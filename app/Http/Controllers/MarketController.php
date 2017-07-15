@@ -15,60 +15,49 @@ class MarketController extends BaseController
 {
     public function show($id)
     {
-        $params = [
-            'index' => 'categories',
-            'type' => 'category',
-            'body' => [
-                'size'=>2000,
-                'query' => [
-                    'match_all' => (object)[]
-                ]
-            ]
-        ];
 
-
-// Get doc at /my_index/my_type/my_id
-        $response = $this->client->search($params);
-        $cats = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $catmap = array();
-        foreach ($cats as $cat){
-            $catmap[$cat['slug']]=$cat;
-        }
 
         $params = [
-            'index' => 'relations',
-            'type' => 'relation',
+            'index' => 'adverts',
+            'type' => 'advert',
             'body' => [
-                'size'=>2000,
+                'size'=>50,
                 'query' => [
-                    'match_all' => (object)[]
+                    'bool' => [
+                        'must_not'=>['term'=>['meta.price'=>-1]],
+                        "filter" => [
+                            "script" => ["script" => "doc['images'].values.length > 0"]
+                        ]
+                    ]
                 ]
             ]
         ];
         $response = $this->client->search($params);
-        $rel = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        //$products=array_rand($products,50);
+        return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
+    }
+    public function search($any){
+        $id = $this->categories[$any]['id'];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>50,
+                'query' => [
+                    'bool' => [
+                        'must'=>['term'=>['category'=>$id]],
+                        "filter" => [
+                            "script" => ["script" => "doc['images'].values.length > 0"]
+                        ]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
 
-        $parents = array();
-        $children = array();
-        foreach ($rel as $relation){
-            $parent=key($relation);
-            $child=$relation[$parent];
-
-            $parents[$child]=$parent;
-            if(!isset($children[$parent]))
-                $children[$parent]=array();
-            array_push($children[$parent],$child);
-
-        }
-        $base=array();
-        foreach ($cats as $cat){
-            $slug=$cat['slug'];
-            if(!isset($parents[$slug])) {
-                array_push($base, $slug);
-            }
-        }
-
-        return View('user.profile',['catagories'=>$catmap,'main'=>$base]);
+        return View('market.listing',['catagories'=>$this->categories,'products'=>$products]);
     }
 
 }

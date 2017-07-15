@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('user/{id}', 'MarketController@show');
+Route::get('/{any}', 'MarketController@search');
