@@ -39,25 +39,46 @@ class MarketController extends BaseController
     }
     public function search($any){
         $id = $this->categories[$any]['id'];
+        $min = $id;
+        if($id%100000000===0){
+            $max = $min + 99999999;
+        }
+        else if($id%1000000===0){
+            $max = $min + 999999;
+        }
+        else if($id%10000===0){
+            $max = $min + 9999;
+        }
+        else if($id%100===0){
+            $max = $min + 99;
+        }
+        else {
+            $max = $min;
+        }
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
                 'size'=>50,
                 'query' => [
-                    'bool' => [
-                        'must'=>['term'=>['category'=>$id]],
-                        "filter" => [
-                            "script" => ["script" => "doc['images'].values.length > 0"]
-                        ]
+                    'range' => [
+                      'category' => [
+                          'gte'=>$min,
+                          'lte'=>$max
+                      ]
                     ]
                 ]
             ]
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-
-        return View('market.listing',['catagories'=>$this->categories,'products'=>$products]);
+        $breads = array();
+        $start=$any;
+        while (isset($this->parents[$start])){
+            $start=$this->parents[$start];
+            array_unshift($breads,$start);
+        }
+        return View('market.listing',['catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base]);
     }
 
 }

@@ -14,6 +14,9 @@ class BaseController extends Controller
     protected $site_settings;
     protected $client;
     protected $categories;
+    protected $parents;
+    protected $children;
+    protected $base;
 
     public function __construct()
     {
@@ -78,6 +81,9 @@ class BaseController extends Controller
             }
         }
         $this->categories=$catmap;
+        $this->parents=$parents;
+        $this->children=$children;
+        $this->base=$base;
     }
 
 
