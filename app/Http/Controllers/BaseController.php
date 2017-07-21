@@ -14,6 +14,7 @@ class BaseController extends Controller
     protected $site_settings;
     protected $client;
     protected $categories;
+    protected $catids;
     protected $parents;
     protected $children;
     protected $base;
@@ -46,6 +47,10 @@ class BaseController extends Controller
         $catmap = array();
         foreach ($cats as $cat){
             $catmap[$cat['slug']]=$cat;
+        }
+        $idmap=array();
+        foreach ($cats as $cat){
+            $idmap[$cat['id']]=$cat;
         }
 
         $params = [
@@ -84,6 +89,7 @@ class BaseController extends Controller
         $this->parents=$parents;
         $this->children=$children;
         $this->base=$base;
+        $this->catids=$idmap;
     }
 
 
