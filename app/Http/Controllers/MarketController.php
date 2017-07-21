@@ -38,6 +38,61 @@ class MarketController extends BaseController
         //$products=array_rand($products,50);
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
+    public function index(Request $request){
+        $min = 0;
+        $max = 999999999;
+        $page = $request->page ? $request->page : 1;
+        if($page>100)
+        {
+            $page=100;
+        }
+        $pagesize = 50;
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'from' => ($page-1)*$pagesize,
+                'size'=>$pagesize,
+                'query' => [
+                    'range' => [
+                        'category' => [
+                            'gte'=>$min,
+                            'lte'=>$max
+                        ]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $total= $response['hits']['total'];
+        $max = (int)($total/$pagesize);
+        if($max==0)
+        {
+            $max=1;
+        }
+        if($max>100){
+            $max=100;
+        }
+
+        $breads = [];
+
+
+        if($max<5){
+            $pages = range(1,$max);
+        }
+        else if($page<4){
+            $pages = range(1,5);
+        }
+        else if($page>$max-2){
+            $pages = range($max-4,$max);
+        }
+        else{
+            $pages = range($page-2,$page+2);
+        }
+
+        return View('market.listing',['max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>'','children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base]);
+    }
     public function leaves(Request $request){
         foreach ($this->categories as $cat=>$val){
             if(!isset($this->children[$cat]))

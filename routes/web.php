@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MarketController@index');
 Route::get('/user/leaves','MarketController@leaves');
 Route::get('user/{id}', 'MarketController@show');
 Route::get('/{any}', 'MarketController@search');
