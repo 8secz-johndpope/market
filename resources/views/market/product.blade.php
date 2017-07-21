@@ -198,12 +198,12 @@
                                         @if(isset($children[$b]))
                                             <ul class="pc-header-nav-child-wrap" data-mega="2">
                                                 @foreach($children[$b] as $ch)
-                                                <li class="pc-header-nav-child">
-                                                    <a href="/{{$ch}}">{{$ch}}</a>
-                                                </li>
-                                                    @endforeach
+                                                    <li class="pc-header-nav-child">
+                                                        <a href="/{{$ch}}">{{$ch}}</a>
+                                                    </li>
+                                                @endforeach
                                             </ul>
-                                            @endif
+                                        @endif
                                     </li>
                                 @endforeach
                             </ul>
@@ -249,7 +249,7 @@
                     </a>
                     <i class="icon-arrow-right"></i>
                 </li>
-                @endforeach
+            @endforeach
             <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
                 <span itemprop="title">{{$last}}</span>
             </li>
@@ -261,21 +261,176 @@
 
 
 
-
-
     <main class=" l-container clearfix">
         <div class="l-content">
+            <section class="item-box-container">
+                <h2 class="item-name">{{$product['title']}}</h2>
+
+                <div class="item-main-content clearfix">
+                    <div class="item-photo">
+                        <div class="owl-carousel">
+                            @foreach($product['images'] as $image)
+                                <div
+                                        class="owl-item-inner is-higher-width"
+                                        data-thumbnail-class-name=" is-higher-width"
+                                >
+                                    <img data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Canon Rebel T5i" class="owl-lazy">
+                                </div>
+                                @endforeach
+
+                        </div>
+                    </div>
+
+                    <table class="item-detail-table">
+                        <tr>
+                            <th>Seller</th>
+                            <td>
+                                <a href="https://www.mercari.com/u/343984384/">Kiara_shomer</a>
+                                <div>
+                                    <div class="item-user-ratings">
+                                        <i class="icon-good"></i>
+                                        <span>2</span>
+                                    </div>
+                                    <div class="item-user-ratings">
+                                        <i class="icon-normal"></i>
+                                        <span>0</span>
+                                    </div>
+                                    <div class="item-user-ratings">
+                                        <i class="icon-bad"></i>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Category</th>
+                            <td>
+                                <a href="https://www.mercari.com/category/7/"><div>Electronics</div></a>
+                                <a href="https://www.mercari.com/category/80/">
+                                    <div class="item-detail-table-sub-category"><i class="icon-arrow-right"></i> Cameras &amp; Photography</div>
+                                </a>
+                                <a href="https://www.mercari.com/category/759/">
+                                    <div class="item-detail-table-sub-sub-category"><i class="icon-arrow-right"></i> Digital Cameras</div>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Brand</th>
+                            <td>
+                                <a href="https://www.mercari.com/brand/1099/">
+                                    <div>
+                                        Canon
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Condition</th>
+                            <td>New</td>
+                        </tr>
+                        <tr>
+                            <th>Shipping paid by</th>
+                            <td>Buyer</td>
+                        </tr>
+                        <tr>
+                            <th>Ships from</th>
+                            <td><a href="https://www.mercari.com/area/5/">California</a></td>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="item-price-box text-center">
+                    @if($product['meta']['price']>=0)
+                    <span class="item-price bold">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</span>
+                    @endif
+                    <span class="item-shipping-fee">+$6 Shipping</span>
+                </div>
 
 
 
+                <div
+                        class="item-open-app f18-24"
+                        data-toggle="open-app"
+                        data-url-scheme="mercariapp://"
+                        data-action="item/openDetail"
+                        data-key="id=m47721349960"
+                        data-play-id="com.mercariapp.mercari">
+                    Open App!
+                </div>
 
-            <ul class="parts-nav clearfix">
+                <a href="https://www.mercari.com/login/?login_callback=https%3A%2F%2Fwww.mercari.com%2Ftransaction%2Fbuy%2Fm47721349960%2F" class="item-buy-btn f18-24" data-client="hidden">Buy Now!</a>
+
+                <div class="item-buy-btn-client" data-client="visible">
+                    <a href="https://www.mercari.com/login/?login_callback=https%3A%2F%2Fwww.mercari.com%2Ftransaction%2Fbuy%2Fm47721349960%2F">Buy Now!</a>
+                </div>
+
+
+                <div class="item-description f14">{{$product['description']}}
+
+                <div class="item-button-container clearfix">
+                    <div class="item-button-left">
+                        <a
+                                href="https://www.mercari.com/login/?login_callback=https://item.mercari.com/gl/m47721349960/&amp;login_message=like"
+                                class="item-button item-button-like">
+                            <i class="icon-like-border"></i>
+                            <span>LIKE</span>
+                            <span data-num="like">3</span>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="item-detail-message">
+                <div class="message-container">
+
+                </div>
+            </div>
+
+            <ul class="nav-item-link-prev-next clearfix">
+                <li class="nav-item-link-prev">
+                    <a href="https://item.mercari.com/gl/m71320765125/"><i class="icon-arrow-left"></i>Kate Spade Stacy Wallet Gray</a>
+                </li>
+                <li class="nav-item-link-next">
+                    <a href="https://item.mercari.com/gl/m55052610454/">Carolina Panthers Customized Jersey NFL<i class="icon-arrow-right"></i></a>
+                </li>
             </ul>
 
-            <section class="items-box-container clearfix">
-                <h2 class="items-box-head">
-                    List of items for {{$last}}, {{$total}}
+            <div class="item-social-media-box">
+                <div class="text-center">
+                    <div class="fb-save" data-uri="product://924427240958731/m47721349960"></div>
+                </div>
+                <ul class="social-media-box">
+                    <li>
+                        <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fitem.mercari.com%2Fgl%2Fm47721349960%2F" target="_blank" class="share-btn" data-window-name="facebook_window">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/share?count=horizontal&amp;original_referer=https%3A%2F%2Fitem.mercari.com%2Fgl%2Fm47721349960%2F&amp;text=Found%20this%20on%20Mercari%3Aexcellent%20used%20cond%E2%80%A6%20%28%24%20670%29%20https%3A%2F%2Fitem.mercari.com%2Fgl%2Fm47721349960%2F" target="_blank" class="share-btn" data-window-name="twitter_window">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fitem.mercari.com%2Fgl%2Fm47721349960%2F&amp;media=https%3A%2F%2Fstatic-mercariapp-com.akamaized.net%2Fphotos%2Fm47721349960_1.jpg%3F1500586448&amp;description=Cool%20item%3A%20Canon%20Rebel%20T5i" target="_blank" class="share-btn" data-window-name="pinterest_window">
+                            <i class="icon-pinterest"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
+            <section class="items-box-container clearfix items-box-overflow">
+
+                <div class="items-box-content clearfix">
+                </div>
+            </section>
+
+            <section class="items-box-container clearfix items-box-overflow">
+                <h2 class="items-box-head">
+                    <a href="https://www.mercari.com/brand/1099/759/">
+                        Similar Items
+                    </a>
                 </h2>
 
                 <div class="items-box-content clearfix">
@@ -283,73 +438,48 @@
                     <section class="items-box">
                         <a href="/p/{{$last}}/{{$product['source_id']}}">
                             <figure class="items-box-photo">
-                                <img data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"1000006.jpg"}}" class="lazyload" alt="The north Face Men&#039;s Size 34 Pants">
+                                <img data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"1000006.jpg"}}?1500595062" class="lazyload" alt="Canon PowerShot SX170 IS Camera">
                             </figure>
                             <div class="items-box-body">
                                 <h3 class="items-box-name font-2">{{$product['title']}}</h3>
                                 <div class="items-box-num clearfix">
                                     @if($product['meta']['price']>=0)
-                                    <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
+                                        <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
                                     @endif
                                 </div>
                             </div>
                         </a>
                     </section>
-                    @endforeach
-
-
-
+                   @endforeach
                 </div>
             </section>
 
-            <ul class="pager">
-                @if($page!=1)
-                <li class="pager-prev visible-pc">
-                    <ul>
-                        <li class="pager-cell">
-                            <a href="/{{$last}}?page=1">
-                                <i class="icon-arrow-double-left"></i>
-                            </a>
-                        </li>
-                        <li class="pager-cell">
-                            <a href="/{{$last}}?page={{$page-1}}">
-                                <i class="icon-arrow-left"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                @endif
 
-                <li class="pager-num">
-                    <ul>
-                        @foreach($pages as $p)
-                            <li class="pager-cell {{$page==$p?'active':''}}">
-                                @if($page===$p)
-                                    {{$p}}
-                                @else
-                                <a href="/{{$last}}?page={{$p}}">{{$p}}</a>
-                                    @endif
-                            </li>
-                            @endforeach
-                    </ul>
-                </li>
-                    @if($page!=$max)
-                <li class="pager-next visible-pc">
-                    <ul>
-                        <li class="pager-cell">
-                            <a href="/{{$last}}?page={{$page+1}}">
-                                <i class="icon-arrow-right"></i>
-                            </a>
-                        </li>
-                        <li class="pager-cell">
-                            <a href="/{{$last}}?page={{$max}}">
-                                <i class="icon-arrow-double-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                        @endif
-            </ul>
+
+
+            <aside class="modal" data-modal="report-item" data-close="modal">
+                <div class="modal-inner modal-banner">
+                    <div class="modal-body">
+                        <div class="modal-head bold">Confirmation</div>
+                        Are you sure you want to report this item?
+                    </div>
+                    <div class="clearfix">
+                        <div class="modal-btn modal-btn-cancel" data-close="modal">Cancel</div>
+                        <a href="https://www.mercari.com/report/m47721349960/">
+                            <button class="modal-btn modal-btn-submit">Yes</button>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+
+
+
+
+
+
+
+
 
         </div>
 
@@ -361,6 +491,9 @@
             </div>
         </div>
     </main>
+
+
+
 
 
 

@@ -38,6 +38,74 @@ class MarketController extends BaseController
         //$products=array_rand($products,50);
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
+    public function product(Request $request,$cat,$sid)
+    {
+        $breads = array();
+        $start=$cat;
+        while (isset($this->parents[$start])){
+            $start=$this->parents[$start];
+            array_unshift($breads,$start);
+        }
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>1,
+                'query' => [
+                    'bool' => [
+                        'must'=>['term'=>['source_id'=>$sid]],
+
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $product=$products[0];
+
+        $id = $this->categories[$cat]['id'];
+        $min = $id;
+        if($id%100000000===0){
+            $max = $min + 99999999;
+        }
+        else if($id%1000000===0){
+            $max = $min + 999999;
+        }
+        else if($id%10000===0){
+            $max = $min + 9999;
+        }
+        else if($id%100===0){
+            $max = $min + 99;
+        }
+        else {
+            $max = $min;
+        }
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+
+                'size'=>6,
+                'query' => [
+                    'bool' => [
+                        'must_not'=>['term'=>['source_id'=>$sid]],
+
+                    'must'=>['range' => [
+                        'category' => [
+                            'gte'=>$min,
+                            'lte'=>$max
+                        ]
+                    ]]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+
+        return View('market.product',['last'=>$cat,'product'=>$product,'breads'=>$breads,'base'=>$this->base,'products'=>$products]);
+    }
     public function index(Request $request){
         $min = 0;
         $max = 999999999;
