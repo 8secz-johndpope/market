@@ -13,8 +13,8 @@
     <meta property="og:site_name" content="Mercari: Anyone can buy & sell">
     <meta property="og:title" content="Cargo - Mercari: Anyone can buy &amp; sell">
     <meta property="og:description" content="Cargocategory.description.sub_category">
-    <meta property="og:url" content="https://www.mercari.com/category/322/">
-    <meta property="og:image" content="https://www.mercari.com/assets/img/common/us/ogp.png">
+    <meta property="og:url" content="/category/322/">
+    <meta property="og:image" content="/assets/img/common/us/ogp.png">
 
     <meta property="al:ios:app_name" content="Mercari">
     <meta property="al:ios:app_store_id" content="896130944">
@@ -25,7 +25,7 @@
     <meta name="twitter:site" content="@mercari_app">
     <meta name="twitter:title" content="Cargo">
     <meta name="twitter:description" content="Cargocategory.description.sub_category">
-    <meta name="twitter:image" content="https://www.mercari.com/assets/img/common/us/ogp.png">
+    <meta name="twitter:image" content="/assets/img/common/us/ogp.png">
 
     <meta name="twitter:app:country" content="us">
     <meta name="twitter:app:name:iphone" content="Mercari">
@@ -38,10 +38,10 @@
 
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="canonical" href="https://www.mercari.com/category/322/">
+    <link rel="canonical" href="/category/322/">
 
 
-    <link rel="next" href="https://www.mercari.com/category/322/?page=2">
+    <link rel="next" href="/category/322/?page=2">
 
 
     <link href="/css/app.css?3198405465" rel="stylesheet">
@@ -78,19 +78,19 @@
 
         <div class="sp-header-inner clearfix">
             <h1>
-                <a href="https://www.mercari.com/">
+                <a href="/">
                     <img src="/css/logo.png?1224156651" alt="mercari"  width="148" height="40">
                 </a>
             </h1>
 
             <div class="sp-header-user-nav clearfix">
 
-                <form action="https://www.mercari.com/search/" class="sp-header-form">
+                <form action="/search/" class="sp-header-form">
                     <input type="search" name="keyword" value="" placeholder="Search Sumra" class="sp-header-search input-default">
                     <i class="icon-search"></i>
                 </form>
 
-                <a href="https://www.mercari.com/login/?login_callback=https%3A%2F%2Fwww.mercari.com%2Fcategory%2F322%2F" class="sp-header-btn btn-red">Sign In</a>
+                <a href="/login/?login_callback=https%3A%2F%2Fwww.mercari.com%2Fcategory%2F322%2F" class="sp-header-btn btn-red">Sign In</a>
             </div>
         </div>
 
@@ -99,7 +99,7 @@
             <ul>
                 <li>
                     <a
-                            href="https://www.mercari.com/category/1/"
+                            href="/category/1/"
                             class=""
                             data-ga="element"
                             data-ga-category="NAVIGATION"
@@ -107,7 +107,7 @@
                 </li>
                 <li>
                     <a
-                            href="https://www.mercari.com/brand/4239/"
+                            href="/brand/4239/"
                             class=""
                             data-ga="element"
                             data-ga-category="NAVIGATION"
@@ -115,7 +115,7 @@
                 </li>
                 <li>
                     <a
-                            href="https://www.mercari.com/category/2/"
+                            href="/category/2/"
                             class=""
                             data-ga="element"
                             data-ga-category="NAVIGATION"
@@ -123,7 +123,7 @@
                 </li>
                 <li>
                     <a
-                            href="https://www.mercari.com/category/3/"
+                            href="/category/3/"
                             class=""
                             data-ga="element"
                             data-ga-category="NAVIGATION"
@@ -131,7 +131,7 @@
                 </li>
                 <li>
                     <a
-                            href="https://www.mercari.com/brand/319/"
+                            href="/brand/319/"
                             class=""
                             data-ga="element"
                             data-ga-category="NAVIGATION"
@@ -139,7 +139,7 @@
                 </li>
                 <li>
                     <a
-                            href="https://www.mercari.com/category/6/"
+                            href="/category/6/"
                             class=""
                             data-ga="element"
                             data-ga-category="NAVIGATION"
@@ -147,7 +147,7 @@
                 </li>
                 <li>
                     <a
-                            href="https://www.mercari.com/brand/6771/"
+                            href="/brand/6771/"
                             class=""
                             data-ga="element"
                             data-ga-category="NAVIGATION"
@@ -155,7 +155,7 @@
                 </li>
                 <li>
                     <a
-                            href="https://www.mercari.com/brand/"
+                            href="/brand/"
                             class="active-category"
                             data-ga="element"
                             data-ga-category="NAVIGATION"
@@ -170,12 +170,12 @@
         <div class="pc-header-inner">
             <div class="clearfix">
                 <h1 class="l-left">
-                    <a href="https://www.mercari.com/">
+                    <a href="/">
                         <img src="/css/logo.png?1224156651" alt="mercari" width="134" height="36">
                     </a>
                 </h1>
 
-                <form action="https://www.mercari.com/search/" class="pc-header-form l-right">
+                <form action="/search/" class="pc-header-form l-right">
                     <input type="search" name="keyword" value="" placeholder="Search Sumra" class="input-default">
                     <i class="icon-search"></i>
                 </form>
@@ -187,7 +187,7 @@
                     <ul class="pc-header-nav">
                         <li>
                             <h2>
-                                <a href="https://www.mercari.com/category/" class="pc-header-nav-root">Category</a>
+                                <a href="/category/" class="pc-header-nav-root">Category</a>
                             </h2>
                             <ul class="pc-header-nav-parent-wrap" data-mega="1">
                                 @foreach($base as $b)
@@ -215,11 +215,11 @@
 
                     <ul class="pc-header-login-nav">
                         <li>
-                            <a href="https://www.mercari.com/login/?login_callback=https%3A%2F%2Fwww.mercari.com%2Fcategory%2F322%2F" class="sp-header-btn btn-red">Sign In</a>
+                            <a href="/login/?login_callback=https%3A%2F%2Fwww.mercari.com%2Fcategory%2F322%2F" class="sp-header-btn btn-red">Sign In</a>
                         </li>
 
                         <li>
-                            <a href="https://www.mercari.com/signup/" class="sp-header-btn header-signup">Sign Up</a>
+                            <a href="/signup/" class="sp-header-btn header-signup">Sign Up</a>
                         </li>
                     </ul>
                 </div>
@@ -411,23 +411,23 @@
                     <h2 class="footer-head">Further Information</h2>
                     <ul>
                         <li>
-                            <a href="https://www.mercari.com/privacy/">Privacy Policy</a>
+                            <a href="/privacy/">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="https://www.mercari.com/tos/">Terms of Service</a>
+                            <a href="/tos/">Terms of Service</a>
                         </li>
                         <li>
-                            <a href="https://www.mercari.com/licenses_disclosures/">Licenses/Disclosures</a>
+                            <a href="/licenses_disclosures/">Licenses/Disclosures</a>
                         </li>
 
                         <li>
-                            <a href="https://www.mercari.com/safety/">Safety</a>
+                            <a href="/safety/">Safety</a>
                         </li>
                         <li>
-                            <a href="https://www.mercari.com/about/">About Us</a>
+                            <a href="/about/">About Us</a>
                         </li>
                         <li>
-                            <a href="https://www.mercari.com/careers/">Careers</a>
+                            <a href="/careers/">Careers</a>
                         </li>
                     </ul>
                 </li>
@@ -435,13 +435,13 @@
                     <h2 class="footer-head">Items on Mercari</h2>
                     <ul>
                         <li>
-                            <a href="https://www.mercari.com/category/">List of Categories</a>
+                            <a href="/category/">List of Categories</a>
                         </li>
                         <li>
-                            <a href="https://www.mercari.com/brand/">List of Brands</a>
+                            <a href="/brand/">List of Brands</a>
                         </li>
                         <li>
-                            <a href="https://www.mercari.com/area/">List of Areas</a>
+                            <a href="/area/">List of Areas</a>
                         </li>
                     </ul>
                 </li>
@@ -450,7 +450,7 @@
                     <ul>
                         <li>
                             <a
-                                    href="https://www.mercari.com/help_center/"
+                                    href="/help_center/"
                                     target="_blank"              >
                                 Help Center
                             </a>
@@ -461,19 +461,19 @@
                     <h2 class="footer-head">Country</h2>
                     <ul class="footer-nav-lang">
                         <li>
-                            <a href="https://www.mercari.com/" class="active"><img src="//www-mercari-com.akamaized.net/assets/img/common/common/flag_us.png?1224156651" alt="" width="22">United States</a>
+                            <a href="/" class="active"><img src="//www-mercari-com.akamaized.net/assets/img/common/common/flag_us.png?1224156651" alt="" width="22">United States</a>
                         </li>
                         <li>
-                            <a href="https://www.mercari.com/uk/" class=""><img src="//www-mercari-com.akamaized.net/assets/img/common/common/flag_uk.png?1224156651" alt="" width="22">United Kingdom</a>
+                            <a href="/uk/" class=""><img src="//www-mercari-com.akamaized.net/assets/img/common/common/flag_uk.png?1224156651" alt="" width="22">United Kingdom</a>
                         </li>
                         <li>
-                            <a href="https://www.mercari.com/jp/" class=""><img src="//www-mercari-com.akamaized.net/assets/img/common/common/flag_jp.png?1224156651" alt="" width="22">Japan</a>
+                            <a href="/jp/" class=""><img src="//www-mercari-com.akamaized.net/assets/img/common/common/flag_jp.png?1224156651" alt="" width="22">Japan</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </nav>
-        <a href="https://www.mercari.com/" class="footer-logo">
+        <a href="/" class="footer-logo">
             <img src="//www-mercari-com.akamaized.net/assets/img/common/common/logo-white.svg?1224156651" width="124" height="33" alt="mercari">
         </a>
         <p class="footer-copyright">
