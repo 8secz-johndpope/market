@@ -86,7 +86,7 @@
             <div class="sp-header-user-nav clearfix">
 
                 <form action="https://www.mercari.com/search/" class="sp-header-form">
-                    <input type="search" name="keyword" value="" placeholder="Search Mercari" class="sp-header-search input-default">
+                    <input type="search" name="keyword" value="" placeholder="Search Sumra" class="sp-header-search input-default">
                     <i class="icon-search"></i>
                 </form>
 
@@ -176,7 +176,7 @@
                 </h1>
 
                 <form action="https://www.mercari.com/search/" class="pc-header-form l-right">
-                    <input type="search" name="keyword" value="" placeholder="Search Mercari" class="input-default">
+                    <input type="search" name="keyword" value="" placeholder="Search Sumra" class="input-default">
                     <i class="icon-search"></i>
                 </form>
             </div>
@@ -274,7 +274,7 @@
 
             <section class="items-box-container clearfix">
                 <h2 class="items-box-head">
-                    List of items for {{$last}}
+                    List of items for {{$last}}, {{$total}}
 
                 </h2>
 
@@ -303,35 +303,52 @@
             </section>
 
             <ul class="pager">
-
-                <li class="pager-num">
+                @if($page!=1)
+                <li class="pager-prev visible-pc">
                     <ul>
-                        <li class="pager-cell active">
-                            1
+                        <li class="pager-cell">
+                            <a href="/{{$last}}?page=1">
+                                <i class="icon-arrow-double-left"></i>
+                            </a>
                         </li>
                         <li class="pager-cell">
-                            <a href="/category/322/?page=2">2</a>
-                        </li>
-                        <li class="pager-cell">
-                            <a href="/category/322/?page=3">3</a>
+                            <a href="/{{$last}}?page={{$page-1}}">
+                                <i class="icon-arrow-left"></i>
+                            </a>
                         </li>
                     </ul>
                 </li>
+                @endif
 
+                <li class="pager-num">
+                    <ul>
+                        @foreach($pages as $p)
+                            <li class="pager-cell {{$page==$p?'active':''}}">
+                                @if($page===$p)
+                                    {{$p}}
+                                @else
+                                <a href="/{{$last}}?page={{$p}}">{{$p}}</a>
+                                    @endif
+                            </li>
+                            @endforeach
+                    </ul>
+                </li>
+                    @if($page!=$max)
                 <li class="pager-next visible-pc">
                     <ul>
                         <li class="pager-cell">
-                            <a href="/category/322/?page=2">
+                            <a href="/{{$last}}?page={{$page+1}}">
                                 <i class="icon-arrow-right"></i>
                             </a>
                         </li>
                         <li class="pager-cell">
-                            <a href="/category/322/?page=3">
+                            <a href="/{{$last}}?page={{$max}}">
                                 <i class="icon-arrow-double-right"></i>
                             </a>
                         </li>
                     </ul>
                 </li>
+                        @endif
             </ul>
 
         </div>

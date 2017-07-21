@@ -14,5 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/user/leaves','MarketController@leaves');
 Route::get('user/{id}', 'MarketController@show');
 Route::get('/{any}', 'MarketController@search');
