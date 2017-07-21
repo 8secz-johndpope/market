@@ -231,13 +231,13 @@
     <nav class="bread-crumbs">
         <ul>
             <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                <a href="https://www.mercari.com/" itemprop="url">
+                <a href="/" itemprop="url">
                     <span itemprop="title">Sumra</span>
                 </a>
                 <i class="icon-arrow-right"></i>
             </li>
             <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                <a href="https://www.mercari.com/category/" itemprop="url">
+                <a href="/category" itemprop="url">
                     <span itemprop="title">List of Categories</span>
                 </a>
                 <i class="icon-arrow-right"></i>
