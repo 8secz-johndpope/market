@@ -128,6 +128,11 @@ class MarketController extends BaseController
                             'lte'=>$max
                         ]
                     ]
+                ],
+                "sort"=> [
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
                 ]
 
             ]
