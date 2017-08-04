@@ -257,6 +257,21 @@
 
         </ul>
     </nav>
+    <nav class="bread-crumbs">
+        <ul>
+
+            @foreach($chs as $ch)
+                <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="/{{$ch}}" itemprop="url">
+                        <span itemprop="title">{{$ch}}</span>
+                    </a>
+                    <i class="icon-arrow-right"></i>
+                </li>
+            @endforeach
+
+
+        </ul>
+    </nav>
 
 
 
