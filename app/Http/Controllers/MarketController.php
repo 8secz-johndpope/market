@@ -136,10 +136,7 @@ class MarketController extends BaseController
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $total= $response['hits']['total'];
         $max = (int)($total/$pagesize);
-        if($max==0)
-        {
-            $max=1;
-        }
+        $max=$max+1;
         if($max>100){
             $max=100;
         }
@@ -208,6 +205,11 @@ class MarketController extends BaseController
                           'lte'=>$max
                       ]
                     ]
+                ],
+                "sort"=> [
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
                 ]
             ]
         ];
@@ -215,10 +217,7 @@ class MarketController extends BaseController
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $total= $response['hits']['total'];
         $max = (int)($total/$pagesize);
-        if($max==0)
-        {
-            $max=1;
-        }
+        $max++;
         if($max>100){
             $max=100;
         }
