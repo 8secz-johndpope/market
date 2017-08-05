@@ -40,6 +40,7 @@ class UserController extends BaseController
         $user = new User;
         $user->email=$request->email;
         $user->password=Hash::make($request->password);
+        $user->name=$request->name;
         $user->save();
         return ['msg'=>'success'];
     }
