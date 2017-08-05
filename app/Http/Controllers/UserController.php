@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends BaseController
 {
@@ -20,7 +21,12 @@ class UserController extends BaseController
     }
     public function profile()
     {
-        return "yes";
+        // Get the currently authenticated user...
+        $user = Auth::user();
+
+// Get the currently authenticated user's ID...
+        $id = Auth::id();
+        return ["yes"=>"no",'user'=>$user];
     }
 
 }
