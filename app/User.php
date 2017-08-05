@@ -33,7 +33,7 @@ class User extends Authenticatable
         parent::__construct($attributes);
     }
 
-    function update(array $attributes = [])
+    function more(array $attributes = [])
     {
         $this->email=$attributes['email'];
         $this->password=$attributes['password'];
