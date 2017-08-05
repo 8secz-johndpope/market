@@ -45,11 +45,12 @@ class UserController extends BaseController
             'index' => 'tests',
             'type' => 'test',
             'body' => [
-                'a'=>'b'
+                $body
             ]
         ];
         $response = $this->client->index($params);
         $advert =  new Advert;
+        $advert->elastic=$response['_id'];
         $advert->save();
 
         return ['body'=>$body,'response'=>$response];
