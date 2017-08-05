@@ -30,7 +30,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     function __construct(array $attributes = []){
-
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         parent::__construct($attributes);
     }
 
