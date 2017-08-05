@@ -41,10 +41,18 @@ class UserController extends BaseController
     public function create(Request $request){
 
         $body=$request->body;
+        $params = [
+            'index' => 'tests',
+            'type' => 'test',
+            'body' => [
+                'a'=>'b'
+            ]
+        ];
+        $response = $this->client->post($params);
         $advert =  new Advert;
         $advert->save();
 
-        return $body;
+        return ['body'=>$body,'response'=>$response];
     }
     public function register(Request $request){
         if(!$request->has('email'))
