@@ -42,8 +42,6 @@ class UserController extends BaseController
         $body=$request->body;
 
         return $body;
-
-
     }
     public function register(Request $request){
         if(!$request->has('email'))
