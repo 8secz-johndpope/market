@@ -45,7 +45,7 @@ class UserController extends BaseController
             'index' => 'tests',
             'type' => 'test',
             'body' => [
-                $body
+                'a'=>'b'
             ]
         ];
         $response = $this->client->index($params);
