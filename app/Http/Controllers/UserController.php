@@ -37,6 +37,12 @@ class UserController extends BaseController
         return ["yes"=>"no",'user'=>$user];
     }
     public function register(Request $request){
+        if(!$request->has('email'))
+            return ['msg'=>"Email can't be blank"];
+        if(!$request->has('password'))
+            return ['msg'=>"Password can't be blank"];
+        if(!$request->has('name'))
+            return ['msg'=>"Email can't be blank"];
         $user = new User;
         $user->email=$request->email;
         $user->password=Hash::make($request->password);
