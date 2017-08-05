@@ -43,8 +43,8 @@ class MarketController extends BaseController
 
 
         $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
+            'index' => 'categories',
+            'type' => 'category',
             'body' => [
                 'size'=>50,
                 'query' => [
