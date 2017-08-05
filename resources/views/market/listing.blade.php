@@ -44,7 +44,7 @@
     <link rel="next" href="/category/322/?page=2">
 
 
-    <link href="/css/app.css?3198405465" rel="stylesheet">
+    <link href="/css/mercari.css?3198405465" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="https://sumra.net/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="https://sumra.net/favicons/favicon-32x32.png" sizes="32x32">
