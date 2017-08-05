@@ -16,8 +16,7 @@ class UserController extends BaseController
 
 // Creating a token without scopes...
        // $token = $user->createToken('Token Name')->accessToken;
-        print_r($this->categories);
-        return "";
+        return $this->categories;
     }
 
 
