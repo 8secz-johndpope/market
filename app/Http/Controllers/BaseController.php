@@ -85,7 +85,7 @@ class BaseController extends Controller
                 array_push($base, $slug);
             }
         }
-        \Stripe::setApiKey(env('STRIPE_SECRET'));
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $this->categories=$catmap;
         $this->parents=$parents;
         $this->children=$children;
