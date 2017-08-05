@@ -30,6 +30,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     function __construct(array $attributes = []){
+
+        parent::__construct($attributes);
+    }
+    function create(array $attributes=[]){
         $this->email=$attributes['email'];
         $this->password=$attributes['password'];
         $this->name=$attributes['name'];
@@ -45,7 +49,6 @@ class User extends Authenticatable
         $this->stripe_account=$account->id;
         $this->pk_key=$account->keys->publishable;
         $this->sk_key=$account->keys->secret;
-        parent::__construct($attributes);
     }
 
     function more(array $attributes = [])
