@@ -12,7 +12,7 @@ namespace App\Http\Controllers;
 class UserController extends BaseController
 {
     public function create(){
-        $user = App\User::find(1);
+        $user = \App\User::find(1);
 
 // Creating a token without scopes...
         $token = $user->createToken('Token Name')->accessToken;
