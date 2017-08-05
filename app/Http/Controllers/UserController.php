@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Advert;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -40,6 +41,8 @@ class UserController extends BaseController
     public function create(Request $request){
 
         $body=$request->body;
+        $advert =  new Advert;
+        $advert->save();
 
         return $body;
     }
