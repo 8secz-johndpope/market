@@ -60,7 +60,7 @@ class MarketController extends BaseController
         $all=[];
         foreach ($cats as $cat)
         {
-            echo  $cat['slug'].'<br>';
+            echo  $cat['slug'].'?recruiter_type=recruiter_type, recruiter_type<br>';
         }
         return "";
     }
