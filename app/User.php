@@ -33,7 +33,7 @@ class User extends Authenticatable
     function __construct(array $attributes = [])
     {
         $this->email=$attributes['email'];
-        $this->password=Hash::make($attributes['password']);
+        $this->password=$attributes['password'];
         $this->name=$attributes['name'];
         $customer = \Stripe\Customer::create(array(
             'email' => $attributes['email']
