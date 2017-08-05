@@ -48,7 +48,7 @@ class UserController extends BaseController
                 'a'=>'b'
             ]
         ];
-        $response = $this->client->post($params);
+        $response = $this->client->index($params);
         $advert =  new Advert;
         $advert->save();
 
