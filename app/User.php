@@ -36,7 +36,7 @@ class User extends Authenticatable
         $this->password=Hash::make($attributes['password']);
         $this->name=$attributes['name'];
         $customer = \Stripe\Customer::create(array(
-            'email' => $attributes->email
+            'email' => $attributes['email']
         ));
         $account = \Stripe\Account::create(array(
             "type" => "custom",
