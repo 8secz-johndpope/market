@@ -11,6 +11,7 @@
 |
 */
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+Auth::routes();
 
 Route::get('/', 'MarketController@index');
 Route::get('/p/{cat}/{id}', 'MarketController@product');
@@ -20,5 +21,4 @@ Route::get('/api/register', 'UserController@register');
 Route::post('/api/user/advert/create','UserController@create');
 Route::get('/{any}', 'MarketController@search');
 Route::get('/api/user/profile', 'UserController@profile')->middleware('auth:api');
-Auth::routes();
 
