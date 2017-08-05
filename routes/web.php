@@ -14,5 +14,5 @@
 Route::get('/', 'MarketController@index');
 Route::get('/p/{cat}/{id}', 'MarketController@product');
 Route::get('/user/leaves','MarketController@leaves');
-Route::get('user/{id}', 'MarketController@show');
+Route::get('/user', 'UserController@create');
 Route::get('/{any}', 'MarketController@search');
