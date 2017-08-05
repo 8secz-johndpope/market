@@ -30,7 +30,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    function __construct(array $attributes = [])
+    function __construct($custom,array $attributes = [])
     {
         $this->email=$attributes['email'];
         $this->password=$attributes['password'];
