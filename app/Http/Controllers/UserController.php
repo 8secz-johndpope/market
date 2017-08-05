@@ -41,7 +41,7 @@ class UserController extends BaseController
     public function create(Request $request){
 
         $advert =  new Advert;
-
+        $advert->save();
         $body=$request->body;
         $body['source_id']=$advert->id;
         $params = [
@@ -50,7 +50,7 @@ class UserController extends BaseController
             'body' => $body
         ];
         $response = $this->client->index($params);
-        
+
         $advert->elastic=$response['_id'];
         $advert->save();
 
