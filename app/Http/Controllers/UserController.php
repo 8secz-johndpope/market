@@ -52,22 +52,7 @@ class UserController extends BaseController
             return ['msg'=>"Password can't be blank"];
         if(!$request->has('name'))
             return ['msg'=>"Name can't be blank"];
-        $user = new User;
-        $user->email=$request->email;
-        $user->password=Hash::make($request->password);
-        $user->name=$request->name;
-        $customer = \Stripe\Customer::create(array(
-            'email' => $user->email
-        ));
-        $account = \Stripe\Account::create(array(
-            "type" => "custom",
-            "country" => "GB",
-            "email" => $user->email
-        ));
-        $user->stripe_id = $customer->id;
-        $user->stripe_account=$account->id;
-        $user->pk_key=$account->keys->publishable;
-        $user->sk_key=$account->keys->secret;
+        $user = new User(['email'=>$request->email,'name'=>$request->name,'password'=>$request->password]);
         $user->save();
         return ['msg'=>'success'];
     }

@@ -28,4 +28,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    function __construct(array $attributes = [])
+    {
+        $this->email=$attributes['email'];
+        $this->password=Hash::make($attributes['password']);
+        $this->name=$attributes['name'];
+        $customer = \Stripe\Customer::create(array(
+            'email' => $attributes->email
+        ));
+        $account = \Stripe\Account::create(array(
+            "type" => "custom",
+            "country" => "GB",
+            "email" => $attributes['email']
+        ));
+        $this->stripe_id = $customer->id;
+        $this->stripe_account=$account->id;
+        $this->pk_key=$account->keys->publishable;
+        $this->sk_key=$account->keys->secret;
+        parent::__construct($attributes);
+    }
 }
