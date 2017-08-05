@@ -29,8 +29,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    function __construct(array $attributes = []){
+        parent::__construct($attributes);
+    }
 
-    function __construct($custom,array $attributes = [])
+    function update(array $attributes = [])
     {
         $this->email=$attributes['email'];
         $this->password=$attributes['password'];
@@ -47,6 +50,6 @@ class User extends Authenticatable
         $this->stripe_account=$account->id;
         $this->pk_key=$account->keys->publishable;
         $this->sk_key=$account->keys->secret;
-        parent::__construct($attributes);
+
     }
 }
