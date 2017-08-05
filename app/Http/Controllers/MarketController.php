@@ -46,7 +46,7 @@ class MarketController extends BaseController
             'index' => 'categories',
             'type' => 'category',
             'body' => [
-                'size'=>50,
+                'size'=>2000,
                 'query' => [
                     'range' => [
                         'id'=>['gte'=>400000000,"lt"=>500000000]
