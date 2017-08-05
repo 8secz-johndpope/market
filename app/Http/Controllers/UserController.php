@@ -8,16 +8,24 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends BaseController
 {
-    public function create(){
-        $user = \App\User::find(1);
+    public function create(Request $request){
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
- //Creating a token without scopes...
-        $token = $user->createToken('Token Name')->accessToken;
-        return $token;
+            $user =  Auth::user();
+
+            //Creating a token without scopes...
+            $token = $user->createToken('Token Name')->accessToken;
+            return ['token'=>$token];
+        }else{
+            return ['msg'=>"Invalid Credentials"];
+        }
     }
     public function profile()
     {
@@ -27,6 +35,13 @@ class UserController extends BaseController
 // Get the currently authenticated user's ID...
         $id = Auth::id();
         return ["yes"=>"no",'user'=>$user];
+    }
+    public function register(Request $request){
+        $user = new User;
+        $user->email=$request->email;
+        $user->password=Hash::make($request->password);
+        $user->save();
+        return ['msg'=>'success'];
     }
 
 }
