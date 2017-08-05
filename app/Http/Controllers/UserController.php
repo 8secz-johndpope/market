@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends BaseController
 {
-    public function create(Request $request){
+    public function login(Request $request){
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
             $user =  Auth::user();
