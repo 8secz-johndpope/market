@@ -40,14 +40,17 @@ class UserController extends BaseController
 
     public function create(Request $request){
 
+        $advert =  new Advert;
+
         $body=$request->body;
+        $body['source_id']=$advert->id;
         $params = [
             'index' => 'tests',
             'type' => 'test',
             'body' => $body
         ];
         $response = $this->client->index($params);
-        $advert =  new Advert;
+        
         $advert->elastic=$response['_id'];
         $advert->save();
 
