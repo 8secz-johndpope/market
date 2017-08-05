@@ -13,6 +13,8 @@
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Auth::routes();
 
+Route::get('/jobscats', 'MarketController@jobscats');
+
 Route::get('/', 'MarketController@index');
 Route::get('/user/leaves','MarketController@leaves');
 Route::get('/api/login', 'UserController@login');

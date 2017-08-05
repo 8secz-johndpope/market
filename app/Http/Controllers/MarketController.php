@@ -38,6 +38,32 @@ class MarketController extends BaseController
         //$products=array_rand($products,50);
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
+    public function jobscats(Request $request)
+    {
+
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>50,
+                'query' => [
+                    'range' => [
+                        'id'=>['gte'=>400000000,"lt"=>500000000]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $cats = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        //$products=array_rand($products,50);
+        $all=[];
+        foreach ($cats as $cat)
+        {
+            $all[]=$cat['slug'];
+        }
+        return $all;
+    }
     public function product(Request $request,$cat,$sid)
     {
         $breads = array();
