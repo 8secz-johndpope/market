@@ -36,6 +36,15 @@ class UserController extends BaseController
         $id = Auth::id();
         return ["yes"=>"no",'user'=>$user];
     }
+
+    public function create(Request $request){
+
+        $body=$request->body;
+
+        return $body;
+
+
+    }
     public function register(Request $request){
         if(!$request->has('email'))
             return ['msg'=>"Email can't be blank"];
