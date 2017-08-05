@@ -18,6 +18,9 @@ class UserController extends BaseController
         $token = $user->createToken('Token Name')->accessToken;
         return $token;
     }
-
+    public function profile()
+    {
+        return "yes";
+    }
 
 }

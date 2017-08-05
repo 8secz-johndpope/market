@@ -16,3 +16,4 @@ Route::get('/p/{cat}/{id}', 'MarketController@product');
 Route::get('/user/leaves','MarketController@leaves');
 Route::get('/user', 'UserController@create');
 Route::get('/{any}', 'MarketController@search');
+Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');
