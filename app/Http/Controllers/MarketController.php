@@ -60,9 +60,9 @@ class MarketController extends BaseController
         $all=[];
         foreach ($cats as $cat)
         {
-            $all[]=$cat['slug'];
+            print $cat['slug'];
         }
-        return $all;
+        return "";
     }
     public function product(Request $request,$cat,$sid)
     {
