@@ -44,9 +44,7 @@ class UserController extends BaseController
         $params = [
             'index' => 'tests',
             'type' => 'test',
-            'body' => [
-                'a'=>'b'
-            ]
+            'body' => $body
         ];
         $response = $this->client->index($params);
         $advert =  new Advert;
