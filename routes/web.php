@@ -21,4 +21,4 @@ Route::get('/{any}', 'MarketController@search');
 Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
