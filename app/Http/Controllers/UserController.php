@@ -42,7 +42,7 @@ class UserController extends BaseController
         if(!$request->has('password'))
             return ['msg'=>"Password can't be blank"];
         if(!$request->has('name'))
-            return ['msg'=>"Email can't be blank"];
+            return ['msg'=>"Name can't be blank"];
         $user = new User;
         $user->email=$request->email;
         $user->password=Hash::make($request->password);
