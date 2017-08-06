@@ -57,10 +57,14 @@ class UserController extends BaseController
         return ['body'=>$body,'response'=>$response];
     }
     public function ccreate(Request $request){
+        $body=$request->json()->all();
+        $advert=Advert::where('sid','=',(int)$body['source_id'])->first();
+        if($advert!==null){
+            return ['a'=>'b'];
+        }
 
         $advert =  new Advert;
 
-        $body=$request->json()->all();
         $advert->sid=(int)$body['source_id'];
         $advert->save();
         $params = [
