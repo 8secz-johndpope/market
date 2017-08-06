@@ -56,6 +56,19 @@ class UserController extends BaseController
 
         return ['body'=>$body,'response'=>$response];
     }
+    public function ccreate(Request $request){
+
+
+        $body=$request->json()->all();
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => $body
+        ];
+        $response = $this->client->index($params);
+
+        return ['response'=>$response];
+    }
     public function register(Request $request){
         if(!$request->has('email'))
             return ['msg'=>"Email can't be blank"];

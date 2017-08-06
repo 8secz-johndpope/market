@@ -20,6 +20,8 @@ Route::get('/user/leaves','MarketController@leaves');
 Route::get('/api/login', 'UserController@login');
 Route::get('/api/register', 'UserController@register');
 Route::post('/api/user/advert/create','UserController@create');
+Route::post('/api/user/advert/ccreate','UserController@ccreate');
+
 Route::get('/api/user/profile', 'UserController@profile')->middleware('auth:api');
 
 Route::get('/p/{cat}/{id}', 'MarketController@product');
