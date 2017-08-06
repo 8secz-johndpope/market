@@ -73,7 +73,8 @@ class UserController extends BaseController
             'body' => $body
         ];
         $response = $this->client->index($params);
-
+        $advert->elastic=$response['_id'];
+        $advert->save();
         return ['response'=>$response];
     }
     public function register(Request $request){
