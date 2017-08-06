@@ -58,8 +58,11 @@ class UserController extends BaseController
     }
     public function ccreate(Request $request){
 
+        $advert =  new Advert;
 
         $body=$request->json()->all();
+        $advert->sid=(int)$body['source_id'];
+        $advert->save();
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
