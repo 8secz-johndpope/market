@@ -23,7 +23,7 @@ class BaseController extends Controller
     {
         $hosts = [
 
-            'https://search-market-qkpqb2dszupuwvaitlgjblovjm.eu-central-1.es.amazonaws.com:443'        // SSL to localhost
+            'http://145.239.66.50:9200'        // SSL to localhost
         ];
         $this->client = \Elasticsearch\ClientBuilder::create()           // Instantiate a new ClientBuilder
         ->setHosts($hosts)      // Set the hosts
