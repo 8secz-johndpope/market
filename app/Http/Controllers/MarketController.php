@@ -66,7 +66,7 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        return $products[0];
+        return $products[0]['meta'];
     }
 
 
