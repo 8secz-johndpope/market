@@ -68,6 +68,7 @@ class MarketController extends BaseController
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $fields=$products[0]['meta'];
         $counts=[];
+        $mandatory=[];
         foreach ($fields as $key=>$val){
             $params = [
                 'index' => 'adverts',
@@ -134,7 +135,7 @@ class MarketController extends BaseController
         return $output;
     }
     public function dummy(Request $request){
-        echo json_encode($this->categories);
+        echo json_encode($this->children);
         return '';
     }
     public function jobscats(Request $request)
