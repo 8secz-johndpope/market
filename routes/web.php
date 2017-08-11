@@ -12,6 +12,8 @@
 */
 Route::get('/dummy', 'MarketController@dummy');
 Route::get('/pull', 'MarketController@pull');
+Route::get('/fields/{any}', 'MarketController@fields');
+
 Route::get('/id/{id}', 'MarketController@id');
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');

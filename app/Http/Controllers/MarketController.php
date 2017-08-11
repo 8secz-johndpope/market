@@ -44,7 +44,29 @@ class MarketController extends BaseController
     }
 
     public function fields(Request $request,$any){
+        $id = $this->categories[$any]['id'];
 
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>1,
+                'query' => [
+                    'term' => [
+                        "category" => $id
+                    ]
+                ],
+                "sort"=> [
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        return $products[0];
     }
 
 
