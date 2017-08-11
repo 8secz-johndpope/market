@@ -105,12 +105,13 @@ class MarketController extends BaseController
                     'bool'=>[
                         'must' => [
                             [
-                            'term' => [
+                            ['term' => [
                                 "category" => $id
-                            ],
-                                "term"=> [
+                            ]],
+                               [ "term"=> [
                                     "meta.price"=> -1
                                 ]
+                               ]
                             ]
                         ],
                         'must_not' => [
