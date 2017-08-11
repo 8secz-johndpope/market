@@ -11,6 +11,7 @@
 |
 */
 Route::get('/dummy', 'MarketController@dummy');
+Route::get('/pull', 'MarketController@pull');
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Auth::routes();

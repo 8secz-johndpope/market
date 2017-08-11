@@ -39,6 +39,10 @@ class MarketController extends BaseController
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
 
+    public function  pull(Request $request){
+        $output = shell_exec('ls -lart');
+        return $output;
+    }
     public function dummy(Request $request){
         echo json_encode($this->categories);
         return '';
