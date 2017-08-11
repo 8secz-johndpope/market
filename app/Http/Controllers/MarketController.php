@@ -66,7 +66,35 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        return $products[0]['meta'];
+        $fields=$products[0]['meta'];
+        $counts=[];
+        foreach ($fields as $key=>$val){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'size'=>1,
+                    'query' => [
+                        'term' => [
+                            "category" => $id
+                        ],
+                        'bool'=>[
+                            "must_not"=> [
+                                [
+                                    "exists"=> [
+                                    "field"=> "meta.fd"
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+
+                ]
+            ];
+            $response = $this->client->search($params);
+            $counts[$key]=$response['hits']['total'];
+        }
+        return $counts;
     }
 
 
