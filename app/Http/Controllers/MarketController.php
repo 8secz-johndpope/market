@@ -107,15 +107,13 @@ class MarketController extends BaseController
                             'term' => [
                                 "category" => $id
                             ],
-                            [
+
                                 "term"=> [
                                     "meta.price"=> -1
                                 ]
-                            ]
-                        ],
-                        "must_not"=> [
 
                         ]
+
                     ]
                 ]
 
