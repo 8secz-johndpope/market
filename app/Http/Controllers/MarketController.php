@@ -38,7 +38,11 @@ class MarketController extends BaseController
         //$products=array_rand($products,50);
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
-    
+
+    public  function id(Request $request,$id){
+        return $this->categories[$id];
+    }
+
 
     public function  pull(Request $request){
         $output = shell_exec('/home/anil/market/gitpull');
