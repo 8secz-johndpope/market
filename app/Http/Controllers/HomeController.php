@@ -26,7 +26,7 @@ class HomeController extends BaseController
     public function index()
     {
 
-        echo $this->categories;
+
         return view('home',['categories'=>$this->categories]);
     }
 }
