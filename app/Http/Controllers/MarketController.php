@@ -38,6 +38,7 @@ class MarketController extends BaseController
         //$products=array_rand($products,50);
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
+
     public function dummy(Request $request){
         echo json_encode($this->categories);
         return '';

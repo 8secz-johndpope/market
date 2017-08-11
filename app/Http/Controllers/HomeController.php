@@ -23,7 +23,8 @@ class HomeController extends BaseController
      */
     public function index()
     {
-        echo $this->categories["boxing-martial-arts-punch-bags"]["title"];
+
+        echo $this->categories;
         return view('home',['categories'=>$this->categories]);
     }
 }
