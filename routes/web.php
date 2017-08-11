@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/dummy', 'MarketController@dummy');
+
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Auth::routes();
 
