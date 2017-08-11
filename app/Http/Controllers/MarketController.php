@@ -43,6 +43,10 @@ class MarketController extends BaseController
         return $this->categories[$id];
     }
 
+    public function fields(Request $request,$any){
+
+    }
+
 
     public function  pull(Request $request){
         $output = shell_exec('/home/anil/market/gitpull');
@@ -84,11 +88,7 @@ class MarketController extends BaseController
     public function product(Request $request,$cat,$sid)
     {
         $breads = array();
-        $start=$cat;
-        while (isset($this->parents[$start])){
-            $start=$this->parents[$start];
-            array_unshift($breads,$start);
-        }
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -105,6 +105,8 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $product=$products[0];
+
+        $cat=$this->catids[$product['category']]['slug'];
 
         $id = $this->categories[$cat]['id'];
         $min = $id;
@@ -146,6 +148,11 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $start=$cat;
+        while (isset($this->parents[$start])){
+            $start=$this->parents[$start];
+            array_unshift($breads,$start);
+        }
 
         return View('market.product',['last'=>$cat,'product'=>$product,'breads'=>$breads,'base'=>$this->base,'products'=>$products,'catagories'=>$this->categories,'parents'=>$this->parents,'children'=>$this->children]);
     }
