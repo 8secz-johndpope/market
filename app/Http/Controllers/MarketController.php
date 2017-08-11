@@ -84,7 +84,7 @@ class MarketController extends BaseController
                             "must_not"=> [
                                 [
                                     "exists"=> [
-                                    "field"=> "meta.fd"
+                                    "field"=> "meta.".$key
                                     ]
                                 ]
                             ]
