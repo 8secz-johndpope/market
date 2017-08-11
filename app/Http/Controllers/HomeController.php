@@ -23,6 +23,6 @@ class HomeController extends BaseController
      */
     public function index()
     {
-        return view('home',['categories'=>$this->categories]);
+        return view('home',['categories'=>'dummy']);
     }
 }
