@@ -75,10 +75,12 @@ class MarketController extends BaseController
                 'body' => [
                     'size'=>1,
                     'query' => [
-                        'term' => [
-                            "category" => $id
-                        ],
                         'bool'=>[
+                            'must' => [
+                                'term' => [
+                                    "category" => $id
+                                ],
+                            ],
                             "must_not"=> [
                                 [
                                     "exists"=> [
