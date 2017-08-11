@@ -40,7 +40,7 @@ class MarketController extends BaseController
     }
 
     public function  pull(Request $request){
-        $output = shell_exec('ls -lart');
+        $output = shell_exec('/home/anil/market/gitpull');
         return $output;
     }
     public function dummy(Request $request){
