@@ -96,6 +96,32 @@ class MarketController extends BaseController
             $response = $this->client->search($params);
             $counts[$key]=$response['hits']['total'];
         }
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>1,
+                'query' => [
+                    'bool'=>[
+                        'must' => [
+                            'term' => [
+                                "category" => $id
+                            ],
+                        ],
+                        "must_not"=> [
+                            [
+                                "term"=> [
+                                    "meta.price"=> -1
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+
+            ]
+        ];
+        $response = $this->client->search($params);
+        $counts['price']=$response['hits']['total'];
         return $counts;
     }
 
