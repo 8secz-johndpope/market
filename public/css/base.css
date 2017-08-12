@@ -5,6 +5,10 @@ section .panel{
 	margin: 0;
 	text-align: center;
 }
+
+.panel.panel-primary.category-0 {
+    border-color: rgb(244,139, 29);
+}
 .read-more{
 	text-align: right;
 }
