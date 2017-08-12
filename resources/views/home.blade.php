@@ -76,7 +76,7 @@
 		 		<div class="category">
 		 			<h1>{{$categories[$b]["title"]}}</h1>
 		 		
-				 	@if(isset($children[$b])
+				 	@if(isset($children[$b]))
 					 	<ul>
 					 	<?
 					 		for ($i=0; $i < 10; $i++) { 
