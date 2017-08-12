@@ -92,7 +92,7 @@ class MarketController extends BaseController
     public function insert(Request $request){
         $car = Category::find(105000000);
         $make=Field::find(1);
-        $car->fields()->save($make);
+        $car->fields()->syncWithoutDetaching([$make->id]);
 
         return 'abc';
     }
