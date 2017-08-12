@@ -13,7 +13,7 @@ section .panel{
 }
 .panel.panel-primary{
     border-color: rgb(244,139, 29);
-    box-shadow: 5px 5px 2px rgb(244,139, 29);
+    box-shadow: 5px 5px 2px #888888;
 }
 
 .panel-primary>.panel-heading{
