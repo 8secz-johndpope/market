@@ -84,7 +84,6 @@
 					@endif
 				 </div>
 		 	@endforeach
-			<h1>Let server udpate{{$categories["boxing-martial-arts-punch-bags"]["title"]}}</h1>
 		</section>
 		<section class="spotligth">
 		</section>

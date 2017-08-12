@@ -31,7 +31,7 @@ class HomeController extends BaseController
         return view('home',['categories'=>$this->categories,'parents'=>$this->parents,'children'=>$this->getFirstChildren($this->children),'catids'=>$this->catids, 'base' => $this->base, 'last' => '']);
     }
     public function getNameCategory(String $index){
-        return $categories[$name]["title"];
+        return $this->categories[$name]["title"];
     }
     public function getFirstChildren(){
         $base = array();
