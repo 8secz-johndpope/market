@@ -29,7 +29,7 @@ class HomeController extends BaseController
 
 
         $base=Catagory::where('parent',0)->get();
-        return view('base' => $base]);
+        return view('home',['base' => $base]);
     }
     public function getNameCategory(String $index){
         return $this->categories[$index]["title"];
