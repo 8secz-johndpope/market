@@ -5,7 +5,7 @@ section .panel{
 	margin: 0;
 	text-align: center;
 }
-.panel-heading image.icon{
+.panel-heading img.icon{
 	height: 10vh;
 }
 .panel.panel-primary.category-0 {
