@@ -27,6 +27,6 @@ class HomeController extends BaseController
     {
 
 
-        return view('home',['categories'=>$this->categories,'parents'=>$this->parents,'children'=>$this->children,'catids'=>$this->catids]);
+        return view('home',['categories'=>$this->categories,'parents'=>$this->parents,'children'=>$this->children,'catids'=>$this->catids, 'base']=> $this->base);
     }
 }
