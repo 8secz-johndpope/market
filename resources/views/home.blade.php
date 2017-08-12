@@ -80,7 +80,7 @@
 					 	@foreach($b as $child)
 					 		<li>{{$child}}</li>
 					 	@endforeach
-					 	{{var_dump($b)}}
+					 	{{var_dump(count($b))}}
 					 	@if(count($b) == 9)
 					 		<div>
 					 			read more..
