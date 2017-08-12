@@ -81,12 +81,11 @@
 		 		
 				 	@if(isset($children[$b]))
 					 	<ul>
-					 	<?
-					 		for ($this->i=0; $this->i < 10; $this->i++) { 
-					 	?>
-					 			<li>{{$categories[$children[$this->i]]['title']}}</li>
+					 	@foreach($children[$b]) as $child)
+					 		<li>{{$categories[$child]['title']}}</li>
 					 	<?	
-					 		}
+					 		if($this->i == 9)
+					 			break;
 					 	?>
 					 	</ul>
 					 
