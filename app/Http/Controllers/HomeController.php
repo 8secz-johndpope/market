@@ -43,6 +43,7 @@ class HomeController extends BaseController
                 if(i == 9)
                     break;
             }
+            var_dump($firstChildren);
             $base[$b] = $firstChildren;
         }
         return $base;
