@@ -130,7 +130,7 @@ class MarketController extends BaseController
                 echo 'is int '.$key.'<br>';
             }else{
                 echo 'is string '.$key.'<br>';
-                $field = Field::where('slug',$key);
+                $field = Field::where('slug',$key)->first();
                 if($field!==null){
                     $fieldval = FieldValue::where('slug',$val)->first();
                     if($fieldval==null){
