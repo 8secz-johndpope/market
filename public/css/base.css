@@ -5,7 +5,9 @@ section .panel{
 	margin: 0;
 	text-align: center;
 }
-
+image.icon{
+	height: 10vh;
+}
 .panel.panel-primary.category-0 {
     border-color: rgb(244,139, 29);
 }
@@ -18,9 +20,8 @@ section .panel{
     background-color: rgb(244,139, 29);
     border-color: rgb(244,139, 29);
 }
-image.icon{
-	height: 10vh;
-}
+
+
 .read-more{
 	text-align: right;
 }
