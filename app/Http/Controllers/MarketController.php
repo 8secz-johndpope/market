@@ -138,7 +138,7 @@ class MarketController extends BaseController
                         $fieldval->slug = $val;
                         $fieldval->save();
                     }
-                    $field->values()->syncWithoutDetaching([$fieldval->id]);
+                    $field->values()->save($fieldval);
                 }
 
             }
