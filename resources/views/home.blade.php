@@ -1,4 +1,3 @@
-{{$this->i = 0}}
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
@@ -81,11 +80,6 @@
 					 	<ul>
 					 	@foreach($children[$b] as $child)
 					 		<li>{{$categories[$child]['title']}}</li>
-					 	<?php	
-					 		$this->i++;
-					 		if($this->i == 9)
-					 			break;
-					 	?>
 					 	</ul>
 					 	@endforeach
 					@endif
