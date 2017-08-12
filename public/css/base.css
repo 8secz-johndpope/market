@@ -21,7 +21,7 @@ section .panel{
 .category-0>.panel-heading {
     color: black;
     background-color: #fff;
-    /*border-color: rgb(244,139, 29);*/
+    border-color: #fff;
 }
 .read-more{
 	text-align: right;
