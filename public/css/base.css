@@ -13,6 +13,7 @@ section .panel{
 }
 .panel.panel-primary.category-0 {
     border-color: rgb(244,139, 29);
+    box-shadow: 10px 10px 5px #888888;
 }
 
 .panel-primary>.panel-heading{
@@ -22,7 +23,7 @@ section .panel{
     color: black;
     background-color: #fff;
     border-color: #fff;
-    box-shadow: 10px 10px 5px #888888;
+
 }
 .read-more{
 	text-align: right;
