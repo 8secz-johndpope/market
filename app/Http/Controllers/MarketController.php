@@ -97,7 +97,7 @@ class MarketController extends BaseController
         return 'abc';
     }
     public function fields(Request $request,$any){
-        $id = $this->categories[$any]['id'];
+        $category = Category::where('slug',$any)->first();
 
 
         $params = [
@@ -107,7 +107,7 @@ class MarketController extends BaseController
                 'size'=>1,
                 'query' => [
                     'term' => [
-                        "category" => $id
+                        "category" => $category->id
                     ]
                 ],
                 "sort"=> [
@@ -119,67 +119,21 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $fields=$products[0]['meta'];
-        $counts=[];
-        $mandatory=[];
-        foreach ($fields as $key=>$val){
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'body' => [
-                    'size'=>1,
-                    'query' => [
-                        'bool'=>[
-                            'must' => [
-                                'term' => [
-                                    "category" => $id
-                                ],
-                            ],
-                            "must_not"=> [
-                                [
-                                    "exists"=> [
-                                    "field"=> "meta.".$key
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
 
-                ]
-            ];
-            $response = $this->client->search($params);
-            $counts[$key]=$response['hits']['total'];
+        $product = $products[0];
+        foreach ($product['meta'] as $key=>$val){
+            if(is_bool($val)){
+                echo 'is bool'.$key.'<br>';
+            }
+            else if(is_int($val)){
+                echo 'is int'.$key.'<br>';
+            }else{
+                echo 'is string '.$key.'<br>';
+
+            }
         }
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => [
-                'size'=>1,
-                'query' => [
-                    'bool'=>[
-                        'must' => [
-                            [
-                            ['term' => [
-                                "category" => $id
-                            ]],
-                               [ "term"=> [
-                                    "meta.price"=> -1
-                                ]
-                               ]
-                            ]
-                        ],
-                        'must_not' => [
 
-                        ]
-
-                    ]
-                ]
-
-            ]
-        ];
-        $response = $this->client->search($params);
-        $counts['price']=$response['hits']['total'];
-        return $counts;
+        return 'yes';
     }
 
 
