@@ -45,6 +45,7 @@ class HomeController extends BaseController
                 $i++;
             }
             $base[$b] = $firstChildren;
+            $base[$b]['title'] = $this->getNameCategory($b);
         }
         return $base;
     }
