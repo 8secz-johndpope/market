@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Category;
 use App\Model\Field;
+use App\Model\FieldValue;
 use App\Model\Relation;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -129,6 +130,16 @@ class MarketController extends BaseController
                 echo 'is int '.$key.'<br>';
             }else{
                 echo 'is string '.$key.'<br>';
+                $field = Field::where('slug',$key);
+                if($field!==null){
+                    $fieldval = FieldValue::where('slug',$val)->first();
+                    if($fieldval==null){
+                        $fieldval = new FieldValue;
+                        $fieldval->slug = $val;
+                        $fieldval->save();
+                    }
+                    $field->values()->syncWithoutDetaching([$fieldval->id]);
+                }
 
             }
         }

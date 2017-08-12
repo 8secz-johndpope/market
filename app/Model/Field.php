@@ -15,4 +15,7 @@ class Field extends  Model
     public function categories(){
         return $this->belongsToMany('App\Model\Category');
     }
+    public function values() {
+        return $this->hasMany('App\Model\FieldValue');
+    }
 }
