@@ -34,14 +34,18 @@ class HomeController extends BaseController
     public function getNameCategory(String $index){
         return $categories[$name]["title"];
     }
-    public function getFirstChildren(String $category){
+    public function getFirstChildren(){
         $i = 0;
-        $firstChildren = array();
-        foreach ($categories[$category] as $child) {
-            $firstChildren[$child] = $categories[$child]["title"];
-            if(i == 9)
-                break;
+        $base = array();
+        foreach ($this->base as $b) {
+            $firstChildren = array();
+            foreach ($categories[$base] as $child) {
+                $firstChildren[$child] = $categories[$child]["title"];
+                if(i == 9)
+                    break;
+            }
+            $base[$b] = $firstChildren;
         }
-        return $firstChildren
+        return $base;
     }
 }
