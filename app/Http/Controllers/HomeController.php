@@ -43,8 +43,9 @@ class HomeController extends BaseController
                 }else{
                     $child->class='invisible-class';
                 }
-                $i++;
+               $i++; 
             }*/
+            $i++;
         }
         return view('home',['base' => $base]);
     }
