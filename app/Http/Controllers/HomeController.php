@@ -28,8 +28,7 @@ class HomeController extends BaseController
     {
 
 
-        return view('home',['categories'=>$this->categories,'parents'=>$this->parents,'children'=>$this->getFirstChildren($this-
-            >children),'catids'=>$this->catids, 'base' => $this->base, 'last' => '']);
+        return view('home',['categories'=>$this->categories,'parents'=>$this->parents,'children'=>$this->getFirstChildren($this->children),'catids'=>$this->catids, 'base' => $this->base, 'last' => '']);
     }
     public function getNameCategory(String $index){
         return $categories[$name]["title"];
