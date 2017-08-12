@@ -26,7 +26,7 @@
 		 			<div class="panel-body">
 					 	<ul>
 					 	@foreach($cat->children as $child)
-					 		<li><a>{{$child->title}}</a></li>
+					 		<li><a href="#">{{$child->title}}</a></li>
 					 	@endforeach
 					 		<div class="read-more">
 					 			<a href="#">more..</a>
