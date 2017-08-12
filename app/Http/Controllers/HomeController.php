@@ -38,8 +38,8 @@ class HomeController extends BaseController
         $base = array();
         foreach ($this->base as $b) {
             $firstChildren = array();
-            foreach ($categories[$base] as $child) {
-                $firstChildren[$child] = $categories[$child]["title"];
+            foreach ($this->categories[$base] as $child) {
+                $firstChildren[$child] = $this->categories[$child]["title"];
                 if(i == 9)
                     break;
             }
