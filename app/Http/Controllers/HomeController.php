@@ -32,7 +32,8 @@ class HomeController extends BaseController
         foreach ($base as $cat) {
             # code...
             $i=0;
-            foreach ($cat->children as $child) {
+            $cat->class="category-$i";
+            /*foreach ($cat->children as $child) {
                 # code...
                 # i
                 if($i<10){
@@ -41,27 +42,8 @@ class HomeController extends BaseController
                     $child->class='invisible-class';
                 }
                 $i++;
-            }
+            }*/
         }
         return view('home',['base' => $base]);
-    }
-    public function getNameCategory(String $index){
-        return $this->categories[$index]["title"];
-    }
-    public function getFirstChildren(){
-        $base = array();
-        foreach ($this->base as $b) {
-            $i = 0;
-            $firstChildren = array();
-            foreach ($this->children[$b] as $child) {
-                if($i == self::MAX_CHILDREN)
-                    break;
-                $firstChildren[$child] = $this->categories[$child]["title"];
-                $i++;
-            }
-            $base[$b] = $firstChildren;
-            $base[$b]['title'] = $this->getNameCategory($b);
-        }
-        return $base;
     }
 }
