@@ -78,7 +78,7 @@
 				 	@if(isset($children[$b]))
 					 	<ul>
 					 	@foreach($children[$b] as $child)
-					 		<li>{{$categories[$child]['title']}}</li>
+					 		<li>{{$categories[$child]}</li>
 					 	@endforeach
 					 	</ul>
 					@endif
