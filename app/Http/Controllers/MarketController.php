@@ -89,12 +89,14 @@ class MarketController extends BaseController
         return '';
     }
     public function insert(Request $request){
-        foreach ($this->parents as $key=>$val){
-            $rel = new Relation;
+        $catagories = Catagory::all();
 
-            $rel->parent=$val;
-            $rel->child=$key;
-            $rel->save();
+        foreach ($catagories as $catagory){
+            $relation = Relation::where('child',$catagory->slug)->first();
+            $parent = Catagory::where('slug',$relation->parent)->first();
+            $catagory->parent=$parent->id;
+            $catagory->save();
+
         }
         return '';
     }

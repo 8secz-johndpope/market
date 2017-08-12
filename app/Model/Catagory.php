@@ -13,6 +13,9 @@ use Illuminate\Database\Eloquent\Model;
 class Catagory extends  Model
 {
     public $timestamps = false;
-
+    public function children()
+    {
+        return $this->hasMany('App\Model\Catagory','parent');
+    }
 
 }
