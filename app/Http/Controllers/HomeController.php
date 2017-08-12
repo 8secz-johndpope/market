@@ -42,6 +42,7 @@ class HomeController extends BaseController
                 }
                 $i++;
             }
+            $cat->children=$cat->children;
         }
         return view('home',['base' => $base]);
     }
