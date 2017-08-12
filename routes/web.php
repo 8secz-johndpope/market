@@ -13,6 +13,7 @@
 Route::get('/dummy', 'MarketController@dummy');
 Route::get('/pull', 'MarketController@pull');
 Route::get('/update', 'MarketController@update');
+Route::get('/insert', 'MarketController@insert');
 
 Route::get('/fields/{any}', 'MarketController@fields');
 

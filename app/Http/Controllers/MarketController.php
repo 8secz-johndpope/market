@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Model\Catagory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -83,6 +84,16 @@ class MarketController extends BaseController
                 print_r($response);
 
             }
+        }
+        return '';
+    }
+    public function insert(Request $request){
+        foreach ($this->categories as $key=>$val){
+            $cat = new Catagory;
+            $cat->id=$val['id'];
+            $cat->title=$val['title'];
+            $cat->slug=$val['slug'];
+            $cat->save();
         }
         return '';
     }
