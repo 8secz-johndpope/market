@@ -89,16 +89,9 @@ class MarketController extends BaseController
         return '';
     }
     public function insert(Request $request){
-        $catagories = Catagory::all();
+        $cat = Catagory::find(101000000);
 
-        foreach ($catagories as $catagory){
-            $relation = Relation::where('child',$catagory->slug)->first();
-            $parent = Catagory::where('slug',$relation->parent)->first();
-            $catagory->parent=$parent->id;
-            $catagory->save();
-
-        }
-        return '';
+        return $cat->parent;
     }
     public function fields(Request $request,$any){
         $id = $this->categories[$any]['id'];
