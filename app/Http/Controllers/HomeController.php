@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends BaseController
 {
-    Const MAX_CHILDREN = 9;
+    const MAX_CHILDREN = 9;
     /**
      * Create a new controller instance.
      *
@@ -39,10 +39,10 @@ class HomeController extends BaseController
         foreach ($this->base as $b) {
             $firstChildren = array();
             foreach ($this->children[$b] as $child) {
-                $firstChildren[$child] = $this->categories[$child]["title"];
-                $i++;
                 if($i == self::MAX_CHILDREN)
                     break;
+                $firstChildren[$child] = $this->categories[$child]["title"];
+                $i++;
             }
             var_dump($firstChildren);
             $base[$b] = $firstChildren;
