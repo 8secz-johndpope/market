@@ -1,7 +1,7 @@
 section .panel{
 	display: inline-grid;
 	width: 14.1%;
-	height: 350px;
+	height: 400px;
 	margin: 0;
 	text-align: center;
 }
@@ -14,7 +14,7 @@ section .panel{
     color: #fff;
     background-color: rgb(244,139, 29);
     border-color: rgb(244,139, 29);
-    height: 20vh;
+    height: 15vh;
 }
 .read-more{
 	text-align: right;
