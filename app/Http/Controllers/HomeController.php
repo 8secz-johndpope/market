@@ -29,7 +29,7 @@ class HomeController extends BaseController
     public function index()
     {
 
-
+        $this->layout = "@app/views/layouts/home";
         $base=Catagory::where('parent_id',0)->get();
         foreach ($base as $cat) {
             # code...
