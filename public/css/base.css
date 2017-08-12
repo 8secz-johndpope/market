@@ -14,6 +14,7 @@ section .panel{
     color: #fff;
     background-color: rgb(244,139, 29);
     border-color: rgb(244,139, 29);
+    height: 20vh;
 }
 .read-more{
 	text-align: right;
