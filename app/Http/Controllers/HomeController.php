@@ -36,13 +36,12 @@ class HomeController extends BaseController
                 # code...
                 # i
                 if($i<10){
-                    $cat->class='visible-class';
+                    $child->class='visible-class';
                 }else{
-                    $cat->class='invisible-class';
+                    $child->class='invisible-class';
                 }
                 $i++;
             }
-            $cat->children=$cat->children;
         }
         return view('home',['base' => $base]);
     }
