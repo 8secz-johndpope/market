@@ -15,10 +15,10 @@ class Catagory extends  Model
     public $timestamps = false;
     public function children()
     {
-        return $this->hasMany('App\Model\Catagory','parent');
+        return $this->hasMany('App\Model\Catagory','parent_id');
     }
     public function parent(){
-        return $this->hasOne('App\Model\Catagory','parent');
+        return $this->hasOne('App\Model\Catagory','parent_id');
     }
 
 }
