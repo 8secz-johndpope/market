@@ -75,7 +75,20 @@
 		 	@foreach($base as $b)
 		 		<div class="category">
 		 			<h1>{{$categories[$b]["title"]}}</h1>
-		 		</div>
+		 		
+				 	@if(isset($children[$b])
+					 	<ul>
+					 	<?
+					 		for ($i=0; $i < 10; $i++) { 
+					 	?>
+					 			<li>{{$categories[$children[$i]]['title']}}</li>
+					 	<?	
+					 		}
+					 	?>
+					 	</ul>
+					 
+					@endif
+				 </div>
 		 	@endforeach
 			<h1>Let server udpate{{$categories["boxing-martial-arts-punch-bags"]["title"]}}</h1>
 		</section>
