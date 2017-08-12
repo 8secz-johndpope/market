@@ -6,13 +6,9 @@ use Illuminate\Http\Request;
 use App\Model\Catagory;
 class HomeController extends BaseController
 {
-<<<<<<< HEAD
     const MAX_CHILDREN = 10;
-=======
-    const MAX_CHILDREN = 9;
-    protected $layout = 'layouts.home';
 
->>>>>>> 1cdd5e50bf8cc4d056be778df32bc41d10a05914
+    protected $layout = 'layouts.home';
     /**
      * Create a new controller instance.
      *
