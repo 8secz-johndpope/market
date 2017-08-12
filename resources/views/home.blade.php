@@ -1,3 +1,6 @@
+<?
+	$this->i = 0;
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
@@ -79,9 +82,9 @@
 				 	@if(isset($children[$b]))
 					 	<ul>
 					 	<?
-					 		for ($i=0; $i < 10; $i++) { 
+					 		for ($this->i=0; $this->i < 10; $this->i++) { 
 					 	?>
-					 			<li>{{$categories[$children[$i]]['title']}}</li>
+					 			<li>{{$categories[$children[$this->i]]['title']}}</li>
 					 	<?	
 					 		}
 					 	?>
