@@ -10,11 +10,13 @@ section .panel{
     border-color: rgb(244,139, 29);
 }
 
+.panel-primary>.panel-heading{
+	height: 15vh;
+}
 .category-0>.panel-heading {
     color: #fff;
     background-color: rgb(244,139, 29);
     border-color: rgb(244,139, 29);
-    height: 15vh;
 }
 .read-more{
 	text-align: right;
