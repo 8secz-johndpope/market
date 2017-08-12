@@ -11,7 +11,7 @@ section .panel{
 .panel-heading h1{
 	margin: 0 auto;
 }
-.panel.panel-primary.category-0 {
+.panel.panel-primary{
     border-color: rgb(244,139, 29);
     box-shadow: 10px 10px 5px #888888;
 }
