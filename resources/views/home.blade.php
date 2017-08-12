@@ -72,7 +72,9 @@
 	</head>
 	<body class="">
 		<section class="categories">
-			<h1>{{var_dump($base)}}</h1>
+		 	@foreach($base as $b)
+		 		<h1>{{$categories["$b"]["title"]}}</h1>
+		 	@endforeach
 			<h1>Let server udpate{{$categories["boxing-martial-arts-punch-bags"]["title"]}}</h1>
 		</section>
 		<section class="spotligth">
