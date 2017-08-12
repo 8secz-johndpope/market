@@ -80,6 +80,11 @@
 					 	@foreach($b as $child)
 					 		<li>{{$child}}</li>
 					 	@endforeach
+					 	@if(sizeof($b) == 9)
+					 		<div>
+					 			read more..
+					 		</div>
+					 	@endif
 					 	</ul>
 					@endif
 				 </div>
