@@ -20,7 +20,7 @@
 		 	@foreach($base as $cat)
 		 		<div class="panel panel-primary {{$cat->class}}">
 		 			<div class="panel-heading">
-		 				<img class="icon" src="{{$cat->slug}}.png">
+		 				<img class="icon" src="css/icons/{{$cat->slug}}.png">
 		 				{{$cat->title}}
 		 			</div>
 		 			<div class="panel-body">
