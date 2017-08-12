@@ -5,7 +5,7 @@
 
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	    <title>{{$last}} - Sumra:  Buy Safe,Sell Safe</title>
+	    <title> Sumra:  Buy Safe,Sell Safe</title>
 	    <meta name="description" content="Cargocategory.description.sub_category">
 
 
@@ -73,21 +73,17 @@
 	</head>
 	<body class="">
 		<section class="categories">
-		 	@foreach($children as $key => $b)
+		 	@foreach($base as $cat)
 		 		<div class="category">
-		 			<h1>{{$b["title"]}}</h1>
-				 	@if(isset($b))
+		 			<h1>{{$cat->title}}</h1>
 					 	<ul>
-					 	@foreach($b as $child)
-					 		<li>{{$child}}</li>
+					 	@foreach($cat->children as $child)
+					 		<li>{{$child->title}}</li>
 					 	@endforeach
-					 	@if(count($b) == 10)
 					 		<div class="read-more">
 					 			<a href="#">more..</a>
 					 		</div>
-					 	@endif
 					 	</ul>
-					@endif
 				 </div>
 		 	@endforeach
 		</section>

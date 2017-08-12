@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Model\Catagory;
 class HomeController extends BaseController
 {
     const MAX_CHILDREN = 9;
@@ -28,7 +28,8 @@ class HomeController extends BaseController
     {
 
 
-        return view('home',['categories'=>$this->categories,'parents'=>$this->parents,'children'=>$this->getFirstChildren($this->children),'catids'=>$this->catids, 'base' => $this->base, 'last' => '']);
+        $base=Catagory::where('parent',0)->get();
+        return view('base' => $base]);
     }
     public function getNameCategory(String $index){
         return $this->categories[$index]["title"];
