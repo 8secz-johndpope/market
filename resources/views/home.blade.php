@@ -1,4 +1,6 @@
-{{$this->i = 0}}
+<? 
+	$this->i = 0
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
