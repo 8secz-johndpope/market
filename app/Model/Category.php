@@ -10,15 +10,15 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Catagory extends  Model
+class Category extends  Model
 {
     public $timestamps = false;
     public function children()
     {
-        return $this->hasMany('App\Model\Catagory','parent_id');
+        return $this->hasMany('App\Model\Category','parent_id');
     }
     public function parent(){
-        return $this->belongsTo('App\Model\Catagory');
+        return $this->belongsTo('App\Model\Category');
     }
 
 }

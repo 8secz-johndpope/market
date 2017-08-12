@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\Catagory;
+use App\Model\Category;
 class HomeController extends BaseController
 {
     const MAX_CHILDREN = 10;
@@ -28,7 +28,7 @@ class HomeController extends BaseController
      */
     public function index()
     {
-        $base=Catagory::where('parent_id',0)->get();
+        $base=Category::where('parent_id',0)->get();
         $i=0;
         foreach ($base as $cat) {
             $cat->class="category-$i";

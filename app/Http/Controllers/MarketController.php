@@ -9,7 +9,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Model\Catagory;
+use App\Model\Category;
 use App\Model\Relation;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -240,7 +240,7 @@ class MarketController extends BaseController
 
         $cat=$this->catids[$product['category']]['slug'];
 
-        $catagory= Catagory::find($product['category']);
+        $catagory= Category::find($product['category']);
 
 
         $params = [
@@ -341,7 +341,7 @@ class MarketController extends BaseController
         return '';
     }
     public function search(Request $request,$any){
-        $catagory = Catagory::where('slug',$any)->first();
+        $catagory = Category::where('slug',$any)->first();
 
         $page = $request->page ? $request->page : 1;
         if($page>100)
