@@ -72,7 +72,7 @@
 	</head>
 	<body class="">
 		<section class="categories">
-			<h1>{{var_dump($base); die}}</h1>
+			<h1>{{var_dump($base)}}</h1>
 			<h1>Let server udpate{{$categories["boxing-martial-arts-punch-bags"]["title"]}}</h1>
 		</section>
 		<section class="spotligth">
