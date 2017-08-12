@@ -16,6 +16,9 @@
 
 </head>
 	<body class="">
+		<header>
+			
+		</header>
 		<section class="categories">
 		 	@foreach($base as $cat)
 		 		<div class="panel panel-primary {{$cat->class}}">
