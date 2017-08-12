@@ -41,7 +41,7 @@ class HomeController extends BaseController
             foreach ($this->children[$b] as $child) {
                 $firstChildren[$child] = $this->categories[$child]["title"];
                 $i++;
-                if($i == MAX_CHILDREN)
+                if($i == self::MAX_CHILDREN)
                     break;
             }
             var_dump($firstChildren);
