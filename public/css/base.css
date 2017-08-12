@@ -1,4 +1,4 @@
-section .table{
+section .panel{
 	display: inline-grid;
 	width: 14.1%;
 	height: 350px;
