@@ -75,7 +75,6 @@
 		 	@foreach($base as $b)
 		 		<div class="category">
 		 			<h1>{{$categories[$b]["title"]}}</h1>
-		 		
 				 	@if(isset($children[$b]))
 					 	<ul>
 					 	@foreach($children[$b] as $child)
