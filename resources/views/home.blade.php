@@ -28,9 +28,11 @@
 					 	@foreach($cat->children as $child)
 					 		<li><a href="{{$child->slug}}">{{$child->title}}</a></li>
 					 	@endforeach
+					 	@if($cat->hasMore)
 					 		<div class="read-more">
 					 			<a href="#">more..</a>
 					 		</div>
+					 	@endif
 					 	</ul>
 					 </div>
 				 </div>
