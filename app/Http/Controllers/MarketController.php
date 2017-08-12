@@ -94,6 +94,7 @@ class MarketController extends BaseController
         foreach ($catagories as $catagory){
             $relation = Relation::where('child',$catagory->slug)->first();
             print_r($relation);
+            return $catagory;
             $parent = Catagory::where('slug',$relation->parent)->first();
             $catagory->parent=$parent->id;
             $catagory->save();
