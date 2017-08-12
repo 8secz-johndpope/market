@@ -17,5 +17,8 @@ class Catagory extends  Model
     {
         return $this->hasMany('App\Model\Catagory','parent');
     }
+    public function parent(){
+        return $this->hasOne('App\Model\Catagory','parent');
+    }
 
 }
