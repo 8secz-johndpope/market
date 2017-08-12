@@ -34,6 +34,6 @@ class HomeController extends BaseController
             $cat->class="category-$i";
             $i++;
         }
-        return $this->render('home',['base' => $base]);
+        return view('home',['base' => $base]);
     }
 }
