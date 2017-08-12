@@ -18,6 +18,9 @@ section .panel{
     background-color: rgb(244,139, 29);
     border-color: rgb(244,139, 29);
 }
+.icon{
+	height: 10vh;
+}
 .read-more{
 	text-align: right;
 }

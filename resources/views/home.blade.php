@@ -21,7 +21,7 @@
 		 		<div class="panel panel-primary {{$cat->class}}">
 		 			<div class="panel-heading">
 		 				<img class="icon" src="css/icons/{{$cat->slug}}.png">
-		 				{{$cat->title}}
+		 				<h1>{{$cat->title}}</h1>
 		 			</div>
 		 			<div class="panel-body">
 					 	<ul>
