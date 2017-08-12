@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Advert;
+use App\Model\Catagory;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -58,6 +59,14 @@ class UserController extends BaseController
     }
     public function ccreate(Request $request){
         $body=$request->json()->all();
+        $catagory=Catagory::where('slug',$body['slug'])->first();
+        if($catagory===null){
+            $catagory=new Catagory;
+            $catagory->slug=$body['slug'];
+            $catagory->save();
+
+        }
+        $body['catagory']=$catagory->id;
         $advert=Advert::where('sid','=',(int)$body['source_id'])->first();
         if($advert!==null){
             return ['a'=>'b'];
