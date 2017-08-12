@@ -80,8 +80,8 @@
 					 	<ul>
 					 	@foreach($children[$b] as $child)
 					 		<li>{{$categories[$child]['title']}}</li>
-					 	</ul>
 					 	@endforeach
+					 	</ul>
 					@endif
 				 </div>
 		 	@endforeach
