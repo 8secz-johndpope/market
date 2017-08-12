@@ -31,7 +31,7 @@ class HomeController extends BaseController
         $base=$this->baseAndFirstChildren();
         return view('home',['base' => $base]);
     }
-
+    
     public function baseAndFirstChildren(){
         $base=Category::where('parent_id',0)->get();
         $children = array();
@@ -43,7 +43,7 @@ class HomeController extends BaseController
                     $cat->hasMore = True;
                     break;
                 }
-                $children[i]= $child;
+                $children[$i]= $child;
                 $i++;   
             }
             $cat->children = $children;
