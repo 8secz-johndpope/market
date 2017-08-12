@@ -89,7 +89,7 @@
 					 			break;
 					 	?>
 					 	</ul>
-					 
+					 	@endforeach
 					@endif
 				 </div>
 		 	@endforeach
