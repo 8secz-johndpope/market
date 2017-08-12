@@ -78,7 +78,7 @@
 		 			<h1>{{$cat->title}}</h1>
 					 	<ul>
 					 	@foreach($cat->children as $child)
-					 		<li>{{$child->title}}</li>
+					 		<li class="{{$child->class}}">{{$child->title}}</li>
 					 	@endforeach
 					 		<div class="read-more">
 					 			<a href="#">more..</a>
