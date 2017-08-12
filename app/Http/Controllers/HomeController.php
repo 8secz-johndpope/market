@@ -46,7 +46,7 @@ class HomeController extends BaseController
                 $children[i]= $child;
                 $i++;   
             }
-            $cat->children = $children
+            $cat->children = $children;
         }
         return $base;
     }
