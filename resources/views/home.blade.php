@@ -83,7 +83,7 @@
 					 	<ul>
 					 	@foreach($children[$b] as $child)
 					 		<li>{{$categories[$child]['title']}}</li>
-					 	<?	
+					 	<?php	
 					 		$this->i++;
 					 		if($this->i == 9)
 					 			break;
