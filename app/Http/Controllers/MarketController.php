@@ -89,9 +89,9 @@ class MarketController extends BaseController
         return '';
     }
     public function insert(Request $request){
-        $cat = Catagory::find(100000000);
+        $cat = Catagory::find(101000000);
 
-        return $cat->children;
+        return $cat->parent;
     }
     public function fields(Request $request,$any){
         $id = $this->categories[$any]['id'];
