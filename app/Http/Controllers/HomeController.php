@@ -35,6 +35,9 @@ class HomeController extends BaseController
             # code...
             $i=0;
             $cat->class="category-$i";
+            if(count($cat->children) > MAX_CHILDREN){
+                $cat->children = array_slice($cat->children, 0, MAX_CHILDREN);
+            }
             /*foreach ($cat->children as $child) {
                 # code...
                 # i
