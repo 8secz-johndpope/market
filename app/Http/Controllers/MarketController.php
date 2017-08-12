@@ -105,7 +105,7 @@ class MarketController extends BaseController
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
-                'size'=>2000,
+                'size'=>10000,
                 'query' => [
                     'term' => [
                         "category" => $category->id
