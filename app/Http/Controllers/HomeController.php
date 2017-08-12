@@ -7,6 +7,8 @@ use App\Model\Catagory;
 class HomeController extends BaseController
 {
     const MAX_CHILDREN = 9;
+    protected $layout = 'layouts.home';
+
     /**
      * Create a new controller instance.
      *
