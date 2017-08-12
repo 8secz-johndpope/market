@@ -33,7 +33,6 @@ class HomeController extends BaseController
             # code...
             $i=0;
             $cat->class="category-$i";
-            var_dump($cat);
             /*if(count($cat->children) > self::MAX_CHILDREN){
                 $cat->children = array_slice($cat->children, 0, self::MAX_CHILDREN);
             }*/
