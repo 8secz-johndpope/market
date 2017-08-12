@@ -40,6 +40,7 @@ class HomeController extends BaseController
             $firstChildren = array();
             foreach ($this->children[$b] as $child) {
                 $firstChildren[$child] = $this->categories[$child]["title"];
+                $i++;
                 if($i == MAX_CHILDREN)
                     break;
             }
