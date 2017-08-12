@@ -89,27 +89,7 @@ class MarketController extends BaseController
         return '';
     }
     public function insert(Request $request){
-        $cats = Catagory::all();
-        foreach ($cats as $cat) {
-            $min=$cat->id;
-            if($min%100000000===0){
-                $max = $min + 99999999;
-            }
-            else if($min%1000000===0){
-                $max = $min + 999999;
-            }
-            else if($min%10000===0){
-                $max = $min + 9999;
-            }
-            else if($min%100===0){
-                $max = $min + 99;
-            }
-            else {
-                $max = $min;
-            }
-            $cat->ends=$max;
-            $cat->save();
-        }
+
 
         return 'abc';
     }
@@ -376,23 +356,8 @@ class MarketController extends BaseController
         return '';
     }
     public function search(Request $request,$any){
-        $id = $this->categories[$any]['id'];
-        $min = $id;
-        if($id%100000000===0){
-            $max = $min + 99999999;
-        }
-        else if($id%1000000===0){
-            $max = $min + 999999;
-        }
-        else if($id%10000===0){
-            $max = $min + 9999;
-        }
-        else if($id%100===0){
-            $max = $min + 99;
-        }
-        else {
-            $max = $min;
-        }
+        $catagory = Catagory::where('slug',$any)->first();
+
         $page = $request->page ? $request->page : 1;
         if($page>100)
         {
@@ -408,8 +373,8 @@ class MarketController extends BaseController
                 'query' => [
                     'range' => [
                       'category' => [
-                          'gte'=>$min,
-                          'lte'=>$max
+                          'gte'=>$catagory->id,
+                          'lte'=>$catagory->ends
                       ]
                     ]
                 ],
