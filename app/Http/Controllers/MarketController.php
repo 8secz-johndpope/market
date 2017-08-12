@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Model\Category;
+use App\Model\Field;
 use App\Model\Relation;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -89,7 +90,9 @@ class MarketController extends BaseController
         return '';
     }
     public function insert(Request $request){
-
+        $car = Category::find(105000000);
+        $make=Field::find(1);
+        $car->fields()->save($make);
 
         return 'abc';
     }

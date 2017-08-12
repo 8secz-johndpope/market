@@ -20,5 +20,7 @@ class Category extends  Model
     public function parent(){
         return $this->belongsTo('App\Model\Category');
     }
-
+    public function fields(){
+        return $this->belongsToMany('App\Model\Field');
+    }
 }

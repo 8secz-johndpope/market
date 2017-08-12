@@ -12,5 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Field extends  Model
 {
-
+    public function categories(){
+        return $this->belongsToMany('App\Model\Category');
+    }
 }
