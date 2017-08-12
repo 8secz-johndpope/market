@@ -18,12 +18,9 @@ section .panel{
 
 .panel-primary>.panel-heading{
 	height: 15vh;
-}
-.panel .panel-heading {
-    color: black;
+	color: black;
     background-color: #fff;
     border-color: #fff;
-
 }
 .read-more{
 	text-align: right;
