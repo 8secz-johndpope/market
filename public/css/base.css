@@ -1,3 +1,4 @@
 section .category{
 	display: inline-grid;
+	width: 15%;
 }
