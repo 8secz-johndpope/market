@@ -34,9 +34,9 @@ class HomeController extends BaseController
         return $categories[$name]["title"];
     }
     public function getFirstChildren(){
-        $i = 0;
         $base = array();
         foreach ($this->base as $b) {
+            $i = 0;
             $firstChildren = array();
             foreach ($this->children[$b] as $child) {
                 if($i == self::MAX_CHILDREN)
