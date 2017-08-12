@@ -29,23 +29,9 @@ class HomeController extends BaseController
     public function index()
     {
         $base=Catagory::where('parent_id',0)->get();
+        $i=0;
         foreach ($base as $cat) {
-            # code...
-            $i=0;
             $cat->class="category-$i";
-            /*if(count($cat->children) > self::MAX_CHILDREN){
-                $cat->children = array_slice($cat->children, 0, self::MAX_CHILDREN);
-            }*/
-            /*foreach ($cat->children as $child) {
-                # code...
-                # i
-                if($i<10){
-                    $child->class='visible-class';
-                }else{
-                    $child->class='invisible-class';
-                }
-               $i++; 
-            }*/
             $i++;
         }
         return view('home',['base' => $base]);
