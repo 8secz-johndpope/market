@@ -6,3 +6,6 @@ section .category{
 	margin: 0;
 	text-align: center;
 }
+.read-more{
+	text-align: right;
+}

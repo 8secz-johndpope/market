@@ -82,7 +82,7 @@
 					 		<li>{{$child}}</li>
 					 	@endforeach
 					 	@if(count($b) == 10)
-					 		<div>
+					 		<div class="read-more">
 					 			read more..
 					 		</div>
 					 	@endif
