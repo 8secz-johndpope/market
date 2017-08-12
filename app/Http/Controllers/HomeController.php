@@ -28,12 +28,26 @@ class HomeController extends BaseController
      */
     public function index()
     {
-        $base=Category::where('parent_id',0)->get();
-        $i=0;
-        foreach ($base as $cat) {
-            $cat->class="category-$i";
-            $i++;
-        }
+        $base=$this->baseAndFirstChildren();
         return view('home',['base' => $base]);
+    }
+
+    public function baseAndFirstChildren(){
+        $base=Category::where('parent_id',0)->get();
+        $children = array();
+        foreach ($base as $cat) {
+            $i=0;
+            $cat->class="category-$i";
+            foreach ($cat->children as $child) {
+                if($i == self::MAX_CHILDREN - 1){
+                    $cat->hasMore = True;
+                    break;
+                }
+                $children[i]= $child;
+                $i++;   
+            }
+            $cat->children = $children
+        }
+        return $base;
     }
 }
