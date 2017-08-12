@@ -240,23 +240,8 @@ class MarketController extends BaseController
 
         $cat=$this->catids[$product['category']]['slug'];
 
-        $id = $this->categories[$cat]['id'];
-        $min = $id;
-        if($id%100000000===0){
-            $max = $min + 99999999;
-        }
-        else if($id%1000000===0){
-            $max = $min + 999999;
-        }
-        else if($id%10000===0){
-            $max = $min + 9999;
-        }
-        else if($id%100===0){
-            $max = $min + 99;
-        }
-        else {
-            $max = $min;
-        }
+        $catagory= Catagory::find($product['category']);
+
 
         $params = [
             'index' => 'adverts',
@@ -270,8 +255,8 @@ class MarketController extends BaseController
 
                     'must'=>['range' => [
                         'category' => [
-                            'gte'=>$min,
-                            'lte'=>$max
+                            'gte'=>$catagory->id,
+                            'lte'=>$catagory->ends
                         ]
                     ]]
                     ]
