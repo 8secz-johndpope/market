@@ -122,11 +122,11 @@ class MarketController extends BaseController
 
         $product = $products[0];
         foreach ($product['meta'] as $key=>$val){
-            if(is_bool($val)){
-                echo 'is bool'.$key.'<br>';
+            if(in_array($val,['true','false'])){
+                echo 'is bool '.$key.'<br>';
             }
             else if(is_int($val)){
-                echo 'is int'.$key.'<br>';
+                echo 'is int '.$key.'<br>';
             }else{
                 echo 'is string '.$key.'<br>';
 
