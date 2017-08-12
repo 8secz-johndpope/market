@@ -1,5 +1,7 @@
 section .category{
 	display: inline-grid;
-	width: 14%;
+	width: 14.1%;
 	border: 2px solid rgb(244,139, 29);
+	margin: 0;
+	text-align: center;
 }
