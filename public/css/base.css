@@ -19,7 +19,7 @@ section .panel{
 .panel-primary>.panel-heading{
 	height: 15vh;
 }
-.category-0>.panel-heading {
+.panel-heading {
     color: black;
     background-color: #fff;
     border-color: #fff;
