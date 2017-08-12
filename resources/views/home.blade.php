@@ -19,7 +19,10 @@
 		<section class="categories">
 		 	@foreach($base as $cat)
 		 		<div class="panel {{$cat->class}}">
-		 			<h1>{{$cat->title}}</h1>
+		 			<div class="panel-heading">
+		 				{{$cat->title}}
+		 			</div>
+		 			<div class="panel-body">
 					 	<ul>
 					 	@foreach($cat->children as $child)
 					 		<li>{{$child->title}}</li>
@@ -28,6 +31,7 @@
 					 			<a href="#">more..</a>
 					 		</div>
 					 	</ul>
+					 </div>
 				 </div>
 		 	@endforeach
 		</section>
