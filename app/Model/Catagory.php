@@ -18,7 +18,7 @@ class Catagory extends  Model
         return $this->hasMany('App\Model\Catagory','parent_id');
     }
     public function parent(){
-        return $this->hasOne('App\Model\Catagory','parent_id');
+        return $this->belongsTo('App\Model\Catagory','parent_id');
     }
 
 }
