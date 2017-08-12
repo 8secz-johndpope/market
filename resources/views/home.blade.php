@@ -83,7 +83,7 @@
 					 	@endforeach
 					 	@if(count($b) == 10)
 					 		<div class="read-more">
-					 			read more..
+					 			<a href="#">read more..</a>
 					 		</div>
 					 	@endif
 					 	</ul>
