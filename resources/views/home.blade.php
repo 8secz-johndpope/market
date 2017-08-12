@@ -72,12 +72,12 @@
 	</head>
 	<body class="">
 		<section class="categories">
-		 	@foreach($children as $b)
+		 	@foreach($children as $key => $b)
 		 		<div class="category">
 		 			<h1>{{$b["title"]}}</h1>
-				 	@if(isset($children[$b]))
+				 	@if(isset($b))
 					 	<ul>
-					 	@foreach($children[$b] as $child)
+					 	@foreach($b as $child)
 					 		<li>{{$child}}</li>
 					 	@endforeach
 					 	</ul>
