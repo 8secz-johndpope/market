@@ -43,6 +43,44 @@ class MarketController extends BaseController
         return $this->categories[$id];
     }
 
+    public function update(Request $request){
+        $id=$request->id;
+        $replace=$request->replace;
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>2000,
+                'query' => [
+                    'term' => [
+                        "category" => $id
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { $ans=$a['_source'];
+            $ans['id']=$a['_id'];
+            return $ans; },$response['hits']['hits']);
+        foreach ($products as $product){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $product['id'],
+                'body' => [
+                    'doc' => [
+                        'category' => $replace
+                    ]
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+            $response = $this->client->update($params);
+            echo $response.'<br>';
+
+        }
+        return '';
+    }
     public function fields(Request $request,$any){
         $id = $this->categories[$any]['id'];
 
