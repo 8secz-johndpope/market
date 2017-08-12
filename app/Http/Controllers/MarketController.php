@@ -89,9 +89,29 @@ class MarketController extends BaseController
         return '';
     }
     public function insert(Request $request){
-        $cat = Catagory::find(101000000);
+        $cats = Catagory::all();
+        foreach ($cats as $cat) {
+            $min=$cat->id;
+            if($min%100000000===0){
+                $max = $min + 99999999;
+            }
+            else if($min%1000000===0){
+                $max = $min + 999999;
+            }
+            else if($min%10000===0){
+                $max = $min + 9999;
+            }
+            else if($min%100===0){
+                $max = $min + 99;
+            }
+            else {
+                $max = $min;
+            }
+            $cat->ends=$max;
+            $cat->save();
+        }
 
-        return $cat->parent;
+        return 'abc';
     }
     public function fields(Request $request,$any){
         $id = $this->categories[$any]['id'];
