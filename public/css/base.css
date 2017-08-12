@@ -9,6 +9,12 @@ section .panel{
 .panel.panel-primary.category-0 {
     border-color: rgb(244,139, 29);
 }
+
+.category-0>.panel-heading {
+    color: rgb(244,139, 29);
+    background-color: #fff;
+    border-color: rgb(244,139, 29);
+}
 .read-more{
 	text-align: right;
 }
