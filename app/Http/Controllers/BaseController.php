@@ -18,6 +18,7 @@ class BaseController extends Controller
     protected $parents;
     protected $children;
     protected $base;
+    protected $oldcats;
 
     public function __construct()
     {
@@ -52,6 +53,23 @@ class BaseController extends Controller
         foreach ($cats as $cat){
             $idmap[$cat['id']]=$cat;
         }
+
+
+        $params = [
+            'index' => 'oldcats',
+            'type' => 'category',
+            'body' => [
+                'size'=>2000,
+                'query' => [
+                    'match_all' => (object)[]
+                ]
+            ]
+        ];
+
+
+// Get doc at /my_index/my_type/my_id
+        $response = $this->client->search($params);
+        $this->oldcats = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
 
         $params = [
             'index' => 'relations',
