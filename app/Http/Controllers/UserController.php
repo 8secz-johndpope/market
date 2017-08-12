@@ -59,14 +59,14 @@ class UserController extends BaseController
     }
     public function ccreate(Request $request){
         $body=$request->json()->all();
-        $catagory=Category::where('slug',$body['slug'])->first();
-        if($catagory===null){
-            $catagory=new Category;
-            $catagory->slug=$body['slug'];
-            $catagory->save();
+        $category=Category::where('slug',$body['slug'])->first();
+        if($category===null){
+            $category=new Category;
+            $category->slug=$body['slug'];
+            $category->save();
 
         }
-        $body['catagory']=$catagory->id;
+        $body['category']=$category->id;
         $advert=Advert::where('sid','=',(int)$body['source_id'])->first();
         if($advert!==null){
             return ['a'=>'b'];
