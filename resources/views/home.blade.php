@@ -18,7 +18,7 @@
 	<body class="">
 		<section class="categories">
 		 	@foreach($base as $cat)
-		 		<div class="table {{$cat->class}}">
+		 		<div class="panel {{$cat->class}}">
 		 			<h1>{{$cat->title}}</h1>
 					 	<ul>
 					 	@foreach($cat->children as $child)
