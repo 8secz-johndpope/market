@@ -28,15 +28,13 @@ class HomeController extends BaseController
      */
     public function index()
     {
-
-        $this->layout = "home.blade";
         $base=Catagory::where('parent_id',0)->get();
         foreach ($base as $cat) {
             # code...
             $i=0;
             $cat->class="category-$i";
-            if(count($cat->children) > MAX_CHILDREN){
-                $cat->children = array_slice($cat->children, 0, MAX_CHILDREN);
+            if(count($cat->children) > self::MAX_CHILDREN){
+                $cat->children = array_slice($cat->children, 0, self::MAX_CHILDREN);
             }
             /*foreach ($cat->children as $child) {
                 # code...
