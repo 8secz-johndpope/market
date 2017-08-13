@@ -34,7 +34,7 @@ class HomeController extends BaseController
     
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
-        var_dump($base);
+        echo  json_encode($base);
         die;
         $children = array();
         $j = 0;
