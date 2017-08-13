@@ -40,15 +40,16 @@
 				</div>
 			</nav>
 			<div class="row search">
-				<form class="navbar-form" role="search">
-				  <div class="form-group">
-				    <input type="text" class="form-control" placeholder="Search">
-				    <input type="text" class="form-control" placeholder="Post Code">
-				    <span class="input-group-btn">
-				        <button class="btn btn-default" type="button">Go!</button>
-				    </span>
-				  </div>
-				</form>
+			<div class="col-lg-6">
+    			<div class="col-lg-6">
+					<div class="input-group">
+				      	<input type="text" class="form-control" placeholder="Search for...">
+				      	<input type="text" class="form-control" placeholder="Post Code">
+				      	<span class="input-group-btn">
+				     		<button class="btn btn-default" type="button">Go!</button>
+				      	</span>
+				    </div><!-- /input-group -->
+				</div><!-- /.col-lg-6 -->
 			</div>
 		</header>
 		<section class="categories">
