@@ -255,7 +255,7 @@ class UserController extends BaseController
         $advert->save();
         if($user->offer===0){
             \Stripe\Transfer::create(array(
-                "amount" => 2000,
+                "amount" => 500,
                 "currency" => "gbp",
                 "destination" => $user->stripe_account
             ));
