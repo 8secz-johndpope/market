@@ -58,11 +58,7 @@ class UserController extends BaseController
                 'submitForSettlement' => True
             ]
         ]);
-        if ($result->success) {
-            return $result;
-        } else {
-            return $result;
-        }
+        return ['result'=>$result];
     }
 
     public function adverts(Request $request)
