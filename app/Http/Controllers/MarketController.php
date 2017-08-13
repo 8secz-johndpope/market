@@ -338,6 +338,54 @@ class MarketController extends BaseController
         return ['msg'=>'No route found'];
     }
     public function query(Request $request){
+        $body = $request->json()->all();
+        $page = isset($body['page']) ? $body['page'] : 1;
+        $id = $body['category'];
+        $catagory=Category::find($id);
+        $pagesize = 25;
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'from' => ($page-1)*$pagesize,
+                'size'=>$pagesize,
+                'query' => [
+                    'range' => [
+                        'category' => [
+                            'gte'=>$catagory->id,
+                            'lte'=>$catagory->ends
+                        ]
+                    ]
+                ],
+                "sort"=> [
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ],
+                    [
+                        "_geo_distance"=> [
+                            "location" => [
+                                "lat" =>  52.5,
+                                "lon" => 1.2
+                            ],
+                            "order"=> "asc",
+                            "unit"=> "km",
+                            "distance_type"=> "plane"
+                        ]
+                    ],
+                    [
+                        "meta.price"=> ["order"=> "desc"]
+                    ],
+                    [
+                        "meta.price"=> ["order"=> "asc"]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+
+        return ['total'=>$response['hits']['total'],'adverts'=>$products];
 
     }
     public function search(Request $request,$any){
