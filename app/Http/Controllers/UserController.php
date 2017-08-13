@@ -159,6 +159,12 @@ class UserController extends BaseController
         $user->addresses()->save($address);
         return ['status'=>'success'];
     }
+    public function addresses(Request $request)
+    {
+        $user = Auth::user();
+        
+        return $user->addresses;
+    }
     public function account(Request $request)
     {
         $user = Auth::user();
