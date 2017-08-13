@@ -337,6 +337,9 @@ class MarketController extends BaseController
     public function error(Request $request){
         return ['msg'=>'No route found'];
     }
+    public function query(Request $request){
+
+    }
     public function search(Request $request,$any){
         $catagory = Category::where('slug',$any)->first();
 
@@ -363,6 +366,17 @@ class MarketController extends BaseController
                 "sort"=> [
                     [
                         "created_at"=> ["order"=> "desc"]
+                    ],
+                    [
+                        "_geo_distance"=> [
+                        "location" => [
+                            "lat" =>  52.5,
+                            "lon" => 1.2
+                        ],
+                            "order"=> "asc",
+                            "unit"=> "km",
+                            "distance_type"=> "plane"
+                        ]
                     ]
                 ]
             ]
