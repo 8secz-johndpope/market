@@ -38,7 +38,31 @@ class UserController extends BaseController
         $id = Auth::id();
         return ["yes"=>"no",'user'=>$user];
     }
+    public function adverts(Request $request)
+    {
 
+        $user = Auth::user();
+        $page = $request->page ? $request->page : 1;
+
+        $pagesize = 10;
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'from'=> ($page-1)*$pagesize,
+                'size'=>$pagesize,
+                'query' => [
+                    'bool' => [
+                        'must'=>['term'=>['user_id'=>$user->id]],
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        
+        return ['total'=>$response['hits']['total'],'adverts'=>$products];
+    }
     public function create(Request $request){
         $user = Auth::user();
         $advert =  new Advert;
