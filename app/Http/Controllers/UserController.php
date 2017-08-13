@@ -73,6 +73,7 @@ class UserController extends BaseController
         $body['created_at']=$milliseconds;
         $body['username']=$user->name;
         $body['user_id']=$user->id;
+        $body['phone']=$user->phone;
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
