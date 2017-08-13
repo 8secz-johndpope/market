@@ -50,12 +50,12 @@ class UserController extends BaseController
         $body['username']=$user->name;
         $body['user_id']=$user->id;
         $params = [
-            'index' => 'tests',
-            'type' => 'test',
+            'index' => 'adverts',
+            'type' => 'advert',
             'body' => $body
         ];
         $response = $this->client->index($params);
-
+        $advert->sid=$advert->id;
         $advert->elastic=$response['_id'];
         $advert->save();
 
