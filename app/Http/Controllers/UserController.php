@@ -124,6 +124,55 @@ class UserController extends BaseController
         $account->save();
         return ['status'=>'success'];
     }
+    public function identity(Request $request)
+    {
+        $user = Auth::user();
+
+        $filename=$request->name;
+        copy('https://s3.eu-central-1.amazonaws.com/chat.sumra.net/'.$filename, '/tmp/'.$filename);
+        $fp = fopen('/tmp/'.$filename, 'r');
+        $result=\Stripe\FileUpload::create(array(
+            'purpose' => 'identity_document',
+            'file' => $fp
+        ));
+        $account = \Stripe\Account::retrieve($user->stripe_account);
+        $account->legal_entity->verification->document = $result->id;
+        $account->save();
+        return ['status'=>'success'];
+    }
+
+    public function address(Request $request)
+    {
+        $user = Auth::user();
+        $account = \Stripe\Account::retrieve($user->stripe_account);
+        $account->legal_entity->address->line1 = $request->line1;
+        $account->legal_entity->address->city = $request->city;
+        $account->legal_entity->address->postal_code= $request->postcode;
+        $account->save();
+        return ['status'=>'success'];
+    }
+    public function account(Request $request)
+    {
+        $user = Auth::user();
+
+        $account = \Stripe\Account::retrieve($user->stripe_account);
+        $data['object']='bank_account';
+        $data['account_number']= $request->number;
+        $data['country']= 'gb';
+        $data['currency']= 'gbp';
+        $data['routing_number'] = $request->sortcode;
+        $account->external_accounts->create(array("external_account" => $data));
+        return ['status'=>'success'];
+    }
+    public function terms(Request $request)
+    {
+        $user = Auth::user();
+        $account = \Stripe\Account::retrieve($user->stripe_account);
+        $account->tos_acceptance->date = $request->date;
+        $account->tos_acceptance->ip = $request->ip;
+        $account->save();
+        return ['status'=>'success'];
+    }
     public function adverts(Request $request)
     {
 
