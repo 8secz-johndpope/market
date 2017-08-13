@@ -40,11 +40,15 @@ class UserController extends BaseController
     }
 
     public function create(Request $request){
-
+        $user = Auth::user();
         $advert =  new Advert;
         $advert->save();
         $body=$request->json()->all();
         $body['source_id']=$advert->id;
+        $milliseconds = round(microtime(true) * 1000);
+        $body['created_at']=$milliseconds;
+        $body['username']=$user->name;
+        $body['user_id']=$user->id;
         $params = [
             'index' => 'tests',
             'type' => 'test',
@@ -93,12 +97,14 @@ class UserController extends BaseController
             return ['msg'=>"Password can't be blank"];
         if(!$request->has('name'))
             return ['msg'=>"Name can't be blank"];
+        if(!$request->has('phone'))
+            return ['msg'=>"Phone can't be blank"];
         $user = User::where('email',$request->email)->first();
         if($user!==null){
             return ['msg'=>'Email is already registered'];
         }
         $user = new User;
-        $user->more(['email'=>$request->email,'name'=>$request->name,'password'=> bcrypt($request->password)]);
+        $user->more(['email'=>$request->email,'name'=>$request->name,'password'=> bcrypt($request->password),'phone'=>$request->phone]);
         $user->save();
         return ['msg'=>'success'];
     }
