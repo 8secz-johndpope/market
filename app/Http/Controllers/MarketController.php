@@ -401,14 +401,18 @@ class MarketController extends BaseController
                 'query' => [
                     'bool' => [
                       'must' => [
-                          'range' => [
-                              'category' => [
-                                  'gte'=>$catagory->id,
-                                  'lte'=>$catagory->ends
+                          [
+                              'range' => [
+                                  'category' => [
+                                      'gte'=>$catagory->id,
+                                      'lte'=>$catagory->ends
+                                  ]
                               ]
                           ],
-                          'match' => [
-                              'title'=>$q
+                          [
+                              'match' => [
+                                  'title'=>$q
+                              ]
                           ]
                       ],
 
