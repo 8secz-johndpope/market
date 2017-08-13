@@ -44,8 +44,10 @@
 				  <div class="form-group">
 				    <input type="text" class="form-control" placeholder="Search">
 				    <input type="text" class="form-control" placeholder="Post Code">
+				    <span class="input-group-btn">
+				        <button class="btn btn-default" type="button">Go!</button>
+				    </span>
 				  </div>
-				  <button type="submit" class="btn btn-default">Search</button>
 				</form>
 			</div>
 		</header>
