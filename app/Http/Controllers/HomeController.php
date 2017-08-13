@@ -34,6 +34,7 @@ class HomeController extends BaseController
     
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
+        var_dump($base);
         $children = array();
         $j = 0;
         foreach ($base as $cat) {
