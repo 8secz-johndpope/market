@@ -28,7 +28,7 @@ Route::get('/', 'MarketController@index');
 Route::get('/user/leaves','MarketController@leaves');
 Route::post('/api/user/login', 'UserController@login');
 Route::post('/api/user/register', 'UserController@register');
-Route::post('/api/user/advert/create','UserController@create');
+Route::post('/api/user/advert/create','UserController@create')->middleware('auth:api');
 Route::post('/api/user/advert/ccreate','UserController@ccreate');
 
 Route::get('/api/user/profile', 'UserController@profile')->middleware('auth:api');
