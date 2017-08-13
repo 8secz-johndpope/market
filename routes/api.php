@@ -32,6 +32,7 @@ Route::post('/user/addresses/add','UserController@address')->middleware('auth:ap
 Route::post('/user/bankaccounts/add','UserController@account')->middleware('auth:api');
 Route::post('/user/terms/accept','UserController@terms')->middleware('auth:api');
 
+Route::get('/user/account/info','UserController@info')->middleware('auth:api');
 
 Route::post('/search', 'MarketController@query');
 

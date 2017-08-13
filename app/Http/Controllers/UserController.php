@@ -173,6 +173,18 @@ class UserController extends BaseController
         $account->save();
         return ['status'=>'success'];
     }
+    public function info()
+    {
+        $user = Auth::user();
+        $account = \Stripe\Account::retrieve($user->stripe_account);
+        $balance = \Stripe\Balance::retrieve(
+            array("stripe_account" => $user->stripe_account)
+        );
+        $stripe_id=$user->stripe_id;
+        $cards=\Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+            'limit'=>10, 'object' => 'card'));
+        return ['account'=>$account,'balance'=>$balance,'cards'=>$cards];
+    }
     public function adverts(Request $request)
     {
 
