@@ -114,6 +114,17 @@ class UserController extends BaseController
 
         return ['status'=>'success','result'=>$charge];
     }
+    public function dob(Request $request)
+    {
+        $user = Auth::user();
+
+        $account = \Stripe\Account::retrieve($user->stripe_account);
+        $account->legal_entity->dob->day = $request->day;
+        $account->legal_entity->dob->month = $request->month;
+        $account->legal_entity->dob->year= $request->year;
+        $account->save();
+        return ['status'=>'success'];
+    }
     public function adverts(Request $request)
     {
 
