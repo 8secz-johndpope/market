@@ -1,3 +1,7 @@
+.categories{
+	width: 90%;
+	margin: 0 auto;
+}
 section .panel{
 	display: inline-grid;
 	height: 400px;
