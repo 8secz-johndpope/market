@@ -43,13 +43,17 @@
 				<div class="col-lg-6">
 				</div>
     			<div class="col-lg-6">
-					<div class="input-group input-group-lg">
-						<input type="text" class="form-control" placeholder="Search for..." aria-describedby="sizing-addon1">
-				      	<input type="text" class="form-control" placeholder="Post Code" aria-describedby="sizing-addon1">
-				      	<span class="input-group-btn">
-				     		<button class="btn btn-default" type="button">Go!</button>
-				      	</span>
-				    </div><!-- /input-group -->
+    				<form class="navbar-form navbar-left">
+        				<div class="form-group">
+							<div class="input-group input-group-lg">
+								<input type="text" class="form-control" placeholder="Search for..." aria-describedby="sizing-addon1">
+						      	<input type="text" class="form-control" placeholder="Post Code" aria-describedby="sizing-addon1">
+						      	<span class="input-group-btn">
+						     		<button class="btn btn-default" type="button">Go!</button>
+						      	</span>
+						    </div><!-- /input-group -->
+						</div>
+					</form>
 				</div><!-- /.col-lg-6 -->
 				<div class="col-lg-6 app-stores">
 						
