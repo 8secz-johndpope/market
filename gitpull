@@ -1,0 +1,2 @@
+cd /home/anil/market
+git pull origin master  2>&1
