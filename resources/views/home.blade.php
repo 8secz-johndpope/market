@@ -99,7 +99,7 @@
 				<div class="carousel-inner">
 				    <div class="item active">
 				    	@foreach($spl1 as $spl)
-				    		<div class="col-lg-4">
+				    		<div class="col-lg-3">
 					    		<div class="panel panel-primary {{$cat->class}}">
 						 			<div class="panel-heading">
 						 				<img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}}" class="lazyload" alt="">
