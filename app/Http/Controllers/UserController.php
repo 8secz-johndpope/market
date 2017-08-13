@@ -185,6 +185,21 @@ class UserController extends BaseController
             'limit'=>10, 'object' => 'card'));
         return ['account'=>$account,'balance'=>$balance,'cards'=>$cards];
     }
+
+    public function withdraw(Request $request)
+    {
+        $user = Auth::user();
+        $bank = $request->bank;
+        $amount  = $request->amount*100;
+        \Stripe\Stripe::setApiKey($user->sk_key);
+        \Stripe\Payout::create(array(
+            "amount" => $amount,
+            "currency" => "gbp",
+            "destination" => $bank
+        ));
+        return ['status'=>'success'];
+    }
+
     public function adverts(Request $request)
     {
 
