@@ -30,7 +30,7 @@ Route::post('/user/dob/add','UserController@dob')->middleware('auth:api');
 Route::post('/user/documents/identity','UserController@identity')->middleware('auth:api');
 Route::post('/user/addresses/add','UserController@add_address')->middleware('auth:api');
 
-Route::get('/user/addresses','UserController@add_address')->middleware('auth:api');
+Route::get('/user/addresses','UserController@addresses')->middleware('auth:api');
 
 
 Route::post('/user/bankaccounts/add','UserController@account')->middleware('auth:api');

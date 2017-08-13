@@ -162,7 +162,7 @@ class UserController extends BaseController
     public function addresses(Request $request)
     {
         $user = Auth::user();
-        
+
         return $user->addresses;
     }
     public function account(Request $request)
