@@ -39,7 +39,7 @@ class HomeController extends BaseController
         foreach ($base as $cat) {
             $i = 0;
             $cat->class = "category-$j";
-            foreach ($cat->children as $child) {
+            foreach ($cat->children()->limit(5)->get() as $child) {
                 if($i == self::MAX_CHILDREN - 1){
                     $cat->hasMore = True;
                     break;
