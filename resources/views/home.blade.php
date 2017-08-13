@@ -45,8 +45,8 @@
     			<div class="col-lg-6">
     				<form class="navbar-form navbar-left">
         				<div class="form-group">
-								<input type="text" class="form-control" placeholder="Search for...">
-								<div class="input-group col-lg-1">
+								<input type="text" class="form-control col-lg-6" placeholder="Search for...">
+								<div class="input-group col-lg-2">
 							      	<input type="text" class="form-control" placeholder="Post Code" >
 							      	<span class="input-group-btn">
 							     		<button class="btn btn-default" type="button">Go!</button>
