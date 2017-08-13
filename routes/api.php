@@ -14,18 +14,18 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/advert/categories','MarketController@categories');
-Route::get('/api/error','MarketController@error');
+Route::get('/error','MarketController@error');
 
-Route::get('/api/advert/category/fields/{any}','MarketController@fields');
+Route::get('/advert/category/fields/{any}','MarketController@fields');
 
-Route::post('/api/user/login', 'UserController@login');
-Route::get('/api/user/adverts', 'UserController@adverts');
+Route::post('/user/login', 'UserController@login');
+Route::get('/user/adverts', 'UserController@adverts');
 
-Route::post('/api/user/register', 'UserController@register');
-Route::post('/api/user/advert/create','UserController@create')->middleware('auth:api');
-Route::post('/api/user/advert/ccreate','UserController@ccreate');
+Route::post('/user/register', 'UserController@register');
+Route::post('/user/advert/create','UserController@create')->middleware('auth:api');
+Route::post('/user/advert/ccreate','UserController@ccreate');
 
-Route::get('/api/user/profile', 'UserController@profile')->middleware('auth:api');
+Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');
 
 
 
