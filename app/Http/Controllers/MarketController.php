@@ -425,17 +425,7 @@ class MarketController extends BaseController
                                   'title'=>$q
                               ]
                           ]
-                      ],
-                        "filter" =>[
-                            "geo_distance" => [
-                                "distance" => $body['distance'].'mi',
-                                "location" => [
-                                    "lat" => $lat,
-                                    "lon" => $lng
-                                ]
-                            ]
-                        ]
-
+                      ]
                     ]
 
                 ],
