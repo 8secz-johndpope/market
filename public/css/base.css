@@ -6,7 +6,9 @@ section .panel{
 }
 .navbar-default{
 	background-color: rgb(244,139,29);
-	color: #fff;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
 }
 .icon{
 	height: 50px;
