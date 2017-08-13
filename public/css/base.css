@@ -60,6 +60,7 @@ section .panel{
 .spotligth .panel-heading{
 	background-size: cover;
 	background-position: 50%;
+	height: 250px;
 	/*overflow: hidden;*/
 }
 .items-box-photo {
