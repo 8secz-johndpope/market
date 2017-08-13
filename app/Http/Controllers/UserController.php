@@ -68,7 +68,15 @@ class UserController extends BaseController
         $stripe_id=$user->stripe_id;
         $token=$request->token;
         $customer = \Stripe\Customer::retrieve($stripe_id);
-        $res=$customer->sources->create(array("source" => $token));
+        try{
+            $res=$customer->sources->create(array("source" => $token));
+
+        }catch (\Exception $e) {
+            return [
+                'success' => false,
+                'result' => 'no such token'
+            ];
+        }
         return [
             'success' => true,
             'result' => $res
