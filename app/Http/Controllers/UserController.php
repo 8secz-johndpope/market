@@ -165,6 +165,17 @@ class UserController extends BaseController
 
         return $user->addresses;
     }
+    public function verify_address(Request $request,$id){
+        $address = Address::find($id);
+        if($address->code===$request->code){
+            $address->verified=1;
+            $address->save();
+            return ['status'=>'success'];
+        }else{
+            return ['status'=>'failed'];
+        }
+        
+    }
     public function account(Request $request)
     {
         $user = Auth::user();

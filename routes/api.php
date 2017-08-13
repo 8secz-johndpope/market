@@ -31,6 +31,7 @@ Route::post('/user/documents/identity','UserController@identity')->middleware('a
 Route::post('/user/addresses/add','UserController@add_address')->middleware('auth:api');
 
 Route::get('/user/addresses','UserController@addresses')->middleware('auth:api');
+Route::post('/user/addresses/verify/{id}','UserController@verify_address')->middleware('auth:api');
 
 
 Route::post('/user/bankaccounts/add','UserController@account')->middleware('auth:api');
