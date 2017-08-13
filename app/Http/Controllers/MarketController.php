@@ -343,25 +343,30 @@ class MarketController extends BaseController
         $id = $body['category'];
         $catagory=Category::find($id);
         $pagesize = 25;
-
+        $lat = isset($body['lat']) ? $body['lat'] : 52.5;
+        $lng = isset($body['lng']) ? $body['lng'] : 1.2;
         $sort=[
             [
                 "created_at"=> ["order"=> "desc"]
             ]
         ];
+
         if(isset($body['order_by'])){
             if($body['order_by']==='distance'){
                 $sort=[
                     [
                         "_geo_distance"=> [
                             "location" => [
-                                "lat" =>  52.5,
-                                "lon" => 1.2
+                                "lat" =>  $lat,
+                                "lon" => $lng
                             ],
                             "order"=> "asc",
                             "unit"=> "km",
                             "distance_type"=> "plane"
                         ]
+                    ],
+                    [
+                        "created_at"=> ["order"=> "desc"]
                     ]
                 ];
             }
@@ -370,6 +375,9 @@ class MarketController extends BaseController
 
                     [
                         "meta.price"=> ["order"=> "desc"]
+                    ],
+                    [
+                        "created_at"=> ["order"=> "desc"]
                     ]
                 ];
             }
@@ -377,6 +385,9 @@ class MarketController extends BaseController
                 $sort=[
                     [
                         "meta.price"=> ["order"=> "asc"]
+                    ],
+                    [
+                        "created_at"=> ["order"=> "desc"]
                     ]
                 ];
             }
@@ -414,9 +425,7 @@ class MarketController extends BaseController
                                   'title'=>$q
                               ]
                           ]
-                      ],
-
-
+                      ]
 
                     ]
 
@@ -424,6 +433,17 @@ class MarketController extends BaseController
                 "sort"=> $sort
             ]
         ];
+        if(isset($body['distance'])&&isset($body['lat'])&&isset($body['lng'])){
+            $params['body']['query']['bool']["filter"] = [
+                "geo_distance" => [
+                    "distance" => $body['distance'].'mi',
+                    "pin.location" => [
+                        "lat" => $lat,
+                        "lon" => $lng
+                    ]
+                ]
+            ];
+        }
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
 
