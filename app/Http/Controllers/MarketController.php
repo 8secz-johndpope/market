@@ -113,7 +113,7 @@ class MarketController extends BaseController
     {
         $vals = FieldValue::all();
         foreach ($vals as $val){
-            $val->title=  ucwords(str_replace_array('-',' ',$$val->slug));
+            $val->title=  ucwords(str_replace_array('-',' ',$val->slug));
             $val->save();
         }
         $category = Category::find($any);
