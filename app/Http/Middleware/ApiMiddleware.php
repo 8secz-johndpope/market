@@ -13,8 +13,11 @@ class ApiMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $guard = null)
     {
-        return $next($request);
+        if (Auth::guard($guard)->check()) {
+            return ['msg'=>'Invalid Credentials'];
+        }
+            return $next($request);
     }
 }
