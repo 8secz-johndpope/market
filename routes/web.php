@@ -26,8 +26,8 @@ Route::get('/jobscats', 'MarketController@jobscats');
 
 Route::get('/', 'MarketController@index');
 Route::get('/user/leaves','MarketController@leaves');
-Route::get('/api/login', 'UserController@login');
-Route::get('/api/register', 'UserController@register');
+Route::post('/api/login', 'UserController@login');
+Route::post('/api/register', 'UserController@register');
 Route::post('/api/user/advert/create','UserController@create');
 Route::post('/api/user/advert/ccreate','UserController@ccreate');
 
