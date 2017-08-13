@@ -38,6 +38,33 @@ class UserController extends BaseController
         $id = Auth::id();
         return ["yes"=>"no",'user'=>$user];
     }
+
+
+    public function token(Request $request){
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+        ));
+        $clientToken = $gateway->clientToken()->generate();
+        return ['token'=>$clientToken];
+    }
+    public function nonce(Request $request){
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+        ));
+        $result = $gateway->transaction()->sale([
+            "amount" => $request->amount,
+            'paymentMethodNonce' => $request->payment_method_nonce,
+            'options' => [
+                'submitForSettlement' => True
+            ]
+        ]);
+        if ($result->success) {
+            return $result;
+        } else {
+            return $result;
+        }
+    }
+
     public function adverts(Request $request)
     {
 
