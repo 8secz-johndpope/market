@@ -57,7 +57,7 @@ section .panel{
 	text-align: right;
 }
 
-section .spotligth{
+section.spotligth{
 	width: 90%;
 	margin:30px auto;
 }
