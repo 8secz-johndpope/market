@@ -18,8 +18,8 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-           // return ['ha'];
-            return redirect('/home');
+           
+            return redirect('/api/error');
         }
 
         return $next($request);
