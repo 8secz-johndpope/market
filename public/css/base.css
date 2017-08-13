@@ -1,6 +1,5 @@
 section .panel{
 	display: inline-grid;
-	width: 12.1%;
 	height: 400px;
 	margin: 0 1%;
 	text-align: center;
