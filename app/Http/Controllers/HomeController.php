@@ -32,18 +32,12 @@ class HomeController extends BaseController
         //Need chande de response is not search client
         $min = 0;
         $max = 999999999;
-        $page = $request->page ? $request->page : 1;
-        if($page>100)
-        {
-            $page=100;
-        }
-        $pagesize = 50;
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
-                'from' => ($page-1)*$pagesize,
-                'size'=>$pagesize,
+                'from' => 0,
+                'size'=> 20,
                 'query' => [
                     'range' => [
                         'category' => [
@@ -62,6 +56,7 @@ class HomeController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        var_dump($products);die;
         return view('home',['base' => $base, 'products' => $products]);
     }
     
