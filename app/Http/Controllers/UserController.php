@@ -142,7 +142,7 @@ class UserController extends BaseController
         return ['status'=>'success'];
     }
 
-    public function address(Request $request)
+    public function add_address(Request $request)
     {
         $user = Auth::user();
         $account = \Stripe\Account::retrieve($user->stripe_account);
@@ -156,6 +156,7 @@ class UserController extends BaseController
         $address->postcode = $request->postcode;
         $address->code = rand(1000, 9999);
         $address->save();
+        $user->addresses()->save($address);
         return ['status'=>'success'];
     }
     public function account(Request $request)

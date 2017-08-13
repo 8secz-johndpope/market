@@ -28,7 +28,11 @@ Route::post('/user/card/charge','UserController@charge')->middleware('auth:api')
 
 Route::post('/user/dob/add','UserController@dob')->middleware('auth:api');
 Route::post('/user/documents/identity','UserController@identity')->middleware('auth:api');
-Route::post('/user/addresses/add','UserController@address')->middleware('auth:api');
+Route::post('/user/addresses/add','UserController@add_address')->middleware('auth:api');
+
+Route::get('/user/addresses','UserController@add_address')->middleware('auth:api');
+
+
 Route::post('/user/bankaccounts/add','UserController@account')->middleware('auth:api');
 Route::post('/user/terms/accept','UserController@terms')->middleware('auth:api');
 

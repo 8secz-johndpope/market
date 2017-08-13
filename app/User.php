@@ -54,4 +54,8 @@ class User extends Authenticatable
         $this->sk_key=$account->keys->secret;
 
     }
+    public function addresses()
+    {
+        return $this->hasMany('App\Model\Address');
+    }
 }
