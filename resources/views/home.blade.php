@@ -63,7 +63,7 @@
 		<section class="categories">
 			<div class ="row">
 		 	@foreach($base as $cat)
-		 		<div class="col-md-6 col-lg-1">
+		 		<div class="col-md-6 col-lg-2">
 			 		<div class="panel panel-primary {{$cat->class}}">
 			 			<div class="panel-heading">
 			 				<img class="icon-category" src="css/icons/{{$cat->slug}}.png">

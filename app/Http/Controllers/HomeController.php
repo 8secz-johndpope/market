@@ -39,8 +39,6 @@ class HomeController extends BaseController
         $children = array();
         $j = 0;
         foreach ($base as $cat) {
-
-            //$cat->
             $i = 0;
             $cat->class = "category-$j";
             foreach ($cat->children as $child) {
