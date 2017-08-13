@@ -253,6 +253,17 @@ class UserController extends BaseController
         $advert->sid=$advert->id;
         $advert->elastic=$response['_id'];
         $advert->save();
+        if($user->offer===0){
+            \Stripe\Transfer::create(array(
+                "amount" => 2000,
+                "currency" => "gbp",
+                "destination" => $user->stripe_account
+            ));
+            $user->offer=1;
+            $user->save();
+        }
+
+
 
         return ['body'=>$body,'response'=>$response];
     }
