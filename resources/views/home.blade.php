@@ -101,9 +101,7 @@
 				    	@foreach($spl1 as $spl)
 				    		<div class="col-lg-2">
 					    		<div class="panel panel-primary {{$cat->class}}">
-						 			<div class="panel-heading">
-						 				<figure class="items-box-photo">
-						 					<img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}}" class=" is-higher-height lazyloaded" alt="">
+						 			<div class="panel-heading" style="background-image: url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl[\'images\'])>0?$spl[\'images\'][0]:\"1000006.jpg\"}}">
 						 				</figure>
 						 			</div>
 						 			<div class="panel-body .visible-md-*">
