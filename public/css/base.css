@@ -50,6 +50,9 @@ section .panel{
     background-color: #fff;
     border-color: #fff;
 }
+.panel-body{
+	text-align: left;
+}
 .read-more{
 	text-align: right;
 }
