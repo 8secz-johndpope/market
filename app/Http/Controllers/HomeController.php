@@ -39,7 +39,7 @@ class HomeController extends BaseController
             $cat->class = "category-$j";
             if($cat->children()->count() > self::MAX_CHILDREN)
                 $cat->hasMore = true;
-            $cat->children= $cat->children()->limit(self::MAX_CHILDREN)->get();
+            $cat->children= $cat->children()->limit(self::MAX_CHILDREN + 1)->get();
             $j++;
         }
         return $base;
