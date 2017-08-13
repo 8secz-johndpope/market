@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="{{ asset('css/base.css') }}" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 	<body class="">
@@ -166,7 +167,7 @@
 				    	@endforeach  
 				    </div>
 				</div>
-				<!-- Left and right controls -->
+				<!-- Left and right controls
 				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
 					<span class="glyphicon glyphicon-chevron-left"></span>
 				    <span class="sr-only">Previous</span>
@@ -175,6 +176,7 @@
 				    <span class="glyphicon glyphicon-chevron-right"></span>
 				    <span class="sr-only">Next</span>
 				</a>
+				-->
 			</div>
 		</section>
 	</body>
