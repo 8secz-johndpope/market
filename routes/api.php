@@ -29,7 +29,7 @@ Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');
 
 
 Route::middleware(['auth:api','myown'])->get('/check',function(Request $request) {
-    return 'came here';
+    return ['pass'=>'next'];
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
