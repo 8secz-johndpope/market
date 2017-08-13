@@ -442,19 +442,19 @@ class MarketController extends BaseController
                 "sort"=> $sort
             ]
         ];
-        /*
+
         if(isset($body['distance'])&&isset($body['lat'])&&isset($body['lng'])){
             $params['body']['query']['bool']["filter"] = [
                 "geo_distance" => [
                     "distance" => $body['distance'].'mi',
-                    "pin.location" => [
+                    "location" => [
                         "lat" => $lat,
                         "lon" => $lng
                     ]
                 ]
             ];
         }
-        */
+
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
 
