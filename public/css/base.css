@@ -73,6 +73,15 @@ section .panel{
     height: 0;
     padding: 0 0 100%;
 }
+.items-box-photo img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
 @media screen and (min-width: 768px){
 	.items-box-photo {
     	width: 220px;
