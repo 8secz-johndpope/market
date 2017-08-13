@@ -111,6 +111,11 @@ class MarketController extends BaseController
     }
     public function fields(Request $request,$any)
     {
+        $vals = FieldValue::all();
+        foreach ($vals as $val){
+            $val->title=  ucwords(str_replace_array('-',' ',$$val->slug));
+            $val->save();
+        }
         $category = Category::find($any);
         if($category===null){
             return ['msg'=>'Catagory not found'];
