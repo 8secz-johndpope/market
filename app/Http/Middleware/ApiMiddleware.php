@@ -16,7 +16,7 @@ class ApiMiddleware
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (!Auth::guard($guard)->check()) {
+        if (Auth::user()===null) {
             return redirect('/api/error');
         }
             return $next($request);
