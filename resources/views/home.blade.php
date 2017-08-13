@@ -39,6 +39,14 @@
 				    </div><!-- /.navbar-collapse -->
 				</div>
 			</nav>
+			<div>
+				<form class="navbar-form navbar-left" role="search">
+				  <div class="form-group">
+				    <input type="text" class="form-control" placeholder="Search">
+				  </div>
+				  <button type="submit" class="btn btn-default">Search</button>
+				</form>
+			</div>
 		</header>
 		<section class="categories">
 			<div class ="row">
