@@ -50,7 +50,7 @@ class MarketController extends BaseController
         $base = Category::where('parent_id',0)->get();
         $categories = Category::all();
         foreach ($categories as $category){
-            $category->children=$category->children();
+            $category->children=$category->children;
         }
 
         return ['base'=>$base,'categories'=>$categories];
