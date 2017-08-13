@@ -28,7 +28,7 @@
 			 				<img class="icon" src="css/icons/{{$cat->slug}}.png">
 			 				<h1>{{$cat->title}}</h1>
 			 			</div>
-			 			<div class="panel-body">
+			 			<div class="panel-body .visible-md-*">
 						 	<ul>
 						 	@foreach($cat->children as $child)
 						 		<li><a href="{{$child->slug}}">{{$child->title}}</a></li>
