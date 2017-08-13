@@ -86,6 +86,9 @@
 		 	@endforeach
 		</section>
 		<section class="spotligth">
+			<div class="row">
+				Spotlight
+			</div>
 		</section>
 	</body>
 </html>
