@@ -17,7 +17,7 @@ class ApiMiddleware
     public function handle($request, Closure $next, $guard = null)
     {
         if (!Auth::guard($guard)->check()) {
-            return ['msg'=>'Invalid Credentials'];
+            return redirect('/api/error');
         }
             return $next($request);
     }
