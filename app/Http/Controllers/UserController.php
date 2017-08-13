@@ -174,7 +174,7 @@ class UserController extends BaseController
         }else{
             return ['status'=>'failed'];
         }
-        
+
     }
     public function account(Request $request)
     {
