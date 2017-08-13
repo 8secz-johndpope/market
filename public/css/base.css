@@ -60,4 +60,9 @@ section .panel{
 .spotligth img{
 	width: 100%;
 	vertical-align: middle;
+	top: 50%;
+    transform: translate(0, -50%);
+}
+.spotligth .panel-heading{
+	    overflow: hidden;
 }
