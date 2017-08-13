@@ -100,7 +100,7 @@
 				<div class="carousel-inner">
 				    <div class="item active">
 				    	@foreach($spl1 as $spl)
-				    		<div class="col-lg-3">
+				    		<div class="col-lg-2">
 					    		<div class="panel panel-primary {{$cat->class}}">
 						 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
 						 			</div>
@@ -117,7 +117,7 @@
 				    </div>
 				    <div class="item">
 				    	@foreach($spl2 as $spl)
-				    		<div class="col-lg-3">
+				    		<div class="col-lg-2">
 					    		<div class="panel panel-primary {{$cat->class}}">
 						 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
 						 			</div>
@@ -134,7 +134,7 @@
 				    </div>
 				    <div class="item">
 				    	@foreach($spl3 as $spl)
-				    		<div class="col-lg-3">
+				    		<div class="col-lg-2">
 					    		<div class="panel panel-primary {{$cat->class}}">
 						 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
 						 			</div>
@@ -151,7 +151,7 @@
 				    </div>
 				    <div class="item">
 				    	@foreach($spl4 as $spl)
-				    		<div class="col-lg-3">
+				    		<div class="col-lg-2">
 					    		<div class="panel panel-primary {{$cat->class}}">
 						 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
 						 			</div>
