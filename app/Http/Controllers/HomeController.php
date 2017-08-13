@@ -29,6 +29,11 @@ class HomeController extends BaseController
     public function index()
     {
         $base=$this->baseAndFirstChildren();
+        //Need chande de response is not search client
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        var_dump($products);
+        die;
         return view('home',['base' => $base]);
     }
     
