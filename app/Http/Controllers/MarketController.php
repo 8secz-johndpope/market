@@ -433,6 +433,7 @@ class MarketController extends BaseController
                 "sort"=> $sort
             ]
         ];
+        /*
         if(isset($body['distance'])&&isset($body['lat'])&&isset($body['lng'])){
             $params['body']['query']['bool']["filter"] = [
                 "geo_distance" => [
@@ -444,6 +445,7 @@ class MarketController extends BaseController
                 ]
             ];
         }
+        */
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
 
