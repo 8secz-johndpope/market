@@ -27,6 +27,7 @@ Route::get('/jobscats', 'MarketController@jobscats');
 Route::get('/', 'MarketController@index');
 Route::get('/user/leaves','MarketController@leaves');
 Route::get('/api/advert/categories','MarketController@categories');
+Route::get('/api/advert/category/fields/{any}','MarketController@fields');
 
 Route::post('/api/user/login', 'UserController@login');
 Route::get('/api/user/adverts', 'UserController@adverts');
