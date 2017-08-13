@@ -7,6 +7,10 @@ section .panel{
 .navbar-default{
 	background-color: rgb(244,139,29);
 }
+.navbar {
+	margin-bottom: 0;
+	border: none;
+}
 .row.search{
 	background-color: rgb(244,139,29);
 }
