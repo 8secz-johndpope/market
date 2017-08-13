@@ -58,7 +58,9 @@ section .panel{
 }
 
 .spotligth .panel-heading{
-	    overflow: hidden;
+	background-size: cover;
+	background-position: 50%;
+	/*overflow: hidden;*/
 }
 .items-box-photo {
     overflow: hidden;
