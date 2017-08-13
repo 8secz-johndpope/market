@@ -97,13 +97,21 @@ class UserController extends BaseController
         $card = $request->card;
         $amount  = $request->amount*100;
         $description= $request->description;
-        $charge=\Stripe\Charge::create(array(
-            "amount" => $amount,
-            "currency" => "gbp",
-            "customer" => $stripe_id,
-            "source" => $card, // obtained with Stripe.js
-            "description" => $description
-        ));
+        try{
+            $charge=\Stripe\Charge::create(array(
+                "amount" => $amount,
+                "currency" => "gbp",
+                "customer" => $stripe_id,
+                "source" => $card, // obtained with Stripe.js
+                "description" => $description
+            ));
+        }catch (\Exception $e) {
+            return [
+                'success' => false,
+                'result' => 'error charging the card'
+            ];
+        }
+
         return ['status'=>'success','result'=>$charge];
     }
     public function adverts(Request $request)
