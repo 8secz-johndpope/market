@@ -26,7 +26,7 @@ class HomeController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $base=$this->baseAndFirstChildren();
         //Need chande de response is not search client
