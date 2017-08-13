@@ -28,6 +28,7 @@ class HomeController extends BaseController
      */
     public function index(Request $request)
     {
+        var_dump($request);
         $base=$this->baseAndFirstChildren();
         //Need chande de response is not search client
         $min = 0;
