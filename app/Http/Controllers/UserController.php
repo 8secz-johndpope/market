@@ -154,7 +154,7 @@ class UserController extends BaseController
         $address->line1 = $request->line1;
         $address->city=$request->city;
         $address->postcode = $request->postcode;
-        $address->code = rand(100000, 999999);
+        $address->code = rand(1000, 9999);
         $address->save();
         return ['status'=>'success'];
     }
