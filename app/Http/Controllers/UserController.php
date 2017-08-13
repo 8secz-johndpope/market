@@ -43,7 +43,7 @@ class UserController extends BaseController
 
         $advert =  new Advert;
         $advert->save();
-        $body=$request->body;
+        $body=$request->json()->all();
         $body['source_id']=$advert->id;
         $params = [
             'index' => 'tests',
