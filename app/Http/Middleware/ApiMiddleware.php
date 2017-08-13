@@ -19,6 +19,6 @@ class ApiMiddleware
         if (Auth::user()===null) {
             return redirect('/api/error');
         }
-            return $next($request);
+        return $next($request);
     }
 }
