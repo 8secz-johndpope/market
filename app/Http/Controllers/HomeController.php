@@ -62,7 +62,6 @@ class HomeController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        var_dump($products);die;
         return view('home',['base' => $base, 'products' => $products]);
     }
     
