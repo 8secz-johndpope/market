@@ -57,31 +57,17 @@ section .panel{
 	text-align: right;
 }
 
+section .spotligth{
+	width: 90%;
+	margin:30px auto;
+}
 .spotligth .panel-heading{
 	background-size: cover;
 	background-position: 50%;
 	height: 250px;
 	/*overflow: hidden;*/
 }
-.items-box-photo {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding: 0 0 100%;
-}
-.items-box-photo img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-}
+
 @media screen and (min-width: 768px){
-	.items-box-photo {
-    	width: 220px;
-    	height: 220px;
-	}
+	
 }
