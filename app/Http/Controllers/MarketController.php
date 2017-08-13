@@ -115,7 +115,11 @@ class MarketController extends BaseController
         if($category===null){
             return ['msg'=>'Catagory not found'];
         }
-        return $category->fields;
+        $fields = $category->fields;
+        foreach ($fields as $field){
+            $field->values = $field->values;
+        }
+        return $fields;
 
     }
     public function addfields(Request $request,$any){
