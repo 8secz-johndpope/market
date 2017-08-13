@@ -31,7 +31,7 @@ class HomeController extends BaseController
         $base=$this->baseAndFirstChildren();
         //Need chande de response is not search client
         $min = 0;
-        $max = 100;
+        $max = 999999999;
         $page = $request->page ? $request->page : 1;
         if($page>100)
         {
