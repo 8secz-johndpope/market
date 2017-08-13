@@ -6,6 +6,7 @@ section .panel{
 	display: inline-grid;
 	height: 400px;
 	margin: 0 1%;
+	width: 100%;
 	text-align: center;
 }
 .navbar-default{
