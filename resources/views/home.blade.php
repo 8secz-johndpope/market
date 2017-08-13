@@ -42,9 +42,9 @@
 			<div class="row search">
 			<div class="col-lg-6">
     			<div class="col-lg-6">
+    				<input type="text" class="form-control" placeholder="Search for..." aria-describedby="sizing-addon1">
 					<div class="input-group">
-				      	<input type="text" class="form-control" placeholder="Search for...">
-				      	<input type="text" class="form-control" placeholder="Post Code">
+				      	<input type="text" class="form-control" placeholder="Post Code" aria-describedby="sizing-addon1">
 				      	<span class="input-group-btn">
 				     		<button class="btn btn-default" type="button">Go!</button>
 				      	</span>
