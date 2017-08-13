@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Address;
 use App\Model\Advert;
 use App\Model\Category;
 use App\User;
@@ -149,6 +150,12 @@ class UserController extends BaseController
         $account->legal_entity->address->city = $request->city;
         $account->legal_entity->address->postal_code= $request->postcode;
         $account->save();
+        $address = new Address;
+        $address->line1 = $request->line1;
+        $address->city=$request->city;
+        $address->postcode = $request->postcode;
+        $address->code = rand(100000, 999999);
+        $address->save();
         return ['status'=>'success'];
     }
     public function account(Request $request)
