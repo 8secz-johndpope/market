@@ -19,7 +19,7 @@ Route::get('/error','MarketController@error');
 Route::get('/advert/category/fields/{any}','MarketController@fields');
 
 Route::post('/user/login', 'UserController@login');
-Route::get('/user/adverts', 'UserController@adverts');
+Route::get('/user/adverts', 'UserController@adverts')->middleware(['auth:api','myown']);
 
 Route::post('/user/register', 'UserController@register');
 Route::post('/user/advert/create','UserController@create')->middleware('auth:api');
