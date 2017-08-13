@@ -154,7 +154,6 @@ class UserController extends BaseController
     public function account(Request $request)
     {
         $user = Auth::user();
-
         $account = \Stripe\Account::retrieve($user->stripe_account);
         $data['object']='bank_account';
         $data['account_number']= $request->number;
