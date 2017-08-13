@@ -33,7 +33,7 @@ class HomeController extends BaseController
     }
     
     public function baseAndFirstChildren(){
-        $base = Category::where('parent_id',0)->get()->limit(1);
+        $base = Category::where('parent_id',0)->limit(1)->all();
         var_dump($base);
         $children = array();
         $j = 0;
