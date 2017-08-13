@@ -101,7 +101,7 @@
 				    	@foreach($spl1 as $spl)
 				    		<div class="panel panel-primary {{$cat->class}}">
 					 			<div class="panel-heading">
-					 				<img data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}}" class="lazyload" alt="The north Face Men&#039;s Size 34 Pants">
+					 				<img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}}" class="lazyload" alt="">
 					 			</div>
 					 			<div class="panel-body .visible-md-*">
 					 				<h3 class="">{{$spl['title']}}</h3>
