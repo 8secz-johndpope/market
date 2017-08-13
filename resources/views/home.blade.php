@@ -46,10 +46,12 @@
     				<form class="navbar-form navbar-left">
         				<div class="form-group">
 								<input type="text" class="form-control" placeholder="Search for...">
-						      	<input type="text" class="form-control" placeholder="Post Code" >
-						      	<span class="input-group-btn">
-						     		<button class="btn btn-default" type="button">Go!</button>
-						      	</span>
+								<div class="input-group col-lg-1">
+							      	<input type="text" class="form-control" placeholder="Post Code" >
+							      	<span class="input-group-btn">
+							     		<button class="btn btn-default" type="button">Go!</button>
+							      	</span>
+							    </div>
 						</div>
 					</form>
 				</div><!-- /.col-lg-6 -->
