@@ -28,7 +28,7 @@ Route::post('/user/advert/ccreate','UserController@ccreate');
 Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');
 
 
-Route::middleware('myown')->get('/check',function(Request $request) {
+Route::middleware(['auth:api','myown'])->get('/check',function(Request $request) {
     return 'came here';
 });
 
