@@ -135,6 +135,9 @@ class MarketController extends BaseController
             $products = array_map(function ($a) {
                 return $a['_source'];
             }, $response['hits']['hits']);
+            if(count($products)==0){
+               continue;
+            }
             $product = $products[0];
             foreach ($product['meta'] as $key => $val) {
                 if (in_array($val, ['true', 'false'])) {
