@@ -117,7 +117,7 @@ class MarketController extends BaseController
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
-                'size'=>10000,
+                'size'=>1,
                 'query' => [
                     'term' => [
                         "category" => $category->id
@@ -132,8 +132,7 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-
-        foreach ($products as $product) {
+        $product = $products[0];
             foreach ($product['meta'] as $key => $val) {
                 if (in_array($val, ['true', 'false'])) {
                     echo 'is bool ' . $key . '<br>';
@@ -143,18 +142,11 @@ class MarketController extends BaseController
                     echo 'is string ' . $key . '<br>';
                     $field = Field::where('slug', $key)->first();
                     if ($field !== null) {
-                        $fieldval = FieldValue::where('slug', $val)->first();
-                        if ($fieldval == null) {
-                            $fieldval = new FieldValue;
-                            $fieldval->slug = $val;
-                            $fieldval->save();
-                        }
-                        $field->values()->save($fieldval);
+                        $category->fields->save($field);
                     }
-
                 }
             }
-        }
+
 
         return 'yes';
     }
