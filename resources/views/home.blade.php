@@ -40,6 +40,8 @@
 				</div>
 			</nav>
 			<div class="row search">
+				<div class="col-lg-6">
+				</div>
     			<div class="col-lg-6">
     				<input type="text" class="form-control" placeholder="Search for..." aria-describedby="sizing-addon1">
 					<div class="input-group input-group-lg">
@@ -49,6 +51,9 @@
 				      	</span>
 				    </div><!-- /input-group -->
 				</div><!-- /.col-lg-6 -->
+				<div class="col-lg-6">
+					
+				</div>
 			</div>
 		</header>
 		<section class="categories">
