@@ -55,10 +55,12 @@ class HomeController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        var_dump($response);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        var_dump($products);die;
-        return view('home',['base' => $base, 'products' => $products]);
+        $spl1 = array_slice($products, 0, 5);
+        $spl2 = array_slice($products, 5, 5);
+        $spl3 = array_slice($products, 10, 5);
+        $spl4 = array_slice($products, 15, 5);
+        return view('home',['base' => $base, 'spl1' => $spl1, 'spl2' => $spl2, 'spl3' => $spl3, 'spl4' => $spl4]);
     }
     
     public function baseAndFirstChildren(){
