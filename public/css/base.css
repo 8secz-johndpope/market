@@ -15,6 +15,10 @@ section .panel{
 	margin-bottom: 0;
 	border: none;
 }
+
+.categories .col-lg-2{
+	padding: 0;
+}
 .row.search{
 	background-color: rgb(244,139,29);
 	margin-bottom: 20px;
