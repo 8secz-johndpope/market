@@ -335,7 +335,7 @@ class MarketController extends BaseController
         return '';
     }
     public function error(Request $request){
-        return ['msg'=>'Access Denied'];
+        return ['msg'=>'No route found'];
     }
     public function search(Request $request,$any){
         $catagory = Category::where('slug',$any)->first();
