@@ -111,7 +111,7 @@ class MarketController extends BaseController
     }
     public function fields(Request $request,$any)
     {
-        
+
         $category = Category::find($any);
         if($category===null){
             return ['msg'=>'Catagory not found'];
@@ -333,6 +333,9 @@ class MarketController extends BaseController
             }
         }
         return '';
+    }
+    public function error(Request $request){
+        return ['msg'=>'Access Denied'];
     }
     public function search(Request $request,$any){
         $catagory = Category::where('slug',$any)->first();
