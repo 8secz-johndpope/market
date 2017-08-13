@@ -39,7 +39,7 @@
 				    </div><!-- /.navbar-collapse -->
 				</div>
 			</nav>
-			<div>
+			<div class="row">
 				<form class="navbar-form navbar-left" role="search">
 				  <div class="form-group">
 				    <input type="text" class="form-control" placeholder="Search">
