@@ -142,7 +142,7 @@ class MarketController extends BaseController
                     echo 'is string ' . $key . '<br>';
                     $field = Field::where('slug', $key)->first();
                     if ($field !== null) {
-                        $category->fields->save($field);
+                        $category->fields()->save($field);
                     }
                 }
             }
