@@ -28,11 +28,10 @@ class HomeController extends BaseController
      */
     public function index(Request $request)
     {
-        var_dump($request);
         $base=$this->baseAndFirstChildren();
         //Need chande de response is not search client
         $min = 0;
-        $max = 999999999;
+        $max = 100;
         $page = $request->page ? $request->page : 1;
         if($page>100)
         {
