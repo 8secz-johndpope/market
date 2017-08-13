@@ -95,7 +95,7 @@ class UserController extends BaseController
             return ['msg'=>"Name can't be blank"];
         $user = User::where('email',$request->email)->first();
         if($user!==null){
-            return ['msg','Email is already registered'];
+            return ['msg'=>'Email is already registered'];
         }
         $user = new User;
         $user->more(['email'=>$request->email,'name'=>$request->name,'password'=> bcrypt($request->password)]);
