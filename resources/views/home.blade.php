@@ -20,23 +20,26 @@
 			
 		</header>
 		<section class="categories">
+			<div class ="row">
 		 	@foreach($base as $cat)
-		 		<div class="panel panel-primary {{$cat->class}}">
-		 			<div class="panel-heading">
-		 				<img class="icon" src="css/icons/{{$cat->slug}}.png">
-		 				<h1>{{$cat->title}}</h1>
-		 			</div>
-		 			<div class="panel-body">
-					 	<ul>
-					 	@foreach($cat->children as $child)
-					 		<li><a href="{{$child->slug}}">{{$child->title}}</a></li>
-					 	@endforeach
-					 	@if($cat->hasMore)
-					 		<div class="read-more">
-					 			<a href="#">more..</a>
-					 		</div>
-					 	@endif
-					 	</ul>
+		 		<div class="col-sm-7">
+			 		<div class="panel panel-primary {{$cat->class}}">
+			 			<div class="panel-heading">
+			 				<img class="icon" src="css/icons/{{$cat->slug}}.png">
+			 				<h1>{{$cat->title}}</h1>
+			 			</div>
+			 			<div class="panel-body">
+						 	<ul>
+						 	@foreach($cat->children as $child)
+						 		<li><a href="{{$child->slug}}">{{$child->title}}</a></li>
+						 	@endforeach
+						 	@if($cat->hasMore)
+						 		<div class="read-more">
+						 			<a href="#">more..</a>
+						 		</div>
+						 	@endif
+						 	</ul>
+						 </div>
 					 </div>
 				 </div>
 		 	@endforeach
