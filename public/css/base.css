@@ -56,3 +56,7 @@ section .panel{
 .read-more{
 	text-align: right;
 }
+
+.spotligth img{
+	vertical-align: middle;
+}
