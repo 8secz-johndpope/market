@@ -117,7 +117,6 @@ class UserController extends BaseController
     public function dob(Request $request)
     {
         $user = Auth::user();
-
         $account = \Stripe\Account::retrieve($user->stripe_account);
         $account->legal_entity->dob->day = $request->day;
         $account->legal_entity->dob->month = $request->month;
