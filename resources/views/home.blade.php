@@ -51,8 +51,8 @@
 				      	</span>
 				    </div><!-- /input-group -->
 				</div><!-- /.col-lg-6 -->
-				<div class="col-lg-6">
-					
+				<div class="col-lg-6 app-stores">
+						
 				</div>
 			</div>
 		</header>
