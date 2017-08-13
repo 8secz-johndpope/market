@@ -4,6 +4,10 @@ section .panel{
 	margin: 0 1%;
 	text-align: center;
 }
+.navbar{
+	background-color: : rgb(244,139,29);
+	color: #fff;
+}
 .icon{
 	height: 60px;
 }
