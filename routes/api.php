@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/api/advert/categories','MarketController@categories');
+Route::get('/advert/categories','MarketController@categories');
 Route::get('/api/error','MarketController@error');
 
 Route::get('/api/advert/category/fields/{any}','MarketController@fields');
