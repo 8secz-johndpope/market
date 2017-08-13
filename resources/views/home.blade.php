@@ -26,7 +26,7 @@
 					        <span class="icon-bar"></span>
 					        <span class="icon-bar"></span>
 				     	</button>
-				      <a class="navbar-brand" href="#"><img src="css/logo.png"></a>
+				      <a class="navbar-brand icon" href="#"><img src="css/logo.png"></a>
 					</div>
 				</div>
 			</nav>
@@ -37,7 +37,7 @@
 		 		<div class="col-md-6 col-lg-1">
 			 		<div class="panel panel-primary {{$cat->class}}">
 			 			<div class="panel-heading">
-			 				<img class="icon" src="css/icons/{{$cat->slug}}.png">
+			 				<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
 			 				<h1>{{$cat->title}}</h1>
 			 			</div>
 			 			<div class="panel-body .visible-md-*">

@@ -4,7 +4,10 @@ section .panel{
 	margin: 0 1%;
 	text-align: center;
 }
-.panel-heading img.icon{
+.icon{
+	height: 10vh;
+}
+.panel-heading img.icon-category{
 	height: 10vh;
 }
 .panel-heading h1{
