@@ -22,7 +22,7 @@
 		<section class="categories">
 			<div class ="row">
 		 	@foreach($base as $cat)
-		 		<div class="col-sm-2 col-lg-2">
+		 		<div class="col-sm-4 col-lg-1">
 			 		<div class="panel panel-primary {{$cat->class}}">
 			 			<div class="panel-heading">
 			 				<img class="icon" src="css/icons/{{$cat->slug}}.png">
