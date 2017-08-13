@@ -87,7 +87,28 @@
 		</section>
 		<section class="spotligth">
 			<div class="row">
-				Spotlight
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					    <li data-target="#myCarousel" data-slide-to="1"></li>
+					    <li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+				</div>
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+				    <div class="item active">
+				      
+				    </div>
+
+				    <div class="item">
+				      
+				    </div>
+
+				    <div class="item">
+				      
+				    </div>
+				</div>
 			</div>
 		</section>
 	</body>
