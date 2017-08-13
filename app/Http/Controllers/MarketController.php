@@ -109,7 +109,16 @@ class MarketController extends BaseController
 
         return 'abc';
     }
-    public function fields(Request $request,$any){
+    public function fields(Request $request,$any)
+    {
+        $category = Category::find($any);
+        if($category===null){
+            return ['msg'=>'Catagory not found'];
+        }
+        return $category->fields;
+
+    }
+    public function addfields(Request $request,$any){
         $categories = Category::all();
 
         foreach ($categories as $category) {
