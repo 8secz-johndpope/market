@@ -22,6 +22,9 @@ Route::post('/user/login', 'UserController@login');
 Route::middleware('auth:api')->get('/user/adverts', 'UserController@adverts');
 Route::post('/user/paypal/nonce','UserController@nonce')->middleware('auth:api');
 Route::get('/user/paypal/token','UserController@token')->middleware('auth:api');
+Route::get('/user/cards','UserController@cards')->middleware('auth:api');
+Route::post('/user/cards/add','UserController@addcard')->middleware('auth:api');
+Route::post('/user/card/charge','UserController@charge')->middleware('auth:api');
 
 Route::post('/search', 'MarketController@query');
 

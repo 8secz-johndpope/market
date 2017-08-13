@@ -61,6 +61,43 @@ class UserController extends BaseController
         return ['result'=>$result];
     }
 
+    public function addcard(Request $request)
+    {
+        $user = Auth::user();
+
+        $stripe_id=$user->stripe_id;
+        $token=$request->token;
+        $customer = \Stripe\Customer::retrieve($stripe_id);
+        $res=$customer->sources->create(array("source" => $token));
+        return [
+            'success' => true,
+            'result' => $res
+        ];
+    }
+
+    public function  cards(Request $request){
+        $user = Auth::user();
+        $stripe_id=$user->stripe_id;
+        $cards=\Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+            'limit'=>10, 'object' => 'card'));
+        return $cards;
+    }
+    public function charge(Request $request) {
+        $user = Auth::user();
+
+        $stripe_id=$user->stripe_id;
+        $card = $request->card;
+        $amount  = $request->amount*100;
+        $description= $request->description;
+        $charge=\Stripe\Charge::create(array(
+            "amount" => $amount,
+            "currency" => "gbp",
+            "customer" => $stripe_id,
+            "source" => $card, // obtained with Stripe.js
+            "description" => $description
+        ));
+        return ['status'=>'success','result'=>$charge];
+    }
     public function adverts(Request $request)
     {
 
