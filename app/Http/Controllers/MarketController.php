@@ -388,6 +388,10 @@ class MarketController extends BaseController
                 ];
             }
         }
+        $q = '*';
+        if(isset($body['q'])){
+            $q=$body['q'];
+        }
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -403,7 +407,10 @@ class MarketController extends BaseController
                                   'lte'=>$catagory->ends
                               ]
                           ]
-                      ]
+                      ],
+                        'should' => [
+                            ['term'=>['title'=>$q]]
+                        ]
                     ]
 
                 ],
