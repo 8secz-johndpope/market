@@ -15,7 +15,6 @@ class ApiMiddleware
      */
     public function handle($request, Closure $next)
     {
-        return redirect('/api/error');
 
         return $next($request);
     }
