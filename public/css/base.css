@@ -7,6 +7,9 @@ section .panel{
 .navbar-default{
 	background-color: rgb(244,139,29);
 }
+.row.search{
+	background-color: rgb(244,139,29);
+}
 .navbar-default .navbar-nav>li>a {
     color: #fff;
 }
