@@ -39,8 +39,8 @@
 				    </div><!-- /.navbar-collapse -->
 				</div>
 			</nav>
-			<div class="row">
-				<form class="navbar-form navbar-left" role="search">
+			<div class="row search">
+				<form class="navbar-form" role="search">
 				  <div class="form-group">
 				    <input type="text" class="form-control" placeholder="Search">
 				    <input type="text" class="form-control" placeholder="Post Code">
