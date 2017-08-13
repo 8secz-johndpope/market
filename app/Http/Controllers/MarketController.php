@@ -408,7 +408,7 @@ class MarketController extends BaseController
                               ]
                           ],
                           'match' => [
-                              'term' => ['title',$q]
+                              'title'=>$q
                           ]
                       ],
 
