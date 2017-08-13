@@ -344,24 +344,14 @@ class MarketController extends BaseController
         $catagory=Category::find($id);
         $pagesize = 25;
 
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => [
-                'from' => ($page-1)*$pagesize,
-                'size'=>$pagesize,
-                'query' => [
-                    'range' => [
-                        'category' => [
-                            'gte'=>$catagory->id,
-                            'lte'=>$catagory->ends
-                        ]
-                    ]
-                ],
-                "sort"=> [
-                    [
-                        "created_at"=> ["order"=> "desc"]
-                    ],
+        $sort=[
+            [
+                "created_at"=> ["order"=> "desc"]
+            ]
+        ];
+        if(isset($body['order_by'])){
+            if($body['order_by']==='distance'){
+                $sort=[
                     [
                         "_geo_distance"=> [
                             "location" => [
@@ -372,14 +362,52 @@ class MarketController extends BaseController
                             "unit"=> "km",
                             "distance_type"=> "plane"
                         ]
-                    ],
+                    ]
+                ];
+            }
+            else if($body['order_by']==='price_desc'){
+                $sort=[
+
                     [
                         "meta.price"=> ["order"=> "desc"]
-                    ],
+                    ]
+                ];
+            }
+            else if($body['order_by']==='price_asc'){
+                $sort=[
                     [
                         "meta.price"=> ["order"=> "asc"]
                     ]
-                ]
+                ];
+            }
+            else{
+                $sort=[
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
+                ];
+            }
+        }
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'from' => ($page-1)*$pagesize,
+                'size'=>$pagesize,
+                'query' => [
+                    'bool' => [
+                      'must' => [
+                          'range' => [
+                              'category' => [
+                                  'gte'=>$catagory->id,
+                                  'lte'=>$catagory->ends
+                              ]
+                          ]
+                      ]
+                    ]
+
+                ],
+                "sort"=> $sort
             ]
         ];
         $response = $this->client->search($params);
