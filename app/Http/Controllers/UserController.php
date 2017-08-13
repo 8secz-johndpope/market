@@ -167,7 +167,6 @@ class UserController extends BaseController
     }
     public function verify_address(Request $request,$id){
         $address = Address::find($id);
-        return $address;
         if($address->code===$request->code){
             $address->verified=1;
             $address->save();
