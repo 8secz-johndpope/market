@@ -388,7 +388,7 @@ class MarketController extends BaseController
                 ];
             }
         }
-        $q = '*';
+        $q = '';
         if(isset($body['q'])){
             $q=$body['q'];
         }
@@ -406,11 +406,14 @@ class MarketController extends BaseController
                                   'gte'=>$catagory->id,
                                   'lte'=>$catagory->ends
                               ]
+                          ],
+                          'match' => [
+                              'term' => ['title',$q]
                           ]
                       ],
-                        'should' => [
-                            ['term'=>['title'=>$q]]
-                        ]
+
+
+
                     ]
 
                 ],
