@@ -110,29 +110,32 @@ class MarketController extends BaseController
         return 'abc';
     }
     public function fields(Request $request,$any){
-        $category = Category::where('slug',$any)->first();
+        $categories = Category::all();
 
+        foreach ($categories as $category) {
 
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => [
-                'size'=>1,
-                'query' => [
-                    'term' => [
-                        "category" => $category->id
-                    ]
-                ],
-                "sort"=> [
-                    [
-                        "created_at"=> ["order"=> "desc"]
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'size' => 1,
+                    'query' => [
+                        'term' => [
+                            "category" => $category->id
+                        ]
+                    ],
+                    "sort" => [
+                        [
+                            "created_at" => ["order" => "desc"]
+                        ]
                     ]
                 ]
-            ]
-        ];
-        $response = $this->client->search($params);
-        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $product = $products[0];
+            ];
+            $response = $this->client->search($params);
+            $products = array_map(function ($a) {
+                return $a['_source'];
+            }, $response['hits']['hits']);
+            $product = $products[0];
             foreach ($product['meta'] as $key => $val) {
                 if (in_array($val, ['true', 'false'])) {
                     echo 'is bool ' . $key . '<br>';
@@ -146,7 +149,7 @@ class MarketController extends BaseController
                     }
                 }
             }
-
+        }
 
         return 'yes';
     }
