@@ -96,7 +96,6 @@
 					    <li data-target="#myCarousel" data-slide-to="1"></li>
 					    <li data-target="#myCarousel" data-slide-to="2"></li>
 					</ol>
-				</div>
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner">
 				    <div class="item active">
@@ -177,6 +176,7 @@
 				    <span class="glyphicon glyphicon-chevron-right"></span>
 				    <span class="sr-only">Next</span>
 				</a>
+			</div>
 			</div>
 		</section>
 	</body>
