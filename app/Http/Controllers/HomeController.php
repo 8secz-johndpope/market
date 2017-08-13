@@ -34,14 +34,16 @@ class HomeController extends BaseController
     
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
+         var_dump($base);
+         die;
         $children = array();
         $j = 0;
         foreach ($base as $cat) {
+
+            //$cat->
             $i = 0;
             $cat->class = "category-$j";
             foreach ($cat->children as $child) {
-                var_dump($child);
-                die;
                 if($i == self::MAX_CHILDREN - 1){
                     $cat->hasMore = True;
                     break;
