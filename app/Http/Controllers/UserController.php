@@ -192,11 +192,20 @@ class UserController extends BaseController
         $bank = $request->bank;
         $amount  = $request->amount*100;
         \Stripe\Stripe::setApiKey($user->sk_key);
-        \Stripe\Payout::create(array(
-            "amount" => $amount,
-            "currency" => "gbp",
-            "destination" => $bank
-        ));
+        try{
+            \Stripe\Payout::create(array(
+                "amount" => $amount,
+                "currency" => "gbp",
+                "destination" => $bank
+            ));
+        }
+        catch (\Exception $e) {
+            return [
+                'success' => false,
+                'result' => 'error withdrawing'
+            ];
+        }
+
         return ['status'=>'success'];
     }
 
