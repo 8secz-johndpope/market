@@ -17,11 +17,15 @@ class Category extends  Model
     {
         return $this->hasMany('App\Model\Category','parent_id');
     }
+    /**
+     * [getBase description]
+     * @return [type] [description]
+     */
     public static function getBase(){
         return self::where('parent_id',0)->get();
     }
     public function firstChildren(int $max){
-        return $this->hasMany('App\Model\Category','parent_id')->limit($max)->get();
+        return $this->children()->limit($max)->get();
     }
     public function parent(){
         return $this->belongsTo('App\Model\Category');
