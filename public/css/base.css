@@ -23,7 +23,7 @@ section .panel{
 	text-align: center;
 }
 .navbar-default{
-	background-color: rgb(244,139,29);
+	background-color: #fff;
 }
 .navbar {
 	margin-bottom: 0;
