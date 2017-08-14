@@ -30,7 +30,7 @@ section .panel{
 	border: none;
 }
 .container-fluid{
-	height: 90px;
+	height: 110px;
 }
 .navbar-default .navbar-brand {
     color: #fff;
@@ -51,7 +51,8 @@ section .panel{
     font-size: 16px;
 }
 .icon{
-	height: 50px;
+	height: 80px;
+    margin-left: 100px;
 }
 .panel-heading img.icon-category{
 	height: 10vh;
