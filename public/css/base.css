@@ -6,7 +6,10 @@
     width: 65%;
     box-shadow: 0 0 2px rgb(242,108,37);
     height: 80px;
-    background-image: url('css/ic_search.png');
+    background-image: url('ic_search.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 36px;
 
 }
 input.form-control.input-lg {
