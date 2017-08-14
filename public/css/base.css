@@ -22,6 +22,9 @@ section .panel{
 .container-fluid{
 	height: 80px;
 }
+.navbar-default .navbar-brand {
+    color: #fff;
+}
 .categories .col-lg-2{
 	padding: 0;
 	width: 14%;
