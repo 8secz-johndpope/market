@@ -85,6 +85,7 @@ section.spotligth{
 .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
 	height: 80px;
 	background-color: #263249;
+	color:#fff;
 }
 @media screen and (min-width: 768px){
 	.navbar-form .input-group>.form-control {
