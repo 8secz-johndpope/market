@@ -56,7 +56,6 @@ class HomeController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        var_dump($products[0]);die;
         $spl1 = array_slice($products, 0, 5);
         $spl2 = array_slice($products, 5, 5);
         $spl3 = array_slice($products, 10, 5);
@@ -65,7 +64,7 @@ class HomeController extends BaseController
     }
     
     public function baseAndFirstChildren(){
-        $base = Category::where('parent_id',0)->get();
+        $base = Category::getBase();
         $j = 0;
         foreach ($base as $cat) {
             $cat->class = "category-$j";

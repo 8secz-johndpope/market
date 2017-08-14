@@ -17,6 +17,12 @@ class Category extends  Model
     {
         return $this->hasMany('App\Model\Category','parent_id');
     }
+    public function getBase(){
+        return self::where('parent_id',0)->get();
+    }
+    public function firstChildren(int $max){
+
+    }
     public function parent(){
         return $this->belongsTo('App\Model\Category');
     }
