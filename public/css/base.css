@@ -41,7 +41,7 @@ section .panel{
 }
 
 .row.search{
-	/* background-color: rgb(244,139,29); */
+	background-color: rgb(244,139,29);
 	margin-bottom: 20px;
     padding-bottom: 20px;
     border: 1px solid transparent;
