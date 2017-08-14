@@ -27,7 +27,7 @@ section .panel{
 	border: none;
 }
 .container-fluid{
-	height: 80px;
+	height: 90px;
 }
 .navbar-default .navbar-brand {
     color: #fff;
