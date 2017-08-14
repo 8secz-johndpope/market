@@ -24,6 +24,11 @@ class Category extends  Model
     public static function getBase(){
         return self::where('parent_id',0)->get();
     }
+    /**
+     * [firstChildren description]
+     * @param  int    $max
+     * @return [type]      [description]
+     */
     public function firstChildren(int $max){
         return $this->children()->limit($max)->get();
     }
