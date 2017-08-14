@@ -46,8 +46,8 @@
 				</div>
     			<div class="col-lg-6">
     				<form class="navbar-form" action="/search/">
-        				<div class="form-group col-lg-12 input-lg">
-								<input type="text" class="form-control" name="keyword" placeholder="Search for...">
+        				<div class="form-group col-lg-12">
+								<input type="text" class="form-control input-lg" name="keyword" placeholder="SEARCH">
 								<div class="input-group col-lg-4 input-group-lg">
 							      	<input type="text" class="form-control" placeholder="Post Code" >
 							      	<span class="input-group-btn">
