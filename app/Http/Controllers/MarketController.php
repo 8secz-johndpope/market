@@ -58,7 +58,11 @@ class MarketController extends BaseController
         return ['base'=>$base,'categories'=>$maps];
 
     }
-
+    /**
+     * [getAllCategories description]
+     * @param  Request $request [description]
+     * @return Array with base categories and all categories and subcategories
+     */
     public function getAllCategories(Request $request){
         $base = Category::where('parent_id',0)->get();
         $i = 0;
@@ -70,7 +74,6 @@ class MarketController extends BaseController
             $i++;
         }
         return ['base'=>$base,'categories'=>$maps];
-
     }
 
     public function update(Request $request){

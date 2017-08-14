@@ -56,7 +56,7 @@ class HomeController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        var_dump($products[1]);die;
+        var_dump($products[0]);die;
         $spl1 = array_slice($products, 0, 5);
         $spl2 = array_slice($products, 5, 5);
         $spl3 = array_slice($products, 10, 5);
