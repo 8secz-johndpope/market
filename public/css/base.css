@@ -76,7 +76,7 @@ section .panel{
 
 section.spotligth{
 	width: 90%;
-	margin:30px auto;
+	margin:100px auto;
 }
 .spotligth .panel-heading{
 	background-size: cover;
