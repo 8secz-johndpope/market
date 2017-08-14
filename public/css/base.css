@@ -19,7 +19,9 @@ section .panel{
 	margin-bottom: 0;
 	border: none;
 }
-
+.container-fluid{
+	height: 80px;
+}
 .categories .col-lg-2{
 	padding: 0;
 	width: 14%;
