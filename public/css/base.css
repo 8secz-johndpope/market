@@ -86,6 +86,8 @@ section.spotligth{
 	height: 80px;
 	background-color: #263249;
 	color:#fff;
+	width: 80px;
+	box-shadow: 0 0 2px #263249;
 }
 @media screen and (min-width: 768px){
 	.navbar-form .input-group>.form-control {
