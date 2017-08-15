@@ -1,6 +1,6 @@
 .categories{
-	width: 95%;
-	margin: 0 auto;
+	width: 85%;
+  margin: 30px auto;
 }
 .search input.form-control.input-lg {
     width: 70%;
@@ -124,9 +124,11 @@ ul {
   padding-left: 1em; 
   text-indent: -.7em;
   color: #263249;
-  font-size: 12px;
+  font-size: 16px;
 }
-
+.categories li a{
+  color: #263249;
+}
 .categories li::before {
   content: "• ";
   /*color: red;  or whatever color you prefer */
