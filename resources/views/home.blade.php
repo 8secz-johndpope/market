@@ -48,7 +48,7 @@
     				<form class="navbar-form" action="/search/">
         				<div class="form-group col-lg-12">
 								<input type="text" class="form-control input-lg" name="keyword" placeholder="SEARCH">
-								<div class="input-group col-lg-4 input-group-lg">
+								<div class="input-group col-lg-3 input-group-lg">
 							      	<input type="text" class="form-control" placeholder="POST CODE" >
 							      	<span class="input-group-btn">
 							     		<button class="btn btn-default" type="button">Go!</button>
