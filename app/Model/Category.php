@@ -42,7 +42,7 @@ class Category extends  Model
         if($descendants){
             //TODO 
         }
-        return $descendants
+        return $descendants;
     }
     public function parent(){
         return $this->belongsTo('App\Model\Category');
