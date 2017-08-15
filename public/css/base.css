@@ -1,3 +1,8 @@
+.top{
+  height: 10px;
+  width: 100%;
+  background-color: #263249;
+}
 .categories{
 	width: 85%;
   margin: 30px auto;
