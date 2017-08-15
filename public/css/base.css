@@ -1,7 +1,8 @@
 .top{
   height: 20px;
   width: 100%;
-  background-color: #263249;
+  /* background-color: #263249; */
+  background-color: #000;
 }
 .categories{
 	width: 85%;
