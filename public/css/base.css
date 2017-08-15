@@ -4,16 +4,12 @@
 }
 .search input.form-control.input-lg {
     width: 66%;
-    box-shadow: 0 0 7px #ed631e;
     height: 80px;
     background-image: url(ic_search.png);
     background-repeat: no-repeat;
     background-position: left;
-    padding-left: 36px;
-    /* border: 4px rgb(242,108,37); */
-    border-color: #ed631e;
-    border-width: 4px;
-    border-radius: 0;
+    padding-left: 56px;
+    background-position-x: 10px;
 }
 .search input.form-control{
 	box-shadow: 0 0 7px #ed631e;
@@ -22,7 +18,7 @@
     border-radius: 0;
 }
 .search input.form-control::-webkit-input-placeholder {
-  	color: #ed631e;
+  	color: #263249;
   	opacity: 0.8;
 
 }
