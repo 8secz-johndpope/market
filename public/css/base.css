@@ -187,7 +187,10 @@ ul {
 footer{
   height: 300px;
   background-image: url('footer.jpg');
-  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
