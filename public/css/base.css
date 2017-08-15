@@ -56,8 +56,15 @@ section .panel{
 	border: none;
 }
 .container-fluid{
-  background-color: #ed631e;
-	height: 110px;
+      /* background-color: #ed631e; */
+    height: 110px;
+    /* border-color: #263249; */
+    border: 2px;
+    background-color: white;
+    border-style: solid;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: #263249;
 }
 .navbar-default .navbar-brand {
     color: #fff;
