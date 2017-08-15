@@ -156,7 +156,10 @@ ul {
 .category-6 li::before{
   color: #ab47bc;
 }
-
+.categories .panel-body {
+    margin: 0;
+    min-height: 26vh;
+}
 
 
 
