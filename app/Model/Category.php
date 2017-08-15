@@ -39,6 +39,7 @@ class Category extends  Model
      */
     public function getAllDescendants(){
         $descendants = $this->children()->get();
+        var_dump($descendants);die;
         if($descendants){
             //TODO 
         }
