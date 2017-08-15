@@ -120,5 +120,8 @@ section.spotligth{
 	.navbar-form .input-group>.form-control {
     	width: 120%;
     	height: 80px;
- }
+ 	}
+ 	.col-lg-2 {
+    	width: 8.8%;
+	}
 }

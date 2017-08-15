@@ -44,7 +44,7 @@
 			<div class="row search">
 				<div class="col-lg-2">
 				</div>
-    			<div class="col-lg-8">
+    			<div class="col-lg-9">
     				<form class="navbar-form" action="/search/">
         				<div class="form-group col-lg-12">
 								<input type="text" class="form-control input-lg" name="keyword" placeholder="SEARCH">
@@ -57,9 +57,6 @@
 						</div>
 					</form>
 				</div><!-- /.col-lg-6 -->
-				<div class="col-lg-3 app-stores">
-						
-				</div>
 			</div>
 		</header>
 		<section class="categories">
