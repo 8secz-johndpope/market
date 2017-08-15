@@ -21,9 +21,6 @@
     border-width: 4px;
     border-radius: 0;
 }
-input.form-control.input-lg {
-    border: none;
-}
 section .panel{
 	display: inline-grid;
 	height: 400px;
