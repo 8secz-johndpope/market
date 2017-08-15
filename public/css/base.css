@@ -60,15 +60,15 @@ section .panel{
 	border: none;
 }
 .container-fluid{
-         /* background-color: #ed631e; */
+        /* background-color: #ed631e; */
     height: 110px;
     /* border-color: #263249; */
-    border: 2px;
+    border: 1px;
     background-color: white;
     border-style: solid;
     border-right-color: white;
     border-left-color: white;
-    box-shadow: 0 0 7px #263249;
+    box-shadow: 0 0 3px #263249;
     border-bottom-color: #263249;
 }
 .navbar-default .navbar-brand {
