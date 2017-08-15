@@ -132,11 +132,11 @@ section.spotligth{
 }
 .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
 	height: 90px;
-	background-color: #263249;
+	background-color: #ed631e;
 	color:#fff;
 	width: 80px;
 	/* box-shadow: 0 0 5px #263249; */
-    border-color: #263249;
+    border-color: #ed631e;
 
 }
 ul {
