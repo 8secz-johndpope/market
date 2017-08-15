@@ -186,7 +186,10 @@ ul {
 }
 section.features{
   min-height: 400px;
-  background-color: #EEEEEE; 
+  background-color: #FBE9E7; 
+}
+section.social-media{
+  min-height: 400px;
 }
 footer{
   height: 300px;
