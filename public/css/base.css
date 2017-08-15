@@ -101,13 +101,13 @@ section.spotligth{
 	background-color: #263249;
 	color:#fff;
 	width: 80px;
-	box-shadow: 0 0 2px #263249;
+	/* box-shadow: 0 0 5px #263249; */
+    border-color: #263249;
+
 }
 @media screen and (min-width: 768px){
 	.navbar-form .input-group>.form-control {
     	width: 120%;
     	height: 80px;
-    	box-shadow: 0 0 7px rgb(242,108,37);
-    	border:none;
  }
 }
