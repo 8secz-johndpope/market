@@ -26,6 +26,16 @@
   	opacity: 0.8;
 
 }
+.search input.form-control::-moz-placeholder {
+  	color: #ed631e;
+  	opacity: 0.8;
+
+}
+.search input.form-control:::-ms-input-placeholder {
+  	color: #ed631e;
+  	opacity: 0.8;
+
+}
 section .panel{
 	display: inline-grid;
 	height: 400px;
