@@ -120,6 +120,16 @@ ul {
   padding: 0;
   margin: 0;
 }
+li {
+  padding-left: 1em; 
+  text-indent: -.7em;
+}
+
+.categories li::before {
+  content: "• ";
+  /*color: red;  or whatever color you prefer */
+  font-weight: 900;
+}
 .category-0 li::before {
   /*content: "• ";*/
   color: #9ccc65; /* or whatever color you prefer */
@@ -130,15 +140,23 @@ ul {
 .category-2 li::before{
   color: #8d6e63;
 }
-
-li {
-  padding-left: 1em; 
-  text-indent: -.7em;
-}tegories li::before {
-  content: "• ";
-  /*color: red;  or whatever color you prefer */
-  font-weight: 900;
+.category-3 li::before{
+  color: #78909c;
 }
+.category-3 li::before{
+  color: #26c6da;
+}
+.category-3 li::before{
+  color: #dc7373;
+}
+.category-3 li::before{
+  color: #ab47bc;
+}
+
+
+
+
+
 @media screen and (min-width: 768px){
 	.navbar-form .input-group>.form-control {
     	width: 100%;
