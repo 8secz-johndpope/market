@@ -21,6 +21,11 @@
     border-width: 4px;
     border-radius: 0;
 }
+.search input.form-control::-webkit-input-placeholder {
+  	color: #ed631e;
+  	opacity: 1;
+
+}
 section .panel{
 	display: inline-grid;
 	height: 400px;
