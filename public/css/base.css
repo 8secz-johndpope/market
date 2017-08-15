@@ -193,7 +193,8 @@ section.social-media{
 }
 footer{
   height: 600px;
-  background-image: url('footer.jpg');
+  background-image: url('footer.png');
+  background-color: black;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
