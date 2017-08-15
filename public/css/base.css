@@ -68,8 +68,8 @@ section .panel{
     border-style: solid;
     border-right-color: white;
     border-left-color: white;
-    box-shadow: 0 0 3px #263249;
-    border-bottom-color: #263249;
+    box-shadow: 0 0 3px #000;
+    border-bottom-color: #000;
 }
 .navbar-default .navbar-brand {
     color: #fff;
