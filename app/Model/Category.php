@@ -32,6 +32,18 @@ class Category extends  Model
     public function firstChildren(int $max){
         return $this->children()->limit($max)->get();
     }
+
+    /**
+     * [getAllDescendants description]
+     * @return [type] [description]
+     */
+    public function getAllDescendants(){
+        $descendants = $this->children()->get();
+        if($descendants){
+            //TODO 
+        }
+        return $descendants
+    }
     public function parent(){
         return $this->belongsTo('App\Model\Category');
     }
