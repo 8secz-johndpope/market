@@ -179,6 +179,14 @@
 			</div>
 			</div>
 		</section>
+		<section class="features">
+			<div class="row">
+			</div>
+		</section>
+		<section class="social-media">
+			<div class="row">
+			</div>
+		</section>
 		<footer>
 		</footer>
 	</body>
