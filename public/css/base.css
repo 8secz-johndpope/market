@@ -167,7 +167,17 @@ ul {
     min-height: 28vh;
 }
 
-
+@media screen and (min-width: 1200px){
+  .search .col-lg-2 {
+    width: 16%;
+  }
+  .categories .col-lg-2 {
+    width: 16%;
+  }
+  .spotligth .col-lg-2 {
+    width: 17%;
+  }
+}
 
 
 @media screen and (min-width: 768px){
@@ -175,13 +185,5 @@ ul {
     	width: 100%;
     	height: 80px;
  	}
- 	.search .col-lg-2 {
-    	width: 16%;
-	}
-  .categories .col-lg-2 {
-      width: 16%;
-  }
-  .spotligth .col-lg-2 {
-    width: 17%;
-  }
+ 	
 }
