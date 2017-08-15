@@ -210,7 +210,9 @@ footer{
     width: 20%;
   }
 }
-
+.carousel-control {
+  width: 40px;
+}
 
 @media screen and (min-width: 768px){
 	.navbar-form .input-group>.form-control {
