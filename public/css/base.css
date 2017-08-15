@@ -1,6 +1,7 @@
 .categories{
 	width: 85%;
   margin: 30px auto;
+  height: 38vh;
 }
 .search input.form-control.input-lg {
     width: 70%;
@@ -97,7 +98,7 @@ section .panel{
 }
 
 section.spotligth{
-	width: 90%;
+	width: 85%;
 	margin:100px auto;
 }
 .spotligth .panel-heading{
