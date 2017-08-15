@@ -42,9 +42,9 @@
 				</div>
 			</nav>
 			<div class="row search">
-				<div class="col-lg-3">
+				<div class="col-lg-2">
 				</div>
-    			<div class="col-lg-6">
+    			<div class="col-lg-8">
     				<form class="navbar-form" action="/search/">
         				<div class="form-group col-lg-12">
 								<input type="text" class="form-control input-lg" name="keyword" placeholder="SEARCH">
