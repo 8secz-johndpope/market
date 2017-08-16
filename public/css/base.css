@@ -96,21 +96,21 @@ section .panel{
     margin-left: 100px;
 }
 .panel-heading img.icon-category{
-	height: 10vh;
+	height: 15vh;
 }
 .panel-heading h1{
 	margin: 0 auto;
 }
 .panel.panel-primary{
-    border-color: white;
-    box-sizing: border-box;
+  border-color: white;
+  box-sizing: border-box;
 }
 
 .panel-primary>.panel-heading{
-	height: 15vh;
+	height: 19vh;
 	color: black;
-    background-color: #fff;
-    border-color: #fff;
+  background-color: #fff;
+  border-color: #fff;
 }
 .panel-body{
 	text-align: left;
