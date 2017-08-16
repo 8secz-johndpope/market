@@ -193,7 +193,7 @@
 					<p>What you see is what you get, no hidden fees on our purchase prices</p>
 				</div>
 				<div class="col-lg-3">
-					<img src="css/free-uk.svg">
+					<img src="css/heart-black.svg">
 					<h2>HASSLE FREE</h2>
 					<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
 				</div>
