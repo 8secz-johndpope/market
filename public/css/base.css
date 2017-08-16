@@ -159,6 +159,9 @@ ul {
   /*color: red;  or whatever color you prefer */
   font-weight: 900;
 }
+.categories .btn-info{
+    margin-top: 10px;
+}
 .category-0 li::before {
   /*content: "• ";*/
   color: #9ccc65; /* or whatever color you prefer */
