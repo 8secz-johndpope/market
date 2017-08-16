@@ -129,7 +129,7 @@ section.spotligth{
 
 .spotligth .row {
     margin: 100px auto;
-    width: 85%;
+    width: 92%;
 }
 
 .spotligth .panel-primary{
@@ -264,7 +264,7 @@ footer{
   color: #ed631e;
 }
 .carousel-inner {
-    margin: 0 120px;
+    margin: 0 40px;
     padding-bottom: 10px;
     padding-top: 10px;
 }
