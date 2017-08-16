@@ -188,8 +188,14 @@
 					<p>We’ll give you discounts and credits for being better buyers & sellers</p>
 				</div>
 				<div class="col-lg-3">
+					<img src="css/free-uk.svg">
+					<h2>FREE SHIPPING</h2>
+					<p>What you see is what you get, no hidden fees on our purchase prices</p>
 				</div>
 				<div class="col-lg-3">
+					<img src="css/free-uk.svg">
+					<h2>HASSLE FREE</h2>
+					<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
 				</div>
 			</div>
 		</section>
