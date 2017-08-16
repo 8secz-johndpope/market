@@ -260,6 +260,9 @@ footer{
   width: 40px;
   color: #ed631e;
 }
+.carousel-control:hover {
+  color: #ed631e;
+}
 .carousel-inner {
     margin: 0 120px;
     padding-bottom: 10px;
