@@ -26,7 +26,7 @@ a.navbar-brand {
     background-position-x: 10px;
 }
 .search input.form-control{
-	box-shadow: 0 0 7px #ed631e;
+	box-shadow: 0 1px 2px #ed631e;
 	border-color: #ed631e;
   border-width: 4px;
   border-radius: 0;
@@ -95,7 +95,7 @@ a.navbar-brand {
     color: #000;
     font-size: 16px;
     font-weight: bold;
-    margin: auto 0;
+    padding-top: 45px;
 }
 .icon{
 	height: 80px;
