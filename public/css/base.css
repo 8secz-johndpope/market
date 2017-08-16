@@ -124,6 +124,7 @@ section .panel{
 section.spotligth{
 	width: 85%;
 	margin:100px auto;
+  background-color: #FBE9E7;
 }
 .spotligth .panel-heading h3{
   font-size: 16px;
