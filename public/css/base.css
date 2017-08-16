@@ -128,7 +128,7 @@ section.spotligth{
 }
 
 .spotligth .row {
-    margin: 100px auto;
+    margin: 100px 50px;
     width: 92%;
 }
 
@@ -287,7 +287,7 @@ a.left.carousel-control {
     width: 14.2%;
   }
   .spotligth .col-lg-2 {
-    width: 16.666667%;
+    width: 16%;
   }
 }
 
