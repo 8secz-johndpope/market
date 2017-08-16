@@ -127,7 +127,7 @@ section.spotligth{
   margin-top: 100px; 
 }
 
-.spotligth.row {
+.spotligth .row {
     margin: 100px auto;
     width: 85%;
 }
