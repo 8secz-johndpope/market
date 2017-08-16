@@ -61,14 +61,14 @@ section .panel{
 }
 .container-fluid{
         /* background-color: #ed631e; */
-    height: 110px;
+    height: 100px;
     /* border-color: #263249; */
-    border: 1px;
+    border: 0px;
     background-color: white;
     border-style: solid;
     border-right-color: white;
     border-left-color: white;
-    box-shadow: 0 0 1px #000;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
     border-bottom-color: #000;
 }
 .navbar-default .navbar-brand {
