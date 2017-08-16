@@ -125,12 +125,15 @@ section.spotligth{
 	width: 85%;
 	margin:100px auto;
 }
+.spotligth .panel-heading h3{
+  font-size: 16px;
+}
 .spotligth .panel-heading{
 	background-size: cover;
 	background-position: 50%;
 	height: 250px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 	/*overflow: hidden;*/
 }
 .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
