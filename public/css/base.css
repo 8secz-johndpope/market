@@ -274,6 +274,10 @@ a.right.carousel-control {
 a.left.carousel-control {
     background: none;
 }
+.items-box-price.font-5 {
+    color: #ed631e;
+    font-weight: 600;
+}
 
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {

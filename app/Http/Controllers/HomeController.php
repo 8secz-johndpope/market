@@ -37,7 +37,7 @@ class HomeController extends BaseController
             'type' => 'advert',
             'body' => [
                 'from' => 0,
-                'size'=> 20,
+                'size'=> 24,
                 'query' => [
                     'range' => [
                         'category' => [
@@ -56,10 +56,10 @@ class HomeController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $spl1 = array_slice($products, 0, 5);
-        $spl2 = array_slice($products, 5, 5);
-        $spl3 = array_slice($products, 10, 5);
-        $spl4 = array_slice($products, 15, 5);
+        $spl1 = array_slice($products, 0, 6);
+        $spl2 = array_slice($products, 6, 6);
+        $spl3 = array_slice($products, 12, 6);
+        $spl4 = array_slice($products, 18, 6);
         return view('home',['base' => $base, 'spl1' => $spl1, 'spl2' => $spl2, 'spl3' => $spl3, 'spl4' => $spl4]);
     }
     
