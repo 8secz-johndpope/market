@@ -103,6 +103,7 @@ a.navbar-brand {
 .panel-heading h1{
 	margin: 0 auto;
   font-size: 30px;
+  padding: 10px 0;
 }
 .panel.panel-primary{
   border-color: white;
