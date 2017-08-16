@@ -310,6 +310,10 @@ a.left.carousel-control {
     width: 16%;
   }
 }
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ff970d;
+}
+
 
 @media screen and (min-width: 768px){
 
