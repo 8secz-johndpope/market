@@ -129,6 +129,8 @@ section.spotligth{
 	background-size: cover;
 	background-position: 50%;
 	height: 250px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 	/*overflow: hidden;*/
 }
 .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
