@@ -292,6 +292,11 @@ a.left.carousel-control {
   background-color: #ed631e;
 }
 
+.features .row{
+  width: 85%;
+  margin: 20px auto;
+}
+
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
     width: 17%;
