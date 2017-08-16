@@ -132,6 +132,13 @@ section.spotligth{
     width: 85%;
 }
 
+.spotligth .panel-primary{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
 .spotligth .panel-body h3{
   font-size: 16px;
 }
@@ -139,9 +146,9 @@ section.spotligth{
 	background-size: cover;
 	background-position: 50%;
 	height: 250px;
-  border-top-left-radius: 10px;
+  /*border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-	/*overflow: hidden;*/
+	overflow: hidden;*/
 }
 
 .spotligth .panel-body{
