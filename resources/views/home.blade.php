@@ -78,7 +78,7 @@
 						 	@endforeach
 						 	@if($cat->hasMore)
 						 		<div class="read-more">
-						 			<a href="#">more..</a>
+						 			<a href="#" class="btn btn-info" role="button">more..</a>
 						 		</div>
 						 	@endif
 						 	</ul>
