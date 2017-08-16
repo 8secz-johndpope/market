@@ -183,14 +183,30 @@ ul {
 .category-3 li::before{
   color: #78909c;
 }
+.category-3 .btn-info {
+  background-color: #78909c;
+  border-color: #78909c;
+}
 .category-4 li::before{
   color: #26c6da;
+}
+.category-4 .btn-info {
+  background-color: #26c6da;
+  border-color: #26c6da;
 }
 .category-5 li::before{
   color: #dc7373;
 }
+.category-5 .btn-info {
+  background-color: #dc7373;
+  border-color: #dc7373;
+}
 .category-6 li::before{
   color: #ab47bc;
+}
+.category-5 .btn-info {
+  background-color: #ab47bc;
+  border-color: #ab47bc;
 }
 .categories .panel-body {
     margin: 0;
