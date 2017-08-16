@@ -339,6 +339,8 @@ a.left.carousel-control {
   }
   .categories .col-sm-4 {
     padding: 0;
-    width: 50%;
+    width: 45%;
+    margin: 0;
+    display: inline-block;
   }
 }
