@@ -197,6 +197,11 @@
 					<h2>HASSLE FREE</h2>
 					<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
 				</div>
+				<div class="col-lg-3">
+					<img src="css/peace-of-mind-uk.svg">
+					<h2>PEACE OF MIND</h2>
+					<p>You’ll always hear back from our customer services within 24 hours</p>
+				</div>
 			</div>
 		</section>
 		<section class="social-media">
