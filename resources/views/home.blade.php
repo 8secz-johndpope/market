@@ -182,6 +182,15 @@
 		</section>
 		<section class="features">
 			<div class="row">
+				<div class="col-lg-3">
+					<img src="css/get-rewarded.svg">
+					<h2>GET REWARDED</h2>
+					<p>We’ll give you discounts and credits for being better buyers & sellers</p>
+				</div>
+				<div class="col-lg-3">
+				</div>
+				<div class="col-lg-3">
+				</div>
 			</div>
 		</section>
 		<section class="social-media">
