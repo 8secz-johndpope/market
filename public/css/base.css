@@ -268,6 +268,12 @@ footer{
     padding-bottom: 10px;
     padding-top: 10px;
 }
+a.right.carousel-control {
+    background: none;
+}
+a.left.carousel-control {
+    background: none;
+}
 
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
