@@ -162,11 +162,23 @@ ul {
   /*content: "• ";*/
   color: #9ccc65; /* or whatever color you prefer */
 }
+.category-0 .btn-info {
+  background-color: #9ccc65;
+  border-color: #9ccc65;
+}
 .category-1 li::before{
   color: #ff7043;
 }
+.category-1 .btn-info {
+  background-color: #ff7043;
+  border-color: #ff7043;
+}
 .category-2 li::before{
   color: #8d6e63;
+}
+.category-2 .btn-info {
+  background-color: #8d6e63;
+  border-color: #8d6e63;
 }
 .category-3 li::before{
   color: #78909c;
