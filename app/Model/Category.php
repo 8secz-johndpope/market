@@ -34,8 +34,8 @@ class Category extends  Model
     }
 
     /**
-     * [getAllDescendants description]
-     * @return [type] [description]
+     * This function return all descendants of a category
+     * @return [Colletion] with the children and its descendants
      */
     public function getAllDescendants(){
         if($this->children()->count() == 0){

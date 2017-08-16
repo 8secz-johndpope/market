@@ -68,8 +68,6 @@ class HomeController extends BaseController
         $j = 0;
         foreach ($base as $cat) {
             $cat->class = "category-$j";
-            $cat->children = $cat->getAllDescendants();
-            var_dump($cat);die;
             if($cat->children()->count() > self::MAX_CHILDREN)
                 $cat->hasMore = true;
             $cat->children= $cat->firstChildren(self::MAX_CHILDREN);
