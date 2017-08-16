@@ -100,6 +100,7 @@ section .panel{
 }
 .panel-heading h1{
 	margin: 0 auto;
+  font-size: 30px;
 }
 .panel.panel-primary{
   border-color: white;
@@ -209,7 +210,7 @@ ul {
   border-color: #ab47bc;
 }
 .categories .panel-body {
-    margin: 0;
+    margin: 0 13px;
     min-height: 28vh;
 }
 section.features{
