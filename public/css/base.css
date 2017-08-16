@@ -337,4 +337,8 @@ a.left.carousel-control {
   .search input.form-control.input-lg {
     width: 100%;
   }
+  .categories .col-sm-4 {
+    padding: 0;
+    width: 50%;
+  }
 }
