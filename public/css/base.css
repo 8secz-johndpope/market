@@ -11,7 +11,8 @@
 .categories .row{
   height: inherit;
   box-shadow: 0 0 3px rgba(0,0,0,.3);
-  padding: 0 0 15px 0;
+  padding: 20px 0 35px 0;
+  border-radius: 10px;
 }
 .search input.form-control.input-lg {
     width: 70%;
@@ -131,7 +132,7 @@ a.navbar-brand {
 section.spotligth{
 	padding: 10px 0;
   background-color: #f1f1f1;
-  margin-top: 150px; 
+  margin-top: 20px;
 }
 
 .spotligth .row {
