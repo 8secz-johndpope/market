@@ -294,7 +294,8 @@ a.left.carousel-control {
 
 .features .row{
   width: 85%;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 100px 0;
 }
 
 @media screen and (min-width: 1200px){
