@@ -260,7 +260,9 @@ footer{
   width: 40px;
 }
 .carousel-inner {
-    margin: 0 90px;
+    margin: 0 120px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 @media screen and (min-width: 1200px){
