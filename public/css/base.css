@@ -232,6 +232,13 @@ footer{
   background-repeat: no-repeat;
   background-size: cover;
 }
+.carousel-control {
+  width: 40px;
+}
+.carousel-inner {
+    margin: 0 90px;
+}
+
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
     width: 17%;
@@ -242,9 +249,6 @@ footer{
   .spotligth .col-lg-2 {
     width: 16.666667%;
   }
-}
-.carousel-control {
-  width: 40px;
 }
 
 @media screen and (min-width: 768px){
