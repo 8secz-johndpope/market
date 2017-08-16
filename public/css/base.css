@@ -258,6 +258,7 @@ footer{
 }
 .carousel-control {
   width: 40px;
+  background-color: #ed631e;
 }
 .carousel-inner {
     margin: 0 120px;
