@@ -38,11 +38,11 @@ class Category extends  Model
      * @return [type] [description]
      */
     public function getAllDescendants(){
-        $descendants = $this->children()->get();
-        if(!isset($descendants)){
+        if($this->children()->count() == 0){
             return null;
         }
         else{
+            $descendants = $this->children()->get();
             foreach ($descendants as $child) {
                 $child->children = $child->getAllDescendants();
             }
