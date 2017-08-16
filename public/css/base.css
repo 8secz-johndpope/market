@@ -119,6 +119,9 @@ section .panel{
 .read-more{
 	text-align: right;
   font-size: 18px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 section.spotligth{
@@ -238,7 +241,7 @@ ul {
 }
 .categories .panel-body {
     margin: 0 13px;
-    min-height: 28vh;
+    min-height: 37vh;
 }
 section.features{
   min-height: 400px;
