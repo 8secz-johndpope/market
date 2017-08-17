@@ -141,7 +141,7 @@ class MarketController extends BaseController
                 $field->values = $field->values;
             }
         }
-        return $fields;
+        return ['fields', $fields];
 
     }
     public function addfields(Request $request,$any){
