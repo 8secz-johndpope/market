@@ -137,9 +137,9 @@ a.navbar-brand {
   background-color: #f9f9f9;
 }
 .categories .panel-body {
-    margin: 0 11%;
-    min-height: 34vh;
-    padding: 9px 15px;
+  margin: 0 11%;
+  min-height: 34vh;
+  padding: 9px 15px 32px 15px;
 }
 
 .read-more{
