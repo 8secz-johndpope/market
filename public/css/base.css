@@ -2,14 +2,25 @@ body{
   background-color: #f9f9f9;
 }
 .top{
-  height: 40px;
+  height: 50px;
   width: 100%;
   /* background-color: #263249; */
   background-color: #000;
 }
+
+.top .col {
+    padding: 10px 0;
+}
+
 .top img.icon{
   height: 30px;
+  margin-left: 125px;
 }
+
+a.navbar-brand {
+    padding: 5px 15px;
+}
+
 .categories{
 	width: 85%;
   margin: 30px auto;
@@ -99,7 +110,7 @@ a.navbar-brand {
     color: #000;
     font-size: 16px;
     font-weight: bold;
-    padding-top: 45px;
+    padding-top: 35px;
 }
 .icon{
 	height: 80px;
