@@ -17,9 +17,23 @@ body{
   margin-left: 125px;
 }
 
+.navbar-header {
+    width: 60%;
+}
+
+.navbar-header .col-2 {
+    display: flex;
+    margin: auto;
+    width: 70%;
+}
+.col-2 img {
+    height: 35px;
+    margin: 30px 10px;
+}
 a.navbar-brand {
     padding: 5px 15px;
 }
+
 
 .categories{
 	width: 85%;

@@ -36,7 +36,7 @@
 					        <span class="icon-bar"></span>
 				     	</button>
 				      <a class="navbar-brand" href="#"><img class="icon" src="css/ic_launcher1.png"></a>
-				      <div>
+				      <div class="col-2">
 						<div>
 							<img src="css/googleplayx233.png">
 						</div>
