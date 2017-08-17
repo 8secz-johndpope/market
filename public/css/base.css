@@ -115,6 +115,10 @@ a.navbar-brand {
   box-sizing: border-box;
 }
 
+.categories .panel.panel-primary{
+  border: 0;
+  background-color: #f9f9f9;
+}
 .panel-primary>.panel-heading{
 	height: 20vh;
 	color: black;
@@ -256,7 +260,7 @@ ul {
 }
 .categories .panel-body {
     margin: 0 13px;
-    min-height: 34vh;
+    min-height: 40vh;
 }
 section.features{
   min-height: 400px;
