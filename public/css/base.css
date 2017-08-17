@@ -314,12 +314,13 @@ section.social-media{
 }
 footer{
   height: 600px;
-  background-image: url('footer.png');
+  background-color: #000;
+  /*background-image: url('footer.png');
   background-color: black;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
 }
 .carousel-control {
   width: 40px;
