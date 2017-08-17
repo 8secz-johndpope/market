@@ -51,7 +51,7 @@ class MarketController extends BaseController
         $categories = Category::all();
         $maps=array();
         foreach ($categories as $category){
-            $category->children=$category->children;
+            //$category->children=$category->children;
             $maps[$category->id]=$category;
         }
 
