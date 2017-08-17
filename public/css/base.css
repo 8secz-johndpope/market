@@ -118,8 +118,11 @@ a.navbar-brand {
 .panel-primary>.panel-heading{
 	height: 20vh;
 	color: black;
-  background-color: #fff;
+  background-color: #f9f9f9;
   border-color: #fff;
+}
+.categories .panel-primary>.panel-heading{
+  border: 0px;
 }
 .panel-body{
 	text-align: left;
