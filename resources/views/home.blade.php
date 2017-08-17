@@ -20,7 +20,13 @@
 	<body class="">
 		<header>
 			<div class="top">
-			
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2">
+							<img class="icon" src="css/sumra-text.png">
+						</div>
+					</div>
+				</div>
 			</div>
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
