@@ -337,6 +337,7 @@ a.left.carousel-control {
     margin: 0;
     display: inline-block;
   }
+}
 
 @media screen and (min-width: 768px){
 
@@ -353,7 +354,7 @@ a.left.carousel-control {
   }
   
 }
-  @media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px){
   .search .col-lg-2 {
     width: 17%;
   }
@@ -366,5 +367,4 @@ a.left.carousel-control {
   .categories .panel-body {
     min-height: 34vh;
   }
-}
 }
