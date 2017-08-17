@@ -45,13 +45,11 @@
 				</div>
 			</nav>
 			<div class="row search">
-				<div class="col-lg-2">
-				</div>
     			<div class="col-lg-9">
     				<form class="navbar-form" action="/search/">
         				<div class="form-group col-lg-12">
 								<input type="text" class="form-control input-lg" name="keyword" placeholder="SEARCH">
-								<div class="input-group col-lg-2 input-group-lg">
+								<div class="input-group col-lg-3 col-xl-2 input-group-lg">
 							      	<input type="text" class="form-control" placeholder="POST CODE" >
 							      	<span class="input-group-btn">
 							     		<button class="btn btn-default" type="button">Go!</button>
