@@ -125,8 +125,12 @@ a.navbar-brand {
   border: 0px;
 }
 .panel-body{
-	text-align: left;
+  text-align: left;
 }
+.categories .panel-body{
+  background-color: #f9f9f9;
+}
+
 .read-more{
 	text-align: right;
   font-size: 18px;
