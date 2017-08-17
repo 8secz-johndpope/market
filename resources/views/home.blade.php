@@ -45,7 +45,7 @@
 							<img src="css/appstorex233.png">
 						</div>
 						<div>
-							<img src="">
+							<img src="css/windowsx233.png">
 						</div>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
