@@ -45,6 +45,8 @@
 				</div>
 			</nav>
 			<div class="row search justify-content-center">
+				<div class="col-3">
+				</div>
     			<div class="col-lg-9">
     				<form class="navbar-form" action="/search/">
         				<div class="form-group col-lg-12">
