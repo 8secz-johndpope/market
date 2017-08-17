@@ -115,15 +115,16 @@ a.navbar-brand {
   box-sizing: border-box;
 }
 
-.categories .panel.panel-primary{
-  border: 0;
-  background-color: #f9f9f9;
-}
+
 .panel-primary>.panel-heading{
 	height: 20vh;
 	color: black;
   background-color: #f9f9f9;
   border-color: #fff;
+}
+.categories .panel.panel-primary{
+  border: 0;
+  background-color: #f9f9f9;
 }
 .categories .panel-primary>.panel-heading{
   border: 0px;
@@ -133,6 +134,10 @@ a.navbar-brand {
 }
 .categories .panel-body{
   background-color: #f9f9f9;
+}
+.categories .panel-body {
+    margin: 0 13px;
+    min-height: 40vh;
 }
 
 .read-more{
@@ -258,10 +263,7 @@ ul {
   background-color: #ab47bc;
   border-color: #ab47bc;
 }
-.categories .panel-body {
-    margin: 0 13px;
-    min-height: 40vh;
-}
+
 section.features{
   min-height: 400px;
   background-color: #FBE9E7; 
