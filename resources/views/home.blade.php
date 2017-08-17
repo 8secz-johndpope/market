@@ -20,11 +20,9 @@
 	<body class="">
 		<header>
 			<div class="top">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<img class="icon" src="css/sumra-text.png">
-						</div>
+				<div class="row">
+					<div class="col">
+						<img class="icon" src="css/sumra-text.png">
 					</div>
 				</div>
 			</div>
