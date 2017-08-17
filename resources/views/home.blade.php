@@ -45,7 +45,7 @@
 				</div>
 			</nav>
 			<div class="row search justify-content-center">
-				<div class="col-2">
+				<div class="col-lg-2">
 				</div>
     			<div class="col-lg-8">
     				<form class="navbar-form" action="/search/">
