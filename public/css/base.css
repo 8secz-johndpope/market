@@ -373,4 +373,7 @@ a.left.carousel-control {
   .categories .panel-body {
     min-height: 34vh;
   }
+  .categories .panel-body {
+    margin: 0 11%; 
+  }
 }
