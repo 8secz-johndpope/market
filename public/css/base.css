@@ -315,6 +315,12 @@ a.left.carousel-control {
   margin: 0 auto;
   padding: 100px 0;
 }
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ff970d;
+}
+.navbar-default .navbar-toggle {
+    border-color: #ff970d;
+}
 
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
@@ -326,14 +332,10 @@ a.left.carousel-control {
   .spotligth .col-lg-2 {
     width: 16%;
   }
+  .categories .panel-body {
+    min-height: 34vh;
+  }
 }
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #ff970d;
-}
-.navbar-default .navbar-toggle {
-    border-color: #ff970d;
-}
-
 
 @media screen and (min-width: 768px){
 
