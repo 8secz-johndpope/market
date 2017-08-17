@@ -13,7 +13,6 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends  Model
 {
     public $timestamps = false;
-    private $children;
     public function children()
     {
         return $this->hasMany('App\Model\Category','parent_id');
@@ -33,27 +32,22 @@ class Category extends  Model
     public function firstChildren(int $max){
         return $this->children()->limit($max)->get();
     }
-    
-    public function setChildren($children){
-        $this->children = $children;
-    }
+
     /**
      * This function return all descendants of a category
      * @return [Colletion] with the children and its descendants
      */
     public function getAllDescendants(){
-        if(!isset($this->children)){ 
-            if($this->children()->count() == 0){
-                return null;
-            }
-            else{
-                $this->children = $this->children()->get();
-                foreach ($this->children as $child) {
-                    $child->children = $child->getAllDescendants();
-                }
+        if($this->children()->count() == 0){
+            return null;
+        }
+        else{
+            $descendants = $this->children()->get();
+            foreach ($descendants as $child) {
+                $child->children = $child->getAllDescendants();
             }
         }
-        return $this->children;
+        return $descendants;
     }
     public function parent(){
         return $this->belongsTo('App\Model\Category');
