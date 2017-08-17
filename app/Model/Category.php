@@ -33,7 +33,10 @@ class Category extends  Model
     public function firstChildren(int $max){
         return $this->children()->limit($max)->get();
     }
-
+    
+    public function setChildren($children){
+        $this->children = $children;
+    }
     /**
      * This function return all descendants of a category
      * @return [Colletion] with the children and its descendants

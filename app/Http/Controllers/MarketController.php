@@ -70,7 +70,7 @@ class MarketController extends BaseController
         $maps=array();
         foreach ($base as $category){
             //$category->children=$category->children;
-            $category->children = $category->getAllDescendants();
+            $category->setChildren($category->getAllDescendants());
             $maps[$i]=$category;
             $i++;
         }
