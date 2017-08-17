@@ -304,10 +304,10 @@ a.left.carousel-control {
     font-weight: 600;
 }
 .carousel-indicators li{
-  border: 1px solid #ed631e;
+  border: 1px solid #ff8830;
 }
 .carousel-indicators .active{
-  background-color: #ed631e;
+  background-color: #ff8830;
 }
 
 .features .row{
