@@ -54,7 +54,7 @@
 					        <li><a href="#">Store</a></li>
 					        <li><a href="#">Login</a></li>
 					        <li><a href="#">Sign Up</a></li>
-					        <li><a class="btn btn-info" role="button" href="#">Sumra for Business</a></li>
+					        <li><a class="btn btn-info bussines" role="button" href="#">Sumra for Business</a></li>
 				      	</ul>
 				    </div><!-- /.navbar-collapse -->
 				</div>
