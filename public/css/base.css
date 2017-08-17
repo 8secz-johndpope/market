@@ -7,6 +7,9 @@ body{
   /* background-color: #263249; */
   background-color: #000;
 }
+.top img.icon{
+  height: 30px;
+}
 .categories{
 	width: 85%;
   margin: 30px auto;
