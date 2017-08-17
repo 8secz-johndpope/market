@@ -125,6 +125,7 @@ a.navbar-brand {
 .categories .panel.panel-primary{
   border: 0;
   background-color: #f9f9f9;
+  box-shadow: none;
 }
 .categories .panel-primary>.panel-heading{
   border: 0px;
