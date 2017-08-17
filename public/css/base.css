@@ -18,17 +18,17 @@ body{
   border-radius: 10px;
 }
 .search input.form-control.input-lg {
-    width: 70%;
-    height: 80px;
-    background-image: url(ic_search.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    padding-left: 56px;
-    background-position-x: 10px;
+  width: 70%;
+  height: 80px;
+  background-image: url(ic_search.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 56px;
+  background-position-x: 10px;
 }
 .search input.form-control{
-	box-shadow: 0 1px 2px #ed631e;
-	border-color: #ed631e;
+	box-shadow: 0 1px 2px #ff8830;
+  border-color: #ff8830;
   border-width: 4px;
   border-radius: 0;
 }
