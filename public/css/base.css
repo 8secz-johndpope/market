@@ -1,6 +1,10 @@
 body{
   background-color: #f9f9f9;
 }
+.row {
+    width: 100%;
+}
+
 .top{
   height: 50px;
   width: 100%;
