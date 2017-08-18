@@ -47,9 +47,15 @@ Route::post('/search', 'MarketController@query');
 
 Route::post('/user/register', 'UserController@register');
 Route::post('/user/advert/create','UserController@create')->middleware('auth:api');
+
+
 Route::post('/user/advert/ccreate','UserController@ccreate');
 
 Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');
+Route::post('/user/advert/create/bump','UserController@bump')->middleware('auth:api');
+Route::post('/user/advert/packs/buy','UserController@buy')->middleware('auth:api');
+Route::get('/stripe', 'UserController@stripe');
+
 
 Route::get('/{any}','MarketController@error');
 

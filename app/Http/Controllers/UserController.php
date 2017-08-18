@@ -47,6 +47,17 @@ class UserController extends BaseController
         $clientToken = $gateway->clientToken()->generate();
         return ['token'=>$clientToken];
     }
+    public function  stripe(Request $request){
+       $token =  \Stripe\Token::create(array(
+            "card" => array(
+                "number" => "4242424242424242",
+                "exp_month" => 8,
+                "exp_year" => 2018,
+                "cvc" => "314"
+            )
+        ));
+       return $token;
+    }
     public function nonce(Request $request){
         $gateway = new \Braintree\Gateway(array(
             'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
@@ -327,7 +338,7 @@ class UserController extends BaseController
                 "currency" => "gbp",
                 "customer" => $stripe_id,
                 "source" => $card, // obtained with Stripe.js
-                "description" => 'Bump Advert/'.$total
+                "description" => 'Buy Pack/'.$total
             ));
             $user->featured += $featured;
             $user->urgent += $urgent;
