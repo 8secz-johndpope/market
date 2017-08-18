@@ -314,6 +314,9 @@ section.features{
 section.social-media{
   background-color: #f1f1f1;
 }
+.social-media .container {
+    margin: 100px auto;
+}
 ul.stores {
     display: inline-flex;
 }
