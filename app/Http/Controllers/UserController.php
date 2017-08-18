@@ -11,6 +11,8 @@ namespace App\Http\Controllers;
 use App\Model\Address;
 use App\Model\Advert;
 use App\Model\Category;
+use App\Model\Order;
+
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -313,6 +315,7 @@ class UserController extends BaseController
         ];
 
         $response = $this->client->get($params);
+
 
         $stripe_id=$user->stripe_id;
         $card = $request->card;
