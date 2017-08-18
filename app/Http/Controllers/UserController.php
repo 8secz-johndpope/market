@@ -541,7 +541,7 @@ class UserController extends BaseController
                 'size'=>2000,
                 'query' => [
                     'bool' => [
-                        'must'=>['term'=>['phone'=>$user->phone]],
+                        'must'=>['term'=>['phone.keyword'=>$user->phone]],
                     ]
                 ]
             ]
