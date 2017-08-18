@@ -349,13 +349,13 @@ footer{
   background-position-y: 230px;
 }
 img#footer_top_logo {
-    margin: 30px auto;
+  margin: 60px auto;
 }
 img.img-responsive.footer_logo {
-    height: 100px;
+  height: 100px;
 }
 footer h4 {
-    color: #ff9d2c;
+  color: #ff9d2c;
 }
 
 footer a {
