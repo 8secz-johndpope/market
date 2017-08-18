@@ -406,12 +406,12 @@ a.left.carousel-control {
     width: 16%;
   }
   .categories .panel-body {
-    min-height: 36vh;
+    height: 36vh;
   }
 }
 @media screen and (min-width: 1700px){
   .categories .panel-body {
-    min-height: 34vh;
+    height: 34vh;
     margin: 0 11%; 
   }
 }
