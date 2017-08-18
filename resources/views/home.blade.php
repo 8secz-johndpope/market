@@ -233,7 +233,7 @@
 		<section class="social-media">
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-md-8 col-lg-3">
+					<div class="col-md-8 col-lg-3 store">
 						<div class="col">
 							<h2>Download</h2>
 							<ul class="stores">
