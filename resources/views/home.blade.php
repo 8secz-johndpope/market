@@ -194,26 +194,28 @@
 			</div>
 		</section>
 		<section class="features">
-			<div class="row">
-				<div class="col-lg-3">
-					<img src="css/get-rewarded.svg">
-					<h2>GET REWARDED</h2>
-					<p>We’ll give you discounts and credits for being better buyers & sellers</p>
-				</div>
-				<div class="col-lg-3">
-					<img src="css/free-uk.svg">
-					<h2>FREE SHIPPING</h2>
-					<p>What you see is what you get, no hidden fees on our purchase prices</p>
-				</div>
-				<div class="col-lg-3">
-					<img src="css/heart-black.svg">
-					<h2>HASSLE FREE</h2>
-					<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
-				</div>
-				<div class="col-lg-3">
-					<img src="css/peace-of-mind-uk.svg">
-					<h2>PEACE OF MIND</h2>
-					<p>You’ll always hear back from our customer services within 24 hours</p>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<img src="css/get-rewarded.svg">
+						<h2>GET REWARDED</h2>
+						<p>We’ll give you discounts and credits for being better buyers & sellers</p>
+					</div>
+					<div class="col-lg-3">
+						<img src="css/free-uk.svg">
+						<h2>FREE SHIPPING</h2>
+						<p>What you see is what you get, no hidden fees on our purchase prices</p>
+					</div>
+					<div class="col-lg-3">
+						<img src="css/heart-black.svg">
+						<h2>HASSLE FREE</h2>
+						<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
+					</div>
+					<div class="col-lg-3">
+						<img src="css/peace-of-mind-uk.svg">
+						<h2>PEACE OF MIND</h2>
+						<p>You’ll always hear back from our customer services within 24 hours</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -244,8 +246,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
 			</div>
 		</section>
 		<footer>
