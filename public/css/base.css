@@ -291,11 +291,11 @@ ul {
   border-color: #34a853;
 }
 .category-5 li::before{
-  color: #dc7373;
+  color: #fbbc05;
 }
 .category-5 .btn-info {
-  background-color: #dc7373;
-  border-color: #dc7373;
+  background-color: #fbbc05;
+  border-color: #fbbc05;
 }
 .category-6 li::before{
   color: #ea4335;
