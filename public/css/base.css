@@ -331,6 +331,10 @@ ul.media {
     display: inline-flex;
 }
 
+.media img{
+  height: 100px;
+}
+
 /* end*/
 footer{
   height: 500px;
