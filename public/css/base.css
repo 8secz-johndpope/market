@@ -388,7 +388,6 @@ a.left.carousel-control {
 }
 
 .features .row{
-  width: 85%;
   margin: 0 auto;
   padding: 100px 0;
 }
@@ -451,6 +450,6 @@ a.left.carousel-control {
     margin: 0 11%; 
   }
   .container{
-    width: 95%;
+    width: 90%;
   }
 }
