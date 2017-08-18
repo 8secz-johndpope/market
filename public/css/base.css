@@ -263,18 +263,18 @@ ul {
   border-color: #9ccc65;
 }
 .category-1 li::before{
-  color: #ff7043;
+  color: #ff9d2c;
 }
 .category-1 .btn-info {
-  background-color: #ff7043;
-  border-color: #ff7043;
+  background-color: #ff9d2c;
+  border-color: #ff9d2c;
 }
 .category-2 li::before{
-  color: #8d6e63;
+  color: #ea4335;
 }
 .category-2 .btn-info {
-  background-color: #8d6e63;
-  border-color: #8d6e63;
+  background-color: #ea4335;
+  border-color: #ea4335;
 }
 .category-3 li::before{
   color: #78909c;
@@ -298,11 +298,11 @@ ul {
   border-color: #dc7373;
 }
 .category-6 li::before{
-  color: #ab47bc;
+  color: #ea4335;
 }
-.category-5 .btn-info {
-  background-color: #ab47bc;
-  border-color: #ab47bc;
+.category-6 .btn-info {
+  background-color: #ea4335;
+  border-color: #ea4335;
 }
 
 section.features{
