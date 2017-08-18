@@ -218,6 +218,16 @@
 			</div>
 		</section>
 		<section class="social-media">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-xl-4">
+						
+					</div>
+					<div class="col-md-8 col-xl-4">
+						
+					</div>
+				</div>
+			</div>
 			<div class="row">
 			</div>
 		</section>
