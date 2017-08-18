@@ -331,6 +331,13 @@ img.img-responsive.footer_logo {
 footer h4 {
     color: #ff9d2c;
 }
+
+footer a {
+    color: #fff;
+}
+footer a;hover {
+    color: #fff;
+}
 .carousel-control {
   width: 40px;
   color: #ff8830;
