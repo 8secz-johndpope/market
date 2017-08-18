@@ -315,6 +315,10 @@ section.social-media{
   min-height: 400px;
 }
 
+ul.stores {
+    display: inline-flex;
+}
+
 .stores img {
     height: 60px;
 }
