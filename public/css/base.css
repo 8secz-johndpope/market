@@ -349,7 +349,7 @@ footer{
   background-position-y: 230px;
 }
 img#footer_top_logo {
-  margin: 60px auto;
+  margin: 40px auto;
 }
 img.img-responsive.footer_logo {
   height: 100px;
@@ -361,8 +361,11 @@ footer h4 {
 footer a {
     color: #fff;
 }
-footer a;hover {
+footer a:hover {
     color: #fff;
+}
+footer .row {
+    margin: 20px 0;
 }
 .carousel-control {
   width: 40px;
