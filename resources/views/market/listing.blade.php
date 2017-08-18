@@ -296,7 +296,7 @@
                 <div class="items-box-content clearfix">
                     @foreach($products as $product)
                     <section class="items-box">
-                        <a href="/p/{{$category->slug}}/{{$product['source_id']}}">
+                        <a href="/p/{{$product['category']}}/{{$product['source_id']}}">
                             <figure class="items-box-photo">
                                 <img data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"1000006.jpg"}}" class="lazyload" alt="The north Face Men&#039;s Size 34 Pants">
                             </figure>
