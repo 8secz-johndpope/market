@@ -311,10 +311,6 @@ section.features{
 }
 
 /* start section media */
-section.social-media{
-  min-height: 400px;
-}
-
 ul.stores {
     display: inline-flex;
 }
