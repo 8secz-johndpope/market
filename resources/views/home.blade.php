@@ -220,7 +220,7 @@
 		<section class="social-media">
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-md-8 col-lg-4">
+					<div class="col-md-8 col-lg-6">
 						<div class="col">
 							<h2>Get the App</h2>
 							<ul class="stores">
@@ -230,7 +230,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-8 col-lg-4">
+					<div class="col-md-8 col-lg-6">
 						<div class="col">
 							<h2>Follow us</h2>
 							<ul class="media">
