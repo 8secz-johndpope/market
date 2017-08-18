@@ -65,42 +65,42 @@ a.navbar-brand {
   background-position-x: 10px;
 }
 .search input.form-control{
-	box-shadow: 0 1px 2px #000;
+  box-shadow: 0 1px 2px #000;
   border-color: #000;
   border-width: 4px;
   border-radius: 0;
 }
 .search input.form-control::-webkit-input-placeholder {
-  	color: #000;
-  	opacity: 0.8;
+    color: #000;
+    opacity: 0.8;
 
 }
 .search input.form-control::-moz-placeholder {
-  	color: #000;
-  	opacity: 0.8;
+    color: #000;
+    opacity: 0.8;
 
 }
 .search input.form-control:::-ms-input-placeholder {
-  	color: #000;
-  	opacity: 0.8;
+    color: #000;
+    opacity: 0.8;
 
 }
 form.navbar-form {
     margin: 0;
 }
 section .panel{
-	display: inline-grid;
-	/* height: 400px;*/
-	margin: 0 1%;
-	width: 100%;
-	text-align: center;
+  display: inline-grid;
+  /* height: 400px;*/
+  margin: 0 1%;
+  width: 100%;
+  text-align: center;
 }
 .navbar-default{
-	background-color: #fff;
+  background-color: #fff;
 }
 .navbar {
-	margin-bottom: 0;
-	border: none;
+  margin-bottom: 0;
+  border: none;
 }
 a.navbar-brand {
     height: fit-content;
@@ -120,8 +120,8 @@ a.navbar-brand {
     color: #fff;
 }
 .categories .col-lg-2{
-	padding: 0;
-	width: 14%;
+  padding: 0;
+  width: 14%;
 }
 
 .row.search{
@@ -137,14 +137,14 @@ a.navbar-brand {
     margin-top: 20px;
 }
 .icon{
-	height: 80px;
+  height: 80px;
     margin-left: 100px;
 }
 .panel-heading img.icon-category{
-	height: 15vh;
+  height: 15vh;
 }
 .panel-heading h1{
-	margin: 0 auto;
+  margin: 0 auto;
   font-size: 30px;
   padding: 10px 0;
 }
@@ -155,8 +155,8 @@ a.navbar-brand {
 
 
 .panel-primary>.panel-heading{
-	height: 21vh;
-	color: black;
+  height: 21vh;
+  color: black;
   background-color: #f9f9f9;
   border-color: #fff;
 }
@@ -181,7 +181,7 @@ a.navbar-brand {
 }
 
 .read-more{
-	text-align: right;
+  text-align: right;
   font-size: 18px;
   position: absolute;
   bottom: 0;
@@ -189,7 +189,7 @@ a.navbar-brand {
 }
 
 section.spotligth{
-	padding: 10px 0;
+  padding: 10px 0;
   background-color: #f1f1f1;
   margin-top: 40px
 }
@@ -210,12 +210,12 @@ section.spotligth{
   font-size: 16px;
 }
 .spotligth .panel-heading{
-	background-size: cover;
-	background-position: 50%;
-	height: 380px;
+  background-size: cover;
+  background-position: 50%;
+  height: 380px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-	/*overflow: hidden;*/
+  /*overflow: hidden;*/
 }
 
 .spotligth .panel-body{
@@ -223,11 +223,11 @@ section.spotligth{
   border-bottom-right-radius: 10px;
 }
 .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
-	height: 60px;
-	background-color: #000;
-	color:#fff;
-	width: 80px;
-	box-shadow: 0 0 5px #000;
+  height: 60px;
+  background-color: #000;
+  color:#fff;
+  width: 80px;
+  box-shadow: 0 0 5px #000;
     border-color: #000;
 
 }
@@ -306,7 +306,7 @@ ul {
 
 section.features{
   min-height: 400px;
-  background-color: #FBE9E7; 
+  /* background-color: #FBE9E7; */
 }
 
 /* start section media */
@@ -334,7 +334,7 @@ ul.media {
 }
 
 .media img{
-  height: 100px;
+  height: 40px;
 }
 
 /* end*/
@@ -349,10 +349,12 @@ footer{
   background-position-y: 230px;
 }
 img#footer_top_logo {
-  margin: 40px auto;
+  margin: 0px auto 110px;
+  height: 30px;
 }
 img.img-responsive.footer_logo {
-  height: 100px;
+  height: 70px;
+  margin-top: 30px;
 }
 footer h4 {
   color: #ff9d2c;
@@ -365,7 +367,7 @@ footer a:hover {
     color: #fff;
 }
 footer .row {
-    margin: 20px 0;
+    margin: 40px 0;
 }
 .carousel-control {
   width: 40px;
