@@ -447,7 +447,10 @@ a.left.carousel-control {
     width: 16%;
   }
   .categories .panel-body {
-    height: 36vh;
+    height: 41vh;
+  }
+  .container{
+    width: 90%;
   }
 }
 @media screen and (min-width: 1700px){
