@@ -346,5 +346,14 @@
 		        </div>
 		    </div>
 		</footer>
+		<div class="copyright style-1">
+		   <div class="container">
+		        <div class="row">
+		            <div class="cell col-md-6 col-xs-12 footer-copy">
+		                All rights reserved. Copyright &copy; 2017 <span class="company-rights">SUMRA</span>
+		            </div>
+		        </div>
+		    </div>
+		</div>
 	</body>
 </html>
