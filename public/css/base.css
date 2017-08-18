@@ -311,6 +311,9 @@ section.features{
 }
 
 /* start section media */
+section.social-media{
+  background-color: #f1f1f1;
+}
 ul.stores {
     display: inline-flex;
 }
