@@ -59,7 +59,7 @@
 				    </div><!-- /.navbar-collapse -->
 				</div>
 			</nav>
-			<div class="row search justify-content-center">
+			<div class="row search">
 				<div class="col-lg-2">
 				</div>
     			<div class="col-lg-8">
@@ -78,27 +78,30 @@
 			</div>
 		</header>
 		<section class="categories">
-			<div class ="row">
-		 	@foreach($base as $cat)
-		 		<div class="col-sm-4 col-lg-2">
-			 		<div class="panel panel-primary {{$cat->class}}">
-			 			<div class="panel-heading">
-			 				<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
-			 				<h1>{{$cat->title}}</h1>
-			 			</div>
-			 			<div class="panel-body">
-						 	<ul>
-						 	@foreach($cat->children as $child)
-						 		<li><a href="{{$child->slug}}">{{$child->title}}</a></li>
-						 	@endforeach
-						 	<div class="read-more">
-						 		<a href="#" class="btn btn-info" role="button">more..</a>
-						 	</div>
-						 	</ul>
+			<div class="container">
+				<div class ="row">
+			 	@foreach($base as $cat)
+			 		<div class="col-sm-4 col-lg-2">
+				 		<div class="panel panel-primary {{$cat->class}}">
+				 			<div class="panel-heading">
+				 				<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
+				 				<h1>{{$cat->title}}</h1>
+				 			</div>
+				 			<div class="panel-body">
+							 	<ul>
+							 	@foreach($cat->children as $child)
+							 		<li><a href="{{$child->slug}}">{{$child->title}}</a></li>
+							 	@endforeach
+							 	<div class="read-more">
+							 		<a href="#" class="btn btn-info" role="button">more..</a>
+							 	</div>
+							 	</ul>
+							 </div>
 						 </div>
 					 </div>
-				 </div>
-		 	@endforeach
+			 		@endforeach
+			 	</div>
+		 	</div>
 		</section>
 		<section class="spotligth">
 			<div class="row">
