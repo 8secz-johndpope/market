@@ -308,6 +308,9 @@ section.features{
   min-height: 400px;
   /* background-color: #FBE9E7; */
 }
+.features h2{
+  font-size: 20px;
+}
 
 /* start section media */
 section.social-media{
