@@ -221,7 +221,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-xl-4">
-						
+						<div class="col">
+							<ul class="stores">
+								<li><a href=""><img src="css/android.png"></a></li>
+								<li><a href=""><img src=""></a></li>
+								<li><a href=""><img src=""></a></li>
+							</ul>
+						</div>
 					</div>
 					<div class="col-md-8 col-xl-4">
 						
