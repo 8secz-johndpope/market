@@ -237,6 +237,7 @@
 								<li><a href=""><img src="css/icons/facebook.svg"></a></li>
 								<li><a href=""><img src="css/icons/twitter.svg"></a></li>
 								<li><a href=""><img src="css/icons/instagram.svg"></a></li>
+								<li><a href=""><img src="css/icons/pinterest.svg"></a></li>
 							</ul>
 						</div>
 					</div>
