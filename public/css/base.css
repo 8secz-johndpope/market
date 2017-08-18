@@ -310,6 +310,7 @@ section.features{
 }
 .features h2{
   font-size: 20px;
+  text-align: center;
 }
 .features figure {
     width: 120px;
