@@ -313,9 +313,10 @@ section.features{
 section.social-media{
   background-color: #f1f1f1;
 }
-.social-media .container {
-    margin: 100px auto;
+.row.justify-content-between {
+    padding: 100px 50px;
 }
+
 ul.stores {
     display: inline-flex;
 }
