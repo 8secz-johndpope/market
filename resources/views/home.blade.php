@@ -135,7 +135,7 @@
 					    		<div class="panel panel-primary {{$cat->class}}">
 						 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
 						 			</div>
-						 			<div class="panel-body visible-sm">
+						 			<div class="panel-body visible-md-*">
 						 				<h3 class="">{{$spl['title']}}</h3>
 									 	@if($spl['meta']['price']>=0)
 	                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
