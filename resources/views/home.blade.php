@@ -222,13 +222,91 @@
 			</div>
 		</section>
 		<footer>
-		    <div class="row">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-md-12">
+		                <img id="footer_top_logo" class="img-responsive" title="" alt="" src="css/sumra-text.png">
+		            </div>
+
+		            <div class="col-md-2 col-xs-6  col-md-offset-2">
+		                <div class="col">
+		                    <h4>Company</h4>
+		                    <ul>
+		                        <li><a href="/about-us" title="About us">About us</a></li>
+		                        <li><a href="/history/about" title="Company History">Company History</a></li>
+		                        <li><a href="/contact-us" title="Contact us">Contact us</a></li>
+		                        <!--<li></li>-->
+		                    </ul>
+		                </div>
+		            </div>
+		            <div class="col-md-2 col-xs-6">
+		                <div class="col">
+		                    <h4>Discover</h4>
+		                    <ul>
+		                        <li><a href="/why-us" title="Why Us">Why Us</a></li>
+		                        <li><a href="/our-programs" title="Our programmes">Our academic programmes</a></li>
+		                        <li><a href="/our-teaching-methods" title="Our teaching methods">Our teaching methods</a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		            <div class="col-md-2 col-xs-6">
+		                <div class="col">
+		                    <h4>Experience</h4>
+		                    <ul>
+		                        <li><a href="/growth" title="Growth">Growth</a></li>
+		                        <li><a href="/responsibility" title="Responsibility">Responsibility</a></li>
+		                        <li><a href="/security" title="Security">Security</a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		            <div class="col-md-2 col-xs-6">
+		                <div class="col">
+		                    <h4>Resources</h4>
+		                    <ul>
+		                        <li><a href="/faq" title="F.A.Q.">F.A.Q.</a></li>
+		                        <li><a href="/help" title="Help">Help</a></li>
+		                        <li><a href="/how-it-works" title="How it works">How it works</a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="row">
+		            <div class="col-md-2 col-xs-6 col-md-offset-2">
+		                <div class="col">
+		                    <h4>Commitment</h4>
+		                    <ul>
+		                        <li><a href="/privacy-policy" title="Privacy policy">Privacy policy</a></li>
+		                        <li><a href="/cookies-policy" title="Cookies policy">Cookies policy</a></li>
+		                        <li><a href="/terms-of-use" title="Terms of Use">Terms of Use</a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		            <div class="col-md-2 col-xs-6">
+		                <div class="col">
+		                    <h4>Partnerships</h4>
+		                    <ul>
+		                        <li><a href="/corporate-partners" title="Corporate partners">Corporate partners</a></li>
+		                        <li><a href="/education-partners" title="Education partners">Education partners</a></li>
+		                        <li><a href="/brand-partners" title="Brand partners">Brand partners</a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		            <div class="col-md-2 col-xs-6">
+		                <div class="col">
+		                    <h4>Press & Opportunities</h4>
+		                    <ul>
+		                        <li><a href="/careers" title="Careers">Careers</a></li>
+		                        <li><a href="/press" title="Press">Press</a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		            <div class="col-md-2 col-xs-6">
+		                <div class="col">
+		                    <img  class="img-responsive  footer_logo" src="/css/ic_launcher1.png" />
+		                </div>
+		            </div>
+		        </div>
 		    </div>
-			<div class="row">
-				<div class="logo">
-					<img src="css/ic_launcher1.png">	
-				</div> 
-			</div>
 		</footer>
 	</body>
 </html>
