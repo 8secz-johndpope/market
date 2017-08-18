@@ -241,6 +241,9 @@ class UserController extends BaseController
                 "currency" => "gbp",
                 "destination" => $bank
             ));
+            $user->balance -= $amount;
+            $user->available -= $amount;
+            $user->save();
         }
         catch (\Exception $e) {
             return [
@@ -298,11 +301,8 @@ class UserController extends BaseController
         $advert->elastic=$response['_id'];
         $advert->save();
         if($user->offer===0){
-            \Stripe\Transfer::create(array(
-                "amount" => 500,
-                "currency" => "gbp",
-                "destination" => $user->stripe_account
-            ));
+            $user->balance += 500;
+            $user->available += 500;
             $user->offer=1;
             $user->save();
         }
