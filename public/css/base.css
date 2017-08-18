@@ -327,6 +327,10 @@ ul.stores {
     height: 100px;
 }
 
+ul.media {
+    display: inline-flex;
+}
+
 /* end*/
 footer{
   height: 500px;
