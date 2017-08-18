@@ -22,7 +22,6 @@ class UserController extends BaseController
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
             $user =  Auth::user();
-
             //Creating a token without scopes...
             $token = $user->createToken('Token Name')->accessToken;
             return ['token'=>$token];
@@ -36,8 +35,8 @@ class UserController extends BaseController
         $user = Auth::user();
 
 // Get the currently authenticated user's ID...
-        $id = Auth::id();
-        return ["yes"=>"no",'user'=>$user];
+        //$id = Auth::id();
+        return ["name"=>$user->name,'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available];
     }
 
 
@@ -288,7 +287,166 @@ class UserController extends BaseController
             $user->save();
         }
 
+        return ['body'=>$body,'response'=>$response];
+    }
+    public function buy(Request $request){
+        $user = Auth::user();
+        $body=$request->json()->all();
+        $featured = (int)$body['featured'];
+        $urgent = (int)$body['urgent'];
+        $spotlight = (int)$body['spotlight'];
+        $balance = (int)$body['balance'];
+        $total = 3399 * $featured + 2399 * $urgent  + 4499* $spotlight;
+        $subtract=0;
+        if($balance===1){
 
+            if($total>$user->available){
+                $total -= $user->available;
+                $subtract = $user->available;
+            }else{
+                $total = 0;
+                $subtract = $total;
+            }
+
+        }
+        if($total===0) {
+            $user->featured += $featured;
+            $user->urgent += $urgent;
+            $user->spotlight += $spotlight;
+            $user->available -= $subtract;
+            $user->balance -= $subtract;
+            $user->save();
+            return ['success'=>true];
+        }
+
+        $stripe_id=$user->stripe_id;
+        $card = $request->card;
+        try{
+            $charge=\Stripe\Charge::create(array(
+                "amount" => $total,
+                "currency" => "gbp",
+                "customer" => $stripe_id,
+                "source" => $card, // obtained with Stripe.js
+                "description" => 'Bump Advert/'.$total
+            ));
+            $user->featured += $featured;
+            $user->urgent += $urgent;
+            $user->spotlight += $spotlight;
+            $user->available -= $subtract;
+            $user->balance -= $subtract;
+            $user->save();
+        }catch (\Exception $e) {
+            return [
+                'success' => false,
+                'result' => 'error charging the card'
+            ];
+        }
+        return ['success'=>true,'result'=>$charge];
+    }
+    public function bump(Request $request){
+        $user = Auth::user();
+        $advert =  new Advert;
+        $advert->save();
+        $body=$request->json()->all();
+        $payment = $body['payment'];
+        $featured = (int)$body['featured'];
+        $urgent = (int)$body['urgent'];
+        $spotlight = (int)$body['spotlight'];
+        $total = 0;
+        if($featured>0){
+            $total += 3399;
+        }
+        if($urgent>0){
+            $total += 2399;
+        }
+        if($spotlight>0){
+            $total += 4499;
+        }
+
+        if($payment==='p'||$payment==='pb'||$payment==='pc'||$payment==='pbc'){
+            if($featured>0&&$user->featured>0){
+                $total-=3399;
+            }
+            if($urgent>0&&$user->urgent>0){
+                $total-=2399;
+            }
+            if($spotlight>0&&$user->spotlight>0){
+                $total-=4499;
+            }
+        }
+        if($payment==='b'||$payment==='pb'||$payment==='pbc'){
+            $subtract = 0;
+            if($user->available>$total){
+                $total=0;
+                $subtract = $total;
+            }else{
+                $total-=$user->available;
+                $subtract = $user->available;
+            }
+        }
+        if($total>0){
+            if (!$request->has('card')) {
+                return ['msg'=>'Not enough balance or packs to make this operation'];
+            }
+            $stripe_id=$user->stripe_id;
+            $card = $request->card;
+            try{
+                $charge=\Stripe\Charge::create(array(
+                    "amount" => $total,
+                    "currency" => "gbp",
+                    "customer" => $stripe_id,
+                    "source" => $card, // obtained with Stripe.js
+                    "description" => 'Bump Advert/'.$total
+                ));
+
+            }catch (\Exception $e) {
+                return [
+                    'success' => false,
+                    'result' => 'error charging the card'
+                ];
+            }
+
+        }
+        if($featured>0&&$user->featured>0){
+            $user->featured -= 1;
+        }
+        if($urgent>0&&$user->urgent>0){
+            $user->urgent -= 1;
+        }
+        if($spotlight>0&&$user->spotlight>0){
+            $user->spotlight -= 1;
+        }
+        $user->available -= $subtract;
+
+        $user->save();
+        unset($body['card']);
+        unset($body['payment']);
+
+        $body['source_id']=$advert->id;
+        $milliseconds = round(microtime(true) * 1000);
+        $body['created_at']=$milliseconds;
+        $body['expires_at']=$milliseconds+7*24*3600*1000;
+        $body['username']=$user->name;
+        $body['user_id']=$user->id;
+        $body['phone']=$user->phone;
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => $body
+        ];
+        $response = $this->client->index($params);
+        $advert->sid=$advert->id;
+        $advert->elastic=$response['_id'];
+        $advert->save();
+        if($user->offer===0){
+            \Stripe\Transfer::create(array(
+                "amount" => 500,
+                "currency" => "gbp",
+                "destination" => $user->stripe_account
+            ));
+            $user->offer=1;
+            $user->save();
+        }
 
         return ['body'=>$body,'response'=>$response];
     }
