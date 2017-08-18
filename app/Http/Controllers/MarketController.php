@@ -545,7 +545,7 @@ class MarketController extends BaseController
             $chs = [];
         }
 
-        return View('market.listing',['max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'catids'=>$this->catids,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs]);
+        return View('market.listing',['max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$catagory,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs]);
     }
 
 }
