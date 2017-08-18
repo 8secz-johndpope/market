@@ -311,6 +311,16 @@ section.features{
 .features h2{
   font-size: 20px;
 }
+.features figure {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    color: #ea352d;
+    line-height: 120px;
+    text-align: center;
+    background: #fff3f5;
+}
 
 /* start section media */
 section.social-media{
