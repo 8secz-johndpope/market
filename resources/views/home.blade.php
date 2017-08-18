@@ -227,7 +227,7 @@
 				<div class="row justify-content-between">
 					<div class="col-md-8 col-lg-4">
 						<div class="col">
-							<h2>Get the App</h2>
+							<h2>Download</h2>
 							<ul class="stores">
 								<li><a href=""><img src="css/icons/android.svg"></a></li>
 								<li><a href=""><img src="css/icons/apple.svg"></a></li>
