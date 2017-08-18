@@ -403,6 +403,9 @@ footer a:hover {
 footer .row {
     margin: 40px 0;
 }
+.copyright.style-1 {
+    background-color: black;
+}
 .carousel-control {
   width: 40px;
   color: #ff8830;
