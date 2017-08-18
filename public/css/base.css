@@ -256,11 +256,11 @@ ul {
 }
 .category-0 li::before {
   /*content: "• ";*/
-  color: #9ccc65; /* or whatever color you prefer */
+  color: #85c808; /* or whatever color you prefer */
 }
 .category-0 .btn-info {
-  background-color: #9ccc65;
-  border-color: #9ccc65;
+  background-color: #85c808;
+  border-color: #85c808;
 }
 .category-1 li::before{
   color: #ff9d2c;
