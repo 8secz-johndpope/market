@@ -330,8 +330,8 @@ section.social-media{
   /*background-color: black;*/
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 90%;
-  background-position-y: 230px;
+  background-size: 100%;
+  background-position:center;
 }
 .row.justify-content-between {
     padding: 100px 50px;
@@ -378,8 +378,8 @@ footer{
   background-color: black;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 90%;
-  background-position-y: 230px;
+  background-size: 100%;
+  background-position: center;
 }
 img#footer_top_logo {
   margin: 0px auto 110px;
