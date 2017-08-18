@@ -91,11 +91,9 @@
 						 	@foreach($cat->children as $child)
 						 		<li><a href="{{$child->slug}}">{{$child->title}}</a></li>
 						 	@endforeach
-						 	@if($cat->hasMore)
-						 		<div class="read-more">
-						 			<a href="#" class="btn btn-info" role="button">more..</a>
-						 		</div>
-						 	@endif
+						 	<div class="read-more">
+						 		<a href="#" class="btn btn-info" role="button">more..</a>
+						 	</div>
 						 	</ul>
 						 </div>
 					 </div>
