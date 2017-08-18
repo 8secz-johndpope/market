@@ -222,6 +222,13 @@
 			</div>
 		</section>
 		<footer>
+		    <div class="row">
+		    </div>
+			<div class="row">
+				<div class="logo">
+					<img src="css/ic_launcher1.png">	
+				</div> 
+			</div>
 		</footer>
 	</body>
 </html>
