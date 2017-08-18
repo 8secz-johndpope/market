@@ -220,7 +220,7 @@
 		<section class="social-media">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-xl-4">
+					<div class="col-md-8 col-lg-4">
 						<div class="col">
 							<h2>Get the App</h2>
 							<ul class="stores">
@@ -230,8 +230,15 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-8 col-xl-4">
-						
+					<div class="col-md-8 col-lg-4">
+						<div class="col">
+							<h2>Follow us</h2>
+							<ul class="media">
+								<li><a href=""><img src="css/icons/android.svg"></a></li>
+								<li><a href=""><img src="css/icons/apple.svg"></a></li>
+								<li><a href=""><img src="css/icons/windows.png"></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
