@@ -532,6 +532,45 @@ class UserController extends BaseController
         $user = new User;
         $user->more(['email'=>$request->email,'name'=>$request->name,'password'=> bcrypt($request->password),'phone'=>$request->phone]);
         $user->save();
+
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>2000,
+                'query' => [
+                    'bool' => [
+                        'must'=>['term'=>['phone'=>$user->phone]],
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) {
+            $ans = $a['_source'];
+            $ans['id'] = $a['_id'];
+            return $ans;
+        },$response['hits']['hits']);
+
+        foreach ($products as $product) {
+
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $product['id'],
+                'body' => [
+                    'doc' => [
+                        'user_id' => $user->id
+                    ]
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+            $response = $this->client->update($params);
+        }
+
+
         return ['msg'=>'success'];
     }
 
