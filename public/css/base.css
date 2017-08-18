@@ -322,6 +322,12 @@ footer{
   background-repeat: no-repeat;
   background-size: cover;*/
 }
+img#footer_top_logo {
+    margin: 30px auto;
+}
+img.img-responsive.footer_logo {
+    height: 100px;
+}
 .carousel-control {
   width: 40px;
   color: #ff8830;
