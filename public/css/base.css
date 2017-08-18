@@ -318,9 +318,9 @@ footer{
   background-image: url('footer.png');
   background-color: black;
   background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 90%;
+  background-position-y: 180px;
 }
 img#footer_top_logo {
     margin: 30px auto;
