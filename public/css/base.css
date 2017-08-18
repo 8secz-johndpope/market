@@ -309,9 +309,17 @@ section.features{
   min-height: 400px;
   background-color: #FBE9E7; 
 }
+
+/* start section media */
 section.social-media{
   min-height: 400px;
 }
+
+.stores img {
+    height: 60px;
+}
+
+/* end*/
 footer{
   height: 500px;
   /*background-color: #000;*/
