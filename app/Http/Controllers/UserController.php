@@ -213,13 +213,15 @@ class UserController extends BaseController
     {
         $user = Auth::user();
         $account = \Stripe\Account::retrieve($user->stripe_account);
+        /*
         $balance = \Stripe\Balance::retrieve(
             array("stripe_account" => $user->stripe_account)
         );
+        */
         $stripe_id=$user->stripe_id;
         $cards=\Stripe\Customer::retrieve($stripe_id)->sources->all(array(
             'limit'=>10, 'object' => 'card'));
-        return ['account'=>$account,'balance'=>$balance,'cards'=>$cards];
+        return ['account'=>$account,'balance'=>$user->balance,'available'=>$user->available,'cards'=>$cards];
     }
 
     public function withdraw(Request $request)
@@ -227,6 +229,11 @@ class UserController extends BaseController
         $user = Auth::user();
         $bank = $request->bank;
         $amount  = $request->amount*100;
+        \Stripe\Transfer::create(array(
+            "amount" => $amount,
+            "currency" => "gbp",
+            "destination" => $user->stripe_account
+        ));
         \Stripe\Stripe::setApiKey($user->sk_key);
         try{
             \Stripe\Payout::create(array(
