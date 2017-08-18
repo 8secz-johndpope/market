@@ -224,7 +224,7 @@
 						<div class="col">
 							<ul class="stores">
 								<li><a href=""><img src="css/icons/android.png"></a></li>
-								<li><a href=""><img src=""></a></li>
+								<li><a href=""><img src="css/icons/apple.svg"></a></li>
 								<li><a href=""><img src=""></a></li>
 							</ul>
 						</div>
