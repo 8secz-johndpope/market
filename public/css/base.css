@@ -343,6 +343,12 @@ ul.media {
 .social-media h2 {
     font-size: 20px;
 }
+
+.stores h3 {
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+}
 /* end*/
 footer{
   height: 500px;

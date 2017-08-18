@@ -229,9 +229,9 @@
 						<div class="col">
 							<h2>Download</h2>
 							<ul class="stores">
-								<li><a href=""><img src="css/icons/android.svg">Android Phone</a></li>
-								<li><a href=""><img src="css/icons/apple.svg">Apple Phone</a></li>
-								<li><a href=""><img src="css/icons/windows.png">Windows Desktop</a></li>
+								<li><a href=""><img src="css/icons/android.svg"><h3>Android Phone</h3></a></li>
+								<li><a href=""><img src="css/icons/apple.svg"><h3>Apple Phone</h3></a></li>
+								<li><a href=""><img src="css/icons/windows.png"><h3>Windows Desktop</h3></a></li>
 							</ul>
 						</div>
 					</div>
