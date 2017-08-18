@@ -52,6 +52,10 @@ Route::post('/user/advert/create','UserController@create')->middleware('auth:api
 Route::post('/user/advert/ccreate','UserController@ccreate');
 
 Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');
+
+Route::get('/user/adverts/transfer', 'UserController@transfer')->middleware('auth:api');
+
+
 Route::post('/user/advert/create/bump','UserController@bump')->middleware('auth:api');
 Route::post('/user/advert/packs/buy','UserController@buy')->middleware('auth:api');
 
