@@ -404,7 +404,8 @@ footer .row {
     margin: 40px 0;
 }
 .copyright.style-1 {
-    background-color: black;
+  background-color: black;
+  text-align: center;
 }
 
 .carousel-control {
