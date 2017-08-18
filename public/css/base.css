@@ -328,6 +328,9 @@ img#footer_top_logo {
 img.img-responsive.footer_logo {
     height: 100px;
 }
+footer h4 {
+    color: #ff9d2c;
+}
 .carousel-control {
   width: 40px;
   color: #ff8830;
