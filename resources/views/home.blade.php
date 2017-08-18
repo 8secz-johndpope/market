@@ -349,7 +349,7 @@
 		<div class="copyright style-1">
 		   <div class="container">
 		        <div class="row">
-		            <div class="cell col-md-6 col-xs-12 footer-copy">
+		            <div class="cell col-md-6 col-xs-12 footer-copy col-lg-offset-4">
 		                All rights reserved. Copyright &copy; 2017 <span class="company-rights">SUMRA</span>
 		            </div>
 		        </div>
