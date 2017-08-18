@@ -241,7 +241,7 @@
 							<ul class="media">
 								<li><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></li>
 								<li><a href=""><img class="img-responsive" src="css/icons/twitter.svg"></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/instagram.svg"></a></li>
+								<li><a href=""><img class="img-responsive" src="css/icons/instagram.png"></a></li>
 								<li><a href=""><img class="img-responsive" src="css/icons/pinterest.svg"></a></li>
 								<li><a href=""><img class="img-responsive" src="css/icons/email.svg"></a></li>
 
