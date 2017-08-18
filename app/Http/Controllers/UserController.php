@@ -314,28 +314,29 @@ class UserController extends BaseController
 
         $response = $this->client->get($params);
 
-        return $response;
-
         $stripe_id=$user->stripe_id;
         $card = $request->card;
         try{
             $charge=\Stripe\Charge::create(array(
-                "amount" => $total,
+                "amount" => (int)$response['_source']['meta']['price'],
                 "currency" => "gbp",
                 "customer" => $stripe_id,
                 "source" => $card, // obtained with Stripe.js
-                "description" => 'Buy Advert/'.$total
+                "description" => 'Buy Advert/'
             ));
 
-            $user->available += $total;
-            $user->balance += $total;
-            $user->save();
+
         }catch (\Exception $e) {
             return [
                 'success' => false,
                 'result' => 'error charging the card'
             ];
         }
+
+
+        $order = new Order;
+        $order->advert_id = $response['_source']['source_id'];
+        $order->save();
         return ['success'=>true,'result'=>$charge];
     }
 
