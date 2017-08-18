@@ -300,6 +300,32 @@ class UserController extends BaseController
 
         return ['body'=>$body,'response'=>$response];
     }
+    public function topup(Request $request)
+    {
+        $user = Auth::user();
+        $total = $request->amount;
+        $stripe_id=$user->stripe_id;
+        $card = $request->card;
+        try{
+            $charge=\Stripe\Charge::create(array(
+                "amount" => $total,
+                "currency" => "gbp",
+                "customer" => $stripe_id,
+                "source" => $card, // obtained with Stripe.js
+                "description" => 'Buy Pack/'.$total
+            ));
+
+            $user->available += $total;
+            $user->balance += $total;
+            $user->save();
+        }catch (\Exception $e) {
+            return [
+                'success' => false,
+                'result' => 'error charging the card'
+            ];
+        }
+        return ['success'=>true,'result'=>$charge];
+    }
     public function buy(Request $request){
         $user = Auth::user();
         $body=$request->json()->all();
