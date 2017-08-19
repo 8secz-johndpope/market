@@ -79,6 +79,23 @@ class MarketController extends BaseController
 
     }
 
+    public function clients(Request $request){
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size' => 0,
+                'aggs' => [
+                    'group_by_phone' => [
+                        "terms" => [ "field"=> "phone.keyword", "size"=> 200]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        return $response;
+    }
+
     public function update(Request $request){
 
         foreach ($this->oldcats as $old) {

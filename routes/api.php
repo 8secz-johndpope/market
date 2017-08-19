@@ -42,6 +42,7 @@ Route::post('/user/balance/withdraw','UserController@withdraw')->middleware('aut
 
 
 Route::get('/user/account/info','UserController@info')->middleware('auth:api');
+Route::get('/clients','UserController@clients');
 
 Route::post('/search', 'MarketController@query');
 
