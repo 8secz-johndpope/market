@@ -298,11 +298,11 @@ ul {
   border-color: #fbbc05;
 }
 .category-6 li::before{
-  color: #ea4335;
+  color: #654320;
 }
 .category-6 .btn-info {
-  background-color: #ea4335;
-  border-color: #ea4335;
+  background-color: #654320;
+  border-color: #654320;
 }
 
 section.features{
