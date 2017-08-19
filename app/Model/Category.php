@@ -44,7 +44,7 @@ class Category extends  Model
         }
         else{
             $categories = Categories::getInstance()->getCategories();
-            for($categories as $cat){
+            foreach($categories as $cat){
                 if($cat->parent_id == $this->id){
                     if(isset($this->children))
                         $this->children = array();
