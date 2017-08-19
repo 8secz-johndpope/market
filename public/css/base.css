@@ -148,7 +148,7 @@ a.navbar-brand {
   padding: 10px 0;
 }
 .panel.panel-primary{
-  /*border-color: white;*/
+  border-color: white;
   box-sizing: border-box;
   border: 0px
 }
@@ -157,7 +157,7 @@ a.navbar-brand {
 .panel-primary>.panel-heading{
   height: 21vh;
   color: black;
-  background-color: transparent;
+  background-color: #f9f9f9;
   border-color: #fff;
 }
 .categories .panel.panel-primary{
