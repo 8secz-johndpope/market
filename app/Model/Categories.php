@@ -33,4 +33,3 @@ class Categories extends  Model
     		return $this->categories[$id];
     	}
 }
-?>
