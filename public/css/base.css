@@ -521,6 +521,10 @@ a.left.carousel-control {
   .container{
     width: 90%;
   }
+  .col-2 img {
+    height: 35px;
+    margin: 30px 5px;
+  }
 }
 @media screen and (min-width: 1700px){
   .categories .panel-body {
@@ -529,5 +533,8 @@ a.left.carousel-control {
   }
   .container{
     width: 90%;
+  }
+  .col-2 img {
+    height: 40px;
   }
 }
