@@ -64,9 +64,9 @@
 				</div>
     			<div class="col-md-10 col-lg-8">
     				<form class="navbar-form" action="/search/">
-        				<div class="form-group col-lg-12">
+        				<div class="form-group col-md-12 col-lg-12">
 								<input type="text" class="form-control input-lg" name="keyword" placeholder="SEARCH">
-								<div class="input-group col-lg-3 col-xl-2 input-group-lg">
+								<div class="input-group col-md-3 col-lg-3 col-xl-2 input-group-lg">
 							      	<input type="text" class="form-control" placeholder="POST CODE" >
 							      	<span class="input-group-btn">
 							     		<button class="btn btn-default" type="button">Go</button>
