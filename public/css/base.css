@@ -125,6 +125,7 @@ a.navbar-brand {
 .categories .col-md-3{
   width: 25%;
 }
+
 .row.search{
     margin-bottom: 20px;
     padding-bottom: 20px;
@@ -178,7 +179,7 @@ a.navbar-brand {
 }
 .categories .panel-body {
   margin: 0 8%;
-  min-height: 34vh;
+  /*min-height: 34vh;*/
   padding: 9px 15px 32px 15px;
 }
 
