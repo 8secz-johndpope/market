@@ -28,8 +28,8 @@ class HomeController extends BaseController
      */
     public function index(Request $request)
     {
-        $base=$this->baseAndFirstChildren();
-        //Need chande de response is not search client
+        $base = Category::where('parent_id',0)->get();
+        //Need  chande de response is not search client
         $min = 0;
         $max = 999999999;
         $params = [
