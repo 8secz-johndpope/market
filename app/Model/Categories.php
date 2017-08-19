@@ -8,7 +8,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Categories extends  Model
+class Categories
 {
 		private static $instance = NULL;
 		private $categories;
