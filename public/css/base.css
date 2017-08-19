@@ -503,6 +503,9 @@ a.left.carousel-control {
   .search input.form-control:::-ms-input-placeholder {
       font-size: 16px;
   }
+  section.social-media {
+    background-size: cover;
+  }
   
 }
 @media screen and (min-width: 1200px){
