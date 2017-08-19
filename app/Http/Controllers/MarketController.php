@@ -93,7 +93,7 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        return $response;
+        return $response['aggregations']['buckets'];
     }
 
     public function update(Request $request){
