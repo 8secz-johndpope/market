@@ -20,10 +20,6 @@ body{
   height: 20px;
 }
 
-.categories .col-md-3{
-  width: 25%;
-}
-
 .navbar-header {
   width: 60%;
 }
@@ -126,7 +122,9 @@ a.navbar-brand {
   padding: 0;
   width: 14%;
 }
-
+.categories .col-md-3{
+  width: 25%;
+}
 .row.search{
     margin-bottom: 20px;
     padding-bottom: 20px;
