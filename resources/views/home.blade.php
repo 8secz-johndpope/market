@@ -36,7 +36,7 @@
 					        <span class="icon-bar"></span>
 				     	</button>
 				      <a class="navbar-brand" href="#"><img class="icon" src="css/ic_launcher1.png"></a>
-				      <div class="col-2 .hidden-sm">
+				      <div class="col-2 hidden-sm">
 						<div>
 							<img src="css/googleplayx233.png">
 						</div>
@@ -87,7 +87,7 @@
 				 				<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
 				 				<h1>{{$cat->title}}</h1>
 				 			</div>
-				 			<div class="panel-body">
+				 			<div class="panel-body hidden-sm">
 							 	<ul>
 							 	@foreach($cat->children as $child)
 							 		<li><a href="{{$child->slug}}">{{$child->title}}</a></li>
