@@ -67,7 +67,7 @@ class MarketController extends BaseController
     public function getAllCategories(Request $request){
         $base = Category::where('parent_id',0)->get();
         $i = 0;
-        $categories = Categories::getInstance()->getAllCategories();
+        $categories = Categories::getInstance()->getCategories();
         $maps=array();
         foreach ($base as $category){
             //$category->children=$category->children;
