@@ -43,7 +43,7 @@ class Category extends  Model
         }
         else{
             $descendants = $this->children()->get();
-            $categories = Categories::getInstance()->getCategories();
+            //$categories = Categories::getInstance()->getCategories();
             foreach ($descendants as $child) {
                 $child->children = $child->getAllDescendants();
             }
