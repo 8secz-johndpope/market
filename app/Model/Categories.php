@@ -19,7 +19,7 @@ class Categories extends  Model
 			}
 
 		}
-		public function __construct(){
+		function __construct(){
 			$categoriesDB = $categories = Category::all();
 			$this->categories = array();
 			foreach ($categoriesDB as $cat) {
