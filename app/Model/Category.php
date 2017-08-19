@@ -17,6 +17,10 @@ class Category extends  Model
     {
         return $this->hasMany('App\Model\Category','parent_id');
     }
+    public function mchildren()
+    {
+        return $this->hasMany('App\Model\Category','parent_id')->limit(10);
+    }
     public function parent(){
         return $this->belongsTo('App\Model\Category');
     }
