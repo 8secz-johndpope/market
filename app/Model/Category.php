@@ -13,7 +13,6 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends  Model
 {
     public $timestamps = false;
-    private $aChildren;
     public function children()
     {
         return $this->hasMany('App\Model\Category','parent_id');
@@ -56,8 +55,5 @@ class Category extends  Model
     }
     public function fields(){
         return $this->belongsToMany('App\Model\Field');
-    }
-    public function getChildren(){
-        return $this->aChildren;
     }
 }
