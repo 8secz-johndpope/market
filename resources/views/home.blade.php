@@ -87,7 +87,7 @@
 				 				<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
 				 				<h1>{{$cat->title}}</h1>
 				 			</div>
-				 			<div class="panel-body hidden-sm">
+				 			<div class="panel-body hidden-xs hidden-sm">
 							 	<ul>
 							 	@foreach($cat->children as $child)
 							 		<li><a href="{{$child->slug}}">{{$child->title}}</a></li>
