@@ -484,7 +484,7 @@ a.left.carousel-control {
 @media screen and (min-width: 768px){
 
   .categories .panel-body {
-    height: 40vh;
+    height: 22vh;
   }
 
   .navbar-form .input-group>.form-control {
