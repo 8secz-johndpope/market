@@ -15,6 +15,7 @@ use App\Model\FieldValue;
 use App\Model\Relation;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use App\Model\Category;
 
 class MarketController extends BaseController
 {
