@@ -64,7 +64,7 @@ class HomeController extends BaseController
     }
     
     public function baseAndFirstChildren(){
-        $base = Category::getBase();
+        $base = Category::where('parent_id',0)->get();
         $j = 0;
         foreach ($base as $cat) {
             $cat->class = "category-$j";
