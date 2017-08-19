@@ -20,7 +20,7 @@ class Categories
 			return self::$instance;
 
 		}
-		function __construct(){
+		private function __construct(){
 			$categoriesDB = $categories = Category::all();
 			$this->categories = array();
 			foreach ($categoriesDB as $cat) {
