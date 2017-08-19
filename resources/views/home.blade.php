@@ -146,9 +146,6 @@
 							 					<h3 class="">{{$spl['title']}}</h3>
 							 				</div>
 										 	
-		                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
-		                                            </div>
-		                                   
 										</div>
 									</div>
 								</div>
