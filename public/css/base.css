@@ -157,7 +157,7 @@ a.navbar-brand {
 .panel-primary>.panel-heading{
   height: 21vh;
   color: black;
-  background-color: #f9f9f9;
+  background-color: transparent;
   border-color: #fff;
 }
 .categories .panel.panel-primary{
