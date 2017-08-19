@@ -494,6 +494,15 @@ a.left.carousel-control {
   .carousel-indicators {
     bottom: -30px;
   }
+  .search input.form-control::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .search input.form-control::-moz-placeholder {
+      font-size: 16px;
+  }
+  .search input.form-control:::-ms-input-placeholder {
+      font-size: 16px;
+  }
   
 }
 @media screen and (min-width: 1200px){
