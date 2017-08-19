@@ -18,7 +18,6 @@ class Categories
 				self::$instance = new self();
 			}
 			return self::$instance;
-
 		}
 		private function __construct(){
 			$categoriesDB = $categories = Category::all();
