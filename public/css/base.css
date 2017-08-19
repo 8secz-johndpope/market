@@ -148,8 +148,9 @@ a.navbar-brand {
   padding: 10px 0;
 }
 .panel.panel-primary{
-  border-color: white;
+  /*border-color: white;*/
   box-sizing: border-box;
+  border: 0px
 }
 
 
