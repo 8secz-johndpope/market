@@ -60,7 +60,7 @@
 				</div>
 			</nav>
 			<div class="row search">
-				<div class="col-md-1 col-lg-2">
+				<div class="col-md-1 col-lg-2 hidden-xs">
 				</div>
     			<div class="col-md-10 col-lg-8">
     				<form class="navbar-form" action="/search/">
