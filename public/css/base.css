@@ -463,7 +463,7 @@ a.left.carousel-control {
 
 @media screen and (max-width: 768px){
   .navbar-header {
-    width: 100%;
+    width: auto;
   }
   .navbar-brand img.icon{
     height: 40px;
