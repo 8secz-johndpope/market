@@ -36,7 +36,7 @@
 					        <span class="icon-bar"></span>
 				     	</button>
 				      <a class="navbar-brand" href="#"><img class="icon" src="css/ic_launcher1.png"></a>
-				      <div class="col-2 hidden-sm">
+				      <div class="col-md-1 col-2 hidden-sm">
 						<div>
 							<img src="css/googleplayx233.png">
 						</div>
@@ -60,9 +60,9 @@
 				</div>
 			</nav>
 			<div class="row search">
-				<div class="col-lg-2">
+				<div class="col-md-1 col-lg-2">
 				</div>
-    			<div class="col-lg-8">
+    			<div class="col-md-10 col-lg-8">
     				<form class="navbar-form" action="/search/">
         				<div class="form-group col-lg-12">
 								<input type="text" class="form-control input-lg" name="keyword" placeholder="SEARCH">
