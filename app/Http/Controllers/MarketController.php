@@ -93,7 +93,7 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        return $response['aggregations']['buckets'];
+        return $response['aggregations']['group_by_phone']['buckets'];
     }
 
     public function update(Request $request){
