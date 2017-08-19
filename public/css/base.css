@@ -194,8 +194,8 @@ section.spotligth{
 }
 
 .spotligth .row {
-    margin: 100px auto;
-    width: 92%;
+    margin: 100px 0;
+    /* width: 92%; */
 }
 
 .spotligth .panel-primary{
@@ -502,7 +502,7 @@ a.left.carousel-control {
     width: 14.2%; 
   }
   .spotligth .col-lg-2 {
-    width: 16%;
+    /*width: 16%;*/
   }
   .categories .panel-body {
     height: 34vh;
