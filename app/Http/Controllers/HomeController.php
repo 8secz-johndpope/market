@@ -28,10 +28,9 @@ class HomeController extends BaseController
      */
     public function index(Request $request)
     {
-<<<<<<< HEAD
-        $base = Category::where('parent_id',0)->get();
+
+        //$base = Category::where('parent_id',0)->get();
         //Need  chande de response is not search client
-=======
         $base=Category::where('parent_id',0)->get();
         $j = 0;
         $all=array();
@@ -42,7 +41,6 @@ class HomeController extends BaseController
             $j++;
         }
         //Need chande de response is not search client
->>>>>>> 8a70688bfe7f9ca0b7dc06a848e1de94423dcf55
         $min = 0;
         $max = 999999999;
         $params = [
@@ -76,7 +74,7 @@ class HomeController extends BaseController
         return view('home',['base' => $all, 'spl1' => $spl1, 'spl2' => $spl2, 'spl3' => $spl3, 'spl4' => $spl4]);
     }
     
-<<<<<<< HEAD
+
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
         $j = 0;
@@ -87,7 +85,4 @@ class HomeController extends BaseController
         }
         return $base;
     }
-=======
-
->>>>>>> 8a70688bfe7f9ca0b7dc06a848e1de94423dcf55
 }
