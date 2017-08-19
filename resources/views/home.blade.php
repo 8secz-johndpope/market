@@ -104,96 +104,98 @@
 		 	</div>
 		</section>
 		<section class="spotligth">
-			<div class="row">
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					    <li data-target="#myCarousel" data-slide-to="1"></li>
-					    <li data-target="#myCarousel" data-slide-to="2"></li>
-					    <li data-target="#myCarousel" data-slide-to="3"></li>
-					</ol>
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
-				    <div class="item active">
-				    	@foreach($spl1 as $spl)
-				    		<div class="col-md-4 col-lg-2">
-					    		<div class="panel panel-primary">
-						 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
-						 			</div>
-						 			<div class="panel-body">
-						 				<h3 class="">{{$spl['title']}}</h3>
-									 	@if($spl['meta']['price']>=0)
-	                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
-	                                            </div>
-	                                   @endif
+			<div class="container">
+				<div class="row">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						    <li data-target="#myCarousel" data-slide-to="1"></li>
+						    <li data-target="#myCarousel" data-slide-to="2"></li>
+						    <li data-target="#myCarousel" data-slide-to="3"></li>
+						</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+					    <div class="item active">
+					    	@foreach($spl1 as $spl)
+					    		<div class="col-md-4 col-lg-2">
+						    		<div class="panel panel-primary">
+							 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
+							 			</div>
+							 			<div class="panel-body">
+							 				<h3 class="">{{$spl['title']}}</h3>
+										 	@if($spl['meta']['price']>=0)
+		                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
+		                                            </div>
+		                                   @endif
+										</div>
 									</div>
 								</div>
-							</div>
-				    	@endforeach
-				    </div>
-				    <div class="item">
-				    	@foreach($spl2 as $spl)
-				    		<div class="col-md-4 col-lg-2">
-					    		<div class="panel panel-primary">
-						 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
-						 			</div>
-						 			<div class="panel-body">
-						 				<h3 class="">{{$spl['title']}}</h3>
-									 	@if($spl['meta']['price']>=0)
-	                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
-	                                            </div>
-	                                   @endif
+					    	@endforeach
+					    </div>
+					    <div class="item">
+					    	@foreach($spl2 as $spl)
+					    		<div class="col-md-4 col-lg-2">
+						    		<div class="panel panel-primary">
+							 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
+							 			</div>
+							 			<div class="panel-body">
+							 				<h3 class="">{{$spl['title']}}</h3>
+										 	@if($spl['meta']['price']>=0)
+		                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
+		                                            </div>
+		                                   @endif
+										</div>
 									</div>
 								</div>
-							</div>
-				    	@endforeach
-				    </div>
-				    <div class="item">
-				    	@foreach($spl3 as $spl)
-				    		<div class="col-md-4 col-lg-2">
-					    		<div class="panel panel-primary">
-						 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
-						 			</div>
-						 			<div class="panel-body">
-						 				<h3 class="">{{$spl['title']}}</h3>
-									 	@if($spl['meta']['price']>=0)
-	                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
-	                                            </div>
-	                                   @endif
+					    	@endforeach
+					    </div>
+					    <div class="item">
+					    	@foreach($spl3 as $spl)
+					    		<div class="col-md-4 col-lg-2">
+						    		<div class="panel panel-primary">
+							 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
+							 			</div>
+							 			<div class="panel-body">
+							 				<h3 class="">{{$spl['title']}}</h3>
+										 	@if($spl['meta']['price']>=0)
+		                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
+		                                            </div>
+		                                   @endif
+										</div>
 									</div>
 								</div>
-							</div>
-				    	@endforeach  
-				    </div>
-				    <div class="item">
-				    	@foreach($spl4 as $spl)
-				    		<div class="col-md-4 col-lg-2">
-					    		<div class="panel panel-primary">
-						 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
-						 			</div>
-						 			<div class="panel-body">
-						 				<h3 class="">{{$spl['title']}}</h3>
-									 	@if($spl['meta']['price']>=0)
-	                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
-	                                            </div>
-	                                   @endif
+					    	@endforeach  
+					    </div>
+					    <div class="item">
+					    	@foreach($spl4 as $spl)
+					    		<div class="col-md-4 col-lg-2">
+						    		<div class="panel panel-primary">
+							 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
+							 			</div>
+							 			<div class="panel-body">
+							 				<h3 class="">{{$spl['title']}}</h3>
+										 	@if($spl['meta']['price']>=0)
+		                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
+		                                            </div>
+		                                   @endif
+										</div>
 									</div>
 								</div>
-							</div>
-				    	@endforeach  
-				    </div>
+					    	@endforeach  
+					    </div>
+					</div>
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					    <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					    <span class="sr-only">Next</span>
+					</a>
 				</div>
-				<!-- Left and right controls -->
-				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left"></span>
-				    <span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#myCarousel" data-slide="next">
-				    <span class="glyphicon glyphicon-chevron-right"></span>
-				    <span class="sr-only">Next</span>
-				</a>
-			</div>
+				</div>
 			</div>
 		</section>
 		<section class="features">
