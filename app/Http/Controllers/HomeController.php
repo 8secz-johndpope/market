@@ -28,7 +28,13 @@ class HomeController extends BaseController
      */
     public function index(Request $request)
     {
-        $base=$this->baseAndFirstChildren();
+        $base=Category::where('parent_id',0)->get();
+        $j = 0;
+        foreach ($base as $cat) {
+            $cat->class = "category-$j";
+            $cat->children= $base->children;
+            $j++;
+        }
         //Need chande de response is not search client
         $min = 0;
         $max = 999999999;
@@ -63,14 +69,5 @@ class HomeController extends BaseController
         return view('home',['base' => $base, 'spl1' => $spl1, 'spl2' => $spl2, 'spl3' => $spl3, 'spl4' => $spl4]);
     }
     
-    public function baseAndFirstChildren(){
-        $base = Category::getBase();
-        $j = 0;
-        foreach ($base as $cat) {
-            $cat->class = "category-$j";
-            $cat->children= $base->children()->limit($max)->get();
-            $j++;
-        }
-        return $base;
-    }
+
 }
