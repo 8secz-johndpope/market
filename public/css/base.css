@@ -20,6 +20,10 @@ body{
   height: 20px;
 }
 
+.categories .col-md-3{
+  width: 25%;
+}
+
 .navbar-header {
   width: 60%;
 }
@@ -162,7 +166,7 @@ a.navbar-brand {
 }
 .categories .panel.panel-primary{
   border: 0;
-  background-color: #f9f9f9;
+  background-color: transparent;
   box-shadow: none;
 }
 .categories .panel-primary>.panel-heading{
