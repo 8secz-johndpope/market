@@ -157,9 +157,14 @@ class MarketController extends BaseController
         $aggs=array();
         foreach ($fields as $field){
             if($field->type==='integer'){
-                $field->filters = $field->filters;
+                $filters = $field->filters;
+                $ranges = array();
+                foreach ($filters as $filter){
+                    $ranges[] = ['from'=>$filter->from_int,'to'=>$filter->to_int];
+                }
+                $aggs['group_by'.$field->slug]=['range'=>['field'=>'meta.'.$field->slug,'ranges'=>$ranges]];
             }else{
-                $aggs['group_by'.$field->slug]=['terms'=>['field'=>$field->slug.'.keyword']];
+                $aggs['group_by'.$field->slug]=['terms'=>['field'=>'meta.'.$field->slug.'.keyword','size'=>1000000]];
             }
         }
         return ['fields' => $aggs];
