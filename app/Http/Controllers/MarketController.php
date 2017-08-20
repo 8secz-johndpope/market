@@ -659,7 +659,9 @@ class MarketController extends BaseController
 
             ]
         ];
-
+        if(count($aggs)>0){
+            $params['body']['aggs']=$aggs;
+        }
 
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
