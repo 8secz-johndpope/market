@@ -574,6 +574,9 @@ a.left.carousel-control {
   .panel-primary>.panel-heading{
     height: 21vh;
   }
+  .read-more {
+    bottom: 10px;
+  }
 }
 @media screen and (min-width: 1700px){
   .categories .panel-body {
