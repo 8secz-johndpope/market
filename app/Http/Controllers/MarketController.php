@@ -651,7 +651,8 @@ class MarketController extends BaseController
                             "distance_type"=> "plane"
                         ]
                     ]
-                ]
+                ],
+                'aggs' => $aggs
 
 
             ]
@@ -695,8 +696,8 @@ class MarketController extends BaseController
 
 
 
-            $filters=array();
-            foreach ($aggretations as $key => $aggretation) {
+        $filters=array();
+        foreach ($aggretations as $key => $aggretation) {
                 $field = Field::where('slug', $key)->first();
                 $buckets = $aggretation['buckets'];
                 $values = array();
