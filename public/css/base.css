@@ -504,7 +504,7 @@ a.left.carousel-control {
 @media screen and (min-width: 768px){
   .categories .panel-body {
     height: 22vh;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .navbar-form .input-group>.form-control {
       width: 100%;
@@ -542,7 +542,7 @@ a.left.carousel-control {
     height: 17vh;
   }
   .read-more {
-    bottom: 20px;
+    bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px){
