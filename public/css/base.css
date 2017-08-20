@@ -519,6 +519,9 @@ a.left.carousel-control {
   footer{
     background-size: cover;
   }
+  .stores img {
+    height: 70px;
+  }
 }
 
 @media screen and (min-width: 768px){
