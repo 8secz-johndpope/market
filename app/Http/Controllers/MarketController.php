@@ -701,7 +701,7 @@ class MarketController extends BaseController
 
 
         $filters=array();
-
+        $parts= explode('?',$request->url());
         foreach ($aggretations as $key => $aggretation) {
                 $field = Field::where('slug', $key)->first();
                 $buckets = $aggretation['buckets'];
@@ -721,7 +721,7 @@ class MarketController extends BaseController
                                 $filter->selected = 1;
 
                             }else{
-                                $filter->url = $request->url();
+                                $filter->url = $parts[0];
                                 $filter->selected = 0;
                             }
                             $values[] = $filter;
@@ -733,7 +733,7 @@ class MarketController extends BaseController
                             $field_val->selected = 1;
                             $field_val->url  = $request->url();
                         }else{
-                            $filter->url = $request->url();
+                            $filter->url = $parts[0];
                             $field_val->selected = 0;
                         }
 
