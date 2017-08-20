@@ -501,8 +501,8 @@ a.left.carousel-control {
   .categories {
     margin: 5px auto;
   }
-  .categories .col-xs-5 {
-    width: 41.66666667%;
+  .categories .col-xs-6 {
+    width: 50%;
   }
 }
 
