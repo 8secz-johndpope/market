@@ -523,10 +523,13 @@ a.left.carousel-control {
     height: 50px;
   }
   .row.justify-content-between {
-    padding: 60px 50px;
+    padding: 60px 0;
   }
   .stores h3 {
     width: 50px;
+  }
+  .col-xs-12.col-md-8.col-lg-6.store {
+    margin: 0 60px;
   }
 }
 
