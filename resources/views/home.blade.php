@@ -244,7 +244,7 @@
 		<section class="social-media">
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-md-8 col-lg-6 store">
+					<div class="col-xs-12 col-md-8 col-lg-6 store">
 							<h2>Download</h2>
 							<ul class="list-inline stores">
 								<li><a href=""><img class="img-responsive center-block" src="css/icons/android.svg"><h3>Android Phone</h3></a></li>
