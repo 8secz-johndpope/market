@@ -155,8 +155,8 @@ class MarketController extends BaseController
         }
         $fields = $category->fields;
         foreach ($fields as $field){
-            if($field->type==='list'){
-                $field->values = $field->values;
+            if($field->type==='integer'){
+                $field->filters = $field->filters;
             }
         }
         return ['fields' => $fields];
