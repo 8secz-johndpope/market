@@ -493,11 +493,7 @@ class MarketController extends BaseController
                                   ]
                               ]
                           ],
-                          [
-                              'match' => [
-                                  'title'=>$q
-                              ]
-                          ]
+
                       ]
                     ]
 
@@ -506,6 +502,13 @@ class MarketController extends BaseController
                 'aggs'=>$aggs
             ]
         ];
+        if(isset($body['q'])){
+            $params['body']['query']['bool']['must'][]=[
+                'match' => [
+                    'title'=>$body['q']
+                ]
+            ];
+        }
 
         if(isset($body['distance'])&&isset($body['lat'])&&isset($body['lng'])){
             $params['body']['query']['bool']["filter"] = [
