@@ -625,7 +625,6 @@ class MarketController extends BaseController
         }
         $pagesize = 50;
 
-        return $aggs;
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
