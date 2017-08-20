@@ -630,6 +630,7 @@ class MarketController extends BaseController
                     if(!isset($bucket['from'])){
                         $fval = new FieldValue;
                         $fval->field_id = $field->id;
+                        $fval->slug = $bucket['key'];
                         $fval->save();
                         return ['bucket'=>$bucket,'field'=>$field];
                     }
