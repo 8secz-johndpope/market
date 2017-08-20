@@ -162,6 +162,20 @@ class MarketController extends BaseController
         return ['fields' => $fields];
 
     }
+    public function filters(Request $request,$any)
+    {
+        $category = Category::find($any);
+        if($category===null){
+            return ['msg'=>'Catagory not found'];
+        }
+        $fields = $category->fields;
+        foreach ($fields as $field){
+            if($field->type==='list'){
+                $field->values = $field->values;
+            }
+        }
+        return ['fields' => $fields];
+    }
     public function addfields(Request $request,$any){
         $categories = Category::all();
 

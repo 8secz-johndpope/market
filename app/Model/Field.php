@@ -18,4 +18,7 @@ class Field extends  Model
     public function values() {
         return $this->hasMany('App\Model\FieldValue');
     }
+    public function filters() {
+        return $this->hasMany('App\Model\Filter');
+    }
 }

@@ -13,10 +13,5 @@ use Illuminate\Database\Eloquent\Model;
 class Filter extends Model
 {
     public $timestamps = false;
-    public function categories(){
-        return $this->belongsToMany('App\Model\Category');
-    }
-    public function values() {
-        return $this->hasMany('App\Model\FilterValue');
-    }
+
 }
