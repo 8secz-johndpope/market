@@ -618,11 +618,9 @@ class MarketController extends BaseController
             foreach ($response['aggregations'] as $a=>$b){
                 $aggretations[$a]=$b;
             }
-            return $aggretations;
             unset($aggs[$key]);
         }
 
-        return $aggretations;
         $page = $request->page ? $request->page : 1;
         if($page>100)
         {
