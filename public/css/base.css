@@ -510,6 +510,9 @@ a.left.carousel-control {
   .categories .panel-primary>.panel-heading {
     margin-top: 20px;
   }
+  .categories .panel-heading h1 {
+    padding: 5px 0;
+  }
 }
 
 @media screen and (min-width: 768px){
