@@ -29,4 +29,4 @@ Route::get('/', 'MarketController@index');
 Route::get('/user/leaves','MarketController@leaves');
 
 Route::get('/p/{cat}/{id}', 'MarketController@product');
-Route::get('/{any}', 'MarketController@search');
+Route::match(['get', 'post'],'/{any}', 'MarketController@search');
