@@ -729,7 +729,7 @@ class MarketController extends BaseController
                     } else {
                         if(isset($input[$key])&&$input[$key]===$field_val->slug){
                             $field_val->selected = 1;
-                            $field_val->url = $request->url();
+                            $field_val->url = $request->url('/');
                         }else{
                             $field_val->selected = 0;
                         }
