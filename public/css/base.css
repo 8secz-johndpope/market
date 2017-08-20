@@ -502,9 +502,12 @@ a.left.carousel-control {
 }
 
 @media screen and (min-width: 768px){
+  .categories .row {
+    padding-bottom: 5px;
+  }
   .categories .panel-body {
     height: 22vh;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .navbar-form .input-group>.form-control {
       width: 100%;
@@ -542,7 +545,7 @@ a.left.carousel-control {
     height: 17vh;
   }
   .read-more {
-    bottom: 20px;
+    bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px){
@@ -567,6 +570,15 @@ a.left.carousel-control {
   }
   .navbar-header {
     width: 60%;
+  }
+  .panel-primary>.panel-heading{
+    height: 21vh;
+  }
+  .read-more {
+    bottom: 10px;
+  }
+  .categories .row {
+    padding-bottom: 35px;
   }
 }
 @media screen and (min-width: 1700px){
