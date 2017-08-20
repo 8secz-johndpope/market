@@ -526,6 +526,9 @@ a.left.carousel-control {
   section.social-media {
     background-size: cover;
   }
+  .navbar-header {
+    width: 48%;
+  }
   
 }
 @media screen and (min-width: 1200px){
