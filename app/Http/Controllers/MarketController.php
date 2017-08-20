@@ -725,7 +725,9 @@ class MarketController extends BaseController
                                 $anyb->title="Any";
                                 $anyb->url= $parts[0].'?'.http_build_query($cinput);
                                 $anyb->selected = 0;
+                                $anyb->count=100;
                                 array_prepend($values,$anyb);
+
                             }else{
                                 $cinput = $input;
                                 $cinput[$key]=$filter->key;
@@ -745,6 +747,7 @@ class MarketController extends BaseController
                             $anyb->url= $parts[0].'?'.http_build_query($cinput);
                             $anyb->title="Any";
                             $anyb->selected = 0;
+                            $anyb->count=100;
                             array_prepend($values,$anyb);
                         }else{
                             $cinput = $input;
