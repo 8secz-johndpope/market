@@ -570,6 +570,9 @@ a.left.carousel-control {
   .navbar-default .navbar-nav>li>a {
     margin-top: 10px;
   }
+  .search input.form-control.input-lg {
+    width: 66%;
+  }
 }
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
