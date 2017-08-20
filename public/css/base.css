@@ -537,6 +537,12 @@ a.left.carousel-control {
   .stores li {
     padding: 0 24px;
   }
+  ul.media {
+    margin: 0 40px;
+  }
+  .media li {
+    margin: 0 5px;
+  }
 }
 
 @media screen and (min-width: 768px){
