@@ -577,7 +577,7 @@ a.left.carousel-control {
   .panel-heading img.icon-category {
     height: 13em;
   }
-  .panel-primary>.panel-heading {
+  .categories .panel-primary>.panel-heading {
     height: 17em;
   }
   .read-more {
