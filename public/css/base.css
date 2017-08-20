@@ -531,6 +531,8 @@ a.left.carousel-control {
   .col-xs-12.col-md-8.col-lg-6.store {
     margin: 0 60px;
   }
+  .social-media h2 {
+    text-align: center;
 }
 
 @media screen and (min-width: 768px){
