@@ -81,7 +81,7 @@
 			<div class="container">
 				<div class ="row">
 			 	@foreach($base as $cat)
-			 		<div class="col-xs-4 col-sm-3 col-md-3 col-lg-2">
+			 		<div class="col-xs-5 col-sm-3 col-md-3 col-lg-2">
 				 		<div class="panel panel-primary {{$cat->class}}">
 				 			<div class="panel-heading">
 				 				<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
