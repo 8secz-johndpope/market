@@ -353,7 +353,7 @@ section.social-media{
     margin-top: -10px;
 }
 ul.stores {
-    display: inline-flex;
+    /* display: inline-flex; */
 }
 
 .stores li {
