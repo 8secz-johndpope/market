@@ -542,6 +542,7 @@ a.left.carousel-control {
   }
   .media li {
     margin: 0 5px;
+    padding-right: 0;
   }
 }
 
