@@ -375,9 +375,12 @@
                 </a>
             </div>
             <div class="l-visible-large">
-                <a href="https://itunes.apple.com/us/app/id896130944?mt=8" target="_blank" class="side-banner">
-                    <img src="//www-mercari-com.akamaized.net/assets/img/common/us/side_banner.jpg?1224156651" alt="Download Mercari Now">
-                </a>
+                <h3>Heading</h3>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
+                    <li>Item 1</li>
+                </ul>
             </div>
         </div>
     </main>
