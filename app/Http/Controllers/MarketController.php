@@ -492,7 +492,7 @@ class MarketController extends BaseController
                                       'lte'=>$category->ends
                                   ]
                               ]
-                          ],
+                          ]
 
                       ]
                     ]
