@@ -628,6 +628,9 @@ class MarketController extends BaseController
                 $field_val = FieldValue::where('slug',$bucket['key'])->first();
                 if($field_val===null){
                     if(!isset($bucket['from'])){
+                        $fval = new FieldValue;
+                        $fval->field_id = $field->id;
+                        $fval->save();
                         return ['bucket'=>$bucket,'field'=>$field];
                     }
                     $filter = Filter::where('from_int',$bucket['from'])->where('to_int',$bucket['to'])->first();
