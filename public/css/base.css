@@ -532,7 +532,8 @@ a.left.carousel-control {
     text-align: center;
   }
   ul.stores {
-    margin: 20px 40px;
+    margin: 20px 9%;
+    width: 100%;
   }
   .stores li {
     padding: 0 6%;
