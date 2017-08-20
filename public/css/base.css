@@ -577,6 +577,9 @@ a.left.carousel-control {
   .read-more {
     bottom: 10px;
   }
+  .categories .row {
+    padding-bottom: 35px;
+  }
 }
 @media screen and (min-width: 1700px){
   .categories .panel-body {
