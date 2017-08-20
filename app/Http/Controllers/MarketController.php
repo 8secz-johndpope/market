@@ -663,9 +663,9 @@ class MarketController extends BaseController
             $params['body']['aggs']=$aggs;
         }
 
-        return $aggs;
 
         $response = $this->client->search($params);
+        array_merge($aggretations,$response['aggregations']);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $total= $response['hits']['total'];
         $max = (int)($total/$pagesize);
