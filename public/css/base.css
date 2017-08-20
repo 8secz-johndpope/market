@@ -533,6 +533,9 @@ a.left.carousel-control {
     height: 40px;
     padding-left: 5px;
   }
+  .navbar-default .navbar-nav>li>a {
+    font-size: 14px;
+  }
   
 }
 @media screen and (min-width: 1200px){
