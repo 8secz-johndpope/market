@@ -525,8 +525,8 @@ a.left.carousel-control {
     width: 90%;
   }
   .col-2 img {
-    height: 35px;
-    margin: 30px 5px;
+    /*height: 35px;
+    margin: 30px 5px;*/
   }
 }
 @media screen and (min-width: 1700px){
