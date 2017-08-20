@@ -545,10 +545,7 @@ class MarketController extends BaseController
                 $aggs[$field->slug]=['terms'=>['field'=>'meta.'.$field->slug.'.keyword','size'=>1000000]];
             }
         }
-        $input = $request->all();
-        foreach ($input as $key=>$value){
 
-        }
         $page = $request->page ? $request->page : 1;
         if($page>100)
         {
@@ -595,6 +592,20 @@ class MarketController extends BaseController
 
             ]
         ];
+
+        $input = $request->all();
+        foreach ($input as $key=>$value){
+            $field=Field::where('slug',$key)->first();
+            if($field===null){
+
+            }else{
+                if($field->type==='list'){
+                    $fil = ['term'=>['meta.'.$key.'.keyword'=>['value'=>$value]]];
+                    $params['body']['query']['bool']['must'][]=$fil;
+                }
+            }
+        }
+
         if(count($aggs)>0){
             $params['body']['aggs']=$aggs;
         }
