@@ -624,7 +624,7 @@ class MarketController extends BaseController
             $page=100;
         }
         $pagesize = 50;
-        return $pagesize;
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -651,8 +651,8 @@ class MarketController extends BaseController
                             "distance_type"=> "plane"
                         ]
                     ]
-                ],
-                'aggs'=>$aggs
+                ]
+
 
             ]
         ];
