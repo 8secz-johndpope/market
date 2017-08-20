@@ -716,12 +716,23 @@ class MarketController extends BaseController
                         } else {
                             $filter = Filter::where('from_int', $bucket['from'])->where('to_int', $bucket['to'])->first();
                             $filter->count = $bucket['doc_count'];
+                            if(isset($input[$key])&&$input[$key]===$filter->key){
+                                $filter->selected = 1;
+                            }else{
+                                $filter->selected = 0;
+                            }
                             $values[] = $filter;
                         }
 
 
                     } else {
-                        $field_val->count = $bucket['doc_count'];
+                        if(isset($input[$key])&&$input[$key]===$field_val->slug){
+                            $field_val->selected = 1;
+                        }else{
+                            $field_val->selected = 0;
+                        }
+
+                            $field_val->count = $bucket['doc_count'];
                         $values[] = $field_val;
                     }
 

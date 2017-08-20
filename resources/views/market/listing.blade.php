@@ -379,8 +379,11 @@
                 <h4>{{$filter->title}}</h4>
                 <ul>
                     @foreach($filter->vals as $val)
-
+                    @if($val->selected===1)
+                            <li>{{$val->title}}</li>
+                        @else
                     <li><a>{{$val->title}}</a>&nbsp;&nbsp;{{$val->count}}</li>
+                        @endif
                     @endforeach
                 </ul>
             </div>
