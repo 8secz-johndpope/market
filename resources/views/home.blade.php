@@ -210,28 +210,28 @@
 		<section class="features">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-lg-3">
+					<div class="col-sm-6 col-md-6 col-lg-3">
 						<figure>
 							<img src="css/get-rewarded.svg">
 						</figure>
 						<h2>GET REWARDED</h2>
 						<p>We’ll give you discounts and credits for being better buyers & sellers</p>
 					</div>
-					<div class="col-md-6 col-lg-3">
+					<div class="col-sm-6 col-md-6 col-lg-3">
 						<figure>
 							<img src="css/free-uk.svg">
 						</figure>
 						<h2>FREE SHIPPING</h2>
 						<p>What you see is what you get, no hidden fees on our purchase prices</p>
 					</div>
-					<div class="col-md-6 col-lg-3">
+					<div class="col-sm-6 col-md-6 col-lg-3">
 						<figure>
 							<img src="css/heart-black.svg">
 						</figure>
 						<h2>HASSLE FREE</h2>
 						<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
 					</div>
-					<div class="col-md-6 col-lg-3">
+					<div class="col-sm-6 col-md-6 col-lg-3">
 						<figure>
 							<img src="css/peace-of-mind-uk.svg">
 						</figure>
