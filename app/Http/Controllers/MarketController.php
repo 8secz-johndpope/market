@@ -592,7 +592,7 @@ class MarketController extends BaseController
 
         }
 
-        return $aggs;
+
         $aggretations=array();
 
         foreach ($input as $key=>$value){
@@ -652,8 +652,7 @@ class MarketController extends BaseController
                             "distance_type"=> "plane"
                         ]
                     ]
-                ],
-                'aggs' => $aggs
+                ]
 
 
             ]
