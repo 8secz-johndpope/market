@@ -375,7 +375,7 @@
                 </a>
             </div>
             <div class="l-visible-large">
-                <h3>Heading</h3>
+                <h4>Heading</h4>
                 <ul>
                     <li><a>Item 1</a></li>
                     <li><a>Item 11</a></li>
