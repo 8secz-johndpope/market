@@ -618,6 +618,7 @@ class MarketController extends BaseController
             unset($aggs[$key]);
         }
 
+        return $aggretations;
         $page = $request->page ? $request->page : 1;
         if($page>100)
         {
