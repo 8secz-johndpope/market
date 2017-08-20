@@ -467,6 +467,7 @@ a.left.carousel-control {
 @media screen and (max-width: 767px){
   .navbar-header {
     width: auto;
+    background-color: #b9b9b9;
   }
   .navbar-brand img.icon{
     height: 40px;
@@ -544,6 +545,12 @@ a.left.carousel-control {
   .media li {
     margin: 0 5px;
     padding-right: 0;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: #fff;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
   }
 }
 
