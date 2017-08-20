@@ -377,9 +377,9 @@
             <div class="l-visible-large">
                 <h3>Heading</h3>
                 <ul>
-                    <li>Item 1</li>
-                    <li>Item 1</li>
-                    <li>Item 1</li>
+                    <li><a>Item 1</a></li>
+                    <li><a>Item 11</a></li>
+                    <li><a>Item 11</a></li>
                 </ul>
             </div>
         </div>
