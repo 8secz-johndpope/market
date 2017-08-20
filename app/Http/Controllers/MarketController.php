@@ -720,8 +720,9 @@ class MarketController extends BaseController
                             if(isset($input[$key])&&$input[$key]===$filter->key){
                                 $filter->selected = 1;
                             }else{
-                                $input[$key]=$filter->key;
-                                $filter->url = $parts[0].'?'.http_build_query($input);
+                                $cinput = $input;
+                                $cinput[$key]=$filter->key;
+                                $filter->url = $parts[0].'?'.http_build_query($cinput);
                                 $filter->selected = 0;
                             }
                             $values[] = $filter;
@@ -732,12 +733,13 @@ class MarketController extends BaseController
                         if(isset($input[$key])&&$input[$key]===$field_val->slug){
                             $field_val->selected = 1;
                         }else{
-                            $input[$key]=$field_val->slug;
-                            $field_val->url = $parts[0].'?'.http_build_query($input);
+                            $cinput = $input;
+                            $cinput[$key]=$field_val->slug;
+                            $field_val->url = $parts[0].'?'.http_build_query($cinput);
                             $field_val->selected = 0;
                         }
 
-                            $field_val->count = $bucket['doc_count'];
+                        $field_val->count = $bucket['doc_count'];
                         $values[] = $field_val;
                     }
 
