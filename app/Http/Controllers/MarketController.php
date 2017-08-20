@@ -632,10 +632,13 @@ class MarketController extends BaseController
                         $fval->field_id = $field->id;
                         $fval->slug = $bucket['key'];
                         $fval->save();
+                    }else{
+                        $filter = Filter::where('from_int',$bucket['from'])->where('to_int',$bucket['to'])->first();
+                        $filter->count = $bucket['doc_count'];
+                        $values[]=$filter;
                     }
-                    $filter = Filter::where('from_int',$bucket['from'])->where('to_int',$bucket['to'])->first();
-                    $filter->count = $bucket['doc_count'];
-                    $values[]=$filter;
+
+
                 }else{
                     $field_val->count = $bucket['doc_count'];
                     $values[]=$field_val;
