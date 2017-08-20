@@ -606,6 +606,7 @@ class MarketController extends BaseController
 
 
                     $params['body']['query']['bool']['must'][0]['range']['meta.'.$key]=$ran;
+                    return  $ran;
                 }
 
             }else{
