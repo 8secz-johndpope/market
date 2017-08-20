@@ -665,6 +665,7 @@ class MarketController extends BaseController
 
 
         $response = $this->client->search($params);
+        return $response['aggregations'];
         array_merge($aggretations,$response['aggregations']);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $total= $response['hits']['total'];
