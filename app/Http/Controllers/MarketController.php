@@ -597,6 +597,7 @@ class MarketController extends BaseController
         foreach ($input as $key=>$value){
             $field=Field::where('slug',$key)->first();
             if($field===null){
+                return $value;
                 $frange = Filter::where('key',$value)->first();
                 if($frange!==null){
                     $ran =  [
