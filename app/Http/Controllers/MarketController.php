@@ -531,7 +531,7 @@ class MarketController extends BaseController
     }
     public function search(Request $request,$any){
         $category = Category::where('slug',$any)->first();
-        $fields = $category->fields;
+        $fields = $category->fields()->where('type','!=','string')->get();
         $aggs=array();
         foreach ($fields as $field){
             if($field->type==='integer'){
