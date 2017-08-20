@@ -613,8 +613,9 @@ class MarketController extends BaseController
                 ]
             ];
             $response = $this->client->search($params);
-            return $response['aggregations'];
+
             array_merge($aggretations,$response['aggregations']);
+            return $aggretations;
             unset($aggs[$key]);
         }
 
