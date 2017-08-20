@@ -702,6 +702,7 @@ class MarketController extends BaseController
 
         $filters=array();
         $parts= explode('?',$request->url());
+        return $parts;
         foreach ($aggretations as $key => $aggretation) {
                 $field = Field::where('slug', $key)->first();
                 $buckets = $aggretation['buckets'];
