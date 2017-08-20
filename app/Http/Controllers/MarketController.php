@@ -146,7 +146,7 @@ class MarketController extends BaseController
 
         return 'abc';
     }
-    public function fields(Request $request,$any)
+    public function filters(Request $request,$any)
     {
 
         $category = Category::find($any);
@@ -162,7 +162,7 @@ class MarketController extends BaseController
         return ['fields' => $fields];
 
     }
-    public function filters(Request $request,$any)
+    public function fields(Request $request,$any)
     {
         $category = Category::find($any);
         if($category===null){
