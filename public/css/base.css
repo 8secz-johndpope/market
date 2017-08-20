@@ -529,6 +529,10 @@ a.left.carousel-control {
   .navbar-header {
     width: 48%;
   }
+  .col-2 img {
+    height: 40px;
+    padding-left: 5px;
+  }
   
 }
 @media screen and (min-width: 1200px){
