@@ -615,6 +615,9 @@ class MarketController extends BaseController
             $response = $this->client->search($params);
 
             array_merge($aggretations,$response['aggregations']);
+            foreach ($response['aggregations'] as $a=>$b){
+                $aggretations[$a]=$b;
+            }
             return $aggretations;
             unset($aggs[$key]);
         }
