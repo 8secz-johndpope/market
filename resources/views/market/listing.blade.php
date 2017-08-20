@@ -380,7 +380,7 @@
                 <ul>
                     @foreach($filter->vals as $val)
 
-                    <li><a>{{$val->title}}</a>{{$val->count}}</li>
+                    <li><a>{{$val->title}}</a>&nbsp;&nbsp;{{$val->count}}</li>
                     @endforeach
                 </ul>
             </div>
