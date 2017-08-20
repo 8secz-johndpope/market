@@ -16,6 +16,7 @@ Route::get('/update', 'MarketController@update');
 Route::get('/insert', 'MarketController@insert');
 
 Route::get('/fields/{any}', 'MarketController@fields');
+Route::get('/filters/{any}', 'MarketController@filters');
 
 Route::get('/id/{id}', 'MarketController@id');
 
