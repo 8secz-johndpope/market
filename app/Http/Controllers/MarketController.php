@@ -605,13 +605,17 @@ class MarketController extends BaseController
                     $frange = Filter::where('key',$value)->first();
                     if($frange!==null){
                         $ran =  [
-                            'gte'=>$frange->from_int,
-                            'lte'=>$frange->to_int
+                            'range' => [
+                                'meta.'.$key => [
+                                    'gte'=>$frange->from_int,
+                                    'lte'=>$frange->to_int
+                                ]
+                            ]
                         ];
 
 
-                        $params['body']['query']['bool']['must'][0]['range']['meta.'.$key]=$ran;
-                        
+                        $params['body']['query']['bool']['must'][]=$ran;
+
                     }
                 }
                 if($field->type==='list'){
