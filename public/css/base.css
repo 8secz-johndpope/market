@@ -595,6 +595,9 @@ a.left.carousel-control {
   .panel-heading img.icon-category {
     height: 15vh;
   }
+  .spotligth .panel-heading {
+    height: 380px;
+  }
 }
 @media screen and (min-width: 1700px){
   .categories .panel-body {
