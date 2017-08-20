@@ -719,9 +719,9 @@ class MarketController extends BaseController
                             $filter->count = $bucket['doc_count'];
                             if(isset($input[$key])&&$input[$key]===$filter->key){
                                 $filter->selected = 1;
-
                             }else{
-                                $filter->url = $parts[0];
+                                $input[$key]===$filter->key;
+                                $filter->url = $parts[0].'?'.http_build_query($input);
                                 $filter->selected = 0;
                             }
                             $values[] = $filter;
@@ -732,7 +732,8 @@ class MarketController extends BaseController
                         if(isset($input[$key])&&$input[$key]===$field_val->slug){
                             $field_val->selected = 1;
                         }else{
-                            $field_val->url = $parts[0];
+                            $input[$key]===$field_val->slug;
+                            $field_val->url = $parts[0].'?'.http_build_query($input);
                             $field_val->selected = 0;
                         }
 
