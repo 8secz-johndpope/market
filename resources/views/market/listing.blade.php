@@ -374,14 +374,16 @@
                     <img src="//www-mercari-com.akamaized.net/assets/img/common/us/side_banner.jpg?1224156651" alt="Download Mercari Now">
                 </a>
             </div>
+            @foreach($filters as $filter)
             <div class="l-visible-large">
-                <h4>Heading</h4>
+                <h4>{{$filter->title}}</h4>
                 <ul>
                     <li><a>Item 1</a></li>
                     <li><a>Item 11</a></li>
                     <li><a>Item 11</a></li>
                 </ul>
             </div>
+                @endforeach
         </div>
     </main>
 

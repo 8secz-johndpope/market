@@ -12,6 +12,7 @@ namespace App\Http\Controllers;
 use App\Model\Category;
 use App\Model\Field;
 use App\Model\FieldValue;
+use App\Model\Filter;
 use App\Model\Relation;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -529,8 +530,21 @@ class MarketController extends BaseController
 
     }
     public function search(Request $request,$any){
-        $catagory = Category::where('slug',$any)->first();
-
+        $category = Category::where('slug',$any)->first();
+        $fields = $category->fields;
+        $aggs=array();
+        foreach ($fields as $field){
+            if($field->type==='integer'){
+                $filters = $field->filters;
+                $ranges = array();
+                foreach ($filters as $filter){
+                    $ranges[] = ['from'=>$filter->from_int,'to'=>$filter->to_int];
+                }
+                $aggs[$field->slug]=['range'=>['field'=>'meta.'.$field->slug,'ranges'=>$ranges]];
+            }else{
+                $aggs[$field->slug]=['terms'=>['field'=>'meta.'.$field->slug.'.keyword','size'=>1000000]];
+            }
+        }
         $page = $request->page ? $request->page : 1;
         if($page>100)
         {
@@ -546,8 +560,8 @@ class MarketController extends BaseController
                 'query' => [
                     'range' => [
                       'category' => [
-                          'gte'=>$catagory->id,
-                          'lte'=>$catagory->ends
+                          'gte'=>$category->id,
+                          'lte'=>$category->ends
                       ]
                     ]
                 ],
@@ -566,7 +580,8 @@ class MarketController extends BaseController
                             "distance_type"=> "plane"
                         ]
                     ]
-                ]
+                ],
+                'aggs'=>$aggs
             ]
         ];
         $response = $this->client->search($params);
@@ -603,7 +618,30 @@ class MarketController extends BaseController
             $chs = [];
         }
 
-        return View('market.listing',['max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$catagory,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs]);
+        $aggretations = $response['aggregations'];
+        $filters=array();
+        foreach ($aggretations as $key=>$aggretation){
+            $field = Field::where('slug',$key)->first();
+            $buckets = $aggretation['buckets'];
+            $values=array();
+            foreach ($buckets as $bucket){
+                $field_val = FieldValue::where('slug',$bucket['key'])->first();
+                if($field_val===null){
+                    $filter = Filter::where('from_int',$bucket['from'])->where('to_int',$bucket['to'])->first();
+                    $filter->count = $bucket['doc_count'];
+                    $values[]=$filter;
+                }else{
+                    $field_val->count = $bucket['doc_count'];
+                    $values[]=$field_val;
+                }
+
+            }
+            $field->vals = $values;
+            $filters[] = $field;
+
+        }
+
+        return View('market.listing',['max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$catagory,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs,'filters'=>$filters]);
     }
 
 }
