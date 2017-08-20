@@ -545,6 +545,10 @@ class MarketController extends BaseController
                 $aggs[$field->slug]=['terms'=>['field'=>'meta.'.$field->slug.'.keyword','size'=>1000000]];
             }
         }
+        $input = $request->all();
+        foreach ($input as $key=>$value){
+
+        }
         $page = $request->page ? $request->page : 1;
         if($page>100)
         {
@@ -558,11 +562,18 @@ class MarketController extends BaseController
                 'from' => ($page-1)*$pagesize,
                 'size'=>$pagesize,
                 'query' => [
-                    'range' => [
-                      'category' => [
-                          'gte'=>$category->id,
-                          'lte'=>$category->ends
-                      ]
+                    'bool' => [
+                        'must' => [
+                            [
+                                'range' => [
+                                    'category' => [
+                                        'gte'=>$category->id,
+                                        'lte'=>$category->ends
+                                    ]
+                                ]
+                            ]
+
+                        ]
                     ]
                 ],
                 "sort"=> [
