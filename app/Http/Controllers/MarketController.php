@@ -154,12 +154,17 @@ class MarketController extends BaseController
             return ['msg'=>'Catagory not found'];
         }
         $fields = $category->fields;
+        $aggs=array();
         foreach ($fields as $field){
+            $agg = array();
             if($field->type==='integer'){
                 $field->filters = $field->filters;
+            }else{
+                $agg['group_by'.$field->slug]=['terms'=>['field'=>$field->slug.'.keyword']];
             }
+            $aggs[]=$agg;
         }
-        return ['fields' => $fields];
+        return ['fields' => $aggs];
 
     }
     public function fields(Request $request,$any)
