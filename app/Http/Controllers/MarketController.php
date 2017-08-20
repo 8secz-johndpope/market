@@ -663,6 +663,8 @@ class MarketController extends BaseController
             $params['body']['aggs']=$aggs;
         }
 
+        return $aggs;
+
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $total= $response['hits']['total'];
