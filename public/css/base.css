@@ -530,6 +530,9 @@ a.left.carousel-control {
   section.social-media {
     background-size: cover;
   }
+  footer{
+    background-size: cover;
+  }
   .navbar-header {
     width: 55%;
   }
