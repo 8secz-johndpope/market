@@ -536,6 +536,9 @@ a.left.carousel-control {
   .navbar-default .navbar-nav>li>a {
     font-size: 14px;
   }
+  .panel-heading img.icon-category {
+    height: 13vh;
+  }
   
 }
 @media screen and (min-width: 1200px){
