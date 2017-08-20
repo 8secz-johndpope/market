@@ -513,6 +513,12 @@ a.left.carousel-control {
   .categories .panel-heading h1 {
     padding: 5px 0;
   }
+  section.social-media {
+    background-size: cover;
+  }
+  footer{
+    background-size: cover;
+  }
 }
 
 @media screen and (min-width: 768px){
