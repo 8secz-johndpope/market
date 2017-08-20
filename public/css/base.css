@@ -558,7 +558,11 @@ a.left.carousel-control {
     height: 18vh;
   }
   .navbar-brand img.icon {
-    margin-left: 100px;
+    margin-left: 30px;
+    height: 60px;
+  }
+  .top img.icon {
+    margin-left: 20px;
   }
 }
 @media screen and (min-width: 1200px){
