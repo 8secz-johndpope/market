@@ -507,6 +507,9 @@ a.left.carousel-control {
   .category {
     height: 8em;
   }
+  .categories .panel-primary>.panel-heading {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (min-width: 768px){
