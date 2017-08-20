@@ -501,6 +501,9 @@ a.left.carousel-control {
   .categories {
     margin: 5px auto;
   }
+  .categories .col-xs-4 {
+    width: 33.33333333%;
+  }
 }
 
 @media screen and (min-width: 768px){
