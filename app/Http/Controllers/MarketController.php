@@ -400,7 +400,21 @@ class MarketController extends BaseController
         $body = $request->json()->all();
         $page = isset($body['page']) ? $body['page'] : 1;
         $id = $body['category'];
-        $catagory=Category::find($id);
+        $category=Category::find($id);
+        $fields = $category->fields;
+        $aggs=array();
+        foreach ($fields as $field){
+            if($field->type==='integer'){
+                $filters = $field->filters;
+                $ranges = array();
+                foreach ($filters as $filter){
+                    $ranges[] = ['from'=>$filter->from_int,'to'=>$filter->to_int];
+                }
+                $aggs['group_by'.$field->slug]=['range'=>['field'=>'meta.'.$field->slug,'ranges'=>$ranges]];
+            }else{
+                $aggs['group_by'.$field->slug]=['terms'=>['field'=>'meta.'.$field->slug.'.keyword','size'=>1000000]];
+            }
+        }
         $pagesize = 25;
         $lat = isset($body['lat']) ? $body['lat'] : 52.5;
         $lng = isset($body['lng']) ? $body['lng'] : 1.2;
@@ -474,8 +488,8 @@ class MarketController extends BaseController
                           [
                               'range' => [
                                   'category' => [
-                                      'gte'=>$catagory->id,
-                                      'lte'=>$catagory->ends
+                                      'gte'=>$category->id,
+                                      'lte'=>$category->ends
                                   ]
                               ]
                           ],
@@ -488,7 +502,8 @@ class MarketController extends BaseController
                     ]
 
                 ],
-                "sort"=> $sort
+                "sort"=> $sort,
+                'aggs'=>$aggs
             ]
         ];
 
