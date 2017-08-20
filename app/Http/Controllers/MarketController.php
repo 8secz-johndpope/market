@@ -156,13 +156,11 @@ class MarketController extends BaseController
         $fields = $category->fields;
         $aggs=array();
         foreach ($fields as $field){
-            $agg = array();
             if($field->type==='integer'){
                 $field->filters = $field->filters;
             }else{
-                $agg['group_by'.$field->slug]=['terms'=>['field'=>$field->slug.'.keyword']];
+                $aggs['group_by'.$field->slug]=['terms'=>['field'=>$field->slug.'.keyword']];
             }
-            $aggs[]=$agg;
         }
         return ['fields' => $aggs];
 
