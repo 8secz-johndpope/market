@@ -613,7 +613,7 @@ class MarketController extends BaseController
                 ]
             ];
             $response = $this->client->search($params);
-            return $response;
+
             array_merge($aggretations,$response['aggregations']);
             unset($aggs[$key]);
         }
@@ -624,6 +624,7 @@ class MarketController extends BaseController
             $page=100;
         }
         $pagesize = 50;
+        return $pagesize;
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
