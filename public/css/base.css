@@ -496,6 +496,9 @@ a.left.carousel-control {
     padding-left: 0; 
     padding-right: 0;
   }
+  .categories {
+    margin: 5px auto;
+  }
 }
 
 @media screen and (min-width: 768px){
