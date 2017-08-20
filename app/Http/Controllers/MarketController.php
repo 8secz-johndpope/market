@@ -608,7 +608,7 @@ class MarketController extends BaseController
                             'range' => [
                                 'meta.'.$key => [
                                     'gte'=>$frange->from_int,
-                                    'lte'=>$frange->to_int
+                                    'lt'=>$frange->to_int
                                 ]
                             ]
                         ];
