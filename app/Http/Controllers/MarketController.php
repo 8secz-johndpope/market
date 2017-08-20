@@ -621,38 +621,40 @@ class MarketController extends BaseController
             $chs = [];
         }
 
-        $aggretations = $response['aggregations'];
+
         $filters=array();
-        foreach ($aggretations as $key=>$aggretation){
-            $field = Field::where('slug',$key)->first();
-            $buckets = $aggretation['buckets'];
-            $values=array();
-            foreach ($buckets as $bucket){
-                $field_val = FieldValue::where('slug',$bucket['key'])->first();
-                if($field_val===null){
-                    if(!isset($bucket['from'])){
-                        $fval = new FieldValue;
-                        $fval->field_id = $field->id;
-                        $fval->slug = $bucket['key'];
-                        $fval->save();
-                    }else{
-                        $filter = Filter::where('from_int',$bucket['from'])->where('to_int',$bucket['to'])->first();
-                        $filter->count = $bucket['doc_count'];
-                        $values[]=$filter;
+        if(isset($response['aggregations'])) {
+            $aggretations = $response['aggregations'];
+            foreach ($aggretations as $key => $aggretation) {
+                $field = Field::where('slug', $key)->first();
+                $buckets = $aggretation['buckets'];
+                $values = array();
+                foreach ($buckets as $bucket) {
+                    $field_val = FieldValue::where('slug', $bucket['key'])->first();
+                    if ($field_val === null) {
+                        if (!isset($bucket['from'])) {
+                            $fval = new FieldValue;
+                            $fval->field_id = $field->id;
+                            $fval->slug = $bucket['key'];
+                            $fval->save();
+                        } else {
+                            $filter = Filter::where('from_int', $bucket['from'])->where('to_int', $bucket['to'])->first();
+                            $filter->count = $bucket['doc_count'];
+                            $values[] = $filter;
+                        }
+
+
+                    } else {
+                        $field_val->count = $bucket['doc_count'];
+                        $values[] = $field_val;
                     }
 
-
-                }else{
-                    $field_val->count = $bucket['doc_count'];
-                    $values[]=$field_val;
                 }
+                $field->vals = $values;
+                $filters[] = $field;
 
             }
-            $field->vals = $values;
-            $filters[] = $field;
-
         }
-
         return View('market.listing',['max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs,'filters'=>$filters]);
     }
 
