@@ -576,6 +576,9 @@ a.left.carousel-control {
   .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
     height: 60px;
   }
+  .categories .panel-body {
+    height: auto;
+  }
 }
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
