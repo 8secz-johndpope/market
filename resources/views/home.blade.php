@@ -247,9 +247,9 @@
 					<div class="col-md-8 col-lg-3 store">
 							<h2>Download</h2>
 							<ul class="stores">
-								<li><a href=""><img class="img-responsive" src="css/icons/android.svg"><h3>Android Phone</h3></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/apple.svg"><h3>Apple Phone</h3></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/windows.png"><h3>Windows Desktop</h3></a></li>
+								<li><a href=""><img class="img-responsive center-block" src="css/icons/android.svg"><h3>Android Phone</h3></a></li>
+								<li><a href=""><img class="img-responsive center-block" src="css/icons/apple.svg"><h3>Apple Phone</h3></a></li>
+								<li><a href=""><img class="img-responsive center-block" src="css/icons/windows.png"><h3>Windows Desktop</h3></a></li>
 							</ul>
 					</div>
 					<div class="col-md-8 col-lg-3 col-lg-offset-6">
