@@ -580,10 +580,13 @@ class MarketController extends BaseController
                             "distance_type"=> "plane"
                         ]
                     ]
-                ],
-                'aggs'=>$aggs
+                ]
+
             ]
         ];
+        if(count($aggs)>0){
+            $params['body']['aggs']=$aggs;
+        }
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $total= $response['hits']['total'];
