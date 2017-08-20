@@ -60,9 +60,9 @@
 				</div>
 			</nav>
 			<div class="row search">
-				<div class="col-md-1 col-lg-2 hidden-xs">
+				<div class="col-sm-1 col-md-1 col-lg-2 hidden-xs">
 				</div>
-    			<div class="col-xs-12 col-md-10 col-lg-8">
+    			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-8">
     				<form class="navbar-form" action="/search/">
         				<div class="form-group col-md-12 col-lg-12">
 								<input type="text" class="form-control input-lg" name="keyword" placeholder="SEARCH">
