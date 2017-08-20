@@ -378,9 +378,10 @@
             <div class="l-visible-large">
                 <h4>{{$filter->title}}</h4>
                 <ul>
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 11</a></li>
-                    <li><a>Item 11</a></li>
+                    @foreach($filter->vals as $val)
+
+                    <li><a>{{$val->title}}</a></li>
+                    @endforeach
                 </ul>
             </div>
                 @endforeach
