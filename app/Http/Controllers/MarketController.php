@@ -702,7 +702,6 @@ class MarketController extends BaseController
 
         $filters=array();
 
-        $parts = explode('?',$request->url());
         foreach ($aggretations as $key => $aggretation) {
                 $field = Field::where('slug', $key)->first();
                 $buckets = $aggretation['buckets'];
@@ -720,7 +719,7 @@ class MarketController extends BaseController
                             $filter->count = $bucket['doc_count'];
                             if(isset($input[$key])&&$input[$key]===$filter->key){
                                 $filter->selected = 1;
-                                $filter->url = $parts[0];
+                                $filter->url = $request->path();
                             }else{
                                 $filter->selected = 0;
                             }
@@ -731,7 +730,7 @@ class MarketController extends BaseController
                     } else {
                         if(isset($input[$key])&&$input[$key]===$field_val->slug){
                             $field_val->selected = 1;
-                            $field_val->url  = $parts[0];
+                            $field_val->url  = $request->path();
                         }else{
                             $field_val->selected = 0;
                         }
