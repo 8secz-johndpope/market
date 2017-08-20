@@ -383,7 +383,7 @@ class MarketController extends BaseController
             $pages = range($page-2,$page+2);
         }
 
-        return View('market.listing',['max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'catids'=>$this->catids,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>'','children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$this->base]);
+        return View('market.listing',['filters'=>[],'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'catids'=>$this->catids,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>'','children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$this->base]);
     }
     public function leaves(Request $request){
         foreach ($this->categories as $cat=>$val){
