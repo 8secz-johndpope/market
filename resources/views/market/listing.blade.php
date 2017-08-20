@@ -382,7 +382,7 @@
                     @if($val->selected===1)
                             <li>{{$val->title}}</li>
                         @else
-                    <li><a href="{{url($val->url)}}">{{$val->title}}</a>&nbsp;&nbsp;{{$val->count}}</li>
+                    <li><a href="url($val->url)">{{$val->title}}</a>&nbsp;&nbsp;{{$val->count}}</li>
                         @endif
                     @endforeach
                 </ul>
