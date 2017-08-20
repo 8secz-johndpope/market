@@ -27,4 +27,7 @@ class Category extends  Model
     public function fields(){
         return $this->belongsToMany('App\Model\Field');
     }
+    public function filters(){
+        return $this->belongsToMany('App\Model\Filter');
+    }
 }
