@@ -574,8 +574,7 @@ a.left.carousel-control {
     width: 66%;
   }
   .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
-    height: 46px;
-    border-top-right-radius: 0;
+    height: 60px;
   }
 }
 @media screen and (min-width: 1200px){
