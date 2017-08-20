@@ -38,13 +38,13 @@
 				      <a class="navbar-brand" href="#"><img class="icon" src="css/ic_launcher1.png"></a>
 				      <div class="col-2 col-md-offset-2 col-lg-offset-7 hidden-xs hidden-sm">
 						<div>
-							<img src="css/googleplayx233.png">
+							<img class="img-responsive" src="css/googleplayx233.png">
 						</div>
 						<div>
-							<img src="css/appstorex233.png">
+							<img class="img-responsive" src="css/appstorex233.png">
 						</div>
 						<div>
-							<img src="css/windowsx233.png">
+							<img class="img-responsive" src="css/windowsx233.png">
 						</div>
 					  </div>
 					</div>
