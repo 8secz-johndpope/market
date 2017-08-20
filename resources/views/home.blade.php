@@ -252,7 +252,7 @@
 								<li><a href=""><img class="img-responsive center-block" src="css/icons/windows.png"><h3>Windows Desktop</h3></a></li>
 							</ul>
 					</div>
-					<div class="col-md-8 col-lg-3 col-lg-offset-6">
+					<div class="col-md-8 col-lg-3 col-lg-offset-4">
 							<h2>Follow us</h2>
 							<ul class="list-inline media">
 								<li><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></li>
