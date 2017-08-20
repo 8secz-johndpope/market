@@ -522,7 +522,7 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
 
-        return ['total'=>$response['hits']['total'],'adverts'=>$products,'response'=>$response];
+        return ['total'=>$response['hits']['total'],'adverts'=>$products,'aggs'=>$response['aggregations']];
 
     }
     public function search(Request $request,$any){
