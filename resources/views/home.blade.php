@@ -246,7 +246,7 @@
 				<div class="row justify-content-between">
 					<div class="col-md-8 col-lg-3 store">
 							<h2>Download</h2>
-							<ul class="stores">
+							<ul class="list-inline stores">
 								<li><a href=""><img class="img-responsive center-block" src="css/icons/android.svg"><h3>Android Phone</h3></a></li>
 								<li><a href=""><img class="img-responsive center-block" src="css/icons/apple.svg"><h3>Apple Phone</h3></a></li>
 								<li><a href=""><img class="img-responsive center-block" src="css/icons/windows.png"><h3>Windows Desktop</h3></a></li>
@@ -254,7 +254,7 @@
 					</div>
 					<div class="col-md-8 col-lg-3 col-lg-offset-6">
 							<h2>Follow us</h2>
-							<ul class="media">
+							<ul class="list-inline media">
 								<li><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></li>
 								<li><a href=""><img class="img-responsive" src="css/icons/twitter.svg"></a></li>
 								<li><a href=""><img class="img-responsive" src="css/icons/instagram.png"></a></li>
