@@ -460,7 +460,9 @@ a.left.carousel-control {
 .navbar-default .navbar-toggle {
     border-color: #ff970d;
 }
-
+.spotligth .container {
+    width: 98%;
+}
 
 @media screen and (max-width: 768px){
   .navbar-header {
