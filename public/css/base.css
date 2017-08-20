@@ -489,6 +489,9 @@ a.left.carousel-control {
   .col-xs-4{
     width: initial;
   }
+  .row.search {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px){
