@@ -532,18 +532,88 @@ class MarketController extends BaseController
     public function search(Request $request,$any){
         $category = Category::where('slug',$any)->first();
         $fields = $category->fields()->where('can_filter',1)->get();
+        $input = $request->all();
         $aggs=array();
+        $musts=array();
+        $musts['category']= [
+            'range' => [
+                'category' => [
+                    'gte'=>$category->id,
+                    'lte'=>$category->ends
+                ]
+            ]
+        ];
+
         foreach ($fields as $field){
+
             if($field->type==='integer'){
                 $filters = $field->filters;
                 $ranges = array();
                 foreach ($filters as $filter){
                     $ranges[] = ['from'=>$filter->from_int,'to'=>$filter->to_int];
                 }
-                $aggs[$field->slug]=['range'=>['field'=>'meta.'.$field->slug,'ranges'=>$ranges]];
+                $agg = ['range'=>['field'=>'meta.'.$field->slug,'ranges'=>$ranges]];;
+
             }else{
-                $aggs[$field->slug]=['terms'=>['field'=>'meta.'.$field->slug.'.keyword','size'=>1000000]];
+                $agg=['terms'=>['field'=>'meta.'.$field->slug.'.keyword','size'=>1000000]];
             }
+            $aggs[$field->slug]=$agg;
+
+
+            if(isset($input[$field->slug])){
+                $field = Field::where('slug', $field->slug)->first();
+                if ($field === null) {
+
+
+                } else {
+                    if ($field->type === 'integer') {
+                        $frange = Filter::where('key', $input[$field->slug])->first();
+                        if ($frange !== null) {
+                            $ran = [
+                                'range' => [
+                                    'meta.' . $field->slug => [
+                                        'gte' => $frange->from_int,
+                                        'lt' => $frange->to_int
+                                    ]
+                                ]
+                            ];
+
+
+                            $musts[$field->slug] = $ran;
+
+                        }
+                    }
+                    if ($field->type === 'list') {
+                        $fil = ['term' => ['meta.' . $field->slug . '.keyword' => ['value' => $input[$field->slug]]]];
+                        $musts[$field->slug] = $fil;
+                    }
+                }
+            }
+
+        }
+
+        $aggretations=array();
+
+        foreach ($input as $key=>$value){
+            $submusts = $musts;
+            unset($submusts[$key]);
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'size'=>0,
+                    'query' => [
+                        'bool' => [
+                            'must' => array_values($submusts)
+                        ]
+                    ],
+                    'aggs' => [$key=>$aggs[$key]]
+
+                ]
+            ];
+            $response = $this->client->search($params);
+            array_merge($aggretations,$response['aggregations']);
+            unset($aggs[$key]);
         }
 
         $page = $request->page ? $request->page : 1;
@@ -560,17 +630,7 @@ class MarketController extends BaseController
                 'size'=>$pagesize,
                 'query' => [
                     'bool' => [
-                        'must' => [
-                            [
-                                'range' => [
-                                    'category' => [
-                                        'gte'=>$category->id,
-                                        'lte'=>$category->ends
-                                    ]
-                                ]
-                            ]
-
-                        ]
+                        'must' => array_values($musts)
                     ]
                 ],
                 "sort"=> [
@@ -588,46 +648,13 @@ class MarketController extends BaseController
                             "distance_type"=> "plane"
                         ]
                     ]
-                ]
+                ],
+                'aggs'=>$aggs
 
             ]
         ];
 
-        $input = $request->all();
-        foreach ($input as $key=>$value){
-            $field=Field::where('slug',$key)->first();
-            if($field===null){
 
-
-
-            }else{
-                if($field->type==='integer'){
-                    $frange = Filter::where('key',$value)->first();
-                    if($frange!==null){
-                        $ran =  [
-                            'range' => [
-                                'meta.'.$key => [
-                                    'gte'=>$frange->from_int,
-                                    'lt'=>$frange->to_int
-                                ]
-                            ]
-                        ];
-
-
-                        $params['body']['query']['bool']['must'][]=$ran;
-
-                    }
-                }
-                if($field->type==='list'){
-                    $fil = ['term'=>['meta.'.$key.'.keyword'=>['value'=>$value]]];
-                    $params['body']['query']['bool']['must'][]=$fil;
-                }
-            }
-        }
-
-        if(count($aggs)>0){
-            $params['body']['aggs']=$aggs;
-        }
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $total= $response['hits']['total'];
@@ -663,9 +690,9 @@ class MarketController extends BaseController
         }
 
 
-        $filters=array();
-        if(isset($response['aggregations'])) {
-            $aggretations = $response['aggregations'];
+
+
+            $filters=array();
             foreach ($aggretations as $key => $aggretation) {
                 $field = Field::where('slug', $key)->first();
                 $buckets = $aggretation['buckets'];
@@ -695,7 +722,7 @@ class MarketController extends BaseController
                 $filters[] = $field;
 
             }
-        }
+
         return View('market.listing',['max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs,'filters'=>$filters]);
     }
 
