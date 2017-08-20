@@ -571,6 +571,9 @@ a.left.carousel-control {
   .navbar-header {
     width: 60%;
   }
+  .panel-primary>.panel-heading{
+    height: 21vh;
+  }
 }
 @media screen and (min-width: 1700px){
   .categories .panel-body {
