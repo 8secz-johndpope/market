@@ -627,6 +627,9 @@ class MarketController extends BaseController
             foreach ($buckets as $bucket){
                 $field_val = FieldValue::where('slug',$bucket['key'])->first();
                 if($field_val===null){
+                    if(!isset($bucket['from'])){
+                        return $bucket;
+                    }
                     $filter = Filter::where('from_int',$bucket['from'])->where('to_int',$bucket['to'])->first();
                     $filter->count = $bucket['doc_count'];
                     $values[]=$filter;
