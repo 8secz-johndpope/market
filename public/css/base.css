@@ -550,6 +550,11 @@ a.left.carousel-control {
     bottom: 30px;
   }
 }
+@media (max-width: 991px) and (min-width: 768px){
+  .panel-primary>.panel-heading {
+    height: 18vh;
+  }
+}
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
     width: 17%;
