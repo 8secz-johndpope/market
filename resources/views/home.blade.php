@@ -247,7 +247,7 @@
 								<div class="center-block"><a href=""><img class="img-responsive center-block" src="css/icons/windows.png"><h3>Windows Desktop</h3></a></div>
 							</div>
 					</div>
-					<div class="col-xs-10 col-md-5 col-lg-3 col-xs-offset-1 col-lg-offset-3">
+					<div class="col-xs-10 col-md-5 col-lg-3 col-xs-offset-1 col-md-offset-2 col-lg-offset-3">
 							<h2>Follow us</h2>
 							<div class=" media">
 								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></div>
