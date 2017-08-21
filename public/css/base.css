@@ -472,6 +472,9 @@ a.left.carousel-control {
 .text:after{
   content: "...";
 }
+.stores{
+  display: flex;
+}
 
 @media screen and (max-width: 767px){
   .navbar-header {
