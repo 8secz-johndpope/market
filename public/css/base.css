@@ -467,12 +467,10 @@ a.left.carousel-control {
 
 .text{
   line-height: 1.3em;
-  max-height: 3.0em;
+  max-height: 2.8em;
   overflow: hidden;
 }
-.text:after{
-  content: "...";
-}
+
 .stores, .media{
   display: flex;
 }
