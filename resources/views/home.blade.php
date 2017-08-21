@@ -239,7 +239,7 @@
 		<section class="social-media">
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-xs-12 col-md-8 col-lg-6 store">
+					<div class="col-xs-12 col-md-5 col-lg-6 store">
 							<h2>Download</h2>
 							<div class="stores">
 								<div class="center-block"><a href=""><img class="img-responsive center-block" src="css/icons/android.svg"><h3>Android Phone</h3></a></div>
@@ -247,7 +247,7 @@
 								<div class="center-block"><a href=""><img class="img-responsive center-block" src="css/icons/windows.png"><h3>Windows Desktop</h3></a></div>
 							</div>
 					</div>
-					<div class="col-md-8 col-lg-3 col-lg-offset-3">
+					<div class="col-xs-8 col-md-5 col-lg-3 col-xs-offset-2 col-lg-offset-3">
 							<h2>Follow us</h2>
 							<div class=" media">
 								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></div>
