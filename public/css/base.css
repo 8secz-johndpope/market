@@ -512,7 +512,7 @@ a.left.carousel-control {
 .tabs-simple-tab:after {
     content: "";
     position: absolute;
-    top: 51px;
+    top: 55px;
     left: 50%;
     margin-left: -10px;
     -webkit-transform: rotate(45deg) scale(0);
