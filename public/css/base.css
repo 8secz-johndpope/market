@@ -688,6 +688,15 @@ a.left.carousel-control {
   .social-media h2 {
     text-align: center;
   }
+  .search input.form-control::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .search input.form-control::-moz-placeholder {
+      font-size: 14px;
+  }
+  .search input.form-control:::-ms-input-placeholder {
+      font-size: 14px;
+  }
 
 }
 @media screen and (min-width: 992px){
@@ -706,13 +715,13 @@ a.left.carousel-control {
     bottom: -30px;
   }
   .search input.form-control::-webkit-input-placeholder {
-    font-size: 14px;
+    font-size: 12px;
   }
   .search input.form-control::-moz-placeholder {
-      font-size: 14px;
+      font-size: 12px;
   }
   .search input.form-control:::-ms-input-placeholder {
-      font-size: 14px;
+      font-size: 12px;
   }
   section.social-media {
     background-size: cover;
