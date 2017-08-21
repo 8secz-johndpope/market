@@ -473,7 +473,15 @@ a.left.carousel-control {
     font-weight: 600;
     font-size: 18px;
 }
-
+.tabs-simple:after {
+    content: "";
+    display: block;
+    margin: -25px auto 0;
+    width: 100%;
+    height: 25px;
+    border-radius: 125px/12px;
+    box-shadow: 0 0 6px #b1adb3;
+}
 .text{
   line-height: 1.3em;
   max-height: 2.6em;
