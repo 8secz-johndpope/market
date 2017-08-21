@@ -598,6 +598,9 @@ a.left.carousel-control {
   .categories .panel-body {
     height: 25em;
   }
+  section.social-media {
+    background-size: cover;
+  }
 }
 @media screen and (min-width: 992px){
   .categories .row {
