@@ -15,7 +15,7 @@ function ellipsis(selector){
      }
      else
      {
-       // Para Firefox
+       // for Firefox
        n.textContent = text.replace(/\W*\s(\S)*$/, '...');
      }
    }
