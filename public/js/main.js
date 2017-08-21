@@ -21,3 +21,10 @@ function ellipsis(selector){
    }
  }
 }
+
+function printSpotligth(){
+  $(window).width()
+  $('.item').find('div').each(function( index ) {
+    console.log( index + ": " + $( this ).text() );
+  });
+}
