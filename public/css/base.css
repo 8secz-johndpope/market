@@ -669,6 +669,9 @@ a.left.carousel-control {
   .read-more {
     bottom: 30px;
   }
+  .spotligth .panel-primary {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
