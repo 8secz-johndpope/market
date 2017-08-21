@@ -69,7 +69,7 @@
 								<div class="input-group col-sm-4 col-md-3 col-lg-3 col-xl-2 input-group-lg">
 							      	<input type="text" class="form-control" placeholder="POST CODE" >
 							      	<span class="input-group-btn">
-							     		<button class="btn btn-default" type="button">Go</button>
+							     		<button class="btn btn-default" type="submit">Go</button>
 							      	</span>
 							    </div>
 						</div>
