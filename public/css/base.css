@@ -464,6 +464,15 @@ a.left.carousel-control {
 .spotligth .container {
     width: 98%;
 }
+.tabs-simple.center-block {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tabs-simple a {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
 
 .text{
   line-height: 1.3em;
