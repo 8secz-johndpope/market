@@ -246,14 +246,14 @@
 						<figure>
 							<img src="css/heart-black.svg">
 						</figure>
-						<h2>HASSLE FREE</h2>
+						<h2>FREE LISTINGS</h2>
 						<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
 					</div>
 					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-3 col-xs-offset-2 col-sm-offset-0">
 						<figure>
 							<img src="css/peace-of-mind-uk.svg">
 						</figure>
-						<h2>PEACE OF MIND</h2>
+						<h2>FREE RETURNS</h2>
 						<p>You’ll always hear back from our customer services within 24 hours</p>
 					</div>
 				</div>
