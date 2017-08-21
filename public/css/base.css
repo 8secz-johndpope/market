@@ -478,6 +478,10 @@ a.left.carousel-control {
     position: relative;
     clear: both;
 }
+.tabs-simple-bar-mask {
+    overflow: hidden;
+    height: 20px;
+}
 .tabs-simple-bar-mask:after {
     content: "";
     display: block;
