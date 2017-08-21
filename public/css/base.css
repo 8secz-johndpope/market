@@ -473,7 +473,7 @@ a.left.carousel-control {
     font-weight: 600;
     font-size: 18px;
 }
-.tabs-simple:after {
+.tabs-simple-bar-mask:after {
     content: "";
     display: block;
     margin: -25px auto 0;
