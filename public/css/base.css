@@ -531,6 +531,7 @@ a.left.carousel-control {
     -webkit-transform: rotate(45deg) scale(1);
     -ms-transform: rotate(45deg) scale(1);
     transform: rotate(45deg) scale(1);
+    text-decoration: none;
 }
 .text{
   line-height: 1.3em;
