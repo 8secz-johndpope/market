@@ -604,6 +604,9 @@ a.left.carousel-control {
   section.social-media {
     background-size: cover;
   }
+  footer {
+    background-size: cover;
+  }
   .social-media h2 {
     text-align: center;
   }
