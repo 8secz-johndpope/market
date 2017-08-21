@@ -566,7 +566,7 @@ a.left.carousel-control {
     height: 8em;
   }
   .categories .panel-primary>.panel-heading {
-    height: 8em;
+        height: auto;
   }
 }
 
