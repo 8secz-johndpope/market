@@ -596,7 +596,7 @@ a.left.carousel-control {
     height: 60px;
   }
   .categories .panel-body {
-    height: 36vh;
+    height: 25em;
   }
 }
 @media screen and (min-width: 992px){
