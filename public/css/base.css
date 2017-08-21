@@ -527,7 +527,7 @@ a.left.carousel-control {
     background: #f1f1f1;
     box-shadow: inset 3px 3px 3px hsla(280,4%,69%,.3), inset 1px 1px 1px hsla(280,4%,69%,.3);
 }
-.tabs-simple-tab.all-spot:hover:after {
+.tabs-simple-tab.all-spot:hover:after, .tabs-simple-tab.pop-se:hover:after {
     -webkit-transform: rotate(45deg) scale(1);
     -ms-transform: rotate(45deg) scale(1);
     transform: rotate(45deg) scale(1);
