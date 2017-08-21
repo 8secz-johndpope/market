@@ -108,7 +108,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="tabs-simple center-block">
-						<ul class=list-inline>
+						<ul class="tab list-inline">
 							<li><a href="">All Spotlight</a></li>
 							<li><a href="">Popular Search</a></li>
 						</ul>

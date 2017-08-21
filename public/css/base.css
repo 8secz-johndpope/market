@@ -491,6 +491,24 @@ a.left.carousel-control {
     border-radius: 125px/12px;
     box-shadow: 0 0 6px #b1adb3;
 }
+.tab:after {
+    content: "";
+    position: absolute;
+    top: 51px;
+    left: 50%;
+    margin-left: -10px;
+    -webkit-transform: rotate(45deg) scale(0);
+    -ms-transform: rotate(45deg) scale(0);
+    transform: rotate(45deg) scale(0);
+    transition: -webkit-transform .15s ease-in;
+    transition: transform .15s ease-in;
+    transition: transform .15s ease-in,-webkit-transform .15s ease-in;
+    display: block;
+    height: 20px;
+    width: 20px;
+    background: #f1f1f1;
+    box-shadow: inset 3px 3px 3px hsla(280,4%,69%,.3), inset 1px 1px 1px hsla(280,4%,69%,.3);
+}
 .text{
   line-height: 1.3em;
   max-height: 2.6em;
