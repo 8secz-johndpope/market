@@ -490,6 +490,11 @@ a.left.carousel-control {
     border-radius: 125px/12px;
     box-shadow: 0 0 6px #b1adb3;
 }
+.tabs-simple>li {
+    list-style: none;
+    text-align: center;
+    display: table-cell;
+}
 .tabs-simple-tab:after {
     content: "";
     position: absolute;
