@@ -565,6 +565,9 @@ a.left.carousel-control {
   .panel-heading img.icon-category {
     height: 8em;
   }
+  .panel-primary>.panel-heading {
+    height: 8em;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
