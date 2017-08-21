@@ -249,14 +249,14 @@
 					</div>
 					<div class="col-md-8 col-lg-3 col-lg-offset-3">
 							<h2>Follow us</h2>
-							<ul class="list-inline media">
-								<li><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/twitter.svg"></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/instagram.png"></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/pinterest.svg"></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/email.svg"></a></li>
+							<div class=" media">
+								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></div>
+								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/twitter.svg"></a></div>
+								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/instagram.png"></a></div>
+								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/pinterest.svg"></a></div>
+								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/email.svg"></a></div>
 
-							</ul>
+							</div>
 					</div>
 				</div>
 			</div>
