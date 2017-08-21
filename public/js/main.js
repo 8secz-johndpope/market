@@ -1,4 +1,4 @@
-$( document ).ready(function() {ellipsis('.text');});
+$( document ).ready(function() {ellipsis('.text'); printSpotligth()});
 
 function ellipsis(selector){
  var nodeList = document.querySelectorAll(selector);
