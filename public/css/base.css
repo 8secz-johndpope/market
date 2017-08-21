@@ -496,11 +496,12 @@ a.left.carousel-control {
   max-height: 2.6em;
   overflow: hidden;
 }
-
 .stores, .media{
   display: flex;
 }
-
+.tabs-simple li{
+  width: 40%;
+}
 @media screen and (max-width: 767px){
   .navbar-header {
     width: auto;
