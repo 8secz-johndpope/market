@@ -483,6 +483,14 @@ a.left.carousel-control {
     position: relative;
     clear: both;
 }
+.tabs-simple-tab {
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: #635b67;
+    cursor: pointer;
+    padding: 20px 10px;
+}
 .tabs-simple-bar-mask {
     overflow: hidden;
     height: 20px;
