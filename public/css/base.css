@@ -467,6 +467,12 @@ a.left.carousel-control {
 .tabs-simple.center-block {
     text-align: center;
 }
+.tabs-simple {
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    min-width: 75%;
+}
 .tabs-simple a {
     font-size: 18px;
     color: #635b67;
