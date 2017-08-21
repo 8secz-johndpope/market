@@ -567,6 +567,9 @@ a.left.carousel-control {
   .categories .panel-primary>.panel-heading {
     height: auto;
   }
+  .spotligth .panel-primary {
+    margin:10px 0;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
