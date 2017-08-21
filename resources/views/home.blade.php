@@ -109,7 +109,7 @@
 				<div class="row">
 					<div class="tabs-simple center-block">
 						<ul class="list-inline">
-							<li class="tabs-simple-tab is-open"><a href="">All Spotlight</a></li>
+							<li><a class="tabs-simple-tab is-open" href="">All Spotlight</a></li>
 							<li><a href="">Popular Search</a></li>
 						</ul>
 					</div>
