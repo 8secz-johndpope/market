@@ -561,6 +561,9 @@ a.left.carousel-control {
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
   }
+  .panel-heading img.icon-category {
+    height: 8em;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
