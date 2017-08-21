@@ -553,7 +553,6 @@ a.left.carousel-control {
     margin: 0 40px;
   }
   .media li {
-    margin: 0 5px;
     padding-right: 0;
   }
   .navbar-default .navbar-toggle {
@@ -566,7 +565,7 @@ a.left.carousel-control {
     height: 8em;
   }
   .categories .panel-primary>.panel-heading {
-        height: auto;
+    height: auto;
   }
 }
 
