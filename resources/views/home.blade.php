@@ -112,6 +112,7 @@
 							<li><a href="">All Spotlight</a></li>
 							<li><a href="">Popular Search</a></li>
 						</ul>
+						<hr>
 					</div>
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						<!-- Indicators -->
