@@ -573,6 +573,15 @@ a.left.carousel-control {
   .spotligth .panel-primary {
     margin:10px 0;
   }
+  .search input.form-control::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .search input.form-control::-moz-placeholder {
+      font-size: 14px;
+  }
+  .search input.form-control:::-ms-input-placeholder {
+      font-size: 14px;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
@@ -610,6 +619,7 @@ a.left.carousel-control {
   .social-media h2 {
     text-align: center;
   }
+
 }
 @media screen and (min-width: 992px){
   .categories .row {
