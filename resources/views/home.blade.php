@@ -107,8 +107,8 @@
 		<section class="spotligth">
 			<div class="container">
 				<div class="row">
-					<div class="tabs-simple center-block">
-						<ul class="list-inline">
+					<div class="center-block">
+						<ul class="tabs-simple list-inline">
 							<li><a class="tabs-simple-tab all-spot" href="">All Spotlight</a></li>
 							<li><a class="tabs-simple-tab pop-se" href="">Popular Searches</a></li>
 						</ul>
