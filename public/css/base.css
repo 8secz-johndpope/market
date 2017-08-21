@@ -469,9 +469,9 @@ a.left.carousel-control {
     margin-bottom: 20px;
 }
 .tabs-simple a {
-    color: #000;
-    font-weight: 600;
     font-size: 18px;
+    color: #635b67;
+    cursor: pointer;
 }
 .tabs-simple-bar {
     width: 100%;
@@ -502,6 +502,7 @@ a.left.carousel-control {
 .tabs-simple li{
   width: 40%;
 }
+
 @media screen and (max-width: 767px){
   .navbar-header {
     width: auto;
