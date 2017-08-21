@@ -107,6 +107,12 @@
 		<section class="spotligth">
 			<div class="container">
 				<div class="row">
+					<div class="tabs-simple">
+						<ul>
+							<li><a href="">All Spotlight</a></li>
+							<li><a href="">Popular Search</a></li>
+						</ul>
+					</div>
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						<!-- Indicators -->
 						<ol class="carousel-indicators">
