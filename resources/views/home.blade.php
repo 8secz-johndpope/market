@@ -214,42 +214,42 @@
 		<section class="features">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-3 col-xs-offset-2 col-sm-offset-0">
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
 							<img src="css/peace-of-mind-uk.svg">
 						</figure>
 						<h2>TRUSTED</h2>
 						<p>We’ll give you discounts and credits for being better buyers & sellers</p>
 					</div>
-					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-3 col-xs-offset-2 col-sm-offset-0">
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
 							<img src="css/free-uk.svg">
 						</figure>
 						<h2>0% Commission</h2>
 						<p>What you see is what you get, no hidden fees on our purchase prices</p>
 					</div>
-					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-3 col-xs-offset-2 col-sm-offset-0">
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
 							<img src="css/free-uk.svg">
 						</figure>
 						<h2>FREE SHIPPING</h2>
 						<p>What you see is what you get, no hidden fees on our purchase prices</p>
 					</div>
-					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-3 col-xs-offset-2 col-sm-offset-0">
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
 							<img src="css/icons/verified.svg">
 						</figure>
 						<h2>VERIFIED</h2>
 						<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
 					</div>
-					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-3 col-xs-offset-2 col-sm-offset-0">
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
 							<img src="css/heart-black.svg">
 						</figure>
 						<h2>FREE LISTINGS</h2>
 						<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
 					</div>
-					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-3 col-xs-offset-2 col-sm-offset-0">
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
 							<img src="css/peace-of-mind-uk.svg">
 						</figure>
