@@ -565,7 +565,7 @@ a.left.carousel-control {
   .panel-heading img.icon-category {
     height: 8em;
   }
-  .panel-primary>.panel-heading {
+  .categories .panel-primary>.panel-heading {
     height: 8em;
   }
 }
