@@ -721,6 +721,10 @@ a.left.carousel-control {
   .carousel-indicators {
     bottom: -10px;
   }
+  .spotligth .panel-primary {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
 }
 @media screen and (min-width: 992px){
   .categories .row {
