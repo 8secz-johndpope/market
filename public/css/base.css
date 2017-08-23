@@ -657,6 +657,9 @@ a.left.carousel-control {
   .spotligth .panel-heading {
     height: 300px;
   }
+  .spotligth .container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
