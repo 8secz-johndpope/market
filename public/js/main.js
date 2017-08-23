@@ -23,5 +23,5 @@ function ellipsis(selector){
 }
 
 function activeFirstItem(){
-  $('.item').find('div').first().addClass( "active" );
+  $('.item').first().addClass( "active" );
 }
