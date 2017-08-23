@@ -262,7 +262,7 @@
 							<img src="css/peace-of-mind-uk.svg">
 						</figure>
 						<h2>TRUSTED</h2>
-						<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
+						<p>We’ll give you discounts and credits for being better buyers & sellers</p>
 					</div>
 					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
@@ -283,14 +283,14 @@
 							<img src="css/icons/verified.svg">
 						</figure>
 						<h2>VERIFIED</h2>
-						<p>Our sellers and buyers are verified by our system</p>
+						<p>Our sellers and buyers are verified by our system........</p>
 					</div>
 					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
 							<img src="css/icons/free-uk.svg">
 						</figure>
 						<h2>FREE LISTINGS</h2>
-						<p>We’ll give you discounts and credits for being better buyers & sellers</p>
+						<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
 					</div>
 					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
