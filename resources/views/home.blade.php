@@ -85,8 +85,10 @@
 			 		<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
 				 		<div class="panel panel-primary {{$cat->class}}">
 				 			<div class="panel-heading">
-				 				<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
-				 				<h1>{{$cat->title}}</h1>
+				 				<a href="#">
+				 					<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
+				 					<h1>{{$cat->title}}</h1>
+				 				</a>
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
@@ -109,8 +111,8 @@
 				<div class="row">
 					<div class="center-block">
 						<ul class="tabs-simple list-inline">
-							<li><a class="tabs-simple-tab all-spot" href="">All Spotlight</a></li>
-							<li><a class="tabs-simple-tab pop-se" href="">Popular Searches</a></li>
+							<li><a class="tabs-simple-tab all-spot" href="#">All Spotlight</a></li>
+							<li><a class="tabs-simple-tab pop-se" href="#">Popular Searches</a></li>
 						</ul>
 					</div>
 					<div class="tabs-simple-bar">
@@ -131,17 +133,19 @@
 							<div class="item">
 									@for ($j = 0; $j < 2; $i++,$j++)
 						    		<div class="col-xs-6 col-md-4 col-lg-2">
-							    		<div class="panel panel-primary">
-								 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}});"">
-								 			</div>
-								 			<div class="panel-body">
-								 				<h3 class="text">{{$spotlight[$i]['title']}}</h3>
-											 	@if($spotlight[$i]['meta']['price']>=0)
-			                                            <div class="items-box-price font-5">£	{{$spotlight[$i]['meta']['price']/100}}{{isset($spotlight[$i]['meta']['price_frequency']) ? $spotlight[$i]['meta']['price_frequency']:''}}
-			                                            </div>
-			                                   @endif
+						    			<a href="#">
+								    		<div class="panel panel-primary">
+									 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}});"">
+									 			</div>
+									 			<div class="panel-body">
+									 				<h3 class="text">{{$spotlight[$i]['title']}}</h3>
+												 	@if($spotlight[$i]['meta']['price']>=0)
+				                                            <div class="items-box-price font-5">£	{{$spotlight[$i]['meta']['price']/100}}{{isset($spotlight[$i]['meta']['price_frequency']) ? $spotlight[$i]['meta']['price_frequency']:''}}
+				                                            </div>
+				                                   @endif
+												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 									@endfor
 									@php
