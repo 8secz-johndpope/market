@@ -149,6 +149,7 @@ a.navbar-brand {
   margin: 0 auto;
   font-size: 30px;
   padding: 10px 0;
+  color: #000;
 }
 .panel.panel-primary{
   /*border-color: white;*/
