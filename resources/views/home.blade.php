@@ -154,6 +154,7 @@
 						    <span class="sr-only">Next</span>
 						</a>
 					</div>
+					<!-- end small devices -->
 					<div id="myCarousel" class="carousel slide hidden-xs" data-ride="carousel">
 						<!-- Indicators -->
 						<ol class="carousel-indicators">
@@ -165,7 +166,7 @@
 						<div class="carousel-inner">
 						    <div class="item active">
 						    	@foreach($spl1 as $spl)
-						    		<div class="col-md-4 col-lg-2">
+						    		<div class="col-sm-4 col-md-4 col-lg-2">
 							    		<div class="panel panel-primary">
 								 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
 								 			</div>
@@ -182,7 +183,7 @@
 						    </div>
 						    <div class="item">
 						    	@foreach($spl2 as $spl)
-						    		<div class="col-md-4 col-lg-2">
+						    		<div class="col-sm-4 col-md-4 col-lg-2">
 							    		<div class="panel panel-primary">
 								 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
 								 			</div>
@@ -200,7 +201,7 @@
 						    </div>
 						    <div class="item">
 						    	@foreach($spl3 as $spl)
-						    		<div class="col-md-4 col-lg-2">
+						    		<div class="col-sm-4 col-md-4 col-lg-2">
 							    		<div class="panel panel-primary">
 								 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
 								 			</div>
@@ -217,7 +218,7 @@
 						    </div>
 						    <div class="item">
 						    	@foreach($spl4 as $spl)
-						    		<div class="col-md-4 col-lg-2">
+						    		<div class="col-sm-4 col-md-4 col-lg-2">
 							    		<div class="panel panel-primary">
 								 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
 								 			</div>
