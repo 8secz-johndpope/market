@@ -701,7 +701,7 @@ a.left.carousel-control {
       font-size: 11px;
   }
   .carousel-indicators {
-    bottom: 10px;
+    bottom: -10px;
   }
 }
 @media screen and (min-width: 992px){
