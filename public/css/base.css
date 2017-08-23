@@ -791,13 +791,13 @@ a.left.carousel-control {
     font-size: 16px;
   }
   .search input.form-control::-webkit-input-placeholder {
-    font-size: 16px;
+    font-size: 15px;
   }
   .search input.form-control::-moz-placeholder {
-      font-size: 16px;
+      font-size: 15px;
   }
   .search input.form-control:::-ms-input-placeholder {
-      font-size: 16px;
+      font-size: 15px;
   }
   .panel-heading img.icon-category {
     height: 10em;
