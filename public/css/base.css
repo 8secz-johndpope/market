@@ -834,6 +834,12 @@ a.left.carousel-control {
   .spotligth .panel-heading {
     height: 380px;
   }
+  .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    margin-right: -20px;
+  }
+  .carousel-control .glyphicon-chevron-left, .carousel-control .icon-next {
+    margin-right: -20px;
+  }
 }
 @media screen and (min-width: 1700px){
   .categories .panel-body {
