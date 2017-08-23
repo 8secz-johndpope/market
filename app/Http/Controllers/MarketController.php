@@ -291,12 +291,12 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $product=$products[0];
-
-        $cat=$this->catids[$product['category']]['slug'];
+	
 
         $catagory= Category::find($product['category']);
 
 
+        $cat=$catagory->slug;
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
