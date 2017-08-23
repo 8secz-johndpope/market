@@ -841,6 +841,9 @@ a.left.carousel-control {
   .carousel-control .glyphicon-chevron-left, .carousel-control .icon-next {
     margin-right: -20px;
   }
+  .col-xs-8.col-sm-6.col-md-6.col-lg-4.col-xs-offset-2.col-sm-offset-0 {
+    height: 300px;
+  }
 }
 @media screen and (min-width: 1700px){
   .categories .panel-body {
