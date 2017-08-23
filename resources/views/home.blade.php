@@ -294,7 +294,7 @@
 					</div>
 					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
-							<img src="css/peace-of-mind-uk.svg">
+							<img src="css/icons/return.svg">
 						</figure>
 						<h2>FREE RETURNS</h2>
 						<p>You’ll always hear back from our customer services within 24 hours</p>
