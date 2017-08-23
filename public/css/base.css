@@ -662,6 +662,12 @@ a.left.carousel-control {
     padding-left: 0px;
     padding-right: 0px;
   }
+  .spotligth .panel-body h3 {
+    font-size: 12px;
+  }
+  .spotligth .panel-body {
+    height: 7em;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
