@@ -718,13 +718,13 @@ a.left.carousel-control {
     bottom: -30px;
   }
   .search input.form-control::-webkit-input-placeholder {
-    font-size: 10px;
+    font-size: 12px;
   }
   .search input.form-control::-moz-placeholder {
-      font-size: 10px;
+      font-size: 12px;
   }
   .search input.form-control:::-ms-input-placeholder {
-      font-size: 10px;
+      font-size: 12px;
   }
   section.social-media {
     background-size: cover;
