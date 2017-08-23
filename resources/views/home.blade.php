@@ -146,7 +146,7 @@
 					    @endforeach
 					</div>
 					<div class="carousel-inner hidden-xs">
-					    <div class="item active ">
+					    <div class="item active">
 					    	@foreach($spl1 as $spl)
 					    		<div class="col-md-4 col-lg-2">
 						    		<div class="panel panel-primary">
@@ -163,7 +163,7 @@
 								</div>
 					    	@endforeach
 					    </div>
-					    <div class="item hidden-xs">
+					    <div class="item">
 					    	@foreach($spl2 as $spl)
 					    		<div class="col-md-4 col-lg-2">
 						    		<div class="panel panel-primary">
@@ -181,7 +181,7 @@
 								</div>
 					    	@endforeach
 					    </div>
-					    <div class="item hidden-xs">
+					    <div class="item">
 					    	@foreach($spl3 as $spl)
 					    		<div class="col-md-4 col-lg-2">
 						    		<div class="panel panel-primary">
@@ -198,7 +198,7 @@
 								</div>
 					    	@endforeach  
 					    </div>
-					    <div class="item hidden-xs">
+					    <div class="item">
 					    	@foreach($spl4 as $spl)
 					    		<div class="col-md-4 col-lg-2">
 						    		<div class="panel panel-primary">
@@ -217,6 +217,7 @@
 								</div>
 					    	@endforeach  
 					    </div>
+					</div>
 					</div>
 					<!-- Left and right controls -->
 					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
