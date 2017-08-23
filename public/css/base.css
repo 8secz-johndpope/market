@@ -700,7 +700,9 @@ a.left.carousel-control {
   .search input.form-control:::-ms-input-placeholder {
       font-size: 11px;
   }
-
+  .carousel-indicators {
+    bottom: 10px;
+  }
 }
 @media screen and (min-width: 992px){
   .categories .row {
