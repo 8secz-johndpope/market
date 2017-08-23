@@ -117,7 +117,7 @@
 						<div class="tabs-simple-bar-mask"></div>
 					</div>
 					<div id="myCarousel-xs" class="carousel slide visible-xs" data-ride="carousel">
-						<!-- Indicators -->
+						<!-- Indicators 
 						<ol class="carousel-indicators">
 							<li data-target="#myCarousel-xs" data-slide-to="0" class="active"></li>
 						    <li data-target="#myCarousel-xs" data-slide-to="1"></li>
@@ -156,13 +156,13 @@
 					</div>
 					<!-- end small devices -->
 					<div id="myCarousel" class="carousel slide hidden-xs" data-ride="carousel">
-						<!-- Indicators
+						<!-- Indicators -->
 						<ol class="carousel-indicators">
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 						    <li data-target="#myCarousel" data-slide-to="1"></li>
 						    <li data-target="#myCarousel" data-slide-to="2"></li>
 						    <li data-target="#myCarousel" data-slide-to="3"></li>
-						</ol> -->
+						</ol> 
 						<div class="carousel-inner">
 						    <div class="item active">
 						    	@foreach($spl1 as $spl)
