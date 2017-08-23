@@ -126,7 +126,25 @@
 						</ol>
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
-					    <div class="item active">
+						<!-- small devices -->
+						@foreach($spl1 as $spl)
+						<div class="item visible-xs">
+					    		<div class="col-md-4 col-lg-2">
+						    		<div class="panel panel-primary">
+							 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
+							 			</div>
+							 			<div class="panel-body">
+							 				<h3 class="text">{{$spl['title']}}</h3>
+										 	@if($spl['meta']['price']>=0)
+		                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
+		                                            </div>
+		                                   @endif
+										</div>
+									</div>
+								</div>
+					    </div>
+					    @endforeach
+					    <div class="item active hidden-xs">
 					    	@foreach($spl1 as $spl)
 					    		<div class="col-md-4 col-lg-2">
 						    		<div class="panel panel-primary">
@@ -143,7 +161,7 @@
 								</div>
 					    	@endforeach
 					    </div>
-					    <div class="item">
+					    <div class="item hidden-xs">
 					    	@foreach($spl2 as $spl)
 					    		<div class="col-md-4 col-lg-2">
 						    		<div class="panel panel-primary">
@@ -161,7 +179,7 @@
 								</div>
 					    	@endforeach
 					    </div>
-					    <div class="item">
+					    <div class="item hidden-xs">
 					    	@foreach($spl3 as $spl)
 					    		<div class="col-md-4 col-lg-2">
 						    		<div class="panel panel-primary">
@@ -178,7 +196,7 @@
 								</div>
 					    	@endforeach  
 					    </div>
-					    <div class="item">
+					    <div class="item hidden-xs">
 					    	@foreach($spl4 as $spl)
 					    		<div class="col-md-4 col-lg-2">
 						    		<div class="panel panel-primary">
