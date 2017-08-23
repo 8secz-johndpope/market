@@ -388,7 +388,7 @@ ul.media {
 }
 /* end*/
 footer{
-  height: 500px;
+  /*height: 500px;
   /*background-color: #000;*/
   background-image: url('footer.png');
   background-color: black;
