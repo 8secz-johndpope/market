@@ -127,7 +127,7 @@
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner ">
 							<!-- small devices -->
-							@foreach($spl1 as $spl)
+							@foreach($spotligth as $spl)
 							<div class="item">
 						    		<div class="col-md-4 col-lg-2">
 							    		<div class="panel panel-primary">
