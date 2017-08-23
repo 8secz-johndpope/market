@@ -127,7 +127,7 @@
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner ">
 							<!-- small devices -->
-							@for ($i = 0; $i < count($spotlight)+1; $i++)
+							@for ($i = 0; $i < count($spotlight); $i++)
 							<div class="item">
 									@for ($j = 0; $j < 2; $i++,$j++)
 						    		<div class="col-xs-6 col-md-4 col-lg-2">
@@ -144,6 +144,9 @@
 										</div>
 									</div>
 									@endfor
+									@php
+										$i--;
+									@endphp
 						    </div>
 						    @endfor
 						</div>
