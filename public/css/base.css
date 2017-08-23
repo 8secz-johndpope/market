@@ -721,11 +721,17 @@ a.left.carousel-control {
       font-size: 11px;
   }
   .carousel-indicators {
-    bottom: -30px;
+    bottom: -10px;
   }
-  .categories .panel.panel-primary {
+  .spotligth .panel-primary {
     margin-bottom: 10px;
     margin-top: 20px;
+  }
+  .categories .panel.panel-primary {
+    margin-bottom: 40px;
+  }
+  .read-more {
+    bottom: 30px;
   }
 }
 @media screen and (min-width: 992px){
@@ -784,12 +790,7 @@ a.left.carousel-control {
     margin-bottom: 10px;
     margin-top: 20px;
   }
-  .categories .panel.panel-primary {
-    margin-bottom: 40px;
-  }
-  .read-more {
-    bottom: 30px;
-  }
+
 }
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
