@@ -266,7 +266,7 @@
 					</div>
 					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
-							<img src="css/commision.svg">
+							<img src="css/icons/commision.svg">
 						</figure>
 						<h2>0% Commission</h2>
 						<p>What you see is what you get, no hidden fees on our purchase prices</p>
