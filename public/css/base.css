@@ -654,6 +654,9 @@ a.left.carousel-control {
   footer .row {
     margin: 10px 0;
   }
+  .spotligth .panel-heading {
+    height: 300px;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
