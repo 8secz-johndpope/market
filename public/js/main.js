@@ -1,4 +1,4 @@
-$( document ).ready(function() {ellipsis('.text'); printSpotligth()});
+$( document ).ready(function() {ellipsis('.text'); activeFirstItem()});
 
 function ellipsis(selector){
  var nodeList = document.querySelectorAll(selector);
@@ -22,9 +22,6 @@ function ellipsis(selector){
  }
 }
 
-function printSpotligth(){
-  $(window).width()
-  $('.item').find('div').each(function( index ) {
-    console.log( index + ": " + $( this ).text() );
-  });
+function activeFirstItem(){
+  $('.item').find('div').first().addClass( "highlight" );
 }
