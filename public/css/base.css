@@ -666,7 +666,11 @@ a.left.carousel-control {
     font-size: 12px;
   }
   .spotligth .panel-body {
+    padding: 5px 10px;
     height: 7em;
+  }
+  .carousel-inner {
+    padding: 10px 15px;
   }
 }
 
