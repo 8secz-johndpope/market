@@ -283,7 +283,7 @@
 							<img src="css/icons/verified.svg">
 						</figure>
 						<h2>VERIFIED</h2>
-						<p>Our sellers and buyers are verified by our system........</p>
+						<p>Our sellers and buyers are verified by our system</p>
 					</div>
 					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
