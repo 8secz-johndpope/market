@@ -129,6 +129,7 @@
 							<!-- small devices -->
 							@for ($i = 0; $i < count($spotlight); $i++)
 							<div class="item">
+									@for ($j = 0; $j < 2; $i++,$j++)
 						    		<div class="col-xs-9 col-md-4 col-lg-2">
 							    		<div class="panel panel-primary">
 								 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}});"">
@@ -142,6 +143,7 @@
 											</div>
 										</div>
 									</div>
+									@endfor
 						    </div>
 						    @endfor
 						</div>
