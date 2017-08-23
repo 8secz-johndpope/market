@@ -276,7 +276,7 @@
 							<img src="css/icons/free-shipping.svg">
 						</figure>
 						<h2>FREE SHIPPING</h2>
-						<p>What you see is what you get, no hidden fees on our purchase prices</p>
+						<p>You can get unlimited FREE Two-Day Shipping</p>
 					</div>
 					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
