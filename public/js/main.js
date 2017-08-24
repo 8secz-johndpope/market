@@ -23,5 +23,5 @@ function ellipsis(selector){
 }
 
 function activeFirstItem(){
-  $('.item').first().addClass( "active" );
+  $('#myCarousel-xs .item').first().addClass( "active" );
 }
