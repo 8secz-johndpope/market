@@ -190,6 +190,9 @@
 										</div>
 									</div>
 						    	@endfor
+						    	@php
+										$i--;
+								@endphp
 						    </div>
 						    @endfor
 						</div>
