@@ -435,6 +435,7 @@ footer .row {
 }
 .carousel-inner {
   padding: 10px 30px;
+  height: 100%;
 }
 a.right.carousel-control {
     background: none;
