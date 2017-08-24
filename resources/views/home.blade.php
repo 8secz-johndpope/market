@@ -178,7 +178,7 @@
 						    	@for ($j = 0; $j < 6; $i++,$j++)
 						    		<div class="col-sm-4 col-md-4 col-lg-2">
 							    		<div class="panel panel-primary">
-								 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}});"">
+								 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}});">
 								 			</div>
 								 			<div class="panel-body">
 								 				<h3 class="text">{{$spotlight[$i]['title']}}</h3>
