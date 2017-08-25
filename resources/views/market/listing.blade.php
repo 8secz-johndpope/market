@@ -712,7 +712,7 @@
             {'country': ['gb']});
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
-        searchBox.addListener('places_changed', function() {
+        searchBox.addListener('place_changed', function() {
             var place = searchBox.getPlace();
             console.log(place);
 
