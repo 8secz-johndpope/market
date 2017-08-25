@@ -690,6 +690,31 @@ class MarketController extends BaseController
                 ];
             }
         }
+        $filte = [
+            "geo_distance" => [
+                "distance" => "2000mi",
+                "location" => [
+                    "lat" => 52.1,
+                    "lon" => 0.1
+                ]
+            ]
+        ];
+        if($request->has('distance')){
+            $lat = $request->lat;
+            $lng = $request->lng;
+            $distance = $request->distance;
+            $filte = [
+                "geo_distance" => [
+                    "distance" => $distance."mi",
+                    "location" => [
+                        "lat" => $lat,
+                        "lon" => $lng
+                    ]
+                ]
+            ];
+
+        }
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -698,8 +723,9 @@ class MarketController extends BaseController
                 'size'=>$pagesize,
                 'query' => [
                     'bool' => [
-                        'must' => array_values($musts)
-                    ]
+                        'must' => array_values($musts),
+                        'filter' => $filte
+                        ]
                 ],
                 "sort"=> $sort
 
