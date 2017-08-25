@@ -262,6 +262,7 @@
                     <a href="/{{$ch->slug}}" itemprop="url">
                         <span itemprop="title">{{$ch->title}}</span>
                     </a>
+                    <i class="icon-arrow-right"></i>
                 </li>
             @endforeach
 
