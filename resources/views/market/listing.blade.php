@@ -402,7 +402,7 @@
                     @endforeach
             <select data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
                 @foreach($distances as $key=>$value)
-                    <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']===$key)) selected @endif>
+                    <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']==$key)) selected @endif>
                         {{$value}}
                     </option>
                     @endforeach
