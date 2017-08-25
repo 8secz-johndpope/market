@@ -26,7 +26,7 @@ class UserController extends BaseController
             $user =  Auth::user();
             //Creating a token without scopes...
             $token = $user->createToken('Token Name')->accessToken;
-            return ['token'=>$token];
+            return ['token'=>$token,'id'=>$user->id,'email'=>$user->email,'name'=>$user->name];
         }else{
             return ['msg'=>"Invalid Credentials"];
         }
@@ -623,7 +623,7 @@ class UserController extends BaseController
         $user->more(['email'=>$request->email,'name'=>$request->name,'password'=> bcrypt($request->password),'phone'=>$request->phone]);
         $user->save();
 
-        return ['msg'=>'success'];
+        return ['msg'=>'success','id'=>$user->id,'email'=>$user->email,'name'=>$user->name];
     }
 
 }
