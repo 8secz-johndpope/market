@@ -292,13 +292,7 @@
                     List of items for {{$last}}, {{$total}}
 
                 </h2>
-                <div class="spacial-description">
-                    <form action="{{$url}}" class="sp-header-form">
-                        <select name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false">
-                            <option value="date" selected="">Most recent first</option><option value="price_lowest_first">Price: Low to High</option><option value="price_highest_first">Price: High to Low</option><option value="distance">Nearest first</option>
-                        </select>
-                    </form>
-                </div>
+
 
                 <div class="items-box-content clearfix">
                     @foreach($products as $product)
@@ -380,6 +374,13 @@
                 <a href="https://itunes.apple.com/us/app/id896130944?mt=8" target="_blank" class="side-banner">
                     <img src="//www-mercari-com.akamaized.net/assets/img/common/us/side_banner.jpg?1224156651" alt="Download Mercari Now">
                 </a>
+            </div>
+            <div class="l-visible-large">
+                <form action="{{$url}}" class="sp-header-form">
+                    <select name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false">
+                        <option value="date" selected="">Most recent first</option><option value="price_lowest_first">Price: Low to High</option><option value="price_highest_first">Price: High to Low</option><option value="distance">Nearest first</option>
+                    </select>
+                </form>
             </div>
             @foreach($filters as $filter)
             <div class="l-visible-large">
