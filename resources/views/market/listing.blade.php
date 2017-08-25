@@ -713,15 +713,13 @@
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
         searchBox.addListener('places_changed', function() {
-            var places = searchBox.getPlaces();
+            var place = autocomplete.getPlace();
 
-            if (places.length == 0) {
-                return;
-            }
+
             var lat = document.getElementById('lat');
             var lng = document.getElementById('lng');
-            lat.value=places[0].geometry.location.lat();
-            lng.value=places[0].geometry.location.lng();
+            lat.value=place.geometry.location.lat();
+            lng.value=place.geometry.location.lng();
             console.log(places);
         });
     }
