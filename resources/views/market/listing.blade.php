@@ -376,10 +376,53 @@
                 </a>
             </div>
             <div class="l-visible-large">
+                <h4> Sort By:</h4>
                 <form action="{{$url}}" >
-                   Sort By: <select name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
+                   <select name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
                         <option value="date" selected="">Most recent first</option><option value="price_lowest_first">Price: Low to High</option><option value="price_highest_first">Price: High to Low</option><option value="distance">Nearest first</option>
                     </select>
+                </form>
+            </div>
+            <div class="l-visible-large">
+                <h4>Distance</h4>
+                <form action="{{$url}}" >
+                    <input type="hidden" name="lat" value="{{$lat}}">
+                    <input type="hidden" name="lng" value="{{$lng}}">
+            <select data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
+                <option value="0.0001">
+                    Default
+                </option>
+                <option value="1">
+                    + 1 mile
+                </option>
+                <option value="3">
+                    + 3 miles
+                </option>
+                <option value="5">
+                    + 5 miles
+                </option>
+                <option value="10">
+                    + 10 miles
+                </option>
+                <option value="15">
+                    + 15 miles
+                </option>
+                <option value="30">
+                    + 30 miles
+                </option>
+                <option value="50">
+                    + 50 miles
+                </option>
+                <option value="75">
+                    + 75 miles
+                </option>
+                <option value="100" selected="">
+                    + 100 miles
+                </option>
+                <option value="1000">
+                    Nationwide
+                </option>
+            </select>
                 </form>
             </div>
             @foreach($filters as $filter)
