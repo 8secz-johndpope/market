@@ -401,6 +401,11 @@
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
                     @endforeach
             <select data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
+                @foreach($distances as $key=>$value)
+                    <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']===$key)) selected="" @endif>
+                        {{$value}}
+                    </option>
+                    @endforeach
                 <option value="0.0001">
                     Default
                 </option>
@@ -428,7 +433,7 @@
                 <option value="75">
                     + 75 miles
                 </option>
-                <option value="100" selected="">
+                <option value="100" >
                     + 100 miles
                 </option>
                 <option value="1000">
