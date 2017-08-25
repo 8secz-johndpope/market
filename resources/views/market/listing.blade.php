@@ -86,6 +86,9 @@
             <div class="sp-header-user-nav clearfix">
 
                 <form action="{{$url}}" class="sp-header-form">
+                    @foreach($input as $key=>$value)
+                        <input type="hidden" name="{{$key}}" value="{{$value}}">
+                    @endforeach
                     <input type="search" name="q" value="" placeholder="Search Sumra" class="sp-header-search input-default">
                     <i class="icon-search"></i>
                 </form>
@@ -176,6 +179,9 @@
                 </h1>
 
                 <form action="{{$url}}" class="pc-header-form l-right">
+                    @foreach($input as $key=>$value)
+                        <input type="hidden" name="{{$key}}" value="{{$value}}">
+                    @endforeach
                     <input type="search" name="q" value="" placeholder="Search Sumra" class="input-default">
                     <i class="icon-search"></i>
                 </form>
@@ -378,6 +384,9 @@
             <div class="l-visible-large">
                 <h4> Sort By:</h4>
                 <form action="{{$url}}" >
+                    @foreach($input as $key=>$value)
+                        <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endforeach
                    <select name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
                         <option value="date" selected="">Most recent first</option><option value="price_lowest_first">Price: Low to High</option><option value="price_highest_first">Price: High to Low</option><option value="distance">Nearest first</option>
                     </select>
@@ -388,6 +397,9 @@
                 <form action="{{$url}}" >
                     <input type="hidden" name="lat" value="{{$lat}}">
                     <input type="hidden" name="lng" value="{{$lng}}">
+                    @foreach($input as $key=>$value)
+                        <input type="hidden" name="{{$key}}" value="{{$value}}">
+                    @endforeach
             <select data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
                 <option value="0.0001">
                     Default
@@ -428,6 +440,9 @@
             <div class="l-visible-large">
                 <h4>Price</h4>
                 <form action="{{$url}}" >
+                    @foreach($input as $key=>$value)
+                        <input type="hidden" name="{{$key}}" value="{{$value}}">
+                    @endforeach
                     <div class="grid-row" action="/search" name="price_form">
                         <div class="grid-col-4">
                             <label class="hide-visually" for="min_price">Minimum Price</label>

@@ -859,7 +859,7 @@ class MarketController extends BaseController
 
             }
 
-        return View('market.listing',['url'=>$request->url().'?'.http_build_query($input),'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs,'filters'=>$filters]);
+        return View('market.listing',['url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs,'filters'=>$filters]);
     }
 
 }
