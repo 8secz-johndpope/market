@@ -711,7 +711,7 @@
         var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.Autocomplete(input);
         searchBox.setComponentRestrictions(
-            {'country': ['us']});
+            {'country': ['gb']});
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
         searchBox.addListener('places_changed', function() {
