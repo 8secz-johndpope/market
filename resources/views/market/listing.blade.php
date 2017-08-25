@@ -387,7 +387,9 @@
                 <h4> Location</h4>
                 <form action="{{$url}}" >
                     @foreach($input as $key=>$value)
+                        @if($key!=='lat'&&$key!=='lng')
                             <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endif
                     @endforeach
                         <input type="hidden" id="lat" name="lat" value="{{$lat}}">
                         <input type="hidden" id="lng" name="lng" value="{{$lng}}">
