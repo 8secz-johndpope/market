@@ -609,13 +609,13 @@ class MarketController extends BaseController
 
         $breads = array();
         $start = $category;
-        while ($start->parent!==null){
+        do{
             $breads[]=$start;
             $start=$start->parent;
-        }
+        }while ($start->parent!==null);
 
         $breads=array_reverse($breads);
-       // array_pop($breads);
+        array_pop($breads);
         if($max<5){
             $pages = range(1,$max);
         }
