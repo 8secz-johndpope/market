@@ -543,6 +543,22 @@ class MarketController extends BaseController
                 ]
             ]
         ];
+        $min_price = -2;
+        if($request->has('min_price')){
+            $min_price = $request->min_price;
+        }
+        $max_price = 999999999999;
+        if($request->has('max_price')){
+            $max_price = $request->max_price;
+        }
+        $musts['meta.price']= [
+            'range' => [
+                'category' => [
+                    'gte'=>$min_price,
+                    'lte'=>$max_price
+                ]
+            ]
+        ];
         $filte = [
             "geo_distance" => [
                 "distance" => "2000mi",
