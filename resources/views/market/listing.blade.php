@@ -377,7 +377,7 @@
             </div>
             <div class="l-visible-large">
                 <form action="{{$url}}" >
-                   Sort By: <select name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false">
+                   Sort By: <select name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
                         <option value="date" selected="">Most recent first</option><option value="price_lowest_first">Price: Low to High</option><option value="price_highest_first">Price: High to Low</option><option value="distance">Nearest first</option>
                     </select>
                 </form>
