@@ -398,6 +398,23 @@
                 </form>
             </div>
             <div class="l-visible-large">
+                <h4>Distance</h4>
+                <form action="{{$url}}" >
+                    @foreach($input as $key=>$value)
+                        @if($key!=='distance')
+                            <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endif
+                    @endforeach
+                    <select data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
+                        @foreach($distances as $key=>$value)
+                            <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']==$key)) selected @endif>
+                                {{$value}}
+                            </option>
+                        @endforeach
+                    </select>
+                </form>
+            </div>
+            <div class="l-visible-large">
                 <h4> Sort By:</h4>
                 <form action="{{$url}}" >
                     @foreach($input as $key=>$value)
@@ -412,23 +429,7 @@
                     </select>
                 </form>
             </div>
-            <div class="l-visible-large">
-                <h4>Distance</h4>
-                <form action="{{$url}}" >
-                    @foreach($input as $key=>$value)
-                        @if($key!=='distance')
-                        <input type="hidden" name="{{$key}}" value="{{$value}}">
-                        @endif
-                    @endforeach
-            <select data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
-                @foreach($distances as $key=>$value)
-                    <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']==$key)) selected @endif>
-                        {{$value}}
-                    </option>
-                    @endforeach
-            </select>
-                </form>
-            </div>
+
             <div class="l-visible-large">
                 <h4>Price</h4>
                 <form action="{{$url}}" >
