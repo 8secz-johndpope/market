@@ -268,10 +268,10 @@
     <nav class="bread-crumbs">
         <ul>
 
-            @foreach($chs as $ch)
+            @foreach($category->children as $ch)
                 <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <a href="/{{$ch}}" itemprop="url">
-                        <span itemprop="title">{{$ch}}</span>
+                    <a href="/{{$ch->slug}}" itemprop="url">
+                        <span itemprop="title">{{$ch->title}}</span>
                     </a>
                     <i class="icon-arrow-right"></i>
                 </li>
