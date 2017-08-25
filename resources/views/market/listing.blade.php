@@ -203,17 +203,15 @@
                                 @foreach($base as $b)
                                     <li class="pc-header-nav-parent">
                                         <h3>
-                                            <a href="/{{$b}}">{{$b}}</a>
+                                            <a href="/{{$b->slug}}">{{$b->title}}</a>
                                         </h3>
-                                        @if(isset($children[$b]))
                                             <ul class="pc-header-nav-child-wrap" data-mega="2">
-                                                @foreach($children[$b] as $ch)
+                                                @foreach($b->children as $ch)
                                                 <li class="pc-header-nav-child">
-                                                    <a href="/{{$ch}}">{{$ch}}</a>
+                                                    <a href="/{{$ch->slug}}">{{$ch->title}}</a>
                                                 </li>
                                                     @endforeach
                                             </ul>
-                                            @endif
                                     </li>
                                 @endforeach
                             </ul>
