@@ -554,7 +554,7 @@ class MarketController extends BaseController
                 }
                 $agg = ['range'=>['field'=>'meta.'.$field->slug,'ranges'=>$ranges]];;
 
-            }else{
+            }else if($field->type==='list'){
                 $agg=['terms'=>['field'=>'meta.'.$field->slug.'.keyword','size'=>1000000]];
             }
             $aggs[$field->slug]=$agg;
@@ -626,7 +626,67 @@ class MarketController extends BaseController
             $page=100;
         }
         $pagesize = 50;
+        $sort = [
+            [
+                "created_at"=> ["order"=> "desc"]
+            ],
+            [
+                "_geo_distance"=> [
+                    "location" => [
+                        "lat" =>  52.5,
+                        "lon" => 1.2
+                    ],
+                    "order"=> "asc",
+                    "unit"=> "km",
+                    "distance_type"=> "plane"
+                ]
+            ]
+        ];
+        if($request->has('sort')){
+            $skey = $request->sort;
+            if($skey==='distance'){
+                $lat = $request->lat;
+                $lng = $request->lng;
+                $sort = [
 
+                    [
+                        "_geo_distance"=> [
+                            "location" => [
+                                "lat" =>  $lat,
+                                "lon" => $lng
+                            ],
+                            "order"=> "asc",
+                            "unit"=> "km",
+                            "distance_type"=> "plane"
+                        ]
+                    ],
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
+                ];
+            }
+            else if($skey==='price_highest_first'){
+                $sort =[
+                    [
+                        "meta.price"=> ["order"=> "desc"]
+                    ],
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
+                    ];
+            }
+            else if($skey==='price_lowest_first'){
+                $sort =[
+                    [
+                        "meta.price"=> ["order"=> "asc"]
+                    ],
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
+
+                ];
+            }
+        }
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -638,23 +698,7 @@ class MarketController extends BaseController
                         'must' => array_values($musts)
                     ]
                 ],
-                "sort"=> [
-                    [
-                        "created_at"=> ["order"=> "desc"]
-                    ],
-                    [
-                        "_geo_distance"=> [
-                        "location" => [
-                            "lat" =>  52.5,
-                            "lon" => 1.2
-                        ],
-                            "order"=> "asc",
-                            "unit"=> "km",
-                            "distance_type"=> "plane"
-                        ]
-                    ]
-                ]
-
+                "sort"=> $sort
 
             ]
         ];
