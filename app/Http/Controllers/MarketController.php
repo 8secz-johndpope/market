@@ -597,7 +597,7 @@ class MarketController extends BaseController
 
         foreach ($input as $key=>$value){
             $fd = Field::where('slug', $key)->first();
-            if($fd!==null&&$fd->type!=='dropdown') {
+            if($fd!==null&&$fd->type!=='select') {
                 $submusts = $musts;
                 unset($submusts[$key]);
                 $params = [
