@@ -87,7 +87,7 @@ class UserController extends BaseController
         }catch (\Exception $e) {
             return [
                 'success' => false,
-                'result' => 'no such token'
+                'result' => ['msg'=>'no such token']
             ];
         }
         return [
