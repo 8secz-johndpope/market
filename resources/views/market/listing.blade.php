@@ -389,7 +389,9 @@
                 <h4> Sort By:</h4>
                 <form action="{{$url}}" >
                     @foreach($input as $key=>$value)
+                        @if($key!=='sort')
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endif
                         @endforeach
                    <select name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
                        @foreach($sorts as $st)
@@ -404,7 +406,9 @@
                     <input type="hidden" name="lat" value="{{$lat}}">
                     <input type="hidden" name="lng" value="{{$lng}}">
                     @foreach($input as $key=>$value)
+                        @if($key!=='distance')
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endif
                     @endforeach
             <select data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
                 @foreach($distances as $key=>$value)
