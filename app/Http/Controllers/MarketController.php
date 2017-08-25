@@ -535,6 +535,8 @@ class MarketController extends BaseController
         $input = $request->all();
         $aggs=array();
         $musts=array();
+        $lat = 52.1;
+        $lng = 0.1;
         $musts['category']= [
             'range' => [
                 'category' => [
@@ -563,8 +565,8 @@ class MarketController extends BaseController
             "geo_distance" => [
                 "distance" => "2000mi",
                 "location" => [
-                    "lat" => 52.1,
-                    "lon" => 0.1
+                    "lat" => $lat,
+                    "lon" => $lng
                 ]
             ]
         ];
