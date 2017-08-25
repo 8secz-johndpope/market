@@ -568,6 +568,15 @@ class MarketController extends BaseController
                 ]
             ]
         ];
+
+        if($request->has('q')){
+            $musts['title'] = [
+                'match' => [
+                    'title'=>$request->q
+                ]
+            ];
+        }
+
         if($request->has('distance')){
             $lat = $request->lat;
             $lng = $request->lng;
