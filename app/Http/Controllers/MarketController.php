@@ -615,7 +615,7 @@ class MarketController extends BaseController
         }
 
         $breads=array_reverse($breads);
-        array_pop($breads);
+       // array_pop($breads);
         if($max<5){
             $pages = range(1,$max);
         }
