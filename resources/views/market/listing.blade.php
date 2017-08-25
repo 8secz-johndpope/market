@@ -384,6 +384,10 @@
                 </a>
             </div>
             <div class="l-visible-large">
+                <h4> Location</h4>
+                <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+            </div>
+            <div class="l-visible-large">
                 <h4> Sort By:</h4>
                 <form action="{{$url}}" >
                     @foreach($input as $key=>$value)
@@ -681,6 +685,37 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSDTXHX"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<script>
+    // This example adds a search box to a map, using the Google Place Autocomplete
+    // feature. People can enter geographical searches. The search box will return a
+    // pick list containing a mix of places and predicted search terms.
 
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+    function initAutocomplete() {
+
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+            var places = searchBox.getPlaces();
+
+            if (places.length == 0) {
+                return;
+            }
+
+            console.log(places);
+        });
+    }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
+        async defer></script>
 </body>
 </html>
