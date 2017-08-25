@@ -391,8 +391,7 @@
                             <input type="hidden" name="{{$key}}" value="{{$value}}">
                         @endif
                     @endforeach
-                        <input type="hidden" id="lat" name="lat" value="{{$lat}}">
-                        <input type="hidden" id="lng" name="lng" value="{{$lng}}">
+                       
                 <input id="pac-input" class="controls" type="text" placeholder="Search Box" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif">
                         <button type="submit" class="btn-primary btn-full-width">Go</button>
                 </form>
@@ -415,8 +414,6 @@
             <div class="l-visible-large">
                 <h4>Distance</h4>
                 <form action="{{$url}}" >
-                    <input type="hidden" name="lat" value="{{$lat}}">
-                    <input type="hidden" name="lng" value="{{$lng}}">
                     @foreach($input as $key=>$value)
                         @if($key!=='distance')
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
