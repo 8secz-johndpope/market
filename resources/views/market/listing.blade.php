@@ -391,7 +391,8 @@
                             <input type="hidden" name="{{$key}}" value="{{$value}}">
                         @endif
                     @endforeach
-                       
+                        <input type="hidden" id="lat" name="lat" value="{{$lat}}">
+                        <input type="hidden" id="lng" name="lng" value="{{$lng}}">
                 <input id="pac-input" class="controls" type="text" placeholder="Search Box" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif">
                         <button type="submit" class="btn-primary btn-full-width">Go</button>
                 </form>
