@@ -714,13 +714,13 @@
         // more details for that place.
         searchBox.addListener('places_changed', function() {
             var place = autocomplete.getPlace();
-
+            console.log(place);
 
             var lat = document.getElementById('lat');
             var lng = document.getElementById('lng');
             lat.value=place.geometry.location.lat();
             lng.value=place.geometry.location.lng();
-            console.log(places);
+
         });
     }
 
