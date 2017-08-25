@@ -95,7 +95,7 @@
                     <i class="icon-search"></i>
                 </form>
 
-                <a href="/login/?login_callback=https%3A%2F%2Fwww.mercari.com%2Fcategory%2F322%2F" class="sp-header-btn btn-red">Sign In</a>
+                <a href="/login" class="sp-header-btn btn-red">Sign In</a>
             </div>
         </div>
 
@@ -223,11 +223,11 @@
 
                     <ul class="pc-header-login-nav">
                         <li>
-                            <a href="/login/?login_callback=https%3A%2F%2Fwww.mercari.com%2Fcategory%2F322%2F" class="sp-header-btn btn-red">Sign In</a>
+                            <a href="/login" class="sp-header-btn btn-red">Sign In</a>
                         </li>
 
                         <li>
-                            <a href="/signup/" class="sp-header-btn header-signup">Sign Up</a>
+                            <a href="/register" class="sp-header-btn header-signup">Sign Up</a>
                         </li>
                     </ul>
                 </div>
