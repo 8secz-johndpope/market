@@ -391,7 +391,6 @@
                        @foreach($sorts as $st)
                            <option value="{{$st->key}}" @if(isset($input['sort'])&&$input['sort']==$key)) selected @endif>{{$st->title}}</option>
                        @endforeach
-                       <option value="date" selected="">Most recent first</option><option value="price_lowest_first">Price: Low to High</option><option value="price_highest_first">Price: High to Low</option><option value="distance">Nearest first</option>
                     </select>
                 </form>
             </div>
