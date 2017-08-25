@@ -87,7 +87,9 @@
 
                 <form action="{{$url}}" class="sp-header-form">
                     @foreach($input as $key=>$value)
+                        @if($key!=='q')
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endif
                     @endforeach
                     <input type="search" name="q" value="@if(isset($input['q'])) {{$input['q']}} @endif" placeholder="Search Sumra" class="sp-header-search input-default">
                     <i class="icon-search"></i>
@@ -180,7 +182,9 @@
 
                 <form action="{{$url}}" class="pc-header-form l-right">
                     @foreach($input as $key=>$value)
+                        @if($key!=='q')
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endif
                     @endforeach
                     <input type="search" name="q" value="@if(isset($input['q'])) {{$input['q']}} @endif" placeholder="Search Sumra" class="input-default">
                     <i class="icon-search"></i>
