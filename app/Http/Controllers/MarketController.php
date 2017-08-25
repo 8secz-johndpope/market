@@ -475,6 +475,7 @@ class MarketController extends BaseController
 
     }
     public function filter($request,$category){
+        $any = $category->slug;
         $fields = $category->fields()->where('can_filter',1)->get();
         $input = $request->all();
 
