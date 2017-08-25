@@ -596,28 +596,31 @@ class MarketController extends BaseController
         $aggretations=array();
 
         foreach ($input as $key=>$value){
-            $submusts = $musts;
-            unset($submusts[$key]);
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'body' => [
-                    'size'=>0,
-                    'query' => [
-                        'bool' => [
-                            'must' => array_values($submusts)
-                        ]
-                    ],
-                    'aggs' => [$key=>$aggs[$key]]
+            $fd = Field::where('slug', $key)->first();
+            if($fd!==null) {
+                $submusts = $musts;
+                unset($submusts[$key]);
+                $params = [
+                    'index' => 'adverts',
+                    'type' => 'advert',
+                    'body' => [
+                        'size' => 0,
+                        'query' => [
+                            'bool' => [
+                                'must' => array_values($submusts)
+                            ]
+                        ],
+                        'aggs' => [$key => $aggs[$key]]
 
-                ]
-            ];
-            $response = $this->client->search($params);
+                    ]
+                ];
+                $response = $this->client->search($params);
 
-            foreach ($response['aggregations'] as $a=>$b){
-                $aggretations[$a]=$b;
+                foreach ($response['aggregations'] as $a => $b) {
+                    $aggretations[$a] = $b;
+                }
+                unset($aggs[$key]);
             }
-            unset($aggs[$key]);
         }
 
         $page = $request->page ? $request->page : 1;
