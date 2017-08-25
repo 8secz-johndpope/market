@@ -597,11 +597,9 @@ class MarketController extends BaseController
         else{
             $pages = range($page-2,$page+2);
         }
-        if(isset($this->children[$any])){
-            $chs=$this->children[$any];
-        }else{
+
             $chs = [];
-        }
+        
 
 
 
