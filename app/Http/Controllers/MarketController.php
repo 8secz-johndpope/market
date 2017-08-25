@@ -608,12 +608,12 @@ class MarketController extends BaseController
         }
 
         $breads = array();
-        $start=$any;
-        while (isset($this->parents[$start])){
-            $start=$this->parents[$start];
-            array_unshift($breads,$start);
+        $start = $category;
+        while ($start->parent!==null){
+            $breads[]=$start;
+            $start=$start->parent;
         }
-        $pages = array();
+
         if($max<5){
             $pages = range(1,$max);
         }

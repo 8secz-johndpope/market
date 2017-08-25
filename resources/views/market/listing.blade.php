@@ -250,14 +250,14 @@
                 </a>
                 <i class="icon-arrow-right"></i>
             </li>
-            @while($category->parent!==null)
+            @foreach($breads as $bread)
                 <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <a href="/{{$category->slug}}" itemprop="url">
-                        <span itemprop="title">{{$category->title}}</span>
+                    <a href="/{{$bread->slug}}" itemprop="url">
+                        <span itemprop="title">{{$bread->title}}</span>
                     </a>
                     <i class="icon-arrow-right"></i>
                 </li>
-                @endwhile
+                @endforeach
             <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
                 <span itemprop="title">{{$last}}</span>
             </li>
