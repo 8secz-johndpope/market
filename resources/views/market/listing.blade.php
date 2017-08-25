@@ -393,7 +393,7 @@
                     @endforeach
                         <input type="hidden" id="lat" name="lat" value="{{$lat}}">
                         <input type="hidden" id="lng" name="lng" value="{{$lng}}">
-                <input id="pac-input" class="controls" type="text" placeholder="Search Box" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
+                <input id="pac-input" class="controls" type="text" placeholder="Postcode or location" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
                         <button type="submit" class="btn-primary btn-full-width">Go</button>
                 </form>
             </div>
