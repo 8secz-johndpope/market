@@ -211,9 +211,7 @@
                                                     <a href="/{{$ch->slug}}">{{$ch->title}}</a>
                                                 </li>
                                                     @endforeach
-                                                    <li class="pc-header-nav-child">
-                                                        <a href=""></a>
-                                                    </li>
+
                                             </ul>
                                     </li>
                                 @endforeach
@@ -268,7 +266,11 @@
                 </li>
             @endforeach
 
-
+                <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="" itemprop="url">
+                        <span itemprop="title"></span>
+                    </a>
+                </li>
         </ul>
     </nav>
 
