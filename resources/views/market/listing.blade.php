@@ -385,7 +385,15 @@
             </div>
             <div class="l-visible-large">
                 <h4> Location</h4>
+                <form action="{{$url}}" >
+                    @foreach($input as $key=>$value)
+                            <input type="hidden" name="{{$key}}" value="{{$value}}">
+                    @endforeach
+                        <input type="hidden" id="lat" name="lat" value="{{$lat}}">
+                        <input type="hidden" id="lng" name="lng" value="{{$lng}}">
                 <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+                        <button type="submit" class="btn-primary btn-full-width">Go</button>
+                </form>
             </div>
             <div class="l-visible-large">
                 <h4> Sort By:</h4>
@@ -709,7 +717,10 @@
             if (places.length == 0) {
                 return;
             }
-
+            var lat = document.getElementById('lat');
+            var lng = document.getElementById('lng');
+            lat.value=places[0].geometry.location.lat();
+            lng.value=places[0].geometry.location.lng();
             console.log(places);
         });
     }
