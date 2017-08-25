@@ -553,7 +553,7 @@ class MarketController extends BaseController
         }
         $musts['meta.price']= [
             'range' => [
-                'category' => [
+                'meta.price' => [
                     'gte'=>$min_price,
                     'lte'=>$max_price
                 ]
