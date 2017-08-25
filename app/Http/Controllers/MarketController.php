@@ -357,7 +357,8 @@ class MarketController extends BaseController
         $musts=array();
         $lat = 52.1;
         $lng = 0.1;
-
+        $input['lat']=$lat;
+        $input['lng']=$lng;
         $musts['category']= [
             'range' => [
                 'category' => [
