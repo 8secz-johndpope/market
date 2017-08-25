@@ -666,7 +666,7 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
         foreach ($response['aggregations'] as $a=>$b){
             $aggretations[$a]=$b;
-        }        
+        }
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $total= $response['hits']['total'];
         $max = (int)($total/$pagesize);
