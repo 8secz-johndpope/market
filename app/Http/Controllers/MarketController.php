@@ -357,8 +357,7 @@ class MarketController extends BaseController
         $musts=array();
         $lat = 52.1;
         $lng = 0.1;
-        $input['lat']=$lat;
-        $input['lng']=$lng;
+
         $musts['category']= [
             'range' => [
                 'category' => [
@@ -405,6 +404,8 @@ class MarketController extends BaseController
         if($request->has('lat')&&$request->has('lng')){
             $lat = $request->lat;
             $lng = $request->lng;
+            $input['lat']=$lat;
+            $input['lng']=$lng;
             if($request->has('distance')){
                 $distance = $request->distance;
             }else{
