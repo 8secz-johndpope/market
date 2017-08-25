@@ -402,11 +402,14 @@ class MarketController extends BaseController
                 ]
             ];
         }
-
-        if($request->has('distance')){
+        if($request->has('lat')&&$request->has('lng')){
             $lat = $request->lat;
             $lng = $request->lng;
-            $distance = $request->distance;
+            if($request->has('distance')){
+                $distance = $request->distance;
+            }else{
+                $distance = '30';
+            }
             $filte = [
                 "geo_distance" => [
                     "distance" => $distance."mi",
@@ -416,8 +419,9 @@ class MarketController extends BaseController
                     ]
                 ]
             ];
-
         }
+
+       
         foreach ($fields as $field){
 
             if($field->type==='integer'){
