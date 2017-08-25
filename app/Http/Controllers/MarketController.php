@@ -545,11 +545,11 @@ class MarketController extends BaseController
         ];
         $min_price = -2;
         if($request->has('min_price')){
-            $min_price = $request->min_price;
+            $min_price = $request->min_price*100;
         }
         $max_price = 999999999999;
         if($request->has('max_price')){
-            $max_price = $request->max_price;
+            $max_price = $request->max_price*100;
         }
         $musts['meta.price']= [
             'range' => [
