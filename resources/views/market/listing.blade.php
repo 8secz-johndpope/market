@@ -389,7 +389,7 @@
                         @endforeach
                    <select name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
                        @foreach($sorts as $st)
-                           <option value="{{$st->key}}" @if(isset($input['sort'])&&$input['sort']==$key)) selected @endif>{{$st->title}}</option>
+                           <option value="{{$st->key}}" @if(isset($input['sort'])&&$input['sort']===$st->key)) selected @endif>{{$st->title}}</option>
                        @endforeach
                     </select>
                 </form>
