@@ -543,7 +543,30 @@ class MarketController extends BaseController
                 ]
             ]
         ];
+        $filte = [
+            "geo_distance" => [
+                "distance" => "2000mi",
+                "location" => [
+                    "lat" => 52.1,
+                    "lon" => 0.1
+                ]
+            ]
+        ];
+        if($request->has('distance')){
+            $lat = $request->lat;
+            $lng = $request->lng;
+            $distance = $request->distance;
+            $filte = [
+                "geo_distance" => [
+                    "distance" => $distance."mi",
+                    "location" => [
+                        "lat" => $lat,
+                        "lon" => $lng
+                    ]
+                ]
+            ];
 
+        }
         foreach ($fields as $field){
 
             if($field->type==='integer'){
@@ -607,7 +630,8 @@ class MarketController extends BaseController
                         'size' => 0,
                         'query' => [
                             'bool' => [
-                                'must' => array_values($submusts)
+                                'must' => array_values($submusts),
+                                'filter' => $filte
                             ]
                         ],
                         'aggs' => [$key => $aggs[$key]]
@@ -690,30 +714,8 @@ class MarketController extends BaseController
                 ];
             }
         }
-        $filte = [
-            "geo_distance" => [
-                "distance" => "2000mi",
-                "location" => [
-                    "lat" => 52.1,
-                    "lon" => 0.1
-                ]
-            ]
-        ];
-        if($request->has('distance')){
-            $lat = $request->lat;
-            $lng = $request->lng;
-            $distance = $request->distance;
-            $filte = [
-                "geo_distance" => [
-                    "distance" => $distance."mi",
-                    "location" => [
-                        "lat" => $lat,
-                        "lon" => $lng
-                    ]
-                ]
-            ];
 
-        }
+
 
         $params = [
             'index' => 'adverts',
