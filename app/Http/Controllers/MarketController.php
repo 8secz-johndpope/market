@@ -330,12 +330,224 @@ class MarketController extends BaseController
     public function index(Request $request){
         $min = 0;
         $max = 999999999;
+        $fields = [];
+        $input = $request->all();
+
+        $aggs=array();
+        $musts=array();
+        $lat = 52.1;
+        $lng = 0.1;
+        $input['lat']=$lat;
+        $input['lng']=$lng;
+        $musts['category']= [
+            'range' => [
+                'category' => [
+                    'gte'=>$min,
+                    'lte'=>$max
+                ]
+            ]
+        ];
+        $min_price = -2;
+        if($request->has('min_price')){
+            if(is_numeric($request->min_price))
+                $min_price = $request->min_price*100;
+        }
+        $max_price = 999999999999;
+        if($request->has('max_price')){
+            if(is_numeric($request->max_price))
+                $max_price = $request->max_price*100;
+        }
+        $musts['meta.price']= [
+            'range' => [
+                'meta.price' => [
+                    'gte'=>$min_price,
+                    'lte'=>$max_price
+                ]
+            ]
+        ];
+        $filte = [
+            "geo_distance" => [
+                "distance" => "2000mi",
+                "location" => [
+                    "lat" => $lat,
+                    "lon" => $lng
+                ]
+            ]
+        ];
+
+        if($request->has('q')){
+            $musts['title'] = [
+                'match' => [
+                    'title'=>$request->q
+                ]
+            ];
+        }
+
+        if($request->has('distance')){
+            $lat = $request->lat;
+            $lng = $request->lng;
+            $distance = $request->distance;
+            $filte = [
+                "geo_distance" => [
+                    "distance" => $distance."mi",
+                    "location" => [
+                        "lat" => $lat,
+                        "lon" => $lng
+                    ]
+                ]
+            ];
+
+        }
+        foreach ($fields as $field){
+
+            if($field->type==='integer'){
+                $filters = $field->filters;
+                $ranges = array();
+                foreach ($filters as $filter){
+                    $ranges[] = ['from'=>$filter->from_int,'to'=>$filter->to_int];
+                }
+                $agg = ['range'=>['field'=>'meta.'.$field->slug,'ranges'=>$ranges]];;
+
+            }else if($field->type==='list'){
+                $agg=['terms'=>['field'=>'meta.'.$field->slug.'.keyword','size'=>1000000]];
+            }
+            $aggs[$field->slug]=$agg;
+
+
+            if(isset($input[$field->slug])){
+                $field = Field::where('slug', $field->slug)->first();
+                if ($field === null) {
+
+
+                } else {
+                    if ($field->type === 'integer') {
+                        $frange = Filter::where('key', $input[$field->slug])->first();
+                        if ($frange !== null) {
+                            $ran = [
+                                'range' => [
+                                    'meta.' . $field->slug => [
+                                        'gte' => $frange->from_int,
+                                        'lt' => $frange->to_int
+                                    ]
+                                ]
+                            ];
+
+
+                            $musts[$field->slug] = $ran;
+
+                        }
+                    }
+                    if ($field->type === 'list') {
+                        $fil = ['term' => ['meta.' . $field->slug . '.keyword' => ['value' => $input[$field->slug]]]];
+                        $musts[$field->slug] = $fil;
+                    }
+                }
+            }
+
+        }
+
+
+        $aggretations=array();
+
+        foreach ($input as $key=>$value){
+            $fd = Field::where('slug', $key)->first();
+            if($fd!==null&&$fd->type!=='select') {
+                $submusts = $musts;
+                unset($submusts[$key]);
+                $params = [
+                    'index' => 'adverts',
+                    'type' => 'advert',
+                    'body' => [
+                        'size' => 0,
+                        'query' => [
+                            'bool' => [
+                                'must' => array_values($submusts),
+                                'filter' => $filte
+                            ]
+                        ],
+                        'aggs' => [$key => $aggs[$key]]
+
+                    ]
+                ];
+                $response = $this->client->search($params);
+
+                foreach ($response['aggregations'] as $a => $b) {
+                    $aggretations[$a] = $b;
+                }
+                unset($aggs[$key]);
+            }
+        }
+
         $page = $request->page ? $request->page : 1;
         if($page>100)
         {
             $page=100;
         }
         $pagesize = 50;
+        $sort = [
+            [
+                "created_at"=> ["order"=> "desc"]
+            ],
+            [
+                "_geo_distance"=> [
+                    "location" => [
+                        "lat" =>  52.5,
+                        "lon" => 1.2
+                    ],
+                    "order"=> "asc",
+                    "unit"=> "km",
+                    "distance_type"=> "plane"
+                ]
+            ]
+        ];
+        if($request->has('sort')){
+            $skey = $request->sort;
+            if($skey==='distance'){
+                $lat = $request->lat;
+                $lng = $request->lng;
+                $sort = [
+
+                    [
+                        "_geo_distance"=> [
+                            "location" => [
+                                "lat" =>  $lat,
+                                "lon" => $lng
+                            ],
+                            "order"=> "asc",
+                            "unit"=> "km",
+                            "distance_type"=> "plane"
+                        ]
+                    ],
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
+                ];
+            }
+            else if($skey==='price_highest_first'){
+                $sort =[
+                    [
+                        "meta.price"=> ["order"=> "desc"]
+                    ],
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
+                ];
+            }
+            else if($skey==='price_lowest_first'){
+                $sort =[
+                    [
+                        "meta.price"=> ["order"=> "asc"]
+                    ],
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
+
+                ];
+            }
+        }
+
+
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -343,33 +555,36 @@ class MarketController extends BaseController
                 'from' => ($page-1)*$pagesize,
                 'size'=>$pagesize,
                 'query' => [
-                    'range' => [
-                        'category' => [
-                            'gte'=>$min,
-                            'lte'=>$max
-                        ]
+                    'bool' => [
+                        'must' => array_values($musts),
+                        'filter' => $filte
                     ]
                 ],
-                "sort"=> [
-                    [
-                        "created_at"=> ["order"=> "desc"]
-                    ]
-                ]
+                "sort"=> $sort
 
             ]
         ];
+        if(count($aggs)>0){
+            $params['body']['aggs']=$aggs;
+        }
+
+
         $response = $this->client->search($params);
+        if(isset($response['aggregations']))
+            foreach ($response['aggregations'] as $a=>$b){
+                $aggretations[$a]=$b;
+            }
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $total= $response['hits']['total'];
         $max = (int)($total/$pagesize);
-        $max=$max+1;
+        $max++;
         if($max>100){
             $max=100;
         }
 
-        $breads = [];
+        $breads = array();
 
-
+        $pages = array();
         if($max<5){
             $pages = range(1,$max);
         }
@@ -382,8 +597,70 @@ class MarketController extends BaseController
         else{
             $pages = range($page-2,$page+2);
         }
+        if(isset($this->children[$any])){
+            $chs=$this->children[$any];
+        }else{
+            $chs = [];
+        }
 
-        return View('market.listing',['filters'=>[],'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'catids'=>$this->catids,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>'','children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$this->base]);
+
+
+
+        $filters=array();
+        $parts= explode('?',$request->url());
+        foreach ($aggretations as $key => $aggretation) {
+            $field = Field::where('slug', $key)->first();
+            $buckets = $aggretation['buckets'];
+            $values = array();
+            foreach ($buckets as $bucket) {
+                $field_val = FieldValue::where('slug', $bucket['key'])->first();
+                if ($field_val === null) {
+                    if (!isset($bucket['from'])) {
+                        $fval = new FieldValue;
+                        $fval->field_id = $field->id;
+                        $fval->slug = $bucket['key'];
+                        $fval->save();
+                    } else {
+                        $filter = Filter::where('from_int', $bucket['from'])->where('to_int', $bucket['to'])->first();
+                        $filter->count = $bucket['doc_count'];
+                        if(isset($input[$key])&&$input[$key]===$filter->key){
+                            $filter->selected = 1;
+
+                        }else{
+                            $cinput = $input;
+                            $cinput[$key]=$filter->key;
+                            $filter->url = $parts[0].'?'.http_build_query($cinput);
+                            $filter->selected = 0;
+                        }
+                        $values[] = $filter;
+                    }
+
+
+                } else {
+                    if(isset($input[$key])&&$input[$key]===$field_val->slug){
+                        $field_val->selected = 1;
+
+                    }else{
+                        $cinput = $input;
+                        $cinput[$key]=$field_val->slug;
+                        $field_val->url = $parts[0].'?'.http_build_query($cinput);
+                        $field_val->selected = 0;
+                    }
+
+                    $field_val->count = $bucket['doc_count'];
+                    $values[] = $field_val;
+                }
+
+            }
+            $field->vals = $values;
+            $filters[] = $field;
+
+        }
+
+        $sorts = Field::where('slug','sort')->first()->filters;
+        $distances = [0.1=>'Default',1=>'+ 1 miles',3=>'+ 3 miles',5=>'+ 5 miles',10=>'+ 10 miles',15=>'+ 15 miles',30=>'+ 30 miles',50=>'+ 50 miles',75=>'+ 75 miles',100=>'+ 100 miles',1000=>'Nationwide'];
+
+        return View('market.listing',['sorts'=>$sorts,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs,'filters'=>$filters]);
     }
     public function leaves(Request $request){
         foreach ($this->categories as $cat=>$val){
