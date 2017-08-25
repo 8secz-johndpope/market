@@ -15,6 +15,7 @@
     <link href="{{ asset('css/base.css') }}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 
 </head>
 	<body class="">
@@ -69,7 +70,7 @@
 								<div class="input-group col-sm-4 col-md-3 col-lg-3 col-xl-2 input-group-lg">
 							      	<input type="text" class="form-control" placeholder="POST CODE" >
 							      	<span class="input-group-btn">
-							     		<button class="btn btn-default" type="button">Go</button>
+							     		<button class="btn btn-default" type="submit">Go</button>
 							      	</span>
 							    </div>
 						</div>
@@ -81,11 +82,13 @@
 			<div class="container">
 				<div class ="row">
 			 	@foreach($base as $cat)
-			 		<div class="col-xs-4 col-sm-3 col-md-3 col-lg-2">
+			 		<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
 				 		<div class="panel panel-primary {{$cat->class}}">
 				 			<div class="panel-heading">
-				 				<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
-				 				<h1>{{$cat->title}}</h1>
+				 				<a href="#">
+				 					<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
+				 					<h1>{{$cat->title}}</h1>
+				 				</a>
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
@@ -106,136 +109,157 @@
 		<section class="spotligth">
 			<div class="container">
 				<div class="row">
-					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<div class="center-block">
+						<ul class="tabs-simple list-inline">
+							<li><a class="tabs-simple-tab all-spot" href="#">All Spotlight</a></li>
+							<li><a class="tabs-simple-tab pop-se" href="#">Popular Searches</a></li>
+						</ul>
+					</div>
+					<div class="tabs-simple-bar">
+						<div class="tabs-simple-bar-mask"></div>
+					</div>
+					<div id="myCarousel-xs" class="carousel slide visible-xs" data-ride="carousel">
+						<!-- Indicators 
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel-xs" data-slide-to="0" class="active"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="1"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="2"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="3"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="4"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="5"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="6"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="7"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="8"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="9"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="10"></li>
+						    <li data-target="#myCarousel-xs" data-slide-to="11"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner ">
+							<!-- small devices -->
+							@for ($i = 0; $i < count($spotlight); $i++)
+							<div class="item">
+									@for ($j = 0; $j < 2 && $i < count($spotlight); $i++,$j++)
+						    		<div class="col-xs-6 col-md-4 col-lg-2">
+						    			<a href="#">
+								    		<div class="panel panel-primary">
+									 			<div class="panel-heading" style="background-image:url('https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}}');">
+									 			</div>
+									 			<div class="panel-body">
+									 				<h3 class="text">{{$spotlight[$i]['title']}}</h3>
+												 	@if($spotlight[$i]['meta']['price']>=0)
+				                                            <div class="items-box-price font-5">£	{{$spotlight[$i]['meta']['price']/100}}{{isset($spotlight[$i]['meta']['price_frequency']) ? $spotlight[$i]['meta']['price_frequency']:''}}
+				                                            </div>
+				                                   @endif
+												</div>
+											</div>
+										</a>
+									</div>
+									@endfor
+									@php
+										$i--;
+									@endphp
+						    </div>
+						    @endfor
+						</div>
+						<a class="left carousel-control" href="#myCarousel-xs" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						    <span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel-xs" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right"></span>
+						    <span class="sr-only">Next</span>
+						</a>
+					</div>
+					<!-- end small devices -->
+					<div id="myCarousel" class="carousel slide hidden-xs" data-ride="carousel">
 						<!-- Indicators -->
 						<ol class="carousel-indicators">
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 						    <li data-target="#myCarousel" data-slide-to="1"></li>
 						    <li data-target="#myCarousel" data-slide-to="2"></li>
 						    <li data-target="#myCarousel" data-slide-to="3"></li>
-						</ol>
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-					    <div class="item active">
-					    	@foreach($spl1 as $spl)
-					    		<div class="col-md-4 col-lg-2">
-						    		<div class="panel panel-primary">
-							 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
-							 			</div>
-							 			<div class="panel-body">
-							 				<div class="text">
-							 					<h3 class="">{{$spl['title']}}</h3>
-							 				</div>
-										 	@if($spl['meta']['price']>=0)
-		                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
-		                                            </div>
-		                                   @endif
+						</ol> 
+						<div class="carousel-inner">
+							@for ($i = 0; $i < count($spotlight); $i++)
+						    <div class="item">
+						    	@for ($j = 0; $j < 6 && $i < count($spotlight); $i++,$j++)
+						    		<div class="col-sm-4 col-md-4 col-lg-2">
+							    		<div class="panel panel-primary">
+								 			<div class="panel-heading" style="background-image:url('https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}}');">
+								 			</div>
+								 			<div class="panel-body">
+								 				<h3 class="text">{{$spotlight[$i]['title']}}</h3>
+											 	@if($spotlight[$i]['meta']['price']>=0)
+			                                            <div class="items-box-price font-5">£	{{$spotlight[$i]['meta']['price']/100}}{{isset($spotlight[$i]['meta']['price_frequency']) ? $spotlight[$i]['meta']['price_frequency']:''}}
+			                                            </div>
+			                                   @endif
+											</div>
 										</div>
 									</div>
-								</div>
-					    	@endforeach
-					    </div>
-					    <div class="item">
-					    	@foreach($spl2 as $spl)
-					    		<div class="col-md-4 col-lg-2">
-						    		<div class="panel panel-primary">
-							 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
-							 			</div>
-							 			<div class="panel-body">
-							 				<div class="text">
-							 					<h3 class="">{{$spl['title']}}</h3>
-							 				</div>
-							 				@if($spl['meta']['price']>=0)
-		                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
-		                                            </div>
-		                                   @endif
-										 	
-										</div>
-									</div>
-								</div>
-					    	@endforeach
-					    </div>
-					    <div class="item">
-					    	@foreach($spl3 as $spl)
-					    		<div class="col-md-4 col-lg-2">
-						    		<div class="panel panel-primary">
-							 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
-							 			</div>
-							 			<div class="panel-body">
-							 				<div class="text">
-							 					<h3 class="">{{$spl['title']}}</h3>
-							 				</div>
-										 	@if($spl['meta']['price']>=0)
-		                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
-		                                            </div>
-		                                   @endif
-										</div>
-									</div>
-								</div>
-					    	@endforeach  
-					    </div>
-					    <div class="item">
-					    	@foreach($spl4 as $spl)
-					    		<div class="col-md-4 col-lg-2">
-						    		<div class="panel panel-primary">
-							 			<div class="panel-heading" style="background-image:url(https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spl['images'])>0?$spl['images'][0]:"1000006.jpg"}});"">
-							 			</div>
-							 			<div class="panel-body">
-							 				<div class="text">
-							 					<h3 class="">{{$spl['title']}}</h3>
-							 				</div>
-										 	@if($spl['meta']['price']>=0)
-		                                            <div class="items-box-price font-5">£	{{$spl['meta']['price']/100}}{{isset($spl['meta']['price_frequency']) ? $spl['meta']['price_frequency']:''}}
-		                                            </div>
-		                                   @endif
-										</div>
-									</div>
-								</div>
-					    	@endforeach  
-					    </div>
+						    	@endfor
+						    	@php
+										$i--;
+								@endphp
+						    </div>
+						    @endfor
+						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						    <span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right"></span>
+						    <span class="sr-only">Next</span>
+						</a>
 					</div>
-					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-					    <span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#myCarousel" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right"></span>
-					    <span class="sr-only">Next</span>
-					</a>
-				</div>
 				</div>
 			</div>
 		</section>
 		<section class="features">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6 col-md-6 col-lg-3">
-						<figure>
-							<img src="css/get-rewarded.svg">
-						</figure>
-						<h2>GET REWARDED</h2>
-						<p>We’ll give you discounts and credits for being better buyers & sellers</p>
-					</div>
-					<div class="col-sm-6 col-md-6 col-lg-3">
-						<figure>
-							<img src="css/free-uk.svg">
-						</figure>
-						<h2>FREE SHIPPING</h2>
-						<p>What you see is what you get, no hidden fees on our purchase prices</p>
-					</div>
-					<div class="col-sm-6 col-md-6 col-lg-3">
-						<figure>
-							<img src="css/heart-black.svg">
-						</figure>
-						<h2>HASSLE FREE</h2>
-						<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
-					</div>
-					<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
 						<figure>
 							<img src="css/peace-of-mind-uk.svg">
 						</figure>
-						<h2>PEACE OF MIND</h2>
+						<h2>TRUSTED</h2>
+						<p>We’ll give you discounts and credits for being better buyers & sellers</p>
+					</div>
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
+						<figure>
+							<img src="css/icons/commision.svg">
+						</figure>
+						<h2>0% Commission</h2>
+						<p>What you see is what you get, no hidden fees on our purchase prices</p>
+					</div>
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
+						<figure>
+							<img src="css/icons/free-shipping.svg">
+						</figure>
+						<h2>FREE SHIPPING</h2>
+						<p>You can get unlimited FREE Two-Day Shipping</p>
+					</div>
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
+						<figure>
+							<img src="css/icons/verified.svg">
+						</figure>
+						<h2>VERIFIED</h2>
+						<p>Our sellers and buyers are verified by our system</p>
+					</div>
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
+						<figure>
+							<img src="css/icons/free-uk.svg">
+						</figure>
+						<h2>FREE LISTINGS</h2>
+						<p>Our buyer guarantee means you'll get refunded if something goes wrong</p>
+					</div>
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xs-offset-2 col-sm-offset-0">
+						<figure>
+							<img src="css/icons/return.svg">
+						</figure>
+						<h2>FREE RETURNS</h2>
 						<p>You’ll always hear back from our customer services within 24 hours</p>
 					</div>
 				</div>
@@ -244,24 +268,24 @@
 		<section class="social-media">
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-md-8 col-lg-6 store">
+					<div class="col-xs-12 col-md-5 col-lg-6 store">
 							<h2>Download</h2>
-							<ul class="list-inline stores">
-								<li><a href=""><img class="img-responsive center-block" src="css/icons/android.svg"><h3>Android Phone</h3></a></li>
-								<li><a href=""><img class="img-responsive center-block" src="css/icons/apple.svg"><h3>Apple Phone</h3></a></li>
-								<li><a href=""><img class="img-responsive center-block" src="css/icons/windows.png"><h3>Windows Desktop</h3></a></li>
-							</ul>
+							<div class="stores">
+								<div class="center-block"><a href=""><img class="img-responsive center-block" src="css/icons/android.svg"><h3>Android Phone</h3></a></div>
+								<div class="center-block"><a href=""><img class="img-responsive center-block" src="css/icons/apple.svg"><h3>Apple Phone</h3></a></div>
+								<div class="center-block"><a href=""><img class="img-responsive center-block" src="css/icons/windows.png"><h3>Windows Desktop</h3></a></div>
+							</div>
 					</div>
-					<div class="col-md-8 col-lg-3 col-lg-offset-3">
+					<div class="col-xs-10 col-md-5 col-lg-3 col-xs-offset-1 col-md-offset-2 col-lg-offset-3">
 							<h2>Follow us</h2>
-							<ul class="list-inline media">
-								<li><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/twitter.svg"></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/instagram.png"></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/pinterest.svg"></a></li>
-								<li><a href=""><img class="img-responsive" src="css/icons/email.svg"></a></li>
+							<div class=" media">
+								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></div>
+								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/twitter.svg"></a></div>
+								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/instagram.png"></a></div>
+								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/pinterest.svg"></a></div>
+								<div class="center-block"><a href=""><img class="img-responsive" src="css/icons/email.svg"></a></div>
 
-							</ul>
+							</div>
 					</div>
 				</div>
 			</div>
@@ -273,7 +297,7 @@
 		                <img id="footer_top_logo" class="img-responsive" title="" alt="" src="css/sumra-text.png">
 		            </div>
 
-		            <div class="col-md-2 col-xs-6  col-md-offset-2">
+		            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-2">
 		                <div class="col">
 		                    <h4>Company</h4>
 		                    <ul>
@@ -284,7 +308,7 @@
 		                    </ul>
 		                </div>
 		            </div>
-		            <div class="col-md-2 col-xs-6">
+		            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
 		                <div class="col">
 		                    <h4>Discover</h4>
 		                    <ul>
@@ -294,7 +318,7 @@
 		                    </ul>
 		                </div>
 		            </div>
-		            <div class="col-md-2 col-xs-6">
+		            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
 		                <div class="col">
 		                    <h4>Experience</h4>
 		                    <ul>
@@ -304,7 +328,7 @@
 		                    </ul>
 		                </div>
 		            </div>
-		            <div class="col-md-2 col-xs-6">
+		            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
 		                <div class="col">
 		                    <h4>Resources</h4>
 		                    <ul>
@@ -316,7 +340,7 @@
 		            </div>
 		        </div>
 		        <div class="row">
-		            <div class="col-md-2 col-xs-6 col-md-offset-2">
+		            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-2">
 		                <div class="col">
 		                    <h4>Commitment</h4>
 		                    <ul>
@@ -326,7 +350,7 @@
 		                    </ul>
 		                </div>
 		            </div>
-		            <div class="col-md-2 col-xs-6">
+		            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
 		                <div class="col">
 		                    <h4>Partnerships</h4>
 		                    <ul>
@@ -336,7 +360,7 @@
 		                    </ul>
 		                </div>
 		            </div>
-		            <div class="col-md-2 col-xs-6">
+		            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
 		                <div class="col">
 		                    <h4>Press & Opportunities</h4>
 		                    <ul>
@@ -345,7 +369,7 @@
 		                    </ul>
 		                </div>
 		            </div>
-		            <div class="col-md-2 col-xs-6">
+		            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
 		                <div class="col">
 		                    <img  class="img-responsive  footer_logo" src="/css/ic_launcher1.png" />
 		                </div>

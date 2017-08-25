@@ -291,12 +291,12 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $product=$products[0];
-
-        $cat=$this->catids[$product['category']]['slug'];
+	
 
         $catagory= Category::find($product['category']);
 
 
+        $cat=$catagory->slug;
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -664,7 +664,8 @@ class MarketController extends BaseController
 
 
         $response = $this->client->search($params);
-        foreach ($response['aggregations'] as $a=>$b){
+  	if(isset($response['aggregations']))
+	foreach ($response['aggregations'] as $a=>$b){
             $aggretations[$a]=$b;
         }
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
