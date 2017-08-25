@@ -175,8 +175,8 @@
                     </a>
                 </h1>
 
-                <form action="/search/" class="pc-header-form l-right">
-                    <input type="search" name="keyword" value="" placeholder="Search Sumra" class="input-default">
+                <form action="{{$url}}" class="pc-header-form l-right">
+                    <input type="search" name="q" value="" placeholder="Search Sumra" class="input-default">
                     <i class="icon-search"></i>
                 </form>
             </div>
