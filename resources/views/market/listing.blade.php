@@ -259,7 +259,7 @@
                 </li>
                 @endforeach
             <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                <span itemprop="title">{{$last}}</span>
+                <span itemprop="title">{{$category->title}}</span>
             </li>
 
 
