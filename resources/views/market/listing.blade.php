@@ -85,8 +85,8 @@
 
             <div class="sp-header-user-nav clearfix">
 
-                <form action="/search/" class="sp-header-form">
-                    <input type="search" name="keyword" value="" placeholder="Search Sumra" class="sp-header-search input-default">
+                <form action="{{$url}}" class="sp-header-form">
+                    <input type="search" name="q" value="" placeholder="Search Sumra" class="sp-header-search input-default">
                     <i class="icon-search"></i>
                 </form>
 
