@@ -474,8 +474,7 @@ class MarketController extends BaseController
         return ['total'=>$response['hits']['total'],'adverts'=>$products,'aggs'=>$response['aggregations']];
 
     }
-    public function search(Request $request,$any){
-        $category = Category::where('slug',$any)->first();
+    public function filter($request,$category){
         $fields = $category->fields()->where('can_filter',1)->get();
         $input = $request->all();
 
@@ -496,12 +495,12 @@ class MarketController extends BaseController
         $min_price = -2;
         if($request->has('min_price')){
             if(is_numeric($request->min_price))
-            $min_price = $request->min_price*100;
+                $min_price = $request->min_price*100;
         }
         $max_price = 999999999999;
         if($request->has('max_price')){
             if(is_numeric($request->max_price))
-            $max_price = $request->max_price*100;
+                $max_price = $request->max_price*100;
         }
         $musts['meta.price']= [
             'range' => [
@@ -677,7 +676,7 @@ class MarketController extends BaseController
                     [
                         "created_at"=> ["order"=> "desc"]
                     ]
-                    ];
+                ];
             }
             else if($skey==='price_lowest_first'){
                 $sort =[
@@ -704,7 +703,7 @@ class MarketController extends BaseController
                     'bool' => [
                         'must' => array_values($musts),
                         'filter' => $filte
-                        ]
+                    ]
                 ],
                 "sort"=> $sort
 
@@ -716,10 +715,10 @@ class MarketController extends BaseController
 
 
         $response = $this->client->search($params);
-  	if(isset($response['aggregations']))
-	foreach ($response['aggregations'] as $a=>$b){
-            $aggretations[$a]=$b;
-        }
+        if(isset($response['aggregations']))
+            foreach ($response['aggregations'] as $a=>$b){
+                $aggretations[$a]=$b;
+            }
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $total= $response['hits']['total'];
         $max = (int)($total/$pagesize);
@@ -736,7 +735,7 @@ class MarketController extends BaseController
         }
         $pages = array();
         if($max<5){
-           $pages = range(1,$max);
+            $pages = range(1,$max);
         }
         else if($page<4){
             $pages = range(1,5);
@@ -759,58 +758,63 @@ class MarketController extends BaseController
         $filters=array();
         $parts= explode('?',$request->url());
         foreach ($aggretations as $key => $aggretation) {
-                $field = Field::where('slug', $key)->first();
-                $buckets = $aggretation['buckets'];
-                $values = array();
-                foreach ($buckets as $bucket) {
-                    $field_val = FieldValue::where('slug', $bucket['key'])->first();
-                    if ($field_val === null) {
-                        if (!isset($bucket['from'])) {
-                            $fval = new FieldValue;
-                            $fval->field_id = $field->id;
-                            $fval->slug = $bucket['key'];
-                            $fval->save();
-                        } else {
-                            $filter = Filter::where('from_int', $bucket['from'])->where('to_int', $bucket['to'])->first();
-                            $filter->count = $bucket['doc_count'];
-                            if(isset($input[$key])&&$input[$key]===$filter->key){
-                                $filter->selected = 1;
-
-                            }else{
-                                $cinput = $input;
-                                $cinput[$key]=$filter->key;
-                                $filter->url = $parts[0].'?'.http_build_query($cinput);
-                                $filter->selected = 0;
-                            }
-                            $values[] = $filter;
-                        }
-
-
+            $field = Field::where('slug', $key)->first();
+            $buckets = $aggretation['buckets'];
+            $values = array();
+            foreach ($buckets as $bucket) {
+                $field_val = FieldValue::where('slug', $bucket['key'])->first();
+                if ($field_val === null) {
+                    if (!isset($bucket['from'])) {
+                        $fval = new FieldValue;
+                        $fval->field_id = $field->id;
+                        $fval->slug = $bucket['key'];
+                        $fval->save();
                     } else {
-                        if(isset($input[$key])&&$input[$key]===$field_val->slug){
-                            $field_val->selected = 1;
+                        $filter = Filter::where('from_int', $bucket['from'])->where('to_int', $bucket['to'])->first();
+                        $filter->count = $bucket['doc_count'];
+                        if(isset($input[$key])&&$input[$key]===$filter->key){
+                            $filter->selected = 1;
 
                         }else{
                             $cinput = $input;
-                            $cinput[$key]=$field_val->slug;
-                            $field_val->url = $parts[0].'?'.http_build_query($cinput);
-                            $field_val->selected = 0;
+                            $cinput[$key]=$filter->key;
+                            $filter->url = $parts[0].'?'.http_build_query($cinput);
+                            $filter->selected = 0;
                         }
-
-                        $field_val->count = $bucket['doc_count'];
-                        $values[] = $field_val;
+                        $values[] = $filter;
                     }
 
+
+                } else {
+                    if(isset($input[$key])&&$input[$key]===$field_val->slug){
+                        $field_val->selected = 1;
+
+                    }else{
+                        $cinput = $input;
+                        $cinput[$key]=$field_val->slug;
+                        $field_val->url = $parts[0].'?'.http_build_query($cinput);
+                        $field_val->selected = 0;
+                    }
+
+                    $field_val->count = $bucket['doc_count'];
+                    $values[] = $field_val;
                 }
-                $field->vals = $values;
-                $filters[] = $field;
 
             }
+            $field->vals = $values;
+            $filters[] = $field;
 
-            $sorts = Field::where('slug','sort')->first()->filters;
-            $distances = [1=>'Default',2=>'+ 1 miles',3=>'+ 3 miles',5=>'+ 5 miles',10=>'+ 10 miles',15=>'+ 15 miles',30=>'+ 30 miles',50=>'+ 50 miles',75=>'+ 75 miles',100=>'+ 100 miles',1000=>'Nationwide'];
+        }
 
-        return View('market.listing',['sorts'=>$sorts,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs,'filters'=>$filters]);
+        $sorts = Field::where('slug','sort')->first()->filters;
+        $prices = Field::where('slug','price')->first()->filters;
+        $distances = [1=>'Default',2=>'+ 1 miles',3=>'+ 3 miles',5=>'+ 5 miles',10=>'+ 10 miles',15=>'+ 15 miles',30=>'+ 30 miles',50=>'+ 50 miles',75=>'+ 75 miles',100=>'+ 100 miles',1000=>'Nationwide'];
+        return ['sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'catagories'=>$this->categories,'products'=>$products,'breads'=>$breads,'last'=>$any,'children'=>$this->children,'parents'=>$this->parents,'base'=>$this->base,'chs'=>$chs,'filters'=>$filters];
+    }
+    public function search(Request $request,$any){
+        $category = Category::where('slug',$any)->first();
+        $params = $this->filter($request,$category);
+        return View('market.listing',$params);
     }
 
 }
