@@ -406,39 +406,6 @@
                         {{$value}}
                     </option>
                     @endforeach
-                <option value="0.0001">
-                    Default
-                </option>
-                <option value="1">
-                    + 1 mile
-                </option>
-                <option value="3">
-                    + 3 miles
-                </option>
-                <option value="5">
-                    + 5 miles
-                </option>
-                <option value="10">
-                    + 10 miles
-                </option>
-                <option value="15">
-                    + 15 miles
-                </option>
-                <option value="30">
-                    + 30 miles
-                </option>
-                <option value="50">
-                    + 50 miles
-                </option>
-                <option value="75">
-                    + 75 miles
-                </option>
-                <option value="100" >
-                    + 100 miles
-                </option>
-                <option value="1000">
-                    Nationwide
-                </option>
             </select>
                 </form>
             </div>
