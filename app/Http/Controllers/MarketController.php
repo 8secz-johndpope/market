@@ -421,7 +421,7 @@ class MarketController extends BaseController
             ];
         }
 
-       
+
         foreach ($fields as $field){
 
             if($field->type==='integer'){
