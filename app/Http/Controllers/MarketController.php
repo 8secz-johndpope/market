@@ -533,10 +533,13 @@ class MarketController extends BaseController
         $category = Category::where('slug',$any)->first();
         $fields = $category->fields()->where('can_filter',1)->get();
         $input = $request->all();
+
         $aggs=array();
         $musts=array();
         $lat = 52.1;
         $lng = 0.1;
+        $input['lat']=$lat;
+        $input['lng']=$lng;
         $musts['category']= [
             'range' => [
                 'category' => [
