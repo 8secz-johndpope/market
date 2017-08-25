@@ -197,7 +197,7 @@
                     <ul class="pc-header-nav">
                         <li>
                             <h2>
-                                <a href="/category/" class="pc-header-nav-root">Category</a>
+                                <a href="/all" class="pc-header-nav-root">Category</a>
                             </h2>
                             <ul class="pc-header-nav-parent-wrap" data-mega="1">
                                 @foreach($base as $b)
