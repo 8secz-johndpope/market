@@ -318,8 +318,7 @@ class MarketController extends BaseController
         return $output;
     }
     public function dummy(Request $request){
-        echo json_encode($this->children);
-        return '';
+        return View('welcome');
     }
     public function jobscats(Request $request)
     {
