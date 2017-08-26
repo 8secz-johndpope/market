@@ -49,7 +49,12 @@ class MarketController extends BaseController
     {
 
         $term = $request->q;
-       // return ['q'=>$request->query,'suggestions'=>[['value'=>'Hello','data'=>'HE'],['value'=>'Samsung','data'=>'HE'],['value'=>'iPhone','data'=>'HE']]];
+        $result = file_get_contents("https://www.gumtree.com/ajax/suggestions/prefix?input=".$term);
+
+        $result = json_decode($result,true);
+        return $result;
+
+        // return ['q'=>$request->query,'suggestions'=>[['value'=>'Hello','data'=>'HE'],['value'=>'Samsung','data'=>'HE'],['value'=>'iPhone','data'=>'HE']]];
         $params = [
             'index' => 'suggest',
             'type' => 'complete',
