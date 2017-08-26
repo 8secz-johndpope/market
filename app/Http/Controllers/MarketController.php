@@ -91,7 +91,7 @@ class MarketController extends BaseController
         }
 */
 
-            $adverts = Advert::paginate(10);
+            $adverts = Advert::paginate(10000);
 
             foreach ($adverts as $advert) {
                 $params = [
@@ -112,7 +112,7 @@ class MarketController extends BaseController
                     ]
                 ];
                 $response = $this->client->index($params);
-                return $response;
+                
             }
 
         return ['a'=>'b'];
