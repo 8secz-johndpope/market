@@ -71,7 +71,7 @@ class MarketController extends BaseController
                 'id' => $product['source_id'],
                 'body' => [
                     'suggest' => [$product['title']],
-                    'weight' => 100-count($product['title'])
+                    'weight' => 100-strlen($product['title'])
                 ]
             ];
             $response = $this->client->index($params);
