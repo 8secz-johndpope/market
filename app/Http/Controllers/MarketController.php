@@ -52,9 +52,8 @@ class MarketController extends BaseController
             'type' => 'advert',
             'body' => [
                 'size' => 10000,
-                'query' => [
-                    'match_all' => []
-                ]
+                'match_all' => []
+
             ]
         ];
         $response = $this->client->search($params);
