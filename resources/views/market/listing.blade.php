@@ -730,33 +730,29 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     $( function() {
-        var availableTags = [
-            "ActionScript",
-            "AppleScript",
-            "Asp",
-            "BASIC",
-            "C",
-            "C++",
-            "Clojure",
-            "COBOL",
-            "ColdFusion",
-            "Erlang",
-            "Fortran",
-            "Groovy",
-            "Haskell",
-            "Java",
-            "JavaScript",
-            "Lisp",
-            "Perl",
-            "PHP",
-            "Python",
-            "Ruby",
-            "Scala",
-            "Scheme"
-        ];
+        function log( message ) {
+            $( "<div>" ).text( message ).prependTo( "#log" );
+            $( "#log" ).scrollTop( 0 );
+        }
+
         $( "#tags" ).autocomplete({
-            source: availableTags
-        });
+            source: function( request, response ) {
+                $.ajax( {
+                    url: "api/suggest",
+                    dataType: "jsonp",
+                    data: {
+                        term: request.term
+                    },
+                    success: function( data ) {
+                        response( data );
+                    }
+                } );
+            },
+            minLength: 2,
+            select: function( event, ui ) {
+                log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+            }
+        } );
     } );
 </script>
 </body>

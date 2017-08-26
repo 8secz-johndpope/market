@@ -48,13 +48,14 @@ class MarketController extends BaseController
     public function suggest(Request $request)
     {
 
+        $term = $request->term;
         $params = [
             'index' => 'suggest',
             'type' => 'complete',
             'body' => [
                 "suggest" => [
         "search-suggest" => [
-            "prefix" => "iphone",
+            "prefix" => $term,
             "completion" => [
                 "field" => "suggest"
                 ]
