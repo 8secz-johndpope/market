@@ -52,8 +52,9 @@ class MarketController extends BaseController
             'type' => 'advert',
             'body' => [
                 'size' => 10000,
-                'match_all' => []
-
+                'query' => [
+                    'match_all' =>  new \stdClass()
+                ]
             ]
         ];
         $response = $this->client->search($params);
