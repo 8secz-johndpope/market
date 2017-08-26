@@ -44,6 +44,23 @@ class MarketController extends BaseController
         //$products=array_rand($products,50);
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
+    public function suggest(Request $request)
+    {
+
+
+        $params = [
+            'index' => 'suggest',
+            'type' => 'complete',
+            'id' => 100,
+            'body' => [
+                'suggest' => ['samsung s8']
+            ]
+        ];
+        $response = $this->client->index($params);
+
+        //$products=array_rand($products,50);
+        return $response;
+    }
 
     public  function id(Request $request,$id){
         return $this->categories[$id];

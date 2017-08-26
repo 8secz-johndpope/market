@@ -64,6 +64,7 @@ Route::post('/user/advert/packs/buy','UserController@buy')->middleware('auth:api
 Route::post('/user/balance/topup','UserController@topup')->middleware('auth:api');
 
 Route::get('/stripe', 'UserController@stripe');
+Route::get('/suggest','MarketController@suggest');
 
 
 Route::get('/{any}','MarketController@error');
