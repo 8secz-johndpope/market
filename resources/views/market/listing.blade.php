@@ -69,7 +69,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="//www-mercari-com.akamaized.net/apple-touch-icon-180x180.png?1224156651">
 
     <link rel="alternate" href="android-app://com.mercariapp.mercari/mercariapp/search/openResults?item_category_id=322&amp;item_category_name=Cargo" />
-
+    <style>
+        .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+        .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+        .autocomplete-selected { background: #F0F0F0; }
+        .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+        .autocomplete-group { padding: 2px 5px; }
+        .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+        .bold-category{
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
 </head>
 
 <body class="">
@@ -190,7 +201,7 @@
                     <input type="search" name="q" value="@if(isset($input['q'])) {{$input['q']}} @endif" placeholder="Search Sumra" class="input-default" id="autocomplete">
                     <i class="icon-search"></i>
                 </form>
-                
+
             </div>
 
             <div class="pc-header-nav-box clearfix">
