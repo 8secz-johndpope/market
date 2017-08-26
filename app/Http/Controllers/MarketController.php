@@ -773,6 +773,7 @@ class MarketController extends BaseController
 
             }
             $field->vals = $values;
+            if(count($values)>0)
             $filters[] = $field;
 
         }
