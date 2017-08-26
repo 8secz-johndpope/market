@@ -78,7 +78,7 @@ class MarketController extends BaseController
                 ]
             ];
             $response = $this->client->search($params);
-            return $response;
+            return $response['aggregations']['group_by_category']['buckets'];
         }else{
             return [];
         }
