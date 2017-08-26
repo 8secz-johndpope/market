@@ -47,7 +47,7 @@ class MarketController extends BaseController
     }
     public function suggest(Request $request)
     {
-        $term = $request->query;
+        $term = $request->q;
        // return ['q'=>$request->query,'suggestions'=>[['value'=>'Hello','data'=>'HE'],['value'=>'Samsung','data'=>'HE'],['value'=>'iPhone','data'=>'HE']]];
         $params = [
             'index' => 'suggest',
