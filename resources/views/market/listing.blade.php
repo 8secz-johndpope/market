@@ -187,13 +187,10 @@
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
                         @endif
                     @endforeach
-                    <input type="search" name="q" value="@if(isset($input['q'])) {{$input['q']}} @endif" placeholder="Search Sumra" class="input-default">
+                    <input type="search" name="q" value="@if(isset($input['q'])) {{$input['q']}} @endif" placeholder="Search Sumra" class="input-default" id="autocomplete">
                     <i class="icon-search"></i>
                 </form>
-                <div class="ui-widget">
-                    <label for="birds">Birds: </label>
-                    <input id="birds">
-                </div>
+                
             </div>
 
             <div class="pc-header-nav-box clearfix">
@@ -727,35 +724,15 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://sumra.net/js/jquery.autocomplete.js"></script>
 <script>
-    $( function() {
-        function log( message ) {
-            $( "<div>" ).text( message ).prependTo( "#log" );
-            $( "#log" ).scrollTop( 0 );
+    $('#autocomplete').autocomplete({
+        paramName :'q',
+        serviceUrl: '/api/suggest',
+        onSelect: function (suggestion) {
+            // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
-
-        $( "#birds" ).autocomplete({
-            source: function( request, response ) {
-                $.ajax( {
-                    url: "/api/suggest",
-                    dataType: "jsonp",
-                    data: {
-                        term: request.term
-                    },
-                    success: function( data ) {
-                        console.log(data);
-                        response( data );
-                    },
-
-                } );
-            },
-            minLength: 2,
-            select: function( event, ui ) {
-                log( "Selected: " + ui.item.value + " aka " + ui.item.id );
-            }
-        } );
-    } );
+    });
 </script>
 </body>
 </html>
