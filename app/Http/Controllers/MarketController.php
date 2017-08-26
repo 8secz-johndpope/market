@@ -46,6 +46,7 @@ class MarketController extends BaseController
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
     public  function  train(Request $request){
+        $term = $request->q;
         $result = file_get_contents("https://www.gumtree.com/ajax/suggestions/prefix?input=".$term);
 
         $result = json_decode($result,true);
