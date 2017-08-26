@@ -91,7 +91,7 @@ class MarketController extends BaseController
         }
 */
 
-            $adverts = Advert::paginate(10000);
+            $adverts = Advert::paginate(10);
 
             foreach ($adverts as $advert) {
                 $params = [
