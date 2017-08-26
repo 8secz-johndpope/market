@@ -70,7 +70,7 @@ class MarketController extends BaseController
                 'type' => 'complete',
                 'id' => $product['source_id'],
                 'body' => [
-                    'suggest' => ['input'=>$product['title'],'weight' => 100-strlen($product['title'])],
+                    'suggest' => ['input'=>$product['title'],'weight' => 255-strlen($product['title'])],
                 ]
             ];
             $response = $this->client->index($params);
