@@ -92,6 +92,7 @@ class MarketController extends BaseController
 */
 
             $adverts = Advert::paginate(10);
+            return $adverts;
             foreach ($adverts['data'] as $advert) {
                 $params = [
                     'index' => 'adverts',
