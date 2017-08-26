@@ -47,7 +47,7 @@ class MarketController extends BaseController
     }
     public function suggest(Request $request)
     {
-        /*
+
         $term = $request->q;
        // return ['q'=>$request->query,'suggestions'=>[['value'=>'Hello','data'=>'HE'],['value'=>'Samsung','data'=>'HE'],['value'=>'iPhone','data'=>'HE']]];
         $params = [
@@ -86,14 +86,15 @@ class MarketController extends BaseController
             $cats = array_map(function ($a) use  ($text) {
                 $ans = $a['key'];
                 $category = Category::find($ans);
-                return ['value'=>$text,'category' => $category->title,'data'=>$category->id];
+                return ['value'=>strtolower($text),'category' => $category->title,'data'=>$category->id];
             }, $buckets);
             return ['text'=>$text,'suggestions'=>$cats];
         }else{
             return ['text'=>'','suggestions'=>[]];
         }
 
-*/
+
+        /*
  // should start with page 15
             $adverts = Advert::paginate(10000);
 
@@ -121,6 +122,7 @@ class MarketController extends BaseController
             }
 
         return ['a'=>'b'];
+        */
 
     }
 
