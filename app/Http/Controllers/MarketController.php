@@ -78,7 +78,13 @@ class MarketController extends BaseController
                 ]
             ];
             $response = $this->client->search($params);
-            return $response['aggregations']['group_by_category']['buckets'];
+            $buckets = $response['aggregations']['group_by_category']['buckets'];
+            $cats = array_map(function ($a) {
+                $ans = $a['key'];
+
+                return Category::find($ans);
+            }, $buckets);
+            return $cats;
         }else{
             return [];
         }
