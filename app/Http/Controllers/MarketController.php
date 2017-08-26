@@ -47,6 +47,23 @@ class MarketController extends BaseController
     public function suggest(Request $request)
     {
 
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size' => 10000,
+                'query' => [
+                    'match_all' => []
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) {
+            $ans = $a['_source'];
+            $ans['id'] = $a['_id'];
+            return $ans;
+        }, $response['hits']['hits']);
+        return $products;
 
         $params = [
             'index' => 'suggest',
