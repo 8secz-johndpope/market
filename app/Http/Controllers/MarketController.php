@@ -65,7 +65,7 @@ class MarketController extends BaseController
             ];
             $weight--;
             $response = $this->client->index($params);
-            print_r($response);
+           // print_r($response);
 
         }
 
