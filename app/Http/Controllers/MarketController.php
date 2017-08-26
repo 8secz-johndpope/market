@@ -50,7 +50,7 @@ class MarketController extends BaseController
         $result = file_get_contents("https://www.gumtree.com/ajax/suggestions/prefix?input=".$term);
 
         $result = json_decode($result,true);
-        $weight = 100;
+        $weight = 10000;
         foreach ($result['suggestions'] as $suggestion) {
 
             $params = [
@@ -61,12 +61,10 @@ class MarketController extends BaseController
                     'suggest' => ['input' => $suggestion['name'], 'weight' => $weight],
                 ]
             ];
-            $weight--;
             $response = $this->client->index($params);
-             print_r($response);
-
+            return ['a'=>'b'];
         }
-        return ['a'=>'b'];
+
     }
     public function suggest(Request $request)
     {
