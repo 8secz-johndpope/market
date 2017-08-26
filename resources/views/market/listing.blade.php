@@ -191,8 +191,8 @@
                     <i class="icon-search"></i>
                 </form>
                 <div class="ui-widget">
-                    <label for="tags">Tags: </label>
-                    <input id="tags">
+                    <label for="birds">Birds: </label>
+                    <input id="birds">
                 </div>
             </div>
 
@@ -735,7 +735,7 @@
             $( "#log" ).scrollTop( 0 );
         }
 
-        $( "#tags" ).autocomplete({
+        $( "#birds" ).autocomplete({
             source: function( request, response ) {
                 $.ajax( {
                     url: "api/suggest",
