@@ -65,7 +65,7 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        return $response['suggest']['search-suggest'][0]['options'];
+      //  return $response['suggest']['search-suggest'][0]['options'];
         if(isset($response['suggest']['search-suggest'][0]['options'][0]['text'])){
             $text = $response['suggest']['search-suggest'][0]['options'][0]['text'];
             $params = [
@@ -82,7 +82,7 @@ class MarketController extends BaseController
                 ]
             ];
             $response = $this->client->search($params);
-          //  return $response;
+            return $response;
             $buckets = $response['aggregations']['group_by_category']['buckets'];
             $cats = array_map(function ($a) use  ($text) {
                 $ans = $a['key'];
