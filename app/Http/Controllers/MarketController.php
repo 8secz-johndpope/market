@@ -62,7 +62,26 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        return $response['suggest']['search-suggest']['0']['options'][0]['text'];
+        if(isset($response['suggest']['search-suggest']['0']['options'][0]['text'])){
+            $text = $response['suggest']['search-suggest']['0']['options'][0]['text'];
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'size' => 0,
+                    'query' => ['bool'=>['should'=>[['term'=>['title'=>$text]]]]],
+                    'aggs' => [
+                        'group_by_category' => [
+                            "terms" => [ "field"=> "category", "size"=> 10]
+                        ]
+                    ]
+                ]
+            ];
+            $response = $this->client->search($params);
+            return $response;
+        }else{
+            return [];
+        }
         /*
         $products = array_map(function ($a) {
             $ans = $a['_source'];
