@@ -96,7 +96,7 @@
             lookup: null,
             onSelect: null,
             width: 'auto',
-            minChars: 1,
+            minChars: 2,
             maxHeight: 300,
             deferRequestBy: 0,
             params: {},
