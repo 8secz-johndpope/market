@@ -63,20 +63,24 @@ class MarketController extends BaseController
             $ans['id'] = $a['_id'];
             return $ans;
         }, $response['hits']['hits']);
-        return $products;
+       // return $products;
+        foreach ($products as $product){
+            $params = [
+                'index' => 'suggest',
+                'type' => 'complete',
+                'id' => $product['source_id'],
+                'body' => [
+                    'suggest' => [$product['title']]
+                ]
+            ];
+            $response = $this->client->index($params);
+            print_r($response);
+            echo '<br>';
+        }
 
-        $params = [
-            'index' => 'suggest',
-            'type' => 'complete',
-            'id' => 100,
-            'body' => [
-                'suggest' => ['samsung s8']
-            ]
-        ];
-        $response = $this->client->index($params);
 
         //$products=array_rand($products,50);
-        return $response;
+        return ['a'=>'b'];
     }
 
     public  function id(Request $request,$id){
