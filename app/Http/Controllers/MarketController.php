@@ -62,7 +62,7 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        return $response;
+        return $response['suggest']['search-suggest'];
         /*
         $products = array_map(function ($a) {
             $ans = $a['_source'];
