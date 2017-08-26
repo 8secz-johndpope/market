@@ -7,13 +7,18 @@
 </head>
 <body>
 
-<div class="ui-widget">
-    <label for="html">HTML Elements: </label>
-    <input id="html">
-</div>
-<div class="ui-widget" style="margin-top:2em; font-family:Arial">
-    Result:
-    <div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
-</div>
+<input type="text" name="country" id="autocomplete"/>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://sumra.net/js/jquery.autocomplete.js"></script>
+<script>
+    $('#autocomplete').autocomplete({
+        serviceUrl: '/api/suggest',
+        onSelect: function (suggestion) {
+            alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+        }
+    });
+</script>
 </body>
 </html>
