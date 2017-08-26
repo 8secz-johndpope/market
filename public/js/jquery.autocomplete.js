@@ -147,7 +147,7 @@
           //  .replace(/</g, '&lt;')
            // .replace(/>/g, '&gt;')
             //.replace(/"/g, '&quot;')
-            .replace(/&lt;(\/?strong)&gt;/g, '<$1>');
+            .replace(/&lt;(\/?strong)&gt;/g, '<$1>')+'<span class="bold-category">'+suggestion.category+'</span>';
     };
 
     function _formatGroup(suggestion, category) {
