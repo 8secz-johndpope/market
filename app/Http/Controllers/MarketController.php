@@ -103,7 +103,6 @@ class MarketController extends BaseController
 // Get doc at /my_index/my_type/my_id
                 $response = $this->client->get($params);
                 $title = $response['_source']['title'];
-                return $title;
                 $params = [
                     'index' => 'suggest',
                     'type' => 'complete',
