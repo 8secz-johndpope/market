@@ -188,14 +188,14 @@ class MarketController extends BaseController
 
     public function update(Request $request){
 
-        foreach ($this->oldcats as $old) {
-            $id=$old['id'];
-            $replace=$this->categories[$old['slug']]['id'];
+            $id=$request->id;
+            $replace = $request->replace;
+
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
                 'body' => [
-                    'size' => 2000,
+                    'size' => 10000,
                     'query' => [
                         'term' => [
                             "category" => $id
@@ -226,9 +226,9 @@ class MarketController extends BaseController
                 print_r($response);
 
             }
+            return ['a'=>'b'];
         }
-        return '';
-    }
+
     public function insert(Request $request){
         $car = Category::find(105000000);
         $make=Field::find(1);
