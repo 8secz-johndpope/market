@@ -49,7 +49,8 @@ class MarketController extends BaseController
         $term = $request->q;
         $result = file_get_contents("https://www.gumtree.com/ajax/suggestions/prefix?input=".$term);
 
-        $result = json_decode($result,true);
+        $result = json_decode($result);
+        return $result;
         $weight = 10000;
         foreach ($result['suggestions'] as $suggestion) {
 
