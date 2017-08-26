@@ -45,6 +45,7 @@
 
 
     <link href="/css/mercari.css?3198405465" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="https://sumra.net/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="https://sumra.net/favicons/favicon-32x32.png" sizes="32x32">
@@ -189,6 +190,10 @@
                     <input type="search" name="q" value="@if(isset($input['q'])) {{$input['q']}} @endif" placeholder="Search Sumra" class="input-default">
                     <i class="icon-search"></i>
                 </form>
+                <div class="ui-widget">
+                    <label for="tags">Tags: </label>
+                    <input id="tags">
+                </div>
             </div>
 
             <div class="pc-header-nav-box clearfix">
@@ -721,5 +726,36 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
+<script>
+    $( function() {
+        var availableTags = [
+            "ActionScript",
+            "AppleScript",
+            "Asp",
+            "BASIC",
+            "C",
+            "C++",
+            "Clojure",
+            "COBOL",
+            "ColdFusion",
+            "Erlang",
+            "Fortran",
+            "Groovy",
+            "Haskell",
+            "Java",
+            "JavaScript",
+            "Lisp",
+            "Perl",
+            "PHP",
+            "Python",
+            "Ruby",
+            "Scala",
+            "Scheme"
+        ];
+        $( "#tags" ).autocomplete({
+            source: availableTags
+        });
+    } );
+</script>
 </body>
 </html>
