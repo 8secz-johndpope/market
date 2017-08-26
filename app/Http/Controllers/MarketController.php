@@ -84,9 +84,9 @@ class MarketController extends BaseController
 
                 return Category::find($ans);
             }, $buckets);
-            return $cats;
+            return ['text'=>$text,'suggest'=>$cats];
         }else{
-            return [];
+            return ['text'=>''];
         }
         /*
         $products = array_map(function ($a) {
