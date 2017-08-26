@@ -52,7 +52,22 @@ class MarketController extends BaseController
         $result = file_get_contents("https://www.gumtree.com/ajax/suggestions/prefix?input=".$term);
 
         $result = json_decode($result,true);
-        return $result;
+        $weight = 100;
+        foreach ($result['suggestions'] as $suggestion) {
+
+            $params = [
+                'index' => 'suggest',
+                'type' => 'complete',
+                'id' => random_int(10000000000,9999999999999),
+                'body' => [
+                    'suggest' => ['input' => $suggestion['name'], 'weight' => $weight],
+                ]
+            ];
+            $weight--;
+            $response = $this->client->index($params);
+            print_r($response);
+
+        }
 
         // return ['q'=>$request->query,'suggestions'=>[['value'=>'Hello','data'=>'HE'],['value'=>'Samsung','data'=>'HE'],['value'=>'iPhone','data'=>'HE']]];
         $params = [
