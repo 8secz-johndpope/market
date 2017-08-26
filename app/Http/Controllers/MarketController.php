@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Model\Advert;
 use App\Model\Category;
 use App\Model\Field;
 use App\Model\FieldValue;
@@ -46,7 +47,7 @@ class MarketController extends BaseController
     }
     public function suggest(Request $request)
     {
-
+/*
         $params = [
             'index' => 'suggest',
             'type' => 'complete',
@@ -88,31 +89,32 @@ class MarketController extends BaseController
         }else{
             return ['text'=>''];
         }
-        /*
-        $products = array_map(function ($a) {
-            $ans = $a['_source'];
-            $ans['id'] = $a['_id'];
-            return $ans;
-        }, $response['hits']['hits']);
-       // return $products;
-        foreach ($products as $product){
-            $params = [
-                'index' => 'suggest',
-                'type' => 'complete',
-                'id' => $product['source_id'],
-                'body' => [
-                    'suggest' => ['input'=>$product['title'],'weight' => 255-strlen($product['title'])],
-                ]
-            ];
-            $response = $this->client->index($params);
-            print_r($response);
-            echo '<br>';
-        }
+*/
 
+            $adverts = Advert::paginate(100000);
+            foreach ($adverts as $advert) {
+                $params = [
+                    'index' => 'adverts',
+                    'type' => 'advert',
+                    'id' => $advert->elastic
+                ];
 
-        //$products=array_rand($products,50);
+// Get doc at /my_index/my_type/my_id
+                $response = $this->client->get($params);
+                return $response;
+                $params = [
+                    'index' => 'suggest',
+                    'type' => 'complete',
+                    'id' => '3',
+                    'body' => [
+                        'suggest' => ['input' => $product['title'], 'weight' => 255 - strlen($product['title'])],
+                    ]
+                ];
+                $response = $this->client->index($params);
+            }
+
         return ['a'=>'b'];
-        */
+
     }
 
     public  function id(Request $request,$id){
