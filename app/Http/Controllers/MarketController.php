@@ -85,7 +85,7 @@ class MarketController extends BaseController
             $cats = array_map(function ($a) use  ($text) {
                 $ans = $a['key'];
                 $category = Category::find($ans);
-                return ['value'=>$text.' in <span class="bold-category">'.$category->title.'</span>','data'=>$category->id];
+                return ['value'=>$text,'category' => $category->title,'data'=>$category->id];
             }, $buckets);
             return ['text'=>$text,'suggestions'=>$cats];
         }else{
