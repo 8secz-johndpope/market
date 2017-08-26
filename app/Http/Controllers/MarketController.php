@@ -48,16 +48,22 @@ class MarketController extends BaseController
     {
 
         $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
+            'index' => 'suggest',
+            'type' => 'complete',
             'body' => [
-                'size' => 10000,
-                'query' => [
-                    'match_all' =>  new \stdClass()
+                "suggest" => [
+        "search-suggest" => [
+            "prefix" => "iph",
+            "completion" => [
+                "field" => "suggest"
                 ]
+        ]
+            ]
             ]
         ];
         $response = $this->client->search($params);
+        return $response;
+        /*
         $products = array_map(function ($a) {
             $ans = $a['_source'];
             $ans['id'] = $a['_id'];
@@ -81,6 +87,7 @@ class MarketController extends BaseController
 
         //$products=array_rand($products,50);
         return ['a'=>'b'];
+        */
     }
 
     public  function id(Request $request,$id){
