@@ -529,7 +529,7 @@ class MarketController extends BaseController
             if($request->has('distance')){
                 $distance = $request->distance;
             }else{
-                $distance = '30';
+                $distance = '2000';
             }
             $filte = [
                 "geo_distance" => [
