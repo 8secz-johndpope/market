@@ -734,7 +734,10 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
 <script>
     $('#autocomplete').autocomplete({
