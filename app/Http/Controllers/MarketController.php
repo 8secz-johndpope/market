@@ -90,6 +90,7 @@ class MarketController extends BaseController
             }, $buckets);
             return ['text'=>$text,'suggestions'=>$cats];
         }else{
+            return $response;
             return ['text'=>'','suggestions'=>[]];
         }
 
