@@ -47,7 +47,7 @@ class MarketController extends BaseController
     }
     public function suggest(Request $request)
     {
-/*
+
         $params = [
             'index' => 'suggest',
             'type' => 'complete',
@@ -89,8 +89,9 @@ class MarketController extends BaseController
         }else{
             return ['text'=>''];
         }
-*/
 
+/*
+ * should start with page 15
             $adverts = Advert::paginate(10000);
 
             foreach ($adverts as $advert) {
@@ -117,7 +118,7 @@ class MarketController extends BaseController
             }
 
         return ['a'=>'b'];
-
+*/
     }
 
     public  function id(Request $request,$id){
