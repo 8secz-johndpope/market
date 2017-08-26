@@ -118,7 +118,7 @@ class MarketController extends BaseController
             $buckets = $response['aggregations']['group_by_category']['buckets'];
             $bts = array_filter($buckets, function( $a ) {
 
-                return Category::find($a['key']) === null;
+                return Category::find($a['key']) !== null;
             } );
             $cats = array_map(function ($a) use  ($text) {
                 $ans = $a['key'];
