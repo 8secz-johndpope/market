@@ -738,7 +738,7 @@
         $( "#birds" ).autocomplete({
             source: function( request, response ) {
                 $.ajax( {
-                    url: "api/suggest",
+                    url: "/api/suggest",
                     dataType: "jsonp",
                     data: {
                         term: request.term
