@@ -48,7 +48,7 @@ class MarketController extends BaseController
     public function suggest(Request $request)
     {
 
-        return ['suggestions'=>[['value'=>'Hello','data'=>'HE']]];
+        return ['suggestions'=>[['value'=>'Hello','data'=>'HE'],['value'=>'Samsung','data'=>'HE'],['value'=>'iPhone','data'=>'HE']]];
         $term = $request->term;
         $params = [
             'index' => 'suggest',
