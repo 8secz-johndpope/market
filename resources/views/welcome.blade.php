@@ -21,6 +21,7 @@
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
 <script>
     $('#autocomplete').autocomplete({
+        paramName :'q',
         serviceUrl: '/api/suggest',
         onSelect: function (suggestion) {
             alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
