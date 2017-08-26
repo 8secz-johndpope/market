@@ -70,7 +70,7 @@ class MarketController extends BaseController
                 'type' => 'advert',
                 'body' => [
                     'size' => 0,
-                    'query' => ['bool'=>['should'=>[['term'=>['title'=>$text]]]]],
+                    'query' => ['bool'=>['should'=>[['term'=>['title'=> strtolower($text)]]]]],
                     'aggs' => [
                         'group_by_category' => [
                             "terms" => [ "field"=> "category", "size"=> 10]
