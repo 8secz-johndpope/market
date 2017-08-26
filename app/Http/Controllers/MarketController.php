@@ -65,6 +65,7 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
+        return $response;
         if(isset($response['suggest']['search-suggest']['0']['options'][0]['text'])){
             $text = $response['suggest']['search-suggest']['0']['options'][0]['text'];
             $params = [
