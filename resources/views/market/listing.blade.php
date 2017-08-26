@@ -741,7 +741,7 @@
         paramName :'q',
         serviceUrl: '/api/suggest',
         onSelect: function (suggestion) {
-            window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.data
+            window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });
