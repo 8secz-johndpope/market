@@ -45,10 +45,7 @@ class MarketController extends BaseController
         //$products=array_rand($products,50);
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
-    public function suggest(Request $request)
-    {
-
-        $term = $request->q;
+    public  function  train(Request $request){
         $result = file_get_contents("https://www.gumtree.com/ajax/suggestions/prefix?input=".$term);
 
         $result = json_decode($result,true);
@@ -65,9 +62,16 @@ class MarketController extends BaseController
             ];
             $weight--;
             $response = $this->client->index($params);
-           // print_r($response);
+             print_r($response);
 
         }
+        return ['a'=>'b'];
+    }
+    public function suggest(Request $request)
+    {
+
+        $term = $request->q;
+
 
         // return ['q'=>$request->query,'suggestions'=>[['value'=>'Hello','data'=>'HE'],['value'=>'Samsung','data'=>'HE'],['value'=>'iPhone','data'=>'HE']]];
         $params = [
