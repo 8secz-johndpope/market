@@ -47,8 +47,8 @@ class MarketController extends BaseController
     }
     public function suggest(Request $request)
     {
-
-        return ['q'=>$request->query,'suggestions'=>[['value'=>'Hello','data'=>'HE'],['value'=>'Samsung','data'=>'HE'],['value'=>'iPhone','data'=>'HE']]];
+        $term = $request->query;
+       // return ['q'=>$request->query,'suggestions'=>[['value'=>'Hello','data'=>'HE'],['value'=>'Samsung','data'=>'HE'],['value'=>'iPhone','data'=>'HE']]];
         $term = $request->term;
         $params = [
             'index' => 'suggest',
@@ -85,10 +85,10 @@ class MarketController extends BaseController
             $buckets = $response['aggregations']['group_by_category']['buckets'];
             $cats = array_map(function ($a) {
                 $ans = $a['key'];
-
-                return Category::find($ans);
+                $category = Category::find($ans);
+                return ['value'=>$category->title,'data'=>$category->id];
             }, $buckets);
-            return ['text'=>$text,'suggest'=>$cats];
+            return ['text'=>$text,'suggestions'=>$cats];
         }else{
             return ['text'=>''];
         }
