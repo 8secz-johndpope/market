@@ -51,7 +51,7 @@ class MarketController extends BaseController
 
         $result = json_decode($result,true);
 
-        $weight = 10000;
+        $weight = $request->weight;
         foreach ($result['suggestions'] as $suggestion) {
 
             $params = [
