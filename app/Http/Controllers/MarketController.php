@@ -65,9 +65,8 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        return $response;
-        if(isset($response['suggest']['search-suggest']['0']['options'][0]['text'])){
-            $text = $response['suggest']['search-suggest']['0']['options'][0]['text'];
+        if(isset($response['suggest']['search-suggest'][0]['options'][0]['text'])){
+            $text = $response['suggest']['search-suggest'][0]['options'][0]['text'];
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
@@ -91,7 +90,6 @@ class MarketController extends BaseController
             }, $buckets);
             return ['text'=>$text,'suggestions'=>$cats];
         }else{
-            return $response;
             return ['text'=>'','suggestions'=>[]];
         }
 
