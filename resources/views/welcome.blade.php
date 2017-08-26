@@ -24,7 +24,7 @@
         paramName :'q',
         serviceUrl: '/api/suggest',
         onSelect: function (suggestion) {
-            alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+           // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });
 </script>
