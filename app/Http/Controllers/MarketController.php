@@ -91,7 +91,7 @@ class MarketController extends BaseController
         }
 */
 
-            $adverts = Advert::paginate(10);
+            $adverts = Advert::paginate(10000);
 
             foreach ($adverts as $advert) {
                 $params = [
@@ -103,10 +103,11 @@ class MarketController extends BaseController
 // Get doc at /my_index/my_type/my_id
                 $response = $this->client->get($params);
                 $title = $response['_source']['title'];
+                $id = $response['_source']['source_id'];
                 $params = [
                     'index' => 'suggest',
                     'type' => 'complete',
-                    'id' => '3',
+                    'id' => $id,
                     'body' => [
                         'suggest' => ['input' => $title, 'weight' => 255 - strlen($title)],
                     ]
