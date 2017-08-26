@@ -48,6 +48,7 @@ class MarketController extends BaseController
     public function suggest(Request $request)
     {
 
+        return [['label'=>'Hello World','value'=>'hello']];
         $term = $request->term;
         $params = [
             'index' => 'suggest',
