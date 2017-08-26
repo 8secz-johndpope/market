@@ -744,6 +744,7 @@
                         term: request.term
                     },
                     success: function( data ) {
+                        console.log(data);
                         response( data );
                     }
                 } );
