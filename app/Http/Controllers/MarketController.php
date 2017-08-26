@@ -68,12 +68,19 @@ class MarketController extends BaseController
       //  return $response['suggest']['search-suggest'][0]['options'];
         if(isset($response['suggest']['search-suggest'][0]['options'][0]['text'])){
             $text = $response['suggest']['search-suggest'][0]['options'][0]['text'];
+            if(preg_match('/\s/',$text)>0){
+                $dict = ['title.keyword'=> strtolower($text)];
+
+            }else{
+                $dict = ['title'=> strtolower($text)];
+
+            }
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
                 'body' => [
                     'size' => 0,
-                    'query' => ['bool'=>['should'=>[['term'=>['title'=> strtolower($text)]]]]],
+                    'query' => ['bool'=>['should'=>[['term'=>$dict]]]],
                     'aggs' => [
                         'group_by_category' => [
                             "terms" => [ "field"=> "category", "size"=> 10]
