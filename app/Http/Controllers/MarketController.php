@@ -54,7 +54,7 @@ class MarketController extends BaseController
             'body' => [
                 "suggest" => [
         "search-suggest" => [
-            "prefix" => "iph",
+            "prefix" => "iphone",
             "completion" => [
                 "field" => "suggest"
                 ]
