@@ -622,6 +622,21 @@ class UserController extends BaseController
         $user = new User;
         $user->more(['email'=>$request->email,'name'=>$request->name,'password'=> bcrypt($request->password),'phone'=>$request->phone]);
         $user->save();
+        
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,"https://fire.sumra.net/updatetitle");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode(['id'=>$user->id,'title'=>$user->name,"image"=>""]));
+        curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $server_output = curl_exec ($ch);
+        curl_close ($ch);
+        $names=explode(' ',$user->name);
+        $account = \Stripe\Account::retrieve($user->stripe_account);
+        $account->legal_entity->first_name = $names[0];
+        $account->legal_entity->last_name = $names[1];
+        $account->legal_entity->type = 'individual';
+        $account->save();
 
         return ['msg'=>'success','id'=>$user->id,'email'=>$user->email,'name'=>$user->name];
     }
