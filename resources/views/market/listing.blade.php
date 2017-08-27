@@ -337,12 +337,12 @@
                 <li class="pager-prev visible-pc">
                     <ul>
                         <li class="pager-cell">
-                            <a href="{{$pageurl}}?page=1">
+                            <a href="{{$pageurl}}&page=1">
                                 <i class="icon-arrow-double-left"></i>
                             </a>
                         </li>
                         <li class="pager-cell">
-                            <a href="{{$pageurl}}?page={{$page-1}}">
+                            <a href="{{$pageurl}}&page={{$page-1}}">
                                 <i class="icon-arrow-left"></i>
                             </a>
                         </li>
@@ -357,7 +357,7 @@
                                 @if($page===$p)
                                     {{$p}}
                                 @else
-                                <a href="{{$pageurl}}?page={{$p}}">{{$p}}</a>
+                                <a href="{{$pageurl}}&page={{$p}}">{{$p}}</a>
                                     @endif
                             </li>
                             @endforeach
@@ -367,12 +367,12 @@
                 <li class="pager-next visible-pc">
                     <ul>
                         <li class="pager-cell">
-                            <a href="{{$pageurl}}?page={{$page+1}}">
+                            <a href="{{$pageurl}}&page={{$page+1}}">
                                 <i class="icon-arrow-right"></i>
                             </a>
                         </li>
                         <li class="pager-cell">
-                            <a href="{{$pageurl}}?page={{$max}}">
+                            <a href="{{$pageurl}}&page={{$max}}">
                                 <i class="icon-arrow-double-right"></i>
                             </a>
                         </li>
