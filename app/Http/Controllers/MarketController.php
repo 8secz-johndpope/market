@@ -513,6 +513,9 @@ class MarketController extends BaseController
                 ]
             ]
         ];
+        if($request->has('photos_filter')&&$request->photos_filter==='true'){
+            $filte['script'] =  ["script" => "doc['images'].values.length > 0"];
+        }
 
         if($request->has('q')){
             $musts['title'] = [
