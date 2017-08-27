@@ -313,7 +313,7 @@
                     <section class="items-box">
                         <a href="/p/{{$product['category']}}/{{$product['source_id']}}">
                             <figure class="items-box-photo">
-                                <img data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"1000006.jpg"}}" class="lazyload" alt="The north Face Men&#039;s Size 34 Pants">
+                                <img data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="The north Face Men&#039;s Size 34 Pants">
                             </figure>
                             <div class="items-box-body">
                                 <h3 class="items-box-name font-2">{{$product['title']}}</h3>
