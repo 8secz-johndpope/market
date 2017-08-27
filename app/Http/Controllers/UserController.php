@@ -613,6 +613,8 @@ class UserController extends BaseController
             return ['msg'=>"Password can't be blank"];
         if(!$request->has('name'))
             return ['msg'=>"Name can't be blank"];
+        if(preg_match('/\s/',$request->has('name')===0)
+            return ['msg'=>'Should have full name'];
         if(!$request->has('phone'))
             return ['msg'=>"Phone can't be blank"];
         $user = User::where('email',$request->email)->first();
