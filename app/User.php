@@ -55,7 +55,7 @@ class User extends Authenticatable
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,"https://fire.sumra.net/updatetitle");
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode(['id'=>$this->id,'title'=>$this->name]));
+        curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode(['id'=>$this->id,'title'=>$this->name,"image":""]));
         curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $server_output = curl_exec ($ch);
