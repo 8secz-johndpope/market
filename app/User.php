@@ -52,6 +52,20 @@ class User extends Authenticatable
         $this->stripe_account=$account->id;
         $this->pk_key=$account->keys->publishable;
         $this->sk_key=$account->keys->secret;
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,"https://fire.sumra.net/updatetitle");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode(['id'=>$this->id,'title'=>$this->name]));
+        curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $server_output = curl_exec ($ch);
+        curl_close ($ch);
+        $names=explode(' ',$this->name);
+        $account = \Stripe\Account::retrieve($this->stripe_account);
+        $account->legal_entity->first_name = $names[0];
+        $account->legal_entity->last_name = $names[1];
+        $account->legal_entity->type = 'individual';
+        $account->save();
 
     }
     public function addresses()
