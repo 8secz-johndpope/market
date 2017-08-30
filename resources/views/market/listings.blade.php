@@ -110,10 +110,10 @@
             </h2>
 
 
-            <div class="grid">
+            <div class="row">
 
             @foreach($products as $product)
-                    <div class="grid-item">
+                    <div class="col-sm-4">
 
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="The north Face Men&#039;s Size 34 Pants">
 
