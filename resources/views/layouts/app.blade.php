@@ -102,7 +102,7 @@
 </header>
 
 
-<section class="categories">
+<section>
     @yield('content')
 
 </section>
