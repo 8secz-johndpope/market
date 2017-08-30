@@ -211,5 +211,12 @@
         </div>
     </div>
 </div>
+<script>
+    $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 200
+    });
+</script>
 </body>
 </html>
