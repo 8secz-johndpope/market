@@ -29,7 +29,7 @@
         }
 
         .masonry { /* Masonry container */
-            column-count: 4;
+            column-count: 3;
             column-gap: 1em;
         }
 
