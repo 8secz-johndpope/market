@@ -14,7 +14,7 @@
 
 
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-2 col-md-offset-1">
 
         <div class="l-visible-large">
             <h4> Location</h4>
