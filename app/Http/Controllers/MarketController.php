@@ -827,7 +827,7 @@ class MarketController extends BaseController
     public function search(Request $request,$any){
         $category = Category::where('slug',$any)->first();
         $params = $this->filter($request,$category);
-        return View('market.listing',$params);
+        return View('market.listings',$params);
     }
 
 }
