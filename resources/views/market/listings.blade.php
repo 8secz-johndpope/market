@@ -15,11 +15,7 @@
 
 <div class="row">
     <div class="col-md-3">
-        <div class="l-visible-large">
-            <a href="https://itunes.apple.com/us/app/id896130944?mt=8" target="_blank" class="side-banner">
-                <img src="//www-mercari-com.akamaized.net/assets/img/common/us/side_banner.jpg?1224156651" alt="Download Mercari Now">
-            </a>
-        </div>
+       
         <div class="l-visible-large">
             <h4> Location</h4>
             <form action="{{$url}}" >
