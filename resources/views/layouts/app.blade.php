@@ -19,6 +19,16 @@
 
     <script src="js/main.js"></script>
     <style>
+        .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+        .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+        .autocomplete-selected { background: #F0F0F0; }
+        .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+        .autocomplete-group { padding: 2px 5px; }
+        .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+        .bold-category{
+            font-weight: bold;
+            font-style: italic;
+        }
         img.lazyload{
             width: 100%;
         }
@@ -175,8 +185,13 @@
         </div>
         <div class="col-xs-12 col-sm-10 col-md-10 col-lg-8">
             <form class="navbar-form" action="{{$url}}">
+                @foreach($input as $key=>$value)
+                    @if($key!=='q')
+                        <input type="hidden" name="{{$key}}" value="{{$value}}">
+                    @endif
+                @endforeach
                 <div class="form-group col-md-12 col-lg-12">
-                    <input type="text" class="form-control input-lg" name="keyword" placeholder="SEARCH">
+                    <input type="text" class="form-control input-lg" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif">
                     <div class="input-group col-sm-4 col-md-3 col-lg-3 col-xl-2 input-group-lg">
                         <input type="text" class="form-control" placeholder="POST CODE" >
                         <span class="input-group-btn">
@@ -291,10 +306,13 @@
     </div>
 </div>
 <script>
-    $('.grid').masonry({
-        // options
-        itemSelector: '.grid-item',
-        columnWidth: 300
+    $('#autocomplete').autocomplete({
+        paramName :'q',
+        serviceUrl: '/api/suggest',
+        onSelect: function (suggestion) {
+            window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
+            // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+        }
     });
 </script>
 </body>
