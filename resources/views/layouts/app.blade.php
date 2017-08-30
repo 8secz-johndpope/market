@@ -174,7 +174,7 @@
         <div class="col-sm-1 col-md-1 col-lg-2 hidden-xs">
         </div>
         <div class="col-xs-12 col-sm-10 col-md-10 col-lg-8">
-            <form class="navbar-form" action="/search/">
+            <form class="navbar-form" action="{{$url}}">
                 <div class="form-group col-md-12 col-lg-12">
                     <input type="text" class="form-control input-lg" name="keyword" placeholder="SEARCH">
                     <div class="input-group col-sm-4 col-md-3 col-lg-3 col-xl-2 input-group-lg">
