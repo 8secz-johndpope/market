@@ -22,6 +22,7 @@
         img.lazyload{
             width: 100%;
         }
+        .grid-item { width: 300px; }
 
     </style>
 
