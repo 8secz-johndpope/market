@@ -15,7 +15,7 @@
 
 <div class="row">
     <div class="col-md-3">
-       
+
         <div class="l-visible-large">
             <h4> Location</h4>
             <form action="{{$url}}" >
@@ -110,15 +110,15 @@
             </h2>
 
 
-            <div class="items-box-content clearfix">
+            <div class="row">
                 @foreach($products as $product)
-                    <section class="items-box">
+                    <div class="col-sm-4">
                         <a href="/p/{{$product['category']}}/{{$product['source_id']}}">
                             <figure class="items-box-photo">
                                 <img data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="The north Face Men&#039;s Size 34 Pants">
                             </figure>
                             <div class="items-box-body">
-                                <h3 class="items-box-name font-2">{{$product['title']}}</h3>
+                                <h4 class="items-box-name font-2">{{$product['title']}}</h4>
                                 <div class="items-box-num clearfix">
                                     @if($product['meta']['price']>=0)
                                         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
@@ -126,7 +126,7 @@
                                 </div>
                             </div>
                         </a>
-                    </section>
+                    </div>
                 @endforeach
 
 
