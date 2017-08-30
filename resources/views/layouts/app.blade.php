@@ -101,9 +101,9 @@
 
         @media only screen and (min-width: 1100px) {
             .masonry {
-                -moz-column-count: 5;
-                -webkit-column-count: 5;
-                column-count: 5;
+                -moz-column-count: 4;
+                -webkit-column-count: 4;
+                column-count: 4;
             }
         }
 
