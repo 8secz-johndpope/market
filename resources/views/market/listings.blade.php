@@ -102,7 +102,7 @@
             </div>
         @endforeach
     </div>
-    <div class="col-md-6">
+    <div class="col-md-9">
         <section class="items-box-container clearfix">
             <h2 class="items-box-head">
                 List of items for {{$last}}, {{$total}}
