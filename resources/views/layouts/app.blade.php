@@ -102,8 +102,10 @@
 </header>
 
 
+<section class="categories">
+    @yield('content')
 
-@yield('content')
+</section>
 <footer>
     <div class="container">
         <div class="row">
