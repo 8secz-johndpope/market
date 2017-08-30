@@ -305,6 +305,8 @@
         </div>
     </div>
 </div>
+<script src="https://sumra.net/js/jquery.autocomplete.js"></script>
+
 <script>
     $('#autocomplete').autocomplete({
         paramName :'q',
