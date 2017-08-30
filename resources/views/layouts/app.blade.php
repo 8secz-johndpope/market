@@ -22,7 +22,6 @@
         img.lazyload{
             width: 100%;
         }
-        .grid-item { width: 200px; }
 
     </style>
 
@@ -215,7 +214,7 @@
     $('.grid').masonry({
         // options
         itemSelector: '.grid-item',
-        columnWidth: 200
+        columnWidth: 300
     });
 </script>
 </body>
