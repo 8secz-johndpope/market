@@ -85,17 +85,17 @@
 
         @media only screen and (min-width: 700px) {
             .masonry {
-                -moz-column-count: 3;
-                -webkit-column-count: 3;
-                column-count: 3;
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                column-count: 2;
             }
         }
 
         @media only screen and (min-width: 900px) {
             .masonry {
-                -moz-column-count: 4;
-                -webkit-column-count: 4;
-                column-count: 4;
+                -moz-column-count: 3;
+                -webkit-column-count: 3;
+                column-count: 3;
             }
         }
 
