@@ -305,6 +305,40 @@
         </div>
     </div>
 </div>
+<script>
+    // This example adds a search box to a map, using the Google Place Autocomplete
+    // feature. People can enter geographical searches. The search box will return a
+    // pick list containing a mix of places and predicted search terms.
+
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+    function initAutocomplete() {
+
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.Autocomplete(input);
+        searchBox.setComponentRestrictions(
+            {'country': ['gb']});
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('place_changed', function() {
+            var place = searchBox.getPlace();
+            console.log(place);
+
+            var lat = document.getElementById('lat');
+            var lng = document.getElementById('lng');
+            lat.value=place.geometry.location.lat();
+            lng.value=place.geometry.location.lng();
+
+        });
+    }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
+        async defer></script>
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
 
 <script>
