@@ -829,7 +829,12 @@ class MarketController extends BaseController
         unset($all['page']);
         $pageurl = $parts[0].'?'.http_build_query($all);
 
-        $categories = $aggretations['category'];
+        $buckets = $aggretations['category']['buckets'];
+        $categories = array();
+        foreach ($buckets as $bucket){
+            $cat = Category::find($bucket['key']);
+            $categories[] = $cat;
+        }
         unset($aggretations['category']);
         foreach ($aggretations as $key => $aggretation) {
             $field = Field::where('slug', $key)->first();
