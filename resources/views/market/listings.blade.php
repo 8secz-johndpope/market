@@ -27,7 +27,7 @@
                 <input type="hidden" id="lat" name="lat" value="{{$lat}}">
                 <input type="hidden" id="lng" name="lng" value="{{$lng}}">
                 <input id="pac-input" class="controls" type="text" placeholder="Postcode or location" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
-                <button type="submit" class="btn-primary btn-full-width">Go</button>
+                <button type="submit" class="btn btn-primary btn-full-width">Go</button>
             </form>
         </div>
         <div class="l-visible-large">
@@ -82,7 +82,7 @@
                         <span class="clear-input-wrapper has-clear"><input placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false"><span class="icn-clear txt-quaternary clear-input is-visible"></span></span>
                     </div>
                     <div class="grid-col-3">
-                        <button type="submit" class="btn-primary btn-full-width">Go</button>
+                        <button type="submit" class="btn btn-primary btn-full-width">Go</button>
                     </div>
                 </div>
             </form>
