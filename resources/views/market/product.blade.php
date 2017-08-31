@@ -21,7 +21,7 @@
                         <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
                         @endforeach
                             <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
-                        <li class="breadcrumb-item active">{{$product['title']}}</li>
+                       
                     </ol>
                 <h2 class="item-name">{{$product['title']}}</h2>
 <div class="col-sm-10">
