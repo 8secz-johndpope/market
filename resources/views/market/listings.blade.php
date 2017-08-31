@@ -70,19 +70,19 @@
                     <input type="hidden" name="{{$key}}" value="{{$value}}">
                 @endforeach
                     <div class="form-group">
-                        <label class="control-label col-sm-8" for="min_price">Minimum Price:</label>
-                        <div class="col-sm-4">
+                        <label class="control-label col-sm-6" for="min_price">Minimum Price:</label>
+                        <div class="col-sm-6">
                         <input placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price'])){{$input['min_price']}}@endif" aria-invalid="false">
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-8" for="max_price">Maximum Price:</label>
-                        <div class="col-sm-4"><input placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false"><span class="icn-clear txt-quaternary clear-input is-visible"></span></span>
+                        <label class="control-label col-sm-6" for="max_price">Maximum Price:</label>
+                        <div class="col-sm-6"><input placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false"><span class="icn-clear txt-quaternary clear-input is-visible"></span></span>
                         </div>
                         </div>
                     <div class="form-group">
-                            <div class="col-sm-offset-8 col-sm-4">
+                            <div class="col-sm-offset-6 col-sm-6">
                                 <button type="submit" class="btn btn-default">Submit</button>
                             </div>
                         </div>
