@@ -462,7 +462,7 @@ class MarketController extends BaseController
         $meta = $product['meta'];
         $metas = array();
         foreach ($meta as $key => $value){
-            $field = Field::where('slug',$key);
+            $field = Field::where('slug',$key)->first();
             if($field!==null){
                 $field->value = $value;
                 $metas[]=$field;
