@@ -405,17 +405,15 @@ class UserController extends BaseController
     {
         $user = Auth::user();
         $total = $request->amount;
-        $stripe_id=$user->stripe_id;
-        $card = $request->card;
-        try{
-            $charge=\Stripe\Charge::create(array(
-                "amount" => $total,
-                "currency" => "gbp",
-                "customer" => $stripe_id,
-                "source" => $card, // obtained with Stripe.js
-                "description" => 'Buy Pack/'.$total
-            ));
 
+        $transaction = Transaction::where('slug',$request->transaction_id)->first();
+        if($transaction===null||$transaction->used===1){
+            return ['result'=>['msg'=>'Not a valid transaction id']];
+        }
+        try{
+            $total =  $transaction->amount;
+            $transaction->used=1;
+            $transaction->save();
             $user->available += $total;
             $user->balance += $total;
             $user->save();
@@ -425,7 +423,7 @@ class UserController extends BaseController
                 'result' => 'error charging the card'
             ];
         }
-        return ['success'=>true,'result'=>$charge];
+        return ['success'=>true,'result'=>['msg'=>'The amount is added to account']];
     }
     public function buy(Request $request){
         $user = Auth::user();
