@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="{{ asset('css/base.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/base.css') }}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
@@ -121,7 +121,7 @@
     <div class="top hidden-xs">
         <div class="row">
             <div class="col">
-                <img class="icon" src="css/sumra-text.png">
+                <img class="icon" src="/css/sumra-text.png">
             </div>
         </div>
     </div>
@@ -134,16 +134,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img class="icon" src="css/ic_launcher1.png"></a>
+                <a class="navbar-brand" href="/"><img class="icon" src="/css/ic_launcher1.png"></a>
                 <div class="col-2 col-md-8 col-lg-5 pull-right hidden-xs hidden-sm">
                     <div class="center-block">
-                        <img class="img-responsive" src="css/googleplayx233.png">
+                        <img class="img-responsive" src="/css/googleplayx233.png">
                     </div>
                     <div class="center-block">
-                        <img class="img-responsive" src="css/appstorex233.png">
+                        <img class="img-responsive" src="/css/appstorex233.png">
                     </div>
                     <div class="center-block">
-                        <img class="img-responsive" src="css/windowsx233.png">
+                        <img class="img-responsive" src="/css/windowsx233.png">
                     </div>
                 </div>
             </div>
@@ -192,7 +192,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <img id="footer_top_logo" class="img-responsive" title="" alt="" src="css/sumra-text.png">
+                <img id="footer_top_logo" class="img-responsive" title="" alt="" src="/css/sumra-text.png">
             </div>
 
             <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-2">
