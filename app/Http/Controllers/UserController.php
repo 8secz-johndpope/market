@@ -18,6 +18,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Mockery\Exception;
 
 class UserController extends BaseController
 {
@@ -65,14 +66,21 @@ class UserController extends BaseController
         $gateway = new \Braintree\Gateway(array(
             'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
         ));
-        $result = $gateway->transaction()->sale([
-            "amount" => $request->amount,
-            'paymentMethodNonce' => $request->payment_method_nonce,
-            'options' => [
-                'submitForSettlement' => True
-            ]
-        ]);
-        return ['result'=>$result];
+        try{
+            $result = $gateway->transaction()->sale([
+                "amount" => $request->amount,
+                'paymentMethodNonce' => $request->payment_method_nonce,
+                'options' => [
+                    'submitForSettlement' => True
+                ]
+            ]);
+            return ['result'=>$result];
+
+        }catch (Exception $e){
+
+            return ['result'=>['msg'=>'failed']];
+        }
+
     }
 
     public function addcard(Request $request)
