@@ -507,6 +507,49 @@ class MarketController extends BaseController
         return View('market.product',['product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas]);
     }
     public function index(Request $request){
+        //$base = Category::where('parent_id',0)->get();
+        //Need  chande de response is not search client
+        $base=Category::where('parent_id',0)->get();
+        $j = 0;
+        $all=array();
+        foreach ($base as $cat) {
+            $cat->class = "category-$j";
+            $cat->children= $cat->mchildren;
+            $all[]=$cat;
+            $j++;
+        }
+        //Need chande de response is not search client
+        $min = 0;
+        $max = 999999999;
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'from' => 0,
+                'size'=> 24,
+                'query' => [
+                    'range' => [
+                        'category' => [
+                            'gte'=>$min,
+                            'lte'=>$max
+                        ]
+                    ]
+                ],
+                "sort"=> [
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]
+                ]
+
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $spl1 = array_slice($products, 0, 6);
+        $spl2 = array_slice($products, 6, 6);
+        $spl3 = array_slice($products, 12, 6);
+        $spl4 = array_slice($products, 18, 6);
+        return view('home',['base' => $all, 'spotlight' => $products]);
         return redirect('all');
     }
     public function leaves(Request $request){
