@@ -13,6 +13,7 @@ use App\Model\Advert;
 use App\Model\Category;
 use App\Model\Order;
 
+use App\Model\Price;
 use App\Model\Transaction;
 use App\User;
 use Illuminate\Http\Request;
@@ -52,7 +53,7 @@ class UserController extends BaseController
         $category = $request->category;
         $lat = $request->lat;
         $lng = $request->lng;
-        return ['urgent'=>39.99,'featured'=>49.99,'spotlight'=>59.99];
+        return Price::find(1);
     }
 
     public function token(Request $request){
@@ -554,7 +555,7 @@ class UserController extends BaseController
             if($transaction===null){
                 return ['msg'=>'Invalid transaction id'];
             }
-            
+
 
         }
         if($featured>0&&$user->featured>0){
