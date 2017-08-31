@@ -48,8 +48,9 @@ class UserController extends BaseController
             return ['msg'=>'No Advert found'];
         }
         $offer = new Offer;
-        $offer->user()->save($user);
+        $offer->amount = $request->amount;
         $offer->save();
+        $offer->user()->save($user);
         $advert->offers()->save($offer);
         return ['msg'=>'Offer successfully sent'];
 
