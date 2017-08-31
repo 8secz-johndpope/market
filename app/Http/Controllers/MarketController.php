@@ -533,6 +533,7 @@ class MarketController extends BaseController
         $input = $request->all();
 
         $aggs=array();
+        $aggs['category']=['terms'=>['field'=>'category'.'.keyword','size'=>1000000]];
         $musts=array();
         $lat = 52.1;
         $lng = 0.1;
@@ -882,7 +883,7 @@ class MarketController extends BaseController
         $sorts = Field::where('slug','sort')->first()->filters;
         $prices = Field::where('slug','price')->first()->filters;
         $distances = [1=>'Default',2=>'+ 1 miles',3=>'+ 3 miles',5=>'+ 5 miles',10=>'+ 10 miles',15=>'+ 15 miles',30=>'+ 30 miles',50=>'+ 50 miles',75=>'+ 75 miles',100=>'+ 100 miles',1000=>'Nationwide'];
-        return ['pageurl'=>$pageurl,'sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'products'=>$products,'breads'=>$breads,'last'=>$any,'base'=>$base,'chs'=>$chs,'filters'=>$filters];
+        return ['pageurl'=>$pageurl,'sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'products'=>$products,'breads'=>$breads,'last'=>$any,'base'=>$base,'chs'=>$chs,'filters'=>$filters,'categories'=>$aggretations['category']];
     }
     public function search(Request $request,$any){
         $category = Category::where('slug',$any)->first();
