@@ -410,19 +410,14 @@ class UserController extends BaseController
         if($transaction===null||$transaction->used===1){
             return ['result'=>['msg'=>'Not a valid transaction id']];
         }
-        try{
+        
             $total =  $transaction->amount;
             $transaction->used=1;
             $transaction->save();
             $user->available += $total;
             $user->balance += $total;
             $user->save();
-        }catch (\Exception $e) {
-            return [
-                'success' => false,
-                'result' => 'error charging the card'
-            ];
-        }
+
         return ['success'=>true,'result'=>['msg'=>'The amount is added to account']];
     }
     public function buy(Request $request){
