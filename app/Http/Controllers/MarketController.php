@@ -533,11 +533,15 @@ class MarketController extends BaseController
         $input = $request->all();
 
         $aggs=array();
-        $ranges = array();
-        foreach ($category->children as $cat){
-            $ranges[] = ['from'=>$cat->id,'to'=>$cat->ends];
+
+        if(count($category->children)>0){
+            $ranges = array();
+            foreach ($category->children as $cat){
+                $ranges[] = ['from'=>$cat->id,'to'=>$cat->ends];
+            }
+            $aggs['category']=['range'=>['field'=>'category','ranges'=>$ranges]];
         }
-        $aggs['category']=['range'=>['field'=>'category','ranges'=>$ranges]];
+
         $musts=array();
         $lat = 52.1;
         $lng = 0.1;
@@ -833,13 +837,16 @@ class MarketController extends BaseController
         unset($all['page']);
         $pageurl = $parts[0].'?'.http_build_query($all);
 
-        $buckets = $aggretations['category']['buckets'];
+
         $categories = array();
-        foreach ($buckets as $bucket){
-            $cat = Category::find($bucket['from']);
-            $cat->count = $bucket['doc_count'];
-            if($cat->parent_id==$category->id)
-            $categories[] = $cat;
+        if(count($category->children)>0) {
+            $buckets = $aggretations['category']['buckets'];
+            foreach ($buckets as $bucket) {
+                $cat = Category::find($bucket['from']);
+                $cat->count = $bucket['doc_count'];
+                if ($cat->parent_id == $category->id)
+                    $categories[] = $cat;
+            }
         }
         unset($aggretations['category']);
         foreach ($aggretations as $key => $aggretation) {
