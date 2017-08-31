@@ -12,6 +12,7 @@ use App\Model\Address;
 use App\Model\Advert;
 use App\Model\Category;
 use App\Model\Featured;
+use App\Model\Offer;
 use App\Model\Order;
 
 use App\Model\Price;
@@ -36,6 +37,22 @@ class UserController extends BaseController
         }else{
             return ['msg'=>"Invalid Credentials"];
         }
+    }
+    public function offer(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+        if($advert===null){
+            return ['msg'=>'No Advert found'];
+        }
+        $offer = new Offer;
+        $offer->user()->save($user);
+        $offer->save();
+        $advert->offers()->save($offer);
+        return ['msg'=>'Offer successfully sent'];
+
     }
     public function profile()
     {
