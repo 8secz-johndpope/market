@@ -533,7 +533,7 @@ class MarketController extends BaseController
         $input = $request->all();
 
         $aggs=array();
-        $aggs['category']=['terms'=>['field'=>'category'.'.keyword','size'=>1000000]];
+        $aggs['category']=['terms'=>['field'=>'category','size'=>1000000]];
         $musts=array();
         $lat = 52.1;
         $lng = 0.1;
