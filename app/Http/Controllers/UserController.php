@@ -272,6 +272,11 @@ class UserController extends BaseController
                     'bool' => [
                         'must'=>['term'=>['user_id'=>$user->id]],
                     ]
+                ],
+                "sort" => [
+                    [
+                        "created_at" => ["order" => "desc"]
+                    ]
                 ]
             ]
         ];
