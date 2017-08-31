@@ -14,7 +14,7 @@
 
 
 <div class="row">
-    <div class="col-md-2 col-md-offset-1">
+    <div class="col-md-3 col-md-offset-1">
 
         <div class="l-visible-large">
             <h4> Location</h4>
@@ -103,7 +103,7 @@
             </div>
         @endforeach
     </div>
-    <div class="col-md-9">
+    <div class="col-md-8">
         <section class="items-box-container clearfix">
             <h2 class="items-box-head">
                 List of items for {{$last}}, {{$total}}
