@@ -44,6 +44,7 @@ class UserController extends BaseController
         $user = Auth::user();
         $id = $request->id;
         $advert = Advert::find($id);
+
         if($advert===null){
             return ['msg'=>'No Advert found'];
         }
