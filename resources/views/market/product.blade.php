@@ -66,8 +66,8 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <iframe
-                                    width="600"
-                                    height="450"
+                                    width="100%"
+                                    height="100%"
                                     frameborder="0" style="border:0"
                                     src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDNgoKnSATE9dpHt44AFXtf7wGkL5eB2L4&center=-33.8569,151.2152&zoom=18" allowfullscreen>
                             </iframe>
