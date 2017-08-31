@@ -65,26 +65,27 @@
 
         <div class="l-visible-large">
             <h4>Price</h4>
-            <form action="{{$url}}" >
+            <form action="{{$url}}"  class="form-horizontal">
                 @foreach($input as $key=>$value)
                     <input type="hidden" name="{{$key}}" value="{{$value}}">
                 @endforeach
-                <div class="grid-row" action="/search" name="price_form">
-                    <div class="grid-col-4">
-                        <label class="hide-visually" for="min_price">Minimum Price</label>
-                        <span class="clear-input-wrapper has-clear"><input placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price'])){{$input['min_price']}}@endif" aria-invalid="false"><span class="icn-clear txt-quaternary clear-input is-visible"></span></span>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="min_price">Minimum Price:</label>
+                        <div class="col-sm-10">
+                        <input placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price'])){{$input['min_price']}}@endif" aria-invalid="false">
                     </div>
-                    <div class="grid-col-1 grid-s-flush-both txt-center form-row-label">
-                        to
                     </div>
-                    <div class="grid-col-4">
-                        <label class="hide-visually" for="max_price">Maximum Price</label>
-                        <span class="clear-input-wrapper has-clear"><input placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false"><span class="icn-clear txt-quaternary clear-input is-visible"></span></span>
-                    </div>
-                    <div class="grid-col-3">
-                        <button type="submit" class="btn btn-primary btn-full-width">Go</button>
-                    </div>
-                </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="max_price">Maximum Price:</label>
+                        <div class="col-sm-10"><input placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false"><span class="icn-clear txt-quaternary clear-input is-visible"></span></span>
+                        </div>
+                        </div>
+                    <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
             </form>
         </div>
         @foreach($filters as $filter)
