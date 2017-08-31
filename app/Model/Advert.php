@@ -10,5 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Advert extends  Model
 {
-
+    public function offers()
+    {
+        return $this->hasMany('App\Model\Offer');
+    }
 }
