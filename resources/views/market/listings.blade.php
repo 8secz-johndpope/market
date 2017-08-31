@@ -16,56 +16,45 @@
 <div class="row">
     <div class="col-md-3 col-md-offset-1">
 
-        <div class="l-visible-large">
-            <h4> Location</h4>
-            <form action="{{$url}}" >
-                @foreach($input as $key=>$value)
-                    @if($key!=='lat'&&$key!=='lng')
-                        <input type="hidden" name="{{$key}}" value="{{$value}}">
-                    @endif
-                @endforeach
-                <input type="hidden" id="lat" name="lat" value="{{$lat}}">
-                <input type="hidden" id="lng" name="lng" value="{{$lng}}">
-                <input id="pac-input" class="controls" type="text" placeholder="Postcode or location" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
-                <button type="submit" class="btn btn-primary btn-full-width">Go</button>
-            </form>
-        </div>
-        <div class="l-visible-large">
-            <h4>Distance</h4>
-            <form action="{{$url}}" >
+
+        <form action="{{$url}}" >
+            <div class="form-group">
+                <label for="distance">Distance:</label>
                 @foreach($input as $key=>$value)
                     @if($key!=='distance')
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
                     @endif
                 @endforeach
-                <select data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
+                <select class="form-control" data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
                     @foreach($distances as $key=>$value)
                         <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']==$key)) selected @endif>
                             {{$value}}
                         </option>
                     @endforeach
                 </select>
+            </div>
             </form>
-        </div>
-        <div class="l-visible-large">
-            <h4> Sort By:</h4>
+
+
             <form action="{{$url}}" >
+                <div class="form-group">
+                    <label for="sort"> Sort By:</label>
                 @foreach($input as $key=>$value)
                     @if($key!=='sort')
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
                     @endif
                 @endforeach
-                <select name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
+                <select class="form-control" name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
                     @foreach($sorts as $st)
                         <option value="{{$st->key}}" @if(isset($input['sort'])&&$input['sort']===$st->key)) selected @endif>{{$st->title}}</option>
                     @endforeach
                 </select>
+                </div>
             </form>
-        </div>
 
-        <div class="l-visible-large">
-            <h4>Price</h4>
+
             <form action="{{$url}}"  class="form-horizontal">
+                <label for="distance">Price:</label>
                 @foreach($input as $key=>$value)
                     <input type="hidden" name="{{$key}}" value="{{$value}}">
                 @endforeach
@@ -87,7 +76,7 @@
                             </div>
                         </div>
             </form>
-        </div>
+
         @foreach($filters as $filter)
             <div class="l-visible-large">
                 <h4>{{$filter->title}}</h4>
