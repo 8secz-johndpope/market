@@ -74,7 +74,11 @@ class UserController extends BaseController
                     'submitForSettlement' => True
                 ]
             ]);
-            return ['result'=>$result];
+            $transaction = new Transaction;
+            $transaction->slug = uniqid();
+            $transaction->amount=$request->amount*100;
+            $transaction->save();
+            return ['status'=>'success','result'=>$result,'transaction_id'=>$transaction->slug];
 
         }catch (Exception $e){
 
