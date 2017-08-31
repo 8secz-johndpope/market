@@ -49,7 +49,7 @@ class UserController extends BaseController
         }
         $offer = new Offer;
         $offer->amount = $request->amount;
-        $offer->user_id = $user->id;
+        $offer->user_id = Auth::id();
         $offer->save();
 
         $advert->offers()->save($offer);
