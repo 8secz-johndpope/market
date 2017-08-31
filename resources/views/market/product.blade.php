@@ -52,10 +52,11 @@
                     </div>
                     <div class="row">
                         @foreach($metas as $meta)
-                            <div class="col-sm-6">
-                                <table class="table">
-                                    <tr><td>{{$meta->title}}</td><td>{{$meta->value}}</td></tr>
-                                </table>
+                            <div class="col-sm-3">
+                                    {{$meta->title}}
+                            </div>
+                            <div class="col-sm-3">
+                                {{$meta->value}}
                             </div>
                             @endforeach
                     </div>
