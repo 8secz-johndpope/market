@@ -474,7 +474,6 @@ class MarketController extends BaseController
                         $field->value = $value;
                     }
                 }
-
                 $metas[]=$field;
             }
         }
