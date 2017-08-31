@@ -110,6 +110,9 @@
 .description, .meta, .mapframe{
     margin-top: 30px;
 }
+.mapframe{
+    margin-bottom: 30px;
+}
         .meta-bold{
             font-weight: bold;
         }
