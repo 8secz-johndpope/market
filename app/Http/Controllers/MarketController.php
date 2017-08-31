@@ -477,9 +477,14 @@ class MarketController extends BaseController
                 $metas[]=$field;
             }
         }
-        $catagory= Category::find($product['category']);
+        $category= Category::find($product['category']);
 
-
+        $rec = $category;
+        while ($rec->parent_id!=-1){
+            $rec = $rec->parent;
+            $parents[] = $rec;
+        }
+        $parents=array_reverse($parents);
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -492,8 +497,8 @@ class MarketController extends BaseController
 
                     'must'=>['range' => [
                         'category' => [
-                            'gte'=>$catagory->id,
-                            'lte'=>$catagory->ends
+                            'gte'=>$category->id,
+                            'lte'=>$category->ends
                         ]
                     ]]
                     ]
@@ -504,7 +509,7 @@ class MarketController extends BaseController
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
 
 
-        return View('market.product',['product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas]);
+        return View('market.product',['product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category]);
     }
     public function index(Request $request){
         //$base = Category::where('parent_id',0)->get();

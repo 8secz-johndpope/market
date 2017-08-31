@@ -16,6 +16,13 @@
 
         <div class="col-sm-3"></div>
                 <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        @foreach($parents as $parent)
+                        <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
+                        @endforeach
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active">Data</li>
+                    </ol>
                 <h2 class="item-name">{{$product['title']}}</h2>
 <div class="col-sm-10">
     <p>{{$product['location_name']}}</p>
