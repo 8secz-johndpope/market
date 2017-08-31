@@ -13,6 +13,7 @@ use App\Model\Advert;
 use App\Model\Category;
 use App\Model\Order;
 
+use App\Model\Transaction;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -118,6 +119,12 @@ class UserController extends BaseController
                 "source" => $card, // obtained with Stripe.js
                 "description" => $description
             ));
+            $transaction = new Transaction;
+            $transaction->slug = uniqid();
+            $transaction->amount=$amount;
+            $transaction->save();
+            return ['status'=>'success','result'=>$charge,'transaction_id'=>$transaction->slug];
+
         }catch (\Exception $e) {
             return [
                 'success' => false,
@@ -125,7 +132,7 @@ class UserController extends BaseController
             ];
         }
 
-        return ['status'=>'success','result'=>$charge];
+
     }
     public function dob(Request $request)
     {
