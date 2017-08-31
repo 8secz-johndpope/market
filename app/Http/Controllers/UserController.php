@@ -547,26 +547,14 @@ class UserController extends BaseController
             }
         }
         if($total>0){
-            if (!$request->has('card')) {
+            if (!$request->has('transaction_id')) {
                 return ['msg'=>'Not enough balance or packs to make this operation'];
             }
-            $stripe_id=$user->stripe_id;
-            $card = $request->card;
-            try{
-                $charge=\Stripe\Charge::create(array(
-                    "amount" => $total,
-                    "currency" => "gbp",
-                    "customer" => $stripe_id,
-                    "source" => $card, // obtained with Stripe.js
-                    "description" => 'Bump Advert/'.$total
-                ));
-
-            }catch (\Exception $e) {
-                return [
-                    'success' => false,
-                    'result' => 'error charging the card'
-                ];
+            $transaction = Transaction::where('slug',$request->transaction_id)->first();
+            if($transaction===null){
+                return ['msg'=>'Invalid transaction id'];
             }
+            
 
         }
         if($featured>0&&$user->featured>0){
