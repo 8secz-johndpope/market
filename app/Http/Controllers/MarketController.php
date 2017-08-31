@@ -452,12 +452,17 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $product=$products[0];
-	
+	    $image = 'noimage.png';
+        if(count($product['images'])>0){
+            $image = $products['images'][0];
+            $images = array_shift($products['images']);
+        }else{
+            $images = [];
+        }
 
         $catagory= Category::find($product['category']);
 
 
-        $cat=$catagory->slug;
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -480,13 +485,9 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $start=$cat;
-        while (isset($this->parents[$start])){
-            $start=$this->parents[$start];
-            array_unshift($breads,$start);
-        }
 
-        return View('market.product',['last'=>$cat,'product'=>$product,'breads'=>$breads,'base'=>$this->base,'products'=>$products,'catagories'=>$this->categories,'parents'=>$this->parents,'children'=>$this->children]);
+
+        return View('market.product',['product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images]);
     }
     public function index(Request $request){
         return redirect('all');
