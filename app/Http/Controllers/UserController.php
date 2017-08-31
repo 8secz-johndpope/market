@@ -59,6 +59,18 @@ class UserController extends BaseController
         return Price::find(1);
     }
 
+    public function mprice(Request $request)
+    {
+        $price = Price::find(1);
+        $featured = $request->featured;
+        $urgent = $request->urgent;
+        $spotlight = $request->spotlight;
+        $featured_14 = $request->featured_14;
+        $shipping_1 = $request->shipping_1;
+        $shipping_2 = $request->shipping_2;
+        $shipping_3 = $request->shipping_3;
+        return ['price'=>(int)(0.8*($featured*$price->featured+$urgent*$price->urgent+$spotlight*$price->spotlight+$featured_14*$price->featured_14+$shipping_1*$price->shipping_1+$shipping_2*$price->shipping_2+$shipping_3*$price->shipping_3))];
+    }
     public function token(Request $request){
         $gateway = new \Braintree\Gateway(array(
             'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
