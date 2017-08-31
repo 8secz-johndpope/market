@@ -834,6 +834,7 @@ class MarketController extends BaseController
         foreach ($buckets as $bucket){
             $cat = Category::find($bucket['key']);
             $cat->count = $bucket['doc_count'];
+            if($cat->parent_id==$category->id)
             $categories[] = $cat;
         }
         unset($aggretations['category']);
