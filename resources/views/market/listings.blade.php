@@ -71,14 +71,14 @@
                 @endforeach
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="min_price">Minimum Price:</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-4">
                         <input placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price'])){{$input['min_price']}}@endif" aria-invalid="false">
                     </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="max_price">Maximum Price:</label>
-                        <div class="col-sm-10"><input placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false"><span class="icn-clear txt-quaternary clear-input is-visible"></span></span>
+                        <div class="col-sm-4"><input placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false"><span class="icn-clear txt-quaternary clear-input is-visible"></span></span>
                         </div>
                         </div>
                     <div class="form-group">
