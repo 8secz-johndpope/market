@@ -11,5 +11,11 @@
 @endsection
 
 @section('content')
-    <h1>Not Found, the item you are looking for is not found</h1>
+    <div class="row">
+
+        <div class="col-sm-6 col-sm-offset-3">
+            <h1>Sorry!The item you are looking for is not found</h1>
+
+        </div>
+    </div>
     @endsection
