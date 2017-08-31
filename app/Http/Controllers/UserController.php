@@ -61,6 +61,11 @@ class UserController extends BaseController
 
     public function mprice(Request $request)
     {
+
+        return ['price'=>$this->cprice($request)];
+    }
+    public function cprice($request){
+
         $price = Price::find(1);
         $featured = $request->featured;
         $urgent = $request->urgent;
@@ -69,7 +74,7 @@ class UserController extends BaseController
         $shipping_1 = $request->shipping_1;
         $shipping_2 = $request->shipping_2;
         $shipping_3 = $request->shipping_3;
-        return ['price'=>(int)(0.8*($featured*$price->featured+$urgent*$price->urgent+$spotlight*$price->spotlight+$featured_14*$price->featured_14+$shipping_1*$price->shipping_1+$shipping_2*$price->shipping_2+$shipping_3*$price->shipping_3))];
+        return (int)(0.8*($featured*$price->featured+$urgent*$price->urgent+$spotlight*$price->spotlight+$featured_14*$price->featured_14+$shipping_1*$price->shipping_1+$shipping_2*$price->shipping_2+$shipping_3*$price->shipping_3));
     }
     public function token(Request $request){
         $gateway = new \Braintree\Gateway(array(
@@ -421,13 +426,10 @@ class UserController extends BaseController
     }
     public function buy(Request $request){
         $user = Auth::user();
-        $price = Price::find(1);
         $body=$request->json()->all();
-        $featured = (int)$body['featured'];
-        $urgent = (int)$body['urgent'];
-        $spotlight = (int)$body['spotlight'];
+
         $balance = (int)$body['balance'];
-        $total = $price->featured * $featured + $price->urgent * $urgent  + $price->spotlight* $spotlight;
+        $total =$this->cprice($request);
         $subtract=0;
         if($balance===1){
 
@@ -441,21 +443,21 @@ class UserController extends BaseController
 
         }
         if($total===0) {
-            if($featured>0){
+            if($request->featured>0){
                 $fff = new Featured;
                 $fff->days = 7;
                 $fff->count = $featured;
                 $fff->save();
                 $user->featured()->save($fff);
             }
-            if($urgent>0){
+            if($request->urgent>0){
                 $uuu = new Urgent;
                 $uuu->days = 7;
                 $uuu->count = $urgent;
                 $uuu->save();
                 $user->urgent()->save($uuu);
             }
-            if($spotlight>0){
+            if($request->spotlight>0){
                 $sss = new Spotlight;
                 $sss->days = 7;
                 $sss->count = $spotlight;
@@ -476,21 +478,21 @@ class UserController extends BaseController
         if($transaction->amount!=$total){
             return ['result'=>['msg'=>'Not enough amount in the transaction']];
         }
-            if($featured>0){
+            if($request->featured>0){
                 $fff = new Featured;
-                $fff->count = $featured;
+                $fff->count = $request->featured;
                 $fff->save();
                 $user->featured()->save($fff);
             }
-            if($urgent>0){
+            if($request->urgent>0){
                 $uuu = new Urgent;
-                $uuu->count = $urgent;
+                $uuu->count = $request->urgent;
                 $uuu->save();
                 $user->urgent()->save($uuu);
             }
-           if($spotlight>0){
+           if($request->spotlight>0){
                $sss = new Spotlight;
-               $sss->count = $spotlight;
+               $sss->count = $request->spotlight;
                $sss-save();
                $user->spotlight()->save($sss);
            }
