@@ -107,7 +107,9 @@
                 width: 1260px;
             }
         }
-
+.masonry{
+    display: none;
+}
     </style>
 
 </head>
