@@ -14,7 +14,7 @@
 
 
 <div class="row">
-    <div class="col-md-3 col-md-offset-1">
+    <div class="col-md-2 col-md-offset-1">
 
 
         <form action="{{$url}}" >
