@@ -18,7 +18,7 @@
 			 		<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
 				 		<div class="panel panel-primary {{$cat->class}}">
 				 			<div class="panel-heading">
-				 				<a href="#">
+				 				<a href="/{{$cat->slug}}">
 				 					<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
 				 					<h1>{{$cat->title}}</h1>
 				 				</a>
