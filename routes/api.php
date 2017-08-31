@@ -53,6 +53,8 @@ Route::post('/user/advert/mprice','UserController@mprice')->middleware('auth:api
 
 Route::post('/user/advert/order','UserController@order')->middleware('auth:api');
 
+Route::post('/user/advert/offer','UserController@offer');
+
 
 Route::post('/user/advert/ccreate','UserController@ccreate');
 
