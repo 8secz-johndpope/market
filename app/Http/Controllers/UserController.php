@@ -404,13 +404,12 @@ class UserController extends BaseController
     public function topup(Request $request)
     {
         $user = Auth::user();
-        $total = $request->amount;
 
         $transaction = Transaction::where('slug',$request->transaction_id)->first();
         if($transaction===null||$transaction->used===1){
             return ['result'=>['msg'=>'Not a valid transaction id']];
         }
-        
+
             $total =  $transaction->amount;
             $transaction->used=1;
             $transaction->save();
