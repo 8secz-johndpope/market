@@ -23,7 +23,7 @@
             </ul>
         </div>
         <div class="l-visible-large">
-            <h4>Categories</h4>
+            <h4>{{$category->title}}</h4>
             <ul>
                 @foreach($categories as $cat)
                         <li><a href="/{{$cat->slug}}">{{$cat->title}}</a>&nbsp;&nbsp;{{$cat->count}}</li>
