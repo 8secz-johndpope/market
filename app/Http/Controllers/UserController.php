@@ -443,18 +443,21 @@ class UserController extends BaseController
         if($total===0) {
             if($featured>0){
                 $fff = new Featured;
+                $fff->days = 7;
                 $fff->count = $featured;
                 $fff->save();
                 $user->featured()->save($fff);
             }
             if($urgent>0){
                 $uuu = new Urgent;
+                $uuu->days = 7;
                 $uuu->count = $urgent;
                 $uuu->save();
                 $user->urgent()->save($uuu);
             }
             if($spotlight>0){
                 $sss = new Spotlight;
+                $sss->days = 7;
                 $sss->count = $spotlight;
                 $sss->save();
                 $user->spotlight()->save($sss);
