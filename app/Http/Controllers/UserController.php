@@ -42,6 +42,7 @@ class UserController extends BaseController
     {
         // Get the currently authenticated user...
         $user = Auth::user();
+        return $user;
         $id = $request->id;
         $advert = Advert::find($id);
         if($advert===null){
