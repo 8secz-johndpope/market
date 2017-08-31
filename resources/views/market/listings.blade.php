@@ -16,7 +16,14 @@
 <div class="row">
     <div class="col-md-2 col-md-offset-1">
 
-
+        <div class="l-visible-large">
+            <h4>Categories</h4>
+            <ul>
+                @foreach($categories as $cat)
+                        <li><a href="/{{$cat->slug}}">{{$cat->title}}</a>&nbsp;&nbsp;{{$cat->count}}</li>
+                @endforeach
+            </ul>
+        </div>
         <form action="{{$url}}" >
             <div class="form-group">
                 <label for="distance">Distance:</label>
