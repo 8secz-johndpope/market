@@ -50,6 +50,15 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
+                    <div class="row">
+                        @foreach($metas as $meta)
+                            <div class="col-sm-6">
+                                <table class="table">
+                                    <tr><td>{{$meta->title}}</td><td>{{$meta->value}}</td></tr>
+                                </table>
+                            </div>
+                            @endforeach
+                    </div>
                     <div class="description">
                         {{$product['description']}}
                     </div>

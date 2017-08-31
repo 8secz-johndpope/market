@@ -434,7 +434,6 @@ class MarketController extends BaseController
     }
     public function product(Request $request,$cat,$sid)
     {
-        $breads = array();
 
         $params = [
             'index' => 'adverts',
@@ -460,6 +459,15 @@ class MarketController extends BaseController
             $images = [];
         }
 
+        $meta = $product['meta'];
+        $metas = array();
+        foreach ($meta as $key => $value){
+            $field = Field::where('slug',$key);
+            if($field!==null){
+                $field->value = $value;
+                $metas[]=$field;
+            }
+        }
         $catagory= Category::find($product['category']);
 
 
@@ -487,7 +495,7 @@ class MarketController extends BaseController
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
 
 
-        return View('market.product',['product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images))]);
+        return View('market.product',['product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas',$metas]);
     }
     public function index(Request $request){
         return redirect('all');
