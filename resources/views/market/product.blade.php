@@ -23,7 +23,7 @@
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                           @foreach(range(1, count($images)) as $number)
+                           @foreach($counts as $number)
                                 <li data-target="#myCarousel" data-slide-to="{{$number}}"></li>
                             @endforeach
                         </ol>
