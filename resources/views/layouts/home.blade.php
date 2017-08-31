@@ -354,7 +354,7 @@
     setTimeout(function(){
         //do what you need here
         $('.masonry').show();
-    }, 2000);
+    }, 3000);
 </script>
 </body>
 </html>
