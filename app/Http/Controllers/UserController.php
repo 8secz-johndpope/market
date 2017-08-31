@@ -11,10 +11,13 @@ namespace App\Http\Controllers;
 use App\Model\Address;
 use App\Model\Advert;
 use App\Model\Category;
+use App\Model\Featured;
 use App\Model\Order;
 
 use App\Model\Price;
+use App\Model\Spotlight;
 use App\Model\Transaction;
+use App\Model\Urgent;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -414,12 +417,13 @@ class UserController extends BaseController
     }
     public function buy(Request $request){
         $user = Auth::user();
+        $price = Price::find(1);
         $body=$request->json()->all();
         $featured = (int)$body['featured'];
         $urgent = (int)$body['urgent'];
         $spotlight = (int)$body['spotlight'];
         $balance = (int)$body['balance'];
-        $total = 3399 * $featured + 2399 * $urgent  + 4499* $spotlight;
+        $total = $price->featured * $featured + $price->urgent * $urgent  + $price->spotlight* $spotlight;
         $subtract=0;
         if($balance===1){
 
@@ -452,9 +456,27 @@ class UserController extends BaseController
                 "source" => $card, // obtained with Stripe.js
                 "description" => 'Buy Pack/'.$total
             ));
-            $user->featured += $featured;
-            $user->urgent += $urgent;
-            $user->spotlight += $spotlight;
+            if($featured>0){
+                $fff = new Featured;
+                $fff->count = $featured;
+                $fff->save();
+                $user->featured()->save($fff);
+            }
+            if($urgent>0){
+                $uuu = new Urgent;
+                $uuu->count = $urgent;
+                $uuu->save();
+                $user->urgent()->save($uuu);
+            }
+           if($spotlight>0){
+               $sss = new Spotlight;
+               $sss->count = $spotlight;
+               $sss-save();
+               $user->spotlight()->save($sss);
+           }
+
+
+
             $user->available -= $subtract;
             $user->balance -= $subtract;
             $user->save();

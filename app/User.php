@@ -59,4 +59,20 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Address');
     }
+    public function featured()
+    {
+        return $this->hasMany('App\Model\Featured');
+    }
+    public function urgent()
+    {
+        return $this->hasMany('App\Model\Urgent');
+    }
+    public function spotlight()
+    {
+        return $this->hasMany('App\Model\Spotlight');
+    }
+    public function shipping()
+    {
+        return $this->hasMany('App\Model\Shipping');
+    }
 }
