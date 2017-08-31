@@ -107,9 +107,7 @@
                 width: 1260px;
             }
         }
-.masonry{
-    display: none;
-}
+
     </style>
 
 </head>
@@ -351,10 +349,7 @@
     });
 </script>
 <script>
-    setTimeout(function(){
-        //do what you need here
-        $('.masonry').show();
-    }, 3000);
+
 </script>
 </body>
 </html>
