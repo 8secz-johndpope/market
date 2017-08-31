@@ -107,7 +107,7 @@
                 width: 1260px;
             }
         }
-.description{
+.description, .meta{
     margin-top: 30px;
 }
     </style>

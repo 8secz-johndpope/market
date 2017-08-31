@@ -50,7 +50,7 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                    <div class="row">
+                    <div class="row meta">
                         @foreach($metas as $meta)
                             <div class="col-sm-3">
                                     {{$meta->title}}
