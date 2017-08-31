@@ -48,6 +48,8 @@ Route::post('/search', 'MarketController@query');
 
 Route::post('/user/register', 'UserController@register');
 Route::post('/user/advert/create','UserController@create')->middleware('auth:api');
+Route::get('/user/advert/price','UserController@price')->middleware('auth:api');
+
 Route::post('/user/advert/order','UserController@order')->middleware('auth:api');
 
 

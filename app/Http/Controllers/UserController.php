@@ -42,7 +42,18 @@ class UserController extends BaseController
         //$id = Auth::id();
         return ["name"=>$user->name,'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available];
     }
+    public function price(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
 
+// Get the currently authenticated user's ID...
+        //$id = Auth::id();
+        $category = $request->category;
+        $lat = $request->lat;
+        $lng = $request->lng;
+        return ['urgent'=>39.99,'featured'=>49.99,'spotlight'=>59.99];
+    }
 
     public function token(Request $request){
         $gateway = new \Braintree\Gateway(array(
