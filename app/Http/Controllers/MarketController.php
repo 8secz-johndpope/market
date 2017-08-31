@@ -454,8 +454,8 @@ class MarketController extends BaseController
         $product=$products[0];
 	    $image = 'noimage.png';
         if(count($product['images'])>0){
-            $image = $products['images'][0];
-            $images = array_shift($products['images']);
+            $image = $product['images'][0];
+            $images = array_shift($product['images']);
         }else{
             $images = [];
         }
