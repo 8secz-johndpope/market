@@ -63,6 +63,17 @@
                     <div class="description">
                         {{$product['description']}}
                     </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <iframe
+                                    width="600"
+                                    height="450"
+                                    frameborder="0" style="border:0"
+                                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&center=-33.8569,151.2152&zoom=18" allowfullscreen>
+                            </iframe>
+
+                        </div>
+                    </div>
                 </div>
         </div>
 
