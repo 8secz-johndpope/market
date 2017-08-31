@@ -175,30 +175,7 @@
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
-    <div class="row search">
-        <div class="col-sm-1 col-md-1 col-lg-2 hidden-xs">
-        </div>
-        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-8">
-            <form class="navbar-form" action="{{$url}}">
-                @foreach($input as $key=>$value)
-                    @if($key!=='q'&&$key!=='lat'&&$key!=='lng')
-                        <input type="hidden" name="{{$key}}" value="{{$value}}">
-                    @endif
-                @endforeach
-                    <input type="hidden" id="lat" name="lat" value="{{$lat}}">
-                    <input type="hidden" id="lng" name="lng" value="{{$lng}}">
-                <div class="form-group col-md-12 col-lg-12">
-                    <input type="text" class="form-control input-lg" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif">
-                    <div class="input-group col-sm-4 col-md-3 col-lg-3 col-xl-2 input-group-lg">
-                        <input type="text" id="pac-input" class="form-control" placeholder="POST CODE" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
-                        <span class="input-group-btn">
-							     		<button class="btn btn-default" type="submit">Go</button>
-							      	</span>
-                    </div>
-                </div>
-            </form>
-        </div><!-- /.col-lg-6 -->
-    </div>
+    
 </header>
 
 
