@@ -549,7 +549,7 @@ class MarketController extends BaseController
         $spl2 = array_slice($products, 6, 6);
         $spl3 = array_slice($products, 12, 6);
         $spl4 = array_slice($products, 18, 6);
-        return view('home',['base' => $all, 'spotlight' => $products]);
+        return view('home',['base' => $all, 'spotlight' => $products,'input'=>[],'lat'=>0.00,'lng'=>0.00]);
         return redirect('all');
     }
     public function leaves(Request $request){
