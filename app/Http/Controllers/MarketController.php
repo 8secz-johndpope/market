@@ -533,7 +533,11 @@ class MarketController extends BaseController
         $input = $request->all();
 
         $aggs=array();
-        $aggs['category']=['terms'=>['field'=>'category','size'=>1000000]];
+        $ranges = array();
+        foreach ($category->children as $cat){
+            $ranges[] = ['from'=>$cat->id,'to'=>$cat->ends];
+        }
+        $aggs['category']=['range'=>['field'=>'category','ranges'=>$ranges]];
         $musts=array();
         $lat = 52.1;
         $lng = 0.1;
@@ -832,7 +836,7 @@ class MarketController extends BaseController
         $buckets = $aggretations['category']['buckets'];
         $categories = array();
         foreach ($buckets as $bucket){
-            $cat = Category::find($bucket['key']);
+            $cat = Category::find($bucket['from']);
             $cat->count = $bucket['doc_count'];
             if($cat->parent_id==$category->id)
             $categories[] = $cat;
