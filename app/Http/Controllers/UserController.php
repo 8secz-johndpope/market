@@ -548,6 +548,7 @@ class UserController extends BaseController
     public function bump(Request $request){
         $user = Auth::user();
         $advert =  new Advert;
+        $price = Price::find(1);
         $advert->save();
         $body=$request->json()->all();
         $payment = $body['payment'];
@@ -556,24 +557,24 @@ class UserController extends BaseController
         $spotlight = (int)$body['spotlight'];
         $total = 0;
         if($featured>0){
-            $total += 3399;
+            $total += $price->featured;
         }
         if($urgent>0){
-            $total += 2399;
+            $total += $price->urgent;
         }
         if($spotlight>0){
-            $total += 4499;
+            $total += $price->spotlight;
         }
 
         if($payment==='p'||$payment==='pb'||$payment==='pc'||$payment==='pbc'){
-            if($featured>0&&$user->featured>0){
-                $total-=3399;
+            if($featured>0&&count($user->featured)>0){
+                $total-=$price->featured;
             }
-            if($urgent>0&&$user->urgent>0){
-                $total-=2399;
+            if($urgent>0&&count($user->urgent)>0){
+                $total-=$price->urgent;
             }
-            if($spotlight>0&&$user->spotlight>0){
-                $total-=4499;
+            if($spotlight>0&&count($user->spotlight)>0){
+                $total-=$price->spotlight;
             }
         }
         if($payment==='b'||$payment==='pb'||$payment==='pbc'){
@@ -594,8 +595,6 @@ class UserController extends BaseController
             if($transaction===null){
                 return ['msg'=>'Invalid transaction id'];
             }
-
-
         }
         if($featured>0&&$user->featured>0){
             $user->featured -= 1;
