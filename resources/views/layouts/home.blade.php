@@ -350,5 +350,11 @@
         }
     });
 </script>
+<script>
+    setTimeout(function(){
+        //do what you need here
+        $('.masonry').show();
+    }, 2000);
+</script>
 </body>
 </html>
