@@ -15,7 +15,13 @@
 
 <div class="row">
     <div class="col-md-2 col-md-offset-1">
-
+        <div class="l-visible-large">
+            <ul>
+                @foreach($parents as $parent)
+                    <li><a href="/{{$parent->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
+                @endforeach
+            </ul>
+        </div>
         <div class="l-visible-large">
             <h4>Categories</h4>
             <ul>
