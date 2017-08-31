@@ -464,7 +464,17 @@ class MarketController extends BaseController
         foreach ($meta as $key => $value){
             $field = Field::where('slug',$key)->first();
             if($field!==null&&$key!=='price'){
-                $field->value = $value;
+                if(is_numeric($value)){
+                    $field->value = $value;
+                }else{
+                    $fval = FieldValue::where('slug',$value)->first();
+                    if($fval!==null){
+                        $field->value = $fval->title;
+                    }else{
+                        $field->value = $value;
+                    }
+                }
+
                 $metas[]=$field;
             }
         }
