@@ -63,7 +63,7 @@
                     <div class="description">
                         {{$product['description']}}
                     </div>
-                    <div class="row">
+                    <div class="row mapframe">
                         <div class="col-sm-12">
                             <iframe
                                     width="100%"

@@ -107,7 +107,7 @@
                 width: 1260px;
             }
         }
-.description, .meta{
+.description, .meta, .mapframe{
     margin-top: 30px;
 }
         .meta-bold{
