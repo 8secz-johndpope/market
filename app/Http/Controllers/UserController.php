@@ -449,9 +449,25 @@ class UserController extends BaseController
 
         }
         if($total===0) {
-            $user->featured += $featured;
-            $user->urgent += $urgent;
-            $user->spotlight += $spotlight;
+            if($featured>0){
+                $fff = new Featured;
+                $fff->count = $featured;
+                $fff->save();
+                $user->featured()->save($fff);
+            }
+            if($urgent>0){
+                $uuu = new Urgent;
+                $uuu->count = $urgent;
+                $uuu->save();
+                $user->urgent()->save($uuu);
+            }
+            if($spotlight>0){
+                $sss = new Spotlight;
+                $sss->count = $spotlight;
+                $sss-save();
+                $user->spotlight()->save($sss);
+            }
+
             $user->available -= $subtract;
             $user->balance -= $subtract;
             $user->save();
