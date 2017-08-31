@@ -17,8 +17,10 @@
         <div class="col-sm-3"></div>
                 <div class="col-sm-6">
                 <h2 class="item-name">{{$product['title']}}</h2>
-
-<div class="col-sm-2 col-sm-offset-10">@if($product['meta']['price']>=0)
+<div class="col-sm-10">
+    <p>{{$product['location_name']}}</p>
+</div>
+<div class="col-sm-2">@if($product['meta']['price']>=0)
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
