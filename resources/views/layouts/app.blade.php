@@ -110,6 +110,9 @@
 .description, .meta{
     margin-top: 30px;
 }
+        .meta-bold{
+            font-weight: bold;
+        }
     </style>
 
 </head>

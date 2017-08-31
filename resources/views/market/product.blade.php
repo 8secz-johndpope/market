@@ -52,8 +52,8 @@
                     </div>
                     <div class="row meta">
                         @foreach($metas as $meta)
-                            <div class="col-sm-3">
-                                    {{$meta->title}}
+                            <div class="col-sm-3 meta-bold">
+                                {{$meta->title}}
                             </div>
                             <div class="col-sm-3">
                                 {{$meta->value}}
