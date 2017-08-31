@@ -464,7 +464,7 @@ class UserController extends BaseController
             if($spotlight>0){
                 $sss = new Spotlight;
                 $sss->count = $spotlight;
-                $sss-save();
+                $sss->save();
                 $user->spotlight()->save($sss);
             }
 
