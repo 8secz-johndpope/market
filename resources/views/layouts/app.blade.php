@@ -75,21 +75,16 @@
             box-shadow: 2px 2px 4px 0 #ccc;
         }
 
-        @media only screen and (min-width: 400px) {
-            .masonry {
-                -moz-column-count: 1;
-                -webkit-column-count: 1;
-                column-count: 1;
-            }
-        }
 
-        @media only screen and (min-width: 700px) {
+        @media only screen and (min-width: 300px) {
             .masonry {
                 -moz-column-count: 2;
                 -webkit-column-count: 2;
                 column-count: 2;
             }
         }
+
+       
 
         @media only screen and (min-width: 900px) {
             .masonry {
