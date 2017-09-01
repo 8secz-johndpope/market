@@ -30,7 +30,7 @@
             font-style: italic;
         }
         .buttons{
-             margin-top: 40px;
+             margin-top: 150px;
         }
         img.lazyload{
             width: 100%;
