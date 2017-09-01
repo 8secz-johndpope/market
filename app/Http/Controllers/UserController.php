@@ -575,6 +575,9 @@ class UserController extends BaseController
     {
         $user = Auth::user();
         $advert  = Advert::find($request->id);
+        if($advert===null){
+            return ['msg'=>'Advert not found'];
+        }
 
         $params = [
             'index' => 'adverts',
@@ -584,31 +587,21 @@ class UserController extends BaseController
 
         $response = $this->client->get($params);
 
+        $price = $response['_source']['meta']['price'];
+        $transaction = Transaction::where('slug',$request->transaction_id)->first();
+        if($transaction===null||$transaction->used===1){
+            return ['result'=>['msg'=>'Not a valid transaction id']];
+        }
 
-        $stripe_id=$user->stripe_id;
-        $card = $request->card;
-        try{
-            $charge=\Stripe\Charge::create(array(
-                "amount" => (int)$response['_source']['meta']['price'],
-                "currency" => "gbp",
-                "customer" => $stripe_id,
-                "source" => $card, // obtained with Stripe.js
-                "description" => 'Buy Advert/'
-            ));
-
-
-        }catch (\Exception $e) {
-            return [
-                'success' => false,
-                'result' => 'error charging the card'
-            ];
+        if($transaction->amount!=$price){
+            return ['msg'=>'Wrong transaction amount'];
         }
 
 
         $order = new Order;
         $order->advert_id = $response['_source']['source_id'];
         $order->save();
-        return ['success'=>true,'result'=>$charge];
+        return ['success'=>true,'msg'=>'Order successfully placed'];
     }
 
     public function topup(Request $request)
