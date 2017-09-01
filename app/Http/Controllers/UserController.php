@@ -969,6 +969,10 @@ class UserController extends BaseController
             return ['msg' => 'Email is already registered'];
         }
         $user = new User;
+
+        //Creating a token without scopes...
+        $token = $user->createToken('Token Name')->accessToken;
+
         $user->more(['email' => $request->email, 'name' => $request->name, 'password' => bcrypt($request->password), 'phone' => $request->phone]);
         $user->save();
 
@@ -987,7 +991,7 @@ class UserController extends BaseController
         $account->legal_entity->type = 'individual';
         $account->save();
 
-        return ['msg' => 'success', 'id' => $user->id, 'email' => $user->email, 'name' => $user->name];
+        return ['msg' => 'success','token' => $token, 'id' => $user->id, 'email' => $user->email, 'name' => $user->name];
     }
 
 }
