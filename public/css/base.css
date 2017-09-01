@@ -184,6 +184,18 @@ a.navbar-brand {
   padding: 9px 15px 32px 15px;
 }
 
+/* listing ui */
+a.listing-product{
+  display: inline-flex;
+}
+.listing-img {
+    width: 200px;
+}
+.items-box-body.listing-content {
+    width: calc(100% - 300px);
+    padding-left: 20px;
+}
+/*  -- end --*/
 .read-more{
   text-align: right;
   font-size: 18px;
