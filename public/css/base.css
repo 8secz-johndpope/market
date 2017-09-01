@@ -195,6 +195,12 @@ a.listing-product{
     width: calc(100% - 300px);
     padding-left: 20px;
 }
+a.listing-product {
+    text-decoration: none;
+}
+h4.items-box-name.font-2 {
+    color: #ff8830;
+}
 /*  -- end --*/
 .read-more{
   text-align: right;
