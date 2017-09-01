@@ -11,7 +11,21 @@
 @endsection
 
 @section('content')
+<script>
+    //var $container = $('.listing-description');
+    var $text = $('.listing-description>p');
+    var originalText = $text.text();
+    var temp = originalText;
 
+    if( 200 < $text.outerHeight() ) {
+    
+        while(200 < $text.outerHeight()) {
+            $text.text( temp = temp.substr(0, temp.length-1) );
+        }   
+        $text.text( temp = temp.substr(0, temp.length-3) );
+        $text.append('...');
+    }
+</script>
 
 <div class="row">
     <div class="col-md-2 col-md-offset-1">

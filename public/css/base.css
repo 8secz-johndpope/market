@@ -201,6 +201,12 @@ a.listing-product {
 h4.items-box-name.font-2 {
     color: #ff8830;
 }
+p.listing-description {
+    color: #8a848d;
+}
+.listing-location {
+    color: #000;
+}
 /*  -- end --*/
 .read-more{
   text-align: right;
