@@ -651,12 +651,14 @@ class UserController extends BaseController
        //     return ['success'=>true,'result'=>['msg'=>'The packs successfully added to account'],'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available,'shipping'=>$user->shipping];
         }
 
-        $transaction = Transaction::where('slug',$request->transaction_id)->first();
-        if($transaction===null||$transaction->used===1){
-            return ['result'=>['msg'=>'Not a valid transaction id']];
-        }
-        if($transaction->amount!=$total){
-            return ['result'=>['msg'=>'Not enough amount in the transaction']];
+        if($total>0) {
+            $transaction = Transaction::where('slug', $request->transaction_id)->first();
+            if ($transaction === null || $transaction->used === 1) {
+                return ['result' => ['msg' => 'Not a valid transaction id']];
+            }
+            if ($transaction->amount != $total) {
+                return ['result' => ['msg' => 'Not enough amount in the transaction']];
+            }
         }
             if($request->featured>0){
                 $fff = new Featured;
