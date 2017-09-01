@@ -189,7 +189,7 @@ a.listing-product{
   display: inline-flex;
 }
 .listing-img {
-    width: 200px;
+    width: 120px;
 }
 .items-box-body.listing-content {
     width: calc(100% - 300px);
