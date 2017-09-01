@@ -22,6 +22,7 @@ use App\Model\Order;
 
 use App\Model\Price;
 use App\Model\Report;
+use App\Model\Review;
 use App\Model\Shipping;
 use App\Model\Spotlight;
 use App\Model\Transaction;
@@ -59,6 +60,28 @@ class UserController extends BaseController
         $cv->user_id = $user->id;
         $cv->save();
         return ['msg'=>'Cv added'];
+
+    }
+    public function review(Request $request)
+    {
+        $user = Auth::user();
+        $order_id = $request->order_id;
+        $order = Order::find($order_id);
+
+        if($order===null){
+            return ['msg'=>'No order found'];
+        }
+        $review = $request->review;
+
+        $cv = new Review;
+        $cv->order_id = $order->id;
+        $cv->review = $review;
+        $cv->description_rating = $request->description_rating;
+        $cv->communication_rating = $request->communication_rating;
+        $cv->dispatchtime_rating = $request->dispatchtime_rating;
+        $cv->postage_rating = $request->postage_rating;
+        $cv->save();
+        return ['msg'=>'Review added'];
 
     }
     public function update(Request $request){
