@@ -13,7 +13,7 @@
 @section('content')
 <script>
     //var $container = $('.listing-description');
-    $('.listing-description>p'). each(function( index ) {
+    $('p.listing-description'). each(function( index ) {
         var $text = $(this);
         var originalText = $text.text();
         var temp = originalText;
