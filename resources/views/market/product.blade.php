@@ -76,12 +76,7 @@
                     </div>
                     <div class="row mapframe">
                         <div class="col-sm-12">
-                            <iframe
-                                    width="100%"
-                                    height="100%"
-                                    frameborder="0" style="border:0"
-                                    src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDNgoKnSATE9dpHt44AFXtf7wGkL5eB2L4&center={{$product['location']}}&zoom=18" allowfullscreen>
-                            </iframe>
+                           
                             <div id="map"></div>
                             <script>
                                 function initMap() {
