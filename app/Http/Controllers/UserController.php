@@ -992,10 +992,10 @@ class UserController extends BaseController
         $account->legal_entity->type = 'individual';
         $account->save();
 
-        $user = Auth::user();
+     
         //Creating a token without scopes...
         $token = $user->createToken('Token Name')->accessToken;
-        
+
         return ['msg' => 'success','token' => $token, 'id' => $user->id, 'email' => $user->email, 'name' => $user->name];
     }
 
