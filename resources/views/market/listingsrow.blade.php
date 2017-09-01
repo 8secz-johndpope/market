@@ -134,6 +134,12 @@
                             <p class="listing-description">
                                 {{$product['description']}}
                             </p>
+                            <ul class="listing-attributes inline-list">
+                                <li>$product['meta']['year']</li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
                             <div class="items-box-num clearfix">
                                 @if($product['meta']['price']>=0)
                                     <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
