@@ -25,7 +25,7 @@
             $text.text( temp = temp.substr(0, temp.length-3) );
             $text.append('...');
         }
-    }
+    });
 </script>
 
 <div class="row">
