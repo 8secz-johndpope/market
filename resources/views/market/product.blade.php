@@ -84,8 +84,8 @@
                             </iframe>
                             <div id="map"></div>
                             <script>
-                                function initMap(lat,lng) {
-                                    var uluru = {lat: lat, lng: lng};
+                                function initMap() {
+                                    var uluru = {lat: 0.0, lng: 0.0};
                                     var map = new google.maps.Map(document.getElementById('map'), {
                                         zoom: 4,
                                         center: uluru
@@ -97,7 +97,7 @@
                                 }
                             </script>
                             <script async defer
-                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k&callback=initMap({{$product['location']}})">
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k&callback=initMap">
                             </script>
                         </div>
                     </div>
