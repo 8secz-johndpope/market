@@ -50,7 +50,7 @@ class UserController extends BaseController
     }
     public function contract(Request $request)
     {
-        /*
+
         $price = $this->cprice($request);
         $discounted = (int)(0.75*$price);
         if($discounted<250000){
@@ -59,9 +59,10 @@ class UserController extends BaseController
         if(!$request->has('transaction_id')){
             return ['msg'=>'5% deposit is required to start the contract'];
         }
-        */
+        $monthly = (int)(0.95*1.2*$price/12);
         foreach (range(3,15) as $i){
             $payment = new Payment;
+            $payment->amount = $monthly;
             $payment->charge_at = date("Y-m-d H:i:s",strtotime('+'.$i.' months'));
             $payment->save();
         }
