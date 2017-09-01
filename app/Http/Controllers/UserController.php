@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 use App\Model\Address;
 use App\Model\Advert;
 use App\Model\Category;
+use App\Model\Cover;
 use App\Model\Cv;
 use App\Model\Favorite;
 use App\Model\Featured;
@@ -117,7 +118,7 @@ class UserController extends BaseController
         $title = $request->title;
         $cover = $request->cover;
 
-        $cv = new Cv;
+        $cv = new Cover;
         $cv->category = $category;
         $cv->title = $title;
         $cv->cover = $cover;
