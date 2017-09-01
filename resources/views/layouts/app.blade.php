@@ -29,6 +29,9 @@
             font-weight: bold;
             font-style: italic;
         }
+        .buttons{
+             margin-top: 40px;
+        }
         img.lazyload{
             width: 100%;
         }

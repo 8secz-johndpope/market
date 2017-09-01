@@ -97,7 +97,8 @@
                     </div>
                 </div>
             <div class="col-sm-3">
-                <button class="btn btn-default">Interested</button>
+                <div class="buttons"><button class="btn btn-primary">Interested to Make Offer</button></div>
+
             </div>
         </div>
 
