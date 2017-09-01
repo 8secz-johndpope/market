@@ -968,7 +968,8 @@ class MarketController extends BaseController
             return View('notfound');
         }
         $params = $this->filter($request,$category);
-        return View('market.listings',$params);
+        //return View('market.listings',$params);
+        return View('market.listingsrow',$params);
     }
 
 }
