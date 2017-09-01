@@ -11,7 +11,10 @@ namespace App\Http\Controllers;
 use App\Model\Address;
 use App\Model\Advert;
 use App\Model\Category;
+use App\Model\Cv;
+use App\Model\Favorite;
 use App\Model\Featured;
+use App\Model\Interest;
 use App\Model\Offer;
 use App\Model\Order;
 
@@ -38,16 +41,103 @@ class UserController extends BaseController
             return ['msg'=>"Invalid Credentials"];
         }
     }
+    public function addcv(Request $request)
+    {
+        $user = Auth::user();
+        $category = $request->category;
+        $title = $request->title;
+        $file_name = $request->file_name;
+
+        $cv = new Cv;
+        $cv->category = $category;
+        $cv->title = $title;
+        $cv->file_name = $file_name;
+        $cv->user_id = $user->id;
+        $cv->save();
+        return ['msg'=>'Cv added'];
+
+    }
+    public function update(Request $request){
+        $user = Auth::user();
+        $advert = Advert::find($request->id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'Advert not found'];
+        }
+        if($advert->user_id!=$user->id){
+            return ['msg'=>'Advert does not belong to you'];
+        }
+        $body=$request->json()->all();
+        unset($body['id']);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic,
+            'body' => [
+                'doc' => $body
+            ]
+        ];
+
+// Update doc at /my_index/my_type/my_id
+        $response = $this->client->update($params);
+        return ['msg'=>'updated','response'=>$response];
+    }
+    public function delete(Request $request){
+        $user = Auth::user();
+        $advert = Advert::find($request->id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'Advert not found'];
+        }
+        if($advert->user_id!=$user->id){
+            return ['msg'=>'Advert does not belong to you'];
+        }
+        $body=$request->json()->all();
+        unset($body['id']);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic
+        ];
+
+// Update doc at /my_index/my_type/my_id
+        $response = $this->client->delete($params);
+        $advert->delete();
+        return ['msg'=>'deleted','response'=>$response];
+    }
+
+    public function addcover(Request $request)
+    {
+        $user = Auth::user();
+        $category = $request->category;
+        $title = $request->title;
+        $cover = $request->cover;
+
+        $cv = new Cv;
+        $cv->category = $category;
+        $cv->title = $title;
+        $cv->cover = $cover;
+        $cv->user_id = $user->id;
+        $cv->save();
+        return ['msg'=>'Cover added'];
+    }
     public function offer(Request $request)
     {
         // Get the currently authenticated user...
         $user = Auth::user();
         $id = $request->id;
         $advert = Advert::find($id);
-
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
         if($advert===null){
             return ['msg'=>'No Advert found'];
         }
+
         $offer = new Offer;
         $offer->amount = $request->amount;
         $offer->user_id =$user->id;
@@ -55,6 +145,46 @@ class UserController extends BaseController
 
         $advert->offers()->save($offer);
         return ['msg'=>'Offer successfully sent'];
+
+    }
+    public function favorite(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'No Advert found'];
+        }
+        $favorite = new Favorite;
+        $favorite->advert_id = $advert->id;
+        $favorite->user_id =$user->id;
+        $favorite->save();
+
+        return ['msg'=>'Favorite sent'];
+
+    }
+    public function interest(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'No Advert found'];
+        }
+        $interest = new Interest;
+        $interest->advert_id = $advert->id;
+        $interest->user_id =$user->id;
+        $interest->save();
+
+        return ['msg'=>'Interest sent'];
 
     }
     public function profile()
@@ -359,6 +489,7 @@ class UserController extends BaseController
     public function create(Request $request){
         $user = Auth::user();
         $advert =  new Advert;
+        $advert->user_id = $user->id;
         $advert->save();
         $body=$request->json()->all();
         $body['source_id']=$advert->id;

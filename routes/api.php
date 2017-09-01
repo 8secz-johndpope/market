@@ -48,12 +48,22 @@ Route::post('/search', 'MarketController@query');
 
 Route::post('/user/register', 'UserController@register');
 Route::post('/user/advert/create','UserController@create')->middleware('auth:api');
+
+Route::post('/user/advert/update','UserController@update')->middleware('auth:api');
+Route::post('/user/advert/delete','UserController@delete')->middleware('auth:api');
+
+Route::post('/user/cvs/add','UserController@addcv')->middleware('auth:api');
+Route::post('/user/covers/add','UserController@addcover')->middleware('auth:api');
+
+
 Route::get('/user/advert/price','UserController@price')->middleware('auth:api');
 Route::post('/user/advert/mprice','UserController@mprice')->middleware('auth:api');
 
 Route::post('/user/advert/order','UserController@order')->middleware('auth:api');
 
 Route::post('/user/advert/offer','UserController@offer')->middleware('auth:api');
+Route::post('/user/advert/interest','UserController@interest')->middleware('auth:api');
+Route::post('/user/advert/favorite','UserController@favorite')->middleware('auth:api');
 
 
 Route::post('/user/advert/ccreate','UserController@ccreate');
