@@ -99,10 +99,10 @@
             <div class="col-sm-3">
                 <div class="buttons">
                     <ul class="list-group">
-                        <li class="list-group-item"> <button class="btn btn-primary">Interested to Make Offer</button></li>
-                        <li class="list-group-item"><button class="btn btn-primary">Save to Favorites</button></li>
+                        <li class="list-group-item"> <button class="btn btn-default">Interested to Make Offer</button></li>
+                        <li class="list-group-item"><button class="btn btn-default">Save to Favorites</button></li>
                         <li class="list-group-item"></li>
-                        <li class="list-group-item"></li>
+                        <li class="list-group-item"><button class="btn btn-primary">Buy Now</button></li>
                     </ul>
 
 
