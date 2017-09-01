@@ -459,6 +459,9 @@ class MarketController extends BaseController
             $images = [];
         }
 
+        $latlng = $product['location'];
+        $latlng=explode(',',$latlng);
+
         $meta = $product['meta'];
         $metas = array();
         foreach ($meta as $key => $value){
@@ -509,7 +512,7 @@ class MarketController extends BaseController
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
 
 
-        return View('market.product',['product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category]);
+        return View('market.product',['product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1]]);
     }
     public function index(Request $request){
         //$base = Category::where('parent_id',0)->get();
