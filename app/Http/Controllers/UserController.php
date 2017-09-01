@@ -60,7 +60,7 @@ class UserController extends BaseController
             return ['msg'=>'5% deposit is required to start the contract'];
         }
         */
-        foreach (range(1,12) as $i){
+        foreach (range(3,15) as $i){
             $payment = new Payment;
             $payment->charge_at = date("Y-m-d H:i:s",strtotime('+'.$i.' months'));
             $payment->save();
