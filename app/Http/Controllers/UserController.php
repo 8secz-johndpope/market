@@ -667,7 +667,7 @@ class UserController extends BaseController
             $user->available -= $subtract;
             $user->balance -= $subtract;
             $user->save();
-            return ['success'=>true];
+            return ['success'=>true,'result'=>['msg'=>'The packs successfully added to account'],'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available,'shipping'=>$user->shipping];
         }
 
         $transaction = Transaction::where('slug',$request->transaction_id)->first();
