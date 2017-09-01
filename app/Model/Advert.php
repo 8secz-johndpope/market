@@ -14,4 +14,17 @@ class Advert extends  Model
     {
         return $this->hasMany('App\Model\Offer');
     }
+    public function interests()
+    {
+        return $this->hasMany('App\Model\Interest');
+    }
+    public function favorites()
+    {
+        return $this->hasMany('App\Model\Favorite');
+    }
+    public function applications()
+    {
+        return $this->hasMany('App\Model\Application');
+    }
+
 }
