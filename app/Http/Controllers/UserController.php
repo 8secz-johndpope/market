@@ -678,7 +678,7 @@ class UserController extends BaseController
                $sss = new Spotlight;
                $sss->count = $request->spotlight;
                $sss->days = 7;
-               $sss-save();
+               $sss->save();
                $user->spotlight()->save($sss);
            }
             if($request->featured_14>0){
