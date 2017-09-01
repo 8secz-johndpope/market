@@ -62,7 +62,7 @@ class UserController extends BaseController
         */
         foreach (range(1,12) as $i){
             $payment = new Payment;
-            $payment->charge_at = strtotime('+'.$i.' months');
+            $payment->charge_at = date("Y-m-d H:i:s",strtotime('+'.$i.' months'));
             $payment->save();
         }
         return ['msg'=>'contract has just started'];
