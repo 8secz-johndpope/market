@@ -600,6 +600,7 @@ class UserController extends BaseController
 
         $order = new Order;
         $order->advert_id = $response['_source']['source_id'];
+        $order->buyer_id = $user->id;
         $order->save();
         return ['success'=>true,'msg'=>'Order successfully placed'];
     }
