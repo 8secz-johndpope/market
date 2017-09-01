@@ -76,16 +76,41 @@
                     </div>
                     <div class="row mapframe">
                         <div class="col-sm-12">
-                            <iframe
-                                    width="100%"
-                                    height="100%"
-                                    frameborder="0" style="border:0"
-                                    src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDNgoKnSATE9dpHt44AFXtf7wGkL5eB2L4&center=-33.8569,151.2152&zoom=18" allowfullscreen>
-                            </iframe>
+
+                            <div id="map"></div>
+                            <script>
+                                function initMap() {
+                                    var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 18,
+                                        center: uluru
+                                    });
+                                    var marker = new google.maps.Marker({
+                                        position: uluru,
+                                        map: map
+                                    });
+                                }
+
+                            </script>
 
                         </div>
                     </div>
                 </div>
+            <div class="col-sm-3">
+                <div class="buttons">
+                    <h4>Seller Info</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
+                    </ul>
+                    <ul class="list-group">
+                        <li class="list-group-item"> <button class="btn btn-default">Interested to Make Offer</button></li>
+                        <li class="list-group-item"><button class="btn btn-default">Save to Favorites</button></li>
+                        <li class="list-group-item"><button class="btn btn-default">Send Message</button></li>
+                        <li class="list-group-item"><button class="btn btn-primary">Buy Now</button></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
 
 

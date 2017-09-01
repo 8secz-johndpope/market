@@ -75,4 +75,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Shipping');
     }
+    public function cvs()
+    {
+        return $this->hasMany('App\Model\Cv');
+    }
+    public function covers()
+    {
+        return $this->hasMany('App\Model\Cover');
+    }
 }

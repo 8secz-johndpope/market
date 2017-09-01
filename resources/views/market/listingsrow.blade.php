@@ -113,24 +113,37 @@
             </h2>
 
 
-            <div class="masonry">
+            <div class="col-md-12">
 
             @foreach($products as $product)
+                <a href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
                     <div class="item">
-
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="The north Face Men&#039;s Size 34 Pants">
-
-                            <div class="items-box-body">
-                                <a href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="items-box-name font-2">{{$product['title']}}</h4>  </a>
-                                <div class="items-box-num clearfix">
-                                    @if($product['meta']['price']>=0)
-                                        <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
-                                    @endif
+                        <div class="listing-img">
+                            <div class="main-img">
+                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
+                                <div class="listing-meta">
                                 </div>
                             </div>
+                        </div>
+                        <div class="items-box-body listing-content">
+                            <h4 class="items-box-name font-2">{{$product['title']}}</h4>
+                            <div class="listing-location">
+                                {{$product['location_name']}}
+                            </div>
+                            <p class="listing-description">
+                                {{$product['description']}}
+                            </p>
+                            <div class="items-box-num clearfix">
+                                @if($product['meta']['price']>=0)
+                                    <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
 
                     </div>
-                @endforeach
+                </a>
+            @endforeach
 
 
 

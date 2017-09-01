@@ -10,12 +10,20 @@ namespace App\Http\Controllers;
 
 use App\Model\Address;
 use App\Model\Advert;
+use App\Model\Application;
 use App\Model\Category;
+use App\Model\Cover;
+use App\Model\Cv;
+use App\Model\Favorite;
 use App\Model\Featured;
+use App\Model\Interest;
 use App\Model\Offer;
 use App\Model\Order;
 
 use App\Model\Price;
+use App\Model\Report;
+use App\Model\Review;
+use App\Model\Shipping;
 use App\Model\Spotlight;
 use App\Model\Transaction;
 use App\Model\Urgent;
@@ -38,16 +46,127 @@ class UserController extends BaseController
             return ['msg'=>"Invalid Credentials"];
         }
     }
+    public function addcv(Request $request)
+    {
+        $user = Auth::user();
+        $category = $request->category;
+        $title = $request->title;
+        $file_name = $request->file_name;
+
+        $cv = new Cv;
+        $cv->category = $category;
+        $cv->title = $title;
+        $cv->file_name = $file_name;
+        $cv->user_id = $user->id;
+        $cv->save();
+        return ['msg'=>'Cv added'];
+
+    }
+    public function review(Request $request)
+    {
+        $user = Auth::user();
+        $order_id = $request->order_id;
+        $order = Order::find($order_id);
+
+        if($order===null){
+            return ['msg'=>'No order found'];
+        }
+        if($order->buyer_id!==$user->id){
+            return ['msg'=>'You cannot rate this order'];
+        }
+        $review = $request->review;
+        $cv = new Review;
+        $cv->order_id = $order->id;
+        $cv->review = $review;
+        $cv->description_rating = $request->description_rating;
+        $cv->communication_rating = $request->communication_rating;
+        $cv->dispatchtime_rating = $request->dispatchtime_rating;
+        $cv->postage_rating = $request->postage_rating;
+        $cv->save();
+        return ['msg'=>'Review added'];
+
+    }
+    public function update(Request $request){
+        $user = Auth::user();
+        $advert = Advert::find($request->id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'Advert not found'];
+        }
+        if($advert->user_id!=$user->id){
+            return ['msg'=>'Advert does not belong to you'];
+        }
+        $body=$request->json()->all();
+        unset($body['id']);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic,
+            'body' => [
+                'doc' => $body
+            ]
+        ];
+
+// Update doc at /my_index/my_type/my_id
+        $response = $this->client->update($params);
+        return ['msg'=>'updated','response'=>$response];
+    }
+    public function delete(Request $request){
+        $user = Auth::user();
+        $advert = Advert::find($request->id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'Advert not found'];
+        }
+        if($advert->user_id!=$user->id){
+            return ['msg'=>'Advert does not belong to you'];
+        }
+        $body=$request->json()->all();
+        unset($body['id']);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic
+        ];
+
+// Update doc at /my_index/my_type/my_id
+        $response = $this->client->delete($params);
+        $advert->delete();
+        return ['msg'=>'deleted','response'=>$response];
+    }
+
+    public function addcover(Request $request)
+    {
+        $user = Auth::user();
+        $category = $request->category;
+        $title = $request->title;
+        $cover = $request->cover;
+
+        $cv = new Cover;
+        $cv->category = $category;
+        $cv->title = $title;
+        $cv->cover = $cover;
+        $cv->user_id = $user->id;
+        $cv->save();
+        return ['msg'=>'Cover added'];
+    }
     public function offer(Request $request)
     {
         // Get the currently authenticated user...
         $user = Auth::user();
         $id = $request->id;
         $advert = Advert::find($id);
-
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
         if($advert===null){
             return ['msg'=>'No Advert found'];
         }
+
         $offer = new Offer;
         $offer->amount = $request->amount;
         $offer->user_id =$user->id;
@@ -57,6 +176,97 @@ class UserController extends BaseController
         return ['msg'=>'Offer successfully sent'];
 
     }
+    public function favorite(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'No Advert found'];
+        }
+        $favorite = new Favorite;
+        $favorite->advert_id = $advert->id;
+        $favorite->user_id =$user->id;
+        $favorite->save();
+
+        return ['msg'=>'Favorite sent'];
+
+    }
+    public function report(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'No Advert found'];
+        }
+        $report = new Report;
+        $report->advert_id = $advert->id;
+        $report->user_id =$user->id;
+        $report->info=$request->info;
+        $report->save();
+
+        return ['msg'=>'Report sent'];
+
+    }
+    public function apply(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'No Advert found'];
+        }
+        $cover = Cover::find($request->cover_id);
+        if($cover===null){
+            return ['msg'=>'No Cover found'];
+        }
+        $cv = Cv::find($request->cv_id);
+        if($cv===null){
+            return ['msg'=>'No Cv found'];
+        }
+        $application = new Application;
+        $application->advert_id = $advert->id;
+        $application->user_id =$user->id;
+        $application->cv_id=$cv->id;
+        $application->cover_id = $cover->id;
+        $application->save();
+
+        return ['msg'=>'Application sent'];
+
+    }
+    public function interest(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'No Advert found'];
+        }
+        $interest = new Interest;
+        $interest->advert_id = $advert->id;
+        $interest->user_id =$user->id;
+        $interest->save();
+
+        return ['msg'=>'Interest sent'];
+
+    }
     public function profile()
     {
         // Get the currently authenticated user...
@@ -64,7 +274,7 @@ class UserController extends BaseController
 
 // Get the currently authenticated user's ID...
         //$id = Auth::id();
-        return ["name"=>$user->name,'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available,'shipping'=>$user->shipping];
+        return ["name"=>$user->name,'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available,'shipping'=>$user->shipping,'cvs'=>$user->cvs,'covers'=>$user->covers];
     }
     public function price(Request $request)
     {
@@ -82,7 +292,7 @@ class UserController extends BaseController
     public function mprice(Request $request)
     {
 
-        return ['price'=>$this->cprice($request)];
+        return ['price'=>(int)(0.8*$this->cprice($request))];
     }
     public function cprice($request){
 
@@ -94,7 +304,7 @@ class UserController extends BaseController
         $shipping_1 = $request->shipping_1;
         $shipping_2 = $request->shipping_2;
         $shipping_3 = $request->shipping_3;
-        return (int)(0.8*($featured*$price->featured+$urgent*$price->urgent+$spotlight*$price->spotlight+$featured_14*$price->featured_14+$shipping_1*$price->shipping_1+$shipping_2*$price->shipping_2+$shipping_3*$price->shipping_3));
+        return (int)(($featured*$price->featured+$urgent*$price->urgent+$spotlight*$price->spotlight+$featured_14*$price->featured_14+$shipping_1*$price->shipping_1+$shipping_2*$price->shipping_2+$shipping_3*$price->shipping_3));
     }
     public function token(Request $request){
         $gateway = new \Braintree\Gateway(array(
@@ -359,6 +569,7 @@ class UserController extends BaseController
     public function create(Request $request){
         $user = Auth::user();
         $advert =  new Advert;
+        $advert->user_id = $user->id;
         $advert->save();
         $body=$request->json()->all();
         $body['source_id']=$advert->id;
@@ -390,6 +601,9 @@ class UserController extends BaseController
     {
         $user = Auth::user();
         $advert  = Advert::find($request->id);
+        if($advert===null){
+            return ['msg'=>'Advert not found'];
+        }
 
         $params = [
             'index' => 'adverts',
@@ -399,31 +613,22 @@ class UserController extends BaseController
 
         $response = $this->client->get($params);
 
+        $price = $response['_source']['meta']['price'];
+        $transaction = Transaction::where('slug',$request->transaction_id)->first();
+        if($transaction===null||$transaction->used===1){
+            return ['result'=>['msg'=>'Not a valid transaction id']];
+        }
 
-        $stripe_id=$user->stripe_id;
-        $card = $request->card;
-        try{
-            $charge=\Stripe\Charge::create(array(
-                "amount" => (int)$response['_source']['meta']['price'],
-                "currency" => "gbp",
-                "customer" => $stripe_id,
-                "source" => $card, // obtained with Stripe.js
-                "description" => 'Buy Advert/'
-            ));
-
-
-        }catch (\Exception $e) {
-            return [
-                'success' => false,
-                'result' => 'error charging the card'
-            ];
+        if($transaction->amount!=$price){
+            return ['msg'=>'Wrong transaction amount'];
         }
 
 
         $order = new Order;
         $order->advert_id = $response['_source']['source_id'];
+        $order->buyer_id = $user->id;
         $order->save();
-        return ['success'=>true,'result'=>$charge];
+        return ['success'=>true,'msg'=>'Order successfully placed'];
     }
 
     public function topup(Request $request)
@@ -463,67 +668,77 @@ class UserController extends BaseController
 
         }
         if($total===0) {
-            if($request->featured>0){
-                $fff = new Featured;
-                $fff->days = 7;
-                $fff->count = $request->featured;
-                $fff->save();
-                $user->featured()->save($fff);
-            }
-            if($request->urgent>0){
-                $uuu = new Urgent;
-                $uuu->days = 7;
-                $uuu->count = $request->urgent;
-                $uuu->save();
-                $user->urgent()->save($uuu);
-            }
-            if($request->spotlight>0){
-                $sss = new Spotlight;
-                $sss->days = 7;
-                $sss->count = $request->spotlight;
-                $sss->save();
-                $user->spotlight()->save($sss);
-            }
+
 
             $user->available -= $subtract;
             $user->balance -= $subtract;
             $user->save();
-            return ['success'=>true];
+       //     return ['success'=>true,'result'=>['msg'=>'The packs successfully added to account'],'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available,'shipping'=>$user->shipping];
         }
 
-        $transaction = Transaction::where('slug',$request->transaction_id)->first();
-        if($transaction===null||$transaction->used===1){
-            return ['result'=>['msg'=>'Not a valid transaction id']];
-        }
-        if($transaction->amount!=$total){
-            return ['result'=>['msg'=>'Not enough amount in the transaction']];
+        if($total>0) {
+            $transaction = Transaction::where('slug', $request->transaction_id)->first();
+            if ($transaction === null || $transaction->used === 1) {
+                return ['result' => ['msg' => 'Not a valid transaction id']];
+            }
+            if ($transaction->amount != $total) {
+                return ['result' => ['msg' => 'Not enough amount in the transaction']];
+            }
         }
             if($request->featured>0){
                 $fff = new Featured;
                 $fff->count = $request->featured;
+                $fff->days=7;
                 $fff->save();
                 $user->featured()->save($fff);
             }
             if($request->urgent>0){
                 $uuu = new Urgent;
                 $uuu->count = $request->urgent;
+                $uuu->days = 7;
                 $uuu->save();
                 $user->urgent()->save($uuu);
             }
            if($request->spotlight>0){
                $sss = new Spotlight;
                $sss->count = $request->spotlight;
-               $sss-save();
+               $sss->days = 7;
+               $sss->save();
                $user->spotlight()->save($sss);
            }
-
-
-
+            if($request->featured_14>0){
+                $fff = new Featured;
+                $fff->count = $request->featured_14;
+                $fff->days = 14;
+                $fff->save();
+                $user->featured()->save($fff);
+            }
+        if($request->shipping_1>0){
+            $fff = new Shipping;
+            $fff->count = $request->shipping_1;
+            $fff->weight = 2;
+            $fff->save();
+            $user->shipping()->save($fff);
+        }
+        if($request->shipping_2>0){
+            $fff = new Shipping;
+            $fff->count = $request->shipping_2;
+            $fff->weight = 5;
+            $fff->save();
+            $user->shipping()->save($fff);
+        }
+        if($request->shipping_3>0){
+            $fff = new Shipping;
+            $fff->count = $request->shipping_3;
+            $fff->weight = 10;
+            $fff->save();
+            $user->shipping()->save($fff);
+        }
             $user->available -= $subtract;
             $user->balance -= $subtract;
             $user->save();
 
-        return ['success'=>true,'result'=>['msg'=>'The packs successfully added to account']];
+        return ['success'=>true,'result'=>['msg'=>'The packs successfully added to account'],'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available,'shipping'=>$user->shipping];
     }
     public function transfer(Request $request){
         $user = Auth::user();
@@ -568,69 +783,73 @@ class UserController extends BaseController
     public function bump(Request $request){
         $user = Auth::user();
         $advert =  new Advert;
-        $price = Price::find(1);
+
         $advert->save();
         $body=$request->json()->all();
-        $payment = $body['payment'];
+
         $featured = (int)$body['featured'];
         $urgent = (int)$body['urgent'];
         $spotlight = (int)$body['spotlight'];
-        $total = 0;
-        if($featured>0){
-            $total += $price->featured;
-        }
-        if($urgent>0){
-            $total += $price->urgent;
-        }
-        if($spotlight>0){
-            $total += $price->spotlight;
-        }
+        $canship = (int)$body['canship'];
 
-        if($payment==='p'||$payment==='pb'||$payment==='pc'||$payment==='pbc'){
-            if($featured>0&&count($user->featured)>0){
-                $total-=$price->featured;
-            }
-            if($urgent>0&&count($user->urgent)>0){
-                $total-=$price->urgent;
-            }
-            if($spotlight>0&&count($user->spotlight)>0){
-                $total-=$price->spotlight;
-            }
-        }
-        if($payment==='b'||$payment==='pb'||$payment==='pbc'){
-            $subtract = 0;
-            if($user->available>$total){
-                $total=0;
-                $subtract = $total;
+        if($featured===1) {
+            if (isset($body['featured_id'])) {
+                $vd = Featured::find($body['featured_id']);
+                if($vd===null){
+                    return ['msg'=>'Not valid featured id'];
+                }
+                $vd->count--;
+                $vd->save();
             }else{
-                $total-=$user->available;
-                $subtract = $user->available;
+                return ['msg'=>'No featured id'];
             }
         }
-        if($total>0){
-            if (!$request->has('transaction_id')) {
-                return ['msg'=>'Not enough balance or packs to make this operation'];
-            }
-            $transaction = Transaction::where('slug',$request->transaction_id)->first();
-            if($transaction===null){
-                return ['msg'=>'Invalid transaction id'];
-            }
-        }
-        if($featured>0&&$user->featured>0){
-            $user->featured -= 1;
-        }
-        if($urgent>0&&$user->urgent>0){
-            $user->urgent -= 1;
-        }
-        if($spotlight>0&&$user->spotlight>0){
-            $user->spotlight -= 1;
-        }
-        $user->available -= $subtract;
 
-        $user->save();
-        unset($body['card']);
-        unset($body['payment']);
+        if($urgent===1) {
+            if (isset($body['urgent_id'])) {
+                $vd = Urgent::find($body['urgent_id']);
+                if($vd===null){
+                    return ['msg'=>'Not valid urgent id'];
+                }
+                $vd->count--;
+                $vd->save();
+            } else{
+                return ['msg'=>'No urgent id '];
+            }
+        }
+        if($spotlight===1) {
+            if (isset($body['spotlight_id'])) {
+                $vd = Spotlight::find($body['spotlight_id']);
+                if($vd===null){
+                    return ['msg'=>'Not valid spotlight id'];
+                }
+                $vd->count--;
+                $vd->save();
 
+            } else{
+                return ['msg'=>'No spotlight id '];
+            }
+        }
+        if($canship===1){
+            if (isset($body['shipping_id'])) {
+                $vd = Shipping::find($body['shipping_id']);
+                if($vd===null){
+                    return ['msg'=>'Not valid shipping id'];
+                }
+                $vd->count--;
+                $vd->save();
+                $advert->canship=1;
+                $advert->save();
+
+            } else{
+                return ['msg'=>'No shipping id '];
+            }
+        }
+        unset($body['featured_id']);
+        unset($body['urgent_id']);
+        unset($body['spotlight_id']);
+        unset($body['shipping_id']);
+        unset($body['canship']);
         $body['source_id']=$advert->id;
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at']=$milliseconds;
