@@ -95,10 +95,9 @@
                                         map: map
                                     });
                                 }
+                                initMap();
                             </script>
-                            <script async defer
-                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k&callback=initMap">
-                            </script>
+
                         </div>
                     </div>
                 </div>
