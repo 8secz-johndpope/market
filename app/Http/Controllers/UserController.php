@@ -82,7 +82,7 @@ class UserController extends BaseController
     public function mprice(Request $request)
     {
 
-        return ['price'=>$this->cprice($request)];
+        return ['price'=>"sss"];
     }
     public function cprice($request){
 
