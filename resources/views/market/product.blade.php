@@ -100,7 +100,7 @@
                 <div class="buttons">
                     <h4>Seller Info</h4>
                     <ul class="list-group">
-                        <li class="list-group-item">{{$product['username']}}</li>
+                        <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
                     </ul>
                     <ul class="list-group">
                         <li class="list-group-item"> <button class="btn btn-default">Interested to Make Offer</button></li>
