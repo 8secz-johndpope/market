@@ -803,6 +803,8 @@ class UserController extends BaseController
                 }
                 $vd->count--;
                 $vd->save();
+                $advert->canship=1;
+                $advert->save();
 
             } else{
                 return ['msg'=>'No shipping id '];
