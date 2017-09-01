@@ -135,12 +135,7 @@
                                 {{$product['description']}}
                             </p>
                             <ul class="listing-attributes inline-list">
-                                @if(isset($product['meta']['vehicle_registration_year']))
-                                    <li>{{$product['meta']['vehicle_registration_year']}}</li>
-                                    <li>{{$product['meta']['vehicle_mileage']}}</li>
-                                    <li>{{$product['meta']['vehicle_fuel_type']}}</li>
-                                    <li>{{$product['meta']['vehicle_engine_size']}}</li>
-                                @endif
+                                
                             </ul>
                             <div class="items-box-num clearfix">
                                 @if($product['meta']['price']>=0)
