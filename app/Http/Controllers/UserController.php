@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Address;
 use App\Model\Advert;
+use App\Model\Application;
 use App\Model\Category;
 use App\Model\Cover;
 use App\Model\Cv;
@@ -166,6 +167,36 @@ class UserController extends BaseController
         $favorite->save();
 
         return ['msg'=>'Favorite sent'];
+
+    }
+    public function apply(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'No Advert found'];
+        }
+        $cover = Cover::find($request->cover_id);
+        if($cover===null){
+            return ['msg'=>'No Cover found'];
+        }
+        $cv = Cv::find($request->cv_id);
+        if($cv===null){
+            return ['msg'=>'No Cv found'];
+        }
+        $application = new Application;
+        $application->advert_id = $advert->id;
+        $application->user_id =$user->id;
+        $application->cv_id=$cv->id;
+        $application->cover_id = $cover->id;
+        $application->save();
+
+        return ['msg'=>'Application sent'];
 
     }
     public function interest(Request $request)
