@@ -209,6 +209,9 @@ p.listing-description {
 .listing-location {
     color: #000;
 }
+.item.listing{
+  margin: 0;
+}
 /*  -- end --*/
 .read-more{
   text-align: right;

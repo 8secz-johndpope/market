@@ -14,6 +14,7 @@
 
 
 <div class="row">
+    <div class="container">
     <div class="col-md-2 col-md-offset-1">
         <div class="l-visible-large">
             <ul>
@@ -116,7 +117,7 @@
             <div class="col-md-12">
 
             @foreach($products as $product)
-                    <div class="item">
+                    <div class="item listing">
                      <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
                         <div class="listing-img">
                             <div class="main-img">
@@ -200,6 +201,7 @@
     </div>
     <div class="col-md-3">
 
+    </div>
     </div>
 </div>
 
