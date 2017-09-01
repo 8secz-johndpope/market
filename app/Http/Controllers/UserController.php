@@ -127,10 +127,10 @@ class UserController extends BaseController
             $advert = Advert::where('sid', $request->id)->first();
         }
         if ($advert === null) {
-            return ['code' => 0, 'msg' => 'Advert not found'];
+            return ['code' => 1, 'msg' => 'Advert not found'];
         }
         if ($advert->user_id != $user->id) {
-            return ['code' => 1, 'msg' => 'Advert does not belong to you'];
+            return ['code' => 2, 'msg' => 'Advert does not belong to you'];
         }
         $body = $request->json()->all();
         unset($body['id']);
