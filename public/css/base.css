@@ -455,7 +455,13 @@ footer .row {
   text-align: center;
   color: #fff;
 }
-
+.panel-body.hidden-xs {
+    background: transparent;
+}
+.spotligth .item.active {
+    background-color: transparent;
+    box-shadow: none;
+}
 .carousel-control {
   width: 40px;
   color: #000;
