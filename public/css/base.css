@@ -225,6 +225,11 @@ p.listing-description {
 .listing-attributes {
     margin-bottom: 8px;
 }
+.listing-attributes>li:after {
+    content: "|";
+    padding-left: 10px;
+    font-weight: 700;
+}
 /*  -- end --*/
 .read-more{
   text-align: right;
