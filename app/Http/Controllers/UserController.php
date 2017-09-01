@@ -702,7 +702,7 @@ class UserController extends BaseController
             $user->balance -= $subtract;
             $user->save();
 
-        return ['success'=>true,'result'=>['msg'=>'The packs successfully added to account']];
+        return ['success'=>true,'result'=>['msg'=>'The packs successfully added to account'],'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available,'shipping'=>$user->shipping];
     }
     public function transfer(Request $request){
         $user = Auth::user();
