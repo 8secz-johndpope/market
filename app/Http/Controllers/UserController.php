@@ -75,7 +75,6 @@ class UserController extends BaseController
             return ['msg'=>'You cannot rate this order'];
         }
         $review = $request->review;
-
         $cv = new Review;
         $cv->order_id = $order->id;
         $cv->review = $review;
