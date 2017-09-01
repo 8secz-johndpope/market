@@ -143,7 +143,7 @@ class UserController extends BaseController
 // Update doc at /my_index/my_type/my_id
         $response = $this->client->delete($params);
         $advert->delete();
-        return ['msg' => 'deleted', 'response' => $response];
+        return ['code' => 3,'msg' => 'deleted', 'response' => $response];
     }
 
     public function addcover(Request $request)
