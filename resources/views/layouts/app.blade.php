@@ -319,6 +319,7 @@
             lng.value=place.geometry.location.lng();
 
         });
+        initMap();
     }
 
 </script>

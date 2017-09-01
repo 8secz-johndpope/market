@@ -95,7 +95,7 @@
                                         map: map
                                     });
                                 }
-                                initMap();
+
                             </script>
 
                         </div>
