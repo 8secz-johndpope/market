@@ -747,69 +747,48 @@ class UserController extends BaseController
     public function bump(Request $request){
         $user = Auth::user();
         $advert =  new Advert;
-        $price = Price::find(1);
+
         $advert->save();
         $body=$request->json()->all();
-        $payment = $body['payment'];
+
         $featured = (int)$body['featured'];
         $urgent = (int)$body['urgent'];
         $spotlight = (int)$body['spotlight'];
-        $total = 0;
-        if($featured>0){
-            $total += $price->featured;
-        }
-        if($urgent>0){
-            $total += $price->urgent;
-        }
-        if($spotlight>0){
-            $total += $price->spotlight;
-        }
+        $canship = (int)$body['canship'];
 
-        if($payment==='p'||$payment==='pb'||$payment==='pc'||$payment==='pbc'){
-            if($featured>0&&count($user->featured)>0){
-                $total-=$price->featured;
-            }
-            if($urgent>0&&count($user->urgent)>0){
-                $total-=$price->urgent;
-            }
-            if($spotlight>0&&count($user->spotlight)>0){
-                $total-=$price->spotlight;
-            }
-        }
-        if($payment==='b'||$payment==='pb'||$payment==='pbc'){
-            $subtract = 0;
-            if($user->available>$total){
-                $total=0;
-                $subtract = $total;
+        if($featured===1) {
+            if (isset($body['featured_id'])) {
+
             }else{
-                $total-=$user->available;
-                $subtract = $user->available;
+                return ['msg'=>'No featured id'];
             }
         }
-        if($total>0){
-            if (!$request->has('transaction_id')) {
-                return ['msg'=>'Not enough balance or packs to make this operation'];
-            }
-            $transaction = Transaction::where('slug',$request->transaction_id)->first();
-            if($transaction===null){
-                return ['msg'=>'Invalid transaction id'];
-            }
-        }
-        if($featured>0&&$user->featured>0){
-            $user->featured -= 1;
-        }
-        if($urgent>0&&$user->urgent>0){
-            $user->urgent -= 1;
-        }
-        if($spotlight>0&&$user->spotlight>0){
-            $user->spotlight -= 1;
-        }
-        $user->available -= $subtract;
 
-        $user->save();
-        unset($body['card']);
-        unset($body['payment']);
+        if($urgent===1) {
+            if (isset($body['urgent_id'])) {
 
+            } else{
+                return ['msg'=>'No urgent id '];
+            }
+        }
+        if($spotlight===1) {
+            if (isset($body['spotlight_id'])) {
+
+            } else{
+                return ['msg'=>'No spotlight id '];
+            }
+        }
+        if($canship===1){
+            if (isset($body['shipping_id'])) {
+
+            } else{
+                return ['msg'=>'No shipping id '];
+            }
+        }
+        unset($body['featured_id']);
+        unset($body['urgent_id']);
+        unset($body['spotlight_id']);
+        unset($body['shipping_id']);
         $body['source_id']=$advert->id;
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at']=$milliseconds;
