@@ -22,6 +22,7 @@ use App\Model\Order;
 
 use App\Model\Price;
 use App\Model\Report;
+use App\Model\Shipping;
 use App\Model\Spotlight;
 use App\Model\Transaction;
 use App\Model\Urgent;
@@ -758,7 +759,12 @@ class UserController extends BaseController
 
         if($featured===1) {
             if (isset($body['featured_id'])) {
-
+                $vd = Featured::find($body['featured_id']);
+                if($vd===null){
+                    return ['msg'=>'Not valid featured id'];
+                }
+                $vd->count--;
+                $vd->save();
             }else{
                 return ['msg'=>'No featured id'];
             }
@@ -766,13 +772,24 @@ class UserController extends BaseController
 
         if($urgent===1) {
             if (isset($body['urgent_id'])) {
-
+                $vd = Urgent::find($body['urgent_id']);
+                if($vd===null){
+                    return ['msg'=>'Not valid urgent id'];
+                }
+                $vd->count--;
+                $vd->save();
             } else{
                 return ['msg'=>'No urgent id '];
             }
         }
         if($spotlight===1) {
             if (isset($body['spotlight_id'])) {
+                $vd = Spotlight::find($body['spotlight_id']);
+                if($vd===null){
+                    return ['msg'=>'Not valid spotlight id'];
+                }
+                $vd->count--;
+                $vd->save();
 
             } else{
                 return ['msg'=>'No spotlight id '];
@@ -780,6 +797,12 @@ class UserController extends BaseController
         }
         if($canship===1){
             if (isset($body['shipping_id'])) {
+                $vd = Shipping::find($body['shipping_id']);
+                if($vd===null){
+                    return ['msg'=>'Not valid shipping id'];
+                }
+                $vd->count--;
+                $vd->save();
 
             } else{
                 return ['msg'=>'No shipping id '];
@@ -789,6 +812,7 @@ class UserController extends BaseController
         unset($body['urgent_id']);
         unset($body['spotlight_id']);
         unset($body['shipping_id']);
+        unset($body['canship']);
         $body['source_id']=$advert->id;
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at']=$milliseconds;
