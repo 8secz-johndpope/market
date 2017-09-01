@@ -98,8 +98,14 @@
                 </div>
             <div class="col-sm-3">
                 <div class="buttons">
-                    <button class="btn btn-primary">Interested to Make Offer</button>
-                    <button class="btn btn-primary">Save to Favorites</button>
+                    <ul class="list-group">
+                        <li class="list-group-item"> <button class="btn btn-primary">Interested to Make Offer</button></li>
+                        <li class="list-group-item"><button class="btn btn-primary">Save to Favorites</button></li>
+                        <li class="list-group-item"></li>
+                        <li class="list-group-item"></li>
+                    </ul>
+
+
 
                 </div>
 
