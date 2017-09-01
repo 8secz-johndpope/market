@@ -71,6 +71,9 @@ class UserController extends BaseController
         if($order===null){
             return ['msg'=>'No order found'];
         }
+        if($order->buyer_id!==$user->id){
+            return ['msg'=>'You cannot rate this order'];
+        }
         $review = $request->review;
 
         $cv = new Review;
