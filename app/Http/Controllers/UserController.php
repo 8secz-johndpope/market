@@ -267,7 +267,7 @@ class UserController extends BaseController
     public function mprice(Request $request)
     {
 
-        return ['price'=>$this->cprice($request)];
+        return ['price'=>(int)(0.8*$this->cprice($request))];
     }
     public function cprice($request){
 
@@ -279,7 +279,7 @@ class UserController extends BaseController
         $shipping_1 = $request->shipping_1;
         $shipping_2 = $request->shipping_2;
         $shipping_3 = $request->shipping_3;
-        return (int)(0.8*($featured*$price->featured+$urgent*$price->urgent+$spotlight*$price->spotlight+$featured_14*$price->featured_14+$shipping_1*$price->shipping_1+$shipping_2*$price->shipping_2+$shipping_3*$price->shipping_3));
+        return (int)(($featured*$price->featured+$urgent*$price->urgent+$spotlight*$price->spotlight+$featured_14*$price->featured_14+$shipping_1*$price->shipping_1+$shipping_2*$price->shipping_2+$shipping_3*$price->shipping_3));
     }
     public function token(Request $request){
         $gateway = new \Braintree\Gateway(array(
@@ -643,32 +643,12 @@ class UserController extends BaseController
 
         }
         if($total===0) {
-            if($request->featured>0){
-                $fff = new Featured;
-                $fff->days = 7;
-                $fff->count = $request->featured;
-                $fff->save();
-                $user->featured()->save($fff);
-            }
-            if($request->urgent>0){
-                $uuu = new Urgent;
-                $uuu->days = 7;
-                $uuu->count = $request->urgent;
-                $uuu->save();
-                $user->urgent()->save($uuu);
-            }
-            if($request->spotlight>0){
-                $sss = new Spotlight;
-                $sss->days = 7;
-                $sss->count = $request->spotlight;
-                $sss->save();
-                $user->spotlight()->save($sss);
-            }
+
 
             $user->available -= $subtract;
             $user->balance -= $subtract;
             $user->save();
-            return ['success'=>true,'result'=>['msg'=>'The packs successfully added to account'],'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available,'shipping'=>$user->shipping];
+       //     return ['success'=>true,'result'=>['msg'=>'The packs successfully added to account'],'featured'=>$user->featured,'urgent'=>$user->urgent,'spotlight'=>$user->spotlight,'balance'=>$user->balance,'available'=>$user->available,'shipping'=>$user->shipping];
         }
 
         $transaction = Transaction::where('slug',$request->transaction_id)->first();
@@ -681,24 +661,52 @@ class UserController extends BaseController
             if($request->featured>0){
                 $fff = new Featured;
                 $fff->count = $request->featured;
+                $fff->days=7;
                 $fff->save();
                 $user->featured()->save($fff);
             }
             if($request->urgent>0){
                 $uuu = new Urgent;
                 $uuu->count = $request->urgent;
+                $uuu->days = 7;
                 $uuu->save();
                 $user->urgent()->save($uuu);
             }
            if($request->spotlight>0){
                $sss = new Spotlight;
                $sss->count = $request->spotlight;
+               $sss->days = 7;
                $sss-save();
                $user->spotlight()->save($sss);
            }
-
-
-
+            if($request->featured_14>0){
+                $fff = new Featured;
+                $fff->count = $request->featured_14;
+                $fff->days = 14;
+                $fff->save();
+                $user->featured()->save($fff);
+            }
+        if($request->shipping_1>0){
+            $fff = new Shipping;
+            $fff->count = $request->shipping_1;
+            $fff->weight = 2;
+            $fff->save();
+            $user->shipping()->save($fff);
+        }
+        if($request->shipping_2>0){
+            $fff = new Shipping;
+            $fff->count = $request->shipping_2;
+            $fff->weight = 5;
+            $fff->save();
+            $user->shipping()->save($fff);
+        }
+        if($request->shipping_3>0){
+            $fff = new Shipping;
+            $fff->count = $request->shipping_3;
+            $fff->weight = 10;
+            $fff->save();
+            $user->shipping()->save($fff);
+        }
             $user->available -= $subtract;
             $user->balance -= $subtract;
             $user->save();
