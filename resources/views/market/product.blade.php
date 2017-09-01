@@ -82,7 +82,23 @@
                                     frameborder="0" style="border:0"
                                     src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDNgoKnSATE9dpHt44AFXtf7wGkL5eB2L4&center={{$product['location']}}&zoom=18" allowfullscreen>
                             </iframe>
-
+                            <div id="map"></div>
+                            <script>
+                                function initMap(lat,lng) {
+                                    var uluru = {lat: lat, lng: lng};
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 4,
+                                        center: uluru
+                                    });
+                                    var marker = new google.maps.Marker({
+                                        position: uluru,
+                                        map: map
+                                    });
+                                }
+                            </script>
+                            <script async defer
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k&callback=initMap({{$product['location']}})">
+                            </script>
                         </div>
                     </div>
                 </div>
