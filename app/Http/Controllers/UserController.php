@@ -21,6 +21,7 @@ use App\Model\Offer;
 use App\Model\Order;
 
 use App\Model\Price;
+use App\Model\Report;
 use App\Model\Spotlight;
 use App\Model\Transaction;
 use App\Model\Urgent;
@@ -167,6 +168,27 @@ class UserController extends BaseController
         $favorite->save();
 
         return ['msg'=>'Favorite sent'];
+
+    }
+    public function report(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        if($advert===null){
+            return ['msg'=>'No Advert found'];
+        }
+        $report = new Report;
+        $report->advert_id = $advert->id;
+        $report->user_id =$user->id;
+        $report->info=$request->info;
+        $report->save();
+
+        return ['msg'=>'Report sent'];
 
     }
     public function apply(Request $request)
