@@ -970,11 +970,12 @@ class UserController extends BaseController
         }
         $user = new User;
 
-        //Creating a token without scopes...
-        $token = $user->createToken('Token Name')->accessToken;
+
 
         $user->more(['email' => $request->email, 'name' => $request->name, 'password' => bcrypt($request->password), 'phone' => $request->phone]);
         $user->save();
+
+
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, "https://fire.sumra.net/updatetitle");
@@ -991,6 +992,10 @@ class UserController extends BaseController
         $account->legal_entity->type = 'individual';
         $account->save();
 
+        $user = Auth::user();
+        //Creating a token without scopes...
+        $token = $user->createToken('Token Name')->accessToken;
+        
         return ['msg' => 'success','token' => $token, 'id' => $user->id, 'email' => $user->email, 'name' => $user->name];
     }
 
