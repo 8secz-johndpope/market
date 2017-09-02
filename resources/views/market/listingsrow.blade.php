@@ -180,54 +180,7 @@
             </ul>
             </div>
         </nav>
-        <ul class="pager">
-            @if($page!=1)
-                <li class="pager-prev visible-pc">
-                    <ul>
-                        <li class="pager-cell">
-                            <a href="{{$pageurl}}&page=1">
-                                <i class="icon-arrow-double-left"></i>
-                            </a>
-                        </li>
-                        <li class="pager-cell">
-                            <a href="{{$pageurl}}&page={{$page-1}}">
-                                <i class="icon-arrow-left"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            @endif
-
-            <li class="pager-num">
-                <ul>
-                    @foreach($pages as $p)
-                        <li class="pager-cell {{$page==$p?'active':''}}">
-                            @if($page===$p)
-                                {{$p}}
-                            @else
-                                <a href="{{$pageurl}}&page={{$p}}">{{$p}}</a>
-                            @endif
-                        </li>
-                    @endforeach
-                </ul>
-            </li>
-            @if($page!=$max)
-                <li class="pager-next visible-pc">
-                    <ul>
-                        <li class="pager-cell">
-                            <a href="{{$pageurl}}&page={{$page+1}}">
-                                <i class="icon-arrow-right"></i>
-                            </a>
-                        </li>
-                        <li class="pager-cell">
-                            <a href="{{$pageurl}}&page={{$max}}">
-                                <i class="icon-arrow-double-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            @endif
-        </ul>
+     
     </div>
     <div class="col-md-3">
 
