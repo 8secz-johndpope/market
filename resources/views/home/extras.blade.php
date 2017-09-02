@@ -9,6 +9,8 @@
                     <option value="{{$value->slug}}">{{$value->title}}</option>
                     @endforeach
             </select>
+            @else
+            <input class="form-control" type="text" name="{{$field->slug}}">
         @endif
     </div>
 @endforeach
