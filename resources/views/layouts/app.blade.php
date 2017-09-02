@@ -359,6 +359,9 @@
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });
+    $(".main-category").on("click", function(event){
+        console.log($(this).data('category'));
+    });
 </script>
 </body>
 </html>
