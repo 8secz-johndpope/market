@@ -29,6 +29,9 @@
             font-weight: bold;
             font-style: italic;
         }
+        span.extra-title {
+            font-weight: bold;
+        }
         .grayborder{
             border: solid 1px gray;
         }
