@@ -422,7 +422,9 @@
             $('.category-level-4').html(data);
         });
     });
-
+    $(".category-level-4").on("click","li", function(event) {
+        $("#continue-button").attr('disabled',false);
+    });
 </script>
 </body>
 </html>
