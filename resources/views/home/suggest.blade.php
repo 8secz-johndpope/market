@@ -1,6 +1,6 @@
 @foreach($categories as $category)
     <li class="list-group-item">
-       <h4>{{$category->title}}</h4>
+       <span class="suggest-title">{{$category->title}}</span>
         <p>{{$category->parentstring}}</p>
     </li>
 @endforeach
