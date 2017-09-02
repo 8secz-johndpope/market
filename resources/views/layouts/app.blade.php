@@ -39,6 +39,9 @@
             line-height: 100px;
             cursor: pointer;
         }
+        .floatright {
+            float: right;
+        }
         .buttons{
              margin-top: 150px;
         }
