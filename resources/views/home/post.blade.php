@@ -104,7 +104,7 @@
                    <div class="row">
                        <div class="col-sm-12 location-selected">
                            <p>Your Location</p>
-                           <span class="extra-large">M139AX</span><a>(Edit)</a>
+                           <span class="extra-large">M139AX</span><a class="edit-location">(Edit)</a>
                        </div>
                        <div class="col-sm-12 edit-location">
                            <form class="form-inline">
