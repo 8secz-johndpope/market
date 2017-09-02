@@ -129,7 +129,9 @@
                         <div class="items-box-body listing-content">
                             <h4 class="items-box-name font-2">{{$product['title']}}</h4>
                             <div class="listing-location">
-                                {{$product['location_name']}}
+                                <span class="truncate-line">
+                                    {{$product['location_name']}}
+                                </span>
                             </div>
                             <p class="listing-description">
                                 {{$product['description']}}
