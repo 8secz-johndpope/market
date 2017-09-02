@@ -87,7 +87,7 @@ a.navbar-brand {
 form.navbar-form {
     margin: 0;
 }
-section .panel{
+section .custompanel{
   display: inline-grid;
   /* height: 400px;*/
   margin: 0 1%;

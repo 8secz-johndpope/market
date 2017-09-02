@@ -17,17 +17,17 @@
     <div class="container">
     <div class="col-md-2 col-md-offset-1">
         <div class="l-visible-large">
-            <ul>
+            <ul class="list-group">
                 @foreach($parents as $parent)
-                    <li><a href="/{{$parent->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
+                    <li class="list-group-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
                 @endforeach
             </ul>
         </div>
         <div class="l-visible-large">
             <h4>{{$category->title}}</h4>
-            <ul>
+            <ul class="list-group">
                 @foreach($categories as $cat)
-                        <li><a href="/{{$cat->slug}}">{{$cat->title}}</a>&nbsp;&nbsp;{{$cat->count}}</li>
+                        <li class="list-group-item"><a href="/{{$cat->slug}}">{{$cat->title}}</a>&nbsp;&nbsp;{{$cat->count}}</li>
                 @endforeach
             </ul>
         </div>
@@ -94,12 +94,12 @@
         @foreach($filters as $filter)
             <div class="l-visible-large">
                 <h4>{{$filter->title}}</h4>
-                <ul>
+                <ul class="list-group">
                     @foreach($filter->vals as $val)
                         @if($val->selected===1)
-                            <li>{{$val->title}}</li>
+                            <li class="list-group-item">{{$val->title}}</li>
                         @else
-                            <li><a href="{!! $val->url !!}">{{$val->title}}</a>&nbsp;&nbsp;{{$val->count}}</li>
+                            <li class="list-group-item"><a href="{!! $val->url !!}">{{$val->title}}</a>&nbsp;&nbsp;{{$val->count}}</li>
                         @endif
                     @endforeach
                 </ul>
@@ -153,6 +153,13 @@
 
             </div>
         </section>
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+            </ul>
+        </nav>
+
         <ul class="pager">
             @if($page!=1)
                 <li class="pager-prev visible-pc">

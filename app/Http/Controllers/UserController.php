@@ -1006,14 +1006,16 @@ class UserController extends BaseController
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $server_output = curl_exec($ch);
         curl_close($ch);
+        /*
         $names = explode(' ', $user->name);
         $account = \Stripe\Account::retrieve($user->stripe_account);
         $account->legal_entity->first_name = $names[0];
         $account->legal_entity->last_name = $names[1];
         $account->legal_entity->type = 'individual';
         $account->save();
+        */
 
-     
+
         //Creating a token without scopes...
         $token = $user->createToken('Token Name')->accessToken;
 
