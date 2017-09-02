@@ -29,8 +29,37 @@
             font-weight: bold;
             font-style: italic;
         }
+        .grayborder{
+            border: solid 1px gray;
+        }
+        .height100{
+            height: 50px;
+            padding: 10px;
+        }
+        .selected-location{
+            margin-top: 20px;
+        }
+        .main-category {
+            width: 14.28%;
+            float: left;
+            height: 100px;
+            border: 1px solid gray;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px;
+            cursor: pointer;
+        }
+        .floatright {
+            float: right;
+        }
         .buttons{
              margin-top: 150px;
+        }
+        .nomargin{
+            margin: 0px;
+        }
+        .nopadding{
+            padding: 0px;
         }
         img.lazyload{
             width: 100%;
@@ -40,6 +69,12 @@
             margin: 0;
             background: #e9e9e9;
         }
+        .sub-category {
+            height: 400px;
+            border: 1px solid gray;
+            padding: 0px;
+            overflow-x: scroll;
+        }
         #map {
             height: 400px;
             width: 100%;
@@ -47,6 +82,12 @@
         .masonry { /* Masonry container */
             column-count: 3;
             column-gap: 1em;
+        }
+        .category-title{
+            font-size: 20px;
+            margin-left: 10px;
+            font-weight: bold;
+
         }
 
         .item { /* Masonry bricks or child elements */
@@ -338,6 +379,77 @@
             window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
+    });
+    $(".main-category").on("click", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
+        $('.category-level-2').html('');
+        $('.category-level-3').html('');
+        $('.category-level-4').html('');
+        console.log($(this).data('category'));
+        $.get("/category/children/"+$(this).data('category'), function(data, status){
+            console.log(data);
+            $('.category-level-1').html(data);
+        });
+    });
+    $(".category-level-1").on("click","li", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
+        $('.category-level-3').html('');
+        $('.category-level-4').html('');
+        var count = $(this).data('children');
+        if(count===0){
+            $('.category-level-2').html('');
+            $("#continue-button").attr('disabled',false);
+
+            $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
+            return;
+        }
+        $("#continue-button").attr('disabled',true);
+
+        console.log($(this).data('category'));
+        $.get("/category/children/"+$(this).data('category'), function(data, status){
+            console.log(data);
+            $('.category-level-2').html(data);
+        });
+    });
+    $(".category-level-2").on("click","li", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
+        $('.category-level-4').html('');
+        var count = $(this).data('children');
+        if(count===0){
+            $('.category-level-3').html('');
+            $("#continue-button").attr('disabled',false);
+            $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
+            return;
+        }
+        $("#continue-button").attr('disabled',true);
+
+        console.log($(this).data('category'));
+        $.get("/category/children/"+$(this).data('category'), function(data, status){
+            console.log(data);
+            $('.category-level-3').html(data);
+        });
+    });
+    $(".category-level-3").on("click","li", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
+        var count = $(this).data('children');
+        if(count===0){
+            $('.category-level-4').html('');
+            $("#continue-button").attr('disabled',false);
+            $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
+            return;
+        }
+        $("#continue-button").attr('disabled',true);
+
+        console.log($(this).data('category'));
+        $.get("/category/children/"+$(this).data('category'), function(data, status){
+            console.log(data);
+            $('.category-level-4').html(data);
+        });
+    });
+    $(".category-level-4").on("click","li", function(event) {
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
+        $("#continue-button").attr('disabled',false);
+        $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
     });
 </script>
 </body>

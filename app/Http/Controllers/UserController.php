@@ -20,6 +20,7 @@ use App\Model\Interest;
 use App\Model\Offer;
 use App\Model\Order;
 
+use App\Model\Payment;
 use App\Model\Price;
 use App\Model\Report;
 use App\Model\Review;
@@ -47,7 +48,27 @@ class UserController extends BaseController
             return ['msg' => "Invalid Credentials"];
         }
     }
+    public function contract(Request $request)
+    {
 
+        $price = $this->cprice($request);
+        $discounted = (int)(0.75*$price);
+        if($discounted<250000){
+            return ['msg'=>'Minimum £2500 is needed to start a contract'];
+        }
+        if(!$request->has('transaction_id')){
+            return ['msg'=>'5% deposit is required to start the contract'];
+        }
+        $monthly = (int)(0.95*1.2*$price/12);
+        foreach (range(3,15) as $i){
+            $payment = new Payment;
+            $payment->amount = $monthly;
+            $payment->charge_at = date("Y-m-d H:i:s",strtotime('+'.$i.' months'));
+            $payment->save();
+        }
+        return ['msg'=>'contract has just started'];
+
+    }
     public function addcv(Request $request)
     {
         $user = Auth::user();

@@ -14,6 +14,7 @@
 
 
 <div class="row">
+    <div class="container">
     <div class="col-md-2 col-md-offset-1">
         <div class="l-visible-large">
             <ul>
@@ -116,7 +117,7 @@
             <div class="col-md-12">
 
             @foreach($products as $product)
-                    <div class="item">
+                    <div class="item listing">
                      <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
                         <div class="listing-img">
                             <div class="main-img">
@@ -133,6 +134,9 @@
                             <p class="listing-description">
                                 {{$product['description']}}
                             </p>
+                            <ul class="listing-attributes inline-list">
+                                
+                            </ul>
                             <div class="items-box-num clearfix">
                                 @if($product['meta']['price']>=0)
                                     <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
@@ -200,6 +204,7 @@
     </div>
     <div class="col-md-3">
 
+    </div>
     </div>
 </div>
 

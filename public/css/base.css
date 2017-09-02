@@ -45,6 +45,7 @@ a.navbar-brand {
 }
 
 
+
 .categories{
   margin: 30px auto;
 }
@@ -189,7 +190,7 @@ a.listing-product{
   display: inline-flex;
 }
 .listing-img {
-    width: 200px;
+    width: 120px;
 }
 .items-box-body.listing-content {
     width: calc(100% - 300px);
@@ -199,13 +200,36 @@ a.listing-product {
     text-decoration: none;
 }
 h4.items-box-name.font-2 {
-    color: #ff8830;
+  color: #ff8830;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: auto;
+  -webkit-line-clamp: 1;
 }
 p.listing-description {
-    color: #8a848d;
+  color: #8a848d;
+  max-height: 41px;
+  overflow: hidden;
 }
 .listing-location {
-    color: #000;
+  color: #000;
+  margin-bottom: 8px;
+  margin-right: 0;
+  font-weight: 700;
+}
+.item.listing{
+  margin: 0;
+  border-bottom: 1px solid #f1f0f1;
+}
+.listing-attributes {
+    margin-bottom: 8px;
+}
+.listing-attributes>li:after {
+    content: "|";
+    padding-left: 10px;
+    font-weight: 700;
 }
 /*  -- end --*/
 .read-more{
@@ -450,7 +474,13 @@ footer .row {
   text-align: center;
   color: #fff;
 }
-
+.panel-body.hidden-xs {
+    background: transparent;
+}
+.spotligth .item.active {
+    background-color: transparent;
+    box-shadow: none;
+}
 .carousel-control {
   width: 40px;
   color: #000;
@@ -471,6 +501,8 @@ a.left.carousel-control {
 .items-box-price.font-5 {
     color: #ff8830;
     font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 .carousel-indicators li{
   border: 1px solid #ff8830;

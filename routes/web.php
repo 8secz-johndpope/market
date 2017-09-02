@@ -14,6 +14,8 @@ Route::get('/dummy', 'MarketController@dummy');
 Route::get('/pull', 'MarketController@pull');
 Route::get('/update', 'MarketController@update');
 Route::get('/insert', 'MarketController@insert');
+Route::get('/post', 'HomeController@post');
+Route::get('/category/children/{id}', 'HomeController@children');
 
 Route::get('/fields/{any}', 'MarketController@fields');
 Route::get('/filters/{any}', 'MarketController@filters');
