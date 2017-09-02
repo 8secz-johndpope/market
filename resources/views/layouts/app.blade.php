@@ -374,6 +374,7 @@
     $(".category-level-1").on("click","li", function(event){
         var count = $(this).data('children');
         if(count==='0'){
+            $("#continue-button").enable();
             return;
         }
         console.log($(this).data('category'));
@@ -385,6 +386,7 @@
     $(".category-level-2").on("click","li", function(event){
         var count = $(this).data('children');
         if(count==='0'){
+            $("#continue-button").enable();
             return;
         }
         console.log($(this).data('category'));
@@ -396,6 +398,7 @@
     $(".category-level-3").on("click","li", function(event){
         var count = $(this).data('children');
         if(count==='0'){
+            $("#continue-button").enable();
             return;
         }
         console.log($(this).data('category'));
