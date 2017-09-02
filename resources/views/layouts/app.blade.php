@@ -35,6 +35,9 @@
         a.select-category-link {
             float: right;
         }
+        .manual-category-panel,.selected-category-panel,.selected-location-panel,.extra-options-panel,.title-panel,.price-panel,.featured-panel,.post-panel{
+            display: none;
+        }
         span.span-urgent, span.span-featured,span.span-spotlight,span.span-shipping {
 
             color: white;
@@ -43,6 +46,9 @@
             display: inline-block;
             text-align: center;
             border-radius: 5px;
+            font-weight: bold;
+        }
+        span.select-category {
             font-weight: bold;
         }
         span.suggest-title {
@@ -500,6 +506,9 @@
             console.log(data);
             $('.category-sting').html(data);
         })
+    });
+    $(".browse-category").click(function () {
+
     });
 </script>
 </body>

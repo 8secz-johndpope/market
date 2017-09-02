@@ -16,7 +16,7 @@
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
 
-           <div class="panel panel-default">
+           <div class="panel panel-default automatic-category-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Category</h3>
                </div>
@@ -36,13 +36,13 @@
                            </ul>
                        </div>
                        <div class="col-sm-12">
-                           <a>Or browse to find a category</a>
+                           <a class="browse-category">Or browse to find a category</a>
                        </div>
                    </div>
                </div>
            </div>
 
-           <div class="panel panel-default">
+           <div class="panel panel-default  manual-category-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Select Category</h3>
                </div>
@@ -82,7 +82,7 @@
                </div>
            </div>
 
-           <div class="panel panel-default">
+           <div class="panel panel-default selected-category-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Category</h3>
                </div>
@@ -96,7 +96,7 @@
                </div>
            </div>
 
-           <div class="panel panel-default">
+           <div class="panel panel-default selected-location-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Location</h3>
                </div>
@@ -116,7 +116,7 @@
                </div>
            </div>
 
-           <div class="panel panel-default">
+           <div class="panel panel-default extra-options-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Select Options</h3>
                </div>
@@ -130,7 +130,7 @@
            </div>
 
 
-           <div class="panel panel-default">
+           <div class="panel panel-default title-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Title</h3>
                </div>
@@ -141,7 +141,7 @@
            </div>
 
 
-           <div class="panel panel-default">
+           <div class="panel panel-default description-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Description</h3>
                </div>
@@ -157,7 +157,7 @@
            </div>
 
 
-           <div class="panel panel-default">
+           <div class="panel panel-default price-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Price</h3>
                </div>
@@ -168,7 +168,7 @@
                </div>
            </div>
 
-           <div class="panel panel-default">
+           <div class="panel panel-default featured-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Make your ad stand out!</h3>
                </div>
@@ -204,7 +204,7 @@
                </div>
            </div>
 
-           <div class="panel panel-success">
+           <div class="panel panel-success total-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Total</h3>
                </div>
@@ -214,7 +214,7 @@
            </div>
 
 
-           <div class="panel panel-info">
+           <div class="panel panel-info post-panel">
                <div class="panel-heading">
                    <h3 class="panel-title"></h3>
                </div>
