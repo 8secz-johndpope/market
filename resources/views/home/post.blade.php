@@ -19,6 +19,20 @@
                    {{$category->title}}
                </div>
            @endforeach
+           <div class="row">
+               <div class="col-lg-3 sub-category">
+
+               </div>
+               <div class="col-lg-3 sub-category">
+
+               </div>
+               <div class="col-lg-3 sub-category">
+
+               </div>
+               <div class="col-lg-3 sub-category">
+
+               </div>
+           </div>
        </div>
        <div class="col-lg-2"></div>
    </div>
