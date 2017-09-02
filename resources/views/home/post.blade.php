@@ -128,6 +128,16 @@
                </div>
            </div>
 
+
+           <div class="panel panel-default">
+               <div class="panel-heading">
+                   <h3 class="panel-title">Title</h3>
+               </div>
+               <div class="panel-body">
+                   <input type="text" name="title" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title">
+               </div>
+           </div>
+
            <div class="ad-title">
                <div class="row">
                    <div class="col-sm-12">
