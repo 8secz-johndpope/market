@@ -42,6 +42,9 @@
             border-radius: 5px;
             font-weight: bold;
         }
+        span.suggest-title {
+            font-weight: bold;
+        }
         span.span-urgent{
             background: #ec4231;
         }
