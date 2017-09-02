@@ -375,6 +375,21 @@
             $('.category-level-2').html(data);
         });
     });
+    $(".category-level-2").on("click","li", function(event){
+        console.log($(this).data('category'));
+        $.get("/category/children/"+$(this).data('category'), function(data, status){
+            console.log(data);
+            $('.category-level-3').html(data);
+        });
+    });
+    $(".category-level-3").on("click","li", function(event){
+        console.log($(this).data('category'));
+        $.get("/category/children/"+$(this).data('category'), function(data, status){
+            console.log(data);
+            $('.category-level-4').html(data);
+        });
+    });
+
 </script>
 </body>
 </html>
