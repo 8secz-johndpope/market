@@ -167,6 +167,13 @@
                                    <span class="span-spotlight">Spotlight</span> &nbsp;&nbsp;Have your Ad seen on the Sumra homepage!
                                </label>
                            </div></li>
+
+                       <li class="list-group-item"><div class="form-check">
+                               <label class="form-check-label">
+                                   <input class="form-check-input" type="checkbox" value="">
+                                   <span class="span-spotlight">CanShip</span> &nbsp;&nbsp;Ship to the buyer when order is placed.
+                               </label>
+                           </div></li>
                    </ul>
                </div>
            </div>
