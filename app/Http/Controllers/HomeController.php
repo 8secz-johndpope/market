@@ -120,7 +120,10 @@ class HomeController extends BaseController
                 $parents[]=$cur->parent;
                 $cur=$cur->parent;
             }
-            $category->parents = $parents;
+            $titles =  array_map(function ($a) {
+               return $a->title;
+            }, $parents);
+            $category->parentstring = implode('>',$titles);
             $categories[]=$category;
         }
        return $categories;
