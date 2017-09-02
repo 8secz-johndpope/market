@@ -157,7 +157,7 @@
             <ul class="pagination">
 
                 <li class=" @if($page===1)disabled @endif">
-                    <a href="#" aria-label="Previous">
+                    <a href="{{$pageurl}}&page={{$page-1}}" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
@@ -172,7 +172,7 @@
                 @endforeach
 
                 <li class=" @if($page===$max)disabled @endif">
-                    <a href="#" aria-label="Next">
+                    <a href="{{$pageurl}}&page={{$page+1}}" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
