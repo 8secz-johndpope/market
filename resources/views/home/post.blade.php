@@ -103,7 +103,16 @@
                </div>
            </div>
            <div class="selected-extras">
-               <div class="row category-extras"></div>
+               <div class="row">
+                   <div class="col-sm-12">
+                       <div class="grayborder height100">
+                           Select Options
+                       </div>
+                   </div>
+                   <div class="col-sm-12">
+                       <div class="row category-extras"></div>
+                   </div>
+               </div>
            </div>
        </div>
        <div class="col-lg-2"></div>
