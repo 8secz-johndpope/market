@@ -25,9 +25,9 @@
                    <div class="col-sm-6">
                        <div class="form-group">
                            <label for="exampleInputEmail1">Tell us what you are posting:</label>
-                           <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex, iPhone, Samsung">
+                           <input type="text" class="form-control posting-string" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex, iPhone, Samsung">
                        </div>
-                       <ul class="list-group">
+                       <ul class="list-group category-suggest">
 
                        </ul>
                    </div>

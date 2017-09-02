@@ -483,6 +483,12 @@
             $('.category-extras').html(data);
         });
     }
+    $('input.posting-string').on('input',function(e){
+        $.get("/category/suggest?q="+$(this).val(), function(data, status){
+            console.log(data);
+            $('.category-suggest').html(data);
+        });
+    });
 </script>
 </body>
 </html>
