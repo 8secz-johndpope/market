@@ -778,6 +778,7 @@ a.left.carousel-control {
   }
   .items-box-body.listing-content {
     /*width: 100%;*/
+    min-height: 75px;
   }
   .items-box-price.font-5 {
     font-size: 16px;
