@@ -751,9 +751,13 @@ a.left.carousel-control {
     height: 40px;
     position: relative;
     white-space: normal;
+    font-size: 16px;
   }
   .items-box-body.listing-content {
     width: 100%;
+  }
+  .items-box-price.font-5 {
+    font-size: 16px;
   }
 }
 
