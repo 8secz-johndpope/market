@@ -142,7 +142,20 @@
 
                </div>
            </div>
+
+           <div class="ad-title">
+               <div class="row">
+                   <div class="col-sm-12">
+                       <div class="grayborder height100">
+                           <span class="category-title" >Price</span>
+                       </div>
+                   </div>
+                   <div class="col-sm-6"><input type="text" name="title" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title"></div>
+                   
+               </div>
+           </div>
        </div>
+
        <div class="col-lg-2"></div>
    </div>
     @endsection
