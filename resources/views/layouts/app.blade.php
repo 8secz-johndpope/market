@@ -508,7 +508,6 @@
         })
     });
     $(".browse-category").click(function () {
-        $(".automatic-category-panel").hide();
         $(".manual-category-panel").show();
     });
 </script>
