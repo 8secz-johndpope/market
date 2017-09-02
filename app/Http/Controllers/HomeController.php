@@ -84,6 +84,19 @@ class HomeController extends BaseController
         $category = Category::find($id);
         return view('home.categorylist',['categories'=>$category->children]);
     }
+    public  function extras(Request $request,$id){
+        $category = Category::find($any);
+        if($category===null){
+            return ['msg'=>'Catagory not found'];
+        }
+        $fields = $category->fields;
+        foreach ($fields as $field){
+            if($field->type==='list'){
+                $field->values = $field->values;
+            }
+        }
+        return view('home.categorylist',['categories'=>$category->children]);
+    }
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
         $j = 0;
