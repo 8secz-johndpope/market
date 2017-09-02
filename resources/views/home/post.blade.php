@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+    <h3>Select Category</h3>
    <div class="row">
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
