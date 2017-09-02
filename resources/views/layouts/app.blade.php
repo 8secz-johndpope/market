@@ -499,6 +499,7 @@
         $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
     });
     function get_extras(category) {
+        if($(".location-selected").is(':visible'))
         $(".all-panels").show();
         $.get("/category/string/"+category, function(data, status){
             console.log(data);
