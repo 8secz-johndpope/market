@@ -114,7 +114,7 @@
             </h2>
 
 
-            <div class="col-xs-12 col-md-12">
+            <div class="col-xs-12  col-md-12">
 
             @foreach($products as $product)
                     <div class="item listing">
