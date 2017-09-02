@@ -79,6 +79,41 @@ class HomeController extends BaseController
 
         return view('home.post',['categories'=>$categories]);
     }
+    public function suggest(Request $request)
+    {
+        $text = $request->q;
+        if(preg_match('/\s/',$text)>0){
+            $dict = ['title.keyword'=> strtolower($text)];
+
+        }else{
+            $dict = ['title'=> strtolower($text)];
+
+        }
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size' => 0,
+                'query' => ['bool'=>['should'=>[['term'=>$dict]]]],
+                'aggs' => [
+                    'group_by_category' => [
+                        "terms" => [ "field"=> "category", "size"=> 5]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        // return $response;
+        $buckets = $response['aggregations']['group_by_category']['buckets'];
+        $bts = array_filter($buckets, function( $a ) {
+
+            return Category::find($a['key']) !== null;
+        } );
+        $bts = array_values($bts);
+       return $bts;
+
+        return view('home.post',['categories'=>$categories]);
+    }
     public function children(Request $request,$id)
     {
         $category = Category::find($id);
