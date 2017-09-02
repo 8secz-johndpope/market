@@ -109,7 +109,7 @@
                            <form class="form-inline">
                                <label class="sr-only" for="inlineFormInput">Postcode</label>
                                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="postcode-text" placeholder="Postcode">
-                               <button class="btn btn-danger postcode-submit">Go</button>
+                               <a class="btn btn-danger postcode-submit">Go</a>
                            </form>
                        </div>
 
