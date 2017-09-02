@@ -32,6 +32,15 @@
         span.extra-title {
             font-weight: bold;
         }
+        span.span-urgent, span.span-featured,span.span-spotlight {
+            background: #e45d5d;
+            color: white;
+            padding: 2px;
+            width: 100px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 5px;
+        }
         .grayborder{
             border: solid 1px gray;
         }
