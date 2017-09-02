@@ -13,7 +13,7 @@
 @section('content')
 
 
-<div class="row">
+<div class="row listings">
     <div class="container">
     <div class="col-md-2 col-md-offset-1">
         <div class="l-visible-large">
