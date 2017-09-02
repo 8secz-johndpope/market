@@ -514,6 +514,11 @@
     $(".browse-category").click(function () {
         $(".manual-category-panel").show();
     });
+    $(".edit-category").click(function () {
+       $('.all-panels').hide();
+       $('.selected-category-panel').hide();
+       $('.automatic-category-panel').show();
+    });
 </script>
 </body>
 </html>

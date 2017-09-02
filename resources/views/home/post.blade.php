@@ -90,7 +90,7 @@
                    <div class="row">
                        <div class="col-sm-11"><span class="category-sting"></span> </div>
                        <div class="col-sm-1">
-                           <a class="btn btn-default">Edit</a>
+                           <a class="btn btn-default edit-category">Edit</a>
                        </div>
                    </div>
                </div>
