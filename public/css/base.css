@@ -199,6 +199,7 @@ a.listing-product{
 }
 a.listing-product {
     text-decoration: none;
+    display:block;
 }
 h4.items-box-name.font-2 {
   color: #ff8830;
