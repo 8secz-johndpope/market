@@ -30,6 +30,7 @@
 
                    </div>
                        <div class="col-sm-12">
+                           <h4>Suggested Categories</h4>
                            <ul class="list-group category-suggest">
 
                            </ul>
