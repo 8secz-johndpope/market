@@ -36,7 +36,7 @@
             height: 50px;
             padding: 10px;
         }
-        .selected-location{
+        .selected-location, .selected-extras{
             margin-top: 20px;
         }
         .main-category {
