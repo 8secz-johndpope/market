@@ -774,6 +774,7 @@ a.left.carousel-control {
     position: relative;
     white-space: normal;
     font-size: 16px;
+    margin-top: 0;
   }
   .items-box-body.listing-content {
     /*width: 100%;*/
