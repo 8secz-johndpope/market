@@ -750,6 +750,10 @@ a.left.carousel-control {
     margin-right: 40px;
     height: 40px;
     position: relative;
+    white-space: normal;
+  }
+  .items-box-body.listing-content {
+    width: auto;
   }
 }
 
