@@ -368,7 +368,7 @@
             $('.category-level-1').html(data);
         });
     });
-    $(".category-level-1 li").on("click", function(event){
+    $(".category-level-1").on("click","li", function(event){
         console.log($(this).data('category'));
         $.get("/category/children/"+$(this).data('category'), function(data, status){
             console.log(data);
