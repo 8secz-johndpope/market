@@ -76,7 +76,7 @@ class HomeController extends BaseController
     public function post(Request $request)
     {
 
-
+        return view('home.post');
     }
 
     public function baseAndFirstChildren(){
