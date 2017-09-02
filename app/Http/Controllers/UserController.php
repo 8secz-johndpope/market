@@ -635,6 +635,9 @@ class UserController extends BaseController
         $body['username'] = $user->name;
         $body['user_id'] = $user->id;
         $body['phone'] = $user->phone;
+        if(!isset($body['meta']['price'])){
+            $body['meta']['price'] = -1;
+        }
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
