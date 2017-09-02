@@ -73,6 +73,12 @@
             column-count: 3;
             column-gap: 1em;
         }
+        .category-title{
+            font-size: 20px;
+            margin-left: 10px;
+            font-weight: bold;
+            
+        }
 
         .item { /* Masonry bricks or child elements */
             background-color: #eee;
