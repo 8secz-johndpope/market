@@ -115,6 +115,7 @@
                </div>
            </div>
            <div class="ad-title">
+               <div class="row">
                <div class="col-sm-12">
                    <div class="grayborder height100">
                        <span class="category-title" >Title</span>
@@ -123,7 +124,7 @@
                <div class="col-sm-6"><input type="text" class="form-control" placeholder="Title"></div>
                <div class="col-sm-6"><p>100 characters remaining</p></div>
                <div class="col-sm-6"><p>Write a short description of your ad and include all of the key highlights.</p></div>
-
+               </div>
            </div>
        </div>
        <div class="col-lg-2"></div>
