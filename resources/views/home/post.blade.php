@@ -124,6 +124,7 @@
                    <div class="col-sm-6"><input type="text" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title"></div>
                <div class="col-sm-6"><p>100 characters remaining</p></div>
                <div class="col-sm-6"><p>Write a short description of your ad and include all of the key highlights.</p></div>
+                   <div class="col-sm-6"></div>
                </div>
            </div>
        </div>
