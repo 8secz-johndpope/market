@@ -42,7 +42,7 @@
                </div>
            </div>
            <div class="row" style="margin-top: 30px;margin-bottom: 30px">
-               <div class="col-sm-2 col-sm-offset-10">
+               <div class="col-sm-1 col-sm-offset-11">
                    <a class="btn btn-danger">Continue</a>
                </div>
            </div>
