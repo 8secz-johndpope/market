@@ -110,10 +110,18 @@ class HomeController extends BaseController
             return Category::find($a['key']) !== null;
         } );
         $bts = array_values($bts);
-        return $bts;
+        //return $bts;
         $categories=array();
         foreach ($bts as $bt){
-            $categories[]=Category::find($bt['key']);
+            $category = Category::find($bt['key']);
+            $parents = array();
+            $cur = $category;
+            while ($cur->prent!==null){
+                $parents[]=$cur->parent;
+                $cur=$cur->parent;
+            }
+            $category->parents = $parents;
+            $categories[]=$category;
         }
        return $categories;
 
