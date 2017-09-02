@@ -638,6 +638,7 @@ class UserController extends BaseController
         if(!isset($body['meta']['price'])){
             $body['meta']['price'] = -1;
         }
+        unset($body['id']);
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
