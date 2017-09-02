@@ -233,6 +233,12 @@ p.listing-description {
     padding-left: 10px;
     font-weight: 700;
 }
+.listing-img .main-img {
+    width: 100%;
+    float: left;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
 /*  -- end --*/
 .read-more{
   text-align: right;
