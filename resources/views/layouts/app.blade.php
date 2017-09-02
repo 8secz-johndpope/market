@@ -32,6 +32,9 @@
         span.extra-title {
             font-weight: bold;
         }
+        a.select-category-link {
+            float: right;
+        }
         span.span-urgent, span.span-featured,span.span-spotlight,span.span-shipping {
 
             color: white;
