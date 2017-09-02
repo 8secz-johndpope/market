@@ -88,19 +88,10 @@
                        <div class="grayborder height100">
                            <div class="row">
                                <div class="col-sm-11">
-                                   <form class="form-horizontal">
-                                       <div class="form-group">
-                                           <label class="control-label col-sm-2" for="postcode">Postcode:</label>
-                                           <div class="col-sm-10">
-                                               <input type="text" class="form-control" id="postcode" placeholder="SW115BG">
-                                           </div>
-                                       </div>
-
-                                       <div class="form-group">
-                                           <div class="col-sm-offset-2 col-sm-10">
-                                               <button class="btn btn-danger">Go</button>
-                                           </div>
-                                       </div>
+                                   <form class="form-inline">
+                                       <label class="sr-only" for="inlineFormInput">Postcode</label>
+                                       <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="M139AX">
+                                       <button class="btn btn-danger">Go</button>
                                    </form>
                                </div>
                                <div class="col-sm-1">
