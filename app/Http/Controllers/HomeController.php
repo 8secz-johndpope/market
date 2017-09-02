@@ -130,6 +130,22 @@ class HomeController extends BaseController
 
         return view('home.suggest',['categories'=>$categories]);
     }
+    public function string(Request $request,$id)
+    {
+        $category = Category::find($id);
+        $parents = array();
+        $cur = $category;
+        while ($cur->parent!==null){
+            $parents[]=$cur->parent;
+            $cur=$cur->parent;
+        }
+        $titles =  array_map(function ($a) {
+            return $a->title;
+        }, $parents);
+        $titles =  array_reverse($titles);
+        $category->parentstring = implode(' > ',$titles);
+        return $category->parentstring;
+    }
     public function children(Request $request,$id)
     {
         $category = Category::find($id);
