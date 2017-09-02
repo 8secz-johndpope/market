@@ -110,7 +110,11 @@ class HomeController extends BaseController
             return Category::find($a['key']) !== null;
         } );
         $bts = array_values($bts);
-       return $bts;
+        $categories=array();
+        foreach ($bts as $bt){
+            $categories[]=Category::find($bt['key']);
+        }
+       return $categories;
 
         return view('home.post',['categories'=>$categories]);
     }
