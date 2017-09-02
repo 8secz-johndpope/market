@@ -144,7 +144,7 @@ class HomeController extends BaseController
         }, $parents);
         $titles =  array_reverse($titles);
         $category->parentstring = implode(' > ',$titles);
-        return $category->parentstring.' > <span "select-category">'.$category->title.'</span>';
+        return $category->parentstring.' > <span class="select-category">'.$category->title.'</span>';
     }
     public function children(Request $request,$id)
     {
