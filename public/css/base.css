@@ -190,6 +190,7 @@ a.listing-product{
 }
 .listing-img {
     width: 120px;
+    float: left;
 }
 .items-box-body.listing-content {
     width: calc(100% - 300px);
@@ -890,6 +891,7 @@ a.left.carousel-control {
   .listing-img .main-img {
     height: 92px;
     width: 100%;
+    float: left;
   }
 }
 @media screen and (min-width: 1200px){
