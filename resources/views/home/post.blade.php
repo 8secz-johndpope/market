@@ -18,6 +18,22 @@
 
            <div class="panel panel-default">
                <div class="panel-heading">
+                   <h3 class="panel-title">Category</h3>
+               </div>
+               <div class="panel-body">
+                   <div class="row">
+                   <div class="col-sm-6">
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">Tell us what you are posting:</label>
+                           <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex, iPhone, Samsung">
+                       </div>
+                   </div>
+                   </div>
+               </div>
+           </div>
+
+           <div class="panel panel-default">
+               <div class="panel-heading">
                    <h3 class="panel-title">Select Category</h3>
                </div>
                <div class="panel-body">
