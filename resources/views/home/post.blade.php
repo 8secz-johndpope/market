@@ -15,6 +15,7 @@
    <div class="row">
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
+           <div class="select-category">
            <h3>Select Category</h3>
            @foreach($categories as $category)
                <div class="main-category" data-category="{{$category->id}}">
@@ -47,6 +48,7 @@
                <div class="col-sm-1 col-sm-offset-11">
                    <a class="btn btn-danger" disabled id="continue-button">Continue</a>
                </div>
+           </div>
            </div>
        </div>
        <div class="col-lg-2"></div>
