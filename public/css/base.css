@@ -753,7 +753,7 @@ a.left.carousel-control {
     white-space: normal;
   }
   .items-box-body.listing-content {
-    width: auto;
+    width: 100%;
   }
 }
 
