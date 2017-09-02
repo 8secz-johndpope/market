@@ -41,6 +41,12 @@
         .buttons{
              margin-top: 150px;
         }
+        .nomargin{
+            margin: 0px;
+        }
+        .nopadding{
+            padding: 0px;
+        }
         img.lazyload{
             width: 100%;
         }
@@ -48,6 +54,10 @@
            /* font: 1em/1.67 'Open Sans', Arial, Sans-serif; */
             margin: 0;
             background: #e9e9e9;
+        }
+        .sub-category {
+            height: 400px;
+            border: 1px solid gray;
         }
         #map {
             height: 400px;

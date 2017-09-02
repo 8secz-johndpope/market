@@ -13,13 +13,13 @@
 @section('content')
    <div class="row">
        <div class="col-lg-2"></div>
-       <div class="col-lg-8">
+       <div class="col-lg-8  nopadding">
            @foreach($categories as $category)
                <div class="main-category">
                    {{$category->title}}
                </div>
            @endforeach
-           <div class="row">
+           <div class="row nomargin">
                <div class="col-lg-3 sub-category">
 
                </div>
