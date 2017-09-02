@@ -116,7 +116,7 @@ class HomeController extends BaseController
             $category = Category::find($bt['key']);
             $parents = array();
             $cur = $category;
-            while ($cur->prent!==null){
+            while ($cur->parent!==null){
                 $parents[]=$cur->parent;
                 $cur=$cur->parent;
             }
