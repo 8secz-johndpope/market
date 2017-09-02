@@ -135,7 +135,7 @@
                            <span class="category-title" >Description</span>
                        </div>
                    </div>
-                   <div class="col-sm-6"><textarea type="text" name="description" rows="10" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title"></div>
+                   <div class="col-sm-6"><textarea type="text" name="description" rows="10" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title"></textarea></div>
                    <div class="col-sm-6"><p>10000 characters remaining (12 words minimum).
                            Enter as much information possible; ads with detailed and longer descriptions get more views and replies!
                        </p></div>
