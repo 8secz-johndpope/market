@@ -21,7 +21,7 @@
            @endforeach
            <div class="row nomargin">
                <div class="col-lg-3 sub-category">
-                <ul class="list-group">
+                <ul class="list-group category-level-1">
 
                 </ul>
                </div>

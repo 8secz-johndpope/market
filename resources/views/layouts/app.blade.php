@@ -363,6 +363,7 @@
         console.log($(this).data('category'));
         $.get("/category/children/"+$(this).data('category'), function(data, status){
             console.log(data);
+            $('.category-level-1').html(data);
         });
     });
 </script>
