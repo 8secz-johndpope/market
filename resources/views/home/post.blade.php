@@ -105,16 +105,14 @@
                        <div class="col-sm-12 location-selected">
                            <span class="extra-large">M139AX</span><a>(Edit)</a>
                        </div>
-                       <div class="col-sm-11">
+                       <div class="col-sm-12 edit-location">
                            <form class="form-inline">
                                <label class="sr-only" for="inlineFormInput">Postcode</label>
-                               <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Postcode">
-                               <button class="btn btn-danger">Go</button>
+                               <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="postcode-text" placeholder="Postcode">
+                               <button class="btn btn-danger postcode-submit">Go</button>
                            </form>
                        </div>
-                       <div class="col-sm-1">
-                           <a class="btn btn-default">Edit</a>
-                       </div>
+
                    </div>
                </div>
            </div>

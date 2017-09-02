@@ -522,6 +522,12 @@
        $('.selected-category-panel').hide();
        $('.automatic-category-panel').show();
     });
+    $(".postcode-submit").click(function () {
+       $(".extra-large").html($("#postcode-text").va());
+       $(".edit-location").hide();
+       $(".location-selected").show();
+       $(".all-panels").show();
+    });
 </script>
 </body>
 </html>
