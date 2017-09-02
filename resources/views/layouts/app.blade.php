@@ -511,9 +511,9 @@
             console.log(data.length);
             $('.category-extras').html(data);
             if(data.length===0){
-                $('.category-extras').hide();
+                $('.extra-options-panel').hide();
             }else{
-                $('.category-extras').show();
+                $('.extra-options-panel').show();
             }
         });
     }
