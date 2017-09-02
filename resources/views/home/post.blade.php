@@ -52,7 +52,7 @@
            </div>
            <div class="selected-category">
                <div class="row">
-                   <div class="col-sm-12"> <span class="glyphicon glyphicon-ok-sign"><h3>Category</h3></span></div>
+                   <div class="col-sm-12"> <span class="glyphicon glyphicon-ok-sign">Category</span></div>
                    <div class="col-sm-11"></div>
                    <div class="col-sm-1">
                        <a class="btn btn-default">Edit</a>
