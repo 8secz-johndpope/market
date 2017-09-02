@@ -41,6 +41,11 @@
                    </ul>
                </div>
            </div>
+           <div class="row">
+               <div class="col-sm-2 col-sm-offset-10">
+                   <a class="btn btn-danger">Continue</a>
+               </div>
+           </div>
        </div>
        <div class="col-lg-2"></div>
    </div>
