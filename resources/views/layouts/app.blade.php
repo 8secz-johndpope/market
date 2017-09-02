@@ -361,6 +361,9 @@
     });
     $(".main-category").on("click", function(event){
         console.log($(this).data('category'));
+        $.get("/category/children/"+$(this).data('category'), function(data, status){
+            console.log(data);
+        });
     });
 </script>
 </body>
