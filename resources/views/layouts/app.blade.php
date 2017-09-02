@@ -373,7 +373,7 @@
     });
     $(".category-level-1").on("click","li", function(event){
         var count = $(this).data('children');
-        if(count==='0'){
+        if(count===0){
             $("#continue-button").attr('disabled',false);
             return;
         }
@@ -385,7 +385,7 @@
     });
     $(".category-level-2").on("click","li", function(event){
         var count = $(this).data('children');
-        if(count==='0'){
+        if(count===0){
             $("#continue-button").attr('disabled',false);
             return;
         }
@@ -397,7 +397,7 @@
     });
     $(".category-level-3").on("click","li", function(event){
         var count = $(this).data('children');
-        if(count==='0'){
+        if(count===0){
             $("#continue-button").attr('disabled',false);
             return;
         }
