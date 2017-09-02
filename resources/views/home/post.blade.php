@@ -116,6 +116,7 @@
                </div>
            </div>
 
+           <div class="all-panels">
            <div class="panel panel-default extra-options-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Select Options</h3>
@@ -223,6 +224,7 @@
                        <div class="col-sm-2 col-sm-offset-10"><a class="btn btn-primary">Post Advert</a> </div>
                    </div>
                </div>
+           </div>
            </div>
 
        </div>
