@@ -15,42 +15,46 @@
    <div class="row">
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
-           <div class="select-category">
-           <h3>Select Category</h3>
-           @foreach($categories as $category)
-               <div class="main-category" data-category="{{$category->id}}">
-                   {{$category->title}}
-               </div>
-           @endforeach
-           <div class="row nomargin">
-               <div class="col-lg-3 sub-category">
-                <ul class="list-group category-level-1  nomargin">
-
-                </ul>
-               </div>
-               <div class="col-lg-3 sub-category">
-                   <ul class="list-group category-level-2  nomargin">
-
-                   </ul>
-               </div>
-               <div class="col-lg-3 sub-category">
-                   <ul class="list-group category-level-3  nomargin">
-
-                   </ul>
-               </div>
-               <div class="col-lg-3 sub-category">
-                   <ul class="list-group category-level-4  nomargin">
-
-                   </ul>
-               </div>
-           </div>
-           <div class="row" style="margin-top: 30px;margin-bottom: 30px">
-               <div class="col-sm-1 col-sm-offset-11">
-                   <a class="btn btn-danger" disabled id="continue-button">Continue</a>
-               </div>
-           </div>
-           </div>
            
+           <div class="panel panel-default">
+               <div class="panel-heading">
+                   <h3 class="panel-title">Select Category</h3>
+               </div>
+               <div class="panel-body">
+                   @foreach($categories as $category)
+                       <div class="main-category" data-category="{{$category->id}}">
+                           {{$category->title}}
+                       </div>
+                   @endforeach
+                   <div class="row nomargin">
+                       <div class="col-lg-3 sub-category">
+                           <ul class="list-group category-level-1  nomargin">
+
+                           </ul>
+                       </div>
+                       <div class="col-lg-3 sub-category">
+                           <ul class="list-group category-level-2  nomargin">
+
+                           </ul>
+                       </div>
+                       <div class="col-lg-3 sub-category">
+                           <ul class="list-group category-level-3  nomargin">
+
+                           </ul>
+                       </div>
+                       <div class="col-lg-3 sub-category">
+                           <ul class="list-group category-level-4  nomargin">
+
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="row" style="margin-top: 30px;margin-bottom: 30px">
+                       <div class="col-sm-1 col-sm-offset-11">
+                           <a class="btn btn-danger" disabled id="continue-button">Continue</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
 
            <div class="panel panel-default">
                <div class="panel-heading">
