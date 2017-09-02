@@ -127,9 +127,8 @@ class HomeController extends BaseController
             $category->parentstring = implode(' > ',$titles);
             $categories[]=$category;
         }
-       return $categories;
 
-        return view('home.post',['categories'=>$categories]);
+        return view('home.suggest',['categories'=>$categories]);
     }
     public function children(Request $request,$id)
     {
