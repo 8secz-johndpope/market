@@ -29,6 +29,9 @@
             font-weight: bold;
             font-style: italic;
         }
+        .grayborder{
+            border: solid 1px gray;
+        }
         .main-category {
             width: 14.28%;
             float: left;
@@ -77,7 +80,7 @@
             font-size: 20px;
             margin-left: 10px;
             font-weight: bold;
-            
+
         }
 
         .item { /* Masonry bricks or child elements */
