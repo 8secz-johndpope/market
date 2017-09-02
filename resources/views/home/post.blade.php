@@ -88,6 +88,7 @@
                        <div class="grayborder height100">
                            <div class="row">
                                <div class="col-sm-11">
+                                   <p>Enter Postcode</p>
                                    <form class="form-inline">
                                        <label class="sr-only" for="inlineFormInput">Postcode</label>
                                        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="M139AX">
