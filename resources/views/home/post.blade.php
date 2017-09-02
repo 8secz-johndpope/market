@@ -121,7 +121,7 @@
                        <span class="category-title" >Title</span>
                    </div>
                </div>
-               <div class="col-sm-6"><input type="text" class="form-control" placeholder="Title"></div>
+                   <div class="col-sm-6"><form class="form-inline"><input type="text" class="form-control" placeholder="Title"></form></div>
                <div class="col-sm-6"><p>100 characters remaining</p></div>
                <div class="col-sm-6"><p>Write a short description of your ad and include all of the key highlights.</p></div>
                </div>
