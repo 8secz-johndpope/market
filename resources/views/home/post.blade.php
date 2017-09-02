@@ -148,7 +148,24 @@
                </div>
                <div class="panel-body">
                    <ul class="list-group">
-                       <li class="list-group-item"></li>
+                       <li class="list-group-item"><div class="form-check">
+                               <label class="form-check-label">
+                                   <input class="form-check-input" type="checkbox" value="">
+                                   Option one is this and that&mdash;be sure to include why it's great
+                               </label>
+                           </div></li>
+                       <li class="list-group-item"><div class="form-check">
+                               <label class="form-check-label">
+                                   <input class="form-check-input" type="checkbox" value="">
+                                   Option one is this and that&mdash;be sure to include why it's great
+                               </label>
+                           </div></li>
+                       <li class="list-group-item"><div class="form-check">
+                               <label class="form-check-label">
+                                   <input class="form-check-input" type="checkbox" value="">
+                                   Option one is this and that&mdash;be sure to include why it's great
+                               </label>
+                           </div></li>
                    </ul>
                </div>
            </div>
