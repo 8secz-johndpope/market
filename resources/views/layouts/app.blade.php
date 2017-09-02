@@ -495,6 +495,12 @@
             $('.category-suggest').html(data);
         });
     });
+    $(".category-suggest").on("click","li", function(event) {
+        $.get("/category/string/"+$(this).data('category'), function(data, status){
+            console.log(data);
+            $('.category-sting').html(data);
+        })
+    });
 </script>
 </body>
 </html>

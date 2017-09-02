@@ -88,7 +88,7 @@
                </div>
                <div class="panel-body">
                    <div class="row">
-                       <div class="col-sm-11"></div>
+                       <div class="col-sm-11"><span class="category-sting"></span> </div>
                        <div class="col-sm-1">
                            <a class="btn btn-default">Edit</a>
                        </div>
