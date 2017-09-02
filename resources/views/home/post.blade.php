@@ -170,6 +170,15 @@
                    </ul>
                </div>
            </div>
+
+           <div class="panel panel-success">
+               <div class="panel-heading">
+                   <h3 class="panel-title">Total</h3>
+               </div>
+               <div class="panel-body">
+                   £0.00
+               </div>
+           </div>
        </div>
 
        <div class="col-lg-2"></div>
