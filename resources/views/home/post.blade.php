@@ -106,7 +106,7 @@
                <div class="row">
                    <div class="col-sm-12">
                        <div class="grayborder height100">
-                           Select Options
+                           <span class="category-title" >Select Options</span>
                        </div>
                    </div>
                    <div class="col-sm-12">
