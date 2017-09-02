@@ -381,6 +381,7 @@
         if(count===0){
             $('.category-level-2').html('');
             $("#continue-button").attr('disabled',false);
+            $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
         $("#continue-button").attr('disabled',true);
