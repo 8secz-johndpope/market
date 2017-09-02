@@ -154,6 +154,7 @@
             </div>
         </section>
         <nav aria-label="Page navigation">
+            <div class="text-center">
             <ul class="pagination">
 
                 <li class=" @if($page===1)disabled @endif">
@@ -177,6 +178,7 @@
                     </a>
                 </li>
             </ul>
+            </div>
         </nav>
         <ul class="pager">
             @if($page!=1)
