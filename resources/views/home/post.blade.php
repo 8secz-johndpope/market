@@ -105,15 +105,10 @@
 
            <div class="panel panel-default">
                <div class="panel-heading">
-                   <h3 class="panel-title">Title</h3>
+                   <h3 class="panel-title">Select Options</h3>
                </div>
                <div class="panel-body">
                    <div class="row">
-                       <div class="col-sm-12">
-                           <div class="grayborder height100">
-                               <span class="category-title" >Select Options</span>
-                           </div>
-                       </div>
                        <div class="col-sm-12">
                            <div class="row category-extras"></div>
                        </div>
