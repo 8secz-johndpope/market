@@ -443,7 +443,7 @@
         if(count===0){
             $('.category-level-2').html('');
             $("#continue-button").attr('disabled',false);
-            $("#continue-button").data($(this).data('category'));
+            $("#continue-button").data('category',$(this).data('category'));
             $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
@@ -462,7 +462,7 @@
         if(count===0){
             $('.category-level-3').html('');
             $("#continue-button").attr('disabled',false);
-            $("#continue-button").data($(this).data('category'));
+            $("#continue-button").data('category',$(this).data('category'));
             $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
@@ -480,7 +480,7 @@
         if(count===0){
             $('.category-level-4').html('');
             $("#continue-button").attr('disabled',false);
-            $("#continue-button").data($(this).data('category'));
+            $("#continue-button").data('category',$(this).data('category'));
 
             $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
