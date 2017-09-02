@@ -508,7 +508,7 @@
             $(".selected-location-panel").show();
         })
         $.get("/category/extras/"+category, function(data, status){
-            console.log(data);
+            console.log(data.length);
             $('.category-extras').html(data);
             if(data.length===0){
                 $('.category-extras').hide();
