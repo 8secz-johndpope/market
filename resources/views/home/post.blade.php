@@ -134,7 +134,8 @@
                    <h3 class="panel-title">Title</h3>
                </div>
                <div class="panel-body">
-                   <input type="text" name="title" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title">
+                   <div class="row"> <div class="col-sm-6"><input type="text" name="title" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title"></div>
+                       <div class="col-sm-6"><p>100 characters remaining</p></div></div>
                </div>
            </div>
 
