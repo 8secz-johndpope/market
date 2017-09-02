@@ -510,6 +510,11 @@
         $.get("/category/extras/"+category, function(data, status){
             console.log(data);
             $('.category-extras').html(data);
+            if(data.length===0){
+                $('.category-extras').hide();
+            }else{
+                $('.category-extras').show();
+            }
         });
     }
     $('input.posting-string').on('input',function(e){
