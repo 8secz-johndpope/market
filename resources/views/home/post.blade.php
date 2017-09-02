@@ -121,10 +121,25 @@
                        <span class="category-title" >Title</span>
                    </div>
                </div>
-                   <div class="col-sm-6"><input type="text" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title"></div>
+                   <div class="col-sm-6"><input type="text" name="title" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title"></div>
                <div class="col-sm-6"><p>100 characters remaining</p></div>
                <div class="col-sm-6"><p>Write a short description of your ad and include all of the key highlights.</p></div>
                    <div class="col-sm-6"></div>
+               </div>
+           </div>
+
+           <div class="ad-title">
+               <div class="row">
+                   <div class="col-sm-12">
+                       <div class="grayborder height100">
+                           <span class="category-title" >Description</span>
+                       </div>
+                   </div>
+                   <div class="col-sm-6"><textarea type="text" name="description" rows="10" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title"></div>
+                   <div class="col-sm-6"><p>10000 characters remaining (12 words minimum).
+                           Enter as much information possible; ads with detailed and longer descriptions get more views and replies!
+                       </p></div>
+
                </div>
            </div>
        </div>
