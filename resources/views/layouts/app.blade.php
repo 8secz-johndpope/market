@@ -543,7 +543,7 @@
        $(".location-selected").show();
        $(".all-panels").show();
     });
-    $(".edit-location").click(function () {
+    $(".edit-location-button").click(function () {
         $(".edit-location").show();
         $(".location-selected").hide();
     });
