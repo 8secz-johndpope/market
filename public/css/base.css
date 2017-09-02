@@ -239,6 +239,9 @@ p.listing-description {
     margin-bottom: 8px;
     overflow: hidden;
 }
+a.listing-product:before {
+    display: table;
+}
 /*  -- end --*/
 .read-more{
   text-align: right;
