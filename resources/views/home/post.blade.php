@@ -179,6 +179,10 @@
                    £0.00
                </div>
            </div>
+
+           <div class="row">
+               <div class="col-sm-2 col-sm-offset-10"><a class="btn btn-primary">Post Advert</a> </div>
+           </div>
        </div>
 
        <div class="col-lg-2"></div>
