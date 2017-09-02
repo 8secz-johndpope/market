@@ -377,6 +377,9 @@
             $("#continue-button").attr('disabled',false);
             return;
         }
+        $("#continue-button").attr('disabled',true);
+        $('.category-level-3').html('');
+        $('.category-level-4').html('');
         console.log($(this).data('category'));
         $.get("/category/children/"+$(this).data('category'), function(data, status){
             console.log(data);
@@ -389,6 +392,8 @@
             $("#continue-button").attr('disabled',false);
             return;
         }
+        $("#continue-button").attr('disabled',true);
+        $('.category-level-4').html('');
         console.log($(this).data('category'));
         $.get("/category/children/"+$(this).data('category'), function(data, status){
             console.log(data);
@@ -401,6 +406,8 @@
             $("#continue-button").attr('disabled',false);
             return;
         }
+        $("#continue-button").attr('disabled',true);
+
         console.log($(this).data('category'));
         $.get("/category/children/"+$(this).data('category'), function(data, status){
             console.log(data);
