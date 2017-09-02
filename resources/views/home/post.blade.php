@@ -102,6 +102,9 @@
                </div>
                <div class="panel-body">
                    <div class="row">
+                       <div class="col-sm-12 location-selected">
+                           <span class="extra-large">M139AX</span><a>(Edit)</a>
+                       </div>
                        <div class="col-sm-11">
                            <form class="form-inline">
                                <label class="sr-only" for="inlineFormInput">Postcode</label>

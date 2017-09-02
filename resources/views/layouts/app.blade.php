@@ -32,6 +32,9 @@
         span.extra-title {
             font-weight: bold;
         }
+        .location-selected{
+            display: none;
+        }
         a.select-category-link {
             float: right;
         }
