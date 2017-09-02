@@ -732,6 +732,9 @@ a.left.carousel-control {
   .carousel-inner {
     padding: 10px 15px;
   }
+  .listing-img {
+    width: 100px;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
