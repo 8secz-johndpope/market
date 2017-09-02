@@ -37,6 +37,7 @@
             text-align: center;
             vertical-align: middle;
             line-height: 100px;
+            cursor: pointer;
         }
         .buttons{
              margin-top: 150px;

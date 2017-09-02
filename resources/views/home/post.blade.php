@@ -15,7 +15,7 @@
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
            @foreach($categories as $category)
-               <div class="main-category">
+               <div class="main-category" data-category="{{$category->id}}">
                    {{$category->title}}
                </div>
            @endforeach
