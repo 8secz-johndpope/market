@@ -365,6 +365,7 @@
         }
     });
     $(".main-category").on("click", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
         $('.category-level-2').html('');
         $('.category-level-3').html('');
         $('.category-level-4').html('');
@@ -375,12 +376,14 @@
         });
     });
     $(".category-level-1").on("click","li", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
         $('.category-level-3').html('');
         $('.category-level-4').html('');
         var count = $(this).data('children');
         if(count===0){
             $('.category-level-2').html('');
             $("#continue-button").attr('disabled',false);
+
             $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
@@ -393,11 +396,13 @@
         });
     });
     $(".category-level-2").on("click","li", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
         $('.category-level-4').html('');
         var count = $(this).data('children');
         if(count===0){
             $('.category-level-3').html('');
             $("#continue-button").attr('disabled',false);
+            $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
         $("#continue-button").attr('disabled',true);
@@ -409,10 +414,12 @@
         });
     });
     $(".category-level-3").on("click","li", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
         var count = $(this).data('children');
         if(count===0){
             $('.category-level-4').html('');
             $("#continue-button").attr('disabled',false);
+            $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
         $("#continue-button").attr('disabled',true);
@@ -424,7 +431,9 @@
         });
     });
     $(".category-level-4").on("click","li", function(event) {
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
         $("#continue-button").attr('disabled',false);
+        $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
     });
 </script>
 </body>
