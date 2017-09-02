@@ -240,6 +240,7 @@ p.listing-description {
     overflow: hidden;
 }
 a.listing-product:before {
+    content: " ";
     display: table;
 }
 /*  -- end --*/
