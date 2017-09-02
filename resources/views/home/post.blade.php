@@ -11,9 +11,15 @@
 @endsection
 
 @section('content')
-    <ul class="list-inline">
-        <li class="list-inline-item">Lorem ipsum</li>
-        <li class="list-inline-item">Phasellus iaculis</li>
-        <li class="list-inline-item">Nulla volutpat</li>
-    </ul>
+   <div class="row">
+       <div class="col-lg-2"></div>
+       <div class="col-lg-8">
+           @foreach($categories as $category)
+               <div class="main-category">
+                   {{$category->title}}
+               </div>
+           @endforeach
+       </div>
+       <div class="col-lg-2"></div>
+   </div>
     @endsection

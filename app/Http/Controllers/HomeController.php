@@ -75,8 +75,9 @@ class HomeController extends BaseController
     }
     public function post(Request $request)
     {
+        $categories = Category::where('parent_id',0)->get();
 
-        return view('home.post');
+        return view('home.post',['categories'=>$categories]);
     }
 
     public function baseAndFirstChildren(){
