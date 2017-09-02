@@ -123,7 +123,8 @@ class HomeController extends BaseController
             $titles =  array_map(function ($a) {
                return $a->title;
             }, $parents);
-            $category->parentstring = implode('>',$titles);
+            $titles =  array_reverse($titles);
+            $category->parentstring = implode(' > ',$titles);
             $categories[]=$category;
         }
        return $categories;
