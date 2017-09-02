@@ -236,6 +236,7 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="/advert/post">Post an Ad</a> </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
