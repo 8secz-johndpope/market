@@ -85,7 +85,7 @@ class HomeController extends BaseController
         return view('home.categorylist',['categories'=>$category->children]);
     }
     public  function extras(Request $request,$id){
-        $category = Category::find($any);
+        $category = Category::find($id);
         if($category===null){
             return ['msg'=>'Catagory not found'];
         }
@@ -95,7 +95,7 @@ class HomeController extends BaseController
                 $field->values = $field->values;
             }
         }
-        return view('home.categorylist',['categories'=>$category->children]);
+        return view('home.extras',['fields'=>$fields]);
     }
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
