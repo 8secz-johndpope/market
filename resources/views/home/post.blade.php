@@ -102,6 +102,9 @@
 
                </div>
            </div>
+           <div class="selected-extras">
+               <div class="row category-extras"></div>
+           </div>
        </div>
        <div class="col-lg-2"></div>
    </div>

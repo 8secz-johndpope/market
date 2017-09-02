@@ -399,7 +399,7 @@
         if(count===0){
             $('.category-level-2').html('');
             $("#continue-button").attr('disabled',false);
-
+            get_extras($(this).data('category'));
             $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
@@ -451,6 +451,12 @@
         $("#continue-button").attr('disabled',false);
         $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
     });
+    function get_extras(category) {
+        $.get("/category/extras/"+category, function(data, status){
+            console.log(data);
+            $('.category-extras').html(data);
+        });
+    }
 </script>
 </body>
 </html>
