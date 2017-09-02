@@ -992,7 +992,7 @@ class UserController extends BaseController
         $account->legal_entity->type = 'individual';
         $account->save();
 
-     
+
         //Creating a token without scopes...
         $token = $user->createToken('Token Name')->accessToken;
 
