@@ -507,6 +507,8 @@
             $('.category-sting').html(data);
             $(".manual-category-panel").hide();
             $(".automatic-category-panel").hide();
+            $(".selected-category-panel").show();
+            $(".selected-location-panel").show();
         })
     });
     $(".browse-category").click(function () {
