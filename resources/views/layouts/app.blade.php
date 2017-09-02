@@ -34,6 +34,7 @@
         }
         .height100{
             height: 50px;
+            padding: 10px;
         }
         .main-category {
             width: 14.28%;
