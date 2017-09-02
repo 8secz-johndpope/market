@@ -195,7 +195,7 @@ a.listing-product{
 }
 .items-box-body.listing-content {
     /*width: calc(100% - 300px);*/
-    display: table;
+    display: grid;
 }
 a.listing-product {
     text-decoration: none;
