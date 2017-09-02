@@ -43,7 +43,7 @@
             font-weight: bold;
         }
         span.span-urgent{
-            background: #e45d5d;
+            background: #ec4231;
         }
         span.span-featured{
             background: #3997ba;
