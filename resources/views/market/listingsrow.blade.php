@@ -155,13 +155,12 @@
         </section>
         <nav aria-label="Page navigation">
             <ul class="pagination">
-                <li>
+
+                <li class=" @if($page===1)disabled @endif">
                     <a href="#" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
-               
-
                 @foreach($pages as $p)
                     <li class="{{$page==$p?'active':''}}">
                         @if($page===$p)
@@ -172,7 +171,7 @@
                     </li>
                 @endforeach
 
-                <li>
+                <li class=" @if($page===$max)disabled @endif">
                     <a href="#" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
