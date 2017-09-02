@@ -1,6 +1,6 @@
 @foreach($fields as $field)
     <div class="col-sm-6">
-        <span>{{$field->title}}</span>
+        <span class="extra-title">{{$field->title}}</span>
         @if($field->type==='integer')
             <input class="form-control" type="text" name="{{$field->slug}}">
             @elseif($field->type==='list')
