@@ -462,6 +462,7 @@
         if(count===0){
             $('.category-level-3').html('');
             $("#continue-button").attr('disabled',false);
+            get_extras($(this).data('category'));
             $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
@@ -479,6 +480,7 @@
         if(count===0){
             $('.category-level-4').html('');
             $("#continue-button").attr('disabled',false);
+            get_extras($(this).data('category'));
             $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
@@ -493,9 +495,18 @@
     $(".category-level-4").on("click","li", function(event) {
         $('.select-arrow').removeClass('glyphicon-ok-sign');
         $("#continue-button").attr('disabled',false);
+        get_extras($(this).data('category'));
         $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
     });
     function get_extras(category) {
+        $.get("/category/string/"+category, function(data, status){
+            console.log(data);
+            $('.category-sting').html(data);
+            $(".manual-category-panel").hide();
+            $(".automatic-category-panel").hide();
+            $(".selected-category-panel").show();
+            $(".selected-location-panel").show();
+        })
         $.get("/category/extras/"+category, function(data, status){
             console.log(data);
             $('.category-extras').html(data);
@@ -508,14 +519,7 @@
         });
     });
     $(".category-suggest").on("click","li", function(event) {
-        $.get("/category/string/"+$(this).data('category'), function(data, status){
-            console.log(data);
-            $('.category-sting').html(data);
-            $(".manual-category-panel").hide();
-            $(".automatic-category-panel").hide();
-            $(".selected-category-panel").show();
-            $(".selected-location-panel").show();
-        })
+        get_extras($(this).data('category'));
     });
     $(".browse-category").click(function () {
         $(".manual-category-panel").show();
