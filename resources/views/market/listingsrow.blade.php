@@ -157,7 +157,7 @@
             <div class="text-center">
             <ul class="pagination">
 
-                <li class=" @if($page===1)disabled @endif">
+                <li class=" @if($page==1)disabled @endif">
                     <a href="{{$pageurl}}&page={{$page-1}}" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
@@ -180,7 +180,7 @@
             </ul>
             </div>
         </nav>
-     
+
     </div>
     <div class="col-md-3">
 
