@@ -33,7 +33,7 @@
             border: solid 1px gray;
         }
         .height100{
-            height: 100px;
+            height: 50px;
         }
         .main-category {
             width: 14.28%;
