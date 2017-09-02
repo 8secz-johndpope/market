@@ -150,7 +150,7 @@
                            <span class="category-title" >Price</span>
                        </div>
                    </div>
-                   <div class="col-sm-6"><input type="text" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price"></div>
+                   <div class="col-sm-6">£<input type="text" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price"></div>
 
                </div>
            </div>
