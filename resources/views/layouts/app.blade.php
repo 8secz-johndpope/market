@@ -38,6 +38,9 @@
         a.select-category-link {
             float: right;
         }
+        span.extra-large {
+            font-size: 25px;
+        }
         .manual-category-panel,.selected-category-panel,.selected-location-panel,.all-panels{
             display: none;
         }
