@@ -379,6 +379,7 @@
         $('.category-level-4').html('');
         var count = $(this).data('children');
         if(count===0){
+            $('.category-level-2').html('');
             $("#continue-button").attr('disabled',false);
             return;
         }
@@ -394,6 +395,7 @@
         $('.category-level-4').html('');
         var count = $(this).data('children');
         if(count===0){
+            $('.category-level-3').html('');
             $("#continue-button").attr('disabled',false);
             return;
         }
@@ -408,6 +410,7 @@
     $(".category-level-3").on("click","li", function(event){
         var count = $(this).data('children');
         if(count===0){
+            $('.category-level-4').html('');
             $("#continue-button").attr('disabled',false);
             return;
         }
