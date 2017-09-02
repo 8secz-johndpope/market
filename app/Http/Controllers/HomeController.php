@@ -73,7 +73,11 @@ class HomeController extends BaseController
         $spl4 = array_slice($products, 18, 6);
         return view('home',['base' => $all, 'spotlight' => $products]);
     }
-    
+    public function post(Request $request)
+    {
+
+
+    }
 
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
