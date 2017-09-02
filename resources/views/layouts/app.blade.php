@@ -36,6 +36,9 @@
             height: 50px;
             padding: 10px;
         }
+        .selected-location{
+            margin-top: 20px;
+        }
         .main-category {
             width: 14.28%;
             float: left;
