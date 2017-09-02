@@ -15,7 +15,7 @@
    <div class="row">
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
-           
+
            <div class="panel panel-default">
                <div class="panel-heading">
                    <h3 class="panel-title">Select Category</h3>
@@ -142,7 +142,16 @@
                </div>
            </div>
 
-
+           <div class="panel panel-default">
+               <div class="panel-heading">
+                   <h3 class="panel-title">Make your ad stand out!</h3>
+               </div>
+               <div class="panel-body">
+                   <ul class="list-group">
+                       <li class="list-group-item"></li>
+                   </ul>
+               </div>
+           </div>
        </div>
 
        <div class="col-lg-2"></div>
