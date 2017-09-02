@@ -35,7 +35,7 @@
         a.select-category-link {
             float: right;
         }
-        .manual-category-panel,.selected-category-panel,.selected-location-panel,.extra-options-panel,.title-panel,.price-panel,.featured-panel,.post-panel{
+        .manual-category-panel,.selected-category-panel,.selected-location-panel,.extra-options-panel,.title-panel,.price-panel,.featured-panel,.post-panel,.total-panel,.description-panel{
             display: none;
         }
         span.span-urgent, span.span-featured,span.span-spotlight,span.span-shipping {
