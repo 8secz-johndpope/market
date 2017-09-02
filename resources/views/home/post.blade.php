@@ -50,30 +50,22 @@
                </div>
            </div>
            </div>
-           <div class="selected-category">
-               <div class="row">
-                   <div class="col-sm-12">
-                   <div class="grayborder height100">
-                       <div class="row">
-                           <div class="col-sm-12">
-                   <span class="glyphicon glyphicon-ok-sign"></span><span class="category-title">Category</span>
-                           </div>
-                       </div>
-                           </div>
-                   </div>
-                   <div class="col-sm-12">
-                       <div class="grayborder height100">
-                           <div class="row">
-                           <div class="col-sm-11"></div>
-                           <div class="col-sm-1">
-                               <a class="btn btn-default">Edit</a>
-                           </div>
-                           </div>
-                       </div></div>
+           
 
+           <div class="panel panel-default">
+               <div class="panel-heading">
+                   <h3 class="panel-title">Category</h3>
+               </div>
+               <div class="panel-body">
+                   <div class="row">
+                       <div class="col-sm-11"></div>
+                       <div class="col-sm-1">
+                           <a class="btn btn-default">Edit</a>
+                       </div>
+                   </div>
                </div>
            </div>
-           
+
            <div class="panel panel-default">
                <div class="panel-heading">
                    <h3 class="panel-title">Location</h3>
