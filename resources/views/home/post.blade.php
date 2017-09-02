@@ -171,7 +171,7 @@
                        <li class="list-group-item"><div class="form-check">
                                <label class="form-check-label">
                                    <input class="form-check-input" type="checkbox" value="">
-                                   <span class="span-spotlight">CanShip</span> &nbsp;&nbsp;Ship to the buyer when order is placed.
+                                   <span class="span-shipping">CanShip</span> &nbsp;&nbsp;Ship to the buyer when order is placed.
                                </label>
                            </div></li>
                    </ul>

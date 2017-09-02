@@ -32,7 +32,7 @@
         span.extra-title {
             font-weight: bold;
         }
-        span.span-urgent, span.span-featured,span.span-spotlight {
+        span.span-urgent, span.span-featured,span.span-spotlight,span.span-shipping {
 
             color: white;
             padding: 2px;
@@ -50,6 +50,9 @@
         }
         span.span-spotlight{
             background: #5cb74c;
+        }
+        span.span-shipping{
+            background: #286090;
         }
         .grayborder{
             border: solid 1px gray;
