@@ -79,7 +79,12 @@ class HomeController extends BaseController
 
         return view('home.post',['categories'=>$categories]);
     }
+    public function children(Request $request,$id)
+    {
+        $category = Category::find($id);
 
+        return view('home.categorylist',['categories'=>$category->children]);
+    }
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
         $j = 0;
