@@ -505,6 +505,8 @@
         $.get("/category/string/"+$(this).data('category'), function(data, status){
             console.log(data);
             $('.category-sting').html(data);
+            $(".manual-category-panel").hide();
+            $(".automatic-category-panel").hide();
         })
     });
     $(".browse-category").click(function () {
