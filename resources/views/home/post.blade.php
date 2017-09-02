@@ -27,10 +27,13 @@
                            <label for="exampleInputEmail1">Tell us what you are posting:</label>
                            <input type="text" class="form-control posting-string" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex, iPhone, Samsung">
                        </div>
-                       <ul class="list-group category-suggest">
 
-                       </ul>
                    </div>
+                       <div class="col-sm-12">
+                           <ul class="list-group category-suggest">
+
+                           </ul>
+                       </div>
                        <div class="col-sm-12">
                            <a>Or browse to find a category</a>
                        </div>
