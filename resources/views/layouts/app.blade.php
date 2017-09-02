@@ -524,7 +524,7 @@
     });
     $(".postcode-submit").click(function () {
         console.log("click works");
-       $(".extra-large").html($("#postcode-text").va());
+       $(".extra-large").html($("#postcode-text").val());
        $(".edit-location").hide();
        $(".location-selected").show();
        $(".all-panels").show();
