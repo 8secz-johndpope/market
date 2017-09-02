@@ -11,10 +11,11 @@
 @endsection
 
 @section('content')
-    <h3>Select Category</h3>
+
    <div class="row">
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
+           <h3>Select Category</h3>
            @foreach($categories as $category)
                <div class="main-category" data-category="{{$category->id}}">
                    {{$category->title}}
