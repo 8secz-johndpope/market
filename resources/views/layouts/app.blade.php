@@ -39,7 +39,7 @@
             height: 50px;
             padding: 10px;
         }
-        .selected-location, .selected-extras{
+        .selected-location, .selected-extras, .ad-title{
             margin-top: 20px;
         }
         .main-category {
