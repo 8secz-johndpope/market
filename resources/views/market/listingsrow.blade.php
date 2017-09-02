@@ -171,7 +171,7 @@
                     </li>
                 @endforeach
 
-                <li class=" @if($page===$max)disabled @endif">
+                <li class=" @if($page===$max-1)disabled @endif">
                     <a href="{{$pageurl}}&page={{$page+1}}" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
