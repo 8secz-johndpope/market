@@ -151,6 +151,7 @@ class HomeController extends BaseController
         ];
         $response = $this->client->index($params);
         $advert->elastic = $response['_id'];
+        $advert->user_id=$user->id;
         $advert->save();
         return redirect('/user/manage/ads');
       //  return ['response' => $response];
