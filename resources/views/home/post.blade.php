@@ -211,7 +211,7 @@
                    <div class="panel-body">
                        <div class="row">
                            <div class="col-sm-3">
-                            <img src="/css/addimage.png">
+                           <a class="add-image"><img src="/css/addimage.png"></a>
                            </div>
                        </div>
                    </div>

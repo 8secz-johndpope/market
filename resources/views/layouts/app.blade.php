@@ -551,6 +551,9 @@
         $(".edit-location").show();
         $(".location-selected").hide();
     });
+    $(".add-image").click(function () {
+
+    });
 </script>
 </body>
 </html>
