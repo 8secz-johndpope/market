@@ -81,7 +81,7 @@ class HomeController extends BaseController
     }
     public  function newad(Request $request){
 
-        return $request;
+        return $request->all();
         $categories = Category::where('parent_id',0)->get();
 
         return view('home.post',['categories'=>$categories]);
