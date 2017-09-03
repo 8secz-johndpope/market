@@ -32,7 +32,7 @@ class HomeController extends BaseController
     public function index(Request $request)
     {
         return redirect('/');
-       
+
         //$base = Category::where('parent_id',0)->get();
         //Need  chande de response is not search client
         $base=Category::where('parent_id',0)->get();
@@ -117,10 +117,14 @@ class HomeController extends BaseController
         $response = $this->client->index($params);
         $advert->elastic = $response['_id'];
         $advert->save();
+        return redirect('/user/manage/ads');
       //  return ['response' => $response];
       //  return $request->all();
       //  $categories = Category::where('parent_id',0)->get();
 
+        return view('home.myadverts');
+    }
+    public function myads(Request $request){
         return view('home.myadverts');
     }
 
