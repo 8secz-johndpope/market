@@ -96,6 +96,7 @@ class HomeController extends BaseController
             //return ['code' => 1, 'msg' => 'Advert not found'];
         }
         if ($advert->user_id != $user->id) {
+            return $advert;
             return redirect('/user/manage/ads');
            // return ['code' => 2, 'msg' => 'Advert does not belong to you'];
         }
