@@ -147,7 +147,7 @@
                             </div>
                         </div>
                     </a>
-                        <a class="favroite-icon"><span class="glyphicon glyphicon-thumbs-up"></span> </a>
+                        <span class="glyphicon glyphicon-thumbs-up favroite-icon"></span> 
 
                     </div>
                 
