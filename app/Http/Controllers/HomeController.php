@@ -125,7 +125,34 @@ class HomeController extends BaseController
         return view('home.myadverts');
     }
     public function myads(Request $request){
-        return view('home.myadverts');
+        $user = Auth::user();
+        $page = $request->page ? $request->page : 1;
+
+        $pagesize = 10;
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'from' => ($page - 1) * $pagesize,
+                'size' => $pagesize,
+                'query' => [
+                    'bool' => [
+                        'must' => ['term' => ['user_id' => $user->id]],
+                    ]
+                ],
+                "sort" => [
+                    [
+                        "created_at" => ["order" => "desc"]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) {
+            return $a['_source'];
+        }, $response['hits']['hits']);
+
+        return view('home.myadverts',['total' => $response['hits']['total'], 'adverts' => $products]);
     }
 
     public function suggest(Request $request)
