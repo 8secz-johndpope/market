@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\Category;
 use App\Model\Advert;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends BaseController
 {
@@ -83,9 +84,14 @@ class HomeController extends BaseController
     }
     public  function newad(Request $request){
 
+        $user= Auth::user();
         $category=Category::find($request->category);
         $body['category'] = $category->id;
-
+        $milliseconds = round(microtime(true) * 1000);
+        $body['created_at'] = $milliseconds;
+        $body['username'] = $user->name;
+        $body['user_id'] = $user->id;
+        $body['phone'] = $user->phone;
         $advert = new Advert;
         $advert->save();
         $advert->sid = $advert->id;
