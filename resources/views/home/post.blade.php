@@ -13,6 +13,7 @@
 @section('content')
     <form action="/advert/newad" method="post" id="advert-form">
         {{ csrf_field() }}
+        <input type="hidden" name="category" value="0" id="category">
    <div class="row">
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
