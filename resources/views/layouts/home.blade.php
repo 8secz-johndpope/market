@@ -354,6 +354,9 @@
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });
+    $(".favroite-icon").click(function () {
+
+    });
 </script>
 <script>
 
