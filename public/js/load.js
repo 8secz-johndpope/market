@@ -28,12 +28,16 @@ var bucket = new AWS.S3({
 function upload_file() {
     var fileChooser = document.getElementById('file-chooser');
     var file = fileChooser.files[0];
+    var number = 1 + Math.floor(Math.random() * 999999999999);
 
     if (file) {
+        var ext = file.name.split('.').pop();
 
         var objKey = '' + file.name;
+        var uname = number+ext;
+        console.log(uname);
         var params = {
-            Key: objKey,
+            Key: uname,
             ContentType: file.type,
             Body: file,
             ACL: 'public-read'
@@ -44,7 +48,8 @@ function upload_file() {
                 console.log(err);
             } else {
                 console.log(data);
-                $("#file-chooser").val("");
+                $(".row-images").append('<div class="col-sm-3"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/'+uname+'"></div>');
+
             }
         });
     } else {

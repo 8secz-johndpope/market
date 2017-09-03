@@ -209,7 +209,7 @@
                        <h3 class="panel-title">Add Image</h3>
                    </div>
                    <div class="panel-body">
-                       <div class="row">
+                       <div class="row row-images">
                            <div class="col-sm-3">
                            <a ><img src="/css/addimage.png" class="add-image" style="cursor: pointer"></a>
                                <input type="file" id="file-chooser" style="display: none">
