@@ -32,6 +32,7 @@ class HomeController extends BaseController
     public function index(Request $request)
     {
         return redirect('/');
+       
         //$base = Category::where('parent_id',0)->get();
         //Need  chande de response is not search client
         $base=Category::where('parent_id',0)->get();
