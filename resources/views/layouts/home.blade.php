@@ -347,6 +347,9 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
+    window.axios.defaults.headers.common = {
+        'X-Requested-With': 'XMLHttpRequest',
+    };
     $('#autocomplete').autocomplete({
         paramName :'q',
         serviceUrl: '/api/suggest',
@@ -361,6 +364,15 @@
             console.log(data);
 
         });
+        axios.post('/api/user/list/favorite', {
+            id:id
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
 
     });
 
