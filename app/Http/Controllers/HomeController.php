@@ -81,6 +81,34 @@ class HomeController extends BaseController
     }
     public  function newad(Request $request){
 
+        $category=Category::find($request->category);
+        $body['category'] = $category->id;
+
+        $advert = new Advert;
+        $advert->save();
+        $advert->sid = $advert->id;
+        $advert->save();
+        $body['source_id']=$advert->id;
+        $body['title']=$request->title;
+        $body['description']=$request->description;
+        $body['location_name']='London';
+        $body['location']='52.2,0.12';
+        if($request->has('images')){
+            $body['images']=$request->images;
+        }else{
+            $body['images']=[];
+        }
+        $body['meta']['price']=$request->price*100;
+        
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => $body
+        ];
+        $response = $this->client->index($params);
+        $advert->elastic = $response['_id'];
+        $advert->save();
+        return ['response' => $response];
         return $request->all();
         $categories = Category::where('parent_id',0)->get();
 
