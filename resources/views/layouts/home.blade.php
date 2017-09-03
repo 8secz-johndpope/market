@@ -355,7 +355,11 @@
         }
     });
     $(".favroite-icon").click(function () {
+        var id = $(this).data('id');
+        $.post("/user/advert/favorite",{id:id}, function(data, status){
+            console.log(data);
 
+        });
     });
 </script>
 <script>
