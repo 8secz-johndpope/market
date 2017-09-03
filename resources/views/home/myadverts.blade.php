@@ -58,6 +58,7 @@
                         </div>
                     </div>
                 </a>
+                <span class="glyphicon glyphicon-remove delete-icon"></span>
             </div>
 
         @endforeach

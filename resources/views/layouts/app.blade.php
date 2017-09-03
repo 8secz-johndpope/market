@@ -209,6 +209,11 @@
         .meta-bold{
             font-weight: bold;
         }
+        .delete-icon{
+            font-size: 30px;
+            float: right;
+            cursor: pointer;
+        }
 
     </style>
 
