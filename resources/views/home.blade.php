@@ -45,6 +45,7 @@
 			<div class="container">
 				<div class="row menu">
 					<div class="center-block">
+						<h2>Sumra free and trusted</h2>
 						<ul class="tabs-simple list-inline">
 							<li><a class="tabs-simple-tab all-spot" href="#">All Spotlight</a></li>
 							<li><a class="tabs-simple-tab pop-se" href="#">Popular Searches</a></li>
