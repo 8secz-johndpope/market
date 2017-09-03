@@ -87,6 +87,7 @@ class HomeController extends BaseController
     {
         $user = Auth::user();
         $advert = Advert::find($id);
+        return $advert;
         if ($advert === null) {
             $advert = Advert::where('sid', $id)->first();
         }
