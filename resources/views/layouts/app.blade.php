@@ -212,6 +212,7 @@
         span.glyphicon.glyphicon-thumbs-up.favroite-icon {
             font-size: 30px;
             float: right;
+            cursor: pointer;
         }
     </style>
 
