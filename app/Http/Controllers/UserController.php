@@ -929,7 +929,7 @@ class UserController extends BaseController
         unset($body['urgent_id']);
         unset($body['spotlight_id']);
         unset($body['shipping_id']);
-        unset($body['canship']);
+       // unset($body['canship']);
         $body['source_id'] = $advert->id;
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at'] = $milliseconds;
