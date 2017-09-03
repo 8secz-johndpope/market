@@ -53,6 +53,8 @@
 					<div class="tabs-simple-bar">
 						<div class="tabs-simple-bar-mask"></div>
 					</div>
+				</div>
+				<div class="row">
 					<div id="myCarousel-xs" class="carousel slide visible-xs" data-ride="carousel">
 						<!-- Indicators 
 						<ol class="carousel-indicators">
