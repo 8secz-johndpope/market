@@ -116,12 +116,13 @@ class HomeController extends BaseController
         $response = $this->client->index($params);
         $advert->elastic = $response['_id'];
         $advert->save();
-        return ['response' => $response];
-        return $request->all();
-        $categories = Category::where('parent_id',0)->get();
+      //  return ['response' => $response];
+      //  return $request->all();
+      //  $categories = Category::where('parent_id',0)->get();
 
-        return view('home.post',['categories'=>$categories]);
+        return view('home.myadverts');
     }
+
     public function suggest(Request $request)
     {
         $text = $request->q;
