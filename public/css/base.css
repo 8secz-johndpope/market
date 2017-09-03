@@ -280,6 +280,7 @@ section.spotligth{
 .row.menu {
     margin: 0;
     padding: 100px 0;
+    background-color: #000;
 }
 
 .spotligth .panel-primary{
