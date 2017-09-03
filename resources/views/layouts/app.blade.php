@@ -209,6 +209,10 @@
         .meta-bold{
             font-weight: bold;
         }
+        span.glyphicon.glyphicon-thumbs-up.favroite-icon {
+            font-size: 30px;
+            float: right;
+        }
     </style>
 
 </head>
