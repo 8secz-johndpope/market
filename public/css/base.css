@@ -166,7 +166,9 @@ a.navbar-brand {
   box-sizing: border-box;
   border: 0px
 }
-
+.form-group.col-md-12.col-lg-12 {
+    padding-right: 0;
+}
 
 .panel-primary>.panel-heading{
   height: 21vh;
