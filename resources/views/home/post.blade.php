@@ -12,7 +12,7 @@
 
 @section('content')
     <form action="/advert/newad" method="post" id="advert-form">
-
+        {{ csrf_field() }}
    <div class="row">
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
