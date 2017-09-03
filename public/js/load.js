@@ -1,7 +1,7 @@
 /**
  * Created by anil on 6/19/17.
  */
-var albumBucketName = 'chat.sumra.net';
+var albumBucketName = 'web.eu-central-1.sumra.net';
 var bucketRegion = 'eu-central-1';
 var IdentityPoolId = 'eu-central-1:860db8b5-a41e-4628-860d-7fa6823eb59c';
 
