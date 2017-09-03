@@ -87,6 +87,8 @@ class HomeController extends BaseController
 
         $user= Auth::user();
         $category=Category::find($request->category);
+        $fields = $category->fields;
+
         $body['category'] = $category->id;
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at'] = $milliseconds;
@@ -108,7 +110,11 @@ class HomeController extends BaseController
             $body['images']=[];
         }
         $body['meta']['price']=$request->price*100;
-
+        foreach ($fields as $field){
+            if($request->has($field->slug)){
+                $body['meta'][$field->slug] = $request->get($field->slug);
+            }
+        }
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
