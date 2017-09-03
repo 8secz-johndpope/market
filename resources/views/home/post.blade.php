@@ -119,18 +119,7 @@
            </div>
 
            <div class="all-panels">
-           <div class="panel panel-default extra-options-panel">
-               <div class="panel-heading">
-                   <h3 class="panel-title">Select Options</h3>
-               </div>
-               <div class="panel-body">
-                   <div class="row">
-                       <div class="col-sm-12">
-                           <div class="row category-extras"></div>
-                       </div>
-                   </div>
-               </div>
-           </div>
+
 
 
            <div class="panel panel-default title-panel">
@@ -215,7 +204,30 @@
                    £0.00
                </div>
            </div>
-
+               <div class="panel panel-success images-panel">
+                   <div class="panel-heading">
+                       <h3 class="panel-title">Add Image</h3>
+                   </div>
+                   <div class="panel-body">
+                       <div class="row">
+                           <div class="col-sm-3">
+                            <img src="/css/addimage.png">
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="panel panel-default extra-options-panel">
+                   <div class="panel-heading">
+                       <h3 class="panel-title">Select Options</h3>
+                   </div>
+                   <div class="panel-body">
+                       <div class="row">
+                           <div class="col-sm-12">
+                               <div class="row category-extras"></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
 
            <div class="panel panel-info post-panel">
                <div class="panel-heading">
