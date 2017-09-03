@@ -19,7 +19,9 @@
 				 		<div class="panel panel-primary {{$cat->class}}">
 				 			<div class="panel-heading">
 				 				<a href="/{{$cat->slug}}">
-				 					<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
+				 					<div class="center-block">
+				 						<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
+				 					</div>
 				 					<h1>{{$cat->title}}</h1>
 				 				</a>
 				 			</div>
