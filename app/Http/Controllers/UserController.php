@@ -750,12 +750,17 @@ class UserController extends BaseController
                 return ['result' => ['msg' => 'Not enough amount in the transaction']];
             }
         }
+        $featured = array();
+        $urgent = array();
+        $spotlight = array();
+        $shipping = array();
         if ($request->featured > 0) {
             $fff = new Featured;
             $fff->count = $request->featured;
             $fff->days = 7;
             $fff->save();
             $user->featured()->save($fff);
+            $featured[] = $fff;
         }
         if ($request->urgent > 0) {
             $uuu = new Urgent;
@@ -763,6 +768,7 @@ class UserController extends BaseController
             $uuu->days = 7;
             $uuu->save();
             $user->urgent()->save($uuu);
+            $urgent[]=$uuu;
         }
         if ($request->spotlight > 0) {
             $sss = new Spotlight;
@@ -770,6 +776,7 @@ class UserController extends BaseController
             $sss->days = 7;
             $sss->save();
             $user->spotlight()->save($sss);
+            $spotlight[]= $sss;
         }
         if ($request->featured_14 > 0) {
             $fff = new Featured;
@@ -777,6 +784,7 @@ class UserController extends BaseController
             $fff->days = 14;
             $fff->save();
             $user->featured()->save($fff);
+            $featured[]=$fff;
         }
         if ($request->shipping_1 > 0) {
             $fff = new Shipping;
@@ -784,6 +792,7 @@ class UserController extends BaseController
             $fff->weight = 2;
             $fff->save();
             $user->shipping()->save($fff);
+            $shipping[]=$fff;
         }
         if ($request->shipping_2 > 0) {
             $fff = new Shipping;
@@ -791,6 +800,7 @@ class UserController extends BaseController
             $fff->weight = 5;
             $fff->save();
             $user->shipping()->save($fff);
+            $shipping[]=$fff;
         }
         if ($request->shipping_3 > 0) {
             $fff = new Shipping;
@@ -798,12 +808,13 @@ class UserController extends BaseController
             $fff->weight = 10;
             $fff->save();
             $user->shipping()->save($fff);
+            $shipping[]=$fff;
         }
         $user->available -= $subtract;
         $user->balance -= $subtract;
         $user->save();
 
-        return ['success' => true, 'result' => ['msg' => 'The packs successfully added to account'], 'featured' => $user->featured, 'urgent' => $user->urgent, 'spotlight' => $user->spotlight, 'balance' => $user->balance, 'available' => $user->available, 'shipping' => $user->shipping];
+        return ['success' => true, 'result' => ['msg' => 'The packs successfully added to account'], 'featured' => $featured, 'urgent' => $urgent, 'spotlight' => $spotlight, 'balance' => $user->balance, 'available' => $user->available, 'shipping' => $shipping];
     }
 
     public function transfer(Request $request)
