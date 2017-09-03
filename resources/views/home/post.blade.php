@@ -211,7 +211,7 @@
                    <div class="panel-body">
                        <div class="row">
                            <div class="col-sm-3">
-                           <a class="add-image"><img src="/css/addimage.png"></a>
+                           <a ><img src="/css/addimage.png" class="add-image" style="cursor: pointer"></a>
                                <input type="file" id="file-chooser" style="display: none">
                            </div>
                        </div>
