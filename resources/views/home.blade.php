@@ -43,7 +43,7 @@
 		</section>
 		<section class="spotligth">
 			<div class="container">
-				<div class="row">
+				<div class="row menu">
 					<div class="center-block">
 						<ul class="tabs-simple list-inline">
 							<li><a class="tabs-simple-tab all-spot" href="#">All Spotlight</a></li>
