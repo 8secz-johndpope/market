@@ -44,6 +44,7 @@ function upload_file() {
                 console.log(err);
             } else {
                 console.log(data);
+                $("#file-chooser").val("");
             }
         });
     } else {
