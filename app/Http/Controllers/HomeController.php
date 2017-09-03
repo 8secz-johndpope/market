@@ -152,7 +152,7 @@ class HomeController extends BaseController
             return $a['_source'];
         }, $response['hits']['hits']);
 
-        return view('home.myadverts',['total' => $response['hits']['total'], 'adverts' => $products]);
+        return view('home.myadverts',['total' => $response['hits']['total'], 'products' => $products]);
     }
 
     public function suggest(Request $request)
