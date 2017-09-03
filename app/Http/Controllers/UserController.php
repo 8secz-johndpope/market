@@ -448,7 +448,7 @@ class UserController extends BaseController
         } catch (\Exception $e) {
             return [
                 'success' => false,
-                'result' => 'error charging the card'
+                'result' => ['msg'=>'error charging the card']
             ];
         }
 
