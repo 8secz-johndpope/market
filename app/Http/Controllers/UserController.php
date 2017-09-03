@@ -744,10 +744,10 @@ class UserController extends BaseController
         if ($total > 0) {
             $transaction = Transaction::where('slug', $request->transaction_id)->first();
             if ($transaction === null || $transaction->used === 1) {
-                return ['result' => ['msg' => 'Not a valid transaction id']];
+                return ['success' => false,'result' => ['msg' => 'Not a valid transaction id']];
             }
             if ($transaction->amount < $total) {
-                return ['result' => ['msg' => 'Not enough amount in the transaction']];
+                return ['success' => false,'result' => ['msg' => 'Not enough amount in the transaction']];
             }
         }
         $featured = array();
@@ -876,12 +876,12 @@ class UserController extends BaseController
             if (isset($body['featured_id'])) {
                 $vd = Featured::find($body['featured_id']);
                 if ($vd === null) {
-                    return ['msg' => 'Not valid featured id'];
+                    return ['success' => false,'msg' => 'Not valid featured id'];
                 }
                 $vd->count--;
                 $vd->save();
             } else {
-                return ['msg' => 'No featured id'];
+                return ['success' => false,'msg' => 'No featured id'];
             }
         }
 
@@ -889,32 +889,32 @@ class UserController extends BaseController
             if (isset($body['urgent_id'])) {
                 $vd = Urgent::find($body['urgent_id']);
                 if ($vd === null) {
-                    return ['msg' => 'Not valid urgent id'];
+                    return ['success' => false,'msg' => 'Not valid urgent id'];
                 }
                 $vd->count--;
                 $vd->save();
             } else {
-                return ['msg' => 'No urgent id '];
+                return ['success' => false,'msg' => 'No urgent id '];
             }
         }
         if ($spotlight === 1) {
             if (isset($body['spotlight_id'])) {
                 $vd = Spotlight::find($body['spotlight_id']);
                 if ($vd === null) {
-                    return ['msg' => 'Not valid spotlight id'];
+                    return ['success' => false,'msg' => 'Not valid spotlight id'];
                 }
                 $vd->count--;
                 $vd->save();
 
             } else {
-                return ['msg' => 'No spotlight id '];
+                return ['success' => false,'msg' => 'No spotlight id '];
             }
         }
         if ($canship === 1) {
             if (isset($body['shipping_id'])) {
                 $vd = Shipping::find($body['shipping_id']);
                 if ($vd === null) {
-                    return ['msg' => 'Not valid shipping id'];
+                    return ['success' => false,'msg' => 'Not valid shipping id'];
                 }
                 $vd->count--;
                 $vd->save();
@@ -922,7 +922,7 @@ class UserController extends BaseController
                 $advert->save();
 
             } else {
-                return ['msg' => 'No shipping id '];
+                return ['success' => false,'msg' => 'No shipping id '];
             }
         }
         unset($body['featured_id']);
@@ -956,7 +956,7 @@ class UserController extends BaseController
             $user->save();
         }
 
-        return ['body' => $body, 'response' => $response];
+        return ['success' => true,'body' => $body, 'response' => $response];
     }
 
     public function ccreate(Request $request)
