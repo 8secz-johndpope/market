@@ -87,7 +87,7 @@ class HomeController extends BaseController
     {
         $user = Auth::user();
         $advert = Advert::find($id);
-        return $advert;
+
         if ($advert === null) {
             $advert = Advert::where('sid', $id)->first();
         }
@@ -108,6 +108,7 @@ class HomeController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
         $response = $this->client->delete($params);
+        return $response;
         $advert->delete();
         return redirect('/user/manage/ads');
     }
