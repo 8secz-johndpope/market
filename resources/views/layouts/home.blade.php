@@ -361,10 +361,10 @@
             console.log(data);
 
         });
-        axios.get('/oauth/scopes')
+        axios.get('/oauth/personal-access-tokens')
             .then(response => {
             console.log(response.data);
-        });
+    });
     });
 
 </script>
