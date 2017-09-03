@@ -559,6 +559,7 @@
     });
     $("#file-chooser").change(function () {
         console.log("did change");
+        upload_file();
     });
 </script>
 </body>
