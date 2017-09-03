@@ -1,6 +1,11 @@
 body{
   /*background-color: #f9f9f9;*/
-  background-image: url(css/back3.jpg);
+    background-image: url(css/back4.jpg);
+    /* background-position: center; */
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position-y: 100px;
+    background-position-x: center;
 }
 .row {
     width: 100%;
@@ -55,6 +60,8 @@ a.navbar-brand {
   padding: 20px 0 35px 0;
   border-radius: 10px;
   background-color: #fff;
+  margin: 0 auto;
+  width: 90%;
 }
 .search input.form-control.input-lg {
   width: 74%;
