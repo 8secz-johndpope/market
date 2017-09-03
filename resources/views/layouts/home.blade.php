@@ -364,6 +364,7 @@
         axios.get('/oauth/scopes')
             .then(response => {
             console.log(response.data);
+        });
     });
 
 </script>
