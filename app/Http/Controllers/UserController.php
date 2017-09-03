@@ -745,7 +745,7 @@ class UserController extends BaseController
             if ($transaction === null || $transaction->used === 1) {
                 return ['result' => ['msg' => 'Not a valid transaction id']];
             }
-            if ($transaction->amount != $total) {
+            if ($transaction->amount < $total) {
                 return ['result' => ['msg' => 'Not enough amount in the transaction']];
             }
         }
