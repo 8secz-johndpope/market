@@ -344,6 +344,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
     $('#autocomplete').autocomplete({
@@ -359,6 +360,13 @@
         $.post("/api/user/list/favorite",{id:id}, function(data, status){
             console.log(data);
 
+        });
+        axios.post('/api/user/list/favorite', {id:id})
+            .then(response => {
+            console.log(response.data.accessToken);
+    })
+    .catch (response => {
+            // List errors on response...
         });
 
     });
