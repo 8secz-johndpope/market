@@ -48,7 +48,7 @@ function upload_file() {
                 console.log(err);
             } else {
                 console.log(data);
-                $(".row-images").append('<div class="col-sm-3"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/'+uname+'"></div>');
+                $(".row-images").prepend('<div class="col-sm-3"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/'+uname+'"></div>');
 
             }
         });

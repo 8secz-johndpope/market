@@ -35,6 +35,9 @@
         .location-selected{
             display: none;
         }
+        .row-images img{
+            width: 100%;
+        }
         a.select-category-link {
             float: right;
         }
