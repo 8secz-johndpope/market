@@ -149,7 +149,7 @@ a.navbar-brand {
 }
 .panel-heading h1{
   margin: 0 auto;
-  font-size: 30px;
+  font-size: 24px;
   padding: 10px 0;
   color: #000;
   text-align: center;
@@ -959,7 +959,7 @@ a.left.carousel-control {
       font-size: 13px;
   }
   .panel-heading img.icon-category {
-    height: 10em;
+    height: 8em;
   }
   .spotligth .panel-heading {
     height: 380px;
