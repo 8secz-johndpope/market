@@ -34,7 +34,7 @@ function upload_file() {
         var ext = file.name.split('.').pop();
 
         var objKey = '' + file.name;
-        var uname = number+ext;
+        var uname = number+'.'+ext;
         console.log(uname);
         var params = {
             Key: uname,
