@@ -356,7 +356,7 @@
     });
     $(".favroite-icon").click(function () {
         var id = $(this).data('id');
-        $.post("/user/advert/favorite",{id:id}, function(data, status){
+        $.post("/user/list/favorite",{id:id}, function(data, status){
             console.log(data);
 
         });
