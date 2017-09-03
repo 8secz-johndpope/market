@@ -213,6 +213,7 @@
             font-size: 30px;
             float: right;
             cursor: pointer;
+            color: red;
         }
 
     </style>
