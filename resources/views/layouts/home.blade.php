@@ -157,6 +157,8 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
+                                <li><a href="/user/manage/ads">Manage My Ads</a> </li>
+                                <li><a href="/user/ads/post">Post an Ad</a> </li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
