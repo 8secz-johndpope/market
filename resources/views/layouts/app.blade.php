@@ -209,7 +209,7 @@
         .meta-bold{
             font-weight: bold;
         }
-        span.glyphicon.glyphicon-thumbs-up.favroite-icon {
+        .favroite-icon {
             font-size: 30px;
             float: right;
             cursor: pointer;
