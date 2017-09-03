@@ -209,11 +209,7 @@
         .meta-bold{
             font-weight: bold;
         }
-        .favroite-icon {
-            font-size: 30px;
-            float: right;
-            cursor: pointer;
-        }
+
     </style>
 
 </head>
