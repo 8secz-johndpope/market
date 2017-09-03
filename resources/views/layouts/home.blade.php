@@ -361,14 +361,9 @@
             console.log(data);
 
         });
-        axios.post('/api/user/list/favorite', {id:id})
+        axios.get('/oauth/scopes')
             .then(response => {
-            console.log(response.data.accessToken);
-    })
-    .catch (response => {
-            // List errors on response...
-        });
-
+            console.log(response.data);
     });
 
 </script>
