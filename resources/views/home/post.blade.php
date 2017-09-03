@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <form action="/advert/newad" method="post" id="advert-form">
+    <form action="/user/advert/newad" method="post" id="advert-form">
         {{ csrf_field() }}
         <input type="hidden" name="category" value="0" id="category">
    <div class="row">
