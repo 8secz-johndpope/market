@@ -64,6 +64,8 @@ Route::post('/user/advert/order','UserController@order')->middleware('auth:api')
 Route::post('/user/advert/offer','UserController@offer')->middleware('auth:api');
 Route::post('/user/advert/interest','UserController@interest')->middleware('auth:api');
 Route::post('/user/advert/favorite','UserController@favorite')->middleware('auth:api');
+Route::post('/user/list/favorite','UserController@favorite')->middleware('auth:api');
+
 Route::post('/user/advert/report','UserController@report')->middleware('auth:api');
 Route::post('/user/order/review','UserController@review')->middleware('auth:api');
 
