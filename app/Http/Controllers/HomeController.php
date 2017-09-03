@@ -88,7 +88,7 @@ class HomeController extends BaseController
         $user = Auth::user();
         $advert = Advert::find($id);
         if ($advert === null) {
-            $advert = Advert::where('sid', $request->id)->first();
+            $advert = Advert::where('sid', $id)->first();
         }
         if ($advert === null) {
             return redirect('/user/manage/ads');
@@ -98,8 +98,7 @@ class HomeController extends BaseController
             return redirect('/user/manage/ads');
            // return ['code' => 2, 'msg' => 'Advert does not belong to you'];
         }
-        $body = $request->json()->all();
-        unset($body['id']);
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
