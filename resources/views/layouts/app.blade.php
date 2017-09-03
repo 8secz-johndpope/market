@@ -557,6 +557,9 @@
     $(".add-image").click(function () {
         $("#file-chooser").click();
     });
+    $("#file-chooser").change(function () {
+        console.log("did change");
+    });
 </script>
 </body>
 </html>
