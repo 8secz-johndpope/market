@@ -715,10 +715,10 @@ class UserController extends BaseController
     public function buy(Request $request)
     {
         $user = Auth::user();
-        return $user;
-        $body = $request->json()->all();
+       // return $user;
+       // $body = $request->json()->all();
 
-        $balance = (int)$body['balance'];
+        $balance = (int)$request->balance;
         $total = $this->cprice($request);
         $subtract = 0;
         if ($balance === 1) {
