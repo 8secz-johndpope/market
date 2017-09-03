@@ -18,6 +18,8 @@ Route::get('/user/ads/post', 'HomeController@post');
 Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'HomeController@myads');
 
+Route::get('/user/advert/delete/{id}', 'HomeController@delete');
+
 Route::get('/category/children/{id}', 'HomeController@children');
 Route::get('/category/extras/{id}', 'HomeController@extras');
 Route::get('/category/suggest', 'HomeController@suggest');

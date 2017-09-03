@@ -83,7 +83,35 @@ class HomeController extends BaseController
 
         return view('home.post',['categories'=>$categories]);
     }
-    public  function newad(Request $request){
+    public  function delete(Request $request,$id)
+    {
+        $user = Auth::user();
+        $advert = Advert::find($id);
+        if ($advert === null) {
+            $advert = Advert::where('sid', $request->id)->first();
+        }
+        if ($advert === null) {
+            return redirect('/user/manage/ads');
+            //return ['code' => 1, 'msg' => 'Advert not found'];
+        }
+        if ($advert->user_id != $user->id) {
+            return redirect('/user/manage/ads');
+           // return ['code' => 2, 'msg' => 'Advert does not belong to you'];
+        }
+        $body = $request->json()->all();
+        unset($body['id']);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic
+        ];
+
+// Update doc at /my_index/my_type/my_id
+        $response = $this->client->delete($params);
+        $advert->delete();
+        return redirect('/user/manage/ads');
+    }
+        public  function newad(Request $request){
 
         $user= Auth::user();
         $category=Category::find($request->category);
