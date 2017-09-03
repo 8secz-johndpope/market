@@ -15,6 +15,8 @@ Route::get('/pull', 'MarketController@pull');
 Route::get('/update', 'MarketController@update');
 Route::get('/insert', 'MarketController@insert');
 Route::get('/advert/post', 'HomeController@post');
+Route::post('/advert/newad', 'HomeController@newad');
+
 Route::get('/category/children/{id}', 'HomeController@children');
 Route::get('/category/extras/{id}', 'HomeController@extras');
 Route::get('/category/suggest', 'HomeController@suggest');

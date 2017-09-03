@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+    <form action="/advert/newad" method="post" id="advert-form">
 
    <div class="row">
        <div class="col-lg-2"></div>
@@ -81,6 +82,7 @@
                    </div>
                </div>
            </div>
+
 
            <div class="panel panel-default selected-category-panel">
                <div class="panel-heading">
@@ -236,7 +238,7 @@
                </div>
                <div class="panel-body">
                    <div class="row">
-                       <div class="col-sm-2 col-sm-offset-10"><a class="btn btn-primary">Post Advert</a> </div>
+                       <div class="col-sm-2 col-sm-offset-10"><button type="submit" class="btn btn-primary">Post Advert</button> </div>
                    </div>
                </div>
            </div>
@@ -246,4 +248,5 @@
 
        <div class="col-lg-2"></div>
    </div>
+   </form>
     @endsection

@@ -79,6 +79,12 @@ class HomeController extends BaseController
 
         return view('home.post',['categories'=>$categories]);
     }
+    public  function newad(Request $request){
+
+        $categories = Category::where('parent_id',0)->get();
+
+        return view('home.post',['categories'=>$categories]);
+    }
     public function suggest(Request $request)
     {
         $text = $request->q;
