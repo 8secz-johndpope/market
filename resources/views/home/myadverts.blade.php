@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="glyphicon glyphicon-remove delete-icon"></a>
+                <a class="glyphicon glyphicon-remove delete-icon" href="/user/advert/delete/{{$product['meta']['price']}}"></a>
             </div>
 
         @endforeach
