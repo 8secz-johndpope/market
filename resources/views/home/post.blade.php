@@ -212,6 +212,7 @@
                        <div class="row">
                            <div class="col-sm-3">
                            <a class="add-image"><img src="/css/addimage.png"></a>
+                               <input type="file" id="file-chooser" style="display: none">
                            </div>
                        </div>
                    </div>
