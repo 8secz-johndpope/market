@@ -569,7 +569,7 @@ a.left.carousel-control {
 }
 .tabs-simple a {
     font-size: 18px;
-    color: #635b67;
+    color: #fe9c30;
     cursor: pointer;
 }
 .tabs-simple-bar {
@@ -596,7 +596,7 @@ a.left.carousel-control {
     width: 100%;
     height: 25px;
     border-radius: 125px/12px;
-    box-shadow: 0 0 6px #b1adb3;
+    box-shadow: 0 0 6px #fe9c30;
 }
 .tabs-simple>li {
     list-style: none;
