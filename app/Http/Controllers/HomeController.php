@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\Category;
+use App\Model\Advert;
+
 class HomeController extends BaseController
 {
     const MAX_CHILDREN = 10;
@@ -99,7 +101,7 @@ class HomeController extends BaseController
             $body['images']=[];
         }
         $body['meta']['price']=$request->price*100;
-        
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
