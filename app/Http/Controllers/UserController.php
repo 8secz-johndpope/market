@@ -603,11 +603,7 @@ class UserController extends BaseController
         return ['status' => 'success'];
     }
 
-    public function tableAdverts(){
 
-        $model = Advert::find(1);
-        return ['table' => $model->getAllColumnsNames()];
-    }
 
     public function adverts(Request $request)
     {

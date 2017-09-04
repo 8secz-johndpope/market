@@ -79,7 +79,6 @@ Route::post('/user/advert/ccreate','UserController@ccreate');
 
 Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');
 
-Route::get('/user/advert/seetable', 'UserController@tableAdverts')->middleware('auth:api');
 
 Route::get('/user/adverts/transfer', 'UserController@transfer')->middleware('auth:api');
 
