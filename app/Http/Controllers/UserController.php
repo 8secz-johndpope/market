@@ -604,7 +604,7 @@ class UserController extends BaseController
     }
 
     public function tableAdverts(){
-        $table = with(new Advert())->getTable();
+        $table = Schema::getColumnListing('advert');
         return ['table' => $table];
     }
 
