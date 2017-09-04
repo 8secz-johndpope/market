@@ -93,8 +93,9 @@ class UserController extends BaseController
         $user = Auth::user();
       //  $user_id = $user->id;
 
-        $response = Cv::where('user_id',  $user->id)->get();
-        return ["cv" =>  $response];
+        $cv = Cv::where('user_id',  $user->id)->get();
+        $cover = Cover::where('user_id',  $user->id)->get();
+        return ["cv" =>  $cv, "cover" => $cover ];
     }
 
     public function review(Request $request)
