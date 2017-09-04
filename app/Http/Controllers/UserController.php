@@ -93,7 +93,7 @@ class UserController extends BaseController
         $user = Auth::user();
       //  $user_id = $user->id;
 
-        $response = DB::table('cv')->where('user_id',  $user->id)->get();
+        $response = DB::table('adverts')->where('user_id',  $user->id)->get();
         return ["cv" => ['users' => $response]];
     }
 
