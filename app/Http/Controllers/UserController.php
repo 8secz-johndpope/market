@@ -319,7 +319,8 @@ class UserController extends BaseController
 
 // Get the currently authenticated user's ID...
         //$id = Auth::id();
-        return ["name" => $user->name, 'featured' => $user->featured, 'urgent' => $user->urgent, 'spotlight' => $user->spotlight, 'balance' => $user->balance, 'available' => $user->available, 'shipping' => $user->shipping, 'cvs' => $user->cvs, 'covers' => $user->covers];
+
+        return ["phone" => $user->phone,"email" => $user->email,"name" => $user->name, 'featured' => $user->featured, 'urgent' => $user->urgent, 'spotlight' => $user->spotlight, 'balance' => $user->balance, 'available' => $user->available, 'shipping' => $user->shipping, 'cvs' => $user->cvs, 'covers' => $user->covers];
     }
 
     public function price(Request $request)
