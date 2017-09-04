@@ -458,8 +458,9 @@ class UserController extends BaseController
 
         } catch (\Exception $e) {
             return [
-                'success' => false,
-                'result' => 'error charging the card'
+                'status' => 'failed',
+                'error' => $e,
+                'result' => ['msg'=>'error charging the card']
             ];
         }
 
@@ -646,6 +647,10 @@ class UserController extends BaseController
         $body['username'] = $user->name;
         $body['user_id'] = $user->id;
         $body['phone'] = $user->phone;
+        if(!isset($body['meta']['price'])){
+            $body['meta']['price'] = -1;
+        }
+        unset($body['id']);
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -721,9 +726,10 @@ class UserController extends BaseController
     public function buy(Request $request)
     {
         $user = Auth::user();
-        $body = $request->json()->all();
+       // return $user;
+       // $body = $request->json()->all();
 
-        $balance = (int)$body['balance'];
+        $balance = (int)$request->balance;
         $total = $this->cprice($request);
         $subtract = 0;
         if ($balance === 1) {
@@ -749,18 +755,23 @@ class UserController extends BaseController
         if ($total > 0) {
             $transaction = Transaction::where('slug', $request->transaction_id)->first();
             if ($transaction === null || $transaction->used === 1) {
-                return ['result' => ['msg' => 'Not a valid transaction id']];
+                return ['success' => false,'result' => ['msg' => 'Not a valid transaction id']];
             }
-            if ($transaction->amount != $total) {
-                return ['result' => ['msg' => 'Not enough amount in the transaction']];
+            if ($transaction->amount < $total) {
+                return ['success' => false,'result' => ['msg' => 'Not enough amount in the transaction']];
             }
         }
+        $featured = array();
+        $urgent = array();
+        $spotlight = array();
+        $shipping = array();
         if ($request->featured > 0) {
             $fff = new Featured;
             $fff->count = $request->featured;
             $fff->days = 7;
             $fff->save();
             $user->featured()->save($fff);
+            $featured[] = $fff;
         }
         if ($request->urgent > 0) {
             $uuu = new Urgent;
@@ -768,6 +779,7 @@ class UserController extends BaseController
             $uuu->days = 7;
             $uuu->save();
             $user->urgent()->save($uuu);
+            $urgent[]=$uuu;
         }
         if ($request->spotlight > 0) {
             $sss = new Spotlight;
@@ -775,6 +787,7 @@ class UserController extends BaseController
             $sss->days = 7;
             $sss->save();
             $user->spotlight()->save($sss);
+            $spotlight[]= $sss;
         }
         if ($request->featured_14 > 0) {
             $fff = new Featured;
@@ -782,6 +795,7 @@ class UserController extends BaseController
             $fff->days = 14;
             $fff->save();
             $user->featured()->save($fff);
+            $featured[]=$fff;
         }
         if ($request->shipping_1 > 0) {
             $fff = new Shipping;
@@ -789,6 +803,7 @@ class UserController extends BaseController
             $fff->weight = 2;
             $fff->save();
             $user->shipping()->save($fff);
+            $shipping[]=$fff;
         }
         if ($request->shipping_2 > 0) {
             $fff = new Shipping;
@@ -796,6 +811,7 @@ class UserController extends BaseController
             $fff->weight = 5;
             $fff->save();
             $user->shipping()->save($fff);
+            $shipping[]=$fff;
         }
         if ($request->shipping_3 > 0) {
             $fff = new Shipping;
@@ -803,12 +819,13 @@ class UserController extends BaseController
             $fff->weight = 10;
             $fff->save();
             $user->shipping()->save($fff);
+            $shipping[]=$fff;
         }
         $user->available -= $subtract;
         $user->balance -= $subtract;
         $user->save();
 
-        return ['success' => true, 'result' => ['msg' => 'The packs successfully added to account'], 'featured' => $user->featured, 'urgent' => $user->urgent, 'spotlight' => $user->spotlight, 'balance' => $user->balance, 'available' => $user->available, 'shipping' => $user->shipping];
+        return ['success' => true, 'result' => ['msg' => 'The packs successfully added to account'], 'featured' => $featured, 'urgent' => $urgent, 'spotlight' => $spotlight, 'balance' => $user->balance, 'available' => $user->available, 'shipping' => $shipping];
     }
 
     public function transfer(Request $request)
@@ -870,12 +887,12 @@ class UserController extends BaseController
             if (isset($body['featured_id'])) {
                 $vd = Featured::find($body['featured_id']);
                 if ($vd === null) {
-                    return ['msg' => 'Not valid featured id'];
+                    return ['success' => false,'msg' => 'Not valid featured id'];
                 }
                 $vd->count--;
                 $vd->save();
             } else {
-                return ['msg' => 'No featured id'];
+                return ['success' => false,'msg' => 'No featured id'];
             }
         }
 
@@ -883,32 +900,32 @@ class UserController extends BaseController
             if (isset($body['urgent_id'])) {
                 $vd = Urgent::find($body['urgent_id']);
                 if ($vd === null) {
-                    return ['msg' => 'Not valid urgent id'];
+                    return ['success' => false,'msg' => 'Not valid urgent id'];
                 }
                 $vd->count--;
                 $vd->save();
             } else {
-                return ['msg' => 'No urgent id '];
+                return ['success' => false,'msg' => 'No urgent id '];
             }
         }
         if ($spotlight === 1) {
             if (isset($body['spotlight_id'])) {
                 $vd = Spotlight::find($body['spotlight_id']);
                 if ($vd === null) {
-                    return ['msg' => 'Not valid spotlight id'];
+                    return ['success' => false,'msg' => 'Not valid spotlight id'];
                 }
                 $vd->count--;
                 $vd->save();
 
             } else {
-                return ['msg' => 'No spotlight id '];
+                return ['success' => false,'msg' => 'No spotlight id '];
             }
         }
         if ($canship === 1) {
             if (isset($body['shipping_id'])) {
                 $vd = Shipping::find($body['shipping_id']);
                 if ($vd === null) {
-                    return ['msg' => 'Not valid shipping id'];
+                    return ['success' => false,'msg' => 'Not valid shipping id'];
                 }
                 $vd->count--;
                 $vd->save();
@@ -916,14 +933,14 @@ class UserController extends BaseController
                 $advert->save();
 
             } else {
-                return ['msg' => 'No shipping id '];
+                return ['success' => false,'msg' => 'No shipping id '];
             }
         }
         unset($body['featured_id']);
         unset($body['urgent_id']);
         unset($body['spotlight_id']);
         unset($body['shipping_id']);
-        unset($body['canship']);
+       // unset($body['canship']);
         $body['source_id'] = $advert->id;
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at'] = $milliseconds;
@@ -931,6 +948,9 @@ class UserController extends BaseController
         $body['username'] = $user->name;
         $body['user_id'] = $user->id;
         $body['phone'] = $user->phone;
+        if(!isset($body['meta']['price'])){
+            $body['meta']['price'] = -1;
+        }
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -938,6 +958,7 @@ class UserController extends BaseController
         ];
         $response = $this->client->index($params);
         $advert->sid = $advert->id;
+        $advert->user_id=$user->id;
         $advert->elastic = $response['_id'];
         $advert->save();
         if ($user->offer === 0) {
@@ -950,7 +971,7 @@ class UserController extends BaseController
             $user->save();
         }
 
-        return ['body' => $body, 'response' => $response];
+        return ['success' => true,'body' => $body, 'response' => $response];
     }
 
     public function ccreate(Request $request)

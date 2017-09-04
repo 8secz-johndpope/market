@@ -29,6 +29,52 @@
             font-weight: bold;
             font-style: italic;
         }
+        span.extra-title {
+            font-weight: bold;
+        }
+        .location-selected{
+            display: none;
+        }
+        .row-images img{
+            width: 100%;
+        }
+        a.select-category-link {
+            float: right;
+        }
+        span.extra-large {
+            font-size: 25px;
+        }
+        .manual-category-panel,.selected-category-panel,.selected-location-panel,.all-panels{
+            display: none;
+        }
+        span.span-urgent, span.span-featured,span.span-spotlight,span.span-shipping {
+
+            color: white;
+            padding: 2px;
+            width: 100px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        span.select-category {
+            font-weight: bold;
+        }
+        span.suggest-title {
+            font-weight: bold;
+        }
+        span.span-urgent{
+            background: #ec4231;
+        }
+        span.span-featured{
+            background: #3997ba;
+        }
+        span.span-spotlight{
+            background: #5cb74c;
+        }
+        span.span-shipping{
+            background: #286090;
+        }
         .grayborder{
             border: solid 1px gray;
         }
@@ -36,7 +82,7 @@
             height: 50px;
             padding: 10px;
         }
-        .selected-location{
+        .selected-location, .selected-extras, .ad-title{
             margin-top: 20px;
         }
         .main-category {
@@ -163,6 +209,13 @@
         .meta-bold{
             font-weight: bold;
         }
+        .delete-icon{
+            font-size: 30px;
+            float: right;
+            cursor: pointer;
+            color: red;
+        }
+
     </style>
 
 </head>
@@ -211,6 +264,8 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="/user/manage/ads">Manage My Ads</a> </li>
+                                <li><a href="/user/ads/post">Post an Ad</a> </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -370,6 +425,9 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
+<script src="https://sumra.net/js/aws-sdk.js"></script>
+<script src="https://sumra.net/js/load.js"></script>
+
 
 <script>
     $('#autocomplete').autocomplete({
@@ -399,7 +457,7 @@
         if(count===0){
             $('.category-level-2').html('');
             $("#continue-button").attr('disabled',false);
-
+            $("#continue-button").data('category',$(this).data('category'));
             $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
@@ -418,6 +476,7 @@
         if(count===0){
             $('.category-level-3').html('');
             $("#continue-button").attr('disabled',false);
+            $("#continue-button").data('category',$(this).data('category'));
             $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
@@ -435,6 +494,8 @@
         if(count===0){
             $('.category-level-4').html('');
             $("#continue-button").attr('disabled',false);
+            $("#continue-button").data('category',$(this).data('category'));
+
             $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
             return;
         }
@@ -446,10 +507,71 @@
             $('.category-level-4').html(data);
         });
     });
+    $("#continue-button").click(function () {
+        get_extras($(this).data('category'));
+    });
     $(".category-level-4").on("click","li", function(event) {
         $('.select-arrow').removeClass('glyphicon-ok-sign');
         $("#continue-button").attr('disabled',false);
+        get_extras($(this).data('category'));
         $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
+    });
+    function get_extras(category) {
+        $("#category").val(category);
+        if($(".location-selected").is(':visible'))
+        $(".all-panels").show();
+        $.get("/category/string/"+category, function(data, status){
+            console.log(data);
+            $('.category-sting').html(data);
+            $(".manual-category-panel").hide();
+            $(".automatic-category-panel").hide();
+            $(".selected-category-panel").show();
+            $(".selected-location-panel").show();
+        })
+        $.get("/category/extras/"+category, function(data, status){
+            console.log(data.length);
+            $('.category-extras').html(data);
+            if(data.length===0){
+                $('.extra-options-panel').hide();
+            }else{
+                $('.extra-options-panel').show();
+            }
+        });
+    }
+    $('input.posting-string').on('input',function(e){
+        $.get("/category/suggest?q="+$(this).val(), function(data, status){
+            console.log(data);
+            $('.category-suggest').html(data);
+        });
+    });
+    $(".category-suggest").on("click","li", function(event) {
+        get_extras($(this).data('category'));
+    });
+    $(".browse-category").click(function () {
+        $(".manual-category-panel").show();
+    });
+    $(".edit-category").click(function () {
+       $('.all-panels').hide();
+       $('.selected-category-panel').hide();
+       $('.automatic-category-panel').show();
+    });
+    $(".postcode-submit").click(function () {
+        console.log("click works");
+       $(".extra-large").html($("#postcode-text").val());
+       $(".edit-location").hide();
+       $(".location-selected").show();
+       $(".all-panels").show();
+    });
+    $(".edit-location-button").click(function () {
+        $(".edit-location").show();
+        $(".location-selected").hide();
+    });
+    $(".add-image").click(function () {
+        $("#file-chooser").click();
+    });
+    $("#file-chooser").change(function () {
+        console.log("did change");
+        upload_file();
     });
 </script>
 </body>

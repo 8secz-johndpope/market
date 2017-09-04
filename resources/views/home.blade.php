@@ -19,7 +19,9 @@
 				 		<div class="panel panel-primary {{$cat->class}}">
 				 			<div class="panel-heading">
 				 				<a href="/{{$cat->slug}}">
-				 					<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
+				 					<div class="center-block">
+				 						<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
+				 					</div>
 				 					<h1>{{$cat->title}}</h1>
 				 				</a>
 				 			</div>
@@ -41,8 +43,9 @@
 		</section>
 		<section class="spotligth">
 			<div class="container">
-				<div class="row">
+				<div class="row menu">
 					<div class="center-block">
+						<h2>Sumra free and trusted</h2>
 						<ul class="tabs-simple list-inline">
 							<li><a class="tabs-simple-tab all-spot" href="#">All Spotlight</a></li>
 							<li><a class="tabs-simple-tab pop-se" href="#">Popular Searches</a></li>
@@ -51,6 +54,8 @@
 					<div class="tabs-simple-bar">
 						<div class="tabs-simple-bar-mask"></div>
 					</div>
+				</div>
+				<div class="row">
 					<div id="myCarousel-xs" class="carousel slide visible-xs" data-ride="carousel">
 						<!-- Indicators 
 						<ol class="carousel-indicators">

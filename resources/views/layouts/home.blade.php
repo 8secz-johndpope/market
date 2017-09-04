@@ -35,7 +35,7 @@
         body {
             /* font: 1em/1.67 'Open Sans', Arial, Sans-serif; */
             margin: 0;
-            background: #e9e9e9;
+            /*background: #e9e9e9;*/
         }
 
         .masonry { /* Masonry container */
@@ -107,6 +107,11 @@
                 width: 1260px;
             }
         }
+        .favroite-icon {
+            font-size: 30px;
+            float: right;
+            cursor: pointer;
+        }
 
     </style>
 
@@ -157,6 +162,8 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
+                                <li><a href="/user/manage/ads">Manage My Ads</a> </li>
+                                <li><a href="/user/ads/post">Post an Ad</a> </li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -337,8 +344,12 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
+    window.axios.defaults.headers.common = {
+        'X-Requested-With': 'XMLHttpRequest',
+    };
     $('#autocomplete').autocomplete({
         paramName :'q',
         serviceUrl: '/api/suggest',
@@ -347,6 +358,24 @@
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });
+    $(".favroite-icon").click(function () {
+        var id = $(this).data('id');
+        $.post("/api/user/list/favorite",{id:id}, function(data, status){
+            console.log(data);
+
+        });
+        axios.post('/api/user/list/favorite', {
+            id:id
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+    });
+
 </script>
 <script>
 

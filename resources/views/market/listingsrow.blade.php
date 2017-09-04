@@ -13,21 +13,21 @@
 @section('content')
 
 
-<div class="row">
+<div class="row listings">
     <div class="container">
     <div class="col-md-2 col-md-offset-1">
         <div class="l-visible-large">
-            <ul>
+            <ul class="list-group">
                 @foreach($parents as $parent)
-                    <li><a href="/{{$parent->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
+                    <li class="list-group-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
                 @endforeach
             </ul>
         </div>
         <div class="l-visible-large">
             <h4>{{$category->title}}</h4>
-            <ul>
+            <ul class="list-group">
                 @foreach($categories as $cat)
-                        <li><a href="/{{$cat->slug}}">{{$cat->title}}</a>&nbsp;&nbsp;{{$cat->count}}</li>
+                        <li class="list-group-item"><a href="/{{$cat->slug}}">{{$cat->title}}</a>&nbsp;&nbsp;{{$cat->count}}</li>
                 @endforeach
             </ul>
         </div>
@@ -94,19 +94,19 @@
         @foreach($filters as $filter)
             <div class="l-visible-large">
                 <h4>{{$filter->title}}</h4>
-                <ul>
+                <ul class="list-group">
                     @foreach($filter->vals as $val)
                         @if($val->selected===1)
-                            <li>{{$val->title}}</li>
+                            <li class="list-group-item">{{$val->title}}</li>
                         @else
-                            <li><a href="{!! $val->url !!}">{{$val->title}}</a>&nbsp;&nbsp;{{$val->count}}</li>
+                            <li class="list-group-item"><a href="{!! $val->url !!}">{{$val->title}}</a>&nbsp;&nbsp;{{$val->count}}</li>
                         @endif
                     @endforeach
                 </ul>
             </div>
         @endforeach
     </div>
-    <div class="col-md-8">
+    <div class="col-xs-12 col-md-8">
         <section class="items-box-container clearfix">
             <h2 class="items-box-head">
                 List of items for {{$category->title}}, {{$total}}
@@ -114,7 +114,7 @@
             </h2>
 
 
-            <div class="col-md-12">
+            <div class="col-xs-12  col-md-12">
 
             @foreach($products as $product)
                     <div class="item listing">
@@ -129,7 +129,9 @@
                         <div class="items-box-body listing-content">
                             <h4 class="items-box-name font-2">{{$product['title']}}</h4>
                             <div class="listing-location">
-                                {{$product['location_name']}}
+                                <span class="truncate-line">
+                                    {{$product['location_name']}}
+                                </span>
                             </div>
                             <p class="listing-description">
                                 {{$product['description']}}
@@ -145,6 +147,8 @@
                             </div>
                         </div>
                     </a>
+                        <span class="glyphicon glyphicon-thumbs-up favroite-icon" data-id="{{$product['source_id']}}"></span>
+
                     </div>
                 
             @endforeach
@@ -153,54 +157,34 @@
 
             </div>
         </section>
-        <ul class="pager">
-            @if($page!=1)
-                <li class="pager-prev visible-pc">
-                    <ul>
-                        <li class="pager-cell">
-                            <a href="{{$pageurl}}&page=1">
-                                <i class="icon-arrow-double-left"></i>
-                            </a>
-                        </li>
-                        <li class="pager-cell">
-                            <a href="{{$pageurl}}&page={{$page-1}}">
-                                <i class="icon-arrow-left"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            @endif
+        <nav aria-label="Page navigation">
+            <div class="text-center">
+            <ul class="pagination">
 
-            <li class="pager-num">
-                <ul>
-                    @foreach($pages as $p)
-                        <li class="pager-cell {{$page==$p?'active':''}}">
-                            @if($page===$p)
-                                {{$p}}
-                            @else
-                                <a href="{{$pageurl}}&page={{$p}}">{{$p}}</a>
-                            @endif
-                        </li>
-                    @endforeach
-                </ul>
-            </li>
-            @if($page!=$max)
-                <li class="pager-next visible-pc">
-                    <ul>
-                        <li class="pager-cell">
-                            <a href="{{$pageurl}}&page={{$page+1}}">
-                                <i class="icon-arrow-right"></i>
-                            </a>
-                        </li>
-                        <li class="pager-cell">
-                            <a href="{{$pageurl}}&page={{$max}}">
-                                <i class="icon-arrow-double-right"></i>
-                            </a>
-                        </li>
-                    </ul>
+                <li class=" @if($page==1)disabled @endif">
+                    <a href="{{$pageurl}}&page={{$page-1}}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
                 </li>
-            @endif
-        </ul>
+                @foreach($pages as $p)
+                    <li class="{{$page==$p?'active':''}}">
+                        @if($page===$p)
+                            <span> {{$p}}<span class="sr-only">(current)</span></span>
+                        @else
+                            <a href="{{$pageurl}}&page={{$p}}">{{$p}}</a>
+                        @endif
+                    </li>
+                @endforeach
+
+                <li class=" @if($page==$max)disabled @endif">
+                    <a href="{{$pageurl}}&page={{$page+1}}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
     </div>
     <div class="col-md-3">
 
