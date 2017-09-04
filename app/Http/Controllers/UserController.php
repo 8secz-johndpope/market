@@ -603,6 +603,11 @@ class UserController extends BaseController
         return ['status' => 'success'];
     }
 
+    public function tableAdverts(){
+        $table = with(new Model)->getTable();
+        return ['table' => $table];
+    }
+
     public function adverts(Request $request)
     {
 

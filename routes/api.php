@@ -68,6 +68,7 @@ Route::post('/user/advert/interest','UserController@interest')->middleware('auth
 Route::post('/user/advert/favorite','UserController@favorite')->middleware('auth:api');
 Route::post('/user/list/favorite','UserController@favorite')->middleware('auth');
 
+
 Route::post('/user/advert/report','UserController@report')->middleware('auth:api');
 Route::post('/user/order/review','UserController@review')->middleware('auth:api');
 
@@ -77,6 +78,8 @@ Route::post('/user/advert/apply','UserController@apply')->middleware('auth:api')
 Route::post('/user/advert/ccreate','UserController@ccreate');
 
 Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');
+
+Route::get('/user/advert/seetable', 'UserController@tableAdverts')->middleware('auth:api');
 
 Route::get('/user/adverts/transfer', 'UserController@transfer')->middleware('auth:api');
 
