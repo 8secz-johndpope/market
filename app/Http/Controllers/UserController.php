@@ -604,7 +604,7 @@ class UserController extends BaseController
     }
 
     public function tableAdverts(){
-        $table = with(new Model)->getTable();
+        $table = with(new Advert())->getTable();
         return ['table' => $table];
     }
 
