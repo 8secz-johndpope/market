@@ -94,7 +94,7 @@ class UserController extends BaseController
       //  $user_id = $user->id;
 
         $response = DB::table('cv')->where('user_id',  $user->id)->get();
-        return ["cv" =>  $response];
+        return ["cv" => json_encode( $response)];
     }
 
     public function review(Request $request)
