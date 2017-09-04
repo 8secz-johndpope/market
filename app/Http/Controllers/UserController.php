@@ -94,7 +94,7 @@ class UserController extends BaseController
       //  $user_id = $user->id;
 
         $response = Cv::where('user_id',  $user->id)->get();
-        return ["cv" => ['users' => $response]];
+        return ["cv" =>  $response];
     }
 
     public function review(Request $request)
