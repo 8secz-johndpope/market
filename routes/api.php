@@ -53,6 +53,8 @@ Route::post('/user/advert/update','UserController@update')->middleware('auth:api
 Route::post('/user/advert/delete','UserController@delete')->middleware('auth:api');
 
 Route::post('/user/cvs/add','UserController@addcv')->middleware('auth:api');
+Route::post('/user/cvs/get','UserController@getcv')->middleware('auth:api');
+
 Route::post('/user/covers/add','UserController@addcover')->middleware('auth:api');
 
 

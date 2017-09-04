@@ -48,27 +48,29 @@ class UserController extends BaseController
             return ['msg' => "Invalid Credentials"];
         }
     }
+
     public function contract(Request $request)
     {
 
         $price = $this->cprice($request);
-        $discounted = (int)(0.75*$price);
-        if($discounted<250000){
-            return ['msg'=>'Minimum £2500 is needed to start a contract'];
+        $discounted = (int)(0.75 * $price);
+        if ($discounted < 250000) {
+            return ['msg' => 'Minimum £2500 is needed to start a contract'];
         }
-        if(!$request->has('transaction_id')){
-            return ['msg'=>'5% deposit is required to start the contract'];
+        if (!$request->has('transaction_id')) {
+            return ['msg' => '5% deposit is required to start the contract'];
         }
-        $monthly = (int)(0.95*1.2*$price/12);
-        foreach (range(3,15) as $i){
+        $monthly = (int)(0.95 * 1.2 * $price / 12);
+        foreach (range(3, 15) as $i) {
             $payment = new Payment;
             $payment->amount = $monthly;
-            $payment->charge_at = date("Y-m-d H:i:s",strtotime('+'.$i.' months'));
+            $payment->charge_at = date("Y-m-d H:i:s", strtotime('+' . $i . ' months'));
             $payment->save();
         }
-        return ['msg'=>'contract has just started'];
+        return ['msg' => 'contract has just started'];
 
     }
+
     public function addcv(Request $request)
     {
         $user = Auth::user();
@@ -84,6 +86,15 @@ class UserController extends BaseController
         $cv->save();
         return ['msg' => 'Cv added'];
 
+    }
+
+    public function getcv()
+    {
+        $user = Auth::user();
+        $user_id = $user->id;
+
+        $response = DB::table('cv')->where('user_id', $user_id)->get();
+        return ["cv" => $response];
     }
 
     public function review(Request $request)
@@ -164,7 +175,7 @@ class UserController extends BaseController
 // Update doc at /my_index/my_type/my_id
         $response = $this->client->delete($params);
         $advert->delete();
-        return ['code' => 3,'msg' => 'deleted', 'response' => $response];
+        return ['code' => 3, 'msg' => 'deleted', 'response' => $response];
     }
 
     public function addcover(Request $request)
@@ -992,10 +1003,8 @@ class UserController extends BaseController
         $user = new User;
 
 
-
         $user->more(['email' => $request->email, 'name' => $request->name, 'password' => bcrypt($request->password), 'phone' => $request->phone]);
         $user->save();
-
 
 
         $ch = curl_init();
@@ -1019,7 +1028,7 @@ class UserController extends BaseController
         //Creating a token without scopes...
         $token = $user->createToken('Token Name')->accessToken;
 
-        return ['msg' => 'success','token' => $token, 'id' => $user->id, 'email' => $user->email, 'name' => $user->name];
+        return ['msg' => 'success', 'token' => $token, 'id' => $user->id, 'email' => $user->email, 'name' => $user->name];
     }
 
 }
