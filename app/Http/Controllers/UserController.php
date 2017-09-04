@@ -604,8 +604,9 @@ class UserController extends BaseController
     }
 
     public function tableAdverts(){
-        $table = Schema::getColumnListing('advert');
-        return ['table' => $table];
+
+        $model = Advert::find(1);
+        return ['table' => $model->getAllColumnsNames()];
     }
 
     public function adverts(Request $request)
