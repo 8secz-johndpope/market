@@ -253,7 +253,7 @@ class UserController extends BaseController
            $i++;
         }
 
-        return ['msg' =>  $a];
+        return ['msg' =>  $a[0]];
     }
 
 
