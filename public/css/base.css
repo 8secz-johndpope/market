@@ -345,8 +345,9 @@ ul {
 .categories .btn-info{
   margin-top: 10px;
   border:0;
-  background-image: url(icons/background-bottom.jpg);
-  background-position: center;
+  background-color: #fe9c30;
+  /*background-image: url(icons/background-bottom.jpg);
+  background-position: center;*/
 }
 .category-0 li::before {
   /*content: "• ";*/
