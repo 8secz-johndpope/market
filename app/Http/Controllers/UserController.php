@@ -259,10 +259,9 @@ class UserController extends BaseController
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
-                'size'=>1,
                 'query' => [
                     'bool' => [
-                        'should'=>['term'=>['source_id'=>$a1[0]],'term'=>['source_id'=>$a1[1]]],
+                        'should'=>['term'=>['source_id'=>$a1[0]]],'should'=>['term'=>['source_id'=>$a1[0]]]
                     ]
                 ]
             ]
