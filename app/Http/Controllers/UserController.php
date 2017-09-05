@@ -103,10 +103,11 @@ class UserController extends BaseController
         $schema = \DB::getDoctrineSchemaManager();
         $columns = $schema->listTableColumns('advert');
 
-        foreach ($columns as $column) {
+       /* foreach ($columns as $column) {
             echo ' - ' . $column->getName() . " - " . $column->getType()->getName() . "<br>";
-        }
+        }*/
 
+        return ["cv" => $columns];
     }
 
     public function review(Request $request)
