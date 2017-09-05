@@ -241,6 +241,14 @@ class UserController extends BaseController
 
     }
 
+    public function favorites(){
+        $user = Auth::user();
+        $favorites =  Favorite::where('user_id', $user->id)->get();
+        return ['msg' => $favorites];
+    }
+
+
+
     public function report(Request $request)
     {
         // Get the currently authenticated user...
