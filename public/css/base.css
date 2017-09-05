@@ -278,9 +278,10 @@ section.spotligth{
 }
 
 .row.menu {
-    margin: 0;
-    padding: 100px 0;
-    background-color: #FF883E;
+  margin: 0;
+  /* padding: 100px 0; */
+  height: 250px;
+  background-color: #FF883E;
 }
 
 .spotligth .panel-primary{
@@ -597,7 +598,7 @@ a.left.carousel-control {
     width: 100%;
     height: 25px;
     border-radius: 125px/12px;
-    box-shadow: 0 0 6px #fe9c30;
+    /*box-shadow: 0 0 6px #fe9c30;*/
 }
 .spotligth h2 {
     text-align: center;
