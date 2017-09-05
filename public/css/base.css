@@ -332,6 +332,7 @@ ul {
   color: #263249;
   font-size: 12px;
 }
+
 .categories li a{
   color: #263249;
 }
@@ -341,61 +342,64 @@ ul {
   font-weight: 900;
 }
 .categories .btn-info{
-    margin-top: 10px;
+  margin-top: 10px;
+  border:0;
+  background-image: url(icons/background-bottom.jpg);
+  background-position: center;
 }
 .category-0 li::before {
   /*content: "• ";*/
-  color: #85c808; /* or whatever color you prefer */
+  /*color: #85c808; /* or whatever color you prefer */
 }
 .category-0 .btn-info {
   /*background-color: #85c808;
-  border-color: #85c808;*/
+  border-color: #85c808;
   border: 0;
   background-image: url(icons/background-bottom.jpg);
-  background-position: center;
+  background-position: center;*/
 
 }
 .category-1 li::before{
   color: #800c74;
 }
 .category-1 .btn-info {
-    background-color: #800c74;
-    border-color: #800c74;
+    /*background-color: #800c74;
+    border-color: #800c74;*/
 }
 .category-2 li::before{
   color: #ea4335;
 }
 .category-2 .btn-info {
-  background-color: #ea4335;
-  border-color: #ea4335;
+  /*background-color: #ea4335;
+  border-color: #ea4335;*/
 }
 .category-3 li::before{
   color: #3a589b;
 }
 .category-3 .btn-info {
-  background-color: #3a589b;
-  border-color: #3a589b;
+  /*background-color: #3a589b;
+  border-color: #3a589b;*/
 }
 .category-4 li::before{
   color: #34a853;
 }
 .category-4 .btn-info {
-  background-color: #34a853;
-  border-color: #34a853;
+  /*background-color: #34a853;
+  border-color: #34a853;*/
 }
 .category-5 li::before{
   color: #fbbc05;
 }
 .category-5 .btn-info {
-  background-color: #fbbc05;
-  border-color: #fbbc05;
+  /*background-color: #fbbc05;
+  border-color: #fbbc05;*/
 }
 .category-6 li::before{
   color: #654320;
 }
 .category-6 .btn-info {
-  background-color: #654320;
-  border-color: #654320;
+  /*background-color: #654320;
+  border-color: #654320;*/
 }
 
 section.features{
