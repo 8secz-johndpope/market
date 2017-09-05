@@ -261,7 +261,7 @@ class UserController extends BaseController
             'body' => [
                 'query' => [
                     'bool' => [
-                        'should'=>['term'=>['source_id'=>$a1[0]]],'should'=>['term'=>['source_id'=>$a1[0]]]
+                        'should'=>['term'=>['source_id'=>$a1[0]]],'should'=>['term'=>['source_id'=>$a1[1]]]
                     ]
                 ]
             ]
