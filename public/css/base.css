@@ -602,6 +602,13 @@ a.left.carousel-control {
     text-align: center;
     color: #000;
 }
+a.tabs-simple-tab.btn {
+    background-color: #fff;
+    color: #000;
+    width: 50%;
+    margin: 0 auto;
+}
+
 .tabs-simple>li {
     list-style: none;
     text-align: center;
