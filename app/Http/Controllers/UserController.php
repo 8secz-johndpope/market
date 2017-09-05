@@ -255,9 +255,6 @@ class UserController extends BaseController
             $i++;
         }
 
-
-
-
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -265,7 +262,7 @@ class UserController extends BaseController
                 'size'=>1,
                 'query' => [
                     'bool' => [
-                        'must'=>['term'=>['source_id'=>$a1]],
+                        'must'=>['term'=>['source_id'=>$a1[0]]],
 
                     ]
                 ]
