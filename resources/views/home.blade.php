@@ -46,13 +46,13 @@
 				<div class="row menu">
 					<div class="center-block">
 						<h2>Sumra free and trusted</h2>
+						<div class="tabs-simple-bar">
+							<div class="tabs-simple-bar-mask"></div>
+						</div>
 						<ul class="tabs-simple list-inline">
 							<li><a class="tabs-simple-tab all-spot btn" href="#">All Spotlight</a></li>
 							<li><a class="tabs-simple-tab pop-se btn" href="#">Popular Searches</a></li>
 						</ul>
-					</div>
-					<div class="tabs-simple-bar">
-						<div class="tabs-simple-bar-mask"></div>
 					</div>
 				</div>
 				<div class="row">
