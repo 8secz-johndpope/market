@@ -98,17 +98,7 @@ class UserController extends BaseController
         return ["cv" => $cv, "covers" => $cover];
     }
 
-    public function seeTables()
-    {
-     $schema = \DB::getDoctrineSchemaManager();
-       $columns = $schema->listTableColumns('adverts');
 
-       /* foreach ($columns as $column) {
-            echo ' - ' . $column->getName() . " - " . $column->getType()->getName() . "<br>";
-        }*/
-
-        return ["cv" => $columns];
-    }
 
     public function review(Request $request)
     {
