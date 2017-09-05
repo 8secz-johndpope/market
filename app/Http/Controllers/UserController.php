@@ -247,7 +247,7 @@ class UserController extends BaseController
         $user = Auth::user();
         $favorites = Favorite::where('user_id', $user->id)->get();
 
-        $a1 = array();
+       /* $a1 = array();
         $i = 0;
         foreach ($favorites as $f) {
             $a1[$i] = $f->advert_id;
@@ -273,9 +273,9 @@ class UserController extends BaseController
 
         $products = array_map(function ($a) {
             return $a['_source'];
-        }, $results['hits']['hits']);
+        }, $results['hits']['hits']);*/
 
-        return ['favorites' => $products];
+        return ['favorites' => $favorites];
     }
 
 
