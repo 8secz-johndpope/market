@@ -55,7 +55,7 @@
 						<div class="col-lg-3">
 							
 						</div>
-						<div class="col-lg-3">
+						<div class="col-lg-4">
 							<a class="tabs-simple-tab pop-se" href="#">Popular Searches</a>
 						</div>
 					</div>
