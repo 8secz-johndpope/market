@@ -253,11 +253,12 @@ class UserController extends BaseController
             $a[$i] = $f->advert_id;
             $i++;
         }
+        $advert = Advert::find($a[0]);
 
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
-            'id' => $a[0]
+            'id' => $advert->elastic
         ];
 
         $results =$this->client->search($params);
