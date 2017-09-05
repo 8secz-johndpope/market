@@ -250,11 +250,12 @@ class UserController extends BaseController
         $a1 = array();
         $i = 0;
         foreach ($favorites as $f) {
-            $a1[$i] = $f->advert_id;
+            $advert = Advert::find($f->advert_id);
+            $a1[$i] =$advert->sid;
             $i++;
         }
 
-        $advert = Advert::find($a1[0]);
+
 
 
         $params = [
@@ -264,7 +265,7 @@ class UserController extends BaseController
                 'size'=>1,
                 'query' => [
                     'bool' => [
-                        'must'=>['term'=>['source_id'=>$advert->sid]],
+                        'must'=>['term'=>['source_id'=>$a1]],
 
                     ]
                 ]
