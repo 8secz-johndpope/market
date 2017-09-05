@@ -44,15 +44,23 @@
 		<section class="spotligth">
 			<div class="container">
 				<div class="row menu">
-					<div class="center-block">
-						<h2>SUMRA Free and Trusted</h2>
-						<div class="tabs-simple-bar">
-							<div class="tabs-simple-bar-mask"></div>
+					<div class="col-lg-3">
+						<img src="css/section-gold1.png">
+					</div>
+					<div class="col-lg-6">
+						<h2>SUMRA is free and trusted</h2>
+						<div class="col-lg-3">
+							<a class="tabs-simple-tab all-spot" href="#">All Spotlight</a>
 						</div>
-						<ul class="tabs-simple list-inline">
-							<li><a class="tabs-simple-tab all-spot" href="#">All Spotlight</a></li>
-							<li><a class="tabs-simple-tab pop-se" href="#">Popular Searches</a></li>
-						</ul>
+						<div class="col-lg-3">
+							
+						</div>
+						<div class="col-lg-3">
+							<a class="tabs-simple-tab pop-se" href="#">Popular Searches</a>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<img src="css/section-gold2.png">
 					</div>
 				</div>
 				<div class="row">
