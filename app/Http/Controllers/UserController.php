@@ -262,9 +262,12 @@ class UserController extends BaseController
         ];
 
         $results =$this->client->search($params);
+        
+        $products = array_map(function ($a) {
+            return $a['_source'];
+        }, $results['hits']['hits']);
 
-
-        return ['favorites' => $results];
+        return ['favorites' => $products];
     }
 
 
