@@ -107,7 +107,7 @@ class UserController extends BaseController
             echo ' - ' . $column->getName() . " - " . $column->getType()->getName() . "<br>";
         }*/
 
-        return ["cv" => $columns];
+        return ["cv" => "ss"];
     }
 
     public function review(Request $request)
