@@ -277,7 +277,7 @@ class UserController extends BaseController
     }
 
     public function getAdvert(Request $request){
-        $advert = Advert::find($request->source_id);
+       // $advert = Advert::find($request->source_id);
 
         $params = [
             'index' => 'adverts',
@@ -286,7 +286,7 @@ class UserController extends BaseController
                 'size'=>1,
                 'query' => [
                     'bool' => [
-                        'must'=>['term'=>['source_id'=>$advert->sid]],
+                        'must'=>['term'=>['source_id'=>$request->source_id]],
 
                     ]
                 ]
