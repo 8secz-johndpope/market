@@ -254,7 +254,16 @@ class UserController extends BaseController
             $i++;
         }
 
-        return ['favorites' => $a];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $a[0]
+        ];
+
+        $results =$this->client->search($params);
+
+
+        return ['favorites' => $results];
     }
 
 
