@@ -631,11 +631,15 @@ section.row-color.white {
     /* left: 50%; */
 }
 .col-lg-4.img.left{
-    transform: translateY(-10%) translateX(-20%);
+    transform: translateY(-10%);
 }
 
 .col-lg-4.img.right{
-    transform: translateY(-10%) translateX(-20%);
+    transform: translateY(-10%);
+}
+.col-lg-4.img.right>img {
+    height: 293px;
+    width: 433px;
 }
 
 .tabs-simple>li {
