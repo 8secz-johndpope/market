@@ -599,6 +599,9 @@ a.left.carousel-control {
     cursor: pointer;
     padding: 20px 10px;
 }
+.row.menu img {
+    transform: translateX(60%);
+}
 .tabs-simple-bar-mask {
     overflow: hidden;
     height: 20px;
@@ -625,7 +628,10 @@ section.row-color.gold {
 }
 .row-color h2 {
     color: #fff;
+    color: #fff;
+    text-align: center;
 }
+
 a.tabs-simple-tab.btn {
     background-color: #fff;
     color: #000;
