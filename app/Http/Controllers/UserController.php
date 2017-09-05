@@ -243,7 +243,7 @@ class UserController extends BaseController
     public function favorites()
     {
         $user = Auth::user();
-        $favorites = Favorite::where('user_id', $user->id)->get();
+        $favorites = Favorite::where('user_id', $user->id)->all();
 
         $a = array();
         $i = 0;
@@ -254,7 +254,7 @@ class UserController extends BaseController
         }
 
 
-        return ['favorites' => json_encode($a)];
+        return ['favorites' => $favorites];
     }
 
 
