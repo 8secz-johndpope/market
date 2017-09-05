@@ -231,7 +231,7 @@ class UserController extends BaseController
         if ($advert === null) {
             return ['msg' => 'No Advert found'];
         }
-       
+
 
         $favorite = new Favorite;
         $favorite->advert_id = $advert->id;
@@ -247,8 +247,14 @@ class UserController extends BaseController
         $user = Auth::user();
         $favorites = Favorite::where('user_id', $user->id)->get();
 
+        $a = array();
+        $i = 0;
+        foreach ($favorites as $f){
+            $a[$i] = $f->advert_id;
+            $i++;
+        }
 
-        return ['favorites' => $favorites];
+        return ['favorites' => $a];
     }
 
 
