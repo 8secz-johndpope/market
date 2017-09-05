@@ -253,9 +253,10 @@ class UserController extends BaseController
             $a1[$i] = $f->advert_id;
             $i++;
         }
+
         $advert = Advert::find($a1[0]);
 
-        $params = [
+        /*$params = [
             'index' => 'adverts',
             'type' => 'advert',
             'id' => $advert->elastic
@@ -265,9 +266,9 @@ class UserController extends BaseController
 
         $products = array_map(function ($a) {
             return $a['_source'];
-        }, $results['hits']['hits']);
+        }, $results['hits']['hits']);*/
 
-        return ['favorites' => $products];
+        return ['favorites' => "sddf"];
     }
 
 
