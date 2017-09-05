@@ -622,11 +622,17 @@ a.tabs-simple-tab.btn:hover{
   height: 250px;
   background-color: #000;
 }
+section.row-color.white {
+    background-color: #fff;
+}
 
 .col-lg-4.img {
     top: 50%;
     /* left: 50%; */
     transform: translateY(-10%) translateX(-20%);
+}
+.col-lg-4.img.left{
+    transform: translateX(-20%);
 }
 
 .tabs-simple>li {
