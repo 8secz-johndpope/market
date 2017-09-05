@@ -158,7 +158,14 @@
 		<section class="row-color">
 			<div class="container">
 				<div class="row">
-						
+					<div class="col-lg-4">
+						<img src="css/section-black.png">
+					</div>
+					<div class="col-lg-4">
+					</div>
+					<div class="col-lg-4">
+						<img src="css/section-black2.png">
+					</div>
 				</div>
 			</div>		
 		</section>
