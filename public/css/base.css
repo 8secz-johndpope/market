@@ -630,6 +630,7 @@ section.row-color.white {
     top: 50%;
     /* left: 50%; */
 }
+
 .col-lg-4.img.left{
     transform: translateY(-10%);
 }
@@ -638,6 +639,9 @@ section.row-color.white {
     transform: translateY(-10%);
 }
 
+.black .col-lg-4.img.left {
+    transform: translateY(-10%) translateX(-20%);
+}
 .white .col-lg-4.img>img {
     height: 244px;
     width: 337px;
