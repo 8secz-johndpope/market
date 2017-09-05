@@ -280,7 +280,7 @@ section.spotligth{
 .row.menu {
     margin: 0;
     padding: 100px 0;
-    background-color: #000;
+    background-color: #FF883E;
 }
 
 .spotligth .panel-primary{
@@ -600,7 +600,7 @@ a.left.carousel-control {
 }
 .spotligth h2 {
     text-align: center;
-    color: #fe9c30;
+    color: #000;
 }
 .tabs-simple>li {
     list-style: none;
