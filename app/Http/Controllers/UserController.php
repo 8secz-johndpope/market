@@ -231,9 +231,8 @@ class UserController extends BaseController
         if ($advert === null) {
             return ['msg' => 'No Advert found'];
         }
-        var_dump($advert);
-        di();
-        
+       
+
         $favorite = new Favorite;
         $favorite->advert_id = $advert->id;
         $favorite->user_id = $user->id;
