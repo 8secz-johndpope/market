@@ -557,6 +557,7 @@ a.left.carousel-control {
     width: 100%;
     padding-right: 0;
     padding-left: 0;
+    padding-bottom: 30px;
 }
 .tabs-simple.center-block {
     text-align: center;
@@ -606,21 +607,21 @@ a.left.carousel-control {
 a.tabs-simple-tab.btn {
     background-color: #fff;
     color: #000;
-    width: 400px;
+    width: 300px;
     margin: 0 auto;
 }
 a.tabs-simple-tab.btn:hover{
   color:#ff883e;
 }
 .row-color{
-  min-height: 300px;
+  min-height: 250px;
   background-color: #000;
 }
 
 .col-lg-4.img {
     top: 50%;
     /* left: 50%; */
-    transform: translateX(-50%) translateY(-10%);
+    transform: translateY(-22%) translateX(-20%);
 }
 
 .tabs-simple>li {
