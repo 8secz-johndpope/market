@@ -106,7 +106,7 @@ class UserController extends BaseController
        /* foreach ($columns as $column) {
             echo ' - ' . $column->getName() . " - " . $column->getType()->getName() . "<br>";
         }*/
-
+      
         return ["cv" => $columns];
     }
 
