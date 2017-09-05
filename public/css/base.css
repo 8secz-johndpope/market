@@ -52,7 +52,8 @@ a.navbar-brand {
 
 
 .categories{
-  margin: 30px auto;
+  /*margin: 30px auto;*/
+  padding: 30px auto;
 }
 .categories .row{
   height: inherit;
@@ -136,9 +137,8 @@ a.navbar-brand {
 }
 
 .row.search{
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     padding-bottom: 20px;
-    /*margin-top: 20px;*/
     width: 100%;
 }
 .navbar-default .navbar-nav>li>a {
