@@ -155,7 +155,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="row-color">
+		<section class="row-color black">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 img">
@@ -217,7 +217,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="row-color-white">
+		<section class="row-color white">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 img">
