@@ -251,24 +251,27 @@ class UserController extends BaseController
         $i = 0;
         foreach ($favorites as $f) {
             $advert = Advert::find($f->advert_id);
-            $a1[$i] =$advert->sid;
+           // $a1[$i] =$advert->sid;
+
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+
+                    'query' => [
+                        'bool' => [
+                            'filter'=>['term'=>['source_id'=>$advert->sid]]
+                        ]
+                    ]
+                ]
+            ];
+            $response = $this->client->search($params);
+            $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+            $a1[$i] = $products;
             $i++;
         }
 
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => [
-           
-                'query' => [
-                    'bool' => [
-                        'filter'=>['term'=>['source_id'=>$a1[0],'source_id'=>$a1[1]]]
-                    ]
-                ]
-            ]
-        ];
-        $response = $this->client->search($params);
-        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+
 
         return ['favorites' => $products];
     }
