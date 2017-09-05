@@ -53,7 +53,7 @@ a.navbar-brand {
 
 .categories{
   /*margin: 30px auto;*/
-  padding: 30px auto;
+  padding: 30px 0;
 }
 .categories .row{
   height: inherit;
