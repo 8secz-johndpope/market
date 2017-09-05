@@ -641,6 +641,10 @@ section.row-color.white {
     height: 293px;
     width: 433px;
 }
+.col-lg-4.img.left>img {
+    height: 293px;
+    width: 433px;
+}
 
 .tabs-simple>li {
     list-style: none;
