@@ -253,11 +253,13 @@
             </div>
             <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
-                    <h4>Resources</h4>
+                    <h4>Help</h4>
                     <ul>
+                        <li><a href="/help" title="Help">Topics</a></li>
                         <li><a href="/faq" title="F.A.Q.">F.A.Q.</a></li>
-                        <li><a href="/help" title="Help">Help</a></li>
-                        <li><a href="/how-it-works" title="How it works">How it works</a></li>
+                        <li><a href="/delivery" title="Delivery">Delivery</a></li>
+                        <li><a href="/promote-ad" title="Promote Ad">Promote Ad</a></li>
+                        <li><a href="/contact-us" title="Contact Us">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
