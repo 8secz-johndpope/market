@@ -49,7 +49,7 @@
 					</div>
 					<div class="col-lg-6">
 						<h2>SUMRA is safe, free and trusted</h2>
-						<div class="col-lg-3">
+						<div class="col-lg-4">
 							<a class="tabs-simple-tab all-spot" href="#">All Spotlight</a>
 						</div>
 						<div class="col-lg-3">
