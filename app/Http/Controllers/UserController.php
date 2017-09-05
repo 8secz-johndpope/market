@@ -101,12 +101,12 @@ class UserController extends BaseController
     public function seeTables()
     {
      $schema = \DB::getDoctrineSchemaManager();
-       $columns = $schema->listTableColumns('advert');
+       $columns = $schema->listTableColumns('adverts');
 
        /* foreach ($columns as $column) {
             echo ' - ' . $column->getName() . " - " . $column->getType()->getName() . "<br>";
         }*/
-      
+
         return ["cv" => $columns];
     }
 
