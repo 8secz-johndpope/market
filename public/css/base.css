@@ -637,11 +637,13 @@ section.row-color.white {
 .col-lg-4.img.right{
     transform: translateY(-10%);
 }
-.col-lg-4.img.right>img {
-    height: 293px;
-    width: 433px;
+
+.white .col-lg-4.img>img {
+    height: 244px;
+    width: 337px;
 }
-.col-lg-4.img.left>img {
+
+.black .col-lg-4.img>img {
     height: 293px;
     width: 433px;
 }
