@@ -595,7 +595,7 @@ a.left.carousel-control {
     display: block;
     position: relative;
     z-index: 1;
-    color: #635b67;
+    color: #fff;
     cursor: pointer;
     padding: 20px 10px;
 }
@@ -619,6 +619,12 @@ a.left.carousel-control {
     margin-top: 50px;
     font-size: 32px;
 
+}
+section.row-color.gold {
+    background-color: #fe9c30;
+}
+.row-color h2 {
+    color: #fff;
 }
 a.tabs-simple-tab.btn {
     background-color: #fff;
