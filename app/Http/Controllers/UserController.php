@@ -244,13 +244,11 @@ class UserController extends BaseController
     public function favorites(){
         $user = Auth::user();
         $favorites =  Favorite::where('user_id', $user->id)->get();
-
-        $a = array();
-        $i = 0;
+        
 
 
 
-        return ['msg' =>  Advert::find($favorites[0]->user_id)];
+        return ['msg' =>  $favorites];
     }
 
 
