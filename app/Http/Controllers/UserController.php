@@ -268,7 +268,7 @@ class UserController extends BaseController
             return $a['_source'];
         }, $results['hits']['hits']);*/
 
-        return ['favorites' => "sddf"];
+        return ['favorites' => $advert->id];
     }
 
 
