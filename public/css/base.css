@@ -601,8 +601,10 @@ a.left.carousel-control {
 }
 .spotligth h2 {
     text-align: center;
-    color: #000;
+    color: #fff;
     margin-bottom: 30px;
+    font-size: 36px;
+
 }
 a.tabs-simple-tab.btn {
     background-color: #fff;
