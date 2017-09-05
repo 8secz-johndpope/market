@@ -243,7 +243,8 @@ class UserController extends BaseController
 
     public function favorites(){
         $user = Auth::user();
-        $favorites =  Favorite::favorites();
+        $favorites =  Favorite::favorites($user->user_id);
+
         return ['msg' =>  $favorites];
     }
 
