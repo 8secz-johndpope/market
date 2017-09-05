@@ -251,7 +251,7 @@ class UserController extends BaseController
         $i = 0;
         foreach ($favorites as $f) {
             $advert = Advert::find($f->advert_id);
-            $a1[$i] =$advert->sid;
+            $a1[] = array('source_id' => $advert->sid);
             $i++;
         }
 
@@ -262,8 +262,7 @@ class UserController extends BaseController
                 'size'=>1,
                 'query' => [
                     'bool' => [
-                        'must'=>['term'=>['source_id'=>$a1[0]]],
-
+                        'must'=>['term'=>[$a1]],
                     ]
                 ]
             ]
