@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Favorite extends Model
 {
-    public function favorites($user_id){
-        return $this->belongsTo('App\Model\Advert',$user_id);
+    public function favorites(){
+        return $this->belongsTo('App\Model\Advert',"user_id","user_id");
     }
 }
