@@ -708,6 +708,9 @@ section.row-color.white {
     white-space: nowrap;
     line-height: inherit;
 }
+.categories .panel-heading a {
+    display: inline-flex;
+}
 
 @media screen and (max-width: 767px){
   .navbar-header {
