@@ -45,7 +45,7 @@
 			<div class="container">
 				<div class="row menu">
 					<div class="center-block">
-						<h2>Sumra free and trusted</h2>
+						<h2>SUMRA Free and Trusted</h2>
 						<div class="tabs-simple-bar">
 							<div class="tabs-simple-bar-mask"></div>
 						</div>
