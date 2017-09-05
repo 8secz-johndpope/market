@@ -629,14 +629,13 @@ section.row-color.white {
 .col-lg-4.img {
     top: 50%;
     /* left: 50%; */
-    transform: translateY(-10%);
 }
 .col-lg-4.img.left{
-    transform: translateX(-20%);
+    transform: translateY(-10%) translateX(-20%);
 }
 
 .col-lg-4.img.right{
-    transform: translateX(-20%);
+    transform: translateY(-10%) translateX(-20%);
 }
 
 .tabs-simple>li {
