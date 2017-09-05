@@ -601,13 +601,13 @@ a.left.carousel-control {
 .spotligth h2 {
     text-align: center;
     color: #000;
+    margin-bottom: 30px;
 }
 a.tabs-simple-tab.btn {
     background-color: #fff;
     color: #000;
-    width: 50%;
+    width: 400px;
     margin: 0 auto;
-    margin-bottom: 30px;
 }
 a.tabs-simple-tab.btn:hover{
   color:#ff883e;
