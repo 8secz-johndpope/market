@@ -1057,14 +1057,17 @@ section.row-color.white {
   .col-xs-8.col-sm-6.col-md-6.col-lg-4.col-xs-offset-2.col-sm-offset-0 {
     height: 300px;
   }
+  .categories .row {
+    width: 78%;
+  }
 }
-@media screen and (min-width: 1700px){
+@media screen and (min-width: 1400px){
   .categories .panel-body {
     height: 24em;
     margin: 0 11%; 
   }
   .categories .row {
-    width: 78%;
+    width: 90%;
   }
   .container{
     width: 90%;
