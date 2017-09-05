@@ -248,9 +248,9 @@ class UserController extends BaseController
         $a = array();
         $i = 0;
 
-    
 
-        return ['msg' =>  Advert::find($favorites[0]->user_id);
+
+        return ['msg' =>  Advert::find($favorites[0]->user_id)];
     }
 
 
