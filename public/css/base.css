@@ -1029,6 +1029,7 @@ section.row-color.white {
   }
   .categories .row {
     padding-bottom: 35px;
+    width: 63%;
   }
   .navbar-default .navbar-nav>li>a {
     font-size: 16px;
@@ -1056,9 +1057,6 @@ section.row-color.white {
   }
   .col-xs-8.col-sm-6.col-md-6.col-lg-4.col-xs-offset-2.col-sm-offset-0 {
     height: 300px;
-  }
-  .categories .row {
-    width: 78%;
   }
 }
 @media screen and (min-width: 1400px){
