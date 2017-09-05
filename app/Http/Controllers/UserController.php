@@ -99,7 +99,6 @@ class UserController extends BaseController
     }
 
 
-
     public function review(Request $request)
     {
         $user = Auth::user();
@@ -241,21 +240,13 @@ class UserController extends BaseController
 
     }
 
-    public function favorites(){
-      /*  $user = Auth::user();
-        $favorites =  Favorite::where('user_id', $user->id)->get();
+    public function favorites()
+    {
+        $user = Auth::user();
+        $favorites = Favorite::where('user_id', $user->id)->get();
 
-        $a = array();
-        $i = 0;
-
-        foreach($favorites as $f){
-           $a[$i] = Advert::find($f->advert_id);
-           $i++;
-        }
-
-        return ['msg' =>  $a[0]];*/
+        return ['favorites' => $favorites];
     }
-
 
 
     public function report(Request $request)
