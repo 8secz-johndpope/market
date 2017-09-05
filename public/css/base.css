@@ -1063,6 +1063,9 @@ section.row-color.white {
     height: 24em;
     margin: 0 11%; 
   }
+  .categories .row {
+    width: 78%;
+  }
   .container{
     width: 90%;
   }
