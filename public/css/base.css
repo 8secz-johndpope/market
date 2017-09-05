@@ -348,8 +348,12 @@ ul {
   color: #85c808; /* or whatever color you prefer */
 }
 .category-0 .btn-info {
-  background-color: #85c808;
-  border-color: #85c808;
+  /*background-color: #85c808;
+  border-color: #85c808;*/
+  border: 0;
+  background-image: url(icons/background-bottom.jpg);
+  background-position: center;
+
 }
 .category-1 li::before{
   color: #800c74;
