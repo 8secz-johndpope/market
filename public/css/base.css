@@ -612,6 +612,10 @@ a.tabs-simple-tab.btn {
 a.tabs-simple-tab.btn:hover{
   color:#ff883e;
 }
+.row-color{
+  min-height: 300px;
+  background-color: #000;
+}
 
 .tabs-simple>li {
     list-style: none;
