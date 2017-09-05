@@ -249,7 +249,7 @@ class UserController extends BaseController
         $i = 0;
 
         foreach($favorites as $f){
-           $a[$i] = Advert::find($f[user_id]);
+           $a[$i] = Advert::find($f->user_id);
            $i++;
         }
 
