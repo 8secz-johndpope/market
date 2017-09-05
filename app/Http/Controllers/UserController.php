@@ -247,13 +247,13 @@ class UserController extends BaseController
         $user = Auth::user();
         $favorites = Favorite::where('user_id', $user->id)->get();
 
-        $a = array();
+        $a1 = array();
         $i = 0;
         foreach ($favorites as $f){
-            $a[$i] = $f->advert_id;
+            $a1[$i] = $f->advert_id;
             $i++;
         }
-        $advert = Advert::find($a[0]);
+        $advert = Advert::find($a1[0]);
 
         $params = [
             'index' => 'adverts',
@@ -262,7 +262,7 @@ class UserController extends BaseController
         ];
 
         $results =$this->client->search($params);
-        
+
         $products = array_map(function ($a) {
             return $a['_source'];
         }, $results['hits']['hits']);
