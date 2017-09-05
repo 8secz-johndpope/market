@@ -160,6 +160,7 @@ a.navbar-brand {
   padding: 10px 0;
   color: #000;
   text-align: center;
+  padding-left: 5px;
 }
 .panel.panel-primary{
   /*border-color: white;*/
