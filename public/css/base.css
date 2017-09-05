@@ -1062,7 +1062,7 @@ section.row-color.white {
 }
 @media screen and (min-width: 1400px){
   .categories .panel-body {
-    height: 24em;
+    height: 26em;
     margin: 0 11%; 
   }
   .categories .row {
