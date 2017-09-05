@@ -245,7 +245,16 @@ class UserController extends BaseController
         $user = Auth::user();
         $favorites = Favorite::where('user_id', $user->id)->get();
 
-        return ['favorites' => $favorites];
+        $a = array();
+        $i = 0;
+
+        foreach ($favorites as $f){
+            $a[$i] = Advert::find($f->advert_id);
+            $i++;
+        }
+
+
+        return ['favorites' => json_encode($a)];
     }
 
 
