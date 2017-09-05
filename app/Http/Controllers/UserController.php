@@ -273,10 +273,30 @@ class UserController extends BaseController
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
 
-
-
-
         return ['favorites' => $products];
+    }
+
+    public function getAdvert(Request $request){
+        $advert = Advert::find($request->source_id);
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>1,
+                'query' => [
+                    'bool' => [
+                        'must'=>['term'=>['source_id'=>$advert->sid]],
+
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+
+        return ['advert' => $products];
+
     }
 
 
