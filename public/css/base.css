@@ -599,6 +599,7 @@ a.left.carousel-control {
     cursor: pointer;
     padding: 20px 10px;
     font-size: 20px;
+    margin-top: 50px;
 }
 .row.menu img {
     transform: translateX(60%);
