@@ -617,6 +617,12 @@ a.tabs-simple-tab.btn:hover{
   background-color: #000;
 }
 
+.col-lg-4.img {
+    top: 50%;
+    /* left: 50%; */
+    transform: translateX(-50%) translateY(-10%);
+}
+
 .tabs-simple>li {
     list-style: none;
     text-align: center;
