@@ -242,7 +242,7 @@ class UserController extends BaseController
     }
 
     public function favorites(){
-        $user = Auth::user();
+      /*  $user = Auth::user();
         $favorites =  Favorite::where('user_id', $user->id)->get();
 
         $a = array();
@@ -253,7 +253,7 @@ class UserController extends BaseController
            $i++;
         }
 
-        return ['msg' =>  $a[0]];
+        return ['msg' =>  $a[0]];*/
     }
 
 
