@@ -41,7 +41,7 @@
 			 	</div>
 		 	</div>
 		</section>
-		<section class="spotligth">
+		<section class="row-color gold">
 			<div class="container">
 				<div class="row menu">
 					<div class="col-lg-3">
@@ -63,6 +63,10 @@
 						<img src="css/section-gold2.png">
 					</div>
 				</div>
+			</div>
+		</section>
+		<section class="spotligth">
+			<div class="container">
 				<div class="row">
 					<div id="myCarousel-xs" class="carousel slide visible-xs" data-ride="carousel">
 						<!-- Indicators 
