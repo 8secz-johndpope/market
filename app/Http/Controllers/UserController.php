@@ -261,8 +261,9 @@ class UserController extends BaseController
             'type' => 'advert',
             'body' => [
                 'query' => [
-                    'match' => [
-                        'id' => $advert->elastic
+                    'bool' => [
+                        'must' => ['term' => ['id' => $advert->elastic]]
+                      
                     ]
                 ]]
 
