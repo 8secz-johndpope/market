@@ -600,6 +600,7 @@ a.left.carousel-control {
     padding: 20px 10px;
     font-size: 20px;
     margin-top: 50px;
+    text-align: center;
 }
 .row.menu img {
     transform: translateX(60%);
