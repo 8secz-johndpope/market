@@ -617,7 +617,7 @@ a.tabs-simple-tab.btn:hover{
   color:#ff883e;
 }
 .row-color{
-  min-height: 250px;
+  height: 250px;
   background-color: #000;
 }
 
