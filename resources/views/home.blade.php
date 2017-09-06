@@ -45,7 +45,7 @@
 			<div class="container">
 				<div class="row menu">
 					<div class="col-lg-4">
-						<img src="css/section-gold1.png">
+						<img class="img-left" src="css/section-gold1.png">
 					</div>
 					<div class="col-lg-4">
 						<h2>SUMRA is safe, free and trusted</h2>
@@ -57,7 +57,7 @@
 						</div>
 					</div>
 					<div class="col-lg-4">
-						<img src="css/section-gold2.png">
+						<img class="img-right" src="css/section-gold2.png">
 					</div>
 				</div>
 			</div>

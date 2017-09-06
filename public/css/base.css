@@ -602,6 +602,17 @@ a.left.carousel-control {
     margin-top: 50px;
     text-align: center;
 }
+img.img-left {
+    position: absolute;
+    left: 20%;
+    top: -50px;
+}
+img.img-right {
+    /* transform: translateX(100%); */
+    position: absolute;
+    right: 20%;
+    top: -50px;
+}
 a.tabs-simple-tab.pop-se {
     text-align: right;
     padding-right: 0;
