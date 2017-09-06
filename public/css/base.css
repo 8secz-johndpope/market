@@ -963,6 +963,9 @@ section.row-color.white {
   a.tabs-simple-tab.all-spot {
     text-align: center;
   }
+  a.tabs-simple-tab.pop-se {
+    text-align: center;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
