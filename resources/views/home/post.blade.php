@@ -206,12 +206,28 @@
                                </label>
                            </div></li>
 
-                       <li class="list-group-item"><div class="form-check">
-                               <label class="form-check-label">
-                                   <input class="form-check-input" type="checkbox" value="">
-                                   <span class="span-shipping">CanShip</span> &nbsp;&nbsp;Ship to the buyer when order is placed.
-                               </label>
-                           </div></li>
+                       <li class="list-group-item">
+                               <div class="row">
+                                   <div class="col-sm-10">
+                                       <div class="form-check">
+                                           <label class="form-check-label">
+                                               <input class="form-check-input" type="checkbox" value="">
+                                               <span class="span-shipping">CanShip</span> &nbsp;&nbsp;Ship to the buyer when order is placed.
+                                           </label>
+
+                                       </div>
+                                   </div>
+                                   <div class="col-sm-2">
+                                       <select class="form-control">
+                                           <option value="2kg">Up to 2kg</option>
+                                           <option value="5kg">Up to 5kg</option>
+                                           <option value="10kg">Up to 10kg</option>
+                                       </select>
+                                   </div>
+                               </div>
+
+
+                       </li>
                    </ul>
                </div>
            </div>
