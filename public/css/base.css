@@ -599,7 +599,7 @@ a.left.carousel-control {
     cursor: pointer;
     padding: 20px 10px;
     font-size: 16px;
-    margin-top: 50px;
+    margin-top: 10px;
     text-align: center;
 }
 img.img-left {
@@ -700,7 +700,7 @@ a.tabs-simple-tab.btn:hover{
   /*height: 400px;*/
   background-color: #000;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 section.row-color.white {
     background-color: #fff;
