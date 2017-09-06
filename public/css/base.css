@@ -952,10 +952,11 @@ section.row-color.white {
   }
   .wave-container {
     margin: 84px 0 112px;
-    width: 392px;
+    width: 100%;
     height: 47px;
-    background-size: 392px 47px;
+    background-size: 90% 47px;
     background-position: center;
+    left: 0;
   }
   img.img-left {
     position: absolute;
