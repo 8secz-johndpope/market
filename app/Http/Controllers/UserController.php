@@ -258,7 +258,7 @@ class UserController extends BaseController
             $adverts[]=$response['_source'];
         }
 
-        return ['favorites' => $user->favorites,'adverts'=>$adverts];
+        return ['favorites'=>$adverts];
     }
 
     public function getAdvert(Request $request){
