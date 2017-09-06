@@ -40,6 +40,11 @@ use Twilio\Rest\Client;
 
 class UserController extends BaseController
 {
+    public function contacts(Request $request){
+        $users = DB::table('users')
+            ->whereIn('phone', array('07712345678', '07788778899', '07712345678'))->get();
+        return $users;
+    }
     public function login(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {

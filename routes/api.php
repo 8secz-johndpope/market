@@ -21,6 +21,8 @@ Route::get('/advert/category/fields/{any}','MarketController@fields');
 
 Route::post('/user/login', 'UserController@login');
 Route::middleware('auth:api')->get('/user/adverts', 'UserController@adverts');
+Route::post('/user/contacts','UserController@contacts')->middleware('auth:api');
+
 Route::post('/user/paypal/nonce','UserController@nonce')->middleware('auth:api');
 Route::get('/user/paypal/token','UserController@token')->middleware('auth:api');
 Route::get('/user/cards','UserController@cards')->middleware('auth:api');
