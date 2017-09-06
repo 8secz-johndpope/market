@@ -28,6 +28,7 @@ class AccountCreated extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.accounts.created');
+        return $this->subject('Welcome to Sumra!')->markdown('emails.accounts.created',['url'=>'https://sumra.net/user/email/verify?code=12334232']);
+
     }
 }
