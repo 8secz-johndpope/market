@@ -248,7 +248,7 @@ class UserController extends BaseController
         $favs = $user->favorites;
         $favorites=array();
         foreach ($favs as $fav){
-            $favorites[] = $fav->advert;
+            $favorites[] = $fav->advert();
         }
         $adverts = array();
         foreach ($favorites as $favorite){
