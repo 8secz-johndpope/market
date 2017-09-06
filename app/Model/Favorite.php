@@ -12,5 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Favorite extends Model
 {
-
+    public function advert(){
+        return $this->hasOne('App\Model\Advert');
+    }
 }

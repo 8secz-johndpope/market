@@ -131,7 +131,7 @@ class HomeController extends BaseController
         $body['source_id']=$advert->id;
         $body['title']=$request->title;
         $body['description']=$request->description;
-        $body['location_name']='London';
+        $body['location_name']=$request->location_name;
         $body['location']='52.2,0.12';
         if($request->has('images')){
             $body['images']=$request->images;
