@@ -246,12 +246,13 @@ class UserController extends BaseController
     {
         $user = Auth::user();
         $favs = $user->favorites;
+
         $favorites=array();
         foreach ($favs as $fav){
             $favorites[] = $fav->advert;
         }
         $adverts = array();
-        foreach ($favorites as $favorite){
+        foreach ($favs as $favorite){
             $advert = Advert::find($favorite->advert_id);
             $params = [
                 'index' => 'adverts',
