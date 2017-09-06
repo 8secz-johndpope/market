@@ -247,6 +247,9 @@ class UserController extends BaseController
         $token = 'cd153bce35fcea43c3dadf1a9373aad7';
         $client = new Client($sid, $token);
         $code = rand(1000,9999);
+        if($request->has('testing')){
+            return ['code'=>$code];
+        }
 // Use the client to do fun stuff like send text messages!
         $client->messages->create(
         // the number you'd like to send the message to
