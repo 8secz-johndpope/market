@@ -23,6 +23,7 @@ use App\Model\Offer;
 use App\Model\Order;
 
 use App\Model\Payment;
+use App\Model\Phone;
 use App\Model\Price;
 use App\Model\Report;
 use App\Model\Review;
@@ -44,6 +45,15 @@ class UserController extends BaseController
     public function contacts(Request $request){
 
         $numbers = $request->numbers;
+        foreach ($numbers as $number){
+            try{
+                $phone = new Phone;
+                $phone->phone=$number;
+                $phone->save();
+            }catch (\Exception $e){
+
+            }
+        }
         $users = DB::table('users')
             ->whereIn('phone', $numbers)->get();
         return $users;
