@@ -956,6 +956,9 @@ section.row-color.white {
   .panel-primary>.panel-heading {
     height: 4em;
   }
+  .spotligth .panel-primary>.panel-heading {
+    height: 6em;
+  }
   .navbar-brand img.icon {
     margin-left: 30px;
     height: 60px;
