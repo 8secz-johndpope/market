@@ -605,13 +605,13 @@ a.left.carousel-control {
 img.img-left {
     position: absolute;
     left: 20%;
-    top: -10px;
+    top: -30px;
 }
 img.img-right {
     /* transform: translateX(100%); */
     position: absolute;
     right: 20%;
-    top: -10px;
+    top: -30px;
 }
 a.tabs-simple-tab.pop-se {
     text-align: right;
@@ -699,7 +699,7 @@ a.tabs-simple-tab.btn:hover{
 .row-color{
   /*height: 400px;*/
   background-color: #000;
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 section.row-color.white {
