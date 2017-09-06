@@ -29,6 +29,6 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
-        return View('emails.name');
+        return $this->view('emails.name');
     }
 }
