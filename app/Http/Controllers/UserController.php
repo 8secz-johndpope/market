@@ -48,7 +48,6 @@ class UserController extends BaseController
         $numbers = $request->numbers;
         foreach ($numbers as $number){
             try{
-                
                 $phone = new Phone;
                 $phone->phone=$number;
                 $phone->save();

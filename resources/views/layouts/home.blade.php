@@ -362,11 +362,11 @@
     });
     $(".favroite-icon").click(function () {
         var id = $(this).data('id');
-        $.post("/api/user/list/favorite",{id:id}, function(data, status){
+        $.post("/user/list/favorite",{id:id}, function(data, status){
             console.log(data);
 
         });
-        axios.post('/api/user/list/favorite', {
+        axios.post('/user/list/favorite', {
             id:id
         })
             .then(function (response) {
@@ -374,7 +374,7 @@
             })
             .catch(function (error) {
                 console.log(error);
-            })
+            });
 
     });
 
