@@ -56,7 +56,7 @@
 							<a class="tabs-simple-tab pop-se" href="#">Popular Searches</a>
 						</div>
 					</div>
-					<div class="col-md-3 col-lg-4">
+					<div class="col-md-3 col-lg-4 hidden-xs hidden-sm">
 						<img class="img-right" src="css/section-gold2.png">
 					</div>
 				</div>
