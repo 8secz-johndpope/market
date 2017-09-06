@@ -176,6 +176,9 @@
 				<div class="wave-copy">
 					<p class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">We're more than a marketplace.</p>
 				</div>
+				<div class="wave-copy">
+					<p class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">Key Features.</p>
+				</div>
 			</div>	
 		</section>
 		<section class="features">
