@@ -954,6 +954,8 @@ section.row-color.white {
     margin: 84px 0 112px;
     width: 392px;
     height: 47px;
+    background-size: 392px 47px;
+    background-position: center;
   }
   img.img-left {
     position: absolute;
