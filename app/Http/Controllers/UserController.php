@@ -255,7 +255,7 @@ class UserController extends BaseController
                 'id' => $advert->elastic
             ];
             $response = $this->client->get($params);
-            $adverts[]=$response;
+            $adverts[]=$response['_source'];
         }
 
         return ['favorites' => $user->favorites,'adverts'=>$adverts];
