@@ -950,6 +950,11 @@ section.row-color.white {
   .categories .panel-heading a {
     display: block;
   }
+  .wave-container {
+    margin: 84px 0 112px;
+    width: 392px;
+    height: 47px;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
