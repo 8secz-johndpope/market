@@ -174,7 +174,7 @@
 				</div>
 				<div class="wave-container" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"><canvas class="webgl-object active" width="932" height="210" style="width: 932px; height: 210px;"></canvas></div>
 				<div class="wave-copy">
-					<h2 class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">We're more than a marketplace.</h2>
+					<p class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">We're more than a marketplace.</p>
 				</div>
 			</div>	
 		</section>

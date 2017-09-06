@@ -634,6 +634,10 @@ h2.typography-subsection-subheadline.siri-command.relative {
   font-size: 42px;
   margin-bottom: 18px;
 }
+.row-color.white p{
+  font-size: 16px;
+  margin-bottom: 18px;
+}
 section.row-color.gold {
     background-color: #fe9c30;
 }
@@ -653,7 +657,7 @@ a.tabs-simple-tab.btn:hover{
   color:#ff883e;
 }
 .row-color{
-  height: 250px;
+  height: 400px;
   background-color: #000;
 }
 section.row-color.white {
