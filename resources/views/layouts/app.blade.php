@@ -573,6 +573,11 @@
         console.log("did change");
         upload_file();
     });
+    function get_location(postcode) {
+        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+postcode+"&key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0",function (data,status) {
+            console.log(data);
+        });
+    }
 </script>
 </body>
 </html>
