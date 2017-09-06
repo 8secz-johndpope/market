@@ -168,18 +168,14 @@
 			</div>
 		</section>
 		<section class="row-color black">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 img left">
-						<img src="css/section-black.png">
-					</div>
-					<div class="col-lg-4">
-					</div>
-					<div class="col-lg-4 img right">
-						<img src="css/section-black2.png">
-					</div>
+			<div class="siri-command-wave enhanced" data-component-list="SiriCommandComponent">
+				<div class="wave-copy">
+					<h3 class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">“I want to watch the next episode of Homeland”</h3>
+					<h3 class="typography-subsection-subheadline siri-command" style="opacity: 0;">“Play some hits from the&nbsp;‘90s”</h3>
+					<h3 class="typography-subsection-subheadline siri-command" style="opacity: 0;">“Turn on subtitles”</h3>
 				</div>
-			</div>		
+				<div class="wave-container" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"><canvas class="webgl-object active" width="932" height="210" style="width: 932px; height: 210px;"></canvas></div>
+			</div>	
 		</section>
 		<section class="features">
 			<div class="container">
