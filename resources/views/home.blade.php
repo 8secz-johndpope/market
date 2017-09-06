@@ -229,20 +229,6 @@
 				</div>
 			</div>
 		</section>
-		<section class="row-color white">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 img left">
-						<img src="css/section-white1.png">
-					</div>
-					<div class="col-lg-4">
-					</div>
-					<div class="col-lg-4 img right">
-						<img src="css/section-white2.png">
-					</div>
-				</div>
-			</div>		
-		</section>
 		<section class="social-media">
 			<div class="container">
 				<div class="row justify-content-between">
