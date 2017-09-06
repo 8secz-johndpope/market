@@ -51,7 +51,7 @@ class User extends Authenticatable
             "email" => $attributes['email']
         ));
         $acc = new AccountCreated();
-        $verify = EmailCode;
+        $verify = new EmailCode;
         $verify->code=uniqid();
         $verify->save();
         $account->verify_code=$verify->code;
