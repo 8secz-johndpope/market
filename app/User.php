@@ -93,6 +93,6 @@ class User extends Authenticatable
     }
     public function favs()
     {
-        return $this->belongsToMany('App\Model\Advert','favorite');
+        return $this->belongsToMany('App\Model\Advert','favorites');
     }
 }
