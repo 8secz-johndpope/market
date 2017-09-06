@@ -613,6 +613,12 @@ img.img-right {
     right: 20%;
     top: -30px;
 }
+a.tabs-simple-tab{
+  text-decoration: none;
+}
+a.tabs-simple-tab:hover{
+  color:#000;
+}
 a.tabs-simple-tab.pop-se {
     text-align: right;
     padding-right: 0;
