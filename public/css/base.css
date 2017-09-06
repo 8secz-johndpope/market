@@ -947,6 +947,9 @@ section.row-color.white {
   .items-box-price.font-5 {
     font-size: 16px;
   }
+  .categories .panel-heading a {
+    display: block;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
