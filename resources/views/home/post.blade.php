@@ -180,16 +180,25 @@
 
                                </label>
                            </div></li>
-                       <li class="list-group-item"><div class="form-check">
-                               <label class="form-check-label">
-                                   <input class="form-check-input" type="checkbox" value="">
-                                   <span class="span-featured">Featured</span>&nbsp;&nbsp;Have your Ad appear at the top of the category listings for 3, 7 or 14 days.
-                               </label>
-                               <select class="form-control">
-                                   <option value="7-days">7 days</option>
-                                   <option value="14-days">14 days</option>
-                               </select>
-                           </div></li>
+                       <li class="list-group-item">
+                           <div class="row">
+                               <div class="col-sm-10">
+                                   <div class="form-check">
+                                       <label class="form-check-label">
+                                           <input class="form-check-input" type="checkbox" value="">
+                                           <span class="span-featured">Featured</span>&nbsp;&nbsp;Have your Ad appear at the top of the category listings for 3, 7 or 14 days.
+                                       </label>
+
+                                   </div>
+                               </div>
+                               <div class="col-sm-2">
+                                   <select class="form-control">
+                                       <option value="7-days">7 days</option>
+                                       <option value="14-days">14 days</option>
+                                   </select>
+                               </div>
+                           </div>
+                          </li>
                        <li class="list-group-item"><div class="form-check">
                                <label class="form-check-label">
                                    <input class="form-check-input" type="checkbox" value="">
