@@ -578,6 +578,10 @@
             console.log(data);
         });
     }
+    $(".postcode-submit").click(function () {
+       var postcode = $("#postcode-text").val();
+       get_location(postcode);
+    });
 </script>
 </body>
 </html>
