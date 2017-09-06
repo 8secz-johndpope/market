@@ -185,6 +185,10 @@
                                    <input class="form-check-input" type="checkbox" value="">
                                    <span class="span-featured">Featured</span>&nbsp;&nbsp;Have your Ad appear at the top of the category listings for 3, 7 or 14 days.
                                </label>
+                               <select class="form-control">
+                                   <option value="7-days">7 days</option>
+                                   <option value="14-days">14 days</option>
+                               </select>
                            </div></li>
                        <li class="list-group-item"><div class="form-check">
                                <label class="form-check-label">

@@ -92,9 +92,10 @@ class HomeController extends BaseController
     }
     public function post(Request $request)
     {
+        $user = Auth::user();
         $categories = Category::where('parent_id',0)->get();
 
-        return view('home.post',['categories'=>$categories]);
+        return view('home.post',['categories'=>$categories,'urgent'=>$user,'featured'=>$user->featured,'spotlight'=>$user->spotlight,'shipping',$user->shipping]);
     }
     public  function delete(Request $request,$id)
     {
