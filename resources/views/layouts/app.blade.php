@@ -578,6 +578,11 @@
             console.log(data.results[0]['formatted_address']);
             console.log(data.results[0]['geometry']['location']['lat']);
             console.log(data.results[0]['geometry']['location']['lng']);
+            var address = data.results[0]['formatted_address'];
+            var parts =  address.split(',');
+            $("#location_name").val(parts[0]);
+            $("#lat").val(data.results[0]['geometry']['location']['lat']);
+            $("#lng").val(data.results[0]['geometry']['location']['lng']);
 
         });
     }
