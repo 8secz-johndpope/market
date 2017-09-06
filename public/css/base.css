@@ -1010,6 +1010,7 @@ section.row-color.white {
 @media screen and (min-width: 992px){
   .categories .row {
     padding-bottom: 5px;
+    width: 83%;
   }
   .categories .panel-body {
     height: 22em;
