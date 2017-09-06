@@ -51,13 +51,7 @@ class User extends Authenticatable
             "country" => "GB",
             "email" => $attributes['email']
         ));
-        $acc = new AccountCreated();
-        $verify = new EmailCode;
-        $verify->user_id = $this->id;
-        $verify->code=uniqid();
-        $verify->save();
-        $acc->verify_code=$verify->code;
-        Mail::to($this)->send($acc);
+
         $this->stripe_id = $customer->id;
         $this->stripe_account=$account->id;
         $this->pk_key=$account->keys->publishable;

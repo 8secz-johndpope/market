@@ -1091,7 +1091,13 @@ class UserController extends BaseController
 
         $user->more(['email' => $request->email, 'name' => $request->name, 'password' => bcrypt($request->password), 'phone' => $request->phone]);
         $user->save();
-
+        $acc = new AccountCreated();
+        $verify = new EmailCode;
+        $verify->user_id = $user->id;
+        $verify->code=uniqid();
+        $verify->save();
+        $acc->verify_code=$verify->code;
+        Mail::to($this)->send($acc);
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, "https://fire.sumra.net/updatetitle");

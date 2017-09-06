@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\BaseController;
+use App\Mail\AccountCreated;
+use App\Model\EmailCode;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -72,6 +75,14 @@ class RegisterController extends BaseController
             'password' => bcrypt($data['password']),
         ]);
         $user->save();
+
+        $acc = new AccountCreated();
+        $verify = new EmailCode;
+        $verify->user_id = $user->id;
+        $verify->code=uniqid();
+        $verify->save();
+        $acc->verify_code=$verify->code;
+        Mail::to($this)->send($acc);
         return $user;
         /*
         return User::create([
