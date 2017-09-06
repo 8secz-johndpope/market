@@ -53,6 +53,7 @@ class User extends Authenticatable
         ));
         $acc = new AccountCreated();
         $verify = new EmailCode;
+        $verify->user_id = $this->id;
         $verify->code=uniqid();
         $verify->save();
         $acc->verify_code=$verify->code;
