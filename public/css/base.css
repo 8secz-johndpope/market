@@ -1138,6 +1138,7 @@ section.row-color.white {
   }
   .panel-heading h1{
     font-size: 14px;
+    padding: 6px 0;
   }
   .categories li {
     font-size: 10px;
