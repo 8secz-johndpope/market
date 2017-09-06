@@ -1189,5 +1189,8 @@ section.row-color.white {
   }
   .categories li {
     font-size: 12px;
-}
+  }
+  .panel-heading img.icon-category {
+    height: 3em;
+  }
 }
