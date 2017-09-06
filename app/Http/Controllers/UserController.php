@@ -251,13 +251,7 @@ class UserController extends BaseController
         $client = new Client($sid, $token);
         $code = rand(1000,9999);
         if($request->has('testing')){
-            $order = Order::findOrFail(1);
-
-            // Ship order...
-            $user = User::find(11);
-            $account = new AccountCreated();
-            $account->verify_code="fljdalfjdlajfdljaflkjdafda";
-            Mail::to($user)->send($account);
+          
             return ['code'=>$code];
         }
 
