@@ -622,7 +622,7 @@ a.tabs-simple-tab.all-spot {
     padding-left: 0;
 }
 .row.menu img {
-    transform: translateX(60%);
+    /*transform: translateX(60%);*/
 }
 .tabs-simple-bar-mask {
     overflow: hidden;
