@@ -1184,4 +1184,7 @@ section.row-color.white {
   .col-2 img {
     height: 40px;
   }
+  .panel-heading h1 {
+    font-size: 16px;
+  }
 }
