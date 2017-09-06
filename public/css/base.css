@@ -677,7 +677,7 @@ a.tabs-simple-tab.btn:hover{
   color:#ff883e;
 }
 .row-color{
-  height: 400px;
+  /*height: 400px;*/
   background-color: #000;
   padding-top: 60px;
 }
