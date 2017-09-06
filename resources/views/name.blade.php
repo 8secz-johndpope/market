@@ -1,8 +1,12 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: sumra
- * Date: 06/09/2017
- * Time: 15:47
- */
-echo "Hello";
+@component('mail::message')
+    # Order Shipped
+
+    Your order has been shipped!
+
+    @component('mail::button', ['url' => $url])
+        View Order
+    @endcomponent
+
+    Thanks,<br>
+    {{ config('app.name') }}
+@endcomponent
