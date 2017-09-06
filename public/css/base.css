@@ -651,6 +651,13 @@ h2.typography-subsection-subheadline.siri-command.relative {
   position: relative;
   position: relative;
 }
+.wave-container .webgl-object {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 section.row-color.gold {
     background-color: #fe9c30;
 }
