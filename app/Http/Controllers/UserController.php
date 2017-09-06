@@ -33,6 +33,7 @@ use App\Model\Urgent;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 use Mockery\Exception;
@@ -41,6 +42,7 @@ use Twilio\Rest\Client;
 class UserController extends BaseController
 {
     public function contacts(Request $request){
+        
         $users = DB::table('users')
             ->whereIn('phone', array('07712345678', '07788778899', '07712345678'))->get();
         return $users;
