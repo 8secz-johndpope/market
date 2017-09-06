@@ -18,6 +18,7 @@ Route::get('/user/ads/post', 'HomeController@post');
 Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'HomeController@myads');
 Route::get('/user/email/verify', 'HomeController@verify');
+Route::post('/user/list/favorite','UserController@favorite')->middleware('auth');
 
 Route::get('/user/advert/delete/{id}', 'HomeController@delete');
 
