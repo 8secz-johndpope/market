@@ -11,6 +11,7 @@ class AccountCreated extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $verify_code = "1211232";
     /**
      * Create a new message instance.
      *
@@ -28,7 +29,7 @@ class AccountCreated extends Mailable
      */
     public function build()
     {
-        return $this->subject('Welcome to Sumra!')->markdown('emails.accounts.created',['url'=>'https://sumra.net/user/email/verify?code=12334232']);
+        return $this->subject('Welcome to Sumra!')->markdown('emails.accounts.created',['url'=>'https://sumra.net/user/email/verify?code='.$this->verify_code]);
 
     }
 }

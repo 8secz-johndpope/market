@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AccountCreated;
 use App\Mail\OrderShipped;
 use App\Model\Address;
 use App\Model\Advert;
@@ -254,7 +255,9 @@ class UserController extends BaseController
 
             // Ship order...
             $user = User::find(11);
-            Mail::to($user)->send(new OrderShipped($order));
+            $account = new AccountCreated();
+            $account->verify_code="fljdalfjdlajfdljaflkjdafda";
+            Mail::to($user)->send($account);
             return ['code'=>$code];
         }
 
