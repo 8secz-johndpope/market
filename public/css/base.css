@@ -737,7 +737,7 @@ section.row-color.white {
     text-align: center;
     display: table-cell;
 }
-.tabs-simple-tab:after {
+/*.tabs-simple-tab:after {
     content: "";
     position: absolute;
     top: 55px;
@@ -760,7 +760,7 @@ section.row-color.white {
     -ms-transform: rotate(45deg) scale(1);
     transform: rotate(45deg) scale(1);
     text-decoration: none;
-}
+}*/
 .text{
   line-height: 1.3em;
   max-height: 2.6em;
