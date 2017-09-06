@@ -242,7 +242,7 @@ class UserController extends BaseController
         return ['msg' => 'Favorite sent'];
 
     }
-    public function text() {
+    public function text(Request $request) {
         $sid = 'AC7237043426f3c67ac884ab4b4b0d3ff3';
         $token = 'cd153bce35fcea43c3dadf1a9373aad7';
         $client = new Client($sid, $token);
