@@ -627,6 +627,9 @@ a.left.carousel-control {
     margin-top:50px;
 
 }
+h2.typography-subsection-subheadline.siri-command.relative {
+  text-align: center
+}
 section.row-color.gold {
     background-color: #fe9c30;
 }
