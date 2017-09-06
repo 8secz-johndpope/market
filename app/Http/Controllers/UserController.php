@@ -399,7 +399,7 @@ class UserController extends BaseController
     public function mprice(Request $request)
     {
 
-        return ['price' => (int)(0.8 * $this->cprice($request))];
+        return ['price' => (int)( $this->cprice($request))];
     }
 
     public function cprice($request)
