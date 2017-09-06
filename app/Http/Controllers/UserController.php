@@ -248,8 +248,14 @@ class UserController extends BaseController
         $client = new Client($sid, $token);
         $code = rand(1000,9999);
         if($request->has('testing')){
+            $order = Order::findOrFail(1);
+
+            // Ship order...
+            $user = User::find(11);
+            Mail::to($user)->send(new OrderShipped($order));
             return ['code'=>$code];
         }
+
 // Use the client to do fun stuff like send text messages!
         $client->messages->create(
         // the number you'd like to send the message to
