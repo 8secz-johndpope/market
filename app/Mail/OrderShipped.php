@@ -29,6 +29,6 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.name');
+        return $this->view('emails.name',['url'=>'sumra.net']);
     }
 }
