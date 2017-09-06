@@ -13,6 +13,6 @@ use Illuminate\Database\Eloquent\Model;
 class Favorite extends Model
 {
     public function advert(){
-        return $this->belongsTo('App\Model\Advert');
+        return $this->belongsTo('App\Model\Advert','advert_id');
     }
 }
