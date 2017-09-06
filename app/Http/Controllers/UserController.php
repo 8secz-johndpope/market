@@ -19,6 +19,7 @@ use App\Model\Featured;
 use App\Model\Interest;
 use App\Model\Offer;
 use App\Model\Order;
+use Illuminate\Support\Facades\Mail;
 
 use App\Model\Payment;
 use App\Model\Price;
