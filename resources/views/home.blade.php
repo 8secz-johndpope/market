@@ -44,7 +44,7 @@
 		<section class="row-color gold">
 			<div class="container">
 				<div class="row menu">
-					<div class="col-md-3 col-lg-4">
+					<div class="col-sm-3 col-md-3 col-lg-4">
 						<img class="img-left" src="css/section-gold1.png">
 					</div>
 					<div class="col-md-6 col-lg-4">
