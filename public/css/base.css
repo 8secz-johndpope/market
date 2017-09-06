@@ -156,7 +156,7 @@ a.navbar-brand {
   height: 3em;
 }
 .panel-heading h1{
-  margin: 0 auto;
+  margin: auto;
   font-size: 18px;
   padding: 10px 0;
   color: #000;
@@ -1051,7 +1051,7 @@ section.row-color.white {
     height: 3em;
   }
   .categories .panel-primary>.panel-heading {
-    height: 17em;
+    height: 4em;
   }
   .read-more {
     bottom: 50px;
