@@ -955,6 +955,11 @@ section.row-color.white {
     width: 392px;
     height: 47px;
   }
+  img.img-left {
+    position: absolute;
+    left: -70%;
+    top: -30px;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
