@@ -91,4 +91,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Favorite');
     }
+    public function favs()
+    {
+        return $this->belongsToMany('App\Model\Advert','favorite');
+    }
 }

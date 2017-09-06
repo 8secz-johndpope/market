@@ -309,7 +309,7 @@ class UserController extends BaseController
             $adverts[]=$response['_source'];
         }
 
-        return ['favorites' => $favorites ,'adverts'=>$adverts];
+        return ['favorites' => $favorites ,'adverts'=>$adverts,'favs'=>$user->favs];
     }
 
 

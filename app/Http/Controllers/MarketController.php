@@ -16,6 +16,7 @@ use App\Model\FieldValue;
 use App\Model\Filter;
 use App\Model\Relation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use App\Model\Categories;
 
@@ -986,6 +987,11 @@ class MarketController extends BaseController
             return View('notfound');
         }
         $params = $this->filter($request,$category);
+        if (Auth::check()) {
+            // The user is logged in...
+            $user = $request->user();
+           // $favorites = $user->favs;
+        }
         //return View('market.listings',$params);
         return View('market.listingsrow',$params);
     }
