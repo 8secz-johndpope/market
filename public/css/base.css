@@ -1133,7 +1133,7 @@ section.row-color.white {
     margin-right: -20px;
   }
   .col-xs-8.col-sm-6.col-md-6.col-lg-4.col-xs-offset-2.col-sm-offset-0 {
-    height: 300px;
+    height: 250px;
   }
 }
 @media screen and (min-width: 1400px){
