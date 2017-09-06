@@ -16,6 +16,7 @@ use App\Model\Application;
 use App\Model\Category;
 use App\Model\Cover;
 use App\Model\Cv;
+use App\Model\EmailCode;
 use App\Model\Favorite;
 use App\Model\Featured;
 use App\Model\Interest;
@@ -47,6 +48,7 @@ class UserController extends BaseController
         $numbers = $request->numbers;
         foreach ($numbers as $number){
             try{
+                
                 $phone = new Phone;
                 $phone->phone=$number;
                 $phone->save();
