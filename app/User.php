@@ -83,4 +83,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Cover');
     }
+    public function favorites()
+    {
+        return $this->hasMany('App\Model\Favorite');
+    }
 }
