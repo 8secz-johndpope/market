@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\EmailCode;
 use Illuminate\Http\Request;
 use App\Model\Category;
 use App\Model\Advert;
@@ -78,8 +79,14 @@ class HomeController extends BaseController
         return view('home',['base' => $all, 'spotlight' => $products]);
     }
     public function verify(Request $request){
-
-        return view('home.verified',['msg'=>'Your email is successfully verified']);
+        $user = Auth::user();
+        $email_code = EmailCode::where('code',$request->code)->first();
+        if($email_code!==null){
+            if($user->id===$email_code->user->id){
+                return view('home.verified',['msg'=>'Your email is successfully verified']);
+            }
+        }
+        return view('home.verified',['msg'=>'Oops! Something went wrong here']);
     }
     public function post(Request $request)
     {
