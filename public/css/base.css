@@ -1099,7 +1099,7 @@ section.row-color.white {
     width: 60%;
   }
   .categories .panel-primary>.panel-heading{
-    height: 4em;
+    height: 3em;
   }
   .read-more {
     bottom: 10px;
@@ -1121,7 +1121,7 @@ section.row-color.white {
       font-size: 13px;
   }
   .panel-heading img.icon-category {
-    height: 3em;
+    height: 2em;
   }
   .spotligth .panel-heading {
     height: 380px;
