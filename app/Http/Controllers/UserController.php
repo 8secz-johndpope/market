@@ -291,7 +291,7 @@ class UserController extends BaseController
     public function favorites()
     {
         $user = Auth::user();
-        $favs = $user->favs;
+        $favs = $user->favorites;
 
 
         $adverts = array();
@@ -305,7 +305,7 @@ class UserController extends BaseController
             $adverts[]=$response['_source'];
         }
 
-        return ['favorites' => $user->favs ,'adverts'=>$adverts];
+        return ['favorites' => $favs ,'adverts'=>$adverts];
     }
 
 

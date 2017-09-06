@@ -87,11 +87,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Cover');
     }
+
     public function favorites()
-    {
-        return $this->hasMany('App\Model\Favorite');
-    }
-    public function favs()
     {
         return $this->belongsToMany('App\Model\Advert','favorites');
     }
