@@ -1193,4 +1193,7 @@ section.row-color.white {
   .panel-heading img.icon-category {
     height: 3em;
   }
+  .categories .panel-primary>.panel-heading {
+    height: 4em;
+  }
 }
