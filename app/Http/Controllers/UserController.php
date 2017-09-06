@@ -258,6 +258,7 @@ class UserController extends BaseController
                 'body' => 'Hey Jenny! Good luck on the bar exam!'
             )
         );
+        return ['a'=>'b'];
     }
 
     public function favorites()
