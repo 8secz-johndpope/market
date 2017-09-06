@@ -43,8 +43,9 @@ class UserController extends BaseController
 {
     public function contacts(Request $request){
 
+        $numbers = $request->numbers;
         $users = DB::table('users')
-            ->whereIn('phone', array('07712345678', '07788778899', '07712345678'))->get();
+            ->whereIn('phone', $numbers)->get();
         return $users;
     }
     public function login(Request $request)
