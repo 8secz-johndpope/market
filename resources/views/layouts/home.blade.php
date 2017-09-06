@@ -113,6 +113,10 @@
             cursor: pointer;
         }
 
+        .favroite-icon-gold {
+            color: gold;
+        }
+
     </style>
 
 </head>
@@ -362,7 +366,8 @@
     });
     $(".favroite-icon").click(function () {
         var id = $(this).data('id');
-        
+        $(this).addClass('favroite-icon-gold');
+
         axios.post('/user/list/favorite', {
             id:id
         })
