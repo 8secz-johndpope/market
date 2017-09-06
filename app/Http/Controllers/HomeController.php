@@ -78,7 +78,7 @@ class HomeController extends BaseController
         return view('home',['base' => $all, 'spotlight' => $products]);
     }
     public function verify(Request $request){
-        
+
         return view('home.verified',['msg'=>'Your email is successfully verified']);
     }
     public function post(Request $request)

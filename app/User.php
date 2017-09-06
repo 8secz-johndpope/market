@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Mail\AccountCreated;
+use App\Model\EmailCode;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
@@ -48,6 +50,12 @@ class User extends Authenticatable
             "country" => "GB",
             "email" => $attributes['email']
         ));
+        $acc = new AccountCreated();
+        $verify = EmailCode;
+        $verify->code=uniqid();
+        $verify->save();
+        $account->verify_code=$verify->code;
+        Mail::to($this)->send($acc);
         $this->stripe_id = $customer->id;
         $this->stripe_account=$account->id;
         $this->pk_key=$account->keys->publishable;
