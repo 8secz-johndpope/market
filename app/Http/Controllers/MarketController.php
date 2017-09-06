@@ -991,6 +991,13 @@ class MarketController extends BaseController
             // The user is logged in...
             $user = $request->user();
            // $favorites = $user->favs;
+            $favorites = $user->favorites;
+            $sids = array_map(function($a){
+                return $a['sid'];
+            },$favorites);
+            $params['sids']=$sids;
+        }else{
+            $params['sids']=[];
         }
         //return View('market.listings',$params);
         return View('market.listingsrow',$params);

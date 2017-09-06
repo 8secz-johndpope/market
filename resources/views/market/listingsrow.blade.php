@@ -147,8 +147,12 @@
                             </div>
                         </div>
                     </a>
-                        <span class="glyphicon glyphicon-thumbs-up favroite-icon" data-id="{{$product['source_id']}}"></span>
+                        @if (in_array($product['source_id'],$sids))
+                            <span class="glyphicon glyphicon-thumbs-up favroite-icon-gold" data-id="{{$product['source_id']}}"></span>
+                        @else
+                            <span class="glyphicon glyphicon-thumbs-up favroite-icon" data-id="{{$product['source_id']}}"></span>
 
+                            @endif
                     </div>
                 
             @endforeach
