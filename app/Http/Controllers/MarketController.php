@@ -992,9 +992,10 @@ class MarketController extends BaseController
             $user = $request->user();
            // $favorites = $user->favs;
             $favorites = $user->favorites;
-            $sids = array_map(function($a){
-                return $a['sid'];
-            },$favorites);
+            $sids = array();
+            foreach ($favorites as $favorite){
+                $sids[] = $favorite->sid;
+            }
             $params['sids']=$sids;
         }else{
             $params['sids']=[];
