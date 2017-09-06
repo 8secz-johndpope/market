@@ -82,7 +82,7 @@ class RegisterController extends BaseController
         $verify->code=uniqid();
         $verify->save();
         $acc->verify_code=$verify->code;
-        Mail::to($this)->send($acc);
+        Mail::to($user)->send($acc);
         return $user;
         /*
         return User::create([

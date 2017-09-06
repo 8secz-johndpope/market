@@ -1097,7 +1097,7 @@ class UserController extends BaseController
         $verify->code=uniqid();
         $verify->save();
         $acc->verify_code=$verify->code;
-        Mail::to($this)->send($acc);
+        Mail::to($user)->send($acc);
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, "https://fire.sumra.net/updatetitle");
