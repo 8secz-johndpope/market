@@ -1187,4 +1187,7 @@ section.row-color.white {
   .panel-heading h1 {
     font-size: 16px;
   }
+  .categories li {
+    font-size: 12px;
+}
 }
