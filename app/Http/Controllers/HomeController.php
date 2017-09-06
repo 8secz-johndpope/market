@@ -83,6 +83,8 @@ class HomeController extends BaseController
         $email_code = EmailCode::where('code',$request->code)->first();
         if($email_code!==null){
             if($user->id===$email_code->user->id){
+                $user->email_verified=1;
+                $user->save();
                 return view('home.verified',['msg'=>'Your email is successfully verified']);
             }
         }
