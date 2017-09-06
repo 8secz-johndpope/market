@@ -7,6 +7,7 @@ use App\Model\EmailCode;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
+use Illuminate\Support\Facades\Mail;
 
 
 class User extends Authenticatable
