@@ -369,6 +369,17 @@
     $(".favroite-icon").click(function () {
         var id = $(this).data('id');
         if($(this).hasClass('favroite-icon-gold')){
+            $(this).removeClass('favroite-icon-gold');
+
+            axios.post('/user/list/unfavorite', {
+                id:id
+            })
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
 
         }else{
             $(this).addClass('favroite-icon-gold');
