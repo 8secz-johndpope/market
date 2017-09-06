@@ -628,7 +628,8 @@ a.left.carousel-control {
 
 }
 h2.typography-subsection-subheadline.siri-command.relative {
-  text-align: center
+  text-align: center;
+  color: #000;
 }
 section.row-color.gold {
     background-color: #fe9c30;
