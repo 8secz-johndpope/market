@@ -55,7 +55,7 @@ class User extends Authenticatable
         $verify = new EmailCode;
         $verify->code=uniqid();
         $verify->save();
-        $account->verify_code=$verify->code;
+        $acc->verify_code=$verify->code;
         Mail::to($this)->send($acc);
         $this->stripe_id = $customer->id;
         $this->stripe_account=$account->id;
