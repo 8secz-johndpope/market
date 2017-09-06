@@ -264,6 +264,27 @@ class UserController extends BaseController
         return ['msg' => 'Favorite sent'];
 
     }
+    public function unfavorite(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+        if ($advert === null) {
+            $advert = Advert::where('sid', $request->id)->first();
+        }
+        if ($advert === null) {
+            return ['msg' => 'No Advert found'];
+        }
+
+
+        $favorite =  Favorite::where('user_id',$user->id)->where('advert_id',$advert->id)->first();
+        if($favorite!==null)
+        $favorite->delete();
+
+        return ['msg' => 'Favorite removed'];
+
+    }
     public function text(Request $request) {
         $sid = 'AC7237043426f3c67ac884ab4b4b0d3ff3';
         $token = 'cd153bce35fcea43c3dadf1a9373aad7';
