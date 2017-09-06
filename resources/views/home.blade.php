@@ -47,19 +47,16 @@
 					<div class="col-lg-4">
 						<img src="css/section-gold1.png">
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-4">
 						<h2>SUMRA is safe, free and trusted</h2>
-						<div class="col-lg-4">
+						<div class="col-lg-6">
 							<a class="tabs-simple-tab all-spot" href="#">All Spotlights</a>
 						</div>
-						<div class="col-lg-3">
-							
-						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-6">
 							<a class="tabs-simple-tab pop-se" href="#">Popular Searches</a>
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-4">
 						<img src="css/section-gold2.png">
 					</div>
 				</div>
