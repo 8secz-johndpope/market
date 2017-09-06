@@ -960,6 +960,9 @@ section.row-color.white {
     left: -70%;
     top: -30px;
   }
+  a.tabs-simple-tab.all-spot {
+    text-align: center;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
