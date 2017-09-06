@@ -68,6 +68,24 @@ class MarketController extends BaseController
         }
 
     }
+    public function advert(Request $request,$id){
+        // $advert = Advert::find($request->source_id);
+        $advert = Advert::find($id);
+        if ($advert === null) {
+            $advert = Advert::where('sid', $request->id)->first();
+        }
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic
+        ];
+        $response = $this->client->get($params);
+
+
+        return ['advert' => $response['_source']];
+
+    }
+
     public function suggest(Request $request)
     {
 

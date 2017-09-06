@@ -64,7 +64,7 @@ Route::get('/user/advert/price','UserController@price')->middleware('auth:api');
 
 Route::get('/user/advert/favorites','UserController@favorites')->middleware('auth:api');
 
-Route::get('/user/advert/getAdvert','UserController@getAdvert')->middleware('auth:api');
+Route::get('/advert/{id}','MarketController@advert')->middleware('auth:api');
 
 
 Route::post('/user/advert/mprice','UserController@mprice')->middleware('auth:api');
