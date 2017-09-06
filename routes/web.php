@@ -17,7 +17,7 @@ Route::get('/insert', 'MarketController@insert');
 Route::get('/user/ads/post', 'HomeController@post');
 Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'HomeController@myads');
-Route::get('/user/verify/email', 'HomeController@verify');
+Route::get('/user/email/verify', 'HomeController@verify');
 
 Route::get('/user/advert/delete/{id}', 'HomeController@delete');
 
