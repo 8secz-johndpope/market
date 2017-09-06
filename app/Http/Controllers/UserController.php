@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderShipped;
 use App\Model\Address;
 use App\Model\Advert;
 use App\Model\Application;
@@ -19,7 +20,6 @@ use App\Model\Featured;
 use App\Model\Interest;
 use App\Model\Offer;
 use App\Model\Order;
-use Illuminate\Support\Facades\Mail;
 
 use App\Model\Payment;
 use App\Model\Price;
@@ -32,7 +32,8 @@ use App\Model\Urgent;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+
 use Mockery\Exception;
 use Twilio\Rest\Client;
 
