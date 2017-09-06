@@ -639,6 +639,18 @@ h2.typography-subsection-subheadline.siri-command.relative {
   margin-bottom: 18px;
   text-align: center;
 }
+.wave-container {
+  margin: 84px 0 112px;
+  width: 592px;
+  height: 77px;
+  background-size: 592px 77px;
+  background-repeat: no-repeat;
+  background-image: url('siri_wave_large.png');
+  left: 50%;
+  margin-left: -296px;
+  position: relative;
+  position: relative;
+}
 section.row-color.gold {
     background-color: #fe9c30;
 }
