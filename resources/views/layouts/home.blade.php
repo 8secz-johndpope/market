@@ -350,11 +350,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
-<script src="https://sumra.net/js/three.js"></script>
-<script src="https://images.apple.com/v/apple-tv/c/built/scripts/head.built.js"></script>
-<script src="https://www.apple.com/ac/localnav/3.0/scripts/ac-localnav.built.js"></script>
-<script src="https://www.apple.com/ac/localeswitcher/1/scripts/localeswitcher.built.js"></script>
-<script src="https://sumra.net/js/built.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 

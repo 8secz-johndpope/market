@@ -50,7 +50,7 @@
 					<div class="col-lg-6">
 						<h2>SUMRA is safe, free and trusted</h2>
 						<div class="col-lg-4">
-							<a class="tabs-simple-tab all-spot" href="#">All Spotlight</a>
+							<a class="tabs-simple-tab all-spot" href="#">All Spotlights</a>
 						</div>
 						<div class="col-lg-3">
 							
@@ -177,7 +177,7 @@
 					<p class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">We're more than a marketplace.</p>
 				</div>
 				<div class="wave-copy">
-					<p class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">Key Features.</p>
+					<p class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">Key Features:</p>
 				</div>
 			</div>	
 		</section>
