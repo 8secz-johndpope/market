@@ -17,6 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://www.paypalobjects.com/api/checkout.js" data-version-4></script>
+    <script src="https://js.stripe.com/v3/"></script>
 
     <script src="js/main.js"></script>
     <style>
