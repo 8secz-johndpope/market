@@ -185,7 +185,7 @@
                                    </div>
                                </div>
                                <div class="col-sm-2">
-                                   <h4>£40</h4>
+                                   <span class="extra-price">£40</span>
                                </div>
                            </div>
 
@@ -223,7 +223,7 @@
                                    </div>
                                </div>
                                <div class="col-sm-2">
-                                   <h4>£60</h4>
+                                   <span class="extra-price">£60</span>
                                </div>
                            </div>
 
