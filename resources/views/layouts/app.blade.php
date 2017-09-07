@@ -606,6 +606,45 @@
             console.log(error);
         });
     $(document).on('change',".extra-change", function(){
+        var featured = $("#featured").val();
+        var featured_quantity=$("#featured-quantity").val();
+        var shipping_quantity=$("#shipping-quantity").val();
+
+        if ($('#featured').is(":checked"))
+        {
+            featured=1;
+        }else{
+            featured=0;
+        }
+        var urgent = $("#urgent").val();
+        if ($('#urgent').is(":checked"))
+        {
+            urgent=1;
+        }else{
+            urgent=0;
+        }
+
+        var spotlight = $("#spotlight").val();
+        if ($('#spotlight').is(":checked"))
+        {
+            spotlight=1;
+        }else{
+            spotlight=0;
+        }
+        var category =  $("#continue-button").data('category');
+
+        axios.get('/category/price/'+category, {
+            params: {
+                spotlight: spotlight
+            }
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
         console.log(this.value);
     });
 </script>
