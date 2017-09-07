@@ -362,6 +362,10 @@
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });
+
+
+</script>
+<script>
     $(".favroite-icon").click(function () {
         var id = $(this).data('id');
         if($(this).hasClass('favroite-icon-gold')){
@@ -393,10 +397,7 @@
 
 
     });
-
 </script>
-<script>
 
-</script>
 </body>
 </html>
