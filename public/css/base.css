@@ -282,6 +282,11 @@ a.listing-product:before {
   left: 17%;
 }
 
+.cell>p {
+    text-align: center;
+    margin-left: 20px;
+}
+
 section.spotligth{
   padding: 0;
   background-color: #fff;
