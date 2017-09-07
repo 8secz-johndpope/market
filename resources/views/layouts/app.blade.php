@@ -610,19 +610,19 @@
         var total = 0;
         if ($('#featured').is(":checked"))
         {
-            total += $("#featured-price").val();
+            total += parseInt($("#featured-price").val());
         }
         if ($('#urgent').is(":checked"))
         {
-            total += $("#urgent-price").val();
+            total += parseInt($("#urgent-price").val());
         }
         if ($('#spotlight').is(":checked"))
         {
-            total += $("#spotlight-price").val();
+            total += parseInt($("#spotlight-price").val());
         }
         if ($('#shipping').is(":checked"))
         {
-            total += $("#shipping-price").val();
+            total += parseInt($("#shipping-price").val());
         }
         $(".total-price").html(total);
 
