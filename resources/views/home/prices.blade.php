@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-sm-2">
                         @if($extra->type==='single')
-                        <span class="extra-price">{{$extra->price->price/100}}</span>
+                        <span class="extra-price">£{{$extra->price->price/100}}</span>
                         @else
                             <select class="form-control" name="featured-days">
                                 @foreach($extra->prices as $price)
