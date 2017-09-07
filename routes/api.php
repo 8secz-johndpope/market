@@ -63,7 +63,7 @@ Route::post('/user/covers/add','UserController@addcover')->middleware('auth:api'
 
 
 Route::get('/user/advert/price','UserController@price')->middleware('auth:api');
-Route::get('/user/list/price','UserController@price')->middleware('auth:api');
+Route::get('/user/list/price','UserController@price')->middleware('auth');
 
 Route::get('/user/advert/favorites','UserController@favorites')->middleware('auth:api');
 
