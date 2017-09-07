@@ -192,8 +192,8 @@ class HomeController extends BaseController
             $stripe_id = $user->stripe_id;
             $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
                 'limit' => 10, 'object' => 'card'));
-            return $cards;
-            return view('home.payment',['orders'=>$orders,'total'=>$total,'cards'=>$cards]);
+
+            return view('home.payment',['orders'=>$orders,'total'=>$total,'cards'=>$cards['data']]);
         }else{
             return redirect('/user/manage/ads');
 
