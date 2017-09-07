@@ -164,7 +164,8 @@
 				</div>
 			</div>
 		</section>
-		<section class="row-color white active">
+		
+		<section class="row-color white section section-siri loading-complete active animated" data-component-list="LoadingComponent" data-analytics-section-engagement="name:siri">
 			<div class="siri-command-wave enhanced" data-component-list="SiriCommandComponent">
 				<div class="wave-copy">
 					<a href=""><h2 class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">What is Sumra?</h2></a>
