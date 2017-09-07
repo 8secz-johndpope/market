@@ -427,6 +427,7 @@
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
 <script src="https://sumra.net/js/aws-sdk.js"></script>
 <script src="https://sumra.net/js/load.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
 <script>
@@ -590,6 +591,13 @@
        var postcode = $("#postcode-text").val();
        get_location(postcode);
     });
+    axios.get('/user/list/price')
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 </script>
 </body>
 </html>

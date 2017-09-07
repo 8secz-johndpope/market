@@ -175,7 +175,7 @@
                    <ul class="list-group">
                        <li class="list-group-item"><div class="form-check">
                                <label class="form-check-label">
-                                   <input class="form-check-input" type="checkbox" value="">
+                                   <input class="form-check-input extra-check" type="checkbox" name="urgent" value="1">
                                    <span class="span-urgent">Urgent</span> &nbsp;&nbsp;Let people know you want to sell, rent or hire quickly.
 
                                </label>
@@ -185,23 +185,23 @@
                                <div class="col-sm-10">
                                    <div class="form-check">
                                        <label class="form-check-label">
-                                           <input class="form-check-input" type="checkbox" value="">
+                                           <input class="form-check-input extra-check" type="checkbox" name="featured" value="1">
                                            <span class="span-featured">Featured</span>&nbsp;&nbsp;Have your Ad appear at the top of the category listings for 3, 7 or 14 days.
                                        </label>
 
                                    </div>
                                </div>
                                <div class="col-sm-2">
-                                   <select class="form-control">
-                                       <option value="7-days">7 days</option>
-                                       <option value="14-days">14 days</option>
+                                   <select class="form-control" name="featured-days">
+                                       <option value="7">7 days</option>
+                                       <option value="14">14 days</option>
                                    </select>
                                </div>
                            </div>
                           </li>
                        <li class="list-group-item"><div class="form-check">
                                <label class="form-check-label">
-                                   <input class="form-check-input" type="checkbox" value="">
+                                   <input class="form-check-input extra-check" type="checkbox" name="spotlight" value="1">
                                    <span class="span-spotlight">Spotlight</span> &nbsp;&nbsp;Have your Ad seen on the Sumra homepage!
                                </label>
                            </div></li>
@@ -211,21 +211,20 @@
                                    <div class="col-sm-10">
                                        <div class="form-check">
                                            <label class="form-check-label">
-                                               <input class="form-check-input" type="checkbox" value="">
+                                               <input class="form-check-input extra-check" type="checkbox" name="shipping" value="1">
                                                <span class="span-shipping">CanShip</span> &nbsp;&nbsp;Ship to the buyer when order is placed.
                                            </label>
 
                                        </div>
                                    </div>
                                    <div class="col-sm-2">
-                                       <select class="form-control">
-                                           <option value="2kg">Up to 2kg</option>
-                                           <option value="5kg">Up to 5kg</option>
-                                           <option value="10kg">Up to 10kg</option>
+                                       <select class="form-control" name="shipping-weight">
+                                           <option value="2">Up to 2kg</option>
+                                           <option value="5">Up to 5kg</option>
+                                           <option value="10">Up to 10kg</option>
                                        </select>
                                    </div>
                                </div>
-
 
                        </li>
                    </ul>
