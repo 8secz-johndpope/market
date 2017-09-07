@@ -314,8 +314,15 @@ class HomeController extends BaseController
         if($category===null){
             return ['msg'=>'Catagory not found'];
         }
-
-        return view('home.prices',['prices'=>[],'extras'=>ExtraType::all()]);
+        $extras = ExtraType::all();
+        foreach ($extras as $extra){
+            if($extra->type==='single'){
+                $extra->price = $extra->price(0,1,2);
+            }else{
+                $extra->prices = $extra->prices(0,1,2);
+            }
+        }
+        return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
