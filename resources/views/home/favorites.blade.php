@@ -58,8 +58,12 @@
                             </div>
                         </div>
                     </a>
-                    <a class="glyphicon glyphicon-remove delete-icon" href="/user/advert/delete/{{$product['source_id']}}"></a>
-                </div>
+                    @if (in_array($product['source_id'],$sids))
+                        <span class="glyphicon glyphicon-thumbs-up favroite-icon favroite-icon-gold" data-id="{{$product['source_id']}}"></span>
+                    @else
+                        <span class="glyphicon glyphicon-thumbs-up favroite-icon" data-id="{{$product['source_id']}}"></span>
+
+                    @endif                </div>
 
             @endforeach
         </div>
