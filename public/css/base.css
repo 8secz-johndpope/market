@@ -547,6 +547,9 @@ footer .row {
   color: #000;
   opacity: 1;
 }
+.col {
+    margin-left: 20px;
+}
 .carousel-control:hover {
   color: #ff8830;
 }
