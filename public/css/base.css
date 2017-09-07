@@ -1052,6 +1052,9 @@ section.row-color.white {
   .read-more {
     bottom: 30px;
   }
+  .col {
+    height: 120px;
+  }
 }
 @media screen and (min-width: 992px){
   .categories .row {
