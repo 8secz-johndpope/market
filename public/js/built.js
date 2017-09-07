@@ -31170,16 +31170,16 @@
                 },
                 initializeJetpack: function() {
                     Object.assign(h, {
-                        LoadingComponent: d("./components/LoadingComponent"),
-                        CaptionGalleryComponent: d("./components/CaptionGalleryComponent"),
-                        GalleryComponent: d("@marcom/ac-jetpack-fuel/components/gallery/GalleryComponent"),
-                        MediaObjectComponent: d("@marcom/ac-jetpack-fuel/components/media-object/MediaObjectComponent"),
-                        ThemeLocalNavComponent: d("./components/themeLocalNavComponent"),
-                        HeroComponent: d("./components/heroComponent"),
+                        //LoadingComponent: d("./components/LoadingComponent"),
+                        //CaptionGalleryComponent: d("./components/CaptionGalleryComponent"),
+                        //GalleryComponent: d("@marcom/ac-jetpack-fuel/components/gallery/GalleryComponent"),
+                        //MediaObjectComponent: d("@marcom/ac-jetpack-fuel/components/media-object/MediaObjectComponent"),
+                        //ThemeLocalNavComponent: d("./components/themeLocalNavComponent"),
+                        //HeroComponent: d("./components/heroComponent"),
                         SiriCommandComponent: d("./components/siriCommandComponent"),
                         WebGLLightingComponent: d("./components/WebGLLightingComponent"),
                         EngagementGridComponent: d("./components/engagementGridComponent"),
-                        ContentRevealComponent: d("./components/contentRevealComponent")
+                        //ContentRevealComponent: d("./components/contentRevealComponent")
                     });
                     h.MediaObjectComponent.URI_PATTERN = "/105/media/{{locale}}/apple-tv/2016/14d9e1b8_9735_4875_9107_d24cf69f325e/{{name}}/{{viewport}}";
                     c = c.extend(f);
