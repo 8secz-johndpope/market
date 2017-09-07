@@ -13,7 +13,7 @@
 @section('content')
 <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-       
+
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Manage My ads</a>
