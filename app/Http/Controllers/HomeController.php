@@ -491,7 +491,7 @@ class HomeController extends BaseController
             ]);
             $advert = Advert::find($order->advert_id);
             foreach ($order->items as $item){
-                $body[$order->slug]=1;
+                $body[$item->slug]=1;
             }
             $params = [
                 'index' => 'adverts',
