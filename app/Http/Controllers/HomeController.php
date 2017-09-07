@@ -169,6 +169,7 @@ class HomeController extends BaseController
         $advert->user_id=$user->id;
         $advert->save();
         $total = (int)$request->total;
+        return $request->total;
         if($total>0){
             $orders = array();
             if($request->has('featured')){
