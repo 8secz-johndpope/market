@@ -15,11 +15,9 @@
     <div class="col-sm-8 col-sm-offset-2">
 
         <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Manage My ads</a>
+            
+            <li class="nav-item active">
+                <a class="nav-link " href="#">Manage My ads</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Messages</a>
