@@ -20,7 +20,7 @@
                         @if($extra->type==='single')
                         <span class="extra-price">£{{$extra->price->price/100}}</span>
                         @else
-                            <select class="form-control" name="{{$extra-slug}}-quantity">
+                            <select class="form-control" name="{{$extra->slug}}-quantity">
                                 @foreach($extra->prices as $price)
                                 <option value="7">{{$price->title}}  (£{{$price->price/100}})</option>
                                     @endforeach
@@ -32,7 +32,7 @@
 
             </li>
             @endforeach
-                   
+
         </ul>
     </div>
 </div>
