@@ -1187,6 +1187,10 @@ section.row-color.white {
   .categories li {
     font-size: 10px;
   }
+  .webgl-object.active{
+    height: 110px;
+    height: 532px;
+  } 
 }
 @media screen and (min-width: 1400px){
   .categories .panel-body {
