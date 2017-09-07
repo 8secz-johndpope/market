@@ -1194,11 +1194,15 @@ section.row-color.white {
     margin: 0 11px; 
   }
   .categories .row {
-    width: 71%;
+    width: 66.66667%;
   }
-  .container{
+  .categories .container{
     width: 90%;
   }
+  .categories .row {
+    width: 66.66667%;
+  }
+  
   .col-2 img {
     height: 40px;
   }
