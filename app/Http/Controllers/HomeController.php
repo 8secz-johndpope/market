@@ -183,7 +183,16 @@ class HomeController extends BaseController
             if($request->has('shipping')){
                 $orders[] = ['title'=>'Shipping','price'=>$request->get('shipping-price')];
             }
-            return view('home.payment',['orders'=>$orders,'total'=>$total]);
+            $user = Auth::user();
+            /*
+            $balance = \Stripe\Balance::retrieve(
+                array("stripe_account" => $user->stripe_account)
+            );
+            */
+            $stripe_id = $user->stripe_id;
+            $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+                'limit' => 10, 'object' => 'card'));
+            return view('home.payment',['orders'=>$orders,'total'=>$total,'cards'=>$cards]);
         }else{
             return redirect('/user/manage/ads');
 

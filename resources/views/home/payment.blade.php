@@ -26,6 +26,15 @@
                 </div>
                 <div class="col-sm-4">
                     <h4>Pay by Card</h4>
+                    <ul class="list-group">
+                        @foreach($cards as $card)
+                            <li class="list-group-item">
+                                <div class="radio">
+                                    <label><input type="radio" name="card">{{$card['brand']}}</label>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
                     <form action="/charge" method="post" id="payment-form">
                         <div class="form-row">
                             <label for="card-element">
