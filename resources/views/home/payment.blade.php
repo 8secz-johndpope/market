@@ -36,7 +36,7 @@
 
                             client: {
                                 sandbox:    'AUBOJK9kQGBJDHSQubGYiOzoGSa0Q-TIvp6catf9WmsQ4gbbInp7qhOkX92QZT_a1Bd0wKSQHov9nBCF', // from https://developer.paypal.com/developer/applications/
-                                production: 'ASDM1ag3La0rWSQMAnbLVXmvHeF1y5ydr4I9xmWYNH635LHJl2xX27UwOzZiwonSm1TNFHx4QLiguFxc'  // from https://developer.paypal.com/developer/applications/
+                              //  production: 'ASDM1ag3La0rWSQMAnbLVXmvHeF1y5ydr4I9xmWYNH635LHJl2xX27UwOzZiwonSm1TNFHx4QLiguFxc'  // from https://developer.paypal.com/developer/applications/
                             },
 
                             // Pass the payment details for your transaction
