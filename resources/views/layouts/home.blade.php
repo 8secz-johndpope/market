@@ -215,7 +215,7 @@
                 <img id="footer_top_logo" class="img-responsive" title="" alt="" src="/css/sumra-text.png">
             </div>
 
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-2">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
                 <div class="col">
                     <h4>Company</h4>
                     <ul>
@@ -226,7 +226,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Experience</h4>
                     <ul>
@@ -236,7 +236,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Help</h4>
                     <ul>
@@ -250,7 +250,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-2">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
                 <div class="col">
                     <h4>Commitment</h4>
                     <ul>
@@ -260,7 +260,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Partnerships</h4>
                     <ul>
@@ -270,7 +270,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Press & Opportunities</h4>
                     <ul>
