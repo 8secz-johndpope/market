@@ -22,7 +22,7 @@
                         @else
                             <select class="form-control" name="featured-days">
                                 @foreach($extra->prices as $price)
-                                <option value="7">{{$price->days}} days (£{{$price->days}})</option>
+                                <option value="7">{{$price->quantity}} {{$price->units}} (£{{$price->quantity}})</option>
                                     @endforeach
                             </select>
                         @endif
