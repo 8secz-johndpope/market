@@ -326,7 +326,7 @@ class HomeController extends BaseController
     }
     public  function price(Request $request,$id){
         $category = Category::find($id);
-        return ['spotlight'=>$request->spotlight];
+        return 80;
         if($category===null){
             return ['msg'=>'Catagory not found'];
         }
