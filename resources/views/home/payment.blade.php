@@ -35,6 +35,7 @@
                             </li>
                         @endforeach
                     </ul>
+                    <div style="display: none">
                     <form action="/user/cards/add" method="post" id="payment-form">
                         {{ csrf_field() }}
                         <div class="form-row">
@@ -51,6 +52,7 @@
 
                         <button>Submit Payment</button>
                     </form>
+                    </div>
                     <p>Or</p>
 
                         <div id="paypal-container"></div>

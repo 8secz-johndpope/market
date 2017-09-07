@@ -172,7 +172,7 @@ class HomeController extends BaseController
         $advert->save();
         $total = (int)$request->total;
         if($total>0){
-            $orders = array();
+           // $orders = array();
             $order= new Order;
             $order->amount = $total;
             $order->advert_id=$advert->id;
@@ -210,21 +210,10 @@ class HomeController extends BaseController
                 $order->items()->save($orderitem);
               //  $orders[] = ['title'=>'Shipping','price'=>$request->get('shipping-price')];
             }
-            $user = Auth::user();
-            /*
-            $balance = \Stripe\Balance::retrieve(
-                array("stripe_account" => $user->stripe_account)
-            );
-            */
-            $stripe_id = $user->stripe_id;
-            $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
-                'limit' => 10, 'object' => 'card'));
-            $gateway = new \Braintree\Gateway(array(
-                'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
-            ));
-            $clientToken = $gateway->clientToken()->generate();
 
-            return view('home.payment',['order'=>$order,'total'=>$total,'cards'=>$cards['data'],'token' => $clientToken]);
+            $request->session()->put('order_id', $order->id);
+            return redirect('/user/manage/order');
+
         }else{
             return redirect('/user/manage/ads');
 
@@ -234,6 +223,24 @@ class HomeController extends BaseController
       //  $categories = Category::where('parent_id',0)->get();
 
      //   return view('home.myadverts');
+    }
+    public function order(Request $request){
+        $user = Auth::user();
+        /*
+        $balance = \Stripe\Balance::retrieve(
+            array("stripe_account" => $user->stripe_account)
+        );
+        */
+        $stripe_id = $user->stripe_id;
+        $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+            'limit' => 10, 'object' => 'card'));
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+        ));
+        $clientToken = $gateway->clientToken()->generate();
+        $order_id  = $request->session()->get('order_id');
+
+        return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards['data'],'token' => $clientToken]);
     }
     public function favorites(Request $request){
             $user = Auth::user();
