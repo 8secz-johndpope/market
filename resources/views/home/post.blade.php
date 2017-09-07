@@ -167,9 +167,6 @@
                </div>
            </div>
 
-          <div class="extra-prices">
-
-          </div>
 
 
                <div class="panel panel-success images-panel">
@@ -197,6 +194,10 @@
                        </div>
                    </div>
                </div>
+               <div class="extra-prices">
+
+               </div>
+
                <div class="panel panel-success total-panel">
                    <div class="panel-heading">
                        <h3 class="panel-title">Total</h3>
@@ -205,6 +206,8 @@
                        £<span class="total-price">0.00</span>
                    </div>
                </div>
+
+
 
            <div class="panel panel-info post-panel">
                <div class="panel-heading">
