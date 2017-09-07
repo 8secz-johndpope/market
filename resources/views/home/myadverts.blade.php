@@ -15,7 +15,7 @@
     <div class="col-sm-8 col-sm-offset-2">
 
         <ul class="nav nav-tabs">
-            
+
             <li class="nav-item active">
                 <a class="nav-link " href="#">Manage My ads</a>
             </li>
