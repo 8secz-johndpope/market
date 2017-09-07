@@ -53,19 +53,21 @@
                     </form>
                     <p>Or</p>
 
-                    <form id="checkout" method="post" action="/checkout">
-                        <div id="payment-form"></div>
-                        <input type="submit" value="Pay £{{$total}}">
-                    </form>
+                        <div id="paypal-container"></div>
 
 
-                    <script>
-                        braintree.setup(
-                            // Replace this with a client token from your server
-                            "{{$token}}",
-                            "dropin", {
-                                container: "payment-form"
-                            });
+                    <script type="text/javascript">
+                        braintree.setup('{{$token}}', 'custom', {
+                            paypal: {
+                                container: 'paypal-container',
+                                singleUse: true, // Required
+                                amount: {{$total}}, // Required
+                                currency: 'GBP', // Required
+                            },
+                            onPaymentMethodReceived: function (obj) {
+                                doSomethingWithTheNonce(obj.nonce);
+                            }
+                        });
                     </script>
 
                     <script>
