@@ -18,7 +18,7 @@ Route::get('/user/ads/post', 'HomeController@post');
 Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'HomeController@myads');
 Route::get('/user/manage/favorites', 'HomeController@favorites');
-Route::get('/user/cards/add', 'HomeController@addcard');
+Route::post('/user/cards/add', 'HomeController@addcard');
 
 Route::get('/user/email/verify', 'HomeController@verify');
 Route::post('/user/list/favorite','UserController@favorite')->middleware('auth');
