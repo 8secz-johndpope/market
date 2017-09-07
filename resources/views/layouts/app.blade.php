@@ -605,6 +605,9 @@
         .catch(function (error) {
             console.log(error);
         });
+    $(document).on('change',".extra-change", function(){
+        console.log(this.value);
+    });
 </script>
 </body>
 </html>

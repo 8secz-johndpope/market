@@ -11,7 +11,7 @@
                     <div class="col-sm-10">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input class="form-check-input extra-check" type="checkbox" name="{{$extra->slug}}" value="1" id="{{$extra->slug}}">
+                                <input class="form-check-input extra-change" type="checkbox" name="{{$extra->slug}}" value="1" id="{{$extra->slug}}">
                                 <span class="span-{{$extra->slug}}">{{$extra->title}}</span> &nbsp;&nbsp;{{$extra->subtitle}}
                             </label>
                         </div>
@@ -20,7 +20,7 @@
                         @if($extra->type==='single')
                         <span class="extra-price">£{{$extra->price->price/100}}</span>
                         @else
-                            <select class="form-control" name="{{$extra->slug}}-quantity" id="{{$extra->slug}}-quantity">
+                            <select class="form-control extra-change" name="{{$extra->slug}}-quantity" id="{{$extra->slug}}-quantity">
                                 @foreach($extra->prices as $price)
                                 <option value="{{$price->quantity}}">{{$price->title}}  (£{{$price->price/100}})</option>
                                     @endforeach
