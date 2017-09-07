@@ -19,10 +19,11 @@
                     <div class="col-sm-2">
                         @if($extra->type==='single')
                         <span class="extra-price">£{{$extra->price->price/100}}</span>
+                            <input type="hidden" id="{{$extra->slug}}-price" value="{{$extra->price->price/100}}">
                         @else
-                            <select class="form-control extra-change" name="{{$extra->slug}}-quantity" id="{{$extra->slug}}-quantity">
+                            <select class="form-control extra-change" name="{{$extra->slug}}-price" id="{{$extra->slug}}-price">
                                 @foreach($extra->prices as $price)
-                                <option value="{{$price->quantity}}">{{$price->title}}  (£{{$price->price/100}})</option>
+                                <option value="{{$price->price/100}}">{{$price->title}}  (£{{$price->price/100}})</option>
                                     @endforeach
                             </select>
                         @endif
