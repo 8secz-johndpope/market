@@ -538,6 +538,13 @@
                 $('.extra-options-panel').show();
             }
         });
+        get_prices(category);
+    }
+    function get_prices(category) {
+
+        $.get("/category/prices/"+category, function(data, status){
+            $('.extra-prices').html(data);
+        });
     }
     $('input.posting-string').on('input',function(e){
         $.get("/category/suggest?q="+$(this).val(), function(data, status){
