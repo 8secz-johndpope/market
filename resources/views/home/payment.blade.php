@@ -27,6 +27,7 @@
                 <div class="col-sm-4">
                     <h4>Pay by Card</h4>
                     <form action="/user/payment/stripe" method="post">
+                        {{ csrf_field() }}
                     <ul class="list-group">
                         @foreach($cards as $card)
                             <li class="list-group-item">
