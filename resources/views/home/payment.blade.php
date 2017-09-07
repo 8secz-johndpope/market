@@ -55,7 +55,7 @@
                             <div id="card-errors" role="alert"></div>
                         </div>
 
-                        <button>Submit Payment</button>
+                        <button>Add Card</button>
                     </form>
                     </div>
                     <p>Or</p>
