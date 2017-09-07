@@ -21,6 +21,7 @@
                         @foreach($orders as $order)
                         <tr><td>{{$order['title']}}</td><td>{{$order['price']}}</td></tr>
                             @endforeach
+                            <tr><td colspan="2">{{$total}}</td></tr>
                     </table>
                 </div>
                 <div class="col-sm-4">

@@ -183,7 +183,7 @@ class HomeController extends BaseController
             if($request->has('shipping')){
                 $orders[] = ['title'=>'Shipping','price'=>$request->get('shipping-price')];
             }
-            return view('home.payment',['orders'=>$orders]);
+            return view('home.payment',['orders'=>$orders,'total'=>$total]);
         }else{
             return redirect('/user/manage/ads');
 
