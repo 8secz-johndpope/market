@@ -19,9 +19,9 @@
                     <h4>Your Order</h4>
                     <table class="table">
                         @foreach($orders as $order)
-                        <tr><td>{{$order['title']}}</td><td>{{$order['price']}}</td></tr>
+                        <tr><td>{{$order['title']}}</td><td>£{{$order['price']}}</td></tr>
                             @endforeach
-                            <tr><td>Total:</td><td>{{$total}}</td></tr>
+                            <tr><td>Total:</td><td>£{{$total}}</td></tr>
                     </table>
                 </div>
                 <div class="col-sm-4">
