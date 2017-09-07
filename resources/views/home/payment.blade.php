@@ -39,7 +39,8 @@
                     </ul>
                         <button type="submit" class="btn btn-primary">Make Payment</button>
                     </form>
-                    <div style="display: none">
+                    <button class="btn btn-default add-card">Add New Card</button>
+                    <div class="add-card-div" style="display: none">
                     <form action="/user/cards/add" method="post" id="payment-form">
                         {{ csrf_field() }}
                         <div class="form-row">
@@ -132,7 +133,9 @@
                             // Submit the form
                             form.submit();
                         }
-
+                        $(".add-card").click(function () {
+                           $(".add-card-div").show();
+                        });
 
                     </script>
                 </div>

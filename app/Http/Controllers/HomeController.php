@@ -423,7 +423,7 @@ class HomeController extends BaseController
         $stripe_id = $user->stripe_id;
         $customer = \Stripe\Customer::retrieve($stripe_id);
         $customer->sources->create(array("source" => $request->stripeToken));
-        return redirect('/user/manage/ads');
+        return redirect('/user/manage/order');
     }
     public function stripe(Request $request){
         $user = Auth::user();
