@@ -31173,7 +31173,7 @@
                         LoadingComponent: d("./components/LoadingComponent"),
                         //CaptionGalleryComponent: d("./components/CaptionGalleryComponent"),
                         //GalleryComponent: d("@marcom/ac-jetpack-fuel/components/gallery/GalleryComponent"),
-                        MediaObjectComponent: d("@marcom/ac-jetpack-fuel/components/media-object/MediaObjectComponent"),
+                        //MediaObjectComponent: d("@marcom/ac-jetpack-fuel/components/media-object/MediaObjectComponent"),
                         //ThemeLocalNavComponent: d("./components/themeLocalNavComponent"),
                         //HeroComponent: d("./components/heroComponent"),
                         SiriCommandComponent: d("./components/siriCommandComponent"),
@@ -31213,21 +31213,21 @@
         b.exports = j.initialize()
     }
     , {
-        "./components/CaptionGalleryComponent": 639,
+        //"./components/CaptionGalleryComponent": 639,
         "./components/LoadingComponent": 640,
         "./components/WebGLLightingComponent": 641,
         "./components/contentRevealComponent": 642,
         "./components/engagementGridComponent": 643,
-        "./components/heroComponent": 644,
+        //"./components/heroComponent": 644,
         "./components/siriCommandComponent": 645,
-        "./components/themeLocalNavComponent": 646,
+        //"./components/themeLocalNavComponent": 646,
         "./model/ProgressiveImageController": 650,
-        "./pages/AppleTVPage": 651,
-        "./shared/model/EnabledFeatures": 652,
-        "@marcom/ac-jetpack-fuel/components/gallery/GalleryComponent": 303,
+        //"./pages/AppleTVPage": 651,
+        //"./shared/model/EnabledFeatures": 652,
+        //"@marcom/ac-jetpack-fuel/components/gallery/GalleryComponent": 303,
         "@marcom/ac-jetpack-fuel/components/media-object/MediaObjectComponent": 304,
         "@marcom/ac-jetpack-lib/model/ComponentMap": 339,
-        "@marcom/ac-jetpack-lib/model/EnabledFeatures": 341
+        //"@marcom/ac-jetpack-lib/model/EnabledFeatures": 341
     }],
     649: [function(b, d, a) {
         var c = b("../controllers/GraphicsPerformanceController");
