@@ -21,7 +21,7 @@
                         @foreach($order->items as $item)
                         <tr><td>{{$item->title}}</td><td>£{{$item->amount}}</td></tr>
                             @endforeach
-                            <tr><td>Total:</td><td>£{{$total}}</td></tr>
+                            <tr><td>Total:</td><td>£{{$order->amount}}</td></tr>
                     </table>
                 </div>
                 <div class="col-sm-4">
@@ -63,7 +63,7 @@
                             paypal: {
                                 container: 'paypal-container',
                                 singleUse: true, // Required
-                                amount: {{$total}}, // Required
+                                amount: {{$order->amount}}, // Required
                                 currency: 'GBP', // Required
                             },
                             onPaymentMethodReceived: function (obj) {
