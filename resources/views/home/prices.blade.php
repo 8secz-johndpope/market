@@ -37,11 +37,3 @@
     </div>
 </div>
 
-<div class="panel panel-success total-panel">
-    <div class="panel-heading">
-        <h3 class="panel-title">Total</h3>
-    </div>
-    <div class="panel-body">
-        £0.00
-    </div>
-</div>
