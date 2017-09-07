@@ -52,8 +52,8 @@
                                     transactions: [
                                         {
                                             amount: {
-                                                total:    '1.00',
-                                                currency: 'USD'
+                                                total:    '{{$total}}',
+                                                currency: 'GBP'
                                             }
                                         }
                                     ]
