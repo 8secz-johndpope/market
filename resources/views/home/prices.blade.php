@@ -19,7 +19,7 @@
                     <div class="col-sm-2">
                         @if($extra->type==='single')
                         <span class="extra-price">£{{$extra->price->price/100}}</span>
-                            <input type="hidden" id="{{$extra->slug}}-price" value="{{$extra->price->price/100}}">
+                            <input type="hidden" id="{{$extra->slug}}-price" value="{{$extra->price->price/100}}" name="{{$extra->slug}}-price">
                         @else
                             <select class="form-control extra-change" name="{{$extra->slug}}-price" id="{{$extra->slug}}-price">
                                 @foreach($extra->prices as $price)
