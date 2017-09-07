@@ -12,7 +12,7 @@
                         <div class="form-check">
                             <label class="form-check-label">
                                 <input class="form-check-input extra-check" type="checkbox" name="urgent" value="1">
-                                <span class="span-{{$extra-slug}}">{{$extra->title}}</span> &nbsp;&nbsp;{{$extra-subtitle}}
+                                <span class="span-{{$extra->slug}}">{{$extra->title}}</span> &nbsp;&nbsp;{{$extra->subtitle}}
                             </label>
                         </div>
                     </div>
