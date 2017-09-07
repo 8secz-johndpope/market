@@ -48,7 +48,7 @@
 						<img class="img-left" src="css/section-gold1.png">
 					</div>
 					<div class="col-xs-8 col-sm-8 col-md-6 col-lg-4">
-						<h2>SUMRA is safe, free and trusted</h2>
+						<h2>Sumra is safe, free and trusted</h2>
 						<div class="col-sm-6 col-md-6 col-lg-6">
 							<a class="tabs-simple-tab all-spot" href="#">All Spotlights</a>
 						</div>
