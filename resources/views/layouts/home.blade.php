@@ -288,8 +288,8 @@
 <div class="copyright style-1">
     <div class="container">
         <div class="row">
-            <div class="cell col-lg-4 col-md-8 col-xs-12 footer-copy col-md-offset-2 col-lg-offset-4">
-                All rights reserved. Copyright &copy; 2017 <span class="company-rights">SUMRA</span>
+            <div class="cell">
+                <p>All rights reserved. Copyright &copy; 2017 <span class="company-rights">SUMRA</span><p>
             </div>
         </div>
     </div>
