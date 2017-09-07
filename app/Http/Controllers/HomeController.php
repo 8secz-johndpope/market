@@ -192,8 +192,12 @@ class HomeController extends BaseController
             $stripe_id = $user->stripe_id;
             $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
                 'limit' => 10, 'object' => 'card'));
+            $gateway = new \Braintree\Gateway(array(
+                'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+            ));
+            $clientToken = $gateway->clientToken()->generate();
 
-            return view('home.payment',['orders'=>$orders,'total'=>$total,'cards'=>$cards['data']]);
+            return view('home.payment',['orders'=>$orders,'total'=>$total,'cards'=>$cards['data'],'token' => $clientToken]);
         }else{
             return redirect('/user/manage/ads');
 
