@@ -277,6 +277,10 @@
                     </ul>
                 </div>
             </div>
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0 visible-sm">
+                <div class="col">
+                </div>
+            </div>
             <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <img  class="img-responsive  footer_logo" src="/css/ic_launcher1.png" />
