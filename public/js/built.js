@@ -31173,7 +31173,7 @@
                         //LoadingComponent: d("./components/LoadingComponent"),
                         //CaptionGalleryComponent: d("./components/CaptionGalleryComponent"),
                         //GalleryComponent: d("@marcom/ac-jetpack-fuel/components/gallery/GalleryComponent"),
-                        //MediaObjectComponent: d("@marcom/ac-jetpack-fuel/components/media-object/MediaObjectComponent"),
+                        MediaObjectComponent: d("@marcom/ac-jetpack-fuel/components/media-object/MediaObjectComponent"),
                         //ThemeLocalNavComponent: d("./components/themeLocalNavComponent"),
                         //HeroComponent: d("./components/heroComponent"),
                         SiriCommandComponent: d("./components/siriCommandComponent"),
