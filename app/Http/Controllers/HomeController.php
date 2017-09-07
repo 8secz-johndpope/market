@@ -425,4 +425,56 @@ class HomeController extends BaseController
         $customer->sources->create(array("source" => $request->stripeToken));
         return redirect('/user/manage/ads');
     }
+    public function stripe(Request $request){
+        $user = Auth::user();
+        $order_id  = $request->session()->get('order_id');
+        $order = Order::find($order_id);
+        $stripe_id = $user->stripe_id;
+        $card = $request->card;
+        $amount = $order->amount * 100;
+        $description = 'Payment towards to Order id '.$order_id;
+        try {
+            $charge = \Stripe\Charge::create(array(
+                "amount" => $amount,
+                "currency" => "gbp",
+                "customer" => $stripe_id,
+                "source" => $card, // obtained with Stripe.js
+                "description" => $description
+            ));
+          return redirect('/user/manage/ads');
+
+        } catch (\Exception $e) {
+            return [
+                'status' => 'failed',
+                'error' => $e,
+                'result' => ['msg' => 'error charging the card']
+            ];
+        }
+
+    }
+    public function paypal(Request $request){
+        $user = Auth::user();
+
+        $order_id  = $request->session()->get('order_id');
+        $order = Order::find($order_id);
+
+        $amount = $order->amount;
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+        ));
+        try {
+            $result = $gateway->transaction()->sale([
+                "amount" => $amount,
+                'paymentMethodNonce' => $request->nonce,
+                'options' => [
+                    'submitForSettlement' => True
+                ]
+            ]);
+            return redirect('/user/manage/ads');
+
+        } catch (Exception $e) {
+
+            return ['result' => ['msg' => 'failed']];
+        }
+    }
 }

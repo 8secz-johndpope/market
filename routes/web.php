@@ -20,6 +20,8 @@ Route::get('/user/manage/ads', 'HomeController@myads');
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::post('/user/cards/add', 'HomeController@addcard');
 Route::get('/user/manage/order', 'HomeController@order');
+Route::get('/user/payment/stripe', 'HomeController@stripe');
+Route::get('/user/payment/paypal', 'HomeController@paypal');
 
 Route::get('/user/email/verify', 'HomeController@verify');
 Route::post('/user/list/favorite','UserController@favorite')->middleware('auth');
