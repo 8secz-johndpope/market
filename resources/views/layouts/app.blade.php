@@ -591,7 +591,7 @@
        var postcode = $("#postcode-text").val();
        get_location(postcode);
     });
-    axios.get('/api/user/list/price')
+    axios.get('/user/list/price')
         .then(function (response) {
             console.log(response);
         })

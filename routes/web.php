@@ -22,6 +22,7 @@ Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::get('/user/email/verify', 'HomeController@verify');
 Route::post('/user/list/favorite','UserController@favorite')->middleware('auth');
 Route::post('/user/list/unfavorite','UserController@unfavorite')->middleware('auth');
+Route::get('/user/list/price','UserController@price')->middleware('auth');
 
 Route::get('/user/advert/delete/{id}', 'HomeController@delete');
 
