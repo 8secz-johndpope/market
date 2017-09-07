@@ -21,7 +21,7 @@
                 <a class="nav-link" href="#">Messages</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Favorites</a>
+                <a class="nav-link" href="/user/manage/favorites">Favorites</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">My Details</a>

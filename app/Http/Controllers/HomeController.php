@@ -174,6 +174,11 @@ class HomeController extends BaseController
 
         return view('home.myadverts');
     }
+    public function favorites(Request $request){
+            $user = Auth::user();
+        return view('home.favorites',[ 'products' => $user->favorites]);
+
+    }
     public function myads(Request $request){
         $user = Auth::user();
         $page = $request->page ? $request->page : 1;
