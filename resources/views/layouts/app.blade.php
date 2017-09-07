@@ -625,6 +625,7 @@
             total += parseInt($("#shipping-price").val());
         }
         $(".total-price").html(total);
+        $("#total-price").html(total);
 
     });
 </script>

@@ -168,12 +168,31 @@ class HomeController extends BaseController
         $advert->elastic = $response['_id'];
         $advert->user_id=$user->id;
         $advert->save();
-        return redirect('/user/manage/ads');
+        $total = (int)$request->total;
+        if($total>0){
+            $orders = array();
+            if($request->has('featured')){
+                $orders[] = ['title'=>'Featured','price'=>$request->get('featured-price')];
+            }
+            if($request->has('urgent')){
+                $orders[] = ['title'=>'Urgent','price'=>$request->get('urgent-price')];
+            }
+            if($request->has('spotlight')){
+                $orders[] = ['title'=>'Spotlight','price'=>$request->get('spotlight-price')];
+            }
+            if($request->has('shipping')){
+                $orders[] = ['title'=>'Shipping','price'=>$request->get('shipping-price')];
+            }
+            return view('home.payment',['orders'=>$orders]);
+        }else{
+            return redirect('/user/manage/ads');
+
+        }
       //  return ['response' => $response];
       //  return $request->all();
       //  $categories = Category::where('parent_id',0)->get();
 
-        return view('home.myadverts');
+     //   return view('home.myadverts');
     }
     public function favorites(Request $request){
             $user = Auth::user();

@@ -204,6 +204,7 @@
                    </div>
                    <div class="panel-body">
                        £<span class="total-price">0.00</span>
+                       <input type="hidden" value="0" name="total" id="total-price">
                    </div>
                </div>
 
