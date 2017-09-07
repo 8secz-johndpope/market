@@ -180,6 +180,11 @@ a.navbar-brand {
 }
 .form-group.col-md-12.col-lg-12 {
     padding-right: 0;
+    padding-left: 0;
+}
+
+.col-xs-12.col-sm-10.col-md-10.col-lg-8 {
+    padding: 0;
 }
 
 .panel-primary>.panel-heading{
