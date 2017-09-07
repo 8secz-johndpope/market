@@ -539,6 +539,7 @@ footer .row {
 .carousel-control {
   width: 40px;
   color: #000;
+  opacity: 1;
 }
 .carousel-control:hover {
   color: #ff8830;
