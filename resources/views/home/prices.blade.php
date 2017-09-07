@@ -4,44 +4,51 @@
     </div>
     <div class="panel-body">
         <ul class="list-group">
+            @foreach($extras as $extra)
+
             <li class="list-group-item">
                 <div class="row">
                     <div class="col-sm-10">
                         <div class="form-check">
                             <label class="form-check-label">
                                 <input class="form-check-input extra-check" type="checkbox" name="urgent" value="1">
-                                <span class="span-urgent">Urgent</span> &nbsp;&nbsp;Let people know you want to sell, rent or hire quickly.
-
+                                <span class="span-{{$extra-slug}}">{{$extra->title}}</span> &nbsp;&nbsp;{{$extra-subtitle}}
                             </label>
                         </div>
                     </div>
                     <div class="col-sm-2">
+                        @if($extra->type==='single')
                         <span class="extra-price">£40</span>
+                        @else
+                            <select class="form-control" name="featured-days">
+                                <option value="7">7 days (£45)</option>
+                                <option value="14">14 days (£50)</option>
+                            </select>
+                        @endif
+
                     </div>
                 </div>
 
-
-
             </li>
-            <li class="list-group-item">
-                <div class="row">
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input extra-check" type="checkbox" name="featured" value="1">
-                                <span class="span-featured">Featured</span>&nbsp;&nbsp;Have your Ad appear at the top of the category listings for 3, 7 or 14 days.
-                            </label>
+            @endforeach
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input extra-check" type="checkbox" name="featured" value="1">
+                                        <span class="span-featured">Featured</span>&nbsp;&nbsp;Have your Ad appear at the top of the category listings for 3, 7 or 14 days.
+                                    </label>
 
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <select class="form-control" name="featured-days">
-                            <option value="7">7 days (£45)</option>
-                            <option value="14">14 days (£50)</option>
-                        </select>
-                    </div>
-                </div>
-            </li>
+                    </li>
+
+
             <li class="list-group-item">
 
                 <div class="row">

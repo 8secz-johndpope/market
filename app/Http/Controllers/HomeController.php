@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\EmailCode;
+use App\Model\ExtraType;
 use Illuminate\Http\Request;
 use App\Model\Category;
 use App\Model\Advert;
@@ -314,7 +315,7 @@ class HomeController extends BaseController
             return ['msg'=>'Catagory not found'];
         }
 
-        return view('home.prices',['prices'=>[]]);
+        return view('home.prices',['prices'=>[],'extras'=>ExtraType::all()]);
     }
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
