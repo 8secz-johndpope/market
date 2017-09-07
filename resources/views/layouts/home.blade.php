@@ -349,7 +349,6 @@
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-<script src="https://sumra.net/js/load.js"></script>
 
 <script>
     window.axios.defaults.headers.common = {
@@ -369,5 +368,7 @@
 <script>
 
 </script>
+<script src="https://sumra.net/js/load.js"></script>
+
 </body>
 </html>
