@@ -378,4 +378,12 @@ class HomeController extends BaseController
         }
         return $base;
     }
+    public function  addcard(Request $request){
+        $user = Auth::user();
+
+        $stripe_id = $user->stripe_id;
+        $customer = \Stripe\Customer::retrieve($stripe_id);
+        $customer->sources->create(array("source" => $request->stripeToken));
+        return redirect('/user/manage/ads');
+    }
 }

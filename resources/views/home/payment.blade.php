@@ -35,7 +35,8 @@
                             </li>
                         @endforeach
                     </ul>
-                    <form action="/charge" method="post" id="payment-form">
+                    <form action="/user/cards/add" method="post" id="payment-form">
+                        {{ csrf_field() }}
                         <div class="form-row">
                             <label for="card-element">
                                 Credit or debit card
