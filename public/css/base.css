@@ -1118,6 +1118,9 @@ section.row-color.white {
   .items-box-body.listing-content {
     /*width: 100%;*/
   }
+  .col-md-1 {
+    width: 12.5%;
+  }
 }
 @media screen and (min-width: 1200px){
   .search .col-lg-2 {
