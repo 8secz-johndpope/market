@@ -248,8 +248,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
                 <div class="col">
                     <h4>Commitment</h4>
