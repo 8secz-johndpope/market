@@ -998,6 +998,9 @@ section.row-color.white {
   .navbar-header {
     width: 20%;
   }
+  .col-xs-12 .col {
+    margin-top: 20px;
+  }
   .panel-primary>.panel-heading {
     height: 4em;
   }
