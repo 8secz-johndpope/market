@@ -1119,7 +1119,7 @@ section.row-color.white {
     /*width: 100%;*/
   }
   .col-md-1 {
-    width: 12.5%;
+    width: 8.6%;
   }
 }
 @media screen and (min-width: 1200px){
@@ -1153,7 +1153,7 @@ section.row-color.white {
   }
   .categories .row {
     padding-bottom: 30px;
-    width: 78%;
+    width: 88%;
   }
   .navbar-default .navbar-nav>li>a {
     font-size: 16px;
