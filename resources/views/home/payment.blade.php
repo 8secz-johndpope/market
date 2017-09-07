@@ -18,8 +18,8 @@
                 <div class="col-sm-8">
                     <h4>Your Order</h4>
                     <table class="table">
-                        @foreach($orders as $order)
-                        <tr><td>{{$order['title']}}</td><td>£{{$order['price']}}</td></tr>
+                        @foreach($order->items as $item)
+                        <tr><td>{{$item->title}}</td><td>£{{$item->amount}}</td></tr>
                             @endforeach
                             <tr><td>Total:</td><td>£{{$total}}</td></tr>
                     </table>

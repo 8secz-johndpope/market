@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Model\EmailCode;
 use App\Model\ExtraType;
+use App\Model\Order;
+use App\Model\OrderItem;
 use Illuminate\Http\Request;
 use App\Model\Category;
 use App\Model\Advert;
@@ -171,17 +173,42 @@ class HomeController extends BaseController
         $total = (int)$request->total;
         if($total>0){
             $orders = array();
+            $order= new Order;
+            $order->amount = $total;
+            $order->advert_id=$advert->id;
+            $order->save();
+
             if($request->has('featured')){
-                $orders[] = ['title'=>'Featured','price'=>$request->get('featured-price')];
+                $orderitem = new OrderItem;
+                $orderitem->title = 'Featured';
+                $orderitem->amount = $request->get('featured-price');
+                $orderitem->save();
+                $order->items()->save($orderitem);
+               // $orders[] = ['title'=>'Featured','price'=>$request->get('featured-price')];
             }
             if($request->has('urgent')){
-                $orders[] = ['title'=>'Urgent','price'=>$request->get('urgent-price')];
+                $orderitem = new OrderItem;
+                $orderitem->title = 'Urgent';
+                $orderitem->amount = $request->get('urgent-price');
+                $orderitem->save();
+                $order->items()->save($orderitem);
+              //  $orders[] = ['title'=>'Urgent','price'=>$request->get('urgent-price')];
             }
             if($request->has('spotlight')){
-                $orders[] = ['title'=>'Spotlight','price'=>$request->get('spotlight-price')];
+                $orderitem = new OrderItem;
+                $orderitem->title = 'Spotlight';
+                $orderitem->amount = $request->get('spotlight-price');
+                $orderitem->save();
+                $order->items()->save($orderitem);
+               // $orders[] = ['title'=>'Spotlight','price'=>$request->get('spotlight-price')];
             }
             if($request->has('shipping')){
-                $orders[] = ['title'=>'Shipping','price'=>$request->get('shipping-price')];
+                $orderitem = new OrderItem;
+                $orderitem->title = 'Shipping';
+                $orderitem->amount = $request->get('shipping-price');
+                $orderitem->save();
+                $order->items()->save($orderitem);
+              //  $orders[] = ['title'=>'Shipping','price'=>$request->get('shipping-price')];
             }
             $user = Auth::user();
             /*
@@ -197,7 +224,7 @@ class HomeController extends BaseController
             ));
             $clientToken = $gateway->clientToken()->generate();
 
-            return view('home.payment',['orders'=>$orders,'total'=>$total,'cards'=>$cards['data'],'token' => $clientToken]);
+            return view('home.payment',['order'=>$order,'total'=>$total,'cards'=>$cards['data'],'token' => $clientToken]);
         }else{
             return redirect('/user/manage/ads');
 
