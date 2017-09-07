@@ -640,7 +640,7 @@
         })
             .then(function (response) {
                 console.log(response);
-                $(".total-price").html(response);
+                $(".total-price").html(response.data);
             })
             .catch(function (error) {
                 console.log(error);
