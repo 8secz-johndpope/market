@@ -26,15 +26,18 @@
                 </div>
                 <div class="col-sm-4">
                     <h4>Pay by Card</h4>
+                    <form action="/user/payment/stripe" method="post">
                     <ul class="list-group">
                         @foreach($cards as $card)
                             <li class="list-group-item">
                                 <div class="radio">
-                                    <label><input type="radio" name="card">{{$card['brand']}}--{{$card['last4']}}</label>
+                                    <label><input type="radio" name="card" value="{{$card['id']}}" required>{{$card['brand']}}--{{$card['last4']}}</label>
                                 </div>
                             </li>
                         @endforeach
                     </ul>
+                        <button type="submit" class="btn btn-primary">Make Payment</button>
+                    </form>
                     <div style="display: none">
                     <form action="/user/cards/add" method="post" id="payment-form">
                         {{ csrf_field() }}
@@ -67,7 +70,9 @@
                                 currency: 'GBP', // Required
                             },
                             onPaymentMethodReceived: function (obj) {
-                                doSomethingWithTheNonce(obj.nonce);
+                              //  doSomethingWithTheNonce(obj.nonce);
+                                document.location.href = '/user/payment/paypal?nonce='+obj.nonce
+
                             }
                         });
                     </script>
