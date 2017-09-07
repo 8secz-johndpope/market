@@ -25,6 +25,11 @@
                     </table>
                 </div>
                 <div class="col-sm-4">
+                    <h4>Pay by Card</h4>
+                    <button class="btn-primary btn">Add Card</button>
+
+                    <p>Or</p>
+
                     <div id="myContainerElement"></div>
 
                     <script>
