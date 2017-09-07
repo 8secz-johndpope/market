@@ -228,16 +228,6 @@
             </div>
             <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
-                    <h4>Discover</h4>
-                    <ul>
-                        <li><a href="/why-us" title="Why Us">Why Us</a></li>
-                        <li><a href="/our-programs" title="Our programmes">Our academic programmes</a></li>
-                        <li><a href="/our-teaching-methods" title="Our teaching methods">Our teaching methods</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
-                <div class="col">
                     <h4>Experience</h4>
                     <ul>
                         <li><a href="/growth" title="Growth">Growth</a></li>
