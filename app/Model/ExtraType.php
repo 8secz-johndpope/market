@@ -16,7 +16,7 @@ class ExtraType extends Model
     {
         $current = Category::find($category);
         while($current!==null){
-            $prices = ExtraPrice::where('category',$current->id)->where('min_lat','<',$lat)->where('max_lat','>',$lat)->where('min_lng','<',$lng)->where('max_lng','>',$lng)->get();
+            $prices = $this->hasMany('App\Model\ExtraPrice')->where('category',$current->id)->where('min_lat','<',$lat)->where('max_lat','>',$lat)->where('min_lng','<',$lng)->where('max_lng','>',$lng)->get();
             if($prices===null){
                 $current=$current->parent;
             }else{
