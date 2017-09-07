@@ -107,15 +107,6 @@
                 width: 1260px;
             }
         }
-        .favroite-icon {
-            font-size: 30px;
-            float: right;
-            cursor: pointer;
-        }
-
-        .favroite-icon-gold {
-            color: gold;
-        }
 
     </style>
 
