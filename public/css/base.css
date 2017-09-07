@@ -1189,7 +1189,7 @@ section.row-color.white {
   }
   .webgl-object.active{
     height: 110px;
-    height: 532px;
+    width: 532px;
   } 
 }
 @media screen and (min-width: 1400px){
