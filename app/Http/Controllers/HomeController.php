@@ -181,6 +181,7 @@ class HomeController extends BaseController
             if($request->has('featured')){
                 $orderitem = new OrderItem;
                 $orderitem->title = 'Featured';
+                $orderitem->slug = 'featured';
                 $orderitem->amount = $request->get('featured-price');
                 $orderitem->save();
                 $order->items()->save($orderitem);
@@ -189,6 +190,7 @@ class HomeController extends BaseController
             if($request->has('urgent')){
                 $orderitem = new OrderItem;
                 $orderitem->title = 'Urgent';
+                $orderitem->slug = 'urgent';
                 $orderitem->amount = $request->get('urgent-price');
                 $orderitem->save();
                 $order->items()->save($orderitem);
@@ -197,6 +199,7 @@ class HomeController extends BaseController
             if($request->has('spotlight')){
                 $orderitem = new OrderItem;
                 $orderitem->title = 'Spotlight';
+                $orderitem->slug = 'spotlight';
                 $orderitem->amount = $request->get('spotlight-price');
                 $orderitem->save();
                 $order->items()->save($orderitem);
@@ -205,6 +208,7 @@ class HomeController extends BaseController
             if($request->has('shipping')){
                 $orderitem = new OrderItem;
                 $orderitem->title = 'Shipping';
+                $orderitem->slug = 'shipping';
                 $orderitem->amount = $request->get('shipping-price');
                 $orderitem->save();
                 $order->items()->save($orderitem);
@@ -441,7 +445,22 @@ class HomeController extends BaseController
                 "source" => $card, // obtained with Stripe.js
                 "description" => $description
             ));
-          return redirect('/user/manage/ads');
+            $advert = Advert::find($order->advert_id);
+            foreach ($order->items as $item){
+                $body[$order->slug]=1;
+            }
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic,
+                'body' => [
+                    'doc' => $body
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+            $response = $this->client->update($params);
+            return redirect('/user/manage/ads');
 
         } catch (\Exception $e) {
             return [
@@ -470,6 +489,21 @@ class HomeController extends BaseController
                     'submitForSettlement' => True
                 ]
             ]);
+            $advert = Advert::find($order->advert_id);
+            foreach ($order->items as $item){
+                $body[$order->slug]=1;
+            }
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic,
+                'body' => [
+                    'doc' => $body
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+            $response = $this->client->update($params);
             return redirect('/user/manage/ads');
 
         } catch (Exception $e) {
