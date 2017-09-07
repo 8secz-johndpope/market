@@ -31170,7 +31170,7 @@
                 },
                 initializeJetpack: function() {
                     Object.assign(h, {
-                        //LoadingComponent: d("./components/LoadingComponent"),
+                        LoadingComponent: d("./components/LoadingComponent"),
                         //CaptionGalleryComponent: d("./components/CaptionGalleryComponent"),
                         //GalleryComponent: d("@marcom/ac-jetpack-fuel/components/gallery/GalleryComponent"),
                         MediaObjectComponent: d("@marcom/ac-jetpack-fuel/components/media-object/MediaObjectComponent"),
