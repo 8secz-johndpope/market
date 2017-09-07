@@ -1196,11 +1196,11 @@ section.row-color.white {
   .categories .row {
     width: 66.66667%;
   }
-  .categories .container{
+  .container{
     width: 90%;
   }
-  .categories .row {
-    width: 66.66667%;
+  .categories .container {
+    width: 100%;
   }
   
   .col-2 img {
