@@ -248,7 +248,7 @@ class MarketController extends BaseController
                     'size' => 10000,
                     'query' => [
                         'term' => [
-                            "category" => $id
+                            "featured" => 1
                         ]
                     ]
                 ]
@@ -266,7 +266,7 @@ class MarketController extends BaseController
                     'id' => $product['id'],
                     'body' => [
                         'doc' => [
-                            'category' => $replace
+                            'featured_acount' => 0
                         ]
                     ]
                 ];
