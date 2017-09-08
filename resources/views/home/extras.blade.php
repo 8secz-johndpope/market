@@ -4,8 +4,14 @@
         <h3 class="panel-title">Price</h3>
     </div>
     <div class="panel-body">
-        <div class="row"> <div class="col-sm-6">  <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
-                <input type="text" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required></div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group">
+
+                <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
+                <input type="text" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required>
+                </div>
+            </div>
             <div class="col-sm-6"></div></div>
     </div>
 </div>
