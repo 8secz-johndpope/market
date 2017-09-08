@@ -248,7 +248,7 @@ class MarketController extends BaseController
                     'size' => 10000,
                     'query' => [
                         'term' => [
-                            "featured" => 1
+                            "urgent" => 1
                         ]
                     ]
                 ]
@@ -268,7 +268,7 @@ class MarketController extends BaseController
                     'id' => $product['id'],
                     'body' => [
                         'doc' => [
-                            'featured_expires' => $days_7
+                            'urgent_expires' => $days_7
                         ]
                     ]
                 ];
