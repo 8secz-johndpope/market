@@ -47,7 +47,7 @@ class MarketController extends BaseController
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
     public  function ufields(Request $request){
-        $categories = Category::where('id','>=',200000000)->where('id','<=',299999999)->get();
+        $categories = Category::where('id','>=',0)->where('id','<=',899999999)->get();
         foreach ($categories as $category){
             $category->fields()->syncWithoutDetaching([10]);
         }
