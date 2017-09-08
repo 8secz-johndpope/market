@@ -996,7 +996,28 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
 
-        $featured = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $featured = array_map(function ($a) {
+            $a['_source']['id'] = $a['_id'];
+            return $a['_source'];
+            },$response['hits']['hits']);
+
+        foreach ($featured as $fet){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $fet['id'],
+                'body' => [
+                    'script' => 'ctx._source.featured_count += 1',
+
+                    'upsert' => [
+                        'featured_count' => 1
+                    ]
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+              $this->client->update($params);
+        }
 
 
         $fmusts = $musts;
@@ -1017,7 +1038,26 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
 
-        $urgent = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $urgent = array_map(function ($a) {
+            $a['_source']['id'] = $a['_id'];
+            return $a['_source']; },$response['hits']['hits']);
+        foreach ($urgent as $fet){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $fet['id'],
+                'body' => [
+                    'script' => 'ctx._source.urgent_count += 1',
+
+                    'upsert' => [
+                        'urgent_count' => 1
+                    ]
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+            $this->client->update($params);
+        }
         $products = array_merge($featured,$urgent,$products);
 
         $distances = [1=>'Default',2=>'+ 1 miles',3=>'+ 3 miles',5=>'+ 5 miles',10=>'+ 10 miles',15=>'+ 15 miles',30=>'+ 30 miles',50=>'+ 50 miles',75=>'+ 75 miles',100=>'+ 100 miles',1000=>'Nationwide'];
