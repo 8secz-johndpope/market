@@ -92,7 +92,6 @@
             </form>
 
         @foreach($filters as $filter)
-            @if($filter->slug!=='price')
             <div class="l-visible-large">
                 <h4>{{$filter->title}}</h4>
                 <ul class="list-group">
@@ -105,7 +104,6 @@
                     @endforeach
                 </ul>
             </div>
-            @endif
         @endforeach
     </div>
     <div class="col-xs-12 col-md-8">
