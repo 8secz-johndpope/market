@@ -557,15 +557,7 @@ class MarketController extends BaseController
                 'query' =>
                     ['bool'=>[
 
-                        'should'=>[['term'=>['spotlight'=>1]]],
-                        'must' => [[
-                            'range' => [
-                                'category' => [
-                                    'gte'=>$min,
-                                    'lte'=>$max
-                                ]
-                            ]
-                        ]]
+                        'should'=>[['term'=>['spotlight'=>1]]]
 
                     ]],
                 "sort"=> [
