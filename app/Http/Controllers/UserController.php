@@ -1043,6 +1043,9 @@ class UserController extends BaseController
         $body['username'] = $user->name;
         $body['user_id'] = $user->id;
         $body['phone'] = $user->phone;
+        $body['featured_count'] = 0;
+        $body['urgent_count'] = 0;
+        $body['spotlight_count'] = 0;
         if (!isset($body['meta']['price'])) {
             $body['meta']['price'] = -1;
         }

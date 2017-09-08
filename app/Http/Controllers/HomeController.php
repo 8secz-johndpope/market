@@ -451,6 +451,9 @@ class HomeController extends BaseController
             foreach ($order->items as $item){
                 $body[$item->slug]=1;
             }
+           $body['featured_count'] = 0;
+           $body['urgent_count'] = 0;
+           $body['spotlight_count'] = 0;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
@@ -495,6 +498,9 @@ class HomeController extends BaseController
             foreach ($order->items as $item){
                 $body[$item->slug]=1;
             }
+            $body['featured_count'] = 0;
+            $body['urgent_count'] = 0;
+            $body['spotlight_count'] = 0;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
