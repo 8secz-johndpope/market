@@ -47,13 +47,8 @@ class MarketController extends BaseController
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
     public  function ufields(Request $request){
-        $text = file_get_contents("https://www.gumtree.com/cars/uk");
-        if(strpos($text,'min_pirce')===false){
-            echo 'no price'.'<br>';
-        }else{
-            echo ' price'.'<br>';
-        }
-        return ['a'=>'b'];
+        $categories = Category::where('id','>=',200000000)->where('id','<=',299999999)->get();
+        return $categories;
     }
     public  function  train(Request $request){
         $term = $request->q;
