@@ -388,10 +388,15 @@ class HomeController extends BaseController
     }
     public  function prices(Request $request,$id){
         $category = Category::find($id);
+        $forsale = Category::find(200000000);
         if($category===null){
             return ['msg'=>'Catagory not found'];
         }
+        if($id>=$forsale->id&&$id<=$forsale->ends)
         $extras = ExtraType::all();
+        else{
+            $extras = ExtraType::where('id','<',4)->get();
+        }
         foreach ($extras as $extra){
             if($extra->type==='single'){
                 $extra->price = $extra->price(0,1,2);
