@@ -885,12 +885,12 @@ class MarketController extends BaseController
                $a['_source']['posted'] = 'Just Now';
            }
            else if($diff<60*60*1000){
-               $a['_source']['posted'] = ($diff/60000).'m ago';
+               $a['_source']['posted'] = (int)($diff/60000).'m ago';
            }
            else if($diff<24*60*60*1000){
-               $a['_source']['posted'] = ($diff/(60*60000)).'h ago';
+               $a['_source']['posted'] = (int)($diff/(60*60000)).'h ago';
            }else{
-               $a['_source']['posted'] = ($diff/(24*60*60000)).'d ago';
+               $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
            }
             return $a['_source'];
 
@@ -1036,12 +1036,12 @@ class MarketController extends BaseController
                 $a['_source']['posted'] = 'Just Now';
             }
             else if($diff<60*60*1000){
-                $a['_source']['posted'] = ($diff/60000).'m ago';
+                $a['_source']['posted'] = (int)($diff/60000).'m ago';
             }
             else if($diff<24*60*60*1000){
-                $a['_source']['posted'] = ($diff/(60*60000)).'h ago';
+                $a['_source']['posted'] = (int)($diff/(60*60000)).'h ago';
             }else{
-                $a['_source']['posted'] = ($diff/(24*60*60000)).'d ago';
+                $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
             }
             $a['_source']['_id'] = $a['_id'];
             return $a['_source'];
@@ -1086,12 +1086,12 @@ class MarketController extends BaseController
                 $a['_source']['posted'] = 'Just Now';
             }
             else if($diff<60*60*1000){
-                $a['_source']['posted'] = ($diff/60000).'m ago';
+                $a['_source']['posted'] = (int)($diff/60000).'m ago';
             }
             else if($diff<24*60*60*1000){
-                $a['_source']['posted'] = ($diff/(60*60000)).'h ago';
+                $a['_source']['posted'] = (int)($diff/(60*60000)).'h ago';
             }else{
-                $a['_source']['posted'] = ($diff/(24*60*60000)).'d ago';
+                $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
             }
             $a['_source']['_id'] = $a['_id'];
             return $a['_source']; },$response['hits']['hits']);
