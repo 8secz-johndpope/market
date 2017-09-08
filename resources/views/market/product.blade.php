@@ -106,7 +106,7 @@
                         <li class="list-group-item"> <button class="btn btn-default">Interested to Make Offer</button></li>
                         <li class="list-group-item"><button class="btn btn-default">Save to Favorites</button></li>
                         <li class="list-group-item"><button class="btn btn-default">Send Message</button></li>
-                        @if($product['shipping']===1)
+                        @if(isset($product['shipping'])&&$product['shipping']===1)
                         <li class="list-group-item"><button class="btn btn-primary">Buy Now</button></li>
                             @endif
                     </ul>
