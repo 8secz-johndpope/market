@@ -984,7 +984,7 @@ class MarketController extends BaseController
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
-                'size'=>3,
+                'size'=>2,
                 'query' => [
                     'bool' => [
                         'must' => array_values($fmusts),
@@ -1005,7 +1005,7 @@ class MarketController extends BaseController
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
-                'size'=>3,
+                'size'=>1,
                 'query' => [
                     'bool' => [
                         'must' => array_values($fmusts),
