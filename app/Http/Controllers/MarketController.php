@@ -48,6 +48,7 @@ class MarketController extends BaseController
     }
     public  function ufields(Request $request){
         $text = file_get_contents("https://www.gumtree.com/cars/uk");
+        return $text;
         if(strpos($text,'min_pirce')===false){
             echo 'no price'.'<br>';
         }else{
