@@ -997,7 +997,7 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
 
         $featured = array_map(function ($a) {
-            $a['_source']['id'] = $a['_id'];
+            $a['_source']['_id'] = $a['_id'];
             return $a['_source'];
             },$response['hits']['hits']);
 
@@ -1005,7 +1005,7 @@ class MarketController extends BaseController
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
-                'id' => $fet['id'],
+                'id' => $fet['_id'],
                 'body' => [
                     'script' => 'ctx._source.featured_count += 1'
                 ]
@@ -1035,13 +1035,13 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
 
         $urgent = array_map(function ($a) {
-            $a['_source']['id'] = $a['_id'];
+            $a['_source']['_id'] = $a['_id'];
             return $a['_source']; },$response['hits']['hits']);
         foreach ($urgent as $fet){
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
-                'id' => $fet['id'],
+                'id' => $fet['_id'],
                 'body' => [
                     'script' => 'ctx._source.urgent_count += 1'
                 ]
