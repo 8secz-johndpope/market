@@ -274,6 +274,7 @@ class HomeController extends BaseController
         ];
         $response = $this->client->get($params);
 
+        $request->session()->put('id', $response['_source']['source_id']);
 
         return view('home.shipping',['addresses'=>$user->addresses,'user'=>$user,'cards'=>$cards['data'],'token' => $clientToken,'def'=>$card,'product'=>$response['_source'],'order'=>Order::find(15)]);
     }
@@ -471,10 +472,39 @@ class HomeController extends BaseController
     }
     public function stripe(Request $request){
         $user = Auth::user();
-        $order_id  = $request->session()->get('order_id');
-        $order = Order::find($order_id);
         $stripe_id = $user->stripe_id;
         $card = $request->card;
+        if ($request->session()->has('id')) {
+            //
+            $id  = $request->session()->get('id');
+            $advert = Advert::find($id);
+
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic
+            ];
+            $response = $this->client->get($params);
+            $amount = (int)($response['_source']['meta']['price']);
+            try {
+                $charge = \Stripe\Charge::create(array(
+                    "amount" => $amount,
+                    "currency" => "gbp",
+                    "customer" => $stripe_id,
+                    "source" => $card, // obtained with Stripe.js
+                    "description" => 'Shipping Item '
+                ));
+                $request->session()->forget('id');
+
+            }
+            catch (\Exception $e) {
+            }
+            return redirect('/user/manage/ads');
+        }
+
+        $order_id  = $request->session()->get('order_id');
+        $order = Order::find($order_id);
+
         $amount = (int)($order->amount * 100);
         $description = 'Payment towards to Order id '.$order_id;
        try {
@@ -508,9 +538,12 @@ class HomeController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
-            return redirect('/user/manage/ads');
+           $request->session()->forget('order_id');
 
-        } catch (\Exception $e) {
+           return redirect('/user/manage/ads');
+
+        }
+        catch (\Exception $e) {
             return [
                 'status' => 'failed',
                 'error' => $e,
@@ -521,14 +554,41 @@ class HomeController extends BaseController
     }
     public function paypal(Request $request){
         $user = Auth::user();
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+        ));
+        if ($request->session()->has('id')) {
+            $id  = $request->session()->get('id');
+            $advert = Advert::find($id);
 
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic
+            ];
+            $response = $this->client->get($params);
+            $amount = ($response['_source']['meta']['price']/100);
+            try{
+                $result = $gateway->transaction()->sale([
+                    "amount" => $amount,
+                    'paymentMethodNonce' => $request->nonce,
+                    'options' => [
+                        'submitForSettlement' => True
+                    ]
+                ]);
+                $request->session()->forget('id');
+
+            }
+            catch (Exception $e) {
+
+            }
+
+        }
         $order_id  = $request->session()->get('order_id');
         $order = Order::find($order_id);
 
         $amount = $order->amount;
-        $gateway = new \Braintree\Gateway(array(
-            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
-        ));
+
         try {
             $result = $gateway->transaction()->sale([
                 "amount" => $amount,
@@ -560,6 +620,8 @@ class HomeController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
+            $request->session()->forget('order_id');
+
             return redirect('/user/manage/ads');
 
         } catch (Exception $e) {
