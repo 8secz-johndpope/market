@@ -47,7 +47,7 @@ class MarketController extends BaseController
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
     public  function ufields(Request $request){
-        $text = file_get_contents("https://www.gumtree.com/classes/uk");
+        $text = file_get_contents("https://www.gumtree.com/cars/uk");
         if(strpos($text,'min_pirce')===false){
             echo 'no price'.'<br>';
         }else{
