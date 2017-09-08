@@ -991,7 +991,7 @@ class MarketController extends BaseController
                         'filter' => $filte
                     ]
                 ],
-                "sort"=> $sort
+                "sort"=> [["featured_count"=> ["order"=> "asc"]]]
             ]
         ];
         $response = $this->client->search($params);
@@ -1007,16 +1007,12 @@ class MarketController extends BaseController
                 'type' => 'advert',
                 'id' => $fet['id'],
                 'body' => [
-                    'script' => 'ctx._source.featured_count += 1',
-
-                    'upsert' => [
-                        'featured_count' => 1
-                    ]
+                    'script' => 'ctx._source.featured_count += 1'
                 ]
             ];
 
 // Update doc at /my_index/my_type/my_id
-            //  $this->client->update($params);
+              $this->client->update($params);
         }
 
 
@@ -1033,7 +1029,7 @@ class MarketController extends BaseController
                         'filter' => $filte
                     ]
                 ],
-                "sort"=> $sort
+                "sort"=> [["urgent_count"=> ["order"=> "asc"]]]
             ]
         ];
         $response = $this->client->search($params);
@@ -1047,16 +1043,12 @@ class MarketController extends BaseController
                 'type' => 'advert',
                 'id' => $fet['id'],
                 'body' => [
-                    'script' => 'ctx._source.urgent_count += 1',
-
-                    'upsert' => [
-                        'urgent_count' => 1
-                    ]
+                    'script' => 'ctx._source.urgent_count += 1'
                 ]
             ];
 
 // Update doc at /my_index/my_type/my_id
-          //  $this->client->update($params);
+            $this->client->update($params);
         }
         $products = array_merge($featured,$urgent,$products);
 
