@@ -355,7 +355,9 @@
 
 </script>
 <script>
-    $(".favroite-icon").click(function () {
+    $(".favroite-icon").click(function (e) {
+        e.preventDefault();
+
         var id = $(this).data('id');
         if($(this).hasClass('favroite-icon-gold')){
             $(this).removeClass('favroite-icon-gold');
