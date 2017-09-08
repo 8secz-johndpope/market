@@ -22,6 +22,10 @@ Route::get('/user/manage/ads', 'HomeController@myads');
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::post('/user/cards/add', 'HomeController@addcard');
 Route::get('/user/manage/order', 'HomeController@order');
+
+Route::get('/user/manage/shipping', 'HomeController@shipping');
+
+
 Route::post('/user/payment/stripe', 'HomeController@stripe');
 Route::get('/user/payment/paypal', 'HomeController@paypal');
 

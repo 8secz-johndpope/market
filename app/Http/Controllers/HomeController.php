@@ -248,6 +248,35 @@ class HomeController extends BaseController
 
         return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards['data'],'token' => $clientToken,'def'=>$card]);
     }
+    public function shipping(Request $request,$id){
+        $user = Auth::user();
+        /*
+        $balance = \Stripe\Balance::retrieve(
+            array("stripe_account" => $user->stripe_account)
+        );
+        */
+        $stripe_id = $user->stripe_id;
+        $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+            'limit' => 10, 'object' => 'card'));
+        $customer = \Stripe\Customer::retrieve($stripe_id);
+        $card = $customer->sources->retrieve($customer->default_source);
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+        ));
+        $clientToken = $gateway->clientToken()->generate();
+       // $order_id  = $request->session()->get('order_id');
+        $advert = Advert::find($id);
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic
+        ];
+        $response = $this->client->get($params);
+
+
+        return view('home.payment',['cards'=>$cards['data'],'token' => $clientToken,'def'=>$card,'product'=>$response['_source']]);
+    }
     public function favorites(Request $request){
             $user = Auth::user();
         $favs = $user->favorites;
