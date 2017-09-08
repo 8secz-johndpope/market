@@ -53,13 +53,7 @@
                                 <ul class="listing-attributes inline-list">
 
                                 </ul>
-                                @if(isset($product['urgent'])&&$product['urgent']===1)
-                                    <div class="listing-posted-date txt-sub">
-<span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
-<span class="hide-visually">This ad is </span>Urgent
-</span>
-                                    </div>
-                                @endif
+                              
                                 <div class="items-box-num clearfix">
                                     @if($product['meta']['price']>=0)
                                         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
