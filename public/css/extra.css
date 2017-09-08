@@ -35,3 +35,13 @@ span.hide-visually {
     position: absolute;
     width: 1px;
 }
+.listing-posted-date.txt-sub {
+    float: right;
+    text-align: right;
+}
+.txt-uppercase {
+    text-transform: uppercase;
+}
+.txt-agnosticRed {
+    color: #ec4231;
+}
