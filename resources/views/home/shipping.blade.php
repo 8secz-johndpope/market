@@ -22,11 +22,7 @@
                                 <div class="main-img">
                                     <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
-                                    @if(isset($product['featured'])&&$product['featured']===1)
-                                        <span class="ribbon-featured">
-<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-</span>
-                                    @endif
+                                    
                                     <div class="listing-meta">
                                     </div>
                                 </div>
@@ -53,7 +49,7 @@
                                 <ul class="listing-attributes inline-list">
 
                                 </ul>
-                              
+
                                 <div class="items-box-num clearfix">
                                     @if($product['meta']['price']>=0)
                                         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
