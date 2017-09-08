@@ -66,6 +66,7 @@
 
                     <div class="row">
                         <div class="col-sm-12">
+                            <h4>Shipping Address</h4>
                             <ul class="list-group" >
                                 @foreach($addresses as $address)
                                     <li class="list-group-item">
