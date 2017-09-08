@@ -560,13 +560,11 @@ class MarketController extends BaseController
                         'should'=>[['term'=>['spotlight'=>1]]]
 
                     ]],
+                "minimum_number_should_match"=> 24,
                 "sort"=> [
                     [
                         "created_at"=> ["order"=> "desc"]
-                    ],
-                    "minimum_number_should_match"=> 24
-
-                ]
+                    ]]
 
             ]
         ];
