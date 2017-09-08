@@ -167,6 +167,7 @@
                             <span class="glyphicon glyphicon-thumbs-up favroite-icon" data-id="{{$product['source_id']}}"></span>
 
                             @endif
+                        {{$product['posted']}}
                     </div>
                 
             @endforeach
