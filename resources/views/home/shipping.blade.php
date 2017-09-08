@@ -22,7 +22,7 @@
                                 <div class="main-img">
                                     <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
-                                    
+
                                     <div class="listing-meta">
                                     </div>
                                 </div>
@@ -66,6 +66,8 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
+                        <h4>Amount to Pay</h4>
+                        <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}</div>
                         <h4>Pay by Card</h4>
                         <form action="/user/payment/stripe" method="post">
                             {{ csrf_field() }}
