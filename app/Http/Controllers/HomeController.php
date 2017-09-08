@@ -454,6 +454,11 @@ class HomeController extends BaseController
            $body['featured_count'] = 0;
            $body['urgent_count'] = 0;
            $body['spotlight_count'] = 0;
+           $milliseconds = round(microtime(true) * 1000);
+
+           $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+           $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+           $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
@@ -501,6 +506,11 @@ class HomeController extends BaseController
             $body['featured_count'] = 0;
             $body['urgent_count'] = 0;
             $body['spotlight_count'] = 0;
+            $milliseconds = round(microtime(true) * 1000);
+
+            $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+            $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+            $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',

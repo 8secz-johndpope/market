@@ -1039,7 +1039,11 @@ class UserController extends BaseController
         $body['source_id'] = $advert->id;
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at'] = $milliseconds;
-        $body['expires_at'] = $milliseconds + 7 * 24 * 3600 * 1000;
+        $body['expires_at'] = $milliseconds + 60 * 24 * 3600 * 1000;
+        $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+        $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+        $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+
         $body['username'] = $user->name;
         $body['user_id'] = $user->id;
         $body['phone'] = $user->phone;
