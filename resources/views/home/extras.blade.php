@@ -6,7 +6,7 @@
     <div class="panel-body">
         <div class="row"> <div class="col-sm-6">  <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
                 <input type="text" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required></div>
-            <div class="col-sm-6"><p>100 characters remaining</p></div></div>
+            <div class="col-sm-6"></div></div>
     </div>
 </div>
 @endif
