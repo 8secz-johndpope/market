@@ -876,9 +876,25 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
         if(isset($response['aggregations']))
             foreach ($response['aggregations'] as $a=>$b){
-                $aggretations[$a]=$b;
-            }
-        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+                $aggretations[$a]=$b;}
+        $milliseconds = round(microtime(true) * 1000);
+        $products = array_map(function ($a) use ($milliseconds) {
+
+           $diff = $milliseconds-$a['_source']['created_at'];
+           if($diff<60*1000){
+               $a['_source']['posted'] = 'Just Now';
+           }
+           else if($diff<60*60*1000){
+               $a['_source']['posted'] = ($diff/60000).'m ago';
+           }
+           else if($diff<24*60*60*1000){
+               $a['_source']['posted'] = ($diff/(60*60000)).'h ago';
+           }else{
+               $a['_source']['posted'] = ($diff/(24*60*60000)).'d ago';
+           }
+            return $a['_source'];
+
+            },$response['hits']['hits']);
         $total= $response['hits']['total'];
         $max = (int)($total/$pagesize);
         $max++;
@@ -1014,7 +1030,19 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
 
-        $featured = array_map(function ($a) {
+        $featured = array_map(function ($a) use ($milliseconds){
+            $diff = $milliseconds-$a['_source']['created_at'];
+            if($diff<60*1000){
+                $a['_source']['posted'] = 'Just Now';
+            }
+            else if($diff<60*60*1000){
+                $a['_source']['posted'] = ($diff/60000).'m ago';
+            }
+            else if($diff<24*60*60*1000){
+                $a['_source']['posted'] = ($diff/(60*60000)).'h ago';
+            }else{
+                $a['_source']['posted'] = ($diff/(24*60*60000)).'d ago';
+            }
             $a['_source']['_id'] = $a['_id'];
             return $a['_source'];
             },$response['hits']['hits']);
@@ -1052,7 +1080,19 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
 
-        $urgent = array_map(function ($a) {
+        $urgent = array_map(function ($a) use ($milliseconds) {
+            $diff = $milliseconds-$a['_source']['created_at'];
+            if($diff<60*1000){
+                $a['_source']['posted'] = 'Just Now';
+            }
+            else if($diff<60*60*1000){
+                $a['_source']['posted'] = ($diff/60000).'m ago';
+            }
+            else if($diff<24*60*60*1000){
+                $a['_source']['posted'] = ($diff/(60*60000)).'h ago';
+            }else{
+                $a['_source']['posted'] = ($diff/(24*60*60000)).'d ago';
+            }
             $a['_source']['_id'] = $a['_id'];
             return $a['_source']; },$response['hits']['hits']);
         foreach ($urgent as $fet){
