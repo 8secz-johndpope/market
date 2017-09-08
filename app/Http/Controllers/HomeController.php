@@ -250,7 +250,6 @@ class HomeController extends BaseController
     }
     public function shipping(Request $request,$id){
         $user = Auth::user();
-        return $user;
         /*
         $balance = \Stripe\Balance::retrieve(
             array("stripe_account" => $user->stripe_account)
@@ -268,6 +267,7 @@ class HomeController extends BaseController
        // $order_id  = $request->session()->get('order_id');
         $advert = Advert::find($id);
 
+        return $advert;
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
