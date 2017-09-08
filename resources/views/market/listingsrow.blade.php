@@ -134,7 +134,7 @@
                         </div>
                         <div class="items-box-body listing-content">
 
-                            <div class="row">
+                            <div class="row top-row">
                                 <div class="col-sm-11">
                                     <h4 class="items-box-name font-2">{{$product['title']}}</h4>
                                 </div>
