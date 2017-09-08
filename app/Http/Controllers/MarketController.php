@@ -554,14 +554,20 @@ class MarketController extends BaseController
             'body' => [
                 'from' => 0,
                 'size'=> 24,
-                'query' => [
-                    'range' => [
-                        'category' => [
-                            'gte'=>$min,
-                            'lte'=>$max
-                        ]
-                    ]
-                ],
+                'query' =>
+                    ['bool'=>[
+
+                        'should'=>[['term'=>['spotlight'=>1]]],
+                        'must' => [[
+                            'range' => [
+                                'category' => [
+                                    'gte'=>$min,
+                                    'lte'=>$max
+                                ]
+                            ]
+                        ]]
+
+                    ]],
                 "sort"=> [
                     [
                         "created_at"=> ["order"=> "desc"]
