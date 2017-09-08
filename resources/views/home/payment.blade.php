@@ -25,6 +25,7 @@
                     </table>
                 </div>
                 <div class="col-sm-4">
+                    <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
                     <h4>Pay by Card</h4>
                     <form action="/user/payment/stripe" method="post">
                         {{ csrf_field() }}
@@ -38,7 +39,9 @@
                         @endforeach
                     </ul>
                         <button type="submit" class="btn btn-primary">Make Payment</button>
+
                     </form>
+                    </div>
                     <button class="btn btn-default add-card">Add New Card</button>
                     <div class="add-card-div" style="display: none">
                     <form action="/user/cards/add" method="post" id="payment-form">
