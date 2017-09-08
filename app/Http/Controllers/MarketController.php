@@ -248,7 +248,7 @@ class MarketController extends BaseController
                     'size' => 10000,
                     'query' => [
                         'term' => [
-                            "urgent" => 1
+                            "spotlight" => 1
                         ]
                     ]
                 ]
@@ -266,7 +266,7 @@ class MarketController extends BaseController
                     'id' => $product['id'],
                     'body' => [
                         'doc' => [
-                            'urgent_count' => 0
+                            'spotlight_count' => 0
                         ]
                     ]
                 ];
