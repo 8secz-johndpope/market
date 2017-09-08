@@ -275,7 +275,7 @@ class HomeController extends BaseController
         $response = $this->client->get($params);
 
 
-        return view('home.shipping',['cards'=>$cards['data'],'token' => $clientToken,'def'=>$card,'product'=>$response['_source']]);
+        return view('home.shipping',['cards'=>$cards['data'],'token' => $clientToken,'def'=>$card,'product'=>$response['_source'],'order'=>Order::find(15)]);
     }
     public function favorites(Request $request){
             $user = Auth::user();
