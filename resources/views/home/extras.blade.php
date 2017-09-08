@@ -10,6 +10,8 @@
 
                 <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
                 <input type="text" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required>
+                    <span class="input-group-addon">.00</span>
+
                 </div>
             </div>
             <div class="col-sm-6"></div></div>
