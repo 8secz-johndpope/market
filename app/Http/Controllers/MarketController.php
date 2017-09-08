@@ -564,7 +564,7 @@ class MarketController extends BaseController
                     [
                         "created_at"=> ["order"=> "desc"]
                     ]],
-                "minimum_number_should_match"=> -2,
+                "minimum_number_should_match"=> "3",
 
 
             ]
