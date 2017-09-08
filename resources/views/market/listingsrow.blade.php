@@ -133,6 +133,12 @@
                             </div>
                         </div>
                         <div class="items-box-body listing-content">
+                            @if (in_array($product['source_id'],$sids))
+                                <span class="glyphicon glyphicon-thumbs-up favroite-icon favroite-icon-gold" data-id="{{$product['source_id']}}"></span>
+                            @else
+                                <span class="glyphicon glyphicon-thumbs-up favroite-icon" data-id="{{$product['source_id']}}"></span>
+
+                            @endif
                             <h4 class="items-box-name font-2">{{$product['title']}}</h4>
                             <div class="listing-location">
                                 <span class="truncate-line">
@@ -161,12 +167,7 @@
 
                         </div>
                     </a>
-                        @if (in_array($product['source_id'],$sids))
-                            <span class="glyphicon glyphicon-thumbs-up favroite-icon favroite-icon-gold" data-id="{{$product['source_id']}}"></span>
-                        @else
-                            <span class="glyphicon glyphicon-thumbs-up favroite-icon" data-id="{{$product['source_id']}}"></span>
 
-                            @endif
                         {{$product['posted']}}
                     </div>
                 
