@@ -579,9 +579,7 @@ class MarketController extends BaseController
             'body' => [
                 'from' => 0,
                 'size'=> 24,
-                'query' =>
-                    ['match_all'=>[
-                    ]],
+                'query' => ['match_all'=>(object)[]],
                 "sort"=> [
                     [
                         "created_at"=> ["order"=> "desc"]
