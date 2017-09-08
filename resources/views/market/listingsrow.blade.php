@@ -175,8 +175,8 @@
 
                         </div>
                          <div class="row">
-                             <div class="col-sm-10 col-md-11"></div>
-                             <div class="col-sm-2 col-md-1">
+                             <div class="col-sm-10 col-md-2"></div>
+                             <div class="col-sm-2 col-md-2">
                                  <span class="posted-text">{{$product['posted']}}</span>
                              </div>
                          </div>
