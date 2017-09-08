@@ -572,12 +572,30 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $spl1 = array_slice($products, 0, 6);
-        $spl2 = array_slice($products, 6, 6);
-        $spl3 = array_slice($products, 12, 6);
-        $spl4 = array_slice($products, 18, 6);
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'from' => 0,
+                'size'=> 24,
+                'query' =>
+                    ['match_all'=>[
+                    ]],
+                "sort"=> [
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]]
+
+
+            ]
+        ];
+        $response = $this->client->search($params);
+       $all = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $products=array_merge($products,$all);
+
         return view('home',['base' => $all, 'spotlight' => $products,'input'=>[],'lat'=>0.00,'lng'=>0.00]);
-        return redirect('all');
+       // return redirect('all');
     }
     public function leaves(Request $request){
         foreach ($this->categories as $cat=>$val){
