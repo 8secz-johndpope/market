@@ -63,6 +63,29 @@
 
 
                     </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="list-group" >
+                                @foreach($addresses as $address)
+                                    <li class="list-group-item">
+                                        <div class="radio">
+                                            <label><input type="radio" name="address" value="{{$address->id}}">
+                                            <table class="table">
+                                                <tr><td>{{$address->line1}}</td></tr>
+                                                <tr><td>{{$address->city}}</td></tr>
+                                                <tr><td>{{$address->postcode}}</td></tr>
+                                            </table>
+                                            </label>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+                            <button class="btn btn-default add-address">Add New Address</button>
+
+                        </div>
+                    </div>
+
                 </div>
                 <div class="col-sm-4">
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
