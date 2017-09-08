@@ -266,7 +266,7 @@ class MarketController extends BaseController
                     'id' => $product['id'],
                     'body' => [
                         'doc' => [
-                            'featured_acount' => 0
+                            'featured_count' => 0
                         ]
                     ]
                 ];
