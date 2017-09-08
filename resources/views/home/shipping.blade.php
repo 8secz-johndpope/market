@@ -38,7 +38,7 @@
                                         <h4 class="items-box-name font-2">{{$product['title']}}</h4>
                                     </div>
                                     <div class="col-sm-1">
-                                      
+
                                     </div>
                                 </div>
 
@@ -68,10 +68,7 @@
                                 </div>
 
                             </div>
-                            <div class="row">
-                                <div class="col-sm-11 col-md-10"></div>
-                                <div class="col-sm-1 col-md-2"> <span class="posted-text">{{$product['posted']}}</span> </div>
-                            </div>
+                            
                         </a>
 
 
