@@ -250,6 +250,7 @@ class HomeController extends BaseController
     }
     public function shipping(Request $request,$id){
         $user = Auth::user();
+        return $user;
         /*
         $balance = \Stripe\Balance::retrieve(
             array("stripe_account" => $user->stripe_account)
