@@ -444,7 +444,7 @@ class HomeController extends BaseController
                 "amount" => $amount,
                 "currency" => "gbp",
                 "customer" => $stripe_id,
-             //   "source" => $card, // obtained with Stripe.js
+                "source" => $card, // obtained with Stripe.js
                 "description" => $description
             ));
             $advert = Advert::find($order->advert_id);

@@ -28,12 +28,11 @@
                     <h4>Pay by Card</h4>
                     <form action="/user/payment/stripe" method="post">
                         {{ csrf_field() }}
-                        <h4>{{$def['brand']}}-{{$def['last4']}}</h4>
-                    <ul class="list-group" style="display: none">
+                    <ul class="list-group" >
                         @foreach($cards as $card)
                             <li class="list-group-item">
                                 <div class="radio">
-                                    <label><input type="radio" name="card" value="{{$card['id']}}" >{{$card['brand']}}--{{$card['last4']}}</label>
+                                    <label><input type="radio" name="card" value="{{$card['id']}}" required @if($card['id']===$def['id']) checked @endif>{{$card['brand']}}--{{$card['last4']}}</label>
                                 </div>
                             </li>
                         @endforeach
