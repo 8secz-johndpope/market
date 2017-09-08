@@ -439,7 +439,7 @@ class HomeController extends BaseController
         $card = $request->card;
         $amount = (int)($order->amount * 100);
         $description = 'Payment towards to Order id '.$order_id;
-        try {
+     //   try {
             $charge = \Stripe\Charge::create(array(
                 "amount" => $amount,
                 "currency" => "gbp",
@@ -464,13 +464,13 @@ class HomeController extends BaseController
             $response = $this->client->update($params);
             return redirect('/user/manage/ads');
 
-        } catch (\Exception $e) {
+      //  } catch (\Exception $e) {
             return [
                 'status' => 'failed',
                 'error' => $e,
                 'result' => ['msg' => 'error charging the card']
             ];
-        }
+       // }
 
     }
     public function paypal(Request $request){
