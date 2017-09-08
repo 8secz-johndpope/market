@@ -70,7 +70,7 @@
                                 @foreach($addresses as $address)
                                     <li class="list-group-item">
                                         <div class="radio">
-                                            <label><input type="radio" name="address" value="{{$address->id}}">
+                                            <label><input type="radio" name="address" value="{{$address->id}}" @if($address->id===$user->default_address) checked @endif>
                                             <table class="table">
                                                 <tr><td>{{$address->line1}}</td></tr>
                                                 <tr><td>{{$address->city}}</td></tr>
