@@ -1016,7 +1016,7 @@ class MarketController extends BaseController
             ];
 
 // Update doc at /my_index/my_type/my_id
-              $this->client->update($params);
+            //  $this->client->update($params);
         }
 
 
@@ -1056,7 +1056,7 @@ class MarketController extends BaseController
             ];
 
 // Update doc at /my_index/my_type/my_id
-            $this->client->update($params);
+          //  $this->client->update($params);
         }
         $products = array_merge($featured,$urgent,$products);
 
