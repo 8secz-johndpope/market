@@ -1,3 +1,4 @@
+@if($hasprice)
 <div class="panel panel-default price-panel">
     <div class="panel-heading">
         <h3 class="panel-title">Price</h3>
@@ -8,6 +9,8 @@
             <div class="col-sm-6"><p>100 characters remaining</p></div></div>
     </div>
 </div>
+@endif
+@if(count($fields)>1)
 <div class="panel panel-default extra-options-panel">
     <div class="panel-heading">
         <h3 class="panel-title">Select Options</h3>
@@ -17,6 +20,7 @@
             <div class="col-sm-12">
                 <div class="row">
                     @foreach($fields as $field)
+                        @if($field->slug!=='price')
                         <div class="col-sm-6">
                             <span class="extra-title">{{$field->title}}</span>
                             @if($field->type==='integer')
@@ -31,9 +35,11 @@
                                 <input class="form-control" type="text" name="{{$field->slug}}" required>
                             @endif
                         </div>
+                        @endif
                     @endforeach
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endif

@@ -375,12 +375,16 @@ class HomeController extends BaseController
             return ['msg'=>'Catagory not found'];
         }
         $fields = $category->fields;
+        $hasprice = false;
         foreach ($fields as $field){
+            if($field->slug==='price'){
+                $hasprice=true;
+            }
             if($field->type==='list'){
                 $field->values = $field->values;
             }
         }
-        return view('home.extras',['fields'=>$fields]);
+        return view('home.extras',['fields'=>$fields,'hasprice'=>$hasprice]);
     }
     public  function prices(Request $request,$id){
         $category = Category::find($id);
