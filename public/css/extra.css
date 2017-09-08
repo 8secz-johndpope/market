@@ -45,3 +45,9 @@ span.hide-visually {
 .txt-agnosticRed {
     color: #ec4231;
 }
+span.posted-text {
+    text-align: right;
+    float: right;
+    color: gray;
+    font-weight: bold;
+}
