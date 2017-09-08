@@ -33,7 +33,7 @@
                         @foreach($cards as $card)
                             <li class="list-group-item">
                                 <div class="radio">
-                                    <label><input type="radio" name="card" value="{{$card['id']}}" required>{{$card['brand']}}--{{$card['last4']}}</label>
+                                    <label><input type="radio" name="card" value="{{$card['id']}}" >{{$card['brand']}}--{{$card['last4']}}</label>
                                 </div>
                             </li>
                         @endforeach
