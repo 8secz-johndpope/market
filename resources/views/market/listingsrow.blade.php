@@ -151,6 +151,11 @@
                                     </div>
                                 @endif
                             </div>
+                            <div class="listing-posted-date txt-sub">
+<span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
+<span class="hide-visually">This ad is </span>Urgent
+</span>
+                            </div>
                         </div>
                     </a>
                         @if (in_array($product['source_id'],$sids))
