@@ -46,6 +46,15 @@ class MarketController extends BaseController
         //$products=array_rand($products,50);
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
+    public  function ufields(Request $request){
+        $text = file_get_contents("https://www.gumtree.com/classes/uk");
+        if(strpos($text,'min_pirce')===false){
+            echo 'no price'.'<br>';
+        }else{
+            echo ' price'.'<br>';
+        }
+        return ['a'=>'b'];
+    }
     public  function  train(Request $request){
         $term = $request->q;
         $result = file_get_contents("https://www.gumtree.com/ajax/suggestions/prefix?input=".$term);
