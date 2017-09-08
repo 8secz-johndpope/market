@@ -48,7 +48,11 @@ class MarketController extends BaseController
     }
     public  function ufields(Request $request){
         $categories = Category::where('id','>=',200000000)->where('id','<=',299999999)->get();
-        return $categories;
+        foreach ($categories as $category){
+            $category->fields()->syncWithoutDetaching([10]);
+        }
+
+        return 'done';
     }
     public  function  train(Request $request){
         $term = $request->q;
