@@ -61,3 +61,6 @@ span.posted-text {
 .favroite-icon-gold {
     color: gold;
 }
+.row.top-row {
+    max-height: 30px;
+}
