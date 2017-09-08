@@ -248,12 +248,14 @@ class MarketController extends BaseController
                     'size' => 10000,
                     'query' => [
                         'term' => [
-                            "spotlight" => 1
+                            "featured" => 1
                         ]
                     ]
                 ]
             ];
-            $response = $this->client->search($params);
+        $milliseconds = round(microtime(true) * 1000);
+        $days_7 = $milliseconds + 7*24*3600*1000;
+        $response = $this->client->search($params);
             $products = array_map(function ($a) {
                 $ans = $a['_source'];
                 $ans['id'] = $a['_id'];
@@ -266,7 +268,7 @@ class MarketController extends BaseController
                     'id' => $product['id'],
                     'body' => [
                         'doc' => [
-                            'spotlight_count' => 0
+                            'featured_expires' => $days_7
                         ]
                     ]
                 ];
