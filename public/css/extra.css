@@ -51,3 +51,13 @@ span.posted-text {
     color: gray;
     font-weight: bold;
 }
+.favroite-icon {
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    color: gray;
+}
+
+.favroite-icon-gold {
+    color: gold;
+}
