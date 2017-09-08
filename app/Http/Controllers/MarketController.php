@@ -590,7 +590,7 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
        $all = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $products=array_merge($products,$all);
+      //  $products=array_merge($products,$all);
 
         return view('home',['base' => $all, 'spotlight' => $products,'input'=>[],'lat'=>0.00,'lng'=>0.00]);
        // return redirect('all');
