@@ -28,7 +28,8 @@
                     <h4>Pay by Card</h4>
                     <form action="/user/payment/stripe" method="post">
                         {{ csrf_field() }}
-                    <ul class="list-group">
+                        <h4>{{$def['brand']}}-{{$def['last4']}}</h4>
+                    <ul class="list-group" style="display: none">
                         @foreach($cards as $card)
                             <li class="list-group-item">
                                 <div class="radio">

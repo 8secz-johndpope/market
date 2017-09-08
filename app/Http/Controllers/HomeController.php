@@ -238,13 +238,15 @@ class HomeController extends BaseController
         $stripe_id = $user->stripe_id;
         $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
             'limit' => 10, 'object' => 'card'));
+        $customer = \Stripe\Customer::retrieve($stripe_id);
+        $card = $customer->sources->retrieve($customer->default_source);
         $gateway = new \Braintree\Gateway(array(
             'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
         ));
         $clientToken = $gateway->clientToken()->generate();
         $order_id  = $request->session()->get('order_id');
 
-        return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards['data'],'token' => $clientToken]);
+        return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards['data'],'token' => $clientToken,'def'=>$card]);
     }
     public function favorites(Request $request){
             $user = Auth::user();
@@ -435,14 +437,14 @@ class HomeController extends BaseController
         $order = Order::find($order_id);
         $stripe_id = $user->stripe_id;
         $card = $request->card;
-        $amount = $order->amount * 100;
+        $amount = (int)($order->amount * 100);
         $description = 'Payment towards to Order id '.$order_id;
         try {
             $charge = \Stripe\Charge::create(array(
                 "amount" => $amount,
                 "currency" => "gbp",
                 "customer" => $stripe_id,
-                "source" => $card, // obtained with Stripe.js
+             //   "source" => $card, // obtained with Stripe.js
                 "description" => $description
             ));
             $advert = Advert::find($order->advert_id);
