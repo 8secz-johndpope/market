@@ -848,7 +848,6 @@ class MarketController extends BaseController
                     ]
                 ],
                 "sort"=> $sort
-
             ]
         ];
         if(count($aggs)>0){
@@ -978,6 +977,49 @@ class MarketController extends BaseController
         $base=Category::where('parent_id',0)->get();
         $sorts = Field::where('slug','sort')->first()->filters;
         $prices = Field::where('slug','price')->first()->filters;
+
+        $fmusts = $musts;
+        $fmusts['featured'] = ['term'=>['featured'=>1]];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>3,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($fmusts),
+                        'filter' => $filte
+                    ]
+                ],
+                "sort"=> $sort
+            ]
+        ];
+        $response = $this->client->search($params);
+
+        $featured = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+
+
+        $fmusts = $musts;
+        $fmusts['urgent'] = ['term'=>['urgent'=>1]];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>3,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($fmusts),
+                        'filter' => $filte
+                    ]
+                ],
+                "sort"=> $sort
+            ]
+        ];
+        $response = $this->client->search($params);
+
+        $urgent = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $products = array_merge($featured,$urgent,$products);
+
         $distances = [1=>'Default',2=>'+ 1 miles',3=>'+ 3 miles',5=>'+ 5 miles',10=>'+ 10 miles',15=>'+ 15 miles',30=>'+ 30 miles',50=>'+ 50 miles',75=>'+ 75 miles',100=>'+ 100 miles',1000=>'Nationwide'];
         return ['pageurl'=>$pageurl,'sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'products'=>$products,'breads'=>$breads,'last'=>$any,'base'=>$base,'chs'=>$chs,'filters'=>$filters,'categories'=>$categories,'parents'=>$parents];
     }
