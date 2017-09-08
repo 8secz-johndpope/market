@@ -557,10 +557,10 @@ class MarketController extends BaseController
                 'query' =>
                     ['bool'=>[
 
-                        'should'=>[['term'=>['spotlight'=>1]]]
+                        'should'=>[['term'=>['spotlight'=>1]]],
+                    "minimum_number_should_match"=> 24,
 
                     ]],
-                "minimum_number_should_match"=> 24,
                 "sort"=> [
                     [
                         "created_at"=> ["order"=> "desc"]
