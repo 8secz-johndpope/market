@@ -496,6 +496,11 @@ class HomeController extends BaseController
                     "description" => 'Shipping Item '
                 ));
                 $request->session()->forget('id');
+                $order = new Order;
+                $order->advert_id = $advert->id;
+                $order->buyer_id = $user->id;
+                $order->seller_id = $advert->user_id;
+                $order->save();
 
             }
             catch (\Exception $e) {
@@ -578,6 +583,11 @@ class HomeController extends BaseController
                     ]
                 ]);
                 $request->session()->forget('id');
+                $order = new Order;
+                $order->advert_id = $advert->id;
+                $order->buyer_id = $user->id;
+                $order->seller_id = $advert->user_id;
+                $order->save();
 
             }
             catch (Exception $e) {
