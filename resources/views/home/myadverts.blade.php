@@ -35,7 +35,9 @@
                 <a class="nav-link" href="/user/manage/details">My Details</a>
             </li>
         </ul>
-        @foreach($products as $product)
+        <a class="btn btn-primary" href="/user/ads/post">Post an Ad</a>
+
+    @foreach($products as $product)
             <div class="item listing">
                 <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}">
                     <div class="listing-img">
