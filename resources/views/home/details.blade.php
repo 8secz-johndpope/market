@@ -33,11 +33,15 @@
                     <a class="nav-link" href="#">My Details</a>
                 </li>
             </ul>
+            <div class="well">
            <table class="table">
                <tr><td>Name</td><td>{{$user->name}}</td></tr>
                <tr><td>Email</td><td>{{$user->email}}</td></tr>
                <tr><td>Phone</td><td>{{$user->phone}}</td></tr>
            </table>
+            </div>
+            <div class="well">
+
             <h4>Adresses</h4>
             @foreach($user->addresses as $address)
                 <ul class="list-group">
@@ -51,13 +55,17 @@
             <br>
 
             @endforeach
-            <h4>CVs</h4>
+            </div>
+                <div class="well">
+
+                <h4>CVs</h4>
             <table class="table">
                 <thead><th>Title</th><th>Category</th></thead>
             @foreach($user->cvs as $cv)
             <tr><td>{{$cv->title}}</td><td>{{$cv->category->title}}</td></tr>
             @endforeach
             </table>
+                </div>
         </div>
     </div>
 
