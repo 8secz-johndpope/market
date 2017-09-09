@@ -53,6 +53,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
+                        <h4>Shipping Address</h4>
                         <ul class="list-group">
                             <li class="list-group-item">{{$order->address->line1}}</li>
                             <li class="list-group-item">{{$order->address->city}}</li>
