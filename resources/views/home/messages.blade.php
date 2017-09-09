@@ -33,7 +33,9 @@
                     <a class="nav-link" href="/user/manage/details">My Details</a>
                 </li>
             </ul>
+            <div class="well">
             <h4>No Messages to Display</h4>
+            </div>
         </div>
     </div>
 
