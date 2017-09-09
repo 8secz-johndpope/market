@@ -656,7 +656,7 @@
         var id = $(this).data('id');
         var tracking = $("#tracking_id").val();
         console.log(id);
-        axios.get('/user/manage/order/shipping/update/'+id,{tracking:tracking})
+        axios.get('/user/manage/order/shipping/update/'+id,{ params:{tracking:tracking}})
             .then(function (response) {
                 console.log(response);
             })
