@@ -16,6 +16,6 @@ class Order extends Model
         return $this->hasMany('App\Model\OrderItem');
     }
     public function address(){
-        return $this->hasMany('App\Model\Address');
+        return $this->hasOne('App\Model\Address');
     }
 }
