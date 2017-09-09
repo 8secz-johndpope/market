@@ -500,6 +500,8 @@ class HomeController extends BaseController
                 $order->advert_id = $advert->id;
                 $order->buyer_id = $user->id;
                 $order->seller_id = $advert->user_id;
+                $order->amount = $amount;
+                $order->type='shipping';
                 $order->save();
 
             }
@@ -587,6 +589,8 @@ class HomeController extends BaseController
                 $order->advert_id = $advert->id;
                 $order->buyer_id = $user->id;
                 $order->seller_id = $advert->user_id;
+                $order->amount = $amount*100;
+                $order->type='shipping';
                 $order->save();
 
             }
