@@ -53,7 +53,7 @@
                                     </div>
                                 @endif
                                 @if($order->tracking==='')
-                                    <button class="btn-default btn update-shipping" data-id="{{$order->id}}">Enter Shipping Info</button>
+                                    <p>{{$order->status}}</p>
                                 @else
                                     <p>{{$order->tracking}}</p>
                                 @endif
