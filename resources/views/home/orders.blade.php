@@ -49,6 +49,7 @@
                                     <div class="items-box-price font-5">£ {{$order->product['meta']['price']/100}}{{isset($order->product['meta']['price_frequency']) ? $order->product['meta']['price_frequency']:''}}
                                     </div>
                                 @endif
+                                <button class="btn-default btn">Enter Shipping Info</button>
                             </div>
                         </div>
                     </div>
