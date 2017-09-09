@@ -359,8 +359,9 @@
         e.preventDefault();
 
         var id = $(this).data('id');
-        if($(this).hasClass('favroite-icon-gold')){
-            $(this).removeClass('favroite-icon-gold');
+        if($(this).hasClass('glyphicon-heart')){
+            $(this).addClass('glyphicon-heart-empty');
+            $(this).removeClass('glyphicon-heart');
 
             axios.post('/user/list/unfavorite', {
                 id:id
@@ -373,8 +374,8 @@
                 });
 
         }else{
-            $(this).addClass('favroite-icon-gold');
-
+            $(this).addClass('glyphicon-heart');
+            $(this).removeClass('glyphicon-heart-empty');
             axios.post('/user/list/favorite', {
                 id:id
             })
