@@ -40,6 +40,7 @@
            </table>
             <h4>Adresses</h4>
             @foreach($user->addresses as $address)
+                <a class="glyphicon glyphicon-trash delete-icon" href="/user/address/delete/{{$address->id}}"></a>
                 <ul class="list-group">
                     <li class="list-group-item"> {{$address->line1}}</li>
                     <li class="list-group-item">{{$address->city}}</li>
