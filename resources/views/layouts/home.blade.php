@@ -161,7 +161,7 @@
                                 <li>
                                 <li><a href="/user/manage/ads">Manage My Ads</a> </li>
                                 <li><a href="/user/ads/post">Post an Ad</a> </li>
-                                    <a href="{{ route('logout') }}"
+                                   <li> <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         Logout
@@ -169,7 +169,7 @@
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
-                                    </form>
+                                    </form></li>
                                 </li>
                             </ul>
                         </li>
