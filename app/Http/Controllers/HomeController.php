@@ -155,7 +155,8 @@ class HomeController extends BaseController
         }else{
             $body['images']=[];
         }
-        $body['meta']['price']=(int)(((float)$request->price)*100);
+            $body['meta']['price'] =100000;
+       // $body['meta']['price']=(int)(((float)$request->price)*100);
         foreach ($fields as $field){
             if($request->has($field->slug)){
                 $body['meta'][$field->slug] = $request->get($field->slug);
