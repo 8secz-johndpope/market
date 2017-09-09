@@ -628,6 +628,9 @@
         $("#total-price").val(total);
 
     });
+    $(document).on('change',".address-select",function () {
+        console.log($('input[name=address]:checked', '#addressform').val());
+    });
 </script>
 </body>
 </html>

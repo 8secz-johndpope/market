@@ -67,11 +67,12 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <h4>Shipping Address</h4>
+                            <form id="addressform">
                             <ul class="list-group" >
                                 @foreach($addresses as $address)
                                     <li class="list-group-item">
                                         <div class="radio">
-                                            <label><input type="radio" name="address" value="{{$address->id}}" @if($address->id===$user->default_address) checked @endif>
+                                            <label><input type="radio" class="address-select" name="address" value="{{$address->id}}" @if($address->id===$user->default_address) checked @endif>
                                             <table class="table">
                                                 <tr><td>{{$address->line1}}</td></tr>
                                                 <tr><td>{{$address->city}}</td></tr>
@@ -82,6 +83,7 @@
                                     </li>
                                 @endforeach
                             </ul>
+                            </form>
                             <button class="btn btn-default add-address">Add New Address</button>
 
                         </div>
