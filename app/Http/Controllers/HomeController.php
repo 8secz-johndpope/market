@@ -670,4 +670,12 @@ class HomeController extends BaseController
 
         return ['msg'=>'Done'];
     }
+    public function update_shipping(Request $request,$id){
+        $order = Order::find($id);
+        $order->tracking = $request->tracking;
+        $order->save();
+
+        return ['msg'=>'Done'];
+
+    }
 }

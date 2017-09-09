@@ -650,6 +650,19 @@
        var id = $(this).data('id');
        console.log(id);
        $("#tracking-info").modal('show');
+        $(".update-tracking").data('id',id);
+    });
+    $(".update-tracking").click(function () {
+        var id = $(this).data('id');
+        var tracking = $("#tracking_id").val();
+        console.log(id);
+        axios.get('/user/manage/order/shipping/update/'+id,{tracking:tracking})
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     });
 
 </script>

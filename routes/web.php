@@ -23,6 +23,7 @@ Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::post('/user/cards/add', 'HomeController@addcard');
 Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/address/change/{id}', 'HomeController@change');
+Route::get('/user/manage/order/shipping/update/{id}', 'HomeController@update_shipping');
 
 Route::get('/user/manage/orders', 'HomeController@orders');
 
