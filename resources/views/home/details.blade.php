@@ -33,7 +33,9 @@
                     <a class="nav-link" href="#">My Details</a>
                 </li>
             </ul>
-           <h4>No Details to Display</h4>
+           <table class="table">
+               <tr><td>Name</td><td>{{$user->name}}</td></tr>
+           </table>
         </div>
     </div>
 

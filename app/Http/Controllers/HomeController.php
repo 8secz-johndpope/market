@@ -600,7 +600,7 @@ class HomeController extends BaseController
     }
     public function details(Request $request){
 
-        return view('home.details',[]);
+        return view('home.details',['user'=>Auth::user()]);
     }
     public function paypal(Request $request){
         $user = Auth::user();
