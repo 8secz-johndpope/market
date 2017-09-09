@@ -663,4 +663,7 @@ class HomeController extends BaseController
             return ['result' => ['msg' => 'failed']];
         }
     }
+    public  function  change(Request $request){
+        return ['msg'=>'Done'];
+    }
 }

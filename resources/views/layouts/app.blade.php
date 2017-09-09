@@ -22,7 +22,7 @@
     <script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
 
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
     <style>
         .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
         .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
@@ -431,6 +431,9 @@
 
 
 <script>
+    window.axios.defaults.headers.common = {
+        'X-Requested-With': 'XMLHttpRequest',
+    };
     $('#autocomplete').autocomplete({
         paramName :'q',
         serviceUrl: '/api/suggest',
@@ -629,7 +632,15 @@
 
     });
     $(document).on('change',".address-select",function () {
+        var id = $('input[name=address]:checked', '#addressform').val();
         console.log($('input[name=address]:checked', '#addressform').val());
+        axios.get('/user/address/change/'+id)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     });
 </script>
 </body>

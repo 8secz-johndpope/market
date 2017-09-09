@@ -20,7 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
     <style>
         .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
         .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
