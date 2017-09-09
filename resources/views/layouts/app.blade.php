@@ -403,21 +403,23 @@
 
         // Create the search box and link it to the UI element.
         var input = document.getElementById('pac-input');
-        var searchBox = new google.maps.places.Autocomplete(input);
-        searchBox.setComponentRestrictions(
-            {'country': ['gb']});
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place.
-        searchBox.addListener('place_changed', function() {
-            var place = searchBox.getPlace();
-            console.log(place);
+        if(input) {
+            var searchBox = new google.maps.places.Autocomplete(input);
+            searchBox.setComponentRestrictions(
+                {'country': ['gb']});
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            searchBox.addListener('place_changed', function () {
+                var place = searchBox.getPlace();
+                console.log(place);
 
-            var lat = document.getElementById('lat');
-            var lng = document.getElementById('lng');
-            lat.value=place.geometry.location.lat();
-            lng.value=place.geometry.location.lng();
+                var lat = document.getElementById('lat');
+                var lng = document.getElementById('lng');
+                lat.value = place.geometry.location.lat();
+                lng.value = place.geometry.location.lng();
 
-        });
+            });
+        }
 
     }
 
