@@ -571,9 +571,10 @@ class HomeController extends BaseController
                 'id' => $advert->elastic
             ];
             $response = $this->client->get($params);
-            $products[]=$response['_source'];
+            $order->product = $response['_source'];
+            $products[]=$order;
         }
-        return view('home.orders',['products'=>$products]);
+        return view('home.orders',['orders'=>$products]);
     }
     public function paypal(Request $request){
         $user = Auth::user();
