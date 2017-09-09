@@ -38,6 +38,14 @@
                <tr><td>Email</td><td>{{$user->email}}</td></tr>
                <tr><td>Phone</td><td>{{$user->phone}}</td></tr>
            </table>
+            <h4>Adresses</h4>
+            @foreach($user->addresses as $address)
+                <ul class="list-group">
+                    <li class="list-group"> {{$address->line1}}</li>
+                    <li class="list-group">{{$address->city}}</li>
+                    <li class="list-group">{{$address->postcode}}</li>
+                </ul>
+                @endforeach
         </div>
     </div>
 
