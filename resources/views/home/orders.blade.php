@@ -38,7 +38,7 @@
                     <div class="col-sm-8">
                         <div class="row">
                             <div class="col-sm-4">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
+                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($order->product['images'])>0?$order->product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
                             </div>
                             <div class="col-sm-8">
