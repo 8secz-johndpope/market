@@ -265,6 +265,8 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/user/manage/ads">Manage My Ads</a> </li>
+                                <li><a href="/user/manage/orders">Orders</a> </li>
+                                <li><a href="/user/manage/favorites">Favorites</a> </li>
                                 <li><a href="/user/ads/post">Post an Ad</a> </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
