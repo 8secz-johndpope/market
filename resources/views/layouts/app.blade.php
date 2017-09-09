@@ -418,7 +418,7 @@
             lng.value=place.geometry.location.lng();
 
         });
-        initMap();
+
     }
 
 </script>
@@ -642,6 +642,7 @@
                 console.log(error);
             });
     });
+
 </script>
 </body>
 </html>

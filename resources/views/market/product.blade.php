@@ -90,6 +90,10 @@
                                         map: map
                                     });
                                 }
+                                $(document).ready(function() {
+                                    initMap();
+//your code
+                                });
 
                             </script>
 
