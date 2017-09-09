@@ -49,7 +49,7 @@
                                     <div class="items-box-price font-5">£ {{$order->product['meta']['price']/100}}{{isset($order->product['meta']['price_frequency']) ? $order->product['meta']['price_frequency']:''}}
                                     </div>
                                 @endif
-                                <button class="btn-default btn">Enter Shipping Info</button>
+                                <button class="btn-default btn update-shipping" data-id="{{$order->id}}">Enter Shipping Info</button>
                             </div>
                         </div>
                     </div>
@@ -68,6 +68,25 @@
 
 
             @endforeach
+        </div>
+    </div>
+    <div class="modal fade" id="tracking-info">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 

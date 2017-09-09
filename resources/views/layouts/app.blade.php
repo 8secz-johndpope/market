@@ -646,6 +646,11 @@
                 console.log(error);
             });
     });
+    $(".update-shipping").click(function () {
+       var id = $(this).data('id');
+       console.log(id);
+       $("#tracking-info").modal('show');
+    });
 
 </script>
 </body>
