@@ -20,6 +20,9 @@
                 <a class="nav-link " href="#">Manage My ads</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/user/manage/orders">Orders</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">Messages</a>
             </li>
             <li class="nav-item">
