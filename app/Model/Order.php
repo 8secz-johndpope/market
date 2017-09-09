@@ -19,9 +19,9 @@ class Order extends Model
         return $this->belongsTo('App\Model\Address');
     }
     public function buyer(){
-        return $this->hasMany('App\User');
+        return $this->belongsTo('App\User');
     }
     public function seller(){
-        return $this->hasMany('App\User');
+        return $this->belongsTo('App\User');
     }
 }
