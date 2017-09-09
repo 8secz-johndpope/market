@@ -19,11 +19,11 @@
                 <li class="nav-item">
                     <a class="nav-link " href="/user/manage/ads">Manage My ads</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#">Orders</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/user/manage/buying">Buying</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Buying</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Messages</a>
@@ -53,8 +53,8 @@
                                     </div>
                                 @endif
                                 @if($order->tracking==='')
-                                <button class="btn-default btn update-shipping" data-id="{{$order->id}}">Enter Shipping Info</button>
-                                    @else
+                                    <button class="btn-default btn update-shipping" data-id="{{$order->id}}">Enter Shipping Info</button>
+                                @else
                                     <p>{{$order->tracking}}</p>
                                 @endif
                             </div>

@@ -578,6 +578,22 @@ class HomeController extends BaseController
         }
         return view('home.orders',['orders'=>$products]);
     }
+    public function buying(Request $request){
+        $user = Auth::user();
+        $orders = $user->buying;
+        foreach ($orders as $order){
+            $advert = Advert::find($order->advert_id);
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic
+            ];
+            $response = $this->client->get($params);
+            $order->product = $response['_source'];
+            $products[]=$order;
+        }
+        return view('home.buying',['orders'=>$products]);
+    }
     public function paypal(Request $request){
         $user = Auth::user();
         $gateway = new \Braintree\Gateway(array(

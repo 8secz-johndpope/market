@@ -21,6 +21,9 @@
                     <a class="nav-link" href="/user/manage/orders">Orders</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link " href="/user/manage/buying">Buying</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Messages</a>
                 </li>
                 <li class="nav-item active">
