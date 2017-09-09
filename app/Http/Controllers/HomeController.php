@@ -594,6 +594,14 @@ class HomeController extends BaseController
         }
         return view('home.buying',['orders'=>$products]);
     }
+    public function messages(Request $request){
+
+        return view('home.messages',[]);
+    }
+    public function details(Request $request){
+
+        return view('home.details',[]);
+    }
     public function paypal(Request $request){
         $user = Auth::user();
         $gateway = new \Braintree\Gateway(array(

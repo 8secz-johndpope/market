@@ -26,13 +26,13 @@
                 <a class="nav-link " href="/user/manage/buying">Buying</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Messages</a>
+                <a class="nav-link" href="/user/manage/messages">Messages</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/user/manage/favorites">Favorites</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">My Details</a>
+                <a class="nav-link" href="/user/manage/details">My Details</a>
             </li>
         </ul>
         @foreach($products as $product)

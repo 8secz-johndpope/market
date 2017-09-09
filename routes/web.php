@@ -27,6 +27,8 @@ Route::get('/user/manage/order/shipping/update/{id}', 'HomeController@update_shi
 
 Route::get('/user/manage/orders', 'HomeController@orders');
 Route::get('/user/manage/buying', 'HomeController@buying');
+Route::get('/user/manage/messages', 'HomeController@messages');
+Route::get('/user/manage/details', 'HomeController@details');
 
 Route::get('/user/manage/shipping/{id}', 'HomeController@shipping');
 
