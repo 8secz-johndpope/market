@@ -20,7 +20,7 @@
                     <a class="nav-link " href="/user/manage/ads">Manage My ads</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Orders</a>
+                    <a class="nav-link" href="/user/manage/orders">Orders</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Buying</a>
