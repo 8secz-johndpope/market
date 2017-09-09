@@ -111,14 +111,11 @@ class UserController extends BaseController
 
     }
 
-    public function getcv()
+    public function getcvs()
     {
         $user = Auth::user();
-        //  $user_id = $user->id;
 
-        $cv = Cv::where('user_id', $user->id)->get();
-        $cover = Cover::where('user_id', $user->id)->get();
-        return ["cv" => $cv, "covers" => $cover];
+        return ["cv" => $user->cvs, "covers" => $user->covers];
     }
 
 
