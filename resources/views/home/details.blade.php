@@ -51,6 +51,13 @@
             <br>
 
             @endforeach
+            <h4>CVs</h4>
+            <table>
+                <thead><th>Title</th><th>Category</th></thead>
+            @foreach($user->cvs as $cv)
+            <tr><td>{{$cv->title}}</td><td>{{$cv->category->title}}</td></tr>
+            @endforeach
+            </table>
         </div>
     </div>
 
