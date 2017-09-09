@@ -12,5 +12,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cv extends Model
 {
-
+    public function category()
+    {
+        return $this->belongsTo('App\Model\Category');
+    }
 }

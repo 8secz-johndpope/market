@@ -102,7 +102,7 @@ class UserController extends BaseController
         $file_name = $request->file_name;
 
         $cv = new Cv;
-        $cv->category = $category;
+        $cv->category_id = $category;
         $cv->title = $title;
         $cv->file_name = $file_name;
         $cv->user_id = $user->id;
