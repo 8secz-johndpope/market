@@ -663,7 +663,11 @@ class HomeController extends BaseController
             return ['result' => ['msg' => 'failed']];
         }
     }
-    public  function  change(Request $request){
+    public  function  change(Request $request,$id){
+        $user = Auth::user();
+        $user->default_address = $id;
+        $user->save();
+
         return ['msg'=>'Done'];
     }
 }
