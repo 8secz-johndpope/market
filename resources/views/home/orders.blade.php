@@ -83,7 +83,7 @@
                     <input class="form-control" id="tracking_id" type="text" placeholder="Tracking Info">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary">Update</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
