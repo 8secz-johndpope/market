@@ -659,6 +659,7 @@
         axios.get('/user/manage/order/shipping/update/'+id,{ params:{tracking:tracking}})
             .then(function (response) {
                 console.log(response);
+                location.reload();
             })
             .catch(function (error) {
                 console.log(error);

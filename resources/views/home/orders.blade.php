@@ -49,7 +49,11 @@
                                     <div class="items-box-price font-5">£ {{$order->product['meta']['price']/100}}{{isset($order->product['meta']['price_frequency']) ? $order->product['meta']['price_frequency']:''}}
                                     </div>
                                 @endif
+                                @if($order->tracking==='')
                                 <button class="btn-default btn update-shipping" data-id="{{$order->id}}">Enter Shipping Info</button>
+                                    @else
+                                    <p>{{$order->tracking}}</p>
+                                @endif
                             </div>
                         </div>
                     </div>
