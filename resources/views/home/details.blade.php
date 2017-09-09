@@ -45,6 +45,8 @@
                     <li class="list-group-item">{{$address->city}}</li>
                     <li class="list-group-item">{{$address->postcode}}</li>
                 </ul>
+            <br>
+            <br>
                 <a class="glyphicon glyphicon-trash delete-icon" href="/user/address/delete/{{$address->id}}"></a>
 
             @endforeach
