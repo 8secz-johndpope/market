@@ -18,4 +18,10 @@ class Order extends Model
     public function address(){
         return $this->belongsTo('App\Model\Address');
     }
+    public function buyer(){
+        return $this->hasMany('App\User');
+    }
+    public function seller(){
+        return $this->hasMany('App\User');
+    }
 }
