@@ -11,7 +11,6 @@
 @endsection
 
 @section('content')
-    <div class="well">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
 
@@ -36,6 +35,8 @@
                     <a class="nav-link" href="/user/manage/details">My Details</a>
                 </li>
             </ul>
+            <div class="well">
+
             @foreach($orders as $order)
 
                 <div class="row">
