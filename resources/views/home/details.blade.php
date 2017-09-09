@@ -41,9 +41,9 @@
             <h4>Adresses</h4>
             @foreach($user->addresses as $address)
                 <ul class="list-group">
-                    <li class="list-group"> {{$address->line1}}</li>
-                    <li class="list-group">{{$address->city}}</li>
-                    <li class="list-group">{{$address->postcode}}</li>
+                    <li class="list-group-item"> {{$address->line1}}</li>
+                    <li class="list-group-item">{{$address->city}}</li>
+                    <li class="list-group-item">{{$address->postcode}}</li>
                 </ul>
                 @endforeach
         </div>
