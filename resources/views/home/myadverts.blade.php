@@ -35,7 +35,15 @@
                 <a class="nav-link" href="/user/manage/details">My Details</a>
             </li>
         </ul>
-        <a class="btn btn-primary" href="/user/ads/post">Post an Ad</a>
+        <div class="row">
+            <div class="col-sm-10">
+
+            </div>
+            <div class="col-sm-2">
+                <a class="btn btn-primary" href="/user/ads/post">Post an Ad</a>
+
+            </div>
+        </div>
 
     @foreach($products as $product)
             <div class="item listing">
