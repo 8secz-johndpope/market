@@ -87,6 +87,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Cover');
     }
+    public function orders(){
+        return $this->hasMany('App\Model\Order','seller_id');
+    }
 
     public function favorites()
     {
