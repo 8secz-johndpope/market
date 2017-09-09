@@ -66,6 +66,17 @@
             @endforeach
             </table>
                 </div>
+
+            <div class="well">
+
+                <h4>Cover Letters</h4>
+                <table class="table">
+                    <thead><th>Title</th><th>Category</th></thead>
+                    @foreach($user->covers as $cover)
+                        <tr><td>{{$cv->title}}</td><td>{{$cv->category->title}}</td></tr>
+                    @endforeach
+                </table>
+            </div>
         </div>
     </div>
 

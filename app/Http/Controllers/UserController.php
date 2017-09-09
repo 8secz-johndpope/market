@@ -211,7 +211,7 @@ class UserController extends BaseController
         $cover = $request->cover;
 
         $cv = new Cover;
-        $cv->category = $category;
+        $cv->category_id = $category;
         $cv->title = $title;
         $cv->cover = $cover;
         $cv->user_id = $user->id;
