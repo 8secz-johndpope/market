@@ -63,7 +63,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="glyphicon glyphicon-remove delete-icon" href="/user/advert/delete/{{$product['source_id']}}"></a>
+                <a class="glyphicon glyphicon-trash delete-icon" href="/user/advert/delete/{{$product['source_id']}}"></a>
             </div>
 
         @endforeach
