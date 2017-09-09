@@ -43,7 +43,7 @@
                             </div>
                             <div class="col-sm-8">
                                 <a class="listing-product" href="/p/{{$order->product['category']}}/{{$order->product['source_id']}}">
-                                    <h4 class="items-box-name font-2">{{$product['title']}}</h4>
+                                    <h4 class="items-box-name font-2">{{$order->product['title']}}</h4>
                                 </a>
                                 @if($order->product['meta']['price']>=0)
                                     <div class="items-box-price font-5">£ {{$order->product['meta']['price']/100}}{{isset($order->product['meta']['price_frequency']) ? $order->product['meta']['price_frequency']:''}}
