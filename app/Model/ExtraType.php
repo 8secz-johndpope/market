@@ -14,30 +14,62 @@ class ExtraType extends Model
 {
     public function prices($category,$lat,$lng)
     {
+
+        $locations = Location::where('min_lat','<',$lat)->where('max_lat','>',$lat)->where('min_lng','<',$lng)->where('max_lng','>',$lng)->get();
+        foreach ($locations as $location){
+            if(count($location->children)===0){
+                $sloc = $location;
+                break;
+            }
+        }
+        $category= Category::find($category);
+        foreach ($sloc->prices as $price){
+
+        }
         $current = Category::find($category);
         while($current!==null){
-            $prices = $this->hasMany('App\Model\ExtraPrice')->where('category',$current->id)->where('min_lat','<',$lat)->where('max_lat','>',$lat)->where('min_lng','<',$lng)->where('max_lng','>',$lng)->get();
-            if($prices===null){
+            $sprice = $sloc->prices()->where('category_id',$current->id)->first();
+            if($sprice===null){
                 $current=$current->parent;
             }else{
-                return $prices;
+                break;
             }
 
         }
-        return ExtraPrice::find(1);
+        $prices = $this->hasMany('App\Model\ExtraPrice')->get();
+        $all = array();
+        foreach ($prices as $price){
+            $price->price = $sprice->{'$price->key'};
+            $all[] = $price;
+        }
+        return $all;
     }
     public function price($category,$lat,$lng)
     {
+        $locations = Location::where('min_lat','<',$lat)->where('max_lat','>',$lat)->where('min_lng','<',$lng)->where('max_lng','>',$lng)->get();
+        foreach ($locations as $location){
+            if(count($location->children)===0){
+                $sloc = $location;
+                break;
+            }
+        }
+        $category= Category::find($category);
+        foreach ($sloc->prices as $price){
+
+        }
         $current = Category::find($category);
         while($current!==null){
-            $price = ExtraPrice::where('category',$current->id)->where('min_lat','<',$lat)->where('max_lat','>',$lat)->where('min_lng','<',$lng)->where('max_lng','>',$lng)->first();
-            if($price===null){
+            $sprice = $sloc->prices()->where('category_id',$current->id)->first();
+            if($sprice===null){
                 $current=$current->parent;
             }else{
-                return $price;
+                break;
             }
 
         }
-        return ExtraPrice::find(1);
+        $price = $this->hasMany('App\Model\ExtraPrice')->first();
+        $price->price = $sprice->{'$price->key'};
+
+        return $price;
     }
 }

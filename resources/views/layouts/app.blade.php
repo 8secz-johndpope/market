@@ -550,8 +550,9 @@
         get_prices(category);
     }
     function get_prices(category) {
-
-        $.get("/category/prices/"+category, function(data, status){
+        var lat = $("#lat").val();
+        var lng = $("#lng").val();
+        $.get("/category/prices/"+category+'?lat='+lat+'&lng='+lng, function(data, status){
             $('.extra-prices').html(data);
         });
     }

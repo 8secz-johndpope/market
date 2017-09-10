@@ -431,9 +431,9 @@ class HomeController extends BaseController
         }
         foreach ($extras as $extra){
             if($extra->type==='single'){
-                $extra->price = $extra->price(0,1,2);
+                $extra->price = $extra->price($id,$request->lat,$request->lng);
             }else{
-                $extra->prices = $extra->prices(0,1,2);
+                $extra->prices = $extra->prices($id,$request->lat,$request->lng);
             }
         }
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
