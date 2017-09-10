@@ -106,7 +106,7 @@ class MarketController extends BaseController
     public function loc(Request $request){
         $locations = Location::where('max_lng',0)->get();
         foreach ($locations as $location){
-            $text = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=$location->slug+UK&key=AIzaSyD5KblV7TqP-rQd0uUmYZ2RfL3VuXxjqTA");
+            $text = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=$location->slug+UK&key=AIzaSyA3U46iw-NKjDuNR2XjEeQJFB3sXfnKuo0");
             $json = json_decode($text,true);
 
             if(isset($json['results'][0]['geometry']['viewport'])) {
