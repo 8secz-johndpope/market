@@ -730,6 +730,22 @@ class MarketController extends BaseController
                 ]
             ]
         ];
+        $musts['lat']= [
+            'range' => [
+                'lat' => [
+                    'gte'=>$location->min_lat,
+                    'lte'=>$location->max_lat
+                ]
+            ]
+        ];
+        $musts['lng']= [
+            'range' => [
+                'lng' => [
+                    'gte'=>$location->min_lng,
+                    'lte'=>$location->max_lng
+                ]
+            ]
+        ];
         $min_price = -2;
         if($request->has('min_price')){
             if(is_numeric($request->min_price))
