@@ -192,7 +192,7 @@
                 <div class="form-group col-md-12 col-lg-12">
                     <input type="text" class="form-control input-lg" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif">
                     <div class="input-group col-sm-4 col-md-3 col-lg-3 col-xl-2 input-group-lg">
-                        <input type="text" id="pac-input" class="form-control" placeholder="POST CODE" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
+                        <input type="text" id="pac-input" class="form-control" placeholder="LOCATION" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
                         <span class="input-group-btn">
 							     		<button class="btn btn-default" type="submit">Go</button>
 							      	</span>
