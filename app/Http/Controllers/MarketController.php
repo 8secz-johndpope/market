@@ -122,7 +122,7 @@ class MarketController extends BaseController
         }
         */
 
-        $locations = Location::whereRaw('id%1000000=0')->get();
+        $locations = Location::whereRaw('id%1000000=0')->whereRaw('id%1000000000!=0')->get();
         foreach ($locations as $location){
             $children = $location->children;
             $i = 1;
