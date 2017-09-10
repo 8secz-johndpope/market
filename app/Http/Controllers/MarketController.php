@@ -1223,6 +1223,7 @@ class MarketController extends BaseController
         if($category===null){
             return View('notfound');
         }
+        return $loc;
         $location = Location::where('slug',$loc)->first();
         if($location===null){
             return View('notfound');
