@@ -111,7 +111,7 @@ class MarketController extends BaseController
                 $child->slug = $parts[1];
                 $child->save();
             }
-            if($child->parent_id!=$parent->id){
+            if($child->parent_id!==$parent->id){
                 $child->parent_id = $parent->id;
                 $child->save();
             }
