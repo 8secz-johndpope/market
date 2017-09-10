@@ -124,7 +124,7 @@ class MarketController extends BaseController
         }
 
 */
-
+/*
         $i=1;
         foreach(file('/home/anil/market/public/loc_rel') as $line) {
             // loop with $line for each line of yourfile.txt
@@ -139,18 +139,7 @@ class MarketController extends BaseController
                 $child->id=$i;
                 $i++;
             }
-            /*
-            if($parent===null){
-                $parent = new Location;
-                $parent->slug = $parts[0];
-                $parent->save();
-            }
-            if($child===null){
-                $child = new Location;
-                $child->slug = $parts[1];
-                $child->save();
-            }
-            */
+
             if($child->id!==$parent->id){
                 $child->parent_id = $parent->id;
                 $child->save();
@@ -159,11 +148,14 @@ class MarketController extends BaseController
 
             echo  $line.'<br>';
         }
-
-/*
-        $locations = Location::where('id%1000000000000=0')->get();//where('id','>',100000)->whereRaw('id%1000=0')->whereRaw('id%1000000!=0')->whereRaw('id%1000000000!=0')->get();
+*/
+        $locations = Location::where('parent_id',0)->get();
+       // $locations = Location::where('id%1000000000000=0')->get();//where('id','>',100000)->whereRaw('id%1000=0')->whereRaw('id%1000000!=0')->whereRaw('id%1000000000!=0')->get();
         foreach ($locations as $location){
+
             $children = $location->children;
+            $location->id=$location->id*1000000000000;
+            $location->save();
             $i = 1;
             foreach ($children as $child){
                 $newid = $location->id+$i*1000000000;
@@ -173,7 +165,7 @@ class MarketController extends BaseController
                 $i++;
             }
         }
-*/
+
     }
     public function suggest(Request $request)
     {
