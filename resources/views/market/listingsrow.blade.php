@@ -18,6 +18,21 @@
     <div class="col-md-2 col-md-offset-1">
         <div class="l-visible-large">
             <ul class="list-group">
+                @foreach($lparents as $parent)
+                    <li class="list-group-item"><a href="/{{$category->slug}}/{{$parent->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="l-visible-large">
+            <h4>{{$location->title}}</h4>
+            <ul class="list-group">
+                @foreach($location->children as $cat)
+                    <li class="list-group-item"><a href="/{{$category->slug}}/{{$cat->slug}}">{{$cat->title}}</a>&nbsp</li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="l-visible-large">
+            <ul class="list-group">
                 @foreach($parents as $parent)
                     <li class="list-group-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
                 @endforeach

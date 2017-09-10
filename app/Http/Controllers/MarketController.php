@@ -687,11 +687,11 @@ class MarketController extends BaseController
     }
     public function query(Request $request){
         $category = Category::find($request->category);
-
-        return $this->filter($request,$category);
+        $location=Location::find(0);
+        return $this->filter($request,$category,$location);
 
     }
-    public function filter($request,$category){
+    public function filter($request,$category,$location){
         $any = $category->slug;
         $fields = $category->fields()->where('can_filter',1)->get();
         $input = $request->all();
@@ -1033,6 +1033,11 @@ class MarketController extends BaseController
             $rec = $rec->parent;
             $parents[] = $rec;
         }
+        $rec = $location;
+        while($rec->parent_id!=-1){
+            $rec = $rec->parent;
+            $lparents[]=$rec;
+        }
         $parents=array_reverse($parents);
         unset($aggretations['category']);
         foreach ($aggretations as $key => $aggretation) {
@@ -1187,14 +1192,15 @@ class MarketController extends BaseController
         $products = array_merge($featured,$urgent,$products);
 
         $distances = [1=>'Default',2=>'+ 1 miles',3=>'+ 3 miles',5=>'+ 5 miles',10=>'+ 10 miles',15=>'+ 15 miles',30=>'+ 30 miles',50=>'+ 50 miles',75=>'+ 75 miles',100=>'+ 100 miles',1000=>'Nationwide'];
-        return ['pageurl'=>$pageurl,'sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'products'=>$products,'breads'=>$breads,'last'=>$any,'base'=>$base,'chs'=>$chs,'filters'=>$filters,'categories'=>$categories,'parents'=>$parents];
+        return ['location'=>$location,'lparents'=>$lparents,'pageurl'=>$pageurl,'sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'products'=>$products,'breads'=>$breads,'last'=>$any,'base'=>$base,'chs'=>$chs,'filters'=>$filters,'categories'=>$categories,'parents'=>$parents];
     }
     public function search(Request $request,$any){
         $category = Category::where('slug',$any)->first();
         if($category===null){
             return View('notfound');
         }
-        $params = $this->filter($request,$category);
+        $location = Location::find(0);
+        $params = $this->filter($request,$category,$location);
         if (Auth::check()) {
             // The user is logged in...
             $user = $request->user();
