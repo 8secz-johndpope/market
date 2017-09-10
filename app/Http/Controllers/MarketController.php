@@ -98,7 +98,7 @@ class MarketController extends BaseController
     }
     public function locs(Request $request){
         $locations = Location::all();
-        $price = Price::find(1);
+        $price = Price::find(2);
         foreach ($locations as $location) {
             $location->prices()->save($price);
         }
