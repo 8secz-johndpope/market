@@ -1034,6 +1034,7 @@ class MarketController extends BaseController
             $parents[] = $rec;
         }
         $rec = $location;
+        $lparents=array();
         while($rec->parent_id!=-1){
             $rec = $rec->parent;
             $lparents[]=$rec;
