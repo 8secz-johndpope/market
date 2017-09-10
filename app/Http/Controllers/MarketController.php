@@ -1235,7 +1235,6 @@ class MarketController extends BaseController
         if($location===null){
             return View('notfound');
         }
-        return $location;
         $params = $this->filter($request,$category,$location);
         if (Auth::check()) {
             // The user is logged in...
