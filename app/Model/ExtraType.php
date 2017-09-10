@@ -39,7 +39,7 @@ class ExtraType extends Model
         $prices = $this->hasMany('App\Model\ExtraPrice')->get();
         $all = array();
         foreach ($prices as $price){
-            $price->price = $sprice->{'$price->key'};
+            $price->price = $sprice->{$price->key};
             $all[] = $price;
         }
         return $all;
@@ -67,7 +67,7 @@ class ExtraType extends Model
 
         }
         $price = $this->hasMany('App\Model\ExtraPrice')->first();
-        $price->price = $sprice->{'$price->key'};
+        $price->price = $sprice->{$price->key};
 
         return $price;
     }
