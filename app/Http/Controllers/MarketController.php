@@ -151,7 +151,7 @@ class MarketController extends BaseController
 */
 
       //  $locations = Location::where('parent_id',0)->get();
-        $locations = Location::whereRaw('id%1000000000000=0')->get();//where('id','>',100000)->whereRaw('id%1000=0')->whereRaw('id%1000000!=0')->whereRaw('id%1000000000!=0')->get();
+        $locations = Location::whereRaw('id%1000000000=0')->get();//where('id','>',100000)->whereRaw('id%1000=0')->whereRaw('id%1000000!=0')->whereRaw('id%1000000000!=0')->get();
         foreach ($locations as $location){
 
             $children = $location->children;
@@ -161,7 +161,7 @@ class MarketController extends BaseController
             foreach ($children as $child){
               //  $child->parent_id=$location->id;
                 //$child->save();
-                $newid = $location->id+$i*1000000000;
+                $newid = $location->id+$i*1000000;
                 Location::where('parent_id',$child->id)->update(['parent_id'=>$newid]);
                 $child->id = $newid;
                 $child->save();
