@@ -1223,11 +1223,12 @@ class MarketController extends BaseController
         if($category===null){
             return View('notfound');
         }
-        return $loc;
+
         $location = Location::where('slug',$loc)->first();
         if($location===null){
             return View('notfound');
         }
+        return $location;
         $params = $this->filter($request,$category,$location);
         if (Auth::check()) {
             // The user is logged in...
