@@ -347,16 +347,15 @@ class MarketController extends BaseController
             foreach ($products as $product) {
                 $location = $product['location'];
                 $parts = explode(',',$location);
-                print_r($parts);
-                exit;
-                /*
+
                 $params = [
                     'index' => 'adverts',
                     'type' => 'advert',
                     'id' => $product['id'],
                     'body' => [
                         'doc' => [
-                            'lat' => $days_7
+                            'lat' => (float)$parts[0],
+                            'lng' => (float)$parts[1]
                         ]
                     ]
                 ];
@@ -364,7 +363,7 @@ class MarketController extends BaseController
 // Update doc at /my_index/my_type/my_id
                 $response = $this->client->update($params);
                 print_r($response);
-*/
+
             }
             return ['a'=>'b'];
         }
