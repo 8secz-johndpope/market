@@ -95,6 +95,11 @@ class MarketController extends BaseController
         return ['advert' => $response['_source']];
 
     }
+    public function locs(Request $request){
+        $locations = Location::all();
+        foreach ($locations as $location)
+            echo $location->slug.'<br>';
+    }
     public function loc(Request $request){
         $locations = Location::where('max_lng',0)->get();
         foreach ($locations as $location){
