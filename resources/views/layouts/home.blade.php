@@ -20,7 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
     <style>
         .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
         .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
@@ -159,22 +159,22 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                <li>
                                 <li><a href="/user/manage/ads">Manage My Ads</a> </li>
                                 <li><a href="/user/manage/orders">Orders</a> </li>
                                 <li><a href="/user/manage/buying">Buying</a> </li>
                                 <li><a href="/user/manage/favorites">Favorites</a> </li>
                                 <li><a href="/user/manage/details">My Details</a> </li>
                                 <li><a href="/user/ads/post">Post an Ad</a> </li>
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                                <li> <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         Logout
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
-                                    </form>
+                                    </form></li>
                                 </li>
                             </ul>
                         </li>
@@ -199,7 +199,7 @@
                 <div class="form-group col-md-12 col-lg-12">
                     <input type="text" class="form-control input-lg" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif">
                     <div class="input-group col-sm-4 col-md-3 col-lg-3 col-xl-2 input-group-lg">
-                        <input type="text" id="pac-input" class="form-control" placeholder="LOCATION" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
+                        <input type="text" id="pac-input" class="form-control" placeholder="POST CODE" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
                         <span class="input-group-btn">
 							     		<button class="btn btn-default" type="submit">Go</button>
 							      	</span>
@@ -222,7 +222,7 @@
                 <img id="footer_top_logo" class="img-responsive" title="" alt="" src="/css/sumra-text.png">
             </div>
 
-            <div class="col-md-3 col-xs-5 col-md-offset-2">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
                 <div class="col">
                     <h4>Company</h4>
                     <ul>
@@ -233,7 +233,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-5 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Experience</h4>
                     <ul>
@@ -243,7 +243,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-5 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Help</h4>
                     <ul>
@@ -255,7 +255,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-5 col-md-offset-2">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
                 <div class="col">
                     <h4>Commitment</h4>
                     <ul>
@@ -265,7 +265,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-5 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Partnerships</h4>
                     <ul>
@@ -275,7 +275,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-5 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Press & Opportunities</h4>
                     <ul>
@@ -360,10 +360,13 @@
 
 </script>
 <script>
-    $(".favroite-icon").click(function () {
+    $(".favroite-icon").click(function (e) {
+        e.preventDefault();
+
         var id = $(this).data('id');
-        if($(this).hasClass('favroite-icon-gold')){
-            $(this).removeClass('favroite-icon-gold');
+        if($(this).hasClass('glyphicon-heart')){
+            $(this).addClass('glyphicon-heart-empty');
+            $(this).removeClass('glyphicon-heart');
 
             axios.post('/user/list/unfavorite', {
                 id:id
@@ -376,8 +379,8 @@
                 });
 
         }else{
-            $(this).addClass('favroite-icon-gold');
-
+            $(this).addClass('glyphicon-heart');
+            $(this).removeClass('glyphicon-heart-empty');
             axios.post('/user/list/favorite', {
                 id:id
             })
