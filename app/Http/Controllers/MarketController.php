@@ -121,18 +121,14 @@ class MarketController extends BaseController
             echo  $line.'<br>';
         }
         */
-        $max = 0;
-        $locations = Location::all();
+
+        $locations = Location::where('parent_id',0)->get();
         foreach ($locations as $location){
-            if(count($location->children)>$max)
-            {
-                $max= count($location->children);
-                $maxloc = $location;
-            }
-
-
+            $newid = $location->id*1000000000;
+            Location::where('parent_id',$location->id)->update(['parent_id'=>$newid]);
+            $location->id = $newid;
+            $location->save();
         }
-        echo $maxloc->slug;
 
     }
     public function suggest(Request $request)
