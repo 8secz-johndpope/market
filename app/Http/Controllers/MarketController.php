@@ -94,7 +94,13 @@ class MarketController extends BaseController
         return ['advert' => $response['_source']];
 
     }
+    public function loc(Request $request){
+        foreach(file('/home/anil/market/public/loc_rel') as $line) {
+            // loop with $line for each line of yourfile.txt
+            echo  $line.'<br>';
+        }
 
+    }
     public function suggest(Request $request)
     {
 
