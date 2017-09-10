@@ -109,12 +109,12 @@ class MarketController extends BaseController
             $text = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=$location->slug+UK&key=AIzaSyD5KblV7TqP-rQd0uUmYZ2RfL3VuXxjqTA");
             $json = json_decode($text,true);
 
-            if(isset($json['results'][0]['geometry']['bounds'])) {
-                print_r($json['results'][0]['geometry']['bounds']);
-                $location->min_lat = $json['results'][0]['geometry']['bounds']['southwest']['lat'];
-                $location->min_lng = $json['results'][0]['geometry']['bounds']['southwest']['lng'];
-                $location->max_lat = $json['results'][0]['geometry']['bounds']['northeast']['lat'];
-                $location->max_lng = $json['results'][0]['geometry']['bounds']['northeast']['lng'];
+            if(isset($json['results'][0]['geometry']['viewport'])) {
+                print_r($json['results'][0]['geometry']['viewport']);
+                $location->min_lat = $json['results'][0]['geometry']['viewport']['southwest']['lat'];
+                $location->min_lng = $json['results'][0]['geometry']['viewport']['southwest']['lng'];
+                $location->max_lat = $json['results'][0]['geometry']['viewport']['northeast']['lat'];
+                $location->max_lng = $json['results'][0]['geometry']['viewport']['northeast']['lng'];
                 $location->save();
             }else{
                 print_r($json);
