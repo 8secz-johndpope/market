@@ -67,4 +67,6 @@ Route::get('/', 'MarketController@index');
 Route::get('/user/leaves','MarketController@leaves');
 
 Route::get('/p/{cat}/{id}', 'MarketController@product');
+Route::get('/{any}/{loc}', 'MarketController@lsearch');
+
 Route::get('/{any}', 'MarketController@search');
