@@ -14,6 +14,7 @@ use App\Model\Category;
 use App\Model\Field;
 use App\Model\FieldValue;
 use App\Model\Filter;
+use App\Model\Location;
 use App\Model\Relation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -97,6 +98,25 @@ class MarketController extends BaseController
     public function loc(Request $request){
         foreach(file('/home/anil/market/public/loc_rel') as $line) {
             // loop with $line for each line of yourfile.txt
+            $parts = explode(',',trim($line));
+            $parent = Location::where('slug',$parts[0])->first();
+            $child = Location::where('slug',$parts[1])->first();
+            if($parent===null){
+                $parent = new Location;
+                $parent->slug = $parts[0];
+                $parent->save();
+            }
+            if($child===null){
+                $child = new Location;
+                $child->slug = $parts[1];
+                $child->save();
+            }
+            if($child->parent_id===-1){
+                $child->parent_id = $parent->id;
+                $child->save();
+            }
+
+
             echo  $line.'<br>';
         }
 
