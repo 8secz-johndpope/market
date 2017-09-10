@@ -121,10 +121,14 @@ class MarketController extends BaseController
             echo  $line.'<br>';
         }
         */
+        $max = 0;
         $locations = Location::all();
         foreach ($locations as $location){
-            echo count($location->children).'<br>';
+            if(count($location->children)>$max)
+                $max= count($location->children);
+
         }
+        echo $max;
 
     }
     public function suggest(Request $request)
