@@ -16,11 +16,13 @@ class ExtraType extends Model
     {
 
         $locations = Location::where('min_lat','<',$lat)->where('max_lat','>',$lat)->where('min_lng','<',$lng)->where('max_lng','>',$lng)->get();
-        return $locations;
+        //return $locations;
         foreach ($locations as $location){
             if(count($location->children)===0){
                 $sloc = $location;
                 break;
+            }else{
+                $sloc = $location;
             }
         }
         $category= Category::find($category);
@@ -48,11 +50,12 @@ class ExtraType extends Model
     public function price($category,$lat,$lng)
     {
         $locations = Location::where('min_lat','<',$lat)->where('max_lat','>',$lat)->where('min_lng','<',$lng)->where('max_lng','>',$lng)->get();
-        return $locations;
         foreach ($locations as $location){
             if(count($location->children)===0){
                 $sloc = $location;
                 break;
+            }else{
+                $sloc = $location;
             }
         }
         $category= Category::find($category);
