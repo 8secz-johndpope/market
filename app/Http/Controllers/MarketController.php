@@ -97,8 +97,11 @@ class MarketController extends BaseController
     }
     public function locs(Request $request){
         $locations = Location::all();
-        foreach ($locations as $location)
-            echo $location->slug.'<br>';
+        foreach ($locations as $location) {
+            $location->title = ucwords($location->title);
+            $location->save();
+            echo $location->slug . '<br>';
+        }
     }
     public function loc(Request $request){
         $locations = Location::where('max_lng',0)->get();
