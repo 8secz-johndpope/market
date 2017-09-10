@@ -116,6 +116,9 @@ class MarketController extends BaseController
                 $location->max_lat = $json['results'][0]['geometry']['bounds']['northeast']['lat'];
                 $location->max_lng = $json['results'][0]['geometry']['bounds']['northeast']['lng'];
                 $location->save();
+            }else{
+                print_r($json);
+                exit;
             }
         }
 
