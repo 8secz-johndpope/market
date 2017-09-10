@@ -96,6 +96,7 @@ class MarketController extends BaseController
 
     }
     public function loc(Request $request){
+        /*
         foreach(file('/home/anil/market/public/loc_rel') as $line) {
             // loop with $line for each line of yourfile.txt
             $parts = explode(',',trim($line));
@@ -118,6 +119,11 @@ class MarketController extends BaseController
 
 
             echo  $line.'<br>';
+        }
+        */
+        $locations = Location::all();
+        foreach ($locations as $location){
+            echo count($location->children).'<br>';
         }
 
     }
