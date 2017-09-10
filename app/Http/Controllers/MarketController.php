@@ -124,10 +124,15 @@ class MarketController extends BaseController
 
         $locations = Location::where('parent_id',0)->get();
         foreach ($locations as $location){
-            $newid = $location->id*1000000000;
-            Location::where('parent_id',$location->id)->update(['parent_id'=>$newid]);
-            $location->id = $newid;
-            $location->save();
+            $children = $location->children;
+            $i = 1;
+            foreach ($children as $child){
+                $newid = $location->id+$i*1000000;
+                Location::where('parent_id',$child->id)->update(['parent_id'=>$newid]);
+                $child->id = $newid;
+                $child->save();
+                $i++;
+            }
         }
 
     }
