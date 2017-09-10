@@ -1,0 +1,93 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+
+}
+span.ribbon-featured {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+}
+strong.ribbon {
+    background-color: #fff;
+    color: #3997ba;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.2);
+    text-transform: uppercase;
+    /* color: #fff; */
+    display: block;
+    text-align: center;
+    top: 13px;
+    left: -33px;
+    font-weight: 700;
+    width: 112px;
+    padding: 3px 0;
+    position: relative;
+    font-size: 10px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+span.hide-visually {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.listing-posted-date.txt-sub {
+    float: right;
+    text-align: right;
+}
+.txt-uppercase {
+    text-transform: uppercase;
+}
+.txt-agnosticRed {
+    color: #ec4231;
+}
+span.posted-text {
+    text-align: right;
+    float: right;
+    color: gray;
+}
+.favroite-icon {
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    color: gray;
+}
+
+.favroite-icon-gold {
+    color: gold;
+}
+.row.top-row {
+    max-height: 30px;
+}
+.delete-icon{
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    color: dimgrey;
+}
+.modal {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}

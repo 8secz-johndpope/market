@@ -102,7 +102,7 @@ class UserController extends BaseController
         $file_name = $request->file_name;
 
         $cv = new Cv;
-        $cv->category = $category;
+        $cv->category_id = $category;
         $cv->title = $title;
         $cv->file_name = $file_name;
         $cv->user_id = $user->id;
@@ -111,14 +111,11 @@ class UserController extends BaseController
 
     }
 
-    public function getcv()
+    public function getcvs()
     {
         $user = Auth::user();
-        //  $user_id = $user->id;
 
-        $cv = Cv::where('user_id', $user->id)->get();
-        $cover = Cover::where('user_id', $user->id)->get();
-        return ["cv" => $cv, "covers" => $cover];
+        return ["cv" => $user->cvs, "covers" => $user->covers];
     }
 
 
@@ -211,7 +208,7 @@ class UserController extends BaseController
         $cover = $request->cover;
 
         $cv = new Cover;
-        $cv->category = $category;
+        $cv->category_id = $category;
         $cv->title = $title;
         $cv->cover = $cover;
         $cv->user_id = $user->id;
@@ -1039,10 +1036,17 @@ class UserController extends BaseController
         $body['source_id'] = $advert->id;
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at'] = $milliseconds;
-        $body['expires_at'] = $milliseconds + 7 * 24 * 3600 * 1000;
+        $body['expires_at'] = $milliseconds + 60 * 24 * 3600 * 1000;
+        $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+        $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+        $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+
         $body['username'] = $user->name;
         $body['user_id'] = $user->id;
         $body['phone'] = $user->phone;
+        $body['featured_count'] = 0;
+        $body['urgent_count'] = 0;
+        $body['spotlight_count'] = 0;
         if (!isset($body['meta']['price'])) {
             $body['meta']['price'] = -1;
         }

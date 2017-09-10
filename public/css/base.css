@@ -1,12 +1,4 @@
-.favroite-icon {
-    font-size: 30px;
-    float: right;
-    cursor: pointer;
-}
 
-.favroite-icon-gold {
-    color: gold;
-}
 
 body{
     background-color: #fff; 
@@ -100,11 +92,7 @@ a.navbar-brand {
     opacity: 0.8;
 
 }
-.search input.form-control:::-ms-input-placeholder {
-    color: #000;
-    opacity: 0.8;
 
-}
 form.navbar-form {
     margin: 0;
 }
@@ -922,9 +910,7 @@ section.row-color.white {
   .search input.form-control::-moz-placeholder {
       font-size: 14px;
   }
-  .search input.form-control:::-ms-input-placeholder {
-      font-size: 14px;
-  }
+
   footer .row {
     margin: 10px 0;
   }
@@ -1046,9 +1032,7 @@ section.row-color.white {
   .search input.form-control::-moz-placeholder {
       font-size: 11px;
   }
-  .search input.form-control:::-ms-input-placeholder {
-      font-size: 11px;
-  }
+
   .carousel-indicators {
     bottom: -30px;
   }
@@ -1091,9 +1075,7 @@ section.row-color.white {
   .search input.form-control::-moz-placeholder {
       font-size: 12px;
   }
-  .search input.form-control:::-ms-input-placeholder {
-      font-size: 12px;
-  }
+
   section.social-media {
     background-size: cover;
   }
@@ -1183,9 +1165,7 @@ section.row-color.white {
   .search input.form-control::-moz-placeholder {
       font-size: 13px;
   }
-  .search input.form-control::-ms-input-placeholder {
-      font-size: 13px;
-  }
+
   .panel-heading img.icon-category {
     height: 2em;
   }

@@ -12,5 +12,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cover extends Model
 {
+    public function category()
+    {
+        return $this->belongsTo('App\Model\Category');
+    }
 
 }

@@ -90,6 +90,10 @@
                                         map: map
                                     });
                                 }
+                                $(document).ready(function() {
+                                    initMap();
+//your code
+                                });
 
                             </script>
 
@@ -106,7 +110,9 @@
                         <li class="list-group-item"> <button class="btn btn-default">Interested to Make Offer</button></li>
                         <li class="list-group-item"><button class="btn btn-default">Save to Favorites</button></li>
                         <li class="list-group-item"><button class="btn btn-default">Send Message</button></li>
-                        <li class="list-group-item"><button class="btn btn-primary">Buy Now</button></li>
+                        @if(isset($product['shipping'])&&$product['shipping']===1)
+                        <li class="list-group-item"><a class="btn btn-primary" href="/user/manage/shipping/{{$product['source_id']}}">Buy Now</a></li>
+                            @endif
                     </ul>
                 </div>
 

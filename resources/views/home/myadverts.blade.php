@@ -20,16 +20,32 @@
                 <a class="nav-link " href="#">Manage My ads</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Messages</a>
+                <a class="nav-link" href="/user/manage/orders">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/user/manage/buying">Buying</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/user/manage/messages">Messages</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/user/manage/favorites">Favorites</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">My Details</a>
+                <a class="nav-link" href="/user/manage/details">My Details</a>
             </li>
         </ul>
-        @foreach($products as $product)
+        <div class="row">
+            <div class="col-sm-10">
+
+            </div>
+            <div class="col-sm-2">
+                <a class="btn btn-primary" href="/user/ads/post">Post an Ad</a>
+
+            </div>
+        </div>
+
+    @foreach($products as $product)
             <div class="item listing">
                 <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}">
                     <div class="listing-img">
@@ -60,7 +76,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="glyphicon glyphicon-remove delete-icon" href="/user/advert/delete/{{$product['source_id']}}"></a>
+                <a class="glyphicon glyphicon-trash delete-icon" href="/user/advert/delete/{{$product['source_id']}}"></a>
             </div>
 
         @endforeach

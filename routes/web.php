@@ -12,6 +12,8 @@
 */
 Route::get('/dummy', 'MarketController@dummy');
 Route::get('/pull', 'MarketController@pull');
+Route::get('/ufields', 'MarketController@ufields');
+
 Route::get('/update', 'MarketController@update');
 Route::get('/insert', 'MarketController@insert');
 Route::get('/user/ads/post', 'HomeController@post');
@@ -20,6 +22,17 @@ Route::get('/user/manage/ads', 'HomeController@myads');
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::post('/user/cards/add', 'HomeController@addcard');
 Route::get('/user/manage/order', 'HomeController@order');
+Route::get('/user/address/change/{id}', 'HomeController@change');
+Route::get('/user/manage/order/shipping/update/{id}', 'HomeController@update_shipping');
+
+Route::get('/user/manage/orders', 'HomeController@orders');
+Route::get('/user/manage/buying', 'HomeController@buying');
+Route::get('/user/manage/messages', 'HomeController@messages');
+Route::get('/user/manage/details', 'HomeController@details');
+
+Route::get('/user/manage/shipping/{id}', 'HomeController@shipping');
+
+
 Route::post('/user/payment/stripe', 'HomeController@stripe');
 Route::get('/user/payment/paypal', 'HomeController@paypal');
 

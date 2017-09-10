@@ -15,4 +15,13 @@ class Order extends Model
     public function items(){
         return $this->hasMany('App\Model\OrderItem');
     }
+    public function address(){
+        return $this->belongsTo('App\Model\Address');
+    }
+    public function buyer(){
+        return $this->belongsTo('App\User');
+    }
+    public function seller(){
+        return $this->belongsTo('App\User');
+    }
 }

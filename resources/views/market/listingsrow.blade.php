@@ -122,12 +122,32 @@
                         <div class="listing-img">
                             <div class="main-img">
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
+
+                              @if(isset($product['featured'])&&$product['featured']===1)
+                                <span class="ribbon-featured">
+<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+</span>
+                                @endif
                                 <div class="listing-meta">
                                 </div>
                             </div>
                         </div>
                         <div class="items-box-body listing-content">
-                            <h4 class="items-box-name font-2">{{$product['title']}}</h4>
+
+                            <div class="row top-row">
+                                <div class="col-sm-11">
+                                    <h4 class="items-box-name font-2">{{$product['title']}}</h4>
+                                </div>
+                                <div class="col-sm-1">
+                                    @if (in_array($product['source_id'],$sids))
+                                        <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                                    @else
+                                        <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
+
+                                    @endif
+                                </div>
+                            </div>
+
                             <div class="listing-location">
                                 <span class="truncate-line">
                                     {{$product['location_name']}}
@@ -139,20 +159,30 @@
                             <ul class="listing-attributes inline-list">
                                 
                             </ul>
+                            @if(isset($product['urgent'])&&$product['urgent']===1)
+                            <div class="listing-posted-date txt-sub">
+<span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
+<span class="hide-visually">This ad is </span>Urgent
+</span>
+                            </div>
+                            @endif
                             <div class="items-box-num clearfix">
                                 @if($product['meta']['price']>=0)
                                     <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                     </div>
                                 @endif
                             </div>
-                        </div>
-                    </a>
-                        @if (in_array($product['source_id'],$sids))
-                            <span class="glyphicon glyphicon-thumbs-up favroite-icon favroite-icon-gold" data-id="{{$product['source_id']}}"></span>
-                        @else
-                            <span class="glyphicon glyphicon-thumbs-up favroite-icon" data-id="{{$product['source_id']}}"></span>
 
-                            @endif
+                        </div>
+                         <div class="row">
+                             <div class="col-sm-10 col-md-10"></div>
+                             <div class="col-sm-2 col-md-2">
+                                 <span class="posted-text">{{$product['posted']}}</span>
+                             </div>
+                         </div>
+                    </a>
+
+
                     </div>
                 
             @endforeach

@@ -155,9 +155,10 @@ class HomeController extends BaseController
         }else{
             $body['images']=[];
         }
-        $body['meta']['price']=$request->price*100;
+
+        $body['meta']['price']=(int)($request->price*100);
         foreach ($fields as $field){
-            if($request->has($field->slug)){
+            if($field->slug!=='price'&&$request->has($field->slug)){
                 $body['meta'][$field->slug] = $request->get($field->slug);
             }
         }
@@ -238,13 +239,46 @@ class HomeController extends BaseController
         $stripe_id = $user->stripe_id;
         $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
             'limit' => 10, 'object' => 'card'));
+        $customer = \Stripe\Customer::retrieve($stripe_id);
+        $card = $customer->sources->retrieve($customer->default_source);
         $gateway = new \Braintree\Gateway(array(
             'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
         ));
         $clientToken = $gateway->clientToken()->generate();
         $order_id  = $request->session()->get('order_id');
 
-        return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards['data'],'token' => $clientToken]);
+        return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards['data'],'token' => $clientToken,'def'=>$card]);
+    }
+    public function shipping(Request $request,$id){
+        $user = Auth::user();
+        /*
+        $balance = \Stripe\Balance::retrieve(
+            array("stripe_account" => $user->stripe_account)
+        );
+        */
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+        ));
+        $clientToken = $gateway->clientToken()->generate();
+        $stripe_id = $user->stripe_id;
+        $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+            'limit' => 10, 'object' => 'card'));
+        $customer = \Stripe\Customer::retrieve($stripe_id);
+        $card = $customer->sources->retrieve($customer->default_source);
+
+       // $order_id  = $request->session()->get('order_id');
+        $advert = Advert::find($id);
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic
+        ];
+        $response = $this->client->get($params);
+
+        $request->session()->put('id', $response['_source']['source_id']);
+
+        return view('home.shipping',['addresses'=>$user->addresses,'user'=>$user,'cards'=>$cards['data'],'token' => $clientToken,'def'=>$card,'product'=>$response['_source'],'order'=>Order::find(15)]);
     }
     public function favorites(Request $request){
             $user = Auth::user();
@@ -373,19 +407,28 @@ class HomeController extends BaseController
             return ['msg'=>'Catagory not found'];
         }
         $fields = $category->fields;
+        $hasprice = false;
         foreach ($fields as $field){
+            if($field->slug==='price'){
+                $hasprice=true;
+            }
             if($field->type==='list'){
                 $field->values = $field->values;
             }
         }
-        return view('home.extras',['fields'=>$fields]);
+        return view('home.extras',['fields'=>$fields,'hasprice'=>$hasprice]);
     }
     public  function prices(Request $request,$id){
         $category = Category::find($id);
+        $forsale = Category::find(200000000);
         if($category===null){
             return ['msg'=>'Catagory not found'];
         }
+        if($id>=$forsale->id&&$id<=$forsale->ends)
         $extras = ExtraType::all();
+        else{
+            $extras = ExtraType::where('id','<',4)->get();
+        }
         foreach ($extras as $extra){
             if($extra->type==='single'){
                 $extra->price = $extra->price(0,1,2);
@@ -431,13 +474,50 @@ class HomeController extends BaseController
     }
     public function stripe(Request $request){
         $user = Auth::user();
-        $order_id  = $request->session()->get('order_id');
-        $order = Order::find($order_id);
         $stripe_id = $user->stripe_id;
         $card = $request->card;
-        $amount = $order->amount * 100;
+        if ($request->session()->has('id')) {
+            //
+            $id  = $request->session()->get('id');
+            $advert = Advert::find($id);
+
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic
+            ];
+            $response = $this->client->get($params);
+            $amount = (int)($response['_source']['meta']['price']);
+            try {
+                $charge = \Stripe\Charge::create(array(
+                    "amount" => $amount,
+                    "currency" => "gbp",
+                    "customer" => $stripe_id,
+                    "source" => $card, // obtained with Stripe.js
+                    "description" => 'Shipping Item '
+                ));
+                $request->session()->forget('id');
+                $order = new Order;
+                $order->advert_id = $advert->id;
+                $order->buyer_id = $user->id;
+                $order->seller_id = $advert->user_id;
+                $order->amount = $amount;
+                $order->address_id = $user->default_address;
+                $order->type='shipping';
+                $order->save();
+
+            }
+            catch (\Exception $e) {
+            }
+            return redirect('/user/manage/ads');
+        }
+
+        $order_id  = $request->session()->get('order_id');
+        $order = Order::find($order_id);
+
+        $amount = (int)($order->amount * 100);
         $description = 'Payment towards to Order id '.$order_id;
-        try {
+       try {
             $charge = \Stripe\Charge::create(array(
                 "amount" => $amount,
                 "currency" => "gbp",
@@ -447,8 +527,16 @@ class HomeController extends BaseController
             ));
             $advert = Advert::find($order->advert_id);
             foreach ($order->items as $item){
-                $body[$order->slug]=1;
+                $body[$item->slug]=1;
             }
+           $body['featured_count'] = 0;
+           $body['urgent_count'] = 0;
+           $body['spotlight_count'] = 0;
+           $milliseconds = round(microtime(true) * 1000);
+
+           $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+           $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+           $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
@@ -460,9 +548,12 @@ class HomeController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
-            return redirect('/user/manage/ads');
+           $request->session()->forget('order_id');
 
-        } catch (\Exception $e) {
+           return redirect('/user/manage/ads');
+
+        }
+        catch (\Exception $e) {
             return [
                 'status' => 'failed',
                 'error' => $e,
@@ -471,16 +562,91 @@ class HomeController extends BaseController
         }
 
     }
+    public function orders(Request $request){
+        $user = Auth::user();
+        $orders = $user->orders;
+        foreach ($orders as $order){
+            $advert = Advert::find($order->advert_id);
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic
+            ];
+            $response = $this->client->get($params);
+            $order->product = $response['_source'];
+            $products[]=$order;
+        }
+        return view('home.orders',['orders'=>$products]);
+    }
+    public function buying(Request $request){
+        $user = Auth::user();
+        $orders = $user->buying;
+        foreach ($orders as $order){
+            $advert = Advert::find($order->advert_id);
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic
+            ];
+            $response = $this->client->get($params);
+            $order->product = $response['_source'];
+            $products[]=$order;
+        }
+        return view('home.buying',['orders'=>$products]);
+    }
+    public function messages(Request $request){
+
+        return view('home.messages',[]);
+    }
+    public function details(Request $request){
+
+        return view('home.details',['user'=>Auth::user()]);
+    }
     public function paypal(Request $request){
         $user = Auth::user();
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+        ));
+        if ($request->session()->has('id')) {
+            $id  = $request->session()->get('id');
+            $advert = Advert::find($id);
 
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic
+            ];
+            $response = $this->client->get($params);
+            $amount = ($response['_source']['meta']['price']/100);
+            try{
+                $result = $gateway->transaction()->sale([
+                    "amount" => $amount,
+                    'paymentMethodNonce' => $request->nonce,
+                    'options' => [
+                        'submitForSettlement' => True
+                    ]
+                ]);
+                $request->session()->forget('id');
+                $order = new Order;
+                $order->advert_id = $advert->id;
+                $order->buyer_id = $user->id;
+                $order->seller_id = $advert->user_id;
+                $order->amount = $amount*100;
+                $order->address_id = $user->default_address;
+                $order->type='shipping';
+                $order->save();
+
+            }
+            catch (Exception $e) {
+
+            }
+
+        }
         $order_id  = $request->session()->get('order_id');
         $order = Order::find($order_id);
 
         $amount = $order->amount;
-        $gateway = new \Braintree\Gateway(array(
-            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
-        ));
+
         try {
             $result = $gateway->transaction()->sale([
                 "amount" => $amount,
@@ -493,6 +659,14 @@ class HomeController extends BaseController
             foreach ($order->items as $item){
                 $body[$item->slug]=1;
             }
+            $body['featured_count'] = 0;
+            $body['urgent_count'] = 0;
+            $body['spotlight_count'] = 0;
+            $milliseconds = round(microtime(true) * 1000);
+
+            $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+            $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+            $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
@@ -504,11 +678,28 @@ class HomeController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
+            $request->session()->forget('order_id');
+
             return redirect('/user/manage/ads');
 
         } catch (Exception $e) {
 
             return ['result' => ['msg' => 'failed']];
         }
+    }
+    public  function  change(Request $request,$id){
+        $user = Auth::user();
+        $user->default_address = $id;
+        $user->save();
+
+        return ['msg'=>'Done'];
+    }
+    public function update_shipping(Request $request,$id){
+        $order = Order::find($id);
+        $order->tracking = $request->tracking;
+        $order->save();
+
+        return ['msg'=>'Done'];
+
     }
 }

@@ -25,20 +25,23 @@
                     </table>
                 </div>
                 <div class="col-sm-4">
+                    <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
                     <h4>Pay by Card</h4>
                     <form action="/user/payment/stripe" method="post">
                         {{ csrf_field() }}
-                    <ul class="list-group">
+                    <ul class="list-group" >
                         @foreach($cards as $card)
                             <li class="list-group-item">
                                 <div class="radio">
-                                    <label><input type="radio" name="card" value="{{$card['id']}}" required>{{$card['brand']}}--{{$card['last4']}}</label>
+                                    <label><input type="radio" name="card" value="{{$card['id']}}" required @if($card['id']===$def['id']) checked @endif>{{$card['brand']}}--{{$card['last4']}}</label>
                                 </div>
                             </li>
                         @endforeach
                     </ul>
                         <button type="submit" class="btn btn-primary">Make Payment</button>
+
                     </form>
+                    </div>
                     <button class="btn btn-default add-card">Add New Card</button>
                     <div class="add-card-div" style="display: none">
                     <form action="/user/cards/add" method="post" id="payment-form">

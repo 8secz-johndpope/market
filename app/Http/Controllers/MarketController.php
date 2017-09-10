@@ -46,6 +46,14 @@ class MarketController extends BaseController
         //$products=array_rand($products,50);
         return View('user.profile',['catagories'=>$this->categories,'products'=>$products]);
     }
+    public  function ufields(Request $request){
+        $categories = Category::where('id','>=',0)->where('id','<=',899999999)->get();
+        foreach ($categories as $category){
+            $category->fields()->syncWithoutDetaching([10]);
+        }
+
+        return 'done';
+    }
     public  function  train(Request $request){
         $term = $request->q;
         $result = file_get_contents("https://www.gumtree.com/ajax/suggestions/prefix?input=".$term);
@@ -248,12 +256,14 @@ class MarketController extends BaseController
                     'size' => 10000,
                     'query' => [
                         'term' => [
-                            "category" => $id
+                            "spotlight" => 1
                         ]
                     ]
                 ]
             ];
-            $response = $this->client->search($params);
+        $milliseconds = round(microtime(true) * 1000);
+        $days_7 = $milliseconds + 7*24*3600*1000;
+        $response = $this->client->search($params);
             $products = array_map(function ($a) {
                 $ans = $a['_source'];
                 $ans['id'] = $a['_id'];
@@ -266,7 +276,7 @@ class MarketController extends BaseController
                     'id' => $product['id'],
                     'body' => [
                         'doc' => [
-                            'category' => $replace
+                            'spotlight_expires' => $days_7
                         ]
                     ]
                 ];
@@ -554,30 +564,46 @@ class MarketController extends BaseController
             'body' => [
                 'from' => 0,
                 'size'=> 24,
-                'query' => [
-                    'range' => [
-                        'category' => [
-                            'gte'=>$min,
-                            'lte'=>$max
-                        ]
-                    ]
-                ],
+                'query' =>
+                    ['bool'=>[
+
+                        'should'=>[['term'=>['spotlight'=>1]]],
+                        "minimum_should_match" => -2,
+      "boost" => 1.0
+
+                    ]],
                 "sort"=> [
                     [
                         "created_at"=> ["order"=> "desc"]
-                    ]
-                ]
+                    ]]
+
 
             ]
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $spl1 = array_slice($products, 0, 6);
-        $spl2 = array_slice($products, 6, 6);
-        $spl3 = array_slice($products, 12, 6);
-        $spl4 = array_slice($products, 18, 6);
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'from' => 0,
+                'size'=> 24,
+                'query' => ['match_all'=>(object)[]],
+                "sort"=> [
+                    [
+                        "created_at"=> ["order"=> "desc"]
+                    ]]
+
+
+            ]
+        ];
+        $response = $this->client->search($params);
+       $alls = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $products=array_merge($products,$alls);
+
         return view('home',['base' => $all, 'spotlight' => $products,'input'=>[],'lat'=>0.00,'lng'=>0.00]);
-        return redirect('all');
+       // return redirect('all');
     }
     public function leaves(Request $request){
         foreach ($this->categories as $cat=>$val){
@@ -848,7 +874,6 @@ class MarketController extends BaseController
                     ]
                 ],
                 "sort"=> $sort
-
             ]
         ];
         if(count($aggs)>0){
@@ -859,9 +884,25 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
         if(isset($response['aggregations']))
             foreach ($response['aggregations'] as $a=>$b){
-                $aggretations[$a]=$b;
-            }
-        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+                $aggretations[$a]=$b;}
+        $milliseconds = round(microtime(true) * 1000);
+        $products = array_map(function ($a) use ($milliseconds) {
+
+           $diff = $milliseconds-$a['_source']['created_at'];
+           if($diff<60*1000){
+               $a['_source']['posted'] = 'Just Now';
+           }
+           else if($diff<60*60*1000){
+               $a['_source']['posted'] = (int)($diff/60000).'m ago';
+           }
+           else if($diff<24*60*60*1000){
+               $a['_source']['posted'] = (int)($diff/(60*60000)).'h ago';
+           }else{
+               $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
+           }
+            return $a['_source'];
+
+            },$response['hits']['hits']);
         $total= $response['hits']['total'];
         $max = (int)($total/$pagesize);
         $max++;
@@ -978,6 +1019,105 @@ class MarketController extends BaseController
         $base=Category::where('parent_id',0)->get();
         $sorts = Field::where('slug','sort')->first()->filters;
         $prices = Field::where('slug','price')->first()->filters;
+
+        $fmusts = $musts;
+        $fmusts['featured'] = ['term'=>['featured'=>1]];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>2,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($fmusts),
+                        'filter' => $filte
+                    ]
+                ],
+                "sort"=> [["featured_count"=> ["order"=> "asc"]]]
+            ]
+        ];
+        $response = $this->client->search($params);
+
+        $featured = array_map(function ($a) use ($milliseconds){
+            $diff = $milliseconds-$a['_source']['created_at'];
+            if($diff<60*1000){
+                $a['_source']['posted'] = 'Just Now';
+            }
+            else if($diff<60*60*1000){
+                $a['_source']['posted'] = (int)($diff/60000).'m ago';
+            }
+            else if($diff<24*60*60*1000){
+                $a['_source']['posted'] = (int)($diff/(60*60000)).'h ago';
+            }else{
+                $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
+            }
+            $a['_source']['_id'] = $a['_id'];
+            return $a['_source'];
+            },$response['hits']['hits']);
+
+        foreach ($featured as $fet){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $fet['_id'],
+                'body' => [
+                    'script' => 'ctx._source.featured_count += 1'
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+              $this->client->update($params);
+        }
+
+
+        $fmusts = $musts;
+        $fmusts['urgent'] = ['term'=>['urgent'=>1]];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>1,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($fmusts),
+                        'filter' => $filte
+                    ]
+                ],
+                "sort"=> [["urgent_count"=> ["order"=> "asc"]]]
+            ]
+        ];
+        $response = $this->client->search($params);
+
+        $urgent = array_map(function ($a) use ($milliseconds) {
+            $diff = $milliseconds-$a['_source']['created_at'];
+            if($diff<60*1000){
+                $a['_source']['posted'] = 'Just Now';
+            }
+            else if($diff<60*60*1000){
+                $a['_source']['posted'] = (int)($diff/60000).'m ago';
+            }
+            else if($diff<24*60*60*1000){
+                $a['_source']['posted'] = (int)($diff/(60*60000)).'h ago';
+            }else{
+                $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
+            }
+            $a['_source']['_id'] = $a['_id'];
+            return $a['_source']; },$response['hits']['hits']);
+        foreach ($urgent as $fet){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $fet['_id'],
+                'body' => [
+                    'script' => 'ctx._source.urgent_count += 1'
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+            $this->client->update($params);
+        }
+        $products = array_merge($featured,$urgent,$products);
+
         $distances = [1=>'Default',2=>'+ 1 miles',3=>'+ 3 miles',5=>'+ 5 miles',10=>'+ 10 miles',15=>'+ 15 miles',30=>'+ 30 miles',50=>'+ 50 miles',75=>'+ 75 miles',100=>'+ 100 miles',1000=>'Nationwide'];
         return ['pageurl'=>$pageurl,'sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'products'=>$products,'breads'=>$breads,'last'=>$any,'base'=>$base,'chs'=>$chs,'filters'=>$filters,'categories'=>$categories,'parents'=>$parents];
     }
