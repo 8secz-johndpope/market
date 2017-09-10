@@ -15,6 +15,7 @@ use App\Model\Field;
 use App\Model\FieldValue;
 use App\Model\Filter;
 use App\Model\Location;
+use App\Model\Price;
 use App\Model\Relation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -97,10 +98,9 @@ class MarketController extends BaseController
     }
     public function locs(Request $request){
         $locations = Location::all();
+        $price = Price::find(1);
         foreach ($locations as $location) {
-            $location->title = ucwords($location->title);
-            $location->save();
-            echo $location->slug . '<br>';
+            $location->prices()->save($price);
         }
     }
     public function loc(Request $request){

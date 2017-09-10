@@ -20,4 +20,7 @@ class Location extends  Model
     public function parent(){
         return $this->belongsTo('App\Model\Location');
     }
+    public function prices(){
+        return $this->belongsToMany('App\Model\Price');
+    }
 }
