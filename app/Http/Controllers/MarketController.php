@@ -125,10 +125,14 @@ class MarketController extends BaseController
         $locations = Location::all();
         foreach ($locations as $location){
             if(count($location->children)>$max)
+            {
                 $max= count($location->children);
+                $maxloc = $location;
+            }
+
 
         }
-        echo $max;
+        echo $maxloc->slug;
 
     }
     public function suggest(Request $request)
