@@ -1047,6 +1047,7 @@ class MarketController extends BaseController
             $lparents[]=$rec;
         }
         $parents=array_reverse($parents);
+        $lparents=array_reverse($lparents);
         unset($aggretations['category']);
         foreach ($aggretations as $key => $aggretation) {
             $field = Field::where('slug', $key)->first();
