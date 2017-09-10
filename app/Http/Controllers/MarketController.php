@@ -345,24 +345,26 @@ class MarketController extends BaseController
                 return $ans;
             }, $response['hits']['hits']);
             foreach ($products as $product) {
-                $location = $product['location'];
-                $parts = explode(',',$location);
+                if(isset($product['location'])) {
+                    $location = $product['location'];
+                    $parts = explode(',', $location);
 
-                $params = [
-                    'index' => 'adverts',
-                    'type' => 'advert',
-                    'id' => $product['id'],
-                    'body' => [
-                        'doc' => [
-                            'lat' => (float)$parts[0],
-                            'lng' => (float)$parts[1]
+                    $params = [
+                        'index' => 'adverts',
+                        'type' => 'advert',
+                        'id' => $product['id'],
+                        'body' => [
+                            'doc' => [
+                                'lat' => (float)$parts[0],
+                                'lng' => (float)$parts[1]
+                            ]
                         ]
-                    ]
-                ];
+                    ];
 
 // Update doc at /my_index/my_type/my_id
-                $response = $this->client->update($params);
-                print_r($response);
+                    $response = $this->client->update($params);
+                    print_r($response);
+                }
 
             }
             return ['a'=>'b'];
