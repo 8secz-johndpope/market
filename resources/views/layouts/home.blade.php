@@ -13,14 +13,11 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="{{ asset('/css/base.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/extra.css') }}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
-    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
     <style>
         .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
         .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
@@ -161,12 +158,8 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                 <li><a href="/user/manage/ads">Manage My Ads</a> </li>
-                                <li><a href="/user/manage/orders">Orders</a> </li>
-                                <li><a href="/user/manage/buying">Buying</a> </li>
-                                <li><a href="/user/manage/favorites">Favorites</a> </li>
-                                <li><a href="/user/manage/details">My Details</a> </li>
                                 <li><a href="/user/ads/post">Post an Ad</a> </li>
-                                   <li> <a href="{{ route('logout') }}"
+                                    <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         Logout
@@ -174,7 +167,7 @@
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
-                                    </form></li>
+                                    </form>
                                 </li>
                             </ul>
                         </li>
@@ -222,7 +215,7 @@
                 <img id="footer_top_logo" class="img-responsive" title="" alt="" src="/css/sumra-text.png">
             </div>
 
-            <div class="col-md-3 col-xs-5 col-md-offset-2">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
                 <div class="col">
                     <h4>Company</h4>
                     <ul>
@@ -233,7 +226,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-5 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Experience</h4>
                     <ul>
@@ -243,7 +236,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-5 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Help</h4>
                     <ul>
@@ -255,7 +248,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-5 col-md-offset-2">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
                 <div class="col">
                     <h4>Commitment</h4>
                     <ul>
@@ -265,7 +258,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-5 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Partnerships</h4>
                     <ul>
@@ -275,7 +268,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-5 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Press & Opportunities</h4>
                     <ul>
@@ -360,13 +353,10 @@
 
 </script>
 <script>
-    $(".favroite-icon").click(function (e) {
-        e.preventDefault();
-
+    $(".favroite-icon").click(function () {
         var id = $(this).data('id');
-        if($(this).hasClass('glyphicon-heart')){
-            $(this).addClass('glyphicon-heart-empty');
-            $(this).removeClass('glyphicon-heart');
+        if($(this).hasClass('favroite-icon-gold')){
+            $(this).removeClass('favroite-icon-gold');
 
             axios.post('/user/list/unfavorite', {
                 id:id
@@ -379,8 +369,8 @@
                 });
 
         }else{
-            $(this).addClass('glyphicon-heart');
-            $(this).removeClass('glyphicon-heart-empty');
+            $(this).addClass('favroite-icon-gold');
+
             axios.post('/user/list/favorite', {
                 id:id
             })

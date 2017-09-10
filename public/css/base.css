@@ -983,6 +983,9 @@ section.row-color.white {
   a.tabs-simple-tab.pop-se {
     text-align: center;
   }
+  .col{
+    height: 140px;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px){
