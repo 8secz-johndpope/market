@@ -96,9 +96,19 @@ class MarketController extends BaseController
 
     }
     public function loc(Request $request){
-        $text = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=england&key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0");
-        $json = json_decode($text,true);
-        print_r($json['results'][0]['geometry']['bounds']);
+        $locations = Location::all();
+        foreach ($locations as $location){
+            $text = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=england&key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0");
+            $json = json_decode($text,true);
+            print_r($json['results'][0]['geometry']['bounds']);
+            $location->min_lat = $json['results'][0]['geometry']['bounds']['southwest']['lat'];
+            $location->min_lng = $json['results'][0]['geometry']['bounds']['southwest']['lng'];
+            $location->max_lat = $json['results'][0]['geometry']['bounds']['northeast']['lat'];
+            $location->max_lng = $json['results'][0]['geometry']['bounds']['northeast']['lng'];
+            $location->save();
+        }
+
+
         /*
         foreach(file('/home/anil/market/public/loc_rel') as $line) {
             // loop with $line for each line of yourfile.txt
