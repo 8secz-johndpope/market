@@ -96,6 +96,9 @@ class MarketController extends BaseController
 
     }
     public function loc(Request $request){
+        $text = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=england&key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0");
+        $json = json_decode($text,true);
+        print_r($json['results'][0]['geometry']['bounds']);
         /*
         foreach(file('/home/anil/market/public/loc_rel') as $line) {
             // loop with $line for each line of yourfile.txt
@@ -121,7 +124,7 @@ class MarketController extends BaseController
             echo  $line.'<br>';
         }
         */
-
+/*
         $locations = Location::where('id','>',100000)->whereRaw('id%1000=0')->whereRaw('id%1000000!=0')->whereRaw('id%1000000000!=0')->get();
         foreach ($locations as $location){
             $children = $location->children;
@@ -134,7 +137,7 @@ class MarketController extends BaseController
                 $i++;
             }
         }
-
+*/
     }
     public function suggest(Request $request)
     {
