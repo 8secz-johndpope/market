@@ -25,10 +25,7 @@ class ExtraType extends Model
                 $sloc = $location;
             }
         }
-        $category= Category::find($category);
-        foreach ($sloc->prices as $price){
 
-        }
         $current = Category::find($category);
         while($current!==null){
             $sprice = $sloc->prices()->where('category_id',$current->id)->first();
@@ -58,10 +55,7 @@ class ExtraType extends Model
                 $sloc = $location;
             }
         }
-        $category= Category::find($category);
-        foreach ($sloc->prices as $price){
-
-        }
+       
         $current = Category::find($category);
         while($current!==null){
             $sprice = $sloc->prices()->where('category_id',$current->id)->first();
