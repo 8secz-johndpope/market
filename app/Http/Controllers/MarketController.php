@@ -330,14 +330,14 @@ class MarketController extends BaseController
                 'body' => [
                     'size' => 10000,
                     'query' => [
-                        'term' => [
-                            "spotlight" => 1
+                        'bool' => [
+                            "must_not" => ['exists'=>['field'=>'lat']]
                         ]
                     ]
                 ]
             ];
-        $milliseconds = round(microtime(true) * 1000);
-        $days_7 = $milliseconds + 7*24*3600*1000;
+      //  $milliseconds = round(microtime(true) * 1000);
+      //  $days_7 = $milliseconds + 7*24*3600*1000;
         $response = $this->client->search($params);
             $products = array_map(function ($a) {
                 $ans = $a['_source'];
@@ -345,13 +345,18 @@ class MarketController extends BaseController
                 return $ans;
             }, $response['hits']['hits']);
             foreach ($products as $product) {
+                $location = $product['location'];
+                $parts = explode(',',$location);
+                print_r($parts);
+                exit;
+                /*
                 $params = [
                     'index' => 'adverts',
                     'type' => 'advert',
                     'id' => $product['id'],
                     'body' => [
                         'doc' => [
-                            'spotlight_expires' => $days_7
+                            'lat' => $days_7
                         ]
                     ]
                 ];
@@ -359,7 +364,7 @@ class MarketController extends BaseController
 // Update doc at /my_index/my_type/my_id
                 $response = $this->client->update($params);
                 print_r($response);
-
+*/
             }
             return ['a'=>'b'];
         }
