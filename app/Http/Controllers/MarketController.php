@@ -104,6 +104,7 @@ class MarketController extends BaseController
         }
     }
     public function loc(Request $request){
+        /*
         $locations = Location::where('max_lng',0)->get();
         foreach ($locations as $location){
             $text = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=$location->slug+UK&key=AIzaSyA3U46iw-NKjDuNR2XjEeQJFB3sXfnKuo0");
@@ -122,8 +123,8 @@ class MarketController extends BaseController
             }
         }
 
-
-        /*
+*/
+/*
         foreach(file('/home/anil/market/public/loc_rel') as $line) {
             // loop with $line for each line of yourfile.txt
             $parts = explode(',',trim($line));
@@ -147,21 +148,21 @@ class MarketController extends BaseController
 
             echo  $line.'<br>';
         }
-        */
-/*
-        $locations = Location::where('id','>',100000)->whereRaw('id%1000=0')->whereRaw('id%1000000!=0')->whereRaw('id%1000000000!=0')->get();
+*/
+
+        $locations = Location::where('id%1000000000000=0')->get();//where('id','>',100000)->whereRaw('id%1000=0')->whereRaw('id%1000000!=0')->whereRaw('id%1000000000!=0')->get();
         foreach ($locations as $location){
             $children = $location->children;
             $i = 1;
             foreach ($children as $child){
-                $newid = $location->id+$i;
+                $newid = $location->id+$i*1000000000;
                 Location::where('parent_id',$child->id)->update(['parent_id'=>$newid]);
                 $child->id = $newid;
                 $child->save();
                 $i++;
             }
         }
-*/
+
     }
     public function suggest(Request $request)
     {
