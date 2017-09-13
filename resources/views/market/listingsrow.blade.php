@@ -149,7 +149,7 @@
         </div>
 
                 <div class="col-sm-10">
-                    <div class="row top-row">
+                    <div class="row">
                         <div class="col-sm-11 col-xs-10 col-md-11 col-lg-11 nopadding">
                             <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
 
