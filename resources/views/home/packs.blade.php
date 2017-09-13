@@ -18,7 +18,7 @@
 
             <div class="well">
                 <table class="table">
-                    <thead><th>Standard</th><th>Urgent</th><th>Spotlight</th><th>Featured(3 days)</th><th>Featured(7 days)</th><th>Featured(14 days)</th><th>Bump</th><th>Shipping(2kg)</th><th>Shipping(7kg)</th><th>Shipping(10kg)</th><th>Location</th><th>Category</th></thead>
+                    <thead><th>Standard</th><th>Urgent</th><th>Spotlight</th><th>Featured(3 days)</th><th>Featured(7 days)</th><th>Featured(14 days)</th><th>Bump</th><th>Location</th><th>Category</th></thead>
                 @foreach($prices as $price)
 
 <tr>
@@ -29,9 +29,6 @@
     <td>{{$price->featured}}</td>
     <td>{{$price->featured_14}}</td>
     <td>{{$price->bump}}</td>
-    <td>{{$price->shipping_1}}</td>
-    <td>{{$price->shipping_2}}</td>
-    <td>{{$price->shipping_3}}</td>
     <td>{{$price->location->title}}</td>
     <td>{{$price->category->title}}</td>
 
