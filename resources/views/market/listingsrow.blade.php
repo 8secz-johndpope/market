@@ -151,7 +151,7 @@
 
                             <div class="row top-row">
                                 <div class="col-sm-11 col-xs-10 col-md-10 col-lg-10 nopadding">
-                                    <h4>{{$product['title']}}</h4>
+                                    <h4 class="product-title">{{$product['title']}}</h4>
                                 </div>
                                 <div class="col-sm-1 col-xs-2 col-md-2 col-lg-2">
                                     @if (in_array($product['source_id'],$sids))
