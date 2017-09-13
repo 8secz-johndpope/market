@@ -162,6 +162,14 @@
                 <div class="col-sm-9  col-xs-7 col-md-10 col-lg-10">
                     <div class="row">
                         <div class="col-sm-10 col-xs-10 col-md-10 col-lg-10 nopadding">
+                            <div class="favor">
+                                @if (in_array($product['source_id'],$sids))
+                                    <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                                @else
+                                    <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
+
+                                @endif
+                            </div>
                             <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
 
                             <span class="listing-location">
@@ -176,14 +184,7 @@
                             @endif
                             <span class="posted-text">{{$product['posted']}}</span>
                         </div>
-                        <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1 nopadding nomargin custom-width">
-                            @if (in_array($product['source_id'],$sids))
-                                <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
-                            @else
-                                <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
 
-                            @endif
-                        </div>
                         <div class="col-sm-12">
                             @if(isset($product['urgent'])&&$product['urgent']===1)
                                 <div class="listing-posted-date txt-sub">
