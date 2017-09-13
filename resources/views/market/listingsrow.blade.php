@@ -147,7 +147,7 @@
                     <div class="listing-meta txt-sub">
                         <ul class="inline-list txt-center">
                             <li>
-                                <span class="icn-camera iconu-xs" aria-hidden="true"></span> 8<span class="hide-visually"> images</span>
+                                <span class="icn-camera iconu-xs" aria-hidden="true"><img src="/css/iconimage.png"></span> 8<span class="hide-visually"> images</span>
                             </li>
                         </ul>
                     </div>
