@@ -8,6 +8,7 @@
 
 namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 
 class ExtraType extends Model
@@ -34,12 +35,18 @@ class ExtraType extends Model
             }else{
                 break;
             }
-
         }
         $prices = $this->hasMany('App\Model\ExtraPrice')->get();
         $all = array();
         foreach ($prices as $price){
-            $price->price = $sprice->{$price->key};
+            $user = Auth::user();
+            $packs = $user->packs()->where('type',$price->key)->get();
+            if(count($packs)>0){
+                $price->price = 0;
+            }else{
+                $price->price = $sprice->{$price->key};
+            }
+
             $all[] = $price;
         }
         return $all;
@@ -67,7 +74,14 @@ class ExtraType extends Model
 
         }
         $price = $this->hasMany('App\Model\ExtraPrice')->first();
-        $price->price = $sprice->{$price->key};
+
+        $user = Auth::user();
+        $packs = $user->packs()->where('type',$price->key)->get();
+        if(count($packs)>0){
+            $price->price = 0;
+        }else{
+            $price->price = $sprice->{$price->key};
+        }
 
         return $price;
     }
