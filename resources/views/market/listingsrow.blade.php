@@ -153,7 +153,7 @@
                                 <div class="col-sm-11 col-xs-10 col-md-11 col-lg-11 nopadding">
                                     <h4 class="product-title">{{$product['title']}}</h4>
                                 </div>
-                                <div class="col-sm-1 col-xs-2 col-md-1 col-lg-1 nopadding nomargin">
+                                <div class="col-sm-1 col-xs-2 col-md-1 col-lg-1 nopadding nomargin custom-width">
                                     @if (in_array($product['source_id'],$sids))
                                         <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
                                     @else

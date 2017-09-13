@@ -109,3 +109,6 @@ h4.product-title {
 .nomargin{
     margin:0;
 }
+.custom-width{
+    max-width: 50px;
+}
