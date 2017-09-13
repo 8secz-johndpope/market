@@ -436,7 +436,7 @@ class HomeController extends BaseController
                 $extra->prices = $extra->prices($id,$request->lat,$request->lng);
             }
         }
-      //  return $extras;
+        return $extras;
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public  function price(Request $request,$id){
