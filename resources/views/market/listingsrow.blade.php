@@ -154,7 +154,7 @@
                 </div>
             </div>
 
-        <div class="info">
+            <div class="info">
 
                             <div class="favor">
                                 @if (in_array($product['source_id'],$sids))
@@ -178,17 +178,17 @@
                                 <span class="product-price">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                 </span>
                             @endif
-                        </div>
+
 
                             @if(isset($product['urgent'])&&$product['urgent']===1)
                                 <div class="listing-posted-date txt-sub">
-<span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
+                                    <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
 <span class="hide-visually">This ad is </span>Urgent
 </span>
                                 </div>
                             @endif
-
-</div>
+            </div>
+        </div>
 </div>
             @endforeach
 
