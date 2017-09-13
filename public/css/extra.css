@@ -91,3 +91,9 @@ span.posted-text {
     text-align: left;
     vertical-align: middle;
 }
+.items-box-body.listing-content {
+    overflow: hidden;
+}
+.nopadding{
+    padding: 0;
+}
