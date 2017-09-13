@@ -145,7 +145,7 @@
                     @endif
 
                     <div class="listing-meta txt-sub">
-                        <img src="/css/iconimage.png"> <span class="image-number"> 8</span>
+                        <img src="/css/cameraicon.png" class="cameraicon"> <span class="image-number"> 8</span>
                     </div>
                 </div>
             </div>
