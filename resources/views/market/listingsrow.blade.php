@@ -15,7 +15,7 @@
 
 <div class="row listings">
     <div class="container">
-    <div class="col-md-2 col-lg-2 col-md-offset-1 filter-container">
+    <div class="filter-container">
         <div class="all-filters">
         <div class="l-visible-large">
             <ul class="list-group">
@@ -123,15 +123,13 @@
         @endforeach
         </div>
     </div>
-    <div class="col-xs-12 col-md-8 col-lg-9">
-        <section class="items-box-container clearfix">
+    <div class="products">
             <h2 class="items-box-head">
                 List of items for {{$category->title}}, {{$total}}
 
             </h2>
 
 
-            <div class="col-xs-12  col-md-12">
 
             @foreach($products as $product)
     <div class="well">
@@ -195,8 +193,6 @@
             @endforeach
 
 
-            </div>
-        </section>
         <nav aria-label="Page navigation">
             <div class="text-center">
             <ul class="pagination">
@@ -226,13 +222,8 @@
         </nav>
 
     </div>
-    <div class="col-md-3">
-
-    </div>
     </div>
 </div>
-
-
 
 
 @endsection
