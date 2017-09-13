@@ -248,6 +248,7 @@ span.product-price {
 
 span.image-number {
     float: right;
-    width: 42px;
+    padding-left: 2px;
+    padding-right: 5px;
     text-align: right;
 }
