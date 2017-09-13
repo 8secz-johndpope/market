@@ -545,7 +545,6 @@
                 $('.extra-options-panel').show();
             }
         });
-        get_prices(category);
     }
     function get_prices(category) {
         var lat = $("#lat").val();
@@ -599,6 +598,9 @@
             $("#location_name").val(parts[0]);
             $("#lat").val(data.results[0]['geometry']['location']['lat']);
             $("#lng").val(data.results[0]['geometry']['location']['lng']);
+            var category =  $("#category").val();
+            get_prices(category);
+
 
         });
     }
