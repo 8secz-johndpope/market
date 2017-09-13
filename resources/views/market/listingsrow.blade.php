@@ -35,7 +35,7 @@
         <div class="l-visible-large">
             <ul class="list-group">
                 @foreach($parents as $parent)
-                    <li class="list-group-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
+                    <li class="list-group-item"><a href="/{{$parent->slug}}/{{$location->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
                 @endforeach
             </ul>
         </div>
@@ -43,7 +43,7 @@
             <h4>{{$category->title}}</h4>
             <ul class="list-group">
                 @foreach($categories as $cat)
-                        <li class="list-group-item"><a href="/{{$cat->slug}}">{{$cat->title}}</a>&nbsp;&nbsp;{{$cat->count}}</li>
+                        <li class="list-group-item"><a href="/{{$cat->slug}}/{{$location->slug}}">{{$cat->title}}</a>&nbsp;&nbsp;{{$cat->count}}</li>
                 @endforeach
             </ul>
         </div>
