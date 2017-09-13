@@ -85,7 +85,7 @@ class ExtraType extends Model
             }
         }
 
-       
+
         $cat = Category::find($category);
         $cats[] = $cat;
         $current=$cat;

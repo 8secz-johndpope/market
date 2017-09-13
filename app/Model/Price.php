@@ -12,5 +12,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Price extends  Model
 {
+    public function location()
+    {
+        return $this->hasOne('App\Model\Location');
+    }
 
+    public function category()
+    {
+        return $this->hasOne('App\Model\Category');
+    }
 }

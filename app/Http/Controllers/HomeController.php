@@ -6,6 +6,7 @@ use App\Model\EmailCode;
 use App\Model\ExtraType;
 use App\Model\Order;
 use App\Model\OrderItem;
+use App\Model\Price;
 use Illuminate\Http\Request;
 use App\Model\Category;
 use App\Model\Advert;
@@ -702,5 +703,9 @@ class HomeController extends BaseController
 
         return ['msg'=>'Done'];
 
+    }
+    public function packs(Request $request){
+        $prices = Price::all();
+        return view('home.prices',['prices'=>$prices]);
     }
 }
