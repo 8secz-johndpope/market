@@ -184,3 +184,11 @@ span.product-price {
     transform: translate(-50%,-50%);
     display: block;
 }
+.listing-side .listing-meta {
+    padding: 2px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+}
