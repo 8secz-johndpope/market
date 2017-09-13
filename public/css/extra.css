@@ -101,3 +101,11 @@ span.posted-text {
 h4.items-box-name.font-2 {
     margin: 0;
 }
+h4.product-title {
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 800px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
