@@ -210,6 +210,8 @@ span.product-price {
 }
 .info{
     position: relative;
+    margin-left: 130px;
+
 }
 .favor {
     position: absolute;
