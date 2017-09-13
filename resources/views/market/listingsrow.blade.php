@@ -15,7 +15,7 @@
 
 <div class="row listings">
     <div class="container">
-    <div class="col-md-2 col-lg-2 col-md-offset-1">
+    <div class="col-md-2 col-lg-2 col-md-offset-1 filter-container">
         <div class="all-filters">
         <div class="l-visible-large">
             <ul class="list-group">
