@@ -112,3 +112,8 @@ h4.product-title {
 .custom-width{
     max-width: 50px;
 }
+@media (max-width: 400px) {
+    h4.product-title {
+        font-size: 14px;
+    }
+}
