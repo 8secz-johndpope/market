@@ -27,6 +27,8 @@ class ExtraType extends Model
             }
         }
 
+        return $sloc;
+
         $current = Category::find($category);
         while($current!==null){
             $sprice = $sloc->prices()->where('category_id',$current->id)->first();
