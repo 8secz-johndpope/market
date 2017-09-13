@@ -51,8 +51,10 @@ span.hide-visually {
 }
 span.posted-text {
     text-align: right;
-    float: right;
     color: gray;
+    bottom: 0;
+    right: 0;
+    position: absolute;
 }
 .favroite-icon {
     font-size: 30px;
@@ -196,4 +198,7 @@ span.product-price {
     left: 0;
     background: rgba(0,0,0,.5);
     color: #fff;
+}
+.info{
+    position: relative;
 }
