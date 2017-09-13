@@ -160,8 +160,6 @@
         </div>
 
                 <div class="col-sm-9  col-xs-7 col-md-10 col-lg-10">
-                    <div class="row">
-                        <div class="col-sm-10 col-xs-10 col-md-10 col-lg-10 nopadding">
                             <div class="favor">
                                 @if (in_array($product['source_id'],$sids))
                                     <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
@@ -194,9 +192,7 @@
 </span>
                                 </div>
                             @endif
-                        </div>
 
-                    </div>
                 </div>
 </div>
 </div>
