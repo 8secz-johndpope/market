@@ -150,3 +150,8 @@ h4.product-title {
         overflow: hidden;
     }
 }
+.main-img {
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+}

@@ -133,7 +133,8 @@
 <div class="row">
 
             @foreach($products as $product)
-
+<div class="col-sm-12">
+    <div class="row">
         <div class="col-sm-2">
             <div class="main-img">
                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
@@ -190,7 +191,8 @@
                         </div>
                     </div>
                 </div>
-                
+</div>
+</div>
             @endforeach
 </div>
 
