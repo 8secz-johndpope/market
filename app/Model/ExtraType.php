@@ -39,13 +39,19 @@ class ExtraType extends Model
         $cat = Category::find($category);
         $cats[] = $cat;
         $current=$cat;
-        while($current->parent!==null)
+        while($current->parent!==null){
             $cats[] = $current->parent;
+            $current = $current->parent;
+        }
+
 
         $current = $sloc;
         $locs[] = $sloc;
-        while ($current->parent!==null)
+        while ($current->parent!==null){
             $locs[] = $current->parent;
+            $current=$current->parent;
+        }
+
 
         $catids = array_map(function($a){
             return $a->id;
@@ -95,13 +101,17 @@ class ExtraType extends Model
         $cat = Category::find($category);
         $cats[] = $cat;
         $current=$cat;
-        while($current->parent!==null)
+        while($current->parent!==null){
             $cats[] = $current->parent;
+            $current = $current->parent;
+        }
 
         $current = $sloc;
         $locs[] = $sloc;
-        while ($current->parent!==null)
+        while ($current->parent!==null){
             $locs[] = $current->parent;
+            $current=$current->parent;
+        }
 
         $catids = array_map(function($a){
             return $a->id;
