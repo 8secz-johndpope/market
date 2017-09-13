@@ -110,3 +110,14 @@ h4.product-title {
     text-overflow: ellipsis;
     max-width: 600px;
 }
+@media (max-width: 1600px) {
+    h4.product-title {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 1200px) {
+    h4.product-title {
+        max-width: 400px;
+    }
+}
