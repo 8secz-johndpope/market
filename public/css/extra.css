@@ -202,3 +202,8 @@ span.product-price {
 .info{
     position: relative;
 }
+.favor {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
