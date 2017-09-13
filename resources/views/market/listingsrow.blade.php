@@ -130,78 +130,69 @@
 
 
             <div class="col-xs-12  col-md-12">
+<div class="row">
 
             @foreach($products as $product)
-                    <div class="item listing">
-                     <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
-                        <div class="listing-img">
-                            <div class="main-img">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
-                              @if(isset($product['featured'])&&$product['featured']===1)
-                                <span class="ribbon-featured">
+        <div class="col-sm-2">
+            <div class="main-img">
+                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
+
+                @if(isset($product['featured'])&&$product['featured']===1)
+                    <span class="ribbon-featured">
 <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
 </span>
-                                @endif
-                                <div class="listing-meta">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="items-box-body listing-content">
+                @endif
 
-                            <div class="row top-row">
-                                <div class="col-sm-11 col-xs-10 col-md-11 col-lg-11 nopadding">
-                                    <h4 class="product-title">{{$product['title']}}</h4>
-                                    <span class="listing-location">
+            </div>
+        </div>
+
+                <div class="col-sm-10">
+                    <div class="row top-row">
+                        <div class="col-sm-11 col-xs-10 col-md-11 col-lg-11 nopadding">
+                            <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
+
+                            <span class="listing-location">
                                     {{$product['location_name']}}
                                 </span>
-                                    <p class="listing-description">
-                                        {{$product['description']}}
-                                    </p>
+                            <p class="listing-description">
+                                {{$product['description']}}
+                            </p>
+                            @if($product['meta']['price']>=0)
+                                <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                 </div>
-                                <div class="col-sm-1 col-xs-2 col-md-1 col-lg-1 nopadding nomargin custom-width">
-                                    @if (in_array($product['source_id'],$sids))
-                                        <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
-                                    @else
-                                        <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
+                            @endif
+                        </div>
+                        <div class="col-sm-1 col-xs-2 col-md-1 col-lg-1 nopadding nomargin custom-width">
+                            @if (in_array($product['source_id'],$sids))
+                                <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                            @else
+                                <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
 
-                                    @endif
-                                </div>
-                            </div>
-
-
-
-                            <ul class="listing-attributes inline-list">
-                                
-                            </ul>
+                            @endif
+                        </div>
+                        <div class="col-sm-12">
                             @if(isset($product['urgent'])&&$product['urgent']===1)
-                            <div class="listing-posted-date txt-sub">
+                                <div class="listing-posted-date txt-sub">
 <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
 <span class="hide-visually">This ad is </span>Urgent
 </span>
-                            </div>
+                                </div>
                             @endif
-                            <div class="items-box-num clearfix">
-                                @if($product['meta']['price']>=0)
-                                    <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
-                                    </div>
-                                @endif
-                            </div>
-
                         </div>
-                         <div class="row">
-                             <div class="col-sm-10 col-md-10"></div>
-                             <div class="col-sm-2 col-md-2">
-                                 <span class="posted-text">{{$product['posted']}}</span>
-                             </div>
-                         </div>
-                    </a>
-
-
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-10 col-md-10"></div>
+                                <div class="col-sm-2 col-md-2">
+                                    <span class="posted-text">{{$product['posted']}}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
                 
             @endforeach
-
+</div>
 
 
             </div>
