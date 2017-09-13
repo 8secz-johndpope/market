@@ -67,8 +67,8 @@ class ExtraType extends Model
         foreach ($prices as $price){
             $user = Auth::user();
             $packs = $user->packs()->where('type',$price->key)->whereIn('category_id', $catids)->whereIn('location_id', $locids)->get();
-            return $packs;
-            if(count($packs)>0){
+
+            if($packs!==null&&count($packs)>0){
                 $price->price = 0;
             }else{
                 $price->price = $sprice->{$price->key};
@@ -127,7 +127,7 @@ class ExtraType extends Model
 
         $user = Auth::user();
         $packs = $user->packs()->where('type',$price->key)->whereIn('category_id', $catids)->whereIn('location_id', $locids)->get();
-        if(count($packs)>0){
+        if($packs!==null&&count($packs)>0){
             $price->price = 0;
         }else{
             $price->price = $sprice->{$price->key};
