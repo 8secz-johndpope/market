@@ -134,6 +134,7 @@
 
             @foreach($products as $product)
 <div class="col-sm-12 product">
+    <div class="well">
     <div class="row">
         <div class="col-sm-3 col-xs-5 col-md-2 col-lg-2">
 
@@ -195,7 +196,7 @@
 
                 </div>
 </div>
-</div>
+</div></div>
             @endforeach
 </div>
 
