@@ -15,7 +15,7 @@
 
 <div class="row listings">
     <div class="container">
-    <div class="col-md-2 col-md-offset-1">
+    <div class="col-md-2 col-lg-2 col-md-offset-1">
         <div class="l-visible-large">
             <ul class="list-group">
                 @foreach($lparents as $parent)
@@ -121,7 +121,7 @@
             </div>
         @endforeach
     </div>
-    <div class="col-xs-12 col-md-8">
+    <div class="col-xs-12 col-md-8 col-lg-9">
         <section class="items-box-container clearfix">
             <h2 class="items-box-head">
                 List of items for {{$category->title}}, {{$total}}
