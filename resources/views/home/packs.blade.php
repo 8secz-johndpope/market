@@ -18,7 +18,7 @@
 
             <div class="well">
                 <table class="table">
-                    <thead><th>Standard</th><th>Urgent</th><th>Spotlight</th><th>Featured(3 days)</th><th>Featured(7 days)</th><th>Featured(14 days)</th><th>Bump</th><th>Location</th><th>Category</th></thead>
+                    <thead><th>Standard</th><th>Urgent</th><th>Spotlight</th><th>Featured(3 days)</th><th>Featured(7 days)</th><th>Featured(14 days)</th><th>Bump</th><th>Location</th><th>Category</th><th>(Edit)</th></thead>
                 @foreach($prices as $price)
 
 <tr>
@@ -31,6 +31,7 @@
     <td>{{$price->bump}}</td>
     <td>{{$price->location->title}}</td>
     <td>{{$price->category->title}}</td>
+    <td><a href="" class="btn btn-primary">Edit</a> </td>
 
 </tr>
                 @endforeach
