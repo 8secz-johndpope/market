@@ -16,6 +16,7 @@
 <div class="row listings">
     <div class="container">
     <div class="col-md-2 col-lg-2 col-md-offset-1">
+        <div class="all-filters">
         <div class="l-visible-large">
             <ul class="list-group">
                 @foreach($lparents as $parent)
@@ -120,6 +121,7 @@
                 </ul>
             </div>
         @endforeach
+        </div>
     </div>
     <div class="col-xs-12 col-md-8 col-lg-9">
         <section class="items-box-container clearfix">
