@@ -158,6 +158,10 @@
                                     <p class="listing-description">
                                         {{$product['description']}}
                                     </p>
+                                    @if($product['meta']['price']>=0)
+                                        <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="col-sm-1 col-xs-2 col-md-1 col-lg-1 nopadding nomargin custom-width">
                                     @if (in_array($product['source_id'],$sids))
@@ -181,12 +185,7 @@
 </span>
                             </div>
                             @endif
-                            <div class="items-box-num clearfix">
-                                @if($product['meta']['price']>=0)
-                                    <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
-                                    </div>
-                                @endif
-                            </div>
+
 
                         </div>
                          <div class="row">
