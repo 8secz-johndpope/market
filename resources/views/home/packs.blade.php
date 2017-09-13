@@ -35,6 +35,7 @@
 </tr>
                 @endforeach
                 </table>
+                <a class="btn-primary btn" href="/user/manage/pricegroup">Add Price Group</a>
             </div>
         </div>
 
