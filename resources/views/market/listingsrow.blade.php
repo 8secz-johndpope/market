@@ -155,6 +155,9 @@
                                     <span class="listing-location">
                                     {{$product['location_name']}}
                                 </span>
+                                    <p class="listing-description">
+                                        {{$product['description']}}
+                                    </p>
                                 </div>
                                 <div class="col-sm-1 col-xs-2 col-md-1 col-lg-1 nopadding nomargin custom-width">
                                     @if (in_array($product['source_id'],$sids))
@@ -167,9 +170,7 @@
                             </div>
 
 
-                            <p class="listing-description">
-                                {{$product['description']}}
-                            </p>
+
                             <ul class="listing-attributes inline-list">
                                 
                             </ul>
