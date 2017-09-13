@@ -107,6 +107,7 @@ h4.product-title {
     font-size: 20px;
     max-height: 40px;
     overflow: hidden;
+    cursor: pointer;
 
 }
 .nomargin{
