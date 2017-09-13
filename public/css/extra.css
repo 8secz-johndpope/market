@@ -119,3 +119,10 @@ h4.product-title {
         overflow: hidden;
     }
 }
+@media (max-width: 600px) {
+    h4.product-title {
+        font-size: 15px;
+        max-height: 30px;
+        overflow: hidden;
+    }
+}
