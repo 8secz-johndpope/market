@@ -172,12 +172,12 @@
                             <p class="listing-description">
                                 {{$product['description']}}
                             </p>
-                            <span class="posted-text">{{$product['posted']}}</span>
 
                         @if($product['meta']['price']>=0)
                                 <span class="product-price">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                 </span>
                             @endif
+                <span class="posted-text">{{$product['posted']}}</span>
 
 
                             @if(isset($product['urgent'])&&$product['urgent']===1)
