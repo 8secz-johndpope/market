@@ -135,7 +135,7 @@
             @foreach($products as $product)
 <div class="col-sm-12">
     <div class="row">
-        <div class="col-sm-3 col-xs-6 col-md-2 col-lg-2">
+        <div class="col-sm-3 col-xs-5 col-md-2 col-lg-2">
 
             <div class="listing-side">
                 <div class="listing-thumbnail">
@@ -159,7 +159,7 @@
 
         </div>
 
-                <div class="col-sm-9  col-xs-6 col-md-10 col-lg-10">
+                <div class="col-sm-9  col-xs-7 col-md-10 col-lg-10">
                     <div class="row">
                         <div class="col-sm-10 col-xs-10 col-md-10 col-lg-10 nopadding">
                             <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
