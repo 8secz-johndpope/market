@@ -32,7 +32,7 @@
             font-weight: bold;
             font-style: italic;
         }
-      
+
         body {
             /* font: 1em/1.67 'Open Sans', Arial, Sans-serif; */
             margin: 0;

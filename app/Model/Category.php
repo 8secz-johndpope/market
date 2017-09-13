@@ -32,4 +32,5 @@ class Category extends  Model
     public function filters(){
         return $this->belongsToMany('App\Model\Filter');
     }
+
 }
