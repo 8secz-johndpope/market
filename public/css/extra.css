@@ -160,3 +160,15 @@ span.product-price {
     width: 150px;
     overflow: hidden;
 }
+.listing-side {
+    width: 120px;
+}
+.listing-side .listing-thumbnail {
+    width: 100%;
+    float: left;
+    height: 92px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #d8d6d9;
+}
