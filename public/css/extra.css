@@ -108,4 +108,5 @@ h4.product-title {
     padding: 0;
     margin: 0;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
