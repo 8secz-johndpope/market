@@ -152,6 +152,9 @@
                             <div class="row top-row">
                                 <div class="col-sm-11 col-xs-10 col-md-11 col-lg-11 nopadding">
                                     <h4 class="product-title">{{$product['title']}}</h4>
+                                    <span class="listing-location">
+                                    {{$product['location_name']}}
+                                </span>
                                 </div>
                                 <div class="col-sm-1 col-xs-2 col-md-1 col-lg-1 nopadding nomargin custom-width">
                                     @if (in_array($product['source_id'],$sids))
@@ -163,11 +166,7 @@
                                 </div>
                             </div>
 
-                            <div class="listing-location">
-                                <span class="truncate-line">
-                                    {{$product['location_name']}}
-                                </span>
-                            </div>
+
                             <p class="listing-description">
                                 {{$product['description']}}
                             </p>
