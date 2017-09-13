@@ -163,6 +163,7 @@
                                 <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                 </div>
                             @endif
+                            <span class="posted-text">{{$product['posted']}}</span>
                         </div>
                         <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1 nopadding nomargin custom-width">
                             @if (in_array($product['source_id'],$sids))
@@ -181,14 +182,7 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="col-sm-12">
-                            <div class="row">
-                                <div class="col-sm-10 col-md-10"></div>
-                                <div class="col-sm-2 col-md-2">
-                                    <span class="posted-text">{{$product['posted']}}</span>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 </div>
