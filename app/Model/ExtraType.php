@@ -27,7 +27,6 @@ class ExtraType extends Model
             }
         }
 
-        return $sloc;
 
         $current = Category::find($category);
         while($current!==null){
@@ -62,6 +61,7 @@ class ExtraType extends Model
             return $a->id;
         },$locs);
 
+        return $locids;
         $prices = $this->hasMany('App\Model\ExtraPrice')->get();
         $all = array();
         foreach ($prices as $price){
