@@ -145,7 +145,7 @@
                     @endif
 
                     <div class="listing-meta txt-sub">
-                        <img src="/css/cameraicon.png" class="cameraicon"> <span class="image-number"> {{count($product['images'])}}</span>
+                        <img src="/css/iconimage.png" class="cameraicon"> <span class="image-number"> {{count($product['images'])}}</span>
                     </div>
                 </div>
             </div>
