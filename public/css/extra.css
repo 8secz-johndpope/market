@@ -109,4 +109,5 @@ h4.product-title {
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 780px;
 }
