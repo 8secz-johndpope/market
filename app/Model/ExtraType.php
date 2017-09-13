@@ -61,12 +61,13 @@ class ExtraType extends Model
             return $a->id;
         },$locs);
 
-        return $locids;
+       // return $locids;
         $prices = $this->hasMany('App\Model\ExtraPrice')->get();
         $all = array();
         foreach ($prices as $price){
             $user = Auth::user();
             $packs = $user->packs()->where('type',$price->key)->whereIn('category_id', $catids)->whereIn('location_id', $locids)->get();
+            return $packs;
             if(count($packs)>0){
                 $price->price = 0;
             }else{
