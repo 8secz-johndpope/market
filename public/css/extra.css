@@ -140,6 +140,9 @@ span.product-price {
     .listing-description{
         display: none;
     }
+    .product-price{
+        display: block;
+    }
 }
 @media (max-width: 900px) {
     h4.product-title {
