@@ -137,6 +137,17 @@ span.product-price {
         overflow: hidden;
     }
 }
+@media (max-width: 1040px) {
+    .all-filters {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: white;
+        width: 100%;
+    }
+}
 @media (max-width: 900px) {
     h4.product-title {
         font-size: 16px;
@@ -155,15 +166,7 @@ span.product-price {
     .listing-description{
         display: none;
     }
-    .all-filters {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        background: white;
-        width: 100%;
-    }
+
     .product-price{
         display: block;
     }
