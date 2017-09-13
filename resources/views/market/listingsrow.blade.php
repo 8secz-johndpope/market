@@ -130,15 +130,11 @@
 
 
             <div class="col-xs-12  col-md-12">
-<div class="row">
 
             @foreach($products as $product)
-<div class="col-sm-12 product">
     <div class="well">
-    <div class="row">
-        <div class="col-sm-3 col-xs-5 col-md-2 col-lg-2">
-
-            <div class="listing-side">
+        <div class="product">
+        <div class="listing-side">
                 <div class="listing-thumbnail">
                     <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
@@ -158,9 +154,8 @@
                 </div>
             </div>
 
-        </div>
+        <div class="info">
 
-                <div class="col-sm-9  col-xs-7 col-md-10 col-lg-10">
                             <div class="favor">
                                 @if (in_array($product['source_id'],$sids))
                                     <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
@@ -185,7 +180,6 @@
                             @endif
                         </div>
 
-                        <div class="col-sm-12">
                             @if(isset($product['urgent'])&&$product['urgent']===1)
                                 <div class="listing-posted-date txt-sub">
 <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
@@ -194,11 +188,9 @@
                                 </div>
                             @endif
 
-                </div>
 </div>
-</div></div>
+</div>
             @endforeach
-</div>
 
 
             </div>
