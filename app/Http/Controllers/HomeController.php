@@ -706,6 +706,6 @@ class HomeController extends BaseController
     }
     public function packs(Request $request){
         $prices = Price::all();
-        return view('home.prices',['prices'=>$prices]);
+        return view('home.packs',['prices'=>$prices]);
     }
 }
