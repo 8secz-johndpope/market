@@ -28,16 +28,10 @@ class ExtraType extends Model
         }
 
 
-        $current = Category::find($category);
-        while($current!==null){
-            $sprice = $sloc->prices()->where('category_id',$current->id)->first();
-            if($sprice===null){
-                $current=$current->parent;
-            }else{
-                break;
-            }
-        }
+
         $cat = Category::find($category);
+
+
         $cats[] = $cat;
         $current=$cat;
         while($current->parent!==null){
@@ -61,6 +55,7 @@ class ExtraType extends Model
             return $a->id;
         },$locs);
 
+        $sprice = Price::whereIn('category_id', $catids)->whereIn('location_id', $locids)->orderBy('id','desc')->first();
        // return $locids;
         $prices = $this->hasMany('App\Model\ExtraPrice')->get();
         $all = array();
@@ -90,17 +85,7 @@ class ExtraType extends Model
             }
         }
 
-        $current = Category::find($category);
-        while($current!==null){
-            $sprice = $sloc->prices()->where('category_id',$current->id)->first();
-            if($sprice===null){
-                $current=$current->parent;
-            }else{
-                break;
-            }
-
-        }
-
+       
         $cat = Category::find($category);
         $cats[] = $cat;
         $current=$cat;
@@ -124,7 +109,7 @@ class ExtraType extends Model
         },$locs);
 
         $price = $this->hasMany('App\Model\ExtraPrice')->first();
-
+        $sprice = Price::whereIn('category_id', $catids)->whereIn('location_id', $locids)->orderBy('id','desc')->first();
         $user = Auth::user();
         $packs = $user->packs()->where('type',$price->key)->whereIn('category_id', $catids)->whereIn('location_id', $locids)->get();
         if($packs!==null&&count($packs)>0){
