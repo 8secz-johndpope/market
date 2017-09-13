@@ -708,4 +708,8 @@ class HomeController extends BaseController
         $prices = Price::all();
         return view('home.packs',['prices'=>$prices]);
     }
+    public function pricegroup(Request $request){
+        $prices = Price::all();
+        return view('home.pricegroup',['prices'=>$prices]);
+    }
 }
