@@ -104,10 +104,9 @@ h4.items-box-name.font-2 {
 h4.product-title {
     white-space: nowrap;
     display: inline-block;
-    max-width: 800px;
     padding: 0;
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 780px;
+    max-width: 600px;
 }
