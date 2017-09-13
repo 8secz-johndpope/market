@@ -160,8 +160,8 @@
                                 {{$product['description']}}
                             </p>
                             @if($product['meta']['price']>=0)
-                                <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
-                                </div>
+                                <span>£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                                </span>
                             @endif
                             <span class="posted-text">{{$product['posted']}}</span>
                         </div>
