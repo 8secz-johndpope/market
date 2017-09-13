@@ -136,16 +136,27 @@
 <div class="col-sm-12">
     <div class="row">
         <div class="col-sm-3">
-            <div class="main-img">
-                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
-                @if(isset($product['featured'])&&$product['featured']===1)
-                    <span class="ribbon-featured">
+            <div class="listing-side">
+                <div class="listing-thumbnail">
+                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
+
+                    @if(isset($product['featured'])&&$product['featured']===1)
+                        <span class="ribbon-featured">
 <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
 </span>
-                @endif
+                    @endif
 
+                    <div class="listing-meta txt-sub">
+                        <ul class="inline-list txt-center">
+                            <li>
+                                <span class="icn-camera iconu-xs" aria-hidden="true"></span> 8<span class="hide-visually"> images</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            
         </div>
 
                 <div class="col-sm-9">
