@@ -29,14 +29,14 @@ class AdminController extends BaseController
 
         $prices = Price::all();
 
-        return view('home.packs',['prices'=>$prices]);
+        return view('admin.packs',['prices'=>$prices]);
     }
     public function pricegroup(Request $request){
         $prices = Price::all();
         $categories = Category::where('parent_id',0)->get();
         $locations = Location::where('parent_id',0)->get();
 
-        return view('home.pricegroup',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations]);
+        return view('admin.pricegroup',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations]);
     }
     public function add_pricegroup(Request $request){
         $price = new Price;
