@@ -30,7 +30,7 @@
 <div class="col-sm-2">@if($product['meta']['price']>=0)
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
-                 
+
                     @if(count($product['images'])>0)
                     <div class="image-gallery">
                         @foreach($product['images'] as $image)
