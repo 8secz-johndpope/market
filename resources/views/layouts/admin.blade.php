@@ -422,10 +422,81 @@
             $('.category-level-4').html(data);
         });
     });
+
+    $(".main-location").on("click", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
+        $('.location-level-2').html('');
+        $('.location-level-3').html('');
+        $('.location-level-4').html('');
+        console.log($(this).data('location'));
+        $.get("/location/children/"+$(this).data('location'), function(data, status){
+            console.log(data);
+            $('.location-level-1').html(data);
+        });
+    });
+    $(".location-level-1").on("click","li", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
+        $('.location-level-3').html('');
+        $('.location-level-4').html('');
+        var count = $(this).data('children');
+        if(count===0){
+            $('.location-level-2').html('');
+            $("#continue-button").attr('disabled',false);
+            $("#continue-button").data('location',$(this).data('location'));
+            $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
+            return;
+        }
+        $("#continue-button").attr('disabled',true);
+
+        console.log($(this).data('location'));
+        $.get("/location/children/"+$(this).data('location'), function(data, status){
+            console.log(data);
+            $('.location-level-2').html(data);
+        });
+    });
+    $(".location-level-2").on("click","li", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
+        $('.location-level-4').html('');
+        var count = $(this).data('children');
+        if(count===0){
+            $('.location-level-3').html('');
+            $("#continue-button").attr('disabled',false);
+            $("#continue-button").data('category',$(this).data('category'));
+            $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
+            return;
+        }
+        $("#continue-button").attr('disabled',true);
+
+        console.log($(this).data('category'));
+        $.get("/location/children/"+$(this).data('location'), function(data, status){
+            console.log(data);
+            $('.location-level-3').html(data);
+        });
+    });
+    $(".location-level-3").on("click","li", function(event){
+        $('.select-arrow').removeClass('glyphicon-ok-sign');
+        var count = $(this).data('children');
+        if(count===0){
+            $('.location-level-4').html('');
+            $("#continue-button").attr('disabled',false);
+            $("#continue-button").data('category',$(this).data('location'));
+
+            $(this).find('.select-arrow').addClass('glyphicon-ok-sign');
+            return;
+        }
+        $("#continue-button").attr('disabled',true);
+
+        console.log($(this).data('category'));
+        $.get("/location/children/"+$(this).data('location'), function(data, status){
+            console.log(data);
+            $('.location-level-4').html(data);
+        });
+    });
+
     $("#continue-button").click(function () {
         get_extras($(this).data('category'));
     });
-    $(".category-level-4").on("click","li", function(event) {
+    $(".location-level-4").on("click","li", function(event) {
         $('.select-arrow').removeClass('glyphicon-ok-sign');
         $("#continue-button").attr('disabled',false);
         get_extras($(this).data('category'));

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\EmailCode;
 use App\Model\ExtraType;
+use App\Model\Location;
 use App\Model\Order;
 use App\Model\OrderItem;
 use App\Model\Price;
@@ -402,6 +403,11 @@ class HomeController extends BaseController
         $category = Category::find($id);
         return view('home.categorylist',['categories'=>$category->children]);
     }
+    public function lchildren(Request $request,$id)
+    {
+        $location = Location::find($id);
+        return view('home.locationlist',['categories'=>$location->children]);
+    }
     public  function extras(Request $request,$id){
         $category = Category::find($id);
         if($category===null){
@@ -711,6 +717,8 @@ class HomeController extends BaseController
     public function pricegroup(Request $request){
         $prices = Price::all();
         $categories = Category::where('parent_id',0)->get();
-        return view('home.pricegroup',['prices'=>$prices,'categories'=>$categories]);
+        $locations = Location::where('parent_id',0)->get();
+
+        return view('home.pricegroup',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations]);
     }
 }
