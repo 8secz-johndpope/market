@@ -641,6 +641,22 @@
        console.log(category);
        get_extras(category);
     });
+    $(".manual-location-panel").on('click','.select-location-link',function () {
+        var location = $(this).data('location');
+        console.log(location);
+        get_location(location);
+    });
+    function get_location(category) {
+        $("#category").val(category);
+
+        $.get("/location/string/"+category, function(data, status){
+            console.log(data);
+            $('.location-sting').html(data);
+            $(".manual-location-panel").hide();
+            $(".selected-location-panel").show();
+        })
+
+    }
 
 </script>
 </body>

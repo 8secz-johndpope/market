@@ -398,6 +398,22 @@ class HomeController extends BaseController
         $category->parentstring = implode(' > ',$titles);
         return $category->parentstring.' > <span class="select-category">'.$category->title.'</span>';
     }
+    public function lstring(Request $request,$id)
+    {
+        $category = Location::find($id);
+        $parents = array();
+        $cur = $category;
+        while ($cur->parent!==null){
+            $parents[]=$cur->parent;
+            $cur=$cur->parent;
+        }
+        $titles =  array_map(function ($a) {
+            return $a->title;
+        }, $parents);
+        $titles =  array_reverse($titles);
+        $category->parentstring = implode(' > ',$titles);
+        return $category->parentstring.' > <span class="select-category">'.$category->title.'</span>';
+    }
     public function children(Request $request,$id)
     {
         $category = Category::find($id);
