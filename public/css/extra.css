@@ -288,9 +288,7 @@ ul.image-gallery-ul li img {
 .carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-prev {
     margin-left: -10px;
 }
-.carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-prev {
-    margin-left: -10px;
-}
+
 .carousel-control .glyphicon-circle-arrow-left, .carousel-control .glyphicon-circle-arrow-right, .carousel-control .icon-next, .carousel-control .icon-prev {
     width: 30px;
     height: 30px;
@@ -310,4 +308,11 @@ ul.image-gallery-ul li img {
 }
 .carousel-control .glyphicon-circle-arrow-right, .carousel-control .icon-next {
     margin-right: -20px;
+}
+.carousel-control .glyphicon-circle-arrow-right, .carousel-control .icon-prev {
+    margin-left: -10px;
+}
+.carousel-control .glyphicon-circle-arrow-right, .carousel-control .icon-prev {
+    right: 50%;
+    margin-left: -10px;
 }
