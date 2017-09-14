@@ -710,6 +710,7 @@ class HomeController extends BaseController
     }
     public function pricegroup(Request $request){
         $prices = Price::all();
-        return view('home.pricegroup',['prices'=>$prices]);
+        $categories = Category::where('parent_id',0)->get();
+        return view('home.pricegroup',['prices'=>$prices,'categories'=>$categories]);
     }
 }
