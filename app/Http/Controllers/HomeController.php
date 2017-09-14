@@ -737,4 +737,18 @@ class HomeController extends BaseController
 
         return view('home.pricegroup',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations]);
     }
+    public function add_pricegroup(Request $request){
+        $price = new Price;
+        $price->category_id = $request->category;
+        $price->location_id = $request->location;
+        $price->standard = $request->standard;
+        $price->urgent = $request->urgent;
+        $price->featured = $request->featured;
+        $price->featured_3 = $request->featured_3;
+        $price->featured_14 = $request->featured_14;
+        $price->bump = $request->bump;
+        $price->save();
+        return ['msg'=>'done'];
+
+    }
 }

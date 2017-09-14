@@ -59,6 +59,7 @@ Route::get('/category/price/{id}', 'HomeController@price');
 Route::get('/category/suggest', 'HomeController@suggest');
 Route::get('/category/string/{id}', 'HomeController@string');
 Route::get('/location/string/{id}', 'HomeController@lstring');
+Route::get('/admin/manage/pricegroup/add', 'HomeController@add_pricegroup');
 
 Route::get('/fields/{any}', 'MarketController@fields');
 Route::get('/filters/{any}', 'MarketController@filters');

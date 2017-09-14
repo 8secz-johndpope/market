@@ -129,47 +129,47 @@
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Standard</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="0.00" id="example-url-input">
+                            <input class="form-control" type="text" placeholder="0.00" id="standard">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Urgent</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="10.00" id="example-url-input">
+                            <input class="form-control" type="text" placeholder="10.00" id="urgent">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Spotlight</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="20.00" id="example-url-input">
+                            <input class="form-control" type="text" placeholder="20.00" id="spotlight">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Featured (3 days)</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="15.00" id="example-url-input">
+                            <input class="form-control" type="text" placeholder="15.00" id="featured_3">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Featured (7 days)</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="20.00" id="example-url-input">
+                            <input class="form-control" type="text" placeholder="20.00" id="featured">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Featured (14 days)</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="30.00" id="example-url-input">
+                            <input class="form-control" type="text" placeholder="30.00" id="featured_14">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Bump</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="5.00" id="example-url-input">
+                            <input class="form-control" type="text" placeholder="5.00" id="bump">
                         </div>
                     </div>
 
-                    <a class="btn btn-primary">Add Price Group</a>
+                    <a class="btn btn-primary add-pricegroup">Add Price Group</a>
 
                 </form>
             </div>
