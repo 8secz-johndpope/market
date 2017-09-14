@@ -133,7 +133,7 @@
 
 <script>
     $(document).ready(function () {
-        $(window).load(function() {
+        $(window).on('load',function() {
             // this will fire after the entire page is loaded, including images
             console.log("yes");
             $('.image-gallery').slick();
