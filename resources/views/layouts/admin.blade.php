@@ -647,6 +647,11 @@
             });
     });
 
+    $(".manual-category-panel").on('click','.select-category-link',function () {
+       var category = $(this).data('category');
+       console.log(category);
+    });
+
 </script>
 </body>
 </html>
