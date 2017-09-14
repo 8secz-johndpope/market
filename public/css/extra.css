@@ -267,8 +267,9 @@ ul.image-gallery-ul {
 }
 ul.image-gallery-ul li {
     display: table-cell;
-    height: 900px;
+    height: 600px;
     vertical-align: middle;
+    padding-right: 16px;
 }
 ul.image-gallery-ul li img {
     max-width: 100%;
