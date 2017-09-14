@@ -504,25 +504,14 @@
     });
     function get_extras(category) {
         $("#category").val(category);
-        if($(".location-selected").is(':visible'))
-            $(".all-panels").show();
+
         $.get("/category/string/"+category, function(data, status){
             console.log(data);
             $('.category-sting').html(data);
             $(".manual-category-panel").hide();
-            $(".automatic-category-panel").hide();
             $(".selected-category-panel").show();
-            $(".selected-location-panel").show();
         })
-        $.get("/category/extras/"+category, function(data, status){
-            console.log(data.length);
-            $('.category-extras').html(data);
-            if(data.length===0){
-                $('.extra-options-panel').hide();
-            }else{
-                $('.extra-options-panel').show();
-            }
-        });
+
     }
     function get_prices(category) {
         var lat = $("#lat").val();
@@ -650,6 +639,7 @@
     $(".manual-category-panel").on('click','.select-category-link',function () {
        var category = $(this).data('category');
        console.log(category);
+       get_extras(category);
     });
 
 </script>
