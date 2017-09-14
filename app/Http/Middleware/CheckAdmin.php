@@ -16,10 +16,10 @@ class CheckAdmin
      */
     public function handle($request, Closure $next, $guard = null)
     {
-       
-        if (Auth::guard($guard)->check()) {
 
-            return redirect('/home');
+        $user = Auth::user();
+        if(!$user->is_admin()){
+            return redirect('/notfound');
         }
         return $next($request);
     }

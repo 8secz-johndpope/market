@@ -1249,6 +1249,9 @@ class MarketController extends BaseController
         //return View('market.listings',$params);
         return View('market.listingsrow',$params);
     }
+    public function notfound(){
+        return View('notfound');
+    }
     public function lsearch(Request $request,$any,$loc){
         $category = Category::where('slug',$any)->first();
         if($category===null){
