@@ -36,6 +36,8 @@ Route::get('/user/manage/details', 'HomeController@details');
 
 Route::get('/user/manage/shipping/{id}', 'HomeController@shipping');
 
+Route::get('/user/contract/start', 'HomeController@contract');
+
 
 Route::post('/user/payment/stripe', 'HomeController@stripe');
 Route::get('/user/payment/paypal', 'HomeController@paypal');

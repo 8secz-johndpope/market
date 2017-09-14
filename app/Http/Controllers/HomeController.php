@@ -726,5 +726,12 @@ class HomeController extends BaseController
         return ['msg'=>'Done'];
 
     }
+    public function contract(Request $request){
+        $prices = Price::all();
+        $categories = Category::where('parent_id',0)->get();
+        $locations = Location::where('parent_id',0)->get();
+
+        return view('home.start',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations]);
+    }
 
 }
