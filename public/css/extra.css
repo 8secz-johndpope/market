@@ -295,3 +295,7 @@ ul.image-gallery-ul li img {
     left: 10px;
     cursor: pointer;
 }
+.image-gallery {
+    width: 800px;
+    overflow: hidden;
+}
