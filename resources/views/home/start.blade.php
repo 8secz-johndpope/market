@@ -15,6 +15,32 @@
     <input type="hidden" id="location">
     <div class="row">
         <div class="col-sm-12">
+
+            <div class="panel panel-default selected-business-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Business Type</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="radio">
+                                <label><input type="radio" name="optradio" checked value="1">Small Business</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio" value="2">Medium Business</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio" value="3">Large Business</label>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="panel panel-default selected-category-panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">Category</h3>
@@ -28,6 +54,8 @@
                     </div>
                 </div>
             </div>
+
+
 
 
             <div class="panel panel-default  manual-category-panel" style="display: block">
