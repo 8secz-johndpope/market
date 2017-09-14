@@ -290,3 +290,8 @@ ul.image-gallery-ul li img {
     color: #fff;
     border-radius: 3px;
 }
+.filmstrip-info {
+    bottom: 10px;
+    left: 10px;
+    cursor: pointer;
+}
