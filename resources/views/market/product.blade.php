@@ -63,7 +63,7 @@
                     </div>
                     @if(count($product['images'])>0)
                     <div class="image-gallery">
-                        <ul class="image-gallery-ul">
+                        <ul class="image-gallery-ul" style="width: {{count($product['images'])*800}}px">
                         @foreach($product['images'] as $image)
                             <li>
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">

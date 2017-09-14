@@ -272,6 +272,7 @@ ul.image-gallery-ul li {
     padding-right: 16px;
 }
 ul.image-gallery-ul li img {
+    width: 100%;
     max-width: 100%;
     max-height: 100%;
 }
