@@ -15,6 +15,86 @@
     <div class="row">
         <div class="col-sm-12">
 
+            <div class="panel panel-default automatic-category-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Category</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Tell us what you are posting:</label>
+                                <input type="text" class="form-control posting-string" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex, iPhone, Samsung">
+                            </div>
+
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>Suggested Categories</h4>
+                            <ul class="list-group category-suggest">
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-12">
+                            <a class="browse-category">Or browse to find a category</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default  manual-category-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Select Category</h3>
+                </div>
+                <div class="panel-body">
+                    @foreach($categories as $category)
+                        <div class="main-category" data-category="{{$category->id}}">
+                            {{$category->title}}
+                        </div>
+                    @endforeach
+                    <div class="row nomargin">
+                        <div class="col-lg-3 sub-category">
+                            <ul class="list-group category-level-1  nomargin">
+
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 sub-category">
+                            <ul class="list-group category-level-2  nomargin">
+
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 sub-category">
+                            <ul class="list-group category-level-3  nomargin">
+
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 sub-category">
+                            <ul class="list-group category-level-4  nomargin">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 30px;margin-bottom: 30px">
+                        <div class="col-sm-1 col-sm-offset-11">
+                            <a class="btn btn-danger" disabled id="continue-button">Continue</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default selected-category-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Category</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-11"><span class="category-sting"></span> </div>
+                        <div class="col-sm-1">
+                            <a class="btn btn-default edit-category">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="well">
 
