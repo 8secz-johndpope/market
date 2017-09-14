@@ -33,7 +33,7 @@
 
                     @if(count($product['images'])>0)
                     <div class="image-gallery">
-                        @foreach($product['images'] as $image)
+                        @foreach($images as $image)
                             <div>
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
                             </div>
