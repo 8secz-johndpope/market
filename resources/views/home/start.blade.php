@@ -155,34 +155,37 @@
 
                 <form>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="type" value="standard">Standard</label>
+                        <label><input type="checkbox" name="type[]" value="standard">Standard</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="type" value="standard">Urgent</label>
+                        <label><input type="checkbox" name="type[]" value="urgent">Urgent</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="type" value="standard">Spotlight</label>
+                        <label><input type="checkbox" name="type[]" value="spotlight">Spotlight</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="type" value="standard">Featured (3 days)</label>
+                        <label><input type="checkbox" name="type[]" value="featured_3">Featured (3 days)</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="type" value="standard">Featured (7 days)</label>
+                        <label><input type="checkbox" name="type[]" value="featured">Featured (7 days)</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="type" value="standard">Bump</label>
+                        <label><input type="checkbox" name="type[]" value="featured_14">Featured (14 days)</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="type" value="standard">Shipping (2kg)</label>
+                        <label><input type="checkbox" name="type[]" value="bump">Bump</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="type" value="standard">Shipping (5kg)</label>
+                        <label><input type="checkbox" name="type[]" value="shipping_1">Shipping (2kg)</label>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox" name="type" value="standard">Shipping (10kg)</label>
+                        <label><input type="checkbox" name="type[]" value="shipping_2">Shipping (5kg)</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="type[]" value="shipping_3">Shipping (10kg)</label>
                     </div>
 
-                    <a class="btn btn-primary add-pack">Add Pack</a>
+                    <a class="btn btn-primary add-pack">Add Packs</a>
 
                 </form>
             </div>
