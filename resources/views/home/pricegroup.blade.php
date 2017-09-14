@@ -11,7 +11,8 @@
 @endsection
 
 @section('content')
-
+<input type="hidden" id="category">
+<input type="hidden" id="location">
     <div class="row">
         <div class="col-sm-12">
 
