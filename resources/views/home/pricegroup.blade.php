@@ -23,7 +23,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tell us what you are posting:</label>
+                                <label for="exampleInputEmail1">Search for a category</label>
                                 <input type="text" class="form-control posting-string" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex, iPhone, Samsung">
                             </div>
 
