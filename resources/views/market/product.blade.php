@@ -30,7 +30,7 @@
 <div class="col-sm-2">@if($product['meta']['price']>=0)
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="display: none">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
