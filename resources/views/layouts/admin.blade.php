@@ -666,13 +666,14 @@
         var category = $("#category").val();
         var location = $("#location").val();
         var urgent = $("#urgent").val();
+        var standard = $("#standard").val();
         var spotlight = $("#spotlight").val();
         var featured = $("#featured").val();
         var featured_3 = $("#featured_3").val();
         var featured_14 = $("#featured_14").val();
         var bump = $("#bump").val();
 
-        axios.get('/admin/manage/pricegroup/add',{ params:{category:category,location:location,urgent:urgent,spotlight:spotlight,featured:featured,featured_3:featured_3,featured_14:featured_14,bump:bump}})
+        axios.get('/admin/manage/pricegroup/add',{ params:{standard:standard,category:category,location:location,urgent:urgent,spotlight:spotlight,featured:featured,featured_3:featured_3,featured_14:featured_14,bump:bump}})
             .then(function (response) {
                 console.log(response);
             })
