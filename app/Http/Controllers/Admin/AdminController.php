@@ -9,6 +9,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\BaseController;
 use App\Model\Category;
+use App\Model\Location;
 use App\Model\Price;
 use Illuminate\Http\Request;
 
