@@ -537,6 +537,11 @@
         $('.selected-category-panel').hide();
         $('.manual-category-panel').show();
     });
+    $(".edit-location").click(function () {
+
+        $('.selected-location-panel').hide();
+        $('.manual-location-panel').show();
+    });
     $(".postcode-submit").click(function () {
         console.log("click works");
         $(".extra-large").html($("#postcode-text").val());
