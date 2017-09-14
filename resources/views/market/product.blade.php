@@ -63,6 +63,12 @@
                     </div>
                     @if(count($product['images'])>0)
                     <div class="image-gallery">
+                        <a class="filmstrip-prev" data-filmstrip-prev="">
+                            <span class="hide-visually">Previous image</span>
+                        </a>
+                        <a class="filmstrip-next" data-filmstrip-next="">
+                            <span class="hide-visually">Next image</span>
+                        </a>
                         <ul class="image-gallery-ul" style="width: {{count($product['images'])*800}}px">
                         @foreach($product['images'] as $image)
                             <li>
