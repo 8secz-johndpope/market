@@ -71,23 +71,12 @@
                             </li>
                         @endforeach
                         </ul>
-                        <div class="filmstrip-info">
-                            <span class="icn-camera space-mrxs" aria-hidden="true"></span>
-                            <span class="hide-visually">Image </span>
-                            <span data-filmstrip-activeslide="">3</span> of <span data-filmstrip-slidecount="">9</span>
+                       <div class="left-arrow">
+                           <span class="glyphicon glyphicon-circle-arrow-left"></span>
+                       </div>
+                        <div class="right-arrow">
+                            <span class="glyphicon glyphicon-circle-arrow-right"></span>
                         </div>
-                        <div class="filmstrip-controls-overlay">
-                            <a class="filmstrip-prev" data-filmstrip-prev="">
-                                <span class="hide-visually">Previous image</span>
-                            </a>
-                            <a class="filmstrip-next" data-filmstrip-next="">
-                                <span class="hide-visually">Next image</span>
-                            </a>
-                        </div>
-                        <a class="filmstrip-zoom" data-filmstrip-fullscreen="">
-                            <span class="icn-magnifying-glass-zoom" aria-hidden="true"></span>
-                            <span class="hide-visually">Full screen gallery</span>
-                        </a>
                     </div>
                     @endif
                     <div class="row meta">
