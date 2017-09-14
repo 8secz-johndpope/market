@@ -15,33 +15,9 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <div class="panel panel-default automatic-category-panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Category</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Search for a category</label>
-                                <input type="text" class="form-control posting-string" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex, iPhone, Samsung">
-                            </div>
 
-                        </div>
-                        <div class="col-sm-12">
-                            <h4>Suggested Categories</h4>
-                            <ul class="list-group category-suggest">
 
-                            </ul>
-                        </div>
-                        <div class="col-sm-12">
-                            <a class="browse-category">Or browse to find a category</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel panel-default  manual-category-panel">
+            <div class="panel panel-default  manual-category-panel" style="display: block">
                 <div class="panel-heading">
                     <h3 class="panel-title">Select Category</h3>
                 </div>
