@@ -56,7 +56,6 @@ class User extends Authenticatable
         $this->stripe_account=$account->id;
         $this->pk_key=$account->keys->publishable;
         $this->sk_key=$account->keys->secret;
-        
 
     }
     public function addresses()
@@ -100,5 +99,9 @@ class User extends Authenticatable
     public function favorites()
     {
         return $this->belongsToMany('App\Model\Advert','favorites')->orderBy('id','desc');
+    }
+    public function roles()
+    {
+        return $this->belongsToMany('App\Model\Role');
     }
 }

