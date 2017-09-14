@@ -77,10 +77,10 @@
                             <span data-filmstrip-activeslide="">3</span> of <span data-filmstrip-slidecount="">9</span>
                         </div>
                         <div class="filmstrip-controls-overlay">
-                            <a class="filmstrip-prev slick-prev" data-filmstrip-prev="">
+                            <a class="filmstrip-prev" data-filmstrip-prev="">
                                 <span class="hide-visually">Previous image</span>
                             </a>
-                            <a class="filmstrip-next slick-next" data-filmstrip-next="">
+                            <a class="filmstrip-next" data-filmstrip-next="">
                                 <span class="hide-visually">Next image</span>
                             </a>
                         </div>
