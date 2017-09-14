@@ -544,9 +544,9 @@
         $(".manual-category-panel").show();
     });
     $(".edit-category").click(function () {
-        $('.all-panels').hide();
+
         $('.selected-category-panel').hide();
-        $('.automatic-category-panel').show();
+        $('.manual-category-panel').show();
     });
     $(".postcode-submit").click(function () {
         console.log("click works");

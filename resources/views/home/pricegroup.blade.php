@@ -50,11 +50,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row" style="margin-top: 30px;margin-bottom: 30px">
-                        <div class="col-sm-1 col-sm-offset-11">
-                            <a class="btn btn-danger" disabled id="continue-button">Continue</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
@@ -92,11 +88,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row" style="margin-top: 30px;margin-bottom: 30px">
-                        <div class="col-sm-1 col-sm-offset-11">
-                            <a class="btn btn-danger" disabled id="continue-button">Continue</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
