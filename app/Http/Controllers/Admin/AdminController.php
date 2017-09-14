@@ -8,6 +8,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\BaseController;
+use App\Model\Price;
 use Illuminate\Http\Request;
 
 class AdminController extends BaseController
@@ -20,6 +21,7 @@ class AdminController extends BaseController
     }
     public function packs(Request $request){
         $prices = Price::all();
+        
         return view('home.packs',['prices'=>$prices]);
     }
     public function pricegroup(Request $request){
