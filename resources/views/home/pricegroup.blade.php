@@ -15,7 +15,19 @@
 <input type="hidden" id="location">
     <div class="row">
         <div class="col-sm-12">
-
+            <div class="panel panel-default selected-category-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Category</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-11"><span class="category-sting"></span> </div>
+                        <div class="col-sm-1">
+                            <a class="btn btn-default edit-category">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <div class="panel panel-default  manual-category-panel" style="display: block">
@@ -52,6 +64,21 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+
+            <div class="panel panel-default selected-location-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Location</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-11"><span class="location-sting"></span> </div>
+                        <div class="col-sm-1">
+                            <a class="btn btn-default edit-location">Edit</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -94,19 +121,7 @@
             </div>
 
 
-            <div class="panel panel-default selected-category-panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Category</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-11"><span class="category-sting"></span> </div>
-                        <div class="col-sm-1">
-                            <a class="btn btn-default edit-category">Edit</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             <div class="well">
 
