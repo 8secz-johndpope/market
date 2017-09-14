@@ -276,3 +276,17 @@ ul.image-gallery-ul li img {
     max-width: 100%;
     max-height: 100%;
 }
+.filmstrip-next, .filmstrip-prev {
+    padding: 24px 12px;
+    margin-top: -47.5px;
+    position: absolute;
+    top: 50%;
+    z-index: 30;
+    cursor: pointer;
+}
+.filmstrip-close, .filmstrip-info, .filmstrip-next, .filmstrip-prev, .filmstrip-zoom {
+    background-color: #000;
+    background-color: rgba(0,0,0,.75);
+    color: #fff;
+    border-radius: 3px;
+}
