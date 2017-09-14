@@ -27,8 +27,6 @@ Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/address/change/{id}', 'HomeController@change');
 Route::get('/user/manage/order/shipping/update/{id}', 'HomeController@update_shipping');
 
-Route::get('/admin/manage/packs', 'AdminController@packs');
-Route::get('/admin/manage/pricegroup', 'AdminController@pricegroup');
 
 
 Route::get('/user/manage/orders', 'HomeController@orders');
@@ -59,7 +57,6 @@ Route::get('/category/price/{id}', 'HomeController@price');
 Route::get('/category/suggest', 'HomeController@suggest');
 Route::get('/category/string/{id}', 'HomeController@string');
 Route::get('/location/string/{id}', 'HomeController@lstring');
-Route::get('/admin/manage/pricegroup/add', 'AdminController@add_pricegroup');
 
 Route::get('/fields/{any}', 'MarketController@fields');
 Route::get('/filters/{any}', 'MarketController@filters');
@@ -78,3 +75,9 @@ Route::get('/p/{cat}/{id}', 'MarketController@product');
 
 Route::get('/{any}', 'MarketController@search');
 Route::get('/{any}/{loc}', 'MarketController@lsearch');
+Route::namespace('Admin')->group(function () {
+    Route::get('/admin/manage/pricegroup/add', 'AdminController@add_pricegroup');
+    Route::get('/admin/manage/packs', 'AdminController@packs');
+    Route::get('/admin/manage/pricegroup', 'AdminController@pricegroup');
+
+});
