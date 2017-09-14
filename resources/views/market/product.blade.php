@@ -133,7 +133,7 @@
 
 <script>
     $(document).ready(function () {
-        $('.image-gallery').slick();
+        $('.image-gallery').slick({ centerMode: true});
     });
 
 
