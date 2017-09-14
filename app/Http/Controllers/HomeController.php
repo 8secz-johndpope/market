@@ -741,12 +741,13 @@ class HomeController extends BaseController
         $price = new Price;
         $price->category_id = $request->category;
         $price->location_id = $request->location;
-        $price->standard = $request->standard;
-        $price->urgent = $request->urgent;
-        $price->featured = $request->featured;
-        $price->featured_3 = $request->featured_3;
-        $price->featured_14 = $request->featured_14;
-        $price->bump = $request->bump;
+        $price->standard = $request->standard*100;
+        $price->spotlight = $request->spotlight*100;
+        $price->urgent = $request->urgent*100;
+        $price->featured = $request->featured*100;
+        $price->featured_3 = $request->featured_3*100;
+        $price->featured_14 = $request->featured_14*100;
+        $price->bump = $request->bump*100;
         $price->save();
         return ['msg'=>'done'];
 
