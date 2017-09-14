@@ -327,3 +327,7 @@ ul.image-gallery-ul li img {
     line-height: 100px;
     cursor: pointer;
 }
+a.select-link {
+    right: 40px;
+    position: absolute;
+}
