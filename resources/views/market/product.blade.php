@@ -133,9 +133,12 @@
 
 <script>
     $(document).ready(function () {
+
+    });
+    $(window).load(function() {
+        // this will fire after the entire page is loaded, including images
         $('.image-gallery').slick();
     });
-
 
 </script>
 
