@@ -63,11 +63,13 @@
                     </div>
                     @if(count($product['images'])>0)
                     <div class="image-gallery">
+                        <ul class="image-gallery-ul">
                         @foreach($product['images'] as $image)
-                            <div>
+                            <li>
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
-                            </div>
+                            </li>
                         @endforeach
+                        </ul>
                     </div>
                     @endif
                     <div class="row meta">
@@ -131,17 +133,6 @@
 
 
 
-<script>
-    $(document).ready(function () {
-        $(window).on('load',function() {
-            // this will fire after the entire page is loaded, including images
-            console.log("yes");
-            $('.image-gallery').slick();
-        });
-    });
-
-
-</script>
 
 
 @endsection
