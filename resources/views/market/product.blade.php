@@ -71,7 +71,7 @@
                             </li>
                         @endforeach
                         </ul>
-                       
+
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                             <span class="glyphicon glyphicon-circle-arrow-left"></span>
                             <span class="sr-only">Previous</span>
