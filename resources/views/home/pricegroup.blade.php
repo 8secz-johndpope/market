@@ -49,6 +49,7 @@
                     @foreach($categories as $category)
                         <div class="main-category" data-category="{{$category->id}}">
                             {{$category->title}}
+                            <a class="select-link select-category-link" data-category="{{$category->id}}">Select</a>
                         </div>
                     @endforeach
                     <div class="row nomargin">
@@ -90,6 +91,7 @@
                     @foreach($locations as $location)
                         <div class="main-location" data-location="{{$location->id}}">
                             {{$location->title}}
+                            <a class="select-link select-location-link" data-category="{{$category->id}}">Select</a>
                         </div>
                     @endforeach
                     <div class="row nomargin">
