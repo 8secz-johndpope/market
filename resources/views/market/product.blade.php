@@ -61,6 +61,16 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
+                    <div class="image-gallery">
+                        <div>
+                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
+                        </div>
+                        @foreach($images as $image)
+                            <div>
+                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
+                            </div>
+                        @endforeach
+                    </div>
                     <div class="row meta">
                         @foreach($metas as $meta)
                             <div class="col-sm-3 meta-bold">
@@ -122,7 +132,10 @@
 
 
 
+<script>
+    $('.image-gallery').slick();
 
+</script>
 
 
 @endsection
