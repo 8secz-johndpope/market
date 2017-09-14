@@ -23,16 +23,16 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-11">
-                            <div class="radio">
-                                <label><input type="radio" name="optradio" checked value="1">Small Business</label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" name="optradio" value="2">Medium Business</label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" name="optradio" value="3">Large Business</label>
-                            </div>
+                            
 
+                            <div class="form-group">
+                                <select class="form-control" id="business">
+                                    <option value="0">Select Business</option>
+                                    <option value="1">Small Business</option>
+                                    <option value="2">Medium Business</option>
+                                    <option value="3">Large Business</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="col-sm-1">
                         </div>

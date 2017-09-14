@@ -123,7 +123,7 @@
             background: #e9e9e9;
         }
         .sub-category {
-            height: 400px;
+
             border: 1px solid gray;
             padding: 0px;
             overflow-x: scroll;
