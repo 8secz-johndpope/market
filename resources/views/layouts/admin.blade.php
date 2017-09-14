@@ -676,6 +676,7 @@
         axios.get('/admin/manage/pricegroup/add',{ params:{standard:standard,category:category,location:location,urgent:urgent,spotlight:spotlight,featured:featured,featured_3:featured_3,featured_14:featured_14,bump:bump}})
             .then(function (response) {
                 console.log(response);
+                document.location.href = "/admin/manage/packs";
             })
             .catch(function (error) {
                 console.log(error);

@@ -27,7 +27,7 @@ Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/address/change/{id}', 'HomeController@change');
 Route::get('/user/manage/order/shipping/update/{id}', 'HomeController@update_shipping');
 
-Route::get('/user/manage/packs', 'HomeController@packs');
+Route::get('/admin/manage/packs', 'HomeController@packs');
 Route::get('/user/manage/pricegroup', 'HomeController@pricegroup');
 
 
