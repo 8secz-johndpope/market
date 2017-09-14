@@ -280,4 +280,31 @@ ul.image-gallery-ul li img {
 .image-gallery {
     width: 800px;
     overflow: hidden;
+    position: relative;
+}
+.carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-next {
+    margin-right: -20px;
+}
+.carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-prev {
+    margin-left: -10px;
+}
+.carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-prev {
+    margin-left: -10px;
+}
+.carousel-control .glyphicon-circle-arrow-left, .carousel-control .glyphicon-circle-arrow-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    font-size: 30px;
+}
+.carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-prev {
+    left: 50%;
+    margin-left: -10px;
+}
+.carousel-control .glyphicon-circle-arrow-left, .carousel-control .glyphicon-circle-arrow-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
 }
