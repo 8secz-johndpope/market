@@ -252,3 +252,6 @@ span.image-number {
     padding-right: 5px;
     text-align: right;
 }
+.slick-prev:before, .slick-next:before {
+    color: black;
+}
