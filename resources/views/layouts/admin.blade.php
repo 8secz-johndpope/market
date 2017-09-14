@@ -652,7 +652,7 @@
         get_location(location);
     });
     function get_location(category) {
-        $("#category").val(category);
+        $("#location").val(category);
 
         $.get("/location/string/"+category, function(data, status){
             console.log(data);
