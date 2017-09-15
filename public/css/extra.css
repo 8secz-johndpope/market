@@ -318,6 +318,9 @@ a.select-link {
     .listing-side-big{
         width: 600px;
     }
+    ul.image-gallery-ul li{
+        height: 600px;
+    }
 }
 @media (max-width: 1040px) {
     .all-filters {
@@ -341,6 +344,10 @@ a.select-link {
     .image-gallery {
         width: 100%;
     }
+    ul.image-gallery-ul li{
+        height: 100%;
+    }
+}
 @media (max-width: 900px) {
     h4.product-title {
         font-size: 16px;
