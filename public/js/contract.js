@@ -343,8 +343,8 @@ $(".add-pack").click(function () {
     var location = $("#location").val();
     var type = [];
     $(".pack-class").each(function(i, obj){
-        if ($(obj).attr("checked")) {
-            type.push($(obj).val());
+        if ($(this).attr("checked")) {
+            type.push($(this).val());
         }
     });
     console.log(type);
