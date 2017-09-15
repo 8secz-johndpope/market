@@ -348,7 +348,6 @@ $(".add-pack").click(function () {
         // or you can do something to the actual checked checkboxes by working directly with  'this'
         // something like $(this).hide() (only something useful, probably) :P
     });
-    console.log(type);
     axios.get('/user/contract/pack/'+category+'/'+location,{ params:{types:values}})
         .then(function (response) {
             console.log(response);
