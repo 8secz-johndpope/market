@@ -776,6 +776,8 @@ class HomeController extends BaseController
         return view('home.start',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'packs'=>$packs,'contract'=>$contract]);
     }
     public  function delete_pack(Request $request,$id){
+        $pack = ContractPack::find($id);
+        $pack->delete();
 
         return ['msg'=>'done'];
     }
