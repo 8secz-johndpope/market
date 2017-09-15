@@ -684,6 +684,14 @@
         });
         current--;
     });
+    $(window).scroll(function(){
+        var aTop = $('.ad').height();
+        if($(this).scrollTop()>=aTop){
+            alert('header just passed.');
+            // instead of alert you can use to show your ad
+            // something like $('#footAd').slideup();
+        }
+    });
 
 </script>
 </body>
