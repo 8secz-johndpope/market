@@ -734,7 +734,7 @@ class HomeController extends BaseController
         $contract = Contract::find($id);
         $price = Price::price($category,$location);
         foreach ($request->types as $type){
-            $extraprice = ExtraPrice::where('slug',$type)->first();
+            $extraprice = ExtraPrice::where('key',$type)->first();
             $pack = new ContractPack;
             $pack->slug = $type;
             $pack->category_id = $category;
