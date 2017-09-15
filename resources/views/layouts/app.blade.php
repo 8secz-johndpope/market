@@ -663,20 +663,22 @@
                 console.log(error);
             });
     });
-
+    var current = 1;
     $(".image-gallery-right").click(function () {
         var width = $(".image-gallery-li").outerWidth();
         console.log(width);
         $("ul.image-gallery-ul").animate({
-            marginLeft: '-800px'
+            marginLeft: (-1*current*width)+'px'
         });
+        current++;
     });
     $(".image-gallery-left").click(function () {
         var width = $(".image-gallery-li").outerWidth();
         console.log(width);
         $("ul.image-gallery-ul").animate({
-            marginLeft: '0px'
+            marginLeft: (-1*(current-1)*width)+'px'
         });
+        current--;
     });
 
 </script>
