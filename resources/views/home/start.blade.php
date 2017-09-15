@@ -30,7 +30,7 @@
 
                         </div>
                         <div class="col-sm-1">
-                            <a class="btn btn-primary">Continue</a>
+                            <a class="btn btn-primary" href="/user/contract/sign">Continue</a>
                         </div>
                     </div>
                 </div>

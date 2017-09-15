@@ -729,6 +729,10 @@ class HomeController extends BaseController
         return ['msg'=>'Done'];
 
     }
+    public function sign(Request $request)
+    {
+        return view('home.sign');
+    }
     public function pack(Request $request,$category,$location){
         $id = $request->session()->get('contract_id');
         $contract = Contract::find($id);
