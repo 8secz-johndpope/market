@@ -676,7 +676,7 @@
         var width = $(".image-gallery-li").outerWidth();
         console.log(width);
         $("ul.image-gallery-ul").animate({
-            marginLeft: ((current-1)*width)+'px'
+            marginLeft: ((current-2)*width)+'px'
         });
         current--;
     });
