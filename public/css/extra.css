@@ -347,3 +347,7 @@ a.select-link {
     font-weight: bold;
     font-size: 20px;
 }
+.doc{
+    display: block;
+    margin: auto;
+}
