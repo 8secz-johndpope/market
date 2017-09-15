@@ -38,7 +38,22 @@
                     </div>
                 </div>
             </div>
+            <div class="panel panel-default selected-business-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">List of Packs</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-11">
 
+
+
+                        </div>
+                        <div class="col-sm-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="panel panel-default selected-category-panel">
                 <div class="panel-heading">

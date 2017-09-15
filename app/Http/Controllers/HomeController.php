@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Contract;
 use App\Model\EmailCode;
 use App\Model\ExtraType;
 use App\Model\Location;
@@ -727,10 +728,18 @@ class HomeController extends BaseController
 
     }
     public function contract(Request $request){
+        if ($request->session()->has('contract_id')) {
+            $id = $request->session()->get('contract_id');
+            $contract = Contract::find($id);
+        }else{
+            $contract = new Contract;
+            $contract->save();
+        }
+        $packs = $contract->packs;
         $prices = Price::all();
         $categories = Category::where('parent_id',0)->get();
         $locations = Location::where('parent_id',0)->get();
-        return view('home.start',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations]);
+        return view('home.start',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'packs'=>$packs]);
     }
 
 }
