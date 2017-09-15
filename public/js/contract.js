@@ -338,3 +338,15 @@ $(".add-pricegroup").click(function () {
             console.log(error);
         });
 });
+$(".add-pack").click(function () {
+    var category = $("#category").val();
+    var location = $("#location").val();
+    axios.get('/user/contract/pack/'+category+'/'+location,{ params:{}})
+        .then(function (response) {
+            console.log(response);
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+});

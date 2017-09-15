@@ -730,7 +730,8 @@ class HomeController extends BaseController
     public function pack(Request $request,$category,$location){
         $id = $request->session()->get('contract_id');
         $contract = Contract::find($id);
-        
+        return ['location'=>$location,'category'=>$category,'contract'=>$contract];
+
     }
     public function contract(Request $request){
         if ($request->session()->has('contract_id')) {
