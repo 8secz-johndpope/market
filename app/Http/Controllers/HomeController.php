@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\Contract;
 use App\Model\ContractPack;
 use App\Model\EmailCode;
+use App\Model\ExtraPrice;
 use App\Model\ExtraType;
 use App\Model\Location;
 use App\Model\Order;
@@ -733,10 +734,12 @@ class HomeController extends BaseController
         $contract = Contract::find($id);
         $price = Price::price($category,$location);
         foreach ($request->types as $type){
+            $extraprice = ExtraPrice::where('slug',$type)->first();
             $pack = new ContractPack;
             $pack->slug = $type;
             $pack->category_id = $category;
             $pack->location_id = $location;
+            $pack->title = $extraprice->stitle;
             $pack->amount = $price->{$type};
             $price->save();
             $contract->packs()->save($pack);
