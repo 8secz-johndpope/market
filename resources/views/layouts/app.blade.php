@@ -664,6 +664,7 @@
             });
     });
     var current = 1;
+    var max = {{count($product['images'])}};
     $(".image-gallery-right").click(function () {
 
         var width = $(".image-gallery-li").outerWidth();
