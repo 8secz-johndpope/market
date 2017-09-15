@@ -15,8 +15,6 @@
     <input type="hidden" id="location">
     <div class="row">
         <div class="col-sm-12">
-
-            
             <div class="panel panel-default selected-business-panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">List of Packs</h3>
@@ -28,7 +26,12 @@
 
 
                         </div>
+                        <div class="col-sm-11">
 
+                        </div>
+                        <div class="col-sm-1">
+                            <a class="btn btn-primary">Continue</a>
+                        </div>
                     </div>
                 </div>
             </div>
