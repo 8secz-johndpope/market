@@ -752,6 +752,14 @@ class HomeController extends BaseController
         return view('home.packs',['contract'=>$contract]);
 
     }
+    public function packs(Request $request){
+        $id = $request->session()->get('contract_id');
+        $contract = Contract::find($id);
+
+        // return ['location'=>$location,'category'=>$category,'contract'=>$contract,'types'=>$request->types];
+        return view('home.packs',['contract'=>$contract]);
+
+    }
     public function contract(Request $request){
         if ($request->session()->has('contract_id')) {
             $id = $request->session()->get('contract_id');
@@ -766,6 +774,10 @@ class HomeController extends BaseController
         $categories = Category::where('parent_id',0)->get();
         $locations = Location::where('parent_id',0)->get();
         return view('home.start',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'packs'=>$packs,'contract'=>$contract]);
+    }
+    public  function delete_pack(Request $request,$id){
+
+        return ['msg'=>'done'];
     }
 
 }

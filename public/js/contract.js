@@ -358,3 +358,27 @@ $(".add-pack").click(function () {
             console.log(error);
         });
 });
+function  get_packs() {
+    axios.get('/user/contract/packs/',{ params:{}})
+        .then(function (response) {
+            // console.log(response);
+            $("#pack-list").html(response.data);
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+}
+$(".delete-pack").click(function () {
+   var id = $(this).data('id');
+    axios.get('/user/contract/pack/delete/'+id,{ params:{}})
+        .then(function (response) {
+            // console.log(response);
+           get_packs()
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+});
