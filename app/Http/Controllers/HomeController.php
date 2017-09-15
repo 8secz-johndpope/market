@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Contract;
+use App\Model\ContractPack;
 use App\Model\EmailCode;
 use App\Model\ExtraType;
 use App\Model\Location;
@@ -730,6 +731,14 @@ class HomeController extends BaseController
     public function pack(Request $request,$category,$location){
         $id = $request->session()->get('contract_id');
         $contract = Contract::find($id);
+        $price = Price::price($category,$location);
+        foreach ($request->types as $type){
+            $pack = new ContractPack;
+            $pack->slug = $type;
+            $pack->amount = $price->{$type};
+            $price->save();
+            $contract->packs()->save($pack);
+        }
         return ['location'=>$location,'category'=>$category,'contract'=>$contract,'types'=>$request->types];
 
     }
