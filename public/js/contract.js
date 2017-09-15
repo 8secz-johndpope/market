@@ -347,6 +347,7 @@ $(".add-pack").click(function () {
             type.push($(obj).val());
         }
     });
+    console.log(type);
     axios.get('/user/contract/pack/'+category+'/'+location,{ params:{types:type}})
         .then(function (response) {
             console.log(response);
