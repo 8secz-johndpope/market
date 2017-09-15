@@ -765,7 +765,7 @@ class HomeController extends BaseController
         $prices = Price::all();
         $categories = Category::where('parent_id',0)->get();
         $locations = Location::where('parent_id',0)->get();
-        return view('home.start',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'packs'=>$packs]);
+        return view('home.start',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'packs'=>$packs,'contract'=>$contract]);
     }
 
 }
