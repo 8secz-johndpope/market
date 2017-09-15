@@ -16,28 +16,7 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <div class="panel panel-default selected-business-panel">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Business Type</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-11">
-
-
-                            <div class="form-group">
-                                <select class="form-control" id="business">
-                                    <option value="1">Small Business</option>
-                                    <option value="2">Medium Business</option>
-                                    <option value="3">Large Business</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-sm-1">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="panel panel-default selected-business-panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">List of Packs</h3>
