@@ -666,7 +666,9 @@
     var current = 1;
     var max = {{count($product['images'])}};
     $(".image-gallery-right").click(function () {
-
+        if(current==max){
+            return;
+        }
         var width = $(".image-gallery-li").outerWidth();
         console.log(width);
         $("ul.image-gallery-ul").animate({
