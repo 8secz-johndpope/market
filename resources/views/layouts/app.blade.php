@@ -665,11 +665,15 @@
     });
 
     $(".image-gallery-right").click(function () {
+        var width = $(".image-gallery-li").width();
+        console.log(width);
         $("ul.image-gallery-ul").animate({
             marginLeft: '-800px'
         });
     });
     $(".image-gallery-left").click(function () {
+        var width = $(".image-gallery-li").width();
+        console.log(width);
         $("ul.image-gallery-ul").animate({
             marginLeft: '0px'
         });
