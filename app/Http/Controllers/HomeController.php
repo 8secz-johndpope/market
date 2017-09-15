@@ -740,7 +740,7 @@ class HomeController extends BaseController
             $pack->category_id = $category;
             $pack->location_id = $location;
             $pack->title = $extraprice->stitle;
-            $pack->amount = $price->{$type};
+            $pack->amount = $contract->count*$price->{$type};
             $price->save();
             $contract->packs()->save($pack);
         }
