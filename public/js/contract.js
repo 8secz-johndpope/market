@@ -369,7 +369,7 @@ function  get_packs() {
             console.log(error);
         })
 }
-$(".delete-pack").click(function () {
+$("#pack-list").on('click','.delete-pack',function () {
    var id = $(this).data('id');
    console.log(id);
     axios.get('/user/contract/pack/delete/'+id,{ params:{}})
