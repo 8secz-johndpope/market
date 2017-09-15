@@ -71,7 +71,7 @@
                                     <div class="listing-thumbnail-big">
                                         <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
                                         <div class="listing-meta txt-sub">
-                                            <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{$key}} of {{count($product['images'])}}</span>
+                                            <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{$key+1}} of {{count($product['images'])}}</span>
                                         </div>
                                     </div>
                                 </div>
