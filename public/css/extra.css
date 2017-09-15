@@ -343,3 +343,7 @@ a.select-link {
     right: 40px;
     position: absolute;
 }
+.bold-text {
+    font-weight: bold;
+    font-size: 20px;
+}
