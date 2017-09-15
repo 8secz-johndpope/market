@@ -664,6 +664,17 @@
             });
     });
 
+    $(".image-gallery-right").click(function () {
+        $("ul.image-gallery-ul").animate({
+            marginLeft: '-800px'
+        });
+    });
+    $(".image-gallery-left").click(function () {
+        $("ul.image-gallery-ul").animate({
+            marginLeft: '0px'
+        });
+    });
+
 </script>
 </body>
 </html>
