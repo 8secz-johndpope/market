@@ -11,6 +11,10 @@
 @endsection
 
 @section('content')
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <embed src="https://sumra.net/css/contract.pdf" width="800" height="600" type='application/pdf'>
 
-<embed src="https://sumra.net/css/contract.pdf" width="500" height="375" type='application/pdf'>
+    </div>
+</div>
 @endsection
