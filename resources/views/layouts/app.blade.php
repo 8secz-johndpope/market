@@ -665,6 +665,7 @@
     });
     var current = 1;
     $(".image-gallery-right").click(function () {
+
         var width = $(".image-gallery-li").outerWidth();
         console.log(width);
         $("ul.image-gallery-ul").animate({
@@ -673,6 +674,9 @@
         current++;
     });
     $(".image-gallery-left").click(function () {
+        if(current<2){
+            return
+        }
         var width = $(".image-gallery-li").outerWidth();
         console.log(width);
         $("ul.image-gallery-ul").animate({
