@@ -27,7 +27,6 @@
 
                             <div class="form-group">
                                 <select class="form-control" id="business">
-                                    <option value="0">Select Business</option>
                                     <option value="1">Small Business</option>
                                     <option value="2">Medium Business</option>
                                     <option value="3">Large Business</option>
