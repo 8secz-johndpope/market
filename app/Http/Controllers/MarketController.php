@@ -282,6 +282,18 @@ class MarketController extends BaseController
         return ['base'=>$base,'categories'=>$maps];
 
     }
+    public function locations(Request $request){
+        $base = Location::where('parent_id',0)->get();
+        $categories = Location::all();
+        $maps=array();
+        foreach ($categories as $category){
+            $category->children=$category->children;
+            $maps[$category->id]=$category;
+        }
+
+        return ['base'=>$base,'locations'=>$maps];
+
+    }
     /**
      * [getAllCategories description]
      * @param  Request $request [description]

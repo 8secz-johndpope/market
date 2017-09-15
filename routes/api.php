@@ -14,6 +14,8 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/advert/categories','MarketController@categories');
+Route::get('/advert/locations','MarketController@locations');
+
 Route::get('/advert/all-categories','MarketController@getAllCategories');
 Route::get('/error','MarketController@error');
 
