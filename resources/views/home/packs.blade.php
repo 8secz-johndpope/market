@@ -3,5 +3,5 @@
     @foreach($contract->packs as $pack)
         <tr><td>{{$pack->title}}</td><td>{{$pack->category->title}}</td><td>{{$pack->location->title}}</td><td>{{$contract->count}}</td><td>{{$pack->amount/100}}</td></tr>
         @endforeach
-    <tr><td>Total</td><td>{{count($contract->packs)*$contract->count}}</td><td>{{$contract->packs->sum('amount')/100}}</td></tr>
+    <tr><td>Total</td><td></td><td></td><td>{{count($contract->packs)*$contract->count}}</td><td>{{$contract->packs->sum('amount')/100}}</td></tr>
 </table>
