@@ -290,7 +290,7 @@ class MarketController extends BaseController
             $category->children=$category->children;
             $maps[$category->id]=$category;
         }
-
+        $maps['a']=Location::find(0);
         return ['base'=>$base,'locations'=>$maps];
 
     }
