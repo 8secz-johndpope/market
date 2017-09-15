@@ -66,7 +66,7 @@
 
                         <ul class="image-gallery-ul" style="width: {{count($product['images'])*800}}px">
                         @foreach($product['images'] as $key=>$image)
-                            <li>
+                            <li class="image-gallery-li">
                                 <div class="listing-side-big">
                                     <div class="listing-thumbnail-big">
                                         <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
