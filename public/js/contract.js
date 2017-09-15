@@ -371,6 +371,7 @@ function  get_packs() {
 }
 $(".delete-pack").click(function () {
    var id = $(this).data('id');
+   console.log(id);
     axios.get('/user/contract/pack/delete/'+id,{ params:{}})
         .then(function (response) {
             // console.log(response);
