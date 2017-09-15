@@ -229,7 +229,7 @@ ul.image-gallery-ul li img {
     width: 800px;
     overflow: hidden;
     position: relative;
-  /*  display: none; */
+    margin: auto;
 }
 .carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-next {
     margin-right: -20px;
