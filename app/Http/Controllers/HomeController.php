@@ -744,7 +744,8 @@ class HomeController extends BaseController
             $price->save();
             $contract->packs()->save($pack);
         }
-        return ['location'=>$location,'category'=>$category,'contract'=>$contract,'types'=>$request->types];
+       // return ['location'=>$location,'category'=>$category,'contract'=>$contract,'types'=>$request->types];
+        return view('home.packs',['contract'=>$contract]);
 
     }
     public function contract(Request $request){

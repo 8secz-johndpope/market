@@ -350,7 +350,8 @@ $(".add-pack").click(function () {
     });
     axios.get('/user/contract/pack/'+category+'/'+location,{ params:{types:values}})
         .then(function (response) {
-            console.log(response);
+           // console.log(response);
+            $("#pack-list").html(response.data);
 
         })
         .catch(function (error) {

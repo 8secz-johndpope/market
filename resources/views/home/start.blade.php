@@ -44,13 +44,12 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-sm-11">
+                        <div class="col-sm-12" id="pack-list">
 
 
 
                         </div>
-                        <div class="col-sm-1">
-                        </div>
+
                     </div>
                 </div>
             </div>
