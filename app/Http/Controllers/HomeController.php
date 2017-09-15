@@ -740,6 +740,7 @@ class HomeController extends BaseController
         }else{
             $contract = new Contract;
             $contract->save();
+            $request->session()->put('contract_id',$contract->id);
         }
         $packs = $contract->packs;
         $prices = Price::all();
