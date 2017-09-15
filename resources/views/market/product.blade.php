@@ -87,6 +87,7 @@
                             <span class="glyphicon glyphicon-circle-arrow-right image-gallery-right"></span>
                             <span class="sr-only">Next</span>
                         </a>
+                        <div class="number-text"></div>
                     </div>
                     @endif
                     <div class="row meta">
