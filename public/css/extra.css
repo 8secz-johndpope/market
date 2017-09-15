@@ -198,10 +198,18 @@ span.product-price {
 .listing-side {
     width: 120px;
 }
-.listing-side .listing-thumbnail {
+.listing-side .listing-thumbnail{
+    height: 92px;
+}
+.listing-side-big .listing-thumbnail-big{
+    height: 600px;
+}
+.listing-side-big{
+    width: 800px;
+}
+.listing-side .listing-thumbnail,.listing-side-big .listing-thumbnail-big {
     width: 100%;
     float: left;
-    height: 92px;
     margin-bottom: 8px;
     overflow: hidden;
     position: relative;
@@ -219,7 +227,7 @@ span.product-price {
     transform: translate(-50%,-50%);
     display: block;
 }
-.listing-side .listing-meta {
+.listing-side .listing-meta,.listing-side-big .listing-meta {
     padding: 2px 0;
     position: absolute;
     bottom: 0;
@@ -281,7 +289,7 @@ ul.image-gallery-ul li img {
     width: 800px;
     overflow: hidden;
     position: relative;
-    display: none;
+  /*  display: none; */
 }
 .carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-next {
     margin-right: -20px;
