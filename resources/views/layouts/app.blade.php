@@ -674,6 +674,7 @@
     });
     $(".image-gallery-left").click(function () {
         var width = $(".image-gallery-li").outerWidth();
+        console.log((current-2)*width);
         console.log(width);
         $("ul.image-gallery-ul").animate({
             marginLeft: ((current-2)*width)+'px'
