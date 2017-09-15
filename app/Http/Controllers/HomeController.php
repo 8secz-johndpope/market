@@ -735,6 +735,8 @@ class HomeController extends BaseController
         foreach ($request->types as $type){
             $pack = new ContractPack;
             $pack->slug = $type;
+            $pack->category_id = $category;
+            $pack->location_id = $location;
             $pack->amount = $price->{$type};
             $price->save();
             $contract->packs()->save($pack);
