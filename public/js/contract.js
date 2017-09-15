@@ -341,7 +341,13 @@ $(".add-pricegroup").click(function () {
 $(".add-pack").click(function () {
     var category = $("#category").val();
     var location = $("#location").val();
-    axios.get('/user/contract/pack/'+category+'/'+location,{ params:{}})
+    var type = [];
+    $(".pack-class").each(function(i, obj){
+        if ($(obj).attr("checked")) {
+            type.push($(obj).val());
+        }
+    });
+    axios.get('/user/contract/pack/'+category+'/'+location,{ params:{types:type}})
         .then(function (response) {
             console.log(response);
 
