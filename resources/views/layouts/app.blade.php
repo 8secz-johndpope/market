@@ -664,7 +664,7 @@
             });
     });
     var current = 1;
-    var max = @if(isset($product['images'])){{count($product['images'])}}@endif;
+    var max = @if(isset($product['images'])){{count($product['images'])}} @else 1 @endif ;
     $(".image-gallery-right").click(function () {
         if(current==max){
             return;
