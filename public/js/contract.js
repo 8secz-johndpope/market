@@ -341,14 +341,15 @@ $(".add-pricegroup").click(function () {
 $(".add-pack").click(function () {
     var category = $("#category").val();
     var location = $("#location").val();
-    var type = [];
-    $(".pack-class").each(function(i, obj){
-        if ($(this).attr("checked")) {
-            type.push($(this).val());
-        }
+    //var type = [];
+    var values = new Array();
+    $.each($("input[name='type[]']:checked"), function() {
+        values.push($(this).val());
+        // or you can do something to the actual checked checkboxes by working directly with  'this'
+        // something like $(this).hide() (only something useful, probably) :P
     });
     console.log(type);
-    axios.get('/user/contract/pack/'+category+'/'+location,{ params:{types:type}})
+    axios.get('/user/contract/pack/'+category+'/'+location,{ params:{types:values}})
         .then(function (response) {
             console.log(response);
 
