@@ -111,4 +111,8 @@ class User extends Authenticatable
     public function address(){
         return $this->belongsTo('App\Model\Address','default_address');
     }
+    public function business()
+    {
+        return $this->hasOne('App\Model\Business');
+    }
 }
