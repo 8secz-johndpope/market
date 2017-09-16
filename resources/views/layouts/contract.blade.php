@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/slick.css?q=43') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/slick-theme.css?q=43') }}"/>
     <link href="{{ asset('/css/extra.css?q=43') }}" rel="stylesheet">
-
+    <link href="{{ asset('/css/style.css?q=43') }}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{ asset('/js/slick.js') }}"></script>
 
