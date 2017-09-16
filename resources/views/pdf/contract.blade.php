@@ -7,6 +7,7 @@
     HelloSign.open({
         url: "https://app.hellosign.com/editor/embeddedSign?signature_id=55de1db72f6ced0f1e21b9e797379043&token=d52964b736101585547b77db021c4523",
         allowCancel: true,
+        redirectUrl:"https://sumra.net",
         messageListener: function(eventData) {
             // do something
         }
