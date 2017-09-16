@@ -11,6 +11,10 @@
 @endsection
 
 @section('content')
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+
+
     <div class="form-group row">
         <label for="example-text-input" class="col-2 col-form-label">Company Name</label>
         <div class="col-10">
@@ -49,5 +53,6 @@
     </div>
 
     <a  class="btn btn-primary go-to-packs">Continue</a>
-
+        </div>
+    </div>
 @endsection
