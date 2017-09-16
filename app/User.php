@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Mail\AccountCreated;
+use App\Model\Address;
 use App\Model\EmailCode;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -106,5 +107,9 @@ class User extends Authenticatable
     }
     public function is_admin(){
         return count($this->belongsToMany('App\Model\Role')->where('name','admin')->get()) > 0;
+    }
+    public function address(){
+        $address = Address::find($this->default_address);
+        return $address->line1.', '.$address->city.', '.$address->postcode;
     }
 }

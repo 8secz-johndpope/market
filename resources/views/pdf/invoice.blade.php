@@ -49,7 +49,7 @@
             <tr><td>Company</td><td>BGC International</td></tr>
             <tr><td>Email</td><td>{{$user->email}}</td></tr>
             <tr><td>Phone</td><td>{{$user->phone}}</td></tr>
-            <tr><td>Billing Address</td></tr>
+            <tr><td>Billing Address</td><td>{{$user->address}}</td></tr>
         </table>
         <table class="customers">
             <tr><th>Title</th><th>Category</th><th>Location</th><th>Quantity</th><th>Price</th></tr>
@@ -63,7 +63,13 @@
 Payment Terms: 30 days Payment Method: Invoice Billing Frequency: Monthly in arrears 				Total
 </p>
 
+       <h4>Terms and Conditions</h4>
+        <p>1. The account holder will pay for the committed purchase in full whether or not it is used. </p>
+        <p>2. These credits are to be used in the area's above and the area's above only.</p>
+        <p>3. Any adverts posted outside of these designated area's will be charged in full separately. </p>
+        <p>4. The Company confirms that it is VAT registered and it’s VAT number is. If the box is not checked, the Company confirms it is not, and is not required to be, VAT registered.</p>
 
+        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
         <div class="page-break"></div>
         <img src="https://sumra.net/css/brand.png" style="width: 100%">
 
@@ -83,6 +89,8 @@ and</p>
         <h4>3 Term</h4>
         <p>3.1 This Agreement shall be deemed to have commenced on the later of the dates inserted by the signatories below ("Start Date") and shall continue in force until the expiry date of the package determined by time period specified in the SUMRA Insertion Order Form ("End Date"). The term of the Agreement shall be from the Start Date to the End Date ("Term").
         </p>
+        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+
         <div class="page-break"></div>
         <img src="https://sumra.net/css/brand.png" style="width: 100%">
 
@@ -115,6 +123,8 @@ and</p>
         </p>
         <h4>10 Consequences of Termination
         </h4><p>10.1 Any termination of this Agreement shall not affect any accrued rights or liabilities of either party nor shall it affect the status of any provision of this Agreement which is expressly or by implication intended to come into or continue in force on or after such termination. Clauses 4 (Fees and Payment), 5 (Warranties), 6 (Indemnities), 7 (Limitation of Liability), 10 (Consequences of Termination), 11 (Confidentiality), and 12 (General) shall continue to have effect after the end of the Term.
+            <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+
         <div class="page-break"></div>
         <img src="https://sumra.net/css/brand.png" style="width: 100%">
 
@@ -143,6 +153,8 @@ and</p>
         </p><p>12.13 This Agreement may be signed in duplicate, each of which, when signed, shall be original, and all the duplicates together shall constitute the same Agreement.
         </p><p>SUMRA
         </p><p>I have read, understood and agree to the SUMRA standard terms and conditions above:</p>
+        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+
     </div>
 </div>
 </body>
