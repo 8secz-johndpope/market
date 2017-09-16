@@ -804,10 +804,10 @@ class HomeController extends BaseController
 
 // Store it to use with the embedded.js HelloSign.open() call
         $sign_url = $response->getSignUrl();
-        return $sign_url;
+        //return $sign_url;
        // $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
      //   $response = $client->getEmbeddedSignUrl('559aa46cf6b9ab8bc4599862ee1f5b01');
-        //return view('pdf.contract');
+        return view('pdf.contract',['url'=>$sign_url]);
     }
 
 }
