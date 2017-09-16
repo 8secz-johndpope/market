@@ -16,8 +16,9 @@
 <body>
 <div class="row">
     <div class="col-sm-12">
+        <img src="https://sumra.net/css/sumra-text.png">
+
         <table class="table">
-            <img src="https://sumra/css/sumra-text.png">
             <tr><td>Name</td></tr>
             <tr><td>Company</td></tr>
             <tr><td>Email</td></tr>
