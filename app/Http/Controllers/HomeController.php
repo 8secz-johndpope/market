@@ -848,4 +848,7 @@ class HomeController extends BaseController
         return view('pdf.contract',['url'=>$sign_url]);
     }
 
+    public function pricing(Request $request){
+        return view('home.pricing');
+    }
 }
