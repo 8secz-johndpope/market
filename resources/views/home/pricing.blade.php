@@ -48,7 +48,7 @@
                     </div> <!-- .cd-pricing-body -->
 
                     <footer class="cd-pricing-footer">
-                        <a class="cd-select" href="http://codyhouse.co/?p=429">Select</a>
+                        <a class="cd-select" href="/user/contract/start/1">Select</a>
                     </footer> <!-- .cd-pricing-footer -->
                 </li>
 
@@ -105,7 +105,7 @@
                     </div> <!-- .cd-pricing-body -->
 
                     <footer class="cd-pricing-footer">
-                        <a class="cd-select" href="http://codyhouse.co/?p=429">Select</a>
+                        <a class="cd-select" href="/user/contract/start/2">Select</a>
                     </footer> <!-- .cd-pricing-footer -->
                 </li>
 
@@ -163,7 +163,7 @@
                     </div> <!-- .cd-pricing-body -->
 
                     <footer class="cd-pricing-footer">
-                        <a class="cd-select" href="http://codyhouse.co/?p=429">Select</a>
+                        <a class="cd-select" href="/user/contract/start/3">Select</a>
                     </footer>  <!-- .cd-pricing-footer -->
                 </li>
 

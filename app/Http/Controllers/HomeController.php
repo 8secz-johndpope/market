@@ -796,7 +796,7 @@ class HomeController extends BaseController
         return view('home.packs',['contract'=>$contract]);
 
     }
-    public function contract(Request $request){
+    public function contract(Request $request,$id){
         if ($request->session()->has('contract_id')) {
             $id = $request->session()->get('contract_id');
             $contract = Contract::find($id);
