@@ -383,3 +383,23 @@ $("#pack-list").on('click','.delete-pack',function () {
         });
 
 });
+
+$(".go-to-packs").click(function () {
+    var name = $('#name').val();
+    var line1 = $('#line1').val();
+    var city = $('#city').val();
+    var phone = $('#phone').val();
+    var company = $('#company').val();
+    var vat = $('#vat').val();
+
+
+    axios.get('/user/contract/cbusiness',{ params:{name:name,line1:line1,city:city,phone:phone,company:company,vat:vat}})
+        .then(function (response) {
+             console.log(response);
+            document.location.href = "/user/contract/start";
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+});

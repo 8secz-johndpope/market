@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Model\Business;
 use PDF;
 use App\Model\Contract;
 use App\Model\ContractPack;
@@ -801,7 +802,25 @@ class HomeController extends BaseController
 
         return view('home.business');
     }
-        public function contract(Request $request){
+    public function cbusiness(Request $request)
+    {
+        $user=Auth::user();
+        $business = new Business;
+        $business->name = $request->name;
+        $address = new Address;
+        $address->line1=$request->line1;
+        $address->city=$request->city;
+        $address->postcode=$request->postcode;
+        $address->user_id=$user->id;
+        $address->save();
+        $business->phone = $request->phone;
+        $business->company = $request->company;
+        $business->vat = $request->vat;
+        $business->user_id = $user->id;
+        $business->save();
+        return ['msg'=>'done'];
+    }
+    public function contract(Request $request){
         if ($request->session()->has('contract_id')) {
             $id = $request->session()->get('contract_id');
             $contract = Contract::find($id);
