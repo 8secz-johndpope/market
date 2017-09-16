@@ -23,7 +23,7 @@
         <img src="https://sumra.net/css/sumra-text.png">
 
         <table class="table">
-            <tr><td>Name</td></tr>
+            <tr><td>Name</td><td>{{$user->name}}</td></tr>
             <tr><td>Company</td></tr>
             <tr><td>Email</td></tr>
             <tr><td>Phone</td></tr>
