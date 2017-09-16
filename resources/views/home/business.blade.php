@@ -51,7 +51,12 @@
             <input class="form-control" type="text" placeholder="01893293" id="example-password-input">
         </div>
     </div>
-
+            <div class="form-group row">
+                <label for="example-password-input" class="col-2 col-form-label">VAT No:(if applicable)</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" placeholder="VN3287283" id="example-password-input">
+                </div>
+            </div>
     <a  class="btn btn-primary go-to-packs">Continue</a>
         </div>
     </div>
