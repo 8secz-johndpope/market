@@ -796,9 +796,10 @@ class HomeController extends BaseController
         $client_id = 'd88c4209bd93093d3815ef0e26069793';
         $embedded_request = new \HelloSign\EmbeddedSignatureRequest($request, $client_id);
         $response = $client->createEmbeddedSignatureRequest($embedded_request);
-        $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
-        $response = $client->getEmbeddedSignUrl('559aa46cf6b9ab8bc4599862ee1f5b01');
-        return view('pdf.contract');
+        return $response;
+       // $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
+     //   $response = $client->getEmbeddedSignUrl('559aa46cf6b9ab8bc4599862ee1f5b01');
+        //return view('pdf.contract');
     }
 
 }
