@@ -13,6 +13,7 @@ class VerifyCsrfToken extends BaseVerifier
      */
     protected $except = [
         //
+        '/hellosign',
         '/api/user/advert/create',
         '/api/user/advert/ccreate',
         '/api/*'
