@@ -112,6 +112,10 @@ and</p>
         <p>7.1 Nothing in this Agreement shall exclude or limit liability for death or personal injury resulting from the negligence of either party or their servants, agents or employees.
         </p><p>7.2 With the exception of: (a) clause 7.1 above; (b) Company's obligations to pay SUMRA under clause 4 (Fees and Payment); and (c) the indemnities in clause 6 (Indemnities), the liability of either party in contract, tort, negligence, pre-contract or other representations or otherwise arising out of this Agreement or the performance of its obligations under this Agreement shall be limited in aggregate to the total amount payable under the Agreement as specified in clause 4.
         </p>
+        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+
+        <div class="page-break"></div>
+        <img src="https://sumra.net/css/brand.png" style="width: 100%">
         <h4>8 Licences and Intellectual Property
         </h4>
         <p>8.1 Company grants to SUMRA a non-exclusive, royalty-free, world-wide licence to use, reproduce and display the Company logo, content, code and material provided by or on behalf of the Company ("Company Materials") on the Site and in any SUMRA marketing materials in the form provided by Company, save for any formatting changes necessary for display on the Site or other agreed changes.
@@ -123,16 +127,17 @@ and</p>
         </p>
         <h4>10 Consequences of Termination
         </h4><p>10.1 Any termination of this Agreement shall not affect any accrued rights or liabilities of either party nor shall it affect the status of any provision of this Agreement which is expressly or by implication intended to come into or continue in force on or after such termination. Clauses 4 (Fees and Payment), 5 (Warranties), 6 (Indemnities), 7 (Limitation of Liability), 10 (Consequences of Termination), 11 (Confidentiality), and 12 (General) shall continue to have effect after the end of the Term.
-            <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
 
-        <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" style="width: 100%">
 
         </p>
         <h4>11 Confidentiality</h4>
         <p>11.1 Each of the parties shall not disclose to any person any information, whether in written or any other form, disclosed by or on behalf of one party ("Disclosing Party") to the other party ("Receiving Party") in the course of the discussions leading up to or the entering into or during the performance of this Agreement and which is identified as confidential or is clearly by its nature confidential including, but not limited to, the Works provided by Company under this Agreement and all personal data relating to SUMRA's users as well as any other information internal to SUMRA or any SUMRA subsidiary, holding or parent company (and any of their subsidiaries) ("Confidential Information") except insofar as: (a) is required by a person employed or engaged by the Receiving Party in connection with the proper performance of this Agreement (but only to the extent that any person to whom the information is disclosed needs to know the same for the performance of their duties and provided the Receiving Party shall be obliged to procure that all such persons are aware of the obligation of confidentiality and undertake to comply with it); or (b) is required to be disclosed by law (provided that the party disclosing the information shall notify the other party of the information to be disclosed and of the circumstances in which the disclosure is alleged to be required as early as reasonably possible before such disclosure shall be made and takes all reasonable action to avoid and limit such disclosure).
         </p><p>11.2 Any disclosure of Confidential Information shall be in confidence, shall only be to the extent that any persons to whom the information is disclosed need to know the same for the performance of their duties and the Receiving Party shall procure that all such persons are aware of the obligation of confidentiality and undertake to comply with it.
         </p><p>11.3 Each of the parties shall use the Confidential Information solely in connection with the performance of this Agreement and not otherwise for its own benefit or the benefit of any third party.
+            <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+
+        <div class="page-break"></div>
+        <img src="https://sumra.net/css/brand.png" style="width: 100%">
         </p><p>11.4 Confidential Information does not include information which: (a) is generally available to the public otherwise than as a direct or indirect result of disclosure by the Receiving Party or a person employed or engaged by the Receiving Party contrary to their respective obligations of confidentiality; or (b) is made available or becomes available to the Receiving Party otherwise than under this Agreement and free of any restrictions as to its use or disclosure.
         </p><p>11.5 Without prejudice to any other rights or remedies that the Disclosing Party may have, the Receiving Party agrees that if the Confidential Information is used or disclosed other than in accordance with the terms of this Agreement, the Disclosing Party shall, without proof of special damage, be entitled to an injunction, specific performance or other equitable relief for any threatened or actual breach of the provisions of this clause, in addition to any damages or other remedy to which it may be entitled.
         </p><p>11.6 Company shall not disclose to SUMRA, or bring onto SUMRA's premises, or induce SUMRA to use, any third party confidential information.
@@ -144,6 +149,10 @@ and</p>
         </p><p>12.4 Neither party shall assign (including by way of a charge or declaration of trust) sub-license or deal in any way with this Agreement or any of its rights under this Agreement, without the prior written consent of the other party, such consent not be unreasonably withheld or delayed, provided that each party shall have the right to assign this Agreement to a subsidiary, holding or parent company (and any of their subsidiaries) of that party on prior written notice to the other party.
         </p> <p>12.5 Except as expressly set out in this Agreement, a person who is not a party to this Agreement has no right to rely upon or enforce any term of this Agreement.
         </p><p>12.6 The validity, construction and performance of this Agreement (and any claim, dispute or matter arising under or in connection with it or its enforceability) shall be governed by and interpreted in accordance with the laws of England and Wales. Each party irrevocably agrees to the exclusive jurisdiction of the English courts over any claim, dispute or matter arising under or in connection with this Agreement or its enforceability or the legal relationships established by this Agreement.
+            <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+
+        <div class="page-break"></div>
+        <img src="https://sumra.net/css/brand.png" style="width: 100%">
         </p><p>12.7 Neither party shall advertise or publicly announce, communicate or circulate the existence or terms of this Agreement or any association with the other party without the prior written consent of the other party.
         </p><p>12.8 Any notice given under this Agreement shall be in writing in English and served by hand, fax, prepaid recorded or special delivery post or prepaid international recorded airmail. In the case of SUMRA, notices shall be given to its Financial Director at the address specified in the Agreement. In the case of Company, notice shall be sent to the address referred to in this Agreement. Any such notice shall be deemed to have been served at the time of delivery. The parties shall notify each other of changes in addresses for service during the Term of this Agreement.
         </p><p>12.9 If any clause of this Agreement is found by any court or administrative body of competent jurisdiction to be invalid or unenforceable, such invalidity or unenforceability shall not affect the other provisions of this Agreement which shall remain in full force and effect.
