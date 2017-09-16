@@ -109,6 +109,6 @@ class User extends Authenticatable
         return count($this->belongsToMany('App\Model\Role')->where('name','admin')->get()) > 0;
     }
     public function address(){
-        return $this->hasOne('App\Model\Address','default_address');
+        return $this->belongsTo('App\Model\Address','default_address');
     }
 }
