@@ -12,7 +12,7 @@
 
 @section('content')
 <div class="cd-pricing-container">
-    <div class="cd-pricing-switcher">
+    <div class="cd-pricing-switcher" style="display: none">
         <p class="fieldset">
             <input type="radio" name="duration-1" value="monthly" id="monthly-1" checked="">
             <label for="monthly-1">Monthly</label>
