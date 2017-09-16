@@ -39,7 +39,7 @@ Route::get('/user/manage/details', 'HomeController@details');
 Route::get('/user/manage/shipping/{id}', 'HomeController@shipping');
 
 Route::get('/user/contract/pricing', 'HomeController@pricing');
-Route::get('/user/contract/business/{id}', 'HomeController@contract');
+Route::get('/user/contract/business/{id}', 'HomeController@business');
 
 Route::get('/user/contract/start', 'HomeController@contract');
 Route::get('/user/contract/sign', 'HomeController@sign');

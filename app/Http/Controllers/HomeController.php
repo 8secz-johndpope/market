@@ -799,6 +799,7 @@ class HomeController extends BaseController
     public function business(Request $request,$id)
     {
 
+        return view('home.business');
     }
         public function contract(Request $request){
         if ($request->session()->has('contract_id')) {
