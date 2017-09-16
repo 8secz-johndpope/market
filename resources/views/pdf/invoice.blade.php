@@ -49,7 +49,7 @@
             <tr><td>Company</td><td>BGC International</td></tr>
             <tr><td>Email</td><td>{{$user->email}}</td></tr>
             <tr><td>Phone</td><td>{{$user->phone}}</td></tr>
-            <tr><td>Billing Address</td><td>{{$user->address}}</td></tr>
+            <tr><td>Billing Address</td><td>{{$user->address->line1}}</td></tr>
         </table>
         <table class="customers">
             <tr><th>Title</th><th>Category</th><th>Location</th><th>Quantity</th><th>Price</th></tr>

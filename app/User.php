@@ -109,7 +109,6 @@ class User extends Authenticatable
         return count($this->belongsToMany('App\Model\Role')->where('name','admin')->get()) > 0;
     }
     public function address(){
-        $address = Address::find($this->default_address);
-        return $address->line1.', '.$address->city.', '.$address->postcode;
+        return $this->hasOne('App\Model\Address','default_address');
     }
 }
