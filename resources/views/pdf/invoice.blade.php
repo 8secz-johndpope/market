@@ -15,6 +15,28 @@
         .page-break {
             page-break-after: always;
         }
+        .customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .customers td, .customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        .customers tr:hover {background-color: #ddd;}
+
+        .customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -22,15 +44,15 @@
     <div class="col-sm-12">
         <img src="https://sumra.net/css/brand.png" style="width: 100%">
 
-        <table class="table" >
+        <table class="customers" >
             <tr><td>Name</td><td>{{$user->name}}</td></tr>
             <tr><td>Company</td><td>BGC International</td></tr>
             <tr><td>Email</td><td>{{$user->email}}</td></tr>
             <tr><td>Phone</td><td>{{$user->phone}}</td></tr>
             <tr><td>Billing Address</td></tr>
         </table>
-        <table class="table">
-            <thead><th>Title</th><th>Category</th><th>Location</th><th>Quantity</th><th>Price</th><th>Delete</th></thead>
+        <table class="customers">
+            <tr><th>Title</th><th>Category</th><th>Location</th><th>Quantity</th><th>Price</th><th>Delete</th></tr>
             @foreach($contract->packs as $pack)
                 <tr><td>{{$pack->title}}</td><td>{{$pack->category->title}}</td><td>{{$pack->location->title}}</td><td>{{$contract->count}}</td><td>£{{$pack->amount/100}}</td><td><a class="delete-pack btn btn-danger" data-id="{{$pack->id}}">Delete</a> </td></tr>
             @endforeach
