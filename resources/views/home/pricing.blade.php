@@ -30,9 +30,9 @@
                         <h2>SBA</h2>
 
                         <div class="cd-price">
-                            <span class="cd-currency">$</span>
-                            <span class="cd-value">30</span>
-                            <span class="cd-duration">mo</span>
+                            <span class="cd-currency">£</span>
+                            <span class="cd-value">2500</span>
+                            <span class="cd-duration">minimum</span>
                         </div>
                     </header> <!-- .cd-pricing-header -->
 
@@ -87,9 +87,9 @@
                         <h2>MBA</h2>
 
                         <div class="cd-price">
-                            <span class="cd-currency">$</span>
-                            <span class="cd-value">60</span>
-                            <span class="cd-duration">mo</span>
+                            <span class="cd-currency">£</span>
+                            <span class="cd-value">10000</span>
+                            <span class="cd-duration">minimum</span>
                         </div>
                     </header> <!-- .cd-pricing-header -->
 
@@ -145,9 +145,9 @@
                         <h2>BBA</h2>
 
                         <div class="cd-price">
-                            <span class="cd-currency">$</span>
-                            <span class="cd-value">90</span>
-                            <span class="cd-duration">mo</span>
+                            <span class="cd-currency">£</span>
+                            <span class="cd-value">50000</span>
+                            <span class="cd-duration">minimum</span>
                         </div>
                     </header> <!-- .cd-pricing-header -->
 
