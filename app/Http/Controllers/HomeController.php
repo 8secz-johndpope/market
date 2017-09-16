@@ -781,5 +781,10 @@ class HomeController extends BaseController
 
         return ['msg'=>'done'];
     }
+    public function pdf(Request $request){
+        $data['name']='Hello';
+        $pdf = PDF::loadView('pdf.invoice', $data);
+        return $pdf->download('invoice.pdf');
+    }
 
 }
