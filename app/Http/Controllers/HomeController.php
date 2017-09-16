@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use PDF;
 use App\Model\Contract;
 use App\Model\ContractPack;
 use App\Model\EmailCode;
