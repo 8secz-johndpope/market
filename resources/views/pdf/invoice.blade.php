@@ -10,13 +10,14 @@
 
     <title>{{ config('app.name', 'Sumra') }}</title>
 
-   
+
 
 </head>
 <body>
 <div class="row">
     <div class="col-sm-12">
         <table class="table">
+            <img src="/css/sumra-text.png">
             <tr><td>Name</td></tr>
             <tr><td>Company</td></tr>
             <tr><td>Email</td></tr>
