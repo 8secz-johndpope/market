@@ -813,6 +813,7 @@ class HomeController extends BaseController
         $address->city=$request->city;
         $address->postcode=$request->postcode;
         $address->user_id=$user->id;
+        $address->code = rand(1000,9999);
         $address->save();
         $business->phone = $request->phone;
         $business->company = $request->company;
