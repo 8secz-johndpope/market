@@ -5,9 +5,8 @@
 <script>
     HelloSign.init("d88c4209bd93093d3815ef0e26069793");
     HelloSign.open({
-        url: "https://app.hellosign.com/editor/embeddedSign?signature_id=559aa46cf6b9ab8bc4599862ee1f5b01&token=26c2c735bd5f318129b247cf1eb565ed",
+        url: "https://app.hellosign.com/editor/embeddedSign?signature_id=55de1db72f6ced0f1e21b9e797379043&token=d52964b736101585547b77db021c4523",
         allowCancel: true,
-        skipDomainVerification: true,
         messageListener: function(eventData) {
             // do something
         }
