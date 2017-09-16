@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Model\Address;
 use App\Model\Business;
 use PDF;
 use App\Model\Contract;
