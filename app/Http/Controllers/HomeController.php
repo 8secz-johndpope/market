@@ -731,7 +731,33 @@ class HomeController extends BaseController
     }
     public function sign(Request $request)
     {
-        return view('home.sign');
+        $data['name']='Hello';
+        $pdf = PDF::loadView('pdf.invoice', ['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'packs'=>$packs,'contract'=>$contract,'user'=>Auth::user()]);
+        $pdf->save('/home/anil/market/storage/contracts/invoice.pdf');
+        $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
+        $request = new \HelloSign\SignatureRequest;
+        $request->enableTestMode();
+        $request->setSubject('My First embedded signature request with a template');
+        $request->setMessage('Awesome, right?');
+        $request->addSigner('anil@sumra.net', 'Anil');
+        $request->addFile("/home/anil/market/storage/contracts/invoice.pdf");
+
+        $client_id = 'd88c4209bd93093d3815ef0e26069793';
+        $embedded_request = new \HelloSign\EmbeddedSignatureRequest($request, $client_id);
+        $response = $client->createEmbeddedSignatureRequest($embedded_request);
+        $signatures   = $response->getSignatures();
+        $signature_id = $signatures[0]->getId();
+
+// Retrieve the URL to sign the document
+        $response = $client->getEmbeddedSignUrl($signature_id);
+
+// Store it to use with the embedded.js HelloSign.open() call
+        $sign_url = $response->getSignUrl();
+        //return $sign_url;
+        // $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
+        //   $response = $client->getEmbeddedSignUrl('559aa46cf6b9ab8bc4599862ee1f5b01');
+        return view('pdf.contract',['url'=>$sign_url]);
+      //  return view('home.sign');
     }
     public function pack(Request $request,$category,$location){
         $id = $request->session()->get('contract_id');
@@ -773,34 +799,9 @@ class HomeController extends BaseController
         $prices = Price::all();
         $categories = Category::where('parent_id',0)->get();
         $locations = Location::where('parent_id',0)->get();
-     //   return view('home.start',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'packs'=>$packs,'contract'=>$contract]);
+        return view('home.start',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'packs'=>$packs,'contract'=>$contract]);
 
-        $data['name']='Hello';
-        $pdf = PDF::loadView('pdf.invoice', ['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'packs'=>$packs,'contract'=>$contract,'user'=>Auth::user()]);
-        $pdf->save('/home/anil/market/storage/contracts/invoice.pdf');
-        $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
-        $request = new \HelloSign\SignatureRequest;
-        $request->enableTestMode();
-        $request->setSubject('My First embedded signature request with a template');
-        $request->setMessage('Awesome, right?');
-        $request->addSigner('anil@sumra.net', 'Anil');
-        $request->addFile("/home/anil/market/storage/contracts/invoice.pdf");
 
-        $client_id = 'd88c4209bd93093d3815ef0e26069793';
-        $embedded_request = new \HelloSign\EmbeddedSignatureRequest($request, $client_id);
-        $response = $client->createEmbeddedSignatureRequest($embedded_request);
-        $signatures   = $response->getSignatures();
-        $signature_id = $signatures[0]->getId();
-
-// Retrieve the URL to sign the document
-        $response = $client->getEmbeddedSignUrl($signature_id);
-
-// Store it to use with the embedded.js HelloSign.open() call
-        $sign_url = $response->getSignUrl();
-        //return $sign_url;
-        // $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
-        //   $response = $client->getEmbeddedSignUrl('559aa46cf6b9ab8bc4599862ee1f5b01');
-        return view('pdf.contract',['url'=>$sign_url]);
     }
     public  function delete_pack(Request $request,$id){
         $pack = ContractPack::find($id);
