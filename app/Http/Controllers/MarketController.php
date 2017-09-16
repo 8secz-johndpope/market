@@ -1291,4 +1291,7 @@ class MarketController extends BaseController
         //return View('market.listings',$params);
         return View('market.listingsrow',$params);
     }
+    public function hellosign(Request $request){
+        return " Hello API Event Received";
+    }
 }
