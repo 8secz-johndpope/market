@@ -12,5 +12,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Business extends Model
 {
+    public function address(){
+        return $this->belongsTo('App\Model\Address');
+    }
 
 }

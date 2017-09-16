@@ -52,7 +52,7 @@
             <tr><td>Company</td><td>{{$user->business->name}}</td></tr>
             <tr><td>Email</td><td>{{$user->email}}</td></tr>
             <tr><td>Phone</td><td>{{$user->business->phone}}</td></tr>
-            <tr><td>Billing Address</td><td>{{$user->address->line1}}</td></tr>
+            <tr><td>Billing Address</td><td>{{$user->business->address->line1}}</td></tr>
         </table>
         <table class="customers">
             <tr><th>Title</th><th>Category</th><th>Location</th><th>Quantity</th><th>Price</th></tr>
