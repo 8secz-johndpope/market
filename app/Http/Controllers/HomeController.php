@@ -790,8 +790,7 @@ class HomeController extends BaseController
         $request->enableTestMode();
         $request->setSubject('My First embedded signature request with a template');
         $request->setMessage('Awesome, right?');
-        $request->addSigner('jack@example.com', 'Jack');
-        $request->addSigner('jill@example.com', 'Jill');
+        $request->addSigner('anil@sumra.net', 'Anil');
         $request->addFile("/home/anil/market/storage/contracts/invoice.pdf");
 
         $client_id = 'd88c4209bd93093d3815ef0e26069793';
