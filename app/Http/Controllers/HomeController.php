@@ -731,8 +731,18 @@ class HomeController extends BaseController
     }
     public function sign(Request $request)
     {
-        $data['name']='Hello';
-        $pdf = PDF::loadView('pdf.invoice', ['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'packs'=>$packs,'contract'=>$contract,'user'=>Auth::user()]);
+        if ($request->session()->has('contract_id')) {
+            $id = $request->session()->get('contract_id');
+            $contract = Contract::find($id);
+        }else{
+            return redirect('/user/contract/start');
+          //  $contract = new Contract;
+          //  $contract->save();
+           // $request->session()->put('contract_id',$contract->id);
+        }
+      //  $packs = $contract->packs;
+
+        $pdf = PDF::loadView('pdf.invoice', ['contract'=>$contract,'user'=>Auth::user()]);
         $pdf->save('/home/anil/market/storage/contracts/invoice.pdf');
         $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
         $request = new \HelloSign\SignatureRequest;
