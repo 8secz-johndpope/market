@@ -20,20 +20,30 @@
 <body>
 <div class="row">
     <div class="col-sm-12">
-        <img src="https://sumra.net/css/sumra-text.png">
+        <img src="https://sumra.net/css/brand.png" style="width: 100%">
 
-        <table class="table">
+        <table class="table" >
             <tr><td>Name</td><td>{{$user->name}}</td></tr>
-            <tr><td>Company</td></tr>
-            <tr><td>Email</td></tr>
-            <tr><td>Phone</td></tr>
+            <tr><td>Company</td><td>BGC International</td></tr>
+            <tr><td>Email</td><td>{{$user->email}}</td></tr>
+            <tr><td>Phone</td><td>{{$user->phone}}</td></tr>
             <tr><td>Billing Address</td></tr>
+        </table>
+        <table class="table">
+            <thead><th>Title</th><th>Category</th><th>Location</th><th>Quantity</th><th>Price</th><th>Delete</th></thead>
+            @foreach($contract->packs as $pack)
+                <tr><td>{{$pack->title}}</td><td>{{$pack->category->title}}</td><td>{{$pack->location->title}}</td><td>{{$contract->count}}</td><td>£{{$pack->amount/100}}</td><td><a class="delete-pack btn btn-danger" data-id="{{$pack->id}}">Delete</a> </td></tr>
+            @endforeach
+            <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td><span class="bold-text">{{count($contract->packs)*$contract->count}}</span></td><td><span class="bold-text"> £{{$contract->packs->sum('amount')/100}}</span></td></tr>
+
         </table>
 <p>Payment details
 Payment Terms: 30 days Payment Method: Invoice Billing Frequency: Monthly in arrears 				Total
 </p>
 
+
         <div class="page-break"></div>
+        <img src="https://sumra.net/css/brand.png" style="width: 100%">
 
 <h4>Terms and Conditions</h4>
         <p>Standard Advertising Terms and Conditions</p>
@@ -52,6 +62,7 @@ and</p>
         <p>3.1 This Agreement shall be deemed to have commenced on the later of the dates inserted by the signatories below ("Start Date") and shall continue in force until the expiry date of the package determined by time period specified in the SUMRA Insertion Order Form ("End Date"). The term of the Agreement shall be from the Start Date to the End Date ("Term").
         </p>
         <div class="page-break"></div>
+        <img src="https://sumra.net/css/brand.png" style="width: 100%">
 
         <h4>4 Fees and Payment</h4>
         <p>4.1 In consideration for posting advertisements on the SUMRA.com website ("Site "), Company shall pay SUMRA the fees product that Company wishes to post on the Site as detailed in the SUMRA Insertion Order Form ("Fee").
@@ -83,6 +94,7 @@ and</p>
         <h4>10 Consequences of Termination
         </h4><p>10.1 Any termination of this Agreement shall not affect any accrued rights or liabilities of either party nor shall it affect the status of any provision of this Agreement which is expressly or by implication intended to come into or continue in force on or after such termination. Clauses 4 (Fees and Payment), 5 (Warranties), 6 (Indemnities), 7 (Limitation of Liability), 10 (Consequences of Termination), 11 (Confidentiality), and 12 (General) shall continue to have effect after the end of the Term.
         <div class="page-break"></div>
+        <img src="https://sumra.net/css/brand.png" style="width: 100%">
 
         </p>
         <h4>11 Confidentiality</h4>
