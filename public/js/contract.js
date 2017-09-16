@@ -391,9 +391,9 @@ $(".go-to-packs").click(function () {
     var phone = $('#phone').val();
     var company = $('#company').val();
     var vat = $('#vat').val();
+var postcode = $("#postcode").val();
 
-
-    axios.get('/user/contract/cbusiness',{ params:{name:name,line1:line1,city:city,phone:phone,company:company,vat:vat}})
+    axios.get('/user/contract/cbusiness',{ params:{name:name,line1:line1,city:city,phone:phone,company:company,vat:vat,postcode:postcode}})
         .then(function (response) {
              console.log(response);
             document.location.href = "/user/contract/start";
