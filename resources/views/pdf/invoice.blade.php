@@ -1,1 +1,112 @@
-<h4>Hello</h4>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Sumra') }}</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="{{ asset('/css/base.css?q=34') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/slick.css?q=43') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/slick-theme.css?q=43') }}"/>
+    <link href="{{ asset('/css/extra.css?q=43') }}" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('/js/slick.js') }}"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script src="/js/main.js"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            <tr><td>Name</td></tr>
+            <tr><td>Company</td></tr>
+            <tr><td>Email</td></tr>
+            <tr><td>Phone</td></tr>
+            <tr><td>Billing Address</td></tr>
+
+
+        </table>
+
+
+
+
+<p>Payment details
+Payment Terms: 30 days Payment Method: Invoice Billing Frequency: Monthly in arrears 				Total
+</p>
+
+
+<h4>Terms and Conditions</h4>
+        <p>Standard Advertising Terms and Conditions</p>
+        <p>1 Parties</p>
+        <p>The parties are:</p>
+        <p>(a) SUMRA, operated by Investors in Ideas Ltd (company number: 07320409), a company incorporated in England, under licence from BGC Global Parters LLC("SUMRA");
+and</p>
+        <p>(b) the Company as detailed in the SUMRA Insertion Order Form ("Company").</p>
+        <p>2 Agreement</p>
+        <p>2.1 These terms and conditions; the SUMRA.com website Terms and Conditions, and the SUMRA.com Privacy Policy shall form this agreement ("Agreement").
+        </p><p>2.2 Company's use of Company's SUMRA account shall be subject to this Agreement.
+        </p><p>2.3 Notwithstanding SUMRA's acceptance of the SUMRA Insertion Order Form or display of any impressions, SUMRA may remove or refuse to publish or link to any material which in its sole discretion is considered defamatory, misleading, abusive, unlawful, inappropriate or otherwise in breach of this Agreement, promotes competitive services to those provided by SUMRA or its affiliated companies or does not comply with SUMRA's technical requirements.
+        </p> <p>2.4. Where applicable, SUMRA may restrict or discontinue the delivery of any advertisements or other communications to any or all users containing advertisements or promotions featuring Company: (a) if SUMRA is satisfied in its reasonable judgement that to send such material to users may expose SUMRA or Company to the risk of sanctions under applicable laws; or (b) if any individual user has opted out or otherwise indicated to SUMRA that he or she does not want to receive any advertisements or promotions for services provided by any company other than SUMRA or its affiliated companies.
+        </p><p>3 Term
+        </p><p>3.1 This Agreement shall be deemed to have commenced on the later of the dates inserted by the signatories below ("Start Date") and shall continue in force until the expiry date of the package determined by time period specified in the SUMRA Insertion Order Form ("End Date"). The term of the Agreement shall be from the Start Date to the End Date ("Term").
+        </p><p>4 Fees and Payment
+        </p><p>4.1 In consideration for posting advertisements on the SUMRA.com website ("Site "), Company shall pay SUMRA the fees product that Company wishes to post on the Site as detailed in the SUMRA Insertion Order Form ("Fee").
+        </p><p>4.2 SUMRA shall issue Company Monthly in arrears invoice payable via Invoice ("SUMRA Invoice").
+        </p><p>4.3 If Company wishes to post advertisements over and above Company's package allowance, SUMRA shall invoice Company for such additional advertising, and Company shall pay the full cost of such advertising.
+        </p><p>4.4 Company shall pay all SUMRA Invoices within 30 days of receipt.
+        </p><p>5 Warranties
+        </p><p>5.1 Each party to this Agreement represents and warrants and undertakes to the other that it has, and shall retain throughout the Term, all right, title and authority to enter into, and perform all of its obligations under this Agreement.
+        </p><p>5.2 Company represents, warrants and undertakes throughout the Term that Company (a) complies with, and shall continue to comply with, all laws and regulations as may be applicable to Company posting job advertisements on the Site; and (b) complies with, and shall continue to comply all applicable Data Protection laws and regulations including but not limited to the EU Data Protection Directive 95/46/EC, The Data Protection Act 1998, The Privacy and Electronic Communications (EC Directive) Regulations 2003 and any other applicable data protection legislation.
+        </p><p>6 Indemnities
+        </p><p>6.1 Company shall indemnify SUMRA (and its employees, directors and agents) against any liability, damage, expense, claim or cost (including reasonable legal fees and costs) suffered by SUMRA arising from any: (a) breach of warranties in clause 5; or (b) breach of clause 11 (Confidentiality).
+        </p><p>7 Limitation of Liability
+        </p><p>7.1 Nothing in this Agreement shall exclude or limit liability for death or personal injury resulting from the negligence of either party or their servants, agents or employees.
+        </p><p>7.2 With the exception of: (a) clause 7.1 above; (b) Company's obligations to pay SUMRA under clause 4 (Fees and Payment); and (c) the indemnities in clause 6 (Indemnities), the liability of either party in contract, tort, negligence, pre-contract or other representations or otherwise arising out of this Agreement or the performance of its obligations under this Agreement shall be limited in aggregate to the total amount payable under the Agreement as specified in clause 4.
+        </p><p>8 Licences and Intellectual Property
+        </p><p>8.1 Company grants to SUMRA a non-exclusive, royalty-free, world-wide licence to use, reproduce and display the Company logo, content, code and material provided by or on behalf of the Company ("Company Materials") on the Site and in any SUMRA marketing materials in the form provided by Company, save for any formatting changes necessary for display on the Site or other agreed changes.
+        </p><p>8.2 Except as otherwise provided in this Agreement, as between SUMRA and Company: (i) SUMRA retains all right, title and interest in and to all intellectual property rights in or associated with the Site, and all SUMRA services and (ii) Company retains all rights, title and interest in and to all intellectual property rights in or associated with the Company Materials.
+        </p><p>9. Termination
+        </p> <p>9.1 This Agreement shall terminate automatically on the End Date specified in the SUMRA Insertion Order Form or as otherwise specified in the SUMRA Insertion Order Form. SUMRA shall be entitled to immediately terminate this Agreement by notice in writing and remove any advertisements from its site without notice in the event it deems, in its sole discretion, that it is likely to incur liability as a result of any act or omission or breach of this Agreement by the Company. If SUMRA terminates this Agreement pursuant to this clause any monies then already paid to SUMRA pursuant to this Agreement shall be non refundable. Either party may terminate this Agreement immediately by notice in writing to the other if the other party: (a) is in material breach of the Agreement and, in the case of a breach capable of remedy, fails to remedy the breach within 15 days of receipt of written notice giving full details of the breach and of the steps required to remedy it; or (b) passes a resolution for winding up (otherwise than for the purposes of a solvent amalgamation or reconstruction) or a court makes an order to that effect; or (c) becomes or is declared insolvent or convenes a meeting of or makes or proposes to make any arrangement or composition with its creditors; or (d) has a liquidator, receiver, administrator, administrative receiver, manager, trustee or similar officer appointed over any of its assets; or (e) ceases, or threatens to cease, to carry on business or (f) the other party suffers or there occurs in relation to that party any event which in the reasonable opinion of the non-defaulting party is analogous to any of the events referred to in sub-clauses (b) to (e) in any part of the world. Any termination of this Agreement for any reason shall be without prejudice to Company's obligations pursuant to clause 5 and 6.
+        </p><p>10 Consequences of Termination
+        </p><p>10.1 Any termination of this Agreement shall not affect any accrued rights or liabilities of either party nor shall it affect the status of any provision of this Agreement which is expressly or by implication intended to come into or continue in force on or after such termination. Clauses 4 (Fees and Payment), 5 (Warranties), 6 (Indemnities), 7 (Limitation of Liability), 10 (Consequences of Termination), 11 (Confidentiality), and 12 (General) shall continue to have effect after the end of the Term.
+        </p><p>11 Confidentiality
+        </p><p>11.1 Each of the parties shall not disclose to any person any information, whether in written or any other form, disclosed by or on behalf of one party ("Disclosing Party") to the other party ("Receiving Party") in the course of the discussions leading up to or the entering into or during the performance of this Agreement and which is identified as confidential or is clearly by its nature confidential including, but not limited to, the Works provided by Company under this Agreement and all personal data relating to SUMRA's users as well as any other information internal to SUMRA or any SUMRA subsidiary, holding or parent company (and any of their subsidiaries) ("Confidential Information") except insofar as: (a) is required by a person employed or engaged by the Receiving Party in connection with the proper performance of this Agreement (but only to the extent that any person to whom the information is disclosed needs to know the same for the performance of their duties and provided the Receiving Party shall be obliged to procure that all such persons are aware of the obligation of confidentiality and undertake to comply with it); or (b) is required to be disclosed by law (provided that the party disclosing the information shall notify the other party of the information to be disclosed and of the circumstances in which the disclosure is alleged to be required as early as reasonably possible before such disclosure shall be made and takes all reasonable action to avoid and limit such disclosure).
+        </p><p>11.2 Any disclosure of Confidential Information shall be in confidence, shall only be to the extent that any persons to whom the information is disclosed need to know the same for the performance of their duties and the Receiving Party shall procure that all such persons are aware of the obligation of confidentiality and undertake to comply with it.
+        </p><p>11.3 Each of the parties shall use the Confidential Information solely in connection with the performance of this Agreement and not otherwise for its own benefit or the benefit of any third party.
+        </p><p>11.4 Confidential Information does not include information which: (a) is generally available to the public otherwise than as a direct or indirect result of disclosure by the Receiving Party or a person employed or engaged by the Receiving Party contrary to their respective obligations of confidentiality; or (b) is made available or becomes available to the Receiving Party otherwise than under this Agreement and free of any restrictions as to its use or disclosure.
+        </p><p>11.5 Without prejudice to any other rights or remedies that the Disclosing Party may have, the Receiving Party agrees that if the Confidential Information is used or disclosed other than in accordance with the terms of this Agreement, the Disclosing Party shall, without proof of special damage, be entitled to an injunction, specific performance or other equitable relief for any threatened or actual breach of the provisions of this clause, in addition to any damages or other remedy to which it may be entitled.
+        </p><p>11.6 Company shall not disclose to SUMRA, or bring onto SUMRA's premises, or induce SUMRA to use, any third party confidential information.
+        </p> <p>11.7 This clause shall continue in force for a period of five years from the termination or expiry of this Agreement howsoever caused.
+        </p><p>12 General
+        </p><p>12.1 If a party is prevented from performing any or all of its obligations of this Agreement by any act, event, omission or condition beyond a party's control (a "Force Majeure Event"), the affected party shall give written notice to the other party within two (2) business days of the occurrence of the Force Majeure Event and the affected party shall be excused from such performance during, but not longer than, the continuance of such Force Majeure Event. Each party shall bear their own costs arising from the Force Majeure Event and shall take all reasonable steps to find ways to perform their obligations despite the Force Majeure Event. If the Force Majeure Event continues for more than thirty (30) consecutive days, the other party may immediately terminate this Agreement on giving written notice to the affected party. 12.2 This Agreement (including any documents referred to) (the "Contractual Documents") contains the entire agreement between the parties relating to the subject matter covered in the Contractual Documents and supersedes any previous agreements, arrangements, undertakings, negotiations, discussions or proposals, written or oral, between the parties in relation to such matters. No oral explanation or oral information given by any party shall alter the interpretation of the Contractual Documents. Each party confirms that, in agreeing to enter into the Contractual Documents, it has not relied on any statement, representation, warranty, understanding, undertaking, promise or assurance (whether negligently or innocently made) of any person save insofar as the same has expressly been made in the Contractual Documents and agrees that it shall have no remedy in respect of any misrepresentation which has notbecome a term of the Contractual Documents except that this Clause shall not apply in respect of any fraudulent or negligent misrepresentation whether or not such has become a term of the Contractual Documents.
+        </p><p>12.3 Nothing in this Agreement shall be construed as creating a partnership or joint venture of any kind between the parties or as constituting or authorising either party as the agent of the other party for any purpose whatsoever. Neither party shall have the authority or power to bind the other, or to contract in the name of, or hold itself out as, or create a liability against the other in any way or for any purpose.
+        </p><p>12.4 Neither party shall assign (including by way of a charge or declaration of trust) sub-license or deal in any way with this Agreement or any of its rights under this Agreement, without the prior written consent of the other party, such consent not be unreasonably withheld or delayed, provided that each party shall have the right to assign this Agreement to a subsidiary, holding or parent company (and any of their subsidiaries) of that party on prior written notice to the other party.
+        </p> <p>12.5 Except as expressly set out in this Agreement, a person who is not a party to this Agreement has no right to rely upon or enforce any term of this Agreement.
+        </p><p>12.6 The validity, construction and performance of this Agreement (and any claim, dispute or matter arising under or in connection with it or its enforceability) shall be governed by and interpreted in accordance with the laws of England and Wales. Each party irrevocably agrees to the exclusive jurisdiction of the English courts over any claim, dispute or matter arising under or in connection with this Agreement or its enforceability or the legal relationships established by this Agreement.
+        </p><p>12.7 Neither party shall advertise or publicly announce, communicate or circulate the existence or terms of this Agreement or any association with the other party without the prior written consent of the other party.
+        </p><p>12.8 Any notice given under this Agreement shall be in writing in English and served by hand, fax, prepaid recorded or special delivery post or prepaid international recorded airmail. In the case of SUMRA, notices shall be given to its Financial Director at the address specified in the Agreement. In the case of Company, notice shall be sent to the address referred to in this Agreement. Any such notice shall be deemed to have been served at the time of delivery. The parties shall notify each other of changes in addresses for service during the Term of this Agreement.
+        </p><p>12.9 If any clause of this Agreement is found by any court or administrative body of competent jurisdiction to be invalid or unenforceable, such invalidity or unenforceability shall not affect the other provisions of this Agreement which shall remain in full force and effect.
+        </p><p>12.10 The failure to exercise or delay in exercising a right or remedy under this Agreement shall not constitute a waiver of the right or remedy or a waiver of any other rights or remedies and no single or partial exercise of any right or remedy under this Agreement shall prevent any further exercise of the right or remedy or the exercise of any other right or remedy. The rights and remedies contained in this Agreement are cumulative and not exclusive of any rights or remedies provided by law.
+        </p> <p>12.11 No modification or variation of this Agreement shall be valid if made by email and shall otherwise only be valid if in writing and signed for or on behalf of each of the parties.
+        </p><p>12.12 Company shall execute or cause to be executed all such other documents and do or cause to be done all such further acts and things (consistent with the terms of this Agreement) as SUMRA may from time to time reasonably require.
+        </p><p>12.13 This Agreement may be signed in duplicate, each of which, when signed, shall be original, and all the duplicates together shall constitute the same Agreement.
+        </p><p>SUMRA
+        </p><p>I have read, understood and agree to the SUMRA standard terms and conditions above:</p>
+    </div>
+</div>
+</body>
+</html>
