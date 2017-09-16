@@ -819,6 +819,7 @@ class HomeController extends BaseController
         $business->company = $request->company;
         $business->vat = $request->vat;
         $business->user_id = $user->id;
+        $business->address_id = $address->id;
         $business->save();
         return ['msg'=>'done'];
     }
