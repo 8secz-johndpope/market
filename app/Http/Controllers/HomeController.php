@@ -785,7 +785,19 @@ class HomeController extends BaseController
         $data['name']='Hello';
         $pdf = PDF::loadView('pdf.invoice', $data);
         $pdf->save('/home/anil/market/storage/contracts/invoice.pdf');
-        return ['a'=>'b'];
+        $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
+        $request = new \HelloSign\SignatureRequest;
+        $request->enableTestMode();
+        $request->setSubject('My First embedded signature request with a template');
+        $request->setMessage('Awesome, right?');
+        $request->addSigner('jack@example.com', 'Jack');
+        $request->addSigner('jill@example.com', 'Jill');
+        $request->addFile("/home/anil/market/storage/contracts/invoice.pdf");
+
+        $client_id = 'd88c4209bd93093d3815ef0e26069793';
+        $embedded_request = new \HelloSign\EmbeddedSignatureRequest($request, $client_id);
+        $response = $client->createEmbeddedSignatureRequest($embedded_request);
+        return ['a'=>'b','response'=>$response];
     }
 
 }
