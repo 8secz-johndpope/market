@@ -62,7 +62,7 @@
             <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td><span class="bold-text">{{count($contract->packs)*$contract->count}}</span></td><td><span class="bold-text"> £{{$contract->packs->sum('amount')/100}}</span></td></tr>
 
         </table>
-        <table class="" style="background: gray">
+        <table class="customers" style="background: gray">
             <tr><td colspan="3"><p style="font-weight: bold">Payment details</p> </td><td>Subtotal</td><td>£{{$contract->packs->sum('amount')/100}}</td></tr>
             <tr><td colspan="3">Payment Terms: 30 days  </td><td>Discount</td><td>£{{0.25*$contract->packs->sum('amount')/100}}</td></tr>
             <tr><td colspan="3">Payment Method: Invoice</td><td>Subtotal after Discount</td><td>£{{0.75*$contract->packs->sum('amount')/100}}</td></tr>
