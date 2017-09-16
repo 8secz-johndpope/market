@@ -784,7 +784,7 @@ class HomeController extends BaseController
     public function pdf(Request $request){
         $data['name']='Hello';
         $pdf = PDF::loadView('pdf.invoice', $data);
-        $pdf->save('/home/anil/market/storage/invoice.pdf');
+        $pdf->save('/home/anil/market/storage/contracts/invoice.pdf');
         return ['a'=>'b'];
     }
 
