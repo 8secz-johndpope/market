@@ -83,7 +83,7 @@
                             paypal: {
                                 container: 'paypal-container',
                                 singleUse: true, // Required
-                                amount: @if($order->type==='bump') {{$order->amount}} @elseif($order->type==='contract'){{($order->contract->deposit()}}@endif, // Required
+                                amount: @if($order->type==='bump') {{$order->amount}} @elseif($order->type==='contract'){{$order->contract->deposit()}}@endif, // Required
                                 currency: 'GBP', // Required
                             },
                             onPaymentMethodReceived: function (obj) {
