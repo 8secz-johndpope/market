@@ -7,7 +7,6 @@
     HelloSign.open({
         url: "{{$url}}",
         allowCancel: true,
-        redirectUrl:"https://sumra.net",
         messageListener: function(eventData) {
             // do something
         }
