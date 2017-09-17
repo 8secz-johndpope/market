@@ -25,8 +25,16 @@
                             <tr><td>Total:</td><td>£{{$order->amount}}</td></tr>
                     </table>
                     @elseif($order->type==='contract')
-                    
+                        <table class="table">
+                            <thead><th>Title</th><th>Category</th><th>Location</th><th>Quantity</th><th>Price</th></thead>
+                            @foreach($contract->packs as $pack)
+                                <tr><td>{{$pack->title}}</td><td>{{$pack->category->title}}</td><td>{{$pack->location->title}}</td><td>{{$contract->count}}</td><td>£{{$pack->amount/100}}</td></tr>
+                            @endforeach
+                            <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td><span class="bold-text">{{count($contract->packs)*$contract->count}}</span></td><td><span class="bold-text"> £{{$contract->packs->sum('amount')/100}}</span></td></tr>
+                        </table>
                     @endif
+                    <p>Amount you will be paying now to secure the contract</p>
+                    <span class="bold-text">£{{(1-$contract->discount/100)*0.05*$contract->packs->sum('amount')/100}}</span>
                 </div>
                 <div class="col-sm-4">
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
