@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Model\Address;
 use App\Model\Business;
+use App\Model\Pack;
 use PDF;
 use App\Model\Contract;
 use App\Model\ContractPack;
@@ -559,6 +560,15 @@ class HomeController extends BaseController
             if($order->type==='contract'){
                 $order->payment = 'done';
                 $order->save();
+                foreach ($order->contract->packs as $pack){
+                    $cpack = new Pack;
+                    $cpack->type = $pack->slug;
+                    $cpack->category_id = $pack->category_id;
+                    $cpack->location_id = $pack->location_id;
+                    $cpack->total = $order->contract->count;
+                    $cpack->user_id = $user->id;
+                    $cpack->save();
+                }
                // $request->session()->forget('order_id');
                 return redirect('/user/contract/sign');
             }
@@ -705,6 +715,15 @@ class HomeController extends BaseController
             if($order->type==='contract'){
                 $order->payment = 'done';
                 $order->save();
+                foreach ($order->contract->packs as $pack){
+                    $cpack = new Pack;
+                    $cpack->type = $pack->slug;
+                    $cpack->category_id = $pack->category_id;
+                    $cpack->location_id = $pack->location_id;
+                    $cpack->total = $order->contract->count;
+                    $cpack->user_id = $user->id;
+                    $cpack->save();
+                }
                 // $request->session()->forget('order_id');
                 return redirect('/user/contract/sign');
             }
