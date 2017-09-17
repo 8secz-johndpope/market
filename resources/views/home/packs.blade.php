@@ -7,10 +7,10 @@
     <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td><span class="bold-text">{{count($contract->packs)*$contract->count}}</span></td><td><span class="bold-text"> £{{$contract->total_before_discount()}}</span></td></tr>
 </table>
     </div>
-    <div class="col-sm-11">
+    <div class="col-sm-6">
 
     </div>
-    <div class="col-sm-1">
+    <div class="col-sm-6">
         <a class="btn btn-primary" href="/user/contract/sign" @if($contract->total_after_vat()<$contract->minimum_payment()) disabled @endif>Continue</a>
         <h4>Minimum Contract Amount £{{$contract->minimum_payment()}}</h4>
     </div>
