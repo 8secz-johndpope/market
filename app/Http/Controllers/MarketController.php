@@ -875,6 +875,8 @@ class MarketController extends BaseController
             }
 
         }
+        echo json_encode($musts);
+        exit;
 
 
         $aggretations=array();
