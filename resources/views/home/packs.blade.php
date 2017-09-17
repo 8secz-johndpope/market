@@ -11,5 +11,5 @@
 
     </div>
     <div class="col-sm-1">
-        <a class="btn btn-primary" href="/user/contract/sign">Continue</a>
+        <a class="btn btn-primary" href="/user/contract/sign" @if($contract->packs->sum('amount')<$contract->minimum) disabled @endif>Continue</a>
     </div>
