@@ -16,7 +16,7 @@
 
 
     <div class="form-group row">
-        <label for="example-text-input" class="col-2 col-form-label">Company Name</label>
+        <label for="example-text-input" class="col-2 col-form-label">Business or Sole Trader Name</label>
         <div class="col-10">
             <input class="form-control" type="text" placeholder="Example Ltd" id="name" required>
         </div>
