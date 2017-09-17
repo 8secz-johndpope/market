@@ -546,7 +546,7 @@ class HomeController extends BaseController
         if($order->type==='bump')
         $amount = (int)($order->amount * 100);
         else if($order->type==='contract')
-            $amount = (int)((1-$order->contract->discount/100)*0.05*$order->contract->packs->sum('amount'));
+            $amount = (int)($order->contract->deposit()*100);
         $description = 'Payment towards to Order id '.$order_id;
        try {
             $charge = \Stripe\Charge::create(array(
@@ -557,6 +557,9 @@ class HomeController extends BaseController
                 "description" => $description
             ));
             if($order->type==='contract'){
+                $order->payment = 'done';
+                $order->save();
+                $request->session()->forget('order_id');
                 return redirect('/user/contract/sign');
             }
             if($order->type==='bump') {
