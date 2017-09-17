@@ -11,6 +11,6 @@
 
     </div>
     <div class="col-sm-1">
-        <a class="btn btn-primary" href="/user/contract/sign" @if($contract->packs->sum('amount')<$contract->minimum) disabled @endif>Continue</a>
-        <h4>Minimum Contract Amount £{{}}</h4>
+        <a class="btn btn-primary" href="/user/contract/sign" @if($contract->total_after_vat()<$contract->minimum_payment()) disabled @endif>Continue</a>
+        <h4>Minimum Contract Amount £{{$contract->minimum_payment()}}</h4>
     </div>
