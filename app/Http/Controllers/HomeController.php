@@ -543,7 +543,10 @@ class HomeController extends BaseController
         $order_id  = $request->session()->get('order_id');
         $order = Order::find($order_id);
 
+        if($order->type==='bump')
         $amount = (int)($order->amount * 100);
+        else if($order->type==='contract')
+            $amount = (int)((1-$order->contract->discount/100)*0.05*$order->contract->packs->sum('amount'));
         $description = 'Payment towards to Order id '.$order_id;
        try {
             $charge = \Stripe\Charge::create(array(
@@ -553,32 +556,40 @@ class HomeController extends BaseController
                 "source" => $card, // obtained with Stripe.js
                 "description" => $description
             ));
-            $advert = Advert::find($order->advert_id);
-            foreach ($order->items as $item){
-                $body[$item->slug]=1;
+            if($order->type==='contract'){
+                return redirect('/user/contract/sign');
             }
-           $body['featured_count'] = 0;
-           $body['urgent_count'] = 0;
-           $body['spotlight_count'] = 0;
-           $milliseconds = round(microtime(true) * 1000);
+            if($order->type==='bump') {
 
-           $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-           $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-           $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'id' => $advert->elastic,
-                'body' => [
-                    'doc' => $body
-                ]
-            ];
+
+                $advert = Advert::find($order->advert_id);
+                foreach ($order->items as $item) {
+                    $body[$item->slug] = 1;
+                }
+                $body['featured_count'] = 0;
+                $body['urgent_count'] = 0;
+                $body['spotlight_count'] = 0;
+                $milliseconds = round(microtime(true) * 1000);
+
+                $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+                $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+                $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+                $params = [
+                    'index' => 'adverts',
+                    'type' => 'advert',
+                    'id' => $advert->elastic,
+                    'body' => [
+                        'doc' => $body
+                    ]
+                ];
 
 // Update doc at /my_index/my_type/my_id
-           $response = $this->client->update($params);
-           $request->session()->forget('order_id');
+                $response = $this->client->update($params);
+                $request->session()->forget('order_id');
 
-           return redirect('/user/manage/ads');
+
+                return redirect('/user/manage/ads');
+            }
 
         }
         catch (\Exception $e) {
