@@ -786,7 +786,7 @@ class MarketController extends BaseController
         ];
         $filte = [
             "geo_distance" => [
-                "distance" => "20mi",
+                "distance" => "50mi",
                 "location" => [
                     "lat" => $lat,
                     "lon" => $lng
