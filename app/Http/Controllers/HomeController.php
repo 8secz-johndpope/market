@@ -804,6 +804,7 @@ class HomeController extends BaseController
         }else{
             $order_id =  $request->session()->get("order_id");
             $order = Order::find($order_id);
+            $contract = $order->contract;
             if($order->payment==='pending'){
                 return redirect('/user/manage/order');
             }
