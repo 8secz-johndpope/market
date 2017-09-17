@@ -993,6 +993,8 @@ class MarketController extends BaseController
                 "sort"=> $sort
             ]
         ];
+        var_dump($params);
+        exit;
         if(count($aggs)>0){
             $params['body']['aggs']=$aggs;
         }
