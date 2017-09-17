@@ -875,8 +875,7 @@ class MarketController extends BaseController
             }
 
         }
-        echo json_encode($musts);
-        exit;
+
 
 
         $aggretations=array();
@@ -995,7 +994,8 @@ class MarketController extends BaseController
                 "sort"=> $sort
             ]
         ];
-
+        echo json_encode($musts);
+        exit;
         if(count($aggs)>0){
             $params['body']['aggs']=$aggs;
         }
