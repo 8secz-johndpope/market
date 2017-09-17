@@ -996,7 +996,7 @@ class MarketController extends BaseController
         if(count($aggs)>0){
             $params['body']['aggs']=$aggs;
         }
-
+        return $musts;
 
         $response = $this->client->search($params);
         if(isset($response['aggregations']))
