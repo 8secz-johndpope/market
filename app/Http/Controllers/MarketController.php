@@ -718,10 +718,10 @@ class MarketController extends BaseController
     }
     public function filter($request,$category,$location){
         if($request->has('min_lat')){
-            $location->min_lat = (float)$request->min_lat;
-            $location->min_lng =(float) $request->min_lng;
-            $location->max_lat = (float)$request->max_lat;
-            $location->min_lat =(float) $request->min_lat;
+            $location->min_lat = (double)$request->min_lat;
+            $location->min_lng =(double) $request->min_lng;
+            $location->max_lat = (double)$request->max_lat;
+            $location->min_lat =(double) $request->min_lat;
         }
             $any = $category->slug;
         $fields = $category->fields()->where('can_filter',1)->get();
@@ -993,7 +993,7 @@ class MarketController extends BaseController
                 "sort"=> $sort
             ]
         ];
-       
+
         if(count($aggs)>0){
             $params['body']['aggs']=$aggs;
         }
