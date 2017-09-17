@@ -819,6 +819,29 @@ class HomeController extends BaseController
     public function business(Request $request,$id)
     {
 
+        if ($request->session()->has('contract_id')) {
+            $id = $request->session()->get('contract_id');
+            $contract = Contract::find($id);
+            $contract->type = $id;
+            if((int)$id===2){
+                $contract->discount = 35;
+            }
+            else if((int)$id===3){
+                $contract->discount = 45;
+            }
+            $contract->save();
+        }else{
+            $contract = new Contract;
+            $contract->type = $id;
+            if((int)$id===2){
+                $contract->discount = 35;
+            }
+            else if((int)$id===3){
+                $contract->discount = 45;
+            }
+            $contract->save();
+            $request->session()->put('contract_id',$contract->id);
+        }
         return view('home.business');
     }
     public function cbusiness(Request $request)
