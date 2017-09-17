@@ -585,6 +585,8 @@ class HomeController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
                 $response = $this->client->update($params);
+                $order->payment = 'done';
+                $order->save();
                 $request->session()->forget('order_id');
 
 
@@ -716,6 +718,8 @@ class HomeController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
+            $order->payment = 'done';
+            $order->save();
             $request->session()->forget('order_id');
 
             return redirect('/user/manage/ads');
@@ -764,6 +768,12 @@ class HomeController extends BaseController
             $order->save();
             $request->session()->put('order_id', $order->id);
             return redirect('/user/manage/order');
+        }else{
+            $order_id =  $request->session()->get("order_id");
+            $order = Order::find($order_id);
+            if($order->payment==='pending'){
+                return redirect('/user/manage/order');
+            }
         }
         $pdf = PDF::loadView('pdf.invoice', ['contract'=>$contract,'user'=>Auth::user()]);
         $pdf->save('/home/anil/market/storage/contracts/invoice.pdf');

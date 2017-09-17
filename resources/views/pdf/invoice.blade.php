@@ -65,7 +65,7 @@
             <tr><td><span class="bold-text">VAT @ 20%</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_vat()}}</span></td></tr>
             <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_after_vat()}}</span></td></tr>
         </table>
-      
+
 
        <h4>Terms and Conditions</h4>
         <p>1. The account holder will pay for the committed purchase in full whether or not it is used. </p>
