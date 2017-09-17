@@ -24,4 +24,7 @@ class Order extends Model
     public function seller(){
         return $this->belongsTo('App\User');
     }
+    public function contract(){
+        return $this->belongsTo('App\Model\Contract');
+    }
 }
