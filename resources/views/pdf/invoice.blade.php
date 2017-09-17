@@ -65,15 +65,7 @@
             <tr><td><span class="bold-text">VAT @ 20%</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_vat()}}</span></td></tr>
             <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_after_vat()}}</span></td></tr>
         </table>
-        <table class="customers" style="background: gray">
-            <tr><td colspan="3"><p style="font-weight: bold">Payment details</p> </td><td>Subtotal</td><td></td></tr>
-            <tr><td colspan="3">Payment Terms: 30 days  </td><td>Discount</td><td></td></tr>
-            <tr><td colspan="3">Payment Method: Invoice</td><td>Subtotal after Discount</td><td></td></tr>
-            <tr><td colspan="3">Billing Frequency: Monthly in arrears </td><td>VAT @ 20%</td><td></td></tr>
-        </table>
-<p>Payment details
-Payment Terms: 30 days Payment Method: Invoice Billing Frequency: Monthly in arrears 				Total
-</p>
+      
 
        <h4>Terms and Conditions</h4>
         <p>1. The account holder will pay for the committed purchase in full whether or not it is used. </p>
