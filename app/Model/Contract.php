@@ -33,7 +33,7 @@ class Contract extends Model
     public function minimum_payment(){
         return $this->minimum/100;
     }
-    public function diposit(){
+    public function deposit(){
         return 0.05*$this->total_after_vat();
     }
 }
