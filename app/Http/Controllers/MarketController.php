@@ -892,7 +892,7 @@ class MarketController extends BaseController
                         'query' => [
                             'bool' => [
                                 'must' => array_values($submusts),
-                                'filter' => $filte
+                            /*    'filter' => $filte */
                             ]
                         ],
                         'aggs' => [$key => $aggs[$key]]
@@ -987,7 +987,7 @@ class MarketController extends BaseController
                 'query' => [
                     'bool' => [
                         'must' => array_values($musts),
-                        'filter' => $filte
+                   /*     'filter' => $filte */
                     ]
                 ],
                 "sort"=> $sort
@@ -1153,7 +1153,7 @@ class MarketController extends BaseController
                 'query' => [
                     'bool' => [
                         'must' => array_values($fmusts),
-                        'filter' => $filte
+                   /*     'filter' => $filte */
                     ]
                 ],
                 "sort"=> [["featured_count"=> ["order"=> "asc"]]]
