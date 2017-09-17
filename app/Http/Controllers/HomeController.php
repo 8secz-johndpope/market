@@ -865,29 +865,28 @@ class HomeController extends BaseController
     }
     public function business(Request $request,$id)
     {
+        $user = Auth::user();
 
-        if ($request->session()->has('contract_id')) {
-            $id = $request->session()->get('contract_id');
-            $contract = Contract::find($id);
-            $contract->type = $id;
-            if((int)$id===2){
-                $contract->discount = 35;
-            }
-            else if((int)$id===3){
-                $contract->discount = 45;
-            }
-            $contract->save();
+        if ($request->session()->has('order_id')) {
+
         }else{
+            $order = new Order;
             $contract = new Contract;
             $contract->type = $id;
             if((int)$id===2){
                 $contract->discount = 35;
+                $contract->minimum = 1000000;
             }
             else if((int)$id===3){
                 $contract->discount = 45;
+                $contract->minimum = 5000000;
             }
             $contract->save();
-            $request->session()->put('contract_id',$contract->id);
+            $order->contract_id = $contract->id;
+            $order->user_id = $user->id;
+            $order->type='contract';
+            $order->save();
+            $request->session()->put('order_id',$order->id);
         }
         return view('home.business');
     }
@@ -912,13 +911,12 @@ class HomeController extends BaseController
         return ['msg'=>'done'];
     }
     public function contract(Request $request){
-        if ($request->session()->has('contract_id')) {
-            $id = $request->session()->get('contract_id');
-            $contract = Contract::find($id);
+        if ($request->session()->has('order_id')) {
+            $order_id =  $request->session()->get('order_id');
+            $order = Order::find($order_id);
+            $contract = $order->contract;
         }else{
-            $contract = new Contract;
-            $contract->save();
-            $request->session()->put('contract_id',$contract->id);
+            return redirect('/user/contract/pricing');
         }
         $packs = $contract->packs;
         $prices = Price::all();
