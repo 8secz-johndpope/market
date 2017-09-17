@@ -36,10 +36,11 @@
                             <tr><td><span class="bold-text">VAT @ 20%</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$order->contract->total_vat()}}</span></td></tr>
                             <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$order->contract->total_after_vat()}}</span></td></tr>                        </table>
                     @endif
-                    <p>Amount you will be paying now to secure the contract</p>
-                    <span class="bold-text">£{{$order->contract->deposit()}}</span>
+
                 </div>
                 <div class="col-sm-4">
+                    <p>Amount you will be paying now to secure the contract</p>
+                    <span class="bold-text">£{{$order->contract->deposit()}}</span>
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
                     <h4>Pay by Card</h4>
                     <form action="/user/payment/stripe" method="post">
