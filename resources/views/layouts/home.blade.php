@@ -337,10 +337,10 @@
             var max_lng = document.getElementById('max_lng');
             lat.value=place.geometry.location.lat();
             lng.value=place.geometry.location.lng();
-            min_lat.value = place.geometry.viewport.b.b;
-            max_lat.value = place.geometry.viewport.b.f;
-            min_lng.value = place.geometry.viewport.f.b;
-            max_lng.value = place.geometry.viewport.f.f;
+            min_lat.value = place.geometry.viewport.f.b;
+            max_lat.value = place.geometry.viewport.f.f;
+            min_lng.value = place.geometry.viewport.b.b;
+            max_lng.value = place.geometry.viewport.b.f;
         });
     }
 
