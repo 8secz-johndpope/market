@@ -883,7 +883,7 @@ class HomeController extends BaseController
             }
             $contract->save();
             $order->contract_id = $contract->id;
-            $order->user_id = $user->id;
+            $order->buyer_id = $user->id;
             $order->type='contract';
             $order->save();
             $request->session()->put('order_id',$order->id);
