@@ -59,15 +59,17 @@
             @foreach($contract->packs as $pack)
                 <tr><td>{{$pack->title}}</td><td>{{$pack->category->title}}</td><td>{{$pack->location->title}}</td><td>{{$contract->count}}</td><td>£{{$pack->amount/100}}</td></tr>
             @endforeach
-            <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td><span class="bold-text">{{count($contract->packs)*$contract->count}}</span></td><td><span class="bold-text"> £{{$contract->packs->sum('amount')/100}}</span></td></tr>
-
+            <tr><td><span class="bold-text">Subtotal</span></td><td></td><td></td><td><span class="bold-text">{{count($contract->packs)*$contract->count}}</span></td><td><span class="bold-text"> £{{$contract->total_before_discount()}}</span></td></tr>
+            <tr><td><span class="bold-text">Discount</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_discount()}}</span></td></tr>
+            <tr><td><span class="bold-text">Subtotal after discount</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_after_discount()}}</span></td></tr>
+            <tr><td><span class="bold-text">VAT @ 20%</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_vat()}}</span></td></tr>
+            <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_after_vat()}}</span></td></tr>
         </table>
         <table class="customers" style="background: gray">
-            <tr><td colspan="3"><p style="font-weight: bold">Payment details</p> </td><td>Subtotal</td><td>£{{$contract->packs->sum('amount')/100}}</td></tr>
-            <tr><td colspan="3">Payment Terms: 30 days  </td><td>Discount</td><td>£{{0.25*$contract->packs->sum('amount')/100}}</td></tr>
-            <tr><td colspan="3">Payment Method: Invoice</td><td>Subtotal after Discount</td><td>£{{0.75*$contract->packs->sum('amount')/100}}</td></tr>
-            <tr><td colspan="3">Billing Frequency: Monthly in arrears </td><td>VAT @ 20%</td><td>£{{0.75*0.2*$contract->packs->sum('amount')/100}}</td></tr>
-            <tr><td colspan="4"> </td><td><h4>£{{0.75*1.2*$contract->packs->sum('amount')/100}}</h4></td></tr>
+            <tr><td colspan="3"><p style="font-weight: bold">Payment details</p> </td><td>Subtotal</td><td></td></tr>
+            <tr><td colspan="3">Payment Terms: 30 days  </td><td>Discount</td><td></td></tr>
+            <tr><td colspan="3">Payment Method: Invoice</td><td>Subtotal after Discount</td><td></td></tr>
+            <tr><td colspan="3">Billing Frequency: Monthly in arrears </td><td>VAT @ 20%</td><td></td></tr>
         </table>
 <p>Payment details
 Payment Terms: 30 days Payment Method: Invoice Billing Frequency: Monthly in arrears 				Total
