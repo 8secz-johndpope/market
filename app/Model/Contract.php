@@ -18,8 +18,14 @@ class Contract extends Model
     public function total_before_discount(){
         return $this->packs->sum('amount')/100;
     }
+    public function total_discount(){
+        return ($this->discount/100)*$this->packs->sum('amount')/100;
+    }
     public function total_after_discount(){
         return (1-$this->discount/100)*$this->packs->sum('amount')/100;
+    }
+    public function total_vat(){
+        return 0.2*(1-$this->discount/100)*$this->packs->sum('amount')/100;
     }
     public function total_after_vat(){
         return 1.2*(1-$this->discount/100)*$this->packs->sum('amount')/100;
