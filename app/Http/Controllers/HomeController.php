@@ -765,12 +765,12 @@ class HomeController extends BaseController
         }
       //  $packs = $contract->packs;
         if(!$request->session()->has('order_id')){
-            $order = new Order;
-            $order->type = 'contract';
-            $order->contract_id = $contract->id;
-            $order->save();
-            $request->session()->put('order_id', $order->id);
-            return redirect('/user/manage/order');
+           // $order = new Order;
+         //   $order->type = 'contract';
+           // $order->contract_id = $contract->id;
+            //$order->save();
+            //$request->session()->put('order_id', $order->id);
+            return redirect('/user/contract/start');
         }else{
             $order_id =  $request->session()->get("order_id");
             $order = Order::find($order_id);
