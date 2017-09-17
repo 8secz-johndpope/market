@@ -189,7 +189,7 @@
         <div class="col-sm-1 col-md-1 col-lg-2 hidden-xs">
         </div>
         <div class="col-xs-12 col-sm-10 col-md-10 col-lg-8">
-            <form class="navbar-form" action="/all">
+            <form class="navbar-form" action="/all" id="mainform">
                 @foreach($input as $key=>$value)
                     @if($key!=='q'&&$key!=='lat'&&$key!=='lng')
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
@@ -206,7 +206,7 @@
                     <div class="input-group col-sm-4 col-md-3 col-lg-3 col-xl-2 input-group-lg">
                         <input type="text" id="pac-input" class="form-control" placeholder="POST CODE" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
                         <span class="input-group-btn">
-							     		<button class="btn btn-default" type="submit">Go</button>
+							     		<button class="btn btn-default" type="submit" id="submitform">Go</button>
 							      	</span>
                     </div>
                 </div>
@@ -341,6 +341,7 @@
             max_lat.value = place.geometry.viewport.f.f;
             min_lng.value = place.geometry.viewport.b.b;
             max_lng.value = place.geometry.viewport.b.f;
+            $("#submitform").click();
         });
     }
 
