@@ -197,6 +197,10 @@
                 @endforeach
                 <input type="hidden" id="lat" name="lat" value="{{$lat}}">
                 <input type="hidden" id="lng" name="lng" value="{{$lng}}">
+                    <input type="hidden" id="min_lat" name="min_lat" value="-99">
+                    <input type="hidden" id="min_lng" name="min_lng" value="-99">
+                    <input type="hidden" id="max_lat" name="max_lat" value="99">
+                    <input type="hidden" id="max_lng" name="max_lng" value="99">
                 <div class="form-group col-md-12 col-lg-12">
                     <input type="text" class="form-control input-lg" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif">
                     <div class="input-group col-sm-4 col-md-3 col-lg-3 col-xl-2 input-group-lg">
@@ -327,9 +331,16 @@
 
             var lat = document.getElementById('lat');
             var lng = document.getElementById('lng');
+            var min_lat = document.getElementById('min_lat');
+            var min_lng = document.getElementById('min_lng');
+            var max_lat = document.getElementById('max_lat');
+            var max_lng = document.getElementById('max_lng');
             lat.value=place.geometry.location.lat();
             lng.value=place.geometry.location.lng();
-
+            min_lat.value = place.geometry.b.b();
+            max_lat.value = place.geometry.b.f();
+            min_lng.value = place.geometry.f.b();
+            max_lng.value = place.geometry.f.f();
         });
     }
 
