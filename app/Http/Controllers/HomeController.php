@@ -837,8 +837,9 @@ class HomeController extends BaseController
       //  return view('home.sign');
     }
     public function pack(Request $request,$category,$location){
-        $id = $request->session()->get('contract_id');
-        $contract = Contract::find($id);
+        $id = $request->session()->get('order_id');
+        $order = Order::find($id);
+        $contract = $order->contract;
         $price = Price::price($category,$location);
         foreach ($request->types as $type){
             $extraprice = ExtraPrice::where('key',$type)->first();
