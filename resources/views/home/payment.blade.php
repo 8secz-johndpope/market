@@ -34,7 +34,7 @@
                         </table>
                     @endif
                     <p>Amount you will be paying now to secure the contract</p>
-                    <span class="bold-text">£{{(1-$order->contract->discount/100)*0.05*$order->contract->packs->sum('amount')/100}}</span>
+                    <span class="bold-text">£{{$order->contract->deposit()}}</span>
                 </div>
                 <div class="col-sm-4">
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
