@@ -30,7 +30,7 @@
                             @foreach($order->contract->packs as $pack)
                                 <tr><td>{{$pack->title}}</td><td>{{$pack->category->title}}</td><td>{{$pack->location->title}}</td><td>{{$order->contract->count}}</td><td>£{{$pack->amount/100}}</td></tr>
                             @endforeach
-                            <tr><td><span class="bold-text">Subtotal</span></td><td></td><td></td><td><span class="bold-text">{{count($order->contract->packs)*$contract->count}}</span></td><td><span class="bold-text"> £{{$order->contract->total_before_discount()}}</span></td></tr>
+                            <tr><td><span class="bold-text">Subtotal</span></td><td></td><td></td><td><span class="bold-text">{{count($order->contract->packs)*$order->contract->count}}</span></td><td><span class="bold-text"> £{{$order->contract->total_before_discount()}}</span></td></tr>
                             <tr><td><span class="bold-text">Discount</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$order->contract->total_discount()}}</span></td></tr>
                             <tr><td><span class="bold-text">Subtotal after Discount</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$order->contract->total_after_discount()}}</span></td></tr>
                             <tr><td><span class="bold-text">VAT @ 20%</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$order->contract->total_vat()}}</span></td></tr>
