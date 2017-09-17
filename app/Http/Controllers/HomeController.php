@@ -779,7 +779,7 @@ class HomeController extends BaseController
     public function sign(Request $request)
     {
 
-
+/*
         if ($request->session()->has('contract_id')) {
             $id = $request->session()->get('contract_id');
             $contract = Contract::find($id);
@@ -792,6 +792,7 @@ class HomeController extends BaseController
           //  $contract->save();
            // $request->session()->put('contract_id',$contract->id);
         }
+*/
       //  $packs = $contract->packs;
         if(!$request->session()->has('order_id')){
            // $order = new Order;
