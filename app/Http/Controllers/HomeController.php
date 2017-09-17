@@ -747,6 +747,9 @@ class HomeController extends BaseController
         if ($request->session()->has('contract_id')) {
             $id = $request->session()->get('contract_id');
             $contract = Contract::find($id);
+            if($contract->total_after_vat()<$contract->minimum_payment()){
+                return redirect('/user/contract/start');
+            }
         }else{
             return redirect('/user/contract/start');
           //  $contract = new Contract;
