@@ -559,7 +559,7 @@ class HomeController extends BaseController
             if($order->type==='contract'){
                 $order->payment = 'done';
                 $order->save();
-                $request->session()->forget('order_id');
+               // $request->session()->forget('order_id');
                 return redirect('/user/contract/sign');
             }
             if($order->type==='bump') {
@@ -670,6 +670,7 @@ class HomeController extends BaseController
                         'submitForSettlement' => True
                     ]
                 ]);
+
                 $request->session()->forget('id');
                 $order = new Order;
                 $order->advert_id = $advert->id;
@@ -688,8 +689,11 @@ class HomeController extends BaseController
         $order_id  = $request->session()->get('order_id');
         $order = Order::find($order_id);
 
-        $amount = $order->amount;
 
+        if($order->type==='bump')
+            $amount = $order->amount;
+        else if($order->type==='contract')
+            $amount = $order->contract->deposit();
         try {
             $result = $gateway->transaction()->sale([
                 "amount" => $amount,
@@ -698,6 +702,12 @@ class HomeController extends BaseController
                     'submitForSettlement' => True
                 ]
             ]);
+            if($order->type==='contract'){
+                $order->payment = 'done';
+                $order->save();
+                // $request->session()->forget('order_id');
+                return redirect('/user/contract/sign');
+            }
             $advert = Advert::find($order->advert_id);
             foreach ($order->items as $item){
                 $body[$item->slug]=1;
