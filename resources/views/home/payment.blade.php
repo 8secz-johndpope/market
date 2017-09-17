@@ -17,12 +17,16 @@
             <div class="row">
                 <div class="col-sm-8">
                     <h4>Your Order</h4>
+                    @if($order->type==='bump')
                     <table class="table">
                         @foreach($order->items as $item)
                         <tr><td>{{$item->title}}</td><td>£{{$item->amount}}</td></tr>
                             @endforeach
                             <tr><td>Total:</td><td>£{{$order->amount}}</td></tr>
                     </table>
+                    @elseif($order->type==='contract')
+                    
+                    @endif
                 </div>
                 <div class="col-sm-4">
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>

@@ -663,7 +663,6 @@ class HomeController extends BaseController
                 $order->address_id = $user->default_address;
                 $order->type='shipping';
                 $order->save();
-
             }
             catch (Exception $e) {
 
@@ -732,6 +731,8 @@ class HomeController extends BaseController
     }
     public function sign(Request $request)
     {
+
+
         if ($request->session()->has('contract_id')) {
             $id = $request->session()->get('contract_id');
             $contract = Contract::find($id);
@@ -742,7 +743,14 @@ class HomeController extends BaseController
            // $request->session()->put('contract_id',$contract->id);
         }
       //  $packs = $contract->packs;
-
+        if(!$request->session()->has('order_id')){
+            $order = new Order;
+            $order->type = 'contract';
+            $order->contract_id = $contract->id;
+            $order->save();
+            $request->session()->put('order_id', $order->id);
+            return redirect('/user/manage/order');
+        }
         $pdf = PDF::loadView('pdf.invoice', ['contract'=>$contract,'user'=>Auth::user()]);
         $pdf->save('/home/anil/market/storage/contracts/invoice.pdf');
         $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');

@@ -504,9 +504,7 @@ class UserController extends BaseController
             $transaction->amount = $request->amount * 100;
             $transaction->save();
             return ['status' => 'success', 'result' => $result, 'transaction_id' => $transaction->slug];
-
         } catch (Exception $e) {
-
             return ['result' => ['msg' => 'failed']];
         }
 
