@@ -69,8 +69,8 @@
 
        <h4>Terms and Conditions</h4>
         <p>1. The account holder will pay for the committed purchase in full whether or not it is used. </p>
-        <p>2. These credits are to be used in the area's above and the area's above only.</p>
-        <p>3. Any adverts posted outside of these designated area's will be charged in full separately. </p>
+        <p>2. These credits are to be used in the areas above and the areas above only.</p>
+        <p>3. Any adverts posted outside of these designated areas will be charged in full separately. </p>
         <p>4. The Company confirms that it is VAT registered and it’s VAT number is. If the box is not checked, the Company confirms it is not, and is not required to be, VAT registered.</p>
 
         <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
