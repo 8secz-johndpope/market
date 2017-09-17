@@ -721,7 +721,7 @@ class MarketController extends BaseController
             $location->min_lat = (double)$request->min_lat;
             $location->min_lng =(double) $request->min_lng;
             $location->max_lat = (double)$request->max_lat;
-            $location->min_lat =(double) $request->min_lat;
+            $location->max_lng =(double) $request->max_lng;
         }
             $any = $category->slug;
         $fields = $category->fields()->where('can_filter',1)->get();
@@ -994,8 +994,7 @@ class MarketController extends BaseController
                 "sort"=> $sort
             ]
         ];
-        echo json_encode($musts);
-        exit;
+       
         if(count($aggs)>0){
             $params['body']['aggs']=$aggs;
         }
