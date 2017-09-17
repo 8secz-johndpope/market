@@ -534,7 +534,6 @@ class HomeController extends BaseController
                 $order->address_id = $user->default_address;
                 $order->type='shipping';
                 $order->save();
-
             }
             catch (\Exception $e) {
             }
