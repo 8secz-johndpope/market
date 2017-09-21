@@ -40,13 +40,13 @@ class Contract extends Model
         return .95*$this->total_after_vat()/12;
     }
     public function days(){
-        for($i=1;$i<12;$i++){
+        for($i=1;$i<=12;$i++){
             $days[] = date('d-m-Y',strtotime('+90 days +'.$i.' months'));
         }
         return $days;
     }
     public function fdays(){
-        for($i=1;$i<12;$i++){
+        for($i=1;$i<=12;$i++){
             $days[] = date('Y-m-d H:i:s',strtotime('+90 days +'.$i.' months'));
         }
         return $days;
