@@ -257,7 +257,7 @@ class HomeController extends BaseController
         $clientToken = $gateway->clientToken()->generate();
         $order_id  = $request->session()->get('order_id');
 
-        return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards['data'],'token' => $clientToken,'def'=>$card]);
+        return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards['data'],'token' => $clientToken,'def'=>$card,'user'=>$user]);
     }
     public function shipping(Request $request,$id){
         $user = Auth::user();

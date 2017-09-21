@@ -39,6 +39,15 @@ class Contract extends Model
     public function deposit(){
         return 0.05*$this->total_after_vat();
     }
+    public function settlement_amount(){
+        $total = 0;
+        foreach ($this->payments as $payment)
+        {
+            if($payment->status==='pending')
+                $total+=$payment->amount;
+        }
+        return $total;
+    }
     public function monthly_payment(){
         return .95*$this->total_after_vat()/12;
     }

@@ -9,6 +9,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Order extends Model
 {
@@ -31,18 +32,32 @@ class Order extends Model
         return $this->belongsTo('App\Model\Payment','payment_id');
     }
     public function amount(){
+        $user = Auth::user();
         if($this->type==='bump')
             return $this->amount ;
         else if($this->type==='contract')
-            return $this->contract->deposit();
+        {
+            if($user->contract===null)
+                return $this->contract->deposit();
+            else
+                return $this->contract->deposit()+$user->contract->settlement_amount();
+        }
+
         else if($this->type==='invoice')
             return $this->invoice->amount/100;
     }
     public function amount_in_pence(){
+        $user = Auth::user();
         if($this->type==='bump')
             return (int)($this->amount * 100);
         else if($this->type==='contract')
-            return (int)($this->contract->deposit()*100);
+        {
+            if($user->contract===null)
+                return (int)($this->contract->deposit()*100);
+            else
+                return 100*$this->contract->deposit()+$user->contract->settlement_amount();
+        }
+
         else if($this->type==='invoice')
             return $this->invoice->amount;
 
