@@ -54,4 +54,15 @@ class Contract extends Model
     public function payments(){
         return $this->hasMany('App\Model\Payment');
     }
+    public function future_payments(){
+        foreach ($this->fdays() as $day){
+            $payment = new Payment;
+            $payment->charge_at = $day;
+            $payment->contract_id = $this->id;
+            $payment->amount = (int)$this->monthly_payment()*100;
+            $payment->reference = strtoupper(uniqid());
+            $payments[] = $payment;
+        }
+        return $payments;
+    }
 }

@@ -38,9 +38,9 @@
                         </table>
                         <h4>Payment Schedule</h4>
                         <table class="customers">
-                            <tr><th>Reference</th><th>Payment Date</th><th>Amount</th></tr>
-                            @foreach($order->contract->payments as $payment)
-                                <tr><td>{{$payment->refernce}}</td><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td></tr>
+                            <tr><<th>Payment Date</th><th>Amount</th></tr>
+                            @foreach($order->contract->future_payments() as $payment)
+                                <tr><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td></tr>
                             @endforeach
                         </table>
                     @endif
