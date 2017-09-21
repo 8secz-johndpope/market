@@ -56,7 +56,11 @@ class BusinessController extends BaseController
         $products = array_map(function ($a) {
             return $a['_source'];
         }, $response['hits']['hits']);
-
-        return view('business.ads',['total' => $response['hits']['total'], 'products' => $products]);
+        $favorites = $user->favorites;
+        $sids = array();
+        foreach ($favorites as $favorite){
+            $sids[] = $favorite->sid;
+        }
+        return view('business.ads',['total' => $response['hits']['total'], 'products' => $products,'sids'=>$sids]);
     }
 }
