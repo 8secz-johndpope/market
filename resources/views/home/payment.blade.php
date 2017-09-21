@@ -44,6 +44,12 @@
                             @endforeach
                         </table>
                     @elseif($order->type==='invoice')
+                        <table class="table">
+                            <thead><th>Title</th><th>Category</th><th>Location</th><th>Quantity</th></thead>
+                            @foreach($order->invoice->contract->packs as $pack)
+                                <tr><td>{{$pack->title}}</td><td>{{$pack->category->title}}</td><td>{{$pack->location->title}}</td></tr>
+                            @endforeach
+                        </table>
                     @endif
 
                 </div>

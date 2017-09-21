@@ -19,4 +19,7 @@ class Payment extends Model
     public function nice_amount(){
         return $this->amount/100;
     }
+    public function contract(){
+        return $this->belongsTo('App\Model\Contract');
+    }
 }
