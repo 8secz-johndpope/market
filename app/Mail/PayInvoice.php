@@ -29,7 +29,7 @@ class PayInvoice extends Mailable
      */
     public function build()
     {
-        return $this->subject('Invoice Reference: '.$this->reference)->markdown('emails.invoices.pay',['url'=>'https://business.sumra.net/business/invoice/pay/'.$this->payment_id]);
+        return $this->subject('Invoice Reference: '.$this->reference)->markdown('emails.invoices.pay',['url'=>'https://business.sumra.net/business/invoice/pay/'.$this->payment_id,'payment'=>'200']);
 
        // return $this->markdown('emails.invoices.pay');
     }

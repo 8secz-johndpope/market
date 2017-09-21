@@ -93,7 +93,7 @@ class BusinessController extends BaseController
         $invoice->payment_id=$id;
         $invoice->reference=$payment->reference;
         Mail::to($user)->send($invoice);
-        
+
         $user=Auth::user();
         $order = new Order;
         $order->buyer_id = $user->id;
