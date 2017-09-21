@@ -559,7 +559,7 @@ class HomeController extends BaseController
     }
     private function complete_invoice($order){
         $order->invoice->status='done';
-        $order->save();
+        $order->invoice->save();
     }
 
     public function stripe(Request $request){
