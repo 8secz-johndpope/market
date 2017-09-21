@@ -18,7 +18,6 @@
     <link href="{{ asset('/css/extra.css?q=43') }}" rel="stylesheet">
     <link href="{{ asset('/css/style.css?q=43') }}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
@@ -224,7 +223,7 @@
     <div class="top hidden-xs">
         <div class="row">
             <div class="col">
-                <img class="icon" src="/css/sumra-text.png">
+                <img class="icon" src="/css/sumra-business.png">
             </div>
         </div>
     </div>

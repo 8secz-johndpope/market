@@ -115,4 +115,8 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Model\Business');
     }
+    public function contract()
+    {
+        return $this->hasOne('App\Model\Contract');
+    }
 }
