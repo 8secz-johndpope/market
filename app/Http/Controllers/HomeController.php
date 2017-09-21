@@ -557,6 +557,10 @@ class HomeController extends BaseController
         $order->save();
 
     }
+    private function complete_invoice($order){
+        $order->invoice->status='done';
+        $order->save();
+    }
 
     public function stripe(Request $request){
         $user = Auth::user();
@@ -587,6 +591,11 @@ class HomeController extends BaseController
                 $request->session()->forget('order_id');
                 return redirect('/user/manage/ads');
             }
+           if($order->type==='invoice') {
+               $this->complete_invoice($order);
+               $request->session()->forget('order_id');
+               return redirect('/business/manage/finance');
+           }
 
         }
         catch (\Exception $e) {

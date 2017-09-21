@@ -80,6 +80,10 @@ class BusinessController extends BaseController
 
     }
     public function invoice(Request $request,$id){
+        $payment=Payment::find($id);
+        if($payment->status!=='pending'){
+            return redirect('/business/manage/finance');
+        }
         $user=Auth::user();
         $order = new Order;
         $order->buyer_id = $user->id;
