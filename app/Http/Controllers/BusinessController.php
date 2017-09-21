@@ -87,13 +87,13 @@ class BusinessController extends BaseController
         if($payment->status!=='pending'){
             return redirect('/business/manage/finance');
         }
-        /*
+
         $user=Auth::user();
         $invoice = new PayInvoice();
         $invoice->payment_id=$id;
         $invoice->reference=$payment->reference;
         Mail::to($user)->send($invoice);
-        */
+        
         $user=Auth::user();
         $order = new Order;
         $order->buyer_id = $user->id;
