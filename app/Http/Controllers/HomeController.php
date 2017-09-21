@@ -635,6 +635,11 @@ class HomeController extends BaseController
                 $request->session()->forget('order_id');
                 return redirect('/user/manage/ads');
             }
+            if($order->type==='invoice') {
+                $this->complete_invoice($order);
+                $request->session()->forget('order_id');
+                return redirect('/business/manage/finance');
+            }
 
 
         } catch (Exception $e) {
