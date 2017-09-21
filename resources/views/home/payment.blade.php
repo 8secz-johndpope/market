@@ -59,6 +59,7 @@
                     <tr><td colspan="2"><p>Amount you will be paying now to secure the contract</p></td> </tr>
                         @if($user->contract!==null)
                      <tr><td>Settlement Fees: </td><td><span class="bold-text">£{{$user->contract->settlement_amount()/100}}</span></td></tr>
+                                <tr><td>Deposit: </td><td><span class="bold-text">£{{$order->contract->deposit()}}</span></td></tr>
                             @endif
                     @elseif($order->type==='invoice')
                             <tr><td colspan="2"><p>Amount to pay</p></td> </tr>
