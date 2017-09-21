@@ -37,8 +37,8 @@
                             <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$order->contract->total_after_vat()}}</span></td></tr>
                         </table>
                         <h4>Payment Schedule</h4>
-                        <table class="customers">
-                            <tr><<th>Payment Date</th><th>Amount</th></tr>
+                        <table class="table">
+                            <tr><th>Payment Date</th><th>Amount</th></tr>
                             @foreach($order->contract->future_payments() as $payment)
                                 <tr><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td></tr>
                             @endforeach
