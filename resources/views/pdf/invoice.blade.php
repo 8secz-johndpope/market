@@ -79,7 +79,8 @@
         <p>1. The account holder will pay for the committed purchase in full whether or not it is used. </p>
         <p>2. These credits are to be used in the areas above and the areas above only.</p>
         <p>3. Any adverts posted outside of these designated areas will be charged in full separately. </p>
-        <p>4. The Company confirms that it is VAT registered and it’s VAT number is. If the box is not checked, the Company confirms it is not, and is not required to be, VAT registered.</p>
+        <p>4. The Company confirms that it is VAT registered and it’s VAT number is. </p>
+        <p>the Company confirms it is not, and is not required to be, VAT registered. By not filling in this box</p>
 
 
 
@@ -87,7 +88,7 @@
         <p>Standard Advertising Terms and Conditions</p>
         <h4>1 Parties</h4>
         <p>The parties are:</p>
-        <p>(a) SUMRA, operated by Investors in Ideas Ltd (company number: 07320409), a company incorporated in England, under licence from BGC Global Parters LLC("SUMRA");
+        <p>(a) SUMRA,a subsidiary of BGC Global Parnters LLC and assigned to  Investors in Ideas Ltd (company number: 07320409), in the United Kingdom(SUMRA);
 and</p>
         <p>(b) the Company as detailed in the SUMRA Insertion Order Form ("Company").</p>
         <h4>2 Agreement</h4>
@@ -106,10 +107,12 @@ and</p>
 
         <h4>4 Fees and Payment</h4>
         <p>4.1 In consideration for posting advertisements on the SUMRA.com website ("Site "), Company shall pay SUMRA the fees product that Company wishes to post on the Site as detailed in the SUMRA Insertion Order Form ("Fee").
-        </p><p>4.2 SUMRA shall issue Company Monthly in arrears invoice payable via Invoice ("SUMRA Invoice").
+        </p><p>4.2 SUMRA shall issue the Company Monthly in arrears invoice payable via Invoice ("SUMRA Invoice").
         </p><p>4.3 If Company wishes to post advertisements over and above Company's package allowance, SUMRA shall invoice Company for such additional advertising, and Company shall pay the full cost of such advertising.
-        </p><p>4.4 Company shall pay all SUMRA Invoices within 30 days of receipt.
         </p>
+        <p>4.4 Company shall pay initial SUMRA Invoice within 90 days of receipt.</p>
+        <p>Subsequent invoices or fees due as per schedule</p>
+
         <h4>5 Warranties</h4>
         <p>5.1 Each party to this Agreement represents and warrants and undertakes to the other that it has, and shall retain throughout the Term, all right, title and authority to enter into, and perform all of its obligations under this Agreement.
         </p><p>5.2 Company represents, warrants and undertakes throughout the Term that Company (a) complies with, and shall continue to comply with, all laws and regulations as may be applicable to Company posting job advertisements on the Site; and (b) complies with, and shall continue to comply all applicable Data Protection laws and regulations including but not limited to the EU Data Protection Directive 95/46/EC, The Data Protection Act 1998, The Privacy and Electronic Communications (EC Directive) Regulations 2003 and any other applicable data protection legislation.
