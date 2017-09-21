@@ -2,7 +2,9 @@
 @component('mail::table')
     | Laravel       | Table         | Example  |
     | ------------- |:-------------:| --------:|
-    | Col 2 is      | Centered      | £{{$payment}}      |
+    @foreach($payment->contract->packs as $pack)
+    | {{$pack->title}}     | {{$pack->category->title}}      | {{$pack->location->title}}      |
+    @endforeach
     | Col 3 is      | Right-Aligned | $20      |
 @endcomponent
 @component('mail::button', ['url' => $url])Pay Now

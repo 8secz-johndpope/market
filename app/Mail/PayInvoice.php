@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Model\Payment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -29,7 +30,7 @@ class PayInvoice extends Mailable
      */
     public function build()
     {
-        return $this->subject('Invoice Reference: '.$this->reference)->markdown('emails.invoices.pay',['url'=>'https://business.sumra.net/business/invoice/pay/'.$this->payment_id,'payment'=>'200']);
+        return $this->subject('Invoice Reference: '.$this->reference)->markdown('emails.invoices.pay',['url'=>'https://business.sumra.net/business/invoice/pay/'.$this->payment_id,'payment'=>Payment::find($this->payment_id)]);
 
        // return $this->markdown('emails.invoices.pay');
     }
