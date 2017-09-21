@@ -45,4 +45,7 @@ class Contract extends Model
         }
         return $days;
     }
+    public function payments(){
+        return $this->hasMany('App\Model\Payment');
+    }
 }

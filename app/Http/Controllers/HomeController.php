@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Model\Address;
 use App\Model\Business;
 use App\Model\Pack;
+use App\Model\Payment;
 use PDF;
 use App\Model\Contract;
 use App\Model\ContractPack;
@@ -514,6 +515,13 @@ class HomeController extends BaseController
             $cpack->total = $order->contract->count;
             $cpack->user_id = $user->id;
             $cpack->save();
+        }
+        foreach ($order->contract->days as $day){
+            $payment = new Payment;
+            $payment->charge_at = $day;
+            $payment->contract_id = $order->contract;
+            $payment->amount = (int)$order->contract->monthly_payment();
+            $payment->save();
         }
     }
     public function stripe(Request $request){
