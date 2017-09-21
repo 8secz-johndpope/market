@@ -39,7 +39,7 @@
             <table class="table">
                 <tr><th>Reference</th><th>Payment Date</th><th>Amount</th><th></th></tr>
                 @foreach($user->contract->payments as $payment)
-                    <tr><td>{{$payment->reference}}</td><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td><td><a href="/business/invoice/pay/{{$payment->id}}">Pay Now</a></td></tr>
+                    <tr><td>{{$payment->reference}}</td><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td><td>@if($payment->status==='done') <span class="green-text">Paid</span> @else<a href="/business/invoice/pay/{{$payment->id}}">Pay Now</a>@endif</td></tr>
                 @endforeach
             </table>
         </div>
