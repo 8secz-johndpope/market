@@ -31,6 +31,7 @@ Route::get('/user/generate/pdf', 'HomeController@pdf');
 
 
 Route::get('/business/manage/ads', 'BusinessController@myads');
+Route::get('/business/manage/finance', 'BusinessController@finance');
 
 
 

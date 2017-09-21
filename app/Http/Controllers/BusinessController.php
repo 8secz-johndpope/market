@@ -74,4 +74,9 @@ class BusinessController extends BaseController
 
         return view('business.ads',['total' => $response['hits']['total'], 'products' => $products]);
     }
+    public function finance(Request $request){
+        $user = Auth::user();
+        return view('business.finance',['user'=>$user]);
+
+    }
 }
