@@ -44,8 +44,10 @@
 
                 </div>
             </div>
-
+<table class="table">
+    <tr><th></th><th>Views</th><th>Last Posted</th></tr>
             @foreach($products as $product)
+                <tr><td>
                 <div class="well">
                     <div class="product">
                         <div class="listing-side">
@@ -66,7 +68,7 @@
 
                         <div class="info">
 
-                            
+
                             <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
 
                             <span class="listing-location">
@@ -80,7 +82,7 @@
                                 <span class="product-price">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                 </span>
                             @endif
-                            <span class="posted-text">{{$product['posted']}}</span>
+
 
 
                             @if(isset($product['urgent'])&&$product['urgent']===1)
@@ -91,7 +93,9 @@
                         </div>
                     </div>
                 </div>
+                    </td><td>0</td><td> <span class="posted-text">{{$product['posted']}}</span></td></tr>
             @endforeach
+</table>
         </div>
     </div>
 
