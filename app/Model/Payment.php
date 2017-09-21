@@ -22,4 +22,10 @@ class Payment extends Model
     public function contract(){
         return $this->belongsTo('App\Model\Contract');
     }
+    public function vat(){
+        return $this->amount/600;
+    }
+    public function before_vat(){
+        return 5*$this->amount/600;
+    }
 }
