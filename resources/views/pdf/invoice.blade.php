@@ -79,7 +79,7 @@
 <table class="customers">
     <tr><th>Reference</th><th>Payment Date</th><th>Amount</th></tr>
     @foreach($contract->payments as $payment)
-        <tr><td>{{$payment->refernce}}</td><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td></tr>
+        <tr><td>{{$payment->reference}}</td><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td></tr>
     @endforeach
 </table>
         <br><br> <br><br>
