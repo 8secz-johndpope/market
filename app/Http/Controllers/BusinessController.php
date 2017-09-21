@@ -53,9 +53,24 @@ class BusinessController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        $products = array_map(function ($a) {
+        $milliseconds = round(microtime(true) * 1000);
+        $products = array_map(function ($a) use ($milliseconds) {
+
+            $diff = $milliseconds-$a['_source']['created_at'];
+            if($diff<60*1000){
+                $a['_source']['posted'] = 'Just Now';
+            }
+            else if($diff<60*60*1000){
+                $a['_source']['posted'] = (int)($diff/60000).'m ago';
+            }
+            else if($diff<24*60*60*1000){
+                $a['_source']['posted'] = (int)($diff/(60*60000)).'h ago';
+            }else{
+                $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
+            }
             return $a['_source'];
-        }, $response['hits']['hits']);
+
+        },$response['hits']['hits']);
         $favorites = $user->favorites;
         $sids = array();
         foreach ($favorites as $favorite){
