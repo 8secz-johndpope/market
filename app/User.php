@@ -117,6 +117,6 @@ class User extends Authenticatable
     }
     public function contract()
     {
-        return $this->hasOne('App\Model\Contract');
+        return $this->hasOne('App\Model\Contract')->where('status','active');
     }
 }
