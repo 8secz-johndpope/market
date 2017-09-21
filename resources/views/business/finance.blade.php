@@ -35,15 +35,15 @@
                     <a class="nav-link" href="/business/manage/support">Support</a>
                 </li>
             </ul>
-
+            <h4>Payment Schedule</h4>
+            <table class="table">
+                <tr><th>Reference</th><th>Payment Date</th><th>Amount</th><th></th></tr>
+                @foreach($user->contract->payments as $payment)
+                    <tr><td>{{$payment->reference}}</td><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td><td><a>Pay Now</a></td></tr>
+                @endforeach
+            </table>
         </div>
     </div>
 
-    <h4>Payment Schedule</h4>
-    <table class="table">
-        <tr><th>Reference</th><th>Payment Date</th><th>Amount</th><th></th></tr>
-        @foreach($user->contract->payments as $payment)
-            <tr><td>{{$payment->reference}}</td><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td><td><a>Pay Now</a></td></tr>
-        @endforeach
-    </table>
+
 @endsection
