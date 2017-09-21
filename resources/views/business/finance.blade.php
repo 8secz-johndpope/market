@@ -41,9 +41,9 @@
 
     <h4>Payment Schedule</h4>
     <table class="table">
-        <tr><th>Reference</th><th>Payment Date</th><th>Amount</th></tr>
+        <tr><th>Reference</th><th>Payment Date</th><th>Amount</th><th></th></tr>
         @foreach($user->contract->payments as $payment)
-            <tr><td>{{$payment->reference}}</td><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td></tr>
+            <tr><td>{{$payment->reference}}</td><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td><td><a>Pay Now</a></td></tr>
         @endforeach
     </table>
 @endsection
