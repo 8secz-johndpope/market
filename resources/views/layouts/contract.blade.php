@@ -220,13 +220,7 @@
 </head>
 <body class="">
 <header>
-    <div class="top hidden-xs">
-        <div class="row">
-            <div class="col">
-                <img class="icon" src="/css/sumra-business.png">
-            </div>
-        </div>
-    </div>
+    
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -236,7 +230,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img class="icon" src="/css/ic_launcher1.png"></a>
+                <a class="navbar-brand" href="/"><img class="icon" src="/css/sumra-business.png"></a>
 
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
