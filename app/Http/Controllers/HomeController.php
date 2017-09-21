@@ -5,6 +5,7 @@ use App\Model\Address;
 use App\Model\Business;
 use App\Model\Pack;
 use App\Model\Payment;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use PDF;
 use App\Model\Contract;
 use App\Model\ContractPack;
@@ -503,7 +504,7 @@ class HomeController extends BaseController
         $customer->sources->create(array("source" => $request->stripeToken));
         return redirect('/user/manage/order');
     }
-    private function complete_order($order){
+    private function complete_contract($order){
         $user=Auth::user();
         $order->payment = 'done';
         $order->save();
@@ -524,97 +525,74 @@ class HomeController extends BaseController
             $payment->save();
         }
     }
+    private function complete_shipping($order){
+        $user=Auth::user();
+        $advert = Advert::find($order->advert_id);
+        $order = new Order;
+        $order->advert_id = $advert->id;
+        $order->buyer_id = $user->id;
+        $order->seller_id = $advert->user_id;
+        $order->amount = $order->amount;
+        $order->address_id = $user->default_address;
+        $order->type='shipping';
+        $order->save();
+    }
+    private function complete_bump($order){
+        $advert = Advert::find($order->advert_id);
+        foreach ($order->items as $item) {
+            $body[$item->slug] = 1;
+        }
+        $body['featured_count'] = 0;
+        $body['urgent_count'] = 0;
+        $body['spotlight_count'] = 0;
+        $milliseconds = round(microtime(true) * 1000);
+
+        $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+        $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+        $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic,
+            'body' => [
+                'doc' => $body
+            ]
+        ];
+
+// Update doc at /my_index/my_type/my_id
+        $response = $this->client->update($params);
+        $order->payment = 'done';
+        $order->save();
+
+    }
+
     public function stripe(Request $request){
         $user = Auth::user();
         $stripe_id = $user->stripe_id;
         $card = $request->card;
-        if ($request->session()->has('id')) {
-            //
-            $id  = $request->session()->get('id');
-            $advert = Advert::find($id);
 
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'id' => $advert->elastic
-            ];
-            $response = $this->client->get($params);
-            $amount = (int)($response['_source']['meta']['price']);
-            try {
-                $charge = \Stripe\Charge::create(array(
-                    "amount" => $amount,
-                    "currency" => "gbp",
-                    "customer" => $stripe_id,
-                    "source" => $card, // obtained with Stripe.js
-                    "description" => 'Shipping Item '
-                ));
-                $request->session()->forget('id');
-                $order = new Order;
-                $order->advert_id = $advert->id;
-                $order->buyer_id = $user->id;
-                $order->seller_id = $advert->user_id;
-                $order->amount = $amount;
-                $order->address_id = $user->default_address;
-                $order->type='shipping';
-                $order->save();
-            }
-            catch (\Exception $e) {
-            }
-            return redirect('/user/manage/ads');
-        }
 
         $order_id  = $request->session()->get('order_id');
         $order = Order::find($order_id);
 
-        if($order->type==='bump')
-        $amount = (int)($order->amount * 100);
-        else if($order->type==='contract')
-            $amount = (int)($order->contract->deposit()*100);
+
         $description = 'Payment towards to Order id '.$order_id;
        try {
             $charge = \Stripe\Charge::create(array(
-                "amount" => $amount,
+                "amount" => $order->amount_in_pence(),
                 "currency" => "gbp",
                 "customer" => $stripe_id,
                 "source" => $card, // obtained with Stripe.js
                 "description" => $description
             ));
             if($order->type==='contract'){
-               $this->complete_order($order);
+               $this->complete_contract($order);
                // $request->session()->forget('order_id');
                 return redirect('/user/contract/sign');
             }
             if($order->type==='bump') {
-
-
-                $advert = Advert::find($order->advert_id);
-                foreach ($order->items as $item) {
-                    $body[$item->slug] = 1;
-                }
-                $body['featured_count'] = 0;
-                $body['urgent_count'] = 0;
-                $body['spotlight_count'] = 0;
-                $milliseconds = round(microtime(true) * 1000);
-
-                $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-                $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-                $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-                $params = [
-                    'index' => 'adverts',
-                    'type' => 'advert',
-                    'id' => $advert->elastic,
-                    'body' => [
-                        'doc' => $body
-                    ]
-                ];
-
-// Update doc at /my_index/my_type/my_id
-                $response = $this->client->update($params);
-                $order->payment = 'done';
-                $order->save();
+                $this->complete_bump($order);
                 $request->session()->forget('order_id');
-
-
                 return redirect('/user/manage/ads');
             }
 
@@ -627,6 +605,41 @@ class HomeController extends BaseController
             ];
         }
 
+    }
+    public function paypal(Request $request){
+        $user = Auth::user();
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+        ));
+
+        $order_id  = $request->session()->get('order_id');
+        $order = Order::find($order_id);
+
+
+        try {
+            $result = $gateway->transaction()->sale([
+                "amount" => $order->amount(),
+                'paymentMethodNonce' => $request->nonce,
+                'options' => [
+                    'submitForSettlement' => True
+                ]
+            ]);
+            if($order->type==='contract'){
+                $this->complete_contract($order);
+                // $request->session()->forget('order_id');
+                return redirect('/user/contract/sign');
+            }
+            if($order->type==='bump') {
+                $this->complete_bump($order);
+                $request->session()->forget('order_id');
+                return redirect('/user/manage/ads');
+            }
+
+
+        } catch (Exception $e) {
+
+            return ['result' => ['msg' => 'failed']];
+        }
     }
     public function orders(Request $request){
         $user = Auth::user();
@@ -668,101 +681,7 @@ class HomeController extends BaseController
 
         return view('home.details',['user'=>Auth::user()]);
     }
-    public function paypal(Request $request){
-        $user = Auth::user();
-        $gateway = new \Braintree\Gateway(array(
-            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
-        ));
-        if ($request->session()->has('id')) {
-            $id  = $request->session()->get('id');
-            $advert = Advert::find($id);
 
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'id' => $advert->elastic
-            ];
-            $response = $this->client->get($params);
-            $amount = ($response['_source']['meta']['price']/100);
-            try{
-                $result = $gateway->transaction()->sale([
-                    "amount" => $amount,
-                    'paymentMethodNonce' => $request->nonce,
-                    'options' => [
-                        'submitForSettlement' => True
-                    ]
-                ]);
-
-                $request->session()->forget('id');
-                $order = new Order;
-                $order->advert_id = $advert->id;
-                $order->buyer_id = $user->id;
-                $order->seller_id = $advert->user_id;
-                $order->amount = $amount*100;
-                $order->address_id = $user->default_address;
-                $order->type='shipping';
-                $order->save();
-            }
-            catch (Exception $e) {
-
-            }
-
-        }
-        $order_id  = $request->session()->get('order_id');
-        $order = Order::find($order_id);
-
-
-        if($order->type==='bump')
-            $amount = $order->amount;
-        else if($order->type==='contract')
-            $amount = $order->contract->deposit();
-        try {
-            $result = $gateway->transaction()->sale([
-                "amount" => $amount,
-                'paymentMethodNonce' => $request->nonce,
-                'options' => [
-                    'submitForSettlement' => True
-                ]
-            ]);
-            if($order->type==='contract'){
-               $this->complete_order($order);
-                // $request->session()->forget('order_id');
-                return redirect('/user/contract/sign');
-            }
-            $advert = Advert::find($order->advert_id);
-            foreach ($order->items as $item){
-                $body[$item->slug]=1;
-            }
-            $body['featured_count'] = 0;
-            $body['urgent_count'] = 0;
-            $body['spotlight_count'] = 0;
-            $milliseconds = round(microtime(true) * 1000);
-
-            $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-            $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-            $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'id' => $advert->elastic,
-                'body' => [
-                    'doc' => $body
-                ]
-            ];
-
-// Update doc at /my_index/my_type/my_id
-            $response = $this->client->update($params);
-            $order->payment = 'done';
-            $order->save();
-            $request->session()->forget('order_id');
-
-            return redirect('/user/manage/ads');
-
-        } catch (Exception $e) {
-
-            return ['result' => ['msg' => 'failed']];
-        }
-    }
     public  function  change(Request $request,$id){
         $user = Auth::user();
         $user->default_address = $id;

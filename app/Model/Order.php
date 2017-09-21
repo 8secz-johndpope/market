@@ -27,4 +27,16 @@ class Order extends Model
     public function contract(){
         return $this->belongsTo('App\Model\Contract');
     }
+    public function amount(){
+        if($this->type==='bump')
+            return $this->amount ;
+        else if($this->type==='contract')
+            return $this->contract->deposit();
+    }
+    public function amount_in_pence(){
+        if($this->type==='bump')
+            return (int)($this->amount * 100);
+        else if($this->type==='contract')
+            return (int)($this->contract->deposit()*100);
+    }
 }
