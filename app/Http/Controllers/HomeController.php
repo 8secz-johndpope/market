@@ -502,6 +502,20 @@ class HomeController extends BaseController
         $customer->sources->create(array("source" => $request->stripeToken));
         return redirect('/user/manage/order');
     }
+    private function complete_order($order){
+        $user=Auth::user();
+        $order->payment = 'done';
+        $order->save();
+        foreach ($order->contract->packs as $pack){
+            $cpack = new Pack;
+            $cpack->type = $pack->slug;
+            $cpack->category_id = $pack->category_id;
+            $cpack->location_id = $pack->location_id;
+            $cpack->total = $order->contract->count;
+            $cpack->user_id = $user->id;
+            $cpack->save();
+        }
+    }
     public function stripe(Request $request){
         $user = Auth::user();
         $stripe_id = $user->stripe_id;
@@ -558,17 +572,7 @@ class HomeController extends BaseController
                 "description" => $description
             ));
             if($order->type==='contract'){
-                $order->payment = 'done';
-                $order->save();
-                foreach ($order->contract->packs as $pack){
-                    $cpack = new Pack;
-                    $cpack->type = $pack->slug;
-                    $cpack->category_id = $pack->category_id;
-                    $cpack->location_id = $pack->location_id;
-                    $cpack->total = $order->contract->count;
-                    $cpack->user_id = $user->id;
-                    $cpack->save();
-                }
+               $this->complete_order($order);
                // $request->session()->forget('order_id');
                 return redirect('/user/contract/sign');
             }
@@ -713,17 +717,7 @@ class HomeController extends BaseController
                 ]
             ]);
             if($order->type==='contract'){
-                $order->payment = 'done';
-                $order->save();
-                foreach ($order->contract->packs as $pack){
-                    $cpack = new Pack;
-                    $cpack->type = $pack->slug;
-                    $cpack->category_id = $pack->category_id;
-                    $cpack->location_id = $pack->location_id;
-                    $cpack->total = $order->contract->count;
-                    $cpack->user_id = $user->id;
-                    $cpack->save();
-                }
+               $this->complete_order($order);
                 // $request->session()->forget('order_id');
                 return redirect('/user/contract/sign');
             }
@@ -776,6 +770,12 @@ class HomeController extends BaseController
         return ['msg'=>'Done'];
 
     }
+    private function get_payment_days(){
+        for($i=1;$i<12;$i++){
+            $days[] = date('d-m-Y',strtotime('+90 days +'.$i.' months'));
+        }
+        return $days;
+    }
     public function sign(Request $request)
     {
 
@@ -810,7 +810,8 @@ class HomeController extends BaseController
             }
         }
         $request->session()->forget('order_id');
-        $pdf = PDF::loadView('pdf.invoice', ['contract'=>$contract,'user'=>Auth::user()]);
+        $days=$this->get_payment_days();
+        $pdf = PDF::loadView('pdf.invoice', ['contract'=>$contract,'user'=>Auth::user(),'days'=>$days]);
         $pdf->save('/home/anil/market/storage/contracts/invoice.pdf');
         $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
         $request = new \HelloSign\SignatureRequest;
