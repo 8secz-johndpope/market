@@ -65,6 +65,9 @@
             <tr><td><span class="bold-text">VAT @ 20%</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_vat()}}</span></td></tr>
             <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_after_vat()}}</span></td></tr>
         </table>
+        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+        <div class="page-break"></div>
+        <img src="https://sumra.net/css/brand.png" style="width: 100%">
 <h4>Payment Schedule</h4>
 <table class="customers">
     <tr><th>Payment Date</th><th>Amount</th></tr>
@@ -78,9 +81,7 @@
         <p>3. Any adverts posted outside of these designated areas will be charged in full separately. </p>
         <p>4. The Company confirms that it is VAT registered and it’s VAT number is. If the box is not checked, the Company confirms it is not, and is not required to be, VAT registered.</p>
 
-        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
-        <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" style="width: 100%">
+
 
 <h4>Terms and Conditions</h4>
         <p>Standard Advertising Terms and Conditions</p>
