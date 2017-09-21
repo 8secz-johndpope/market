@@ -54,13 +54,17 @@
 
                 </div>
                 <div class="col-sm-4">
+                    <table class="table">
                     @if($order->type==='contract')
-                    <p>Amount you will be paying now to secure the contract</p>
-                        Settlement Fees: <span class="bold-text">£{{$user->contract->settlement_amount()/100}}</span><br>
+                    <tr><td colspan="2"><p>Amount you will be paying now to secure the contract</p></td> </tr>
+                        @if($user->contract!==null)
+                     <tr><td>Settlement Fees: </td><td><span class="bold-text">£{{$user->contract->settlement_amount()/100}}</span></td></tr>
+                            @endif
                     @elseif($order->type==='invoice')
-                        <p>Amount to pay</p>
+                            <tr><td colspan="2"><p>Amount to pay</p></td> </tr>
                     @endif
-                        Total:<span class="bold-text">£{{$order->amount()}}</span>
+                       <tr><td>Total:</td><td><span class="bold-text">£{{$order->amount()}}</span></td></tr>
+                    </table>
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
                     <h4>Pay by Card</h4>
                     <form action="/user/payment/stripe" method="post">
