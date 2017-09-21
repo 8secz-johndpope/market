@@ -28,7 +28,7 @@ class Order extends Model
         return $this->belongsTo('App\Model\Contract');
     }
     public function invoice(){
-        return $this->belongsTo('App\Model\Payment');
+        return $this->belongsTo('App\Model\Payment','payment_id');
     }
     public function amount(){
         if($this->type==='bump')
