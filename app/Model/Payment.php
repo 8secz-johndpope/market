@@ -13,4 +13,10 @@ use Illuminate\Database\Eloquent\Model;
 class Payment extends Model
 {
 
+    public function nice_date(){
+       return date("d-m-Y", strtotime($this->charge_at));
+    }
+    public function nice_amount(){
+        return $this->amount/100;
+    }
 }

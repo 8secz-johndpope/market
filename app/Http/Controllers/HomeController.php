@@ -522,21 +522,11 @@ class HomeController extends BaseController
             $payment->charge_at = $day;
             $payment->contract_id = $order->contract->id;
             $payment->amount = (int)$order->contract->monthly_payment()*100;
+            $payment->reference = strtoupper(uniqid());
             $payment->save();
         }
     }
-    private function complete_shipping($order){
-        $user=Auth::user();
-        $advert = Advert::find($order->advert_id);
-        $order = new Order;
-        $order->advert_id = $advert->id;
-        $order->buyer_id = $user->id;
-        $order->seller_id = $advert->user_id;
-        $order->amount = $order->amount;
-        $order->address_id = $user->default_address;
-        $order->type='shipping';
-        $order->save();
-    }
+
     private function complete_bump($order){
         $advert = Advert::find($order->advert_id);
         foreach ($order->items as $item) {

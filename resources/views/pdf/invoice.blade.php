@@ -77,9 +77,9 @@
         <img src="https://sumra.net/css/brand.png" style="width: 100%">
 <h4>Payment Schedule</h4>
 <table class="customers">
-    <tr><th>Payment Date</th><th>Amount</th></tr>
-    @foreach($days as $day)
-        <tr><td>{{$day}}</td><td> £{{$contract->monthly_payment()}}</td></tr>
+    <tr><th>Reference</th><th>Payment Date</th><th>Amount</th></tr>
+    @foreach($contract->payments as $payment)
+        <tr><td>{{$payment->refernce}}</td><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td></tr>
     @endforeach
 </table>
         <br><br> <br><br>
