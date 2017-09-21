@@ -525,6 +525,8 @@ class HomeController extends BaseController
             $payment->reference = strtoupper(uniqid());
             $payment->save();
         }
+        $order->contract->user_id = $user->id;
+        $order->contract->save();
     }
 
     private function complete_bump($order){
