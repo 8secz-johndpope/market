@@ -299,6 +299,10 @@ a.select-link {
     display: block;
     margin: auto;
 }
+span.green-text {
+    color: green;
+    font-weight: bold;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
