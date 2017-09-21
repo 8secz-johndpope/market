@@ -93,7 +93,7 @@
                         </div>
                     </div>
                 </div>
-                    </td><td>0</td><td> <span class="posted-text">{{$product['posted']}}</span></td></tr>
+                    </td><td>0</td><td> <span class="posted">{{$product['posted']}}</span></td></tr>
             @endforeach
 </table>
         </div>
