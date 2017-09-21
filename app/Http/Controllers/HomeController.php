@@ -872,7 +872,9 @@ class HomeController extends BaseController
         $user = Auth::user();
 
         if ($request->session()->has('order_id')) {
-
+            if($user->business!==null){
+                return redirect('/user/contract/start');
+            }
         }else{
             $order = new Order;
             $contract = new Contract;
