@@ -50,8 +50,11 @@
                 <div class="col-sm-4">
                     @if($order->type==='contract')
                     <p>Amount you will be paying now to secure the contract</p>
-                    <span class="bold-text">£{{$order->contract->deposit()}}</span>
+
+                    @elseif($order->type==='invoice')
+                        <p>Amount to pay</p>
                     @endif
+                        <span class="bold-text">£{{$order->amount()}}</span>
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
                     <h4>Pay by Card</h4>
                     <form action="/user/payment/stripe" method="post">
