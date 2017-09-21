@@ -520,7 +520,7 @@ class HomeController extends BaseController
             $payment = new Payment;
             $payment->charge_at = $day;
             $payment->contract_id = $order->contract->id;
-            $payment->amount = (int)$order->contract->monthly_payment();
+            $payment->amount = (int)$order->contract->monthly_payment()*100;
             $payment->save();
         }
     }
