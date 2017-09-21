@@ -40,6 +40,15 @@
         body{
             font-size: 0.8em;
         }
+        .header-brand,.footer-brand{
+            width: 100%;
+        }
+        .header-brand{
+            margin-top: -50px;
+        }
+        .footer-brand{
+            margin-bottom: -50px;
+        }
     </style>
 </head>
 <body>
@@ -83,10 +92,10 @@
         <p>4. The Company confirms that it is VAT registered and it’s VAT number is. </p>
         <p>the Company confirms it is not, and is not required to be, VAT registered. By not filling in this box</p>
 
-        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+        <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
 
         <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" style="width: 100%">
+        <img src="https://sumra.net/css/brand.png" class="header-brand">
 
 <h4>Terms and Conditions</h4>
         <p>Standard Advertising Terms and Conditions</p>
@@ -113,10 +122,10 @@ and</p>
         </p>
         <p>4.4 Company shall pay initial SUMRA Invoice within 90 days of receipt.</p>
         <p>Subsequent invoices or fees due as per schedule</p>
-        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+        <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
 
         <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" style="width: 100%">
+        <img src="https://sumra.net/css/brand.png" class="header-brand">
         <h4>5 Warranties</h4>
         <p>5.1 Each party to this Agreement represents and warrants and undertakes to the other that it has, and shall retain throughout the Term, all right, title and authority to enter into, and perform all of its obligations under this Agreement.
         </p><p>5.2 Company represents, warrants and undertakes throughout the Term that Company (a) complies with, and shall continue to comply with, all laws and regulations as may be applicable to Company posting job advertisements on the Site; and (b) complies with, and shall continue to comply all applicable Data Protection laws and regulations including but not limited to the EU Data Protection Directive 95/46/EC, The Data Protection Act 1998, The Privacy and Electronic Communications (EC Directive) Regulations 2003 and any other applicable data protection legislation.
@@ -140,10 +149,10 @@ and</p>
         </h4>
         <p>9.1 This Agreement shall terminate automatically on the End Date specified in the SUMRA Insertion Order Form or as otherwise specified in the SUMRA Insertion Order Form. SUMRA shall be entitled to immediately terminate this Agreement by notice in writing and remove any advertisements from its site without notice in the event it deems, in its sole discretion, that it is likely to incur liability as a result of any act or omission or breach of this Agreement by the Company. If SUMRA terminates this Agreement pursuant to this clause any monies then already paid to SUMRA pursuant to this Agreement shall be non refundable. Either party may terminate this Agreement immediately by notice in writing to the other if the other party: (a) is in material breach of the Agreement and, in the case of a breach capable of remedy, fails to remedy the breach within 15 days of receipt of written notice giving full details of the breach and of the steps required to remedy it; or (b) passes a resolution for winding up (otherwise than for the purposes of a solvent amalgamation or reconstruction) or a court makes an order to that effect; or (c) becomes or is declared insolvent or convenes a meeting of or makes or proposes to make any arrangement or composition with its creditors; or (d) has a liquidator, receiver, administrator, administrative receiver, manager, trustee or similar officer appointed over any of its assets; or (e) ceases, or threatens to cease, to carry on business or (f) the other party suffers or there occurs in relation to that party any event which in the reasonable opinion of the non-defaulting party is analogous to any of the events referred to in sub-clauses (b) to (e) in any part of the world. Any termination of this Agreement for any reason shall be without prejudice to Company's obligations pursuant to clause 5 and 6.
         </p>
-        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+        <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
 
         <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" style="width: 100%">
+        <img src="https://sumra.net/css/brand.png" class="header-brand">
         <h4>10 Consequences of Termination
         </h4><p>10.1 Any termination of this Agreement shall not affect any accrued rights or liabilities of either party nor shall it affect the status of any provision of this Agreement which is expressly or by implication intended to come into or continue in force on or after such termination. Clauses 4 (Fees and Payment), 5 (Warranties), 6 (Indemnities), 7 (Limitation of Liability), 10 (Consequences of Termination), 11 (Confidentiality), and 12 (General) shall continue to have effect after the end of the Term.
 
@@ -165,10 +174,10 @@ and</p>
         </p><p>12.3 Nothing in this Agreement shall be construed as creating a partnership or joint venture of any kind between the parties or as constituting or authorising either party as the agent of the other party for any purpose whatsoever. Neither party shall have the authority or power to bind the other, or to contract in the name of, or hold itself out as, or create a liability against the other in any way or for any purpose.
         </p><p>12.4 Neither party shall assign (including by way of a charge or declaration of trust) sub-license or deal in any way with this Agreement or any of its rights under this Agreement, without the prior written consent of the other party, such consent not be unreasonably withheld or delayed, provided that each party shall have the right to assign this Agreement to a subsidiary, holding or parent company (and any of their subsidiaries) of that party on prior written notice to the other party.
 
-            <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+            <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
 
         <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" style="width: 100%">
+        <img src="https://sumra.net/css/brand.png" class="header-brand">
         </p> <p>12.5 Except as expressly set out in this Agreement, a person who is not a party to this Agreement has no right to rely upon or enforce any term of this Agreement.
         </p><p>12.6 The validity, construction and performance of this Agreement (and any claim, dispute or matter arising under or in connection with it or its enforceability) shall be governed by and interpreted in accordance with the laws of England and Wales. Each party irrevocably agrees to the exclusive jurisdiction of the English courts over any claim, dispute or matter arising under or in connection with this Agreement or its enforceability or the legal relationships established by this Agreement.
         </p><p>12.7 Neither party shall advertise or publicly announce, communicate or circulate the existence or terms of this Agreement or any association with the other party without the prior written consent of the other party.
@@ -180,7 +189,7 @@ and</p>
         </p><p>12.13 This Agreement may be signed in duplicate, each of which, when signed, shall be original, and all the duplicates together shall constitute the same Agreement.
         </p><p>SUMRA
         </p><p>I have read, understood and agree to the SUMRA standard terms and conditions above:</p>
-        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+        <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
 
     </div>
 </div>
