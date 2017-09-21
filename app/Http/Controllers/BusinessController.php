@@ -15,6 +15,8 @@ use App\Model\Pack;
 use App\Model\Payment;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use PDF;
+use Illuminate\Support\Facades\Mail;
+
 use App\Model\Contract;
 use App\Model\ContractPack;
 use App\Model\EmailCode;
