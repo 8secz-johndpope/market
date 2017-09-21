@@ -124,11 +124,12 @@ and</p>
         <h4>5 Warranties</h4>
         <p>5.1 Each party to this Agreement represents and warrants and undertakes to the other that it has, and shall retain throughout the Term, all right, title and authority to enter into, and perform all of its obligations under this Agreement.
         </p>
-        <p>5.2 Company represents, warrants and undertakes throughout the Term that Company (a) complies with, and shall continue to comply with, all laws and regulations as may be applicable to Company posting job advertisements on the Site; and (b) complies with, and shall continue to comply all applicable Data Protection laws and regulations including but not limited to the EU Data Protection Directive 95/46/EC, The Data Protection Act 1998, The Privacy and Electronic Communications (EC Directive) Regulations 2003 and any other applicable data protection legislation.</p>
         <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
 
         <div class="page-break"></div>
         <img src="https://sumra.net/css/brand.png" class="header-brand">
+        <p>5.2 Company represents, warrants and undertakes throughout the Term that Company (a) complies with, and shall continue to comply with, all laws and regulations as may be applicable to Company posting job advertisements on the Site; and (b) complies with, and shall continue to comply all applicable Data Protection laws and regulations including but not limited to the EU Data Protection Directive 95/46/EC, The Data Protection Act 1998, The Privacy and Electronic Communications (EC Directive) Regulations 2003 and any other applicable data protection legislation.</p>
+
         <h4>6 Indemnities
         </h4>
         <p>6.1 Company shall indemnify SUMRA (and its employees, directors and agents) against any liability, damage, expense, claim or cost (including reasonable legal fees and costs) suffered by SUMRA arising from any: (a) breach of warranties in clause 5; or (b) breach of clause 11 (Confidentiality).
