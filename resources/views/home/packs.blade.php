@@ -18,4 +18,5 @@
     <div class="col-sm-6">
         <a class="btn btn-primary" href="/user/contract/sign" @if($contract->total_after_vat()<$contract->minimum_payment()) disabled @endif>Continue</a>
         <h4>Minimum Contract Amount £{{$contract->minimum_payment()}}</h4>
+        <h4>Choose packs below to reach the above minimum contract amount for you to continue.</h4>
     </div>
