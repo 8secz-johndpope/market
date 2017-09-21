@@ -92,6 +92,7 @@
                             @endif
                         </div>
                     </div>
+                    <table class="table"><tr><td><a>Edit</a></td><td><a>Stats</a></td><td><a>Delete</a></td></tr></table>
                 </div>
                     </td><td>0</td><td> <span class="posted">{{$product['posted']}}</span></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
             @endforeach
