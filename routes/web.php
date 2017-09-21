@@ -30,6 +30,9 @@ Route::get('/user/manage/order/shipping/update/{id}', 'HomeController@update_shi
 Route::get('/user/generate/pdf', 'HomeController@pdf');
 
 
+Route::get('/business/manage/ads', 'BusinessController@myads');
+
+
 
 Route::get('/user/manage/orders', 'HomeController@orders');
 Route::get('/user/manage/buying', 'HomeController@buying');
