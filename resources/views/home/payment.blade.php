@@ -39,7 +39,7 @@
                         <h4>Payment Schedule</h4>
                         <table class="table">
                             <tr><th>Payment Date</th><th>Amount</th></tr>
-                            @foreach($contract->days() as $day)
+                            @foreach($order->contract->days() as $day)
                                 <tr><td>{{$day}}</td><td> £{{$contract->monthly_payment()}}</td></tr>
                             @endforeach
                         </table>
