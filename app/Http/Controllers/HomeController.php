@@ -519,7 +519,7 @@ class HomeController extends BaseController
         foreach ($order->contract->days as $day){
             $payment = new Payment;
             $payment->charge_at = $day;
-            $payment->contract_id = $order->contract;
+            $payment->contract_id = $order->contract->id;
             $payment->amount = (int)$order->contract->monthly_payment();
             $payment->save();
         }
