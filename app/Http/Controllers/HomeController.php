@@ -516,7 +516,7 @@ class HomeController extends BaseController
             $cpack->user_id = $user->id;
             $cpack->save();
         }
-        foreach ($order->contract->days as $day){
+        foreach ($order->contract->days() as $day){
             $payment = new Payment;
             $payment->charge_at = $day;
             $payment->contract_id = $order->contract->id;

@@ -45,6 +45,12 @@ class Contract extends Model
         }
         return $days;
     }
+    public function fdays(){
+        for($i=1;$i<12;$i++){
+            $days[] = date('Y-m-d H:i:s',strtotime('+90 days +'.$i.' months'));
+        }
+        return $days;
+    }
     public function payments(){
         return $this->hasMany('App\Model\Payment');
     }
