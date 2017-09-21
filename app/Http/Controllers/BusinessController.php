@@ -79,4 +79,14 @@ class BusinessController extends BaseController
         return view('business.finance',['user'=>$user]);
 
     }
+    public function invoice(Request $request,$id){
+        $user=Auth::user();
+        $order = new Order;
+        $order->buyer_id = $user->id;
+        $order->payment_id = $id;
+        $order->type='invoice';
+        $order->save();
+        $request->session()->put('order_id',$order->id);
+        return redirect('/user/manage/order');
+    }
 }

@@ -43,6 +43,7 @@
                                 <tr><td>{{$payment->nice_date()}}</td><td> £{{$payment->nice_amount()}}</td></tr>
                             @endforeach
                         </table>
+                    @elseif($order->type==='invoice')
                     @endif
 
                 </div>
@@ -95,7 +96,7 @@
                             paypal: {
                                 container: 'paypal-container',
                                 singleUse: true, // Required
-                                amount: @if($order->type==='bump') {{$order->amount}} @elseif($order->type==='contract'){{$order->contract->deposit()}}@endif, // Required
+                                amount: {{$order->amount()}}, // Required
                                 currency: 'GBP', // Required
                             },
                             onPaymentMethodReceived: function (obj) {
