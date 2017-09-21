@@ -40,7 +40,7 @@ class Order extends Model
             if($user->contract===null)
                 return $this->contract->deposit();
             else
-                return $this->contract->deposit()+$user->contract->settlement_amount();
+                return $this->contract->deposit()+$user->contract->settlement_amount()/100;
         }
 
         else if($this->type==='invoice')
