@@ -17,22 +17,22 @@
             <ul class="nav nav-tabs">
 
                 <li class="nav-item active">
-                    <a class="nav-link " href="#">Manage My ads</a>
+                    <a class="nav-link " href="#">Manage  ads</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/orders">Orders</a>
+                    <a class="nav-link" href="/business/manage/details">My Details</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/user/manage/buying">Buying</a>
+                    <a class="nav-link " href="/business/manage/company">Company</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/messages">Messages</a>
+                    <a class="nav-link" href="/business/manage/finance">Financials</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/favorites">Favorites</a>
+                    <a class="nav-link" href="/business/manage/metrics">Metrics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/details">My Details</a>
+                    <a class="nav-link" href="/business/manage/support">Support</a>
                 </li>
             </ul>
             <div class="row">
