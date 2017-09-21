@@ -97,6 +97,7 @@
                     </td><td>0</td><td> <span class="posted">{{$product['posted']}}</span></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
             @endforeach
 </table>
+            <a class="btn-primary btn" disabled>Continue</a>
         </div>
     </div>
 
