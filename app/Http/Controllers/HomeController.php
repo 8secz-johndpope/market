@@ -891,6 +891,9 @@ class HomeController extends BaseController
             $order->type='contract';
             $order->save();
             $request->session()->put('order_id',$order->id);
+            if($user->business!==null){
+                return redirect('/user/contract/start');
+            }
         }
         return view('home.business');
     }
