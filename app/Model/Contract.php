@@ -15,6 +15,9 @@ class Contract extends Model
     public function packs(){
         return $this->hasMany('App\Model\ContractPack');
     }
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
     public function total_before_discount(){
         return $this->packs->sum('amount')/100;
     }
