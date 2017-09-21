@@ -40,7 +40,7 @@
                         <table class="table">
                             <tr><th>Payment Date</th><th>Amount</th></tr>
                             @foreach($order->contract->days() as $day)
-                                <tr><td>{{$day}}</td><td> £{{$contract->monthly_payment()}}</td></tr>
+                                <tr><td>{{$day}}</td><td> £{{$order->contract->monthly_payment()}}</td></tr>
                             @endforeach
                         </table>
                     @endif
