@@ -525,6 +525,10 @@ class HomeController extends BaseController
             $payment->reference = strtoupper(uniqid());
             $payment->save();
         }
+        if($user->contract!==null){
+            $user->contract->status='settled';
+            $user->contract->save();
+        }
         $order->contract->user_id = $user->id;
         $order->contract->save();
     }
