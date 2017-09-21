@@ -1,12 +1,6 @@
-@component('mail::message')
-# Introduction
-
-The body of your message.
-
-@component('mail::button', ['url' => ''])
-Button Text
+@component('mail::message')# Your payment is due
+@component('mail::button', ['url' => $url])Pay Now
 @endcomponent
-
 Thanks,<br>
 {{ config('app.name') }}
 @endcomponent

@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PayInvoice;
 use App\Model\Address;
 use App\Model\Business;
 use App\Model\Pack;
@@ -84,6 +85,10 @@ class BusinessController extends BaseController
         if($payment->status!=='pending'){
             return redirect('/business/manage/finance');
         }
+        $user=Auth::user();
+        $invoice = new PayInvoice();
+        $invoice->payment_id=$id;
+        Mail::to($user)->send($invoice);
         $user=Auth::user();
         $order = new Order;
         $order->buyer_id = $user->id;

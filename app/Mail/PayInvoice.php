@@ -10,7 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class PayInvoice extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $payment_id= "0";
     /**
      * Create a new message instance.
      *
@@ -28,6 +28,8 @@ class PayInvoice extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.invoices.pay');
+        return $this->subject('Welcome to Sumra!')->markdown('emails.invoices.pay',['url'=>'https://business.sumra.net/business/invoice/pay/'.$this->payment_id]);
+
+       // return $this->markdown('emails.invoices.pay');
     }
 }
