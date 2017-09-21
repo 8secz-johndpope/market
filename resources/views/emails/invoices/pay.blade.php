@@ -1,11 +1,11 @@
 @component('mail::message')# Your payment is due
 @component('mail::table')
-    | Laravel       | Table         | Example  |
+    | Product       | Category         | Location  |
     | ------------- |:-------------:| --------:|
     @foreach($payment->contract->packs as $pack)
     | {{$pack->title}}     | {{$pack->category->title}}      | {{$pack->location->title}}      |
     @endforeach
-    | Col 3 is      | Right-Aligned | $20      |
+    | Total      |  | £{{$payment->amount/100}}      |
 @endcomponent
 @component('mail::button', ['url' => $url])Pay Now
 @endcomponent
