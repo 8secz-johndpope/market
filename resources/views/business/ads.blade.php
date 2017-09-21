@@ -66,14 +66,7 @@
 
                         <div class="info">
 
-                            <div class="favor">
-                                @if (in_array($product['source_id'],$sids))
-                                    <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
-                                @else
-                                    <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
-
-                                @endif
-                            </div>
+                            
                             <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
 
                             <span class="listing-location">
