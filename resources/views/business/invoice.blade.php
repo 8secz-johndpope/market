@@ -55,7 +55,7 @@
         <img src="https://sumra.net/css/brand.png" style="width: 100%">
 
         <table class="customers" >
-            <tr><td>Name</td><td>{{$user->name}}</td></tr>
+            <tr><td>Name </td><td>{{$user->name}}</td></tr>
             <tr><td>Company</td><td>{{$user->business->name}}</td></tr>
             <tr><td>Email</td><td>{{$user->email}}</td></tr>
             <tr><td>Phone</td><td>{{$user->business->phone}}</td></tr>
