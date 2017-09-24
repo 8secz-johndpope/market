@@ -79,7 +79,7 @@
                         @endforeach
                         </ul>
 
-                        <ul class="image-gallery-ul" style="width: {{count($product['images'])*800}}px">
+                        <ul class="image-gallery-ul" style="width: {{count($product['images'])*800}}px;display: none">
                             @foreach($product['images'] as $key=>$image)
                                 <li class="image-gallery-li">
                                     <div class="frame">
