@@ -215,7 +215,7 @@
                         <div class="main-location-div inline-block-div">
                         <input type="text" id="pac-input" class="form-control" placeholder="Location" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required></div>
                         <div class="main-go-div inline-block-div">
-							     		<button class="btn btn-default" type="submit" id="submitform">Go</button></div>
+							     		<button class="btn btn-primary" type="submit" id="submitform">Go</button></div>
                     </div>
                 </div>
             </form>
