@@ -266,6 +266,9 @@ ul.image-gallery-ul li img {
     position: relative;
     margin: auto;
 }
+.all-filters {
+    padding-left: 15px;
+}
 .carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-next {
     margin-right: -20px;
 }
