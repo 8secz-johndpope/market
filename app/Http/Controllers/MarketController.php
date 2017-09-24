@@ -1253,22 +1253,8 @@ class MarketController extends BaseController
             return View('notfound');
         }
         $location = Location::find(0);
-        $params = $this->filter($request,$category,$location);
-        if (Auth::check()) {
-            // The user is logged in...
-            $user = $request->user();
-           // $favorites = $user->favs;
-            $favorites = $user->favorites;
-            $sids = array();
-            foreach ($favorites as $favorite){
-                $sids[] = $favorite->sid;
-            }
-            $params['sids']=$sids;
-        }else{
-            $params['sids']=[];
-        }
-        //return View('market.listings',$params);
-        return View('market.listingsrow',$params);
+        return $this->lsearch($request,$any,$location);
+        
     }
     public function notfound(){
         return View('notfound');
