@@ -14,8 +14,8 @@
 
         <div class="row">
 
-        <div class="col-lg-3  col-md-2"></div>
-                <div class="col-lg-6 col-md-8 col-sm-12">
+        <div class="col-lg-3"></div>
+                <div class="col-lg-6 col-md-9 col-sm-12">
                     <ol class="breadcrumb">
                         @foreach($parents as $parent)
                         <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
@@ -130,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-            <div class="col-sm-3">
+            <div class="col-md-3 col-sm-12">
                 <div class="buttons">
                     <h4>Seller Info</h4>
                     <ul class="list-group">
