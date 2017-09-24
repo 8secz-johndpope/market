@@ -158,10 +158,10 @@ li.list-group-item a {
     height: 92px;
 }
 .listing-side-big .listing-thumbnail-big{
-    height: 600px;
+    height: 450px;
 }
 .listing-side-big{
-    width: 800px;
+    width: 600px;
 }
 .listing-side .listing-thumbnail,.listing-side-big .listing-thumbnail-big {
     width: 100%;
@@ -242,7 +242,7 @@ ul.image-gallery-ul li img {
 }
 
 .image-gallery {
-    width: 800px;
+    width: 600px;
     overflow: hidden;
     position: relative;
     margin: auto;
