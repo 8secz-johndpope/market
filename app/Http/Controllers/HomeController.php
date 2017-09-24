@@ -89,7 +89,7 @@ class HomeController extends BaseController
         $spl2 = array_slice($products, 6, 6);
         $spl3 = array_slice($products, 12, 6);
         $spl4 = array_slice($products, 18, 6);
-        return view('home',['base' => $all, 'spotlight' => $products]);
+        return view('home',['base' => $all, 'spotlight' => $products,'category'=>Category::find(0)]);
     }
     public function verify(Request $request){
         $user = Auth::user();
