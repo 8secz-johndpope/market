@@ -1,5 +1,6 @@
 body{
     font-family: 'Quicksand', sans-serif;
+    background: #eeeeee;
 
 }
 span.ribbon-featured {
@@ -9,6 +10,13 @@ span.ribbon-featured {
     overflow: hidden;
     bottom: 0;
     right: 0;
+}
+.list-group-item{
+    background-color: transparent;
+    border: 0px solid #ddd;
+}
+.well{
+    background: white;
 }
 strong.ribbon {
     background-color: #fff;
@@ -111,6 +119,7 @@ h4.product-title {
     overflow: hidden;
     cursor: pointer;
     max-width: 80%;
+    font-weight: bold;
 }
 .nomargin{
     margin:0;
@@ -126,10 +135,14 @@ span.product-price {
 .products {
     width: 76%;
     float: right;
+    background: white;
+    padding: 20px;
 }
 
 
-
+li.list-group-item a {
+    font-weight: bold;
+}
 .main-img {
     height: 150px;
     width: 150px;
