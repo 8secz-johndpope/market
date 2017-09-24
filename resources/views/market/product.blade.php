@@ -67,8 +67,8 @@
                         <ul class="image-gallery-ul" style="width: {{count($product['images'])*800}}px">
                         @foreach($product['images'] as $key=>$image)
                             <li class="image-gallery-li">
-                                <div class="listing-side-big">
-                                    <div class="listing-thumbnail-big">
+                                <div class="listing-side-big1">
+                                    <div class="listing-thumbnail-big1">
                                         <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
                                         <div class="listing-meta txt-sub">
                                             &nbsp;<span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> &nbsp; {{$key+1}} of {{count($product['images'])}}</span>
