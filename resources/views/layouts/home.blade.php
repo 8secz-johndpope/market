@@ -373,7 +373,7 @@
 <script>
     $(".filter-button").click(function () {
         if (!$(".all-filters").css('visibility') === 'hidden') {
-            $(".all-filters").hide();
+            $(".all-filters").css('visibility','hidden');
         }else{
             $(".all-filters").show();
         }
