@@ -425,6 +425,9 @@ span.green-text {
     .main-q-div{
         width : calc(100% - 150px);
     }
+    .main-first-div, .main-second-div{
+        width: 50%;
+    }
 
 }
 @media (max-width: 767px) {
