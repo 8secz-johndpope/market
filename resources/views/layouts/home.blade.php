@@ -377,12 +377,15 @@
             $(".all-filters").hide();
             $(".products").show();
             $("footer").show();
+            $(".copyright").show();
             $(this).html('Filter');
 
         }else{
             $(".all-filters").show();
             $(".products").hide();
             $("footer").hide();
+            $(".copyright").hide();
+
             $(this).html('Close');
 
         }
