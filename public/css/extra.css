@@ -15,6 +15,7 @@ span.ribbon-featured {
     background-color: transparent;
     border: 0px solid #ddd;
     padding-left: 0;
+    padding-top: 0;
 }
 .well{
     background: white;
