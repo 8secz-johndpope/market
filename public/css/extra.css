@@ -425,8 +425,11 @@ span.green-text {
     .main-q-div{
         width : calc(100% - 150px);
     }
-    .main-first-div, .main-second-div{
+    .main-first-div{
         width: 50%;
+    }
+    .main-second-div{
+        width:49%;
     }
     .main-location-div .form-control{
         width: 100%;
