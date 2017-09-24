@@ -40,6 +40,11 @@ span.ribbon-featured {
     right: 0;
     margin: auto;
 }
+a.filter-button.btn.btn-default {
+    float: right;
+    margin-bottom: 5px;
+    display: none;
+}
 strong.ribbon {
     background-color: #fff;
     color: #3997ba;
@@ -407,6 +412,9 @@ span.green-text {
     }
     .filter-container{
         width: 100%;
+    }
+    .filter-button{
+        display: block;
     }
     .products{
         width: 100%;

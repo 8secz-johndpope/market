@@ -371,6 +371,13 @@
 
 </script>
 <script>
+    $(".filter-button").click(function () {
+        if (!$(".all-filters").css('visibility') === 'hidden') {
+            $(".all-filters").hide();
+        }else{
+            $(".all-filters").show();
+        }
+    });
     $(".favroite-icon").click(function (e) {
         e.preventDefault();
 
