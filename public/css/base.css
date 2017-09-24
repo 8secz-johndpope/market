@@ -113,17 +113,6 @@ section .custompanel{
 a.navbar-brand {
     height: fit-content;
 }
-.container-fluid{
-    /* background-color: #ed631e; */
-    /* border-color: #263249; */
-    border: 0px;
-    background-color: white;
-    border-style: solid;
-    border-right-color: white;
-    border-left-color: white;
-    box-shadow: 0 1px 3px rgba(0,0,0,.2);
-    border-bottom-color: #000;
-}
 .navbar-default .navbar-brand {
     color: #fff;
 }
@@ -890,7 +879,6 @@ section.row-color.white {
   }
   .navbar-default .navbar-toggle {
     border-color: #ff970d;
-    background-color: #fff;
   }
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #ff970d;
