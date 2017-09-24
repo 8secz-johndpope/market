@@ -400,6 +400,7 @@
                 })
                 .catch(function (error) {
                     console.log(error);
+                    document.href.location='/login';
                 });
         }
 
