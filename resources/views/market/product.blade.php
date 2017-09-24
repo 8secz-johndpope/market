@@ -79,6 +79,16 @@
                         @endforeach
                         </ul>
 
+                        <ul class="image-gallery-ul" style="width: {{count($product['images'])*800}}px">
+                            @foreach($product['images'] as $key=>$image)
+                                <li class="image-gallery-li">
+                                    <div class="frame">
+                                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                             <span class="glyphicon glyphicon-circle-arrow-left image-gallery-left"></span>
                             <span class="sr-only">Previous</span>
