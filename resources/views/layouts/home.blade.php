@@ -186,7 +186,7 @@
     <div class="row search">
         <div class="col-sm-1 col-md-1 col-lg-2 hidden-xs">
         </div>
-        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-8">
+        <div class="col-xs-12 col-sm-10 col-md-12 col-lg-12">
             <form class="navbar-form" action="/all" id="mainform">
                 @foreach($input as $key=>$value)
                     @if($key!=='q'&&$key!=='lat'&&$key!=='lng')
