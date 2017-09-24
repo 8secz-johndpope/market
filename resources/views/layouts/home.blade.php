@@ -203,6 +203,9 @@
                     <div class="input-group col-sm-4 col-md-2 col-lg-1 col-xl-2 input-group-lg">
                         <select name="search_category" class="form-control">
                             <option value="all">All</option>
+                            @foreach($base as $cat)
+                                <option value="{{$cat->slug}}">{{$cat->title}}</option>
+                            @endforeach
                         </select>
                     </div><div class="input-group col-sm-4 col-md-7 col-lg-7 col-xl-8 input-group-lg">
                     <input type="text" class="form-control input-lg" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif">
