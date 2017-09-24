@@ -405,6 +405,9 @@ span.green-text {
         background: white;
         width: 100%;
     }
+    .filter-container{
+        width: 100%;
+    }
     .products{
         width: 100%;
     }

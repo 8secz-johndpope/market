@@ -16,6 +16,9 @@
 <div class="row listings">
     <div class="container-fluid">
         <div class="all">
+            <div class="top-bar">
+                <a class="filter-button btn btn-default">Filter</a>
+            </div>
     <div class="filter-container">
         <div class="all-filters">
         <div class="l-visible-large">
