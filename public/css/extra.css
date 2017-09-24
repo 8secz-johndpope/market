@@ -365,15 +365,7 @@ span.green-text {
     }
 }
 @media (max-width: 1040px) {
-    .all-filters {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        background: white;
-        width: 100%;
-    }
+
     .products{
         width: 100%;
     }
@@ -400,6 +392,15 @@ span.green-text {
 
 }
 @media (max-width: 767px) {
+    .all-filters {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: white;
+        width: 100%;
+    }
     h4.product-title {
         font-size: 15px;
         max-height: 30px;
