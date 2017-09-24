@@ -228,7 +228,10 @@ li.list-group-item a {
     width: 20%;
     float: left;
 }
-
+.all {
+    max-width: 1400px;
+    margin: auto;
+}
 span.image-number {
     float: right;
     padding-left: 2px;
