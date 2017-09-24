@@ -428,10 +428,15 @@ span.green-text {
     .main-first-div, .main-second-div{
         width: 50%;
     }
+    .main-location-div .form-control{
+        width: 100%;
+    }
     .main-q-div .form-control{
         width:100%;
     }
-
+.main-location-div {
+    width: calc(100% - 60px);
+}
 }
 @media (max-width: 767px) {
     .all-filters {
