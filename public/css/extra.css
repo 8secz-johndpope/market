@@ -438,7 +438,7 @@ span.green-text {
         width:100%;
     }
 .main-location-div {
-    width: calc(100% - 60px);
+    width: calc(100% - 48px);
 }
 }
 @media (max-width: 767px) {
