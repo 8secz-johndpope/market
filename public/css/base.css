@@ -817,7 +817,6 @@ section.row-color.white {
     margin-left: 0; 
   }
   .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
-    height: 60px;
     border-top-right-radius: 0;
   }
   .col-xs-4{
