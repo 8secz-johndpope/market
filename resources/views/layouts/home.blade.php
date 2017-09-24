@@ -204,6 +204,10 @@
                     <div class="main-first-div inline-block-div">
                     <div class="main-cat-div inline-block-div">
                         <select name="search_category" class="form-control">
+                            @if($category->id!==0&&$category->parent_id!==0)
+                                <option value="{{$category->slug}}">{{$category->title}}</option>
+
+                            @endif
                             <option value="all">All</option>
                             @foreach($base as $cat)
                                 <option value="{{$cat->slug}}" @if($category->slug===$cat->slug) selected @endif>{{$cat->title}}</option>
