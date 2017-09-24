@@ -366,9 +366,7 @@ span.green-text {
 }
 @media (max-width: 1040px) {
 
-    .products{
-        width: 100%;
-    }
+
     .listing-side-big .listing-thumbnail-big{
         height: 520px;
     }
@@ -399,6 +397,9 @@ span.green-text {
         left: 0;
         z-index: 100;
         background: white;
+        width: 100%;
+    }
+    .products{
         width: 100%;
     }
     h4.product-title {
