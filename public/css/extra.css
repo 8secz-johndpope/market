@@ -442,7 +442,7 @@ span.green-text {
 }
 }
 @media (max-width: 767px) {
-    .main-second-div,main-first-div{
+    .main-second-div,.main-first-div{
         display: block;
         width: 100%;
     }
