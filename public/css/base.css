@@ -68,7 +68,6 @@ a.navbar-brand {
   width: 90%;
 }
 .search input.form-control.input-lg {
-  width: 74%;
   background-image: url(ic_search.png);
   background-repeat: no-repeat;
   background-position: left;
@@ -998,9 +997,7 @@ section.row-color.white {
   .navbar-default .navbar-nav>li>a {
     margin-top: 10px;
   }
-  .search input.form-control.input-lg {
-    width: 66%;
-  }
+
 
   .categories .panel-body {
     height: 25em;
