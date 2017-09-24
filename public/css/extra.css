@@ -14,6 +14,7 @@ span.ribbon-featured {
 .list-group-item{
     background-color: transparent;
     border: 0px solid #ddd;
+    padding-left: 0;
 }
 .well{
     background: white;
