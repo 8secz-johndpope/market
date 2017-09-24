@@ -18,6 +18,9 @@ span.ribbon-featured {
 .well{
     background: white;
 }
+.main-search{
+    margin-top: 15px;
+}
 strong.ribbon {
     background-color: #fff;
     color: #3997ba;
