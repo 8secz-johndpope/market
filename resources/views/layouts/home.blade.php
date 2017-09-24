@@ -200,7 +200,7 @@
                     <input type="hidden" id="max_lng" name="max_lng" value="99">
 
 
-                <div class="main-search form-group col-md-12 col-lg-12">
+                <div class="main-search form-group col-sm-12 col-xs-12 col-md-12 col-lg-12">
                     <div class="input-group col-sm-6 col-sm-offset-0 col-md-2 col-lg-2 col-lg-offset-2 col-xl-2 input-group-lg">
                         <select name="search_category" class="form-control">
                             <option value="all">All</option>
