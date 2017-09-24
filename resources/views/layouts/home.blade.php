@@ -375,8 +375,12 @@
         console.log($(".all-filters").css('visibility'));
         if ($(".all-filters").is(':visible')) {
             $(".all-filters").hide();
+            $(this).html('Filter');
+
         }else{
             $(".all-filters").show();
+            $(this).html('Close');
+
         }
     });
     $(".favroite-icon").click(function (e) {
