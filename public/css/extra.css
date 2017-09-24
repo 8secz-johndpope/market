@@ -413,7 +413,7 @@ span.green-text {
     .filter-container{
         width: 100%;
     }
-    .filter-button{
+    a.filter-button.btn.btn-default{
         display: block;
     }
     .products{
