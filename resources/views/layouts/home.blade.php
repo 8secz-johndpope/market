@@ -373,8 +373,8 @@
 <script>
     $(".filter-button").click(function () {
         console.log($(".all-filters").css('visibility'));
-        if (!$(".all-filters").css('visibility') === 'hidden') {
-            $(".all-filters").css('visibility','hidden');
+        if ($(".all-filters").is(':visible')) {
+            $(".all-filters").hide();
         }else{
             $(".all-filters").show();
         }
