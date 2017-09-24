@@ -23,6 +23,30 @@ span.ribbon-featured {
 .main-search{
     margin-top: 15px;
 }
+.inline-block-div {
+    display: inline-block;
+}
+.main-cat-div .form-control {
+    width: 100%;
+}
+.main-cat-div.inline-block-div {
+    width: 150px;
+}
+.main-search-div {
+    width: 80%;
+    margin: auto;
+    max-width: 1000px;
+}
+.main-first-div {
+    width: 77%;
+}
+.main-q-div.inline-block-div {
+    width: calc(100% - 150px);
+}
+
+.main-q-div .form-control {
+    width: 100%;
+}
 .frame {
     width: 600px;
     height: 600px;
