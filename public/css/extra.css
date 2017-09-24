@@ -419,6 +419,13 @@ span.green-text {
         max-width: 70%;
     }
 
+    .main-search-div{
+        width: 100%;
+    }
+    .main-q-div{
+        width : calc(100% - 150px);
+    }
+
 }
 @media (max-width: 767px) {
     .all-filters {
