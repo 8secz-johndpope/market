@@ -206,7 +206,7 @@
                         <select name="search_category" class="form-control">
                             <option value="all">All</option>
                             @foreach($base as $cat)
-                                <option value="{{$cat->slug}}">{{$cat->title}}</option>
+                                <option value="{{$cat->slug}}" @if($category->slug===$cat->slug) selected @endif>{{$cat->title}}</option>
                             @endforeach
                         </select>
                     </div><div class="main-q-div inline-block-div"><input type="text" class="form-control" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif"></div>
