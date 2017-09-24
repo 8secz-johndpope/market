@@ -390,17 +390,18 @@
                 });
 
         }else{
-            $(this).addClass('glyphicon-heart');
-            $(this).removeClass('glyphicon-heart-empty');
+
             axios.post('/user/list/favorite', {
                 id:id
             })
                 .then(function (response) {
                     console.log(response);
+                    $(this).addClass('glyphicon-heart');
+                    $(this).removeClass('glyphicon-heart-empty');
                 })
                 .catch(function (error) {
                     console.log(error);
-                    document.href.location='/login';
+                    document.location.href='/login';
                 });
         }
 
