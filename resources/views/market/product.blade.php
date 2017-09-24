@@ -30,7 +30,7 @@
 <div class="col-sm-2">@if($product['meta']['price']>=0)
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel"  style="display: none">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel"  style="">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -41,11 +41,11 @@
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                            <div class="item active">
+                            <div class="item frame active">
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
                             </div>
                             @foreach($images as $image)
-                            <div class="item">
+                            <div class="item frame">
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
                             </div>
                             @endforeach
@@ -90,13 +90,6 @@
                         </a>
                         <div class="number-text"></div>
                     </div>
-                        <div class="images">
-                                @foreach($product['images'] as $key=>$image)
-                                        <div class="frame">
-                                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
-                                        </div>
-                                @endforeach
-                        </div>
                     @endif
                     <div class="row meta">
                         @foreach($metas as $meta)
