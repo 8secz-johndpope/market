@@ -36,7 +36,10 @@ span.ribbon-featured {
 }
 
 
-
+.main-search-div {
+    margin: auto;
+    width: 777px;
+}
 .main-q-div .form-control {
     width: 400px;
 }
