@@ -798,7 +798,7 @@ section.row-color.white {
 @media screen and (max-width: 767px){
   .navbar-header {
     width: auto;
-    background-color: #b9b9b9;
+    background-color: black;
   }
   .navbar-brand img.icon{
     height: 40px;
@@ -1002,9 +1002,7 @@ section.row-color.white {
   .search input.form-control.input-lg {
     width: 66%;
   }
-  .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
-    height: 60px;
-  }
+
   .categories .panel-body {
     height: 25em;
   }
