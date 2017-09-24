@@ -15,6 +15,7 @@
 
 <div class="row listings">
     <div class="container-fluid">
+        <div class="all">
     <div class="filter-container">
         <div class="all-filters">
         <div class="l-visible-large">
@@ -216,6 +217,7 @@
         </nav>
 
     </div>
+        </div>
     </div>
 </div>
 
