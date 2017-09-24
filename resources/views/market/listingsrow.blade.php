@@ -14,7 +14,7 @@
 
 
 <div class="row listings">
-    <div class="container">
+    <div class="container-fluid">
     <div class="filter-container">
         <div class="all-filters">
         <div class="l-visible-large">
