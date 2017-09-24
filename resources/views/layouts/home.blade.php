@@ -200,16 +200,18 @@
                     <input type="hidden" id="max_lng" name="max_lng" value="99">
 
 
-                <div class="main-search form-group col-sm-12 col-xs-12 col-md-12 col-lg-12">
-                    <div class="col-xs-5 col-sm-5 col-sm-offset-0 col-md-2 col-lg-2 col-lg-offset-2 col-xl-2">
+                <div class="main-search-div">
+                    <div class="main-first-div">
+                    <div class="main-cat-div">
                         <select name="search_category" class="form-control">
                             <option value="all">All</option>
                             @foreach($base as $cat)
                                 <option value="{{$cat->slug}}">{{$cat->title}}</option>
                             @endforeach
                         </select>
-                    </div><div class=" col-xs-6 col-sm-6 col-md-7 col-lg-4 col-xl-8 "><input type="text" class="form-control input-lg" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif">
-                    </div><div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2 ">
+                    </div><div class="main-q-div"><input type="text" class="form-control input-lg" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif"></div>
+                    </div>
+                    <div class="main-second-div">
                         <input type="text" id="pac-input" class="form-control" placeholder="POST CODE" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
                         <span class="input-group-btn">
 							     		<button class="btn btn-default" type="submit" id="submitform">Go</button>
