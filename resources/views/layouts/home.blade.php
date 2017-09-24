@@ -201,7 +201,7 @@
 
 
                 <div class="main-search form-group col-md-12 col-lg-12">
-                    <div class="input-group col-sm-4 col-md-2 col-lg-2 col-xl-2 input-group-lg">
+                    <div class="input-group col-sm-4 col-md-2 col-lg-2 col-lg-offset-2 col-xl-2 input-group-lg">
                         <select name="search_category" class="form-control">
                             <option value="all">All</option>
                             @foreach($base as $cat)
