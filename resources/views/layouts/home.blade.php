@@ -209,7 +209,7 @@
                                 <option value="{{$cat->slug}}">{{$cat->title}}</option>
                             @endforeach
                         </select>
-                    </div><div class="main-q-div"><input type="text" class="form-control input-lg" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif"></div>
+                    </div><div class="main-q-div"><input type="text" class="form-control" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif"></div>
                     </div>
                     <div class="main-second-div">
                         <input type="text" id="pac-input" class="form-control" placeholder="POST CODE" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
