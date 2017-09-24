@@ -200,14 +200,14 @@
                     <input type="hidden" id="max_lat" name="max_lat" value="99">
                     <input type="hidden" id="max_lng" name="max_lng" value="99">
                 <div class="main-search form-group col-md-12 col-lg-12">
-                    <div class="input-group col-sm-4 col-md-2 col-lg-1 col-xl-2 input-group-lg">
+                    <div class="input-group col-sm-4 col-md-2 col-lg-2 col-xl-2 input-group-lg">
                         <select name="search_category" class="form-control">
                             <option value="all">All</option>
                             @foreach($base as $cat)
                                 <option value="{{$cat->slug}}">{{$cat->title}}</option>
                             @endforeach
                         </select>
-                    </div><div class="input-group col-sm-4 col-md-7 col-lg-7 col-xl-8 input-group-lg">
+                    </div><div class="input-group col-sm-4 col-md-7 col-lg-6 col-xl-8 input-group-lg">
                     <input type="text" class="form-control input-lg" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif">
                     </div><div class="input-group col-sm-4 col-md-3 col-lg-3 col-xl-2 input-group-lg">
                         <input type="text" id="pac-input" class="form-control" placeholder="POST CODE" name="location" value="@if(isset($input['location'])) {{$input['location']}} @endif" required>
