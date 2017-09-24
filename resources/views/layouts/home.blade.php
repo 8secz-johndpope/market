@@ -375,10 +375,12 @@
         console.log($(".all-filters").css('visibility'));
         if ($(".all-filters").is(':visible')) {
             $(".all-filters").hide();
+            $(".products").show();
             $(this).html('Filter');
 
         }else{
             $(".all-filters").show();
+            $(".products").hide();
             $(this).html('Close');
 
         }
