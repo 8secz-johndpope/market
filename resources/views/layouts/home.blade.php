@@ -376,11 +376,13 @@
         if ($(".all-filters").is(':visible')) {
             $(".all-filters").hide();
             $(".products").show();
+            $("footer").show();
             $(this).html('Filter');
 
         }else{
             $(".all-filters").show();
             $(".products").hide();
+            $("footer").hide();
             $(this).html('Close');
 
         }
