@@ -15,6 +15,7 @@ use App\Model\Field;
 use App\Model\FieldValue;
 use App\Model\Filter;
 use App\Model\Location;
+use App\Model\Postcode;
 use App\Model\Price;
 use App\Model\Relation;
 use Illuminate\Http\Request;
@@ -1304,38 +1305,13 @@ class MarketController extends BaseController
         return " Hello API Event Received";
     }
     public function wrong(Request $request){
-        $locations = Location::all();
-        foreach ($locations as $location){
-            $parent = $location->parent;
-            if($parent!==null){
-                $lat = ($location->min_lat+$location->max_lat)/2;
-                $lng = ($location->min_lng+$location->max_lng)/2;
+        $postcodes = Postcode::where('location_id',0)->limit(100)->get();
+        foreach ($postcodes as $postcode){
+            $location = Location::where('min_lat','<=',$postcode->lat)->where('max_lat','>=',$postcode->lat)->where('min_lng','<=',$postcode->lng)->where('max_lng','>=',$postcode->lng)->orderBy('id','desc')->first();
+            echo $location->title.'<br>';
 
-                if($lat>=$parent->min_lat&&$lat<=$parent->max_lat&&$lng>=$parent->min_lng&&$lng<=$parent->max_lng){
-
-                }else{
-                    $title=$location->title.' '.$parent->title;
-                    /*
-                    $title=str_replace(' ','+',$title);
-                    $text = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=$title+UK&key=AIzaSyA3U46iw-NKjDuNR2XjEeQJFB3sXfnKuo0");
-                    $json = json_decode($text,true);
-
-                    if(isset($json['results'][0]['geometry']['viewport'])) {
-                     //   print_r($json['results'][0]['geometry']['viewport']);
-                        $location->min_lat = $json['results'][0]['geometry']['viewport']['southwest']['lat'];
-                        $location->min_lng = $json['results'][0]['geometry']['viewport']['southwest']['lng'];
-                        $location->max_lat = $json['results'][0]['geometry']['viewport']['northeast']['lat'];
-                        $location->max_lng = $json['results'][0]['geometry']['viewport']['northeast']['lng'];
-                        $location->save();
-                    }else{
-                        // print_r($json);
-                        // exit;
-                    }
-                    */
-                    echo $title.'<br>';
-                }
-            }
         }
+
         return ['a'=>'b'];
     }
 }
