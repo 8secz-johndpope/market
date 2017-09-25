@@ -1311,7 +1311,7 @@ class MarketController extends BaseController
                 if($location->min_lat>=$parent->min_lat&&$location->min_lng>=$parent->min_lng&&$location->max_lat<=$parent->max_lat&&$location->max_lng<=$parent->max_lng){
 
                 }else{
-                    echo $location->title.'<br>';
+                    echo $location->slug.'<br>';
                 }
             }
         }
