@@ -16,6 +16,7 @@ Route::get('/ufields', 'MarketController@ufields');
 Route::get('/loc', 'MarketController@loc');
 Route::get('/locs', 'MarketController@locs');
 Route::get('/wrong', 'MarketController@wrong');
+Route::get('/searchform', 'MarketController@searchform');
 
 Route::post('/hellosign', 'MarketController@hellosign');
 

@@ -1328,6 +1328,12 @@ class MarketController extends BaseController
     public function hellosign(Request $request){
         return " Hello API Event Received";
     }
+    public function searchform(Request $request){
+        $loc = $request->location_slug;
+        $cat = $request->search_category;
+        $q = $request->q;
+        return redirect('/'.$cat.'/'.$loc.'?q='.$q);
+    }
     public function wrong(Request $request){
         $postcodes = Postcode::where('active',1)->where('location_id',0)->limit(10000)->get();
       //  $postcodes = [Postcode::find(2148380)];

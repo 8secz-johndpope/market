@@ -186,7 +186,7 @@
     <div class="row search">
         <div class="col-sm-1   hidden-xs">
         </div><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <form class="navbar-form" action="/all" id="mainform">
+            <form class="navbar-form" action="/searchform" id="mainform">
                 @foreach($input as $key=>$value)
                     @if($key!=='q'&&$key!=='lat'&&$key!=='lng')
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
@@ -198,7 +198,7 @@
                     <input type="hidden" id="min_lng" name="min_lng" value="-99">
                     <input type="hidden" id="max_lat" name="max_lat" value="99">
                     <input type="hidden" id="max_lng" name="max_lng" value="99">
-
+                    <input type="hidden" id="location_slug" value="uk">
 
                 <div class="main-search-div">
                     <div class="main-first-div inline-block-div">
@@ -387,6 +387,7 @@
         paramName :'q',
         serviceUrl: '/api/lsuggest',
         onSelect: function (suggestion) {
+            $("#location_slug").val(suggestion.slug);
             $("#submitform").click();
             //   window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
