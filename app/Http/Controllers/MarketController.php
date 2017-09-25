@@ -276,7 +276,8 @@ class MarketController extends BaseController
         foreach ($locations as $a){
             $cats[]= ['value'=>$a->title,'category' => $a->title,'slug' => $a->slug,'data'=>$a->id];
         }
-        $a = Postcode::where('hash',crc32($term))->first();
+        $a = Postcode::where('hash',crc32(strtoupper($term)))->first();
+
         if ($a!==null){
             $cats[]= ['value'=>$a->postcode,'category' => $a->postcode,'slug' => $a->postcode,'data'=>$a->id];
         }
