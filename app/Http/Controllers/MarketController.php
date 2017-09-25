@@ -1308,7 +1308,10 @@ class MarketController extends BaseController
         foreach ($locations as $location){
             $parent = $location->parent;
             if($parent!==null){
-                if($location->min_lat>=$parent->min_lat&&$location->min_lng>=$parent->min_lng&&$location->max_lat<=$parent->max_lat&&$location->max_lng<=$parent->max_lng){
+                $lat = ($location->min_lat+$location->max_lat)/2;
+                $lng = ($location->min_lng+$location->max_lng)/2;
+
+                if($lat>=$parent->min_lat&&$lat<=$parent->max_lat&&$lng>=$parent->min_lng&&$lng<=$parent->max_lng){
 
                 }else{
                     $title=$location->title.' '.$parent->title;
