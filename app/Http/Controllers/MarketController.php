@@ -1312,6 +1312,7 @@ class MarketController extends BaseController
 
                 }else{
                     $title=$location->title.' '.$parent->title;
+                    /*
                     $title=str_replace(' ','+',$title);
                     $text = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=$title+UK&key=AIzaSyA3U46iw-NKjDuNR2XjEeQJFB3sXfnKuo0");
                     $json = json_decode($text,true);
@@ -1327,6 +1328,7 @@ class MarketController extends BaseController
                         // print_r($json);
                         // exit;
                     }
+                    */
                     echo $title.'<br>';
                 }
             }
