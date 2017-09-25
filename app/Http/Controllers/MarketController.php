@@ -276,6 +276,10 @@ class MarketController extends BaseController
         foreach ($locations as $a){
             $cats[]= ['value'=>$a->title,'category' => $a->title,'slug' => $a->slug,'data'=>$a->id];
         }
+        $locations = Postcode::where('postcode','like',$term)->get();
+        foreach ($locations as $a){
+            $cats[]= ['value'=>$a->postcode,'category' => $a->postcode,'slug' => $a->postcode,'data'=>$a->id];
+        }
         return ['text'=>$term,'suggestions'=>$cats];
 
     }
