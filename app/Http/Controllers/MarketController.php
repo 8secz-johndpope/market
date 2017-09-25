@@ -280,6 +280,8 @@ class MarketController extends BaseController
 
         if ($a!==null){
             $cats[]= ['value'=>$a->postcode,'category' => $a->postcode,'slug' => $a->postcode,'data'=>$a->id];
+            $cats[]= ['value'=>$a->postcode,'category' => $a->postcode,'slug' => $a->postcode,'data'=>$a->id];
+
         }
         return ['text'=>$term,'suggestions'=>$cats];
 
