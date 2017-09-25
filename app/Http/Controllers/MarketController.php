@@ -1303,4 +1303,18 @@ class MarketController extends BaseController
     public function hellosign(Request $request){
         return " Hello API Event Received";
     }
+    public function wrong(Request $request){
+        $locations = Location::all();
+        foreach ($locations as $location){
+            $parent = $location->parent;
+            if($parent!==null){
+                if($location->min_lat>=$parent->min_lat&&$location->min_lng>=$parent->min_lng&&$location->max_lat<=$parent->max_lat&&$location->max_lng<=$parent->max_lng){
+
+                }else{
+                    echo $location->title.'<br>';
+                }
+            }
+        }
+        return ['a'=>'b'];
+    }
 }

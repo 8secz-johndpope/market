@@ -15,6 +15,8 @@ Route::get('/pull', 'MarketController@pull');
 Route::get('/ufields', 'MarketController@ufields');
 Route::get('/loc', 'MarketController@loc');
 Route::get('/locs', 'MarketController@locs');
+Route::get('/wrong', 'MarketController@wrong');
+
 Route::post('/hellosign', 'MarketController@hellosign');
 
 Route::get('/update', 'MarketController@update');
