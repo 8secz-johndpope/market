@@ -377,7 +377,8 @@
         paramName :'q',
         serviceUrl: '/api/suggest',
         onSelect: function (suggestion) {
-            window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
+            $("#submitform").click();
+         //   window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });
@@ -385,7 +386,8 @@
         paramName :'q',
         serviceUrl: '/api/lsuggest',
         onSelect: function (suggestion) {
-         //   window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
+            $("#submitform").click();
+            //   window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });
