@@ -267,7 +267,17 @@ class MarketController extends BaseController
         */
 
     }
+    public function lsuggest(Request $request)
+    {
 
+        $term = $request->q;
+        $locations = Location::where('title','like',$term.'%');
+        $cats = array_map(function ($a)  {
+                return ['value'=>$a->title,'category' => $a->title,'slug' => $a->slug,'data'=>$a->id];
+        }, $locations);
+        return ['text'=>$term,'suggestions'=>$cats];
+
+    }
     public  function id(Request $request,$id){
         return $this->categories[$id];
     }

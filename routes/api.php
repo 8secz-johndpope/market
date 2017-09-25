@@ -107,6 +107,7 @@ Route::post('/user/balance/topup','UserController@topup')->middleware('auth:api'
 
 Route::get('/stripe', 'UserController@stripe');
 Route::get('/suggest','MarketController@suggest');
+Route::get('/lsuggest','MarketController@lsuggest');
 
 Route::get('/train','MarketController@train');
 

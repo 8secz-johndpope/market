@@ -329,7 +329,7 @@
 
     function initAutocomplete() {
 
-
+/*
         // Create the search box and link it to the UI element.
         var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.Autocomplete(input);
@@ -355,6 +355,7 @@
             max_lng.value = place.geometry.viewport.b.f;
             $("#submitform").click();
         });
+        */
     }
 
 </script>
@@ -377,6 +378,14 @@
         serviceUrl: '/api/suggest',
         onSelect: function (suggestion) {
             window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
+            // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+        }
+    });
+    $("#pac-input").autocomplete({
+        paramName :'q',
+        serviceUrl: '/api/lsuggest',
+        onSelect: function (suggestion) {
+         //   window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });
