@@ -272,9 +272,10 @@ class MarketController extends BaseController
 
         $term = $request->q;
         $locations = Location::where('title','like',$term.'%');
-        $cats = array_map(function ($a)  {
-                return ['value'=>$a->title,'category' => $a->title,'slug' => $a->slug,'data'=>$a->id];
-        }, $locations);
+        $cats = [];
+        foreach ($locations as $a){
+            $cats[]= ['value'=>$a->title,'category' => $a->title,'slug' => $a->slug,'data'=>$a->id];
+        }
         return ['text'=>$term,'suggestions'=>$cats];
 
     }
