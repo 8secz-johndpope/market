@@ -365,7 +365,6 @@
 <script data-src="https://images.apple.com/v/apple-tv/c/built/scripts/webgl-externals.built.js" type="text/javascript" charset="utf-8" async="true" class="webgl-externals"></script>
 <script src="https://sumra.net/js/three.js"></script>
 <script src="https://sumra.net/js/built.js"></script>
-<script src="https://sumra.net/js/jquery.autocomplete.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
