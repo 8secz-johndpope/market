@@ -228,7 +228,7 @@ class MarketController extends BaseController
                 $ans = $a['key'];
                 $category = Category::find($ans);
                 if($category!==null)
-                return ['value'=>strtolower($text),'category' => $category->title,'slug' => $category->slug,'data'=>$category->id];
+                return ['value'=>strtolower($text).' in <span class="bold-category">'.$category->title.'</span>','category' => $category->title,'slug' => $category->slug,'data'=>$category->id];
             }, $bts);
             return ['text'=>$text,'suggestions'=>$cats];
         }else{
