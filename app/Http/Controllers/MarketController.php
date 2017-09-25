@@ -1329,7 +1329,7 @@ class MarketController extends BaseController
         return " Hello API Event Received";
     }
     public function searchform(Request $request){
-        $loc = $request->location_slug;
+        $loc = $request->slug;
         $cat = $request->search_category;
         $q = $request->q;
         return redirect('/'.$cat.'/'.$loc.'?q='.$q);
