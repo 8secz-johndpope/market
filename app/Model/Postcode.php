@@ -14,5 +14,7 @@ class Postcode extends Model
 {
     public $timestamps = false;
 
-
+    public function location(){
+        return $this->belongsTo('App\Model\Location');
+    }
 }

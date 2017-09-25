@@ -1281,8 +1281,14 @@ class MarketController extends BaseController
         }
 
         $location = Location::where('slug',$loc)->first();
-        if($location===null){
-            return View('notfound');
+        if($location===null) {
+            $postcode = Postcode::where('postcode', strtoupper($loc))->first();
+
+            if ($postcode === null) {
+                return View('notfound');
+            }else{
+                $location = $postcode->location;
+            }
         }
         $params = $this->filter($request,$category,$location);
         if (Auth::check()) {
