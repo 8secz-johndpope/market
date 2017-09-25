@@ -1305,7 +1305,7 @@ class MarketController extends BaseController
         return " Hello API Event Received";
     }
     public function wrong(Request $request){
-        $postcodes = Postcode::where('active',1)->where('location_id',0)->limit(1000)->get();
+        $postcodes = Postcode::where('active',1)->where('location_id',0)->limit(10000)->get();
       //  $postcodes = [Postcode::find(2148380)];
         foreach ($postcodes as $postcode){
             $location = Location::where('min_lat','<=',$postcode->lat)->where('max_lat','>=',$postcode->lat)->where('min_lng','<=',$postcode->lng)->where('max_lng','>=',$postcode->lng)->orderBy('product')->first();
