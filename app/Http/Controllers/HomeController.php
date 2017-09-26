@@ -475,6 +475,26 @@ class HomeController extends BaseController
     public  function price(Request $request,$id){
         return Price::price($id,$request->id);
     }
+    public function total(Request $request,$id){
+        $extratypes = ExtraType::all();
+        $price = Price::price($id,$request->id);
+        $total = 0;
+        foreach ($extratypes as $type){
+            if($request->has($type->slug)&&$request->get($type->slug)==1){
+                $key = $type->slug;
+                if($type->type==='list'){
+                    $key = $type->key;
+                }
+                if(Pack::has_packs($key,$id,$request->id)) {
+
+                }else{
+                    $total += $price->{$key};
+                }
+            }
+
+        }
+        return ['total'=>$total/100];
+    }
     public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
         $j = 0;

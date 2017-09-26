@@ -632,22 +632,42 @@
     $(document).on('change',".extra-change", function(){
 
         var total = 0;
+        var featured = 0;
+        var urgent = 0;
+        var shipping = 0;
+        var spotlight = 0;
+        var featured_type = 'featured_3';
+        var shipping_type = 'shipping_3';
         if ($('#featured').is(":checked"))
         {
-            total += parseInt($("#featured-price").val());
+            featured = 1;
+            featured_type = $("#featured_type").val();
         }
         if ($('#urgent').is(":checked"))
         {
-            total += parseInt($("#urgent-price").val());
+            urgent=1;
         }
         if ($('#spotlight').is(":checked"))
         {
-            total += parseInt($("#spotlight-price").val());
+            spotlight = 1;
+
         }
         if ($('#shipping').is(":checked"))
         {
-            total += parseInt($("#shipping-price").val());
+            shipping=1;
+            shipping_type=$("#shipping_type").val();
         }
+        var category = $("#category").val();
+        var id = $("#location_id").val();
+        axios.get('/category/total/'+category,{ params:{id:id,shipping:shipping,featured:featured,spotlight:spotlight,urgent:urgent,featured_type:featured_type,shipping_type:shipping_type}})
+            .then(function (response) {
+            console.log(response.data);
+
+        })
+            .catch(function (error) {
+                console.log(error);
+            });
+
         $(".total-price").html(total);
         $("#total-price").val(total);
 

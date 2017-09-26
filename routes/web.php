@@ -78,6 +78,9 @@ Route::get('/category/extras/{id}', 'HomeController@extras');
 Route::get('/category/prices/{id}', 'HomeController@prices');
 Route::get('/category/price/{id}', 'HomeController@price');
 
+Route::get('/category/total/{id}', 'HomeController@total');
+
+
 Route::get('/category/suggest', 'HomeController@suggest');
 Route::get('/category/string/{id}', 'HomeController@string');
 Route::get('/location/string/{id}', 'HomeController@lstring');
