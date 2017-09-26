@@ -599,11 +599,12 @@
         */
         axios.get('/postcodes/postcode',{ params:{q:postcode}})
             .then(function (response) {
-                console.log(response);
-                if(response.data.msg==='yes')
-                get_prices(category);
+                console.log(response.data);
+                if(response.data.msg==='yes') {
+                    get_prices(category);
+                }
                 else{
-                    
+                 console.log("no");
                 }
 
             })
