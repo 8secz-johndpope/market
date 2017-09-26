@@ -11,6 +11,11 @@
 @endsection
 
 @section('content')
+    <style>
+        .select-category-link{
+            display: none;
+        }
+    </style>
     <form action="/user/advert/newad" method="post" id="advert-form">
         {{ csrf_field() }}
         <input type="hidden" name="category" value="0" id="category">
