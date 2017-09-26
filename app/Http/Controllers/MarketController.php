@@ -111,13 +111,13 @@ class MarketController extends BaseController
             if($location->parent===null){
 
             }
-            /*
+            
             else{
                 $location->ends = $location->res + ($location->res/$this->leading($location->res)) - 1;
                 $location->save();
             }
-            */
 
+/*
             else if($location->parent->id===0){
                 $location->res1= $location->id * 100000000000;
                 $location->save();
@@ -151,6 +151,7 @@ class MarketController extends BaseController
                 $location->res1 = $location->parent->res1 + ($count)*1;
                 $location->save();
             }
+*/
 
         }
     }
