@@ -17,6 +17,7 @@ class OrderItem extends Model
         return $this->belongsTo('App\Model\ExtraPrice');
     }
 
+
     public function order()
     {
         return $this->belongsTo('App\Model\Order');
