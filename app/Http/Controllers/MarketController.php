@@ -101,8 +101,29 @@ class MarketController extends BaseController
         $locations = Location::all();
 
         foreach ($locations as $location) {
-            if(count($location->children)>=100){
-                echo $location->id.'<br>';
+            if($location->parent->id===0){
+                $location->res= $location->id * 100000000000;
+                $location->save();
+            }
+            else if($location->parent->parent->id===0){
+                $location->res = $location->parent->res  + ($location->id-$location->parent->children()->first()->id+1)*1000000000;
+                $location->save();
+            }
+            else if($location->parent->parent->parent->id===0){
+                $location->res = $location->parent->res + ($location->id-$location->parent->children()->first()->id+1)*1000000;
+                $location->save();
+            }
+            else if($location->parent->parent->parent->parent->id===0){
+                $location->res = $location->parent->res + ($location->id-$location->parent->children()->first()->id+1)*10000;
+                $location->save();
+            }
+            else if($location->parent->parent->parent->parent->parent->id===0){
+                $location->res = $location->parent->res + ($location->id-$location->parent->children()->first()->id+1)*100;
+                $location->save();
+            }
+            else if($location->parent->parent->parent->parent->parent->parent->id===0){
+                $location->res = $location->parent->res + ($location->id-$location->parent->children()->first()->id+1)*1;
+                $location->save();
             }
         }
     }
