@@ -201,7 +201,7 @@ class HomeController extends BaseController
                     if($type->type==='list'){
                         $key = $request->get($type->key);
                     }
-                    $extraprice = ExtraPrice::where('slug',$key)->first();
+                    $extraprice = ExtraPrice::where('key',$key)->first();
                     $orderitem = new OrderItem;
                     $orderitem->title = 'Featured';
                     $orderitem->slug = 'featured';
