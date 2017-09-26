@@ -144,7 +144,9 @@ class HomeController extends BaseController
 
         $user= Auth::user();
         $category=Category::find($request->category);
-        $fields = $category->fields;
+        $location=Category::find($request->location_id);
+
+            $fields = $category->fields;
 
         $body['category'] = $category->id;
         $milliseconds = round(microtime(true) * 1000);
@@ -187,45 +189,34 @@ class HomeController extends BaseController
            // $orders = array();
             $order= new Order;
             $order->amount = $total;
+            $order->category_id = $category->id;
+            $order->location_id = $location->id;
             $order->advert_id=$advert->id;
             $order->save();
 
-            if($request->has('featured')){
-                $orderitem = new OrderItem;
-                $orderitem->title = 'Featured';
-                $orderitem->slug = 'featured';
-                $orderitem->amount = $request->get('featured-price');
-                $orderitem->save();
-                $order->items()->save($orderitem);
-               // $orders[] = ['title'=>'Featured','price'=>$request->get('featured-price')];
+            $extratypes=ExtraType::all();
+            foreach ($extratypes as $type){
+                if($request->has($type->slug)&&$request->get($type->slug)==1){
+                    $key = $type->slug;
+                    if($type->type==='list'){
+                        $key = $request->get($type->key);
+                    }
+                    $extraprice = ExtraPrice::where('slug',$key)->first();
+                    $orderitem = new OrderItem;
+                    $orderitem->title = 'Featured';
+                    $orderitem->slug = 'featured';
+                    $orderitem->extra_price_id = $extraprice->id;
+                    $orderitem->amount = 0;
+                    $orderitem->save();
+                    $order->items()->save($orderitem);
+
+
+                }
+
             }
-            if($request->has('urgent')){
-                $orderitem = new OrderItem;
-                $orderitem->title = 'Urgent';
-                $orderitem->slug = 'urgent';
-                $orderitem->amount = $request->get('urgent-price');
-                $orderitem->save();
-                $order->items()->save($orderitem);
-              //  $orders[] = ['title'=>'Urgent','price'=>$request->get('urgent-price')];
-            }
-            if($request->has('spotlight')){
-                $orderitem = new OrderItem;
-                $orderitem->title = 'Spotlight';
-                $orderitem->slug = 'spotlight';
-                $orderitem->amount = $request->get('spotlight-price');
-                $orderitem->save();
-                $order->items()->save($orderitem);
-               // $orders[] = ['title'=>'Spotlight','price'=>$request->get('spotlight-price')];
-            }
-            if($request->has('shipping')){
-                $orderitem = new OrderItem;
-                $orderitem->title = 'Shipping';
-                $orderitem->slug = 'shipping';
-                $orderitem->amount = $request->get('shipping-price');
-                $orderitem->save();
-                $order->items()->save($orderitem);
-              //  $orders[] = ['title'=>'Shipping','price'=>$request->get('shipping-price')];
-            }
+
+
+
 
             $request->session()->put('order_id', $order->id);
             return redirect('/user/manage/order');

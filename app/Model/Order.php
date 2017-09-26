@@ -28,6 +28,12 @@ class Order extends Model
     public function contract(){
         return $this->belongsTo('App\Model\Contract');
     }
+    public function category(){
+        return $this->belongsTo('App\Model\Category');
+    }
+    public function location(){
+        return $this->belongsTo('App\Model\Location');
+    }
     public function invoice(){
         return $this->belongsTo('App\Model\Payment','payment_id');
     }
