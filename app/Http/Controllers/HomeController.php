@@ -5,6 +5,7 @@ use App\Model\Address;
 use App\Model\Business;
 use App\Model\Pack;
 use App\Model\Payment;
+use App\Model\Postcode;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use PDF;
 use App\Model\Contract;
@@ -805,6 +806,7 @@ class HomeController extends BaseController
 
     }
     public function postcode(Request $request){
+        
          $up =   str_replace(' ','',strtoupper($request->q));
         $a = Postcode::where('hash',crc32($up))->first();
         if($a===null){
