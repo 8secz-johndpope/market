@@ -378,7 +378,7 @@
         serviceUrl: '/api/suggest',
         onSelect: function (suggestion) {
             $("#autocomplete").val(suggestion.val);
-            $("#search_category").val(suggestion.slug);
+          //  $("#search_category").val(suggestion.slug);
             $("#submitform").click();
          //   window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
