@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class OrderItem extends Model
 {
-    public function type()
+    public function yahoo()
     {
         return $this->belongsTo('App\Model\ExtraPrice');
     }

@@ -468,10 +468,10 @@ class HomeController extends BaseController
         $order = Order::find($order_id);
         foreach ($order->items as $item)
         {
-            if($item->order===null){
+            if($item->yahoo===null){
                echo 'null';
             }else
-            echo  $item->order->advert_id;
+            echo  "done";
         }
     }
     public function total(Request $request,$id){
