@@ -14,7 +14,6 @@ class OrderItem extends Model
 {
     public function yahoo()
     {
-        return 20;
         return $this->belongsTo('App\Model\ExtraPrice');
     }
 
