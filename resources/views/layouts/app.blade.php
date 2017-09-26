@@ -662,14 +662,15 @@
         axios.get('/category/total/'+category,{ params:{id:id,shipping:shipping,featured:featured,spotlight:spotlight,urgent:urgent,featured_type:featured_type,shipping_type:shipping_type}})
             .then(function (response) {
             console.log(response.data);
+                $(".total-price").html(response.data.total);
 
-        })
+
+            })
             .catch(function (error) {
                 console.log(error);
             });
 
-        $(".total-price").html(total);
-        $("#total-price").val(total);
+      //  $("#total-price").val(total);
 
     });
     $(document).on('change',".address-select",function () {
