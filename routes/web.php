@@ -70,6 +70,7 @@ Route::get('/user/advert/delete/{id}', 'HomeController@delete');
 
 Route::get('/category/children/{id}', 'HomeController@children');
 Route::get('/location/children/{id}', 'HomeController@lchildren');
+Route::get('/postcodes/postcode', 'HomeController@postcode');
 
 Route::get('/category/extras/{id}', 'HomeController@extras');
 Route::get('/category/prices/{id}', 'HomeController@prices');

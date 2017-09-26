@@ -581,6 +581,7 @@
         upload_file();
     });
     function get_location(postcode) {
+        /*
         $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+postcode+"&key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0",function (data,status) {
             console.log(data.results[0]['formatted_address']);
             console.log(data.results[0]['geometry']['location']['lat']);
@@ -595,6 +596,16 @@
 
 
         });
+        */
+        axios.get('/postcodes/postcode',{ params:{q:postcode}})
+            .then(function (response) {
+                console.log(response);
+                get_prices(category);
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
     $(".postcode-submit").click(function () {
        var postcode = $("#postcode-text").val();
