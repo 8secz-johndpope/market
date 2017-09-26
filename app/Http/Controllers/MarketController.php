@@ -124,31 +124,31 @@ class MarketController extends BaseController
             }
             else if($location->parent->parent->id===0){
                 $count = count(Location::where('parent_id',$location->parent->id)->whereBetween('id',[$location->id,$location->parent->children()->first()->id])->get());
-                $location->res1 = $location->parent->res  + ($count)*1000000000;
+                $location->res1 = $location->parent->res1  + ($count)*1000000000;
                 $location->save();
             }
             else if($location->parent->parent->parent->id===0){
                 $count = count(Location::where('parent_id',$location->parent->id)->whereBetween('id',[$location->id,$location->parent->children()->first()->id])->get());
 
-                $location->res1 = $location->parent->res + ($count)*1000000;
+                $location->res1 = $location->parent->res1 + ($count)*1000000;
                 $location->save();
             }
             else if($location->parent->parent->parent->parent->id===0){
                 $count = count(Location::where('parent_id',$location->parent->id)->whereBetween('id',[$location->id,$location->parent->children()->first()->id])->get());
 
-                $location->res1 = $location->parent->res + ($count)*10000;
+                $location->res1 = $location->parent->res1 + ($count)*10000;
                 $location->save();
             }
             else if($location->parent->parent->parent->parent->parent->id===0){
                 $count = count(Location::where('parent_id',$location->parent->id)->whereBetween('id',[$location->id,$location->parent->children()->first()->id])->get());
 
-                $location->res1 = $location->parent->res + ($count)*100;
+                $location->res1 = $location->parent->res1 + ($count)*100;
                 $location->save();
             }
             else if($location->parent->parent->parent->parent->parent->parent->id===0){
                 $count = count(Location::where('parent_id',$location->parent->id)->whereBetween('id',[$location->id,$location->parent->children()->first()->id])->get());
 
-                $location->res1 = $location->parent->res + ($count)*1;
+                $location->res1 = $location->parent->res1 + ($count)*1;
                 $location->save();
             }
 
