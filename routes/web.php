@@ -21,6 +21,8 @@ Route::get('/searchform', 'MarketController@searchform');
 Route::post('/hellosign', 'MarketController@hellosign');
 
 Route::get('/update', 'MarketController@update');
+Route::get('/updates', 'MarketController@updates');
+
 Route::get('/insert', 'MarketController@insert');
 Route::get('/user/ads/post', 'HomeController@post');
 Route::post('/user/advert/newad', 'HomeController@newad');

@@ -111,7 +111,7 @@ class MarketController extends BaseController
             if($location->parent===null){
 
             }
-            
+
             else{
                 $location->ends = $location->res + ($location->res/$this->leading($location->res)) - 1;
                 $location->save();
@@ -454,6 +454,53 @@ class MarketController extends BaseController
             }
             return ['a'=>'b'];
         }
+
+    public function updates(Request $request){
+
+        $locations = Location::where('res','!=','res1')->get();
+        foreach ($locations as $location){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'size' => 10000,
+                    'query' => [
+                        "term" => ["location_id"=>$location->res]
+                    ]
+                ]
+            ];
+            //  $milliseconds = round(microtime(true) * 1000);
+            //  $days_7 = $milliseconds + 7*24*3600*1000;
+            $response = $this->client->search($params);
+            $products = array_map(function ($a) {
+                $ans = $a['_source'];
+                $ans['id'] = $a['_id'];
+                return $ans;
+            }, $response['hits']['hits']);
+            foreach ($products as $product) {
+
+                        $params = [
+                            'index' => 'adverts',
+                            'type' => 'advert',
+                            'id' => $product['id'],
+                            'body' => [
+                                'doc' => [
+                                    'location_id' => $location->res1,
+                                ]
+                            ]
+                        ];
+
+// Update doc at /my_index/my_type/my_id
+                        $response = $this->client->update($params);
+                        print_r($response);
+
+
+            }
+        }
+
+
+        return ['a'=>'b'];
+    }
 
     public function insert(Request $request){
         $car = Category::find(105000000);
