@@ -279,8 +279,8 @@ class MarketController extends BaseController
         $a = Postcode::where('hash',crc32(strtoupper($term)))->first();
 
         if ($a!==null){
-            $cats[]= ['value'=>$a->postcode,'category' => $a->postcode,'slug' => $a->postcode,'data'=>$a->id];
-            $cats[]= ['value'=>$a->postcode,'category' => $a->postcode,'slug' => $a->postcode,'data'=>$a->id];
+            $cats[]= ['value'=>$a->postcode,'category' => $a->postcode,'slug' => strtolower($a->postcode),'data'=>$a->id];
+            $cats[]= ['value'=>$a->postcode,'category' => $a->postcode,'slug' => strtolower($a->postcode),'data'=>$a->id];
 
         }
         return ['text'=>$term,'suggestions'=>$cats];
