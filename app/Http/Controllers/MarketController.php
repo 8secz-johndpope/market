@@ -401,7 +401,7 @@ class MarketController extends BaseController
                     'size' => 10000,
                     'query' => [
                         'bool' => [
-                            "must_not" => ['exists'=>['field'=>'lat']]
+                            "must_not" => ['exists'=>['field'=>'location_id']]
                         ]
                     ]
                 ]
@@ -418,22 +418,25 @@ class MarketController extends BaseController
                 if(isset($product['location'])) {
                     $location = $product['location'];
                     $parts = explode(',', $location);
-
-                    $params = [
-                        'index' => 'adverts',
-                        'type' => 'advert',
-                        'id' => $product['id'],
-                        'body' => [
-                            'doc' => [
-                                'lat' => (float)$parts[0],
-                                'lng' => (float)$parts[1]
+                    $lat = (float)$parts[0];
+                    $lng = (float)$parts[1];
+                    $loc = Location::where('min_lat','<=',$lat)->where('max_lat','>=',$lat)->where('min_lng','<=',$lng)->where('max_lng','>=',$lng)->orderBy('product')->first();
+                    if($loc!==null) {
+                        $params = [
+                            'index' => 'adverts',
+                            'type' => 'advert',
+                            'id' => $product['id'],
+                            'body' => [
+                                'doc' => [
+                                    'location_id' => $loc->res,
+                                ]
                             ]
-                        ]
-                    ];
+                        ];
 
 // Update doc at /my_index/my_type/my_id
-                    $response = $this->client->update($params);
-                    print_r($response);
+                        $response = $this->client->update($params);
+                        print_r($response);
+                    }
                 }
 
             }
