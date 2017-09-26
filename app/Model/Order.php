@@ -40,7 +40,13 @@ class Order extends Model
     public function amount(){
         $user = Auth::user();
         if($this->type==='bump')
-            return $this->amount ;
+        {
+            $total = 0;
+            foreach ($this->items as $item){
+                $total += $item->price();
+            }
+            return $total;
+        }
         else if($this->type==='contract')
         {
             if($user->contract===null)
@@ -55,7 +61,13 @@ class Order extends Model
     public function amount_in_pence(){
         $user = Auth::user();
         if($this->type==='bump')
-            return (int)($this->amount * 100);
+        {
+            $total = 0;
+            foreach ($this->items as $item){
+                $total += $item->price();
+            }
+            return $total*100;
+        }
         else if($this->type==='contract')
         {
             if($user->contract===null)

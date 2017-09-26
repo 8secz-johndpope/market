@@ -22,7 +22,7 @@
                         @foreach($order->items as $item)
                         <tr><td>{{$item->type()->stitle}}</td><td>£{{$item->price()}}</td></tr>
                             @endforeach
-                            <tr><td>Total:</td><td>£{{$order->amount}}</td></tr>
+                            <tr><td>Total:</td><td>£{{$order->amount()}}</td></tr>
                     </table>
                     @elseif($order->type==='contract')
                         <table class="table">
