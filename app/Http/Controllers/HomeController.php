@@ -144,7 +144,7 @@ class HomeController extends BaseController
 
         $user= Auth::user();
         $category=Category::find($request->category);
-        $location=Category::find($request->location_id);
+        $location=Location::find($request->location_id);
 
             $fields = $category->fields;
 
