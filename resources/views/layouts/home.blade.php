@@ -198,7 +198,7 @@
                     <input type="hidden" id="min_lng" name="min_lng" value="-99">
                     <input type="hidden" id="max_lat" name="max_lat" value="99">
                     <input type="hidden" id="max_lng" name="max_lng" value="99">
-                    <input type="hidden" id="location_slug" name="slug" value="uk">
+                    <input type="hidden" id="location_slug" name="slug" value="{{$location->slug}}">
 
                 <div class="main-search-div">
                     <div class="main-first-div inline-block-div">
