@@ -12,5 +12,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class ExtraPrice extends  Model
 {
+    public function item()
+    {
+        return $this->hasOne('App\Model\OrderItem');
+    }
 
 }
