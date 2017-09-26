@@ -118,7 +118,7 @@
                            <input type="hidden" name="location_name" value="London" id="location_name">
                            <input type="hidden" name="lat" value="52.0" id="lat">
                            <input type="hidden" name="lng" value="0.12" id="lng">
-                           <span class="red-text" style="display: none">Not a valid postcode</span>
+                           <span class="red-text" id="location-error-info" style="display: none">Not a valid postcode</span>
 
                            <form class="form-inline">
                                <label class="sr-only" for="inlineFormInput">Postcode</label>

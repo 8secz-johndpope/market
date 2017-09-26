@@ -605,6 +605,7 @@
                     get_prices(category);
                 }
                 else{
+                    $("#location-error-info").show();
                  console.log("no");
                 }
 
