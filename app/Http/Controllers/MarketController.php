@@ -1332,6 +1332,10 @@ class MarketController extends BaseController
         $loc = $request->slug;
         $cat = $request->search_category;
         $q = $request->q;
+        if(strlen($q)==0)
+        {
+            return redirect('/'.$cat.'/'.$loc);
+        }
         return redirect('/'.$cat.'/'.$loc.'?q='.$q);
     }
     public function wrong(Request $request){
