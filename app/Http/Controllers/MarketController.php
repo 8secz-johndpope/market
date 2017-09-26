@@ -119,7 +119,7 @@ class MarketController extends BaseController
             */
 
             else if($location->parent->id===0){
-                $location->res= $location->id * 100000000000;
+                $location->res1= $location->id * 100000000000;
                 $location->save();
             }
             else if($location->parent->parent->id===0){
