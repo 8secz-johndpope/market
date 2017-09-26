@@ -537,6 +537,7 @@
                 $('.extra-options-panel').show();
             }
         });
+        get_prices(category);
     }
     function get_prices(category) {
         var lat = $("#lat").val();
