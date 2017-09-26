@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ExtraPrice extends  Model
 {
-    public function item()
+    public function items()
     {
         return $this->hasMany('App\Model\OrderItem');
     }

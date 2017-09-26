@@ -467,7 +467,7 @@ class HomeController extends BaseController
         $orderitem = new OrderItem;
         $orderitem->save();
         $extraprice = ExtraPrice::find(0);
-        $extraprice->item()->save($orderitem);
+        $extraprice->items()->save($orderitem);
 
         return $orderitem;
 
