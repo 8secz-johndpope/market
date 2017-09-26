@@ -11,6 +11,9 @@ span.ribbon-featured {
     bottom: 0;
     right: 0;
 }
+span.red-text {
+    color: red;
+}
 .list-group-item{
     background-color: transparent;
     border: 0px solid #ddd;
