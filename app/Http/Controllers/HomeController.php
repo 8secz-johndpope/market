@@ -464,12 +464,13 @@ class HomeController extends BaseController
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public  function price(Request $request,$id){
-        $order_id  = $request->session()->get('order_id');
-        $order = Order::find($order_id);
-        foreach ($order->items as $item)
-        {
-           return $item;
-        }
+        $orderitem = new OrderItem;
+        $orderitem->save();
+        $extraprice = ExtraPrice::find(0);
+        $orderitem->type()->save($extraprice);
+
+        return $orderitem;
+
     }
     public function total(Request $request,$id){
         $extratypes = ExtraType::all();
