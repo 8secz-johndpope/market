@@ -203,7 +203,7 @@
                 <div class="main-search-div">
                     <div class="main-first-div inline-block-div">
                     <div class="main-cat-div inline-block-div">
-                        <select name="search_category" class="form-control">
+                        <select name="search_category" class="form-control" id="search_category">
                             @if($category->id!==0&&$category->parent_id!==0)
                                 <option value="{{$category->slug}}">{{$category->title}}</option>
 
@@ -378,6 +378,7 @@
         serviceUrl: '/api/suggest',
         onSelect: function (suggestion) {
             $("#autocomplete").val(suggestion.val);
+            $("#search_category").val(suggestion.slug);
             $("#submitform").click();
          //   window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
