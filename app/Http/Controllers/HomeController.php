@@ -540,7 +540,12 @@ class HomeController extends BaseController
     private function complete_bump($order){
         $advert = Advert::find($order->advert_id);
         foreach ($order->items as $item) {
-            $body[$item->slug] = 1;
+            $body[$item->type()->type->slug] = 1;
+            if($item->price()===0){
+                $pack = $item->pack();
+                $pack->remaining--;
+                $pack->save();
+            }
         }
         $body['featured_count'] = 0;
         $body['urgent_count'] = 0;

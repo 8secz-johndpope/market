@@ -32,4 +32,8 @@ class OrderItem extends Model
             return ($price->{$this->type()->key})/100;
         }
     }
+    public function pack()
+    {
+        return Pack::pack($this->type()->key,$this->order->category->id,$this->order->location->id);
+    }
 }

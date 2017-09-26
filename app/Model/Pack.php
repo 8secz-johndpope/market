@@ -47,4 +47,35 @@ class Pack extends Model
             return false;
 
     }
+    public static function pack($type,$category,$location){
+        $user = Auth::user();
+        $cat = Category::find($category);
+        $sloc = Location::find($location);
+
+        $cats[] = $cat;
+        $current=$cat;
+        while($current->parent!==null){
+            $cats[] = $current->parent;
+            $current = $current->parent;
+        }
+
+
+        $current = $sloc;
+        $locs[] = $sloc;
+        while ($current->parent!==null){
+            $locs[] = $current->parent;
+            $current=$current->parent;
+        }
+
+
+        $catids = array_map(function($a){
+            return $a->id;
+        },$cats);
+        $locids = array_map(function($a){
+            return $a->id;
+        },$locs);
+        $pack = $user->packs()->where('type',$type)->whereIn('category_id', $catids)->whereIn('location_id', $locids)->where('remaining','>',0)->first();
+       return $pack;
+
+    }
 }
