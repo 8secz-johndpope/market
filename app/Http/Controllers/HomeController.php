@@ -471,7 +471,7 @@ class HomeController extends BaseController
             if($item->order===null){
                echo 'null';
             }else
-            echo  $item->order->title;
+            echo  $item->order->advert_id;
         }
     }
     public function total(Request $request,$id){
