@@ -15,47 +15,14 @@ class ExtraType extends Model
 {
     public function prices($category,$location)
     {
-
-
-        $sloc = Location::find($location);
-
-
-
-        $cat = Category::find($category);
-
-
-        $cats[] = $cat;
-        $current=$cat;
-        while($current->parent!==null){
-            $cats[] = $current->parent;
-            $current = $current->parent;
-        }
-
-
-        $current = $sloc;
-        $locs[] = $sloc;
-        while ($current->parent!==null){
-            $locs[] = $current->parent;
-            $current=$current->parent;
-        }
-
-
-        $catids = array_map(function($a){
-            return $a->id;
-        },$cats);
-        $locids = array_map(function($a){
-            return $a->id;
-        },$locs);
-
-        $sprice = Price::whereIn('category_id', $catids)->whereIn('location_id', $locids)->orderBy('id','desc')->first();
+        $sprice = Price::price($category,$location);
        // return $locids;
         $prices = $this->hasMany('App\Model\ExtraPrice')->get();
         $all = array();
         foreach ($prices as $price){
-            $user = Auth::user();
-            $packs = $user->packs()->where('type',$price->key)->whereIn('category_id', $catids)->whereIn('location_id', $locids)->get();
 
-            if($packs!==null&&count($packs)>0){
+
+            if(Pack::has_packs($price->key,$category,$location)){
                 $price->price = 0;
             }else{
                 $price->price = $sprice->{$price->key};
@@ -67,38 +34,12 @@ class ExtraType extends Model
     }
     public function price($category,$location)
     {
-        $sloc = Location::find($location);
+        $sprice = Price::price($category,$location);
 
-
-
-
-        $cat = Category::find($category);
-        $cats[] = $cat;
-        $current=$cat;
-        while($current->parent!==null){
-            $cats[] = $current->parent;
-            $current = $current->parent;
-        }
-
-        $current = $sloc;
-        $locs[] = $sloc;
-        while ($current->parent!==null){
-            $locs[] = $current->parent;
-            $current=$current->parent;
-        }
-
-        $catids = array_map(function($a){
-            return $a->id;
-        },$cats);
-        $locids = array_map(function($a){
-            return $a->id;
-        },$locs);
 
         $price = $this->hasMany('App\Model\ExtraPrice')->first();
-        $sprice = Price::whereIn('category_id', $catids)->whereIn('location_id', $locids)->orderBy('id','desc')->first();
-        $user = Auth::user();
-        $packs = $user->packs()->where('type',$price->key)->whereIn('category_id', $catids)->whereIn('location_id', $locids)->get();
-        if($packs!==null&&count($packs)>0){
+
+        if(Pack::has_packs($price->key,$category,$location)){
             $price->price = 0;
         }else{
             $price->price = $sprice->{$price->key};
