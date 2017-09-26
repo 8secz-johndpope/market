@@ -101,7 +101,10 @@ class MarketController extends BaseController
         $locations = Location::all();
 
         foreach ($locations as $location) {
-            if($location->parent->id===0){
+            if($location->parent===null){
+
+            }
+            else if($location->parent->id===0){
                 $location->res= $location->id * 100000000000;
                 $location->save();
             }
