@@ -468,10 +468,7 @@ class HomeController extends BaseController
         $order = Order::find($order_id);
         foreach ($order->items as $item)
         {
-            if($item->yahoo===null){
-               echo 'null';
-            }else
-            echo  "done";
+           return $item;
         }
     }
     public function total(Request $request,$id){
