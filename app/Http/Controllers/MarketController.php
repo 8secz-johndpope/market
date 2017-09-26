@@ -102,7 +102,7 @@ class MarketController extends BaseController
 
         foreach ($locations as $location) {
             if(count($location->children)>100){
-                echo $location->title.'<br>';
+                echo $location->id.'<br>';
             }
         }
     }
