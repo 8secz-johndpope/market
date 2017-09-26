@@ -466,7 +466,10 @@ class HomeController extends BaseController
     public  function price(Request $request,$id){
         $order_id  = $request->session()->get('order_id');
         $order = Order::find($order_id);
-        return $order->items;
+        foreach ($order->items as $item)
+        {
+            return $item->item;
+        }
     }
     public function total(Request $request,$id){
         $extratypes = ExtraType::all();
