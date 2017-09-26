@@ -477,6 +477,7 @@ class MarketController extends BaseController
                 $ans['id'] = $a['_id'];
                 return $ans;
             }, $response['hits']['hits']);
+            print count($products);
             foreach ($products as $product) {
 
                         $params = [
@@ -492,7 +493,7 @@ class MarketController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
                         $response = $this->client->update($params);
-                        print_r($response);
+                     //   print_r($response);
 
 
             }
