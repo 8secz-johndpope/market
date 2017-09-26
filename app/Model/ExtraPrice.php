@@ -16,7 +16,7 @@ class ExtraPrice extends  Model
     {
         return $this->hasMany('App\Model\OrderItem');
     }
-    public function type()
+    public function extra_type()
     {
         return $this->belongsTo('App\Model\ExtraType');
     }
