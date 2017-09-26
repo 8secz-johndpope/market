@@ -604,6 +604,7 @@
                     $(".edit-location").hide();
                     $(".location-selected").show();
                     $(".all-panels").show();
+                    var category =  $("#category").val();
                     get_prices(category);
                 }
                 else{
