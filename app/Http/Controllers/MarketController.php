@@ -101,7 +101,7 @@ class MarketController extends BaseController
         $locations = Location::all();
 
         foreach ($locations as $location) {
-            if(count($location->children)>100){
+            if(count($location->children)>=100){
                 echo $location->id.'<br>';
             }
         }
