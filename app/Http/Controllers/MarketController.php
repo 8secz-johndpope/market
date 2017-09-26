@@ -458,6 +458,7 @@ class MarketController extends BaseController
     public function updates(Request $request){
 
         $locations = Location::where('res','!=','res1')->get();
+        return $locations;
         foreach ($locations as $location){
             $params = [
                 'index' => 'adverts',
