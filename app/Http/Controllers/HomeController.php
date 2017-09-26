@@ -469,7 +469,7 @@ class HomeController extends BaseController
         $extraprice = ExtraPrice::find(1);
         $extraprice->items()->save($orderitem);
 
-        return $orderitem;
+        return $orderitem->type;
 
     }
     public function total(Request $request,$id){
