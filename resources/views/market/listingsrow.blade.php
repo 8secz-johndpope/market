@@ -31,11 +31,6 @@
         <div class="l-visible-large">
             <h4>{{$location->title}}</h4>
             <ul class="list-group">
-                @foreach($location->children as $cat)
-                    <li class="list-group-item"><a href="/{{$category->slug}}/{{$cat->slug}}">{{$cat->title}}</a>&nbsp</li>
-                @endforeach
-            </ul>
-            <ul class="list-group">
                 @foreach($locs as $cat)
                     <li class="list-group-item"><a href="/{{$category->slug}}/{{$cat->slug}}">{{$cat->title}}</a>&nbsp{{$cat->count}}</li>
                 @endforeach
