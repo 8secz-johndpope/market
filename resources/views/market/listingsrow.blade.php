@@ -35,6 +35,11 @@
                     <li class="list-group-item"><a href="/{{$category->slug}}/{{$cat->slug}}">{{$cat->title}}</a>&nbsp</li>
                 @endforeach
             </ul>
+            <ul class="list-group">
+                @foreach($locs as $cat)
+                    <li class="list-group-item"><a href="/{{$category->slug}}/{{$cat->slug}}">{{$cat->title}}</a>&nbsp{{$cat->count}}</li>
+                @endforeach
+            </ul>
         </div>
         <div class="l-visible-large">
             <ul class="list-group">
