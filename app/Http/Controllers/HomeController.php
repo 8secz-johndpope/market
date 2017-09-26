@@ -483,7 +483,7 @@ class HomeController extends BaseController
             if($request->has($type->slug)&&$request->get($type->slug)==1){
                 $key = $type->slug;
                 if($type->type==='list'){
-                    $key = $type->key;
+                    $key = $request->get($type->key);
                 }
                 if(Pack::has_packs($key,$id,$request->id)) {
 
