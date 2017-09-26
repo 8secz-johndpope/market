@@ -97,6 +97,13 @@ class MarketController extends BaseController
         return ['advert' => $response['_source']];
 
     }
+    public function leading($num){
+        if($num%10!==0){
+            return $num;
+        }else{
+            return $this->leading($num/10);
+        }
+    }
     public function locs(Request $request){
         $locations = Location::all();
 
@@ -104,6 +111,11 @@ class MarketController extends BaseController
             if($location->parent===null){
 
             }
+            else{
+                $location->ends = $location->res + ($location->res/$this->leading($location->res)) - 1;
+                $location->save();
+            }
+            /*
             else if($location->parent->id===0){
                 $location->res= $location->id * 100000000000;
                 $location->save();
@@ -128,6 +140,7 @@ class MarketController extends BaseController
                 $location->res = $location->parent->res + ($location->id-$location->parent->children()->first()->id+1)*1;
                 $location->save();
             }
+            */
         }
     }
     public function loc(Request $request){
