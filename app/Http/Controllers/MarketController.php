@@ -818,6 +818,17 @@ class MarketController extends BaseController
                 ]
             ]
         ];
+
+        $musts['location_id']= [
+            'range' => [
+                'location_id' => [
+                    'gte'=>$location->res,
+                    'lte'=>$location->ends
+                ]
+            ]
+        ];
+
+        /*
         $musts['lat']= [
             'range' => [
                 'lat' => [
@@ -834,6 +845,7 @@ class MarketController extends BaseController
                 ]
             ]
         ];
+        */
         $min_price = -2;
         if($request->has('min_price')){
             if(is_numeric($request->min_price))
