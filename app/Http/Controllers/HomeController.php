@@ -469,9 +469,9 @@ class HomeController extends BaseController
         foreach ($order->items as $item)
         {
             if($item->item===null){
-               return 'null';
+               echo 'null';
             }else
-            return $item->item;
+            echo  $item->item;
         }
     }
     public function total(Request $request,$id){
