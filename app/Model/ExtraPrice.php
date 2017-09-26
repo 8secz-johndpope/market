@@ -14,7 +14,7 @@ class ExtraPrice extends  Model
 {
     public function item()
     {
-        return $this->hasOne('App\Model\OrderItem');
+        return $this->hasMany('App\Model\OrderItem');
     }
 
 }
