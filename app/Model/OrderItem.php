@@ -24,8 +24,8 @@ class OrderItem extends Model
 
     public function price()
     {
-        $price = Price::price($this->order->category,$this->order->location);
-        if(Pack::has_packs($this->type->key,$this->order->category,$this->order->location)) {
+        $price = Price::price($this->order->category->id,$this->order->location->id);
+        if(Pack::has_packs($this->type->key,$this->order->category->id,$this->order->location->id)) {
             return 0;
         }else{
             return ($price->{$this->type->key})/100;
