@@ -14,7 +14,7 @@ class OrderItem extends Model
 {
     public function type()
     {
-        return $this->belongsTo('App\Model\ExtraPrice');
+        return ExtraPrice::where('id',$this->extra_price_id)->first();
     }
 
 
@@ -26,10 +26,10 @@ class OrderItem extends Model
     public function price()
     {
         $price = Price::price($this->order->category->id,$this->order->location->id);
-        if(Pack::has_packs($this->type->key,$this->order->category->id,$this->order->location->id)) {
+        if(Pack::has_packs($this->type()->key,$this->order->category->id,$this->order->location->id)) {
             return 0;
         }else{
-            return ($price->{$this->type->key})/100;
+            return ($price->{$this->type()->key})/100;
         }
     }
 }
