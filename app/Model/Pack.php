@@ -40,7 +40,7 @@ class Pack extends Model
         $locids = array_map(function($a){
             return $a->id;
         },$locs);
-        $packs = $user->packs()->where('type',$type)->whereIn('category_id', $catids)->whereIn('location_id', $locids)->get();
+        $packs = $user->packs()->where('type',$type)->whereIn('category_id', $catids)->whereIn('location_id', $locids)->where('remaining','>',0)->get();
         if(count($packs)>0)
             return true;
         else
