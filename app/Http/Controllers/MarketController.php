@@ -111,36 +111,47 @@ class MarketController extends BaseController
             if($location->parent===null){
 
             }
+            /*
             else{
                 $location->ends = $location->res + ($location->res/$this->leading($location->res)) - 1;
                 $location->save();
             }
-            /*
+            */
+
             else if($location->parent->id===0){
                 $location->res= $location->id * 100000000000;
                 $location->save();
             }
             else if($location->parent->parent->id===0){
-                $location->res = $location->parent->res  + ($location->id-$location->parent->children()->first()->id+1)*1000000000;
+                $count = count(Location::where('parent_id',$location->parent->id)->whereBetween('id',[$location->id,$location->parent->children()->first()->id])->get());
+                $location->res1 = $location->parent->res  + ($count)*1000000000;
                 $location->save();
             }
             else if($location->parent->parent->parent->id===0){
-                $location->res = $location->parent->res + ($location->id-$location->parent->children()->first()->id+1)*1000000;
+                $count = count(Location::where('parent_id',$location->parent->id)->whereBetween('id',[$location->id,$location->parent->children()->first()->id])->get());
+
+                $location->res1 = $location->parent->res + ($count)*1000000;
                 $location->save();
             }
             else if($location->parent->parent->parent->parent->id===0){
-                $location->res = $location->parent->res + ($location->id-$location->parent->children()->first()->id+1)*10000;
+                $count = count(Location::where('parent_id',$location->parent->id)->whereBetween('id',[$location->id,$location->parent->children()->first()->id])->get());
+
+                $location->res1 = $location->parent->res + ($count)*10000;
                 $location->save();
             }
             else if($location->parent->parent->parent->parent->parent->id===0){
-                $location->res = $location->parent->res + ($location->id-$location->parent->children()->first()->id+1)*100;
+                $count = count(Location::where('parent_id',$location->parent->id)->whereBetween('id',[$location->id,$location->parent->children()->first()->id])->get());
+
+                $location->res1 = $location->parent->res + ($count)*100;
                 $location->save();
             }
             else if($location->parent->parent->parent->parent->parent->parent->id===0){
-                $location->res = $location->parent->res + ($location->id-$location->parent->children()->first()->id+1)*1;
+                $count = count(Location::where('parent_id',$location->parent->id)->whereBetween('id',[$location->id,$location->parent->children()->first()->id])->get());
+
+                $location->res1 = $location->parent->res + ($count)*1;
                 $location->save();
             }
-            */
+
         }
     }
     public function loc(Request $request){
