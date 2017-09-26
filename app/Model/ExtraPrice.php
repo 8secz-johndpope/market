@@ -18,7 +18,7 @@ class ExtraPrice extends  Model
     }
     public function type()
     {
-        return $this->hasMany('App\Model\ExtraType');
+        return $this->belongsTo('App\Model\ExtraType');
     }
 
 }
