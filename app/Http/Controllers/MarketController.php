@@ -494,7 +494,7 @@ class MarketController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
                         $response = $this->client->update($params);
-                     //   print_r($response);
+                        print_r($response);
 
 
             }
