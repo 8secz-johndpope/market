@@ -564,10 +564,7 @@
     });
     $(".postcode-submit").click(function () {
         console.log("click works");
-       $(".extra-large").html($("#postcode-text").val());
-       $(".edit-location").hide();
-       $(".location-selected").show();
-       $(".all-panels").show();
+
     });
     $(".edit-location-button").click(function () {
         $(".edit-location").show();
@@ -601,6 +598,10 @@
             .then(function (response) {
                 console.log(response.data);
                 if(response.data.msg==='yes') {
+                    $(".extra-large").html($("#postcode-text").val());
+                    $(".edit-location").hide();
+                    $(".location-selected").show();
+                    $(".all-panels").show();
                     get_prices(category);
                 }
                 else{
