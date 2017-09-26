@@ -184,11 +184,11 @@ class HomeController extends BaseController
         $advert->elastic = $response['_id'];
         $advert->user_id=$user->id;
         $advert->save();
-        $total = (int)$request->total;
-        if($total>0){
+        //$total = (int)$request->total;
+       // if($total>0){
            // $orders = array();
             $order= new Order;
-            $order->amount = $total;
+            $order->amount = 70;
             $order->category_id = $category->id;
             $order->location_id = $location->id;
             $order->advert_id=$advert->id;
@@ -221,10 +221,10 @@ class HomeController extends BaseController
             $request->session()->put('order_id', $order->id);
             return redirect('/user/manage/order');
 
-        }else{
-            return redirect('/user/manage/ads');
+        //}else{
+          //  return redirect('/user/manage/ads');
 
-        }
+        //}
       //  return ['response' => $response];
       //  return $request->all();
       //  $categories = Category::where('parent_id',0)->get();
