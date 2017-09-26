@@ -452,6 +452,7 @@ class HomeController extends BaseController
     }
     public  function prices(Request $request,$id){
         $category = Category::find($id);
+
         $forsale = Category::find(200000000);
         if($category===null){
             return ['msg'=>'Catagory not found'];
@@ -463,9 +464,9 @@ class HomeController extends BaseController
         }
         foreach ($extras as $extra){
             if($extra->type==='single'){
-                $extra->price = $extra->price($id,$request->lat,$request->lng);
+                $extra->price = $extra->price($id,$request->id);
             }else{
-                $extra->prices = $extra->prices($id,$request->lat,$request->lng);
+                $extra->prices = $extra->prices($id,$request->id);
             }
         }
       //  return $extras;
@@ -812,7 +813,7 @@ class HomeController extends BaseController
         if($a===null){
             return ['msg'=>'Not valid'];
         }else{
-            return ['msg'=>'yes','val'=>$a->postcode];
+            return ['msg'=>'yes','val'=>$a->postcode,'id'=>$a->location->id];
         }
     }
     public function business(Request $request,$id)

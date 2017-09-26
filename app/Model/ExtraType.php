@@ -13,19 +13,11 @@ use Illuminate\Support\Facades\Auth;
 
 class ExtraType extends Model
 {
-    public function prices($category,$lat,$lng)
+    public function prices($category,$location)
     {
 
-        $locations = Location::where('min_lat','<',$lat)->where('max_lat','>',$lat)->where('min_lng','<',$lng)->where('max_lng','>',$lng)->get();
-        //return $locations;
-        foreach ($locations as $location){
-            if(count($location->children)===0){
-                $sloc = $location;
-                break;
-            }else{
-                $sloc = $location;
-            }
-        }
+
+        $sloc = Location::find($location);
 
 
 
@@ -73,17 +65,11 @@ class ExtraType extends Model
         }
         return $all;
     }
-    public function price($category,$lat,$lng)
+    public function price($category,$location)
     {
-        $locations = Location::where('min_lat','<',$lat)->where('max_lat','>',$lat)->where('min_lng','<',$lng)->where('max_lng','>',$lng)->get();
-        foreach ($locations as $location){
-            if(count($location->children)===0){
-                $sloc = $location;
-                break;
-            }else{
-                $sloc = $location;
-            }
-        }
+        $sloc = Location::find($location);
+
+
 
 
         $cat = Category::find($category);

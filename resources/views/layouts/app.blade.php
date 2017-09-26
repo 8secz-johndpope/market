@@ -541,7 +541,8 @@
     function get_prices(category) {
         var lat = $("#lat").val();
         var lng = $("#lng").val();
-        $.get("/category/prices/"+category+'?lat='+lat+'&lng='+lng, function(data, status){
+        var id = $("#location_id").val();
+        $.get("/category/prices/"+category+'?id='+id, function(data, status){
             $('.extra-prices').html(data);
         });
     }
@@ -598,6 +599,7 @@
             .then(function (response) {
                 console.log(response.data);
                 if(response.data.msg==='yes') {
+                    $("#location_id").val(response.data.id);
                     $(".extra-large").html($("#postcode-text").val());
                     $(".edit-location").hide();
                     $(".location-selected").show();

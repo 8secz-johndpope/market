@@ -116,13 +116,15 @@
                        </div>
                        <div class="col-sm-12 edit-location">
                            <input type="hidden" name="location_name" value="London" id="location_name">
+                           <input type="hidden" name="location_id" value="London" id="location_id">
+
                            <input type="hidden" name="lat" value="52.0" id="lat">
                            <input type="hidden" name="lng" value="0.12" id="lng">
                            <span class="red-text" id="location-error-info" style="display: none">Not a valid postcode</span>
 
                            <form class="form-inline">
                                <label class="sr-only" for="inlineFormInput">Postcode</label>
-                               <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="postcode-text" placeholder="Postcode">
+                               <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="postcode-text" placeholder="Postcode" name="postcode">
                                <a class="btn btn-danger postcode-submit">Go</a>
                            </form>
                        </div>
