@@ -16,6 +16,5 @@ class ExtraPrice extends  Model
     {
         return $this->hasMany('App\Model\OrderItem');
     }
-    public $table = "extra_pricesx";
 
 }
