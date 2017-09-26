@@ -14,7 +14,7 @@ class OrderItem extends Model
 {
     public function type()
     {
-        return $this->belongsTo('App\Model\ExtraPrice');
+        return $this->hasOne('App\Model\ExtraPrice');
     }
 
 
