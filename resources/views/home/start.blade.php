@@ -52,7 +52,7 @@
                         <div class="main-category" data-category="{{$category->id}}">
                             <span class="category-title">{{$category->title}}</span>
                             <br>
-                            <a class="select-link select-category-link" data-category="{{$category->id}}">Select</a>
+                            <a class="select-category-link" data-category="{{$category->id}}">Select</a>
                         </div>
                     @endforeach
                     <div class="row nomargin">
