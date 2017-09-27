@@ -34,7 +34,7 @@ class Category extends  Model
     }
 
     public function is_parent($id){
-        if($this->id<$id&&$this->ends>=$id){
+        if($this->id<=$id&&$this->ends>=$id){
             return true;
         }else{
             return false;
