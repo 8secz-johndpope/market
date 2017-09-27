@@ -32,7 +32,9 @@ span.red-text {
 .main-cat-div .form-control {
     width: 150px;
 }
-
+.category-title {
+    line-height: 100px;
+}
 .main-search-div {
     margin: auto;
     max-width: 1000px;
