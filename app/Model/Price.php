@@ -55,7 +55,7 @@ class Price extends  Model
         $sloc = Location::find($location);
 
         $prices = Price::all();
-        $mprice = Price::find1(1);
+        $mprice = Price::find(1);
         foreach ($prices as $price){
             if($cat->is_parent($price->category->id)&&$sloc->is_parent($price->location->id)){
                 if($price->urgent>$mprice->urgent)
