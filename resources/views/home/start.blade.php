@@ -50,7 +50,7 @@
                 <div class="panel-body">
                     @foreach($categories as $category)
                         <div class="main-category" data-category="{{$category->id}}">
-                            {{$category->title}}
+                            <span class="category-title">{{$category->title}}</span>
                             <br>
                             <a class="select-link select-category-link" data-category="{{$category->id}}">Select</a>
                         </div>

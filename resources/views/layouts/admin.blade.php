@@ -94,16 +94,7 @@
         .selected-location, .selected-extras, .ad-title{
             margin-top: 20px;
         }
-        .main-category {
-            width: 14.28%;
-            float: left;
-            height: 100px;
-            border: 1px solid gray;
-            text-align: center;
-            vertical-align: middle;
-            line-height: 100px;
-            cursor: pointer;
-        }
+
         .floatright {
             float: right;
         }
