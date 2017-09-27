@@ -183,9 +183,7 @@
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
-    <div class="row search">
-        <div class="col-sm-1   hidden-xs">
-        </div><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
             <form class="navbar-form" action="/searchform" id="mainform">
                 @foreach($input as $key=>$value)
                     @if($key!=='q'&&$key!=='lat'&&$key!=='lng')
@@ -223,8 +221,7 @@
                     </div>
                 </div>
             </form>
-        </div><!-- /.col-lg-6 -->
-    </div>
+       
 </header>
 
 
