@@ -42,6 +42,8 @@ span.red-text {
 .main-search-div {
     margin: auto;
     width: 800px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .main-q-div .form-control {
     width: 400px;
