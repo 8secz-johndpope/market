@@ -1214,7 +1214,7 @@ class MarketController extends BaseController
             $buckets = $aggretations['category']['buckets'];
             foreach ($buckets as $bucket) {
                 $cat = Category::find($bucket['from']);
-                $cat->count = $bucket['doc_count'];
+                $cat->count = number_format( $bucket['doc_count']);
                 if ($cat->parent_id == $category->id)
                     $categories[] = $cat;
             }
@@ -1226,7 +1226,7 @@ class MarketController extends BaseController
             foreach ($buckets as $bucket) {
                 $loc = Location::where('res',$bucket['from'])->first();
                 if($loc!==null){
-                    $loc->count = $bucket['doc_count'];
+                    $loc->count = number_format( $bucket['doc_count']);
                     if ($loc->parent_id == $location->id)
                         $locs[] = $loc;
                 }
@@ -1263,7 +1263,7 @@ class MarketController extends BaseController
                         $fval->save();
                     } else {
                         $filter = Filter::where('from_int', $bucket['from'])->where('to_int', $bucket['to'])->first();
-                        $filter->count = $bucket['doc_count'];
+                        $filter->count = number_format( $bucket['doc_count']);
                         if(isset($input[$key])&&$input[$key]===$filter->key){
                             $filter->selected = 1;
 
@@ -1288,7 +1288,7 @@ class MarketController extends BaseController
                         $field_val->selected = 0;
                     }
 
-                    $field_val->count = $bucket['doc_count'];
+                    $field_val->count = number_format(  $bucket['doc_count']);
                     $values[] = $field_val;
                 }
 
