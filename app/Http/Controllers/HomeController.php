@@ -517,6 +517,7 @@ class HomeController extends BaseController
             $cpack->type = $pack->slug;
             $cpack->category_id = $pack->category_id;
             $cpack->location_id = $pack->location_id;
+            $cpack->remaining = $order->contract->count;
             $cpack->total = $order->contract->count;
             $cpack->user_id = $user->id;
             $cpack->save();
