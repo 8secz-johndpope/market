@@ -104,8 +104,8 @@
                 <div class="panel-body">
                     @foreach($locations as $location)
                         <div class="main-location" data-location="{{$location->id}}">
-                            {{$location->title}}
-                            <a class="select-link select-location-link" data-location="{{$location->id}}">Select</a>
+                            <span class="category-title">   {{$location->title}} </span>
+                            <a class="main-category-link select-location-link" data-location="{{$location->id}}">Select</a>
                         </div>
                     @endforeach
                     <div class="row nomargin">
