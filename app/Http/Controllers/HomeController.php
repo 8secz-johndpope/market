@@ -854,7 +854,11 @@ class HomeController extends BaseController
             $order_id =  $request->session()->get('order_id');
             $order = Order::find($order_id);
             $contract = $order->contract;
-            if((int)$id===2){
+            if((int)$id===1){
+                $contract->discount = 25;
+                $contract->minimum = 250000;
+            }
+            else if((int)$id===2){
                 $contract->discount = 35;
                 $contract->minimum = 1000000;
             }
