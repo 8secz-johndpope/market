@@ -51,6 +51,7 @@
                     @foreach($categories as $category)
                         <div class="main-category" data-category="{{$category->id}}">
                             {{$category->title}}
+                            <br>
                             <a class="select-link select-category-link" data-category="{{$category->id}}">Select</a>
                         </div>
                     @endforeach
