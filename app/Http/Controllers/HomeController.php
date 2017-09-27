@@ -829,9 +829,7 @@ class HomeController extends BaseController
         $user = Auth::user();
 
         if ($request->session()->has('order_id')) {
-            if($user->business!==null){
-                return redirect('/user/contract/start');
-            }
+
         }else{
             $order = new Order;
             $contract = new Contract;
@@ -850,9 +848,22 @@ class HomeController extends BaseController
             $order->type='contract';
             $order->save();
             $request->session()->put('order_id',$order->id);
-            if($user->business!==null){
-                return redirect('/user/contract/start');
+
+        }
+        if($user->business!==null){
+            $order_id =  $request->session()->get('order_id');
+            $order = Order::find($order_id);
+            $contract = $order->contract;
+            if((int)$id===2){
+                $contract->discount = 35;
+                $contract->minimum = 1000000;
             }
+            else if((int)$id===3){
+                $contract->discount = 45;
+                $contract->minimum = 5000000;
+            }
+            $contract->save();
+            return redirect('/user/contract/start');
         }
         return view('home.business');
     }
