@@ -59,7 +59,7 @@ class Price extends  Model
         //$all=array();
         foreach ($prices as $price){
             if($cat->is_parent($price->category->id)&&$sloc->is_parent($price->location->res)){
-              //  if($price->urgent>$mprice->urgent)
+                if($price->urgent>$mprice->urgent)
                     $mprice=$price;
             }
         }
