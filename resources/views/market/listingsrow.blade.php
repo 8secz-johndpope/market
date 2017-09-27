@@ -129,7 +129,7 @@
     </div>
     <div class="products">
             <h2 class="items-box-head">
-                List of items for {{$category->title}}, {{$total}}
+                List of items for {{$category->title}}, {{number_format($total)}}
 
             </h2>
 
