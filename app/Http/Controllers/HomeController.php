@@ -896,7 +896,7 @@ class HomeController extends BaseController
         $pack = ContractPack::find($id);
         $pack->delete();
 
-        return ['msg'=>'done'];
+        return redirect('/user/contract/start');
     }
     public function pdf(Request $request){
         $data['name']='Hello';
