@@ -178,7 +178,7 @@
                             </ul>
                         </li>
                     @endif
-                    <li><a class="btn btn-info bussines" role="button" href="#">Sumra for Business</a></li>
+                    <li><a class="btn btn-info bussines" role="button" href="/user/contract/pricing">Sumra for Business</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
