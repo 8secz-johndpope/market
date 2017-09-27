@@ -464,7 +464,7 @@ class HomeController extends BaseController
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public  function price(Request $request,$id){
-        
+
         return Price::mprice($id,$request->id);
 
     }

@@ -56,13 +56,13 @@ class Price extends  Model
 
         $prices = Price::all();
         $mprice = Price::find(1);
-        $all=array();
+        //$all=array();
         foreach ($prices as $price){
             if($cat->is_parent($price->category->id)&&$sloc->is_parent($price->location->res)){
-                if($price->urgent>$mprice->urgent)
-                    $all[]=$price;
+              //  if($price->urgent>$mprice->urgent)
+                    $mprice=$price;
             }
         }
-        return $all;
+        return $mprice;
     }
 }
