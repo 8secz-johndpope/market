@@ -50,4 +50,18 @@ class Price extends  Model
 
         return Price::whereIn('category_id', $catids)->whereIn('location_id', $locids)->orderBy('id','desc')->first();
     }
+    public static function mprice($category,$location){
+        $cat = Category::find($category);
+        $sloc = Location::find($location);
+
+        $prices = Price::all();
+        $mprice = Price::find1(1);
+        foreach ($prices as $price){
+            if($cat->is_parent($price->category->id)&&$sloc->is_parent($price->location->id)){
+                if($price->urgent>$mprice->urgent)
+                    $mprice=$price;
+            }
+        }
+        return $mprice;
+    }
 }

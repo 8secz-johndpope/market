@@ -790,7 +790,7 @@ class HomeController extends BaseController
         $id = $request->session()->get('order_id');
         $order = Order::find($id);
         $contract = $order->contract;
-        $price = Price::price($category,$location);
+        $price = Price::mprice($category,$location);
         foreach ($request->types as $type){
             $extraprice = ExtraPrice::where('key',$type)->first();
             $pack = new ContractPack;

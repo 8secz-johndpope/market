@@ -33,4 +33,12 @@ class Category extends  Model
         return $this->belongsToMany('App\Model\Filter');
     }
 
+    public function is_parent($id){
+        if($this->id<$id&&$this->ends>=$id){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
