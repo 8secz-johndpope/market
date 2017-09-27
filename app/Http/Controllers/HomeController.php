@@ -465,9 +465,7 @@ class HomeController extends BaseController
     }
     public  function price(Request $request,$id){
 
-        $orderitem  = OrderItem::find(98);
-        return ExtraPrice::where('id',$orderitem->extra_price_id)->first();
-
+        return Price::mprice($id,$request->id);
 
     }
     public function total(Request $request,$id){
