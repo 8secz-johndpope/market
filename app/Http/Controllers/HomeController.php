@@ -464,7 +464,9 @@ class HomeController extends BaseController
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public  function price(Request $request,$id){
-
+        $category=Category::find(100000000);
+        if($category->is_parent(105000000))
+            return true;
         return Price::mprice($id,$request->id);
 
     }
