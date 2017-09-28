@@ -119,7 +119,7 @@ class BusinessController extends BaseController
 
                     $extraprice = ExtraPrice::where('key', $key)->first();
                     if($extraprice===null)
-                        return $key;
+                        return $key.' do';
                     $orderitem = new OrderItem;
                     $orderitem->title = 'Featured';
                     $orderitem->slug = 'featured';
