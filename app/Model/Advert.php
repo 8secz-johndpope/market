@@ -114,6 +114,24 @@ class Advert extends  BaseModel
         }
         return $posted;
     }
+    public function created(){
+        $milliseconds = round(strtotime($this->created_at) * 1000);
+        if($this->dict===null)
+            $this->fetch();
+        $diff = $milliseconds-$this->dict['created_at'];
+        if($diff<60*1000){
+            $posted = 'Just Now';
+        }
+        else if($diff<60*60*1000){
+            $posted = (int)($diff/60000).' minutes ago';
+        }
+        else if($diff<24*60*60*1000){
+            $posted = (int)($diff/(60*60000)).' hours ago';
+        }else{
+            $posted = (int)($diff/(24*60*60000)).' days ago';
+        }
+        return $posted;
+    }
     public function location(){
         if($this->dict===null)
             $this->fetch();
