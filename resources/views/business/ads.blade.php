@@ -126,8 +126,6 @@
                                     <tr>  <td>Created</td></td> <td>12 days ago</td><td>Last posted</td></td> <td> 12 days ago</td></tr>
                                     <tr>  <td>Ad id</td></td> <td>1266508749</td> <td> </td></td> <td></tr>
 
-                                
-
                                 </table>
                             </td>
                         </tr>
@@ -142,6 +140,5 @@
 
         </div>
     </div>
-    Try it Yourself »
 
 @endsection

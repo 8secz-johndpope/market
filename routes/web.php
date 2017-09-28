@@ -71,6 +71,9 @@ Route::get('/user/list/price','UserController@price')->middleware('auth');
 
 Route::get('/user/advert/delete/{id}', 'HomeController@delete');
 
+Route::get('/user/advert/stats/{id}', 'HomeController@stats');
+
+
 Route::get('/category/children/{id}', 'HomeController@children');
 Route::get('/location/children/{id}', 'HomeController@lchildren');
 Route::get('/postcodes/postcode', 'HomeController@postcode');

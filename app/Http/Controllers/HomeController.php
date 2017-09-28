@@ -971,4 +971,8 @@ class HomeController extends BaseController
     public function pricing(Request $request){
         return view('home.pricing');
     }
+    public function stats(Request $request,$id){
+        $advert = Advert::find($id);
+        return view('business.stats',['advert'=>$advert]);
+    }
 }
