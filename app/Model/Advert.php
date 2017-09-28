@@ -8,7 +8,7 @@
 namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 
-class Advert extends  Model
+class Advert extends  BaseModel
 {
     public function offers()
     {
@@ -26,8 +26,15 @@ class Advert extends  Model
     {
         return $this->hasMany('App\Model\Application');
     }
+    public function param($param){
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic
+        ];
+        $response = $this->client->get($params);
 
-
-
+        return $response['_source'][$param];
+    }
 
 }
