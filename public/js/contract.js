@@ -338,6 +338,18 @@ $(".add-pricegroup").click(function () {
             console.log(error);
         });
 });
+$(".stats-click").click(function () {
+    var id = $(this).data('id');
+    axios.get('/user/advert/stats/'+id,{ params:{}})
+        .then(function (response) {
+            // console.log(response);
+            $("#modal-content").html(response.data);
+            $("#mymodal").modal('show');
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+});
 $(".add-pack").click(function () {
     var category = $("#category").val();
     var location = $("#location").val();
