@@ -23,7 +23,7 @@ class OrderItem extends Model
         return $this->belongsTo('App\Model\Location');
     }
 
-    public function ad(){
+    public function advert(){
         return $this->belongsTo('App\Model\Advert');
     }
 
