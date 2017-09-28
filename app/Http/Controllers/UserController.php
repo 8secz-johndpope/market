@@ -1109,8 +1109,8 @@ class UserController extends BaseController
 
         $advert->sid = (int)$body['source_id'];
         $advert->save();
-        //$body['views']=0;
-       // $body['list_views']=0;
+        $body['views']=0;
+        $body['list_views']=0;
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
