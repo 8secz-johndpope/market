@@ -142,7 +142,7 @@
                 <div class="listing-thumbnail">
                     <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
-                    @if(isset($product['featured'])&&$product['featured']===1)
+                    @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli)
                         <span class="ribbon-featured">
 <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
 </span>
@@ -177,7 +177,11 @@
                                 <span class="product-price">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                 </span>
                             @endif
+                @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli)
+
+                    @else
                 <span class="posted-text">{{$product['posted']}}</span>
+                @endif
 
 
                             @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
