@@ -48,7 +48,6 @@
     <tr><th></th><th>Views</th><th>Last Posted</th><th>Featured(3 days)</th><th>Featured(7 days)</th><th>Featured(14 days)</th><th>Urgent</th><th>Spotlight</th><td>Bump</td></tr>
             @foreach($products as $product)
                 <tr><td>
-                <div class="well">
                     <div class="product">
                         <div class="listing-side">
                             <div class="listing-thumbnail">
@@ -93,7 +92,6 @@
                         </div>
                     </div>
                     <table class="table"><tr><td><a>Edit</a></td><td><a>Stats</a></td><td><a>Delete</a></td></tr></table>
-                </div>
                     </td><td>0</td><td> <span class="posted">{{$product['posted']}}</span></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
             @endforeach
 </table>
