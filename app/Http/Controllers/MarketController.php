@@ -1418,13 +1418,13 @@ class MarketController extends BaseController
         if($category===null){
             return View('notfound');
         }
+        $postcode=null;
 
         $location = Location::where('slug',$loc)->first();
         if($location===null) {
             $postcode = Postcode::where('postcode', strtoupper($loc))->first();
 
             if ($postcode === null) {
-                return View('notfound');
             }else{
                 $location = $postcode->location;
             }
