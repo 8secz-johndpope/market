@@ -423,7 +423,7 @@ class MarketController extends BaseController
             $ans['id'] = $a['_id'];
             return $ans;
         }, $response['hits']['hits']);
-        /*
+
         foreach ($products as $product) {
             $params = [
                 'index' => 'adverts',
@@ -441,7 +441,7 @@ class MarketController extends BaseController
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
         }
-        */
+
 /*
             $params = [
                 'index' => 'adverts',
@@ -1392,6 +1392,7 @@ class MarketController extends BaseController
 // Update doc at /my_index/my_type/my_id
               $this->client->update($params);
         }
+        /*
         foreach ($products as $fet){
             $params = [
                 'index' => 'adverts',
@@ -1405,6 +1406,7 @@ class MarketController extends BaseController
 // Update doc at /my_index/my_type/my_id
             $this->client->update($params);
         }
+        */
 
 /*
         $fmusts = $musts;
