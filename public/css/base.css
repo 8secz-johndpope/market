@@ -138,6 +138,10 @@ a.navbar-brand {
   height: 80px;
     margin-left: 70px;
 }
+img.icon-small {
+    width: 100px;
+    margin-left: 80px;
+}
 .panel-heading img.icon-category{
   height: 3em;
 }
