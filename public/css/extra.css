@@ -285,7 +285,9 @@ ul.image-gallery-ul {
     display: table;
     table-layout: fixed;
 }
-
+.red-color {
+    color: red;
+}
 ul.image-gallery-ul li {
     display: table-cell;
     height: 600px;
