@@ -568,7 +568,7 @@ class HomeController extends BaseController
 
                 $body[$item->type->extra_type->slug.'_expires'] = $milliseconds + $item->type->quantity * 24 * 3600 * 1000;
             }
-               
+
 
             $params = [
                 'index' => 'adverts',

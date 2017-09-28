@@ -1304,11 +1304,13 @@ class MarketController extends BaseController
 
         $fmusts = $musts;
         $fmusts['featured'] = ['term'=>['featured'=>1]];
+        $fmusts['featured_expires'] = ['range'=>['featured_expires'=>['gte'=>$milliseconds]]];
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
-                'size'=>2,
+                'size'=>3,
                 'query' => [
                     'bool' => [
                         'must' => array_values($fmusts),
