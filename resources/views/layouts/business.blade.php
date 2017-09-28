@@ -223,7 +223,7 @@
                 <a class="navbar-brand" href="/"><img class="icon-small" src="/css/sumra-business.png"></a>
 
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="business-drop collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Store</a></li>
