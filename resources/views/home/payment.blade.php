@@ -21,9 +21,9 @@
                     <table class="table">
                         <tr><th>Ad</th><th>Ad ID</th><th>Item</th><th>Price</th></tr>
                         @foreach($order->items as $item)
-                        <tr><td><h4>{{$item->advert->param('title')}}</h4></td><td>{{$item->type()->stitle}}</td><td>@if($item->price()===0) Included in Package @else£{{$item->price()}}@endif</td></tr>
+                        <tr><td><h4>{{$item->advert->param('title')}}</h4></td><td>{{$item->advert->id}}</td><td>{{$item->type()->stitle}}</td><td>@if($item->price()===0) Included in Package @else£{{$item->price()}}@endif</td></tr>
                             @endforeach
-                            <tr><td>Total:</td><td>£{{$order->amount()}}</td></tr>
+                            <tr><td>Total:</td><td><td></td><td>£{{$order->amount()}}</td></tr>
                     </table>
                     @elseif($order->type==='contract')
                         <table class="table">
