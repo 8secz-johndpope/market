@@ -45,7 +45,10 @@ class Advert extends  BaseModel
         ];
         $response = $this->client->get($params);
 
+        if(isset($response['_source']['meta'][$param]))
         return $response['_source']['meta'][$param];
+        else
+            return '';
     }
     public function featured_expires(){
         $milliseconds = round(microtime(true) * 1000);
