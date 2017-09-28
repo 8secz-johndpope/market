@@ -753,23 +753,33 @@ class MarketController extends BaseController
     public function product(Request $request,$cat,$sid)
     {
 
+
+        $advert= Advert::where('sid',$sid)->first();
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
-            'body' => [
-                'size'=>1,
-                'query' => [
-                    'bool' => [
-                        'must'=>['term'=>['source_id'=>$sid]],
+            'id' => $advert->elastic
+        ];
+        $response = $this->client->get($params);
 
-                    ]
-                ]
+
+        $product=$response['_source'];
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic,
+            'body' => [
+                    'script' => 'ctx._source.views += 1'
+                
             ]
         ];
-        $response = $this->client->search($params);
-        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $product=$products[0];
-	    $image = 'noimage.png';
+        $this->client->update($params);
+
+
+
+        $image = 'noimage.png';
         if(count($product['images'])>0){
             $image = $product['images'][0];
             $images = array_slice($product['images'],1);
