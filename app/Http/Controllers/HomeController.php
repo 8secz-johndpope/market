@@ -543,34 +543,35 @@ class HomeController extends BaseController
     }
 
     private function complete_bump($order){
-        $advert = Advert::find($order->advert_id);
+
         foreach ($order->items as $item) {
+            $advert = Advert::find($item->advert_id);
             $body[$item->type->extra_type->slug] = 1;
             if($item->price()===0){
                 $pack = $item->pack();
                 $pack->remaining--;
                 $pack->save();
             }
-        }
-        $body['featured_count'] = 0;
-        $body['urgent_count'] = 0;
-        $body['spotlight_count'] = 0;
-        $milliseconds = round(microtime(true) * 1000);
+            $body[$item->type->extra_type->slug.'_count'] = 0;
 
-        $body['featured_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-        $body['urgent_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-        $body['spotlight_expires'] = $milliseconds + 7 * 24 * 3600 * 1000;
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'id' => $advert->elastic,
-            'body' => [
-                'doc' => $body
-            ]
-        ];
+            $milliseconds = round(microtime(true) * 1000);
+
+            $body[$item->type->extra_type->slug.'_expires'] = $milliseconds + $item->type->quantity * 24 * 3600 * 1000;
+
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic,
+                'body' => [
+                    'doc' => $body
+                ]
+            ];
 
 // Update doc at /my_index/my_type/my_id
-        $response = $this->client->update($params);
+            $response = $this->client->update($params);
+        }
+
+
         $order->payment = 'done';
         $order->save();
 
