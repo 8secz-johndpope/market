@@ -145,7 +145,7 @@ class HomeController extends BaseController
         $user= Auth::user();
         $category=Category::find($request->category);
         $location=Location::find($request->location_id);
-
+        $postcode = Postcode::where('postcode',$request->postcode)->first();
             $fields = $category->fields;
 
         $body['category'] = $category->id;
@@ -161,8 +161,8 @@ class HomeController extends BaseController
         $body['source_id']=$advert->id;
         $body['title']=$request->title;
         $body['description']=$request->description;
-        $body['location_name']=$request->location_name;
-        $body['location']='52.2,0.12';
+        $body['location_name']=$location->title;
+        $body['location']=$postcode->lat.','.$postcode->lng;
         if($request->has('images')){
             $body['images']=$request->images;
         }else{
