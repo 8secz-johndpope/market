@@ -1450,7 +1450,7 @@ class MarketController extends BaseController
             $params['type']='postcode';
             $params['postcode']=$postcode;
         }
-
+/*
         $adverts = [];
         $products = $params['products'];
         foreach ($products as $product){
@@ -1463,6 +1463,7 @@ class MarketController extends BaseController
         }
 
         $params['adverts']=$adverts;
+*/
         //return View('market.listings',$params);
         return View('market.listingsrow',$params);
     }
