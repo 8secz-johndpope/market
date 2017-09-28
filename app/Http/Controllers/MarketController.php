@@ -405,7 +405,42 @@ class MarketController extends BaseController
 
             $id=$request->id;
             $replace = $request->replace;
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size' => 10000,
+                'query' => [
+                    'bool' => [
+                        "must_not" => ['exists'=>['field'=>'views']]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) {
+            $ans = $a['_source'];
+            $ans['id'] = $a['_id'];
+            return $ans;
+        }, $response['hits']['hits']);
+        foreach ($products as $product) {
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $product['id'],
+                'body' => [
+                    'doc' => [
+                        'views' => 0,
+                        'list_views' => 0,
 
+                    ]
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+            $response = $this->client->update($params);
+        }
+/*
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
@@ -452,6 +487,7 @@ class MarketController extends BaseController
                 }
 
             }
+*/
             return ['a'=>'b'];
         }
 
