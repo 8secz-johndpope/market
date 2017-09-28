@@ -304,6 +304,10 @@ class HomeController extends BaseController
     }
     public function myads(Request $request){
         $user = Auth::user();
+        if($user->contract!==null)
+        {
+            return redirect('/business/manage/ads');
+        }
         $page = $request->page ? $request->page : 1;
 
         $pagesize = 10;
