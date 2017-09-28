@@ -16,6 +16,12 @@ class OrderItem extends Model
     {
         return ExtraPrice::where('id',$this->extra_price_id)->first();
     }
+    public function category(){
+        return $this->belongsTo('App\Model\Category');
+    }
+    public function location(){
+        return $this->belongsTo('App\Model\Location');
+    }
 
 
     public function order()
@@ -25,8 +31,8 @@ class OrderItem extends Model
 
     public function price()
     {
-        $price = Price::price($this->order->category->id,$this->order->location->id);
-        if(Pack::has_packs($this->type()->key,$this->order->category->id,$this->order->location->id)) {
+        $price = Price::price($this->category->id,$this->location->id);
+        if(Pack::has_packs($this->type()->key,$this->category->id,$this->location->id)) {
             return 0;
         }else{
             return ($price->{$this->type()->key})/100;
@@ -34,6 +40,6 @@ class OrderItem extends Model
     }
     public function pack()
     {
-        return Pack::pack($this->type()->key,$this->order->category->id,$this->order->location->id);
+        return Pack::pack($this->type()->key,$this->category->id,$this->location->id);
     }
 }

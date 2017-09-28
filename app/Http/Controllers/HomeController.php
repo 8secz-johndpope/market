@@ -189,8 +189,7 @@ class HomeController extends BaseController
            // $orders = array();
             $order= new Order;
             $order->amount = 70;
-            $order->category_id = $category->id;
-            $order->location_id = $location->id;
+
             $order->advert_id=$advert->id;
             $order->save();
 
@@ -205,6 +204,9 @@ class HomeController extends BaseController
                     $orderitem = new OrderItem;
                     $orderitem->title = 'Featured';
                     $orderitem->slug = 'featured';
+                    $orderitem->advert_id=$advert->id;
+                    $orderitem->category_id = $category->id;
+                    $orderitem->location_id = $location->id;
                     $orderitem->extra_price_id = $extraprice->id;
                     $orderitem->amount = 0;
                     $orderitem->save();
