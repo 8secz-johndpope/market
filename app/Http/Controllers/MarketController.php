@@ -442,7 +442,7 @@ class MarketController extends BaseController
             $response = $this->client->update($params);
         }
 
-/*
+
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
@@ -489,7 +489,7 @@ class MarketController extends BaseController
                 }
 
             }
-*/
+
             return ['a'=>'b'];
         }
 
