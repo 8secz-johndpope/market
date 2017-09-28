@@ -350,6 +350,13 @@ $(".stats-click").click(function () {
             console.log(error);
         });
 });
+$('.featured-check').change(function() {
+    var id = $(this).data('id');
+    if ($(this).is(":checked")) {
+        $(".featured-check-"+id).prop('checked', false);
+        $(this).prop('checked', true);
+    }
+});
 $(".add-pack").click(function () {
     var category = $("#category").val();
     var location = $("#location").val();
