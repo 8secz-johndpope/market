@@ -348,6 +348,11 @@ ul.image-gallery-ul li img {
     cursor: pointer;
     position: relative;
 }
+img.icon-small {
+    height: 40px;
+    margin-top: -10px;
+    margin-left: 20px;
+}
 .main-category-link {
     position: absolute;
     bottom: 10px;
