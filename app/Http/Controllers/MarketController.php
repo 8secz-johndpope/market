@@ -86,6 +86,18 @@ class MarketController extends BaseController
         if ($advert === null) {
             $advert = Advert::where('sid', $request->id)->first();
         }
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $advert->elastic,
+            'body' => [
+                'script' => 'ctx._source.views += 1'
+
+            ]
+        ];
+        $this->client->update($params);
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -772,7 +784,7 @@ class MarketController extends BaseController
             'id' => $advert->elastic,
             'body' => [
                     'script' => 'ctx._source.views += 1'
-                
+
             ]
         ];
         $this->client->update($params);
