@@ -344,7 +344,7 @@ $(".stats-click").click(function () {
         .then(function (response) {
              console.log(response);
             $("#modal-content").html(response.data);
-            $("#mymodal").modal('show');
+            $("#myModal").modal('show');
         })
         .catch(function (error) {
             console.log(error);
