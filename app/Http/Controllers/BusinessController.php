@@ -104,7 +104,9 @@ class BusinessController extends BaseController
         return redirect('/user/manage/order');
     }
     public function bump(Request $request){
-
+        if(!$request->has('matrix')){
+            return redirect('/business/manage/ads');
+        }
         $order= new Order;
         $order->amount = 70;
 
