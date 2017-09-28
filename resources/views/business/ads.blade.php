@@ -44,7 +44,8 @@
 
                 </div>
             </div>
-            <form action="/business/manage/bump">
+            <form action="/business/manage/bump" method="post">
+                {{ csrf_field() }}
 <table class="table">
     <tr><th></th><th>Views</th><th>Last Posted</th><th>Featured(3 days)</th><th>Featured(7 days)</th><th>Featured(14 days)</th><th>Urgent</th><th>Spotlight</th><td>Bump</td></tr>
             @foreach($products as $product)

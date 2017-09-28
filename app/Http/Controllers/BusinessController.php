@@ -103,4 +103,7 @@ class BusinessController extends BaseController
         $request->session()->put('order_id',$order->id);
         return redirect('/user/manage/order');
     }
+    public function bump(Request $request){
+        return $request->bump;
+    }
 }
