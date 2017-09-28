@@ -103,7 +103,7 @@ class User extends Authenticatable
     }
     public function adverts()
     {
-        return $this->hasMany('App\Model\Advert');
+        return $this->hasMany('App\Model\Advert')->orderby('id','desc');
     }
     public function roles()
     {
