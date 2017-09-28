@@ -109,13 +109,13 @@ class BusinessController extends BaseController
         $order->amount = 70;
 
         $order->save();
-        foreach ($request->matrix as $id) {
+        foreach ($request->matrix as $id=>$ad) {
             $advert=Advert::find($id);
             $category = Category::find($advert->param('category'));
             $location = Location::find($advert->param('location_id'));
 
            // $extratypes = ExtraType::all();
-            foreach ($request->matrix[$id] as $key=>$val) {
+            foreach ($ad as $key=>$val) {
 
                     $extraprice = ExtraPrice::where('key', $key)->first();
                     $orderitem = new OrderItem;
