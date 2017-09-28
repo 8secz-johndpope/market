@@ -442,7 +442,43 @@ class MarketController extends BaseController
             $response = $this->client->update($params);
         }
 
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size' => 10000,
+                'query' => [
+                    'bool' => [
+                        "must" => ['range'=>["location_id"=>['lte'=>4000]]]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) {
+            $ans = $a['_source'];
+            $ans['id'] = $a['_id'];
+            return $ans;
+        }, $response['hits']['hits']);
 
+        foreach ($products as $product) {
+            $location = Location::find($product['location_id']);
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $product['id'],
+                'body' => [
+                    'doc' => [
+                        'location_id' => $location->res
+
+                    ]
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+            $response = $this->client->update($params);
+        }
+/*
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
@@ -489,7 +525,7 @@ class MarketController extends BaseController
                 }
 
             }
-
+*/
             return ['a'=>'b'];
         }
 
