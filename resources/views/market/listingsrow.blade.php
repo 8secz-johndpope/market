@@ -180,7 +180,7 @@
                 <span class="posted-text">{{$product['posted']}}</span>
 
 
-                            @if(isset($product['urgent'])&&$product['urgent']===1)
+                            @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
                                     <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
 <span class="hide-visually">This ad is </span>Urgent
 </span>

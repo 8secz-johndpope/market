@@ -1450,6 +1450,8 @@ class MarketController extends BaseController
             $params['type']='postcode';
             $params['postcode']=$postcode;
         }
+        $milliseconds = round(microtime(true) * 1000);
+        $params['milli']=$milliseconds;
 /*
         $adverts = [];
         $products = $params['products'];
