@@ -342,7 +342,7 @@ $(".stats-click").click(function () {
     var id = $(this).data('id');
     axios.get('/user/p/stats/'+id,{ params:{}})
         .then(function (response) {
-            // console.log(response);
+             console.log(response);
             $("#modal-content").html(response.data);
             $("#mymodal").modal('show');
         })
