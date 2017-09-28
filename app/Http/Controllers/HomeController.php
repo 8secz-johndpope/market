@@ -242,6 +242,8 @@ class HomeController extends BaseController
             array("stripe_account" => $user->stripe_account)
         );
         */
+        $order_id  = $request->session()->get('order_id');
+
         $stripe_id = $user->stripe_id;
         $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
             'limit' => 10, 'object' => 'card'));
@@ -251,7 +253,6 @@ class HomeController extends BaseController
             'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
         ));
         $clientToken = $gateway->clientToken()->generate();
-        $order_id  = $request->session()->get('order_id');
 
         return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards['data'],'token' => $clientToken,'def'=>$card,'user'=>$user]);
     }
@@ -607,13 +608,16 @@ class HomeController extends BaseController
 
         $description = 'Payment towards to Order id '.$order_id;
        try {
-            $charge = \Stripe\Charge::create(array(
-                "amount" => $order->amount_in_pence(),
-                "currency" => "gbp",
-                "customer" => $stripe_id,
-                "source" => $card, // obtained with Stripe.js
-                "description" => $description
-            ));
+           if($order->amount_in_pence()>0){
+               $charge = \Stripe\Charge::create(array(
+                   "amount" => $order->amount_in_pence(),
+                   "currency" => "gbp",
+                   "customer" => $stripe_id,
+                   "source" => $card, // obtained with Stripe.js
+                   "description" => $description
+               ));
+           }
+
             if($order->type==='contract'){
                $this->complete_contract($order);
                // $request->session()->forget('order_id');
@@ -651,13 +655,16 @@ class HomeController extends BaseController
 
 
         try {
-            $result = $gateway->transaction()->sale([
-                "amount" => $order->amount(),
-                'paymentMethodNonce' => $request->nonce,
-                'options' => [
-                    'submitForSettlement' => True
-                ]
-            ]);
+            if($order->amount()>0){
+                $result = $gateway->transaction()->sale([
+                    "amount" => $order->amount(),
+                    'paymentMethodNonce' => $request->nonce,
+                    'options' => [
+                        'submitForSettlement' => True
+                    ]
+                ]);
+            }
+
             if($order->type==='contract'){
                 $this->complete_contract($order);
                 // $request->session()->forget('order_id');
