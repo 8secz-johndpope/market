@@ -1195,6 +1195,8 @@ class MarketController extends BaseController
            }else{
                $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
            }
+            $a['_source']['_id'] = $a['_id'];
+
             return $a['_source'];
 
             },$response['hits']['hits']);
@@ -1387,6 +1389,19 @@ class MarketController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
               $this->client->update($params);
+        }
+        foreach ($products as $fet){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $fet['_id'],
+                'body' => [
+                    'script' => 'ctx._source.list_views += 1'
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+            $this->client->update($params);
         }
 
 /*
