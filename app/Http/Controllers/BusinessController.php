@@ -104,6 +104,32 @@ class BusinessController extends BaseController
         return redirect('/user/manage/order');
     }
     public function bump(Request $request){
-        return $request->matrix;
+
+        $order= new Order;
+        $order->amount = 70;
+
+        $order->save();
+        foreach ($request->matrix as $id) {
+            $advert=Advert::find($id);
+            $category = Category::find($advert->param('category'));
+            $location = Location::find($advert->param('location_id'));
+
+           // $extratypes = ExtraType::all();
+            foreach ($request->matrix[$id] as $key=>$val) {
+
+                    $extraprice = ExtraPrice::where('key', $key)->first();
+                    $orderitem = new OrderItem;
+                    $orderitem->title = 'Featured';
+                    $orderitem->slug = 'featured';
+                    $orderitem->advert_id = $advert->id;
+                    $orderitem->category_id = $category->id;
+                    $orderitem->location_id = $location->id;
+                    $orderitem->type_id = $extraprice->id;
+                    $orderitem->amount = 0;
+                    $orderitem->save();
+                    $order->items()->save($orderitem);
+            }
+        }
+        return redirect('/user/manage/order');
     }
 }

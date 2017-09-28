@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <table class="table"><tr><td><a>Edit</a></td><td><a>Stats</a></td><td><a>Delete</a></td></tr></table>
-                    </td><td>0</td><td> <span class="posted">{{$product['posted']}}</span></td><td><input name="matrix[{{$product['source_id']}}]['featured_3']" type="checkbox"></td><td><input name="matrix[{{$product['source_id']}}]['featured']" type="checkbox"></td><td><input name="matrix[{{$product['source_id']}}]['featured_14']" type="checkbox"></td><td><input name="matrix[{{$product['source_id']}}]['urgent']" type="checkbox"></td><td><input name="matrix[{{$product['source_id']}}]['spotlight']" type="checkbox"></td><td><input name="matrix[{{$product['source_id']}}]['bump']" type="checkbox"></td></tr>
+                    </td><td>0</td><td> <span class="posted">{{$product['posted']}}</span></td><td><input name="matrix[{{$product['source_id']}}]['featured_3']" type="checkbox" value="1"></td><td><input name="matrix[{{$product['source_id']}}]['featured']" type="checkbox" value="1"></td><td><input name="matrix[{{$product['source_id']}}]['featured_14']" type="checkbox" value="1"></td><td><input name="matrix[{{$product['source_id']}}]['urgent']" type="checkbox" value="1"></td><td><input name="matrix[{{$product['source_id']}}]['spotlight']" type="checkbox" value="1"></td><td><input name="matrix[{{$product['source_id']}}]['bump']" type="checkbox" value="1"></td></tr>
             @endforeach
 </table>
                 <button class="btn-primary btn" type="submit">Continue</button>
