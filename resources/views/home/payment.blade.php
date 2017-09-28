@@ -20,7 +20,7 @@
                     @if($order->type==='bump')
                     <table class="table">
                         @foreach($order->items as $item)
-                        <tr><td>{{$item->ad->param('title')}}</td><td>{{$item->type()->stitle}}</td><td>£{{$item->price()}}</td></tr>
+                        <tr><td>{{$item->advert->param('title')}}</td><td>{{$item->type()->stitle}}</td><td>£{{$item->price()}}</td></tr>
                             @endforeach
                             <tr><td>Total:</td><td>£{{$order->amount()}}</td></tr>
                     </table>
