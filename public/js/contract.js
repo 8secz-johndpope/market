@@ -340,7 +340,7 @@ $(".add-pricegroup").click(function () {
 });
 $(".stats-click").click(function () {
     var id = $(this).data('id');
-    axios.get('/user/advert/stats/'+id,{ params:{}})
+    axios.get('/user/p/stats/'+id,{ params:{}})
         .then(function (response) {
             // console.log(response);
             $("#modal-content").html(response.data);
