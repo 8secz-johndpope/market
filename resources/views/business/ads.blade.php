@@ -48,21 +48,21 @@
                 {{ csrf_field() }}
 <table class="table">
     <tr><th></th><th>Views</th><th>Last Posted</th><th>Featured(3 days)</th><th>Featured(7 days)</th><th>Featured(14 days)</th><th>Urgent</th><th>Spotlight</th><td>Bump</td></tr>
-            @foreach($products as $product)
+            @foreach($user->adverts as $advert)
                 <tr><td>
                     <div class="product">
                         <div class="listing-side">
                             <div class="listing-thumbnail">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
+                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
-                                @if(isset($product['featured'])&&$product['featured']===1)
+                                @if($advert->featured_expires())
                                     <span class="ribbon-featured">
 <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
 </span>
                                 @endif
 
                                 <div class="listing-meta txt-sub">
-                                    <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($product['images'])}}</span>
+                                    <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($advert->param('images'))}}</span>
                                 </div>
                             </div>
                         </div>
@@ -70,23 +70,23 @@
                         <div class="info">
 
 
-                            <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
+                            <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->id}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
 
                             <span class="listing-location">
-                                    {{$product['location_name']}}
+                                    {{$advert->param('location_name')}}
                                 </span>
                             <p class="listing-description">
-                                {{$product['description']}}
+                                {{$advert->param('description')}}
                             </p>
 
-                            @if($product['meta']['price']>=0)
-                                <span class="product-price">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                            @if($advert->meta('price')>=0)
+                                <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
                                 </span>
                             @endif
 
 
 
-                            @if(isset($product['urgent'])&&$product['urgent']===1)
+                            @if($advert->urgent_expires())
                                 <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
 <span class="hide-visually">This ad is </span>Urgent
 </span>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <table class="table"><tr><td><a>Edit</a></td><td><a>Stats</a></td><td><a>Delete</a></td></tr></table>
-                    </td><td>0</td><td> <span class="posted">{{$product['posted']}}</span></td><td><input name="matrix[{{$product['source_id']}}][featured_3]" type="checkbox" value="1"></td><td><input name="matrix[{{$product['source_id']}}][featured]" type="checkbox" value="1"></td><td><input name="matrix[{{$product['source_id']}}][featured_14]" type="checkbox" value="1"></td><td><input name="matrix[{{$product['source_id']}}][urgent]" type="checkbox" value="1"></td><td><input name="matrix[{{$product['source_id']}}][spotlight]" type="checkbox" value="1"></td><td><input name="matrix[{{$product['source_id']}}][bump]" type="checkbox" value="1"></td></tr>
+                    </td><td>0</td><td> <span class="posted">{{$advert->posted()}}</span></td><td><input name="matrix[{{$advert->id}}][featured_3]" type="checkbox" value="1"></td><td><input name="matrix[{{$advert->id}}][featured]" type="checkbox" value="1"></td><td><input name="matrix[{{$advert->id}}][featured_14]" type="checkbox" value="1"></td><td>   <input name="matrix[{{$advert->id}}][urgent]" type="checkbox" value="1"></td><td><input name="matrix[{{$advert->id}}][spotlight]" type="checkbox" value="1"></td><td><input name="matrix[{{$advert->id}}][bump]" type="checkbox" value="1"></td></tr>
             @endforeach
 </table>
                 <button class="btn-primary btn" type="submit">Continue</button>

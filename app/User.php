@@ -101,6 +101,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Model\Advert','favorites')->orderBy('id','desc');
     }
+    public function adverts()
+    {
+        return $this->belongsToMany('App\Model\Advert');
+    }
     public function roles()
     {
         return $this->belongsToMany('App\Model\Role');

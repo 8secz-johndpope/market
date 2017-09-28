@@ -37,4 +37,88 @@ class Advert extends  BaseModel
         return $response['_source'][$param];
     }
 
+    public function meta($param){
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic
+        ];
+        $response = $this->client->get($params);
+
+        return $response['_source']['meta'][$param];
+    }
+    public function featured_expires(){
+        $milliseconds = round(microtime(true) * 1000);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic
+        ];
+        $response = $this->client->get($params);
+        if(isset($response['_source']['featured_expires']))
+        {
+            $diff = $milliseconds-$response['_source']['featured_expires'];
+            return (int)($diff/(24*60*60000)).' left';
+        }else{
+            return false;
+        }
+
+    }
+    public function urgent_expires(){
+        $milliseconds = round(microtime(true) * 1000);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic
+        ];
+        $response = $this->client->get($params);
+        if(isset($response['_source']['urgent_expires']))
+        {
+            $diff = $milliseconds-$response['_source']['featured_expires'];
+            return (int)($diff/(24*60*60000)).' left';
+        }else{
+            return false;
+        }
+
+    }
+    public function spotlight_expires(){
+        $milliseconds = round(microtime(true) * 1000);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic
+        ];
+        $response = $this->client->get($params);
+        if(isset($response['_source']['spotlight_expires']))
+        {
+            $diff = $milliseconds-$response['_source']['featured_expires'];
+            return (int)($diff/(24*60*60000)).' left';
+        }else{
+            return false;
+        }
+
+    }
+    public function posted(){
+        $milliseconds = round(microtime(true) * 1000);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic
+        ];
+        $response = $this->client->get($params);
+        $diff = $milliseconds-$response['_source']['created_at'];
+        if($diff<60*1000){
+            $posted = 'Just Now';
+        }
+        else if($diff<60*60*1000){
+            $posted = (int)($diff/60000).'m ago';
+        }
+        else if($diff<24*60*60*1000){
+            $posted = (int)($diff/(60*60000)).'h ago';
+        }else{
+            $posted = (int)($diff/(24*60*60000)).'d ago';
+        }
+        return $posted;
+    }
+
 }
