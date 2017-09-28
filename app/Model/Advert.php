@@ -61,6 +61,8 @@ class Advert extends  BaseModel
         if(isset($response['_source']['featured_expires']))
         {
             $diff = $response['_source']['featured_expires']-$milliseconds;
+            if($diff<0)
+                return false;
             return ((int)($diff/(24*60*60000))+1);
         }else{
             return false;
@@ -78,6 +80,8 @@ class Advert extends  BaseModel
         if(isset($response['_source']['urgent_expires']))
         {
             $diff = $response['_source']['urgent_expires'] - $milliseconds;
+            if($diff<0)
+                return false;
             return ((int)($diff/(24*60*60000))+1);
         }else{
             return false;
@@ -95,6 +99,8 @@ class Advert extends  BaseModel
         if(isset($response['_source']['spotlight_expires']))
         {
             $diff = $response['_source']['spotlight_expires']-$milliseconds;
+            if($diff<0)
+                return false;
             return ((int)($diff/(24*60*60000))+1);
         }else{
             return false;
