@@ -1447,7 +1447,7 @@ class MarketController extends BaseController
             $params['type']='location';
         else
         {
-            $params['type']='location';
+            $params['type']='postcode';
             $params['postcode']=$postcode;
         }
         //return View('market.listings',$params);
