@@ -1462,7 +1462,7 @@ class MarketController extends BaseController
             $adverts[]=$advert;
         }
 
-        $params['adverts']=$advert;
+        $params['adverts']=$adverts;
         //return View('market.listings',$params);
         return View('market.listingsrow',$params);
     }
