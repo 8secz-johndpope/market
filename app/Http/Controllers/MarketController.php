@@ -1408,27 +1408,7 @@ class MarketController extends BaseController
     }
     public function search(Request $request,$any){
         return redirect('/'.$any.'/uk');
-        $category = Category::where('slug',$any)->first();
-        if($category===null){
-            return View('notfound');
-        }
-
-        $params = $this->filter($request,$category,$location);
-        if (Auth::check()) {
-            // The user is logged in...
-            $user = $request->user();
-           // $favorites = $user->favs;
-            $favorites = $user->favorites;
-            $sids = array();
-            foreach ($favorites as $favorite){
-                $sids[] = $favorite->sid;
-            }
-            $params['sids']=$sids;
-        }else{
-            $params['sids']=[];
-        }
-        //return View('market.listings',$params);
-        return View('market.listingsrow',$params);
+       
     }
     public function notfound(){
         return View('notfound');
