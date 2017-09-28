@@ -120,7 +120,7 @@
 
                         <tr>
                             <td>
-                                <table>
+                                <table class="table">
                                  <tr>  <td>Views</td></td> <td>935</td></tr>
                                     <tr>  <td>Email replies</td></td> <td>11</td></tr>
                                     <tr>  <td>Created</td></td> <td>12 days ago</td></tr>
@@ -132,7 +132,7 @@
                             </td>
                             <td>
 
-                                <table>
+                                <table class="table">
                                     <tr>  <td>Listing views</td></td> <td>9,294</td></tr>
                                     <tr>  <td>Times bumped up</td></td> <td>0</td></tr>
                                     <tr>  <td>Last posted</td></td> <td> 12 days ago</td></tr>
