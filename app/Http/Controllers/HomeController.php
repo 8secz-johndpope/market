@@ -207,7 +207,7 @@ class HomeController extends BaseController
                     $orderitem->advert_id=$advert->id;
                     $orderitem->category_id = $category->id;
                     $orderitem->location_id = $location->id;
-                    $orderitem->extra_price_id = $extraprice->id;
+                    $orderitem->type_id = $extraprice->id;
                     $orderitem->amount = 0;
                     $orderitem->save();
                     $order->items()->save($orderitem);
