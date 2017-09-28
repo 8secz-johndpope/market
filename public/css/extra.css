@@ -251,6 +251,9 @@ li.list-group-item a {
     top: 0;
     right: 0;
 }
+.center-text{
+    text-align: center;
+}
 .product {
     min-height: 90px;
 }
