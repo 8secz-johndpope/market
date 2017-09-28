@@ -1116,10 +1116,15 @@ class UserController extends BaseController
             'type' => 'advert',
             'body' => $body
         ];
-        $response = $this->client->index($params);
-        $advert->elastic = $response['_id'];
-        $advert->save();
-        return ['response' => $response];
+        try{
+            $response = $this->client->index($params);
+            $advert->elastic = $response['_id'];
+            $advert->save();
+            return ['response' => $response];
+        }catch (\Exception $e){
+            return $e;
+        }
+
     }
 
     public function register(Request $request)
