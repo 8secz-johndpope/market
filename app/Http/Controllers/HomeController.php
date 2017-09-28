@@ -545,7 +545,7 @@ class HomeController extends BaseController
     private function complete_bump($order){
         $advert = Advert::find($order->advert_id);
         foreach ($order->items as $item) {
-            $body[$item->type()->extra_type->slug] = 1;
+            $body[$item->type->extra_type->slug] = 1;
             if($item->price()===0){
                 $pack = $item->pack();
                 $pack->remaining--;
