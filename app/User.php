@@ -103,7 +103,7 @@ class User extends Authenticatable
     }
     public function adverts()
     {
-        return $this->belongsToMany('App\Model\Advert');
+        return $this->hasMany('App\Model\Advert');
     }
     public function roles()
     {
