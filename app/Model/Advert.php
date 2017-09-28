@@ -42,6 +42,11 @@ class Advert extends  BaseModel
 
         return $this->dict[$param];
     }
+    public function has_param($param){
+        if($this->dict===null)
+            $this->fetch();
+        return isset($this->dict[$param]);
+    }
 
     public function meta($param){
 

@@ -562,6 +562,10 @@ class HomeController extends BaseController
                 $pack->save();
             }
             if($item->type->key==='bump') {
+                if($advert->has_param('bumped'))
+                    $body['bumped']=$advert->param('bumped')+1;
+                else
+                    $body['bumped']=1;
                 $body['created_at']=$milliseconds;
             }else{
                 $body[$item->type->extra_type->slug] = 1;
