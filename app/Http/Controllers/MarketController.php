@@ -1450,6 +1450,7 @@ class MarketController extends BaseController
             $params['type']='postcode';
             $params['postcode']=$postcode;
         }
+
         //return View('market.listings',$params);
         return View('market.listingsrow',$params);
     }
