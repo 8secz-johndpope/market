@@ -1451,6 +1451,18 @@ class MarketController extends BaseController
             $params['postcode']=$postcode;
         }
 
+        $adverts = [];
+        $products = $params['products'];
+        foreach ($products as $product){
+            $advert = Advert::find($product['source_id']);
+            if ($advert === null) {
+                $advert = Advert::where('sid', $product['source_id'])->first();
+            }
+            $advert->dict=$product;
+            $adverts[]=$advert;
+        }
+
+        $params['adverts']=$advert;
         //return View('market.listings',$params);
         return View('market.listingsrow',$params);
     }

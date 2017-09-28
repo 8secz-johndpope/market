@@ -135,21 +135,21 @@
 
 
 
-            @foreach($products as $product)
+            @foreach($adverts as $advert)
     <div class="well">
         <div class="product">
         <div class="listing-side">
                 <div class="listing-thumbnail">
-                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
+                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
-                    @if(isset($product['featured'])&&$product['featured']===1)
+                    @if($advert->featured_expires())
                         <span class="ribbon-featured">
 <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
 </span>
                     @endif
 
                     <div class="listing-meta txt-sub">
-                        <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($product['images'])}}</span>
+                        <span class="glyphicon glyphicon-camera"> </span> <span class="image-number">  {{count($advert->param('images'))}}</span>
                     </div>
                 </div>
             </div>
@@ -157,30 +157,31 @@
             <div class="info">
 
                             <div class="favor">
-                                @if (in_array($product['source_id'],$sids))
-                                    <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                                @if (in_array($advert->sid,$sids))
+                                    <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$advert->sid}}"></span>
                                 @else
-                                    <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
+                                    <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$advert->sid}}"></span>
 
                                 @endif
                             </div>
-                            <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
+                            <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->sid}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
 
                             <span class="listing-location">
-                                    {{\App\Model\Location::where('res',$product['location_id'])->first()->title}}, {{\App\Model\Location::where('res',$product['location_id'])->first()->parent->title}}
+                                    {{$advert->location()->title}}, {{$advert->location()->parent->title}}
                                 </span>
                             <p class="listing-description">
-                                {{$product['description']}}
+                                {{$advert->param('description')}}
                             </p>
 
-                        @if($product['meta']['price']>=0)
-                                <span class="product-price">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+
+                @if($advert->meta('price')>=0)
+                    <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
                                 </span>
-                            @endif
-                <span class="posted-text">{{$product['posted']}}</span>
+                @endif
+                <span class="posted-text">{{$advert->posted()}}</span>
 
 
-                            @if(isset($product['urgent'])&&$product['urgent']===1)
+                @if($advert->urgent_expires())
                                     <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
 <span class="hide-visually">This ad is </span>Urgent
 </span>

@@ -114,5 +114,10 @@ class Advert extends  BaseModel
         }
         return $posted;
     }
+    public function location(){
+        if($this->dict===null)
+            $this->fetch();
+        return Location::where('res',$this->dict['location_id'])->first();
+    }
 
 }
