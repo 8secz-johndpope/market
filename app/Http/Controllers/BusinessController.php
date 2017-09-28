@@ -118,6 +118,8 @@ class BusinessController extends BaseController
             foreach ($ad as $key=>$val) {
 
                     $extraprice = ExtraPrice::where('key', $key)->first();
+                    if($extraprice===null)
+                        return $key;
                     $orderitem = new OrderItem;
                     $orderitem->title = 'Featured';
                     $orderitem->slug = 'featured';
