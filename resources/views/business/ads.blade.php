@@ -44,6 +44,7 @@
 
                 </div>
             </div>
+            <form action="/business/manage/bump">
 <table class="table">
     <tr><th></th><th>Views</th><th>Last Posted</th><th>Featured(3 days)</th><th>Featured(7 days)</th><th>Featured(14 days)</th><th>Urgent</th><th>Spotlight</th><td>Bump</td></tr>
             @foreach($products as $product)
@@ -92,9 +93,10 @@
                         </div>
                     </div>
                     <table class="table"><tr><td><a>Edit</a></td><td><a>Stats</a></td><td><a>Delete</a></td></tr></table>
-                    </td><td>0</td><td> <span class="posted">{{$product['posted']}}</span></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                    </td><td>0</td><td> <span class="posted">{{$product['posted']}}</span></td><td><input name="matrix[{{$product['source_id']}}]['featured_3']" type="checkbox"></td><td><input name="matrix[{{$product['source_id']}}]['featured']" type="checkbox"></td><td><input name="matrix[{{$product['source_id']}}]['featured_14']" type="checkbox"></td><td><input name="matrix[{{$product['source_id']}}]['urgent']" type="checkbox"></td><td><input name="matrix[{{$product['source_id']}}]['spotlight']" type="checkbox"></td><td><input name="matrix[{{$product['source_id']}}]['bump']" type="checkbox"></td></tr>
             @endforeach
 </table>
+            </form>
             <a class="btn-primary btn" disabled>Continue</a>
         </div>
     </div>
