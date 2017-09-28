@@ -466,8 +466,12 @@ class HomeController extends BaseController
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public  function price(Request $request,$id){
-
-        return Price::mprice($id,$request->id);
+        $order_id  = $request->session()->get('order_id');
+        $order = Order::find($order_id);
+        foreach ($order->items as $item){
+            return $item->ad;
+        }
+      //  return Price::mprice($id,$request->id);
 
     }
     public function total(Request $request,$id){
