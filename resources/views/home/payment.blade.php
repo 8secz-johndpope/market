@@ -35,7 +35,7 @@
                             <tr><td><span class="bold-text">Discount</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$order->contract->total_discount()}}</span></td></tr>
                             <tr><td><span class="bold-text">Subtotal after Discount</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$order->contract->total_after_discount()}}</span></td></tr>
                             <tr><td><span class="bold-text">VAT @ 20%</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$order->contract->total_vat()}}</span></td></tr>
-                            <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$order->contract->total_after_vat()}}</span></td></tr>
+                            <tr><td><span class="bold-text"><h1>Total</h1></span></td><td></td><td></td><td></td><td><span class="bold-text"> <h1>£{{$order->contract->total_after_vat()}}</h1></span></td></tr>
                         </table>
                         <h4>Payment Schedule</h4>
                         <table class="table">
