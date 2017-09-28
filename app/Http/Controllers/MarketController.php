@@ -1501,7 +1501,11 @@ class MarketController extends BaseController
             $this->client->update($params);
         }
 */
-foreach ($products as $fet){
+
+
+        $products = array_merge($featured,$products);
+
+        foreach ($products as $fet){
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
@@ -1514,10 +1518,6 @@ foreach ($products as $fet){
 // Update doc at /my_index/my_type/my_id
             $this->client->update($params);
         }
-
-        $products = array_merge($featured,$products);
-
-
         $distances = [1=>'Default',2=>'+ 1 miles',3=>'+ 3 miles',5=>'+ 5 miles',10=>'+ 10 miles',15=>'+ 15 miles',30=>'+ 30 miles',50=>'+ 50 miles',75=>'+ 75 miles',100=>'+ 100 miles',1000=>'Nationwide'];
         return ['location'=>$location,'lparents'=>$lparents,'pageurl'=>$pageurl,'sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'products'=>$products,'breads'=>$breads,'last'=>$any,'base'=>$base,'chs'=>$chs,'filters'=>$filters,'categories'=>$categories,'parents'=>$parents,'locs'=>$locs];
     }
