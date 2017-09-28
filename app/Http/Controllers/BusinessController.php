@@ -132,6 +132,8 @@ class BusinessController extends BaseController
                     $order->items()->save($orderitem);
             }
         }
+        $request->session()->put('order_id', $order->id);
+
         return redirect('/user/manage/order');
     }
 }
