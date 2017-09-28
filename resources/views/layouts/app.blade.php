@@ -105,7 +105,7 @@
             padding: 0px;
         }
 
-       
+
         .sub-category {
             height: 400px;
             border: 1px solid gray;
