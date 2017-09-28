@@ -104,6 +104,6 @@ class BusinessController extends BaseController
         return redirect('/user/manage/order');
     }
     public function bump(Request $request){
-        return 'hello';
+        return $request->json->all();
     }
 }
