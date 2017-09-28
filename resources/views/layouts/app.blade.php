@@ -214,7 +214,7 @@
     <div class="top hidden-xs">
         <div class="row">
             <div class="col">
-                <img class="icon" src="/css/sumra-text.png">
+                <img class="icon-small" src="/css/sumra-text.png">
             </div>
         </div>
     </div>
