@@ -469,7 +469,7 @@ class HomeController extends BaseController
         $order_id  = $request->session()->get('order_id');
         $order = Order::find($order_id);
         foreach ($order->items as $item){
-            return $item->ad;
+            return $item->ad();
         }
       //  return Price::mprice($id,$request->id);
 
