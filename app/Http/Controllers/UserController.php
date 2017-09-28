@@ -12,6 +12,8 @@ use App\Mail\AccountCreated;
 use App\Mail\OrderShipped;
 use App\Model\Address;
 use App\Model\Advert;
+use App\Model\Location;
+
 use App\Model\Application;
 use App\Model\Category;
 use App\Model\Cover;
