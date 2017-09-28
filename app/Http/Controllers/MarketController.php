@@ -1408,7 +1408,7 @@ class MarketController extends BaseController
     }
     public function search(Request $request,$any){
         return redirect('/'.$any.'/uk');
-       
+
     }
     public function notfound(){
         return View('notfound');
@@ -1442,6 +1442,13 @@ class MarketController extends BaseController
             $params['sids']=$sids;
         }else{
             $params['sids']=[];
+        }
+        if($postcode===null)
+            $params['type']='location';
+        else
+        {
+            $params['type']='location';
+            $params['postcode']=$postcode;
         }
         //return View('market.listings',$params);
         return View('market.listingsrow',$params);
