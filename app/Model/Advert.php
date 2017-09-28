@@ -114,7 +114,7 @@ class Advert extends  BaseModel
         }
         return $posted;
     }
-    public function created(){
+    public function first_created(){
         $milliseconds = round(strtotime($this->created_at) * 1000);
         if($this->dict===null)
             $this->fetch();
