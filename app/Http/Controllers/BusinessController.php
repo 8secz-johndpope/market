@@ -112,7 +112,7 @@ class BusinessController extends BaseController
         foreach ($request->matrix as $id=>$ad) {
             $advert=Advert::find($id);
             $category = Category::find($advert->param('category'));
-            $location = Location::find($advert->param('location_id'));
+            $location = Location::where('res',$advert->param('location_id'))->first();
 
            // $extratypes = ExtraType::all();
             foreach ($ad as $key=>$val) {
