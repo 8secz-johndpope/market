@@ -1407,11 +1407,12 @@ class MarketController extends BaseController
         return ['location'=>$location,'lparents'=>$lparents,'pageurl'=>$pageurl,'sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'products'=>$products,'breads'=>$breads,'last'=>$any,'base'=>$base,'chs'=>$chs,'filters'=>$filters,'categories'=>$categories,'parents'=>$parents,'locs'=>$locs];
     }
     public function search(Request $request,$any){
+        return redirect('/'.$any.'/uk');
         $category = Category::where('slug',$any)->first();
         if($category===null){
             return View('notfound');
         }
-        $location = Location::find(0);
+
         $params = $this->filter($request,$category,$location);
         if (Auth::check()) {
             // The user is logged in...
