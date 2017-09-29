@@ -207,15 +207,9 @@
 </head>
 <body class="">
 <header>
-    <div class="top hidden-xs">
-        <div class="row">
-            <div class="col">
-                <img class="icon-small" src="/css/sumra-text.png">
-            </div>
-        </div>
-    </div>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
+   
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid" style="background: black">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -223,18 +217,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img class="icon" src="/css/ic_launcher1.png"></a>
-                <div class="col-2 col-md-8 col-lg-5 pull-right hidden-xs hidden-sm">
+                <a class="navbar-brand" href="/"><img class="icon-small" src="/css/sumra-text.png"></a>
 
-                </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="business-drop collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Store</a></li>
                     @if (Auth::guest())
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Sign Up</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Sign Up</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -262,7 +254,6 @@
                             </ul>
                         </li>
                     @endif
-                    <li><a class="btn btn-info bussines" role="button" href="/user/contract/pricing">Sumra for Business</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
