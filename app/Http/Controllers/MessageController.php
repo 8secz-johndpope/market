@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Auth;
 
 class MessageController extends BaseController
 {
+    public function __construct()
+    {
+
+        $this->middleware('auth');
+        parent::__construct();
+    }
     public function messages(Request $request){
         $client = new Client();
 
