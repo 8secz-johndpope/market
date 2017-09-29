@@ -27,6 +27,7 @@ span.red-text {
 }
 .left-message .message {
     background: gray;
+    color: white;
 
 }
 .left-message,.right-message {
