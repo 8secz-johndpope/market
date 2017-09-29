@@ -60,9 +60,9 @@
                     <div class="all-messages">
                         @foreach($r as $message)
                             @if($message['from_msg']===$user->id)
-                            <span class="right-message">{{$message['message']}}</span>
+                            <span class="right-message">{{$message['message']}}</span><br>
                             @else
-                                <span class="left-message">{{$message['message']}}</span>
+                                <span class="left-message">{{$message['message']}}</span><br>
                             @endif
 
                         @endforeach
