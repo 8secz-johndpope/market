@@ -304,6 +304,14 @@ ul.image-gallery-ul {
     right: 0;
     left: 0;
 }
+.message-input-div {
+    width: calc(100% - 60px);
+    display: inline-block;
+}
+.message-send-div {
+    width: 50px;
+    display: inline-block;
+}
 ul.image-gallery-ul li {
     display: table-cell;
     height: 600px;
