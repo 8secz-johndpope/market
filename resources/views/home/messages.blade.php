@@ -64,9 +64,8 @@
                     </ul>
                     <div class="bottom-div-messages">
                         <form class="form-inline">
-                            <label class="sr-only" for="inlineFormInputName2">Message</label>
-                            <input type="text" class="form-control mb-10 mr-sm-10 mb-sm-0" id="inlineFormInputName2" placeholder="Type Your Message here" required>
-                            <button type="submit" class="btn btn-primary">Send</button>
+                            <div class="message-input-div"><input type="text" class="form-control"  placeholder="Type Your Message here" required</div>
+                            <div class="message-send-div"><button type="submit" class="btn btn-primary">Send</button></div>
                         </form>
                     </div>
                 </div>
