@@ -477,7 +477,7 @@ class HomeController extends BaseController
         $statement = new Cassandra\SimpleStatement(       // also supports prepared and batch statements
             'select * from users'
         );
-        $future    = $this->cassandra ->executeAsync($statement);  // fully asynchronous and easy parallel execution
+        $future    = $this->cassandra ->execute($statement);  // fully asynchronous and easy parallel execution
         $result    = $future->get();                      // wait for the result, with an optional timeout
 
         foreach ($result as $row) {                       // results and rows implement Iterator, Countable and ArrayAccess
