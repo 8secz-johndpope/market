@@ -12,6 +12,7 @@
 
 @section('content')
     <form action="/user/message/send">
+        {{ csrf_field() }}
         <input type="hidden" name="id" value="{{$advert->id}}">
     <div class="row">
         <div class="col-sm-11 col-sm-offset-1">
