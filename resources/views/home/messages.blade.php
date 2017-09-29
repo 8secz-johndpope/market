@@ -59,7 +59,7 @@
                 <div class="right-div-messages">
                     <ul class="list-group">
                         @foreach($r as $message)
-                            <li class="list-group-item">{{$message['$message']}}</li>
+                            <li class="list-group-item">{{$message['message']}}</li>
                             @endforeach
                     </ul>
                 </div>
