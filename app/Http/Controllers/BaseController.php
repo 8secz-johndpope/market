@@ -7,7 +7,7 @@
  */
 
 namespace App\Http\Controllers;
-
+use Cassandra;
 
 class BaseController extends Controller
 {
