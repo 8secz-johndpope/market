@@ -292,6 +292,18 @@ ul.image-gallery-ul {
     width: 25%;
     float: left;
 }
+.right-div-messages {
+    position: relative;
+    float: left;
+    width: 70%;
+    min-height: 300px;
+}
+.bottom-div-messages {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 ul.image-gallery-ul li {
     display: table-cell;
     height: 600px;
