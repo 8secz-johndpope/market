@@ -50,7 +50,7 @@
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">{{$group['title']}}</h4>
+                                <a href="/user/manage/messages/{{$group['rid']}}"><h4 class="media-heading">{{$group['title']}}</h4></a>
                                 ...
                             </div>
                         </div>
