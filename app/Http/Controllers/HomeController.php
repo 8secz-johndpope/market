@@ -473,7 +473,6 @@ class HomeController extends BaseController
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public  function price(Request $request,$id){
-        return php_info();
         $statement = new Cassandra\SimpleStatement(       // also supports prepared and batch statements
             'select * from users'
         );
