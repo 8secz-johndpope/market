@@ -5,11 +5,11 @@
  * Date: 9/29/17
  * Time: 1:24 PM
  */
-use Illuminate\Http\Request;
 
 namespace App\Http\Controllers;
 use GuzzleHttp\Pool;
 use GuzzleHttp\Client;
+use Illuminate\Http\Request;
 
 
 class MessageController extends BaseController
