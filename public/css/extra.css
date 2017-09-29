@@ -31,6 +31,7 @@ span.red-text {
 }
 .left-message,.right-message {
     padding: 10px;
+    min-height: 40px;
 }
 .message{
     padding: 8px;
