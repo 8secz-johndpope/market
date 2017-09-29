@@ -17,7 +17,7 @@ class MessageController extends BaseController
     public function test(Request $request){
         $client = new Client();
         $r = $client->request('POST', 'https://fire.sumra.net/allmessages', [
-            'body' => ['id'=>104]
+            'form_params' => ['id'=>104]
         ]);
         return $r;
     }
