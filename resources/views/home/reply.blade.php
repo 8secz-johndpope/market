@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <form action="/user/message/send">
+    <form action="/user/message/send" method="post">
         {{ csrf_field() }}
         <input type="hidden" name="id" value="{{$advert->id}}">
     <div class="row">
