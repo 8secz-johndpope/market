@@ -63,8 +63,9 @@
                             @endforeach
                     </ul>
                     <div class="bottom-div-messages">
-                        <form>
-                            <div class="message-input-div"><input type="text" class="form-control"  placeholder="Type Your Message here" required></div>
+                        <form action="/user/message/rsend" method="post">
+                            <input type="hidden" name="rid" value="{{$rid}}">
+                            {{ csrf_field() }}                            <div class="message-input-div"><input type="text" class="form-control"  name="message" placeholder="Type Your Message here" required></div>
                             <div class="message-send-div"><button type="submit" class="btn btn-primary">Send</button></div>
                         </form>
                     </div>
