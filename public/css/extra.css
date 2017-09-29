@@ -288,6 +288,10 @@ ul.image-gallery-ul {
 .red-color {
     color: red;
 }
+.left-div-messages {
+    width: 25%;
+    float: left;
+}
 ul.image-gallery-ul li {
     display: table-cell;
     height: 600px;
