@@ -225,7 +225,7 @@
                 </button>
                 <a class="navbar-brand" href="/"><img class="icon" src="/css/ic_launcher1.png"></a>
                 <div class="col-2 col-md-8 col-lg-5 pull-right hidden-xs hidden-sm">
-                   
+
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
