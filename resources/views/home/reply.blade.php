@@ -13,7 +13,7 @@
 @section('content')
     <div class="row">
         <div class="col-sm-11 col-sm-offset-1">
-            <h1>{{$advert->param('title')}}</h1>
+            <h4>{{$advert->param('title')}}</h4>
         </div>
     </div>
 
