@@ -22,6 +22,9 @@ span.red-text {
 .well{
     background: white;
 }
+.media.selected-room {
+    background: #eee;
+}
 .main-search{
     margin-top: 15px;
 }
