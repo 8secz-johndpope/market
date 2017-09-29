@@ -473,7 +473,7 @@ class HomeController extends BaseController
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public  function price(Request $request,$id){
-        $statement = new \Cassandra\SimpleStatement(       // also supports prepared and batch statements
+        $statement = new Cassandra\SimpleStatement(       // also supports prepared and batch statements
             'select * from users'
         );
         $future    = $this->cassandra ->executeAsync($statement);  // fully asynchronous and easy parallel execution
