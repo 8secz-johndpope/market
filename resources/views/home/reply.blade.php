@@ -19,7 +19,7 @@
                 <div class="under-heading">
                     <h4>Reply to the listing</h4>
                 </div>
-                <p>Your message to {{$advert->param('user_name')}}</p>
+                <p>Your message to {{$advert->param('username')}}</p>
                 <textarea cols="100">
 
                 </textarea>
