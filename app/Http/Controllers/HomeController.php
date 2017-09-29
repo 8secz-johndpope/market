@@ -22,6 +22,7 @@ use App\Model\Category;
 use App\Model\Advert;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
+use Ramsey\Uuid\Uuid;
 
 class HomeController extends BaseController
 {
@@ -474,6 +475,7 @@ class HomeController extends BaseController
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public  function price(Request $request,$id){
+
         $uuid4 = Uuid::uuid4();
         $uuid = $uuid4->toString();
         $statement = new Cassandra\SimpleStatement(       // also supports prepared and batch statements
