@@ -21,7 +21,7 @@
                     <h4 class="bold-text">Reply to the listing</h4>
                 </div>
                 <p>Your message to {{$advert->param('username')}}</p>
-                <textarea cols="50" rows="5"></textarea>
+                <textarea cols="50" rows="5" name="message"></textarea>
                 <p>Replies will be sent to <strong class="bold-text">{{$user->name}}</strong> at <strong class="bold-text">{{$user->email}}</strong> </p>
                 <button class="btn btn-primary">Send Message</button>
             </div>
