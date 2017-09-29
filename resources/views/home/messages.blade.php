@@ -35,6 +35,7 @@
             </ul>
             <div class="full-width">
                 <div class="left-div-message">
+                    {{$count($g)}}
                     @foreach($g as $group)
                         <div class="media">
                             <div class="media-left">
