@@ -25,6 +25,19 @@ span.red-text {
 .media.selected-room {
     background: #eee;
 }
+.left-message .message {
+    background: gray;
+
+}
+.message{
+    padding: 8px;
+    border-radius: 5px;
+}
+.right-message .message {
+    float: right;
+    background: blue;
+    color: white;
+}
 .main-search{
     margin-top: 15px;
 }
