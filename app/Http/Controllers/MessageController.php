@@ -67,10 +67,11 @@ class MessageController extends BaseController
             'form_params' => ['advert_id'=>$advert->sid,'users'=>[$user->id,$advert->user_id],'title'=>$advert->param('title'),'image'=>$advert->first_image()]
         ]);
         $g = json_decode($g->getBody(),true);
-        $g = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
+        $k = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
             'form_params' => ['from'=>$user->id,'message'=>$request->message,'rid'=>$g['rid'],'type'=>'text']
         ]);
-        return $g;
+
+        return redirect('/user/manage/messages/'.$g['rid']);
 
     }
 
