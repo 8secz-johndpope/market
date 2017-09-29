@@ -37,7 +37,7 @@
                 <div class="left-div-messages">
                     {{count($g)}}
                     @foreach($g as $group)
-                        <div class="media">
+                        <div class="media @if($group['rid']===$rid) selected-room @endif">
                             <div class="media-left">
                                 <a href="#">
                                     <div class="listing-side">
