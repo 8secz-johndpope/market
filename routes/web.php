@@ -44,6 +44,8 @@ Route::post('/business/manage/bump', 'BusinessController@bump');
 
 Route::get('/business/invoice/pay/{id}', 'BusinessController@invoice');
 
+Route::get('/user/reply/{id}', 'MessageController@reply');
+
 
 Route::get('/user/manage/orders', 'HomeController@orders');
 Route::get('/user/manage/buying', 'HomeController@buying');

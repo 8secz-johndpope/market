@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use App\Model\Advert;
 use GuzzleHttp\Pool;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -28,6 +29,15 @@ class MessageController extends BaseController
         $g = json_decode($g->getBody(),true);
         //return $g;
         return view('home.messages',['r'=>$r,'g'=>$g]);
+    }
+    public function reply(Request $request,$id){
+        $advert = Advert::find($id);
+        if($advert===null)
+        {
+            $advert=Advert::where('sid',$id)->first();
+        }
+        return view('home.reply',['advert'=>$advert]);
+
     }
 
 }
