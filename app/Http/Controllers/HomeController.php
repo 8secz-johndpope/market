@@ -482,8 +482,8 @@ class HomeController extends BaseController
             "INSERT INTO direct (fid,tid,rid) VALUES (104, 99,$uuid) IF NOT EXISTS"
         );
         $future    = $this->cassandra ->execute($statement);  // fully asynchronous and easy parallel execution
-         var_dump($future);
-   
+         var_dump($future[0]);
+
 
     }
     public function total(Request $request,$id){
