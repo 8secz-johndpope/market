@@ -482,20 +482,8 @@ class HomeController extends BaseController
             "INSERT INTO direct (fid,tid,rid) VALUES (104, 99,$uuid) IF NOT EXISTS"
         );
         $future    = $this->cassandra ->execute($statement);  // fully asynchronous and easy parallel execution
-        return $future;
-    //    $result    = $future->get();                      // wait for the result, with an optional timeout
-
-        foreach ($future as $row) {                       // results and rows implement Iterator, Countable and ArrayAccess
-            printf("The keyspace %s has a table called %s\n", $row['uid'], $row['title']);
-        }
-
-        return ['a'];
-        $order_id  = $request->session()->get('order_id');
-        $order = Order::find($order_id);
-        foreach ($order->items as $item){
-            return $item->advert;
-        }
-      //  return Price::mprice($id,$request->id);
+         var_dump($future);
+   
 
     }
     public function total(Request $request,$id){
