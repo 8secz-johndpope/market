@@ -17,7 +17,6 @@ Route::get('/loc', 'MarketController@loc');
 Route::get('/locs', 'MarketController@locs');
 Route::get('/wrong', 'MarketController@wrong');
 Route::get('/searchform', 'MarketController@searchform');
-Route::get('/messages', 'MessageController@test');
 
 Route::post('/hellosign', 'MarketController@hellosign');
 
@@ -28,6 +27,9 @@ Route::get('/insert', 'MarketController@insert');
 Route::get('/user/ads/post', 'HomeController@post');
 Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'HomeController@myads');
+
+Route::get('/user/manage/messages', 'MessageController@messages');
+
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::post('/user/cards/add', 'HomeController@addcard');
 Route::get('/user/manage/order', 'HomeController@order');

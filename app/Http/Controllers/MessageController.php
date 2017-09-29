@@ -14,12 +14,16 @@ use Illuminate\Http\Request;
 
 class MessageController extends BaseController
 {
-    public function test(Request $request){
+    public function messages(Request $request){
         $client = new Client();
         $r = $client->request('POST', 'https://fire.sumra.net/allmessages', [
             'form_params' => ['id'=>104]
         ]);
-        return $r;
+
+        $g = $client->request('POST', 'https://fire.sumra.net/groups', [
+            'form_params' => ['id'=>104]
+        ]);
+        return view('home.messages',['r'=>$r,'g'=>$g]);
     }
 
 }
