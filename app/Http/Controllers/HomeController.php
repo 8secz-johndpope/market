@@ -474,10 +474,13 @@ class HomeController extends BaseController
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public  function price(Request $request,$id){
+        $uuid4 = Uuid::uuid4();
+        $uuid = $uuid4->toString();
         $statement = new Cassandra\SimpleStatement(       // also supports prepared and batch statements
-            'INSERT INTO direct (fid,tid,rid) VALUES (104, 99,) IF NOT EXISTS'
+            "INSERT INTO direct (fid,tid,rid) VALUES (104, 99,$uuid) IF NOT EXISTS""
         );
         $future    = $this->cassandra ->execute($statement);  // fully asynchronous and easy parallel execution
+        return $future;
     //    $result    = $future->get();                      // wait for the result, with an optional timeout
 
         foreach ($future as $row) {                       // results and rows implement Iterator, Countable and ArrayAccess
