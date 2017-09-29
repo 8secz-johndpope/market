@@ -21,6 +21,7 @@ use Illuminate\Http\Request;
 use App\Model\Category;
 use App\Model\Advert;
 use Illuminate\Support\Facades\Auth;
+use Cassandra;
 
 class HomeController extends BaseController
 {
