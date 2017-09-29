@@ -40,7 +40,13 @@
                         <div class="media">
                             <div class="media-left">
                                 <a href="#">
-                                    <img class="media-object" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$group['image']}}" alt="...">
+                                    <div class="listing-side">
+                                        <div class="listing-thumbnail">
+                                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ isset($group['image'])?$group['image']:"noimage.png"}}" class="lazyload" alt="">
+
+
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
                             <div class="media-body">
