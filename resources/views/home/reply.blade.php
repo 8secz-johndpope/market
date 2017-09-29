@@ -12,6 +12,7 @@
 
 @section('content')
     <form action="/user/message/send">
+        <input type="hidden" name="id" value="{{$advert->id}}">
     <div class="row">
         <div class="col-sm-11 col-sm-offset-1">
             <h4 class="bold-text">{{$advert->param('title')}}</h4>

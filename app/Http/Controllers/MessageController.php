@@ -41,5 +41,16 @@ class MessageController extends BaseController
         return view('home.reply',['advert'=>$advert,'user'=>$user]);
 
     }
+    public function send(Request $request){
+        $user = Auth::user();
+        $advert = Advert::find($request->id);
+        $client = new Client();
+        $g = $client->request('POST', 'https://fire.sumra.net/creategroup', [
+            'form_params' => ['advert_id'=>$advert->sid,'users'=>[$user->id,$advert->user_id],'title'=>$advert->param('title'),'image'=>$advert->first_image()]
+        ]);
+        return $g;
+
+    }
+
 
 }

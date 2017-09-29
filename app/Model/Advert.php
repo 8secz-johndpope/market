@@ -48,6 +48,14 @@ class Advert extends  BaseModel
         return isset($this->dict[$param]);
     }
 
+    public function first_image(){
+        if($this->dict===null)
+            $this->fetch();
+        if(count($this->dict['images'])>0)
+            return $this->dict['images'][0];
+        else
+            return 'noimage.png';
+    }
     public function meta($param){
 
 
