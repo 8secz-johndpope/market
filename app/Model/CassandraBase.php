@@ -12,14 +12,12 @@ use Cassandra;
 
 class CassandraBase
 {
-    protected static $cassandra;
 
-
-    public function __construct()
+    public static function cassandra()
     {
         $cluster   = Cassandra::cluster()->withContactPoints('35.157.50.121')->build();
         $keyspace  = 'chat';
-        $this->cassandra   = $cluster->connect($keyspace);        // create session, optionally scoped to a keyspace
-
+        $cassandra   = $cluster->connect($keyspace);        // create session, optionally scoped to a keyspace
+        return $cassandra;
     }
 }

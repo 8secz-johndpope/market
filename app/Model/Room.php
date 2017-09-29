@@ -15,7 +15,7 @@ class Room extends CassandraBase
         $statement = new Cassandra\SimpleStatement(       // also supports prepared and batch statements
             "select * from rooms"
         );
-        $future    = CassandraBase::$cassandra->execute($statement);
+        $future    = CassandraBase::cassandra()->execute($statement);
         $rooms=[];
         foreach ($future as $row){
             $rooms[]=$row['rid'];
