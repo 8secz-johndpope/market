@@ -5,6 +5,7 @@
  * Date: 9/29/17
  * Time: 1:24 PM
  */
+use Illuminate\Http\Request;
 
 namespace App\Http\Controllers;
 use GuzzleHttp\Pool;
