@@ -475,7 +475,7 @@ class HomeController extends BaseController
     }
     public  function price(Request $request,$id){
         $statement = new Cassandra\SimpleStatement(       // also supports prepared and batch statements
-            'select * from users'
+            'INSERT INTO direct (fid,tid,rid) VALUES (104, 99,) IF NOT EXISTS'
         );
         $future    = $this->cassandra ->execute($statement);  // fully asynchronous and easy parallel execution
     //    $result    = $future->get();                      // wait for the result, with an optional timeout
