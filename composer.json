@@ -9,6 +9,7 @@
         "barryvdh/laravel-dompdf": "^0.8.1",
         "braintree/braintree_php": "^3.24",
         "elasticsearch/elasticsearch": "^5.2",
+        "guzzlehttp/guzzle": "^6.3",
         "hellosign/hellosign-php-sdk": "^3.4",
         "laravel/framework": "5.4.*",
         "laravel/passport": "^3.0",
