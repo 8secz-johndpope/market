@@ -59,11 +59,13 @@
                 <div class="right-div-messages">
                     <div class="all-messages">
                         @foreach($r as $message)
+                            @if($message['type']!=='notify')
                             @if($message['from_msg']===$user->id)
 
                             <div class="right-message"><span class="message"> {{$message['message']}}</span></div>
                             @else
                                 <div class="left-message"><span class="message">{{$message['message']}}</span></div>
+                            @endif
                             @endif
 
                         @endforeach
