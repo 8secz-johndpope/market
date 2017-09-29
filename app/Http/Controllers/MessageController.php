@@ -26,7 +26,7 @@ class MessageController extends BaseController
         ///var_dump($g);
         //exit;
         $g = json_decode($g->getBody(),true);
-        return $g;
+        //return $g;
         return view('home.messages',['r'=>$r,'g'=>$g]);
     }
 
