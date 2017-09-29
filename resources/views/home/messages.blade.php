@@ -34,7 +34,7 @@
                 </li>
             </ul>
             <div class="full-width">
-                <div class="left-div-message">
+                <div class="left-div-messages">
                     {{count($g)}}
                     @foreach($g as $group)
                         <div class="media">
@@ -55,6 +55,13 @@
                             </div>
                         </div>
                         @endforeach
+                </div>
+                <div class="right-div-messages">
+                    <ul class="list-group">
+                        @foreach($r as $message)
+                            <li class="list-group-item">{{$message['$message']}}</li>
+                            @endforeach
+                    </ul>
                 </div>
             </div>
         </div>

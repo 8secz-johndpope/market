@@ -18,8 +18,25 @@ class MessageController extends BaseController
 {
     public function messages(Request $request){
         $client = new Client();
-        $r = $client->request('POST', 'https://fire.sumra.net/allmessages', [
+
+
+        $g = $client->request('POST', 'https://fire.sumra.net/groups', [
             'form_params' => ['id'=>104]
+        ]);
+        ///var_dump($g);
+        //exit;
+        $g = json_decode($g->getBody(),true);
+        //return $g;
+        $r = $client->request('POST', 'https://fire.sumra.net/groupmessages', [
+            'form_params' => ['rid'=>$g[0]['rid'],"time"=>0]
+        ]);
+        $r = json_decode($r->getBody(),true);
+        return view('home.messages',['r'=>$r,'g'=>$g]);
+    }
+    public function gmessages(Request $request,$rid){
+        $client = new Client();
+        $r = $client->request('POST', 'https://fire.sumra.net/groupmessages', [
+            'form_params' => ['rid'=>$rid,"time"=>0]
         ]);
 
         $g = $client->request('POST', 'https://fire.sumra.net/groups', [
@@ -27,6 +44,7 @@ class MessageController extends BaseController
         ]);
         ///var_dump($g);
         //exit;
+        $r = json_decode($r->getBody(),true);
         $g = json_decode($g->getBody(),true);
         //return $g;
         return view('home.messages',['r'=>$r,'g'=>$g]);
