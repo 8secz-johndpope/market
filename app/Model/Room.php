@@ -7,11 +7,14 @@
  */
 
 namespace App\Model;
+use App\User;
 use Cassandra;
+use Illuminate\Support\Facades\Auth;
 
 class Room extends CassandraBase
 {
     public static function all(){
+        $user = Auth::user();
         $statement = new Cassandra\SimpleStatement(       // also supports prepared and batch statements
             "select * from rooms"
         );
