@@ -42,12 +42,13 @@ class BaseController extends Controller
             ]
         ];
 
+        /*
         $cluster   = \Cassandra::cluster('cassandra.sumra.net')                 // connects to localhost by default
         ->build();
         $keyspace  = 'chat';
         $this->cassandra   = $cluster->connect($keyspace);        // create session, optionally scoped to a keyspace
 
-
+*/
 // Get doc at /my_index/my_type/my_id
         $response = $this->client->search($params);
         $cats = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
