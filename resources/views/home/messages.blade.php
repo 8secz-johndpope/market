@@ -12,7 +12,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-12">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a class="nav-link" href="/user/manage/ads">Manage My ads</a>
@@ -33,8 +33,22 @@
                     <a class="nav-link" href="/user/manage/details">My Details</a>
                 </li>
             </ul>
-            <div class="well">
-            <h4>No Messages to Display</h4>
+            <div class="full-width">
+                <div class="left-div-message">
+                    @foreach($g as $group)
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$group['image']}}" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{$group['title']}}</h4>
+                                ...
+                            </div>
+                        </div>
+                        @endforeach
+                </div>
             </div>
         </div>
     </div>
