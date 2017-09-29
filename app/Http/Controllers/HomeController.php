@@ -473,6 +473,17 @@ class HomeController extends BaseController
         return view('home.prices',['prices'=>[],'extras'=>$extras]);
     }
     public  function price(Request $request,$id){
+        $statement = new \Cassandra\SimpleStatement(       // also supports prepared and batch statements
+            'select * from users'
+        );
+        $future    = $this->cassandra ->executeAsync($statement);  // fully asynchronous and easy parallel execution
+        $result    = $future->get();                      // wait for the result, with an optional timeout
+
+        foreach ($result as $row) {                       // results and rows implement Iterator, Countable and ArrayAccess
+            printf("The keyspace %s has a table called %s\n", $row['keyspace_name'], $row['columnfamily_name']);
+        }
+
+        return ['a'];
         $order_id  = $request->session()->get('order_id');
         $order = Order::find($order_id);
         foreach ($order->items as $item){

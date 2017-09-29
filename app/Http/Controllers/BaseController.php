@@ -19,6 +19,7 @@ class BaseController extends Controller
     protected $children;
     protected $base;
     protected $oldcats;
+    protected $cassandra;
 
     public function __construct()
     {
@@ -40,6 +41,11 @@ class BaseController extends Controller
                 ]
             ]
         ];
+
+        $cluster   = \Cassandra::cluster('cassandra.sumra.net')                 // connects to localhost by default
+        ->build();
+        $keyspace  = 'chat';
+        $this->cassandra   = $cluster->connect($keyspace);        // create session, optionally scoped to a keyspace
 
 
 // Get doc at /my_index/my_type/my_id
