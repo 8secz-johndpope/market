@@ -6,6 +6,7 @@ use App\Model\Business;
 use App\Model\Pack;
 use App\Model\Payment;
 use App\Model\Postcode;
+use App\Model\Room;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use PDF;
 use App\Model\Contract;
@@ -478,11 +479,7 @@ class HomeController extends BaseController
 
         $uuid4 = Uuid::uuid4();
         $uuid = $uuid4->toString();
-        $statement = new Cassandra\SimpleStatement(       // also supports prepared and batch statements
-            "INSERT INTO direct (fid,tid,rid) VALUES (104, 99,$uuid) IF NOT EXISTS"
-        );
-        $future    = $this->cassandra ->execute($statement);  // fully asynchronous and easy parallel execution
-         var_dump($future[0]);
+        return Room::all();
 
 
     }
