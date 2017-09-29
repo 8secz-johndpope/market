@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+    <form action="/user/message/send">
     <div class="row">
         <div class="col-sm-11 col-sm-offset-1">
             <h4 class="bold-text">{{$advert->param('title')}}</h4>
@@ -20,13 +21,14 @@
                     <h4>Reply to the listing</h4>
                 </div>
                 <p>Your message to {{$advert->param('username')}}</p>
-                <textarea cols="100">
+                <textarea cols="50" rows="30">
 
                 </textarea>
                 <p>Replies will be sent to {{$user->name}} at{{$user->email}}</p>
+                <button class="btn btn-primary">Send Message</button>
             </div>
         </div>
     </div>
-
+    </form>
 
 @endsection
