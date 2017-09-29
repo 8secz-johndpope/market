@@ -24,7 +24,7 @@
                 <textarea cols="50" rows="5">
 
                 </textarea>
-                <p>Replies will be sent to {{$user->name}} at{{$user->email}}</p>
+                <p>Replies will be sent to <span class="bold-text">{{$user->name}}</span> at <span class="bold-text">{{$user->email}}</span> </p>
                 <button class="btn btn-primary">Send Message</button>
             </div>
         </div>
