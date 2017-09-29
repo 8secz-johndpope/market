@@ -23,10 +23,10 @@ class MessageController extends BaseController
         $g = $client->request('POST', 'https://fire.sumra.net/groups', [
             'form_params' => ['id'=>104]
         ]);
-        var_dump($g);
-        exit;
-        //$g = json_decode($g,true);
-        //return $g;
+        ///var_dump($g);
+        //exit;
+        $g = json_decode($g->getBody(),true);
+        return $g;
         return view('home.messages',['r'=>$r,'g'=>$g]);
     }
 
