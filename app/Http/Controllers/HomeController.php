@@ -478,9 +478,9 @@ class HomeController extends BaseController
             'select * from users'
         );
         $future    = $this->cassandra ->execute($statement);  // fully asynchronous and easy parallel execution
-        $result    = $future->get();                      // wait for the result, with an optional timeout
+    //    $result    = $future->get();                      // wait for the result, with an optional timeout
 
-        foreach ($result as $row) {                       // results and rows implement Iterator, Countable and ArrayAccess
+        foreach ($future as $row) {                       // results and rows implement Iterator, Countable and ArrayAccess
             printf("The keyspace %s has a table called %s\n", $row['uid'], $row['title']);
         }
 
