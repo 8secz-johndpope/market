@@ -480,7 +480,7 @@ class HomeController extends BaseController
         $result    = $future->get();                      // wait for the result, with an optional timeout
 
         foreach ($result as $row) {                       // results and rows implement Iterator, Countable and ArrayAccess
-            printf("The keyspace %s has a table called %s\n", $row['keyspace_name'], $row['columnfamily_name']);
+            printf("The keyspace %s has a table called %s\n", $row['uid'], $row['title']);
         }
 
         return ['a'];
