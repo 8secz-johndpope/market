@@ -24,7 +24,7 @@ class MessageController extends BaseController
     }
     public function messages(Request $request){
         $client = new Client();
-
+        $user = Auth::user();
 
         $g = $client->request('POST', 'https://fire.sumra.net/groups', [
             'form_params' => ['id'=>104]
@@ -37,10 +37,11 @@ class MessageController extends BaseController
             'form_params' => ['rid'=>$g[0]['rid'],"time"=>0]
         ]);
         $r = json_decode($r->getBody(),true);
-        return view('home.messages',['r'=>$r,'g'=>$g,'rid'=>$g[0]['rid']]);
+        return view('home.messages',['r'=>$r,'g'=>$g,'rid'=>$g[0]['rid'],'user'=>$user]);
     }
     public function gmessages(Request $request,$rid){
         $client = new Client();
+        $user = Auth::user();
         $r = $client->request('POST', 'https://fire.sumra.net/groupmessages', [
             'form_params' => ['rid'=>$rid,"time"=>0]
         ]);
@@ -53,7 +54,7 @@ class MessageController extends BaseController
         $r = json_decode($r->getBody(),true);
         $g = json_decode($g->getBody(),true);
         //return $g;
-        return view('home.messages',['r'=>$r,'g'=>$g,'rid'=>$rid]);
+        return view('home.messages',['r'=>$r,'g'=>$g,'rid'=>$rid,'user'=>$user]);
     }
     public function reply(Request $request,$id){
         $user = Auth::user();

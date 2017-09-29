@@ -57,11 +57,18 @@
                         @endforeach
                 </div>
                 <div class="right-div-messages">
-                    <ul class="list-group">
+                    <div class="all-messages">
                         @foreach($r as $message)
-                            <li class="list-group-item">{{$message['message']}}</li>
-                            @endforeach
-                    </ul>
+                            @if($message['from_msg']===$user->id)
+                            <div class="right-message">{{$message['message']}}</div>
+                            @else
+                                <div class="left-message">{{$message['message']}}</div>
+                            @endif
+
+                        @endforeach
+                    </div>
+
+
                     <div class="bottom-div-messages">
                         <form action="/user/message/rsend" method="post">
                             <input type="hidden" name="rid" value="{{$rid}}">
