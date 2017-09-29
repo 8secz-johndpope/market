@@ -63,7 +63,7 @@
                             @endforeach
                     </ul>
                     <div class="bottom-div-messages">
-                        <form class="form-inline">
+                        <form>
                             <div class="message-input-div"><input type="text" class="form-control"  placeholder="Type Your Message here" required></div>
                             <div class="message-send-div"><button type="submit" class="btn btn-primary">Send</button></div>
                         </form>
