@@ -18,10 +18,10 @@
             <p class="bold-text">{{$advert->param('location_name')}}</p>
             <div class="well">
                 <div class="under-heading">
-                    <h4>Reply to the listing</h4>
+                    <h4 class="bold-text">Reply to the listing</h4>
                 </div>
                 <p>Your message to {{$advert->param('username')}}</p>
-                <textarea cols="50" rows="30">
+                <textarea cols="50" rows="5">
 
                 </textarea>
                 <p>Replies will be sent to {{$user->name}} at{{$user->email}}</p>
