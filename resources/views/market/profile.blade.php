@@ -13,6 +13,10 @@
 @section('content')
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
+            <div class="profile-picutre-big">
+                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$user->image}}">
+            </div>
+            <h4>{{$user->name}}</h4>
 @foreach($user->adverts as $advert)
 
                 <div class="product">

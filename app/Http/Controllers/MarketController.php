@@ -1600,7 +1600,7 @@ class MarketController extends BaseController
         return " Hello API Event Received";
     }
     public function userads(Request $request, $id){
-        return view('market.ads',['user'=>User::find($id)]);
+        return view('market.profile',['user'=>User::find($id)]);
     }
     public function searchform(Request $request){
         $loc = $request->slug;
