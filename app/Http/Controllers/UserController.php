@@ -1111,6 +1111,7 @@ class UserController extends BaseController
         $advert->user_id = (int)$body['user_id'];
         $advert->sid = (int)$body['source_id'];
         $advert->save();
+        /*
         $user = User::find($body['user_id']);
         if($user===null){
             $user = new User;
@@ -1118,6 +1119,7 @@ class UserController extends BaseController
             $user->id=(int)$body['user_id'];
             $user->save();
         }
+        */
         $location = $body['location'];
         $parts = explode(',', $location);
         $lat = (float)$parts[0];
