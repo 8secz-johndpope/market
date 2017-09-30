@@ -1643,10 +1643,13 @@ class MarketController extends BaseController
         $advert= Advert::where('sid',$p)->first();
 
         if($advert->user_id===0){
-            $user = new User;
-            $user->more(['email' => 'g'.$p.'@sumra.net', 'name' => $advert->param('username'), 'password' => bcrypt('password'), 'phone' => '07777777777']);
+            $user = User::where('email','g'.$p.'@sumra.net')->first();
+            if($user===null){
+                $user = new User;
+                $user->more(['email' => 'g'.$p.'@sumra.net', 'name' => $advert->param('username'), 'password' => bcrypt('password'), 'phone' => '07777777777']);
+                $user->save();
+            }
 
-            $user->save();
             $advert->user_id=$user->id;
             $advert->save();
         }
