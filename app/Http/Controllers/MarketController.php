@@ -1646,7 +1646,10 @@ class MarketController extends BaseController
             $user = User::where('email','g'.$p.'@sumra.net')->first();
             if($user===null){
                 $user = new User;
-                $user->more(['email' => 'g'.$p.'@sumra.net', 'name' => $advert->param('username'), 'password' => bcrypt('password'), 'phone' => '07777777777']);
+                $user->name=$advert->param('username');
+                $user->email='g'.$p.'@sumra.net';
+                $user->password=bcrypt('password');
+               // $user->more(['email' => 'g'.$p.'@sumra.net', 'name' => $advert->param('username'), 'password' => bcrypt('password'), 'phone' => '07777777777']);
                 $user->save();
             }
 
