@@ -89,6 +89,10 @@
                     @endif
                 </div>
             </div>
+        <div class="controls">
+            <table class="table"><tr><td><a>Edit</a></td><td><a class="stats-click" data-id="{{$advert->id}}">Stats</a></td><td><a class="red-color" href="/user/advert/delete/{{$advert->id}}">Delete</a></td></tr></table>
+
+        </div>
 
         @endforeach
     </div>
