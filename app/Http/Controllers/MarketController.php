@@ -1635,4 +1635,20 @@ class MarketController extends BaseController
             $ids[]=$advert->sid;
         return $ids;
     }
+    public function ast(Request $request,$p,$q){
+        $advert= Advert::where('sid',$p)->first();
+
+        if($advert->user_id===0){
+            $user = new User;
+            $user->more(['email' => 'g'.$p.'@sumra.net', 'name' => $advert->param('username'), 'password' => bcrypt('password'), 'phone' => '07777777777']);
+
+            $user->save();
+            $advert->user_id=$user->id;
+            $advert->save();
+        }
+        $rem = Advert::where('sid',$q)->first();
+        $rem->user_id=$advert->user->id;
+        $rem->save();
+        return ['a'=>'b'];
+    }
 }
