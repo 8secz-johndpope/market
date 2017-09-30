@@ -404,6 +404,7 @@
 <script src="https://sumra.net/js/load.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+<script src="https://sumra.net/js/contract.js"></script>
 
 <script>
     window.axios.defaults.headers.common = {
