@@ -33,6 +33,15 @@ span.red-text {
 .profile-picutre img{
     max-width: 100px;
 }
+.profile-picutre-big img{
+    max-width: 200px;
+    margin: auto;
+    display: block;
+}
+.profile-name-big{
+    font-size: 20px;
+    font-weight: bold;
+}
 .left-message,.right-message {
     padding: 10px;
     min-height: 40px;
