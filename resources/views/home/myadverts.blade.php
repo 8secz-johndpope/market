@@ -66,7 +66,7 @@
                 <div class="info">
 
 
-                    <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->id}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
+                    <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->sid}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
 
                     <span class="listing-location">
                                     {{$advert->param('location_name')}}
