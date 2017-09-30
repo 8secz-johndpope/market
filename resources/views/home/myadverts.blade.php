@@ -45,38 +45,39 @@
             </div>
         </div>
 
-    @foreach($products as $product)
+    @foreach($user->averts as $avert)
             <div class="item listing">
-                <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}">
+                <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->sid}}">
                     <div class="listing-img">
                         <div class="main-img">
-                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
+                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
                             <div class="listing-meta">
                             </div>
                         </div>
                     </div>
                     <div class="items-box-body listing-content">
-                        <h4 class="items-box-name font-2">{{$product['title']}}</h4>
+                        <h4 class="items-box-name font-2">{{$advert->param('title')}}</h4>
                         <div class="listing-location">
                                 <span class="truncate-line">
-                                    {{$product['location_name']}}
+                                    {{$advert->param('location_name')}}
                                 </span>
                         </div>
                         <p class="listing-description">
-                            {{$product['description']}}
+                            {{$advert->param('description')}}
                         </p>
                         <ul class="listing-attributes inline-list">
 
                         </ul>
                         <div class="items-box-num clearfix">
-                            @if($product['meta']['price']>=0)
-                                <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
-                                </div>
+
+                            @if($advert->meta('price')>=0)
+                                <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
+                                </span>
                             @endif
                         </div>
                     </div>
                 </a>
-                <a class="glyphicon glyphicon-trash delete-icon" href="/user/advert/delete/{{$product['source_id']}}"></a>
+                <a class="glyphicon glyphicon-trash delete-icon" href="/user/advert/delete/{{$advert->sid}}"></a>
             </div>
 
         @endforeach

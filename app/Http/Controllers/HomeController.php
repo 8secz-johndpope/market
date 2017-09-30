@@ -314,33 +314,9 @@ class HomeController extends BaseController
         {
             return redirect('/business/manage/ads');
         }
-        $page = $request->page ? $request->page : 1;
 
-        $pagesize = 10;
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => [
-                'from' => ($page - 1) * $pagesize,
-                'size' => $pagesize,
-                'query' => [
-                    'bool' => [
-                        'must' => ['term' => ['user_id' => $user->id]],
-                    ]
-                ],
-                "sort" => [
-                    [
-                        "created_at" => ["order" => "desc"]
-                    ]
-                ]
-            ]
-        ];
-        $response = $this->client->search($params);
-        $products = array_map(function ($a) {
-            return $a['_source'];
-        }, $response['hits']['hits']);
 
-        return view('home.myadverts',['total' => $response['hits']['total'], 'products' => $products]);
+        return view('home.myadverts',['total' => count($user->adverts), 'user' => $user]);
     }
 
     public function suggest(Request $request)
