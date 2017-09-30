@@ -28,6 +28,8 @@ Route::get('/user/ads/post', 'HomeController@post');
 Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'HomeController@myads');
 
+Route::get('/userads/{id}', 'MarketController@userads');
+
 Route::get('/user/manage/messages', 'MessageController@messages');
 Route::get('/user/manage/messages/{rid}', 'MessageController@gmessages');
 
