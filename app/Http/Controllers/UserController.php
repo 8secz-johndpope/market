@@ -1108,7 +1108,7 @@ class UserController extends BaseController
         }
 
         $advert = new Advert;
-
+        $advert->user_id = (int)$body['user_id'];
         $advert->sid = (int)$body['source_id'];
         $advert->save();
         $location = $body['location'];
