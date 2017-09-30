@@ -1629,7 +1629,7 @@ class MarketController extends BaseController
         return ['a'=>'b'];
     }
     public function gads(Request $request){
-        $adverts = Advert::where('user_id',0)->orberBy('id','desc')->limit(100)->get();
+        $adverts = Advert::where('user_id',0)->orderBy('id','desc')->limit(100)->get();
         $ids = [];
         foreach ($adverts as $advert)
             $ids[]=$advert->sid;
