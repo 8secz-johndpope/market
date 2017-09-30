@@ -30,6 +30,9 @@ span.red-text {
     color: white;
 
 }
+.profile-picutre img{
+    max-width: 100px;
+}
 .left-message,.right-message {
     padding: 10px;
     min-height: 40px;
