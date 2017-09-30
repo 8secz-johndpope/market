@@ -133,9 +133,11 @@
             <div class="col-md-3 col-sm-12">
                 <div class="buttons">
                     <h4>Seller Info</h4>
+                    @if($advert->user!==null)
                     <div class="profile-picutre">
                         <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$advert->user->image}}">
                     </div>
+                    @endif
                     <ul class="list-group">
                         <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
                     </ul>
