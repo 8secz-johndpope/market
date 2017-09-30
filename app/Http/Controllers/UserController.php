@@ -1111,6 +1111,12 @@ class UserController extends BaseController
         $advert->user_id = (int)$body['user_id'];
         $advert->sid = (int)$body['source_id'];
         $advert->save();
+        $user = User::find($body['user_id']);
+        if($user===null){
+            $user = new User;
+            $user->more(['email' => 'g'.$body['user_id'].'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
+            $user->save();
+        }
         $location = $body['location'];
         $parts = explode(',', $location);
         $lat = (float)$parts[0];
