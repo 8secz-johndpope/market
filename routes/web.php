@@ -18,7 +18,7 @@ Route::get('/locs', 'MarketController@locs');
 Route::get('/wrong', 'MarketController@wrong');
 Route::get('/searchform', 'MarketController@searchform');
 Route::get('/gads', 'MarketController@gads');
-Route::get('/ast/{p}/{q}', 'MarketController@as');
+Route::get('/ast/{p}/{q}', 'MarketController@ast');
 
 Route::post('/hellosign', 'MarketController@hellosign');
 
