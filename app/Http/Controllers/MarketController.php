@@ -448,6 +448,9 @@ class MarketController extends BaseController
                     ]
                 ]
             ];
+            $advert = Advert::where('sid',(int)$product['source_id'])->first();
+            $advert->user_id=(int)$product['user_id'];
+            $advert->save();
 
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
