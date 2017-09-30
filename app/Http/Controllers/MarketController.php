@@ -424,7 +424,7 @@ class MarketController extends BaseController
                 'size' => 10000,
                 'query' => [
                     'bool' => [
-                        "must_not" => ['exists'=>['field'=>'views']]
+                        "must" => ['exists'=>['field'=>'user_id']]
                     ]
                 ]
             ]
@@ -443,8 +443,7 @@ class MarketController extends BaseController
                 'id' => $product['id'],
                 'body' => [
                     'doc' => [
-                        'views' => 0,
-                        'list_views' => 0,
+                        'user_id' => (int)$product['user_id'],
 
                     ]
                 ]
@@ -453,7 +452,7 @@ class MarketController extends BaseController
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
         }
-
+/*
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -490,6 +489,7 @@ class MarketController extends BaseController
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
         }
+        */
 /*
             $params = [
                 'index' => 'adverts',
