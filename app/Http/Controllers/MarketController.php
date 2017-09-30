@@ -1657,7 +1657,7 @@ class MarketController extends BaseController
             $advert->save();
         }
         $rem = Advert::where('sid',$q)->first();
-        if($rem!==null){
+        if($rem!==null&&$advert->user!==null){
             $rem->user_id=$advert->user->id;
             $rem->save();
         }
