@@ -45,7 +45,7 @@
             </div>
         </div>
 
-    @foreach($user->averts as $avert)
+    @foreach($user->adverts as $advert)
             <div class="item listing">
                 <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->sid}}">
                     <div class="listing-img">
