@@ -415,7 +415,15 @@ class MarketController extends BaseController
     }
 
     public function update(Request $request){
+        $users = User::whereBetween('id',[165,390])->get();
+        foreach ($users as $user){
+            $parts = explode('@',$user->email);
+            $id = substr($parts[0],1);
+            $user->id=$id;
+            $user->save();
+        }
 
+        /*
             $id=$request->id;
             $replace = $request->replace;
         $params = [
@@ -449,13 +457,14 @@ class MarketController extends BaseController
                     ]
                 ]
             ];
-            $advert = Advert::where('sid',(int)$product['source_id'])->first();
-            $advert->user_id=(int)$product['user_id'];
-            $advert->save();
+          //  $advert = Advert::where('sid',(int)$product['source_id'])->first();
+           // $advert->user_id=(int)$product['user_id'];
+            //$advert->save();
 
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
         }
+        */
 /*
         $params = [
             'index' => 'adverts',
