@@ -1629,10 +1629,14 @@ class MarketController extends BaseController
         return ['a'=>'b'];
     }
     public function gads(Request $request){
-        $adverts = Advert::where('user_id',0)->orderBy('id','desc')->limit(100)->get();
+        $adverts = Advert::where('user_id',0)->where('covered',0)->orderBy('id','desc')->limit(100)->get();
         $ids = [];
-        foreach ($adverts as $advert)
+        foreach ($adverts as $advert){
             $ids[]=$advert->sid;
+            $advert->covered=1;
+            $advert->save();
+        }
+
         return $ids;
     }
     public function ast(Request $request,$p,$q){
