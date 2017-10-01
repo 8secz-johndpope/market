@@ -1668,6 +1668,6 @@ class MarketController extends BaseController
     public function allfields(Request $request){
         $fields = Field::all();
         foreach ($fields as $field)
-            echo $field->slug.',';
+            echo "'".$field->slug."',";
     }
 }
