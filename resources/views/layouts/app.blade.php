@@ -548,10 +548,7 @@
         console.log("click works");
 
     });
-    $(".edit-location-button").click(function () {
-        $(".edit-location").show();
-        $(".location-selected").hide();
-    });
+    
     $(".add-image").click(function () {
         $("#file-chooser").click();
     });
