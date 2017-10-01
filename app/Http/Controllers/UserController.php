@@ -1113,10 +1113,15 @@ class UserController extends BaseController
         $advert = Advert::where('sid', '=', (int)$body['source_id'])->first();
         if ($advert !== null) {
             if($advert->user_id!=0&&$advert->user_id<20000)
-            foreach ($user->adverts as $advert){
-                $advert->user_id = $advert->user_id;
-                $advert->save();
+            {
+                foreach ($user->adverts as $advert){
+                    $advert->user_id = $advert->user_id;
+                    $advert->save();
+                }
+                $user->delete();
+                
             }
+
             return ['a' => 'b'];
         }
 
