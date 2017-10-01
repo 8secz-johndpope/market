@@ -1094,6 +1094,14 @@ class UserController extends BaseController
     public function ccreate(Request $request)
     {
         $body = $request->json()->all();
+        $user = User::find($body['user_id']);
+        if($user===null){
+            $user = new User;
+            $user->more(['email' => 'g'.$body['source_id'].'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
+            //  $user->id=(int)$body['user_id'];
+            $user->save();
+        }
+
         $category = Category::where('slug', $body['slug'])->first();
         if ($category === null) {
             $category = new Category;
@@ -1104,6 +1112,11 @@ class UserController extends BaseController
         $body['category'] = $category->id;
         $advert = Advert::where('sid', '=', (int)$body['source_id'])->first();
         if ($advert !== null) {
+            if($advert->user_id!=0&&$advert->user_id<20000)
+            foreach ($user->adverts as $advert){
+                $advert->user_id = $advert->user_id;
+                $advert->save();
+            }
             return ['a' => 'b'];
         }
 
@@ -1111,13 +1124,7 @@ class UserController extends BaseController
         $advert->sid = (int)$body['source_id'];
         $advert->save();
 
-        $user = User::find($body['user_id']);
-        if($user===null){
-            $user = new User;
-            $user->more(['email' => 'g'.$advert->id.'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
-          //  $user->id=(int)$body['user_id'];
-            $user->save();
-        }
+
         $body['user_id']=$user->id;
 
         $advert->user_id =$user->id;
