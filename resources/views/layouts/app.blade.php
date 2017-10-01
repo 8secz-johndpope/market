@@ -404,7 +404,6 @@
 <script src="https://sumra.net/js/load.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-<script src="https://sumra.net/js/contract.js"></script>
 
 <script>
     window.axios.defaults.headers.common = {
@@ -548,7 +547,10 @@
         console.log("click works");
 
     });
-    
+    $(".edit-location-button").click(function () {
+        $(".edit-location").show();
+        $(".location-selected").hide();
+    });
     $(".add-image").click(function () {
         $("#file-chooser").click();
     });
