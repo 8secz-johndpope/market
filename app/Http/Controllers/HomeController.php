@@ -165,7 +165,7 @@ class HomeController extends BaseController
         $body['title']=$request->title;
         $body['description']=$request->description;
         $body['location_name']=$location->title;
-        $body['location_id']=$location->id;
+        $body['location_id']=$location->res;
 
             $body['location']=$postcode->lat.','.$postcode->lng;
         $body['views']=0;
