@@ -1108,7 +1108,6 @@ class UserController extends BaseController
         }
 
         $advert = new Advert;
-        $advert->user_id = (int)$body['user_id'];
         $advert->sid = (int)$body['source_id'];
         $advert->save();
 
@@ -1120,6 +1119,9 @@ class UserController extends BaseController
             $user->save();
         }
         $body['user_id']=$user->id;
+
+        $advert->user_id =$user->id;
+        $advert->save();
         $location = $body['location'];
         $parts = explode(',', $location);
         $lat = (float)$parts[0];
