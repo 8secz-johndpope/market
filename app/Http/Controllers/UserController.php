@@ -1118,8 +1118,8 @@ class UserController extends BaseController
                     $advert->user_id = $advert->user_id;
                     $advert->save();
                 }
-                $user->delete();
-                
+                //$user->delete();
+
             }
 
             return ['a' => 'b'];
