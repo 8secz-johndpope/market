@@ -248,10 +248,18 @@ class HomeController extends BaseController
         $order_id  = $request->session()->get('order_id');
 
         $stripe_id = $user->stripe_id;
-        $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
-            'limit' => 10, 'object' => 'card'));
         $customer = \Stripe\Customer::retrieve($stripe_id);
-        $card = $customer->sources->retrieve($customer->default_source);
+
+        try{
+            $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+                'limit' => 10, 'object' => 'card'));
+            $card = $customer->sources->retrieve($customer->default_source);
+
+        }catch (\Exception $exception){
+            $cards = [];
+            $card=null;
+        }
+
         $gateway = new \Braintree\Gateway(array(
             'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
         ));
