@@ -409,6 +409,19 @@
     window.axios.defaults.headers.common = {
         'X-Requested-With': 'XMLHttpRequest',
     };
+
+    $(".stats-click").click(function () {
+        var id = $(this).data('id');
+        axios.get('/user/p/stats/'+id,{ params:{}})
+            .then(function (response) {
+                console.log(response);
+                $("#modal-content").html(response.data);
+                $("#myModal").modal('show');
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    });
     $('#autocomplete').autocomplete({
         paramName :'q',
         serviceUrl: '/api/suggest',
