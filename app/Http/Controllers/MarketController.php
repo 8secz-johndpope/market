@@ -1665,4 +1665,9 @@ class MarketController extends BaseController
 
         return ['a'=>'b'];
     }
+    public function allfieds(Request $request){
+        $fields = Field::all();
+        foreach ($fields as $field)
+            echo $field->slug.',';
+    }
 }
