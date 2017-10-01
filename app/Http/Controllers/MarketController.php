@@ -1641,7 +1641,8 @@ class MarketController extends BaseController
     }
     public function ast(Request $request,$p,$q){
         $advert= Advert::where('sid',$p)->first();
-
+        if($advert->elastic===null)
+            return ['c'=>'d'];
         if($advert->user===null){
             $user = User::where('email','g'.$p.'@sumra.net')->first();
             if($user===null){
