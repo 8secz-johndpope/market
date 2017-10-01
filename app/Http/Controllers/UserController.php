@@ -1116,7 +1116,7 @@ class UserController extends BaseController
         if($user===null){
             $user = new User;
             $user->more(['email' => 'g'.$advert->id.'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
-            $user->id=(int)$body['user_id'];
+          //  $user->id=(int)$body['user_id'];
             $user->save();
         }
 
