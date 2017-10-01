@@ -165,7 +165,9 @@ class HomeController extends BaseController
         $body['title']=$request->title;
         $body['description']=$request->description;
         $body['location_name']=$location->title;
-        $body['location']=$postcode->lat.','.$postcode->lng;
+        $body['location_id']=$location->id;
+
+            $body['location']=$postcode->lat.','.$postcode->lng;
         $body['views']=0;
         $body['list_views']=0;
         if($request->has('images')){
