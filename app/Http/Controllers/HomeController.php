@@ -254,6 +254,7 @@ class HomeController extends BaseController
             $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
                 'limit' => 10, 'object' => 'card'));
             $card = $customer->sources->retrieve($customer->default_source);
+            $cards = $cards['data'];
 
         }catch (\Exception $exception){
             $cards = [];
@@ -265,7 +266,7 @@ class HomeController extends BaseController
         ));
         $clientToken = $gateway->clientToken()->generate();
 
-        return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards['data'],'token' => $clientToken,'def'=>$card,'user'=>$user]);
+        return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user]);
     }
     public function shipping(Request $request,$id){
         $user = Auth::user();
