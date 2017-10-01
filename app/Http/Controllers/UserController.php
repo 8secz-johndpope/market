@@ -1097,7 +1097,11 @@ class UserController extends BaseController
         $user = User::find($body['user_id']);
         if($user===null){
             $user = new User;
-            $user->more(['email' => 'g'.$body['source_id'].'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
+            $user->email='g'.$body['source_id'].'@sumra.net';
+            $user->name=$body['username'];
+            $user->password= bcrypt('password');
+            $user->phone='07777777777';
+           // $user->more(['email' => 'g'.$body['source_id'].'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
             //  $user->id=(int)$body['user_id'];
             $user->save();
         }
