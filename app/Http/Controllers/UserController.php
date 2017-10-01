@@ -1119,7 +1119,7 @@ class UserController extends BaseController
           //  $user->id=(int)$body['user_id'];
             $user->save();
         }
-
+        $body['user_id']=$user->id;
         $location = $body['location'];
         $parts = explode(',', $location);
         $lat = (float)$parts[0];
