@@ -22,6 +22,12 @@ span.red-text {
 .well{
     background: white;
 }
+.gray-color {
+    color: gray;
+}
+.detail-text {
+    margin-bottom: 20px;
+}
 .media.selected-room {
     background: #eee;
 }

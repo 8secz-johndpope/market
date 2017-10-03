@@ -37,7 +37,7 @@
             </ul>
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <h4 class="bold-text">{{$user->name}}</h4>
+                    <h2 class="bold-text">{{$user->name}}</h2>
                     <div class="row">
                         <div class="col-sm-4">
                         <div class="gray-color">
@@ -59,6 +59,8 @@
                         <a><span class="glyphicon glyphicon-edit"></span>Edit </a>
                         </div>
                     </div>
+                    <h2 class="bold-text">Contact Details</h2>
+
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="gray-color">
