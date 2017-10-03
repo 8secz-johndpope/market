@@ -35,7 +35,60 @@
                     <a class="nav-link" href="/business/manage/support">Support</a>
                 </li>
             </ul>
-            <h4 class="bold-text">{{$user->name}}</h4>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h4 class="bold-text">{{$user->name}}</h4>
+                    <div class="row">
+                        <div class="col-sm-4">
+                        <div class="gray-color">
+                          <strong>Login email:</strong>
+                        </div>
+                            <div class="detail-text">
+                                {{$user->email}}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="gray-color">
+                                <strong>Password:</strong>
+                            </div>
+                            <div class="detail-text">
+                                <p>*************</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                        <a><span class="glyphicon glyphicon-edit"></span>Edit </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="gray-color">
+                                <strong>Contact number:</strong>
+                            </div>
+                            <div class="detail-text">
+                                {{$user->phone}}
+                            </div>
+                            <div class="gray-color">
+                                <strong>Display name:</strong>
+                            </div>
+                            <div class="detail-text">
+                                {{$user->display_name}}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="gray-color">
+                                <strong>Primary Email:</strong>
+                            </div>
+                            <div class="detail-text">
+                                {{$user->email}}
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <a><span class="glyphicon glyphicon-edit"></span>Edit </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
     </div>
