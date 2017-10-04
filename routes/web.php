@@ -53,6 +53,7 @@ Route::get('/business/manage/finance', 'BusinessController@finance');
 Route::get('/business/manage/details', 'BusinessController@details');
 Route::get('/business/manage/company', 'BusinessController@company');
 Route::get('/business/manage/metrics', 'BusinessController@metrics');
+Route::get('/business/manage/support', 'BusinessController@support');
 
 Route::post('/business/manage/bump', 'BusinessController@bump');
 
