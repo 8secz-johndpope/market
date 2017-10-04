@@ -92,6 +92,11 @@ class BusinessController extends BaseController
         return view('business.company',['user'=>$user]);
 
     }
+    public function metrics(Request $request){
+        $user = Auth::user();
+        return view('business.metrics',['user'=>$user]);
+
+    }
     public function invoice(Request $request,$id){
         $payment=Payment::find($id);
         if($payment->status!=='pending'){
