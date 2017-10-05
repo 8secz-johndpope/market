@@ -5,6 +5,7 @@ namespace App;
 use App\Mail\AccountCreated;
 use App\Model\Address;
 use App\Model\EmailCode;
+use App\Model\Order;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
@@ -90,6 +91,14 @@ class User extends Authenticatable
     public function covers()
     {
         return $this->hasMany('App\Model\Cover');
+    }
+    public function bumps()
+    {
+        $orders = Order::where('buyer_id',$this->id)->where('type','bump')->get();
+        $items = array();
+        foreach ($orders as $order)
+            $items[]=$order->items;
+        return $items;
     }
     public function orders(){
         return $this->hasMany('App\Model\Order','seller_id');
