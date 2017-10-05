@@ -67,6 +67,14 @@
                                       Current Account Status
                                    </p>
                                    <span class="active-strip">Active</span>
+                                   <p class="bold-text">
+                                       Current Package Status
+                                   </p>
+                                   <span class="active-strip">Live</span>
+                                   <p class="bold-text">
+                                      Posting us with since
+                                   </p>
+                                   <p>{{date('Y',strtotime($user->created_at))}}</p>
                                </div>
                                <div class="col-sm-3">
 
