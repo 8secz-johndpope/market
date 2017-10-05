@@ -36,7 +36,24 @@
                 </li>
             </ul>
 
+            <div class="row">
+                <div class="cols-sm-12">
+                    <ul class="nav nav-tabs">
 
+                        <li class="nav-item active">
+                            <a class="nav-link " href="#">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=#">Package Summary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Package Usage</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
         </div>
     </div>
 
