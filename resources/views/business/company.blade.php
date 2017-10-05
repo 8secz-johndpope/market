@@ -57,8 +57,11 @@
                             <p>Some content.</p>
                         </div>
                         <div id="package_summary" class="tab-pane fade">
-                            <h3>Menu 1</h3>
-                            <p>Some content in menu 1.</p>
+                            <table class="table">
+                           @foreach($user->packs as $pack)
+                               <tr><td>{{$pack->type->stitle}} in {{$pack->category->title}},{{$pack->location->title}}</td></tr>
+                               @endforeach
+                            </table>
                         </div>
                         <div id="package_usage" class="tab-pane fade">
                             <h3>Menu 2</h3>

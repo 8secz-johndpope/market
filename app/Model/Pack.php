@@ -78,4 +78,13 @@ class Pack extends Model
        return $pack;
 
     }
+    public function category(){
+        return $this->belongsTo('App\Model\Category');
+    }
+    public function location(){
+        return $this->belongsTo('App\Model\Location');
+    }
+    public function type(){
+        return $this->belongsTo('App\Model\ExtraPrice')->where('key',$this->type);
+    }
 }
