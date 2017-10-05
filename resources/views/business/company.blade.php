@@ -153,6 +153,7 @@
                                             </div>
                                             <h4>All company contacts</h4>
                                             <table class="table">
+                                                <tr><th>Name</th><th>Email</th><th>Type</th><th></th></tr>
                                                 <tr><td>{{$user->name}}</td><td>{{$user->email}}</td><td>Account/Finance</td><td><span class="glyphicon glyphicon-info-sign"></span> </td></tr>
                                             </table>
                                         </div>
