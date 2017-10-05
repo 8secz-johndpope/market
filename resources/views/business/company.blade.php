@@ -77,7 +77,12 @@
                                    <p>{{date('Y',strtotime($user->created_at))}}</p>
                                </div>
                                <div class="col-sm-3">
-
+                                   <p class="bold-text">
+                                       Company Address
+                                   </p>
+                                   <p>{{$user->business->address->line1}}</p>
+                                   <p>{{$user->business->address->city}}</p>
+                                   <p>{{$user->business->address->postcode}}</p>
                                </div>
                                <div class="col-sm-3">
 
