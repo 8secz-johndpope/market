@@ -27,6 +27,7 @@ span.active-strip {
     padding: 5px;
     color: white;
     border-radius: 3px;
+    margin-bottom: 10px;
 }
 .gray-color {
     color: gray;
