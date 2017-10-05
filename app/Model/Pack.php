@@ -85,6 +85,6 @@ class Pack extends Model
         return $this->belongsTo('App\Model\Location');
     }
     public function type(){
-        return $this->belongsTo('App\Model\ExtraPrice')->where('key',$this->type);
+        return ExtraPrice::where('key',$this->type)->first();
     }
 }

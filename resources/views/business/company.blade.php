@@ -59,7 +59,7 @@
                         <div id="package_summary" class="tab-pane fade">
                             <table class="table">
                            @foreach($user->packs as $pack)
-                               <tr><td>{{$pack->type->stitle}} in {{$pack->category->title}},{{$pack->location->title}}</td></tr>
+                               <tr><td>{{$pack->type()->stitle}} in {{$pack->category->title}},{{$pack->location->title}}</td></tr>
                                @endforeach
                             </table>
                         </div>
