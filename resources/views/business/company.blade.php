@@ -83,6 +83,14 @@
                                    <p>{{$user->business->address->line1}}</p>
                                    <p>{{$user->business->address->city}}</p>
                                    <p>{{$user->business->address->postcode}}</p>
+                                   <p class="bold-text">
+                                       Company Registration Number
+                                   </p>
+                                   <p>{{$user->business->company}}</p>
+                                   <p class="bold-text">
+                                       Company VAT Number
+                                   </p>
+                                   <p>{{$user->business->vat}}</p>
                                </div>
                                <div class="col-sm-3">
 
