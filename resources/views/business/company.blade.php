@@ -70,33 +70,7 @@
                                    </p>
                                    <h4>£{{$user->contract->monthly_payment()}}</h4>
                                    <a href="/business/manage/finance">Pay Now</a>
-                                   <div class="well">
-                                       <div class="row">
-                                           <div class="col-sm-6">
-                                               <h4>Your primary contact</h4>
-                                               <div class="row">
-                                                   <div class="col-sm-4">
-                                                       <div class="profile-picture">
-                                                           <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$user->image}}">
-                                                       </div>
 
-                                                   </div>
-                                                   <div class="col-sm-8">
-                                                       <p>{{$user->name}}</p>
-                                                       <p>{{$user->phone}}</p>
-                                                       <p><a href="mailto:{{$user->email}}">{{$user->email}}</a> </p>
-                                                       <span class="active-strip">Active</span>
-
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="col-sm-6">
-
-                                           </div>
-                                       </div>
-
-
-                                   </div>
 
                                </div>
                                <div class="col-sm-3">
@@ -133,6 +107,33 @@
 
                                </div>
                            </div>
+                                <div class="well">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h4>Your primary contact</h4>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="profile-picture">
+                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$user->image}}">
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <p>{{$user->name}}</p>
+                                                    <p>{{$user->phone}}</p>
+                                                    <p><a href="mailto:{{$user->email}}">{{$user->email}}</a> </p>
+                                                    <span class="active-strip">Active</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
                             </div>
                         </div>
                         <div id="package_summary" class="tab-pane fade">
