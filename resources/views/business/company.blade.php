@@ -151,6 +151,10 @@
                                             </div>
                                         </div>
                                             </div>
+                                            <h4>All company contacts</h4>
+                                            <table class="table">
+                                                <tr><td>{{$user->name}}</td><td>{{$user->email}}</td><td>Account/Finance</td><td><span class="glyphicon glyphicon-info-sign"></span> </td></tr>
+                                            </table>
                                         </div>
                                     </div>
 
