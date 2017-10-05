@@ -40,13 +40,13 @@
                 <div class="cols-sm-12">
                     <ul class="nav nav-tabs">
 
-                        <li class="nav-item active">
+                        <li class="active">
                             <a  data-toggle="tab" href="#overview">Overview</a>
                         </li>
-                        <li class="nav-item">
+                        <li>
                             <a data-toggle="tab" href=#package_summary">Package Summary</a>
                         </li>
-                        <li class="nav-item">
+                        <li>
                             <a  data-toggle="tab" href="#package_usage">Package Usage</a>
                         </li>
 
