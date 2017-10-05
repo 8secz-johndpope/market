@@ -60,6 +60,14 @@
                                       Company Name
                                    </p>
                                    <h4>{{$user->business->name}}</h4>
+                                   <p class="bold-text">
+                                       Account Number
+                                   </p>
+                                   <h4>{{$user->business->id}}</h4>
+                                   <p class="bold-text">
+                                       Oustanding Balance
+                                   </p>
+                                   <h4>£{{$user->contract->monthly_payment()}}</h4>
 
                                </div>
                                <div class="col-sm-3">
