@@ -53,6 +53,7 @@
                     </ul>
                     <div class="tab-content">
                         <div id="overview" class="tab-pane fade in active">
+                            <div class="well">
                             <h4>Company Profile</h4>
                            <div class="row">
                                <div class="col-sm-3">
@@ -104,6 +105,7 @@
 
                                </div>
                            </div>
+                            </div>
                         </div>
                         <div id="package_summary" class="tab-pane fade">
                             <table class="table">
