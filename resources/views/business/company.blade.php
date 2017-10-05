@@ -109,6 +109,11 @@
                            </div>
                                 <div class="well">
                                     <div class="row">
+                                        <div class="col-sm-4">
+
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="row">
                                         <div class="col-sm-6">
                                             <h4>Your primary contact</h4>
                                             <div class="row">
@@ -129,6 +134,8 @@
                                         </div>
                                         <div class="col-sm-6">
 
+                                        </div>
+                                            </div>
                                         </div>
                                     </div>
 
