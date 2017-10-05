@@ -100,7 +100,7 @@ class User extends Authenticatable
         {
             foreach ($order->items as $item)
                 $items[]=$item;
-        }  
+        }
         return $items;
     }
     public function orders(){

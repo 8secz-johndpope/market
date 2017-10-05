@@ -67,8 +67,8 @@
                         <div id="package_usage" class="tab-pane fade">
                             <table class="table">
                                 @foreach($user->bumps() as $bump)
-                                    <td>{{date('d/m/y',strtotime($bump->advert->created_at))}}</td><td>{{$bump->advert->id}}</td><td>{{$bump->advert->param('title')}}</td><td>{{$bump->type->stitle}} in {{$bump->category->title}},{{$bump->location->title}}</td>
-                                    @endforeach
+                                    <tr><td>{{date('d/m/y',strtotime($bump->advert->created_at))}}</td><td>{{$bump->advert->id}}</td><td>{{$bump->advert->param('title')}}</td><td>{{$bump->type->stitle}} in {{$bump->category->title}},{{$bump->location->title}}</td>
+                                    </tr>@endforeach
                             </table>
                         </div>
                     </div>
