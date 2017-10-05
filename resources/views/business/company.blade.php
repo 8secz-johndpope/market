@@ -41,13 +41,13 @@
                     <ul class="nav nav-tabs">
 
                         <li class="nav-item active">
-                            <a class="nav-link " data-toggle="tab" href="#overview">Overview</a>
+                            <a  data-toggle="tab" href="#overview">Overview</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href=#package_summary">Package Summary</a>
+                            <a data-toggle="tab" href=#package_summary">Package Summary</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#package_usage">Package Usage</a>
+                            <a  data-toggle="tab" href="#package_usage">Package Usage</a>
                         </li>
 
                     </ul>
