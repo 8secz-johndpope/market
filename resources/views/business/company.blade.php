@@ -40,14 +40,14 @@
                 <div class="cols-sm-12">
                     <ul class="nav nav-tabs">
 
-                        <li class="active">
-                            <a  data-toggle="tab" href="#overview">Overview</a>
+                        <li class="nav-item active">
+                            <a class="nav-link " data-toggle="tab" href="#overview">Overview</a>
                         </li>
-                        <li>
-                            <a data-toggle="tab" href=#package_summary">Package Summary</a>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#package_summary">Package Summary</a>
                         </li>
-                        <li>
-                            <a  data-toggle="tab" href="#package_usage">Package Usage</a>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#package_usage">Package Usage</a>
                         </li>
 
                     </ul>
