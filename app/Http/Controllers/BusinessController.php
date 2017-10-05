@@ -158,4 +158,11 @@ class BusinessController extends BaseController
 
         return redirect('/user/manage/order');
     }
+    public function __construct()
+    {
+
+        $this->middleware('auth');
+        parent::__construct();
+    }
+
 }
