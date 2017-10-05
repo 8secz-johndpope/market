@@ -53,8 +53,28 @@
                     </ul>
                     <div class="tab-content">
                         <div id="overview" class="tab-pane fade in active">
-                            <h3>HOME</h3>
-                            <p>Some content.</p>
+                            <h4>Company Profile</h4>
+                           <div class="row">
+                               <div class="col-sm-3">
+                                   <p class="bold-text">
+                                      Company Name
+                                   </p>
+                                   <h4>{{$user->business->name}}</h4>
+
+                               </div>
+                               <div class="col-sm-3">
+                                   <p class="bold-text">
+                                      Current Account Status
+                                   </p>
+                                   <span class="active-strip">Active</span>
+                               </div>
+                               <div class="col-sm-3">
+
+                               </div>
+                               <div class="col-sm-3">
+
+                               </div>
+                           </div>
                         </div>
                         <div id="package_summary" class="tab-pane fade">
                             <table class="table">
