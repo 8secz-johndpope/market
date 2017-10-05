@@ -58,6 +58,7 @@
                         </div>
                         <div id="package_summary" class="tab-pane fade">
                             <table class="table">
+                                <tr><th>Product</th><th>Total</th><th>Used</th><th>Remaining</th></tr>
                            @foreach($user->packs as $pack)
                                <tr><td>{{$pack->type()->stitle}} in {{$pack->category->title}},{{$pack->location->title}}</td><td>{{$pack->total}}</td><td>{{$pack->total-$pack->remaining}}</td><td><span class="red-text">{{$pack->remaining}}</span> </td></tr>
                                @endforeach
