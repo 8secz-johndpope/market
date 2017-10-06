@@ -79,10 +79,10 @@ class UserController extends BaseController
         $advert=Advert::find($request->id);
         $order= new Order;
         $order->amount = 70;
-
+        $order->type='bump';
         $order->advert_id=$request->id;
         $order->save();
-        
+
         $extratypes=ExtraType::all();
         foreach ($extratypes as $type){
             if($request->has($type->slug)&&$request->get($type->slug)==1){
