@@ -25,7 +25,7 @@ Route::get('/error','MarketController@error');
 
 Route::get('/advert/category/fields/{any}','MarketController@fields');
 
-Route::post('/user/order/create', 'UserController@corder');
+Route::get('/user/order/create', 'UserController@corder');
 
 Route::post('/user/login', 'UserController@login');
 Route::middleware('auth:api')->get('/user/adverts', 'UserController@adverts');
