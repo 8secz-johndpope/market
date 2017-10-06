@@ -61,7 +61,25 @@ class UserController extends BaseController
             ->whereIn('phone', $numbers)->get();
         return $users;
     }
-    public function login(Request $request)
+    public function userads(Request $request, $id)
+    {
+        $ad = Advert::where('sid',$id)->first();
+        if($ad->user_id===0)
+            return [];
+        $user = User::find($ad->user_id);
+        $adverts = [];
+        foreach ($user->adverts as $advert){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic
+            ];
+            $response = $this->client->get($params);
+            $adverts[]=$response['_source'];
+        }
+        return $adverts;
+    }
+        public function login(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
