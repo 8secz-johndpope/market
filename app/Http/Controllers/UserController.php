@@ -12,6 +12,7 @@ use App\Mail\AccountCreated;
 use App\Mail\OrderShipped;
 use App\Model\Address;
 use App\Model\Advert;
+use App\Model\ExtraPrice;
 use App\Model\Location;
 
 use App\Model\Application;
@@ -79,7 +80,7 @@ class UserController extends BaseController
 
         $order->advert_id=$request->id;
         $order->save();
-
+        
         $extratypes=ExtraType::all();
         foreach ($extratypes as $type){
             if($request->has($type->slug)&&$request->get($type->slug)==1){
