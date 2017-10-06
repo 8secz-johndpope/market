@@ -65,7 +65,16 @@ class UserController extends BaseController
     {
         $ad = Advert::where('sid',$id)->first();
         if($ad->user_id===0)
-            return [];
+        {
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $ad->elastic
+            ];
+            $response = $this->client->get($params);
+            return [$response['_source']];
+        }
+
         $user = User::find($ad->user_id);
         $adverts = [];
         foreach ($user->adverts()->paginate(15) as $advert){
