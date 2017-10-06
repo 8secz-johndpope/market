@@ -115,7 +115,7 @@ class UserController extends BaseController
             return ['result' => ['msg' => 'Not a valid transaction id']];
         }
 
-        if ($transaction->amount !== $order->amount()*100) {
+        if ($transaction->amount < $order->amount()*100) {
             return ['msg' => 'Wrong transaction amount'];
         }
         foreach ($order->items as $item) {
