@@ -197,6 +197,7 @@ class HomeController extends BaseController
             $order= new Order;
             $order->amount = 70;
             $order->type = 'bump';
+            $order->buyer_id = $user->id;
             $order->advert_id=$advert->id;
             $order->save();
 
