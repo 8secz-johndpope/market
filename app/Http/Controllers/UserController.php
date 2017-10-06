@@ -72,6 +72,39 @@ class UserController extends BaseController
             return ['msg'=>'yes','val'=>$a->postcode,'id'=>$a->location->id];
         }
     }
+    public function corder(Request $request){
+        $advert=Advert::find($request->id);
+        $order= new Order;
+        $order->amount = 70;
+
+        $order->advert_id=$request->id;
+        $order->save();
+
+        $extratypes=ExtraType::all();
+        foreach ($extratypes as $type){
+            if($request->has($type->slug)&&$request->get($type->slug)==1){
+                $key = $type->slug;
+                if($type->type==='list'){
+                    $key = $request->get($type->key);
+                }
+                $extraprice = ExtraPrice::where('key',$key)->first();
+                $orderitem = new OrderItem;
+                $orderitem->title = 'Featured';
+                $orderitem->slug = 'featured';
+                $orderitem->advert_id=$advert->id;
+                $orderitem->category_id = $advert->param('category');
+                $orderitem->location_id = $advert->location()->id;
+                $orderitem->type_id = $extraprice->id;
+                $orderitem->amount = 0;
+                $orderitem->save();
+                $order->items()->save($orderitem);
+
+
+            }
+
+        }
+        return ['id'=>$order->id];
+    }
     public function userads(Request $request, $id)
     {
         $ad = Advert::where('sid',$id)->first();
@@ -816,7 +849,7 @@ class UserController extends BaseController
             $user->save();
         }
 
-        return ['body' => $body, 'response' => $response];
+        return ['body' => $body, 'response' => $response,'id'=>$advert->id];
     }
 
     public function order(Request $request)
