@@ -27,6 +27,7 @@ use App\Model\Interest;
 use App\Model\Offer;
 use App\Model\Order;
 
+use App\Model\OrderItem;
 use App\Model\Payment;
 use App\Model\Phone;
 use App\Model\Postcode;
