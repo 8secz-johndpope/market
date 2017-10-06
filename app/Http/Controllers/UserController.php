@@ -106,7 +106,7 @@ class UserController extends BaseController
             }
 
         }
-        return ['id'=>$order->id];
+        return ['id'=>$order->id,'total'=>$order->amount()];
     }
     public function userads(Request $request, $id)
     {
