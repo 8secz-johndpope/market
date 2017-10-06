@@ -27,7 +27,7 @@ class MessageController extends BaseController
         $user = Auth::user();
 
         $g = $client->request('POST', 'https://fire.sumra.net/groups', [
-            'form_params' => ['id'=>104]
+            'form_params' => ['id'=>$user->id]
         ]);
         ///var_dump($g);
         //exit;
