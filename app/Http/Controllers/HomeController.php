@@ -148,7 +148,7 @@ class HomeController extends BaseController
         $user= Auth::user();
         $category=Category::find($request->category);
         $location=Location::find($request->location_id);
-        $postcode = Postcode::where('postcode',$request->postcode)->first();
+        $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$request->postcode)))->first();
             $fields = $category->fields;
 
         $body['category'] = $category->id;
