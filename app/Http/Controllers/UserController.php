@@ -118,6 +118,8 @@ class UserController extends BaseController
         if ($transaction->amount < $order->amount()*100) {
             return ['msg' => 'Wrong transaction amount'];
         }
+        $transaction->used=1;
+        $transaction->save();
         foreach ($order->items as $item) {
             $advert = Advert::find($item->advert_id);
             $milliseconds = round(microtime(true) * 1000);
