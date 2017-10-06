@@ -68,7 +68,7 @@ class UserController extends BaseController
             return [];
         $user = User::find($ad->user_id);
         $adverts = [];
-        foreach ($user->adverts as $advert){
+        foreach ($user->adverts()->paginate(15) as $advert){
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
