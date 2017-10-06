@@ -17,7 +17,7 @@ Route::get('/advert/categories','MarketController@categories');
 Route::get('/advert/locations','MarketController@locations');
 
 Route::get('/userads/{id}','UserController@userads');
-Route::get('/category/price/{id}', 'HomeController@price');
+Route::get('/category/price/{id}', 'HomeController@price')->middleware('auth:api');
 
 Route::get('/advert/all-categories','MarketController@getAllCategories');
 Route::get('/error','MarketController@error');
