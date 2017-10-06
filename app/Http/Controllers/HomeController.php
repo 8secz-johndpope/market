@@ -464,10 +464,26 @@ class HomeController extends BaseController
     }
     public  function price(Request $request,$id){
 
-        $uuid4 = Uuid::uuid4();
-        $uuid = $uuid4->toString();
-        return Room::all();
+        $category = Category::find($id);
 
+        $forsale = Category::find(200000000);
+        if($category===null){
+            return ['msg'=>'Catagory not found'];
+        }
+        if($id>=$forsale->id&&$id<=$forsale->ends)
+            $extras = ExtraType::all();
+        else{
+            $extras = ExtraType::where('id','<',4)->get();
+        }
+        foreach ($extras as $extra){
+            if($extra->type==='single'){
+                $extra->price = $extra->price($id,$request->id);
+            }else{
+                $extra->prices = $extra->prices($id,$request->id);
+            }
+        }
+
+        return $extras;
 
     }
     public function total(Request $request,$id){
