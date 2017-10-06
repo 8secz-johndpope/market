@@ -28,6 +28,8 @@ Route::get('/advert/category/fields/{any}','MarketController@fields');
 Route::post('/user/order/create', 'UserController@corder')->middleware('auth:api');
 Route::post('/user/order/complete/{id}', 'UserController@complete_bump')->middleware('auth:api');
 
+Route::post('/user/message/create', 'MessageController@fsend')->middleware('auth:api');
+
 Route::post('/user/login', 'UserController@login');
 Route::middleware('auth:api')->get('/user/adverts', 'UserController@adverts');
 Route::post('/user/contacts','UserController@contacts')->middleware('auth:api');

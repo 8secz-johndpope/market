@@ -81,6 +81,24 @@ class MessageController extends BaseController
         return redirect('/user/manage/messages/'.$g['rid']);
 
     }
+    public function fsend(Request $request){
+        $user = Auth::user();
+        $advert = Advert::find($request->id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        $client = new Client();
+        $g = $client->request('POST', 'https://fire.sumra.net/creategroup', [
+            'form_params' => ['advert_id'=>$advert->sid,'users'=>[$user->id,$advert->user_id],'title'=>$advert->param('title'),'image'=>$advert->first_image()]
+        ]);
+        $g = json_decode($g->getBody(),true);
+        $k = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
+            'form_params' => ['from'=>$user->id,'message'=>$request->message,'rid'=>$g['rid'],'type'=>'text']
+        ]);
+
+        return ['rid'=>$g['rid'],'msg'=>'sent'];
+
+    }
     public function rsend(Request $request){
         $user = Auth::user();
         $client = new Client();
