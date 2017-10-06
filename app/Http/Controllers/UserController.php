@@ -106,7 +106,62 @@ class UserController extends BaseController
             }
 
         }
-        return ['id'=>$order->id,'total'=>$order->amount()];
+        return ['id'=>$order->id,'total'=>$order->amount()*100];
+    }
+    public function complete_bump(Request $request,$id){
+        $order=Order::find($id);
+        $transaction = Transaction::where('slug', $request->transaction_id)->first();
+        if ($transaction === null || $transaction->used === 1) {
+            return ['result' => ['msg' => 'Not a valid transaction id']];
+        }
+
+        if ($transaction->amount !== $order->amount()*100) {
+            return ['msg' => 'Wrong transaction amount'];
+        }
+        foreach ($order->items as $item) {
+            $advert = Advert::find($item->advert_id);
+            $milliseconds = round(microtime(true) * 1000);
+
+
+            if($item->price()===0){
+                $pack = $item->pack();
+                $pack->remaining--;
+                $pack->save();
+            }
+            if($item->type->key==='bump') {
+                if($advert->has_param('bumped'))
+                    $body['bumped']=$advert->param('bumped')+1;
+                else
+                    $body['bumped']=1;
+                $body['created_at']=$milliseconds;
+            }else{
+                $body[$item->type->extra_type->slug] = 1;
+
+                $body[$item->type->extra_type->slug.'_count'] = 0;
+
+
+                $body[$item->type->extra_type->slug.'_expires'] = $milliseconds + $item->type->quantity * 24 * 3600 * 1000;
+            }
+
+
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic,
+                'body' => [
+                    'doc' => $body
+                ]
+            ];
+
+// Update doc at /my_index/my_type/my_id
+            $response = $this->client->update($params);
+        }
+
+
+        $order->payment = 'done';
+        $order->save();
+        return ['id'=>$order->id,'msg'=>'done'];
+
     }
     public function userads(Request $request, $id)
     {
