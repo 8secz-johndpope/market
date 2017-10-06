@@ -61,6 +61,16 @@ class UserController extends BaseController
             ->whereIn('phone', $numbers)->get();
         return $users;
     }
+    public function postcode(Request $request){
+
+        $up =   str_replace(' ','',strtoupper($request->q));
+        $a = Postcode::where('hash',crc32($up))->first();
+        if($a===null){
+            return ['msg'=>'Not valid'];
+        }else{
+            return ['msg'=>'yes','val'=>$a->postcode,'id'=>$a->location->id];
+        }
+    }
     public function userads(Request $request, $id)
     {
         $ad = Advert::where('sid',$id)->first();
