@@ -13,6 +13,7 @@ use App\Mail\OrderShipped;
 use App\Model\Address;
 use App\Model\Advert;
 use App\Model\ExtraPrice;
+use App\Model\ExtraType;
 use App\Model\Location;
 
 use App\Model\Application;
