@@ -94,7 +94,7 @@ class User extends Authenticatable
     }
     public function bumps()
     {
-        $orders = Order::where('buyer_id', $this->id)->where('type', 'bump')->get();
+        $orders = Order::where('buyer_id', $this->id)->where('type', 'bump')->orderBy('id','desc')->get();
         $items = array();
         foreach ($orders as $order)
         {
