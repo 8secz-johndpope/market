@@ -124,12 +124,14 @@ class BusinessController extends BaseController
         return redirect('/user/manage/order');
     }
     public function bump(Request $request){
+        $user = Auth::user();
         if(!$request->has('matrix')){
             return redirect('/business/manage/ads');
         }
         $order= new Order;
         $order->amount = 70;
-
+        $order->type='bump';
+        $order->buyer_id=$user->id;
         $order->save();
         foreach ($request->matrix as $id=>$ad) {
             $advert=Advert::find($id);
