@@ -879,24 +879,43 @@ class UserController extends BaseController
     public function create(Request $request)
     {
         $user = Auth::user();
-        $advert = new Advert;
-        $advert->user_id = $user->id;
-        $advert->save();
-        $body = $request->json()->all();
-        $body['source_id'] = $advert->id;
+        $category=Category::find($request->category);
+
+        $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$request->postcode)))->first();
+        $location=$postcode->location;
+        $fields = $category->fields;
+
+        $body['category'] = $category->id;
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at'] = $milliseconds;
         $body['username'] = $user->name;
         $body['user_id'] = $user->id;
         $body['phone'] = $user->phone;
-        if (!isset($body['meta']['price'])) {
-            $body['meta']['price'] = -1;
-        }
+        $advert = new Advert;
+        $advert->save();
+        $advert->sid = $advert->id;
+        $advert->save();
+        $body['source_id']=$advert->id;
+        $body['title']=$request->title;
+        $body['description']=$request->description;
+        $body['location_name']=$location->title;
+        $body['location_id']=$location->res;
+
+        $body['location']=$postcode->lat.','.$postcode->lng;
         $body['views']=0;
         $body['list_views']=0;
-        $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$body['postcode'])))->first();
-        $body['location_id']=$postcode->location->res;
-        unset($body['id']);
+        if($request->has('images')){
+            $body['images']=$request->images;
+        }else{
+            $body['images']=[];
+        }
+
+        $body['meta']['price']=(int)($request->price*100);
+        foreach ($fields as $field){
+            if($field->slug!=='price'&&$request->has($field->slug)){
+                $body['meta'][$field->slug] = $request->get($field->slug);
+            }
+        }
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
