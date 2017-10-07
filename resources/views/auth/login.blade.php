@@ -53,6 +53,7 @@
                             <div class="col-md-8 col-md-offset-4">
 
                                 <button
+                                        class="btn btn-primary"
                                         type="submit">
                                     Login
                                 </button>
