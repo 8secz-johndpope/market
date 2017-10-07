@@ -878,6 +878,11 @@ class UserController extends BaseController
 
     public function create(Request $request)
     {
+        $request->validate([
+            'title' => 'required|max:255',
+            'postcode' => 'required',
+            'description' => 'required',
+        ]);
         $user = Auth::user();
         $category=Category::find($request->category);
 
