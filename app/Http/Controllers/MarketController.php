@@ -345,7 +345,7 @@ class MarketController extends BaseController
         $locations = Postcode::where('active',1)->where('postcode','like',$term.'%')->get();
 
         foreach ($locations as $a){
-            $cats[]= ['value'=>$a->postcode,'category' => $a->postcode,'slug' => strtolower($a->postcode),'data'=>$a->location->id];
+            $cats[]= ['value'=>$a->postcode.', '.$a->location->title,'category' => $a->postcode,'slug' => strtolower($a->postcode),'data'=>$a->location->id];
 
         }
 
