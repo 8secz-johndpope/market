@@ -47,40 +47,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="g-recaptcha" data-sitekey="6LfzjTMUAAAAAMvn7MSJsKdheHNH5pe3ACQM6NLA"></div>
 
-                            </div>
-                        </div>
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
 
-                                <a
+                                <button
+                                        type="submit"
                                         class="g-recaptcha btn btn-primary"
                                         data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
                                         data-callback="onSubmit">
                                     Login
-                                </a>
+                                </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
                                 </a>
                                 <script>
                                     function onSubmit(token) {
-                                        alert('hi');
-                                        return;
-                                        var recaptcha = $("#g-recaptcha-response").val();
-                                        if (recaptcha === "") {
-                                            event.preventDefault();
-                                            alert("Please check the recaptcha");
-                                        }else
-                                        {
-                                            alert(recaptcha);
-                                          //  document.getElementById("login-form").submit();
 
-                                        }
+
+                                            document.getElementById("login-form").submit();
+
+
 
                                     }
                                 </script>
