@@ -885,7 +885,7 @@ class UserController extends BaseController
         ]);
         if ($validator->fails()) {
             //
-            return $validator;
+            return $validator->messages();
         }
         $user = Auth::user();
         $category=Category::find($request->category);
