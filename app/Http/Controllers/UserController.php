@@ -881,6 +881,7 @@ class UserController extends BaseController
         $validator=Validator::make($request->all(),[
             'title' => 'required|max:255',
             'postcode' => 'required',
+            'category' => 'required',
             'description' => 'required',
         ]);
         if ($validator->fails()) {
