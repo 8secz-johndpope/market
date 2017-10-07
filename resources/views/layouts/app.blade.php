@@ -22,6 +22,7 @@
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <script src="/js/main.js"></script>
     <style>

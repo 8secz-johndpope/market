@@ -47,6 +47,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button
+                                        class="g-recaptcha"
+                                        data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
+                                        data-callback="YourOnSubmitFn">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
