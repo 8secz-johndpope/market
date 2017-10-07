@@ -71,7 +71,7 @@ class MessageController extends BaseController
         $advert = Advert::find($request->id);
         $client = new Client();
         $g = $client->request('POST', 'https://fire.sumra.net/creategroup', [
-            'form_params' => ['advert_id'=>$advert->sid,'users'=>[$user->id,$advert->user_id],'title'=>$advert->param('title'),'image'=>$advert->first_image()]
+            'form_params' => ['advert_id'=>$advert->sid,'users'=>[$user->id,$advert->user_id],'title'=>$advert->param('title'),'image'=>$advert->first_image(),'id'=>$user->id]
         ]);
         $g = json_decode($g->getBody(),true);
         $k = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
@@ -89,7 +89,7 @@ class MessageController extends BaseController
         }
         $client = new Client();
         $g = $client->request('POST', 'https://fire.sumra.net/creategroup', [
-            'form_params' => ['advert_id'=>$advert->sid,'users'=>[$user->id,$advert->user_id],'title'=>$advert->param('title'),'image'=>$advert->first_image()]
+            'form_params' => ['advert_id'=>$advert->sid,'users'=>[$user->id,$advert->user_id],'title'=>$advert->param('title'),'image'=>$advert->first_image(),'id'=>$user->id]
         ]);
         $g = json_decode($g->getBody(),true);
         $k = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
