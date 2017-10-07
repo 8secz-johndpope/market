@@ -944,7 +944,10 @@ class MarketController extends BaseController
     }
     public function query(Request $request){
         $category = Category::find($request->category);
+        if($request->has('location_id'))
         $location=Location::find(0);
+        else
+            $location=Location::find($request->location_id);
         return $this->filter($request,$category,$location);
 
     }
