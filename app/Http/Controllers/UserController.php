@@ -15,7 +15,7 @@ use App\Model\Advert;
 use App\Model\ExtraPrice;
 use App\Model\ExtraType;
 use App\Model\Location;
-
+use Validator;
 use App\Model\Application;
 use App\Model\Category;
 use App\Model\Cover;
@@ -878,11 +878,15 @@ class UserController extends BaseController
 
     public function create(Request $request)
     {
-        $request->validate([
+        $validator=Validator::make($request->all(),[
             'title' => 'required|max:255',
             'postcode' => 'required',
             'description' => 'required',
         ]);
+        if ($validator->fails()) {
+            //
+            return $validator;
+        }
         $user = Auth::user();
         $category=Category::find($request->category);
 
