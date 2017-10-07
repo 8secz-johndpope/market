@@ -58,7 +58,10 @@
                             <div class="col-md-8 col-md-offset-4">
 
                                 <button
-                                        type="submit">
+                                        type="submit"
+                                        class="g-recaptcha btn btn-primary"
+                                        data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
+                                        data-callback="onSubmit">
                                     Login
                                 </button>
 
@@ -67,6 +70,11 @@
                                 </a>
                                 <script>
                                     function onSubmit(token) {
+                                        var recaptcha = $("#g-recaptcha-response").val();
+                                        if (recaptcha === "") {
+                                            event.preventDefault();
+                                            alert("Please check the recaptcha");
+                                        }else
                                         document.getElementById("login-form").submit();
                                     }
                                 </script>
