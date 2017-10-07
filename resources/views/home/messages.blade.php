@@ -34,8 +34,8 @@
                 </li>
             </ul>
             <div class="full-width">
+                @if(count($g)>0)
                 <div class="left-div-messages">
-                    {{count($g)}}
                     @foreach($g as $group)
                         <div class="media @if($group['rid']===$rid) selected-room @endif">
                             <div class="media-left">
@@ -80,6 +80,9 @@
                         </form>
                     </div>
                 </div>
+                    @else
+                    <h4>No Messages to Display</h4>
+                    @endif
             </div>
         </div>
     </div>
