@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <form action="/user/message/send" method="post">
+    <form action="/user/message/send" method="post" id="login-form">
         {{ csrf_field() }}
         <input type="hidden" name="id" value="{{$advert->id}}">
     <div class="row">
@@ -25,10 +25,20 @@
                 <p>Your message to {{$advert->param('username')}}</p>
                 <textarea cols="50" rows="5" name="message"></textarea>
                 <p>Replies will be sent to <strong class="bold-text">{{$user->name}}</strong> at <strong class="bold-text">{{$user->email}}</strong> </p>
-                <button class="btn btn-primary">Send Message</button>
+                <button class="btn btn-primary g-recaptcha"  data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
+                        data-callback="onSubmit">Send Message</button>
             </div>
         </div>
     </div>
     </form>
+    <script>
+        function onSubmit(token) {
 
+
+            document.getElementById("login-form").submit();
+
+
+
+        }
+    </script>
 @endsection
