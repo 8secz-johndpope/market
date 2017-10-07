@@ -69,6 +69,8 @@
                                 </a>
                                 <script>
                                     function onSubmit(token) {
+                                        alert('hi');
+                                        return;
                                         var recaptcha = $("#g-recaptcha-response").val();
                                         if (recaptcha === "") {
                                             event.preventDefault();
