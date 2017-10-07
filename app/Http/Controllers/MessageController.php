@@ -71,18 +71,22 @@ class MessageController extends BaseController
 
     }
     public function send(Request $request){
-        $user = Auth::user();
-        $advert = Advert::find($request->id);
-        $client = new Client();
-        $g = $client->request('POST', 'https://fire.sumra.net/creategroup', [
-            'form_params' => ['advert_id'=>$advert->sid,'users'=>[$user->id,$advert->user_id],'title'=>$advert->param('title'),'image'=>$advert->first_image(),'id'=>$user->id]
-        ]);
-        $g = json_decode($g->getBody(),true);
-        $k = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
-            'form_params' => ['from'=>$user->id,'message'=>$request->message,'rid'=>$g['rid'],'type'=>'text']
-        ]);
+        if($request->has('g-recaptcha-response')) {
+            $user = Auth::user();
+            $advert = Advert::find($request->id);
+            $client = new Client();
+            $g = $client->request('POST', 'https://fire.sumra.net/creategroup', [
+                'form_params' => ['advert_id' => $advert->sid, 'users' => [$user->id, $advert->user_id], 'title' => $advert->param('title'), 'image' => $advert->first_image(), 'id' => $user->id]
+            ]);
+            $g = json_decode($g->getBody(), true);
+            $k = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
+                'form_params' => ['from' => $user->id, 'message' => $request->message, 'rid' => $g['rid'], 'type' => 'text']
+            ]);
 
-        return redirect('/user/manage/messages/'.$g['rid']);
+            return redirect('/user/manage/messages/' . $g['rid']);
+        }else{
+            return redirect('/user/reply/' . $request->id);
+        }
 
     }
     public function fsend(Request $request){
