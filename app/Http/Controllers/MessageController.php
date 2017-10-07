@@ -104,12 +104,14 @@ class MessageController extends BaseController
 
     }
     public function rsend(Request $request){
-        return $request->get('g-recaptcha-response');
-        $user = Auth::user();
-        $client = new Client();
-        $g = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
-            'form_params' => ['from'=>$user->id,'message'=>$request->message,'rid'=>$request->rid,'type'=>'text']
-        ]);
+        if($request->has('g-recaptcha-response')){
+            $user = Auth::user();
+            $client = new Client();
+            $g = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
+                'form_params' => ['from'=>$user->id,'message'=>$request->message,'rid'=>$request->rid,'type'=>'text']
+            ]);
+
+        }
 
         return redirect('/user/manage/messages/'.$request->rid);
 
