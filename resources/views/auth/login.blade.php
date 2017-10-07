@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                    <form class="form-horizontal" id="login-form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -55,17 +55,22 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                
+
                                 <button
                                         class="g-recaptcha btn btn-primary"
                                         data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
-                                        data-callback="YourOnSubmitFn">
+                                        data-callback="onSubmit">
                                     Login
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
                                 </a>
+                                <script>
+                                    function onSubmit(token) {
+                                        document.getElementById("login-form").submit();
+                                    }
+                                </script>
                             </div>
                         </div>
                     </form>
