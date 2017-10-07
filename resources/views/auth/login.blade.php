@@ -49,6 +49,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
+                                <div class="g-recaptcha" data-sitekey="6LfzjTMUAAAAAMvn7MSJsKdheHNH5pe3ACQM6NLA"></div>
 
                             </div>
                         </div>

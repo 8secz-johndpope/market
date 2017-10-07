@@ -7,7 +7,8 @@
  */
 
 namespace App\Http\Controllers;
-
+//6Le7jzMUAAAAAMxPpgAuCziF-HIcL63FBbvxn770
+//6LfzjTMUAAAAAPvQbTC0I6m9Ilfpd8Q3ife2Fejn
 
 use App\Model\Advert;
 use App\Model\Category;
