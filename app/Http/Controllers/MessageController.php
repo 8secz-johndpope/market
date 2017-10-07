@@ -33,6 +33,13 @@ class MessageController extends BaseController
         //exit;
         $g = json_decode($g->getBody(),true);
         if(count($g)>0){
+            $g = usort($g,function ($a, $b)
+            {
+                if ($a['modified_at'] == $b['modified_at']) {
+                    return 0;
+                }
+                return ($a['modified_at'] < $b['modified_at']) ? -1 : 1;
+            });
             $r = $client->request('POST', 'https://fire.sumra.net/groupmessages', [
                 'form_params' => ['rid'=>$g[0]['rid'],"time"=>0]
             ]);
