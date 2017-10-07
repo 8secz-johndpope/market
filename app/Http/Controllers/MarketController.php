@@ -336,7 +336,7 @@ class MarketController extends BaseController
     {
 
         $term = $request->q;
-        $locations = Location::where('title','like',$term.'%')->get();
+        $locations = Location::where('title','like',$term.'%')->limit(10)->get();
         $cats = [];
         foreach ($locations as $a){
             $cats[]= ['value'=>$a->title,'category' => $a->title,'slug' => $a->slug,'data'=>$a->id];
