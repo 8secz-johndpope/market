@@ -943,6 +943,7 @@ class MarketController extends BaseController
         return ['msg'=>'No route found'];
     }
     public function query(Request $request){
+        return $request->location_id;
         $category = Category::find($request->category);
         if($request->has('location_id'))
         $location=Location::find(0);
