@@ -64,6 +64,13 @@ class MessageController extends BaseController
         //exit;
         $r = json_decode($r->getBody(),true);
         $g = json_decode($g->getBody(),true);
+        usort($g,function ($a, $b)
+        {
+            if ($a['modified_at'] == $b['modified_at']) {
+                return 0;
+            }
+            return ($a['modified_at'] < $b['modified_at']) ? 1 : -1;
+        });
         //return $g;
         return view('home.messages',['r'=>$r,'g'=>$g,'rid'=>$rid,'user'=>$user]);
     }
