@@ -74,7 +74,12 @@
                                             event.preventDefault();
                                             alert("Please check the recaptcha");
                                         }else
-                                        document.getElementById("login-form").submit();
+                                        {
+                                            alert(recaptcha);
+                                          //  document.getElementById("login-form").submit();
+
+                                        }
+
                                     }
                                 </script>
                             </div>
