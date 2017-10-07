@@ -33,7 +33,7 @@ class MessageController extends BaseController
         //exit;
         $g = json_decode($g->getBody(),true);
         if(count($g)>0){
-            $g = usort($g,function ($a, $b)
+            usort($g,function ($a, $b)
             {
                 if ($a['modified_at'] == $b['modified_at']) {
                     return 0;
