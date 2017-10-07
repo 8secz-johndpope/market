@@ -57,12 +57,12 @@
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
 
-                                <button
+                                <a
                                         class="g-recaptcha btn btn-primary"
                                         data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
                                         data-callback="onSubmit">
                                     Login
-                                </button>
+                                </a>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
