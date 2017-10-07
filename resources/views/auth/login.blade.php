@@ -58,7 +58,6 @@
                             <div class="col-md-8 col-md-offset-4">
 
                                 <button
-                                        type="submit"
                                         class="g-recaptcha btn btn-primary"
                                         data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
                                         data-callback="onSubmit">
