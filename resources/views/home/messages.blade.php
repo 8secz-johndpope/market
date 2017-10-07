@@ -73,10 +73,12 @@
 
 
                     <div class="bottom-div-messages">
-                        <form action="/user/message/rsend" method="post">
+                        <form action="/user/message/rsend" method="post" id="login-form">
                             <input type="hidden" name="rid" value="{{$rid}}">
                             {{ csrf_field() }}                            <div class="message-input-div"><input type="text" class="form-control"  name="message" placeholder="Type Your Message here" required></div>
-                            <div class="message-send-div"><button type="submit" class="btn btn-primary">Send</button></div>
+                            <div class="message-send-div"><button type="submit"  class="btn btn-primary g-recaptcha btn btn-primary"
+                                                                  data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
+                                                                  data-callback="onSubmit">Send</button></div>
                         </form>
                     </div>
                 </div>
@@ -86,6 +88,15 @@
             </div>
         </div>
     </div>
+    <script>
+        function onSubmit(token) {
 
+
+            document.getElementById("login-form").submit();
+
+
+
+        }
+    </script>
 
 @endsection
