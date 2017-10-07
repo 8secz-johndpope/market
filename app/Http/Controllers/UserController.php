@@ -894,12 +894,15 @@ class UserController extends BaseController
         }
         $body['views']=0;
         $body['list_views']=0;
+        $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$body['postcode'])))->first();
+        $body['location_id']=$postcode->location->res;
         unset($body['id']);
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
             'body' => $body
         ];
+
         $response = $this->client->index($params);
         $advert->sid = $advert->id;
         $advert->elastic = $response['_id'];
