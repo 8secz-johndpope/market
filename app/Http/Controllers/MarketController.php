@@ -948,6 +948,7 @@ class MarketController extends BaseController
         $location=Location::find(0);
         else
             $location=Location::find($request->location_id);
+        return $location;
         return $this->filter($request,$category,$location);
 
     }
