@@ -221,7 +221,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-sm-2 col-sm-offset-10"><button type="submit" class="btn btn-primary">Post Advert</button> </div>
+                                <div class="col-sm-2 col-sm-offset-10"><button type="submit" class="btn btn-primary">Update Advert</button> </div>
                             </div>
                         </div>
                     </div>
