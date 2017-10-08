@@ -56,8 +56,11 @@ class Price extends  BaseModel
         $westminister = Location::find(1931);
         $location=Location::find($location);
         $part = $location->ratio()/$westminister->ratio();
+
         $max = Price::find(19);
-        $max->urgent = (int)($part*$max->urgent);
+        if($part>1)
+            return $max;
+                $max->urgent = (int)($part*$max->urgent);
         $max->spotlight = (int)($part*$max->spotlight);
         $max->featured = (int)($part*$max->featured);
         $max->featured_3 = (int)($part*$max->featured_3);
