@@ -67,7 +67,7 @@
                             <h3 class="panel-title">Title</h3>
                         </div>
                         <div class="panel-body">
-                            <div class="row"> <div class="col-sm-6"><input type="text" name="title" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title" required></div>
+                            <div class="row"> <div class="col-sm-6"><input type="text" name="title" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title" value="{{$advert->param('title')}}" required></div>
                                 <div class="col-sm-6"><p>100 characters remaining</p></div></div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-sm-6"><textarea type="text" name="description" rows="10" class="form-control  mb-2 mr-sm-2 mb-sm-0" required></textarea></div>
+                                <div class="col-sm-6"><textarea type="text" name="description" rows="10" class="form-control  mb-2 mr-sm-2 mb-sm-0" required>{{$advert->param('description')}}</textarea></div>
                                 <div class="col-sm-6"><p>10000 characters remaining (12 words minimum).
                                         Enter as much information possible; ads with detailed and longer descriptions get more views and replies!
                                     </p></div>
