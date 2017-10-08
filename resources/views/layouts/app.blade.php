@@ -559,6 +559,7 @@
     });
     $(".edit-location-button").click(function () {
         $(".edit-location").show();
+        $(".location-selected").hide();
         $(".all-panels").hide();
     });
     $(".add-image").click(function () {
