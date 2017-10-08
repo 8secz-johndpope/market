@@ -116,17 +116,18 @@
                        </div>
 
 
-                       <div class="col-sm-12 edit-location">
+                       <div class="col-sm-12 edit-location" @if($location) style="display: none" @endif>
                            <input type="hidden" name="location_name" value="London" id="location_name">
                            <input type="hidden" name="location_id" value="London" id="location_id">
 
                            <input type="hidden" name="lat" value="52.0" id="lat">
                            <input type="hidden" name="lng" value="0.12" id="lng">
-                           <span class="red-text" id="location-error-info" style="display: none">Not a valid postcode</span>
-
+                           @if($message)
+                           <span class="red-text" id="location-error-info" >{{$message}}</span>
+                            @endif
                            <form class="form-inline" action="/user/advert/location" method="post">
                                {{ csrf_field() }}
-                               <input type="hidden" name="category" value="0" id="category">
+                               <input type="hidden" name="category" value="{{$category->id}}" id="category">
                                <label class="sr-only" for="inlineFormInput">Postcode</label>
                                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="postcode-text" placeholder="Postcode" name="postcode">
                                <button class="btn btn-danger" type="submit">Go</button>

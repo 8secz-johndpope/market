@@ -39,9 +39,7 @@
         span.extra-title {
             font-weight: bold;
         }
-        .location-selected{
-            display: none;
-        }
+
         .row-images img{
             width: 100%;
         }
