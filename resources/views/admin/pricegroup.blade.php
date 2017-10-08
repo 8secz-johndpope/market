@@ -131,6 +131,7 @@
             <div class="well">
 
                 <form action="/admin/manage/pricegroup/add" method="post">
+                    {{ csrf_field() }}
                     @if($price)
                         <input type="hidden" name="id" value="{{$price->id}}">
                         @endif
