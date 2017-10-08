@@ -33,7 +33,7 @@ class Category extends  BaseModel
         return $this->belongsToMany('App\Model\Filter');
     }
     public function has_price(){
-        $price = $this->fields()->where('id',10)->first();
+        $price = CategoryField::where('category_id',$this->id)->where('field_id',10)->first();
         if($price)
             return true;
         else
