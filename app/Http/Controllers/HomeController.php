@@ -236,42 +236,51 @@ class HomeController extends BaseController
         //$total = (int)$request->total;
        // if($total>0){
            // $orders = array();
-            $order= new Order;
-            $order->amount = 70;
-            $order->type = 'bump';
-            $order->buyer_id = $user->id;
-            $order->advert_id=$advert->id;
-            $order->save();
-
             $extratypes=ExtraType::all();
-            foreach ($extratypes as $type){
-                if($request->has($type->slug)&&$request->get($type->slug)==1){
-                    $key = $type->slug;
-                    if($type->type==='list'){
-                        $key = $request->get($type->key);
-                    }
-                    $extraprice = ExtraPrice::where('key',$key)->first();
-                    $orderitem = new OrderItem;
-                    $orderitem->title = 'Featured';
-                    $orderitem->slug = 'featured';
-                    $orderitem->advert_id=$advert->id;
-                    $orderitem->category_id = $category->id;
-                    $orderitem->location_id = $location->id;
-                    $orderitem->type_id = $extraprice->id;
-                    $orderitem->amount = 0;
-                    $orderitem->save();
-                    $order->items()->save($orderitem);
+            $needsorder=false;
+            foreach ($extratypes as $type) {
+                if ($request->has($type->slug) && $request->get($type->slug) == 1) {
+                $needsorder=true;
+                }
+            }
+            if($needsorder) {
+                $order = new Order;
+                $order->amount = 70;
+                $order->type = 'bump';
+                $order->buyer_id = $user->id;
+                $order->advert_id = $advert->id;
+                $order->save();
 
+
+                foreach ($extratypes as $type) {
+                    if ($request->has($type->slug) && $request->get($type->slug) == 1) {
+                        $key = $type->slug;
+                        if ($type->type === 'list') {
+                            $key = $request->get($type->key);
+                        }
+                        $extraprice = ExtraPrice::where('key', $key)->first();
+                        $orderitem = new OrderItem;
+                        $orderitem->title = 'Featured';
+                        $orderitem->slug = 'featured';
+                        $orderitem->advert_id = $advert->id;
+                        $orderitem->category_id = $category->id;
+                        $orderitem->location_id = $location->id;
+                        $orderitem->type_id = $extraprice->id;
+                        $orderitem->amount = 0;
+                        $orderitem->save();
+                        $order->items()->save($orderitem);
+
+
+                    }
 
                 }
 
+
+                $request->session()->put('order_id', $order->id);
+                return redirect('/user/manage/order');
+            }else{
+                return redirect('/user/manage/ads');
             }
-
-
-
-
-            $request->session()->put('order_id', $order->id);
-            return redirect('/user/manage/order');
 
         //}else{
           //  return redirect('/user/manage/ads');
