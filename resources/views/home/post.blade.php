@@ -89,7 +89,7 @@
            </div>
 
 
-           <div class="panel panel-default selected-category-panel">
+           <div class="panel panel-default selected-category-panel"  @if(!$category) style="display: none" @endif>
                <div class="panel-heading">
                    <h3 class="panel-title">Category</h3>
                </div>
