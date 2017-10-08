@@ -315,7 +315,14 @@ class HomeController extends BaseController
     public  function save(Request $request)
     {
         $advert=Advert::find($request->id);
-        $advert->update_fields(['title'=>$request->title,'description'=>$request->description]);
+        $body=['title'=>$request->title,'description'=>$request->description];
+
+        foreach ($advert->fields as $field){
+            if($field->slug!=='price'&&$request->has($field->slug)){
+                $body['meta'.$field->slug] = $request->get($field->slug);
+            }
+        }
+        $advert->update_fields($body);
         return redirect('/user/manage/ads');
     }
         public function order(Request $request){
