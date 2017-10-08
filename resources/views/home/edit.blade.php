@@ -167,35 +167,50 @@
                                 </div>
                                 <div class="panel-body">
                                     <ul class="list-group">
-                                        @foreach($advert->extras() as $extra)
 
                                             <li class="list-group-item">
                                                 <div class="row">
                                                     <div class="col-sm-10">
                                                         <div class="form-check">
                                                             <label class="form-check-label">
-                                                                <input class="form-check-input extra-change" type="checkbox" name="{{$extra->slug}}" value="1" id="{{$extra->slug}}">
-                                                                <span class="span-{{$extra->slug}}">{{$extra->title}}</span> &nbsp;&nbsp;{{$extra->subtitle}}
+                                                                <input class="form-check-input extra-change" type="checkbox" name="urgent" value="1" id="urgent">
+                                                                <span class="span-urgent">Urgent</span> &nbsp;Let people know you want to sell, rent or hire quickly.
                                                             </label>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-2">
-                                                        @if($extra->type==='single')
-                                                            <span class="extra-price">£{{$extra->price->price/100}}</span>
-                                                            <input type="hidden" id="{{$extra->slug}}-price" value="{{$extra->price->price/100}}" name="{{$extra->slug}}-price">
-                                                        @else
-                                                            <select class="form-control extra-change" name="{{$extra->key}}" id="{{$extra->key}}">
-                                                                @foreach($extra->prices as $price)
-                                                                    <option value="{{$price->key}}">{{$price->title}}  (£{{$price->price/100}})</option>
-                                                                @endforeach
-                                                            </select>
-                                                        @endif
+                                                            <span class="extra-price"> @if($advert->has_pack('urgent')) Included in Package  @else £{{$advert->extra_price('urgent')/100}} @endif</span>
+                                                            <input type="hidden" id="urgent-price" value="@if($advert->has_pack('urgent'))0@else{{$extra->price->price/100}}@endif" name="urgent-price">
+
 
                                                     </div>
                                                 </div>
 
                                             </li>
-                                        @endforeach
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-sm-10">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input extra-change" type="checkbox" name="featured" value="1" id="featured">
+                                                            <span class="span-urgent">Featured</span> &nbsp;Have your Ad appear at the top of the category listings for 3, 7 or 14 days.
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+
+                                                        <select class="form-control extra-change" name="featured_type" id="featured_type}">
+
+                                                                <option value="featured_3">Featured (3 days)  ( @if($advert->has_pack('featured_3')) Included in Package  @else £{{$advert->extra_price('featured_3')/100}} @endif )</option>
+                                                            <option value="featured">Featured (7 days)  ( @if($advert->has_pack('featured')) Included in Package  @else £{{$advert->extra_price('featured')/100}} @endif )</option>
+                                                            <option value="featured_3">Featured (3 days)  ( @if($advert->has_pack('featured_14')) Included in Package  @else £{{$advert->extra_price('featured_14')/100}} @endif )</option>
+
+                                                        </select>
+
+                                                </div>
+                                            </div>
+
+                                        </li>
 
                                     </ul>
                                 </div>

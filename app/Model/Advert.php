@@ -79,6 +79,17 @@ class Advert extends  BaseModel
         ];
         $response = $this->client->update($params);
     }
+    public function prices(){
+        return Price::price($this->category->id,$this->postcode->location_id);
+    }
+
+    public function extra_price($key){
+        $price=$this->prices();
+        return $price->{$key};
+    }
+    public function has_pack($key){
+        return Pack::has_packs($key,$this->category->id,$this->postcode->location_id);
+    }
 
     public function update_fields($fields){
         $params = [
