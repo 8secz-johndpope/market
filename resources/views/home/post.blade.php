@@ -127,9 +127,9 @@
 
                            <form class="form-inline" action="/user/advert/location" method="post">
                                {{ csrf_field() }}
-                               @if($category)
-                               <input type="hidden" name="category" value="{{$category->id}}" id="category">
-                               @endif
+
+                               <input type="hidden" name="category" value="@if($category) {{$category->id}}  @endif" id="category">
+
                                <label class="sr-only" for="inlineFormInput">Postcode</label>
                                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="postcode-text" placeholder="Postcode" name="postcode">
                                <button class="btn btn-danger" type="submit">Go</button>
