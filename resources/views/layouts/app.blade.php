@@ -51,9 +51,7 @@
         span.extra-large {
             font-size: 25px;
         }
-        .manual-category-panel,.selected-category-panel,.selected-location-panel,.all-panels{
-            display: none;
-        }
+       
         span.span-urgent, span.span-featured,span.span-spotlight,span.span-shipping {
 
             color: white;
