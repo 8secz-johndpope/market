@@ -121,8 +121,9 @@ class MarketController extends BaseController
     public function locs(Request $request){
         $price = new Price;
         $price->location_id=119;
+        $location=$price->location;
         $price->category_id=0;
-        return $price->count();
+        return $price->count()/$location->product();
         /*
         $locations = Location::all();
 

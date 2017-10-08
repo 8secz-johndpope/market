@@ -30,6 +30,9 @@ class Location extends  Model
             return false;
         }
     }
+    public function product(){
+        return ($this->max_lat-$this->min_lat)*($this->max_lng-$this->min_lng);
+    }
     public function string(){
         if($this->id===0)
             return $this->title;
