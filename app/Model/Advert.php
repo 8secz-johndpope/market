@@ -72,7 +72,16 @@ class Advert extends  BaseModel
             'type' => 'advert',
             'id' => $this->elastic,
             'body' => [
-                "script" => "ctx._source.remove('inactive')",
+                "script" => "ctx._source.remove('inactive')"
+            ]
+
+        ];
+        $response = $this->client->update($params);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic,
+            'body' => [
                 'doc' => [
                     'created_at' => $milliseconds
                 ]
@@ -80,6 +89,7 @@ class Advert extends  BaseModel
 
         ];
         $response = $this->client->update($params);
+
         $this->deleted=0;
         $this->save();
     }
