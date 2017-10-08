@@ -41,13 +41,22 @@ class Advert extends  BaseModel
         $this->dict = $response['_source'];
     }
     public function make_inactive(){
+        $milliseconds = round(microtime(true) * 1000);
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
             'id' => $this->elastic,
             'body' => [
                 'doc' => [
-                    'inactive' => 1
+                    'inactive' => 1,
+                    'views'=>0,
+                    'list_views'=>0,
+                    'ugrent_expires' => $milliseconds,
+                    'featured_expires' => $milliseconds,
+                     'spotlight_expires' => $milliseconds,
+                      'featured_count' => 0,
+                    'urgent_count' => 0,
+                     'spotlight_count' => 0
                 ]
             ]
 
