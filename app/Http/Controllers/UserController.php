@@ -320,18 +320,8 @@ class UserController extends BaseController
         if ($advert->user_id != $user->id) {
             return ['code' => 2, 'msg' => 'Advert does not belong to you'];
         }
-        $body = $request->json()->all();
-        unset($body['id']);
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'id' => $advert->elastic
-        ];
-
-// Update doc at /my_index/my_type/my_id
-        $response = $this->client->delete($params);
-        $advert->delete();
-        return ['code' => 3, 'msg' => 'deleted', 'response' => $response];
+        $advert->make_inactive();
+        return ['code' => 3, 'msg' => 'deleted', 'response' => []];
     }
 
     public function addcover(Request $request)

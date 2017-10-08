@@ -1002,6 +1002,7 @@ class MarketController extends BaseController
             ]
         ];
 
+        $mustnot = ['exists'=>['field'=>'inactive']];
         $musts['location_id']= [
             'range' => [
                 'location_id' => [
@@ -1156,6 +1157,7 @@ class MarketController extends BaseController
                         'query' => [
                             'bool' => [
                                 'must' => array_values($submusts),
+                                'must_not' => $mustnot
                             /*    'filter' => $filte */
                             ]
                         ],
@@ -1251,6 +1253,7 @@ class MarketController extends BaseController
                 'query' => [
                     'bool' => [
                         'must' => array_values($musts),
+                        'must_not' => $mustnot
                    /*     'filter' => $filte */
                     ]
                 ],
@@ -1438,6 +1441,7 @@ class MarketController extends BaseController
                 'query' => [
                     'bool' => [
                         'must' => array_values($fmusts),
+                        'must_not' => $mustnot
                    /*     'filter' => $filte */
                     ]
                 ],

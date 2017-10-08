@@ -40,6 +40,20 @@ class Advert extends  BaseModel
         $response = $this->client->get($params);
         $this->dict = $response['_source'];
     }
+    public function make_inactive(){
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic,
+            'body' => [
+                'doc' => [
+                    'inactive' => 1
+                ]
+            ]
+
+        ];
+        $response = $this->client->update($params);
+    }
     public function param($param){
        if($this->dict===null)
            $this->fetch();
