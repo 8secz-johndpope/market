@@ -199,7 +199,7 @@
                                                 </div>
                                                 <div class="col-sm-4">
 
-                                                        <select class="form-control extra-change" name="featured_type" id="featured_type}">
+                                                        <select class="form-control extra-change" name="featured_type" id="featured_type">
 
                                                                 <option value="featured_3">Featured (3 days)  ( @if($advert->has_pack('featured_3')) Included in Package  @else £{{$advert->extra_price('featured_3')/100}} @endif )</option>
                                                             <option value="featured" selected>Featured (7 days)  ( @if($advert->has_pack('featured')) Included in Package  @else £{{$advert->extra_price('featured')/100}} @endif )</option>
@@ -241,7 +241,7 @@
                                                 </div>
                                                 <div class="col-sm-4">
 
-                                                    <select class="form-control extra-change" name="featured_type" id="featured_type}">
+                                                    <select class="form-control extra-change" name="shipping_type" id="shipping_type">
 
                                                         <option value="shipping_1">Shipping (2kg)  ( @if($advert->has_pack('shipping_1')) Included in Package  @else £{{$advert->extra_price('shipping_1')/100}} @endif )</option>
                                                         <option value="shipping_2">Shipping (5kg)  ( @if($advert->has_pack('shipping_2')) Included in Package  @else £{{$advert->extra_price('shipping_2')/100}} @endif )</option>
