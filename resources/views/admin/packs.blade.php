@@ -22,15 +22,15 @@
                 @foreach($prices as $price)
 
 <tr>
-    <td>{{$price->standard}}</td>
-    <td>{{$price->urgent}}</td>
-    <td>{{$price->spotlight}}</td>
-    <td>{{$price->featured_3}}</td>
-    <td>{{$price->featured}}</td>
-    <td>{{$price->featured_14}}</td>
-    <td>{{$price->bump}}</td>
-    <td>{{$price->location->title}}</td>
-    <td>{{$price->category->title}}</td>
+    <td>£{{$price->standard/100}}</td>
+    <td>£{{$price->urgent/100}}</td>
+    <td>£{{$price->spotlight/100}}</td>
+    <td>£{{$price->featured_3/100}}</td>
+    <td>£{{$price->featured/100}}</td>
+    <td>£{{$price->featured_14/100}}</td>
+    <td>£{{$price->bump/100}}</td>
+    <td>£{{$price->location->title}}</td>
+    <td>£{{$price->category->title}}</td>
     <td><a href="/admin/manage/pricegroup/edit/{{$price->id}}" class="btn btn-primary">Edit</a> </td>
 
 </tr>
