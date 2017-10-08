@@ -32,6 +32,13 @@ class Category extends  BaseModel
     public function filters(){
         return $this->belongsToMany('App\Model\Filter');
     }
+    public function has_price(){
+        $price = $this->fields()->where('id',10)->first();
+        if($price)
+            return true;
+        else
+            return false;
+    }
 
     public function is_parent($id){
         if($this->id<=$id&&$this->ends>=$id){

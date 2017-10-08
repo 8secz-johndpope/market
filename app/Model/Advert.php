@@ -233,5 +233,10 @@ class Advert extends  BaseModel
         }
         return $extras;
     }
+    public function price(){
+        if($this->dict===null)
+            $this->fetch();
+        return number_format($this->meta('price')/100,2);
+    }
 
 }

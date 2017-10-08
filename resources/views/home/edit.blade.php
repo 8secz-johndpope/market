@@ -106,6 +106,7 @@
                         </div>
                     </div>
                         <div class="category-extras" style="display: block">
+                            @if($advert->category->has_price())
                                 <div class="panel panel-default price-panel">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">Price</h3>
@@ -116,7 +117,7 @@
                                                 <div class="input-group">
 
                                                     <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
-                                                    <input type="text" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required>
+                                                    <input type="text" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required value="{{$advert->price()}}">
                                                     <span class="input-group-addon">.00</span>
 
                                                 </div>
@@ -124,6 +125,7 @@
                                             <div class="col-sm-6"></div></div>
                                     </div>
                                 </div>
+                            @endif
 
                                 <div class="panel panel-default extra-options-panel">
                                     <div class="panel-heading">
