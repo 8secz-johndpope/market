@@ -133,7 +133,7 @@
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <div class="row">
-                                                    @foreach($advert->fields as $field)
+                                                    @foreach($advert->category->fields as $field)
                                                         @if($field->slug!=='price')
                                                             <div class="col-sm-6">
                                                                 <span class="extra-title">{{$field->title}}</span>
