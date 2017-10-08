@@ -180,7 +180,7 @@
                                                     </div>
                                                     <div class="col-sm-2">
                                                             <span class="extra-price"> @if($advert->has_pack('urgent')) Included in Package  @else £{{$advert->extra_price('urgent')/100}} @endif</span>
-                                                            <input type="hidden" id="urgent-price" value="@if($advert->has_pack('urgent'))0@else{{$extra->price->price/100}}@endif" name="urgent-price">
+                                                            <input type="hidden" id="urgent-price" value="@if($advert->has_pack('urgent'))0@else{{$advert->extra_price('urgent')/100}}@endif" name="urgent-price">
 
 
                                                     </div>
