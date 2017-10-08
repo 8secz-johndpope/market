@@ -148,7 +148,7 @@
                        <input type="hidden" name="postcode" value="{{$postcode}}">
                    @endif
                {{ csrf_field() }}
-           <div class="all-panels" @if(!$category) style="display: none" @endif>
+           <div class="all-panels" @if(!$category||!$location) style="display: none" @endif>
 
            <div class="panel panel-default title-panel">
                <div class="panel-heading">
