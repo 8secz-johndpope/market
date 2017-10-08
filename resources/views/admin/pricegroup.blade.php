@@ -139,43 +139,43 @@
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Standard</label>
                         <div class="col-10">
-                            <input class="form-control" name="standard" type="text" placeholder="0.00" id="standard" required @if($price) value="{{$price->standard}}" @endif >
+                            <input class="form-control" name="standard" type="text" placeholder="0.00" id="standard" required @if($price) value="{{$price->standard/100}}" @endif >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Urgent</label>
                         <div class="col-10">
-                            <input class="form-control" name="urgent" type="text" placeholder="10.00" id="urgent" required @if($price) value="{{$price->urgent}}" @endif>
+                            <input class="form-control" name="urgent" type="text" placeholder="10.00" id="urgent" required @if($price) value="{{$price->urgent/100}}" @endif>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Spotlight</label>
                         <div class="col-10">
-                            <input class="form-control" name="spotlight" type="text" placeholder="20.00" id="spotlight" required @if($price) value="{{$price->spotlight}}" @endif>
+                            <input class="form-control" name="spotlight" type="text" placeholder="20.00" id="spotlight" required @if($price) value="{{$price->spotlight/100}}" @endif>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Featured (3 days)</label>
                         <div class="col-10">
-                            <input class="form-control" name="featured_3" type="text" placeholder="15.00" id="featured_3" required @if($price) value="{{$price->featured_3}}" @endif>
+                            <input class="form-control" name="featured_3" type="text" placeholder="15.00" id="featured_3" required @if($price) value="{{$price->featured_3/100}}" @endif>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Featured (7 days)</label>
                         <div class="col-10">
-                            <input class="form-control" name="featured" type="text" placeholder="20.00" id="featured" required @if($price) value="{{$price->featured}}" @endif>
+                            <input class="form-control" name="featured" type="text" placeholder="20.00" id="featured" required @if($price) value="{{$price->featured/100}}" @endif>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Featured (14 days)</label>
                         <div class="col-10">
-                            <input class="form-control" name="featured_14" type="text" placeholder="30.00" id="featured_14" required @if($price) value="{{$price->featured_14}}" @endif>
+                            <input class="form-control" name="featured_14" type="text" placeholder="30.00" id="featured_14" required @if($price) value="{{$price->featured_14/100}}" @endif>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Bump</label>
                         <div class="col-10">
-                            <input class="form-control" name="bump" type="text" placeholder="5.00" id="bump" required @if($price) value="{{$price->bump}}" @endif>
+                            <input class="form-control" name="bump" type="text" placeholder="5.00" id="bump" required @if($price) value="{{$price->bump/100}}" @endif>
                         </div>
                     </div>
 
