@@ -10,7 +10,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends  Model
+class Category extends  BaseModel
 {
     public $timestamps = false;
     public function children()
@@ -55,6 +55,35 @@ class Category extends  Model
         $titles =  array_reverse($titles);
         $parentstring = implode(' > ',$titles);
         return $parentstring.' > '.$this->title;
+    }
+    public  function count(){
+
+        $musts=array();
+        $musts['category']= [
+            'range' => [
+                'category' => [
+                    'gte'=>$this->id,
+                    'lte'=>$this->ends
+                ]
+            ]
+        ];
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>0,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($musts),
+                        /*     'filter' => $filte */
+                    ]
+                ],
+            ]
+        ];
+        $response = $this->client->search($params);
+        $total= $response['hits']['total'];
+        return $total;
     }
 
 }

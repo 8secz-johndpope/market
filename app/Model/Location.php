@@ -10,12 +10,16 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Location extends  Model
+class Location extends  BaseModel
 {
     public $timestamps = false;
     public function children()
     {
         return $this->hasMany('App\Model\Location','parent_id');
+    }
+    public function postcodes()
+    {
+        return $this->hasMany('App\Model\Postcode');
     }
     public function parent(){
         return $this->belongsTo('App\Model\Location');
@@ -48,5 +52,34 @@ class Location extends  Model
         $titles =  array_reverse($titles);
         $parentstring = implode(' > ',$titles);
         return $parentstring.' > '.$this->title;
+    }
+    public  function count(){
+        $musts=array();
+
+
+        $musts['location_id']= [
+            'range' => [
+                'location_id' => [
+                    'gte'=>$this->res,
+                    'lte'=>$this->ends
+                ]
+            ]
+        ];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>0,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($musts),
+                        /*     'filter' => $filte */
+                    ]
+                ],
+            ]
+        ];
+        $response = $this->client->search($params);
+        $total= $response['hits']['total'];
+        return $total;
     }
 }
