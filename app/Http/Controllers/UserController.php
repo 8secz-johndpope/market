@@ -323,7 +323,22 @@ class UserController extends BaseController
         $advert->make_inactive();
         return ['code' => 3, 'msg' => 'deleted', 'response' => []];
     }
-
+    public function repost(Request $request)
+    {
+        $user = Auth::user();
+        $advert = Advert::find($request->id);
+        if ($advert === null) {
+            $advert = Advert::where('sid', $request->id)->first();
+        }
+        if ($advert === null) {
+            return ['code' => 1, 'msg' => 'Advert not found'];
+        }
+        if ($advert->user_id != $user->id) {
+            return ['code' => 2, 'msg' => 'Advert does not belong to you'];
+        }
+        $advert->make_active();
+        return ['code' => 3, 'msg' => 'reposted', 'response' => []];
+    }
     public function addcover(Request $request)
     {
         $user = Auth::user();
