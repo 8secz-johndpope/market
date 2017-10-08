@@ -16,9 +16,8 @@
             display: none;
         }
     </style>
-    <form action="/user/advert/newad" method="post" id="advert-form">
-        {{ csrf_field() }}
-        <input type="hidden" name="category" value="0" id="category">
+
+
    <div class="row">
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
@@ -103,17 +102,20 @@
                    </div>
                </div>
            </div>
-
+           @if($category)
            <div class="panel panel-default selected-location-panel">
                <div class="panel-heading">
                    <h3 class="panel-title">Location</h3>
                </div>
                <div class="panel-body">
                    <div class="row">
+
                        <div class="col-sm-12 location-selected">
                            <p>Your Location</p>
-                           <span class="extra-large">M139AX</span><a class="edit-location-button">(Edit)</a>
+                           <span class="extra-large"> @if($location){{$postcode}} @endif</span><a class="edit-location-button">(Edit)</a>
                        </div>
+
+
                        <div class="col-sm-12 edit-location">
                            <input type="hidden" name="location_name" value="London" id="location_name">
                            <input type="hidden" name="location_id" value="London" id="location_id">
@@ -122,17 +124,24 @@
                            <input type="hidden" name="lng" value="0.12" id="lng">
                            <span class="red-text" id="location-error-info" style="display: none">Not a valid postcode</span>
 
-                           <form class="form-inline">
+                           <form class="form-inline" action="/user/advert/location" method="post">
+                               {{ csrf_field() }}
+                               <input type="hidden" name="category" value="0" id="category">
                                <label class="sr-only" for="inlineFormInput">Postcode</label>
                                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="postcode-text" placeholder="Postcode" name="postcode">
-                               <a class="btn btn-danger postcode-submit">Go</a>
+                               <button class="btn btn-danger" type="submit">Go</button>
                            </form>
                        </div>
 
                    </div>
                </div>
            </div>
-
+           @endif
+           <form action="/user/advert/newad" method="post" id="advert-form">
+               @if($category)
+                   <input type="hidden" name="category" value="{{$category->id}}">
+                   @endif
+               {{ csrf_field() }}
            <div class="all-panels">
 
 
@@ -237,7 +246,7 @@
                    @endif
                </div>
                @endif
-               @if($prices)
+               @if($extras)
                <div class="extra-prices" style="display: block">
                    <div class="panel panel-default featured-panel">
                        <div class="panel-heading">

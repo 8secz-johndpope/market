@@ -112,7 +112,48 @@ class HomeController extends BaseController
         $user = Auth::user();
         $categories = Category::where('parent_id',0)->get();
 
-        return view('home.post',['categories'=>$categories,'user'=>$user,'prices'=>false,'fields'=>false,'hasprice'=>false]);
+        return view('home.post',['categories'=>$categories,'user'=>$user,'extras'=>false,'fields'=>false,'hasprice'=>false,'category'=>false,'location'=>false,'message'=>false]);
+    }
+    public function location(Request $request){
+        $user = Auth::user();
+        $categories = Category::where('parent_id',0)->get();
+        $category=Category::find($request->category);
+        $up =   str_replace(' ','',strtoupper($request->postcode));
+        $a = Postcode::where('hash',crc32($up))->first();
+        if($a===null){
+            return view('home.post',['categories'=>$categories,'user'=>$user,'extras'=>false,'fields'=>false,'hasprice'=>false,'category'=>$category,'location'=>false,'message'=>'Not a valid postcode']);
+        }else{
+            $location=$a->location;
+            $fields = $category->fields;
+            $hasprice = false;
+            foreach ($fields as $field){
+                if($field->slug==='price'){
+                    $hasprice=true;
+                }
+                if($field->type==='list'){
+                    $field->values = $field->values;
+                }
+            }
+            $forsale = Category::find(200000000);
+
+            if($category->id>=$forsale->id&&$category->id<=$forsale->ends)
+                $extras = ExtraType::all();
+            else{
+                $extras = ExtraType::where('id','<',4)->get();
+            }
+            foreach ($extras as $extra){
+                if($extra->type==='single'){
+                    $extra->price = $extra->price($category->id,$location->id);
+                }else{
+                    $extra->prices = $extra->prices($category->id,$location->id);
+                }
+            }
+            return view('home.post',['categories'=>$categories,'user'=>$user,'extras'=>$extras,'fields'=>false,'hasprice'=>$hasprice,'category'=>$category,'location'=>$a->location,'message'=>false,'postcode'=>$a->postcode]);
+
+        }
+
+
+
     }
     public  function delete(Request $request,$id)
     {
