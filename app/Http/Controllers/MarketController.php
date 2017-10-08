@@ -123,7 +123,7 @@ class MarketController extends BaseController
         $price->location_id=119;
         $location=$price->location;
         $price->category_id=0;
-        return $price->count()/$location->product();
+        return $location->product();
         /*
         $locations = Location::all();
 
