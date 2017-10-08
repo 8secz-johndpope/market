@@ -317,7 +317,7 @@ class HomeController extends BaseController
         $advert=Advert::find($request->id);
         $body=['title'=>$request->title,'description'=>$request->description];
 
-        foreach ($advert->fields as $field){
+        foreach ($advert->category->fields as $field){
             if($field->slug!=='price'&&$request->has($field->slug)){
                 $body['meta'.$field->slug] = $request->get($field->slug);
             }
