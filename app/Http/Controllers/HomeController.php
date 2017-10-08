@@ -114,6 +114,13 @@ class HomeController extends BaseController
 
         return view('home.post',['categories'=>$categories,'user'=>$user,'extras'=>false,'fields'=>false,'hasprice'=>false,'category'=>false,'location'=>false,'message'=>false]);
     }
+    public function edit(Request $request,$id)
+    {
+        $advert=Advert::find($id);
+        $user = Auth::user();
+
+        return view('home.edit',['advert'=>$advert,'user'=>$user]);
+    }
     public function location(Request $request){
         $user = Auth::user();
         $categories = Category::where('parent_id',0)->get();

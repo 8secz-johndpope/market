@@ -210,5 +210,10 @@ class Advert extends  BaseModel
             $this->fetch();
         return Location::where('res',$this->dict['location_id'])->first();
     }
+    public function category(){
+        if($this->dict===null)
+            $this->fetch();
+        return Category::where('res',$this->dict['category'])->first();
+    }
 
 }
