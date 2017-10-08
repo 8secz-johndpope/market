@@ -40,5 +40,19 @@ class Category extends  Model
             return false;
         }
     }
+    public function string(){
+        $parents = array();
+        $cur = $this;
+        while ($cur->parent!==null){
+            $parents[]=$cur->parent;
+            $cur=$cur->parent;
+        }
+        $titles =  array_map(function ($a) {
+            return $a->title;
+        }, $parents);
+        $titles =  array_reverse($titles);
+        $parentstring = implode(' > ',$titles);
+        return $parentstring.' > '.$this->title;
+    }
 
 }

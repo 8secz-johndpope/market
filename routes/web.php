@@ -128,6 +128,7 @@ Route::get('/{any}', 'MarketController@search');
 Route::get('/{any}/{loc}', 'MarketController@lsearch');
 Route::namespace('Admin')->group(function () {
     Route::get('/admin/manage/pricegroup/add', 'AdminController@add_pricegroup')->middleware('admin');
+    Route::get('/admin/manage/pricegroup/edit/{id}', 'AdminController@edit_pricegroup')->middleware('admin');
     Route::get('/admin/manage/packs', 'AdminController@packs')->middleware('admin');
     Route::get('/admin/manage/pricegroup', 'AdminController@pricegroup')->middleware('admin');
     Route::get('/admin/manage/role', 'AdminController@iam')->middleware('admin');

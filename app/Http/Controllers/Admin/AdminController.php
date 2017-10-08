@@ -38,6 +38,11 @@ class AdminController extends BaseController
 
         return view('admin.pricegroup',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations]);
     }
+    public function edit_pricegroup(Request $request,$id){
+        $price = Price::find($id);
+
+        return view('admin.pricegroup',['price'=>$price]);
+    }
     public function add_pricegroup(Request $request){
         $price = new Price;
         $price->category_id = $request->category;
