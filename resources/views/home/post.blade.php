@@ -102,8 +102,7 @@
                    </div>
                </div>
            </div>
-           @if($category)
-           <div class="panel panel-default selected-location-panel">
+           <div class="panel panel-default selected-location-panel" @if(!$category) style="display: none" @endif>
                <div class="panel-heading">
                    <h3 class="panel-title">Location</h3>
                </div>
@@ -137,7 +136,6 @@
                    </div>
                </div>
            </div>
-           @endif
            <form action="/user/advert/newad" method="post" id="advert-form">
                @if($category)
                    <input type="hidden" name="category" value="{{$category->id}}">
