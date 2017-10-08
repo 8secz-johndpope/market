@@ -202,7 +202,7 @@
                                                         <select class="form-control extra-change" name="featured_type" id="featured_type}">
 
                                                                 <option value="featured_3">Featured (3 days)  ( @if($advert->has_pack('featured_3')) Included in Package  @else £{{$advert->extra_price('featured_3')/100}} @endif )</option>
-                                                            <option value="featured">Featured (7 days)  ( @if($advert->has_pack('featured')) Included in Package  @else £{{$advert->extra_price('featured')/100}} @endif )</option>
+                                                            <option value="featured" selected>Featured (7 days)  ( @if($advert->has_pack('featured')) Included in Package  @else £{{$advert->extra_price('featured')/100}} @endif )</option>
                                                             <option value="featured_3">Featured (3 days)  ( @if($advert->has_pack('featured_14')) Included in Package  @else £{{$advert->extra_price('featured_14')/100}} @endif )</option>
 
                                                         </select>
@@ -228,6 +228,32 @@
                                             </div>
 
                                         </li>
+                                        @if($advert->category->can_ship())
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input extra-change" type="checkbox" name="shipping" value="1" id="shipping">
+                                                            <span class="span-shipping">Shipping</span> &nbsp;Ship to the buyer when order is placed.
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+
+                                                    <select class="form-control extra-change" name="featured_type" id="featured_type}">
+
+                                                        <option value="shipping_1">Shipping (2kg)  ( @if($advert->has_pack('shipping_1')) Included in Package  @else £{{$advert->extra_price('shipping_1')/100}} @endif )</option>
+                                                        <option value="shipping_2">Shipping (5kg)  ( @if($advert->has_pack('shipping_2')) Included in Package  @else £{{$advert->extra_price('shipping_2')/100}} @endif )</option>
+                                                        <option value="shipping_3">Shipping (10kg)  ( @if($advert->has_pack('shipping_3')) Included in Package  @else £{{$advert->extra_price('shipping_3')/100}} @endif )</option>
+
+                                                    </select>
+
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                            @endif
 
                                     </ul>
                                 </div>

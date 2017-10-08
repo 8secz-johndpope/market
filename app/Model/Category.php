@@ -39,6 +39,15 @@ class Category extends  BaseModel
         else
             return false;
     }
+    public function can_ship(){
+
+        $forsale = Category::find(200000000);
+
+        if($this->id>=$forsale->id&&$this->id<=$forsale->ends)
+            return true;
+        else
+            return false;
+    }
 
     public function is_parent($id){
         if($this->id<=$id&&$this->ends>=$id){
