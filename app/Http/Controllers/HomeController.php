@@ -319,7 +319,7 @@ class HomeController extends BaseController
 
         foreach ($advert->category->fields as $field){
             if($field->slug!=='price'&&$request->has($field->slug)){
-                $body['meta'.$field->slug] = $request->get($field->slug);
+                $body['meta.'.$field->slug] = $request->get($field->slug);
             }
         }
         $advert->update_fields($body);
