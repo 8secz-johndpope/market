@@ -55,7 +55,7 @@ class Price extends  Model
         $sloc = Location::find($location);
 
         $prices = Price::all();
-        $mprice = Price::find(1);
+        $mprice = Price::find(17);
         //$all=array();
         foreach ($prices as $price){
             if(($price->category->is_parent($cat->id)||$cat->is_parent($price->category->id))&&($sloc->is_parent($price->location->res)||$price->location->is_parent($sloc->res))){
