@@ -119,6 +119,11 @@ class MarketController extends BaseController
         }
     }
     public function locs(Request $request){
+        $price = new Price;
+        $price->location_id=0;
+        $price->category_id=0;
+        return $price->count();
+        /*
         $locations = Location::all();
 
         foreach ($locations as $location) {
@@ -131,7 +136,7 @@ class MarketController extends BaseController
                 $location->save();
             }
 
-/*
+
             else if($location->parent->id===0){
                 $location->res1= $location->id * 100000000000;
                 $location->save();
@@ -165,9 +170,10 @@ class MarketController extends BaseController
                 $location->res1 = $location->parent->res1 + ($count)*1;
                 $location->save();
             }
-*/
+
 
         }
+*/
     }
     public function loc(Request $request){
         /*

@@ -10,7 +10,7 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Price extends  Model
+class Price extends  BaseModel
 {
     public function location()
     {
@@ -64,5 +64,43 @@ class Price extends  Model
             }
         }
         return $mprice;
+    }
+    public  function count(){
+        $category = Category::find($this->category_id);
+        $location = Location::find($this->location_id);
+        $musts=array();
+        $musts['category']= [
+            'range' => [
+                'category' => [
+                    'gte'=>$category->id,
+                    'lte'=>$category->ends
+                ]
+            ]
+        ];
+
+        $musts['location_id']= [
+            'range' => [
+                'location_id' => [
+                    'gte'=>$location->res,
+                    'lte'=>$location->ends
+                ]
+            ]
+        ];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>0,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($musts),
+                        /*     'filter' => $filte */
+                    ]
+                ],
+            ]
+        ];
+        $response = $this->client->search($params);
+        $total= $response['hits']['total'];
+        return $total;
     }
 }
