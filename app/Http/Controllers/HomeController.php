@@ -173,15 +173,7 @@ class HomeController extends BaseController
            // return ['code' => 2, 'msg' => 'Advert does not belong to you'];
         }
 
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'id' => $advert->elastic
-        ];
-
-// Update doc at /my_index/my_type/my_id
-        $response = $this->client->delete($params);
-        $advert->delete();
+        $advert->make_inactive();
         return redirect('/user/manage/ads');
     }
         public  function newad(Request $request){
