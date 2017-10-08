@@ -850,7 +850,7 @@ class UserController extends BaseController
                     $response = $this->client->get($params);
                     $adverts[] = $response['_source'];
                 }catch (\Exception $e){
-                    
+
                 }
 
 

@@ -53,6 +53,8 @@ class Advert extends  BaseModel
 
         ];
         $response = $this->client->update($params);
+        $this->deleted=1;
+        $this->save();
     }
     public function param($param){
        if($this->dict===null)
