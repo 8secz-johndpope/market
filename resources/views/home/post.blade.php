@@ -19,8 +19,8 @@
 
 
    <div class="row">
-       <div class="col-lg-2"></div>
-       <div class="col-lg-8  nopadding">
+       <div class="col-lg-1"></div>
+       <div class="col-lg-10  nopadding">
 
            <div class="panel panel-default automatic-category-panel" @if($category) style="display: none" @endif>
                <div class="panel-heading">
