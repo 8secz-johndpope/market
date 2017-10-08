@@ -48,7 +48,7 @@
                </div>
            </div>
 
-           <div class="panel panel-default  manual-category-panel"  @if($category) style="display: none" @endif>
+           <div class="panel panel-default  manual-category-panel"   style="display: none">
                <div class="panel-heading">
                    <h3 class="panel-title">Select Category</h3>
                </div>
@@ -146,9 +146,7 @@
                        <input type="hidden" name="postcode" value="{{$postcode}}">
                    @endif
                {{ csrf_field() }}
-           <div class="all-panels">
-
-
+           <div class="all-panels" @if(!$category) style="display: none" @endif>
 
            <div class="panel panel-default title-panel">
                <div class="panel-heading">
@@ -319,9 +317,9 @@
            </div>
            </div>
 
-       </div>
+           </form>
 
-       <div class="col-lg-2"></div>
    </div>
-   </form>
+   </div>
+    </div>
     @endsection
