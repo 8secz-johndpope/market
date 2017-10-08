@@ -53,9 +53,9 @@
                    <h3 class="panel-title">Select Category</h3>
                </div>
                <div class="panel-body">
-                   @foreach($categories as $category)
-                       <div class="main-category" data-category="{{$category->id}}">
-                           {{$category->title}}
+                   @foreach($categories as $cat)
+                       <div class="main-category" data-category="{{$cat->id}}">
+                           {{$cat->title}}
                        </div>
                    @endforeach
                    <div class="row nomargin">
@@ -95,7 +95,7 @@
                </div>
                <div class="panel-body">
                    <div class="row">
-                       <div class="col-sm-11"><span class="category-sting">@if($category) {!! $category->pstring() !!} > <span class="select-category"> {{$category->title}} </span> @endif</span> </div>
+                       <div class="col-sm-11"><span class="category-sting">@if($category) {{$category->pstring()}}   > <span class="select-category"> {{$category->title}} </span> @endif</span> </div>
                        <div class="col-sm-1">
                            <a class="btn btn-default edit-category">Edit</a>
                        </div>
