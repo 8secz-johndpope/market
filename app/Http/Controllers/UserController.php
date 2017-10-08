@@ -839,13 +839,17 @@ class UserController extends BaseController
         $user = Auth::user();
         $adverts = [];
         foreach ($user->adverts()->paginate(15) as $advert){
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'id' => $advert->elastic
-            ];
-            $response = $this->client->get($params);
-            $adverts[]=$response['_source'];
+            if($advert->elastic) {
+
+
+                $params = [
+                    'index' => 'adverts',
+                    'type' => 'advert',
+                    'id' => $advert->elastic
+                ];
+                $response = $this->client->get($params);
+                $adverts[] = $response['_source'];
+            }
         }
 
         return ['total' => count($adverts), 'adverts' => $adverts];
