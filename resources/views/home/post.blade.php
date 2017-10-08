@@ -109,7 +109,7 @@
                <div class="panel-body">
                    <div class="row">
 
-                       <div class="col-sm-12 location-selected">
+                       <div class="col-sm-12 location-selected" @if(!$location) style="display: none" @endif>
                            <p>Your Location</p>
                            <span class="extra-large"> @if($location){{$postcode}} @endif</span><a class="edit-location-button">(Edit)</a>
                        </div>
