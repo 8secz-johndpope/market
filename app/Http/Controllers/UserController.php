@@ -841,14 +841,19 @@ class UserController extends BaseController
         foreach ($user->adverts()->paginate(15) as $advert){
             if($advert->elastic) {
 
+                try{
+                    $params = [
+                        'index' => 'adverts',
+                        'type' => 'advert',
+                        'id' => $advert->elastic
+                    ];
+                    $response = $this->client->get($params);
+                    $adverts[] = $response['_source'];
+                }catch (\Exception $e){
+                    
+                }
 
-                $params = [
-                    'index' => 'adverts',
-                    'type' => 'advert',
-                    'id' => $advert->elastic
-                ];
-                $response = $this->client->get($params);
-                $adverts[] = $response['_source'];
+
             }
         }
 
