@@ -120,7 +120,7 @@ class MarketController extends BaseController
     }
     public function locs(Request $request){
         $price = new Price;
-        $price->location_id=119;
+        $price->location_id=1931;
         $location=$price->location;
         $price->category_id=0;
         return $location->count();
