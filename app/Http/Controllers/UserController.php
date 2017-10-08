@@ -837,33 +837,18 @@ class UserController extends BaseController
     {
 
         $user = Auth::user();
-        $page = $request->page ? $request->page : 1;
+        $adverts = [];
+        foreach ($user->adverts()->paginate(15) as $advert){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'id' => $advert->elastic
+            ];
+            $response = $this->client->get($params);
+            $adverts[]=$response['_source'];
+        }
 
-        $pagesize = 10;
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => [
-                'from' => ($page - 1) * $pagesize,
-                'size' => $pagesize,
-                'query' => [
-                    'bool' => [
-                        'must' => ['term' => ['user_id' => $user->id]],
-                    ]
-                ],
-                "sort" => [
-                    [
-                        "created_at" => ["order" => "desc"]
-                    ]
-                ]
-            ]
-        ];
-        $response = $this->client->search($params);
-        $products = array_map(function ($a) {
-            return $a['_source'];
-        }, $response['hits']['hits']);
-
-        return ['total' => $response['hits']['total'], 'adverts' => $products];
+        return ['total' => count($adverts), 'adverts' => $adverts];
     }
 
     public function create(Request $request)
