@@ -12,5 +12,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class CategoryField  extends Model
 {
-
+    public $table="category_field";
 }
