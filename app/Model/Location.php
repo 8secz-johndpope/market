@@ -31,6 +31,8 @@ class Location extends  Model
         }
     }
     public function string(){
+        if($this->id===0)
+            return $this->title;
         $parents = array();
         $cur = $this;
         while ($cur->parent!==null){
