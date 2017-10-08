@@ -142,7 +142,7 @@
                                                                 @elseif($field->type==='list')
                                                                     <select class="form-control" name="{{$field->slug}}">
                                                                         @foreach($field->values as $value)
-                                                                            <option value="{{$value->slug}}" @if($value->slug===$advert->meta($field->slug)) @endif>{{$value->title}}</option>
+                                                                            <option value="{{$value->slug}}" @if($value->slug===$advert->meta($field->slug)) selected @endif>{{$value->title}}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 @else
