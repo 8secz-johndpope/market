@@ -118,17 +118,10 @@
 
                                                     <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
                                                     <input type="number" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required value="{{$advert->price()}}" step="1">
-                                                    <span class="input-group-addon">.00</span>
 
                                                 </div>
                                             </div>
-                                            <div class="col-sm-2">
-                                                <div class="input-group">
 
-                                                    <input type="number" name="pence" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required value="{{$advert->pence()}}" step="1" min="0" max="99">
-
-                                                </div>
-                                            </div>
                                             <div class="col-sm-6"></div></div>
                                     </div>
                                 </div>
