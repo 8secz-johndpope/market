@@ -34,48 +34,11 @@ class BusinessController extends BaseController
 {
     public function myads(Request $request){
         $user = Auth::user();
-        $page = $request->page ? $request->page : 1;
 
-        $pagesize = 10;
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => [
-                'from' => ($page - 1) * $pagesize,
-                'size' => $pagesize,
-                'query' => [
-                    'bool' => [
-                        'must' => ['term' => ['user_id' => $user->id]],
-                    ]
-                ],
-                "sort" => [
-                    [
-                        "created_at" => ["order" => "desc"]
-                    ]
-                ]
-            ]
-        ];
-        $response = $this->client->search($params);
         $milliseconds = round(microtime(true) * 1000);
-        $products = array_map(function ($a) use ($milliseconds) {
 
-            $diff = $milliseconds-$a['_source']['created_at'];
-            if($diff<60*1000){
-                $a['_source']['posted'] = 'Just Now';
-            }
-            else if($diff<60*60*1000){
-                $a['_source']['posted'] = (int)($diff/60000).'m ago';
-            }
-            else if($diff<24*60*60*1000){
-                $a['_source']['posted'] = (int)($diff/(60*60000)).'h ago';
-            }else{
-                $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
-            }
-            return $a['_source'];
 
-        },$response['hits']['hits']);
-
-        return view('business.ads',['total' => $response['hits']['total'], 'products' => $products,'mill'=>$milliseconds,'user'=>$user]);
+        return view('business.ads',['mill'=>$milliseconds,'user'=>$user]);
     }
     public function finance(Request $request){
         $user = Auth::user();
