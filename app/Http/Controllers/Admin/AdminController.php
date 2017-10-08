@@ -43,6 +43,12 @@ class AdminController extends BaseController
 
         return view('admin.pricegroup',['price'=>$price]);
     }
+    public function delete_pricegroup(Request $request,$id){
+        $price = Price::find($id);
+        $price->delete();
+        return redirect('/admin/manage/packs');
+
+    }
     public function add_pricegroup(Request $request){
         if($request->has('id'))
             $price=Price::find($request->id);

@@ -32,6 +32,7 @@
     <td>{{$price->location->title}}</td>
     <td>{{$price->category->title}}</td>
     <td><a href="/admin/manage/pricegroup/edit/{{$price->id}}" class="btn btn-primary">Edit</a> </td>
+    <td><a  href="/admin/manage/pricegroup/delete/{{$price->id}}" class="btn btn-danger">Delete</a> </td>
 
 </tr>
                 @endforeach
