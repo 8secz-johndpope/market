@@ -15,7 +15,7 @@
 <input type="hidden" id="location">
     <div class="row">
         <div class="col-sm-12">
-            <div class="panel panel-default selected-category-panel">
+            <div class="panel panel-default selected-category-panel" @if($price) style="display: block" @endif>
                 <div class="panel-heading">
                     <h3 class="panel-title">Category</h3>
                 </div>
@@ -71,7 +71,7 @@
             @endif
 
 
-            <div class="panel panel-default selected-location-panel">
+            <div class="panel panel-default selected-location-panel" @if($price) style="display: block" @endif>
                 <div class="panel-heading">
                     <h3 class="panel-title">Location</h3>
                 </div>
