@@ -11,8 +11,7 @@
 @endsection
 
 @section('content')
-<input type="hidden" id="category">
-<input type="hidden" id="location">
+
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-default selected-category-panel" @if($price) style="display: block" @endif>
@@ -131,51 +130,56 @@
 
             <div class="well">
 
-                <form>
+                <form action="/admin/manage/pricegroup/add" method="post">
+                    @if($price)
+                        <input type="hidden" name="id" value="{{$price->id}}">
+                        @endif
+                    <input type="hidden" id="category" name="category" value="@if($price) {{$price->category->id}} @else 0 @endif">
+                    <input type="hidden" id="location" name="location" value="@if($price) {{$price->location->id}} @else 0 @endif">
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Standard</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="0.00" id="standard">
+                            <input class="form-control" name="standard" type="text" placeholder="0.00" id="standard" required @if($price) value="{{$price->standard}}" @endif >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Urgent</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="10.00" id="urgent">
+                            <input class="form-control" name="urgent" type="text" placeholder="10.00" id="urgent" required @if($price) value="{{$price->urgent}}" @endif>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Spotlight</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="20.00" id="spotlight">
+                            <input class="form-control" name="spotlight" type="text" placeholder="20.00" id="spotlight" required @if($price) value="{{$price->spotlight}}" @endif>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Featured (3 days)</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="15.00" id="featured_3">
+                            <input class="form-control" name="featured_3" type="text" placeholder="15.00" id="featured_3" required @if($price) value="{{$price->featured_3}}" @endif>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Featured (7 days)</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="20.00" id="featured">
+                            <input class="form-control" name="featured" type="text" placeholder="20.00" id="featured" required @if($price) value="{{$price->featured}}" @endif>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Featured (14 days)</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="30.00" id="featured_14">
+                            <input class="form-control" name="featured_14" type="text" placeholder="30.00" id="featured_14" required @if($price) value="{{$price->featured_14}}" @endif>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="example-url-input" class="col-2 col-form-label">Bump</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" placeholder="5.00" id="bump">
+                            <input class="form-control" name="bump" type="text" placeholder="5.00" id="bump" required @if($price) value="{{$price->bump}}" @endif>
                         </div>
                     </div>
 
-                    <a class="btn btn-primary add-pricegroup">Add Price Group</a>
+                    <button type="submit" class="btn btn-primary">Add Price Group</button>
 
                 </form>
             </div>

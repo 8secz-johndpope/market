@@ -44,6 +44,9 @@ class AdminController extends BaseController
         return view('admin.pricegroup',['price'=>$price]);
     }
     public function add_pricegroup(Request $request){
+        if($request->has('id'))
+            $price=Price::find($request->id);
+        else
         $price = new Price;
         $price->category_id = $request->category;
         $price->location_id = $request->location;
@@ -55,7 +58,7 @@ class AdminController extends BaseController
         $price->featured_14 = $request->featured_14*100;
         $price->bump = $request->bump*100;
         $price->save();
-        return ['msg'=>'done'];
+        return redirect('/admin/manage/packs');
 
     }
     public function iam(Request $request){
