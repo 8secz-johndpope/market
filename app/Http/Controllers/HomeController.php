@@ -316,13 +316,14 @@ class HomeController extends BaseController
     {
         $advert=Advert::find($request->id);
         $body=['title'=>$request->title,'description'=>$request->description];
-
+        $advert->update_fields($body);
+        $body=[];
         foreach ($advert->category->fields as $field){
             if($field->slug!=='price'&&$request->has($field->slug)){
-                $body['meta.'.$field->slug] = $request->get($field->slug);
+                $body[$field->slug] = $request->get($field->slug);
             }
         }
-        $advert->update_fields($body);
+        $advert->update_meta($body);
         return redirect('/user/manage/ads');
     }
         public function order(Request $request){

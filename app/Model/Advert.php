@@ -65,14 +65,14 @@ class Advert extends  BaseModel
         $this->deleted=1;
         $this->save();
     }
-    public function update_field($field,$value){
+    public function update_meta($meta){
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
             'id' => $this->elastic,
             'body' => [
                 'doc' => [
-                    $field => $value
+                    'meta' => $meta
                 ]
             ]
 
