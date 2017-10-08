@@ -51,7 +51,7 @@ class Advert extends  BaseModel
                     'inactive' => 1,
                     'views'=>0,
                     'list_views'=>0,
-                    'ugrent_expires' => $milliseconds,
+                    'urgent_expires' => $milliseconds,
                     'featured_expires' => $milliseconds,
                      'spotlight_expires' => $milliseconds,
                       'featured_count' => 0,
