@@ -29,8 +29,8 @@
     <td>£{{$price->featured/100}}</td>
     <td>£{{$price->featured_14/100}}</td>
     <td>£{{$price->bump/100}}</td>
-    <td>£{{$price->location->title}}</td>
-    <td>£{{$price->category->title}}</td>
+    <td>{{$price->location->title}}</td>
+    <td>{{$price->category->title}}</td>
     <td><a href="/admin/manage/pricegroup/edit/{{$price->id}}" class="btn btn-primary">Edit</a> </td>
 
 </tr>
