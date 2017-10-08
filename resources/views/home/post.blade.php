@@ -124,15 +124,17 @@
                            @if($message)
                            <span class="red-text" id="location-error-info" >{{$message}}</span>
                             @endif
-                           @if($category)
+
                            <form class="form-inline" action="/user/advert/location" method="post">
                                {{ csrf_field() }}
+                               @if($category)
                                <input type="hidden" name="category" value="{{$category->id}}" id="category">
+                               @endif
                                <label class="sr-only" for="inlineFormInput">Postcode</label>
                                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="postcode-text" placeholder="Postcode" name="postcode">
                                <button class="btn btn-danger" type="submit">Go</button>
                            </form>
-                               @endif
+
                        </div>
 
                    </div>
