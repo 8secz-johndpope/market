@@ -65,6 +65,33 @@ class Advert extends  BaseModel
         $this->deleted=1;
         $this->save();
     }
+    public function update_field($field,$value){
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic,
+            'body' => [
+                'doc' => [
+                    $field => $value
+                ]
+            ]
+
+        ];
+        $response = $this->client->update($params);
+    }
+
+    public function update_fields($fields){
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic,
+            'body' => [
+                'doc' => $fields
+            ]
+
+        ];
+        $response = $this->client->update($params);
+    }
     public function make_active(){
         $milliseconds = round(microtime(true) * 1000);
         $params = [

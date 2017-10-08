@@ -312,7 +312,13 @@ class HomeController extends BaseController
 
      //   return view('home.myadverts');
     }
-    public function order(Request $request){
+    public  function save(Request $request)
+    {
+        $advert=Advert::find($request->id);
+        $advert->update_fields(['title'=>$request->title,'description'=>$request->description]);
+        return redirect('/user/manage/ads');
+    }
+        public function order(Request $request){
         $user = Auth::user();
         /*
         $balance = \Stripe\Balance::retrieve(

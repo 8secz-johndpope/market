@@ -93,6 +93,8 @@ Route::get('/user/advert/delete/{id}', 'HomeController@delete');
 Route::get('/user/advert/repost/{id}', 'HomeController@repost');
 Route::get('/user/advert/edit/{id}', 'HomeController@edit');
 
+Route::post('/user/advert/save', 'HomeController@save');
+
 Route::get('/user/p/stats/{id}', 'HomeController@stats');
 
 
