@@ -51,7 +51,7 @@
         span.extra-large {
             font-size: 25px;
         }
-       
+
         span.span-urgent, span.span-featured,span.span-spotlight,span.span-shipping {
 
             color: white;

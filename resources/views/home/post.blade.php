@@ -22,7 +22,7 @@
        <div class="col-lg-2"></div>
        <div class="col-lg-8  nopadding">
 
-           <div class="panel panel-default automatic-category-panel">
+           <div class="panel panel-default automatic-category-panel" @if($category) style="display: none" @endif>
                <div class="panel-heading">
                    <h3 class="panel-title">Category</h3>
                </div>
@@ -48,7 +48,7 @@
                </div>
            </div>
 
-           <div class="panel panel-default  manual-category-panel">
+           <div class="panel panel-default  manual-category-panel"  @if($category) style="display: none" @endif>
                <div class="panel-heading">
                    <h3 class="panel-title">Select Category</h3>
                </div>
