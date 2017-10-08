@@ -36,7 +36,7 @@ class AdminController extends BaseController
         $categories = Category::where('parent_id',0)->get();
         $locations = Location::where('parent_id',0)->get();
 
-        return view('admin.pricegroup',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations]);
+        return view('admin.pricegroup',['prices'=>$prices,'categories'=>$categories,'locations'=>$locations,'price'=>false]);
     }
     public function edit_pricegroup(Request $request,$id){
         $price = Price::find($id);
