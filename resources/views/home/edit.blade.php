@@ -117,7 +117,7 @@
                                                 <div class="input-group">
 
                                                     <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
-                                                    <input type="text" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required value="{{$advert->price()}}">
+                                                    <input type="number" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required value="{{$advert->price()}}" step="0.01">
                                                     <span class="input-group-addon">.00</span>
 
                                                 </div>

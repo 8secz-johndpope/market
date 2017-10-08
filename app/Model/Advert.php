@@ -236,7 +236,7 @@ class Advert extends  BaseModel
     public function price(){
         if($this->dict===null)
             $this->fetch();
-        return number_format($this->meta('price')/100,2);
+        return $this->meta('price')/100;
     }
 
 }
