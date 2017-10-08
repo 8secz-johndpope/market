@@ -124,7 +124,7 @@ class HomeController extends BaseController
             return view('home.post',['categories'=>$categories,'user'=>$user,'extras'=>false,'fields'=>false,'hasprice'=>false,'category'=>$category,'location'=>false,'message'=>'Not a valid postcode']);
         }else{
             $location=$a->location;
-            return $category;
+            return $category->pstring();
             $fields = $category->fields;
             $hasprice = false;
             foreach ($fields as $field){
