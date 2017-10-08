@@ -36,7 +36,10 @@ class BusinessController extends BaseController
         $user = Auth::user();
 
         $milliseconds = round(microtime(true) * 1000);
-
+        foreach ($user->adverts as $advert){
+            $advert->category_id=$advert->param('category');
+            $advert->save();
+        }
 
         return view('business.ads',['mill'=>$milliseconds,'user'=>$user]);
     }
