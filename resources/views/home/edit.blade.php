@@ -170,7 +170,7 @@
 
                                             <li class="list-group-item">
                                                 <div class="row">
-                                                    <div class="col-sm-10">
+                                                    <div class="col-sm-8">
                                                         <div class="form-check">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input extra-change" type="checkbox" name="urgent" value="1" id="urgent">
@@ -178,7 +178,7 @@
                                                             </label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-4">
                                                             <span class="extra-price"> @if($advert->has_pack('urgent')) Included in Package  @else £{{$advert->extra_price('urgent')/100}} @endif</span>
                                                             <input type="hidden" id="urgent-price" value="@if($advert->has_pack('urgent'))0@else{{$advert->extra_price('urgent')/100}}@endif" name="urgent-price">
 
@@ -189,15 +189,15 @@
                                             </li>
                                         <li class="list-group-item">
                                             <div class="row">
-                                                <div class="col-sm-10">
+                                                <div class="col-sm-8">
                                                     <div class="form-check">
                                                         <label class="form-check-label">
                                                             <input class="form-check-input extra-change" type="checkbox" name="featured" value="1" id="featured">
-                                                            <span class="span-urgent">Featured</span> &nbsp;Have your Ad appear at the top of the category listings for 3, 7 or 14 days.
+                                                            <span class="span-featured">Featured</span> &nbsp;Have your Ad appear at the top of the category listings for 3, 7 or 14 days.
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-2">
+                                                <div class="col-sm-4">
 
                                                         <select class="form-control extra-change" name="featured_type" id="featured_type}">
 
