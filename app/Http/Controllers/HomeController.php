@@ -176,6 +176,27 @@ class HomeController extends BaseController
         $advert->make_inactive();
         return redirect('/user/manage/ads');
     }
+    public  function repost(Request $request,$id)
+    {
+        $user = Auth::user();
+        $advert = Advert::find($id);
+
+        if ($advert === null) {
+            $advert = Advert::where('sid', $id)->first();
+        }
+        if ($advert === null) {
+            return redirect('/user/manage/ads');
+            //return ['code' => 1, 'msg' => 'Advert not found'];
+        }
+        if ($advert->user_id != $user->id) {
+
+            return redirect('/user/manage/ads');
+            // return ['code' => 2, 'msg' => 'Advert does not belong to you'];
+        }
+
+        $advert->make_active();
+        return redirect('/user/manage/ads');
+    }
         public  function newad(Request $request){
 
         $user= Auth::user();

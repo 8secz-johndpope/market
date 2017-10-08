@@ -119,6 +119,11 @@ class MarketController extends BaseController
         }
     }
     public function locs(Request $request){
+        $fields=FieldValue::whereNull('title');
+        foreach ($fields as $field){
+            $field->title=ucwords(str_replace('-',' ',$field->slug));
+            $field->save();
+        }
         $price = new Price;
         $price->location_id=1931;
         $location=$price->location;
