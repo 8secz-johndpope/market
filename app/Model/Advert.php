@@ -211,9 +211,27 @@ class Advert extends  BaseModel
         return Location::where('res',$this->dict['location_id'])->first();
     }
     public function category(){
-        if($this->dict===null)
-            $this->fetch();
-        return Category::where('res',$this->dict['category'])->first();
+        return $this->belongsTo('App\Model\Category');
+    }
+    public function postcode(){
+        return $this->belongsTo('App\Model\Postcode');
+    }
+    public function extras(){
+        $forsale = Category::find(200000000);
+
+        if($this->category->id>=$forsale->id&&$this->category->id<=$forsale->ends)
+            $extras = ExtraType::all();
+        else{
+            $extras = ExtraType::where('id','<',4)->get();
+        }
+        foreach ($extras as $extra){
+            if($extra->type==='single'){
+                $extra->price = $extra->price($this->category->id,$this->postcode->location->id);
+            }else{
+                $extra->prices = $extra->prices($this->category->id,$this->postcode->location->id);
+            }
+        }
+        return $extras;
     }
 
 }

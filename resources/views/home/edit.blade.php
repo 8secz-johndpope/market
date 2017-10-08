@@ -49,7 +49,7 @@
 
                         <div class="col-sm-12 location-selected">
                             <p>Your Location</p>
-                            <span class="extra-large"> </span> <span class="glyphicon glyphicon-lock"></span>
+                            <span class="extra-large">{{$advert->postcode->postcode}} </span> <span class="glyphicon glyphicon-lock"></span>
                         </div>
 
 
@@ -58,8 +58,7 @@
                 </div>
             </div>
             <form action="/user/advert/save" method="post" id="advert-form">
-                    <input type="hidden" name="category" value="{{$category->id}}">
-                    <input type="hidden" name="postcode" value="{{$postcode}}">
+
                 {{ csrf_field() }}
                 <div class="all-panels" >
 
@@ -134,7 +133,7 @@
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <div class="row">
-                                                    @foreach($fields as $field)
+                                                    @foreach($advert->fields as $field)
                                                         @if($field->slug!=='price')
                                                             <div class="col-sm-6">
                                                                 <span class="extra-title">{{$field->title}}</span>
@@ -166,7 +165,7 @@
                                 </div>
                                 <div class="panel-body">
                                     <ul class="list-group">
-                                        @foreach($extras as $extra)
+                                        @foreach($advert->extras() as $extra)
 
                                             <li class="list-group-item">
                                                 <div class="row">
