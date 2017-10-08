@@ -56,6 +56,22 @@ class Category extends  BaseModel
         $parentstring = implode(' > ',$titles);
         return $parentstring.' > '.$this->title;
     }
+    public function hstring(){
+        if($this->id===0)
+            return $this->title;
+        $parents = array();
+        $cur = $this;
+        while ($cur->parent!==null){
+            $parents[]=$cur->parent;
+            $cur=$cur->parent;
+        }
+        $titles =  array_map(function ($a) {
+            return $a->title;
+        }, $parents);
+        $titles =  array_reverse($titles);
+        $parentstring = implode(' > ',$titles);
+        return $parentstring.' > <span class="select-category">'.$this->title.'</span>';
+    }
     public  function count(){
 
         $musts=array();
