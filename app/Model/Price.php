@@ -77,6 +77,11 @@ class Price extends  BaseModel
         if($max->featured_14<300){
             $max->featured_14=300;
         }
+        $max->urgent=$max->urgent-$max->urgent%100;
+        $max->spotlight=$max->spotlight-$max->spotlight%100;
+        $max->featured=$max->featured-$max->featured%100;
+        $max->featured_3=$max->featured_3-$max->featured_3%100;
+        $max->featured_14=$max->featured_14-$max->featured_14%100;
         return $max;
     }
 
