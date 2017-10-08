@@ -148,7 +148,7 @@ class HomeController extends BaseController
                     $extra->prices = $extra->prices($category->id,$location->id);
                 }
             }
-            return view('home.post',['categories'=>$categories,'user'=>$user,'extras'=>$extras,'fields'=>false,'hasprice'=>$hasprice,'category'=>$category,'location'=>$a->location,'message'=>false,'postcode'=>$a->postcode]);
+            return view('home.post',['categories'=>$categories,'user'=>$user,'extras'=>$extras,'fields'=>$fields,'hasprice'=>$hasprice,'category'=>$category,'location'=>$a->location,'message'=>false,'postcode'=>$a->postcode]);
 
         }
 
