@@ -48,9 +48,39 @@ class Price extends  BaseModel
             return $a->id;
         },$locs);
 
-        return Price::whereIn('category_id', $catids)->whereIn('location_id', $locids)->orderBy('id','desc')->first();
+        $price = Price::whereIn('category_id', $catids)->whereIn('location_id', $locids)->orderBy('id','desc')->first();
+        if($price===null)
+            return Price::lprice($location);
     }
-    public static function mprice($category,$location){
+    public static function lprice($location){
+        $westminister = Location::find(1931);
+        $location=Location::find($location);
+        $part = $location->ratio()/$westminister->ratio();
+        $max = Price::find(19);
+        $max->urgent = (int)($part*$max->urgent);
+        $max->spotlight = (int)($part*$max->spotlight);
+        $max->featured = (int)($part*$max->featured);
+        $max->featured_3 = (int)($part*$max->featured_3);
+        $max->featured_14 = (int)($part*$max->featured_14);
+        if($max->urgent<100){
+            $max->urgent=100;
+        }
+        if($max->spotlight<300){
+            $max->spotlight=300;
+        }
+        if($max->featured<200){
+            $max->featured=200;
+        }
+        if($max->featured_3<100){
+            $max->featured_3=100;
+        }
+        if($max->featured_14<300){
+            $max->featured_14=300;
+        }
+        return $max;
+    }
+
+        public static function mprice($category,$location){
         $cat = Category::find($category);
         $sloc = Location::find($location);
 

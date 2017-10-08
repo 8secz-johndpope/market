@@ -19,7 +19,7 @@ class Location extends  BaseModel
     }
     public function postcodes()
     {
-        return $this->hasMany('App\Model\Postcode');
+        return $this->hasMany('App\Model\Postcode')->where('active',1);
     }
     public function parent(){
         return $this->belongsTo('App\Model\Location');
@@ -81,5 +81,8 @@ class Location extends  BaseModel
         $response = $this->client->search($params);
         $total= $response['hits']['total'];
         return $total;
+    }
+    public function ratio(){
+        return $this->count()/count($this->postcodes);
     }
 }
