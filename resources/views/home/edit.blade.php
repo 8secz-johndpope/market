@@ -33,7 +33,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-sm-11"><span class="category-sting"> {{$advert->category()->pstring()}} <span class="select-category"> {{$advert->category()->title}}   > </span> </span> </div>
+                        <div class="col-sm-11"><span class="category-sting"> {{$advert->category->pstring()}} <span class="select-category"> {{$advert->category->title}}   > </span> </span> </div>
                         <div class="col-sm-1">
                             <span class="glyphicon glyphicon-lock"></span>
                         </div>
