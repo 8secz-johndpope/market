@@ -142,6 +142,9 @@
                @if($category)
                    <input type="hidden" name="category" value="{{$category->id}}">
                    @endif
+                   @if($location)
+                       <input type="hidden" name="postcode" value="{{$postcode}}">
+                   @endif
                {{ csrf_field() }}
            <div class="all-panels">
 
