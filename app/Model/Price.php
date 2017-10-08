@@ -50,7 +50,8 @@ class Price extends  BaseModel
 
         $price = Price::whereIn('category_id', $catids)->whereIn('location_id', $locids)->orderBy('id','desc')->first();
         if($price===null)
-            return Price::lprice($location);
+            return Price::find(19);
+           // return Price::lprice($location);
     }
     public static function lprice($location){
         $westminister = Location::find(1931);

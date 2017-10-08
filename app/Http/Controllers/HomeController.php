@@ -112,7 +112,7 @@ class HomeController extends BaseController
         $user = Auth::user();
         $categories = Category::where('parent_id',0)->get();
 
-        return view('home.post',['categories'=>$categories,'urgent'=>$user,'featured'=>$user->featured,'spotlight'=>$user->spotlight,'shipping',$user->shipping]);
+        return view('home.post',['categories'=>$categories,'user'=>$user,'prices'=>false,'fields'=>false,'hasprice'=>false]);
     }
     public  function delete(Request $request,$id)
     {

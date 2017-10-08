@@ -180,12 +180,107 @@
                        </div>
                    </div>
                </div>
-               <div class="category-extras">
+               @if($fields)
+               <div class="category-extras" style="display: block">
+                   @if($hasprice)
+                       <div class="panel panel-default price-panel">
+                           <div class="panel-heading">
+                               <h3 class="panel-title">Price</h3>
+                           </div>
+                           <div class="panel-body">
+                               <div class="row">
+                                   <div class="col-sm-6">
+                                       <div class="input-group">
+
+                                           <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
+                                           <input type="text" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required>
+                                           <span class="input-group-addon">.00</span>
+
+                                       </div>
+                                   </div>
+                                   <div class="col-sm-6"></div></div>
+                           </div>
+                       </div>
+                   @endif
+                   @if(count($fields)>1)
+                       <div class="panel panel-default extra-options-panel">
+                           <div class="panel-heading">
+                               <h3 class="panel-title">Select Options</h3>
+                           </div>
+                           <div class="panel-body">
+                               <div class="row">
+                                   <div class="col-sm-12">
+                                       <div class="row">
+                                           @foreach($fields as $field)
+                                               @if($field->slug!=='price')
+                                                   <div class="col-sm-6">
+                                                       <span class="extra-title">{{$field->title}}</span>
+                                                       @if($field->type==='integer')
+                                                           <input class="form-control" type="text" name="{{$field->slug}}" required>
+                                                       @elseif($field->type==='list')
+                                                           <select class="form-control" name="{{$field->slug}}">
+                                                               @foreach($field->values as $value)
+                                                                   <option value="{{$value->slug}}">{{$value->title}}</option>
+                                                               @endforeach
+                                                           </select>
+                                                       @else
+                                                           <input class="form-control" type="text" name="{{$field->slug}}" required>
+                                                       @endif
+                                                   </div>
+                                               @endif
+                                           @endforeach
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   @endif
+               </div>
+               @endif
+               @if($prices)
+               <div class="extra-prices" style="display: block">
+                   <div class="panel panel-default featured-panel">
+                       <div class="panel-heading">
+                           <h3 class="panel-title">Make your ad stand out!</h3>
+                       </div>
+                       <div class="panel-body">
+                           <ul class="list-group">
+                               @foreach($extras as $extra)
+
+                                   <li class="list-group-item">
+                                       <div class="row">
+                                           <div class="col-sm-10">
+                                               <div class="form-check">
+                                                   <label class="form-check-label">
+                                                       <input class="form-check-input extra-change" type="checkbox" name="{{$extra->slug}}" value="1" id="{{$extra->slug}}">
+                                                       <span class="span-{{$extra->slug}}">{{$extra->title}}</span> &nbsp;&nbsp;{{$extra->subtitle}}
+                                                   </label>
+                                               </div>
+                                           </div>
+                                           <div class="col-sm-2">
+                                               @if($extra->type==='single')
+                                                   <span class="extra-price">£{{$extra->price->price/100}}</span>
+                                                   <input type="hidden" id="{{$extra->slug}}-price" value="{{$extra->price->price/100}}" name="{{$extra->slug}}-price">
+                                               @else
+                                                   <select class="form-control extra-change" name="{{$extra->key}}" id="{{$extra->key}}">
+                                                       @foreach($extra->prices as $price)
+                                                           <option value="{{$price->key}}">{{$price->title}}  (£{{$price->price/100}})</option>
+                                                       @endforeach
+                                                   </select>
+                                               @endif
+
+                                           </div>
+                                       </div>
+
+                                   </li>
+                               @endforeach
+
+                           </ul>
+                       </div>
+                   </div>
 
                </div>
-               <div class="extra-prices">
-
-               </div>
+               @endif
 
                <div class="panel panel-success total-panel">
                    <div class="panel-heading">
