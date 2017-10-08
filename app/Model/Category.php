@@ -56,7 +56,7 @@ class Category extends  BaseModel
         $parentstring = implode(' > ',$titles);
         return $parentstring.' > '.$this->title;
     }
-    public function hstring(){
+    public function pstring(){
         if($this->id===0)
             return $this->title;
         $parents = array();
@@ -70,7 +70,7 @@ class Category extends  BaseModel
         }, $parents);
         $titles =  array_reverse($titles);
         $parentstring = implode(' > ',$titles);
-        return $parentstring.' > <span class="select-category">'.$this->title.'</span>';
+        return $parentstring;
     }
     public  function count(){
 
