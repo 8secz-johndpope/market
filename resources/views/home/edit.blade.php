@@ -47,11 +47,13 @@
                 <div class="panel-body">
                     <div class="row">
 
-                        <div class="col-sm-12 location-selected">
+                        <div class="col-sm-11 location-selected">
                             <p>Your Location</p>
-                            <span class="extra-large">{{$advert->postcode->postcode}} </span> <span class="glyphicon glyphicon-lock"></span>
+                            <span class="extra-large">{{$advert->postcode->postcode}} </span>
                         </div>
-
+                        <div class="col-sm-1">
+                            <span class="glyphicon glyphicon-lock"></span>
+                        </div>
 
 
                     </div>
