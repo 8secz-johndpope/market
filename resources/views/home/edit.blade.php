@@ -211,6 +211,23 @@
                                             </div>
 
                                         </li>
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input extra-change" type="checkbox" name="spotlight" value="1" id="spotlight">
+                                                            <span class="span-spotlight">Spotlight</span> &nbsp; Have your Ad seen on the Sumra homepage!
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <span class="extra-price"> @if($advert->has_pack('spotlight')) Included in Package  @else £{{$advert->extra_price('spotlight')/100}} @endif</span>
+                                                    <input type="hidden" id="urgent-price" value="@if($advert->has_pack('spotlight'))0@else{{$advert->extra_price('spotlight')/100}}@endif" name="urgent-price">
+                                                </div>
+                                            </div>
+
+                                        </li>
 
                                     </ul>
                                 </div>
