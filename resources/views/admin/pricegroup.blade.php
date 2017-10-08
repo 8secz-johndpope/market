@@ -179,7 +179,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Add Price Group</button>
+                    <button type="submit" class="btn btn-primary">  @if($price) Save Changes @else Add Price Group @endif</button>
 
                 </form>
             </div>
