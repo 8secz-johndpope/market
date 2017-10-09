@@ -98,6 +98,9 @@
                         </div>
                         <div class="panel-body">
                             <div class="row row-images">
+                                @foreach($advert->param('images') as $image)
+                                    <div class="col-sm-3"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}"></div>
+                                    @endforeach
                                 <div class="col-sm-3">
                                     <a ><img src="/css/addimage.png" class="add-image" style="cursor: pointer"></a>
                                     <input type="file" id="file-chooser" style="display: none">
