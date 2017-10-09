@@ -296,7 +296,7 @@ class Advert extends  BaseModel
         }
         if(isset($params['shipping_type'])&& $params['shipping'] === '1') {
 
-
+            $total += 100;
             $shipping = Shipping::find($params['shipping_type']);
 
              if(!($this->has_param('shipping')&&$this->shipping_id===$shipping->id)) {
