@@ -1007,7 +1007,7 @@ class MarketController extends BaseController
             ]
         ];
 
-        $mustnot = ['exists'=>['field'=>'inactive']];
+        $mustnot = [['exists'=>['field'=>'inactive']],['exists'=>['field'=>'draft']]];
         $musts['location_id']= [
             'range' => [
                 'location_id' => [
