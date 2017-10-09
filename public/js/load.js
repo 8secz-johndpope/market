@@ -48,8 +48,8 @@ function upload_file() {
                 console.log(err);
             } else {
                 console.log(data);
-                $(".row-images").prepend('<div class="col-sm-3"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/'+uname+'"></div>');
-                $("#advert-form").append('<input type="hidden" name="images[]" value="'+uname+'">');
+                $(".row-images").prepend('<div class="col-sm-3"><input type="hidden" name="images[]" value="'+uname+'"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/'+uname+'"></div>');
+              //  $("#advert-form").append('<input type="hidden" name="images[]" value="'+uname+'">');
 
             }
         });
