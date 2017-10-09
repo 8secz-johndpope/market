@@ -7,6 +7,7 @@ use App\Model\Pack;
 use App\Model\Payment;
 use App\Model\Postcode;
 use App\Model\Room;
+use App\Model\Shipping;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use PDF;
 use App\Model\Contract;
@@ -119,7 +120,7 @@ class HomeController extends BaseController
         $advert=Advert::find($id);
         $user = Auth::user();
 
-        return view('home.edit',['advert'=>$advert,'user'=>$user]);
+        return view('home.edit',['advert'=>$advert,'user'=>$user,'shippings'=>Shipping::all()]);
     }
     public function location(Request $request){
         $user = Auth::user();

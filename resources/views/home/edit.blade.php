@@ -268,11 +268,9 @@
                                                 <div class="col-sm-4">
 
                                                     <select class="form-control extra-change" name="shipping_type" id="shipping_type">
-
-                                                        <option value="shipping_1">Shipping (2kg)  ( @if($advert->has_pack('shipping_1')) Included in Package  @else £{{$advert->extra_price('shipping_1')/100}} @endif )</option>
-                                                        <option value="shipping_2">Shipping (5kg)  ( @if($advert->has_pack('shipping_2')) Included in Package  @else £{{$advert->extra_price('shipping_2')/100}} @endif )</option>
-                                                        <option value="shipping_3">Shipping (10kg)  ( @if($advert->has_pack('shipping_3')) Included in Package  @else £{{$advert->extra_price('shipping_3')/100}} @endif )</option>
-
+                                                        @foreach($shippings as $shipping)
+                                                            <option value="{{$shipping->id}}">Shipping (2kg)  ( @if($advert->has_pack($shipping->key)) Included in Package  @else £{{$advert->extra_price($shipping->key)/100}} @endif )</option>
+                                                        @endforeach
                                                     </select>
 
                                                 </div>

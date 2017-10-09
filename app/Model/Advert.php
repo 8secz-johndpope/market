@@ -294,8 +294,16 @@ class Advert extends  BaseModel
         if(isset($params['featured_type'])&&!$this->has_pack($params['featured_type'])&&isset($params['featured'])&&($params['featured']==='1')) {
             $total += $price->{$params['featured_type']};
         }
-        if(isset($params['shipping_type'])&&!$this->has_pack($params['shipping_type'])&&isset($params['shipping'])&&($params['shipping']==='1')) {
-            $total += $price->{$params['shipping_type']};
+        if(isset($params['shipping_type'])&& $params['shipping'] === '1') {
+
+
+            $shipping = Shipping::find($params['shipping_type']);
+
+             if(!($this->has_param('shipping')&&$this->shipping_id===$shipping->id)) {
+
+                 $total += $price->{$shipping->key};
+             }
+
         }
         return $total/100;
     }
