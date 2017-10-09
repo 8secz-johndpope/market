@@ -593,7 +593,12 @@ class HomeController extends BaseController
         }
         return ['total'=>$total/100];
     }
-    public function baseAndFirstChildren(){
+    public function ad_total(Request $request,$id){
+        $advert=Advert::fine($request->id);
+        return ['total'=> $advert->total()];
+    }
+
+        public function baseAndFirstChildren(){
         $base = Category::where('parent_id',0)->get();
         $j = 0;
         foreach ($base as $cat) {

@@ -204,6 +204,7 @@ class Advert extends  BaseModel
         }
 
     }
+
     public function posted(){
         $milliseconds = round(microtime(true) * 1000);
         if($this->dict===null)
@@ -280,6 +281,23 @@ class Advert extends  BaseModel
         if($this->dict===null)
             $this->fetch();
         return $this->meta('price')%100;
+    }
+    public function total($params){
+        $price=$this->prices();
+        $total=0;
+        if(!$this->has_pack('urgent')&&isset($params['urgent'])&&($params['urgent']==='1')) {
+            $total += $price->urgent;
+        }
+        if(!$this->has_pack('spotlight')&&isset($params['spotlight'])&&($params['spotlight']==='1')) {
+            $total += $price->spotlight;
+        }
+        if(isset($params['featured_type'])&&!$this->has_pack($params['featured_type'])&&isset($params['featured'])&&($params['featured']==='1')) {
+            $total += $price->{$params['featured_type']};
+        }
+        if(isset($params['shipping_type'])&&!$this->has_pack($params['shipping_type'])&&isset($params['shipping'])&&($params['shipping']==='1')) {
+            $total += $price->{$params['shipping_type']};
+        }
+        return $total/100;
     }
 
 }

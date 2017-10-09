@@ -58,7 +58,7 @@
                 </div>
             </div>
             <form action="/user/advert/save" method="post" id="advert-form">
-                <input type="hidden" name="id" value="{{$advert->id}}">
+                <input type="hidden" name="id" value="{{$advert->id}}" id="id">
                 {{ csrf_field() }}
                 <div class="all-panels" >
 

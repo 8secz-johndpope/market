@@ -649,6 +649,7 @@
         }
         var category = $("#category").val();
         var id = $("#location_id").val();
+
         axios.get('/category/total/'+category,{ params:{id:id,shipping:shipping,featured:featured,spotlight:spotlight,urgent:urgent,featured_type:featured_type,shipping_type:shipping_type}})
             .then(function (response) {
             console.log(response.data);
@@ -659,7 +660,17 @@
             .catch(function (error) {
                 console.log(error);
             });
+        var id = $("#id").val();
+        axios.get('/product/total',{ params:{id:id,shipping:shipping,featured:featured,spotlight:spotlight,urgent:urgent,featured_type:featured_type,shipping_type:shipping_type}})
+            .then(function (response) {
+                console.log(response.data);
+                $(".total-price").html(response.data.total);
 
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
       //  $("#total-price").val(total);
 
     });

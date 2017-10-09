@@ -107,6 +107,7 @@ Route::get('/category/prices/{id}', 'HomeController@prices');
 Route::get('/category/price/{id}', 'HomeController@price');
 
 Route::get('/category/total/{id}', 'HomeController@total');
+Route::get('/product/total', 'HomeController@ad_total');
 
 
 Route::get('/category/suggest', 'HomeController@suggest');
