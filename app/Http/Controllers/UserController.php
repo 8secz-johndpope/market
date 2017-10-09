@@ -934,6 +934,7 @@ class UserController extends BaseController
         $response = $this->client->index($params);
         $advert->sid = $advert->id;
         $advert->user_id=$user->id;
+        $advert->postcode_id=$postcode->id;
         $advert->elastic = $response['_id'];
         $advert->save();
         if ($user->offer === 0) {
