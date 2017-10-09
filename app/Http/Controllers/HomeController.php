@@ -318,12 +318,22 @@ class HomeController extends BaseController
     {
         $advert=Advert::find($request->id);
         $body=['title'=>$request->title,'description'=>$request->description];
+        if($request->has('images')){
+            $body['images']=$request->images;
+        }else{
+            $body['images']=[];
+        }
         $advert->update_fields($body);
         $body=[];
         foreach ($advert->category->fields as $field){
             if($field->slug!=='price'&&$request->has($field->slug)){
                 $body[$field->slug] = $request->get($field->slug);
             }
+        }
+        if($request->has('price')){
+            $body['price']=$request->price*100;
+        }else{
+            $body['price']=-1;
         }
         $advert->update_meta($body);
         return redirect('/user/manage/ads');
