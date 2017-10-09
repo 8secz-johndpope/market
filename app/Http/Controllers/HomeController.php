@@ -595,8 +595,8 @@ class HomeController extends BaseController
         return ['total'=>$total/100];
     }
     public function ad_total(Request $request){
-        return 'done';
         $advert=Advert::fine($request->id);
+        return $advert;
         return ['total'=> $advert->total()];
     }
 
