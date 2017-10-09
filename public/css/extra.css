@@ -129,6 +129,7 @@ span.active-strip {
     color: white;
     padding: 4px;
     right: 0;
+    cursor: pointer;
 }
 a.filter-button.btn.btn-default {
     float: right;

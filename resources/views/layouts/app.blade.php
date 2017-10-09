@@ -612,6 +612,9 @@
        var postcode = $("#postcode-text").val();
        get_location(postcode);
     });
+    $(".row-images").on('click','.cross-mark',function () {
+        $(this).parent().remove();
+    });
     axios.get('/user/list/price')
         .then(function (response) {
             console.log(response);
