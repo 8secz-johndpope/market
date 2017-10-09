@@ -283,8 +283,10 @@ class Advert extends  BaseModel
         return $this->meta('price')%100;
     }
     public function total($params){
+
         $price=$this->prices();
         $total=0;
+        return $total;
         if(!$this->has_pack('urgent')&&isset($params['urgent'])&&($params['urgent']==='1')) {
             $total += $price->urgent;
         }
