@@ -97,9 +97,9 @@
                             <h3 class="panel-title">Add Image</h3>
                         </div>
                         <div class="panel-body">
-                            <div class="row row-images">
+                            <div class="row row-images ui-sortable"  id="sortable">
                                 @foreach($advert->param('images') as $image)
-                                    <div class="col-sm-3 single-image"><div class="cross-mark">X</div> <input type="hidden" name="images[]" value="{{$image}}"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}"></div>
+                                    <div class="col-sm-3 single-image ui-state-default ui-sortable-handle"><div class="cross-mark">X</div> <input type="hidden" name="images[]" value="{{$image}}"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}"></div>
                                     @endforeach
                                 <div class="col-sm-3">
                                     <a ><img src="/css/addimage.png" class="add-image" style="cursor: pointer"></a>

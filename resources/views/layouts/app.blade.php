@@ -396,6 +396,10 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
+<script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
 <script src="https://sumra.net/js/aws-sdk.js"></script>
 <script src="https://sumra.net/js/load.js"></script>
@@ -614,6 +618,25 @@
     });
     $(".row-images").on('click','.cross-mark',function () {
         $(this).parent().remove();
+    });
+    $(function() {
+        var isDragging = false;
+        $("a")
+            .mousedown(function() {
+                isDragging = false;
+            })
+            .mousemove(function() {
+                isDragging = true;
+            })
+            .mouseup(function() {
+                var wasDragging = isDragging;
+                isDragging = false;
+                if (!wasDragging) {
+                    $("#throbble").toggle();
+                }
+            });
+
+        $("ul").sortable();
     });
     axios.get('/user/list/price')
         .then(function (response) {
