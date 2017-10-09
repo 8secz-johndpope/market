@@ -627,7 +627,7 @@
         var shipping = 0;
         var spotlight = 0;
         var featured_type = 'featured_3';
-        var shipping_type = 'shipping_3';
+        var shipping_type = '1';
         if ($('#featured').is(":checked"))
         {
             featured = 1;
