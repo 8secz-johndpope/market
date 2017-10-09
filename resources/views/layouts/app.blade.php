@@ -407,6 +407,7 @@
 
 
 <script>
+    $('#sortable').sortable({placeholder: "ui-state-highlight",helper:'clone'});
     window.axios.defaults.headers.common = {
         'X-Requested-With': 'XMLHttpRequest',
     };
