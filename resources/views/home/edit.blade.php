@@ -173,15 +173,23 @@
                                                     <div class="col-sm-8">
                                                         <div class="form-check">
                                                             <label class="form-check-label">
+                                                                @if($advert->urgent_expires())
+                                                                    <input  type="hidden" name="urgent" value="0" id="urgent">
+                                                                    <span class="glyphicon glyphicon-lock"></span>
+                                                                @else
                                                                 <input class="form-check-input extra-change" type="checkbox" name="urgent" value="1" id="urgent">
+                                                                @endif
                                                                 <span class="span-urgent">Urgent</span> &nbsp;Let people know you want to sell, rent or hire quickly.
                                                             </label>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
+                                                        @if($advert->urgent_expires())
+                                                            <span class="extra-price"> {{$advert->urgent_expires()}} days left</span>
+                                                        @else
                                                             <span class="extra-price"> @if($advert->has_pack('urgent')) Included in Package  @else £{{$advert->extra_price('urgent')/100}} @endif</span>
                                                             <input type="hidden" id="urgent-price" value="@if($advert->has_pack('urgent'))0@else{{$advert->extra_price('urgent')/100}}@endif" name="urgent-price">
-
+                                                            @endif
 
                                                     </div>
                                                 </div>
@@ -192,12 +200,20 @@
                                                 <div class="col-sm-8">
                                                     <div class="form-check">
                                                         <label class="form-check-label">
+                                                            @if($advert->featured_expires())
+                                                                <input  type="hidden" name="featured" value="0" id="featured">
+                                                                <span class="glyphicon glyphicon-lock"></span>
+                                                            @else
                                                             <input class="form-check-input extra-change" type="checkbox" name="featured" value="1" id="featured">
+                                                            @endif
                                                             <span class="span-featured">Featured</span> &nbsp;Have your Ad appear at the top of the category listings for 3, 7 or 14 days.
                                                         </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-4">
+                                                    @if($advert->featured_expires())
+                                                        <span class="extra-price"> {{$advert->featured_expires()}} days left</span>
+                                                    @else
 
                                                         <select class="form-control extra-change" name="featured_type" id="featured_type">
 
@@ -206,6 +222,7 @@
                                                             <option value="featured_3">Featured (3 days)  ( @if($advert->has_pack('featured_14')) Included in Package  @else £{{$advert->extra_price('featured_14')/100}} @endif )</option>
 
                                                         </select>
+                                                        @endif
 
                                                 </div>
                                             </div>
@@ -216,14 +233,23 @@
                                                 <div class="col-sm-8">
                                                     <div class="form-check">
                                                         <label class="form-check-label">
+                                                            @if($advert->spotlight_expires())
+                                                                <input  type="hidden" name="spotlight" value="0" id="spotlight">
+                                                                <span class="glyphicon glyphicon-lock"></span>
+                                                            @else
                                                             <input class="form-check-input extra-change" type="checkbox" name="spotlight" value="1" id="spotlight">
+                                                            @endif
                                                             <span class="span-spotlight">Spotlight</span> &nbsp; Have your Ad seen on the Sumra homepage!
                                                         </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-4">
+                                                    @if($advert->spotlight_expires())
+                                                        <span class="extra-price"> {{$advert->spotlight_expires()}} days left</span>
+                                                    @else
                                                     <span class="extra-price"> @if($advert->has_pack('spotlight')) Included in Package  @else £{{$advert->extra_price('spotlight')/100}} @endif</span>
                                                     <input type="hidden" id="urgent-price" value="@if($advert->has_pack('spotlight'))0@else{{$advert->extra_price('spotlight')/100}}@endif" name="urgent-price">
+                                                    @endif
                                                 </div>
                                             </div>
 
