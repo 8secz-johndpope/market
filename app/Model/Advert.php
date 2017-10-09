@@ -300,8 +300,8 @@ class Advert extends  BaseModel
             $shipping = Shipping::find($params['shipping_type']);
 
              if(!($this->has_param('shipping')&&$this->shipping_id===$shipping->id)) {
-
-                 $total += $price->{$shipping->key};
+                 $key = $shipping->key;
+                 $total += $price->{$key};
              }
 
         }
