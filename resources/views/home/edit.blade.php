@@ -260,7 +260,7 @@
                                                 <div class="col-sm-8">
                                                     <div class="form-check">
                                                         <label class="form-check-label">
-                                                            <input class="form-check-input extra-change" type="checkbox" name="shipping" value="1" id="shipping">
+                                                            <input class="form-check-input extra-change" type="checkbox" name="shipping" value="1" id="shipping" @if($advert->has_param('spotlight')) checked @endif>
                                                             <span class="span-shipping">Shipping</span> &nbsp;Ship to the buyer when order is placed.
                                                         </label>
                                                     </div>
