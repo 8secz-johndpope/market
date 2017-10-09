@@ -254,6 +254,7 @@ class HomeController extends BaseController
         $advert->elastic = $response['_id'];
         $advert->user_id=$user->id;
         $advert->postcode_id=$postcode->id;
+        $advert->category_id=$category->id;
         $advert->save();
         //$total = (int)$request->total;
        // if($total>0){

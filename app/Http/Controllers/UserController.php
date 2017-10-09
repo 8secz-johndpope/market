@@ -934,6 +934,7 @@ class UserController extends BaseController
         $response = $this->client->index($params);
         $advert->sid = $advert->id;
         $advert->user_id=$user->id;
+        $advert->category_id=$category->id;
         $advert->postcode_id=$postcode->id;
         $advert->elastic = $response['_id'];
         $advert->save();
@@ -1321,6 +1322,7 @@ class UserController extends BaseController
         try{
             $response = $this->client->index($params);
             $advert->elastic = $response['_id'];
+            $advert->category_id=$category->id;
             $advert->save();
             return ['response' => $response,'user'=>$user];
         }catch (\Exception $e){
