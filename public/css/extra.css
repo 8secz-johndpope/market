@@ -118,6 +118,18 @@ span.active-strip {
     right: 0;
     margin: auto;
 }
+.single-image {
+    position: relative;
+    padding: 0px;
+    padding-left: 10px;
+}
+.cross-mark {
+    position: absolute;
+    background: darkgray;
+    color: white;
+    padding: 4px;
+    right: 0;
+}
 a.filter-button.btn.btn-default {
     float: right;
     margin-bottom: 5px;
