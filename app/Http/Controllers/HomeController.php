@@ -147,6 +147,18 @@ class HomeController extends BaseController
     public function manage(Request $request,$id){
         $advert = Advert::find($id);
         $categories = Category::where('parent_id', 0)->get();
+        if($advert->elastic===null){
+            $body['title']='';
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => $body
+            ];
+
+            $response = $this->client->index($params);
+            $advert->elastic = $response['_id'];
+            $advert->save();
+        }
 
         return view('home.ad',['advert'=>$advert,'categories' => $categories]);
     }
