@@ -126,13 +126,13 @@
 
                             <input type="hidden" name="lat" value="52.0" id="lat">
                             <input type="hidden" name="lng" value="0.12" id="lng">
-                            @if(false)
-                                <span class="red-text" id="location-error-info" >{{$message}}</span>
+                            @if($advert->postcode_id<0)
+                                <span class="red-text" id="location-error-info" >Invalid Postcode</span>
                             @endif
 
                             <form class="form-inline" action="/user/advert/location/change" method="post" id="change-location">
                                 {{ csrf_field() }}
-
+                                <input type="hidden" name="id" value="{{$advert->id}}">
 
                                 <label class="sr-only" for="inlineFormInput">Postcode</label>
                                 <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="postcode-text" placeholder="Postcode" name="postcode">

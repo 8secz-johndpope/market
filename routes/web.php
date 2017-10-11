@@ -34,6 +34,7 @@ Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'HomeController@myads');
 
 Route::post('/user/advert/category/change', 'HomeController@change_category');
+Route::post('/user/advert/location/change', 'HomeController@change_location');
 
 
 Route::get('/user/advert/ad/create', 'HomeController@create');

@@ -130,6 +130,20 @@ class HomeController extends BaseController
         $advert->save();
         return redirect('/user/manage/ad/'.$advert->id);
     }
+    public function change_location(Request $request){
+        $advert = Advert::find($request->id);
+        $up =   str_replace(' ','',strtoupper($request->postcode));
+        $a = Postcode::where('hash',crc32($up))->first();
+        if($a===null){
+            $advert->postcode_id=-1;
+            $advert->save();
+        }else{
+            $advert->postcode_id=$a->id;
+            $advert->save();
+        }
+
+        return redirect('/user/manage/ad/'.$advert->id);
+    }
     public function manage(Request $request,$id){
         $advert = Advert::find($id);
         $categories = Category::where('parent_id', 0)->get();
