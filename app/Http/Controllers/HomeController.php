@@ -387,6 +387,7 @@ class HomeController extends BaseController
     public  function save(Request $request)
     {
 
+        $user=Auth::user();
         $advert=Advert::find($request->id);
         $body=['title'=>$request->title,'description'=>$request->description];
         if($request->has('category')){
@@ -418,6 +419,37 @@ class HomeController extends BaseController
         $advert->update_meta($body);
         if($request->has('post')){
             $advert->publish();
+        }
+        if($request->has('post')||$request->has('update')){
+            $order = new Order;
+            $order->amount = 70;
+            $order->type = 'bump';
+            $order->buyer_id = $user->id;
+            $order->advert_id = $advert->id;
+            $order->save();
+            $extratypes=ExtraType::all();
+            foreach ($extratypes as $type) {
+                if ($request->has($type->slug) && $request->get($type->slug) == 1) {
+                    $key = $type->slug;
+                    if ($type->type === 'list') {
+                        $key = $request->get($type->key);
+                    }
+                    $extraprice = ExtraPrice::where('key', $key)->first();
+                    $orderitem = new OrderItem;
+                    $orderitem->title = 'Featured';
+                    $orderitem->slug = 'featured';
+                    $orderitem->advert_id = $advert->id;
+                    $orderitem->category_id = $advert->category->id;
+                    $orderitem->location_id = $advert->location->id;
+                    $orderitem->type_id = $extraprice->id;
+                    $orderitem->amount = 0;
+                    $orderitem->save();
+                    $order->items()->save($orderitem);
+
+
+                }
+
+            }
         }
         return redirect('/user/manage/ads');
     }

@@ -363,7 +363,7 @@
 
                                                     <select class="form-control extra-change" name="shipping_type" id="shipping_type">
                                                         @foreach($shippings as $shipping)
-                                                            <option value="{{$shipping->id}}">Shipping (2kg)  ( @if($advert->has_pack($shipping->key)) Included in Package  @else £{{$advert->extra_price($shipping->key)/100}} @endif )</option>
+                                                            <option value="{{$shipping->key}}">Shipping (2kg)  ( @if($advert->has_pack($shipping->key)) Included in Package  @else £{{$advert->extra_price($shipping->key)/100}} @endif )</option>
                                                         @endforeach
                                                     </select>
 

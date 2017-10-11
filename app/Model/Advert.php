@@ -329,7 +329,7 @@ class Advert extends  BaseModel
         }
         if(isset($params['shipping_type'])&& $params['shipping'] === '1') {
 
-            $shipping = Shipping::find($params['shipping_type']);
+            $shipping = Shipping::where('key',$params['shipping_type'])->first();
 
              if(!($this->has_param('shipping')&&$this->shipping_id===$shipping->id)) {
                  $key = $shipping->key;
