@@ -127,6 +127,7 @@ class HomeController extends BaseController
     public function change_category(Request $request){
         $advert = Advert::find($request->id);
         $advert->category_id=$request->category;
+        $advert->update_fileds(['category'=>$request->category]);
         $advert->save();
         return redirect('/user/manage/ad/'.$advert->id);
     }
@@ -139,6 +140,7 @@ class HomeController extends BaseController
             $advert->save();
         }else{
             $advert->postcode_id=$a->id;
+            $advert->update_fileds(['location_id'=>$a->location->id,'location_name'=>$a->location->title]);
             $advert->save();
         }
 
@@ -155,6 +157,13 @@ class HomeController extends BaseController
             $body['description']='';
             $body['images']=[];
             $body['draft']=1;
+            $milliseconds = round(microtime(true) * 1000);
+            $body['category']=0;
+            $body['location_id']=0;
+            $body['location_name']='United Kingdom';
+            $body['views']=0;
+            $body['list_views']=0;
+            $body['created_at']=$milliseconds;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
