@@ -106,7 +106,7 @@
                             @endif
                     </td>
                     @if($advert->has_param('inactive'))
-                        <td colspan="5"><p>You need to repost advert to promote the advert.<a href="/user/advert/repost/{{$advert->id}}">Repost</a> </p></td>
+                        <td colspan="5"><p>You need to repost advert to promote the advert. </p><a href="/user/advert/repost/{{$advert->id}}">Repost</a></td>
                         @else
                     <td><span class="bold-text">{{$advert->param('views')}}</span></td><td> <span class="posted">{{$advert->posted()}}</span></td>@if($advert->featured_expires()) <td colspan="3" class="center-text"><span class="bold-text">{{$advert->featured_expires()}} days left</span> </td> @else<td><input name="matrix[{{$advert->id}}][featured_3]" type="checkbox" class="featured-check featured-check-{{$advert->id}}" data-id="{{$advert->id}}" value="1"></td><td><input class="featured-check featured-check-{{$advert->id}}" data-id="{{$advert->id}}" name="matrix[{{$advert->id}}][featured]" type="checkbox" value="1"></td><td><input class="featured-check featured-check-{{$advert->id}}" data-id="{{$advert->id}}" name="matrix[{{$advert->id}}][featured_14]" type="checkbox" value="1"></td>@endif<td> @if($advert->urgent_expires())<span class="bold-text">{{$advert->urgent_expires()}} days left</span>  @else <input name="matrix[{{$advert->id}}][urgent]" type="checkbox" value="1"> @endif</td><td>@if($advert->spotlight_expires())<span class="bold-text">{{$advert->spotlight_expires()}} days left</span>  @else<input name="matrix[{{$advert->id}}][spotlight]" type="checkbox" value="1"> @endif</td><td><input name="matrix[{{$advert->id}}][bump]" type="checkbox" value="1"></td>
                     @endif
