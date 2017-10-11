@@ -95,7 +95,10 @@
                             @endif
                         </div>
                     </div>
-                        @if($advert->has_param('inactive'))
+                        @if($advert->has_param('draft'))
+                            <table class="table"><tr><td><span class="yellow-text">Draft</span></td><td></td><td><a class="btn btn-primary" href="/user/manage/ad/{{$advert->id}}">Continue To Post</a></td></tr></table>
+
+                        @elseif($advert->has_param('inactive'))
                             <table class="table"><tr><td><span class="red-text">Deleted</span></td><td></td><td><a class="btn btn-primary" href="/user/advert/repost/{{$advert->id}}">Repost</a></td></tr></table>
 
                         @else

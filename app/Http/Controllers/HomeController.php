@@ -376,7 +376,6 @@ class HomeController extends BaseController
         $body=['title'=>$request->title,'description'=>$request->description];
         if($request->has('category')){
             $milliseconds = round(microtime(true) * 1000);
-
             $body['category']=$advert->category_id;
             $body['location_id']=$advert->postcode->location->id;
             $body['location_name']=$advert->postcode->location->title;
