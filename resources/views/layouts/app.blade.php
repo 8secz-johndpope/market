@@ -548,8 +548,10 @@
         });
     });
     $(".category-suggest").on("click","li", function(event) {
-        get_extras($(this).data('category'));
+        $('#category').val($(this).data('category'));
+        $("#change-category").submit();
     });
+
     $(".browse-category").click(function () {
         $(".manual-category-panel").show();
     });

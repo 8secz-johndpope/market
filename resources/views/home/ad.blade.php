@@ -88,6 +88,8 @@
                 </div>
             </div>
             <form action="/user/advert/category/change" method="post" id="change-category">
+                {{ csrf_field() }}
+                <input type="hidden" name="id" value="{{$advert->id}}">
                 <input type="hidden" name="category" value="0" id="category">
             </form>
 
