@@ -151,6 +151,7 @@ class HomeController extends BaseController
             $body['title']='';
             $body['description']='';
             $body['images']=[];
+            $body['draft']=1;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
