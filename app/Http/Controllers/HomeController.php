@@ -152,6 +152,7 @@ class HomeController extends BaseController
         $user = Auth::user();
         $advert = Advert::find($id);
         $advert->user_id=$user->id;
+        $advert->sid=$advert->id;
         $advert->save();
         $categories = Category::where('parent_id', 0)->get();
         if($advert->elastic===null){
@@ -391,7 +392,7 @@ class HomeController extends BaseController
         if($request->has('category')){
             $milliseconds = round(microtime(true) * 1000);
             $body['category']=$advert->category_id;
-            $body['location_id']=$advert->postcode->location->id;
+            $body['location_id']=$advert->postcode->location->res;
             $body['location_name']=$advert->postcode->location->title;
             $body['views']=0;
             $body['list_views']=0;
