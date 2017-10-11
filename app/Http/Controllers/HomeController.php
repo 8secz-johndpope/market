@@ -162,9 +162,11 @@ class HomeController extends BaseController
             $milliseconds = round(microtime(true) * 1000);
             $body['category']=0;
             $body['location_id']=0;
+            $body['location']='0,0';
             $body['location_name']='United Kingdom';
             $body['views']=0;
             $body['list_views']=0;
+            $body['username']=$advert->display_name;
             $body['created_at']=$milliseconds;
             $params = [
                 'index' => 'adverts',
