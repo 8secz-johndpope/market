@@ -147,6 +147,9 @@
             @if($advert->category_id>0&&$advert->postcode_id>0)
             <form action="/user/advert/save" method="post" id="advert-form">
                 <input type="hidden" name="id" value="{{$advert->id}}" id="id">
+                <input type="hidden" name="category" value="{{$advert->category_id}}" id="id">
+                <input type="hidden" name="location_id" value="{{$advert->postcode->location->id}}" id="id">
+
                 {{ csrf_field() }}
                 <div class="all-panels" >
 
