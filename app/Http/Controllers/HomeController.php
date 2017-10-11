@@ -377,6 +377,7 @@ class HomeController extends BaseController
         if($request->has('category')){
             $body['category']=$advert->category_id;
             $body['location_id']=$advert->postcode->location->id;
+            $body['location_name']=$advert->postcode->location->title;
         }
         if($request->has('images')){
             $body['images']=$request->images;
