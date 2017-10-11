@@ -40,7 +40,7 @@
 
                 </div>
                 <div class="col-sm-2">
-                    <a class="btn btn-primary" href="/user/advert/ad/create">Post an Ad</a>
+                    <a class="btn btn-primary" href="/user/ad/create">Post an Ad</a>
 
                 </div>
             </div>

@@ -243,7 +243,7 @@
                                 <li><a href="/user/manage/buying">Buying</a> </li>
                                 <li><a href="/user/manage/favorites">Favorites</a> </li>
                                 <li><a href="/user/manage/details">My Details</a> </li>
-                                <li><a href="/user/ads/post">Post an Ad</a> </li>
+                                <li><a href="/user/ad/create">Post an Ad</a> </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
