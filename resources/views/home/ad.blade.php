@@ -219,7 +219,7 @@
                                 </div>
                             </div>
                         @endif
-
+                        @if(count($advert->category->fields)>1)
                         <div class="panel panel-default extra-options-panel">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Select Options</h3>
@@ -252,6 +252,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
 
                     <div class="extra-prices" style="display: block">
                         <div class="panel panel-default featured-panel">
