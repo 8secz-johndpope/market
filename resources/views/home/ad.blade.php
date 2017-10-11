@@ -157,7 +157,7 @@
                             <h3 class="panel-title">Title</h3>
                         </div>
                         <div class="panel-body">
-                            <div class="row"> <div class="col-sm-6"><input type="text" name="title" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title" value="{{$advert->param('title')}}" required></div>
+                            <div class="row"> <div class="col-sm-6"><input type="text" name="title" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Title" value="{{$advert->param('title')}}" ></div>
                                 <div class="col-sm-6"><p>100 characters remaining</p></div></div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-sm-6"><textarea type="text" name="description" rows="10" class="form-control  mb-2 mr-sm-2 mb-sm-0" required>{{$advert->param('description')}}</textarea></div>
+                                <div class="col-sm-6"><textarea type="text" name="description" rows="10" class="form-control  mb-2 mr-sm-2 mb-sm-0" >{{$advert->param('description')}}</textarea></div>
                                 <div class="col-sm-6"><p>10000 characters remaining (12 words minimum).
                                         Enter as much information possible; ads with detailed and longer descriptions get more views and replies!
                                     </p></div>
@@ -210,7 +210,7 @@
                                             <div class="input-group">
 
                                                 <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
-                                                <input type="number" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price" required value="@if($advert->has_meta('price')){{$advert->price()}}@endif" step="1">
+                                                <input type="number" name="price" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="Price"  value="@if($advert->has_meta('price')){{$advert->price()}}@endif" step="1">
 
                                             </div>
                                         </div>
@@ -233,7 +233,7 @@
                                                     <div class="col-sm-6">
                                                         <span class="extra-title">{{$field->title}}</span>
                                                         @if($field->type==='integer')
-                                                            <input class="form-control" type="text" name="{{$field->slug}}" required value="{{$advert->meta($field->slug)}}">
+                                                            <input class="form-control" type="text" name="{{$field->slug}}"  value="{{$advert->meta($field->slug)}}">
                                                         @elseif($field->type==='list')
                                                             <select class="form-control" name="{{$field->slug}}">
                                                                 @foreach($field->values as $value)
@@ -241,7 +241,7 @@
                                                                 @endforeach
                                                             </select>
                                                         @else
-                                                            <input class="form-control" type="text" name="{{$field->slug}}" required  value="{{$advert->meta($field->slug)}}">
+                                                            <input class="form-control" type="text" name="{{$field->slug}}"   value="{{$advert->meta($field->slug)}}">
                                                         @endif
                                                     </div>
                                                 @endif
