@@ -142,7 +142,11 @@ class Advert extends  BaseModel
             $this->fetch();
         return isset($this->dict[$param]);
     }
-
+    public function has_meta($param){
+        if($this->dict===null)
+            $this->fetch();
+        return isset($this->dict['meta'][$param]);
+    }
     public function first_image(){
         if($this->dict===null)
             $this->fetch();
