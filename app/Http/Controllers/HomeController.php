@@ -142,7 +142,7 @@ class HomeController extends BaseController
             $advert->save();
         }else{
             $advert->postcode_id=$a->id;
-            $advert->update_fileds(['location_id'=>(int)$a->location->id,'location_name'=>$a->location->title]);
+            $advert->update_fields(['location_id'=>(int)$a->location->id,'location_name'=>$a->location->title]);
             $advert->save();
         }
 
