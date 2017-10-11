@@ -368,6 +368,11 @@ class HomeController extends BaseController
     }
     public  function save(Request $request)
     {
+        if($request->has('save')){
+            return "yes";
+        }else{
+            return "no";
+        }
         $advert=Advert::find($request->id);
         $body=['title'=>$request->title,'description'=>$request->description];
         if($request->has('images')){
