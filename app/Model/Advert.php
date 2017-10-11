@@ -131,6 +131,34 @@ class Advert extends  BaseModel
         $this->deleted=0;
         $this->save();
     }
+    public function publish(){
+        $milliseconds = round(microtime(true) * 1000);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic,
+            'body' => [
+                "script" => "ctx._source.remove('draft')"
+            ]
+
+        ];
+        $response = $this->client->update($params);
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic,
+            'body' => [
+                'doc' => [
+                    'created_at' => $milliseconds
+                ]
+            ]
+
+        ];
+        $response = $this->client->update($params);
+
+        $this->deleted=0;
+        $this->save();
+    }
     public function param($param){
        if($this->dict===null)
            $this->fetch();

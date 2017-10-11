@@ -412,6 +412,9 @@ class HomeController extends BaseController
             $body['price']=-1;
         }
         $advert->update_meta($body);
+        if($request->has('post')){
+            $advert->publish();
+        }
         return redirect('/user/manage/ads');
     }
         public function order(Request $request){
