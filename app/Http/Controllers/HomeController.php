@@ -374,6 +374,10 @@ class HomeController extends BaseController
 
         $advert=Advert::find($request->id);
         $body=['title'=>$request->title,'description'=>$request->description];
+        if($request->has('category')){
+            $body['category']=$advert->category_id;
+            $body['location_id']=$advert->postcode->location->id;
+        }
         if($request->has('images')){
             $body['images']=$request->images;
         }else{
