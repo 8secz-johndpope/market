@@ -792,8 +792,12 @@ class MarketController extends BaseController
     public function product(Request $request,$cat,$sid)
     {
 
+        $advert= Advert::find($sid);
+        if($advert===null){
+            $advert= Advert::where('sid',$sid)->first();
 
-        $advert= Advert::where('sid',$sid)->first();
+        }
+
 
         $params = [
             'index' => 'adverts',
