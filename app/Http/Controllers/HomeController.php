@@ -142,7 +142,7 @@ class HomeController extends BaseController
             $advert->save();
         }else{
             $advert->postcode_id=$a->id;
-            $advert->update_fields(['location_id'=>(int)$a->location->id,'location_name'=>$a->location->title]);
+            $advert->update_fields(['location_id'=>(int)$a->location->id,'location_name'=>$a->location->title,'location'=>$a->lat.','.$a->lng]);
             $advert->save();
         }
 
@@ -166,6 +166,7 @@ class HomeController extends BaseController
             $body['location_name']='United Kingdom';
             $body['views']=0;
             $body['list_views']=0;
+            $body['source_id']=$advert->id;
             $body['username']=$advert->display_name;
             $body['created_at']=$milliseconds;
             $params = [
