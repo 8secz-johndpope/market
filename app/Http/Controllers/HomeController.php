@@ -127,7 +127,7 @@ class HomeController extends BaseController
     public function change_category(Request $request){
         $advert = Advert::find($request->id);
      //   return $advert;
-        $advert->update_fields(['category'=>$request->category]);
+        $advert->update_fields(['category'=>(int)$request->category]);
 
         $advert->category_id=$request->category;
         $advert->save();
