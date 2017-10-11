@@ -375,11 +375,14 @@ class HomeController extends BaseController
         $advert=Advert::find($request->id);
         $body=['title'=>$request->title,'description'=>$request->description];
         if($request->has('category')){
+            $milliseconds = round(microtime(true) * 1000);
+
             $body['category']=$advert->category_id;
             $body['location_id']=$advert->postcode->location->id;
             $body['location_name']=$advert->postcode->location->title;
             $body['views']=0;
             $body['list_views']=0;
+            $body['created_at']=$milliseconds;
         }
         if($request->has('images')){
             $body['images']=$request->images;
