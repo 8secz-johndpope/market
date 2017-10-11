@@ -160,7 +160,8 @@ class HomeController extends BaseController
             $advert->save();
         }
 
-        return view('home.ad',['advert'=>$advert,'categories' => $categories]);
+
+        return view('home.ad',['advert'=>$advert,'categories' => $categories,'shippings'=>Shipping::all()]);
     }
     public function edit(Request $request,$id)
     {
