@@ -440,7 +440,7 @@ class HomeController extends BaseController
                     $orderitem->slug = 'featured';
                     $orderitem->advert_id = $advert->id;
                     $orderitem->category_id = $advert->category->id;
-                    $orderitem->location_id = $advert->location->id;
+                    $orderitem->location_id = $advert->postcode->location->id;
                     $orderitem->type_id = $extraprice->id;
                     $orderitem->amount = 0;
                     $orderitem->save();
