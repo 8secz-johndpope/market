@@ -149,6 +149,8 @@ class HomeController extends BaseController
         $categories = Category::where('parent_id', 0)->get();
         if($advert->elastic===null){
             $body['title']='';
+            $body['description']='';
+            $body['images']=[];
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
