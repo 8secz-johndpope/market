@@ -33,6 +33,9 @@ Route::post('/user/advert/location', 'HomeController@location');
 Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'HomeController@myads');
 
+Route::get('/user/advert/ad/create', 'HomeController@create');
+Route::get('/user/manage/ad/{id}', 'HomeController@manage');
+
 Route::get('/userads/{id}', 'MarketController@userads');
 
 Route::get('/user/manage/messages', 'MessageController@messages');

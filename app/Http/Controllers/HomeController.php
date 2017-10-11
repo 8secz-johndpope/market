@@ -111,9 +111,21 @@ class HomeController extends BaseController
     public function post(Request $request)
     {
         $user = Auth::user();
-        $categories = Category::where('parent_id',0)->get();
+        $categories = Category::where('parent_id', 0)->get();
 
-        return view('home.post',['categories'=>$categories,'user'=>$user,'extras'=>false,'fields'=>false,'hasprice'=>false,'category'=>false,'location'=>false,'message'=>false]);
+        return view('home.post', ['categories' => $categories, 'user' => $user, 'extras' => false, 'fields' => false, 'hasprice' => false, 'category' => false, 'location' => false, 'message' => false]);
+
+    }
+    public function create(Request $request){
+        $advert=new Advert;
+        $advert->postcode_id=0;
+        $advert->category_id=0;
+        $advert->save();
+        return redirect('/user/manage/ad/'.$advert->id);
+    }
+    public function manage(Request $request,$id){
+        $advert = Advert::find($id);
+        return view('home.ad',['advert'=>$advert]);
     }
     public function edit(Request $request,$id)
     {
