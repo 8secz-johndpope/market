@@ -142,6 +142,7 @@
                     </div>
                 </div>
             </div>
+            @if($advert->category_id>0&&$advert->postcode_id>0)
             <form action="/user/advert/save" method="post" id="advert-form">
                 <input type="hidden" name="id" value="{{$advert->id}}" id="id">
                 {{ csrf_field() }}
@@ -398,7 +399,7 @@
                 </div>
 
             </form>
-
+@endif
         </div>
     </div>
     </div>
