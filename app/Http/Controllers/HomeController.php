@@ -121,11 +121,14 @@ class HomeController extends BaseController
         $advert->postcode_id=0;
         $advert->category_id=0;
         $advert->save();
+
         return redirect('/user/manage/ad/'.$advert->id);
     }
     public function manage(Request $request,$id){
         $advert = Advert::find($id);
-        return view('home.ad',['advert'=>$advert]);
+        $categories = Category::where('parent_id', 0)->get();
+
+        return view('home.ad',['advert'=>$advert,'categories' => $categories]);
     }
     public function edit(Request $request,$id)
     {
