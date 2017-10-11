@@ -368,7 +368,7 @@ class HomeController extends BaseController
     }
     public  function save(Request $request)
     {
-        if($request->has('save')){
+        if($request->has('post')){
             return "yes";
         }else{
             return "no";
