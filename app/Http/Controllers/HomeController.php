@@ -145,7 +145,10 @@ class HomeController extends BaseController
         return redirect('/user/manage/ad/'.$advert->id);
     }
     public function manage(Request $request,$id){
+        $user = Auth::user();
         $advert = Advert::find($id);
+        $advert->user_id=$user->id;
+        $advert->save();
         $categories = Category::where('parent_id', 0)->get();
         if($advert->elastic===null){
             $body['title']='';
@@ -368,7 +371,7 @@ class HomeController extends BaseController
     }
     public  function save(Request $request)
     {
-        
+
         $advert=Advert::find($request->id);
         $body=['title'=>$request->title,'description'=>$request->description];
         if($request->has('images')){
