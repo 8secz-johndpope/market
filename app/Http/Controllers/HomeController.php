@@ -127,8 +127,8 @@ class HomeController extends BaseController
     public function change_category(Request $request){
         $advert = Advert::find($request->id);
         $advert->category_id=$request->category;
-        $advert->update_fileds(['category'=>$request->category]);
         $advert->save();
+        $advert->update_fileds(['category'=>$request->category]);
         return redirect('/user/manage/ad/'.$advert->id);
     }
     public function change_location(Request $request){
