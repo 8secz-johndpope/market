@@ -22,7 +22,7 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-10  nopadding">
 
-            <div class="panel panel-default automatic-category-panel" @if($category) style="display: none" @endif>
+            <div class="panel panel-default automatic-category-panel" @if($advert->category_id>0) style="display: none" @endif>
                 <div class="panel-heading">
                     <h3 class="panel-title">Category</h3>
                 </div>
@@ -92,39 +92,39 @@
             </form>
 
 
-            <div class="panel panel-default selected-category-panel"  @if(!$category) style="display: none" @endif>
+            <div class="panel panel-default selected-category-panel"  @if($advert->category_id===0) style="display: none" @endif>
                 <div class="panel-heading">
                     <h3 class="panel-title">Category</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-sm-11"><span class="category-sting">@if($category) {{$category->pstring()}}   > <span class="select-category"> {{$category->title}} </span> @endif</span> </div>
+                        <div class="col-sm-11"><span class="category-sting">@if($advert->category_id>0) {{$advert->category->pstring()}}   > <span class="select-category"> {{$advert->category->title}} </span> @endif</span> </div>
                         <div class="col-sm-1">
                             <a class="btn btn-default edit-category">Edit</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default selected-location-panel" @if(!$category) style="display: none" @endif>
+            <div class="panel panel-default selected-location-panel" @if($advert->category_id===0) style="display: none" @endif>
                 <div class="panel-heading">
                     <h3 class="panel-title">Location</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
 
-                        <div class="col-sm-12 location-selected" @if(!$location) style="display: none" @endif>
+                        <div class="col-sm-12 location-selected" @if($advert->postcode_id===0) style="display: none" @endif>
                             <p>Your Location</p>
-                            <span class="extra-large"> @if($location){{$postcode}} @endif</span><a class="edit-location-button">(Edit)</a>
+                            <span class="extra-large"> @if($advert->postcode_id>0){{$advert->postcode->postcode}} @endif</span><a class="edit-location-button">(Edit)</a>
                         </div>
 
 
-                        <div class="col-sm-12 edit-location" @if($location) style="display: none" @endif>
+                        <div class="col-sm-12 edit-location" @if($advert->postcode_id>0) style="display: none" @endif>
                             <input type="hidden" name="location_name" value="London" id="location_name">
                             <input type="hidden" name="location_id" value="London" id="location_id">
 
                             <input type="hidden" name="lat" value="52.0" id="lat">
                             <input type="hidden" name="lng" value="0.12" id="lng">
-                            @if($message)
+                            @if(false)
                                 <span class="red-text" id="location-error-info" >{{$message}}</span>
                             @endif
 
@@ -143,14 +143,14 @@
                 </div>
             </div>
             <form action="/user/advert/newad" method="post" id="advert-form">
-                @if($category)
-                    <input type="hidden" name="category" value="{{$category->id}}">
+                @if($advert->category_id>0)
+                    <input type="hidden" name="category" value="{{$advert->category->id}}">
                 @endif
-                @if($location)
-                    <input type="hidden" name="postcode" value="{{$postcode}}">
+                @if($advert->postcode_id>0)
+                    <input type="hidden" name="postcode" value="{{$advert->postcode->postcode}}">
                 @endif
                 {{ csrf_field() }}
-                <div class="all-panels" @if(!$category||!$location) style="display: none" @endif>
+                <div class="all-panels" @if($advert->category_id===0||$advert->postcode_id===0) style="display: none" @endif>
 
                     <div class="panel panel-default title-panel">
                         <div class="panel-heading">
