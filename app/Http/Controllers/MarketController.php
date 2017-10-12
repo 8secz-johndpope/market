@@ -969,6 +969,59 @@ class MarketController extends BaseController
         return $this->filter($request,$category,$location);
 
     }
+    public function spotlight(Request $request){
+        $mustnot = [['exists'=>['field'=>'inactive']],['exists'=>['field'=>'draft']]];
+        $milliseconds = round(microtime(true) * 1000);
+
+        $location=Location::find($request->id);
+        $musts['location_id']= [
+            'range' => [
+                'location_id' => [
+                    'gte'=>$location->res,
+                    'lte'=>$location->ends
+                ]
+            ]
+        ];
+        $fmusts = $musts;
+        $fmusts['spotlight'] = ['term'=>['spotlight'=>1]];
+        $fmusts['spotlight_expires'] = ['range'=>['spotlight_expires'=>['gte'=>$milliseconds]]];
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>15,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($fmusts),
+                        'must_not' => $mustnot
+                        /*     'filter' => $filte */
+                    ]
+                ],
+                "sort"=> [["spotlight_count"=> ["order"=> "asc"]]]
+            ]
+        ];
+        $response = $this->client->search($params);
+
+        $featured = array_map(function ($a) use ($milliseconds){
+            $diff = $milliseconds-$a['_source']['created_at'];
+            if($diff<60*1000){
+                $a['_source']['posted'] = 'Just Now';
+            }
+            else if($diff<60*60*1000){
+                $a['_source']['posted'] = (int)($diff/60000).'m ago';
+            }
+            else if($diff<24*60*60*1000){
+                $a['_source']['posted'] = (int)($diff/(60*60000)).'h ago';
+            }else{
+                $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
+            }
+            $a['_source']['featured_x']=1;
+            $a['_source']['_id'] = $a['_id'];
+            return $a['_source'];
+        },$response['hits']['hits']);
+        return ['adverts'=>$featured];
+    }
     public function filter($request,$category,$location){
         if($request->has('min_lat')){
             $location->min_lat = (double)$request->min_lat;

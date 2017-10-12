@@ -22,6 +22,7 @@ Route::get('/postcodes/postcode','UserController@postcode');
 
 Route::get('/advert/all-categories','MarketController@getAllCategories');
 Route::get('/error','MarketController@error');
+Route::get('/ads/spotlight','MarketController@spotlight');
 
 Route::get('/advert/category/fields/{any}','MarketController@fields');
 
