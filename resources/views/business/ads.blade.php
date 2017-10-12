@@ -102,7 +102,7 @@
                             <table class="table"><tr><td><span class="red-text">Deleted</span></td><td></td><td><a class="btn btn-primary" href="/user/advert/repost/{{$advert->id}}">Repost</a></td></tr></table>
 
                         @else
-                    <table class="table"><tr><td><a href="/user/advert/edit/{{$advert->id}}">Edit</a></td><td><a class="stats-click" data-id="{{$advert->id}}">Stats</a></td><td><a class="red-color" href="/user/advert/delete/{{$advert->id}}">Delete</a></td></tr></table>
+                    <table class="table"><tr><td><a href="/user/advert/edit/{{$advert->id}}">Edit</a></td><td><a class="btn btn-primary" href="/user/advert/duplicate/{{$advert->id}}">Duplicate</a></td><td><a class="stats-click" data-id="{{$advert->id}}">Stats</a></td><td><a class="red-color" href="/user/advert/delete/{{$advert->id}}">Delete</a></td></tr></table>
                             @endif
                     </td>
                     @if($advert->has_param('draft'))

@@ -191,6 +191,13 @@ class HomeController extends BaseController
 
         return view('home.edit',['advert'=>$advert,'user'=>$user,'shippings'=>Shipping::all()]);
     }
+    public function duplicate(Request $request,$id)
+    {
+        $advert=Advert::find($id);
+        $advert->duplicate();
+        $user = Auth::user();
+        return redirect('/user/manage/ads');
+    }
     public function location(Request $request){
         $user = Auth::user();
         $categories = Category::where('parent_id',0)->get();

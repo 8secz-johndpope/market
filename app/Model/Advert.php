@@ -79,6 +79,28 @@ class Advert extends  BaseModel
         ];
         $response = $this->client->update($params);
     }
+    public function duplicate(){
+        if($this->dict===null)
+            $this->fetch();
+        $body=$this->dict;
+        $body['draft']=1;
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => $body
+        ];
+        $response = $this->client->index($params);
+
+        $advert = new Advert;
+        $advert->save();
+        $advert->sid = $advert->id;
+        $advert->user_id=$this->user_id;
+        $advert->category_id=$this->category->id;
+        $advert->postcode_id=$this->postcode->id;
+        $advert->elastic = $response['_id'];
+        $advert->save();
+
+    }
     public function prices(){
         return Price::price($this->category->id,$this->postcode->location_id);
     }
