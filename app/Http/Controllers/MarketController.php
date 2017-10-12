@@ -972,8 +972,10 @@ class MarketController extends BaseController
     public function spotlight(Request $request){
         $mustnot = [['exists'=>['field'=>'inactive']],['exists'=>['field'=>'draft']]];
         $milliseconds = round(microtime(true) * 1000);
-
+        if($request->has('id'))
         $location=Location::find($request->id);
+        else
+            $location=Location::find(0);
         $musts['location_id']= [
             'range' => [
                 'location_id' => [
