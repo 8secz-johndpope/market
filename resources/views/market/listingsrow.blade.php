@@ -142,7 +142,7 @@
                 <div class="listing-thumbnail">
                     <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
-                    @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli)
+                    @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&$product['featured_x']===1)
                         <span class="ribbon-featured">
 <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
 </span>

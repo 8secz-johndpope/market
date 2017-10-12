@@ -1472,6 +1472,7 @@ class MarketController extends BaseController
             }else{
                 $a['_source']['posted'] = (int)($diff/(24*60*60000)).'d ago';
             }
+            $a['_source']['featured_x']=1;
             $a['_source']['_id'] = $a['_id'];
             return $a['_source'];
             },$response['hits']['hits']);
