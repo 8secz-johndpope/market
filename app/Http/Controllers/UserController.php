@@ -851,6 +851,7 @@ class UserController extends BaseController
     public function adverts(Request $request)
     {
 
+        $type = $request->type;
         $user = Auth::user();
         $adverts = [];
         foreach ($user->adverts()->paginate(15) as $advert){
@@ -863,7 +864,17 @@ class UserController extends BaseController
                         'id' => $advert->elastic
                     ];
                     $response = $this->client->get($params);
-                    $adverts[] = $response['_source'];
+
+                     if($type==='draft'&&isset($response['_source']['draft'])){
+                         $adverts[] = $response['_source'];
+                    }
+                     if($type==='inactive'&&isset($response['_source']['inactive'])){
+                        $adverts[] = $response['_source'];
+                    }
+                    if($type==='live'&&!isset($response['_source']['inactive'])&&!isset($response['_source']['draft'])){
+                        $adverts[] = $response['_source'];
+                    }
+
                 }catch (\Exception $e){
 
                 }
