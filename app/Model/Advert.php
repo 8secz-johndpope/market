@@ -221,9 +221,13 @@ class Advert extends  BaseModel
             return '';
     }
     public function featured_expires(){
-        $milliseconds = round(microtime(true) * 1000);
         if($this->dict===null)
             $this->fetch();
+        if(!isset($this->dict['featured']))
+            return false;
+
+            $milliseconds = round(microtime(true) * 1000);
+
         if(isset($this->dict['featured_expires']))
         {
             $diff = $this->dict['featured_expires']-$milliseconds;
@@ -236,9 +240,11 @@ class Advert extends  BaseModel
 
     }
     public function urgent_expires(){
-        $milliseconds = round(microtime(true) * 1000);
         if($this->dict===null)
             $this->fetch();
+        $milliseconds = round(microtime(true) * 1000);
+        if(!isset($this->dict['urgent']))
+            return false;
         if(isset($this->dict['urgent_expires']))
         {
             $diff = $this->dict['urgent_expires'] - $milliseconds;
@@ -251,9 +257,12 @@ class Advert extends  BaseModel
 
     }
     public function spotlight_expires(){
+
         $milliseconds = round(microtime(true) * 1000);
         if($this->dict===null)
             $this->fetch();
+        if(!isset($this->dict['spotlight']))
+            return false;
         if(isset($this->dict['spotlight_expires']))
         {
             $diff = $this->dict['spotlight_expires']-$milliseconds;
