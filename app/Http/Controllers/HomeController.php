@@ -405,9 +405,11 @@ class HomeController extends BaseController
             $body['views']=0;
             $body['list_views']=0;
             $body['created_at']=$milliseconds;
+
         }
         if($request->has('images')){
             $body['images']=$request->images;
+
         }else{
             $body['images']=[];
         }

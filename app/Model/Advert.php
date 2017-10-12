@@ -84,6 +84,13 @@ class Advert extends  BaseModel
             $this->fetch();
         $body=$this->dict;
         $body['draft']=1;
+        $body['views']=0;
+        $body['list_views']=0;
+        unset($body['featured']);
+        unset($body['urgent']);
+        unset($body['spotlight']);
+        unset($body['shipping']);
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
