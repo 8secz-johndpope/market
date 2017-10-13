@@ -51,8 +51,8 @@
         var barChartData = {
             labels: ["January", "February", "March", "April", "May", "June", "July"],
             datasets: [{
-                label: 'Adverts per Month',
-                backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                label: 'Adverts each month',
+                backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
                 borderColor: window.chartColors.red,
                 borderWidth: 1,
                 data: [
@@ -80,7 +80,7 @@
                     },
                     title: {
                         display: true,
-                        text: 'Chart.js Bar Chart'
+                        text: 'Adverts this year'
                     }
                 }
             });
