@@ -73,7 +73,9 @@
                     </div>
 
                     <div class="info">
-
+                        <div class="favor">
+                                <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                        </div>
 
                         <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->id}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
 
