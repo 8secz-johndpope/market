@@ -53,6 +53,9 @@ span.active-strip {
 .profile-picutre img{
     max-width: 100px;
 }
+a.delete-alert-link {
+    float: right;
+}
 a.post-advert {
     color: orange !important;
     border: solid 1px;
