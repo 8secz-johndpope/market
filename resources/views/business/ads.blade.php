@@ -20,7 +20,7 @@
                     <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/messages">Messages</a>
+                    <a class="nav-link nav-color" href="/user/manage/messages"><span class="glyphicon glyphicon-envelope"></span> &nbsp;&nbsp; Messages</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp; My Details</a>
