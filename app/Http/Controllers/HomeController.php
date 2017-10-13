@@ -925,19 +925,8 @@ class HomeController extends BaseController
     }
     public function orders(Request $request){
         $user = Auth::user();
-        $orders = $user->orders;
-        foreach ($orders as $order){
-            $advert = Advert::find($order->advert_id);
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'id' => $advert->elastic
-            ];
-            $response = $this->client->get($params);
-            $order->product = $response['_source'];
-            $products[]=$order;
-        }
-        return view('home.orders',['orders'=>$products]);
+
+        return view('home.orders',['user'=>$user]);
     }
     public function buying(Request $request){
         $user = Auth::user();
