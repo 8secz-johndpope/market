@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.business')
 
 @section('title', 'Page Title')
 
@@ -12,92 +12,98 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-12">
 
             <ul class="nav nav-tabs">
 
                 <li class="nav-item">
-                    <a class="nav-link " href="/user/manage/ads">Manage My ads</a>
+                    <a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Orders</a>
+                    <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-credit-card"></span> &nbsp;&nbsp; Orders</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/user/manage/buying">Buying</a>
+                    <a class="nav-link nav-color" href="/user/manage/messages"><span class="glyphicon glyphicon-envelope"></span> &nbsp;&nbsp; Messages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/messages">Messages</a>
+                    <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp; My Details</a>
+                </li>
+                @if($user->contract!==null)
+                    <li class="nav-item">
+                        <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Company</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;&nbsp; Financials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp; Metrics</a>
+                    </li>
+                @endif
+                <li class="nav-item">
+                    <a class="nav-link nav-color" href="/user/manage/favorites"><span class="glyphicon glyphicon-heart"></span> &nbsp;&nbsp; Favorites</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/favorites">Favorites</a>
+                    <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-alert"></span> &nbsp;&nbsp; Search Alerts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/details">My Details</a>
+                    <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
                 </li>
             </ul>
-            <div class="well">
+        </div>
+    </div>
+    <table class="table">
 
-            @foreach($orders as $order)
+        @foreach($user->favorites as $advert)
+            <tr><td>
+                    <div class="product">
+                        <div class="listing-side">
+                            <div class="listing-thumbnail">
+                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
-                <div class="row">
-                    <div class="col-sm-8">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($order->product['images'])>0?$order->product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
-
-                            </div>
-                            <div class="col-sm-8">
-                                <a class="listing-product" href="/p/{{$order->product['category']}}/{{$order->product['source_id']}}">
-                                    <h4 class="items-box-name font-2">{{$order->product['title']}}</h4>
-                                </a>
-                                @if($order->product['meta']['price']>=0)
-                                    <div class="items-box-price font-5">£ {{$order->product['meta']['price']/100}}{{isset($order->product['meta']['price_frequency']) ? $order->product['meta']['price_frequency']:''}}
-                                    </div>
+                                @if($advert->featured_expires())
+                                    <span class="ribbon-featured">
+<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+</span>
                                 @endif
-                                @if($order->tracking==='')
-                                <button class="btn-default btn update-shipping" data-id="{{$order->id}}">Enter Shipping Info</button>
-                                    @else
-                                    <p>{{$order->tracking}}</p>
-                                @endif
+
+                                <div class="listing-meta txt-sub">
+                                    <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($advert->param('images'))}}</span>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="info">
+                            <div class="favor">
+                                <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$advert->sid}}"></span>
+                            </div>
+
+                            <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->id}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
+
+                            <span class="listing-location">
+                                    {{$advert->param('location_name')}}
+                                </span>
+                            <p class="listing-description">
+                                {{$advert->param('description')}}
+                            </p>
+
+                            @if($advert->meta('price')>=0)
+                                <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
+                                </span>
+                            @endif
+
+
+
+                            @if($advert->urgent_expires())
+                                <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
+<span class="hide-visually">This ad is </span>Urgent
+</span>
+                            @endif
+                        </div>
                     </div>
-                    <div class="col-sm-4">
-                        <h4>Shipping Address</h4>
-                        <ul class="list-group">
-                            <li class="list-group-item">{{$order->buyer->name}}</li>
-                            <li class="list-group-item">{{$order->address->line1}}</li>
-                            <li class="list-group-item">{{$order->address->city}}</li>
-                            <li class="list-group-item">{{$order->address->postcode}}</li>
 
-                        </ul>
-                    </div>
-                </div>
+                </td>
+            </tr>
+        @endforeach
+    </table>
 
-
-
-            @endforeach
-        </div>
-    </div>
-    <div class="modal fade" id="tracking-info">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Tracking</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <input class="form-control" id="tracking_id" type="text" placeholder="Tracking Info">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary update-tracking">Update</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    </div>
 @endsection
