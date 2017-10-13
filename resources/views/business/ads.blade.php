@@ -108,7 +108,7 @@
                         </div>
                     </div>
                         @if($advert->has_param('draft'))
-                            <table class="table"><tr><td><span class="yellow-text">Draft</span></td><td></td><td><a class="btn btn-primary" href="/user/manage/ad/{{$advert->id}}">Continue To Post</a></td></tr></table>
+                            <table class="table"><tr><td><span class="yellow-text">Draft</span></td><td></td><td><a class="nav-color" href="/user/manage/ad/{{$advert->id}}"><span class="glyphicon glyphicon-play-circle"></span>&nbsp;&nbsp; Continue To Post</a></td></tr></table>
 
                         @elseif($advert->has_param('inactive'))
                             <table class="table"><tr><td><span class="red-text">Deleted</span></td><td></td><td><a class="btn btn-primary" href="/user/advert/repost/{{$advert->id}}">Repost</a></td></tr></table>
