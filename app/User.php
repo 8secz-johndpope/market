@@ -113,6 +113,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Model\Advert','favorites')->orderBy('id','desc');
     }
+    public function alerts()
+    {
+        return $this->hasMany('App\Model\SearchAlert')->orderBy('id','desc');
+    }
     public function adverts()
     {
         return $this->hasMany('App\Model\Advert')->orderby('deleted')->orderby('id','desc');
