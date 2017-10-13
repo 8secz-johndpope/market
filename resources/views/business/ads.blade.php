@@ -28,6 +28,7 @@
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp; My Details</a>
                 </li>
+                @if($user->contract!==null)
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Company</a>
                 </li>
@@ -37,6 +38,7 @@
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp; Metrics</a>
                 </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/user/manage/favorites"><span class="glyphicon glyphicon-heart"></span> &nbsp;&nbsp; Favorites</a>
                 </li>
