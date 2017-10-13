@@ -51,18 +51,18 @@
         var barChartData = {
             labels: ["January", "February", "March", "April", "May", "June", "July"],
             datasets: [{
-                label: 'Dataset 1',
+                label: 'Adverts per Month',
                 backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
                 borderColor: window.chartColors.red,
                 borderWidth: 1,
                 data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
+                   1,
+                    10,
+                    23,
+                   5,
+                    15,
+                   19,
+                    3
                 ]
             }]
 
