@@ -17,7 +17,7 @@
             <ul class="nav nav-tabs">
 
                 <li class="nav-item">
-                    <a class="nav-link " href="/business/manage/ads">Manage  ads</a>
+                    <a class="nav-link " href="/business/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>Manage  ads</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="/business/manage/details">My Details</a>
