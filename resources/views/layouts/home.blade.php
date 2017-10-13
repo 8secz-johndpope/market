@@ -200,7 +200,6 @@
                         </li>
 
                     @endif
-                    <li><a class="post-advert" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Post an Ad</a> </li>
 
                     <li><a class="btn btn-info bussines" role="button" href="/user/contract/pricing">Sumra for Business</a></li>
                 </ul>
