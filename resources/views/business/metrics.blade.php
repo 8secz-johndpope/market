@@ -64,20 +64,6 @@
                     randomScalingFactor(),
                     randomScalingFactor()
                 ]
-            }, {
-                label: 'Dataset 2',
-                backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
-                borderColor: window.chartColors.blue,
-                borderWidth: 1,
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
-                ]
             }]
 
         };
