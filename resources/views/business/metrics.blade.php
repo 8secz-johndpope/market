@@ -53,7 +53,7 @@
             datasets: [{
                 label: 'Adverts each month',
                 backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
-                borderColor: window.chartColors.red,
+                borderColor: window.chartColors.blue,
                 borderWidth: 1,
                 data: [
                    1,
