@@ -864,7 +864,7 @@ class UserController extends BaseController
                         'id' => $advert->elastic
                     ];
                     $response = $this->client->get($params);
-
+                    $response['_source']['posted']=$advert->posted();
                      if($type==='draft'&&isset($response['_source']['draft'])){
                          $adverts[] = $response['_source'];
                     }
