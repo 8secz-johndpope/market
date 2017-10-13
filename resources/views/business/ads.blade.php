@@ -20,7 +20,7 @@
                     <a class="nav-link " href="#"><span class="glyphicon glyphicon-folder-open"></span> Manage  ads</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/business/manage/details">My Details</a>
+                    <a class="nav-link" href="/business/manage/details"><span class="glyphicon glyphicon-info-sign"></span>&nbsp; My Details</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="/business/manage/company">Company</a>
