@@ -43,6 +43,8 @@
         <canvas id="canvas"></canvas>
     </div>
     <script src="/js/Chart.bundle.js"></script>
+    <script src="/js/utils.js"></script>
+
     <script>
         var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         var color = Chart.helpers.color;
