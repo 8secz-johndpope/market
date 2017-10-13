@@ -276,7 +276,7 @@
                         </li>
 
                     @endif
-                    <li><a class="btn btn-default" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Post an Ad</a> </li>
+                    <li><a class="post-advert" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Post an Ad</a> </li>
 
                 </ul>
             </div><!-- /.navbar-collapse -->
