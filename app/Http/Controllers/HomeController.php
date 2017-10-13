@@ -541,6 +541,12 @@ class HomeController extends BaseController
         return view('home.favorites',[ 'user' => $user]);
 
     }
+    public function alerts(Request $request){
+        $user = Auth::user();
+
+        return view('home.alerts',[ 'user' => $user]);
+
+    }
     public function myads(Request $request){
         $user = Auth::user();
         if($user->contract!==null)
