@@ -309,6 +309,42 @@
         }
 
     }
+    $(".favroite-icon").click(function (e) {
+        e.preventDefault();
+
+        var id = $(this).data('id');
+        if($(this).hasClass('glyphicon-heart')){
+            $(this).addClass('glyphicon-heart-empty');
+            $(this).removeClass('glyphicon-heart');
+
+            axios.post('/user/list/unfavorite', {
+                id:id
+            })
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+        }else{
+            $(this).addClass('glyphicon-heart');
+            $(this).removeClass('glyphicon-heart-empty');
+            axios.post('/user/list/favorite', {
+                id:id
+            })
+                .then(function (response) {
+                    console.log(response);
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                    document.location.href='/login';
+                });
+        }
+
+
+    });
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
