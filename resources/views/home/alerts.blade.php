@@ -57,7 +57,7 @@
               @foreach($user->alerts as $alert)
                   <li class="list-group-item">
                       <a href="/{{$alert->category->slug}}">{{$alert->category->title}}</a>
-                      <a class="red-color" href="/user/delete/alert/{{$alert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a>
+                      <a class="red-color delete-alert-link" href="/user/delete/alert/{{$alert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a>
                   </li>
               @endforeach
           </ul>
