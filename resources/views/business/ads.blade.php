@@ -52,7 +52,7 @@
 
                 </div>
                 <div class="col-sm-2">
-                    <a class="nav-color btn btn-success" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp; Post an Ad</a>
+                    <a class="btn btn-success" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp; Post an Ad</a>
 
                 </div>
             </div>
