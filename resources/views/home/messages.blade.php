@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.business')
 
 @section('title', 'Page Title')
 
@@ -14,23 +14,27 @@
     <div class="row">
         <div class="col-sm-12">
             <ul class="nav nav-tabs">
+
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/ads">Manage My ads</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/orders">Orders</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/user/manage/buying">Buying</a>
+                    <a class="nav-link nav-color" href="/business/manage/ads"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Messages</a>
+                    <a class="nav-link nav-color" href="#">Messages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/favorites">Favorites</a>
+                    <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp; My Details</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/details">My Details</a>
+                    <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;&nbsp; Financials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp; Metrics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
                 </li>
             </ul>
             <div class="full-width">
