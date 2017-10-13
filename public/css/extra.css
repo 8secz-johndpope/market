@@ -59,6 +59,12 @@ a.post-advert {
     padding: 6px !important;
     margin-top: 10px;
 }
+a.search-alert {
+    color: orange;
+    border: 1px solid;
+    padding: 5px;
+    margin-left: 15px;
+}
 a.post-advert:hover{
     background: orange !important;
     color: white !important;
