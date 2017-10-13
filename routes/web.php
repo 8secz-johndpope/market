@@ -31,7 +31,7 @@ Route::get('/insert', 'MarketController@insert');
 Route::get('/user/ads/post', 'HomeController@post');
 Route::post('/user/advert/location', 'HomeController@location');
 Route::post('/user/advert/newad', 'HomeController@newad');
-Route::get('/user/manage/ads', 'HomeController@myads');
+Route::get('/user/manage/ads', 'BusinessController@myads');
 
 Route::post('/user/advert/category/change', 'HomeController@change_category');
 Route::post('/user/advert/location/change', 'HomeController@change_location');
