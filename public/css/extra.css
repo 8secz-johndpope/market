@@ -141,6 +141,10 @@ a.nav-color {
     text-decoration: none;
     font-weight: bold;
 }
+p.listing-description {
+    max-height: 40px;
+    overflow: hidden;
+}
 a.red-color{
     text-decoration: none;
 }
