@@ -139,7 +139,7 @@
                     </div>
                         <a href="/userads/{{$advert->user->id}}">Ads({{count($advert->user->adverts)}})</a>
                         <ul class="list-group">
-                            <li class="list-group-item"><h4>{{$advert->user->diplay_name}}</h4></li>
+                            <li class="list-group-item"><h4>{{$advert->user->display_name}}</h4></li>
                         </ul>
                         @else
                         <ul class="list-group">
