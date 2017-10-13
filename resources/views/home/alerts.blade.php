@@ -16,7 +16,7 @@
 
             <ul class="nav nav-tabs">
 
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
                 </li>
                 <li class="nav-item">
