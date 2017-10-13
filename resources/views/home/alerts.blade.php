@@ -51,12 +51,17 @@
             </ul>
         </div>
     </div>
-  <ul class="list-group">
-      @foreach($user->alerts as $alert)
-      <li class="list-group-item">
-          <a href="/{{$alert->category->slug}}">{{$alert->category->title}}</a>
-      </li>
-          @endforeach
-  </ul>
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+          <ul class="list-group">
+              @foreach($user->alerts as $alert)
+                  <li class="list-group-item">
+                      <a href="/{{$alert->category->slug}}">{{$alert->category->title}}</a>
+                      <a class="red-color" href="/user/delete/alert/{{$alert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a>
+                  </li>
+              @endforeach
+          </ul>
+      </div>
+  </div>
 
 @endsection
