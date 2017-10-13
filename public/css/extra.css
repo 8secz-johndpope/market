@@ -138,6 +138,7 @@ a.filter-button.btn.btn-default {
 }
 a.nav-color {
     color: gray;
+    text-decoration: none;
 }
 .user-badge {
     font-size: 30px;
