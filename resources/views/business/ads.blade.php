@@ -43,7 +43,7 @@
                     <a class="nav-link nav-color" href="/user/manage/favorites"><span class="glyphicon glyphicon-heart"></span> &nbsp;&nbsp; Favorites</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/favorites"><span class="glyphicon glyphicon-alert"></span> &nbsp;&nbsp; Search Alerts</a>
+                    <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-alert"></span> &nbsp;&nbsp; Search Alerts</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
