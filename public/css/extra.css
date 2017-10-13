@@ -139,6 +139,7 @@ a.filter-button.btn.btn-default {
 a.nav-color {
     color: gray;
     text-decoration: none;
+    font-weight: bold;
 }
 a.red-color{
     text-decoration: none;
