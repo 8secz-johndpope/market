@@ -854,7 +854,7 @@ class UserController extends BaseController
         $type = $request->type;
         $user = Auth::user();
         $adverts = [];
-        foreach ($user->adverts()->paginate(15) as $advert){
+        foreach ($user->adverts()->paginate(50) as $advert){
             if($advert->elastic) {
 
                 try{
