@@ -7,6 +7,7 @@ use App\Model\Pack;
 use App\Model\Payment;
 use App\Model\Postcode;
 use App\Model\Room;
+use App\Model\SearchAlert;
 use App\Model\Shipping;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use PDF;
@@ -545,6 +546,16 @@ class HomeController extends BaseController
         $user = Auth::user();
 
         return view('home.alerts',[ 'user' => $user]);
+
+    }
+    public function alert(Request $request,$id){
+        $category=Category::find($id);
+        $alert = new SearchAlert;
+        $user=Auth::user();
+        $alert->user_id=$user->id;
+        $alert->category_id=$category->id;
+        $alert->save();
+        return redirect('/'.$category->slug);
 
     }
     public function myads(Request $request){
