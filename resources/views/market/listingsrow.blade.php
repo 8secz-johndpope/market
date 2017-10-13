@@ -16,6 +16,9 @@
 <div class="row listings">
     <div class="container-fluid">
         <div class="all">
+            <div class="search-alert-div">
+                <a class="search-alert"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
+            </div>
             <div class="top-bar">
                 <a class="filter-button btn btn-default">Filter</a>
             </div>
