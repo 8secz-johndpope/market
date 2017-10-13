@@ -141,6 +141,9 @@
                         <ul class="list-group">
                             <li class="list-group-item"><h4>{{$advert->user->display_name}}</h4></li>
                         </ul>
+                        <div class="user-badge">
+                            V2
+                        </div>
                         @else
                         <ul class="list-group">
                             <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
