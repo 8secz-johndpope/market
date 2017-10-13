@@ -168,7 +168,7 @@
                                 <li>
                                     <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp; My Details</a>
                                 </li>
-                                @if($user->contract!==null)
+                                @if( Auth::user()->contract!==null)
                                     <li>
                                         <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Company</a>
                                     </li>
