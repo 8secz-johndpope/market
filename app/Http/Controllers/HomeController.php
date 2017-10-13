@@ -537,20 +537,8 @@ class HomeController extends BaseController
     }
     public function favorites(Request $request){
             $user = Auth::user();
-        $favs = $user->favorites;
 
-
-        $adverts = array();
-        foreach ($favs as $favorite){
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'id' => $favorite->elastic
-            ];
-            $response = $this->client->get($params);
-            $adverts[]=$response['_source'];
-        }
-        return view('home.favorites',[ 'products' => $adverts]);
+        return view('home.favorites',[ 'user' => $user]);
 
     }
     public function myads(Request $request){

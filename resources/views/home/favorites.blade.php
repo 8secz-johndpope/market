@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.business')
 
 @section('title', 'Page Title')
 
@@ -12,65 +12,96 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-12">
+
             <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/ads">Manage My ads</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/orders">Orders</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/user/manage/buying">Buying</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/messages">Messages</a>
-                </li>
+
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Favorites</a>
+                    <a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/manage/details">My Details</a>
+                    <a class="nav-link nav-color" href="/user/manage/orders"><span class="glyphicon glyphicon-credit-card"></span> &nbsp;&nbsp; Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-color" href="/user/manage/messages"><span class="glyphicon glyphicon-envelope"></span> &nbsp;&nbsp; Messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp; My Details</a>
+                </li>
+                @if($user->contract!==null)
+                    <li class="nav-item">
+                        <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Company</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;&nbsp; Financials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp; Metrics</a>
+                    </li>
+                @endif
+                <li class="nav-item active">
+                    <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-heart"></span> &nbsp;&nbsp; Favorites</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-alert"></span> &nbsp;&nbsp; Search Alerts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
                 </li>
             </ul>
-            @foreach($products as $product)
-                <div class="item listing">
-                    <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}">
-                        <div class="listing-img">
-                            <div class="main-img">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
-                                <div class="listing-meta">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="items-box-body listing-content">
-                            <h4 class="items-box-name font-2">{{$product['title']}}</h4>
-                            <div class="listing-location">
-                                <span class="truncate-line">
-                                    {{$product['location_name']}}
-                                </span>
-                            </div>
-                            <p class="listing-description">
-                                {{$product['description']}}
-                            </p>
-                            <ul class="listing-attributes inline-list">
-
-                            </ul>
-                            <div class="items-box-num clearfix">
-                                @if($product['meta']['price']>=0)
-                                    <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
-                                    </div>
-                                @endif
-                            </div>
-                        </div>
-                    </a>
-                        <span class="glyphicon glyphicon-thumbs-up favroite-icon favroite-icon-gold" data-id="{{$product['source_id']}}"></span>
-
-          </div>
-
-            @endforeach
         </div>
     </div>
+<table class="table">
 
+    @foreach($user->favorites as $advert)
+        <tr><td>
+                <div class="product">
+                    <div class="listing-side">
+                        <div class="listing-thumbnail">
+                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+
+                            @if($advert->featured_expires())
+                                <span class="ribbon-featured">
+<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+</span>
+                            @endif
+
+                            <div class="listing-meta txt-sub">
+                                <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($advert->param('images'))}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info">
+
+
+                        <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->id}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
+
+                        <span class="listing-location">
+                                    {{$advert->param('location_name')}}
+                                </span>
+                        <p class="listing-description">
+                            {{$advert->param('description')}}
+                        </p>
+
+                        @if($advert->meta('price')>=0)
+                            <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
+                                </span>
+                        @endif
+
+
+
+                        @if($advert->urgent_expires())
+                            <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
+<span class="hide-visually">This ad is </span>Urgent
+</span>
+                        @endif
+                    </div>
+                </div>
+
+            </td>
+        </tr>
+    @endforeach
+</table>
 
 @endsection
