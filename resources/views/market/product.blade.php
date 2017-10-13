@@ -138,10 +138,15 @@
                         <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$advert->user->image}}">
                     </div>
                         <a href="/userads/{{$advert->user->id}}">Ads({{count($advert->user->adverts)}})</a>
+                        <ul class="list-group">
+                            <li class="list-group-item"><h4>{{$advert->user->diplay_name}}</h4></li>
+                        </ul>
+                        @else
+                        <ul class="list-group">
+                            <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
+                        </ul>
                     @endif
-                    <ul class="list-group">
-                        <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
-                    </ul>
+
                     <ul class="list-group">
                         <li class="list-group-item"> <button class="btn btn-default">Interested to Make Offer</button></li>
                         <li class="list-group-item"><button class="btn btn-default">Save to Favorites</button></li>
