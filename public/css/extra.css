@@ -136,6 +136,9 @@ a.filter-button.btn.btn-default {
     margin-bottom: 5px;
     display: none;
 }
+a.nav-color {
+    color: gray;
+}
 strong.ribbon {
     background-color: #fff;
     color: #3997ba;
