@@ -212,7 +212,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                @if(Auth::user()->contract!==null)
                 <a class="navbar-brand" href="/"><img class="icon-small" src="/css/sumra-business.png"></a>
+                    @else
+                    <a class="navbar-brand" href="/"><img class="icon-small" src="/css/sumra-text.png"></a>
+
+                @endif
 
             </div>
             <div class="business-drop collapse navbar-collapse" id="bs-example-navbar-collapse-1">
