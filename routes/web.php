@@ -49,6 +49,8 @@ Route::post('/user/message/send','MessageController@send');
 Route::post('/user/message/rsend','MessageController@rsend');
 
 Route::get('/user/manage/favorites', 'HomeController@favorites');
+Route::get('/user/manage/alerts', 'HomeController@alerts');
+
 Route::post('/user/cards/add', 'HomeController@addcard');
 Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/address/change/{id}', 'HomeController@change');
