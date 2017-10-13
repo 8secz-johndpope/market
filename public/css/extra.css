@@ -149,6 +149,13 @@ span.listing-location {
     font-weight: bold;
     font-size: 16px;
 }
+.copyright {
+    position: absolute;
+    bottom: 0;
+    background: black;
+    color: white;
+    width: 100%;
+}
 a.red-color{
     text-decoration: none;
 }
