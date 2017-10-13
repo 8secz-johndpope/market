@@ -17,22 +17,22 @@
             <ul class="nav nav-tabs">
 
                 <li class="nav-item">
-                    <a class="nav-link nav-color" href="/business/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp Manage  ads</a>
+                    <a class="nav-link nav-color" href="/business/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp; Manage  ads</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;My Details</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link nav-color" href="/business/manage/company">Company</a>
+                    <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;Company</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" href="/business/manage/finance">Financials</a>
+                    <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;Financials</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link nav-color" href="/business/manage/metrics">Metrics</a>
+                    <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;Metrics</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link nav-color" href="#">Support</a>
+                    <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-earphone"></span> &nbsp;Support</a>
                 </li>
             </ul>
 
