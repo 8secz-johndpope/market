@@ -48,6 +48,11 @@ class BusinessController extends BaseController
         return view('business.finance',['user'=>$user]);
 
     }
+    public function images(Request $request){
+        $user = Auth::user();
+        return view('business.images',['user'=>$user]);
+
+    }
     public function auto(Request $request,$id,$count){
         $user = Auth::user();
         $category=Category::find($id);
