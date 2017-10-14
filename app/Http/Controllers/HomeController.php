@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Mail\AccountCreated;
 use App\Model\Address;
 use App\Model\Business;
 use App\Model\Pack;
@@ -11,6 +12,8 @@ use App\Model\SearchAlert;
 use App\Model\Shipping;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use PDF;
+use Illuminate\Support\Facades\Mail;
+
 use App\Model\Contract;
 use App\Model\ContractPack;
 use App\Model\EmailCode;
@@ -846,6 +849,18 @@ class HomeController extends BaseController
             return ['msg'=>'correct'];
         }
 
+    }
+    public function resend_email(Request $request){
+        $user=Auth::user();
+
+        $acc = new AccountCreated;
+        $verify = new EmailCode;
+        $verify->user_id = $user->id;
+        $verify->code=uniqid();
+        $verify->save();
+        $acc->verify_code=$verify->code;
+        Mail::to($user)->send($acc);
+        return redirect('/user/manage/details');
     }
     private function complete_contract($order){
         $user=Auth::user();

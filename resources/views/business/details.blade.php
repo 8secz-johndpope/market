@@ -212,6 +212,7 @@
                     <h4 class="modal-title">Verification Code</h4>
                 </div>
                 <div class="modal-body">
+                    <span class="red-text" id="invalid-code" style="display: none">Invalid Code</span>
                     <div class="form-group" style="margin-top: 25px">
                         <label for="card">Enter the code sent to your mobile:</label>
                         <input class="form-control" name="code" id="code" placeholder="6342">
@@ -261,6 +262,11 @@
         })
             .then(function (response) {
                 console.log(response);
+                if(response.data.msg==='wrong'){
+                    $('#invalid-code').show();
+                }else{
+                    document.location.href='/user/manage/details';
+                }
             })
             .catch(function (error) {
                 console.log(error);
