@@ -134,6 +134,10 @@ input:checked + .slider:before {
 .center-add-card {
     text-align: center;
 }
+.multi-image {
+    width: 200px;
+    display: inline-block;
+}
 a.card-div-link {
     color: darkgreen;
     font-weight: bold;
