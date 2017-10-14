@@ -785,7 +785,7 @@ class HomeController extends BaseController
         $parts = explode('/',$request->expiry);
         $month = (int)$parts[0];
         $year = (int)$parts[1];
-        $customer->sources->create(array("source" => ['object'=>'card','number'=>$request->card,'exp_month'=>$month,'exp_year'=>$year,'cvv'=>$request->cvv]));
+        $customer->sources->create(array("source" => ['object'=>'card','number'=>str_replace(' ','',$request->card),'exp_month'=>$month,'exp_year'=>$year,'cvv'=>$request->cvv]));
         return redirect('/user/manage/details');
     }
     private function complete_contract($order){
