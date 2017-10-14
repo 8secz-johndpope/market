@@ -178,7 +178,7 @@
             <button type="submit" class="btn btn-success">Save </button>
         </form>
     </div>
-    <div class="add-account-form" style="display: block">
+    <div class="add-account-form" style="display: none">
         <div class="cross-mark-add-bank">
             X
         </div>
