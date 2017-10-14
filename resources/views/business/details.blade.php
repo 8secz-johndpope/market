@@ -106,6 +106,13 @@
                             <div class="last-4">
                                 X- {{$card->last4}}
                             </div>
+                            <div class="card-logo">
+                                @if($card->brand==='visa')
+                                    <img src="/css/visa-log.png">
+                                    @else
+                                    <img src="/css/mastercard.png">
+                                @endif
+                            </div>
                         </div>
                             @endforeach
                     </div>
