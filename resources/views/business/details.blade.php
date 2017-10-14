@@ -255,7 +255,16 @@
             });
     });
     $("#verify-link").click(function(){
-
+        var code=$("#code").val();
+        axios.get('/user/verify/text', {
+            params : {code:code}
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     });
 </script>
 @endsection

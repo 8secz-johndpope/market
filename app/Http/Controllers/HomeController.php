@@ -836,6 +836,15 @@ class HomeController extends BaseController
         );
         return ['code'=>'sent'];
     }
+    public function verify_text(Request $request) {
+        $user=Auth::user();
+        if($user->phone_code!==$request->code){
+            return ['msg'=>'wrong'];
+        }else{
+            return ['msg'=>'correct'];
+        }
+
+    }
     private function complete_contract($order){
         $user=Auth::user();
         $order->payment = 'done';
