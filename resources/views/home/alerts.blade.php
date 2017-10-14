@@ -58,6 +58,10 @@
                   <li class="list-group-item">
                       <a href="/{{$alert->category->slug}}"><h2>{{$alert->category->title}}</h2></a>
                       <span class="listing-location">{{$alert->location->title}}</span>
+                      <label class="switch">
+                          <input type="checkbox">
+                          <span class="slider round"></span>
+                      </label>
                       <a class="red-color delete-alert-link" href="/user/delete/alert/{{$alert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a>
                   </li>
               @endforeach
