@@ -79,7 +79,7 @@
                                 <strong>Contact number:</strong>
                             </div>
                             <div class="detail-text">
-                                {{$user->phone}} @if($user->phone_verified!==1) <a>Verify Phone</a> @else <span class="glyphicon glyphicon-ok-sign" style="color: green"></span> @endif
+                                {{$user->phone}} @if($user->phone_verified!==1) <a class="verify-phone-link">Verify Phone</a> @else <span class="glyphicon glyphicon-ok-sign" style="color: green"></span> @endif
                             </div>
                             <div class="gray-color">
                                 <strong>Display name:</strong>
@@ -202,6 +202,29 @@
             <button type="submit" class="btn btn-success">Save </button>
         </form>
     </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content" id="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Verification Code</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group" style="margin-top: 25px">
+                        <label for="card">Enter the code sent to your mobile:</label>
+                        <input class="form-control" name="code" id="code" placeholder="6342">
+                    </div>
+                    <a class="btn btn-primary">Verify</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 <script>
     $(".card-div-link").click(function () {
         $(".all-divs").hide();
@@ -218,6 +241,9 @@
     $(".cross-mark-add-bank ").click(function () {
         $(".all-divs").show();
         $(".add-account-form").hide();
+    });
+    $(".verify-phone-link").click(function () {
+        $("#myModal").modal('show');
     });
 </script>
 @endsection
