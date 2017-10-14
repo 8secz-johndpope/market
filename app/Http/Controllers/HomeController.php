@@ -560,6 +560,13 @@ class HomeController extends BaseController
         return redirect('/'.$category->slug.'/'.$location->slug);
 
     }
+    public function delete_alert(Request $request,$id){
+        $alert=SearchAlert::find($id);
+        $alert->delete();
+
+        return redirect('/user/manage/alerts');
+
+    }
     public function myads(Request $request){
         $user = Auth::user();
         if($user->contract!==null)
