@@ -838,7 +838,7 @@ class HomeController extends BaseController
     }
     public function verify_text(Request $request) {
         $user=Auth::user();
-        if($user->phone_code!==$request->code){
+        if($user->phone_code!==(int)$request->code){
             return ['msg'=>'wrong'];
         }else{
             return ['msg'=>'correct'];
