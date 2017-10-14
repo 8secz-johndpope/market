@@ -117,7 +117,7 @@
                         </div>
                             @endforeach
                         <div class="card-div add-card-div">
-                            <a><div class="center-add-card">
+                            <a class="card-div-link"><div class="center-add-card">
                                     <p>+</p>
                                     <p>Add Card</p>
                                 </div> </a>
