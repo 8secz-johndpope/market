@@ -114,13 +114,14 @@ input:checked + .slider:before {
 }
 .card-logo img {
     width: 50px;
-    margin-bottom: 5px;
-    margin-right: 10px;
+
 }
 .card-logo {
     position: absolute;
     right: 0;
     bottom: 0;
+    margin-bottom: 5px;
+    margin-right: 10px;
 }
 .last-4 {
     position: absolute;
