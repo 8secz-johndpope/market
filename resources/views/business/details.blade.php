@@ -124,6 +124,7 @@
                         </div>
                         <div class="add-card-form">
                             <form action="/user/cards/add" method="post">
+                                {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="card">Card Number:</label>
                                 <input class="form-control" name="card" placeholder="Card number">
