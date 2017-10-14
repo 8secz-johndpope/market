@@ -122,32 +122,7 @@
                                     <p>Add Card</p>
                                 </div> </a>
                         </div>
-                        <div class="add-card-form" style="display: none">
-                            <form action="/user/cards/add" method="post">
-                                {{ csrf_field() }}
-                                <div class="form-group">
-                                    <label for="card">Card Number:</label>
-                                <input class="form-control" name="card" placeholder="Card number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="expiry">Expiry date:</label>
-                                <input class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
-                                </div>
-                                    <div class="form-group">
-                                        <label for="cvc">CVC:</label>
-                                <input class="form-control" name="cvc" placeholder="cvc (3 digits)">
-                                    </div>
-                                <div class="form-group">
-                                    <label for="address">Billing Address:</label>
-                                    <select class="form-control" name="address">
-                                        @foreach($user->addresses as $address)
-                                            <option value="{{$address->id}}">{{$address->line1}}, {{$address->city}}, {{$address->postcode}}</option>
-                                            @endforeach
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-success">Save </button>
-                            </form>
-                        </div>
+
                     </div>
 
                 </div>
@@ -155,7 +130,32 @@
 
         </div>
     </div>
-
+    <div class="add-card-form" style="display: none">
+        <form action="/user/cards/add" method="post">
+            {{ csrf_field() }}
+            <div class="form-group">
+                <label for="card">Card Number:</label>
+                <input class="form-control" name="card" placeholder="Card number">
+            </div>
+            <div class="form-group">
+                <label for="expiry">Expiry date:</label>
+                <input class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
+            </div>
+            <div class="form-group">
+                <label for="cvc">CVC:</label>
+                <input class="form-control" name="cvc" placeholder="cvc (3 digits)">
+            </div>
+            <div class="form-group">
+                <label for="address">Billing Address:</label>
+                <select class="form-control" name="address">
+                    @foreach($user->addresses as $address)
+                        <option value="{{$address->id}}">{{$address->line1}}, {{$address->city}}, {{$address->postcode}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Save </button>
+        </form>
+    </div>
 <script>
     $(".card-div-link").click(function () {
         $(".all-divs").hide();
