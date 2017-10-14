@@ -550,12 +550,14 @@ class HomeController extends BaseController
     }
     public function alert(Request $request,$id){
         $category=Category::find($id);
+        $location=Location::find($request->id);
         $alert = new SearchAlert;
         $user=Auth::user();
         $alert->user_id=$user->id;
         $alert->category_id=$category->id;
+        $alert->location_id=$location->id;
         $alert->save();
-        return redirect('/'.$category->slug);
+        return redirect('/'.$category->slug.'/'.$location->slug);
 
     }
     public function myads(Request $request){
