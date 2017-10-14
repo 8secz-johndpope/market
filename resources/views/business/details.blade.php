@@ -104,7 +104,7 @@
                         @foreach($cards as $card)
                         <div class="card-div">
                             <div class="last-4">
-                                {{$card->last4}}
+                                X- {{$card->last4}}
                             </div>
                         </div>
                             @endforeach

@@ -105,7 +105,20 @@ input:checked + .slider:before {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
-
+.card-div {
+    width: 200px;
+    height: 130px;
+    background: gray;
+    border-radius: 18px;
+}
+.last-4 {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    margin-left: 8px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
 /* Rounded sliders */
 .slider.round {
     border-radius: 34px;
