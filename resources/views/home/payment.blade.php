@@ -161,21 +161,14 @@
                             // Submit the form
                             form.submit();
                         }
-                        $(".add-card").click(function () {
-                            $(".all-divs").hide();
-                            $(".add-card-form").show();
-                        });
-                        $(".cross-mark-add-card ").click(function () {
-                            $(".all-divs").show();
-                            $(".add-card-form").hide();
-                        });
+
 
                     </script>
                 </div>
             </div>
         </div>
     </div>
-    <div class="add-card-form">
+    <div class="add-card-form" style="display: none">
         <div class="cross-mark-add-card">
             X
         </div>
@@ -205,5 +198,14 @@
             <button type="submit" class="btn btn-success">Save </button>
         </form>
     </div>
-
+<script>
+    $(".add-card").click(function () {
+        $(".all-divs").hide();
+        $(".add-card-form").show();
+    });
+    $(".cross-mark-add-card ").click(function () {
+        $(".all-divs").show();
+        $(".add-card-form").hide();
+    });
+</script>
 @endsection
