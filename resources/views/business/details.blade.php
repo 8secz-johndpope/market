@@ -111,7 +111,7 @@
                                 @if($card->brand==='Visa')
                                     <img src="/css/visa-logo.png">
                                     @elseif($card->brand==='American Express')
-                                    <img src="/css/amex.jpg">
+                                    <img src="/css/amex.png">
                                     @else
                                     <img src="/css/mastercard.png">
                                 @endif
