@@ -126,6 +126,7 @@ a.card-div-link {
     display: block;
     cursor: pointer;
     text-decoration: none;
+    padding-bottom: 20px;
 }
 .card-logo img {
     width: 50px;
