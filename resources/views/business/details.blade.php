@@ -128,8 +128,12 @@
                         <h4 class="bold-text">Bank Accounts</h4>
                         @foreach($accounts as $account)
                             <div class="bank-div">
-
+                            <p class="bank-name">{{$account->bank_name}}</p>
+                                <div class="last-4">
+                                    X- {{$account->last4}}
+                                </div>
                             </div>
+
                         @endforeach
                         <div class="card-div add-card-div">
                             <a class="card-div-link"><div class="center-add-card">
