@@ -143,6 +143,15 @@ a.card-div-link {
     text-decoration: none;
     padding-bottom: 20px;
 }
+a.add-bank-link {
+    color: darkgreen;
+    font-weight: bold;
+    padding-top: 35px;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
 .add-card-form {
     margin: auto;
     top: 123px;

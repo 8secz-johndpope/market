@@ -136,9 +136,9 @@
 
                         @endforeach
                         <div class="card-div add-card-div">
-                            <a class="card-div-link"><div class="center-add-card">
+                            <a class="add-bank-link"><div class="center-add-card">
                                     <p>+</p>
-                                    <p>Add Card</p>
+                                    <p>Add Bank Account</p>
                                 </div> </a>
                         </div>
                         <div class="add-account-form">
