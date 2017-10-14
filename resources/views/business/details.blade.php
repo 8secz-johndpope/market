@@ -131,6 +131,9 @@
         </div>
     </div>
     <div class="add-card-form" style="display: none">
+        <div class="cross-mark cross-mark-add-card">
+            X
+        </div>
         <form action="/user/cards/add" method="post">
             {{ csrf_field() }}
             <div class="form-group">
