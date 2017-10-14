@@ -115,7 +115,11 @@ input:checked + .slider:before {
     display: inline-block;
 }
 .add-card-div {
+    display: block;
     background: lightgray;
+}
+.credit-debit-cards {
+    max-width: 500px;
 }
 .center-add-card {
     text-align: center;
