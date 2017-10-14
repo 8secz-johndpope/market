@@ -50,27 +50,30 @@
             <h4>Payment Schedule</h4>
             <table class="table">
                 <tr><th>Title</th><th>Description</th><th>Postcode</th>@foreach($category->fields as $field)<th>{{$field->title}}</th>@endforeach</tr>
+                @foreach (range(1, $count) as $number) {
+
                 <tr>
-                    <td> <input class="form-control" type="text" name="title" required value=""></td>
-                    <td> <textarea class="form-control" name="description" rows="6" cols="60" required></textarea></td>
-                    <td> <input class="form-control" type="text" name="postcode" required value=""></td>
+                    <td> <input class="form-control" type="text" name="{{$number}}_title" required value=""></td>
+                    <td> <textarea class="form-control" name="{{$number}}_description" rows="6" cols="60" required></textarea></td>
+                    <td> <input class="form-control" type="text" name="{{$number}}_postcode" required value=""></td>
 
                 @foreach($category->fields as $field)
                         <td>
                             @if($field->type==='integer')
-                                <input class="form-control" type="text" name="{{$field->slug}}" required value="">
+                                <input class="form-control" type="text" name="{{$number}}_{{$field->slug}}" required value="">
                             @elseif($field->type==='list')
-                                <select class="form-control" name="{{$field->slug}}">
+                                <select class="form-control" name="{{$number}}_{{$field->slug}}">
                                     @foreach($field->values as $value)
                                         <option value="{{$value->slug}}" >{{$value->title}}</option>
                                     @endforeach
                                 </select>
                             @else
-                                <input class="form-control" type="text" name="{{$field->slug}}" required  value="">
+                                <input class="form-control" type="text" name="{{$number}}_{{$field->slug}}" required  value="">
                             @endif
                         </td>
                 @endforeach
                 </tr>
+                    @endforeach
             </table>
         </div>
     </div>

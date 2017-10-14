@@ -48,10 +48,10 @@ class BusinessController extends BaseController
         return view('business.finance',['user'=>$user]);
 
     }
-    public function auto(Request $request,$id){
+    public function auto(Request $request,$id,$count){
         $user = Auth::user();
         $category=Category::find($id);
-        return view('business.auto',['user'=>$user,'category'=>$category]);
+        return view('business.auto',['user'=>$user,'category'=>$category,'count'=>$count]);
 
     }
     public function details(Request $request){

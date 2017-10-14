@@ -32,7 +32,7 @@ Route::get('/user/ads/post', 'HomeController@post');
 Route::post('/user/advert/location', 'HomeController@location');
 Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'BusinessController@myads');
-Route::get('/user/category/auto/{id}', 'BusinessController@auto');
+Route::get('/user/category/auto/{id}/{count}', 'BusinessController@auto');
 
 Route::post('/user/advert/category/change', 'HomeController@change_category');
 Route::post('/user/advert/location/change', 'HomeController@change_location');
