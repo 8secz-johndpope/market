@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <div class="row">
+    <div class="row all-divs">
         <div class="col-sm-8 col-sm-offset-2">
 
             <div class="row">
@@ -85,38 +85,7 @@
                     </form>
                     </div>
                     <button class="btn btn-default add-card">Add New Card</button>
-                    <div class="add-card-div" style="display: none">
-                        <div class="add-card-form">
-                            <div class="cross-mark-add-card">
-                                X
-                            </div>
-                            <form action="/user/cards/add" method="post">
-                                <input name="redirect" type="hidden" value="/user/manage/order">
-                                {{ csrf_field() }}
-                                <div class="form-group" style="margin-top: 25px">
-                                    <label for="card">Card Number:</label>
-                                    <input class="form-control" name="card" placeholder="Card number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="expiry">Expiry date:</label>
-                                    <input class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
-                                </div>
-                                <div class="form-group">
-                                    <label for="cvc">CVC:</label>
-                                    <input class="form-control" name="cvc" placeholder="cvc (3 digits)">
-                                </div>
-                                <div class="form-group">
-                                    <label for="address">Billing Address:</label>
-                                    <select class="form-control" name="address">
-                                        @foreach($user->addresses as $address)
-                                            <option value="{{$address->id}}">{{$address->line1}}, {{$address->city}}, {{$address->postcode}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-success">Save </button>
-                            </form>
-                        </div>
-                    </div>
+
                     <p>Or</p>
 
                         <div id="paypal-container"></div>
@@ -193,7 +162,12 @@
                             form.submit();
                         }
                         $(".add-card").click(function () {
-                           $(".add-card-div").show();
+                            $(".all-divs").hide();
+                            $(".add-card-form").show();
+                        });
+                        $(".cross-mark-add-card ").click(function () {
+                            $(".all-divs").show();
+                            $(".add-card-form").hide();
                         });
 
                     </script>
@@ -201,6 +175,35 @@
             </div>
         </div>
     </div>
-
+    <div class="add-card-form">
+        <div class="cross-mark-add-card">
+            X
+        </div>
+        <form action="/user/cards/add" method="post">
+            <input name="redirect" type="hidden" value="/user/manage/order">
+            {{ csrf_field() }}
+            <div class="form-group" style="margin-top: 25px">
+                <label for="card">Card Number:</label>
+                <input class="form-control" name="card" placeholder="Card number">
+            </div>
+            <div class="form-group">
+                <label for="expiry">Expiry date:</label>
+                <input class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
+            </div>
+            <div class="form-group">
+                <label for="cvc">CVC:</label>
+                <input class="form-control" name="cvc" placeholder="cvc (3 digits)">
+            </div>
+            <div class="form-group">
+                <label for="address">Billing Address:</label>
+                <select class="form-control" name="address">
+                    @foreach($user->addresses as $address)
+                        <option value="{{$address->id}}">{{$address->line1}}, {{$address->city}}, {{$address->postcode}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Save </button>
+        </form>
+    </div>
 
 @endsection
