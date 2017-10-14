@@ -60,7 +60,7 @@
                       <span class="listing-location">{{$alert->location->title}}</span>
                       <br>
                       <label class="switch">
-                          <a href="/user/toggle/alert/{{$alert->id}}"><input type="checkbox" @if($alert->active===1) checked @endif></a>
+                          <input type="checkbox" @if($alert->active===1) checked @endif>
                           <span class="slider round"></span>
                       </label>
                       <a class="red-color delete-alert-link" href="/user/delete/alert/{{$alert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a>
