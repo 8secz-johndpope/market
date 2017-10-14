@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 use App\Mail\PayInvoice;
 use App\Model\Address;
 use App\Model\Business;
+use App\Model\Image;
 use App\Model\Pack;
 use App\Model\Payment;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -51,6 +52,15 @@ class BusinessController extends BaseController
     public function images(Request $request){
         $user = Auth::user();
         return view('business.images',['user'=>$user]);
+
+    }
+    public function image(Request $request){
+        $user = Auth::user();
+        $image = new Image;
+        $image->image = $request->image;
+        $image->user_id=$user->id;
+        $image->save();
+       return ['msg'=>'done'];
 
     }
     public function auto(Request $request,$id,$count){

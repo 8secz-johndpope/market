@@ -33,6 +33,7 @@ Route::post('/user/advert/location', 'HomeController@location');
 Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'BusinessController@myads');
 Route::get('/user/manage/images', 'BusinessController@images');
+Route::get('/user/image/add', 'BusinessController@image');
 
 Route::get('/user/category/auto/{id}/{count}', 'BusinessController@auto');
 
