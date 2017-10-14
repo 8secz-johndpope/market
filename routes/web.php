@@ -52,6 +52,7 @@ Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::get('/user/manage/alerts', 'HomeController@alerts');
 Route::get('/user/create/alert/{id}', 'HomeController@alert');
 Route::get('/user/delete/alert/{id}', 'HomeController@delete_alert');
+Route::get('/user/toggle/alert/{id}', 'HomeController@toggle_alert');
 
 Route::post('/user/cards/add', 'HomeController@addcard');
 Route::get('/user/manage/order', 'HomeController@order');

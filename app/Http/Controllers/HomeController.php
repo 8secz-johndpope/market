@@ -567,6 +567,14 @@ class HomeController extends BaseController
         return redirect('/user/manage/alerts');
 
     }
+    public function toggle_alert(Request $request,$id){
+        $alert=SearchAlert::find($id);
+        $alert->active=!$alert->active;
+        $alert->save();
+
+        return redirect('/user/manage/alerts');
+
+    }
     public function myads(Request $request){
         $user = Auth::user();
         if($user->contract!==null)
