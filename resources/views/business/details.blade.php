@@ -137,7 +137,7 @@
                                 <input class="form-control" name="card" placeholder="CSC (3 digits)">
                                     </div>
                                 <div class="form-group">
-                                    <label for="address">Address:</label>
+                                    <label for="address">Billing Address:</label>
                                     <select class="form-control" name="address">
                                         @foreach($user->addresses as $address)
                                             <option value="{{$address->id}}">{{$address->line1}}, {{$address->city}}, {{$address->postcode}}</option>

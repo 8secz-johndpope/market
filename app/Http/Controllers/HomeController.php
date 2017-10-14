@@ -782,8 +782,11 @@ class HomeController extends BaseController
 
         $stripe_id = $user->stripe_id;
         $customer = \Stripe\Customer::retrieve($stripe_id);
-        $customer->sources->create(array("source" => $request->stripeToken));
-        return redirect('/user/manage/order');
+        $parts = explode('/',$request->expiry);
+        $month = (int)$parts[0];
+        $year = (int)$parts[1];
+        $customer->sources->create(array("source" => ['object'=>'card','number'=>$request->card,'exp_month'=>$month,'exp_year'=>$year,'cvv'=>$request->cvv]));
+        return redirect('/user/manage/details');
     }
     private function complete_contract($order){
         $user=Auth::user();
