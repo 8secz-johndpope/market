@@ -130,6 +130,7 @@
                         <h4 class="bold-text">Bank Accounts</h4>
                         @foreach($accounts as $account)
                             <div class="bank-div">
+                                <span class="glyphicon glyphicon-piggy-bank"></span>
                             <p class="bank-name">{{$account->bank_name}}</p>
                                 <div class="last-4">
                                     X- {{$account->last4}}
