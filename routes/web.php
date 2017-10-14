@@ -77,7 +77,7 @@ Route::get('/user/reply/{id}', 'MessageController@reply');
 
 Route::get('/user/manage/orders', 'HomeController@orders');
 Route::get('/user/manage/buying', 'HomeController@buying');
-Route::get('/user/manage/details', 'HomeController@details');
+Route::get('/user/manage/details', 'BusinessController@details');
 
 Route::get('/user/manage/shipping/{id}', 'HomeController@shipping');
 
