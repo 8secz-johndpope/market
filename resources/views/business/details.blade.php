@@ -108,7 +108,7 @@
                             </div>
                             <div class="card-logo">
                                 @if($card->brand==='Visa')
-                                    <img src="/css/visa-log.png">
+                                    <img src="/css/visa-logo.png">
                                     @else
                                     <img src="/css/mastercard.png">
                                 @endif
