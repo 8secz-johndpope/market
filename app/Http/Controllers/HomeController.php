@@ -841,6 +841,8 @@ class HomeController extends BaseController
         if($user->phone_code!==(int)$request->code){
             return ['msg'=>'wrong'];
         }else{
+            $user->phone_verified=1;
+            $user->save();
             return ['msg'=>'correct'];
         }
 
