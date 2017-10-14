@@ -58,6 +58,7 @@
                   <li class="list-group-item">
                       <a href="/{{$alert->category->slug}}"><h2>{{$alert->category->title}}</h2></a>
                       <span class="listing-location">{{$alert->location->title}}</span>
+                      <br>
                       <label class="switch">
                           <input type="checkbox">
                           <span class="slider round"></span>
