@@ -50,7 +50,7 @@
             <h4>Payment Schedule</h4>
             <table class="table">
                 <tr><th>Title</th><th>Description</th><th>Postcode</th>@foreach($category->fields as $field)<th>{{$field->title}}</th>@endforeach</tr>
-                @foreach (range(1, $count) as $number) {
+                @foreach (range(1, $count) as $number) 
 
                 <tr>
                     <td> <input class="form-control" type="text" name="{{$number}}_title" required value=""></td>
