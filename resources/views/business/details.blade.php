@@ -209,7 +209,7 @@
         $(".all-divs").hide();
         $(".add-account-form").show();
     });
-    $(".cross-mark-add-card ").click(function () {
+    $(".cross-mark-add-bank ").click(function () {
         $(".all-divs").show();
         $(".add-account-form").hide();
     });
