@@ -156,5 +156,9 @@
         </div>
     </div>
 
-
+<script>
+    $(".card-div-link").click(function () {
+       $(".add-card-form").show();
+    });
+</script>
 @endsection
