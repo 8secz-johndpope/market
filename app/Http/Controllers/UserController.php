@@ -188,6 +188,7 @@ class UserController extends BaseController
                 'id' => $advert->elastic
             ];
             $response = $this->client->get($params);
+            if(!isset($response['_source']['draft'])&&!isset($response['_source']['inactive']))
             $adverts[]=$response['_source'];
         }
         return $adverts;
