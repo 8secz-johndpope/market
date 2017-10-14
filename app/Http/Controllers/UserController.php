@@ -191,7 +191,7 @@ class UserController extends BaseController
             if(!isset($response['_source']['draft'])&&!isset($response['_source']['inactive']))
             $adverts[]=$response['_source'];
         }
-        return $adverts;
+        return ['adverts'=>$adverts,'total'=>count($adverts)];
     }
 
         public function login(Request $request)
