@@ -94,7 +94,7 @@ class User extends Authenticatable
     }
     public function images()
     {
-        return $this->hasMany('App\Model\Image');
+        return $this->hasMany('App\Model\Image')->orderBy('id','desc');
     }
     public function bumps()
     {
