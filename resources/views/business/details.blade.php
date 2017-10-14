@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <div class="row">
+    <div class="row all-divs">
         <div class="col-sm-12">
 
             <ul class="nav nav-tabs">
@@ -158,6 +158,7 @@
 
 <script>
     $(".card-div-link").click(function () {
+        $(".all-divs").hide();
        $(".add-card-form").show();
     });
 </script>
