@@ -20,6 +20,9 @@
                     <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link nav-color" href="/user/manage/images"><span class="glyphicon glyphicon-camera"></span>&nbsp;&nbsp;Images</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link nav-color" href="/user/manage/orders"><span class="glyphicon glyphicon-credit-card"></span> &nbsp;&nbsp; Orders</a>
                 </li>
                 <li class="nav-item">
