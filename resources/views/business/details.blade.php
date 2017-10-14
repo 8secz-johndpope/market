@@ -164,5 +164,9 @@
         $(".all-divs").hide();
        $(".add-card-form").show();
     });
+    $(".cross-mark-add-card ").click(function () {
+        $(".all-divs").show();
+        $(".add-card-form").hide();
+    });
 </script>
 @endsection
