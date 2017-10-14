@@ -86,22 +86,36 @@
                     </div>
                     <button class="btn btn-default add-card">Add New Card</button>
                     <div class="add-card-div" style="display: none">
-                    <form action="/user/cards/add" method="post" id="payment-form">
-                        {{ csrf_field() }}
-                        <div class="form-row">
-                            <label for="card-element">
-                                Credit or debit card
-                            </label>
-                            <div id="card-element">
-                                <!-- a Stripe Element will be inserted here. -->
+                        <div class="add-card-form">
+                            <div class="cross-mark-add-card">
+                                X
                             </div>
-
-                            <!-- Used to display Element errors -->
-                            <div id="card-errors" role="alert"></div>
+                            <form action="/user/cards/add" method="post">
+                                <input name="redirect" type="hidden" value="/user/manage/order">
+                                {{ csrf_field() }}
+                                <div class="form-group" style="margin-top: 25px">
+                                    <label for="card">Card Number:</label>
+                                    <input class="form-control" name="card" placeholder="Card number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="expiry">Expiry date:</label>
+                                    <input class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvc">CVC:</label>
+                                    <input class="form-control" name="cvc" placeholder="cvc (3 digits)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Billing Address:</label>
+                                    <select class="form-control" name="address">
+                                        @foreach($user->addresses as $address)
+                                            <option value="{{$address->id}}">{{$address->line1}}, {{$address->city}}, {{$address->postcode}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-success">Save </button>
+                            </form>
                         </div>
-
-                        <button>Add Card</button>
-                    </form>
                     </div>
                     <p>Or</p>
 
