@@ -124,7 +124,30 @@
                         </div>
 
                     </div>
+                    <div class="bank-accounts">
+                        <h4 class="bold-text">Bank Accounts</h4>
+                        @foreach($cards as $card)
+                            <div class="card-div">
+                                <div class="last-4">
+                                    X- {{$card->last4}}
+                                </div>
+                                <div class="card-logo">
+                                    @if($card->brand==='Visa')
+                                        <img src="/css/visa-logo.png">
+                                    @else
+                                        <img src="/css/mastercard.png">
+                                    @endif
+                                </div>
+                            </div>
+                        @endforeach
+                        <div class="card-div add-card-div">
+                            <a class="card-div-link"><div class="center-add-card">
+                                    <p>+</p>
+                                    <p>Add Card</p>
+                                </div> </a>
+                        </div>
 
+                    </div>
                 </div>
             </div>
 

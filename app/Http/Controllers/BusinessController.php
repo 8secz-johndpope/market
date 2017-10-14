@@ -60,8 +60,16 @@ class BusinessController extends BaseController
         }catch (\Exception $exception){
             $cards = [];
         }
+        try{
+            $accounts = \Stripe\Account::retrieve($user->stripe_account)->external_accounts->all(array(
+                'limit'=>3, 'object' => 'bank_account'));
+            $accounts=$accounts['data'];
+        }catch (\Exception $exception){
+            $accounts = [];
+        }
+      return $accounts;
 
-        return view('business.details',['user'=>$user,'cards'=>$cards]);
+        return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts]);
 
     }
     public function company(Request $request){
