@@ -119,6 +119,14 @@ input:checked + .slider:before {
 .center-add-card {
     text-align: center;
 }
+a.card-div-link {
+    color: darkgreen;
+    font-weight: bold;
+    padding-top: 35px;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
 .card-logo img {
     width: 50px;
 
