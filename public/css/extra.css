@@ -136,6 +136,14 @@ a.card-div-link {
     max-width: 900px;
     position: relative;
 }
+.cross-mark-add-card {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-bottom: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
 .card-logo img {
     width: 50px;
 

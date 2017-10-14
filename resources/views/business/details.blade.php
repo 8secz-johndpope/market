@@ -136,7 +136,7 @@
         </div>
         <form action="/user/cards/add" method="post">
             {{ csrf_field() }}
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 25px">
                 <label for="card">Card Number:</label>
                 <input class="form-control" name="card" placeholder="Card number">
             </div>
