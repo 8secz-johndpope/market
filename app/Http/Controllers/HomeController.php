@@ -572,7 +572,7 @@ class HomeController extends BaseController
         $alert->active=!$alert->active;
         $alert->save();
 
-        return redirect('/user/manage/alerts');
+        return ['msg'=>'done'];
 
     }
     public function myads(Request $request){

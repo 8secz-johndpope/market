@@ -369,6 +369,18 @@
 
 
     });
+    $(".search-alert-check").click(function(){
+        var id=$(this).val();
+        axios.get('/user/toggle/alert/'+id, {
+            id:id
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    });
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
