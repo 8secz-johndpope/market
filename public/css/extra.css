@@ -134,6 +134,7 @@ a.card-div-link {
     background: white;
     width: 100%;
     max-width: 900px;
+    position: relative;
 }
 .card-logo img {
     width: 50px;
