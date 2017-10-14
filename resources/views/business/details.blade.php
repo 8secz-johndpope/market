@@ -244,10 +244,7 @@
     });
     $(".verify-phone-link").click(function () {
         $("#myModal").modal('show');
-    });
-    $("#verify-link").click(function(){
-        var id=$(this).val();
-        axios.get('/user/toggle/alert/'+id, {
+        axios.get('/user/send/text', {
             id:id
         })
             .then(function (response) {
@@ -256,6 +253,9 @@
             .catch(function (error) {
                 console.log(error);
             });
+    });
+    $("#verify-link").click(function(){
+
     });
 </script>
 @endsection
