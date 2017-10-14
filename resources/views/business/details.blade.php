@@ -136,6 +136,14 @@
                                         <label for="cvv">CVV:</label>
                                 <input class="form-control" name="card" placeholder="CSC (3 digits)">
                                     </div>
+                                <div class="form-group">
+                                    <label for="address">Address:</label>
+                                    <select class="form-control" name="address">
+                                        @foreach($user->addresses as $address)
+                                            <option value="{{$address->id}}">{{$address->line1}}, {{$address->city}}, {{$address->postcode}}</option>
+                                            @endforeach
+                                    </select>
+                                </div>
                                 <button type="submit" class="btn btn-success">Save </button>
                             </form>
                         </div>
