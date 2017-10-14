@@ -26,6 +26,7 @@ use App\Model\Advert;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
 use Ramsey\Uuid\Uuid;
+use Twilio\Rest\Client;
 
 class HomeController extends BaseController
 {
@@ -811,9 +812,7 @@ class HomeController extends BaseController
     }
     public function text(Request $request) {
         $user=Auth::user();
-        $sid = 'AC7237043426f3c67ac884ab4b4b0d3ff3';
-        $token = 'cd153bce35fcea43c3dadf1a9373aad7';
-        $client = new Client($sid, $token);
+
         $code = rand(1000,9999);
         $user->phone_code=$code;
         $user->save();
@@ -821,7 +820,9 @@ class HomeController extends BaseController
 
             return ['code'=>$code];
         }
-
+        $sid = 'AC7237043426f3c67ac884ab4b4b0d3ff3';
+        $token = 'cd153bce35fcea43c3dadf1a9373aad7';
+        $client = new Client($sid, $token);
 // Use the client to do fun stuff like send text messages!
         $client->messages->create(
         // the number you'd like to send the message to
