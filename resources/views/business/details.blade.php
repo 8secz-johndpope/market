@@ -107,7 +107,7 @@
                                 X- {{$card->last4}}
                             </div>
                             <div class="card-logo">
-                                @if($card->brand==='visa')
+                                @if($card->brand==='Visa')
                                     <img src="/css/visa-log.png">
                                     @else
                                     <img src="/css/mastercard.png">

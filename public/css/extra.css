@@ -110,6 +110,17 @@ input:checked + .slider:before {
     height: 130px;
     background: gray;
     border-radius: 18px;
+    position: relative;
+}
+.card-logo img {
+    width: 50px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+.card-logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 .last-4 {
     position: absolute;
