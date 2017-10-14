@@ -134,8 +134,8 @@
                                 <input class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
                                 </div>
                                     <div class="form-group">
-                                        <label for="cvv">CVV:</label>
-                                <input class="form-control" name="cvv" placeholder="CSC (3 digits)">
+                                        <label for="cvc">CVC:</label>
+                                <input class="form-control" name="cvc" placeholder="cvc (3 digits)">
                                     </div>
                                 <div class="form-group">
                                     <label for="address">Billing Address:</label>
