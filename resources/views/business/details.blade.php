@@ -265,7 +265,7 @@
                 if(response.data.msg==='wrong'){
                     $('#invalid-code').show();
                 }else{
-                    document.location.href='/user/manage/details';
+                    location.reload();
                 }
             })
             .catch(function (error) {
