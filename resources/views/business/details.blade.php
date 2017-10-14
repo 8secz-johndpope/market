@@ -245,7 +245,6 @@
     $(".verify-phone-link").click(function () {
         $("#myModal").modal('show');
         axios.get('/user/send/text', {
-            id:id
         })
             .then(function (response) {
                 console.log(response);
