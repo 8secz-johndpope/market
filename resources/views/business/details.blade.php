@@ -100,6 +100,15 @@
                             <a><span class="glyphicon glyphicon-edit"></span>Edit </a>
                         </div>
                     </div>
+                    <div class="credit-debit-cards">
+                        @foreach($cards as $card)
+                        <div class="card-div">
+                            <div class="last-4">
+                                {{$card->last4}}
+                            </div>
+                        </div>
+                            @endforeach
+                    </div>
 
                 </div>
             </div>

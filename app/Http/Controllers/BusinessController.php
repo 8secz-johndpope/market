@@ -60,7 +60,6 @@ class BusinessController extends BaseController
         }catch (\Exception $exception){
             $cards = [];
         }
-        return $cards;
 
         return view('business.details',['user'=>$user,'cards'=>$cards]);
 
