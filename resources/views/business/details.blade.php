@@ -79,7 +79,7 @@
                                 <strong>Contact number:</strong>
                             </div>
                             <div class="detail-text">
-                                {{$user->phone}} @if($user->phone_verified!==1) <a>Verify Phone</a> @endif
+                                {{$user->phone}} @if($user->phone_verified!==1) <a>Verify Phone</a> @else <span class="glyphicon glyphicon-ok-sign" style="color: green"></span> @endif
                             </div>
                             <div class="gray-color">
                                 <strong>Display name:</strong>
