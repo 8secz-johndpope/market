@@ -60,6 +60,7 @@ Route::post('/user/accounts/add', 'HomeController@add_bank_account');
 Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/send/text', 'HomeController@text');
 Route::get('/user/verify/text', 'HomeController@verify_text');
+Route::get('/user/email/resend', 'HomeController@resend_email');
 
 Route::get('/user/address/change/{id}', 'HomeController@change');
 Route::get('/user/manage/order/shipping/update/{id}', 'HomeController@update_shipping');

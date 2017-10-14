@@ -93,7 +93,7 @@
                                 <strong>Primary Email:</strong>
                             </div>
                             <div class="detail-text">
-                                {{$user->email}}
+                                {{$user->email}}@if($user->phone_verified!==1)  <a href="/user/email/resend">Resend Verificaton Email</a> @else <span class="glyphicon glyphicon-ok-sign" style="color: green"></span> @endif
                             </div>
                         </div>
                         <div class="col-sm-4">
