@@ -101,6 +101,7 @@
                         </div>
                     </div>
                     <div class="credit-debit-cards">
+                        <h4>Credit and Debit Cards</h4>
                         @foreach($cards as $card)
                         <div class="card-div">
                             <div class="last-4">
