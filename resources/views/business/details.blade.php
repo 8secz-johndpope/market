@@ -124,9 +124,18 @@
                         </div>
                         <div class="add-card-form">
                             <form action="/user/cards/add" method="post">
+                                <div class="form-group">
+                                    <label for="card">Card Number:</label>
                                 <input class="form-control" name="card" placeholder="Card number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="expiry">Expiry date:</label>
                                 <input class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
+                                </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV:</label>
                                 <input class="form-control" name="card" placeholder="CSC (3 digits)">
+                                    </div>
                                 <button type="submit" class="btn btn-success">Save </button>
                             </form>
                         </div>
