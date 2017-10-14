@@ -92,6 +92,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Cover');
     }
+    public function images()
+    {
+        return $this->hasMany('App\Model\Image');
+    }
     public function bumps()
     {
         $orders = Order::where('buyer_id', $this->id)->where('type', 'bump')->orderBy('id','desc')->get();

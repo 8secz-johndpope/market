@@ -49,6 +49,15 @@
                     <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp;Support</a>
                 </li>
             </ul>
+            <div class="row row-images ui-sortable"  id="sortable">
+                @foreach($user->images as $image)
+                    <div class="col-sm-3 single-image ui-state-default ui-sortable-handle"><div class="cross-mark">X</div> <input type="hidden" name="images[]" value="{{$image->image}}"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}"></div>
+                @endforeach
+                <div class="col-sm-3">
+                    <a ><img src="/css/addimage.png" class="add-image" style="cursor: pointer"></a>
+                    <input type="file" id="file-chooser" style="display: none">
+                </div>
+            </div>
 
             <div style="min-height: 50px">
 
