@@ -695,7 +695,7 @@ class UserController extends BaseController
                 "customer" => $stripe_id,
                 "source" => $card, // obtained with Stripe.js
                 "description" => $description
-            ));
+            ), array("stripe_account" => "{$user->stripe_account}"));
             $transaction = new Transaction;
             $transaction->slug = uniqid();
             $transaction->amount = $amount;

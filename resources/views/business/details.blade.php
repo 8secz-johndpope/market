@@ -122,6 +122,14 @@
                                     <p>Add Card</p>
                                 </div> </a>
                         </div>
+                        <div class="add-card-form">
+                            <form action="/user/cards/add" method="post">
+                                <input class="form-control" name="card" placeholder="Card number">
+                                <input class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
+                                <input class="form-control" name="card" placeholder="CSC (3 digits)">
+                                <button type="submit" class="btn btn-success">Save </button>
+                            </form>
+                        </div>
                     </div>
 
                 </div>
