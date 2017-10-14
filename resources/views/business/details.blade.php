@@ -110,6 +110,8 @@
                             <div class="card-logo">
                                 @if($card->brand==='Visa')
                                     <img src="/css/visa-logo.png">
+                                    @elseif($card->brand==='American Express')
+                                    <img src="/css/amex.jpg">
                                     @else
                                     <img src="/css/mastercard.png">
                                 @endif
