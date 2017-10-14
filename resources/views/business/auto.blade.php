@@ -49,8 +49,12 @@
             </ul>
             <h4>Payment Schedule</h4>
             <table class="table">
-                <tr>@foreach($category->fields as $field)<th>{{$field->title}}</th>@endforeach</tr>
+                <tr><th>Title</th><th>Description</th><th>Postcode</th>@foreach($category->fields as $field)<th>{{$field->title}}</th>@endforeach</tr>
                 <tr>
+                    <td> <input class="form-control" type="text" name="title" required value=""></td>
+                    <td> <textarea class="form-control" name="description" rows="10" required></textarea></td>
+                    <td> <input class="form-control" type="text" name="postcode" required value=""></td>
+
                 @foreach($category->fields as $field)
                         <td>
                             @if($field->type==='integer')
