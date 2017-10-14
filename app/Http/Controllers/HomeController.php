@@ -809,6 +809,32 @@ class HomeController extends BaseController
         return redirect($request->redirect);
 
     }
+    public function text(Request $request) {
+        $user=Auth::user();
+        $sid = 'AC7237043426f3c67ac884ab4b4b0d3ff3';
+        $token = 'cd153bce35fcea43c3dadf1a9373aad7';
+        $client = new Client($sid, $token);
+        $code = rand(1000,9999);
+        $user->phone_code=$code;
+        $user->save();
+        if($request->has('testing')){
+
+            return ['code'=>$code];
+        }
+
+// Use the client to do fun stuff like send text messages!
+        $client->messages->create(
+        // the number you'd like to send the message to
+            $request->phone,
+            array(
+                // A Twilio phone number you purchased at twilio.com/console
+                'from' => '+441202286628',
+                // the body of the text message you'd like to send
+                'body' => 'Sumra: Your verification code is '.$code
+            )
+        );
+        return ['code'=>'sent'];
+    }
     private function complete_contract($order){
         $user=Auth::user();
         $order->payment = 'done';

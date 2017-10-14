@@ -216,7 +216,7 @@
                         <label for="card">Enter the code sent to your mobile:</label>
                         <input class="form-control" name="code" id="code" placeholder="6342">
                     </div>
-                    <a class="btn btn-primary">Verify</a>
+                    <a class="btn btn-primary" id="verify-link">Verify</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -244,6 +244,18 @@
     });
     $(".verify-phone-link").click(function () {
         $("#myModal").modal('show');
+    });
+    $("#verify-link").click(function(){
+        var id=$(this).val();
+        axios.get('/user/toggle/alert/'+id, {
+            id:id
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     });
 </script>
 @endsection
