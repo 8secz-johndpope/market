@@ -141,24 +141,7 @@
                                     <p>Add Bank Account</p>
                                 </div> </a>
                         </div>
-                        <div class="add-account-form">
-                            <div class="cross-mark-add-card">
-                                X
-                            </div>
-                            <form action="/user/accounts/add" method="post">
-                                {{ csrf_field() }}
-                                <div class="form-group" style="margin-top: 25px">
-                                    <label for="card">Sort Code:</label>
-                                    <input class="form-control" name="sortcode" placeholder="208534">
-                                </div>
-                                <div class="form-group">
-                                    <label for="expiry">Account Number:</label>
-                                    <input class="form-control" name="number" placeholder="12345678">
-                                </div>
 
-                                <button type="submit" class="btn btn-success">Save </button>
-                            </form>
-                        </div>
 
                     </div>
                 </div>
@@ -195,7 +178,24 @@
             <button type="submit" class="btn btn-success">Save </button>
         </form>
     </div>
+    <div class="add-account-form" style="display: block">
+        <div class="cross-mark-add-bank">
+            X
+        </div>
+        <form action="/user/accounts/add" method="post">
+            {{ csrf_field() }}
+            <div class="form-group" style="margin-top: 25px">
+                <label for="card">Sort Code:</label>
+                <input class="form-control" name="sortcode" placeholder="208534">
+            </div>
+            <div class="form-group">
+                <label for="expiry">Account Number:</label>
+                <input class="form-control" name="number" placeholder="12345678">
+            </div>
 
+            <button type="submit" class="btn btn-success">Save </button>
+        </form>
+    </div>
 <script>
     $(".card-div-link").click(function () {
         $(".all-divs").hide();
@@ -204,6 +204,14 @@
     $(".cross-mark-add-card ").click(function () {
         $(".all-divs").show();
         $(".add-card-form").hide();
+    });
+    $(".add-bank-link").click(function () {
+        $(".all-divs").hide();
+        $(".add-account-form").show();
+    });
+    $(".cross-mark-add-card ").click(function () {
+        $(".all-divs").show();
+        $(".add-account-form").hide();
     });
 </script>
 @endsection

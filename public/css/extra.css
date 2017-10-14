@@ -170,6 +170,15 @@ a.add-bank-link {
     font-weight: bold;
     cursor: pointer;
 }
+.cross-mark-add-bank {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-bottom: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
 .card-logo img {
     width: 50px;
 
