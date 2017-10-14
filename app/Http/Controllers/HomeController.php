@@ -801,6 +801,14 @@ class HomeController extends BaseController
         $account->external_accounts->create(array("external_account" => $data));
         return redirect($request->redirect);
     }
+    public function delete_card(Request $request){
+        $user = Auth::user();
+        $stripe_id = $user->stripe_id;
+        $customer = \Stripe\Customer::retrieve($stripe_id);
+        $customer->sources->retrieve($request->card)->delete();
+        return redirect($request->redirect);
+
+    }
     private function complete_contract($order){
         $user=Auth::user();
         $order->payment = 'done';
