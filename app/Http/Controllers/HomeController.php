@@ -987,7 +987,7 @@ class HomeController extends BaseController
     }
     public function details(Request $request){
 
-        return view('home.details',['user'=>Auth::user()]);
+        return view('business.details',['user'=>Auth::user()]);
     }
 
     public  function  change(Request $request,$id){
