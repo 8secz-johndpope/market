@@ -161,6 +161,15 @@ a.add-bank-link {
     position: relative;
     padding-top: 1px;
 }
+.add-account-form {
+    margin: auto;
+    top: 123px;
+    background: white;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    padding-top: 1px;
+}
 .cross-mark-add-card {
     position: absolute;
     right: 0;
