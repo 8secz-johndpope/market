@@ -126,18 +126,9 @@
                     </div>
                     <div class="bank-accounts">
                         <h4 class="bold-text">Bank Accounts</h4>
-                        @foreach($cards as $card)
-                            <div class="card-div">
-                                <div class="last-4">
-                                    X- {{$card->last4}}
-                                </div>
-                                <div class="card-logo">
-                                    @if($card->brand==='Visa')
-                                        <img src="/css/visa-logo.png">
-                                    @else
-                                        <img src="/css/mastercard.png">
-                                    @endif
-                                </div>
+                        @foreach($accounts as $account)
+                            <div class="bank-div">
+
                             </div>
                         @endforeach
                         <div class="card-div add-card-div">
@@ -160,7 +151,7 @@
                                     <label for="expiry">Account Number:</label>
                                     <input class="form-control" name="number" placeholder="12345678">
                                 </div>
-                                
+
                                 <button type="submit" class="btn btn-success">Save </button>
                             </form>
                         </div>
