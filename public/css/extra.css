@@ -121,6 +121,8 @@ input:checked + .slider:before {
     position: relative;
     margin-bottom: 10px;
     display: inline-block;
+    border: 1px solid lightgray;
+    padding: 9px
 }
 .add-card-div {
     display: block;
@@ -177,6 +179,9 @@ a.card-div-link {
     margin-left: 8px;
     margin-bottom: 5px;
     font-weight: bold;
+}
+.bank-div .last-4{
+    color: black;
 }
 /* Rounded sliders */
 .slider.round {
