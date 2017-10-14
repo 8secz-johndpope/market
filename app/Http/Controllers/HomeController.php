@@ -789,6 +789,18 @@ class HomeController extends BaseController
         $customer->sources->create(array("source" => ['object'=>'card','number'=>$card,'exp_month'=>$month,'exp_year'=>$year,'cvc'=>$request->cvc]));
         return redirect('/user/manage/details');
     }
+    public function add_bank_account(Request $request)
+    {
+        $user = Auth::user();
+        $account = \Stripe\Account::retrieve($user->stripe_account);
+        $data['object'] = 'bank_account';
+        $data['account_number'] = $request->number;
+        $data['country'] = 'gb';
+        $data['currency'] = 'gbp';
+        $data['routing_number'] = $request->sortcode;
+        $account->external_accounts->create(array("external_account" => $data));
+        return redirect('/user/manage/details');
+    }
     private function complete_contract($order){
         $user=Auth::user();
         $order->payment = 'done';
