@@ -54,7 +54,7 @@
                 @foreach($category->fields as $field)
                         <td>
                             @if($field->type==='integer')
-                                <input class="form-control" type="text" name="{{$field->slug}}" required value="{{$advert->meta($field->slug)}}">
+                                <input class="form-control" type="text" name="{{$field->slug}}" required value="">
                             @elseif($field->type==='list')
                                 <select class="form-control" name="{{$field->slug}}">
                                     @foreach($field->values as $value)
