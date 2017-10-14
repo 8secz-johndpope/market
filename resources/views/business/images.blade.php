@@ -49,9 +49,9 @@
                     <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp;Support</a>
                 </li>
             </ul>
-            <div class="row row-images ui-sortable"  id="sortable">
+            <div class="row row-images"  id="sortable">
                 @foreach($user->images as $image)
-                    <div class="multi-image single-image ui-state-default ui-sortable-handle"><div class="cross-mark">X</div> <input type="hidden" name="images[]" value="{{$image->image}}"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}"></div>
+                    <div class="multi-image"><input type="hidden" name="images[]" value="{{$image->image}}"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}"></div>
                 @endforeach
                 <div class="multi-image">
                     <a ><img src="/css/addimage.png" class="add-image" style="cursor: pointer"></a>
