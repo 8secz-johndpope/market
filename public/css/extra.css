@@ -114,6 +114,14 @@ input:checked + .slider:before {
     margin-bottom: 10px;
     display: inline-block;
 }
+.bank-div {
+    width: 200px;
+    height: 130px;
+    border-radius: 18px;
+    position: relative;
+    margin-bottom: 10px;
+    display: inline-block;
+}
 .add-card-div {
     display: block;
     background: lightgray;
