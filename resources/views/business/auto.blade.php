@@ -52,7 +52,7 @@
                 <tr><th>Title</th><th>Description</th><th>Postcode</th>@foreach($category->fields as $field)<th>{{$field->title}}</th>@endforeach</tr>
                 <tr>
                     <td> <input class="form-control" type="text" name="title" required value=""></td>
-                    <td> <textarea class="form-control" name="description" rows="10" required></textarea></td>
+                    <td> <textarea class="form-control" name="description" rows="10" cols="20" required></textarea></td>
                     <td> <input class="form-control" type="text" name="postcode" required value=""></td>
 
                 @foreach($category->fields as $field)
