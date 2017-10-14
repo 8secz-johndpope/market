@@ -135,7 +135,7 @@
                                 </div>
                                     <div class="form-group">
                                         <label for="cvv">CVV:</label>
-                                <input class="form-control" name="card" placeholder="CSC (3 digits)">
+                                <input class="form-control" name="cvv" placeholder="CSC (3 digits)">
                                     </div>
                                 <div class="form-group">
                                     <label for="address">Billing Address:</label>
