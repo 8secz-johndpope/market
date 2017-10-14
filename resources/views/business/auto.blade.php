@@ -76,10 +76,10 @@
                 </tr>
                     @endforeach
             </table>
-                <button type="submit">Save</button>
+                <button type="submit" class="btn btn-primary">Save</button>
             </form>
             <div style="min-height: 50px">
-                
+
             </div>
         </div>
     </div>
