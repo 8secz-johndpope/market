@@ -50,7 +50,19 @@ class BusinessController extends BaseController
     }
     public function details(Request $request){
         $user = Auth::user();
-        return view('business.details',['user'=>$user]);
+        $stripe_id = $user->stripe_id;
+
+        try{
+            $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+                'limit' => 10, 'object' => 'card'));
+            $cards = $cards['data'];
+
+        }catch (\Exception $exception){
+            $cards = [];
+        }
+        return $cards;
+
+        return view('business.details',['user'=>$user,'cards'=>$cards]);
 
     }
     public function company(Request $request){
