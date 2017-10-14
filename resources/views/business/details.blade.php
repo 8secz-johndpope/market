@@ -122,7 +122,7 @@
                                     <p>Add Card</p>
                                 </div> </a>
                         </div>
-                        <div class="add-card-form">
+                        <div class="add-card-form" style="display: none">
                             <form action="/user/cards/add" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
