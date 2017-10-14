@@ -787,7 +787,7 @@ class HomeController extends BaseController
         $year = (int)$parts[1];
         $card=str_replace(' ','',trim($request->card));
         $customer->sources->create(array("source" => ['object'=>'card','number'=>$card,'exp_month'=>$month,'exp_year'=>$year,'cvc'=>$request->cvc]));
-        return redirect('/user/manage/details');
+        return redirect($request->redirect);
     }
     public function add_bank_account(Request $request)
     {
@@ -799,7 +799,7 @@ class HomeController extends BaseController
         $data['currency'] = 'gbp';
         $data['routing_number'] = $request->sortcode;
         $account->external_accounts->create(array("external_account" => $data));
-        return redirect('/user/manage/details');
+        return redirect($request->redirect);
     }
     private function complete_contract($order){
         $user=Auth::user();

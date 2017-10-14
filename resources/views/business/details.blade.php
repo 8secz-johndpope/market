@@ -154,6 +154,7 @@
             X
         </div>
         <form action="/user/cards/add" method="post">
+            <input name="redirect" type="hidden" value="/user/manage/details">
             {{ csrf_field() }}
             <div class="form-group" style="margin-top: 25px">
                 <label for="card">Card Number:</label>
@@ -183,6 +184,8 @@
             X
         </div>
         <form action="/user/accounts/add" method="post">
+            <input name="redirect" type="hidden" value="/user/manage/details">
+
             {{ csrf_field() }}
             <div class="form-group" style="margin-top: 25px">
                 <label for="card">Sort Code:</label>
