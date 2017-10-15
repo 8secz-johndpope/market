@@ -84,7 +84,7 @@ class Advert extends  BaseModel
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
-                'body' => ['title'=>'']
+                'body' => ['title'=>'','draft'=>1]
             ];
             $response = $this->client->index($params);
             $this->elastic = $response['_id'];
