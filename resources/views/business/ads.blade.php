@@ -135,7 +135,7 @@
             @endforeach
 </table>
                 <div class="continue-div">
-                <button class="btn-primary btn" type="submit">Continue</button>
+                <button class="btn-primary btn" type="submit" style="float: right;margin-right: 20px;">Continue</button>
                 </div>
             </form>
                 </div>
