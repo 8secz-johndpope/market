@@ -56,6 +56,9 @@ span.active-strip {
 a.delete-alert-link {
     float: right;
 }
+.assign-images{
+    cursor: pointer;
+}
 /* The switch - the box around the slider */
 .switch {
     position: relative;
