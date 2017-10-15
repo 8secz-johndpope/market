@@ -47,7 +47,7 @@ function upload_multi_file() {
             };
 
             console.log(params);
-
+            (function (uname) {
             bucket.putObject(params, function (err, data) {
                 if (err) {
                     console.log(err);
@@ -68,6 +68,7 @@ function upload_multi_file() {
 
                 }
             });
+            })(uname);
         } else {
             console.log("nothing to upload");
         }
