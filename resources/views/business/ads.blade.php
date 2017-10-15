@@ -119,7 +119,7 @@
                             <table class="table"><tr><td><span class="red-text">Deleted</span></td><td></td><td><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;Repost</a></td></tr></table>
 
                         @else
-                    <table class="table"><tr><td><a class="nav-color" href="/user/advert/edit/{{$advert->id}}"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp; Edit</a></td><td><a class="nav-color" href="/user/advert/duplicate/{{$advert->id}}"><span class="glyphicon glyphicon-magnet"></span>&nbsp;&nbsp; Duplicate</a></td><td><a href="#" class="stats-click nav-color" data-id="{{$advert->id}}"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Stats</a></td><td><a class="red-color" href="/user/advert/delete/{{$advert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a></td></tr></table>
+                    <table class="table"><tr><td><a class="nav-color assign-images" ><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp; Assign Images</a></td><td><a class="nav-color" href="/user/advert/edit/{{$advert->id}}"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp; Edit</a></td><td><a class="nav-color" href="/user/advert/duplicate/{{$advert->id}}"><span class="glyphicon glyphicon-magnet"></span>&nbsp;&nbsp; Duplicate</a></td><td><a href="#" class="stats-click nav-color" data-id="{{$advert->id}}"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Stats</a></td><td><a class="red-color" href="/user/advert/delete/{{$advert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a></td></tr></table>
                             @endif
                     </td>
                     @if($advert->has_param('draft'))
@@ -174,5 +174,29 @@
 
         </div>
     </div>
+    <div id="myModal1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content" id="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Statistics</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-images"  id="sortable">
+                        @foreach($user->images as $image)
+                            <div class="multi-image"><input type="hidden" name="images[]" value="{{$image->image}}"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}" data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}"></div>
+                        @endforeach
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 @endsection
