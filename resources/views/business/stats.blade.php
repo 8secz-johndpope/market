@@ -9,7 +9,7 @@
             <td>
                 <table class="table">
                     <tr>  <td>Views</td></td> <td>{{$advert->param('views')}}</td><td>Listing views</td></td> <td>{{$advert->param('list_views')}}</td></tr>
-                    <tr>  <td>Number of replies</td></td> <td>11</td><td>Times bumped up</td></td> <td>@if($advert->has_param('bumped')){{$advert->param('bumped')}} @else <span>0</span> @endif</td></tr>
+                    <tr>  <td>Number of replies</td></td> <td>{{$advert->replies}}</td><td>Times bumped up</td></td> <td>@if($advert->has_param('bumped')){{$advert->param('bumped')}} @else <span>0</span> @endif</td></tr>
                     <tr>  <td>Created</td></td> <td>{{$advert->first_created()}}</td><td>Last posted</td></td> <td> {{$advert->posted()}}</td></tr>
                     <tr>  <td>Ad id</td></td> <td>{{$advert->id}}</td> <td> </td></td> <td></tr>
 
