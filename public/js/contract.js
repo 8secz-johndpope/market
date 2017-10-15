@@ -223,7 +223,7 @@ $("#file-chooser-x").change(function () {
     console.log("did change");
     upload_multi_file();
 });
-$(". assign-images").click(function () {
+$(".assign-images").click(function () {
    $("#myModal1").modal('show');
 });
 function get_location(postcode) {
