@@ -37,13 +37,7 @@ class BusinessController extends BaseController
         $user = Auth::user();
 
         $milliseconds = round(microtime(true) * 1000);
-        foreach ($user->adverts as $advert){
-            if($advert->has_param('draft'))
-            $advert->status=0;
-            else if($advert->has_param('inactive'))
-                $advert->status=2;
-            $advert->save();
-        }
+      
 
         return view('business.ads',['mill'=>$milliseconds,'user'=>$user]);
     }
