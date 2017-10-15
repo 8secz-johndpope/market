@@ -189,7 +189,7 @@
                                                 @endif
                                             </div>
                                         </div>
-                                            <table class="table"><tr><td><span class="yellow-text bold-text">Draft</span></td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Assign Images</a></td><td></td><td><a class="nav-color" href="/user/manage/ad/{{$advert->id}}"><span class="glyphicon glyphicon-play-circle"></span>&nbsp;&nbsp; Continue To Post</a></td></tr></table>
+                                            <table class="table"><tr><td><span class="yellow-text bold-text">Draft</span></td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Add Images</a></td><td></td><td><a class="nav-color" href="/user/manage/ad/{{$advert->id}}"><span class="glyphicon glyphicon-play-circle"></span>&nbsp;&nbsp; Continue To Post</a></td></tr></table>
 
 
                                     </td>
@@ -252,7 +252,7 @@
                                             </div>
                                         </div>
 
-                                            <table class="table"><tr><td><span class="red-text bold-text">Deleted</span></td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Assign Images</a></td><td></td><td><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;Repost</a></td></tr></table>
+                                            <table class="table"><tr><td><span class="red-text bold-text">Deleted</span></td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Add Images</a></td><td></td><td><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;Repost</a></td></tr></table>
 
                                     </td>
                                         <td colspan="5"><p>You need to repost advert to promote the advert. </p><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp; Repost</a></td>
