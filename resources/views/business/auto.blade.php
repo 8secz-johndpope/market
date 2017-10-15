@@ -48,7 +48,7 @@
             </ul>
             <h4>Payment Schedule</h4>
             <form action="/user/ad/multi/create">
-                <input type="hidden" name="count" value="{{$number}}">
+                <input type="hidden" name="count" value="{{$count}}">
                 <input type="hidden" name="category" value="{{$category->id}}">
 
                 <table class="table">
