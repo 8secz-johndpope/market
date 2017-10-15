@@ -34,6 +34,7 @@ function upload_file() {
         var number = 1 + Math.floor(Math.random() * 999999999999);
 
     if (file) {
+        console.log(file.name);
         var ext = file.name.split('.').pop();
 
         var objKey = '' + file.name;
