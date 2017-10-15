@@ -181,7 +181,7 @@
             <div class="modal-content" id="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Statistics</h4>
+                    <h4 class="modal-title">Assign Images</h4>
                 </div>
                 <div class="modal-body">
                     <div class="row row-images-modal"  id="sortable">
@@ -193,6 +193,7 @@
 
                 </div>
                 <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>

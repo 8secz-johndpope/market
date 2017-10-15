@@ -63,6 +63,13 @@ a.delete-alert-link {
     width: 60px;
     height: 34px;
 }
+.multi-image img {
+    width: 100%;
+}
+.row-images-modal {
+    height: 500px;
+    overflow: auto;
+}
 
 /* Hide default HTML checkbox */
 .switch input {display:none;}
