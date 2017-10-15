@@ -49,8 +49,8 @@
                     <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp;Support</a>
                 </li>
             </ul>
-            <div class="multi-image">
-                <a ><img src="/css/addimage.png" class="add-image-x" style="cursor: pointer"></a>
+            <div class="upload-image">
+                <a ><img src="/css/upload.png" class="add-image-x" style="cursor: pointer"></a>
                 <input type="file" id="file-chooser-x" style="display: none" multiple>
             </div>
             <div class="row row-images"  id="sortable">
