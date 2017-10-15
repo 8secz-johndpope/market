@@ -55,7 +55,7 @@
                 @endforeach
                 <div class="multi-image">
                     <a ><img src="/css/addimage.png" class="add-image" style="cursor: pointer"></a>
-                    <input type="file" id="file-chooser" style="display: none">
+                    <input type="file" id="file-chooser" style="display: none" multiple>
                 </div>
             </div>
 
