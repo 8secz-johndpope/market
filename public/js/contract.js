@@ -228,7 +228,14 @@ $(".assign-images").click(function () {
    $("#myModal1").modal('show');
 });
 $("#myModal1 img").click(function () {
-    $(this).parent().addClass('selected-image');
+    if($(this).parent().hasClass('selected-image'))
+    {
+        $(this).parent().removeClass('selected-image');
+
+    }else{
+        $(this).parent().addClass('selected-image');
+
+    }
     $(this).parent().children(":first").prop("checked", !$(this).parent().children(":first").prop("checked"));
 });
 function get_location(postcode) {
