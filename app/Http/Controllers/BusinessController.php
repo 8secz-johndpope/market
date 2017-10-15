@@ -37,7 +37,7 @@ class BusinessController extends BaseController
         $user = Auth::user();
 
         $milliseconds = round(microtime(true) * 1000);
-      
+
 
         return view('business.ads',['mill'=>$milliseconds,'user'=>$user]);
     }
