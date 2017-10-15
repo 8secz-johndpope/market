@@ -387,7 +387,10 @@
 <script src="https://sumra.net/js/three.js"></script>
 <script src="https://sumra.net/js/built.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.2.0/lazyload.min.js"></script>
+<script>
+    new LazyLoad();
+</script>
 
 <script>
     window.axios.defaults.headers.common = {
