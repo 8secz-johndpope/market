@@ -59,6 +59,9 @@ a.delete-alert-link {
 .assign-images{
     cursor: pointer;
 }
+.selected-image {
+    background: lightskyblue;
+}
 /* The switch - the box around the slider */
 .switch {
     position: relative;

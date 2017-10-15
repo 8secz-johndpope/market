@@ -229,7 +229,7 @@ $(".assign-images").click(function () {
 });
 $("#myModal1 img").click(function () {
     $(this).parent().addClass('selected-image');
-    $(this).parent().first().prop("checked", !$(this).parent().first().prop("checked"));
+    $(this).parent().children(":first").prop("checked", !$(this).parent().children(":first").prop("checked"));
 });
 function get_location(postcode) {
     $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+postcode+"&key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0",function (data,status) {
