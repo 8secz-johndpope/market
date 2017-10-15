@@ -134,8 +134,9 @@
                 </tr>
             @endforeach
 </table>
+                <div class="continue-div">
                 <button class="btn-primary btn" type="submit">Continue</button>
-
+                </div>
             </form>
                 </div>
                 <div id="drafts" class="tab-pane fade">
