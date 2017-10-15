@@ -659,6 +659,8 @@ class UserController extends BaseController
         $customer = \Stripe\Customer::retrieve($stripe_id);
         try {
             $res = $customer->sources->create(array("source" => $token));
+            $user->vid='V2';
+            $user->save();
 
         } catch (\Exception $e) {
             return [
@@ -790,6 +792,8 @@ class UserController extends BaseController
         $data['currency'] = 'gbp';
         $data['routing_number'] = $request->sortcode;
         $account->external_accounts->create(array("external_account" => $data));
+        $user->vid='V3';
+        $user->save();
         return ['status' => 'success'];
     }
 
