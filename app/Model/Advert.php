@@ -79,6 +79,19 @@ class Advert extends  BaseModel
         ];
         $response = $this->client->update($params);
     }
+    public function create_elastic(){
+        if($this->elastic===null){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => ['title'=>'']
+            ];
+            $response = $this->client->index($params);
+            $this->elastic = $response['_id'];
+            $this->save();
+        }
+
+    }
     public function duplicate(){
         if($this->dict===null)
             $this->fetch();

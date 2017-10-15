@@ -115,6 +115,48 @@ class BusinessController extends BaseController
         return view('business.support',['user'=>$user]);
 
     }
+    public function multiple(Request $request){
+        $count=$request->count;
+        $category=Category::find($request->category);
+        foreach (range(1, $count) as $number){
+            $ad = new Advert;
+            $ad->category_id=$category->id;
+            $ad->status=0;
+            $body=[];
+            if($request->has($number.'_postcode')){
+                $up =   str_replace(' ','',strtoupper($request->get($number.'_postcode')));
+                $a = Postcode::where('hash',crc32($up))->first();
+                if($a!==null){
+                    $ad->postcode_id=$a->id;
+                    $body['location']=$a->lat.','.$a->lng;
+                    $body['location_id']=$a->location->res;
+                }
+            }
+            $ad->save();
+            $ad->create_elastic();
+
+            if($request->has($number.'_title'))
+                $body['title']=$request->get($number.'_title');
+            if($request->has($number.'_description'))
+                $body['description']=$request->get($number.'_description');
+            $ad->update_fields($body);
+            $body=[];
+            foreach ($ad->category->fields as $field){
+                if($field->slug!=='price'&&$request->has($number.'_'.$field->slug)){
+                    $body[$field->slug] = $request->get($number.'_'.$field->slug);
+                }
+            }
+            if($request->has($number.'_'.'price')){
+                $body['price']=$request->get($number.'_'.'price')*100;
+            }else{
+                $body['price']=-1;
+            }
+            $ad->update_meta($body);
+
+
+        }
+        return redirect('/user/manage/ads');
+    }
     public function invoice(Request $request,$id){
         $payment=Payment::find($id);
         if($payment->status!=='pending'){

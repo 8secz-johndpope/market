@@ -47,8 +47,11 @@
                 </li>
             </ul>
             <h4>Payment Schedule</h4>
-            <form>
-            <table class="table">
+            <form action="/user/ad/multi/create">
+                <input type="hidden" name="count" value="{{$number}}">
+                <input type="hidden" name="category" value="{{$category->id}}">
+
+                <table class="table">
                 <tr><th>Title</th><th>Description</th><th>Postcode</th>@foreach($category->fields as $field)<th>{{$field->title}}</th>@endforeach</tr>
                 @foreach (range(1, $count) as $number)
 

@@ -34,6 +34,7 @@ Route::post('/user/advert/newad', 'HomeController@newad');
 Route::get('/user/manage/ads', 'BusinessController@myads');
 Route::get('/user/manage/images', 'BusinessController@images');
 Route::get('/user/image/add', 'BusinessController@image');
+Route::get('/user/ad/multi/create','BusinessController@multiple');
 Route::post('/user/ad/images', 'BusinessController@add_images');
 
 Route::get('/user/category/auto/{id}/{count}', 'BusinessController@auto');
