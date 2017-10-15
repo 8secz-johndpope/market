@@ -292,20 +292,31 @@ class UserController extends BaseController
         if ($advert->user_id != $user->id) {
             return ['msg' => 'Advert does not belong to you'];
         }
-        $body = $request->json()->all();
-        unset($body['id']);
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'id' => $advert->elastic,
-            'body' => [
-                'doc' => $body
-            ]
-        ];
+        $body=[];
+        if($request->has('title'))
+            $body['title']=$request->title;
+        if($request->has('description'))
+            $body['title']=$request->description;
+        if($request->has('images')){
+            $body['images']=$request->images;
 
-// Update doc at /my_index/my_type/my_id
-        $response = $this->client->update($params);
-        return ['msg' => 'updated', 'response' => $response];
+        }else{
+            $body['images']=[];
+        }
+        $advert->update_fields($body);
+        $body=[];
+        foreach ($advert->category->fields as $field){
+            if($field->slug!=='price'&&$request->has($field->slug)){
+                $body[$field->slug] = $request->get($field->slug);
+            }
+        }
+        if($request->has('price')){
+            $body['price']=$request->price*100;
+        }else{
+            $body['price']=-1;
+        }
+        $advert->update_meta($body);
+        return ['msg' => 'updated', 'response' => []];
     }
 
     public function delete(Request $request)
