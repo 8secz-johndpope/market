@@ -66,7 +66,7 @@ class BusinessController extends BaseController
     public function add_images(Request $request){
         $advert=Advert::find($request->id);
         if($request->has('images')){
-            $body['images']=$request->images;
+            $body['images']=array_merge($request->images,$advert->param('images'));
         }else{
             $body['images']=[];
         }
