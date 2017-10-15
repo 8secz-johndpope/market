@@ -193,7 +193,7 @@
                                 @endforeach
                                 <div class="col-sm-3">
                                     <a ><img src="/css/addimage.png" class="add-image" style="cursor: pointer"></a>
-                                    <input type="file" id="file-chooser" style="display: none">
+                                    <input type="file" id="file-chooser" multiple style="display: none">
                                 </div>
                             </div>
                         </div>
