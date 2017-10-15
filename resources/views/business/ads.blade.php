@@ -67,10 +67,10 @@
                     <a class="nav-link nav-color" data-toggle="tab" href="#live">Live</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" data-toggle="tab" href="#package_summary">Drafts</a>
+                    <a class="nav-link nav-color" data-toggle="tab" href="#drafts">Drafts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" data-toggle="tab" href="#package_usage">Inactive</a>
+                    <a class="nav-link nav-color" data-toggle="tab" href="#inactive">Inactive</a>
                 </li>
 
             </ul>
@@ -151,6 +151,160 @@
                 <button class="btn-primary btn" type="submit">Continue</button>
 
             </form>
+                </div>
+                <div id="drafts" class="tab-pane fade in active">
+                    <form action="/business/manage/bump" method="post">
+                        {{ csrf_field() }}
+                        <table class="table">
+                            <tr><th></th><th>Views</th><th>Last Posted</th><th colspan="3" class="center-text">Featured</th><th>Urgent</th><th>Spotlight</th><th>Bump</th></tr>
+                            <tr><td></td><td></td><td></td><td>3 days</td><td>7 days</td><td>14 days</td><td></td><td></td><td></td></tr>
+
+                            @foreach($user->drafts as $advert)
+                                <tr><td>
+                                        <div class="product">
+                                            <div class="listing-side">
+                                                <div class="listing-thumbnail">
+                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+
+                                                    @if($advert->featured_expires())
+                                                        <span class="ribbon-featured">
+<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+</span>
+                                                    @endif
+
+                                                    <div class="listing-meta txt-sub">
+                                                        <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($advert->param('images'))}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="info">
+
+
+                                                <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->id}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
+
+                                                <span class="listing-location">
+                                    {{$advert->param('location_name')}}
+                                </span>
+                                                <p class="listing-description">
+                                                    {{$advert->param('description')}}
+                                                </p>
+
+                                                @if($advert->meta('price')>=0)
+                                                    <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
+                                </span>
+                                                @endif
+
+
+
+                                                @if($advert->urgent_expires())
+                                                    <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
+<span class="hide-visually">This ad is </span>Urgent
+</span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        @if($advert->has_param('draft'))
+                                            <table class="table"><tr><td><span class="yellow-text bold-text">Draft</span></td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Assign Images</a></td><td></td><td><a class="nav-color" href="/user/manage/ad/{{$advert->id}}"><span class="glyphicon glyphicon-play-circle"></span>&nbsp;&nbsp; Continue To Post</a></td></tr></table>
+
+                                        @elseif($advert->has_param('inactive'))
+                                            <table class="table"><tr><td><span class="red-text bold-text">Deleted</span></td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Assign Images</a></td><td></td><td><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;Repost</a></td></tr></table>
+
+                                        @else
+                                            <table class="table"><tr><td><span class="green-text bold-text">Live</span> </td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Assign Images</a></td><td><a class="nav-color" href="/user/advert/edit/{{$advert->id}}"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp; Edit</a></td><td><a class="nav-color" href="/user/advert/duplicate/{{$advert->id}}"><span class="glyphicon glyphicon-magnet"></span>&nbsp;&nbsp; Duplicate</a></td><td><a href="#" class="stats-click nav-color" data-id="{{$advert->id}}"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Stats</a></td><td><a class="red-color" href="/user/advert/delete/{{$advert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a></td></tr></table>
+                                        @endif
+                                    </td>
+                                    @if($advert->has_param('draft'))
+                                        <td colspan="5"><p>You need to Finish the  advert to promote the advert. </p><a href="/user/manage/ad/{{$advert->id}}">Finish Posting</a></td>
+
+                                    @elseif($advert->has_param('inactive'))
+                                        <td colspan="5"><p>You need to repost advert to promote the advert. </p><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp; Repost</a></td>
+                                    @else
+                                        <td><span class="bold-text">{{$advert->param('views')}}</span></td><td> <span class="posted">{{$advert->posted()}}</span></td>@if($advert->featured_expires()) <td colspan="3" class="center-text"><span class="bold-text">{{$advert->featured_expires()}} days left</span> </td> @else<td><input name="matrix[{{$advert->id}}][featured_3]" type="checkbox" class="featured-check featured-check-{{$advert->id}}" data-id="{{$advert->id}}" value="1"></td><td><input class="featured-check featured-check-{{$advert->id}}" data-id="{{$advert->id}}" name="matrix[{{$advert->id}}][featured]" type="checkbox" value="1"></td><td><input class="featured-check featured-check-{{$advert->id}}" data-id="{{$advert->id}}" name="matrix[{{$advert->id}}][featured_14]" type="checkbox" value="1"></td>@endif<td> @if($advert->urgent_expires())<span class="bold-text">{{$advert->urgent_expires()}} days left</span>  @else <input name="matrix[{{$advert->id}}][urgent]" type="checkbox" value="1"> @endif</td><td>@if($advert->spotlight_expires())<span class="bold-text">{{$advert->spotlight_expires()}} days left</span>  @else<input name="matrix[{{$advert->id}}][spotlight]" type="checkbox" value="1"> @endif</td><td><input name="matrix[{{$advert->id}}][bump]" type="checkbox" value="1"></td>
+                                    @endif
+                                </tr>
+                            @endforeach
+                        </table>
+                        <button class="btn-primary btn" type="submit">Continue</button>
+
+                    </form>
+                </div>
+                <div id="inactive" class="tab-pane fade in active">
+                    <form action="/business/manage/bump" method="post">
+                        {{ csrf_field() }}
+                        <table class="table">
+                            <tr><th></th><th>Views</th><th>Last Posted</th><th colspan="3" class="center-text">Featured</th><th>Urgent</th><th>Spotlight</th><th>Bump</th></tr>
+                            <tr><td></td><td></td><td></td><td>3 days</td><td>7 days</td><td>14 days</td><td></td><td></td><td></td></tr>
+
+                            @foreach($user->inactive as $advert)
+                                <tr><td>
+                                        <div class="product">
+                                            <div class="listing-side">
+                                                <div class="listing-thumbnail">
+                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+
+                                                    @if($advert->featured_expires())
+                                                        <span class="ribbon-featured">
+<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+</span>
+                                                    @endif
+
+                                                    <div class="listing-meta txt-sub">
+                                                        <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($advert->param('images'))}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="info">
+
+
+                                                <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->id}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
+
+                                                <span class="listing-location">
+                                    {{$advert->param('location_name')}}
+                                </span>
+                                                <p class="listing-description">
+                                                    {{$advert->param('description')}}
+                                                </p>
+
+                                                @if($advert->meta('price')>=0)
+                                                    <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
+                                </span>
+                                                @endif
+
+
+
+                                                @if($advert->urgent_expires())
+                                                    <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
+<span class="hide-visually">This ad is </span>Urgent
+</span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        @if($advert->has_param('draft'))
+                                            <table class="table"><tr><td><span class="yellow-text bold-text">Draft</span></td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Assign Images</a></td><td></td><td><a class="nav-color" href="/user/manage/ad/{{$advert->id}}"><span class="glyphicon glyphicon-play-circle"></span>&nbsp;&nbsp; Continue To Post</a></td></tr></table>
+
+                                        @elseif($advert->has_param('inactive'))
+                                            <table class="table"><tr><td><span class="red-text bold-text">Deleted</span></td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Assign Images</a></td><td></td><td><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;Repost</a></td></tr></table>
+
+                                        @else
+                                            <table class="table"><tr><td><span class="green-text bold-text">Live</span> </td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Assign Images</a></td><td><a class="nav-color" href="/user/advert/edit/{{$advert->id}}"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp; Edit</a></td><td><a class="nav-color" href="/user/advert/duplicate/{{$advert->id}}"><span class="glyphicon glyphicon-magnet"></span>&nbsp;&nbsp; Duplicate</a></td><td><a href="#" class="stats-click nav-color" data-id="{{$advert->id}}"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Stats</a></td><td><a class="red-color" href="/user/advert/delete/{{$advert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a></td></tr></table>
+                                        @endif
+                                    </td>
+                                    @if($advert->has_param('draft'))
+                                        <td colspan="5"><p>You need to Finish the  advert to promote the advert. </p><a href="/user/manage/ad/{{$advert->id}}">Finish Posting</a></td>
+
+                                    @elseif($advert->has_param('inactive'))
+                                        <td colspan="5"><p>You need to repost advert to promote the advert. </p><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp; Repost</a></td>
+                                    @else
+                                        <td><span class="bold-text">{{$advert->param('views')}}</span></td><td> <span class="posted">{{$advert->posted()}}</span></td>@if($advert->featured_expires()) <td colspan="3" class="center-text"><span class="bold-text">{{$advert->featured_expires()}} days left</span> </td> @else<td><input name="matrix[{{$advert->id}}][featured_3]" type="checkbox" class="featured-check featured-check-{{$advert->id}}" data-id="{{$advert->id}}" value="1"></td><td><input class="featured-check featured-check-{{$advert->id}}" data-id="{{$advert->id}}" name="matrix[{{$advert->id}}][featured]" type="checkbox" value="1"></td><td><input class="featured-check featured-check-{{$advert->id}}" data-id="{{$advert->id}}" name="matrix[{{$advert->id}}][featured_14]" type="checkbox" value="1"></td>@endif<td> @if($advert->urgent_expires())<span class="bold-text">{{$advert->urgent_expires()}} days left</span>  @else <input name="matrix[{{$advert->id}}][urgent]" type="checkbox" value="1"> @endif</td><td>@if($advert->spotlight_expires())<span class="bold-text">{{$advert->spotlight_expires()}} days left</span>  @else<input name="matrix[{{$advert->id}}][spotlight]" type="checkbox" value="1"> @endif</td><td><input name="matrix[{{$advert->id}}][bump]" type="checkbox" value="1"></td>
+                                    @endif
+                                </tr>
+                            @endforeach
+                        </table>
+                        <button class="btn-primary btn" type="submit">Continue</button>
+
+                    </form>
                 </div>
             </div>
         </div>
