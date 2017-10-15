@@ -67,7 +67,7 @@
     <tr><th></th><th>Views</th><th>Last Posted</th><th colspan="3" class="center-text">Featured</th><th>Urgent</th><th>Spotlight</th><th>Bump</th></tr>
     <tr><td></td><td></td><td></td><td>3 days</td><td>7 days</td><td>14 days</td><td></td><td></td><td></td></tr>
 
-@foreach($user->adverts as $advert)
+@foreach($user->live as $advert)
                 <tr><td>
                     <div class="product">
                         <div class="listing-side">

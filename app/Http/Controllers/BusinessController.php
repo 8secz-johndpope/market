@@ -38,7 +38,10 @@ class BusinessController extends BaseController
 
         $milliseconds = round(microtime(true) * 1000);
         foreach ($user->adverts as $advert){
-            $advert->category_id=$advert->param('category');
+            if($advert->has_param('draft'))
+            $advert->status=0;
+            else if($advert->has_param('inactive'))
+                $advert->status=2;
             $advert->save();
         }
 

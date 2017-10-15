@@ -125,6 +125,18 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Advert')->orderby('deleted')->orderby('id','desc');
     }
+    public function live()
+    {
+        return $this->hasMany('App\Model\Advert')->where('status',1)->orderby('updated_at','desc');
+    }
+    public function drafts()
+    {
+        return $this->hasMany('App\Model\Advert')->where('status',0)->orderby('updated_at','desc');
+    }
+    public function deleted()
+    {
+        return $this->hasMany('App\Model\Advert')->where('status',2)->orderby('updated_at','desc');
+    }
     public function roles()
     {
         return $this->belongsToMany('App\Model\Role');
