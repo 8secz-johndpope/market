@@ -152,7 +152,7 @@
 
             </form>
                 </div>
-                <div id="drafts" class="tab-pane fade in active">
+                <div id="drafts" class="tab-pane fade">
                     <form action="/business/manage/bump" method="post">
                         {{ csrf_field() }}
                         <table class="table">
@@ -229,7 +229,7 @@
 
                     </form>
                 </div>
-                <div id="inactive" class="tab-pane fade in active">
+                <div id="inactive" class="tab-pane fade">
                     <form action="/business/manage/bump" method="post">
                         {{ csrf_field() }}
                         <table class="table">
