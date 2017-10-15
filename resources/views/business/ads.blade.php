@@ -153,7 +153,6 @@
             </form>
                 </div>
                 <div id="drafts" class="tab-pane fade">
-                    <form action="/business/manage/bump" method="post">
                         {{ csrf_field() }}
                         <table class="table">
                             <tr><th></th><th>Views</th><th>Last Posted</th><th colspan="3" class="center-text">Featured</th><th>Urgent</th><th>Spotlight</th><th>Bump</th></tr>
@@ -225,13 +224,10 @@
                                 </tr>
                             @endforeach
                         </table>
-                        <button class="btn-primary btn" type="submit">Continue</button>
 
-                    </form>
                 </div>
                 <div id="inactive" class="tab-pane fade">
-                    <form action="/business/manage/bump" method="post">
-                        {{ csrf_field() }}
+
                         <table class="table">
                             <tr><th></th><th>Views</th><th>Last Posted</th><th colspan="3" class="center-text">Featured</th><th>Urgent</th><th>Spotlight</th><th>Bump</th></tr>
                             <tr><td></td><td></td><td></td><td>3 days</td><td>7 days</td><td>14 days</td><td></td><td></td><td></td></tr>
@@ -302,9 +298,7 @@
                                 </tr>
                             @endforeach
                         </table>
-                        <button class="btn-primary btn" type="submit">Continue</button>
 
-                    </form>
                 </div>
             </div>
         </div>
