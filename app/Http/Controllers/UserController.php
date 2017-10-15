@@ -296,12 +296,9 @@ class UserController extends BaseController
         if($request->has('title'))
             $body['title']=$request->title;
         if($request->has('description'))
-            $body['title']=$request->description;
+            $body['description']=$request->description;
         if($request->has('images')){
             $body['images']=$request->images;
-
-        }else{
-            $body['images']=[];
         }
         $advert->update_fields($body);
         $body=[];
