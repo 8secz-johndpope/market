@@ -141,7 +141,7 @@
                         <ul class="list-group">
                             <li class="list-group-item"><h4>{{$advert->user->display_name}}</h4></li>
                             <li class="list-group-item">     <div class="user-badge">
-                                    V2
+                                    {{$$advert->user->vid}}
                                 </div></li>
                         </ul>
 
