@@ -124,6 +124,7 @@ class BusinessController extends BaseController
             $ad->category_id=$category->id;
             $ad->user_id=$user->id;
             $ad->status=0;
+            $ad->postcode_id=0;
             $body=[];
             if($request->has($number.'_postcode')){
                 $up =   str_replace(' ','',strtoupper($request->get($number.'_postcode')));
