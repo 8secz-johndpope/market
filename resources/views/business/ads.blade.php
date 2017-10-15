@@ -177,6 +177,7 @@
     <div id="myModal1" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
             <form action="/user/ad/images" method="post">
+                {{ csrf_field() }}
                 <input name="id" value="0" id="advert_id">
             <!-- Modal content-->
             <div class="modal-content" id="modal-content">
