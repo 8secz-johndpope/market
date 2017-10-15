@@ -175,7 +175,7 @@
         </div>
     </div>
     <div id="myModal1" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
 
             <!-- Modal content-->
             <div class="modal-content" id="modal-content">
@@ -184,7 +184,7 @@
                     <h4 class="modal-title">Statistics</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="row row-images"  id="sortable">
+                    <div class="row row-images-modal"  id="sortable">
                         @foreach($user->images as $image)
                             <div class="multi-image"><input type="hidden" name="images[]" value="{{$image->image}}"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}" data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}"></div>
                         @endforeach
