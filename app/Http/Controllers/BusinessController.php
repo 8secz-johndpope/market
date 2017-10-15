@@ -132,11 +132,14 @@ class BusinessController extends BaseController
                     $ad->postcode_id=$a->id;
                     $body['location']=$a->lat.','.$a->lng;
                     $body['location_id']=$a->location->res;
+                    $body['location_name']=$a->location->title;
+                }else{
+                    $body['location_name']='United Kingdom';
                 }
             }
             $ad->save();
             $ad->create_elastic();
-
+            $body['category']=$category->id;
             if($request->has($number.'_title'))
                 $body['title']=$request->get($number.'_title');
             if($request->has($number.'_description'))
