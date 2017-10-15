@@ -46,6 +46,7 @@ function upload_file() {
             Body: file,
             ACL: 'public-read'
         };
+        (function (uname) {
 
         bucket.putObject(params, function (err, data) {
             if (err) {
@@ -67,6 +68,8 @@ function upload_file() {
 
             }
         });
+        })(uname);
+
     } else {
         console.log("nothing to upload");
     }
