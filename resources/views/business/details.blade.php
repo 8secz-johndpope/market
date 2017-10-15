@@ -192,11 +192,11 @@
             {{ csrf_field() }}
             <div class="form-group" style="margin-top: 25px">
                 <label for="card">Sort Code:</label>
-                <input class="form-control" name="sortcode" placeholder="208534">
+                <input class="form-control" name="sortcode" placeholder="108800">
             </div>
             <div class="form-group">
                 <label for="expiry">Account Number:</label>
-                <input class="form-control" name="number" placeholder="12345678">
+                <input class="form-control" name="number" placeholder="00012345">
             </div>
 
             <button type="submit" class="btn btn-success">Save </button>
