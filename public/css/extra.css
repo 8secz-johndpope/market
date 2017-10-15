@@ -124,6 +124,13 @@ input:checked + .slider:before {
     border: 1px solid lightgray;
     padding: 9px
 }
+.upload-image img {
+    width: 100%;
+}
+inspector-stylesheet:1
+.upload-image {
+    width: 100px;
+}
 .add-card-div {
     display: block;
     background: lightgray;
