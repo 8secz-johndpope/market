@@ -119,7 +119,7 @@
                             <table class="table"><tr><td><span class="red-text">Deleted</span></td><td></td><td><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;Repost</a></td></tr></table>
 
                         @else
-                    <table class="table"><tr><td><a class="nav-color assign-images" ><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp; Assign Images</a></td><td><a class="nav-color" href="/user/advert/edit/{{$advert->id}}"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp; Edit</a></td><td><a class="nav-color" href="/user/advert/duplicate/{{$advert->id}}"><span class="glyphicon glyphicon-magnet"></span>&nbsp;&nbsp; Duplicate</a></td><td><a href="#" class="stats-click nav-color" data-id="{{$advert->id}}"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Stats</a></td><td><a class="red-color" href="/user/advert/delete/{{$advert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a></td></tr></table>
+                    <table class="table"><tr><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp; Assign Images</a></td><td><a class="nav-color" href="/user/advert/edit/{{$advert->id}}"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp; Edit</a></td><td><a class="nav-color" href="/user/advert/duplicate/{{$advert->id}}"><span class="glyphicon glyphicon-magnet"></span>&nbsp;&nbsp; Duplicate</a></td><td><a href="#" class="stats-click nav-color" data-id="{{$advert->id}}"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Stats</a></td><td><a class="red-color" href="/user/advert/delete/{{$advert->id}}"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp; Delete</a></td></tr></table>
                             @endif
                     </td>
                     @if($advert->has_param('draft'))
@@ -177,6 +177,7 @@
     <div id="myModal1" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
             <form action="/user/ad/images" method="post">
+                <input name="id" value="0" id="advert_id">
             <!-- Modal content-->
             <div class="modal-content" id="modal-content">
                 <div class="modal-header">

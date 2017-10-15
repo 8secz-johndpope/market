@@ -224,6 +224,7 @@ $("#file-chooser-x").change(function () {
     upload_multi_file();
 });
 $(".assign-images").click(function () {
+    $("#advert_id").val($(this).data('id'));
    $("#myModal1").modal('show');
 });
 function get_location(postcode) {

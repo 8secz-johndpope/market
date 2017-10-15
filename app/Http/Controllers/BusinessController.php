@@ -63,6 +63,17 @@ class BusinessController extends BaseController
        return ['msg'=>'done'];
 
     }
+    public function add_images(Request $request){
+        $advert=Advert::find($request->id);
+        if($request->has('images')){
+            $body['images']=$request->images;
+        }else{
+            $body['images']=[];
+        }
+        $advert->update_fields($body);
+        return redirect('/user/manage/ads');
+
+    }
     public function auto(Request $request,$id,$count){
         $user = Auth::user();
         $category=Category::find($id);
