@@ -116,11 +116,13 @@ class BusinessController extends BaseController
 
     }
     public function multiple(Request $request){
+        $user=Auth::user();
         $count=$request->count;
         $category=Category::find($request->category);
         foreach (range(1, $count) as $number){
             $ad = new Advert;
             $ad->category_id=$category->id;
+            $ad->user_id=$user->id;
             $ad->status=0;
             $body=[];
             if($request->has($number.'_postcode')){
