@@ -96,6 +96,8 @@ class MessageController extends BaseController
             $k = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
                 'form_params' => ['from' => $user->id, 'message' => $request->message, 'rid' => $g['rid'], 'type' => 'text']
             ]);
+            $advert->replies++;
+            $advert->save();
 
             return redirect('/user/manage/messages/' . $g['rid']);
         }else{
@@ -117,6 +119,8 @@ class MessageController extends BaseController
         $k = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
             'form_params' => ['from'=>$user->id,'message'=>$request->message,'rid'=>$g['rid'],'type'=>'text']
         ]);
+        $advert->replies++;
+        $advert->save();
 
         return ['rid'=>$g['rid'],'msg'=>'sent'];
 
