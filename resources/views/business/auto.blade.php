@@ -56,14 +56,14 @@
                 @foreach (range(1, $count) as $number)
 
                 <tr>
-                    <td> <input class="form-control" type="text" name="{{$number}}_title" required value=""></td>
-                    <td> <textarea class="form-control" name="{{$number}}_description" rows="6" cols="60" required></textarea></td>
-                    <td> <input class="form-control" type="text" name="{{$number}}_postcode" required value=""></td>
+                    <td> <input class="form-control" type="text" name="{{$number}}_title"  value=""></td>
+                    <td> <textarea class="form-control" name="{{$number}}_description" rows="6" cols="60" ></textarea></td>
+                    <td> <input class="form-control" type="text" name="{{$number}}_postcode"  value=""></td>
 
                 @foreach($category->fields as $field)
                         <td>
                             @if($field->type==='integer')
-                                <input class="form-control" type="text" name="{{$number}}_{{$field->slug}}" required value="">
+                                <input class="form-control" type="text" name="{{$number}}_{{$field->slug}}"  value="">
                             @elseif($field->type==='list')
                                 <select class="form-control" name="{{$number}}_{{$field->slug}}">
                                     @foreach($field->values as $value)
@@ -71,7 +71,7 @@
                                     @endforeach
                                 </select>
                             @else
-                                <input class="form-control" type="text" name="{{$number}}_{{$field->slug}}" required  value="">
+                                <input class="form-control" type="text" name="{{$number}}_{{$field->slug}}"   value="">
                             @endif
                         </td>
                 @endforeach
