@@ -125,6 +125,7 @@ class HomeController extends BaseController
         $advert=new Advert;
         $advert->postcode_id=0;
         $advert->category_id=0;
+        $advert->status=0;
         $advert->save();
 
         return redirect('/user/manage/ad/'.$advert->id);

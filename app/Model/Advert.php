@@ -105,6 +105,7 @@ class Advert extends  BaseModel
         $advert->category_id=$this->category->id;
         $advert->postcode_id=$this->postcode->id;
         $advert->elastic = $response['_id'];
+        $advert->status=0;
         $advert->save();
 
     }
@@ -186,6 +187,7 @@ class Advert extends  BaseModel
         $response = $this->client->update($params);
 
         $this->deleted=0;
+        $this->status=1;
         $this->save();
     }
     public function param($param){
