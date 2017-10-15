@@ -388,6 +388,8 @@
 <script src="https://sumra.net/js/jquery.autocomplete.js"></script>
 <script src="https://sumra.net/js/aws-sdk.js"></script>
 <script src="https://sumra.net/js/load.js"></script>
+<script src="https://sumra.net/js/multi-upload.js"></script>
+
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://sumra.net/js/contract.js"></script>
 

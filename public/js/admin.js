@@ -216,6 +216,10 @@ $("#file-chooser").change(function () {
     console.log("did change");
     upload_file();
 });
+$("#file-chooser-x").change(function () {
+    console.log("did change");
+    upload_multi_file();
+});
 function get_location(postcode) {
     $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+postcode+"&key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0",function (data,status) {
         console.log(data.results[0]['formatted_address']);
