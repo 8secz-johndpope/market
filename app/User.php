@@ -133,7 +133,7 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Advert')->where('status',0)->orderby('updated_at','desc');
     }
-    public function deleted()
+    public function inactive()
     {
         return $this->hasMany('App\Model\Advert')->where('status',2)->orderby('updated_at','desc');
     }
