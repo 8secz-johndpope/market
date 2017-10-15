@@ -74,6 +74,7 @@ class BusinessController extends BaseController
             $body['images']=[];
         }
         $advert->update_fields($body);
+        $advert->save();
         return redirect('/user/manage/ads');
 
     }
