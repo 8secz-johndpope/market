@@ -46,6 +46,8 @@ function upload_multi_file() {
                 ACL: 'public-read'
             };
 
+            console.log(params);
+
             bucket.putObject(params, function (err, data) {
                 if (err) {
                     console.log(err);
