@@ -212,6 +212,9 @@ $(".edit-location-button").click(function () {
 $(".add-image").click(function () {
     $("#file-chooser").click();
 });
+$(".add-image-x").click(function () {
+    $("#file-chooser-x").click();
+});
 $("#file-chooser").change(function () {
     console.log("did change");
     upload_file();

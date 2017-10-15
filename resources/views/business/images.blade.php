@@ -54,7 +54,7 @@
                     <div class="multi-image"><input type="hidden" name="images[]" value="{{$image->image}}"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}"></div>
                 @endforeach
                 <div class="multi-image">
-                    <a ><img src="/css/addimage.png" class="add-image" style="cursor: pointer"></a>
+                    <a ><img src="/css/addimage.png" class="add-image-x" style="cursor: pointer"></a>
                     <input type="file" id="file-chooser-x" style="display: none" multiple>
                 </div>
             </div>
