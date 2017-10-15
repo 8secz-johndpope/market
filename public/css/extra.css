@@ -59,6 +59,9 @@ a.delete-alert-link {
 .assign-images{
     cursor: pointer;
 }
+.yellow-text {
+    color: orange;
+}
 .selected-image {
     background: lightskyblue;
 }
