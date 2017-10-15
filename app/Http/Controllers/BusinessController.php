@@ -136,6 +136,8 @@ class BusinessController extends BaseController
                 }else{
                     $body['location_name']='United Kingdom';
                 }
+            }else{
+                $body['location_name']='United Kingdom';
             }
             $ad->save();
             $ad->create_elastic();
