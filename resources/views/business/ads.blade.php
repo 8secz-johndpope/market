@@ -61,6 +61,21 @@
 
                 </div>
             </div>
+            <ul class="nav nav-tabs">
+
+                <li class="nav-item active">
+                    <a class="nav-link nav-color" data-toggle="tab" href="#live">Live</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-color" data-toggle="tab" href="#package_summary">Drafts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-color" data-toggle="tab" href="#package_usage">Inactive</a>
+                </li>
+
+            </ul>
+            <div class="tab-content">
+                <div id="live" class="tab-pane fade in active">
             <form action="/business/manage/bump" method="post">
                 {{ csrf_field() }}
 <table class="table">
@@ -136,6 +151,8 @@
                 <button class="btn-primary btn" type="submit">Continue</button>
 
             </form>
+                </div>
+            </div>
         </div>
     </div>
 
