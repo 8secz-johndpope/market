@@ -111,9 +111,9 @@ class BusinessController extends BaseController
 
     }
     public function csv(Request $request){
-        if (($handle = fopen("test.csv", "r")) !== FALSE) {
+    //    if (($handle = fopen("test.csv", "r")) !== FALSE) {
 
-        }
+       // }
             return $request->csv->path();
     }
     public function support(Request $request){
