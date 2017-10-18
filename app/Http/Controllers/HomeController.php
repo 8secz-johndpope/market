@@ -531,7 +531,6 @@ class HomeController extends BaseController
         $alert->location_id=$location->id;
         $alert->save();
         return redirect('/'.$category->slug.'/'.$location->slug);
-
     }
     public function delete_alert(Request $request,$id){
         $alert=SearchAlert::find($id);
@@ -544,7 +543,6 @@ class HomeController extends BaseController
         $alert=SearchAlert::find($id);
         $alert->active=!$alert->active;
         $alert->save();
-
         return ['msg'=>'done'];
 
     }

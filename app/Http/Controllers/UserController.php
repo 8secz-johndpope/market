@@ -369,6 +369,33 @@ class UserController extends BaseController
         $advert->duplicate();
         return ['msg'=>'duplicated'];
     }
+
+    public function alerts(Request $request){
+        $user = Auth::user();
+        return $user->alerts;
+    }
+    public function alert(Request $request,$id){
+        $category=Category::find($id);
+        $location=Location::find($request->id);
+        $alert = new SearchAlert;
+        $user=Auth::user();
+        $alert->user_id=$user->id;
+        $alert->category_id=$category->id;
+        $alert->location_id=$location->id;
+        $alert->save();
+        return ['msg'=>'done'];
+    }
+    public function delete_alert(Request $request,$id){
+        $alert=SearchAlert::find($id);
+        $alert->delete();
+        return ['msg'=>'done'];
+    }
+    public function toggle_alert(Request $request,$id){
+        $alert=SearchAlert::find($id);
+        $alert->active=!$alert->active;
+        $alert->save();
+        return ['msg'=>'done'];
+    }
     public function suggest(Request $request)
     {
         $text = $request->q;

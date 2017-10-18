@@ -84,6 +84,13 @@ Route::get('/user/advert/price','UserController@price')->middleware('auth:api');
 
 Route::get('/user/advert/favorites','UserController@favorites')->middleware('auth:api');
 
+
+Route::get('/user/alerts','UserController@alerts')->middleware('auth:api');
+Route::get('/user/alert/create/{id}','UserController@alert')->middleware('auth:api');
+Route::get('/user/alert/delete/{id}','UserController@delete_alert')->middleware('auth:api');
+Route::get('/user/alert/toggle/{id}','UserController@toggle_alert')->middleware('auth:api');
+
+
 Route::get('/user/text','UserController@text');
 Route::get('/user/ctext','UserController@ctext');
 
