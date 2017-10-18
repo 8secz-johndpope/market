@@ -74,11 +74,7 @@ class MessageController extends BaseController
         //return $g;
         return view('home.messages',['r'=>$r,'g'=>$g,'rid'=>$rid,'user'=>$user]);
     }
-    public function check(Request $request){
-        $mbox = imap_open ("{box.gsejobs.com:993/imap/ssl}INBOX", "anil@sumra.net", "google00");
-        print $mbox;
 
-    }
     public function reply(Request $request,$id){
         $user = Auth::user();
         $advert = Advert::find($id);
