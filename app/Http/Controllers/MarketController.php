@@ -907,7 +907,7 @@ class MarketController extends BaseController
                 'size'=> 24,
                 'query' =>
                     ['bool'=>[
-                        'must'=>['exits'=>['field'=>'meta']],
+                        'must'=>['exists'=>['field'=>'meta']],
                         'should'=>[['term'=>['spotlight'=>1]]],
                         "minimum_should_match" => -2,
       "boost" => 1.0
