@@ -110,6 +110,9 @@ class BusinessController extends BaseController
         return view('business.metrics',['user'=>$user]);
 
     }
+    public function csv(Request $request){
+        return $request->csv;
+    }
     public function support(Request $request){
         $user = Auth::user();
         return view('business.support',['user'=>$user]);

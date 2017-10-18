@@ -39,6 +39,8 @@ Route::post('/user/ad/images', 'BusinessController@add_images');
 
 Route::get('/user/category/auto/{id}/{count}', 'BusinessController@auto');
 
+Route::post('/user/upload/csv', 'BusinessController@csv');
+
 Route::post('/user/advert/category/change', 'HomeController@change_category');
 Route::post('/user/advert/location/change', 'HomeController@change_location');
 

@@ -53,8 +53,14 @@
                 </li>
             </ul>
             <div class="row">
-                <div class="col-sm-10">
+                <div class="col-sm-8">
 
+                </div>
+                <div class="col-sm-2">
+                <form action="/user/upload/csv" method="post">{{csrf_field()}}
+                <input type="file" name="csv">
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-success" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp; Post an Ad</a>
