@@ -54,6 +54,8 @@ Route::post('/user/terms/accept','UserController@terms')->middleware('auth:api')
 
 Route::post('/user/balance/withdraw','UserController@withdraw')->middleware('auth:api');
 
+Route::get('/user/advert/duplicate/{id}', 'UserController@duplicate')->middleware('auth:api');
+
 
 Route::get('/user/account/info','UserController@info')->middleware('auth:api');
 Route::get('/clients','MarketController@clients');

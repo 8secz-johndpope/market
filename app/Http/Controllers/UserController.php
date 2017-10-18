@@ -363,6 +363,12 @@ class UserController extends BaseController
         $cv->save();
         return ['msg' => 'Cover added'];
     }
+    public function duplicate(Request $request,$id)
+    {
+        $advert=Advert::find($id);
+        $advert->duplicate();
+        return ['msg'=>'duplicated'];
+    }
     public function save(Request $request){
         if($request->has('id'))
         $advert=Advert::find($request->id);
