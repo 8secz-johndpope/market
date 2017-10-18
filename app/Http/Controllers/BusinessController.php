@@ -111,7 +111,10 @@ class BusinessController extends BaseController
 
     }
     public function csv(Request $request){
-        return $request->csv;
+        if (($handle = fopen("test.csv", "r")) !== FALSE) {
+
+        }
+            return $request->csv->path();
     }
     public function support(Request $request){
         $user = Auth::user();
