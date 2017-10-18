@@ -15,6 +15,7 @@ use App\Model\Advert;
 use App\Model\ExtraPrice;
 use App\Model\ExtraType;
 use App\Model\Location;
+use App\Model\SearchAlert;
 use Validator;
 use App\Model\Application;
 use App\Model\Category;
