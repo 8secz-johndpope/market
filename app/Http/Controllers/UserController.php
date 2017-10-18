@@ -369,6 +369,57 @@ class UserController extends BaseController
         $advert->duplicate();
         return ['msg'=>'duplicated'];
     }
+    public function suggest(Request $request)
+    {
+        $text = $request->q;
+        if(preg_match('/\s/',$text)>0){
+            $dict = ['title.keyword'=> strtolower($text)];
+
+        }else{
+            $dict = ['title'=> strtolower($text)];
+
+        }
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size' => 0,
+                'query' => ['bool'=>['should'=>[['term'=>$dict]]]],
+                'aggs' => [
+                    'group_by_category' => [
+                        "terms" => [ "field"=> "category", "size"=> 5]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        // return $response;
+        $buckets = $response['aggregations']['group_by_category']['buckets'];
+        $bts = array_filter($buckets, function( $a ) {
+
+            return Category::find($a['key']) !== null;
+        } );
+        $bts = array_values($bts);
+        //return $bts;
+        $categories=array();
+        foreach ($bts as $bt){
+            $category = Category::find($bt['key']);
+            $parents = array();
+            $cur = $category;
+            while ($cur->parent!==null){
+                $parents[]=$cur->parent;
+                $cur=$cur->parent;
+            }
+            $titles =  array_map(function ($a) {
+                return $a->title;
+            }, $parents);
+            $titles =  array_reverse($titles);
+            $category->parentstring = implode(' > ',$titles);
+            $categories[]=$category;
+        }
+
+        return $categories;
+    }
     public function save(Request $request){
         if($request->has('id'))
         $advert=Advert::find($request->id);

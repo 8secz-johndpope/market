@@ -120,6 +120,7 @@ Route::post('/user/advert/create/bump','UserController@bump')->middleware('auth:
 Route::post('/user/advert/packs/buy','UserController@buy')->middleware('auth:api');
 
 Route::post('/user/balance/topup','UserController@topup')->middleware('auth:api');
+Route::get('/category/suggest','UserController@suggest');
 
 Route::get('/stripe', 'UserController@stripe');
 Route::get('/suggest','MarketController@suggest');
