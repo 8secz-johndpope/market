@@ -115,12 +115,9 @@ class BusinessController extends BaseController
 
        // }
         $path = $request->csv;//->store('images');
-        if ($request->hasFile('csv')) {
-            //
-            return 'yes';
-        }
 
-        return $path;
+
+        return $path->path();
     }
     public function support(Request $request){
         $user = Auth::user();
