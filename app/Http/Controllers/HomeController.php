@@ -123,10 +123,8 @@ class HomeController extends BaseController
     }
     public function create(Request $request){
         $advert=new Advert;
-        $advert->postcode_id=0;
-        $advert->category_id=0;
-        $advert->status=0;
         $advert->save();
+        $advert->create_draft();
 
         return redirect('/user/manage/ad/'.$advert->id);
     }
@@ -155,38 +153,8 @@ class HomeController extends BaseController
         return redirect('/user/manage/ad/'.$advert->id);
     }
     public function manage(Request $request,$id){
-        $user = Auth::user();
         $advert = Advert::find($id);
-        $advert->user_id=$user->id;
-        $advert->sid=$advert->id;
-        $advert->save();
         $categories = Category::where('parent_id', 0)->get();
-        if($advert->elastic===null){
-            $body['title']='';
-            $body['description']='';
-            $body['images']=[];
-            $body['draft']=1;
-            $milliseconds = round(microtime(true) * 1000);
-            $body['category']=0;
-            $body['location_id']=0;
-            $body['location']='0,0';
-            $body['location_name']='United Kingdom';
-            $body['views']=0;
-            $body['list_views']=0;
-            $body['source_id']=$advert->id;
-            $body['username']=$advert->display_name;
-            $body['created_at']=$milliseconds;
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'body' => $body
-            ];
-
-            $response = $this->client->index($params);
-            $advert->elastic = $response['_id'];
-            $advert->save();
-        }
-
 
         return view('home.ad',['advert'=>$advert,'categories' => $categories,'shippings'=>Shipping::all()]);
     }

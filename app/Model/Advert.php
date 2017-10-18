@@ -79,15 +79,38 @@ class Advert extends  BaseModel
         ];
         $response = $this->client->update($params);
     }
-    public function create_elastic(){
+    public function create_draft(){
+        $user = Auth::user();
+
         if($this->elastic===null){
+
+
+            $body['title']='';
+            $body['description']='';
+            $body['images']=[];
+            $body['draft']=1;
+            $milliseconds = round(microtime(true) * 1000);
+            $body['category']=0;
+            $body['location_id']=0;
+            $body['location']='0,0';
+            $body['location_name']='United Kingdom';
+            $body['views']=0;
+            $body['list_views']=0;
+            $body['source_id']=$this->id;
+            $body['username']=$user->display_name;
+            $body['created_at']=$milliseconds;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
-                'body' => ['title'=>'','draft'=>1,'images'=>[]]
+                'body' => $body
             ];
+
             $response = $this->client->index($params);
             $this->elastic = $response['_id'];
+            $this->sid=$this->id;
+            $this->status=0;
+            $this->user_id=$user->id;
+            $this->postcode_id=0;
             $this->save();
         }
 

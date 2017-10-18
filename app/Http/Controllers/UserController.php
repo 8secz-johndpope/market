@@ -363,6 +363,11 @@ class UserController extends BaseController
         $cv->save();
         return ['msg' => 'Cover added'];
     }
+    public function save(Request $request){
+
+        $category=Category::find($request->category);
+
+    }
 
     public function offer(Request $request)
     {

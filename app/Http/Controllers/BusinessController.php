@@ -123,6 +123,7 @@ class BusinessController extends BaseController
                 for ($c=0; $c < $num; $c++) {
                     echo $data[$c] . "<br />\n";
                 }
+
             }
             fclose($handle);
 
@@ -140,10 +141,10 @@ class BusinessController extends BaseController
         $category=Category::find($request->category);
         foreach (range(1, $count) as $number){
             $ad = new Advert;
+            $ad->save();
+            $ad->create_draft();
             $ad->category_id=$category->id;
-            $ad->user_id=$user->id;
-            $ad->status=0;
-            $ad->postcode_id=0;
+            $ad->save();
             $body=[];
             if($request->has($number.'_postcode')){
                 $up =   str_replace(' ','',strtoupper($request->get($number.'_postcode')));
@@ -153,14 +154,9 @@ class BusinessController extends BaseController
                     $body['location']=$a->lat.','.$a->lng;
                     $body['location_id']=$a->location->res;
                     $body['location_name']=$a->location->title;
-                }else{
-                    $body['location_name']='United Kingdom';
                 }
-            }else{
-                $body['location_name']='United Kingdom';
             }
-            $ad->save();
-            $ad->create_elastic();
+
             $body['category']=$category->id;
             if($request->has($number.'_title'))
                 $body['title']=$request->get($number.'_title');
