@@ -372,7 +372,12 @@ class UserController extends BaseController
 
     public function alerts(Request $request){
         $user = Auth::user();
-        return $user->alerts;
+        $alerts = $user->alerts;
+        foreach ($alerts as $alert){
+            $alert->category=$alert->category;
+            $alert->location=$alert->location;
+        }
+        return $alerts;
     }
     public function alert(Request $request,$id){
         $category=Category::find($id);
