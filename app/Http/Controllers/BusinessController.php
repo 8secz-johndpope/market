@@ -111,12 +111,12 @@ class BusinessController extends BaseController
 
     }
     public function csv(Request $request){
-    //    if (($handle = fopen("test.csv", "r")) !== FALSE) {
 
-       // }
         $path = $request->csv;//->store('images');
 
+        if (($handle = fopen($path->path(), "r")) !== FALSE) {
 
+         }
         return $path->path();
     }
     public function support(Request $request){
