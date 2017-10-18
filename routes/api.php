@@ -132,6 +132,8 @@ Route::get('/category/suggest','UserController@suggest');
 Route::get('/stripe', 'UserController@stripe');
 Route::get('/suggest','MarketController@suggest');
 Route::get('/lsuggest','MarketController@lsuggest');
+Route::get('/psuggest','MarketController@psuggest');
+Route::get('/autosuggest','MarketController@autosuggest');
 
 Route::get('/train','MarketController@train');
 

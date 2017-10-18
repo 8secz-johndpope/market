@@ -364,6 +364,90 @@ class MarketController extends BaseController
         return ['text'=>$term,'suggestions'=>$cats];
 
     }
+    public function psuggest(Request $request)
+    {
+
+        $term = $request->q;
+        $cats = [];
+
+        // $a = Postcode::where('hash',crc32(strtoupper($term)))->first();
+        $locations = Postcode::where('active',1)->where('postcode','like',$term.'%')->limit(10)->get();
+
+        foreach ($locations as $a){
+            $cats[]= ['value'=>$a->postcode.', '.$a->location->title,'category' => $a->postcode,'slug' => strtolower($a->postcode),'data'=>$a->location->id];
+
+        }
+
+        return ['text'=>$term,'suggestions'=>$cats];
+
+    }
+    public function autosuggest(Request $request)
+    {
+
+        $term = $request->q;
+
+
+        // return ['q'=>$request->query,'suggestions'=>[['value'=>'Hello','data'=>'HE'],['value'=>'Samsung','data'=>'HE'],['value'=>'iPhone','data'=>'HE']]];
+        $params = [
+            'index' => 'suggest',
+            'type' => 'complete',
+            'body' => [
+                "suggest" => [
+                    "search-suggest" => [
+                        "prefix" => ''.strtolower($term),
+                        "completion" => [
+                            "field" => "suggest"
+                        ]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        //  return $response['suggest']['search-suggest'][0]['options'];
+        if(isset($response['suggest']['search-suggest'][0]['options'][0]['text'])){
+            $text = $response['suggest']['search-suggest'][0]['options'][0]['text'];
+            if(preg_match('/\s/',$text)>0){
+                $dict = ['title.keyword'=> strtolower($text)];
+
+            }else{
+                $dict = ['title'=> strtolower($text)];
+
+            }
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'size' => 0,
+                    'query' => ['bool'=>['should'=>[['term'=>$dict]]]],
+                    'aggs' => [
+                        'group_by_category' => [
+                            "terms" => [ "field"=> "category", "size"=> 10]
+                        ]
+                    ]
+                ]
+            ];
+            $response = $this->client->search($params);
+            // return $response;
+            $buckets = $response['aggregations']['group_by_category']['buckets'];
+            $bts = array_filter($buckets, function( $a ) {
+
+                return Category::find($a['key']) !== null;
+            } );
+            $bts = array_values($bts);
+            $cats = array_map(function ($a) use  ($text) {
+                $ans = $a['key'];
+                $category = Category::find($ans);
+                if($category!==null)
+                    return ['value'=>strtolower($text),'category' => $category];
+            }, $bts);
+            return ['text'=>$text,'suggestions'=>$cats];
+        }else{
+            return ['text'=>'','suggestions'=>[]];
+        }
+
+
+
+    }
     public  function id(Request $request,$id){
         return $this->categories[$id];
     }

@@ -380,6 +380,7 @@ class UserController extends BaseController
         }
         return $alerts;
     }
+
     public function alert(Request $request,$id){
         $category=Category::find($id);
         $location=Location::find($request->id);
