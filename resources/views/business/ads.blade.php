@@ -57,10 +57,12 @@
 
                 </div>
                 <div class="col-sm-2">
-                <form action="/user/upload/csv" method="post">{{csrf_field()}}
+                    {{Form::open(array('url' => '/user/upload/csv', 'method' => 'post', 'files' => true))}}
+
+                        {{csrf_field()}}
                 <input type="file" name="csv">
                     <button type="submit" class="btn btn-primary">Upload</button>
-                </form>
+                    {{ Form::close() }}
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-success" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp; Post an Ad</a>
