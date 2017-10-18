@@ -63,6 +63,8 @@ Route::post('/search', 'MarketController@query');
 Route::post('/user/register', 'UserController@register');
 Route::post('/user/advert/create','UserController@create')->middleware('auth:api');
 
+Route::post('/user/advert/draft','UserController@save')->middleware('auth:api');
+
 Route::post('/user/advert/update','UserController@update')->middleware('auth:api');
 Route::post('/user/advert/delete','UserController@delete')->middleware('auth:api');
 Route::post('/user/advert/repost','UserController@repost')->middleware('auth:api');

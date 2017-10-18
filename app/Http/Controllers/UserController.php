@@ -364,9 +364,54 @@ class UserController extends BaseController
         return ['msg' => 'Cover added'];
     }
     public function save(Request $request){
+        if($request->has('id'))
+        $advert=Advert::find($request->id);
+        else
+        {
+            $advert=new Advert;
+            $advert->save();
+            $advert->create_draft();
+        }
+        $body=[];
+        if($request->has('postcode')){
+            $up =   str_replace(' ','',strtoupper($request->postcode));
+            $a = Postcode::where('hash',crc32($up))->first();
+            if($a!==null){
+                $advert->postcode_id=$a->id;
+                $body['location']=$a->lat.','.$a->lng;
+                $body['location_id']=$a->location->res;
+                $body['location_name']=$a->location->title;
+            }
+        }
+        if($request->has('category')){
+            $category=Category::find($request->category);
+            $advert->category_id=$category->id;
+            $advert->save();
+            $body['category']=$category->id;
 
-        $category=Category::find($request->category);
-
+        }
+        if($request->has('title'))
+            $body['title']=$request->title;
+        if($request->has('description'))
+            $body['description']=$request->description;
+        $advert->update_fields($body);
+        $body=[];
+        foreach ($advert->category->fields as $field){
+            if($field->slug!=='price'&&$request->has($field->slug)){
+                $body[$field->slug] = $request->get($field->slug);
+            }
+        }
+        if($request->has('price')){
+            $body['price']=$request->get('price')*100;
+        }else{
+            $body['price']=-1;
+        }
+        $advert->update_meta($body);
+        if($request->has('post')){
+            $advert->publish();
+            return ['msg'=>'posted'];
+        }
+        return ['msg'=>'saved'];
     }
 
     public function offer(Request $request)
