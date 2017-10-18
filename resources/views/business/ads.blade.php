@@ -57,8 +57,8 @@
 
                 </div>
                 <div class="col-sm-2">
-                    
-                <form action="/user/upload/csv" method="post">{{csrf_field()}}
+
+                <form action="/user/upload/csv" method="post" enctype="multipart/form-data">{{csrf_field()}}
                 <input type="file" name="csv">
                     <button type="submit" class="btn btn-primary">Upload</button>
                 </form>
