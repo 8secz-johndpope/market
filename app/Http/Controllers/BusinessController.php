@@ -114,7 +114,7 @@ class BusinessController extends BaseController
     //    if (($handle = fopen("test.csv", "r")) !== FALSE) {
 
        // }
-        $path = $request->file('csv')->store('images');
+        $path = $request->file('csv');//->store('images');
 
         return $path;
     }
