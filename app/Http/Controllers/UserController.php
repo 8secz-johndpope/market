@@ -347,6 +347,10 @@ class UserController extends BaseController
         if ($advert->user_id != $user->id) {
             return ['code' => 2, 'msg' => 'Advert does not belong to you'];
         }
+        $date = date("Y-m-d H:i:s");
+        $advert->modified_at=$date;
+        $advert->save();
+
         $advert->make_active();
         return ['code' => 3, 'msg' => 'reposted', 'response' => []];
     }
