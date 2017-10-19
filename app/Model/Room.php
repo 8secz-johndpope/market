@@ -25,4 +25,12 @@ class Room extends CassandraBase
         }
         return $rooms;
     }
+    public static function delete($rid){
+        $user = Auth::user();
+        $statement = new Cassandra\SimpleStatement(       // also supports prepared and batch statements
+            "delete from messages where rid=".$rid
+        );
+        $future    = CassandraBase::cassandra()->execute($statement);
+        return $future;
+    }
 }
