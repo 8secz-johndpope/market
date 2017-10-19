@@ -276,6 +276,7 @@ class UserController extends BaseController
         $cv->dispatchtime_rating = $request->dispatchtime_rating;
         $cv->postage_rating = $request->postage_rating;
         $cv->save();
+
         return ['msg' => 'Review added'];
 
     }
@@ -405,6 +406,7 @@ class UserController extends BaseController
     }
     public function suggest(Request $request)
     {
+
         $text = $request->q;
         if(preg_match('/\s/',$text)>0){
             $dict = ['title.keyword'=> strtolower($text)];
