@@ -251,6 +251,9 @@ class HomeController extends BaseController
             return redirect('/user/manage/ads');
             // return ['code' => 2, 'msg' => 'Advert does not belong to you'];
         }
+        $date = date("Y-m-d H:i:s");
+        $advert->modified_at=$date;
+        $advert->save();
 
         $advert->make_active();
         return redirect('/user/manage/ads');
