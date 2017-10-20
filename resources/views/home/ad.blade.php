@@ -397,14 +397,8 @@
 
                                         <select class="form-control" name="distance">
                                             @foreach($distances as $distance)
-                                                <option value="{{$distance->value}}">{{$distance->title}}</option>
+                                                <option value="{{$distance->value}}" @if($advert->has_meta('distance')&&$advert->meta('distance')===$distance->value) selected @endif>{{$distance->title}}</option>
                                             @endforeach
-                                            <option value="1">1 Mile</option>
-                                            <option value="5">5 Miles</option>
-                                            <option value="10">10 Miles</option>
-                                            <option value="30">30 Miles</option>
-                                            <option value="50">50 Miles</option>
-                                            <option value="100">100 Miles</option>
                                         </select>
                                     </div>
                                 </div>
