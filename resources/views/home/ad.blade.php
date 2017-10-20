@@ -379,7 +379,7 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <input  type="checkbox" name="canship" value="1" @if($advert->has_param('canship')&&$advert->param('canship')===1) checked @endif><span class="delivery-text" >Can Ship Nationwide</span>
-                                        <input type="hidden" name="shipping" value="{{$shipping->id}}" id="shipping-type">
+                                        <input type="hidden" name="shipping" value="{{$shipping->id}}" id="shipping">
                                         <p>Note: Need to ship the product by the date specified on the order</p>
                                         <div class="well">
                                             <h4>Shipping Method</h4>
@@ -562,7 +562,7 @@
 
             var id = $(this).data('servicecode');
             var title=$(this).data('servicename');
-            $("#shipping-type").val(id);
+            $("#shipping").val(id);
             $("#shipping-title").html(title);
             $("#shipping-replace").html($("#"+id+"_extras").html());
             $('#myModal').modal('hide');

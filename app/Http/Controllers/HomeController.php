@@ -157,8 +157,13 @@ class HomeController extends BaseController
     public function manage(Request $request,$id){
         $advert = Advert::find($id);
         $categories = Category::where('parent_id', 0)->get();
+        if($advert->has_param('shipping')){
+            $shipping=Shipping::find($advert->param('shipping'));
+        }else{
+            $shipping=Shipping::find(1);
+        }
 
-        return view('home.ad',['advert'=>$advert,'categories' => $categories,'shipping'=>Shipping::find(1),'economies'=>Shipping::where('type',0)->get(),'standards'=>Shipping::where('type',1)->get(),'expresses'=>Shipping::where('type',2)->get(),'distances'=>Distance::all(),'dispatches'=>Dispatch::all()]);
+        return view('home.ad',['advert'=>$advert,'categories' => $categories,'shipping'=>$shipping,'economies'=>Shipping::where('type',0)->get(),'standards'=>Shipping::where('type',1)->get(),'expresses'=>Shipping::where('type',2)->get(),'distances'=>Distance::all(),'dispatches'=>Dispatch::all()]);
     }
     public function edit(Request $request,$id)
     {
@@ -415,6 +420,7 @@ class HomeController extends BaseController
         if($request->has('canship')){
             $body['canship']=1;
             $meta['dispatch']=(int)$request->dispatch;
+            $body['shipping']=(int)$request->shipping;
         }else{
             $body['canship']=0;
         }
