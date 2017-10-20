@@ -490,7 +490,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Shipping Methods</h4>
                 </div>
-                <div class="modal-body">        <h2 id="dialog-shipping-overlay-title">Select a service</h2>
+                <div class="modal-body all-con">        <h2 id="dialog-shipping-overlay-title">Select a service</h2>
                     <p>Economy services</p>
                     <table class="table">
                         <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
