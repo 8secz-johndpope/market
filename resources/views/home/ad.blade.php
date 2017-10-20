@@ -250,9 +250,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    @endif
+                         </div>
+                         </div>
+                        @endif
 
                     <div class="extra-prices" style="display: block">
                         <div class="panel panel-default featured-panel">
@@ -349,7 +349,9 @@
 
                                     </li>
                                     @if($advert->category->can_ship())
-                                        <li class="list-group-item">
+                                        
+
+                                        <li class="list-group-item" style="display: none">
                                             <div class="row">
                                                 <div class="col-sm-8">
                                                     <div class="form-check">
