@@ -532,7 +532,7 @@
                                     <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
                                     <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">2 - 3 working days</span></td>
                                    </tr>
-                        <tr><td><input data-servicecode="UK_myHermesDoorToDoorService" data-servicename="Hermes Tracked" type="radio" value="UK_myHermesDoorToDoorService" id="domestic_Hermes Tracked" name="serviceOptions" aria-label=" Hermes Tracked Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                        <tr><td><input class="change-shipping"  data-servicecode="UK_myHermesDoorToDoorService" data-servicename="Hermes Tracked" type="radio" value="UK_myHermesDoorToDoorService" id="domestic_Hermes Tracked" name="serviceOptions" aria-label=" Hermes Tracked Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                                     <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Hermes Tracked</span>
                                 <span class="subText sm-1">Max: 15 kg, 120 cm</span>
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
@@ -542,7 +542,7 @@
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">3 - 5 working days</span></td>
                                    </tr>
-                        <tr><td><input data-servicecode="UK_CollectPlusTrakedDeliveryToDoor" data-servicename="Collect+ Economy Tracked" type="radio" value="UK_CollectPlusTrakedDeliveryToDoor" id="domestic_Collect+ Economy Tracked" name="serviceOptions" aria-label=" Collect+ Economy Tracked Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                        <tr><td><input class="change-shipping"  data-servicecode="UK_CollectPlusTrakedDeliveryToDoor" data-servicename="Collect+ Economy Tracked" type="radio" value="UK_CollectPlusTrakedDeliveryToDoor" id="domestic_Collect+ Economy Tracked" name="serviceOptions" aria-label=" Collect+ Economy Tracked Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                                     <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Collect+ Economy Tracked</span>
                                 <span class="subText sm-1">Max: 10 kg, 50 x 30 x 30 cm</span>
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
@@ -553,7 +553,7 @@
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">3 - 5 working days</span></td>
                                     </tr>
-                        <tr><td><input data-servicecode="UK_OtherCourier" data-servicename="Other courier (3 to 5 days)" type="radio" value="UK_OtherCourier" id="domestic_Other courier (3 to 5 days)" name="serviceOptions" aria-label=" Other courier (3 to 5 days) Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                        <tr><td><input class="change-shipping"  data-servicecode="UK_OtherCourier" data-servicename="Other courier (3 to 5 days)" type="radio" value="UK_OtherCourier" id="domestic_Other courier (3 to 5 days)" name="serviceOptions" aria-label=" Other courier (3 to 5 days) Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                                 <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Other courier (3 to 5 days)</span>
                                 <span class="subText mobile_only sm-1">Tracking included: No</span>
                                 <span class="subText mobile_only sm-1">Compensation included: No</span>
@@ -564,7 +564,7 @@
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">3 - 5 working days</span></td>
                               </tr>
-                        <tr><td><input data-servicecode="UK_Shutl3To5Days" data-servicename="eBay delivery - Shutl 3-5 days" type="radio" value="UK_Shutl3To5Days" id="domestic_eBay delivery - Shutl 3-5 days" name="serviceOptions" aria-label=" eBay delivery - Shutl 3-5 days Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                        <tr><td><input class="change-shipping"  data-servicecode="UK_Shutl3To5Days" data-servicename="eBay delivery - Shutl 3-5 days" type="radio" value="UK_Shutl3To5Days" id="domestic_eBay delivery - Shutl 3-5 days" name="serviceOptions" aria-label=" eBay delivery - Shutl 3-5 days Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                                 <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Shutl 3-5 days</span>
                                 <span class="subText sm-1">Max: 15 kg, 120 cm</span>
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
@@ -579,7 +579,7 @@
                     <h4 class="bold-text">Standard services</h4>
                     <table class="table">
                         <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
-                   <tr><td> <input data-servicecode="UK_RoyalMailFirstClassStandard" data-servicename="Royal Mail 1st Class" type="radio" value="UK_RoyalMailFirstClassStandard" id="domestic_Royal Mail 1st Class" name="serviceOptions" aria-label=" Royal Mail 1st Class Delivery time 1 working day Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                   <tr><td> <input class="change-shipping"  data-servicecode="UK_RoyalMailFirstClassStandard" data-servicename="Royal Mail 1st Class" type="radio" value="UK_RoyalMailFirstClassStandard" id="domestic_Royal Mail 1st Class" name="serviceOptions" aria-label=" Royal Mail 1st Class Delivery time 1 working day Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                         <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail 1st Class</span>
                         <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
                         <span class="subText mobile_only sm-1">Tracking included: No</span>
@@ -594,7 +594,7 @@
 
                        <tr>
                            <td>
-                           <input data-servicecode="UK_RoyalMailFirstClassRecorded" data-servicename="Royal Mail 1st Class Signed For" type="radio" value="UK_RoyalMailFirstClassRecorded" id="domestic_Royal Mail 1st Class Signed For" name="serviceOptions" aria-label=" Royal Mail 1st Class Signed For Delivery time 1 working day Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                           <input class="change-shipping"  data-servicecode="UK_RoyalMailFirstClassRecorded" data-servicename="Royal Mail 1st Class Signed For" type="radio" value="UK_RoyalMailFirstClassRecorded" id="domestic_Royal Mail 1st Class Signed For" name="serviceOptions" aria-label=" Royal Mail 1st Class Signed For Delivery time 1 working day Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                         <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail 1st Class Signed For</span>
                            <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
                            <span class="subText mobile_only sm-1">Tracking included: No</span>
@@ -608,7 +608,7 @@
                        </tr>
                         <tr>
                             <td>
-                        <input data-servicecode="UK_Parcelforce48" data-servicename="Parcelforce 48" type="radio" value="UK_Parcelforce48" id="domestic_Parcelforce 48" name="serviceOptions" aria-label=" Parcelforce 48 Delivery time 1 - 2 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                        <input class="change-shipping"  data-servicecode="UK_Parcelforce48" data-servicename="Parcelforce 48" type="radio" value="UK_Parcelforce48" id="domestic_Parcelforce 48" name="serviceOptions" aria-label=" Parcelforce 48 Delivery time 1 - 2 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                         <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Parcelforce 48</span>
                                 <span class="subText sm-1">Max: 30 kg, 150 cm</span>
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
@@ -622,7 +622,7 @@
                         </tr>
                         <tr>
                             <td>
-                        <input data-servicecode="UK_OtherCourier48" data-servicename="Other 48h courier" type="radio" value="UK_OtherCourier48" id="domestic_Other 48h courier" name="serviceOptions" aria-label=" Other 48h courier Delivery time 1 - 2 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                        <input class="change-shipping"  data-servicecode="UK_OtherCourier48" data-servicename="Other 48h courier" type="radio" value="UK_OtherCourier48" id="domestic_Other 48h courier" name="serviceOptions" aria-label=" Other 48h courier Delivery time 1 - 2 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                         <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Other 48h courier</span>
                                 <span class="subText mobile_only sm-1">Tracking included: No</span>
                                 <span class="subText mobile_only sm-1">Compensation included: No</span>
@@ -635,7 +635,7 @@
                         </tr>
                         <tr>
 
-                            <td> <input data-servicecode="UK_Shutl2Days" data-servicename="eBay delivery - Shutl 2 days" type="radio" value="UK_Shutl2Days" id="domestic_eBay delivery - Shutl 2 days" name="serviceOptions" aria-label=" eBay delivery - Shutl 2 days Delivery time 2 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                            <td> <input  class="change-shipping" data-servicecode="UK_Shutl2Days" data-servicename="eBay delivery - Shutl 2 days" type="radio" value="UK_Shutl2Days" id="domestic_eBay delivery - Shutl 2 days" name="serviceOptions" aria-label=" eBay delivery - Shutl 2 days Delivery time 2 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                         <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Shutl 2 days</span>
                                 <span class="subText sm-1">Max: 10 kg, 60 x 50 x 50 cm</span>
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
@@ -652,7 +652,7 @@
                             <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
                             <tr>
 
-                                <td> <input data-servicecode="UK_Shutl1Day" data-servicename="eBay delivery - Shutl 1 day" type="radio" value="UK_Shutl1Day" id="domestic_eBay delivery - Shutl 1 day" name="serviceOptions" aria-label=" eBay delivery - Shutl 1 day Delivery time 1 working day Price range £5.65" data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                                <td> <input class="change-shipping"  data-servicecode="UK_Shutl1Day" data-servicename="eBay delivery - Shutl 1 day" type="radio" value="UK_Shutl1Day" id="domestic_eBay delivery - Shutl 1 day" name="serviceOptions" aria-label=" eBay delivery - Shutl 1 day Delivery time 1 working day Price range £5.65" data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                             <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Shutl 1 day</span>
                                     <span class="subText sm-1">Max: 15 kg, 80 cm</span>
                                     <span class="subText mobile_only sm-1">Tracking included: Yes</span>
@@ -665,7 +665,7 @@
                             </tr>
                             <tr>
 
-                                <td> <input data-servicecode="UK_RoyalMailSpecialDeliveryNextDay" data-servicename="Royal Mail Special Delivery (TM) 1:00 pm" type="radio" value="UK_RoyalMailSpecialDeliveryNextDay" id="domestic_Royal Mail Special Delivery (TM) 1:00 pm" name="serviceOptions" aria-label=" Royal Mail Special Delivery (TM) 1:00 pm Delivery time 1 working day Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                                <td> <input  class="change-shipping" data-servicecode="UK_RoyalMailSpecialDeliveryNextDay" data-servicename="Royal Mail Special Delivery (TM) 1:00 pm" type="radio" value="UK_RoyalMailSpecialDeliveryNextDay" id="domestic_Royal Mail Special Delivery (TM) 1:00 pm" name="serviceOptions" aria-label=" Royal Mail Special Delivery (TM) 1:00 pm Delivery time 1 working day Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                             <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail Special Delivery (TM) 1:00 pm</span>
                                     <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
                                     <span class="subText mobile_only sm-1">Tracking included: Yes</span>
