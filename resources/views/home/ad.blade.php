@@ -390,6 +390,7 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <input  type="checkbox" name="candeliver" value="1"><span class="delivery-text">Can Deliver Locally</span>
+                                        <p>Note: Need to delivery the product within 2 days of receiving the order</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <select class="form-control" name="distance">
