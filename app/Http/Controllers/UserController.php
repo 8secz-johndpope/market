@@ -427,7 +427,7 @@ class UserController extends BaseController
                 'query' => ['bool'=>['should'=>[['term'=>$dict]]]],
                 'aggs' => [
                     'group_by_category' => [
-                        "terms" => [ "field"=> "category", "size"=> 15]
+                        "terms" => [ "field"=> "category", "size"=> 25]
                     ]
                 ]
             ]
