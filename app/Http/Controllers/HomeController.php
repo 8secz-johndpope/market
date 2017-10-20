@@ -404,7 +404,7 @@ class HomeController extends BaseController
             $body['freeshipping']=1;
             $meta['shipping']=0;
         }else{
-            $meta['shipping']=(int)$request->buyer_pays*100;
+            $meta['shipping']=(int)($request->buyer_pays*100);
         }
 
         if($request->has('acceptreturns'))
