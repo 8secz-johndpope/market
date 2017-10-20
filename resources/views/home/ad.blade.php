@@ -681,4 +681,12 @@
             </div>
         </div>
     </div>
+    <script>
+        $(".change-shipping").change( function(){
+
+            var id = $(this).id;
+            $("#shipping-replace").html($("#"+id+"_extras").html());
+            $('#myModal').modal('hide');
+        });
+    </script>
 @endsection
