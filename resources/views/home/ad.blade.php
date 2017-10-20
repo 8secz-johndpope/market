@@ -412,10 +412,12 @@
                                         <div class="well">
                                             <h4>Shipping Method</h4>
                                             <p class="bold-text"> Royal Mail 2nd Class Signed For</p>
-                                            Max: 20 kg, 61 x 46 x 46 cm
-                                            Tracking included: No
-                                            Compensation included: Yes
-                                            Delivery time: 2 - 3 working days
+                                            <ul>
+                                                <li>Max: 20 kg, 61 x 46 x 46 cm</li>
+                                                <li>Tracking included: No</li>
+                                                <li>Compensation included: Yes</li>
+                                                <li>Delivery time: 2 - 3 working days</li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
