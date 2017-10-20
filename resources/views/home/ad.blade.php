@@ -424,10 +424,10 @@
                                             <p class="bold-text">Buyer Pays</p>
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
-                                                <input type="number" name="buyer_pays"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="" @if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) disabled @endif  value="@if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) 0.00 @elseif($advert->has_meta('shipping')&&$advert->meta('shipping')>=0){{$advert->shipping()}}@endif" step="1">
+                                                <input type="number" name="buyer_pays" id="buyer_pays"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="" @if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) disabled @endif  value="@if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) 0.00 @elseif($advert->has_meta('shipping')&&$advert->meta('shipping')>=0){{$advert->shipping()}}@endif" step="1">
                                             </div>
                                             <br>
-                                            <input  type="checkbox" name="freeshipping" value="1" @if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) checked @endif><span class="delivery-text">Free Shipping</span>
+                                            <input  type="checkbox" id="freeshipping" name="freeshipping" value="1" @if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) checked @endif><span class="delivery-text">Free Shipping</span>
                                             <p>This is a great way to attract potential buyers looking to grab a bargain.</p>
                                             <br>
                                             <input  type="checkbox" name="acceptreturns" value="1" @if($advert->has_param('acceptreturns')&&$advert->param('acceptreturns')===1) checked @endif><span class="delivery-text">Accept Returns</span>
@@ -782,6 +782,13 @@
             $("#shipping-title").html(title);
             $("#shipping-replace").html($("#"+id+"_extras").html());
             $('#myModal').modal('hide');
+        });
+        $("#freeshipping").change(function () {
+                if($(this).is(":checked")){
+                    $("#buyer_pays").disable();
+                }else{
+                    $("#buyer_pays").enable();
+                }
         });
     </script>
 @endsection
