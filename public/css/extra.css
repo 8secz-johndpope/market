@@ -47,7 +47,13 @@ span.delivery-text {
     background: #eee;
 }
 
+.mobile_only {
+    display: none;
+}
 
+.subText {
+    display: block;
+}
 .profile-picture img {
     max-width: 100%;
 }

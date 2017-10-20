@@ -495,7 +495,7 @@
                     <table class="table">
                         <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
                         <tr><td><input data-servicecode="UK_RoyalMailSecondClassStandard" data-servicename="Royal Mail 2nd Class" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                            <td><span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail 2nd Class</span>
+                            <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail 2nd Class</span>
                                 <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
                                 <span class="subText mobile_only sm-1">Tracking included: No</span>
                                 <span class="subText mobile_only sm-1">Compensation included: Yes</span>
