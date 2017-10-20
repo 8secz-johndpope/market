@@ -521,7 +521,7 @@
                             </td>
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">2 - 3 working days</span>
                            </td></tr>
-                        <tr><td> <input data-servicecode="UK_RoyalMailSecondClassRecorded" data-servicename="Royal Mail 2nd Class Signed For" type="radio" value="UK_RoyalMailSecondClassRecorded" id="domestic_Royal Mail 2nd Class Signed For" name="serviceOptions" aria-label=" Royal Mail 2nd Class Signed For Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                        <tr><td> <input class="change-shipping" data-servicecode="UK_RoyalMailSecondClassRecorded" data-servicename="Royal Mail 2nd Class Signed For" type="radio" value="UK_RoyalMailSecondClassRecorded" id="domestic_Royal Mail 2nd Class Signed For" name="serviceOptions" aria-label=" Royal Mail 2nd Class Signed For Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                                     <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail 2nd Class Signed For</span>
                                     <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
                                     <span class="subText mobile_only sm-1">Tracking included: No</span>
