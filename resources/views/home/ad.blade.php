@@ -491,7 +491,7 @@
                     <h4 class="modal-title">Shipping Methods</h4>
                 </div>
                 <div class="modal-body all-con">
-                    <h4>Economy services</h4>
+                    <h4 class="bold-text">Economy services</h4>
                     <table class="table">
                         <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
                         <tr><td><input data-servicecode="UK_RoyalMailSecondClassStandard" data-servicename="Royal Mail 2nd Class" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
@@ -565,7 +565,7 @@
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">3 - 5 working days</span></td>
                              </tr>
                     </table>
-                    <h4>Standard services</h4>
+                    <h4 class="bold-text">Standard services</h4>
                     <table class="table">
                         <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
                    <tr><td> <input data-servicecode="UK_RoyalMailFirstClassStandard" data-servicename="Royal Mail 1st Class" type="radio" value="UK_RoyalMailFirstClassStandard" id="domestic_Royal Mail 1st Class" name="serviceOptions" aria-label=" Royal Mail 1st Class Delivery time 1 working day Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
@@ -636,7 +636,7 @@
 
                         </tr>
                     </table>
-                        <h4>Express services</h4>
+                        <h4 class="bold-text">Express services</h4>
                         <table class="table">
                             <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
                             <tr>
