@@ -493,6 +493,7 @@ class UserController extends BaseController
             $body['images']=$request->images;
         if($request->has('description'))
             $body['description']=$request->description;
+        if(!empty($body))
         $advert->update_fields($body);
         $body=[];
         foreach ($advert->category->fields as $field){
@@ -505,6 +506,7 @@ class UserController extends BaseController
         }else{
             $body['price']=-1;
         }
+        if(!empty($body))
         $advert->update_meta($body);
         if($request->has('post')){
             $advert->publish();
