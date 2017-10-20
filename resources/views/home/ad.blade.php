@@ -411,7 +411,7 @@
                                         <p>Note: Need to ship the product by the date specified on the order</p>
                                         <div class="well">
                                             <h4>Shipping Method</h4>
-                                            <p class="bold-text"> Royal Mail 2nd Class Signed For</p>
+                                            <p class="bold-text" id="shipping-title"> Royal Mail 2nd Class Signed For</p>
                                             <div id="shipping-replace">
 
                                             <ul>
@@ -684,7 +684,9 @@
     <script>
         $(".change-shipping").change( function(){
 
-            var id = $(this).id;
+            var id = $(this).data('servicecode');
+            var title=$(this).data('servicename');
+            $("#shipping-title").html(title);
             $("#shipping-replace").html($("#"+id+"_extras").html());
             $('#myModal').modal('hide');
         });
