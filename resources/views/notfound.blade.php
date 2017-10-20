@@ -15,7 +15,7 @@
 
         <div class="col-sm-6 col-sm-offset-3">
             <h1>Sorry!The item you are looking for is not found</h1>
-            <img src="/css/ic_launcher1.png" style="width: 100%">
+            <img src="/css/ic_launcher1.png" style="width: 500px">
 
         </div>
     </div>
