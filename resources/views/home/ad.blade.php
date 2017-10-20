@@ -393,6 +393,8 @@
                                         <p>Note: Need to delivery the product within 2 days of receiving the order</p>
                                     </div>
                                     <div class="col-sm-6">
+                                        <span class="delivery-text">Delivery Distance</span>
+
                                         <select class="form-control" name="distance">
                                             <option value="1">1 Mile</option>
                                             <option value="5">5 Miles</option>
