@@ -404,14 +404,19 @@ class HomeController extends BaseController
             $body['freeshipping']=1;
             $meta['shipping']=0;
         }else{
+            $body['freeshipping']=0;
             $meta['shipping']=(int)($request->buyer_pays*100);
         }
 
         if($request->has('acceptreturns'))
             $body['acceptreturns']=1;
+        else
+            $body['acceptreturns']=0;
         if($request->has('canship')){
             $body['canship']=1;
             $meta['dispatch']=(int)$request->dispatch;
+        }else{
+            $body['canship']=0;
         }
 
         $advert->update_fields($body);

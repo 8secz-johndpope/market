@@ -404,7 +404,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <input  type="checkbox" name="canship" value="1" @if($advert->has_param('canship')) checked @endif><span class="delivery-text" >Can Ship Nationwide</span>
+                                        <input  type="checkbox" name="canship" value="1" @if($advert->has_param('canship')&&$advert->param('canship')===1) checked @endif><span class="delivery-text" >Can Ship Nationwide</span>
                                         <input type="hidden" name="shipping-type" value="UK_RoyalMailSecondClassRecorded" id="shipping-type">
                                         <p>Note: Need to ship the product by the date specified on the order</p>
                                         <div class="well">
@@ -427,10 +427,10 @@
                                                 <input type="number" name="buyer_pays"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder=""   value="@if($advert->has_meta('shipping')&&$advert->meta('shipping')>=0){{$advert->shipping()}}@endif" step="1">
                                             </div>
                                             <br>
-                                            <input  type="checkbox" name="freeshipping" value="1" @if($advert->has_param('freeshipping')) checked @endif><span class="delivery-text">Free Shipping</span>
+                                            <input  type="checkbox" name="freeshipping" value="1" @if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) checked @endif><span class="delivery-text">Free Shipping</span>
                                             <p>This is a great way to attract potential buyers looking to grab a bargain.</p>
                                             <br>
-                                            <input  type="checkbox" name="acceptreturns" value="1" @if($advert->has_param('acceptreturns')) checked @endif><span class="delivery-text">Accept Returns</span>
+                                            <input  type="checkbox" name="acceptreturns" value="1" @if($advert->has_param('acceptreturns')&&$advert->param('acceptreturns')===1) checked @endif><span class="delivery-text">Accept Returns</span>
                                             <p>Buyers have 14 days to let you know they'd like to retun an item, plus an additional 14 days to return the item. Buyers pay to return the item.</p>
 
                                         </div>
