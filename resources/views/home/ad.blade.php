@@ -427,6 +427,7 @@
                                             </div>
                                             <br>
                                             <input  type="checkbox" name="freeshipping" value="1"><span class="delivery-text">Free Shipping</span>
+                                            <p>This is a great way to attract potential buyers looking to grab a bargain.</p>
                                             <br>
                                             <input  type="checkbox" name="acceptreturns" value="1"><span class="delivery-text">Accept Returns</span>
                                             <p>Buyers have 14 days to let you know they'd like to retun an item, plus an additional 14 days to return the item. Buyers pay to return the item.</p>
