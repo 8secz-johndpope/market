@@ -110,6 +110,8 @@ class Advert extends  BaseModel
             $this->elastic = $response['_id'];
             $this->sid=$this->id;
             $this->status=0;
+            $this->category_id=0;
+
             $this->user_id=$user->id;
             $this->postcode_id=0;
             $this->save();
