@@ -490,7 +490,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Shipping Methods</h4>
                 </div>
-                <div class="modal-body all-con">        
+                <div class="modal-body all-con">
                     <h4>Economy services</h4>
                     <table class="table">
                         <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
@@ -636,7 +636,7 @@
 
                         </tr>
                     </table>
-                        <h4>Standard services</h4>
+                        <h4>Express services</h4>
                         <table class="table">
                             <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
                             <tr>
