@@ -39,6 +39,10 @@ span.active-strip {
 .detail-text {
     margin-bottom: 20px;
 }
+span.delivery-text {
+    padding: 3px;
+    font-weight: bold;
+}
 .media.selected-room {
     background: #eee;
 }

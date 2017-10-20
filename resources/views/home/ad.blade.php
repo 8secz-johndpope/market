@@ -389,7 +389,7 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <input  type="checkbox" name="candeliver" value="1"><span class="delivery-text">Can Deliver</span>
+                                        <input  type="checkbox" name="candeliver" value="1"><span class="delivery-text">Can Deliver Locally</span>
                                     </div>
                                     <div class="col-sm-6">
                                         <select class="form-control" name="distance">
