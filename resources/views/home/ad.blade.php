@@ -425,6 +425,8 @@
                                                 <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
                                                 <input type="number" name="buyer_pays" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder=""  value="@if($advert->has_meta('price')&&$advert->meta('price')>=0){{$advert->price()}}@endif" step="1">
                                             </div>
+                                            <input  type="checkbox" name="freeshipping" value="1"><span class="delivery-text">Free Shipping</span>
+
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
