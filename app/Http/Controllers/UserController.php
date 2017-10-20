@@ -496,6 +496,7 @@ class UserController extends BaseController
         if(!empty($body))
         $advert->update_fields($body);
         $body=[];
+        if($advert->category->fields)
         foreach ($advert->category->fields as $field){
             if($field->slug!=='price'&&$request->has($field->slug)){
                 $body[$field->slug] = $request->get($field->slug);
