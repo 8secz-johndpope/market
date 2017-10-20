@@ -396,6 +396,9 @@
                                         <span class="delivery-text">Delivery Distance</span>
 
                                         <select class="form-control" name="distance">
+                                            @foreach($distances as $distance)
+                                                <option value="{{$distance->value}}">{{$distance->title}}</option>
+                                            @endforeach
                                             <option value="1">1 Mile</option>
                                             <option value="5">5 Miles</option>
                                             <option value="10">10 Miles</option>
@@ -430,10 +433,10 @@
                                                 <input type="number" name="buyer_pays"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder=""  value="@if($advert->has_meta('price')&&$advert->meta('price')>=0){{$advert->price()}}@endif" step="1">
                                             </div>
                                             <br>
-                                            <input  type="checkbox" name="freeshipping" value="1"><span class="delivery-text">Free Shipping</span>
+                                            <input  type="checkbox" name="freeshipping" value="1" @if($advert->has_param('freeshipping')) checked @endif><span class="delivery-text">Free Shipping</span>
                                             <p>This is a great way to attract potential buyers looking to grab a bargain.</p>
                                             <br>
-                                            <input  type="checkbox" name="acceptreturns" value="1"><span class="delivery-text">Accept Returns</span>
+                                            <input  type="checkbox" name="acceptreturns" value="1" @if($advert->has_param('acceptreturns')) checked @endif><span class="delivery-text">Accept Returns</span>
                                             <p>Buyers have 14 days to let you know they'd like to retun an item, plus an additional 14 days to return the item. Buyers pay to return the item.</p>
 
                                         </div>

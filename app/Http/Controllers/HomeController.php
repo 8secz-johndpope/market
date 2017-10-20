@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Mail\AccountCreated;
 use App\Model\Address;
 use App\Model\Business;
+use App\Model\Distance;
 use App\Model\Pack;
 use App\Model\Payment;
 use App\Model\Postcode;
@@ -156,7 +157,7 @@ class HomeController extends BaseController
         $advert = Advert::find($id);
         $categories = Category::where('parent_id', 0)->get();
 
-        return view('home.ad',['advert'=>$advert,'categories' => $categories,'shippings'=>Shipping::all()]);
+        return view('home.ad',['advert'=>$advert,'categories' => $categories,'shippings'=>Shipping::all(),'distances'=>Distance::all()]);
     }
     public function edit(Request $request,$id)
     {
@@ -374,6 +375,7 @@ class HomeController extends BaseController
         $user=Auth::user();
         $advert=Advert::find($request->id);
         $body=['title'=>$request->title,'description'=>$request->description];
+        $meta=[];
         if($request->has('category')){
             $milliseconds = round(microtime(true) * 1000);
             $body['category']=$advert->category_id;
@@ -391,22 +393,39 @@ class HomeController extends BaseController
             $body['images']=[];
         }
         if($request->has('candeliver'))
+        {
             $body['candeliver']=1;
-        if($request->has('canship'))
+            $meta['distance']=(int)$request->distance;
+        }
+
+        if($request->has('freeshipping'))
+        {
+            $body['freeshipping']=1;
+            $meta['shipping']=0;
+        }else{
+            $meta['shipping']=(int)$request->buyer_pays*100;
+        }
+
+        if($request->has('acceptreturns'))
+            $body['acceptreturns']=1;
+        if($request->has('canship')){
             $body['canship']=1;
+            $meta['dispatch']=(int)$request->dispatch;
+        }
+
         $advert->update_fields($body);
-        $body=[];
+
         foreach ($advert->category->fields as $field){
             if($field->slug!=='price'&&$request->has($field->slug)){
-                $body[$field->slug] = $request->get($field->slug);
+                $meta[$field->slug] = $request->get($field->slug);
             }
         }
         if($request->has('price')){
-            $body['price']=$request->price*100;
+            $meta['price']=$request->price*100;
         }else{
-            $body['price']=-1;
+            $meta['price']=-1;
         }
-        $advert->update_meta($body);
+        $advert->update_meta($meta);
         if($request->has('post')){
             $advert->publish();
         }
