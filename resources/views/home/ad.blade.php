@@ -418,6 +418,13 @@
                                                 <li>Compensation included: Yes</li>
                                                 <li>Delivery time: 2 - 3 working days</li>
                                             </ul>
+                                            <a>Change Shipping Method</a>
+
+                                            <p class="bold-text">Buyer Pays</p>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
+                                                <input type="number" name="buyer_pays" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder=""  value="@if($advert->has_meta('price')&&$advert->meta('price')>=0){{$advert->price()}}@endif" step="1">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
