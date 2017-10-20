@@ -349,7 +349,7 @@
 
                                     </li>
                                     @if($advert->category->can_ship())
-                                        
+
 
                                         <li class="list-group-item" style="display: none">
                                             <div class="row">
@@ -380,6 +380,31 @@
                         </div>
 
                     </div>
+
+                    @if($advert->category->can_ship())
+                        <div class="panel panel-default extra-options-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Delivery Options</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="checkbox" name="candeliver" value="1"><span class="delivery-text">Can Deliver</span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="form-control" name="distance">
+                                            <option value="1">1 Mile</option>
+                                            <option value="5">5 Miles</option>
+                                            <option value="10">10 Miles</option>
+                                            <option value="30">30 Miles</option>
+                                            <option value="50">50 Miles</option>
+                                            <option value="100">100 Miles</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
 
                     <div class="panel panel-success total-panel">
                         <div class="panel-heading">
