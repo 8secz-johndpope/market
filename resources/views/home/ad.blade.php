@@ -787,6 +787,7 @@
                 if($(this).is(":checked")){
                     $("#buyer_pays").prop('disabled', true);
                 }else{
+                    $("#buyer_pays").val(0.00);
                     $("#buyer_pays").prop('disabled', false);
                 }
         });
