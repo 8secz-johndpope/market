@@ -474,301 +474,84 @@
                                     <span class="subText mobile_only sm-1">Delivery time: {{$economy->delivery}}</span>
                                     <div id="UK_RoyalMailSecondClassStandard_extras" style="display: none">
                                         <ul>
-                                            <li>Max: 20 kg, 61 x 46 x 46 cm</li>
-                                            <li>Tracking included: No</li>
-                                            <li>Compensation included: Yes</li>
-                                            <li>Delivery time: 2 - 3 working days</li>
+                                            <li>{{$economy->dimensions}}</li>
+                                            <li>Tracking included: {{$economy->tracking}}</li>
+                                            <li>Compensation included: {{$economy->compensation}}</li>
+                                            <li>Delivery time: {{$economy->delivery}}</li>
                                         </ul>
                                     </div>
                                 </td>
-                                <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span>
+                                <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">{{$economy->tracking}}</span>
                                 </td>
 
 
                                 <td>
-                                    <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span>
+                                    <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>{{$economy->compensation}}</b></span>
                                 </td>
-                                <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">2 - 3 working days</span>
+                                <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">{{$economy->delivery}}</span>
                                 </td></tr>
                             @endforeach
-
-                        <tr><td><input class="change-shipping" data-servicecode="UK_RoyalMailSecondClassStandard" data-servicename="Royal Mail 2nd Class" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                            <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail 2nd Class</span>
-                                <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
-                                <span class="subText mobile_only sm-1">Tracking included: No</span>
-                                <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                <span class="subText mobile_only sm-1">Delivery time: 2 - 3 working days</span>
-                                <div id="UK_RoyalMailSecondClassStandard_extras" style="display: none">
-                                    <ul>
-                                        <li>Max: 20 kg, 61 x 46 x 46 cm</li>
-                                        <li>Tracking included: No</li>
-                                        <li>Compensation included: Yes</li>
-                                        <li>Delivery time: 2 - 3 working days</li>
-                                    </ul>
-                                </div>
-                            </td>
-                                   <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span>
-                                       </td>
-
-
-                            <td>
-                            <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span>
-                            </td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">2 - 3 working days</span>
-                           </td></tr>
-                        <tr><td> <input class="change-shipping" data-servicecode="UK_RoyalMailSecondClassRecorded" data-servicename="Royal Mail 2nd Class Signed For" type="radio" value="UK_RoyalMailSecondClassRecorded" id="domestic_Royal Mail 2nd Class Signed For" name="serviceOptions" aria-label=" Royal Mail 2nd Class Signed For Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                                    <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail 2nd Class Signed For</span>
-                                    <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
-                                    <span class="subText mobile_only sm-1">Tracking included: No</span>
-                                    <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                    <span class="subText mobile_only sm-1">Delivery time: 2 - 3 working days</span>
-                                <div id="UK_RoyalMailSecondClassRecorded_extras" style="display: none">
-                                    <ul>
-                                        <li>Max: 20 kg, 61 x 46 x 46 cm</li>
-                                        <li>Tracking included: No</li>
-                                        <li>Compensation included: Yes</li>
-                                        <li>Delivery time: 2 - 3 working days</li>
-                                    </ul>
-                                </div>
-                                </td>
-                                    <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
-                                    <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                                    <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">2 - 3 working days</span></td>
-                                   </tr>
-                        <tr><td><input class="change-shipping"  data-servicecode="UK_myHermesDoorToDoorService" data-servicename="Hermes Tracked" type="radio" value="UK_myHermesDoorToDoorService" id="domestic_Hermes Tracked" name="serviceOptions" aria-label=" Hermes Tracked Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                                    <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Hermes Tracked</span>
-                                <span class="subText sm-1">Max: 15 kg, 120 cm</span>
-                                <span class="subText mobile_only sm-1">Tracking included: Yes</span>
-                                <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                <span class="subText mobile_only sm-1">Delivery time: 3 - 5 working days</span>
-                                <div id="UK_myHermesDoorToDoorService_extras" style="display: none">
-                                    <ul>
-                                        <li>Max: 15 kg, 120 cm</li>
-                                        <li>Tracking included: Yes</li>
-                                        <li>Compensation included: Yes</li>
-                                        <li>Delivery time: 3 - 5 working days</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                            <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                            <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">3 - 5 working days</span></td>
-                                   </tr>
-                        <tr><td><input class="change-shipping"  data-servicecode="UK_CollectPlusTrakedDeliveryToDoor" data-servicename="Collect+ Economy Tracked" type="radio" value="UK_CollectPlusTrakedDeliveryToDoor" id="domestic_Collect+ Economy Tracked" name="serviceOptions" aria-label=" Collect+ Economy Tracked Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                                    <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Collect+ Economy Tracked</span>
-                                <span class="subText sm-1">Max: 10 kg, 50 x 30 x 30 cm</span>
-                                <span class="subText mobile_only sm-1">Tracking included: Yes</span>
-                                <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                <span class="subText mobile_only sm-1">Delivery time: 3 - 5 working days</span>
-                                <div id="UK_CollectPlusTrakedDeliveryToDoor_extras" style="display: none">
-                                    <ul>
-                                        <li>Max: 10 kg, 50 x 30 x 30 cm</li>
-                                        <li>Tracking included: Yes</li>
-                                        <li>Compensation included: Yes</li>
-                                        <li>Delivery time: 3 - 5 working days</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                            <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                            <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">3 - 5 working days</span></td>
-                                    </tr>
-                        <tr><td><input class="change-shipping"  data-servicecode="UK_OtherCourier" data-servicename="Other courier (3 to 5 days)" type="radio" value="UK_OtherCourier" id="domestic_Other courier (3 to 5 days)" name="serviceOptions" aria-label=" Other courier (3 to 5 days) Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                                <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Other courier (3 to 5 days)</span>
-                                <span class="subText mobile_only sm-1">Tracking included: No</span>
-                                <span class="subText mobile_only sm-1">Compensation included: No</span>
-                                <span class="subText mobile_only sm-1">Delivery time: 3 - 5 working days</span>
-                                <div id="UK_OtherCourier_extras" style="display: none">
-                                    <ul>
-                                        <li>Tracking included: No</li>
-                                        <li>Compensation included: No</li>
-                                        <li>Delivery time: 3 - 5 working days</li>
-                                    </ul>
-                                </div>
-                            </td>
-
-                            <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
-                            <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
-                            <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">3 - 5 working days</span></td>
-                              </tr>
-                        <tr><td><input class="change-shipping"  data-servicecode="UK_Shutl3To5Days" data-servicename="Shutl 3-5 days" type="radio" value="UK_Shutl3To5Days" id="domestic_eBay delivery - Shutl 3-5 days" name="serviceOptions" aria-label=" eBay delivery - Shutl 3-5 days Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                                <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Shutl 3-5 days</span>
-                                <span class="subText sm-1">Max: 15 kg, 120 cm</span>
-                                <span class="subText mobile_only sm-1">Tracking included: Yes</span>
-                                <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                <span class="subText mobile_only sm-1">Delivery time: 3 - 5 working days</span>
-                                <div id="UK_Shutl3To5Days_extras" style="display: none">
-                                    <ul>
-                                        <li>Max: 15 kg, 120 cm</li>
-                                        <li>Tracking included: Yes</li>
-                                        <li>Compensation included: Yes</li>
-                                        <li>Delivery time: 3 - 5 working days</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">3 - 5 working days</span></td>
-                             </tr>
                     </table>
                     <h4 class="bold-text">Standard services</h4>
                     <table class="table">
                         <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
-                   <tr><td> <input class="change-shipping"  data-servicecode="UK_RoyalMailFirstClassStandard" data-servicename="Royal Mail 1st Class" type="radio" value="UK_RoyalMailFirstClassStandard" id="domestic_Royal Mail 1st Class" name="serviceOptions" aria-label=" Royal Mail 1st Class Delivery time 1 working day Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                        <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail 1st Class</span>
-                        <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
-                        <span class="subText mobile_only sm-1">Tracking included: No</span>
-                        <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                        <span class="subText mobile_only sm-1">Delivery time: 1 working day</span>
-                           <div id="UK_RoyalMailFirstClassStandard_extras" style="display: none">
-                               <ul>
-                                   <li>Max: 20 kg, 61 x 46 x 46 cm</li>
-                                   <li>Tracking included: No</li>
-                                   <li>Compensation included: Yes</li>
-                                   <li>Delivery time: 1 working day</li>
-                               </ul>
-                           </div>
-                   </td>
+                        @foreach($standards as $economy)
+                            <tr><td><input class="change-shipping" data-servicecode="{{$economy->slug}}" data-servicename="{{$economy->title}}" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                                    <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">{{$economy->title}}</span>
+                                    <span class="subText sm-1">{{$economy->dimensions}}</span>
+                                    <span class="subText mobile_only sm-1">Tracking included: {{$economy->tracking}}</span>
+                                    <span class="subText mobile_only sm-1">Compensation included: {{$economy->compensation}}</span>
+                                    <span class="subText mobile_only sm-1">Delivery time: {{$economy->delivery}}</span>
+                                    <div id="UK_RoyalMailSecondClassStandard_extras" style="display: none">
+                                        <ul>
+                                            <li>{{$economy->dimensions}}</li>
+                                            <li>Tracking included: {{$economy->tracking}}</li>
+                                            <li>Compensation included: {{$economy->compensation}}</li>
+                                            <li>Delivery time: {{$economy->delivery}}</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">{{$economy->tracking}}</span>
+                                </td>
 
-                        <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
-                        <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                        <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">1 working day</span></td>
-                   </tr>
 
-                       <tr>
-                           <td>
-                           <input class="change-shipping"  data-servicecode="UK_RoyalMailFirstClassRecorded" data-servicename="Royal Mail 1st Class Signed For" type="radio" value="UK_RoyalMailFirstClassRecorded" id="domestic_Royal Mail 1st Class Signed For" name="serviceOptions" aria-label=" Royal Mail 1st Class Signed For Delivery time 1 working day Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                        <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail 1st Class Signed For</span>
-                           <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
-                           <span class="subText mobile_only sm-1">Tracking included: No</span>
-                           <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                           <span class="subText mobile_only sm-1">Delivery time: 1 working day</span>
-                               <div id="UK_RoyalMailFirstClassRecorded_extras" style="display: none">
-                                   <ul>
-                                       <li>Max: 20 kg, 61 x 46 x 46 cm</li>
-                                       <li>Tracking included: No</li>
-                                       <li>Compensation included: Yes</li>
-                                       <li>Delivery time: 1 working day</li>
-                                   </ul>
-                               </div>
-                           </td>
-                           <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
-                           <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                           <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">1 working day</span></td>
+                                <td>
+                                    <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>{{$economy->compensation}}</b></span>
+                                </td>
+                                <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">{{$economy->delivery}}</span>
+                                </td></tr>
+                        @endforeach
 
-                       </tr>
-                        <tr>
-                            <td>
-                        <input class="change-shipping"  data-servicecode="UK_Parcelforce48" data-servicename="Parcelforce 48" type="radio" value="UK_Parcelforce48" id="domestic_Parcelforce 48" name="serviceOptions" aria-label=" Parcelforce 48 Delivery time 1 - 2 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                        <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Parcelforce 48</span>
-                                <span class="subText sm-1">Max: 30 kg, 150 cm</span>
-                                <span class="subText mobile_only sm-1">Tracking included: Yes</span>
-                                <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                <span class="subText mobile_only sm-1">Delivery time: 1 - 2 working days</span>
-                                <div id="UK_Parcelforce48_extras" style="display: none">
-                                    <ul>
-                                        <li>Max: 30 kg, 150 cm</li>
-                                        <li>Tracking included: Yes</li>
-                                        <li>Compensation included: Yes</li>
-                                        <li>Delivery time: 1 - 2 working days</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">1 - 2 working days</span></td>
-
-                        </tr>
-                        <tr>
-                            <td>
-                        <input class="change-shipping"  data-servicecode="UK_OtherCourier48" data-servicename="Other 48h courier" type="radio" value="UK_OtherCourier48" id="domestic_Other 48h courier" name="serviceOptions" aria-label=" Other 48h courier Delivery time 1 - 2 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                        <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Other 48h courier</span>
-                                <span class="subText mobile_only sm-1">Tracking included: No</span>
-                                <span class="subText mobile_only sm-1">Compensation included: No</span>
-                                <span class="subText mobile_only sm-1">Delivery time: 1 - 2 working days</span>
-                                <div id="UK_OtherCourier48_extras" style="display: none">
-                                    <ul>
-                                        <li>Tracking included: No</li>
-                                        <li>Compensation included: No</li>
-                                        <li>Delivery time: 1 - 2 working days</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
-                            <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">1 - 2 working days</span></td>
-
-                        </tr>
-                        <tr>
-
-                            <td> <input  class="change-shipping" data-servicecode="UK_Shutl2Days" data-servicename="Shutl 2 days" type="radio" value="UK_Shutl2Days" id="domestic_eBay delivery - Shutl 2 days" name="serviceOptions" aria-label=" eBay delivery - Shutl 2 days Delivery time 2 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                        <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Shutl 2 days</span>
-                                <span class="subText sm-1">Max: 10 kg, 60 x 50 x 50 cm</span>
-                                <span class="subText mobile_only sm-1">Tracking included: Yes</span>
-                                <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                <span class="subText mobile_only sm-1">Delivery time: 2 working days</span>
-                                <div id="UK_Shutl2Days_extras" style="display: none">
-                                    <ul>
-                                        <li>Max: 10 kg, 60 x 50 x 50 cm</li>
-                                        <li>Tracking included: Yes</li>
-                                        <li>Compensation included: Yes</li>
-                                        <li>Delivery time: 2 working days</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
-                            <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
-                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">2 working days</span> </td>
-
-                        </tr>
                     </table>
                         <h4 class="bold-text">Express services</h4>
                         <table class="table">
                             <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
-                            <tr>
+                            @foreach($expresses as $economy)
+                                <tr><td><input class="change-shipping" data-servicecode="{{$economy->slug}}" data-servicename="{{$economy->title}}" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                                        <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">{{$economy->title}}</span>
+                                        <span class="subText sm-1">{{$economy->dimensions}}</span>
+                                        <span class="subText mobile_only sm-1">Tracking included: {{$economy->tracking}}</span>
+                                        <span class="subText mobile_only sm-1">Compensation included: {{$economy->compensation}}</span>
+                                        <span class="subText mobile_only sm-1">Delivery time: {{$economy->delivery}}</span>
+                                        <div id="UK_RoyalMailSecondClassStandard_extras" style="display: none">
+                                            <ul>
+                                                <li>{{$economy->dimensions}}</li>
+                                                <li>Tracking included: {{$economy->tracking}}</li>
+                                                <li>Compensation included: {{$economy->compensation}}</li>
+                                                <li>Delivery time: {{$economy->delivery}}</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">{{$economy->tracking}}</span>
+                                    </td>
 
-                                <td> <input class="change-shipping"  data-servicecode="UK_Shutl1Day" data-servicename="Shutl 1 day" type="radio" value="UK_Shutl1Day" id="domestic_eBay delivery - Shutl 1 day" name="serviceOptions" aria-label=" eBay delivery - Shutl 1 day Delivery time 1 working day Price range £5.65" data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                            <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Shutl 1 day</span>
-                                    <span class="subText sm-1">Max: 15 kg, 80 cm</span>
-                                    <span class="subText mobile_only sm-1">Tracking included: Yes</span>
-                                    <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                    <span class="subText mobile_only sm-1">Delivery time: 1 working day</span>
-                                    <div id=UK_Shutl1Day_extras" style="display: none">
-                                        <ul>
-                                            <li>Max: 15 kg, 80 cm</li>
-                                            <li>Tracking included: Yes</li>
-                                            <li>Compensation included: Yes</li>
-                                            <li>Delivery time: 1 working day</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                                <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
-                                <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
-                                <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">1 working day</span> </td>
 
-                            </tr>
-                            <tr>
-
-                                <td> <input  class="change-shipping" data-servicecode="UK_RoyalMailSpecialDeliveryNextDay" data-servicename="Royal Mail Special Delivery (TM) 1:00 pm" type="radio" value="UK_RoyalMailSpecialDeliveryNextDay" id="domestic_Royal Mail Special Delivery (TM) 1:00 pm" name="serviceOptions" aria-label=" Royal Mail Special Delivery (TM) 1:00 pm Delivery time 1 working day Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                            <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail Special Delivery (TM) 1:00 pm</span>
-                                    <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
-                                    <span class="subText mobile_only sm-1">Tracking included: Yes</span>
-                                    <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                    <span class="subText mobile_only sm-1">Delivery time: 1 working day</span>
-                                    <div id="UK_RoyalMailSpecialDeliveryNextDay_extras" style="display: none">
-                                        <ul>
-                                            <li>Max: 20 kg, 61 x 46 x 46 cm</li>
-                                            <li>Tracking included: Yes</li>
-                                            <li>Compensation included: Yes</li>
-                                            <li>Delivery time: 1 working day</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                                <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
-                                <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
-                                <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">1 working day</span> </td>
-
-                            </tr>
+                                    <td>
+                                        <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>{{$economy->compensation}}</b></span>
+                                    </td>
+                                    <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">{{$economy->delivery}}</span>
+                                    </td></tr>
+                            @endforeach
                     </table>
                 </div>
             </div>
