@@ -390,6 +390,10 @@ class HomeController extends BaseController
         }else{
             $body['images']=[];
         }
+        if($request->has('candeliver'))
+            $body['candeliver']=1;
+        if($request->has('canship'))
+            $body['canship']=1;
         $advert->update_fields($body);
         $body=[];
         foreach ($advert->category->fields as $field){

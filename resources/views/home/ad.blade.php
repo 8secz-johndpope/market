@@ -440,7 +440,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <span class="delivery-text">Dispatch Time</span>
-                                        <select class="form-control" name="distance">
+                                        <select class="form-control" name="dispatch">
                                             <option value="1">1 working day</option>
                                             <option value="2">2 working days</option>
                                             <option value="3">3 working days</option>
