@@ -238,7 +238,7 @@ $("#myModal1 img").click(function () {
     }
     $(this).parent().children(":first").prop("checked", !$(this).parent().children(":first").prop("checked"));
 });
-$(document).on('change',".change-shipping", function(){
+$(".change-shipping").change( function(){
     var id = $(this).id;
     $("#shipping-replace").html($("#"+id+"_extras").html());
     $('#myModal').modal('hide');
