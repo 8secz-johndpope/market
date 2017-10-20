@@ -348,7 +348,7 @@
                                         </div>
 
                                     </li>
-                               
+
                                 </ul>
                             </div>
                         </div>
@@ -465,6 +465,33 @@
                     <h4 class="bold-text">Economy services</h4>
                     <table class="table">
                         <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
+                        @foreach($economies as $economy)
+                            <tr><td><input class="change-shipping" data-servicecode="{{$economy->slug}}" data-servicename="{{$economy->title}}" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                                    <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">{{$economy->title}}</span>
+                                    <span class="subText sm-1">{{$economy->dimensions}}</span>
+                                    <span class="subText mobile_only sm-1">Tracking included: {{$economy->tracking}}</span>
+                                    <span class="subText mobile_only sm-1">Compensation included: {{$economy->compensation}}</span>
+                                    <span class="subText mobile_only sm-1">Delivery time: {{$economy->delivery}}</span>
+                                    <div id="UK_RoyalMailSecondClassStandard_extras" style="display: none">
+                                        <ul>
+                                            <li>Max: 20 kg, 61 x 46 x 46 cm</li>
+                                            <li>Tracking included: No</li>
+                                            <li>Compensation included: Yes</li>
+                                            <li>Delivery time: 2 - 3 working days</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span>
+                                </td>
+
+
+                                <td>
+                                    <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span>
+                                </td>
+                                <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">2 - 3 working days</span>
+                                </td></tr>
+                            @endforeach
+
                         <tr><td><input class="change-shipping" data-servicecode="UK_RoyalMailSecondClassStandard" data-servicename="Royal Mail 2nd Class" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                             <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Royal Mail 2nd Class</span>
                                 <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
