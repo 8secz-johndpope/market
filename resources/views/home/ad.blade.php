@@ -438,13 +438,9 @@
                                     <div class="col-sm-6">
                                         <span class="delivery-text">Dispatch Time</span>
                                         <select class="form-control" name="dispatch">
-                                            <option value="1">1 working day</option>
-                                            <option value="2">2 working days</option>
-                                            <option value="3">3 working days</option>
-                                            <option value="5">5 working days</option>
-                                            <option value="10">10 working days</option>
-                                            <option value="30">1 month</option>
-                                            <option value="60">2 months</option>
+                                            @foreach($dispatches as $dispatch)
+                                                <option value="{{$dispatch->value}}" @if($advert->has_meta('dispatch')&&$advert->meta('dispatch')===$dispatch->value) selected @endif>{{$dispatch->title}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Mail\AccountCreated;
 use App\Model\Address;
 use App\Model\Business;
+use App\Model\Dispatch;
 use App\Model\Distance;
 use App\Model\Pack;
 use App\Model\Payment;
@@ -157,7 +158,7 @@ class HomeController extends BaseController
         $advert = Advert::find($id);
         $categories = Category::where('parent_id', 0)->get();
 
-        return view('home.ad',['advert'=>$advert,'categories' => $categories,'shippings'=>Shipping::all(),'distances'=>Distance::all()]);
+        return view('home.ad',['advert'=>$advert,'categories' => $categories,'shippings'=>Shipping::all(),'distances'=>Distance::all(),'dispatches'=>Dispatch::all()]);
     }
     public function edit(Request $request,$id)
     {
