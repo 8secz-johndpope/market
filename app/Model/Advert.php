@@ -388,6 +388,11 @@ class Advert extends  BaseModel
             $this->fetch();
         return $this->meta('price')/100;
     }
+    public function shipping(){
+        if($this->dict===null)
+            $this->fetch();
+        return $this->meta('shipping')/100;
+    }
     public function pence(){
         if($this->dict===null)
             $this->fetch();
