@@ -239,6 +239,7 @@ $("#myModal1 img").click(function () {
     $(this).parent().children(":first").prop("checked", !$(this).parent().children(":first").prop("checked"));
 });
 $(".change-shipping").change( function(){
+    alert("yes");
     var id = $(this).id;
     $("#shipping-replace").html($("#"+id+"_extras").html());
     $('#myModal').modal('hide');
