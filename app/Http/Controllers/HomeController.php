@@ -158,7 +158,7 @@ class HomeController extends BaseController
         $advert = Advert::find($id);
         $categories = Category::where('parent_id', 0)->get();
 
-        return view('home.ad',['advert'=>$advert,'categories' => $categories,'economies'=>Shipping::where('type',0)->get(),'standards'=>Shipping::where('type',1)->get(),'expresses'=>Shipping::where('type',2)->get(),'distances'=>Distance::all(),'dispatches'=>Dispatch::all()]);
+        return view('home.ad',['advert'=>$advert,'categories' => $categories,'shipping'=>Shipping::find(0),'economies'=>Shipping::where('type',0)->get(),'standards'=>Shipping::where('type',1)->get(),'expresses'=>Shipping::where('type',2)->get(),'distances'=>Distance::all(),'dispatches'=>Dispatch::all()]);
     }
     public function edit(Request $request,$id)
     {

@@ -379,18 +379,18 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <input  type="checkbox" name="canship" value="1" @if($advert->has_param('canship')&&$advert->param('canship')===1) checked @endif><span class="delivery-text" >Can Ship Nationwide</span>
-                                        <input type="hidden" name="shipping-type" value="UK_RoyalMailSecondClassRecorded" id="shipping-type">
+                                        <input type="hidden" name="shipping" value="{{$shipping->id}}" id="shipping-type">
                                         <p>Note: Need to ship the product by the date specified on the order</p>
                                         <div class="well">
                                             <h4>Shipping Method</h4>
-                                            <p class="bold-text" id="shipping-title"> Royal Mail 2nd Class Signed For</p>
+                                            <p class="bold-text" id="shipping-title">{{$shipping->title}}</p>
                                             <div id="shipping-replace">
 
                                             <ul>
-                                                <li>Max: 20 kg, 61 x 46 x 46 cm</li>
-                                                <li>Tracking included: No</li>
-                                                <li>Compensation included: Yes</li>
-                                                <li>Delivery time: 2 - 3 working days</li>
+                                                <li>{{$shipping->dimensions}}</li>
+                                                <li>Tracking included: {{$shipping->tracking}}</li>
+                                                <li>Compensation included:  {{$shipping->compensation}}</li>
+                                                <li>Delivery time: {{$shipping->delivery}}</li>
                                             </ul>
                                             </div>
                                             <a  data-toggle="modal" data-target="#myModal">Change Shipping Method</a>
@@ -466,13 +466,13 @@
                     <table class="table">
                         <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
                         @foreach($economies as $economy)
-                            <tr><td><input class="change-shipping" data-servicecode="{{$economy->slug}}" data-servicename="{{$economy->title}}" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                            <tr><td><input class="change-shipping" data-servicecode="{{$economy->id}}" data-servicename="{{$economy->title}}" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                                     <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">{{$economy->title}}</span>
                                     <span class="subText sm-1">{{$economy->dimensions}}</span>
                                     <span class="subText mobile_only sm-1">Tracking included: {{$economy->tracking}}</span>
                                     <span class="subText mobile_only sm-1">Compensation included: {{$economy->compensation}}</span>
                                     <span class="subText mobile_only sm-1">Delivery time: {{$economy->delivery}}</span>
-                                    <div id="UK_RoyalMailSecondClassStandard_extras" style="display: none">
+                                    <div id="{{$economy->id}}_extras" style="display: none">
                                         <ul>
                                             <li>{{$economy->dimensions}}</li>
                                             <li>Tracking included: {{$economy->tracking}}</li>
@@ -496,13 +496,13 @@
                     <table class="table">
                         <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
                         @foreach($standards as $economy)
-                            <tr><td><input class="change-shipping" data-servicecode="{{$economy->slug}}" data-servicename="{{$economy->title}}" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                            <tr><td><input class="change-shipping" data-servicecode="{{$economy->id}}" data-servicename="{{$economy->title}}" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                                     <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">{{$economy->title}}</span>
                                     <span class="subText sm-1">{{$economy->dimensions}}</span>
                                     <span class="subText mobile_only sm-1">Tracking included: {{$economy->tracking}}</span>
                                     <span class="subText mobile_only sm-1">Compensation included: {{$economy->compensation}}</span>
                                     <span class="subText mobile_only sm-1">Delivery time: {{$economy->delivery}}</span>
-                                    <div id="UK_RoyalMailSecondClassStandard_extras" style="display: none">
+                                    <div id="{{$economy->id}}_extras" style="display: none">
                                         <ul>
                                             <li>{{$economy->dimensions}}</li>
                                             <li>Tracking included: {{$economy->tracking}}</li>
@@ -527,13 +527,13 @@
                         <table class="table">
                             <tr><th>Service</th><th>Tracking</th></span><th>Compensation</th><th>Delivery time</th></tr>
                             @foreach($expresses as $economy)
-                                <tr><td><input class="change-shipping" data-servicecode="{{$economy->slug}}" data-servicename="{{$economy->title}}" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
+                                <tr><td><input class="change-shipping" data-servicecode="{{$economy->id}}" data-servicename="{{$economy->title}}" type="radio" value="UK_RoyalMailSecondClassStandard" id="domestic_Royal Mail 2nd Class" name="serviceOptions" aria-label=" Royal Mail 2nd Class Delivery time 2 - 3 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
                                         <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">{{$economy->title}}</span>
                                         <span class="subText sm-1">{{$economy->dimensions}}</span>
                                         <span class="subText mobile_only sm-1">Tracking included: {{$economy->tracking}}</span>
                                         <span class="subText mobile_only sm-1">Compensation included: {{$economy->compensation}}</span>
                                         <span class="subText mobile_only sm-1">Delivery time: {{$economy->delivery}}</span>
-                                        <div id="UK_RoyalMailSecondClassStandard_extras" style="display: none">
+                                        <div id="{{$economy->id}}_extras" style="display: none">
                                             <ul>
                                                 <li>{{$economy->dimensions}}</li>
                                                 <li>Tracking included: {{$economy->tracking}}</li>
