@@ -527,6 +527,14 @@
                                     <span class="subText mobile_only sm-1">Tracking included: No</span>
                                     <span class="subText mobile_only sm-1">Compensation included: Yes</span>
                                     <span class="subText mobile_only sm-1">Delivery time: 2 - 3 working days</span>
+                                <div id="UK_RoyalMailSecondClassRecorded_extras" style="display: none">
+                                    <ul>
+                                        <li>Max: 20 kg, 61 x 46 x 46 cm</li>
+                                        <li>Tracking included: No</li>
+                                        <li>Compensation included: Yes</li>
+                                        <li>Delivery time: 2 - 3 working days</li>
+                                    </ul>
+                                </div>
                                 </td>
                                     <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
                                     <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
@@ -537,7 +545,16 @@
                                 <span class="subText sm-1">Max: 15 kg, 120 cm</span>
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
                                 <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                <span class="subText mobile_only sm-1">Delivery time: 3 - 5 working days</span></td>
+                                <span class="subText mobile_only sm-1">Delivery time: 3 - 5 working days</span>
+                                <div id="UK_myHermesDoorToDoorService_extras" style="display: none">
+                                    <ul>
+                                        <li>Max: 15 kg, 120 cm</li>
+                                        <li>Tracking included: Yes</li>
+                                        <li>Compensation included: Yes</li>
+                                        <li>Delivery time: 3 - 5 working days</li>
+                                    </ul>
+                                </div>
+                            </td>
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">3 - 5 working days</span></td>
@@ -548,6 +565,14 @@
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
                                 <span class="subText mobile_only sm-1">Compensation included: Yes</span>
                                 <span class="subText mobile_only sm-1">Delivery time: 3 - 5 working days</span>
+                                <div id="UK_CollectPlusTrakedDeliveryToDoor_extras" style="display: none">
+                                    <ul>
+                                        <li>Max: 10 kg, 50 x 30 x 30 cm</li>
+                                        <li>Tracking included: Yes</li>
+                                        <li>Compensation included: Yes</li>
+                                        <li>Delivery time: 3 - 5 working days</li>
+                                    </ul>
+                                </div>
                             </td>
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
@@ -558,6 +583,13 @@
                                 <span class="subText mobile_only sm-1">Tracking included: No</span>
                                 <span class="subText mobile_only sm-1">Compensation included: No</span>
                                 <span class="subText mobile_only sm-1">Delivery time: 3 - 5 working days</span>
+                                <div id="UK_OtherCourier_extras" style="display: none">
+                                    <ul>
+                                        <li>Tracking included: No</li>
+                                        <li>Compensation included: No</li>
+                                        <li>Delivery time: 3 - 5 working days</li>
+                                    </ul>
+                                </div>
                             </td>
 
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
@@ -570,6 +602,14 @@
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
                                 <span class="subText mobile_only sm-1">Compensation included: Yes</span>
                                 <span class="subText mobile_only sm-1">Delivery time: 3 - 5 working days</span>
+                                <div id="UK_Shutl3To5Days_extras" style="display: none">
+                                    <ul>
+                                        <li>Max: 15 kg, 120 cm</li>
+                                        <li>Tracking included: Yes</li>
+                                        <li>Compensation included: Yes</li>
+                                        <li>Delivery time: 3 - 5 working days</li>
+                                    </ul>
+                                </div>
                             </td>
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
@@ -585,6 +625,14 @@
                         <span class="subText mobile_only sm-1">Tracking included: No</span>
                         <span class="subText mobile_only sm-1">Compensation included: Yes</span>
                         <span class="subText mobile_only sm-1">Delivery time: 1 working day</span>
+                           <div id="UK_RoyalMailFirstClassStandard_extras" style="display: none">
+                               <ul>
+                                   <li>Max: 20 kg, 61 x 46 x 46 cm</li>
+                                   <li>Tracking included: No</li>
+                                   <li>Compensation included: Yes</li>
+                                   <li>Delivery time: 1 working day</li>
+                               </ul>
+                           </div>
                    </td>
 
                         <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
@@ -600,6 +648,14 @@
                            <span class="subText mobile_only sm-1">Tracking included: No</span>
                            <span class="subText mobile_only sm-1">Compensation included: Yes</span>
                            <span class="subText mobile_only sm-1">Delivery time: 1 working day</span>
+                               <div id="UK_RoyalMailFirstClassRecorded_extras" style="display: none">
+                                   <ul>
+                                       <li>Max: 20 kg, 61 x 46 x 46 cm</li>
+                                       <li>Tracking included: No</li>
+                                       <li>Compensation included: Yes</li>
+                                       <li>Delivery time: 1 working day</li>
+                                   </ul>
+                               </div>
                            </td>
                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
                            <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
@@ -614,6 +670,14 @@
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
                                 <span class="subText mobile_only sm-1">Compensation included: Yes</span>
                                 <span class="subText mobile_only sm-1">Delivery time: 1 - 2 working days</span>
+                                <div id="UK_Parcelforce48_extras" style="display: none">
+                                    <ul>
+                                        <li>Max: 30 kg, 150 cm</li>
+                                        <li>Tracking included: Yes</li>
+                                        <li>Compensation included: Yes</li>
+                                        <li>Delivery time: 1 - 2 working days</li>
+                                    </ul>
+                                </div>
                             </td>
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span></td>
@@ -627,6 +691,13 @@
                                 <span class="subText mobile_only sm-1">Tracking included: No</span>
                                 <span class="subText mobile_only sm-1">Compensation included: No</span>
                                 <span class="subText mobile_only sm-1">Delivery time: 1 - 2 working days</span>
+                                <div id="UK_OtherCourier48_extras" style="display: none">
+                                    <ul>
+                                        <li>Tracking included: No</li>
+                                        <li>Compensation included: No</li>
+                                        <li>Delivery time: 1 - 2 working days</li>
+                                    </ul>
+                                </div>
                             </td>
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">No</span></td>
@@ -640,7 +711,16 @@
                                 <span class="subText sm-1">Max: 10 kg, 60 x 50 x 50 cm</span>
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
                                 <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                <span class="subText mobile_only sm-1">Delivery time: 2 working days</span></td>
+                                <span class="subText mobile_only sm-1">Delivery time: 2 working days</span>
+                                <div id="UK_Shutl2Days_extras" style="display: none">
+                                    <ul>
+                                        <li>Max: 10 kg, 60 x 50 x 50 cm</li>
+                                        <li>Tracking included: Yes</li>
+                                        <li>Compensation included: Yes</li>
+                                        <li>Delivery time: 2 working days</li>
+                                    </ul>
+                                </div>
+                            </td>
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
                             <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">2 working days</span> </td>
@@ -657,7 +737,16 @@
                                     <span class="subText sm-1">Max: 15 kg, 80 cm</span>
                                     <span class="subText mobile_only sm-1">Tracking included: Yes</span>
                                     <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                    <span class="subText mobile_only sm-1">Delivery time: 1 working day</span></td>
+                                    <span class="subText mobile_only sm-1">Delivery time: 1 working day</span>
+                                    <div id=UK_Shutl1Day_extras" style="display: none">
+                                        <ul>
+                                            <li>Max: 15 kg, 80 cm</li>
+                                            <li>Tracking included: Yes</li>
+                                            <li>Compensation included: Yes</li>
+                                            <li>Delivery time: 1 working day</li>
+                                        </ul>
+                                    </div>
+                                </td>
                                 <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
                                 <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
                                 <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">1 working day</span> </td>
@@ -670,7 +759,16 @@
                                     <span class="subText sm-1">Max: 20 kg, 61 x 46 x 46 cm</span>
                                     <span class="subText mobile_only sm-1">Tracking included: Yes</span>
                                     <span class="subText mobile_only sm-1">Compensation included: Yes</span>
-                                    <span class="subText mobile_only sm-1">Delivery time: 1 working day</span></td>
+                                    <span class="subText mobile_only sm-1">Delivery time: 1 working day</span>
+                                    <div id="UK_RoyalMailSpecialDeliveryNextDay_extras" style="display: none">
+                                        <ul>
+                                            <li>Max: 20 kg, 61 x 46 x 46 cm</li>
+                                            <li>Tracking included: Yes</li>
+                                            <li>Compensation included: Yes</li>
+                                            <li>Delivery time: 1 working day</li>
+                                        </ul>
+                                    </div>
+                                </td>
                                 <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
                                 <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4"><b>Yes</b></span> </td>
                                 <td><span class="shippingServicesOverlay__groupContentCell lg_only col-4">1 working day</span> </td>
