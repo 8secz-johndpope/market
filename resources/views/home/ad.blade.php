@@ -425,7 +425,11 @@
                                                 <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
                                                 <input type="number" name="buyer_pays" class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder=""  value="@if($advert->has_meta('price')&&$advert->meta('price')>=0){{$advert->price()}}@endif" step="1">
                                             </div>
+                                            <br>
                                             <input  type="checkbox" name="freeshipping" value="1"><span class="delivery-text">Free Shipping</span>
+                                            <br>
+                                            <input  type="checkbox" name="acceptreturns" value="1"><span class="delivery-text">Accept Returns</span>
+                                            <p>Buyers have 14 days to let you know they'd like to retun an item, plus an additional 14 days to return the item. Buyers pay to return the item.</p>
 
                                         </div>
                                     </div>
