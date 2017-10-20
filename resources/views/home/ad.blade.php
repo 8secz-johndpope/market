@@ -389,7 +389,7 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <input  type="checkbox" name="candeliver" value="1"><span class="delivery-text">Can Deliver Locally</span>
+                                        <input  type="checkbox" name="candeliver" value="1"  @if($advert->has_param('candeliver')) checked @endif><span class="delivery-text">Can Deliver Locally</span>
                                         <p>Note: Need to delivery the product within 2 days of receiving the order</p>
                                     </div>
                                     <div class="col-sm-6">
@@ -407,7 +407,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <input  type="checkbox" name="canship" value="1"><span class="delivery-text">Can Ship Nationwide</span>
+                                        <input  type="checkbox" name="canship" value="1" @if($advert->has_param('canship')) checked @endif><span class="delivery-text" >Can Ship Nationwide</span>
                                         <input type="hidden" name="shipping-type" value="UK_RoyalMailSecondClassRecorded" id="shipping-type">
                                         <p>Note: Need to ship the product by the date specified on the order</p>
                                         <div class="well">
