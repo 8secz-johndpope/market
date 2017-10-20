@@ -403,6 +403,24 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input  type="checkbox" name="canship" value="1"><span class="delivery-text">Can Ship Nationwide</span>
+                                        <p>Note: Need to ship the product by the date specified on the order</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <span class="delivery-text">Dispatch Time</span>
+                                        <select class="form-control" name="distance">
+                                            <option value="1">1 working day</option>
+                                            <option value="2">2 working days</option>
+                                            <option value="3">3 working days</option>
+                                            <option value="5">5 working days</option>
+                                            <option value="10">10 working days</option>
+                                            <option value="30">1 month</option>
+                                            <option value="60">2 months</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     @endif
