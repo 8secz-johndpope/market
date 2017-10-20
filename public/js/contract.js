@@ -238,6 +238,12 @@ $("#myModal1 img").click(function () {
     }
     $(this).parent().children(":first").prop("checked", !$(this).parent().children(":first").prop("checked"));
 });
+$(document).on('change',".change-shipping", function(){
+    var id = $(this).id;
+    $("#shipping-replace").html($("#"+id+"_extras").html());
+    $('#myModal').modal('hide');
+});
+
 function get_location(postcode) {
     $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+postcode+"&key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0",function (data,status) {
         console.log(data.results[0]['formatted_address']);
