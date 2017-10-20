@@ -348,33 +348,7 @@
                                         </div>
 
                                     </li>
-                                    @if($advert->category->can_ship())
-
-
-                                        <li class="list-group-item" style="display: none">
-                                            <div class="row">
-                                                <div class="col-sm-8">
-                                                    <div class="form-check">
-                                                        <label class="form-check-label">
-                                                            <input class="form-check-input extra-change" type="checkbox" name="shipping" value="1" id="shipping" @if($advert->has_param('shipping')) checked @endif>
-                                                            <span class="span-shipping">Shipping</span> &nbsp;Ship to the buyer when order is placed.
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-
-                                                    <select class="form-control extra-change" name="shipping_type" id="shipping_type">
-                                                        @foreach($shippings as $shipping)
-                                                            <option value="{{$shipping->key}}">Shipping (2kg)  ( @if($advert->has_pack($shipping->key)) Included in Package  @else £{{$advert->extra_price($shipping->key)/100}} @endif )</option>
-                                                        @endforeach
-                                                    </select>
-
-                                                </div>
-                                            </div>
-
-                                        </li>
-                                    @endif
-
+                               
                                 </ul>
                             </div>
                         </div>
