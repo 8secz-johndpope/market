@@ -409,6 +409,14 @@
                                     <div class="col-sm-6">
                                         <input  type="checkbox" name="canship" value="1"><span class="delivery-text">Can Ship Nationwide</span>
                                         <p>Note: Need to ship the product by the date specified on the order</p>
+                                        <div class="well">
+                                            <h4>Shipping Method</h4>
+                                            <p class="bold-text"> Royal Mail 2nd Class Signed For</p>
+                                            Max: 20 kg, 61 x 46 x 46 cm
+                                            Tracking included: No
+                                            Compensation included: Yes
+                                            Delivery time: 2 - 3 working days
+                                        </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <span class="delivery-text">Dispatch Time</span>
