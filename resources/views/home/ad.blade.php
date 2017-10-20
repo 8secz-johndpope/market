@@ -554,7 +554,7 @@
                             <td> <span class="shippingServicesOverlay__groupContentCell lg_only col-4">3 - 5 working days</span></td>
                               </tr>
                         <tr><td><input data-servicecode="UK_Shutl3To5Days" data-servicename="eBay delivery - Shutl 3-5 days" type="radio" value="UK_Shutl3To5Days" id="domestic_eBay delivery - Shutl 3-5 days" name="serviceOptions" aria-label=" eBay delivery - Shutl 3-5 days Delivery time 3 - 5 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                                <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">eBay delivery - Shutl 3-5 days</span>
+                                <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Shutl 3-5 days</span>
                                 <span class="subText sm-1">Max: 15 kg, 120 cm</span>
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
                                 <span class="subText mobile_only sm-1">Compensation included: Yes</span>
@@ -625,7 +625,7 @@
                         <tr>
 
                             <td> <input data-servicecode="UK_Shutl2Days" data-servicename="eBay delivery - Shutl 2 days" type="radio" value="UK_Shutl2Days" id="domestic_eBay delivery - Shutl 2 days" name="serviceOptions" aria-label=" eBay delivery - Shutl 2 days Delivery time 2 working days Price range " data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                        <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">eBay delivery - Shutl 2 days</span>
+                        <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Shutl 2 days</span>
                                 <span class="subText sm-1">Max: 10 kg, 60 x 50 x 50 cm</span>
                                 <span class="subText mobile_only sm-1">Tracking included: Yes</span>
                                 <span class="subText mobile_only sm-1">Compensation included: Yes</span>
@@ -642,7 +642,7 @@
                             <tr>
 
                                 <td> <input data-servicecode="UK_Shutl1Day" data-servicename="eBay delivery - Shutl 1 day" type="radio" value="UK_Shutl1Day" id="domestic_eBay delivery - Shutl 1 day" name="serviceOptions" aria-label=" eBay delivery - Shutl 1 day Delivery time 1 working day Price range £5.65" data-w-onclick="setServiceState|w0-w0-shipping-services-overlay_serviceList" data-w-onkeydown="setServiceState|w0-w0-shipping-services-overlay_serviceList">
-                            <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">eBay delivery - Shutl 1 day</span>
+                            <span class="shippingServicesOverlay__groupContentCell serviceName col-4 sm-1">Shutl 1 day</span>
                                     <span class="subText sm-1">Max: 15 kg, 80 cm</span>
                                     <span class="subText mobile_only sm-1">Tracking included: Yes</span>
                                     <span class="subText mobile_only sm-1">Compensation included: Yes</span>
