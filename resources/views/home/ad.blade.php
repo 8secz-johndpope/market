@@ -785,9 +785,9 @@
         });
         $("#freeshipping").change(function () {
                 if($(this).is(":checked")){
-                    $("#buyer_pays").disable();
+                    $("#buyer_pays").prop('disabled', true);
                 }else{
-                    $("#buyer_pays").enable();
+                    $("#buyer_pays").prop('disabled', false);
                 }
         });
     </script>
