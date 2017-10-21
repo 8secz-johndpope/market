@@ -20,9 +20,8 @@ class CronController extends BaseController
         $dom->loadHTML($text);
         $element = $dom->getElementById('tblJobDetails');
         $tables=$element->getElementsByTagName ('table');
-        foreach ($tables as $table){
-            echo $dom->saveHTML($table);
-        }
+            echo $dom->saveHTML($tables[3]);
+
 
 
 
