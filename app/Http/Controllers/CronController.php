@@ -25,9 +25,15 @@ class CronController extends BaseController
         $apply->parentNode->removeChild($apply);
             //echo $dom->saveHTML($tds[0]);
         foreach ($tds[0]->childNodes as $node){
-            echo $node->nodeValue;
-            echo "<br>";
+          //  echo $node->nodeValue;
+          //  echo "<br>";
         }
+        $title=$dom->getElementById('hTitle');
+        $name=$dom->getElementById('pContactName');
+        $image=$dom->getElementById('imgClient');
+        $company =  $image->getAttribute('title');
+
+        echo $company;
 
 
 
