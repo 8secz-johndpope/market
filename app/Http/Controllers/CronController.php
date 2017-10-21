@@ -21,7 +21,7 @@ class CronController extends BaseController
         $element = $dom->getElementById('tblJobDetails');
         $tables=$element->getElementsByTagName ('table');
         foreach ($tables as $table){
-            echo $element->saveHTML($table);
+            echo $dom->saveHTML($table);
         }
 
 
