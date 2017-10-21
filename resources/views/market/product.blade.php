@@ -102,9 +102,7 @@
                             @endforeach
                     </div>
                     <div class="description">
-                        @foreach(explode("\n\r",$product['description']) as $part)
-                       <br> {{$part}}<br>
-                            @endforeach
+                       {!! $product['description'] !!}
                     </div>
                     <div class="row mapframe">
                         <div class="col-sm-12">
