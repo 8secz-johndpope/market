@@ -104,7 +104,7 @@
                     <div class="description">
                        {!! $product['description'] !!}
                         @foreach($r = preg_split("/(\r\n|\n|\r)/", $product['description']) as $part)
-                            <p>{{$part}}</p>
+                            <br>{{$part}}<br>
                             @endforeach
                     </div>
                     <div class="row mapframe">
