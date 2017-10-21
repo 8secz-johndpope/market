@@ -19,7 +19,11 @@ class CronController extends BaseController
         libxml_use_internal_errors(true);
         $dom->loadHTML($text);
         $element = $dom->getElementById('tblJobDetails');
-        echo $dom->saveHTML($element);
+        $tables=$element->getElementsByTagName ('table');
+        foreach ($tables as $table){
+            echo $element->saveHTML($table);
+        }
+
 
 
     }
