@@ -24,7 +24,10 @@ class CronController extends BaseController
         $apply = $dom->getElementById('tblApplyByEmail');
         $apply->parentNode->removeChild($apply);
             //echo $dom->saveHTML($tds[0]);
-        echo $tds[0]->nodeValue;
+        foreach ($tds[0]->childNodes as $node){
+            echo $node->nodeValue;
+            echo "<br>";
+        }
 
 
 
