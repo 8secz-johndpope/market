@@ -142,6 +142,7 @@ class Advert extends  BaseModel
         $advert->sid = $advert->id;
         $advert->user_id=$this->user_id;
         $advert->category_id=$this->category->id;
+        if($this->postcode_id>0)
         $advert->postcode_id=$this->postcode->id;
         $advert->elastic = $response['_id'];
         $advert->status=0;
