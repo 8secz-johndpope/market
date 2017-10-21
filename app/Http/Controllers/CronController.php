@@ -21,6 +21,8 @@ class CronController extends BaseController
         $element = $dom->getElementById('tblJobDetails');
         $tables=$element->getElementsByTagName ('table');
         $tds=$tables[3]->getElementsByTagName('td');
+        $apply = $tds[0]->getElementById('tblApplyByEmail');
+        $apply->parentNode->removeChild($apply);
             echo $dom->saveHTML($tds[0]);
 
 
