@@ -104,6 +104,7 @@
                     <div class="description">
                        {!! $product['description'] !!}
                     </div>
+                    <textarea>{!! $product['description'] !!}}</textarea>
                     <div class="row mapframe">
                         <div class="col-sm-12">
 
