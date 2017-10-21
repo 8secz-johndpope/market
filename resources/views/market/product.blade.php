@@ -103,6 +103,9 @@
                     </div>
                     <div class="description">
                        {!! $product['description'] !!}
+                        @foreach($r = preg_split('/\R/', $product['description']) as $part)
+                            <p>{{$part}}</p>
+                            @endforeach
                     </div>
                     <textarea rows="100" cols="100">{!! $product['description'] !!}}</textarea>
                     <div class="row mapframe">
