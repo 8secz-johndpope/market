@@ -102,7 +102,7 @@
                             @endforeach
                     </div>
                     <div class="description">
-                        @foreach(explode(PHP_EOL,$product['description']) as $part)
+                        @foreach(explode("\n\r",$product['description']) as $part)
                        <br> {{$part}}<br>
                             @endforeach
                     </div>
