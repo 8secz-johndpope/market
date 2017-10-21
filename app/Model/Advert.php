@@ -399,6 +399,11 @@ class Advert extends  BaseModel
             $this->fetch();
         return $this->meta('price')%100;
     }
+    public function lines(){
+        if($this->dict===null)
+            $this->fetch();
+        return explode("\n", $this->dict['description']);
+    }
     public function total($params){
 
         $price=$this->prices();
