@@ -102,7 +102,7 @@
                             @endforeach
                     </div>
                     <div class="description">
-                        @foreach(explode("\n",$product['description']) as $part)
+                        @foreach(explode("\t",$product['description']) as $part)
                        <br> {{$part}}<br>
                             @endforeach
                     </div>
