@@ -47,6 +47,7 @@ use Illuminate\Support\Facades\Mail;
 
 use Mockery\Exception;
 use Twilio\Rest\Client;
+use GuzzleHttp\Client as GClient;
 
 class UserController extends BaseController
 {
@@ -1326,7 +1327,7 @@ class UserController extends BaseController
         try {
 
 
-            $client = new \GuzzleHttp\Client;
+            $client = new \GClient;
             $url = 'https://dvlasearch.appspot.com/DvlaSearch';
             $r = $client->request('GET', $url, [
                 'form_params' => ['licencePlate' => $request->q, "apikey" => "KM7ol0xqsObXb1nl"]

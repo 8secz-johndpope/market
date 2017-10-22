@@ -32,6 +32,7 @@ use Illuminate\Support\Facades\Auth;
 use Cassandra;
 use Ramsey\Uuid\Uuid;
 use Twilio\Rest\Client;
+use GuzzleHttp\Client as GClient;
 
 class HomeController extends BaseController
 {
