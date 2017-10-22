@@ -134,7 +134,7 @@ class CronController extends BaseController
 
 
         $text=file_get_contents('https://www.indeed.co.uk/nanny-jobs-in-London-Borough-of-Hackney,-Greater-London');
-      
+
         $dom = new \DOMDocument();
         libxml_use_internal_errors(true);
         $dom->loadHTML($text);
@@ -154,7 +154,10 @@ class CronController extends BaseController
             $finder = new \DomXPath($dom);
             $classname = "company";
             $nodes1 = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
+            if($nodes1)
             echo $nodes1[0]->nodeValue;
+            else
+                continue;
             //Generate a random forename.
             $random_name = $names[mt_rand(0, sizeof($names) - 1)];
 
