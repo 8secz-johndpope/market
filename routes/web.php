@@ -21,6 +21,8 @@ Route::get('/gads', 'MarketController@gads');
 Route::get('/parse', 'CronController@parse_page');
 Route::get('/indeed', 'CronController@indeed');
 
+Route::get('/plate', 'HomeController@dvla');
+
 Route::get('/allfields', 'MarketController@allfields');
 
 Route::get('/ast/{p}/{q}', 'MarketController@ast');

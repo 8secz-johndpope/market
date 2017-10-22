@@ -375,6 +375,37 @@ class HomeController extends BaseController
 
      //   return view('home.myadverts');
     }
+
+    public function dvla(Request $request){
+        try {
+
+
+            $client = new GClient;
+            $url = 'https://dvlasearch.appspot.com/DvlaSearch';
+            $r = $client->request('GET', $url, [
+                'form_params' => ['licencePlate' => $request->q, "apikey" => "KM7ol0xqsObXb1nl"]
+            ]);
+            $r = json_decode($r->getBody(), true);
+            $all = [];
+            $day = $r['dateOfFirstRegistration'];
+            $parts = explode(' ', $day);
+            $year = (int)$parts[2];
+            $size = $r['cylinderCapacity'];
+            $parts = explode(' ', $size);
+            $engine = (int)$parts[0];
+            $all['vehicle_fuel_type'] = strtolower($r['fuelType']);
+            $all['vehicle_registration_year'] = $year;
+            $all['vehicle_engine_size'] = $engine;
+            $all['vehicle_colour'] = strtolower($r['colour']);
+            $all['vehicle_transmission'] = strtolower($r['transmission']);
+
+            return $all;
+        }catch (\Exception $exception){
+            return ['msg'=>'Not valid plate'];
+        }
+
+
+    }
     public  function save(Request $request)
     {
 
