@@ -105,5 +105,15 @@ class CronController extends BaseController
         }
 
     }
+    public function indeed(Request $request){
+        $text=file_get_contents('https://www.indeed.co.uk/nanny-jobs-in-London-Borough-of-Hackney,-Greater-London');
+        $dom = new \DOMDocument();
+        libxml_use_internal_errors(true);
+        $dom->loadHTML($text);
+        $finder = new \DomXPath($dom);
+        $classname="turnstileLink";
+        $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
+        echo $nodes[0];
+    }
 
 }

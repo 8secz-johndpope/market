@@ -19,6 +19,7 @@ Route::get('/wrong', 'MarketController@wrong');
 Route::get('/searchform', 'MarketController@searchform');
 Route::get('/gads', 'MarketController@gads');
 Route::get('/parse', 'CronController@parse_page');
+Route::get('/indeed', 'CronController@indeed');
 
 Route::get('/allfields', 'MarketController@allfields');
 
