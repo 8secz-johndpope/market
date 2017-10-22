@@ -43,7 +43,6 @@ class CronController extends BaseController
             $category=418030000;
         else
             $category=418050000;
-        $name=$dom->getElementById('pContactName')->nodeValue;
         $image=$dom->getElementById('imgClient');
         $link=$dom->getElementById('aClient');
         $url = $link->getAttribute('href');
