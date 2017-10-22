@@ -52,7 +52,7 @@ class CronController extends BaseController
         else
             $phone=$phone->nodeValue;
         echo $company;
-        $user = User::where('email',$parts[4].'@sumra.net');
+        $user = User::where('email',$parts[4].'@sumra.net')->first();
         if($user===null){
             $user = new User;
             $user->email=$parts[4].'@sumra.net';
