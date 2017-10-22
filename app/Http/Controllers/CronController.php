@@ -15,7 +15,7 @@ use App\User;
 class CronController extends BaseController
 {
     public function parse_page(Request $request){
-        for ($i=205503;$i>206371;$i++){
+        for ($i=205503;$i<206371;$i++){
 
 
         $text = file_get_contents('http://www.greatcare.co.uk/nanny-and-childcare-jobs/'.$i.'/russian-speaking-baby-nanny-needed---%C2%A31000p-w.html');
