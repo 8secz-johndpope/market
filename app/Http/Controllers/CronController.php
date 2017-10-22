@@ -185,6 +185,8 @@ class CronController extends BaseController
                 $user->save();
             }
             $category = 418020000;
+            if(strpos(strtolower($title),'live-in')!==false||strpos(strtolower($title),'live in')!==false)
+                $category=418010000;
             $description = $dom->getElementById('job_summary')->nodeValue;
             echo $description;
 
