@@ -66,6 +66,7 @@ class CronController extends BaseController
         $body['location']='52.2,0.13';
         $body['username']=$company;
         $body['phone']=$phone;
+        $body['user_id']=0;
         $advert->update_fields($body);
         $advert->publish();
         echo 'done';
