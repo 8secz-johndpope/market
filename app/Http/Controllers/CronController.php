@@ -138,7 +138,7 @@ class CronController extends BaseController
             ),
         );
 
-        $text=file_get_contents('https://www.indeed.co.uk/jobs?q=nanny&l=London+Borough+of+Hackney%2C+Greater+London&start='.$request->start, false, stream_context_create($arrContextOptions));
+        $text=file_get_contents('https://www.indeed.co.uk/jobs?q=nanny&l=Manchester&start='.$request->start, false, stream_context_create($arrContextOptions));
 
         $dom = new \DOMDocument();
         libxml_use_internal_errors(true);
@@ -153,7 +153,7 @@ class CronController extends BaseController
 
             $title = $link->nodeValue;
             try {
-                
+
                 $text = '<?xml encoding="utf-8" ?>' . file_get_contents('https://www.indeed.co.uk' . $link->getAttribute('href'), false, stream_context_create($arrContextOptions));
             }catch (\Exception $exception){
                 continue;
@@ -219,7 +219,7 @@ class CronController extends BaseController
             $body['title'] = $title;
             $body['category'] = $category;
             $body['description'] = implode("\n",$lines);
-            $body['location_id'] = 1250000000;
+            $body['location_id'] = 1260000000;
             $body['location'] = '52.2,0.13';
             $body['username'] = $user->display_name;
             $body['phone'] = $user->phone;
