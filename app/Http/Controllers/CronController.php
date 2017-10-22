@@ -23,6 +23,8 @@ class CronController extends BaseController
         libxml_use_internal_errors(true);
         $dom->loadHTML($text);
         $element = $dom->getElementById('tblJobDetails');
+        if(!$element)
+            continue;
         $tables=$element->getElementsByTagName ('table');
         $tds=$tables[3]->getElementsByTagName('td');
         $apply = $dom->getElementById('tblApplyByEmail');
