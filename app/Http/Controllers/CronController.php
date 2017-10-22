@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Advert;
 use Illuminate\Http\Request;
 
 
@@ -24,18 +25,49 @@ class CronController extends BaseController
         $apply = $dom->getElementById('tblApplyByEmail');
         $apply->parentNode->removeChild($apply);
             //echo $dom->saveHTML($tds[0]);
+        $lines=[];
         foreach ($tds[0]->childNodes as $node){
           //  echo $node->nodeValue;
           //  echo "<br>";
+            $lines[]=$node->nodeValue;
         }
-        $title=$dom->getElementById('hTitle');
-        $name=$dom->getElementById('pContactName');
+        $title=$dom->getElementById('hTitle')->nodeValue;
+        if(strpos(strtolower($title),'live-in')!==false)
+            $category=418010000;
+        else if(strpos(strtolower($title),'live-out')!==false)
+            $category=418020000;
+        else if(strpos(strtolower($title),'maternity')!==false)
+            $category=418030000;
+        else
+            $category=418050000;
+        $name=$dom->getElementById('pContactName')->nodeValue;
         $image=$dom->getElementById('imgClient');
+        $link=$dom->getElementById('aClient');
+        $url = $link->getAttribute('href');
+
+        $advert = new Advert;
+        $advert->category_id=$category;
+        $advert->save();
+        $advert->create_draft();
+
+
         $company =  $image->getAttribute('title');
-
+        $phone = $dom->getElementById('tdTelephone');
+        if(!$phone)
+            $phone='07788778877';
+        else
+            $phone=$phone->nodeValue;
         echo $company;
-
-
+        $body=[];
+        $body['title']=$title;
+        $body['category']=$category;
+        $body['description']=implode("\n",$lines);
+        $body['location_id']=119;
+        $body['location']='52.2,0.13';
+        $body['username']=$company;
+        $body['phone']=$phone;
+        $advert->update_fields($body);
+        echo 'done';
 
     }
 

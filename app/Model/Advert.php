@@ -97,6 +97,7 @@ class Advert extends  BaseModel
             $body['location_name']='United Kingdom';
             $body['views']=0;
             $body['list_views']=0;
+            $body['meta']['price']=-1;
             $body['source_id']=$this->id;
             $body['username']=$user->display_name;
             $body['created_at']=$milliseconds;
