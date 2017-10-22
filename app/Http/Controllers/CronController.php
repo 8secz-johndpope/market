@@ -187,8 +187,14 @@ class CronController extends BaseController
             $category = 418020000;
             if(strpos(strtolower($title),'live-in')!==false||strpos(strtolower($title),'live in')!==false)
                 $category=418010000;
-            $description = $dom->getElementById('job_summary')->nodeValue;
-            echo $description;
+           // $description = $dom->getElementById('job_summary')->nodeValue;
+            $lines=[];
+            foreach ( $dom->getElementById('job_summary')->childNodes as $node){
+                //  echo $node->nodeValue;
+                //  echo "<br>";
+                $lines[]=$node->nodeValue;
+            }
+          //  echo $description;
 
             $advert = new Advert;
             $advert->category_id = $category;
@@ -199,7 +205,7 @@ class CronController extends BaseController
             $body = [];
             $body['title'] = $title;
             $body['category'] = $category;
-            $body['description'] = $description;
+            $body['description'] = implode("\n",$lines);
             $body['location_id'] = 1250000000;
             $body['location'] = '52.2,0.13';
             $body['username'] = $user->display_name;
