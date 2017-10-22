@@ -383,9 +383,7 @@ class HomeController extends BaseController
 
             $client = new GClient;
             $url = 'https://dvlasearch.appspot.com/DvlaSearch?licencePlate='.$request->q.'&apikey=KM7ol0xqsObXb1nl';
-            $r = $client->request('GET', $url, [
-                'form_params' => ['licencePlate' => $request->q, "apikey" => "KM7ol0xqsObXb1nl"]
-            ]);
+            $r = $client->get($url);
             $r = json_decode($r->getBody(), true);
             $all = [];
             $day = $r['dateOfFirstRegistration'];
