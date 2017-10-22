@@ -52,25 +52,31 @@ class CronController extends BaseController
         else
             $url='http://www.greatcare.co.uk/recruiters/nannies_plus_us.html';
        $parts = explode('/',$url);
-        $company =  $image->getAttribute('title');
+            $user = User::where('email',$parts[4].'@sumra.net')->first();
+            if($image)
+                $company =  $image->getAttribute('title');
+            else
+                $user->display_name;
+            if($user===null){
+                $user = new User;
+                $user->email=$parts[4].'@sumra.net';
+                $user->name=$company;
+                $user->display_name=$company;
+                $user->password= bcrypt('password');
+                $user->phone='07777777777';
+                // $user->more(['email' => 'g'.$body['source_id'].'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
+                //  $user->id=(int)$body['user_id'];
+                $user->save();
+            }
+
+
         $phone = $dom->getElementById('tdTelephone');
         if(!$phone)
             $phone='07788778877';
         else
             $phone=$phone->nodeValue;
         echo $company;
-        $user = User::where('email',$parts[4].'@sumra.net')->first();
-        if($user===null){
-            $user = new User;
-            $user->email=$parts[4].'@sumra.net';
-            $user->name=$company;
-            $user->display_name=$company;
-            $user->password= bcrypt('password');
-            $user->phone='07777777777';
-            // $user->more(['email' => 'g'.$body['source_id'].'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
-            //  $user->id=(int)$body['user_id'];
-            $user->save();
-        }
+
 
         $advert = new Advert;
         $advert->category_id=$category;
