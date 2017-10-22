@@ -152,7 +152,12 @@ class CronController extends BaseController
 
 
             $title = $link->nodeValue;
-            $text = '<?xml encoding="utf-8" ?>' .file_get_contents('https://www.indeed.co.uk' . $link->getAttribute('href'), false, stream_context_create($arrContextOptions));
+            try {
+                
+                $text = '<?xml encoding="utf-8" ?>' . file_get_contents('https://www.indeed.co.uk' . $link->getAttribute('href'), false, stream_context_create($arrContextOptions));
+            }catch (\Exception $exception){
+                continue;
+            }
             $dom = new \DOMDocument();
             libxml_use_internal_errors(true);
             $dom->loadHTML($text);
