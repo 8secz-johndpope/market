@@ -114,6 +114,7 @@ class CronController extends BaseController
         $classname="turnstileLink";
         $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
         echo $nodes[0]->getAttribute('href');
+        echo file_get_contents('https://www.indeed.co.uk'.$nodes[0]->getAttribute('href'));
     }
 
 }
