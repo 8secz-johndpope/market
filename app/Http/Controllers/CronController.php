@@ -113,8 +113,15 @@ class CronController extends BaseController
         $finder = new \DomXPath($dom);
         $classname="turnstileLink";
         $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
-        echo $nodes[0]->getAttribute('href');
-        echo file_get_contents('https://www.indeed.co.uk'.$nodes[0]->getAttribute('href'));
+        //echo $nodes[0]->getAttribute('href');
+        $text=file_get_contents('https://www.indeed.co.uk'.$nodes[0]->getAttribute('href'));
+        $dom = new \DOMDocument();
+        libxml_use_internal_errors(true);
+        $dom->loadHTML($text);
+        $finder = new \DomXPath($dom);
+        $classname="company";
+        $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
+        echo $nodes[0]->nodeValue;
     }
 
 }
