@@ -45,14 +45,6 @@ class CronController extends BaseController
         $link=$dom->getElementById('aClient');
         $url = $link->getAttribute('href');
        $parts = explode('/',$url);
-        return $parts;
-
-        $advert = new Advert;
-        $advert->category_id=$category;
-        $advert->save();
-        $advert->create_draft();
-
-
         $company =  $image->getAttribute('title');
         $phone = $dom->getElementById('tdTelephone');
         if(!$phone)
@@ -60,6 +52,26 @@ class CronController extends BaseController
         else
             $phone=$phone->nodeValue;
         echo $company;
+        $user = User::where('email',$parts[4].'@sumra.net');
+        if($user===null){
+            $user = new User;
+            $user->email=$parts[4].'@sumra.net';
+            $user->name=$company;
+            $user->display_name=$company;
+            $user->password= bcrypt('password');
+            $user->phone='07777777777';
+            // $user->more(['email' => 'g'.$body['source_id'].'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
+            //  $user->id=(int)$body['user_id'];
+            $user->save();
+        }
+
+        $advert = new Advert;
+        $advert->category_id=$category;
+        $advert->save();
+        $advert->create_dd($user);
+
+
+
         $body=[];
         $body['title']=$title;
         $body['category']=$category;
