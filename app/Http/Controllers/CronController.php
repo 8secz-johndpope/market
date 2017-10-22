@@ -131,9 +131,14 @@ class CronController extends BaseController
             'Mercado',
             'Sellers'
         );
+        $arrContextOptions=array(
+            "ssl"=>array(
+                "verify_peer"=>false,
+                "verify_peer_name"=>false,
+            ),
+        );
 
-
-        $text=file_get_contents('https://www.indeed.co.uk/jobs?q=nanny&l=London+Borough+of+Hackney%2C+Greater+London&start='.$request->start);
+        $text=file_get_contents('https://www.indeed.co.uk/jobs?q=nanny&l=London+Borough+of+Hackney%2C+Greater+London&start='.$request->start, false, stream_context_create($arrContextOptions));
 
         $dom = new \DOMDocument();
         libxml_use_internal_errors(true);
