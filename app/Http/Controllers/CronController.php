@@ -147,7 +147,7 @@ class CronController extends BaseController
 
 
             $title = $link->nodeValue;
-            $text = file_get_contents('https://www.indeed.co.uk' . $link->getAttribute('href'));
+            $text = '<?xml encoding="utf-8" ?>' .file_get_contents('https://www.indeed.co.uk' . $link->getAttribute('href'));
             $dom = new \DOMDocument();
             libxml_use_internal_errors(true);
             $dom->loadHTML($text);
