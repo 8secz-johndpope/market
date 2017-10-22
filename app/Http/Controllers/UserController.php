@@ -1325,8 +1325,6 @@ class UserController extends BaseController
     }
     public function dvla(Request $request){
         try {
-
-
             $client = new GClient;
             $url = 'https://dvlasearch.appspot.com/DvlaSearch?licencePlate='.$request->q.'&apikey=DvlaSearchDemoAccount';
             $r = $client->get($url);
