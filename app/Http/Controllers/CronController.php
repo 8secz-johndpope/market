@@ -154,7 +154,7 @@ class CronController extends BaseController
             $finder = new \DomXPath($dom);
             $classname = "company";
             $nodes1 = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
-            if($nodes1)
+            if($nodes1[0])
             echo $nodes1[0]->nodeValue;
             else
                 continue;
