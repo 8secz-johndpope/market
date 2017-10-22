@@ -15,7 +15,10 @@ use App\User;
 class CronController extends BaseController
 {
     public function parse_page(Request $request){
-        $text = file_get_contents('http://www.greatcare.co.uk/nanny-and-childcare-jobs/206372/russian-speaking-baby-nanny-needed---%C2%A31000p-w.html');
+        for ($i=206371;$i>200000;$i--){
+
+
+        $text = file_get_contents('http://www.greatcare.co.uk/nanny-and-childcare-jobs/'.$i.'/russian-speaking-baby-nanny-needed---%C2%A31000p-w.html');
         $dom = new \DOMDocument();
         libxml_use_internal_errors(true);
         $dom->loadHTML($text);
@@ -84,6 +87,7 @@ class CronController extends BaseController
         $advert->update_fields($body);
         $advert->publish();
         echo 'done';
+        }
 
     }
 
