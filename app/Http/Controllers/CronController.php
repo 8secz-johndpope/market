@@ -133,7 +133,7 @@ class CronController extends BaseController
         );
 
 
-        $text=file_get_contents('https://www.indeed.co.uk/jobs?l=London+Borough+of+Hackney%2C+Greater+London&start='.$request->start);
+        $text=file_get_contents('https://www.indeed.co.uk/jobs?q=nanny&l=London+Borough+of+Hackney%2C+Greater+London&start='.$request->start);
 
         $dom = new \DOMDocument();
         libxml_use_internal_errors(true);
