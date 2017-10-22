@@ -378,7 +378,7 @@ class HomeController extends BaseController
     }
 
     public function dvla(Request $request){
-        try {
+      //  try {
 
 
             $client = new GClient;
@@ -401,9 +401,9 @@ class HomeController extends BaseController
             $all['vehicle_transmission'] = strtolower($r['transmission']);
 
             return $all;
-        }catch (\Exception $exception){
-            return ['msg'=>'Not valid plate'];
-        }
+      //  }catch (\Exception $exception){
+        //    return ['msg'=>'Not valid plate'];
+      //  }
 
 
     }
