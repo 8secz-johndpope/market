@@ -139,7 +139,8 @@ class CronController extends BaseController
         );
 
         $text=file_get_contents('https://www.indeed.co.uk/jobs?q=nanny&l=Manchester&start='.$request->start, false, stream_context_create($arrContextOptions));
-
+        echo $text;
+        exit;
         $dom = new \DOMDocument();
         libxml_use_internal_errors(true);
         $dom->loadHTML($text);
