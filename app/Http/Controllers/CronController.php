@@ -53,7 +53,11 @@ class CronController extends BaseController
         else
             $url='http://www.greatcare.co.uk/recruiters/nannies_plus_us.html';
        $parts = explode('/',$url);
+       if(count($parts)>4)
             $user = User::where('email',$parts[4].'@sumra.net')->first();
+       else
+           $user = User::where('email','nannies_plus_us.html@sumra.net')->first();
+
             if($image)
                 $company =  $image->getAttribute('title');
             else
