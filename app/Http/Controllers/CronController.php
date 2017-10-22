@@ -142,6 +142,7 @@ class CronController extends BaseController
         $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
         //echo $nodes[0]->getAttribute('href');
         $links=$nodes;
+        return ''.count($links);
         for($i=0;$i<count($links);$i++) {
 
 
