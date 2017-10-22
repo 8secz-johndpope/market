@@ -44,6 +44,8 @@ class CronController extends BaseController
         $image=$dom->getElementById('imgClient');
         $link=$dom->getElementById('aClient');
         $url = $link->getAttribute('href');
+       $parts = explode('/',$url);
+        return $parts;
 
         $advert = new Advert;
         $advert->category_id=$category;
