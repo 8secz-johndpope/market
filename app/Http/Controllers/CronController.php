@@ -152,8 +152,8 @@ class CronController extends BaseController
             $dom->loadHTML($text);
             $finder = new \DomXPath($dom);
             $classname = "company";
-            $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
-            echo $nodes[0]->nodeValue;
+            $nodes1 = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
+            echo $nodes1[0]->nodeValue;
             //Generate a random forename.
             $random_name = $names[mt_rand(0, sizeof($names) - 1)];
 
@@ -161,12 +161,12 @@ class CronController extends BaseController
             $random_surname = $surnames[mt_rand(0, sizeof($surnames) - 1)];
 
 //Combine them together and print out the result.
-            if ($nodes[0]->nodeValue === 'Private Family') {
+            if ($nodes1[0]->nodeValue === 'Private Family') {
                 $fullname = $random_name . ' ' . $random_surname;
                 $email = $random_name . $random_surname . '@sumra.net';
             } else {
-                $fullname = $nodes[0]->nodeValue;
-                $email = str_replace(' ', '', $nodes[0]->nodeValue) . '@sumra.net';
+                $fullname = $nodes1[0]->nodeValue;
+                $email = str_replace(' ', '', $nodes1[0]->nodeValue) . '@sumra.net';
             }
             $user = User::where('email', $email)->first();
             if ($user === null) {
