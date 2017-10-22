@@ -47,7 +47,10 @@ class CronController extends BaseController
             $category=418050000;
         $image=$dom->getElementById('imgClient');
         $link=$dom->getElementById('aClient');
+        if(!$link)
         $url = $link->getAttribute('href');
+        else
+            $url='http://www.greatcare.co.uk/recruiters/nannies_plus_us.html';
        $parts = explode('/',$url);
         $company =  $image->getAttribute('title');
         $phone = $dom->getElementById('tdTelephone');
