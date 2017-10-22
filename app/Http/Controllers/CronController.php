@@ -194,11 +194,14 @@ class CronController extends BaseController
                 $category=418010000;
            // $description = $dom->getElementById('job_summary')->nodeValue;
             $lines=[];
+            if($dom->getElementById('job_summary'))
             foreach ( $dom->getElementById('job_summary')->childNodes as $node){
                 //  echo $node->nodeValue;
                 //  echo "<br>";
                 $lines[]=$node->nodeValue;
             }
+            else
+                continue;
           //  echo $description;
 
             $advert = new Advert;
