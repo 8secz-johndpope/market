@@ -95,6 +95,7 @@ Route::get('/user/text','UserController@text');
 Route::get('/user/ctext','UserController@ctext');
 
 Route::get('/advert/{id}','MarketController@advert')->middleware('auth:api');
+Route::get('/plate', 'UserController@dvla')->middleware('auth:api');
 
 
 Route::post('/user/advert/mprice','UserController@mprice')->middleware('auth:api');

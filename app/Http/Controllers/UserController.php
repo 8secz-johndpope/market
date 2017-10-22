@@ -1327,11 +1327,9 @@ class UserController extends BaseController
         try {
 
 
-            $client = new \GClient;
-            $url = 'https://dvlasearch.appspot.com/DvlaSearch';
-            $r = $client->request('GET', $url, [
-                'form_params' => ['licencePlate' => $request->q, "apikey" => "KM7ol0xqsObXb1nl"]
-            ]);
+            $client = new GClient;
+            $url = 'https://dvlasearch.appspot.com/DvlaSearch?licencePlate='.$request->q.'&apikey=KM7ol0xqsObXb1nl';
+            $r = $client->get($url);
             $r = json_decode($r->getBody(), true);
             $all = [];
             $day = $r['dateOfFirstRegistration'];
@@ -1353,7 +1351,6 @@ class UserController extends BaseController
 
 
     }
-
     public function bump(Request $request)
     {
         $user = Auth::user();
