@@ -10,7 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Advert;
 use Illuminate\Http\Request;
-
+use App\User;
 
 class CronController extends BaseController
 {
