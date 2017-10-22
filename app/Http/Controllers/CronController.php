@@ -113,7 +113,7 @@ class CronController extends BaseController
         $finder = new \DomXPath($dom);
         $classname="turnstileLink";
         $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
-        echo $nodes[0]->nodeValue;
+        echo $nodes[0]->getAttribute('href');
     }
 
 }
