@@ -62,7 +62,7 @@ class CronController extends BaseController
         $body['title']=$title;
         $body['category']=$category;
         $body['description']=implode("\n",$lines);
-        $body['location_id']=119;
+        $body['location_id']=1250000000;
         $body['location']='52.2,0.13';
         $body['username']=$company;
         $body['phone']=$phone;
