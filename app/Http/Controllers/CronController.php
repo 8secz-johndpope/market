@@ -106,6 +106,33 @@ class CronController extends BaseController
 
     }
     public function indeed(Request $request){
+        //PHP array containing forenames.
+        $names = array(
+            'Christopher',
+            'Ryan',
+            'Ethan',
+            'John',
+            'Zoey',
+            'Sarah',
+            'Michelle',
+            'Samantha',
+        );
+
+//PHP array containing surnames.
+        $surnames = array(
+            'Walker',
+            'Thompson',
+            'Anderson',
+            'Johnson',
+            'Tremblay',
+            'Peltier',
+            'Cunningham',
+            'Simpson',
+            'Mercado',
+            'Sellers'
+        );
+
+
         $text=file_get_contents('https://www.indeed.co.uk/nanny-jobs-in-London-Borough-of-Hackney,-Greater-London');
         $dom = new \DOMDocument();
         libxml_use_internal_errors(true);
@@ -122,6 +149,15 @@ class CronController extends BaseController
         $classname="company";
         $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
         echo $nodes[0]->nodeValue;
+        //Generate a random forename.
+        $random_name = $names[mt_rand(0, sizeof($names) - 1)];
+
+//Generate a random surname.
+        $random_surname = $surnames[mt_rand(0, sizeof($surnames) - 1)];
+
+//Combine them together and print out the result.
+        if($nodes[0]->nodeValue==='Private Family')
+        echo $random_name . ' ' . $random_surname;
     }
 
 }
