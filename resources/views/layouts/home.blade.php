@@ -115,14 +115,12 @@
 </head>
 <body class="">
 <header>
-    <div class="top hidden-xs">
-        <div class="row">
+    <div class="container-fluid">
+        <div class="row hidden-xs">
             <div class="col">
                 <img class="icon-small" src="/css/sumra-text.png">
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
         <nav class="navbar navbar-default">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
