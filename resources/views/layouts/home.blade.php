@@ -122,8 +122,8 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -204,9 +204,8 @@
                     <li><a class="btn btn-info bussines" role="button" href="/user/contract/pricing">Sumra for Business</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
-        </div>
-    </nav>
-
+        </nav>
+    </div>
             <form class="navbar-form" action="/searchform" id="mainform">
                 @foreach($input as $key=>$value)
                     @if($key!=='q'&&$key!=='lat'&&$key!=='lng')
