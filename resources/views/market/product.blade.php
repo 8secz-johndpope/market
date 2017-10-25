@@ -166,8 +166,10 @@
                                 <br>
                             <br>
                                 <a class="btn btn-primary">Apply</a>
+                                @elseif(Auth::user()->has_applied($advert->id))
+                                <button class="btn-primary btn" disabled>Application Sent</button>
                                 @else
-                                <form action="/user/covers/add" method="post">
+                                <form action="/user/jobs/apply" method="post">
                                     <input name="redirect" type="hidden" value="/user/manage/details">
                                     {{ csrf_field() }}
 

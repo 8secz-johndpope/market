@@ -4,6 +4,7 @@ namespace App;
 
 use App\Mail\AccountCreated;
 use App\Model\Address;
+use App\Model\Application;
 use App\Model\EmailCode;
 use App\Model\Order;
 use Illuminate\Notifications\Notifiable;
@@ -91,6 +92,13 @@ class User extends Authenticatable
     public function covers()
     {
         return $this->hasMany('App\Model\Cover');
+    }
+    public function has_applied($id){
+       $application = Application::where('advert_id',$id)->where('user_id',$id)->first();
+       if($application===null)
+           return false;
+       else
+           return true;
     }
     public function images()
     {
