@@ -180,10 +180,10 @@
                                     </select>
                                 </div>
                                     <div class="form-group">
-                                        <label for="cv">Select a Cover Letter</label>
-                                        <select class="form-control" name="cv" required>
-                                            @foreach(Auth::user()->cvs as $cv)
-                                                <option value="{{$cv->id}}">{{$cv->title}}</option>
+                                        <label for="cover">Select a Cover Letter</label>
+                                        <select class="form-control" name="cover" required>
+                                            @foreach(Auth::user()->covers as $cover)
+                                                <option value="{{$cover->id}}">{{$cover->title}}</option>
                                             @endforeach
                                         </select>
                                     </div>
