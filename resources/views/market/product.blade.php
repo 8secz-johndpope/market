@@ -140,6 +140,12 @@
                         <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
                         <button class="btn-primary btn">Order Now</button>
                         @endif
+                        @if($advert->has_param('canship')&&$advert->param('canship')===1)
+                            <h4>Can Ship Nationwide</h4>
+                            <p>Price</p>
+                            <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->shipping()}}&nbsp;&nbsp; Shipping</span>
+                            <button class="btn-primary btn">Order Now</button>
+                        @endif
                 </div>
                 <div class="buttons">
                     <h4>Seller Info</h4>
