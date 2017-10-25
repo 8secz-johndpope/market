@@ -135,6 +135,8 @@
             <div class="col-md-3 col-sm-12">
                 <div class="delivery-options">
                     @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
+                        <input class="form-control" placeholder="SW153AZ" name="postcode">
+                    <button class="btn btn-default">Check</button>
                         <h4>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
                         <p>Price</p>
                         <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
