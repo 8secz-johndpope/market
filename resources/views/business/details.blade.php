@@ -222,6 +222,8 @@
                                     <p>{{$cover->category->title}}</p>
                                 @endif
                                 <p>{{$cover->cover}}</p>
+                                <a  href="/user/delete/cover/{{$cover->id}}"><span class="red-text">Delete</span> </a>
+
                             </div>
 
                         @endforeach

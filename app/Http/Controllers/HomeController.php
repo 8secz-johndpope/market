@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Mail\AccountCreated;
 use App\Model\Address;
 use App\Model\Business;
+use App\Model\Cover;
 use App\Model\Cv;
 use App\Model\Dispatch;
 use App\Model\Distance;
@@ -620,6 +621,13 @@ class HomeController extends BaseController
     }
     public function delete_cv(Request $request,$id){
         $alert=Cv::find($id);
+        $alert->delete();
+
+        return redirect('/user/manage/details');
+
+    }
+    public function delete_cover(Request $request,$id){
+        $alert=Cover::find($id);
         $alert->delete();
 
         return redirect('/user/manage/details');
