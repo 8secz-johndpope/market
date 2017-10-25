@@ -179,6 +179,10 @@
                         @foreach($user->cvs as $cv)
                                 <div class="address-div">
                                     <p>{{$cv->title}}</p>
+                                    @if($cv->category)
+                                        <p>{{$cv->category->title}}</p>
+
+                                    @endif
                                 </div>
 
                         @endforeach
