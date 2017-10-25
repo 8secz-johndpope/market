@@ -47,7 +47,7 @@
                     <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp;Support</a>
                 </li>
             </ul>
-            <div class="row">
+            <div class="row" style="margin-bottom: 30px">
                 <div class="col-md-6 col-md-offset-3">
                     <h2 class="bold-text">{{$user->name}}</h2>
                     <div class="row">
