@@ -226,7 +226,7 @@ a.add-bank-link {
     position: relative;
     padding-top: 1px;
 }
-.cross-mark-add-card {
+.cross-mark-add-card,.cross-mark-add-address {
     position: absolute;
     right: 0;
     top: 0;
