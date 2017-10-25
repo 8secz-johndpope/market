@@ -163,9 +163,12 @@
                     @if($advert->category->can_apply())
                         <div class="apply-options">
                             @if (Auth::guest())
+                                <br>
+                            <br>
                                 <a class="btn btn-primary">Apply</a>
                                 @else
-                                
+
+
                             @endif
                         </div>
                             @endif
