@@ -181,8 +181,8 @@
                                     <p>{{$cv->title}}</p>
                                     @if($cv->category)
                                         <p>{{$cv->category->title}}</p>
-
                                     @endif
+                                    <a href="/user/delete/cv/{{$cv->id}}"><span class="red-text">Delete</span> </a>
                                 </div>
 
                         @endforeach
