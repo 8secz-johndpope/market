@@ -188,6 +188,11 @@
                         @endforeach
                         <br>
                         <div class="form-group">
+                            <label for="exampleInputEmail1">Title</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CV for Part Time Job">
+                            <small id="emailHelp" class="form-text text-muted">With title you can easily locate CV if you have many CVs </small>
+                        </div>
+                        <div class="form-group">
                             <label for="category">Select Category</label>
                             <select class="form-control" id="category">
                                 <option value="0">Select</option>
