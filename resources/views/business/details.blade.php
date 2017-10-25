@@ -378,7 +378,7 @@
         }else{
             $('#no-title').hide();
         }
-        if(!category){
+        if(category=='0'){
             $('#no-category').show();
             return;
         }else{
