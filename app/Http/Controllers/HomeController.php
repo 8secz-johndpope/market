@@ -617,6 +617,16 @@ class HomeController extends BaseController
         return redirect('/user/manage/details');
 
     }
+    public function primary_address(Request $request,$id){
+        $user = Auth::user();
+
+        $adddress=Address::find($id);
+        $user->default_address=$adddress->id;
+        $user->save();
+
+        return redirect('/user/manage/details');
+
+    }
     public function toggle_alert(Request $request,$id){
         $alert=SearchAlert::find($id);
         $alert->active=!$alert->active;
