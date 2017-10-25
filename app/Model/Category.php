@@ -27,7 +27,7 @@ class Category extends  BaseModel
         return $this->belongsTo('App\Model\Category');
     }
     public function fields(){
-        return $this->belongsToMany('App\Model\Field');
+        return $this->belongsToMany('App\Model\Field')->orderBy('order_by');
     }
     public function filters(){
         return $this->belongsToMany('App\Model\Filter');
