@@ -585,11 +585,11 @@
         });
         $("#candeliver").change(function () {
             if($(this).is(":checked")){
-                $("#buyer_pays").val(0.00);
-                $("#buyer_pays").prop('disabled', false);
+                $("#delivery").val(0.00);
+                $("#delivery").prop('disabled', false);
             }else{
-                $("#buyer_pays").val(0.00);
-                $("#buyer_pays").prop('disabled', true);
+                $("#delivery").val(0.00);
+                $("#delivery").prop('disabled', true);
             }
         });
     </script>
