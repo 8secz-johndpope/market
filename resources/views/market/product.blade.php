@@ -139,6 +139,8 @@
                         <input class="form-control" placeholder="SW153AZ" name="postcode">
 
                     <button class="btn btn-default">Check</button>
+                    <br>
+                    <span id="delivery-info">Can be delivered to <span class="bold-text" id="postcode-text">M139AX</span> </span>
                         <h4>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
                         <p>Price</p>
                         <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
