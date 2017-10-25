@@ -369,7 +369,7 @@
                                             <p class="bold-text">Buyer Pays</p>
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
-                                                <input type="number" name="delivery" id="delivery"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="" @if(!$advert->has_param('candeliver')||$advert->param('candeliver')!==1) disabled @endif  value="@if($advert->has_param('candeliver')&&$advert->param('candeliver')===1&&$advert->has_meta('delivery')){{$advert->shipping()}}@endif" step="1">
+                                                <input type="number" name="delivery" id="delivery"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="" @if(!$advert->has_param('candeliver')||$advert->param('candeliver')!==1) disabled @endif  value="@if($advert->has_param('candeliver')&&$advert->param('candeliver')===1&&$advert->has_meta('delivery')){{$advert->delivery()}}@endif" step="1">
                                             </div>
                                         </div>
                                         </div>
