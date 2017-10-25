@@ -34,7 +34,7 @@ span.active-strip {
     display: inline-block;
 }
 .address-div {
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     padding: 5px;
     border-radius: 5px;
     margin-bottom: 10px;
