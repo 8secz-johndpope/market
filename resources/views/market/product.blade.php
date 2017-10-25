@@ -135,7 +135,7 @@
             <div class="col-md-3 col-sm-12">
                 <div class="delivery-options">
                     @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
-                        <div id="check-div">
+                        <div id="check-div" @if (!Auth::guest()&& Auth::user()->default_address>0) style="display: none" @endif>
                         <p class="bold-text">Check if it can be delivered to you</p>
                         <span class="red-text" id="sorry-info" style="display: none">Sorry, the item can't be delivered to your location</span>
                         <input class="form-control" placeholder="SW153AZ" name="postcode" id="postcode">
@@ -143,7 +143,7 @@
                     <button class="btn btn-default" id="check-button">Check</button>
                         </div>
                     <br>
-                    <span id="delivery-info" style="display: none">Can be delivered to <span class="bold-text" id="postcode-text">M139AX</span> <a id="edit-post">Edit</a></span>
+                    <span id="delivery-info"  @if (Auth::guest()|| Auth::user()->default_address===0) style="display: none" @endif>Can be delivered to <span class="bold-text" id="postcode-text">@if (Auth::guest()|| Auth::user()->default_address===0)M139AX @else {{ Auth::user()->address->postcode}} @endif</span> <a id="edit-post">Edit</a></span>
                         <h4>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
                         <p>Price</p>
                         <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
