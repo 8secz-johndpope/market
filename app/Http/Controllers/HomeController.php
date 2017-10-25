@@ -880,6 +880,17 @@ class HomeController extends BaseController
         $user->save();
         return redirect($request->redirect);
     }
+    public function add_cover(Request $request)
+    {
+        $user = Auth::user();
+        $cover = new Cover;
+        $cover->title=$request->title;
+        $cover->category_id=$request->category;
+        $cover->cover=$request->cover;
+        $cover->user_id=$user->id;
+        $cover->save();
+        return redirect($request->redirect);
+    }
     public function add_address(Request $request)
     {
         $user = Auth::user();
