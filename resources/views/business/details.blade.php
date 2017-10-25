@@ -183,7 +183,7 @@
                                         <p>{{$cv->category->title}}</p>
                                     @endif
                                     <a href="https://s3.eu-central-1.amazonaws.com/cv.eu-central-1.sumra.net/{{$cv->file_name}}">View</a>
-                                    <a href="/user/delete/cv/{{$cv->id}}"><span class="red-text">Delete</span> </a>
+                                    <a target="_blank" href="/user/delete/cv/{{$cv->id}}"><span class="red-text">Delete</span> </a>
                                 </div>
 
                         @endforeach
