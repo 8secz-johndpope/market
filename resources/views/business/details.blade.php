@@ -170,7 +170,7 @@
 
                         @endforeach
                         <br>
-                        <a class="btn btn-primary">Add New Address</a>
+                        <a class="btn btn-primary" id="add-address-link">Add New Address</a>
 
                     </div>
                 </div>
@@ -228,6 +228,30 @@
             <button type="submit" class="btn btn-success">Save </button>
         </form>
     </div>
+    <div class="add-address-form" style="display: none">
+        <div class="cross-mark-add-address">
+            X
+        </div>
+        <form action="/user/addresses/add" method="post">
+            <input name="redirect" type="hidden" value="/user/manage/details">
+
+            {{ csrf_field() }}
+            <div class="form-group" style="margin-top: 25px">
+                <label for="card">Line 1:</label>
+                <input class="form-control" name="line1" placeholder="32 Finchale Road">
+            </div>
+            <div class="form-group">
+                <label for="expiry">City:</label>
+                <input class="form-control" name="city" placeholder="Durham">
+            </div>
+            <div class="form-group">
+                <label for="expiry">Postcode:</label>
+                <input class="form-control" name="postcode" placeholder="DH15JH">
+            </div>
+
+            <button type="submit" class="btn btn-success">Save </button>
+        </form>
+    </div>
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
@@ -268,6 +292,14 @@
     $(".cross-mark-add-bank ").click(function () {
         $(".all-divs").show();
         $(".add-account-form").hide();
+    });
+    $('#add-address-link').click(function () {
+        $(".all-divs").hide();
+        $(".add-address-form").show();
+    });
+    $(".cross-mark-add-address ").click(function () {
+        $(".all-divs").show();
+        $(".add-address-form").hide();
     });
     $(".verify-phone-link").click(function () {
         $("#myModal").modal('show');

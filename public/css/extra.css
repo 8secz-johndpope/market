@@ -218,9 +218,8 @@ a.add-bank-link {
     position: relative;
     padding-top: 1px;
 }
-.add-account-form {
+.add-account-form, .add-address-form {
     margin: auto;
-    top: 123px;
     background: white;
     width: 100%;
     max-width: 900px;
