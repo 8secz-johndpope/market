@@ -190,6 +190,7 @@
                         <div class="form-group">
                             <label for="category">Select Category</label>
                             <select class="form-control" id="category">
+                                <option value="0">Select</option>
                                 @foreach($jobs as $job)
                                     <option value="{{$job->id}}">{{$job->title}}</option>
                                     @endforeach
