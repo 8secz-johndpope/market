@@ -221,6 +221,7 @@
                                 @if($cover->category)
                                     <p>{{$cover->category->title}}</p>
                                 @endif
+                                <p>{{$cover->cover}}</p>
                             </div>
 
                         @endforeach
