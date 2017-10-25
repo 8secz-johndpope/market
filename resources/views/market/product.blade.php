@@ -135,7 +135,7 @@
             <div class="col-md-3 col-sm-12">
                 <div class="delivery-options">
                     @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
-                        <h4>Can Delivery Locally</h4>
+                        <h4>Can Delivery Locally(Within {{$advert->meta('distance')}} &nbsp;&nbsp; Miles)</h4>
                         <p>Price</p>
                         <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
                     <br><br>
