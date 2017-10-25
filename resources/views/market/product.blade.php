@@ -136,9 +136,9 @@
                 <div class="delivery-options">
                     @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <p class="bold-text">Check if it can be delivered to you</p>
-                        <input class="form-control" placeholder="SW153AZ" name="postcode">
-
-                    <button class="btn btn-default">Check</button>
+                        <input class="form-control" placeholder="SW153AZ" name="postcode" id="postcode">
+                        <input type="hidden" id="id" value="{{$advert->id}}">
+                    <button class="btn btn-default" id="check-button">Check</button>
                     <br>
                     <span id="delivery-info">Can be delivered to <span class="bold-text" id="postcode-text">M139AX</span> <a>Edit</a></span>
                         <h4>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
@@ -189,7 +189,22 @@
         </div>
 
 
+<script>
+    $("#check-button").click(function () {
+        var id =$('#id').val();
+        var postcode=$('#postcode').val();
+        axios.get('/user/p/deliver/'+id, {
+            params: {postcode: postcode}
+        })
+            .then(function (response) {
+                console.log(response);
 
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    });
+</script>
 
 
 
