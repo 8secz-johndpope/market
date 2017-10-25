@@ -212,11 +212,12 @@
             })
             .catch(function (error) {
                 console.log(error);
-                $('#delivery-info').hide();
+
             });
     });
     $('#edit-post').click(function () {
         $('#check-div').show();
+        $('#delivery-info').hide();
     });
 </script>
 
