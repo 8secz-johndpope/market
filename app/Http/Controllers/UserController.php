@@ -1020,7 +1020,14 @@ class UserController extends BaseController
         $type = $request->type;
         $user = Auth::user();
         $adverts = [];
-        foreach ($user->adverts()->paginate(200) as $advert){
+        if($type==='live'){
+            $adverts=$user->live;
+        }else if($type==='draft'){
+            $adverts=$user->drafts;
+        }else{
+            $adverts=$user->inactive;
+        }
+        foreach ($adverts as $advert){
             if($advert->postcode_id>0)
             $advert->postcode=$advert->postcode;
             if($advert->elastic) {
@@ -1033,15 +1040,7 @@ class UserController extends BaseController
                     ];
                     $response = $this->client->get($params);
                     $response['_source']['posted']=$advert->posted();
-                     if($type==='draft'&&isset($response['_source']['draft'])){
-                         $adverts[] = $response['_source'];
-                    }
-                     if($type==='inactive'&&isset($response['_source']['inactive'])){
-                        $adverts[] = $response['_source'];
-                    }
-                    if($type==='live'&&!isset($response['_source']['inactive'])&&!isset($response['_source']['draft'])){
-                        $adverts[] = $response['_source'];
-                    }
+
 
                 }catch (\Exception $e){
 
