@@ -117,6 +117,7 @@ function upload_cv() {
                         })
                             .then(function (response) {
                                 console.log(response);
+                                location.reload();
 
                             })
                             .catch(function (error) {
