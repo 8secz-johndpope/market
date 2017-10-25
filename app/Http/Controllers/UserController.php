@@ -479,6 +479,7 @@ class UserController extends BaseController
                 $body['location']=$a->lat.','.$a->lng;
                 $body['location_id']=$a->location->res;
                 $body['location_name']=$a->location->title;
+                $advert->save();
             }
         }
         if($request->has('category')){
