@@ -150,6 +150,14 @@
 
                     <div class="user-addresses">
                         <h4 class="bold-text">Addresses</h4>
+                        @if($user->default_address>0)
+                            <div class="address-div">
+                                <p>{{$user->address->line1}}</p>
+                                <p>{{$user->address->city}}</p>
+                                <p>{{$user->address->postcode}}</p>
+                                 <span class="bold-text green-text">Primary</span>
+                            </div>
+                            @endif
                         @foreach($user->addresses as $address)
                             @if($user->default_address!==$address->id)
                             <div class="address-div">
