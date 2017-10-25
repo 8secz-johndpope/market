@@ -155,7 +155,7 @@
                                 <p>{{$address->line1}}</p>
                                 <p>{{$address->city}}</p>
                                 <p>{{$address->postcode}}</p>
-                                <a> <span class="red-text">Delete</span></a>
+                                <a href="/user/delete/address/{{$address->id}}"> <span class="red-text">Delete</span></a>
                             </div>
 
                         @endforeach

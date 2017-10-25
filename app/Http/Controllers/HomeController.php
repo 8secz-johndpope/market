@@ -610,6 +610,13 @@ class HomeController extends BaseController
         return redirect('/user/manage/alerts');
 
     }
+    public function delete_address(Request $request,$id){
+        $alert=Address::find($id);
+        $alert->delete();
+
+        return redirect('/user/manage/details');
+
+    }
     public function toggle_alert(Request $request,$id){
         $alert=SearchAlert::find($id);
         $alert->active=!$alert->active;

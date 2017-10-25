@@ -69,6 +69,9 @@ Route::get('/user/create/alert/{id}', 'HomeController@alert');
 Route::get('/user/delete/alert/{id}', 'HomeController@delete_alert');
 Route::get('/user/toggle/alert/{id}', 'HomeController@toggle_alert');
 
+Route::get('/user/delete/address/{id}', 'HomeController@delete_address');
+
+
 Route::post('/user/cards/add', 'HomeController@addcard');
 Route::post('/user/accounts/add', 'HomeController@add_bank_account');
 
