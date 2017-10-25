@@ -1029,7 +1029,7 @@ class UserController extends BaseController
         }
         foreach ($adverts as $advert){
             if($advert->postcode_id>0)
-            $advert->postcode=$advert->postcode;
+            $advert->postcode=$advert->postcode->postcode;
             if($advert->elastic) {
 
                 try{
