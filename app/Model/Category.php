@@ -49,7 +49,7 @@ class Category extends  BaseModel
             return false;
     }
     public static function job_leaves(){
-            $all=Category::where('id','>',400000000)->where('id','<',500000000)->get();
+            $all=Category::where('id','>',400000000)->where('id','<',500000000)->orderBy('title')->get();
             $jobs=[];
             foreach ($all as $job){
                 if(count($job->children)===0)
