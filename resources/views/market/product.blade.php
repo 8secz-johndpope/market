@@ -136,11 +136,12 @@
                 <div class="delivery-options">
                     @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <p class="bold-text">Check if it can be delivered to you</p>
+                        <span class="red-text" id="sorry-info" style="display: none">Sorry, the item can't be delivered to your location</span>
                         <input class="form-control" placeholder="SW153AZ" name="postcode" id="postcode">
                         <input type="hidden" id="id" value="{{$advert->id}}">
                     <button class="btn btn-default" id="check-button">Check</button>
                     <br>
-                    <span id="delivery-info">Can be delivered to <span class="bold-text" id="postcode-text">M139AX</span> <a>Edit</a></span>
+                    <span id="delivery-info" style="display: none">Can be delivered to <span class="bold-text" id="postcode-text">M139AX</span> <a>Edit</a></span>
                         <h4>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
                         <p>Price</p>
                         <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
@@ -198,6 +199,12 @@
         })
             .then(function (response) {
                 console.log(response);
+                if(response.data.can){
+                    $('#delivery-info').show();
+                    $('#postcode-text').html(postcode);
+                }else{
+                    $('#sorry-info').show();
+                }
 
             })
             .catch(function (error) {
