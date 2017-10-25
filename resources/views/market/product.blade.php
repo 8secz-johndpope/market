@@ -167,6 +167,28 @@
                             <br>
                                 <a class="btn btn-primary">Apply</a>
                                 @else
+                                <form action="/user/covers/add" method="post">
+                                    <input name="redirect" type="hidden" value="/user/manage/details">
+                                    {{ csrf_field() }}
+
+                                <div class="form-group">
+                                    <label for="cv">Select a CV</label>
+                                    <select class="form-control" name="cv" required>
+                                        @foreach(Auth::user()->cvs as $cv)
+                                            <option value="{{$cv->id}}">{{$cv->title}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                    <div class="form-group">
+                                        <label for="cv">Select a Cover Letter</label>
+                                        <select class="form-control" name="cv" required>
+                                            @foreach(Auth::user()->cvs as $cv)
+                                                <option value="{{$cv->id}}">{{$cv->title}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Apply</button>
+                                </form>
 
 
                             @endif
