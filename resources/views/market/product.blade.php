@@ -133,6 +133,14 @@
                     </div>
                 </div>
             <div class="col-md-3 col-sm-12">
+                <div class="delivery-options">
+                    @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
+                        <h4>Can Delivery Locally</h4>
+                        <p>Price</p>
+                        <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
+                        <button class="btn-primary btn">Order Now</button>
+                        @endif
+                </div>
                 <div class="buttons">
                     <h4>Seller Info</h4>
                     @if($advert->user!==null)
