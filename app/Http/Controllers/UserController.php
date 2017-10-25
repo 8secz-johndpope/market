@@ -1019,7 +1019,7 @@ class UserController extends BaseController
 
         $type = $request->type;
         $user = Auth::user();
-        $adverts = [];
+
         if($type==='live'){
             $adverts=$user->live;
         }else if($type==='draft'){
@@ -1027,9 +1027,8 @@ class UserController extends BaseController
         }else{
             $adverts=$user->inactive;
         }
+        $ads=array();
         foreach ($adverts as $advert){
-            if($advert->postcode_id>0)
-            $advert->postcode=$advert->postcode->postcode;
             if($advert->elastic) {
 
                 try{
@@ -1040,6 +1039,9 @@ class UserController extends BaseController
                     ];
                     $response = $this->client->get($params);
                     $response['_source']['posted']=$advert->posted();
+                    if($advert->postcode_id>0)
+                    $response['_source']['postcode']=$advert->postcode->postcode;
+                    $ads[]=$response['_source'];
 
 
                 }catch (\Exception $e){
@@ -1050,7 +1052,7 @@ class UserController extends BaseController
             }
         }
 
-        return ['total' => count($adverts), 'adverts' => $adverts];
+        return ['total' => count($adverts), 'adverts' => $ads];
     }
 
     public function create(Request $request)
