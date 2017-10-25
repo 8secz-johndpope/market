@@ -432,6 +432,7 @@ class HomeController extends BaseController
         {
             $body['candeliver']=1;
             $meta['distance']=(int)$request->distance;
+            $meta['delivery']=(int)($request->delivery*100);
         }
 
         if($request->has('freeshipping'))
