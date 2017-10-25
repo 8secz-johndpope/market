@@ -1020,6 +1020,8 @@ class UserController extends BaseController
         $user = Auth::user();
         $adverts = [];
         foreach ($user->adverts()->paginate(200) as $advert){
+            if($advert->postcode_id>0)
+            $advert->postcode=$advert->postcode;
             if($advert->elastic) {
 
                 try{
