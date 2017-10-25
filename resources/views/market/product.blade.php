@@ -167,6 +167,9 @@
                             <br>
                                 <a class="btn btn-primary">Apply</a>
                                 @elseif(Auth::user()->has_applied($advert->id))
+                                <br>
+                            <br>
+                            <br>
                                 <button class="btn-primary btn" disabled>Application Sent</button>
                                 @else
                                 <form action="/user/jobs/apply" method="post">
