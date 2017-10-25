@@ -155,6 +155,7 @@
                                 <p>{{$address->line1}}</p>
                                 <p>{{$address->city}}</p>
                                 <p>{{$address->postcode}}</p>
+                                <a class="red-text">Delete</a>
                             </div>
 
                         @endforeach
