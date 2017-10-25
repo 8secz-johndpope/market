@@ -110,8 +110,10 @@ function upload_cv() {
                         console.log(err);
                     } else {
                         console.log(data);
-                        axios.get('/user/image/add', {
-                            params: {image: uname}
+                        var title = $('#title').val();
+                        var category=$('#category').val();
+                        axios.get('/user/cvs/add', {
+                            params: {file_name: uname,title:title,category:category}
                         })
                             .then(function (response) {
                                 console.log(response);
@@ -120,8 +122,6 @@ function upload_cv() {
                             .catch(function (error) {
                                 console.log(error);
                             });
-                        $(".row-images").prepend('<div class="col-sm-3"><div class="cross-mark">X</div><input type="hidden" name="images[]" value="' + uname + '"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/' + uname + '"></div>');
-                        //  $("#advert-form").append('<input type="hidden" name="images[]" value="'+uname+'">');
 
                     }
                 });

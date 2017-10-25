@@ -890,6 +890,17 @@ class HomeController extends BaseController
 
         return redirect($request->redirect);
     }
+    public function add_cv(Request $request)
+    {
+        $user = Auth::user();
+        $cv = new Cv;
+        $cv->title=$request->title;
+        $cv->file_name=$request->file_name;
+        $cv->category_id=$request->category;
+        $cv->user_id=$user->id;
+        $cv->save();
+        return ['msg'=>'done'];
+    }
     public function delete_card(Request $request){
         $user = Auth::user();
         $stripe_id = $user->stripe_id;
