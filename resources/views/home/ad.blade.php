@@ -372,6 +372,7 @@
                                                 <input type="number" name="delivery" id="delivery"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="" @if(!$advert->has_param('candeliver')||$advert->param('candeliver')!==1) disabled @endif  value="@if($advert->has_param('candeliver')&&$advert->param('candeliver')===1&&$advert->has_meta('delivery')){{$advert->shipping()}}@endif" step="1">
                                             </div>
                                         </div>
+                                        </div>
                                     <div class="col-sm-6">
                                         <span class="delivery-text">Delivery Distance</span>
 
