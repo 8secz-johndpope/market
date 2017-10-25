@@ -70,6 +70,7 @@ Route::get('/user/delete/alert/{id}', 'HomeController@delete_alert');
 Route::get('/user/toggle/alert/{id}', 'HomeController@toggle_alert');
 
 Route::get('/user/delete/address/{id}', 'HomeController@delete_address');
+Route::get('/user/primary/address/{id}', 'HomeController@primary_address');
 
 
 Route::post('/user/cards/add', 'HomeController@addcard');
