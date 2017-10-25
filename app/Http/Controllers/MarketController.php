@@ -988,7 +988,13 @@ class MarketController extends BaseController
         $advert=Advert::find($id);
         $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$request->postcode)))->first();
         $distance = $this->haversineGreatCircleDistance($advert->postcode->lat,$advert->postcode->lng,$postcode->lat,$postcode->lng);
-        return ['distance'=>$distance];
+        $max = $advert->meta('distance');
+        if($distance<=$max){
+            return ['can'=>true,'distance'=>$distance];
+        }
+        else{
+            return ['can'=>false,'distance'=>$distance];
+        }
 
     }
     public function index(Request $request){
