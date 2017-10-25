@@ -187,7 +187,7 @@
 
                         @endforeach
                         <br>
-                        <a class="btn btn-primary" id="add-address-link">Add New Address</a>
+                        <input type="file" id="upload-cv"><a class="btn btn-primary" id="upload-cv-link">Upload CV</a>
 
                     </div>
                 </div>
