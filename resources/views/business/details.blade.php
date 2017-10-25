@@ -155,7 +155,7 @@
                                 <p>{{$address->line1}}</p>
                                 <p>{{$address->city}}</p>
                                 <p>{{$address->postcode}}</p>
-                               @if($user->address->id===$address->id)  <span class="bold-text green-text">Primary</span> @else <a>Make Primary</a><a href="/user/delete/address/{{$address->id}}"> <span class="red-text">Delete</span></a>@endif
+                               @if($user->address->id===$address->id)  <span class="bold-text green-text">Primary</span> @else <a href="/user/primary/address/{{$address->id}}">Make Primary</a><a href="/user/delete/address/{{$address->id}}"> <span class="red-text">Delete</span></a>@endif
                             </div>
 
                         @endforeach
