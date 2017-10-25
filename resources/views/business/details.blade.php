@@ -368,5 +368,8 @@
                 console.log(error);
             });
     });
+    $('#upload-cv-link').click(function () {
+       upload_cv();
+    });
 </script>
 @endsection
