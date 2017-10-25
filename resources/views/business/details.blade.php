@@ -173,6 +173,20 @@
                         <a class="btn btn-primary" id="add-address-link">Add New Address</a>
 
                     </div>
+                    <div class="user-addresses">
+                        <h4 class="bold-text">Stored CVs</h4>
+
+                        @foreach($user->cvs as $cv)
+                                <div class="address-div">
+                                    <p>{{$cv->title}}</p>
+                                    <p>{{$cv->category->title}}</p>
+                                </div>
+
+                        @endforeach
+                        <br>
+                        <a class="btn btn-primary" id="add-address-link">Add New Address</a>
+
+                    </div>
                 </div>
             </div>
 
