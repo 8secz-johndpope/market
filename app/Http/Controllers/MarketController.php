@@ -984,6 +984,13 @@ class MarketController extends BaseController
                 cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
         return $angle * $earthRadius;
     }
+    public function can_deliver(Request $request,$id){
+        $advert=Advert::find($id);
+        $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$request->postcode)))->first();
+        $distance = $this->haversineGreatCircleDistance($advert->postcode->lat,$advert->postcode->lng,$postcode->lat,$postcode->lng);
+        return ['distance'=>$distance];
+
+    }
     public function index(Request $request){
         //$base = Category::where('parent_id',0)->get();
         //Need  chande de response is not search client
