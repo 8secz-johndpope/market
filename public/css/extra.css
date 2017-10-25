@@ -74,6 +74,9 @@ a.delete-alert-link {
     height: 500px;
     overflow: auto;
 }
+span#postcode-text {
+    text-transform: uppercase;
+}
 .continue-div {
     position: fixed;
     bottom: 19px;
