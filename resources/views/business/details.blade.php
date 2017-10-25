@@ -212,6 +212,19 @@
                         </div>
 
                     </div>
+                    <div class="user-covers">
+                        <h4 class="bold-text">Stored Covers</h4>
+
+                        @foreach($user->covers as $cover)
+                            <div class="address-div">
+                                <p>{{$cover->title}}</p>
+                                @if($cover->category)
+                                    <p>{{$cover->category->title}}</p>
+                                @endif
+                            </div>
+
+                        @endforeach
+                    </div>
                 </div>
             </div>
 
