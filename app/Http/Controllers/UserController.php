@@ -1341,7 +1341,8 @@ class UserController extends BaseController
             $all['vehicle_engine_size'] = $engine;
             $all['vehicle_colour'] = strtolower($r['colour']);
             $all['vehicle_transmission'] = strtolower($r['transmission']);
-
+            $all['vehicle_make'] = strtolower($r['make']);
+            $all['vehicle_model'] = strtolower(explode(' ',$r['model'])[0]);
             return $all;
         }catch (\Exception $exception){
             return ['msg'=>'Not valid plate'];
