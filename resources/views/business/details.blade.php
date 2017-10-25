@@ -147,6 +147,21 @@
 
 
                     </div>
+
+                    <div class="user-addresses">
+                        <h4 class="bold-text">Addresses</h4>
+                        @foreach($user->addresses as $address)
+                            <div class="address-div">
+                                <p>{{$address->line1}}</p>
+                                <p>{{$address->city}}</p>
+                                <p>{{$address->postcode}}</p>
+                            </div>
+
+                        @endforeach
+
+
+
+                    </div>
                 </div>
             </div>
 
