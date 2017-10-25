@@ -41,6 +41,9 @@ class Advert extends  BaseModel
         $response = $this->client->get($params);
         $this->dict = $response['_source'];
     }
+    public function url(){
+        return '/p/'.$this->category_id.'/'.$this->id;
+    }
     public function make_inactive(){
         $milliseconds = round(microtime(true) * 1000);
         $params = [

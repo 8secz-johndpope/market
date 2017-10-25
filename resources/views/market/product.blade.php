@@ -170,7 +170,8 @@
                                 <button class="btn-primary btn" disabled>Application Sent</button>
                                 @else
                                 <form action="/user/jobs/apply" method="post">
-                                    <input name="redirect" type="hidden" value="/user/manage/details">
+                                    <input name="redirect" type="hidden" value="{{$advert->url()}}">
+                                    <input name="id" type="hidden" value="{{$advert->id}}">
                                     {{ csrf_field() }}
 
                                 <div class="form-group">

@@ -82,6 +82,8 @@ Route::post('/user/accounts/add', 'HomeController@add_bank_account');
 Route::post('/user/addresses/add', 'HomeController@add_address');
 Route::post('/user/covers/add', 'HomeController@add_cover');
 
+Route::post('/user/jobs/apply', 'HomeController@apply');
+
 Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/send/text', 'HomeController@text');
 Route::get('/user/verify/text', 'HomeController@verify_text');

@@ -891,6 +891,22 @@ class HomeController extends BaseController
         $cover->save();
         return redirect($request->redirect);
     }
+    public function apply(Request $request)
+    {
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $id = $request->id;
+        $advert = Advert::find($id);
+
+        $application = new Application;
+        $application->advert_id = $advert->id;
+        $application->user_id = $user->id;
+        $application->cv_id = $request->cv;
+        $application->cover_id = $request->cover;
+        $application->save();
+        return redirect($advert->url());
+
+    }
     public function add_address(Request $request)
     {
         $user = Auth::user();
