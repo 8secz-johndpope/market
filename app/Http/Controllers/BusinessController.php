@@ -102,7 +102,8 @@ class BusinessController extends BaseController
             $user->default_address=$address->id;
             $user->save();
         }
-        return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts]);
+
+        return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts,'jobs'=>Category::job_leaves()]);
 
     }
     public function company(Request $request){

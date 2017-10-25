@@ -48,6 +48,15 @@ class Category extends  BaseModel
         else
             return false;
     }
+    public static function job_leaves(){
+            $all=Category::where('id','>',400000000)->where('id','<',500000000)->get();
+            $jobs=[];
+            foreach ($all as $job){
+                if(count($job->children)===0)
+                    $jobs[]=$job;
+            }
+            return $jobs;
+    }
 
     public function is_parent($id){
         if($this->id<=$id&&$this->ends>=$id){

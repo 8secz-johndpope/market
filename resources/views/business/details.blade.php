@@ -187,7 +187,20 @@
 
                         @endforeach
                         <br>
-                        <input type="file" id="upload-cv"><a class="btn btn-primary" id="upload-cv-link">Upload CV</a>
+                        <div class="form-group">
+                            <label for="category">Select Category</label>
+                            <select class="form-control" id="category">
+                                @foreach($jobs as $job)
+                                    <option value="{{$job->id}}">{{$job->title}}</option>
+                                    @endforeach
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="v">Select CV</label>
+                            <input type="file" class="form-control-file" id="upload-cv">
+                        </div>
+                        <a class="btn btn-primary" id="upload-cv-link">Upload CV</a>
 
                     </div>
                 </div>
