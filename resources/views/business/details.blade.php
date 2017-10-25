@@ -178,7 +178,7 @@
 
                         @foreach($user->cvs as $cv)
                                 <div class="address-div">
-                                    <p>{{$cv->title}}</p>
+                                    <p class="bold-text">{{$cv->title}}</p>
                                     @if($cv->category)
                                         <p>{{$cv->category->title}}</p>
                                     @endif
@@ -217,7 +217,7 @@
 
                         @foreach($user->covers as $cover)
                             <div class="address-div">
-                                <p>{{$cover->title}}</p>
+                                <p class="bold-text">{{$cover->title}}</p>
                                 @if($cover->category)
                                     <p>{{$cover->category->title}}</p>
                                 @endif
