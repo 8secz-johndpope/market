@@ -63,6 +63,7 @@ class Advert extends  BaseModel
 
         ];
         $response = $this->client->update($params);
+        $this->status=2;
         $this->deleted=1;
         $this->save();
     }
