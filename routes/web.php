@@ -75,6 +75,7 @@ Route::get('/user/primary/address/{id}', 'HomeController@primary_address');
 
 Route::post('/user/cards/add', 'HomeController@addcard');
 Route::post('/user/accounts/add', 'HomeController@add_bank_account');
+Route::post('/user/addresses/add', 'HomeController@add_address');
 
 Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/send/text', 'HomeController@text');

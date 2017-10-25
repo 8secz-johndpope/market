@@ -864,6 +864,22 @@ class HomeController extends BaseController
         $user->save();
         return redirect($request->redirect);
     }
+    public function add_address(Request $request)
+    {
+        $user = Auth::user();
+        $address = new Address;
+        $address->line1=$request->line1;
+        $address->city=$request->city;
+        $address->postcode=$request->postcode;
+        $address->save();
+        if($user->default_address===0){
+            $user->default_address=$address->id;
+            $user->save();
+        }
+
+
+        return redirect($request->redirect);
+    }
     public function delete_card(Request $request){
         $user = Auth::user();
         $stripe_id = $user->stripe_id;
