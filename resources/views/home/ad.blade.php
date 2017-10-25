@@ -363,7 +363,7 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <input  type="checkbox" name="candeliver" value="1"  @if($advert->has_param('candeliver')) checked @endif><span class="delivery-text">Can Deliver Locally</span>
+                                        <input  type="checkbox" name="candeliver" id="candeliver"  value="1"  @if($advert->has_param('candeliver')) checked @endif><span class="delivery-text">Can Deliver Locally</span>
                                         <p>Note: Need to delivery the product within 2 days of receiving the order</p>
                                         <div class="well">
                                             <p class="bold-text">Buyer Pays</p>
@@ -582,6 +582,15 @@
                     $("#buyer_pays").val(0.00);
                     $("#buyer_pays").prop('disabled', false);
                 }
+        });
+        $("#candeliver").change(function () {
+            if($(this).is(":checked")){
+                $("#buyer_pays").val(0.00);
+                $("#buyer_pays").prop('disabled', false);
+            }else{
+                $("#buyer_pays").val(0.00);
+                $("#buyer_pays").prop('disabled', true);
+            }
         });
     </script>
 @endsection
