@@ -97,6 +97,11 @@ class BusinessController extends BaseController
         }catch (\Exception $exception){
             $accounts = [];
         }
+        if(count($user->addresses)>0&&$user->default_address===0){
+            $address = $user->addresses[0];
+            $user->default_address=$address->id;
+            $user->save();
+        }
         return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts]);
 
     }
