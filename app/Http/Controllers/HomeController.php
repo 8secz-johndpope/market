@@ -871,6 +871,7 @@ class HomeController extends BaseController
         $address->line1=$request->line1;
         $address->city=$request->city;
         $address->postcode=$request->postcode;
+        $address->user_id=$user->id;
         $address->save();
         if($user->default_address===0){
             $user->default_address=$address->id;
