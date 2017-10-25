@@ -190,12 +190,12 @@
                         <br>
                         <div class="well">
                         <div class="form-group">
-                            <label for="title">Title</label>
+                            <label for="title">Title</label> <span class="red-text" id="no-title" style="display: none">Please add a title to your CV</span>
                             <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="CV for Part Time Job">
                             <small id="emailHelp" class="form-text text-muted">With title you can easily locate CV if you have many CVs </small>
                         </div>
                         <div class="form-group">
-                            <label for="category">Select Category</label>
+                            <label for="category">Select Category</label> <span class="red-text" id="no-category" style="display: none">Please choose a category to your CV</span>
                             <select class="form-control" id="category">
                                 <option value="0">Select</option>
                                 @foreach($jobs as $job)
@@ -370,6 +370,20 @@
             });
     });
     $('#upload-cv-link').click(function () {
+        var title = $('#title').val();
+        var category = $('#category').val();
+        if(!title){
+            $('#no-title').show();
+            return;
+        }else{
+            $('#no-title').hide();
+        }
+        if(!category){
+            $('#no-category').show();
+            return;
+        }else{
+            $('#no-category').hide();
+        }
        upload_cv();
     });
 </script>
