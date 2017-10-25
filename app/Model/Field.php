@@ -16,7 +16,7 @@ class Field extends  Model
         return $this->belongsToMany('App\Model\Category');
     }
     public function values() {
-        return $this->hasMany('App\Model\FieldValue');
+        return $this->hasMany('App\Model\FieldValue')->orderBy('title');
     }
     public function filters() {
         return $this->hasMany('App\Model\Filter');
