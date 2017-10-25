@@ -187,6 +187,7 @@
 
                         @endforeach
                         <br>
+                        <div class="well">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CV for Part Time Job">
@@ -207,6 +208,7 @@
                             <input type="file" class="form-control-file" id="upload-cv">
                         </div>
                         <a class="btn btn-primary" id="upload-cv-link">Upload CV</a>
+                        </div>
 
                     </div>
                 </div>
