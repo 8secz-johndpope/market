@@ -133,6 +133,7 @@
                     </div>
                 </div>
             <div class="col-md-3 col-sm-12">
+                @if($advert->category->can_ship())
                 <div class="delivery-options">
                     @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <div id="check-div" @if (!Auth::guest()&& Auth::user()->default_address>0) style="display: none" @endif>
@@ -158,6 +159,12 @@
                             <button class="btn-success btn">Order to Ship</button>
                         @endif
                 </div>
+                @endif
+                    @if($advert->category->can_apply())
+                        <div class="apply-options">
+                        </div>
+                            @endif
+
                 <div class="buttons">
                     <h4>Seller Info</h4>
                     @if($advert->user!==null)

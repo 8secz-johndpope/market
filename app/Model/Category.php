@@ -48,6 +48,15 @@ class Category extends  BaseModel
         else
             return false;
     }
+    public function can_apply(){
+
+        $jobs = Category::find(400000000);
+
+        if($this->id>=$jobs->id&&$this->id<=$jobs->ends)
+            return true;
+        else
+            return false;
+    }
     public static function job_leaves(){
             $all=Category::where('id','>',400000000)->where('id','<',500000000)->orderBy('title')->get();
             $jobs=[];
