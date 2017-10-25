@@ -365,7 +365,13 @@
                                     <div class="col-sm-6">
                                         <input  type="checkbox" name="candeliver" value="1"  @if($advert->has_param('candeliver')) checked @endif><span class="delivery-text">Can Deliver Locally</span>
                                         <p>Note: Need to delivery the product within 2 days of receiving the order</p>
-                                    </div>
+                                        <div class="well">
+                                            <p class="bold-text">Buyer Pays</p>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
+                                                <input type="number" name="delivery" id="delivery"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="" @if(!$advert->has_param('candeliver')||$advert->param('candeliver')!==1) disabled @endif  value="@if($advert->has_param('candeliver')&&$advert->param('candeliver')===1&&$advert->has_meta('delivery')){{$advert->shipping()}}@endif" step="1">
+                                            </div>
+                                        </div>
                                     <div class="col-sm-6">
                                         <span class="delivery-text">Delivery Distance</span>
 
