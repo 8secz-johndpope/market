@@ -294,7 +294,8 @@ class Advert extends  BaseModel
             return 'noimage.png';
     }
     public function meta($param){
-
+        if($this->dict===null)
+            $this->fetch();
 
         if(isset($this->dict['meta'][$param]))
         return $this->dict['meta'][$param];
