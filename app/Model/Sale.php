@@ -13,7 +13,14 @@ use Illuminate\Database\Eloquent\Model;
 class Sale extends Model
 {
     public function amount() {
-        return 10.00;
+        $advert = $this->advert;
+        if($this->type===0)
+        return $advert->amount()+$advert->delivery();
+        else if($this->type===1){
+            return $advert->amount()+$advert->shipping();
+        }else{
+            return $advert->amount();
+        }
     }
     public function advert()
     {
