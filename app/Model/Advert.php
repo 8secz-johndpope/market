@@ -417,6 +417,11 @@ class Advert extends  BaseModel
             return false;
         }
     }
+    public function distance($postcode){
+
+        $distance = $this->haversineGreatCircleDistance($this->postcode->lat,$this->postcode->lng,$postcode->lat,$postcode->lng);
+        return $distance;
+    }
     public function category(){
         return $this->belongsTo('App\Model\Category');
     }

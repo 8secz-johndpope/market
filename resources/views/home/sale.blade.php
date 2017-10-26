@@ -66,22 +66,11 @@
                     <div class="form-check">
                         <label class="form-check-label">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" @if(!$advert->can_deliver_to($address->zip)) disabled @endif>
-                          {{$address->line1}},{{$address->city}},{{$address->postcode}}@if(!$advert->can_deliver_to($address->zip))<span class="red-text">Outside of the delivery area</span>@endif
+                          {{$address->line1}},{{$address->city}},{{$address->postcode}}({{$advert->distance($address->zip)}})@if(!$advert->can_deliver_to($address->zip))<span class="red-text">Outside of the delivery area</span>@endif
                         </label>
                     </div>
                     @endforeach
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                            Option two can be something else and selecting it will deselect option one
-                        </label>
-                    </div>
-                    <div class="form-check disabled">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-                            Option three is disabled
-                        </label>
-                    </div>
+
                 </div>
                 <div class="col-sm-4">
                     <table class="table">
