@@ -16,8 +16,8 @@
 
             <div class="row">
                 <div class="col-sm-8">
-                    <form action="/user/payment/stripe" method="post">
-
+                    <form action="/user/payment/sale/stripe/{{$sale->id}}" method="post">
+                        {{ csrf_field() }}
                     <h4>Your Order</h4>
 
                     <div class="product">
@@ -67,7 +67,7 @@
                     @foreach($user->addresses as $address)
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="delivery_address" id="exampleRadios1" value="option1" @if(!$advert->can_deliver_to($address->zip)) disabled @endif required>
+                            <input class="form-check-input" type="radio" name="delivery_address" id="exampleRadios1" value="{{$address->id}}" @if(!$advert->can_deliver_to($address->zip)) disabled @endif required>
                             {{$address->line1}},{{$address->city}},{{$address->postcode}}<br>@if(!$advert->can_deliver_to($address->zip))<span class="red-text"> Outside of the delivery area</span> @else <span class="green-text" > Can Deliver </span> @endif --- {{$advert->distance($address->zip) }} Miles
                         </label>
                     </div>
@@ -76,7 +76,7 @@
                     @foreach($user->addresses as $address)
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="billing_address" id="exampleRadios1" value="option1" @if($user->default_address===$address->id) checked @endif required>
+                                <input class="form-check-input" type="radio" name="billing_address" id="exampleRadios1" value="{{$address->id}}" @if($user->default_address===$address->id) checked @endif required>
                                 {{$address->line1}},{{$address->city}},{{$address->postcode}}
                             </label>
                         </div>
@@ -95,7 +95,7 @@
                     </table>
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
                         <h4>Pay by Card</h4>
-                            {{ csrf_field() }}
+
                             <ul class="list-group" >
                                 @foreach($cards as $card)
                                     <li class="list-group-item">
