@@ -149,7 +149,11 @@
                         <p>Price</p>
                         <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
                     <br><br>
-                        <button class="btn-primary btn">Order to Deliver</button>
+                        <form action="/user/ad/deliver" method="post">
+                            <input name="id" type="hidden" value="{{$advert->id}}">
+                            {{ csrf_field() }}
+                        <button type="submit" class="btn-primary btn">Order to Deliver</button>
+                        </form>
                         @endif
                         @if($advert->has_param('canship')&&$advert->param('canship')===1)
                             <h4>Can Ship Nationwide</h4>

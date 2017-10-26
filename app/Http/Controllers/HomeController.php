@@ -13,6 +13,7 @@ use App\Model\Pack;
 use App\Model\Payment;
 use App\Model\Postcode;
 use App\Model\Room;
+use App\Model\Sale;
 use App\Model\SearchAlert;
 use App\Model\Shipping;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -551,6 +552,46 @@ class HomeController extends BaseController
         $clientToken = $gateway->clientToken()->generate();
 
         return view('home.payment',['order'=>Order::find($order_id),'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user]);
+    }
+    public function sale(Request $request,$id){
+        $user = Auth::user();
+        /*
+        $balance = \Stripe\Balance::retrieve(
+            array("stripe_account" => $user->stripe_account)
+        );
+        */
+
+
+        $stripe_id = $user->stripe_id;
+        $customer = \Stripe\Customer::retrieve($stripe_id);
+
+        try{
+            $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+                'limit' => 10, 'object' => 'card'));
+            $card = $customer->sources->retrieve($customer->default_source);
+            $cards = $cards['data'];
+
+        }catch (\Exception $exception){
+            $cards = [];
+            $card=null;
+        }
+
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+        ));
+        $clientToken = $gateway->clientToken()->generate();
+
+        return view('home.sale',['sale'=>Sale::find($id),'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user]);
+    }
+    public function deliver(Request $request)
+    {
+        $user = Auth::user();
+        $advert=Advert::find($request->id);
+        $sale = new Sale;
+        $sale->user_id=$user->id;
+        $sale->advert_id=$advert->id;
+        $sale->save();
+        return redirect('/user/manage/sale'.$sale->id);
     }
     public function shipping(Request $request,$id){
         $user = Auth::user();

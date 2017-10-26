@@ -85,6 +85,9 @@ Route::post('/user/covers/add', 'HomeController@add_cover');
 Route::post('/user/jobs/apply', 'HomeController@apply');
 
 Route::get('/user/manage/order', 'HomeController@order');
+Route::get('/user/manage/sale/{id}', 'HomeController@sale');
+Route::post('/user/ad/deliver', 'HomeController@deliver');
+
 Route::get('/user/send/text', 'HomeController@text');
 Route::get('/user/verify/text', 'HomeController@verify_text');
 Route::get('/user/email/resend', 'HomeController@resend_email');
