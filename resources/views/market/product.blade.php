@@ -200,6 +200,11 @@
                             @endif
                         </div>
                             @endif
+                    <div class="collection-options">
+                        <h4>Near to Seller, liked the item?</h4>
+                        <button class="btn-info btn">Agree to Buy</button>
+                        <p>Once you agree to buy, the seller will handover the item and get paid</p>
+                    </div>
 
                 <div class="buttons">
                     <h4>Seller Info</h4>
