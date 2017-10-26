@@ -1170,12 +1170,12 @@ class HomeController extends BaseController
     }
     public function sale_stripe(Request $request,$id){
         $user = Auth::user();
-        $sale=Sale::fine($id);
+        $sale=Sale::find($id);
         $stripe_id = $user->stripe_id;
         $card = $request->card;
 
 
-        
+
 
         $description = 'Payment towards to Order id '.$sale->id;
         try {
