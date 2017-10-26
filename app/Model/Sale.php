@@ -15,11 +15,11 @@ class Sale extends Model
     public function amount() {
         $advert = $this->advert;
         if($this->type===0)
-        return $advert->amount()+$advert->delivery();
+        return $advert->price()+$advert->delivery();
         else if($this->type===1){
-            return $advert->amount()+$advert->shipping();
+            return $advert->price()+$advert->shipping();
         }else{
-            return $advert->amount();
+            return $advert->price();
         }
     }
     public function advert()
