@@ -65,7 +65,7 @@
                     @foreach($user->addresses as $address)
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" @if(!$advert->can_deliver_to($address->zip)) disabled @endif>
+                            <input class="form-check-input" type="radio" name="delivery_address" id="exampleRadios1" value="option1" @if(!$advert->can_deliver_to($address->zip)) disabled @endif>
                           {{$address->line1}},{{$address->city}},{{$address->postcode}}({{$advert->distance($address->zip) }} Miles)@if(!$advert->can_deliver_to($address->zip))<span class="red-text">Outside of the delivery area</span>@endif
                         </label>
                     </div>
@@ -74,7 +74,7 @@
                     @foreach($user->addresses as $address)
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" @if($user->default_address===$address->id) checked @endif>
+                                <input class="form-check-input" type="radio" name="billing_address" id="exampleRadios1" value="option1" @if($user->default_address===$address->id) checked @endif>
                                 {{$address->line1}},{{$address->city}},{{$address->postcode}}
                             </label>
                         </div>
