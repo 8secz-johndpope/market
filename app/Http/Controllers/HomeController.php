@@ -591,7 +591,7 @@ class HomeController extends BaseController
         $sale->user_id=$user->id;
         $sale->advert_id=$advert->id;
         $sale->save();
-        return redirect('/user/manage/sale'.$sale->id);
+        return redirect('/user/manage/sale/'.$sale->id);
     }
     public function shipping(Request $request,$id){
         $user = Auth::user();
