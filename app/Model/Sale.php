@@ -15,4 +15,8 @@ class Sale extends Model
     public function amount() {
         return 10.00;
     }
+    public function advert()
+    {
+        return $this->belongsTo('App\Model\Advert');
+    }
 }

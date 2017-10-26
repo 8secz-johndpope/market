@@ -580,8 +580,8 @@ class HomeController extends BaseController
             'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
         ));
         $clientToken = $gateway->clientToken()->generate();
-
-        return view('home.sale',['sale'=>Sale::find($id),'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user]);
+        $sale=Sale::find($id);
+        return view('home.sale',['sale'=>$sale,'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user,'advert'=>$sale->advert]);
     }
     public function deliver(Request $request)
     {
