@@ -420,7 +420,7 @@ class Advert extends  BaseModel
     public function distance($postcode){
 
         $distance = $this->haversineGreatCircleDistance($this->postcode->lat,$this->postcode->lng,$postcode->lat,$postcode->lng);
-        return $distance;
+        return number_format($distance,2);
     }
     public function category(){
         return $this->belongsTo('App\Model\Category');
