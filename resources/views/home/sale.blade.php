@@ -64,6 +64,11 @@
                 </div>
                 <div class="col-sm-4">
                     <table class="table">
+                        <tr><td>Price:</td><td><span class="bold-text">£{{$sale->advert->price()}}</span></td></tr>
+                        @if($sale->type===0)
+                            <tr><td>Delivery:</td><td><span class="bold-text">£{{$sale->advert->delivery()}}</span></td></tr>
+
+                        @endif
 
                         <tr><td>Total:</td><td><span class="bold-text">£{{$sale->amount()}}</span></td></tr>
                     </table>
