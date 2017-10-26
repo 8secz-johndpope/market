@@ -70,6 +70,15 @@
                         </label>
                     </div>
                     @endforeach
+                    <h4>Billing Address</h4>
+                    @foreach($user->addresses as $address)
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" @if($user->default_address===$address->id) checked @endif>
+                                {{$address->line1}},{{$address->city}},{{$address->postcode}}
+                            </label>
+                        </div>
+                    @endforeach
 
                 </div>
                 <div class="col-sm-4">
