@@ -16,6 +16,8 @@
 
             <div class="row">
                 <div class="col-sm-8">
+                    <form action="/user/payment/stripe" method="post">
+
                     <h4>Your Order</h4>
 
                     <div class="product">
@@ -66,7 +68,7 @@
                     <div class="form-check">
                         <label class="form-check-label">
                             <input class="form-check-input" type="radio" name="delivery_address" id="exampleRadios1" value="option1" @if(!$advert->can_deliver_to($address->zip)) disabled @endif>
-                          {{$address->line1}},{{$address->city}},{{$address->postcode}}@if(!$advert->can_deliver_to($address->zip))<span class="red-text" style="display: block"> @else <span class="green-text" style="display: block"> @endif  @if(!$advert->can_deliver_to($address->zip))Outside of the delivery area @else Can Deliver  @endif --- {{$advert->distance($address->zip) }} Miles  </span>
+                            {{$address->line1}},{{$address->city}},{{$address->postcode}}@if(!$advert->can_deliver_to($address->zip))<span class="red-text" style="display: block"> Outside of the delivery area</span> @else <span class="green-text" style="display: block"> Can Deliver </span> @endif --- {{$advert->distance($address->zip) }} Miles
                         </label>
                     </div>
                     @endforeach
@@ -93,7 +95,6 @@
                     </table>
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
                         <h4>Pay by Card</h4>
-                        <form action="/user/payment/stripe" method="post">
                             {{ csrf_field() }}
                             <ul class="list-group" >
                                 @foreach($cards as $card)
