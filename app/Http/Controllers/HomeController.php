@@ -1136,7 +1136,7 @@ class HomeController extends BaseController
                $charge = \Stripe\Charge::create(array(
                    "amount" => $order->amount_in_pence(),
                    "currency" => "gbp",
-                   "customer" => $stripe_id,
+                  // "customer" => $stripe_id,
                    "source" => $card, // obtained with Stripe.js
                    "description" => $description
                ), array("stripe_account" => "{$user->stripe_account}"));
