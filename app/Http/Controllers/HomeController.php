@@ -952,12 +952,15 @@ class HomeController extends BaseController
     }
     public function add_address(Request $request)
     {
+        $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$request->postcode)))->first();
+
         $user = Auth::user();
         $address = new Address;
         $address->line1=$request->line1;
         $address->city=$request->city;
-        $address->postcode=$request->postcode;
+        $address->postcode=$postcode->postcode;
         $address->user_id=$user->id;
+        $address->zip_id=$postcode->id;
         $address->code=rand(1000,9999);
         $address->save();
         if($user->default_address===0){
