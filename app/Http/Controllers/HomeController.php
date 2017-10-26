@@ -1168,6 +1168,41 @@ class HomeController extends BaseController
         }
 
     }
+    public function sale_stripe(Request $request,$id){
+        $user = Auth::user();
+        $sale=Sale::fine($id);
+        $stripe_id = $user->stripe_id;
+        $card = $request->card;
+
+
+        
+
+        $description = 'Payment towards to Order id '.$sale->id;
+        try {
+            if($sale->amount_in_pence()>0){
+                $charge = \Stripe\Charge::create(array(
+                    "amount" => $sale->amount_in_pence(),
+                    "currency" => "gbp",
+                    "customer" => $stripe_id,
+                    "source" => $card, // obtained with Stripe.js
+                    "description" => $description
+                ), array("stripe_account" => "{$user->stripe_account}"));
+            }
+
+
+                return redirect('/user/manage/orders');
+
+
+        }
+        catch (\Exception $e) {
+            return [
+                'status' => 'failed',
+                'error' => $e,
+                'result' => ['msg' => 'error charging the card']
+            ];
+        }
+
+    }
     public function paypal(Request $request){
         $user = Auth::user();
         $gateway = new \Braintree\Gateway(array(

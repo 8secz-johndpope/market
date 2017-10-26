@@ -22,6 +22,9 @@ class Sale extends Model
             return $advert->price();
         }
     }
+    public function amount_in_pence() {
+      return (int)(100*$this->amount());
+    }
     public function advert()
     {
         return $this->belongsTo('App\Model\Advert');
