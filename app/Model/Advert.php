@@ -405,6 +405,18 @@ class Advert extends  BaseModel
             $this->fetch();
         return Location::where('res',$this->dict['location_id'])->first();
     }
+    public function can_deliver_to($postcode){
+
+        $max = $this->meta('distance');
+        $distance = $this->haversineGreatCircleDistance($this->postcode->lat,$this->postcode->lng,$postcode->lat,$postcode->lng);
+
+        if($distance<=$max){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     public function category(){
         return $this->belongsTo('App\Model\Category');
     }
@@ -477,6 +489,22 @@ class Advert extends  BaseModel
 
         }
         return $total/100;
+    }
+    private  function haversineGreatCircleDistance(
+        $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 6371000)
+    {
+        // convert from degrees to radians
+        $latFrom = deg2rad($latitudeFrom);
+        $lonFrom = deg2rad($longitudeFrom);
+        $latTo = deg2rad($latitudeTo);
+        $lonTo = deg2rad($longitudeTo);
+
+        $latDelta = $latTo - $latFrom;
+        $lonDelta = $lonTo - $lonFrom;
+
+        $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
+                cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
+        return 0.000621371*$angle * $earthRadius;
     }
 
 }

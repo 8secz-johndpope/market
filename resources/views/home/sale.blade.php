@@ -61,6 +61,27 @@
                             @endif
                         </div>
                     </div>
+                    <h4>Delivery Address</h4>
+                    @foreach($user->addresses as $address)
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          {{$address->line1}},{{$address->city}},{{$address->postcode}}
+                        </label>
+                    </div>
+                    @endforeach
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            Option two can be something else and selecting it will deselect option one
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                            Option three is disabled
+                        </label>
+                    </div>
                 </div>
                 <div class="col-sm-4">
                     <table class="table">

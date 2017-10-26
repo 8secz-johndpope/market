@@ -13,5 +13,9 @@ use Illuminate\Database\Eloquent\Model;
 class Address extends  Model
 {
     public $timestamps = false;
+    public function zip()
+    {
+        return $this->belongsTo('App\Model\Postcode');
+    }
 
 }
