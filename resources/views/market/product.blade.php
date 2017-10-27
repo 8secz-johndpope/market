@@ -181,7 +181,8 @@
                             @if (Auth::guest())
                                 <br>
                             <br>
-                                <a class="btn btn-primary">Apply</a>
+                            You need to login to apply.
+                                <a href="/user/redirect/{{$advert->id}}" class="btn btn-primary">Login</a>
                                 @elseif(Auth::user()->has_applied($advert->id))
                                 <br>
                             <br>
@@ -195,19 +196,25 @@
 
                                 <div class="form-group">
                                     <label for="cv">Select a CV</label>
+                                    @if(count(Auth::user()->cvs)>0)
                                     <select class="form-control" name="cv" required>
                                         @foreach(Auth::user()->cvs as $cv)
                                             <option value="{{$cv->id}}">{{$cv->title}}</option>
                                         @endforeach
                                     </select>
+                                        @else
+                                    @endif
                                 </div>
                                     <div class="form-group">
+                                        @if(count(Auth::user()->covers)>0)
+
                                         <label for="cover">Select a Cover Letter</label>
                                         <select class="form-control" name="cover" required>
                                             @foreach(Auth::user()->covers as $cover)
                                                 <option value="{{$cover->id}}">{{$cover->title}}</option>
                                             @endforeach
                                         </select>
+                                            @else
                                     </div>
                                     <button type="submit" class="btn btn-primary">Apply</button>
                                 </form>

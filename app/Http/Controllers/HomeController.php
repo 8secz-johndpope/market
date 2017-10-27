@@ -128,6 +128,10 @@ class HomeController extends BaseController
         return view('home.post', ['categories' => $categories, 'user' => $user, 'extras' => false, 'fields' => false, 'hasprice' => false, 'category' => false, 'location' => false, 'message' => false]);
 
     }
+    public function c_login(Request $request,$id){
+        $advert=Advert::find($id);
+        return redirect($advert->url());
+    }
     public function create(Request $request){
         $advert=new Advert;
         $advert->save();
