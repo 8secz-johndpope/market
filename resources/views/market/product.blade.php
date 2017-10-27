@@ -248,6 +248,13 @@
                     @endif
 
                 <div class="buttons">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a class="btn btn-default favroite-icon" data-id="{{$advert->id}}">Save to Favorites</a></li>
+                        @if(!$advert->category->can_apply())
+                            <li class="list-group-item"><a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a></li>
+                        @endif
+
+                    </ul>
                     <h4>Info</h4>
                     @if($advert->user!==null)
                     <div class="profile-picutre">
@@ -267,13 +274,7 @@
                         </ul>
                     @endif
 
-                    <ul class="list-group">
-                        <li class="list-group-item"><button class="btn btn-default">Save to Favorites</button></li>
-                        @if(!$advert->category->can_apply())
-                        <li class="list-group-item"><a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a></li>
-                            @endif
 
-                    </ul>
                 </div>
 
             </div>
