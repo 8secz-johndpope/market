@@ -178,8 +178,15 @@ class HomeController extends BaseController
     {
         $advert=Advert::find($id);
         $user = Auth::user();
+        $advert = Advert::find($id);
+        $categories = Category::where('parent_id', 0)->get();
+        if($advert->has_param('shipping')){
+            $shipping=Shipping::find($advert->param('shipping'));
+        }else{
+            $shipping=Shipping::find(1);
+        }
 
-        return view('home.edit',['advert'=>$advert,'user'=>$user,'shippings'=>Shipping::all()]);
+        return view('home.edit',['user'=>$user,'advert'=>$advert,'categories' => $categories,'shipping'=>$shipping,'economies'=>Shipping::where('type',0)->get(),'standards'=>Shipping::where('type',1)->get(),'expresses'=>Shipping::where('type',2)->get(),'distances'=>Distance::all(),'dispatches'=>Dispatch::all()]);
     }
     public function duplicate(Request $request,$id)
     {
