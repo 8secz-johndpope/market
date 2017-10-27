@@ -230,7 +230,7 @@
 
                         @endforeach
                         <br>
-                        <a class="btn btn-primary" id="add-address-link">Add New Address</a>
+                        <a class="btn btn-primary" class="add-address-link">Add New Address</a>
 
                     </div>
                     <div class="user-cvs">
@@ -433,7 +433,7 @@
         $(".all-divs").show();
         $(".add-account-form").hide();
     });
-    $('#add-address-link').click(function () {
+    $('.add-address-link').click(function () {
         $(".all-divs").hide();
         $(".add-address-form").show();
     });
