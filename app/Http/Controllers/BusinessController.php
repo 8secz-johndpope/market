@@ -104,11 +104,11 @@ class BusinessController extends BaseController
             $user->default_address=$address->id;
             $user->save();
         }
-        //$account=\Stripe\Account::retrieve($user->stripe_account);
+        $account=\Stripe\Account::retrieve($user->stripe_account);
 
 
 
-        return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts,'jobs'=>Category::job_leaves(),'balance'=>$balance]);
+        return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts,'jobs'=>Category::job_leaves(),'balance'=>$balance,'account'=>$account]);
 
     }
     public function company(Request $request){

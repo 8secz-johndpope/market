@@ -114,6 +114,9 @@
                         </form>
                     </div>
                     <div class="terms">
+                        @if($account->tos_acceptance->ip)
+                            
+                            @else
                         <h4>Accept Terms of Conditions</h4>
                         <form class="form-inline" method="post" action="/user/terms/accept">
                             {{ csrf_field() }}
@@ -121,6 +124,7 @@
 <br>
                             <button type="submit" class="btn btn-primary">Accept</button>
                         </form>
+                            @endif
                     </div>
                     <div class="balances">
                         <h4>Balances</h4>
