@@ -117,6 +117,7 @@
                         <h4>Accept Terms of Conditions</h4>
                         <form class="form-inline" method="post" action="/user/terms/accept">
                             {{ csrf_field() }}
+                            <input type="checkbox" class="checkbox" name="terms" required> I accept <a>Terms of Service</a>
 
                             <button type="submit" class="btn btn-primary">Accept</button>
                         </form>
