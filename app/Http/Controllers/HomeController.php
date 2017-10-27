@@ -576,6 +576,7 @@ class HomeController extends BaseController
             $card=null;
         }
 
+
         $gateway = new \Braintree\Gateway(array(
             'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
         ));
