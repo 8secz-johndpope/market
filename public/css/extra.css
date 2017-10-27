@@ -235,6 +235,18 @@ a.add-bank-link {
     font-weight: bold;
     cursor: pointer;
 }
+strong.ship-ribbon {
+    background: green;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+strong.deliver-ribbon {
+    background: burlywood;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
 .cross-mark-add-bank {
     position: absolute;
     right: 0;
