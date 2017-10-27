@@ -71,6 +71,9 @@ class RegisterController extends BaseController
         $user->more([
             'name' => $data['name'],
             'last' => $data['last'],
+            'day' => $data['day'],
+            'month' => $data['month'],
+            'year' => $data['year'],
             'email' => $data['email'],
             'phone' => $data['phone'],
             'password' => bcrypt($data['password']),
