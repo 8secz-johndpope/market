@@ -176,7 +176,7 @@
                         @endif
                 </div>
                 @endif
-                    @if($advert->category->price()>0&&$advert->category->can_apply())
+                    @if($advert->price()>0&&$advert->category->can_apply())
                         <div class="apply-options">
                             @if (Auth::guest())
                                 <br>
