@@ -97,7 +97,7 @@
 <span class="hide-visually">This ad is </span>Urgent
 </span>
                             @endif
-                            <br>
+                          &nbsp;&nbsp;
                             <a class="btn btn-success">I've received the Item</a>
 
                         </div>
