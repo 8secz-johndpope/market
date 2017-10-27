@@ -277,6 +277,7 @@
                     $('#delivery-info').show();
                     $('#postcode-text').html(postcode);
                     $('#check-div').hide();
+                    $('#s-info').hide();
                 }else{
                     $('#sorry-info').show();
                 }
