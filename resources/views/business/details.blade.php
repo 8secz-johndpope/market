@@ -104,11 +104,12 @@
                         </div>
                     </div>
                     <div class="legal-document">
+                        <h4>Identity Document</h4>
                         <form class="form-inline" method="post" action="/user/documents/identity" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <label class="sr-only" for="inlineFormInputName2">Choose File</label>
                             <input type="file" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" name="identity" required >
-                            
+
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
