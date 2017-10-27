@@ -144,8 +144,11 @@
                     <button class="btn btn-default" id="check-button">Check</button>
                         </div>
                     <br>
-                    <span id="delivery-info"  @if (Auth::guest()|| Auth::user()->default_address===0) style="display: none" @endif>Can be delivered to <span class="bold-text" id="postcode-text">@if (Auth::guest()|| Auth::user()->default_address===0)M139AX @else {{ Auth::user()->address->postcode}} @endif</span> <a id="edit-post">Edit</a></span>
-                        <h4>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
+                        @if (Auth::guest()|| Auth::user()->default_address===0)
+                            @else
+                    <span id="delivery-info">@if($advert->can_deliver_to(Auth::user()->address->zip))Can be delivered to <span class="bold-text" id="postcode-text">{{ Auth::user()->address->postcode}} </span> @else <span class="red-text">Cannot deliver to <span class="bold-text" id="postcode-text">{{ Auth::user()->address->postcode}} </span>  </span>  @endif <a id="edit-post">Edit</a></span>
+                        @endif
+                            <h4>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
                         <p>Price</p>
                         <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
                     <br><br>
