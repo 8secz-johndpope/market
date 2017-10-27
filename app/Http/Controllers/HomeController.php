@@ -583,12 +583,13 @@ class HomeController extends BaseController
         $sale=Sale::find($id);
         return view('home.sale',['sale'=>$sale,'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user,'advert'=>$sale->advert]);
     }
-    public function deliver(Request $request)
+    public function agree_sale(Request $request)
     {
         $user = Auth::user();
         $advert=Advert::find($request->id);
         $sale = new Sale;
         $sale->user_id=$user->id;
+        $sale->type=$request->type;
         $sale->advert_id=$advert->id;
         $sale->save();
         return redirect('/user/manage/sale/'.$sale->id);

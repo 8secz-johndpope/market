@@ -149,8 +149,9 @@
                         <p>Price</p>
                         <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
                     <br><br>
-                        <form action="/user/ad/deliver" method="post">
+                        <form action="/user/ad/sale" method="post">
                             <input name="id" type="hidden" value="{{$advert->id}}">
+                            <input name="type" type="hidden" value="0">
                             {{ csrf_field() }}
                         <button type="submit" class="btn-primary btn">Order to Deliver</button>
                         </form>
@@ -160,7 +161,13 @@
                             <p>Price</p>
                             <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->shipping()}}&nbsp;&nbsp; Shipping</span>
                             <br><br>
-                            <button class="btn-success btn">Order to Ship</button>
+                            <form action="/user/ad/sale" method="post">
+                                <input name="id" type="hidden" value="{{$advert->id}}">
+                                <input name="type" type="hidden" value="1">
+                                {{ csrf_field() }}
+                            <button type="submit"  class="btn-success btn">Order to Ship</button>
+                            </form>
+
                         @endif
                 </div>
                 @endif
@@ -208,7 +215,12 @@
 
                     <div class="collection-options">
                         <h4>Near to Seller, liked the item?</h4>
-                        <button class="btn-info btn">Purchase</button>
+                        <form action="/user/ad/sale" method="post">
+                            <input name="id" type="hidden" value="{{$advert->id}}">
+                            <input name="type" type="hidden" value="2">
+                            {{ csrf_field() }}
+                        <button type="submit" class="btn-info btn">Purchase</button>
+                        </form>
                         <p>Once you agree to buy, the seller will handover the item and get paid</p>
                     </div>
                     @endif

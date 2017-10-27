@@ -86,7 +86,7 @@ Route::post('/user/jobs/apply', 'HomeController@apply');
 
 Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/manage/sale/{id}', 'HomeController@sale');
-Route::post('/user/ad/deliver', 'HomeController@deliver');
+Route::post('/user/ad/sale', 'HomeController@agree_sale');
 
 Route::get('/user/send/text', 'HomeController@text');
 Route::get('/user/verify/text', 'HomeController@verify_text');
