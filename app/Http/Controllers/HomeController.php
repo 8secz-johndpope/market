@@ -1217,6 +1217,11 @@ class HomeController extends BaseController
             $sale->status=1;
             $sale->save();
 
+            \Stripe\Transfer::create(array(
+                "amount" => (int)(95*$sale->advert->price()),
+                "currency" => "gbp",
+                "destination" => $sale->advert->user->stripe_account
+            ));
 
                 return redirect('/user/manage/orders');
 
