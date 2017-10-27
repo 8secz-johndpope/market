@@ -955,6 +955,14 @@ class HomeController extends BaseController
         $application->cv_id = $request->cv;
         if($request->has('cover'))
         $application->cover_id = $request->cover;
+        if($request->has('ctext')&&$request->ctext){
+            $cover = new Cover;
+            $cover->title=$request->ctitle;
+            $cover->category_id=$advert->category_id;
+            $cover->cover=$request->ctext;
+            $cover->user_id=$user->id;
+            $cover->save();
+        }
         $application->save();
         return redirect($advert->url());
 
