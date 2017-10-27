@@ -89,6 +89,7 @@ Route::get('/user/manage/sale/{id}', 'HomeController@sale');
 Route::post('/user/ad/sale', 'HomeController@agree_sale');
 
 Route::post('/user/money/withdraw', 'HomeController@withdraw');
+Route::post('/user/documents/identity', 'HomeController@identity');
 
 Route::get('/user/redirect/{id}', 'HomeController@c_login');
 

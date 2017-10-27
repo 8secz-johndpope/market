@@ -975,6 +975,25 @@ class HomeController extends BaseController
         return redirect($advert->url());
 
     }
+    public function identity(Request $request)
+    {
+        $user = Auth::user();
+
+        $filename = $request->identity;
+       // copy('https://s3.eu-central-1.amazonaws.com/chat.sumra.net/' . $filename, '/tmp/' . $filename);
+        $path = Input::file('identity')->getRealPath();
+
+        $fp = fopen($path, 'r');
+        $result = \Stripe\FileUpload::create(array(
+            'purpose' => 'identity_document',
+            'file' => $fp
+        ));
+        $account = \Stripe\Account::retrieve($user->stripe_account);
+        $account->legal_entity->verification->document = $result->id;
+        $account->save();
+        return redirect('/user/manage/details');
+    }
+
     public function add_address(Request $request)
     {
         $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$request->postcode)))->first();
