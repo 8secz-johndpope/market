@@ -193,12 +193,12 @@
 </span>
                             @endif
 
-                @if(isset($product['canship'])&&$product['canship']===1))
+                @if(isset($product['canship'])&&$product['canship']===1)
                     <span class="ribbon-shipping">
 <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>CanShip</strong>
 </span>
                 @endif
-                @if(isset($product['candeliver'])&&$product['candeliver']===1))
+                @if(isset($product['candeliver'])&&$product['candeliver']===1)
                 <span class="ribbon-delivery">
 <strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>CanDeliver</strong>
 </span>
