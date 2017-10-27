@@ -981,7 +981,7 @@ class HomeController extends BaseController
 
         $filename = $request->identity;
        // copy('https://s3.eu-central-1.amazonaws.com/chat.sumra.net/' . $filename, '/tmp/' . $filename);
-        $path = Input::file('identity')->getRealPath();
+        $path = $request->file('identity')->getRealPath();
 
         $fp = fopen($path, 'r');
         $result = \Stripe\FileUpload::create(array(
