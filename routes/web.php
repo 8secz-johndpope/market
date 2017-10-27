@@ -91,6 +91,8 @@ Route::post('/user/ad/sale', 'HomeController@agree_sale');
 Route::post('/user/money/withdraw', 'HomeController@withdraw');
 Route::post('/user/documents/identity', 'HomeController@identity');
 
+Route::post('/user/terms/accept', 'HomeController@terms');
+
 Route::get('/user/redirect/{id}', 'HomeController@c_login');
 
 Route::get('/user/send/text', 'HomeController@text');

@@ -113,6 +113,14 @@
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
+                    <div class="terms">
+                        <h4>Accept Terms of Conditions</h4>
+                        <form class="form-inline" method="post" action="/user/terms/accept">
+                            {{ csrf_field() }}
+
+                            <button type="submit" class="btn btn-primary">Accept</button>
+                        </form>
+                    </div>
                     <div class="balances">
                         <h4>Balances</h4>
                         <table class="table">

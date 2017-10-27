@@ -993,7 +993,14 @@ class HomeController extends BaseController
         $account->save();
         return redirect('/user/manage/details');
     }
-
+    public function terms(Request $request)
+    {
+        $user = Auth::user();
+        $account = \Stripe\Account::retrieve($user->stripe_account);
+        $account->tos_acceptance->date = time();
+        $account->tos_acceptance->ip = Request::ip();
+        $account->save();
+        return redirect('/user/manage/details');    }
     public function add_address(Request $request)
     {
         $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$request->postcode)))->first();
