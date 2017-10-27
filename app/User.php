@@ -55,15 +55,16 @@ class User extends Authenticatable
             "country" => "GB",
             "email" => $attributes['email']
         ));
-        $account->legal_entity->type='individual';
-        $account->legal_entity->first_name=$this->name;
-        if(isset($attributes['last']))
-        $account->legal_entity->last_name=$attributes['last'];
-        $account->save();
+
         $this->stripe_id = $customer->id;
         $this->stripe_account=$account->id;
         $this->pk_key=$account->keys->publishable;
         $this->sk_key=$account->keys->secret;
+        $account->legal_entity->type='individual';
+        $account->legal_entity->first_name=$this->name;
+        if(isset($attributes['last']))
+            $account->legal_entity->last_name=$attributes['last'];
+        $account->save();
 
     }
     public function addresses()
