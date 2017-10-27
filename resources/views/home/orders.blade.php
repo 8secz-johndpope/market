@@ -98,7 +98,7 @@
 </span>
                             @endif
                             <br>
-                            <a class="btn btn-primary">I've received the Item</a>
+                            <a>I've received the Item</a>
 
                         </div>
                     </div>
