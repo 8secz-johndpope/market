@@ -68,7 +68,7 @@
                             @foreach($user->addresses as $address)
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="delivery_address" id="exampleRadios1" value="{{$address->id}}" required>
+                                        <input class="form-check-input" type="radio" name="delivery_address" id="exampleRadios1"  @if($user->default_address===$address->id) checked @endif  value="{{$address->id}}" required>
                                         {{$address->line1}},{{$address->city}},{{$address->postcode}}
                                     </label>
                                 </div>
