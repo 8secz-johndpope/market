@@ -248,7 +248,7 @@
                     @endif
 
                 <div class="buttons">
-                    <h4>Seller Info</h4>
+                    <h4>Info</h4>
                     @if($advert->user!==null)
                     <div class="profile-picutre">
                         <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$advert->user->image}}">
@@ -268,12 +268,11 @@
                     @endif
 
                     <ul class="list-group">
-                        <li class="list-group-item"> <button class="btn btn-default">Interested to Make Offer</button></li>
                         <li class="list-group-item"><button class="btn btn-default">Save to Favorites</button></li>
+                        @if(!$advert->category->can_apply())
                         <li class="list-group-item"><a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a></li>
-                        @if(isset($product['shipping'])&&$product['shipping']===1)
-                        <li class="list-group-item"><a class="btn btn-primary" href="/user/manage/shipping/{{$product['source_id']}}">Buy Now</a></li>
                             @endif
+
                     </ul>
                 </div>
 
