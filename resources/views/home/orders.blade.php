@@ -51,13 +51,15 @@
             </ul>
         </div>
     </div>
+    <div class="row" style="margin-bottom: 30px">
+        <div class="col-md-6 col-md-offset-3">
    @if(count($user->buying)>0)
         <h4>Buying</h4>
 
     @endif
     @if(count($user->orders)>0)
         <h4>Selling</h4>
-
     @endif
-
+        </div>
+    </div>
 @endsection
