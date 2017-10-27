@@ -998,7 +998,7 @@ class HomeController extends BaseController
         $user = Auth::user();
         $account = \Stripe\Account::retrieve($user->stripe_account);
         $account->tos_acceptance->date = time();
-        $account->tos_acceptance->ip = Request::ip();
+        $account->tos_acceptance->ip = $request->ip();
         $account->save();
         return redirect('/user/manage/details');    }
     public function add_address(Request $request)
