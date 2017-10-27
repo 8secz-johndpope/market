@@ -368,4 +368,33 @@
         </div>
     </div>
     </div>
+    <script>
+        $(".change-shipping").change( function(){
+
+            var id = $(this).data('servicecode');
+            var title=$(this).data('servicename');
+            $("#shipping").val(id);
+            $("#shipping-title").html(title);
+            $("#shipping-replace").html($("#"+id+"_extras").html());
+            $('#myModal').modal('hide');
+        });
+        $("#freeshipping").change(function () {
+            if($(this).is(":checked")){
+                $("#buyer_pays").val(0.00);
+                $("#buyer_pays").prop('disabled', true);
+            }else{
+                $("#buyer_pays").val(0.00);
+                $("#buyer_pays").prop('disabled', false);
+            }
+        });
+        $("#candeliver").change(function () {
+            if($(this).is(":checked")){
+                $("#delivery").val(0.00);
+                $("#delivery").prop('disabled', false);
+            }else{
+                $("#delivery").val(0.00);
+                $("#delivery").prop('disabled', true);
+            }
+        });
+    </script>
 @endsection
