@@ -962,6 +962,7 @@ class HomeController extends BaseController
             $cover->cover=$request->ctext;
             $cover->user_id=$user->id;
             $cover->save();
+            $application->cover_id = $cover->id;
         }
         $application->save();
         return redirect($advert->url());
