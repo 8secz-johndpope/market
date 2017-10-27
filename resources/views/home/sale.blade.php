@@ -103,6 +103,10 @@
                             <tr><td>Delivery:</td><td><span class="bold-text">£{{$sale->advert->delivery()}}</span></td></tr>
 
                         @endif
+                        @if($sale->type===1)
+                            <tr><td>Shipping:</td><td><span class="bold-text">£{{$sale->advert->shipping()}}</span></td></tr>
+
+                        @endif
 
                         <tr><td>Total:</td><td><span class="bold-text">£{{$sale->amount()}}</span></td></tr>
                     </table>
