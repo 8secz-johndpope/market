@@ -146,7 +146,7 @@
                     <br>
                         @if (Auth::guest()|| Auth::user()->default_address===0)
                             @else
-                    <span id="delivery-info">@if($advert->can_deliver_to(Auth::user()->address->zip))Can be delivered to <span class="bold-text" id="postcode-text">{{ Auth::user()->address->postcode}} </span> @else <span class="red-text">Cannot deliver to <span class="bold-text" id="postcode-text">{{ Auth::user()->address->postcode}} </span>  </span>  @endif <a id="edit-post">Edit</a></span>
+                    <span id="delivery-info" @if(!$advert->can_deliver_to(Auth::user()->address->zip)) style="display: none" @endif>Can be delivered to  <span class="bold-text" id="postcode-text">{{ Auth::user()->address->postcode}} </span>  <a id="edit-post">Edit</a></span>
                         @endif
                             <h4>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
                         <p>Price</p>
