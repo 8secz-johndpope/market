@@ -105,7 +105,7 @@ class BusinessController extends BaseController
             $user->save();
         }
         $account=\Stripe\Account::retrieve($user->stripe_account);
-        $account=$account->type='individual';
+        $account->type='individual';
         $account->save();
 
 
