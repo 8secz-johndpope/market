@@ -64,11 +64,11 @@ class User extends Authenticatable
         $account->legal_entity->first_name=$this->name;
         if(isset($attributes['last']))
             $account->legal_entity->last_name=$attributes['last'];
-        if(isset($attributes['day']))
+      //  if(isset($attributes['day']))
             $account->legal_entity->dob->day=$attributes['day'];
-        if(isset($attributes['month']))
+       // if(isset($attributes['month']))
             $account->legal_entity->dob->month=$attributes['month'];
-        if(isset($attributes['year']))
+      //  if(isset($attributes['year']))
             $account->legal_entity->dob->year=$attributes['year'];
         $account->save();
 
