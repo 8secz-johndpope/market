@@ -230,7 +230,7 @@
 
                         @endforeach
                         <br>
-                        <a class="btn btn-primary" class="add-address-link">Add New Address</a>
+                        <a class="btn btn-primary add-address-link" >Add New Address</a>
 
                     </div>
                     <div class="user-cvs">
