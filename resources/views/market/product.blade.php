@@ -204,6 +204,9 @@
                                         @endforeach
                                     </select>
                                         @else
+                                        <input type="hidden" id="title" value="{{$advert->category->title}}">
+
+                                        <input type="hidden" id="category" value="{{$advert->category_id}}">
                                         <input type="file" class="form-control-file" id="upload-cv">
                                     @endif
                                 </div>
