@@ -249,7 +249,7 @@
 
                 <div class="buttons">
                     <ul class="list-group">
-                        <li class="list-group-item"><span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$advert->id}}"></span>
+                        <li class="list-group-item"><div style="width: 50px"><span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$advert->id}}"></span></div>
                         </li>
                         @if(!$advert->category->can_apply())
                             <li class="list-group-item"><a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a></li>
