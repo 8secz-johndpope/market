@@ -121,7 +121,7 @@
 
                             <label class="sr-only" for="inlineFormInputGroupUsername2">Bank Account</label>
                             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                <select name="account">
+                                <select name="account" class="form-control">
                                 @foreach($accounts as $account)
                                     <option value="{{$account->id}}">{{$account->bank_name}}- {{$account->last4}}</option>
                                 @endforeach
