@@ -103,6 +103,18 @@
                             <a><span class="glyphicon glyphicon-edit"></span>Edit </a>
                         </div>
                     </div>
+                    <div class="balances">
+                        <h4>Balances</h4>
+                        <table class="table">
+                            @foreach($balance['available'] as $item)
+                            <tr><td>Available</td><td>{{$item['amount']}}<span class="currency">{{$item['currency']}}</span> </td></tr>
+                            @endforeach
+                                @foreach($balance['pending'] as $item)
+                                    <tr><td>Pending</td><td>{{$item['amount']}}<span class="currency">{{$item['currency']}}</span> </td></tr>
+                                @endforeach
+
+                        </table>
+                    </div>
                     <div class="credit-debit-cards">
                         <h4 class="bold-text">Credit and Debit Cards</h4>
                         @foreach($cards as $card)

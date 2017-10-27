@@ -82,7 +82,6 @@ class BusinessController extends BaseController
 
         $user = Auth::user();
         $balance = \Stripe\Balance::retrieve( array("stripe_account" => $user->stripe_account));
-        return $balance;
         $stripe_id = $user->stripe_id;
 
         try{
@@ -106,7 +105,7 @@ class BusinessController extends BaseController
             $user->save();
         }
 
-        return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts,'jobs'=>Category::job_leaves()]);
+        return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts,'jobs'=>Category::job_leaves(),'balance'=>$balance]);
 
     }
     public function company(Request $request){
