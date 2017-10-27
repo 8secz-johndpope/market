@@ -55,6 +55,51 @@
         <div class="col-md-6 col-md-offset-3">
    @if(count($user->buying)>0)
         <h4>Buying</h4>
+       @foreach($user->buying as $sale)
+                    <div class="product">
+                        <div class="listing-side">
+                            <div class="listing-thumbnail">
+                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($sale->advert->param('images'))>0?$sale->advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+
+                                @if($sale->advert->featured_expires())
+                                    <span class="ribbon-featured">
+<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+</span>
+                                @endif
+
+                                <div class="listing-meta txt-sub">
+                                    <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($sale->advert->param('images'))}}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info">
+
+
+                            <a class="listing-product" href="/p/{{$sale->advert->param('category')}}/{{$sale->advert->id}}"> <h4 class="product-title">{{$sale->advert->param('title')}}</h4></a>
+
+                            <span class="listing-location">
+                                    {{$sale->advert->param('location_name')}}
+                                </span>
+                            <p class="listing-description">
+                                {{$advert->param('description')}}
+                            </p>
+
+                            @if($sale->advert->meta('price')>=0)
+                                <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
+                                </span>
+                            @endif
+
+
+
+                            @if($sale->advert->urgent_expires())
+                                <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
+<span class="hide-visually">This ad is </span>Urgent
+</span>
+                            @endif
+                        </div>
+                    </div>
+           @endforeach
 
     @endif
     @if(count($user->orders)>0)
