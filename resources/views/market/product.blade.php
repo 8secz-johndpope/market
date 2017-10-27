@@ -208,7 +208,7 @@
 
                     <div class="collection-options">
                         <h4>Near to Seller, liked the item?</h4>
-                        <button class="btn-info btn">Agree to Buy</button>
+                        <button class="btn-info btn">Purchase</button>
                         <p>Once you agree to buy, the seller will handover the item and get paid</p>
                     </div>
                     @endif
