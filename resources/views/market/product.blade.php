@@ -222,6 +222,7 @@
                                         </select>
                                             @else
                                             <label for="cover">Cover Letter</label>
+                                            <input type="hidden" name="ctitle" value="{{$advert->category->title}}">
                                             <textarea name="ctext" class="form-control" rows="3"></textarea>
                                         @endif
                                     </div>
