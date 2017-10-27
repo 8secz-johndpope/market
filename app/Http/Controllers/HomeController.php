@@ -1411,7 +1411,7 @@ class HomeController extends BaseController
         } catch (\Exception $e) {
             return [
                 'success' => false,
-                'res'=>$e
+                'res'=>$e,
                 'result' => 'error withdrawing'
             ];
         }
