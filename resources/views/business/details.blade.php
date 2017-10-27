@@ -114,6 +114,23 @@
                                 @endforeach
 
                         </table>
+                        <h4>Withdraw</h4>
+                        <form class="form-inline">
+                            <label class="sr-only" for="inlineFormInputName2">Amount</label>
+                            <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" name="amount" placeholder="100.00">
+
+                            <label class="sr-only" for="inlineFormInputGroupUsername2">Bank Account</label>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <select name="account">
+                                @foreach($accounts as $account)
+                                    <option value="{{$account->id}}">{{$account->bank_name}}- {{$account->last4}}</option>
+                                @endforeach
+                                </select>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
                     <div class="credit-debit-cards">
                         <h4 class="bold-text">Credit and Debit Cards</h4>
