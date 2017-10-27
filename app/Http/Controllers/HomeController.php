@@ -1208,6 +1208,7 @@ class HomeController extends BaseController
                 ));
             }
             $sale->status=1;
+            $sale->save();
 
 
                 return redirect('/user/manage/orders');
