@@ -117,7 +117,7 @@
                         <h4>Withdraw</h4>
                         <form class="form-inline">
                             <label class="sr-only" for="inlineFormInputName2">Amount</label>
-                            <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" name="amount" placeholder="100.00" min="0" max="{{$balance['available'][0]['amount']/100}}">
+                            <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" name="amount" placeholder="100.00" min="0.01" max="{{$balance['available'][0]['amount']/100}}">
 
                             <label class="sr-only" for="inlineFormInputGroupUsername2">Bank Account</label>
                             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
