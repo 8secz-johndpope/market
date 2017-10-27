@@ -1000,7 +1000,8 @@ class HomeController extends BaseController
         $account->tos_acceptance->date = time();
         $account->tos_acceptance->ip = $request->ip();
         $account->save();
-        return redirect('/user/manage/details');    }
+        return redirect('/user/manage/details');
+    }
     public function add_address(Request $request)
     {
         $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$request->postcode)))->first();

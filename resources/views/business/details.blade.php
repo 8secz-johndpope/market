@@ -104,6 +104,9 @@
                         </div>
                     </div>
                     <div class="legal-document">
+                        @if($account->legal_entity->verification->document)
+
+                        @else
                         <h4>Identity Document</h4>
                         <form class="form-inline" method="post" action="/user/documents/identity" enctype="multipart/form-data">
                             {{ csrf_field() }}
@@ -112,10 +115,11 @@
 
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
+                            @endif
                     </div>
                     <div class="terms">
                         @if($account->tos_acceptance->ip)
-                            
+
                             @else
                         <h4>Accept Terms of Conditions</h4>
                         <form class="form-inline" method="post" action="/user/terms/accept">
