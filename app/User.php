@@ -67,9 +67,9 @@ class User extends Authenticatable
         if(isset($attributes['day']))
             $account->legal_entity->dob->day=$attributes['day'];
         if(isset($attributes['month']))
-            $account->legal_entity->dob->day=$attributes['month'];
+            $account->legal_entity->dob->month=$attributes['month'];
         if(isset($attributes['year']))
-            $account->legal_entity->dob->day=$attributes['year'];
+            $account->legal_entity->dob->year=$attributes['year'];
         $account->save();
 
     }
