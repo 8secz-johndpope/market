@@ -992,6 +992,15 @@ class HomeController extends BaseController
             $user->default_address=$address->id;
             $user->save();
         }
+        if(count($user->addresses)===1){
+            $account = \Stripe\Account::retrieve($user->stripe_account);
+            $account->legal_entity->address->line1=$request->line1;
+            $account->legal_entity->address->city=$request->city;
+            $account->legal_entity->address->country='GB';
+            $account->legal_entity->address->postal_code=$postcode->postcode;
+            $account->save();
+        }
+
 
 
         return redirect($request->redirect);
