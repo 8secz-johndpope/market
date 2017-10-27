@@ -203,6 +203,7 @@
                                         @endforeach
                                     </select>
                                         @else
+
                                     @endif
                                 </div>
                                     <div class="form-group">
@@ -215,6 +216,7 @@
                                             @endforeach
                                         </select>
                                             @else
+                                        @endif
                                     </div>
                                     <button type="submit" class="btn btn-primary">Apply</button>
                                 </form>
