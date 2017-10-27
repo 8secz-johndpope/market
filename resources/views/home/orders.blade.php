@@ -102,6 +102,8 @@
            @endforeach
 
     @endif
+            <br>
+       <br><br>
     @if(count($user->orders)>0)
         <h4>Selling</h4>
            @foreach($user->orders as $sale)
