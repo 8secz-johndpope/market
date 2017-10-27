@@ -82,11 +82,11 @@
                                     {{$sale->advert->param('location_name')}}
                                 </span>
                             <p class="listing-description">
-                                {{$advert->param('description')}}
+                                {{$sale->advert->param('description')}}
                             </p>
 
                             @if($sale->advert->meta('price')>=0)
-                                <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
+                                <span class="product-price">£ {{$sale->advert->meta('price')/100}}{{$sale->advert->meta('price_frequency')}}
                                 </span>
                             @endif
 
