@@ -79,7 +79,10 @@ class BusinessController extends BaseController
 
     }
     public function details(Request $request){
+
         $user = Auth::user();
+        $balance = \Stripe\Balance::retrieve($user->stripe_account);
+        return $balance;
         $stripe_id = $user->stripe_id;
 
         try{
