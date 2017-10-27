@@ -591,6 +591,7 @@ class HomeController extends BaseController
         $sale->user_id=$user->id;
         $sale->type=$request->type;
         $sale->advert_id=$advert->id;
+        $sale->seller_id=$advert->user_id;
         $sale->save();
         return redirect('/user/manage/sale/'.$sale->id);
     }
