@@ -70,6 +70,7 @@ class RegisterController extends BaseController
         $user = new User;
         $user->more([
             'name' => $data['name'],
+            'last' => $data['last'],
             'email' => $data['email'],
             'phone' => $data['phone'],
             'password' => bcrypt($data['password']),
