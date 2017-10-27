@@ -61,6 +61,53 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('day') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Date of Birth</label>
+
+                            <div class="col-md-2">
+                                <select  class="form-control" name="month" required  >
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+
+                                @if ($errors->has('month'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('month') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="col-md-2">
+                                <input id="name" type="text" class="form-control" name="day" value="{{ old('day') }}" required placeholder="01">
+
+                                @if ($errors->has('day'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('day') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="col-md-2">
+                                <input id="name" type="text" class="form-control" name="year" value="{{ old('year') }}" required placeholder="1985">
+
+                                @if ($errors->has('year'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('year') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+
+
                         <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
