@@ -103,11 +103,14 @@
                             <a><span class="glyphicon glyphicon-edit"></span>Edit </a>
                         </div>
                     </div>
+                    @if($account->legal_entity->verification->document&&$account->tos_acceptance->ip&&$account->legal_entity->address->postal_code&&count($accounts)>0)
+                        @else
+                    <h3>Steps Required to Withdraw Balance</h3>
                     <div class="legal-document">
                         @if($account->legal_entity->verification->document)
 
                         @else
-                        <h4>Identity Document</h4>
+                        <h4>Add Identity Document</h4>
                         <form class="form-inline" method="post" action="/user/documents/identity" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <label class="sr-only" for="inlineFormInputName2">Choose File</label>
@@ -130,6 +133,17 @@
                         </form>
                             @endif
                     </div>
+                        @if(!$account->legal_entity->address->postal_code)
+                            <h4>Add Address</h4>
+                            <a class="btn btn-primary add-address-link" >Add New Address</a>
+
+                        @endif
+                        @if(count($accounts)===0)
+                            <h4>Add Bank Account</h4>
+                            <a class="btn btn-primary add-bank-link" >Add Bank Account</a>
+
+                        @endif
+                    @endif
                     <div class="balances">
                         <h4>Balances</h4>
                         <table class="table">
