@@ -124,10 +124,10 @@ class User extends Authenticatable
         return $items;
     }
     public function orders(){
-        return $this->hasMany('App\Model\Sale','seller_id');
+        return $this->hasMany('App\Model\Sale','seller_id')->where('status',1);
     }
     public function buying(){
-        return $this->hasMany('App\Model\Sale');
+        return $this->hasMany('App\Model\Sale')->where('status',1);
     }
     public function favorites()
     {
