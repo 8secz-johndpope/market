@@ -99,7 +99,7 @@
                             @endif
                           &nbsp;&nbsp;
                             <a class="btn btn-success">I've received the Item</a>
-                            <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Contact Seller</a>
+                            <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
 
                         </div>
                     </div>
