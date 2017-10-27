@@ -192,6 +192,17 @@
 <span class="hide-visually">This ad is </span>Urgent
 </span>
                             @endif
+
+                @if(isset($product['canship'])&&$product['canship']===1))
+                    <span class="ribbon-featured">
+<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>CanShip</strong>
+</span>
+                @endif
+                @if(isset($product['candeliver'])&&$product['candeliver']===1))
+                <span class="ribbon-featured">
+<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>CanDeliver</strong>
+</span>
+                @endif
             </div>
         </div>
 </div>
