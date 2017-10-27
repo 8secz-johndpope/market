@@ -63,6 +63,18 @@
                             @endif
                         </div>
                     </div>
+                        @if($sale->type===1)
+                            <h4>Shipping Address</h4>
+                            @foreach($user->addresses as $address)
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="delivery_address" id="exampleRadios1" value="{{$address->id}}" required>
+                                        {{$address->line1}},{{$address->city}},{{$address->postcode}}
+                                    </label>
+                                </div>
+                            @endforeach
+                        @endif
+                        @if($sale->type===0)
                     <h4>Delivery Address</h4>
                     @foreach($user->addresses as $address)
                     <div class="form-check">
@@ -72,6 +84,7 @@
                         </label>
                     </div>
                     @endforeach
+                        @endif
                     <h4>Billing Address</h4>
                     @foreach($user->addresses as $address)
                         <div class="form-check">
