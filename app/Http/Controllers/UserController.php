@@ -909,17 +909,28 @@ class UserController extends BaseController
     {
         $user = Auth::user();
         $account = \Stripe\Account::retrieve($user->stripe_account);
-        $account->legal_entity->address->line1 = $request->line1;
-        $account->legal_entity->address->city = $request->city;
-        $account->legal_entity->address->postal_code = $request->postcode;
-        $account->save();
+        $postcode = Postcode::where('postcode',strtoupper(str_replace(' ','',$request->postcode)))->first();
+
         $address = new Address;
         $address->line1 = $request->line1;
         $address->city = $request->city;
-        $address->postcode = $request->postcode;
+        $address->postcode = $postcode->postcode;
         $address->code = rand(1000, 9999);
         $address->save();
         $user->addresses()->save($address);
+
+        if($user->default_address===0){
+            $user->default_address=$address->id;
+            $user->save();
+        }
+        if(count($user->addresses)===1){
+            $account = \Stripe\Account::retrieve($user->stripe_account);
+            $account->legal_entity->address->line1=$request->line1;
+            $account->legal_entity->address->city=$request->city;
+            $account->legal_entity->address->country='GB';
+            $account->legal_entity->address->postal_code=$postcode->postcode;
+            $account->save();
+        }
         return ['status' => 'success'];
     }
 
