@@ -218,6 +218,8 @@
                                             @endforeach
                                         </select>
                                             @else
+                                            <label for="cover">Cover Letter</label>
+                                            <textarea name="ctext" class="form-control" rows="3"></textarea>
                                         @endif
                                     </div>
                                     <button type="submit" class="btn btn-primary">Apply</button>
