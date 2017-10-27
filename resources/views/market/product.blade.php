@@ -176,7 +176,7 @@
                         @endif
                 </div>
                 @endif
-                    @if($advert->meta('price')>0&&$advert->category->can_apply())
+                    @if($advert->category->can_apply())
                         <div class="apply-options">
                             @if (Auth::guest())
                                 <br>
@@ -216,7 +216,7 @@
                             @endif
                         </div>
                             @endif
-                    @if($advert->category->has_price())
+                    @if($advert->category->has_price()&&$advert->meta('price')>0)
 
                     <div class="collection-options">
                         <h4>Near to Seller, liked the item?</h4>
