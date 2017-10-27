@@ -112,7 +112,7 @@
             <br>
        <br><br>
     @if(count($user->orders)>0)
-        <h4>Selling</h4>
+        <h4>Orders Received</h4>
            @foreach($user->orders as $sale)
                <div class="product">
                    <div class="listing-side">
