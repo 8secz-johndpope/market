@@ -1393,6 +1393,31 @@ class HomeController extends BaseController
         return view('pdf.contract',['url'=>$sign_url]);
       //  return view('home.sign');
     }
+
+    public function withdraw(Request $request)
+    {
+        $user = Auth::user();
+        $bank = $request->account;
+        $amount = $request->amount * 100;
+
+        \Stripe\Stripe::setApiKey($user->sk_key);
+        try {
+            \Stripe\Payout::create(array(
+                "amount" => $amount,
+                "currency" => "gbp",
+                "destination" => $bank
+            ));
+
+        } catch (\Exception $e) {
+            return [
+                'success' => false,
+                'result' => 'error withdrawing'
+            ];
+        }
+
+        return redirect('/user/manage/details');
+    }
+
     public function pack(Request $request,$category,$location){
         $id = $request->session()->get('order_id');
         $order = Order::find($id);
