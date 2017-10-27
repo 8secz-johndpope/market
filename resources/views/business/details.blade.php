@@ -140,7 +140,7 @@
                         @endif
                         @if(count($accounts)===0)
                             <h4>Add Bank Account</h4>
-                            <a class="btn btn-primary add-bank-link" >Add Bank Account</a>
+                            <a class="btn btn-primary add-bank-link-btn" >Add Bank Account</a>
 
                         @endif
                     @endif
@@ -213,7 +213,7 @@
 
                         @endforeach
                         <div class="card-div add-card-div">
-                            <a class="add-bank-link"><div class="center-add-card">
+                            <a class="add-bank-link add-bank-link-btn"><div class="center-add-card">
                                     <p>+</p>
                                     <p>Add Bank Account</p>
                                 </div> </a>
@@ -439,7 +439,7 @@
         $(".all-divs").show();
         $(".add-card-form").hide();
     });
-    $(".add-bank-link").click(function () {
+    $(".add-bank-link-btn").click(function () {
         $(".all-divs").hide();
         $(".add-account-form").show();
     });
