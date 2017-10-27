@@ -249,7 +249,8 @@
 
                 <div class="buttons">
                     <ul class="list-group">
-                        <li class="list-group-item"><a class="btn btn-default favroite-icon" data-id="{{$advert->id}}">Save to Favorites</a></li>
+                        <li class="list-group-item"><span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$advert->id}}"></span>
+                        </li>
                         @if(!$advert->category->can_apply())
                             <li class="list-group-item"><a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a></li>
                         @endif
