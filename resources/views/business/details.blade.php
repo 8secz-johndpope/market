@@ -107,10 +107,10 @@
                         <h4>Balances</h4>
                         <table class="table">
                             @foreach($balance['available'] as $item)
-                            <tr><td>Available</td><td>{{$item['amount']}}  &nbsp;<span class="currency">{{$item['currency']}}</span> </td></tr>
+                                <tr><td>Available</td><td><strong>{{$item['amount']}}  &nbsp;<span class="currency">{{$item['currency']}}</span></strong> </td></tr>
                             @endforeach
                                 @foreach($balance['pending'] as $item)
-                                    <tr><td>Pending</td><td>{{$item['amount']}}&nbsp; <span class="currency">{{$item['currency']}}</span> </td></tr>
+                                    <tr><td>Pending</td><td><strong>{{$item['amount']}}&nbsp; <span class="currency">{{$item['currency']}}</span> </strong></td></tr>
                                 @endforeach
 
                         </table>

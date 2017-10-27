@@ -241,6 +241,9 @@ strong.ship-ribbon {
     padding: 5px;
     border-radius: 10px;
 }
+span.currency {
+    text-transform: uppercase;
+}
 strong.deliver-ribbon {
     background: burlywood;
     color: white;
