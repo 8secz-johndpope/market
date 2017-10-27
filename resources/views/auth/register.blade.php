@@ -23,7 +23,7 @@
                                 @endif
                             </div>
                             <div class="col-md-3">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('last') }}" required placeholder="Last Name">
+                                <input id="name" type="text" class="form-control" name="last" value="{{ old('last') }}" required placeholder="Last Name">
 
                                 @if ($errors->has('last'))
                                     <span class="help-block">
