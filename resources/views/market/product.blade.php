@@ -204,7 +204,7 @@
                                         @endforeach
                                     </select>
                                         @else
-
+                                        <input type="file" class="form-control-file" id="upload-cv">
                                     @endif
                                 </div>
                                     <div class="form-group">
@@ -304,6 +304,9 @@
     $('#edit-post').click(function () {
         $('#check-div').show();
         $('#delivery-info').hide();
+    });
+    $('#upload-cv').change(function () {
+        upload_cv();
     });
 </script>
 
