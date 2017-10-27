@@ -6,6 +6,7 @@ use App\Mail\AccountCreated;
 use App\Model\Address;
 use App\Model\Application;
 use App\Model\EmailCode;
+use App\Model\Favorite;
 use App\Model\Order;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -80,6 +81,13 @@ class User extends Authenticatable
     public function spotlight()
     {
         return $this->hasMany('App\Model\Spotlight');
+    }
+    public function is_favorite($id){
+        $fav = Favorite::where('advert_id',$id)->where('user_id',$this->id)->first();
+        if($fav===null)
+            return false;
+        else
+            return true;
     }
     public function shipping()
     {

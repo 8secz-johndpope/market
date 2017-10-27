@@ -249,8 +249,10 @@
 
                 <div class="buttons">
                     <ul class="list-group">
-                        <li class="list-group-item"><div style="width: 50px"><span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$advert->id}}"></span></div>
+                        <li class="list-group-item"><div style="width: 30px;padding-bottom: 30px;"><span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span></div>
                         </li>
+
+
                         @if(!$advert->category->can_apply())
                             <li class="list-group-item"><a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a></li>
                         @endif
