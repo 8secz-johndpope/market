@@ -104,7 +104,7 @@
     @endif
     @if(count($user->orders)>0)
         <h4>Selling</h4>
-           @foreach($user->buying as $sale)
+           @foreach($user->orders as $sale)
                <div class="product">
                    <div class="listing-side">
                        <div class="listing-thumbnail">
