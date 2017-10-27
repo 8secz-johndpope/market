@@ -106,6 +106,9 @@ class BusinessController extends BaseController
         }
         $account=\Stripe\Account::retrieve($user->stripe_account);
         $account->legal_entity->type='individual';
+        $parts = explode(' ',$user->name);
+        $account->legal_entity->first_name=$parts[0];
+        $account->legal_entity->last_name=$parts[1];
         $account->save();
 
 
