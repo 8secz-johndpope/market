@@ -951,7 +951,9 @@ class HomeController extends BaseController
         $application = new Application;
         $application->advert_id = $advert->id;
         $application->user_id = $user->id;
+        if($request->has('cv'))
         $application->cv_id = $request->cv;
+        if($request->has('cover'))
         $application->cover_id = $request->cover;
         $application->save();
         return redirect($advert->url());

@@ -198,6 +198,7 @@
                                     <label for="cv">Select a CV</label>
                                     @if(count(Auth::user()->cvs)>0)
                                     <select class="form-control" name="cv" required>
+                                        <option value="0">Select</option>
                                         @foreach(Auth::user()->cvs as $cv)
                                             <option value="{{$cv->id}}">{{$cv->title}}</option>
                                         @endforeach
@@ -211,6 +212,7 @@
 
                                         <label for="cover">Select a Cover Letter</label>
                                         <select class="form-control" name="cover" required>
+                                            <option value="0">Select</option>
                                             @foreach(Auth::user()->covers as $cover)
                                                 <option value="{{$cover->id}}">{{$cover->title}}</option>
                                             @endforeach
