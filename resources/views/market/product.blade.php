@@ -216,7 +216,7 @@
                             @endif
                         </div>
                             @endif
-                    @if($advert->category->has_price()&&$advert->meta('price')>0)
+                    @if($advert->category->has_price())
 
                     <div class="collection-options">
                         <h4>Near to Seller, liked the item?</h4>
