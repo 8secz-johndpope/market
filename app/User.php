@@ -63,7 +63,7 @@ class User extends Authenticatable
     }
     public function addresses()
     {
-        return $this->hasMany('App\Model\Address');
+        return $this->hasMany('App\Model\Address')->orderBy('id','desc');
     }
     public function featured()
     {
