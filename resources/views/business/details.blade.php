@@ -155,6 +155,8 @@
                                 @endforeach
 
                         </table>
+                        @if($account->legal_entity->verification->document&&$account->tos_acceptance->ip&&$account->legal_entity->address->postal_code&&count($accounts)>0)
+
                         <h4>Withdraw</h4>
                         <form class="form-inline" method="post" action="/user/money/withdraw">
                             {{ csrf_field() }}
@@ -173,6 +175,7 @@
 
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
+                            @endif
                     </div>
                     <div class="credit-debit-cards">
                         <h4 class="bold-text">Credit and Debit Cards</h4>
