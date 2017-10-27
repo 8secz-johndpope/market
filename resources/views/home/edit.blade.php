@@ -265,6 +265,79 @@
                             </div>
 
                         </div>
+                    @if($advert->category->can_ship())
+                        <div class="panel panel-default extra-options-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Delivery Options</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input  type="checkbox" name="candeliver" id="candeliver"  value="1"  @if($advert->has_param('candeliver')) checked @endif><span class="delivery-text">Can Deliver Locally</span>
+                                        <p>Note: Need to delivery the product within 2 days of receiving the order</p>
+                                        <div class="well">
+                                            <p class="bold-text">Buyer Pays</p>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
+                                                <input type="number" name="delivery" id="delivery"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="" @if(!$advert->has_param('candeliver')||$advert->param('candeliver')!==1) disabled @endif  value="@if($advert->has_param('candeliver')&&$advert->param('candeliver')===1&&$advert->has_meta('delivery')){{$advert->delivery()}}@endif" step="0.01">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <span class="delivery-text">Delivery Distance</span>
+
+                                        <select class="form-control" name="distance">
+                                            @foreach($distances as $distance)
+                                                <option value="{{$distance->value}}" @if($advert->has_meta('distance')&&$advert->meta('distance')===$distance->value) selected @endif>{{$distance->title}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input  type="checkbox" name="canship" value="1" @if($advert->has_param('canship')&&$advert->param('canship')===1) checked @endif><span class="delivery-text" >Can Ship Nationwide</span>
+                                        <input type="hidden" name="shipping" value="{{$shipping->id}}" id="shipping">
+                                        <p>Note: Need to ship the product by the date specified on the order</p>
+                                        <div class="well">
+                                            <h4>Shipping Method</h4>
+                                            <p class="bold-text" id="shipping-title">{{$shipping->title}}</p>
+                                            <div id="shipping-replace">
+
+                                                <ul>
+                                                    <li>{{$shipping->dimensions}}</li>
+                                                    <li>Tracking included: {{$shipping->tracking}}</li>
+                                                    <li>Compensation included:  {{$shipping->compensation}}</li>
+                                                    <li>Delivery time: {{$shipping->delivery}}</li>
+                                                </ul>
+                                            </div>
+                                            <a  data-toggle="modal" data-target="#myModal">Change Shipping Method</a>
+
+                                            <p class="bold-text">Buyer Pays</p>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
+                                                <input type="number" name="buyer_pays" id="buyer_pays"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="" @if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) disabled @endif  value="@if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) 0.00 @elseif($advert->has_meta('shipping')&&$advert->meta('shipping')>=0){{$advert->shipping()}}@endif" step="0.01">
+                                            </div>
+                                            <br>
+                                            <input  type="checkbox" id="freeshipping" name="freeshipping" value="1" @if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) checked @endif><span class="delivery-text">Free Shipping</span>
+                                            <p>This is a great way to attract potential buyers looking to grab a bargain.</p>
+                                            <br>
+                                            <input  type="checkbox" name="acceptreturns" value="1" @if($advert->has_param('acceptreturns')&&$advert->param('acceptreturns')===1) checked @endif><span class="delivery-text">Accept Returns</span>
+                                            <p>Buyers have 14 days to let you know they'd like to retun an item, plus an additional 14 days to return the item. Buyers pay to return the item.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <span class="delivery-text">Dispatch Time</span>
+                                        <select class="form-control" name="dispatch">
+                                            @foreach($dispatches as $dispatch)
+                                                <option value="{{$dispatch->value}}" @if($advert->has_meta('dispatch')&&$advert->meta('dispatch')===$dispatch->value) selected @endif>{{$dispatch->title}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
 
                     <div class="panel panel-success total-panel">
                         <div class="panel-heading">
