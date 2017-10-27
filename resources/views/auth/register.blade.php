@@ -37,7 +37,7 @@
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" placeholder="tom@hanks.com" class="form-control" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -48,10 +48,10 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            <label for="password"  class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                                <input id="password" placeholder="**********" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -65,7 +65,7 @@
                             <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" placeholder="**********" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
 
@@ -73,7 +73,7 @@
                             <label for="name" class="col-md-4 control-label">Phone</label>
 
                             <div class="col-md-6">
-                                <input id="phone" type="text" class="form-control" name="phone" value="{{ old('phone') }}" required autofocus>
+                                <input id="phone" type="text" placeholder="07788778866" class="form-control" name="phone" value="{{ old('phone') }}" required autofocus>
 
                                 @if ($errors->has('phone'))
                                     <span class="help-block">
