@@ -159,11 +159,10 @@ class MessageController extends BaseController
         $message->from_msg=$user->id;
         $message->to_msg=$advert->user_id;
         $message->room_id=$room->id;
+        $message->url='';
         $message->save();
-
         $message->insertion_time=$message->created_at;
         $message->save();
-
         $advert->replies++;
         $advert->save();
 
@@ -187,6 +186,9 @@ class MessageController extends BaseController
         $message->from_msg=$user->id;
         $message->to_msg=$advert->user_id;
         $message->room_id=$room->id;
+        if($request->has('url')){
+            $message->url=$request->url;
+        }
         $message->save();
         $message->insertion_time=$message->created_at;
         $message->save();
