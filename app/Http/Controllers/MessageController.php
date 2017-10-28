@@ -195,7 +195,8 @@ class MessageController extends BaseController
     }
     public function all_messages(Request $request){
         $user = Auth::user();
-
+        $rooms = $user->rooms()->pluck('id')->toArray();
+        return $rooms;
 
     }
 

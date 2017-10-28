@@ -73,6 +73,10 @@ class User extends Authenticatable
         $account->save();
 
     }
+    public function rooms()
+    {
+        return $this->belongsToMany('App\Model\Room');
+    }
     public function addresses()
     {
         return $this->hasMany('App\Model\Address')->orderBy('id','desc');
