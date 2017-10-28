@@ -242,6 +242,20 @@ class MessageController extends BaseController
         fclose($fp);
         return ['great'=>'yes','res'=>$result];
     }
+    public function android(Request $request){
+        $client = new Client([
+            'headers' => [
+                'Content-Type'=> 'application/json',
+                'Authorization'=> 'key=AAAAxvu2uio:APA91bEv0upMJEfZC1Bv_kSH03KpsbZKP4zph4p8NXT0FO5Ihc2kLmtEUBHQ2rUoI0PXY2hyD70N3TjK2H4ARZP1hgffgJ8TeUCSMxRQNE9ADNR7zLNiMTNjajgiHHc795LAbs6akZD3'
+            ]
+        ]);
+
+        $g = $client->request('POST', 'https://fcm.googleapis.com/fcm/send', [
+            'form_params' => ['to' => 'token', 'priority'=>'high','data','1','notification'=>['title'=>'title','body'=>'message','sound'=>'mySound']]
+        ]);
+        $g = json_decode($g->getBody(), true);
+        return ['great'=>'yes','res'=>$g];
+    }
     public function all_messages(Request $request){
         $user = Auth::user();
         $rooms = $user->rooms()->pluck('room_id')->toArray();
