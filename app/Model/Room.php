@@ -12,5 +12,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
 {
-
+    public function advert()
+    {
+        return $this->belongsTo('App\Model\Advert');
+    }
 }
