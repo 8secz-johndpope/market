@@ -143,6 +143,7 @@ class MessageController extends BaseController
                 $room->sender_id=$user->id;
                 $room->save();
                 $room->users()->save($user);
+                if($user->id!==$advert->user_id)
                 $room->users()->save($advert->user);
             }
 
@@ -210,7 +211,8 @@ class MessageController extends BaseController
             $room->sender_id=$user->id;
             $room->save();
             $room->users()->save($user);
-            $room->users()->save($advert->user);
+            if($user->id!==$advert->user_id)
+                $room->users()->save($advert->user);
             $advert->replies++;
             $advert->save();
         }
