@@ -351,6 +351,10 @@ class MessageController extends BaseController
             $mid = Uuid::uuid1();
 
             $room = Room::find($request->rid);
+            if($room===null){
+                return redirect('/user/manage/messages');
+
+            }
             $advert=$room->advert;
 
             $message = new Message;
