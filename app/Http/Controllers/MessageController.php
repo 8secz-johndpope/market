@@ -350,7 +350,7 @@ class MessageController extends BaseController
             $user = Auth::user();
             $mid = Uuid::uuid1();
 
-            $room = Room::find($request->id);
+            $room = Room::find($request->rid);
             $advert=$room->advert;
 
             $message = new Message;
