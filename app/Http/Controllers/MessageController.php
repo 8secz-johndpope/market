@@ -97,6 +97,11 @@ class MessageController extends BaseController
         {
             $advert=Advert::where('sid',$id)->first();
         }
+        $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
+        if($room!==null){
+            return redirect('/user/manage/messages/' . $room->id);
+        }
+
         return view('home.reply',['advert'=>$advert,'user'=>$user]);
 
     }
@@ -104,6 +109,8 @@ class MessageController extends BaseController
         if($request->has('g-recaptcha-response')) {
             $user = Auth::user();
             $advert = Advert::find($request->id);
+
+            /*
             $client = new Client();
             $g = $client->request('POST', 'https://fire.sumra.net/creategroup', [
                 'form_params' => ['advert_id' => $advert->sid, 'users' => [$user->id, $advert->user_id], 'title' => $advert->param('title'), 'image' => $advert->first_image(), 'id' => $user->id]
@@ -115,7 +122,45 @@ class MessageController extends BaseController
             $advert->replies++;
             $advert->save();
 
-            return redirect('/user/manage/messages/' . $g['rid']);
+
+            */
+            $uuid = Uuid::uuid1();
+            $mid = Uuid::uuid1();;
+
+
+            $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
+            if($room===null){
+                $room = new Room;
+                $room->advert_id = $advert->id;
+                $room->image=$advert->first_image();
+                $room->rid=$uuid;
+                $room->title=$advert->param('title');
+                $room->sender_id=$user->id;
+                $room->save();
+                $room->users()->save($user);
+                $room->users()->save($advert->user);
+            }
+
+
+
+
+            $message = new Message;
+            $message->message=$request->message;
+            $message->rid=$uuid;
+            $message->mid=$mid;
+            $message->from_msg=$user->id;
+            $message->to_msg=$advert->user_id;
+            $message->room_id=$room->id;
+            $message->url='';
+            $message->save();
+            $message->insertion_time=$message->created_at;
+            $message->save();
+            $advert->replies++;
+            $advert->save();
+
+            Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
+
+            return redirect('/user/manage/messages/' . $room->id);
         }else{
             return redirect('/user/reply/' . $request->id);
         }
