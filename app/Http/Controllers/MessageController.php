@@ -144,6 +144,7 @@ class MessageController extends BaseController
             $room->advert_id = $advert->id;
             $room->image=$advert->first_image();
             $room->rid=$uuid;
+            $room->title=$advert->param('title');
             $room->sender_id=$user->id;
             $room->save();
         }
@@ -194,6 +195,52 @@ class MessageController extends BaseController
         $message->save();
         return ['mid'=>$message->id,'msg'=>'sent'];
 
+    }
+    public function push(Request $request){
+        $uuid = Uuid::uuid1();
+
+        $user = Auth::user();
+        $advert = Advert::find($request->id);
+        if($advert===null){
+            $advert = Advert::where('sid',$request->id)->first();
+        }
+        $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
+        $passphrase = '1234';
+        $ctx = stream_context_create();
+        stream_context_set_option($ctx, 'ssl', 'local_cert', '/home/anil/market/storage/private/ck.pem');
+        stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
+// Open a connection to the APNS server
+        $fp = stream_socket_client(
+            'ssl://gateway.sandbox.push.apple.com:2195', $err,
+            $errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
+        if (!$fp)
+            exit("Failed to connect: $err $errstr" . PHP_EOL);
+        echo 'Connected to APNS' . PHP_EOL;
+// Create the payload body
+        $body['aps'] = array(
+            'content-available' => 1,
+            'roomName' => $room->title,
+            'username' => $user->name,
+            'alert' => 'great',
+            'sound' => 'default'
+        );
+        $body['UUID']=$uuid;
+        $body['handle']=$user->name;
+        $body['hasVideo']='1';
+// Encode the payload as JSON
+        $payload = json_encode($body);
+// Build the binary notification
+        $token='';
+        $msg = chr(0) . pack('n', 32) . pack('H*', $token) . pack('n', strlen($payload)) . $payload;
+// Send it to the server
+        $result = fwrite($fp, $msg, strlen($msg));
+        if (!$result)
+            echo 'Message not delivered' . PHP_EOL;
+        else
+            echo 'Message successfully delivered' . PHP_EOL;
+// Close the connection to the server
+        fclose($fp);
+        return ['great'=>'yes','res'=>$result];
     }
     public function all_messages(Request $request){
         $user = Auth::user();
