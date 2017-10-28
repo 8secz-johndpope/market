@@ -16,6 +16,7 @@ use App\Model\ExtraPrice;
 use App\Model\ExtraType;
 use App\Model\Location;
 use App\Model\SearchAlert;
+use App\Model\Token;
 use Validator;
 use App\Model\Application;
 use App\Model\Category;
@@ -773,7 +774,15 @@ class UserController extends BaseController
         $clientToken = $gateway->clientToken()->generate();
         return ['token' => $clientToken];
     }
-
+    public function save_token(Request $request)
+    {
+        $user = Auth::user();
+        $token=new Token;
+        $token->user_id=$user->id;
+        $token->token=$request->token;
+        $token->save();
+        return ['msg'=>'saved','status'=>'success','token'=>$token,'type'=>'notify'];
+    }
     public function stripe(Request $request)
     {
         $token = \Stripe\Token::create(array(
@@ -1547,6 +1556,7 @@ class UserController extends BaseController
         }
 
     }
+
 
     public function register(Request $request)
     {
