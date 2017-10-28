@@ -186,9 +186,7 @@ class MessageController extends BaseController
 
 
 
-        $advert->replies++;
-        $advert->save();
-
+        
 
         return ['rid'=>$uuid,'msg'=>'sent'];
 
