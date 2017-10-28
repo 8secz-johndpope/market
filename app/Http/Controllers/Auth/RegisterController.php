@@ -54,6 +54,7 @@ class RegisterController extends BaseController
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'phone' => 'required|string|max:255',
+            'g-recaptcha-response' => 'required|string',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -67,7 +68,8 @@ class RegisterController extends BaseController
      */
     protected function create(array $data)
     {
-        $user = new User;
+
+            $user = new User;
         $user->more([
             'name' => $data['name'],
             'last' => $data['last'],
