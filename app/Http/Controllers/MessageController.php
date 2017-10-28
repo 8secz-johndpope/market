@@ -198,8 +198,16 @@ class MessageController extends BaseController
     public function all_messages(Request $request){
         $user = Auth::user();
         $rooms = $user->rooms()->pluck('room_id')->toArray();
-        $messages = Message::whereIn('room_id',$rooms)->get();
-        return $messages;
+        if($request->has('time')){
+            $x=date('Y-m-d H:i:s',$request->time);
+            $messages = Message::where('created_at','>=',$x)->whereIn('room_id',$rooms)->get();
+
+        }else{
+            $messages = Message::whereIn('room_id',$rooms)->get();
+
+        }
+
+         return $messages;
 
     }
 
