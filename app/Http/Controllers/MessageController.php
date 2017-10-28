@@ -148,12 +148,12 @@ class MessageController extends BaseController
             $room->title=$advert->param('title');
             $room->sender_id=$user->id;
             $room->save();
+            $room->users()->save($user);
+            $room->users()->save($advert->user);
         }
 
 
 
-        $room->users()->save($user);
-        $room->users()->save($advert->user);
 
         $message = new Message;
         $message->message=$request->message;
