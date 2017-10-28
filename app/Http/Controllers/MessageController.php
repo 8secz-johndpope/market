@@ -152,10 +152,11 @@ class MessageController extends BaseController
         $message->mid=$mid;
         $message->from_msg=$user->id;
         $message->to_msg=$advert->user_id;
-        $message->insertion_time=date('Y-m-d\TH:i:s\Z',time());
         $message->room_id=$room->id;
         $message->save();
 
+        $message->insertion_time=$message->created_at;
+        $message->save();
 
         $advert->replies++;
         $advert->save();
