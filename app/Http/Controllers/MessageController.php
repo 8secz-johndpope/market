@@ -14,6 +14,7 @@ use GuzzleHttp\Pool;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redis;
 
 use Ramsey\Uuid\Uuid;
 
@@ -149,6 +150,7 @@ class MessageController extends BaseController
             $room->save();
         }
 
+        Redis::publish('test-channel', json_encode(['foo' => 'bar']));
 
         $room->users()->save($user);
         $room->users()->save($advert->user);
