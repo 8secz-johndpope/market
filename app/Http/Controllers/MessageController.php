@@ -145,6 +145,7 @@ class MessageController extends BaseController
         $room->save();
 
         $room->users()->save($user);
+        $room->users()->save($advert->user);
 
         $message = new Message;
         $message->message=$request->message;
