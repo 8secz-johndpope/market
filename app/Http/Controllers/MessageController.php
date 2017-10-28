@@ -168,7 +168,7 @@ class MessageController extends BaseController
         $advert->save();
 
 
-        return ['room_id'=>$room->id,'msg'=>'sent'];
+        return ['room_id'=>$room->id,'msg'=>'sent','mid'=>$message->id];
 
     }
 
@@ -186,11 +186,11 @@ class MessageController extends BaseController
         $message->mid=$mid;
         $message->from_msg=$user->id;
         $message->to_msg=$advert->user_id;
-        $message->insertion_time=date('Y-m-d\TH:i:s\Z',time());
         $message->room_id=$room->id;
         $message->save();
-
-        return ['rid'=>$uuid,'msg'=>'sent'];
+        $message->insertion_time=$message->created_at;
+        $message->save();
+        return ['mid'=>$message->id,'msg'=>'sent'];
 
     }
     public function all_messages(Request $request){
