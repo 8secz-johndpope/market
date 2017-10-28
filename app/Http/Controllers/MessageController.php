@@ -168,7 +168,7 @@ class MessageController extends BaseController
         $advert->save();
 
 
-        return ['rid'=>$uuid,'msg'=>'sent'];
+        return ['room_id'=>$room->id,'msg'=>'sent'];
 
     }
 
