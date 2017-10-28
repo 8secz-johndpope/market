@@ -206,6 +206,8 @@ class MessageController extends BaseController
             $room->save();
             $room->users()->save($user);
             $room->users()->save($advert->user);
+            $advert->replies++;
+            $advert->save();
         }
 
 
@@ -222,8 +224,7 @@ class MessageController extends BaseController
         $message->save();
         $message->insertion_time=$message->created_at;
         $message->save();
-        $advert->replies++;
-        $advert->save();
+
 
         Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
 
@@ -233,7 +234,7 @@ class MessageController extends BaseController
 
     public function normal_message(Request $request){
         $uuid = Uuid::uuid1();
-        $mid = Uuid::uuid1();;
+        $mid = Uuid::uuid1();
 
         $user = Auth::user();
         $room = Room::find($request->id);
@@ -347,10 +348,36 @@ class MessageController extends BaseController
         public function rsend(Request $request){
         if($request->has('g-recaptcha-response')){
             $user = Auth::user();
+            $mid = Uuid::uuid1();
+
+            $room = Room::find($request->id);
+            $advert=$room->advert;
+
+            $message = new Message;
+            $message->message=$request->message;
+            $message->rid=$room->rid;
+            $message->mid=$mid;
+            $message->from_msg=$user->id;
+            $message->to_msg=$advert->user_id;
+            $message->room_id=$room->id;
+            if($request->has('url')){
+                $message->url=$request->url;
+            }
+
+            $message->save();
+            $message->insertion_time=$message->created_at;
+            $message->save();
+            Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
+
+
+
+
+            /*
             $client = new Client();
             $g = $client->request('POST', 'https://fire.sumra.net/groupmessage', [
                 'form_params' => ['from'=>$user->id,'message'=>$request->message,'rid'=>$request->rid,'type'=>'text']
             ]);
+            */
 
         }
 
