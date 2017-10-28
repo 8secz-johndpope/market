@@ -39,6 +39,9 @@ Route::post('/user/msg/all', 'MessageController@all_messages')->middleware('auth
 Route::post('/user/ad/call', 'MessageController@android')->middleware('auth:api');
 
 
+Route::get('/user/get/profile', 'UserController@pro')->middleware('auth:api');
+
+
 Route::post('/user/login', 'UserController@login');
 Route::middleware('auth:api')->get('/user/adverts', 'UserController@adverts');
 Route::post('/user/contacts','UserController@contacts')->middleware('auth:api');

@@ -774,6 +774,11 @@ class UserController extends BaseController
         $clientToken = $gateway->clientToken()->generate();
         return ['token' => $clientToken];
     }
+    public function pro(Request $request){
+        $user = Auth::user();
+
+        return ['id'=>$user->id];
+    }
     public function save_token(Request $request)
     {
         $user = Auth::user();
