@@ -53,7 +53,8 @@
                             <div class="col-md-8 col-md-offset-4">
 
                                 <button
-                                        class="btn btn-primary"
+                                        data-callback="onSubmit"    data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
+                                        class="btn btn-primary  g-recaptcha"
                                         type="submit">
                                     Login
                                 </button>
@@ -70,4 +71,14 @@
         </div>
     </div>
 </div>
+<script>
+    function onSubmit(token) {
+
+
+        document.getElementById("login-form").submit();
+
+
+
+    }
+</script>
 @endsection
