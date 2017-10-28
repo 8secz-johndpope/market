@@ -41,7 +41,7 @@ Route::get('/user/cards','UserController@cards')->middleware('auth:api');
 Route::post('/user/cards/add','UserController@addcard')->middleware('auth:api');
 Route::post('/user/card/charge','UserController@charge')->middleware('auth:api');
 
-Route::get('/user/device/token','UserController@save_token')->middleware('auth:api');
+Route::post('/user/device/token','UserController@save_token')->middleware('auth:api');
 
 
 Route::post('/user/dob/add','UserController@dob')->middleware('auth:api');
