@@ -27,8 +27,13 @@ class MessageController extends BaseController
         parent::__construct();
     }
     public function messages(Request $request){
-        $client = new Client();
         $user = Auth::user();
+
+        return view('home.messages',['cur'=>$user->rooms()->first(),'user'=>$user]);
+
+        /*
+
+        $client = new Client();
 
         $g = $client->request('POST', 'https://fire.sumra.net/groups', [
             'form_params' => ['id'=>$user->id]
@@ -53,6 +58,7 @@ class MessageController extends BaseController
         }
         else
             return view('home.messages',['r'=>[],'g'=>[],'rid'=>'nomessages','user'=>$user]);
+        */
     }
     public function gmessages(Request $request,$rid){
         $client = new Client();

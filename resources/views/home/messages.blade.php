@@ -53,23 +53,21 @@
                 </li>
             </ul>
             <div class="full-width">
-                @if(count($g)>0)
+                @if(count($user->rooms)>0)
                 <div class="left-div-messages">
-                    @foreach($g as $group)
-                        <div class="media @if($group['rid']===$rid) selected-room @endif">
+                    @foreach($user->rooms as $room)
+                        <div class="media @if($room->id===$cur->id) selected-room @endif">
                             <div class="media-left">
                                 <a href="#">
                                     <div class="listing-side">
                                         <div class="listing-thumbnail">
-                                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ isset($group['image'])?$group['image']:"noimage.png"}}" class="lazyload" alt="">
-
-
+                                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$room->image}}" class="lazyload" alt="">
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <div class="media-body">
-                                <a href="/user/manage/messages/{{$group['rid']}}"><h4 class="media-heading">{{$group['title']}}</h4></a>
+                                <a href="/user/manage/messages/{{$room->id}}"><h4 class="media-heading">{{$room->title}}</h4></a>
                                 ...
                             </div>
                         </div>
@@ -77,14 +75,12 @@
                 </div>
                 <div class="right-div-messages">
                     <div class="all-messages">
-                        @foreach($r as $message)
-                            @if($message['type']!=='notify')
-                            @if($message['from_msg']===$user->id)
+                        @foreach($cur->messages as $message)
+                            @if($message->from_msg===$user->id)
 
-                            <div class="right-message"><span class="message"> {{$message['message']}}</span></div>
+                            <div class="right-message"><span class="message"> {{$message->message}}</span></div>
                             @else
-                                <div class="left-message"><span class="message">{{$message['message']}}</span></div>
-                            @endif
+                                <div class="left-message"><span class="message">{{$message->message}}</span></div>
                             @endif
 
                         @endforeach
