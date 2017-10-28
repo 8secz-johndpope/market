@@ -62,7 +62,12 @@ class MessageController extends BaseController
     }
     public function gmessages(Request $request,$rid){
         $user = Auth::user();
-        return view('home.messages',['cur'=>Room::find($rid),'user'=>$user]);
+        $room=Room::find($rid);
+        if($room===null){
+            return redirect('/user/manage/messages');
+
+        }
+        return view('home.messages',['cur'=>$room,'user'=>$user]);
 
         /*
         $client = new Client();
@@ -351,10 +356,7 @@ class MessageController extends BaseController
             $mid = Uuid::uuid1();
 
             $room = Room::find($request->rid);
-            if($room===null){
-                return redirect('/user/manage/messages');
 
-            }
             $advert=$room->advert;
 
             $message = new Message;
