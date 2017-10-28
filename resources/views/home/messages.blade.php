@@ -89,7 +89,7 @@
 
                     <div class="bottom-div-messages">
                         <form action="/user/message/rsend" method="post" id="login-form">
-                            <input type="hidden" name="rid" value="{{$rid}}">
+                            <input type="hidden" name="rid" value="{{$cur->id}}">
                             {{ csrf_field() }}                            <div class="message-input-div"><input type="text" class="form-control"  name="message" placeholder="Type Your Message here" required></div>
                             <div class="message-send-div"><button type="submit"  class="btn btn-primary g-recaptcha"
                                                                   data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
