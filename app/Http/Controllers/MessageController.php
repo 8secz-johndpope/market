@@ -150,7 +150,8 @@ class MessageController extends BaseController
             $room->save();
         }
 
-        Redis::publish('test-channel', json_encode(['foo' => 'bar']));
+        Redis::publish(''.$advert->user_id, json_encode(['foo' => 'bar']));
+
 
         $room->users()->save($user);
         $room->users()->save($advert->user);
