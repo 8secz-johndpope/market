@@ -196,7 +196,7 @@ class MessageController extends BaseController
     public function all_messages(Request $request){
         $user = Auth::user();
         $rooms = $user->rooms()->pluck('room_id')->toArray();
-        $messages = Message::whereIn('room_id',$rooms);
+        $messages = Message::whereIn('room_id',$rooms)->get();
         return $messages;
 
     }
