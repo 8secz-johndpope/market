@@ -781,7 +781,7 @@ class UserController extends BaseController
         $token->user_id=$user->id;
         $token->token=$request->token;
         $token->save();
-        return ['msg'=>'saved','status'=>'success','token'=>$token,'type'=>'notify'];
+        return ['msg'=>'saved','status'=>'success','token'=>$token->token,'type'=>'notify'];
     }
     public function stripe(Request $request)
     {
