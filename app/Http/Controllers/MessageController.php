@@ -150,7 +150,6 @@ class MessageController extends BaseController
             $room->save();
         }
 
-        Redis::publish(''.$advert->user_id, json_encode(['foo' => 'bar']));
 
 
         $room->users()->save($user);
@@ -170,6 +169,7 @@ class MessageController extends BaseController
         $advert->replies++;
         $advert->save();
 
+        Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
 
         return ['room_id'=>$room->id,'msg'=>'sent','mid'=>$message->id];
 
@@ -193,11 +193,23 @@ class MessageController extends BaseController
         if($request->has('url')){
             $message->url=$request->url;
         }
+
         $message->save();
         $message->insertion_time=$message->created_at;
         $message->save();
+        Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
+
         return ['mid'=>$message->id,'msg'=>'sent'];
 
+    }
+    public function room(Request $request,$id){
+        $room =  Room::find($id);
+        $room->users=$room->users;
+        return $room;
+    }
+    public function call(Request $request){
+
+        return ['msg'=>'sent'];
     }
     public function push(Request $request){
         $uuid = Uuid::uuid1();

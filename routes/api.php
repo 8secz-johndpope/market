@@ -36,8 +36,9 @@ Route::post('/user/msg/create', 'MessageController@create_message')->middleware(
 Route::post('/user/msg/send', 'MessageController@normal_message')->middleware('auth:api');
 Route::post('/user/msg/all', 'MessageController@all_messages')->middleware('auth:api');
 
-Route::post('/user/ad/call', 'MessageController@android')->middleware('auth:api');
+Route::post('/user/ad/call', 'MessageController@call')->middleware('auth:api');
 
+Route::get('/user/room/{id}','MessageController@room')->middleware('auth:api');
 
 Route::get('/user/get/profile', 'UserController@pro')->middleware('auth:api');
 
