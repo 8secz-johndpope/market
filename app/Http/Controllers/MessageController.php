@@ -61,8 +61,12 @@ class MessageController extends BaseController
         */
     }
     public function gmessages(Request $request,$rid){
-        $client = new Client();
         $user = Auth::user();
+        return view('home.messages',['cur'=>Room::find($rid),'user'=>$user]);
+
+        /*
+        $client = new Client();
+
         $r = $client->request('POST', 'https://fire.sumra.net/groupmessages', [
             'form_params' => ['rid'=>$rid,"time"=>0]
         ]);
@@ -83,6 +87,7 @@ class MessageController extends BaseController
         });
         //return $g;
         return view('home.messages',['r'=>$r,'g'=>$g,'rid'=>$rid,'user'=>$user]);
+        */
     }
 
     public function reply(Request $request,$id){
