@@ -785,6 +785,7 @@ class UserController extends BaseController
         $token=new Token;
         $token->user_id=$user->id;
         $token->token=$request->token;
+        $token->type=$request->type;
         $token->save();
         return ['msg'=>'saved','status'=>'success','token'=>$token->token,'type'=>'notify'];
     }
