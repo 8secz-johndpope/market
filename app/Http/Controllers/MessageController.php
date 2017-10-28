@@ -139,11 +139,12 @@ class MessageController extends BaseController
             $advert = Advert::where('sid',$request->id)->first();
         }
         $room = new Room;
-        $room->user_id = $user->id;
         $room->advert_id = $advert->id;
         $room->image=$advert->first_image();
         $room->rid=$uuid;
         $room->save();
+
+        $room->users()->save($user);
 
         $message = new Message;
         $message->message=$request->message;
@@ -156,8 +157,6 @@ class MessageController extends BaseController
         $message->save();
 
 
-
-
         $advert->replies++;
         $advert->save();
 
@@ -165,6 +164,7 @@ class MessageController extends BaseController
         return ['rid'=>$uuid,'msg'=>'sent'];
 
     }
+
     public function normal_message(Request $request){
         $uuid = Uuid::uuid1();
         $mid = Uuid::uuid1();;
@@ -183,15 +183,16 @@ class MessageController extends BaseController
         $message->room_id=$room->id;
         $message->save();
 
-
-
-
-        
-
         return ['rid'=>$uuid,'msg'=>'sent'];
 
     }
-    public function rsend(Request $request){
+    public function all_messages(Request $request){
+        $user = Auth::user();
+
+
+    }
+
+        public function rsend(Request $request){
         if($request->has('g-recaptcha-response')){
             $user = Auth::user();
             $client = new Client();

@@ -16,4 +16,8 @@ class Room extends Model
     {
         return $this->belongsTo('App\Model\Advert');
     }
+    public function users()
+    {
+        return $this->belongsToMany('App\User');
+    }
 }

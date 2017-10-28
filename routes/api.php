@@ -31,6 +31,10 @@ Route::post('/user/order/complete/{id}', 'UserController@complete_bump')->middle
 
 Route::post('/user/message/create', 'MessageController@fsend')->middleware('auth:api');
 
+Route::post('/user/msg/create', 'MessageController@create_message')->middleware('auth:api');
+
+
+
 Route::post('/user/login', 'UserController@login');
 Route::middleware('auth:api')->get('/user/adverts', 'UserController@adverts');
 Route::post('/user/contacts','UserController@contacts')->middleware('auth:api');
