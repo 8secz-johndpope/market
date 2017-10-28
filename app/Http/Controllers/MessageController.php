@@ -204,7 +204,7 @@ class MessageController extends BaseController
     }
     public function room(Request $request,$id){
         $room =  Room::find($id);
-        $room->users=$room->users;
+        $room->users=$room->users()->pluck('user_id')->toArray();
         return $room;
     }
     public function call(Request $request){
