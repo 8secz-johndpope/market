@@ -138,11 +138,16 @@ class MessageController extends BaseController
         if($advert===null){
             $advert = Advert::where('sid',$request->id)->first();
         }
-        $room = new Room;
-        $room->advert_id = $advert->id;
-        $room->image=$advert->first_image();
-        $room->rid=$uuid;
-        $room->save();
+        $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
+        if($room===null){
+            $room = new Room;
+            $room->advert_id = $advert->id;
+            $room->image=$advert->first_image();
+            $room->rid=$uuid;
+            $room->sender_id=$user->id;
+            $room->save();
+        }
+
 
         $room->users()->save($user);
         $room->users()->save($advert->user);
