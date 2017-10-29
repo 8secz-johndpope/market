@@ -91,7 +91,7 @@ class MessageController extends BaseController
             $advert->replies++;
             $advert->save();
 
-            Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
+            Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
 
             return redirect('/user/manage/messages/' . $room->id);
         }else{
@@ -259,7 +259,7 @@ class MessageController extends BaseController
 
             $message->save();
 
-            Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
+            Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
 
 
 
