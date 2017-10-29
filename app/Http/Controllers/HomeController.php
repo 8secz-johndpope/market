@@ -9,6 +9,7 @@ use App\Model\Cover;
 use App\Model\Cv;
 use App\Model\Dispatch;
 use App\Model\Distance;
+use App\Model\Message;
 use App\Model\Pack;
 use App\Model\Payment;
 use App\Model\Postcode;
