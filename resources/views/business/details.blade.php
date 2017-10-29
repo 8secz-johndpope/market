@@ -14,7 +14,7 @@
     <div class="row all-divs">
         <div class="col-sm-12">
 
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs top-main-nav">
 
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage  ads</a>
