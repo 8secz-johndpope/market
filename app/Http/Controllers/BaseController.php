@@ -14,14 +14,7 @@ class BaseController extends Controller
 {
     protected $site_settings;
     protected $client;
-    protected $categories;
-    protected $catids;
-    protected $parents;
-    protected $children;
-    protected $base;
-    protected $oldcats;
-    protected $cassandra;
-
+ 
     public function __construct()
     {
         $hosts = [
@@ -32,89 +25,7 @@ class BaseController extends Controller
         ->setHosts($hosts)      // Set the hosts
         ->build();              // Build the client object
 
-        /*
-        // Fetch the Site Settings object
-        $params = [
-            'index' => 'categories',
-            'type' => 'category',
-            'body' => [
-                'size'=>2000,
-                'query' => [
-                    'match_all' => (object)[]
-                ]
-            ]
-        ];
 
-
-
-// Get doc at /my_index/my_type/my_id
-        $response = $this->client->search($params);
-        $cats = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $catmap = array();
-        foreach ($cats as $cat){
-            $catmap[$cat['slug']]=$cat;
-        }
-        $idmap=array();
-        foreach ($cats as $cat){
-            $idmap[$cat['id']]=$cat;
-        }
-
-
-        $params = [
-            'index' => 'oldcats',
-            'type' => 'category',
-            'body' => [
-                'size'=>2000,
-                'query' => [
-                    'match_all' => (object)[]
-                ]
-            ]
-        ];
-
-
-// Get doc at /my_index/my_type/my_id
-        $response = $this->client->search($params);
-        $this->oldcats = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-
-        $params = [
-            'index' => 'relations',
-            'type' => 'relation',
-            'body' => [
-                'size'=>2000,
-                'query' => [
-                    'match_all' => (object)[]
-                ]
-            ]
-        ];
-        $response = $this->client->search($params);
-        $rel = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-
-        $parents = array();
-        $children = array();
-        foreach ($rel as $relation){
-            $parent=key($relation);
-            $child=$relation[$parent];
-
-            $parents[$child]=$parent;
-            if(!isset($children[$parent]))
-                $children[$parent]=array();
-            array_push($children[$parent],$child);
-
-        }
-        $base=array();
-        foreach ($cats as $cat){
-            $slug=$cat['slug'];
-            if(!isset($parents[$slug])) {
-                array_push($base, $slug);
-            }
-        }
-        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-        $this->categories=$catmap;
-        $this->parents=$parents;
-        $this->children=$children;
-        $this->base=$base;
-        $this->catids=$idmap;
-        */
     }
 
     public function android($token,$room,$message){
