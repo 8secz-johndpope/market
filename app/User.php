@@ -75,7 +75,7 @@ class User extends Authenticatable
     }
     public function rooms()
     {
-        return $this->belongsToMany('App\Model\Room');
+        return $this->belongsToMany('App\Model\Room')->orderBy('room_id','desc');
     }
     public function addresses()
     {
