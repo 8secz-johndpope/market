@@ -109,7 +109,7 @@ Route::get('/user/alert/toggle/{id}','UserController@toggle_alert')->middleware(
 Route::get('/user/text','UserController@text');
 Route::get('/user/ctext','UserController@ctext');
 
-Route::get('/advert/{id}','MarketController@advert')->middleware('auth:api');
+Route::get('/advert/{id}','MarketController@advert');
 Route::get('/plate', 'UserController@dvla')->middleware('auth:api');
 
 
