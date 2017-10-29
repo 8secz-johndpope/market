@@ -831,6 +831,7 @@ a.message-back-button {
         max-height: 32px;
         overflow: hidden;
         max-width: 70%;
+        display: inline;
     }
     .left-div-messages{
         width: 100%;
