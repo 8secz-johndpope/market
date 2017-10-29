@@ -222,21 +222,7 @@ class MessageController extends BaseController
         fclose($fp);
         return ['great'=>'yes','res'=>$result];
     }
-    private function android($token,$room,$message){
-        $client = new Client([
-            'headers' => [
-                'Content-Type'=> 'application/json',
-                'Authorization'=> 'key=AAAAxvu2uio:APA91bEv0upMJEfZC1Bv_kSH03KpsbZKP4zph4p8NXT0FO5Ihc2kLmtEUBHQ2rUoI0PXY2hyD70N3TjK2H4ARZP1hgffgJ8TeUCSMxRQNE9ADNR7zLNiMTNjajgiHHc795LAbs6akZD3'
-            ]
-        ]);
-        //$tk='cFX7C7fVoHA:APA91bE4gCqSZ6YynKZd98Ar8ZoI8ST1HBToikZjTk1Q0xyT6qOvm06kg8inGioJ7P9MCYrATTUQNmurmQAq3wCtheaH9yb2COtNSR4SDUD2l-h5uuS9idhPHJBRpvU0_5K5lFAoyXmh';
-        $g = $client->request('POST', 'https://fcm.googleapis.com/fcm/send', [
-            'json' => ['to' => $token->token , 'priority'=>'high','data',['id'=>$room->id],'notification'=>['title'=>$room->title,'body'=>$message->message,'sound'=>'mySound']]
-        ]);
-        $g = json_decode($g->getBody(), true);
 
-        //return ['great'=>'yes','res'=>$g];
-    }
     public function all_messages(Request $request){
         $user = Auth::user();
         $rooms = $user->rooms()->pluck('room_id')->toArray();

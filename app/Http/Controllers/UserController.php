@@ -15,6 +15,7 @@ use App\Model\Advert;
 use App\Model\ExtraPrice;
 use App\Model\ExtraType;
 use App\Model\Location;
+use App\Model\Room;
 use App\Model\SearchAlert;
 use App\Model\Token;
 use Validator;
@@ -696,6 +697,45 @@ class UserController extends BaseController
         $application->cv_id = $cv->id;
         $application->cover_id = $cover->id;
         $application->save();
+
+        
+
+
+        $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
+        if($room===null){
+            $room = new Room;
+            $room->advert_id = $advert->id;
+            $room->image=$advert->first_image();
+            $room->title=$advert->param('title');
+            $room->sender_id=$user->id;
+            $room->save();
+            $room->users()->save($user);
+            if($user->id!==$advert->user_id)
+                $room->users()->save($advert->user);
+            $advert->replies++;
+            $advert->save();
+        }
+
+
+
+
+        $message = new Message;
+        $message->message=$cover->cover;
+        $message->from_msg=$user->id;
+        $message->to_msg=$advert->user_id;
+        $message->room_id=$room->id;
+        $message->url='';
+        $message->save();
+
+        foreach ($advert->user->android as $token){
+            $this->android($token,$room,$message);
+        }
+
+        Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
+
+
+
+
 
         return ['msg' => 'Application sent'];
 
