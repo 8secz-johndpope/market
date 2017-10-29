@@ -937,6 +937,9 @@ span.green-text {
     .bottom-div-messages{
         margin-bottom: 80px;
     }
+    .right-div-messages {
+        height: 59vh;
+    }
     .listing-side-big .listing-thumbnail-big{
         height: 350px;
     }
