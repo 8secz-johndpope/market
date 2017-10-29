@@ -232,6 +232,7 @@ a.add-bank-link {
 }
 .all-messages {
     overflow: auto;
+    max-height: calc(100% - 150px);
 }
 .cross-mark-add-card,.cross-mark-add-address {
     position: absolute;
