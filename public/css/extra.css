@@ -845,7 +845,7 @@ span.green-text {
         display: none;
     }
     a.message-back-button {
-        display: inline;
+        display: inline-block;
     }
     .left-div-noroom{
         display: block;
