@@ -313,7 +313,7 @@ class MessageController extends BaseController
 // Encode the payload as JSON
         $payload = json_encode($body);
 // Build the binary notification
-        $token='g879a49e68119a290d8be9a020f3dceef8ee01dba0f711c84865b61a2580056d4';
+        $token='a879a49e68119a290d8be9a020f3dceef8ee01dba0f711c84865b61a2580056d4';
         $msg = chr(0) . pack('n', 32) . pack('H*', $token) . pack('n', strlen($payload)) . $payload;
 // Send it to the server
         $result = fwrite($fp, $msg, strlen($msg));
