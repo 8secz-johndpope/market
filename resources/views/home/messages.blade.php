@@ -123,6 +123,10 @@
 
 
         }
+        axios.get('/oauth/personal-access-tokens')
+            .then(response => {
+            console.log(response.data);
+        });
         var exampleSocket = new WebSocket("wss://sumra.net:8080", "protocolOne");
         exampleSocket.onopen = function (event) {
 
