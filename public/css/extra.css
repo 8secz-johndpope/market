@@ -647,7 +647,7 @@ ul.image-gallery-ul {
     color: red;
 }
 .left-div-messages {
-    width: 25%;
+    width: 400px;
     float: left;
     overflow: auto;
     margin-bottom: 30px;
@@ -660,14 +660,16 @@ ul.image-gallery-ul {
 .right-div-messages {
     position: relative;
     float: left;
-    width: 70%;
+    width: calc(100% - 400px);
     height: 100%;
+    padding: 10px;
 }
 .bottom-div-messages {
     position: absolute;
     bottom: 0;
     right: 0;
     left: 0;
+    margin-right: 20px;
 }
 .message-input-div {
     width: calc(100% - 60px);
