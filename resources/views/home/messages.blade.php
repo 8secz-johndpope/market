@@ -130,8 +130,6 @@
             axios.get('/oauth/personal-access-tokens')
                 .then(response => {
                  console.log(response.data);
-                 var object = JSON.parse(response.data);
-                 console.log(object.lenth);
                 if(response.data.lenth>0){
                     console.log( response.data[0].id);
              //   exampleSocket.send(JSON.stringify({'token': response.data[0].id}));
