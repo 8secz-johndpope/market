@@ -77,22 +77,6 @@
 
 
                     <div class="product">
-                        <div class="listing-side">
-                            <div class="listing-thumbnail">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($cur->advert->param('images'))>0?$cur->advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
-
-                                @if($cur->advert->featured_expires())
-                                    <span class="ribbon-featured">
-<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-</span>
-                                @endif
-
-                                <div class="listing-meta txt-sub">
-                                    <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($cur->advert->param('images'))}}</span>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="info">
 
 
