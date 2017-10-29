@@ -698,7 +698,7 @@ class UserController extends BaseController
         $application->cover_id = $cover->id;
         $application->save();
 
-        
+
 
 
         $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();

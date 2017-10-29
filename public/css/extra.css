@@ -230,6 +230,10 @@ a.add-bank-link {
     border-bottom: 1px solid #d8d6d9;
     padding: 16px;
 }
+.all-messages {
+    height: 272px;
+    overflow: auto;
+}
 .cross-mark-add-card,.cross-mark-add-address {
     position: absolute;
     right: 0;
