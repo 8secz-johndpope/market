@@ -68,7 +68,7 @@
                             </div>
                             <div class="media-body">
                                 <a href="/user/manage/messages/{{$room->id}}"><h4 class="media-heading">{{$room->title}}</h4></a>
-                                <p>{{$room->messages()->last()->message}}</p>
+                                <p>{{$room->messages()->orderby('id','desc')->first()->message}}</p>
                             </div>
                         </div>
                         @endforeach
