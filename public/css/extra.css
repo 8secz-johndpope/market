@@ -834,6 +834,9 @@ span.green-text {
     .right-div-messages{
         width: 100%;
     }
+    .right-div-messages{
+        display: none;
+    }
     .main-search-div{
         width: 100%;
     }
