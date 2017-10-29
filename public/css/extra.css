@@ -850,6 +850,9 @@ span.green-text {
     .full-width {
         height: auto;
     }
+    .right-div-messages{
+        height: 70vh;
+    }
     .main-search-div{
         width: 100%;
     }
