@@ -231,7 +231,9 @@ class MessageController extends BaseController
         $message->save();
         $message->insertion_time=$message->created_at;
         $message->save();
-
+        foreach ($user->android as $token){
+            $this->android($token,$room,$message);
+        }
 
         Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
 
@@ -262,7 +264,9 @@ class MessageController extends BaseController
         $message->insertion_time=$message->created_at;
         $message->save();
         Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
-
+        foreach ($user->android as $token){
+            $this->android($token,$room,$message);
+        }
         return ['mid'=>$message->id,'msg'=>'sent'];
 
     }
@@ -321,20 +325,20 @@ class MessageController extends BaseController
         fclose($fp);
         return ['great'=>'yes','res'=>$result];
     }
-    public function android(Request $request){
+    private function android($token,$room,$message){
         $client = new Client([
             'headers' => [
                 'Content-Type'=> 'application/json',
                 'Authorization'=> 'key=AAAAxvu2uio:APA91bEv0upMJEfZC1Bv_kSH03KpsbZKP4zph4p8NXT0FO5Ihc2kLmtEUBHQ2rUoI0PXY2hyD70N3TjK2H4ARZP1hgffgJ8TeUCSMxRQNE9ADNR7zLNiMTNjajgiHHc795LAbs6akZD3'
             ]
         ]);
-
+        //$tk='cFX7C7fVoHA:APA91bE4gCqSZ6YynKZd98Ar8ZoI8ST1HBToikZjTk1Q0xyT6qOvm06kg8inGioJ7P9MCYrATTUQNmurmQAq3wCtheaH9yb2COtNSR4SDUD2l-h5uuS9idhPHJBRpvU0_5K5lFAoyXmh';
         $g = $client->request('POST', 'https://fcm.googleapis.com/fcm/send', [
-            'json' => ['to' => 'cFX7C7fVoHA:APA91bE4gCqSZ6YynKZd98Ar8ZoI8ST1HBToikZjTk1Q0xyT6qOvm06kg8inGioJ7P9MCYrATTUQNmurmQAq3wCtheaH9yb2COtNSR4SDUD2l-h5uuS9idhPHJBRpvU0_5K5lFAoyXmh', 'priority'=>'high','data','1','notification'=>['title'=>'title','body'=>'message','sound'=>'mySound']]
+            'json' => ['to' => $token->token , 'priority'=>'high','data','1','notification'=>['title'=>$room->title,'body'=>$message->message,'sound'=>'mySound']]
         ]);
         $g = json_decode($g->getBody(), true);
 
-        return ['great'=>'yes','res'=>$g];
+        //return ['great'=>'yes','res'=>$g];
     }
     public function all_messages(Request $request){
         $user = Auth::user();
