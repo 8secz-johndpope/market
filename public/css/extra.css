@@ -828,7 +828,12 @@ span.green-text {
         overflow: hidden;
         max-width: 70%;
     }
-
+    .left-div-messages{
+        width: 100%;
+    }
+    .right-div-messages{
+        width: 100%;
+    }
     .main-search-div{
         width: 100%;
     }
