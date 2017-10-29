@@ -44,10 +44,6 @@ class BaseController extends Controller
         ];
 
 
-        $cluster   = Cassandra::cluster()->withContactPoints('35.157.50.121')->build();
-        $keyspace  = 'chat';
-        $this->cassandra   = $cluster->connect($keyspace);        // create session, optionally scoped to a keyspace
-
 
 // Get doc at /my_index/my_type/my_id
         $response = $this->client->search($params);
