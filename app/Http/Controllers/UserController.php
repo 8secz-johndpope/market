@@ -15,6 +15,7 @@ use App\Model\Advert;
 use App\Model\ExtraPrice;
 use App\Model\ExtraType;
 use App\Model\Location;
+use App\Model\Message;
 use App\Model\Room;
 use App\Model\SearchAlert;
 use App\Model\Token;
@@ -673,6 +674,7 @@ class UserController extends BaseController
 
     public function apply(Request $request)
     {
+        
         // Get the currently authenticated user...
         $user = Auth::user();
         $id = $request->id;
