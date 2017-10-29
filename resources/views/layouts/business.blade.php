@@ -18,6 +18,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -391,7 +393,6 @@
 <script src="https://sumra.net/js/load.js"></script>
 <script src="https://sumra.net/js/multi-upload.js"></script>
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://sumra.net/js/contract.js"></script>
 
 </body>
