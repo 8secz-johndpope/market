@@ -14,7 +14,7 @@ class BaseController extends Controller
 {
     protected $site_settings;
     protected $client;
- 
+
     public function __construct()
     {
         $hosts = [

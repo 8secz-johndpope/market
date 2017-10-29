@@ -972,6 +972,37 @@ class HomeController extends BaseController
             $application->cover_id = $cover->id;
         }
         $application->save();
+
+        $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
+        if($room===null){
+            $room = new Room;
+            $room->advert_id = $advert->id;
+            $room->image=$advert->first_image();
+            $room->title=$advert->param('title');
+            $room->sender_id=$user->id;
+            $room->save();
+            $room->users()->save($user);
+            if($user->id!==$advert->user_id)
+                $room->users()->save($advert->user);
+            $advert->replies++;
+            $advert->save();
+        }
+
+
+
+
+        $message = new Message;
+        $message->message=$cover->cover;
+        $message->from_msg=$user->id;
+        $message->to_msg=$advert->user_id;
+        $message->room_id=$room->id;
+        $message->url='';
+        $message->save();
+
+        foreach ($advert->user->android as $token){
+            $this->android($token,$room,$message);
+        }
+
         return redirect($advert->url());
 
     }
