@@ -231,7 +231,6 @@ a.add-bank-link {
     padding: 16px;
 }
 .all-messages {
-    height: 272px;
     overflow: auto;
 }
 .cross-mark-add-card,.cross-mark-add-address {
@@ -649,15 +648,14 @@ ul.image-gallery-ul {
 .left-div-messages {
     width: 25%;
     float: left;
-    height: 400px;
     overflow: auto;
     margin-bottom: 30px;
+    padding: 10px;
 }
 .right-div-messages {
     position: relative;
     float: left;
     width: 70%;
-    height: 400px;
 }
 .bottom-div-messages {
     position: absolute;
