@@ -74,35 +74,13 @@
                         @endforeach
                 </div>
                 <div class="right-div-messages">
-
-
-                    <div class="product">
-                        <div class="info">
-
-
+                    <div class="mtop">
                             <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4 class="product-title">{{$cur->advert->param('title')}}</h4></a>
-
-                            <span class="listing-location">
-                                    {{$cur->advert->param('location_name')}}
-                                </span>
-                            <p class="listing-description">
-                                {{$cur->advert->param('description')}}
-                            </p>
-
                             @if($cur->advert->meta('price')>=0)
                                 <span class="product-price">£ {{$cur->advert->meta('price')/100}}{{$cur->advert->meta('price_frequency')}}
                                 </span>
                             @endif
 
-
-
-                            @if($cur->advert->urgent_expires())
-                                <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
-<span class="hide-visually">This ad is </span>Urgent
-</span>
-                            @endif
-
-                        </div>
                     </div>
 
                     <div class="all-messages">
