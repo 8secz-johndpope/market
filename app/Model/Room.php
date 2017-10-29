@@ -24,4 +24,8 @@ class Room extends Model
     {
         return $this->hasMany('App\Model\Message');
     }
+    public function last_message(){
+        $message = Message::where('room-id',$this->id)->orderby('id','desc')->first();
+        return $message;
+    }
 }
