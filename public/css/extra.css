@@ -782,6 +782,7 @@ span.green-text {
 }
 a.message-back-button {
     display: none;
+    color: black;
 }
 @media (max-width: 1500px) {
     h4.product-title {
@@ -832,6 +833,7 @@ a.message-back-button {
         overflow: hidden;
         max-width: 70%;
         display: inline;
+        margin-left: 20px;
     }
     .left-div-messages{
         width: 100%;
