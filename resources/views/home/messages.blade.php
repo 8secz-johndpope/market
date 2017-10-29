@@ -124,7 +124,10 @@
 
         }
         var exampleSocket = new WebSocket("wss://sumra.net:8080", "protocolOne");
-        exampleSocket.send(JSON.stringify({'token':'hello'}));
+        exampleSocket.onopen = function (event) {
+
+            exampleSocket.send(JSON.stringify({'token': 'hello'}));
+        };
 
 
     </script>
