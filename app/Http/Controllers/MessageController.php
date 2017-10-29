@@ -259,7 +259,6 @@ class MessageController extends BaseController
         public function rsend(Request $request){
         if($request->has('g-recaptcha-response')){
             $user = Auth::user();
-            $mid = Uuid::uuid1();
 
             $room = Room::find($request->rid);
 
@@ -267,7 +266,6 @@ class MessageController extends BaseController
 
             $message = new Message;
             $message->message=$request->message;
-            $message->mid=$mid;
             $message->from_msg=$user->id;
             $message->to_msg=$advert->user_id;
             $message->room_id=$room->id;
