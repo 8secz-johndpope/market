@@ -128,6 +128,9 @@
 
             exampleSocket.send(JSON.stringify({'token': 'hello'}));
         };
+        exampleSocket.onmessage = function (event) {
+            console.log(event.data);
+        }
 
 
     </script>
