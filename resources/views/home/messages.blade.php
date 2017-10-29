@@ -69,7 +69,7 @@
                             <div class="media-body">
                                 <a href="/user/manage/messages/{{$room->id}}"><h4 class="media-heading">{{$room->title}}</h4></a>
                                 <p>{{$room->last_message()->message}}</p>
-                                <strong>{{$room->last_message()->user->name}}</strong>
+                                <strong>{{$room->advert->user->name}}</strong>
                             </div>
                         </div>
                         @endforeach
