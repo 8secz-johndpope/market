@@ -780,6 +780,9 @@ span.green-text {
     color: green;
     font-weight: bold;
 }
+a.message-back-button {
+    display: none;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
