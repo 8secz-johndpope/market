@@ -226,6 +226,10 @@ a.add-bank-link {
     position: relative;
     padding-top: 1px;
 }
+.mtop {
+    border-bottom: 1px solid #d8d6d9;
+    padding: 16px;
+}
 .cross-mark-add-card,.cross-mark-add-address {
     position: absolute;
     right: 0;
