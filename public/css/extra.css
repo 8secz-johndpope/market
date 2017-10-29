@@ -931,6 +931,12 @@ span.green-text {
         overflow: hidden;
         max-width: 50%;
     }
+    .all-messages{
+        max-height: calc(100% - 200px);
+    }
+    .bottom-div-messages{
+        margin-bottom: 80px;
+    }
     .listing-side-big .listing-thumbnail-big{
         height: 350px;
     }
