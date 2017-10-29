@@ -60,6 +60,8 @@ Route::get('/userads/{id}', 'MarketController@userads');
 Route::get('/user/manage/messages', 'MessageController@messages');
 Route::get('/user/manage/messages/{rid}', 'MessageController@gmessages');
 
+Route::get('/user/message/push','MessageController@push');
+
 
 Route::post('/user/message/send','MessageController@send');
 Route::post('/user/message/rsend','MessageController@rsend');
