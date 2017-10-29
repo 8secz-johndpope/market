@@ -12,5 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Application extends Model
 {
-
+    public function cover(){
+        return $this->belongsTo('App\Model\Cover');
+    }
 }
