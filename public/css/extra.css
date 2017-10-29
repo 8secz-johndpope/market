@@ -834,8 +834,17 @@ span.green-text {
     .right-div-messages{
         width: 100%;
     }
-    .right-div-messages{
+    .right-div-room{
+        display: block;
+    }
+    .left-div-room{
         display: none;
+    }
+    .right-div-noroom{
+        display: none;
+    }
+    .left-div-noroom{
+        display: block;
     }
     .main-search-div{
         width: 100%;
