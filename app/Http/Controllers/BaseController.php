@@ -31,6 +31,8 @@ class BaseController extends Controller
         $this->client = \Elasticsearch\ClientBuilder::create()           // Instantiate a new ClientBuilder
         ->setHosts($hosts)      // Set the hosts
         ->build();              // Build the client object
+
+        /*
         // Fetch the Site Settings object
         $params = [
             'index' => 'categories',
@@ -112,6 +114,7 @@ class BaseController extends Controller
         $this->children=$children;
         $this->base=$base;
         $this->catids=$idmap;
+        */
     }
 
     public function android($token,$room,$message){
