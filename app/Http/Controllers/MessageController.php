@@ -231,7 +231,7 @@ class MessageController extends BaseController
         $message->save();
         $message->insertion_time=$message->created_at;
         $message->save();
-        foreach ($user->android as $token){
+        foreach ($advert->user->android as $token){
             $this->android($token,$room,$message);
         }
 
@@ -264,7 +264,7 @@ class MessageController extends BaseController
         $message->insertion_time=$message->created_at;
         $message->save();
         Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
-        foreach ($user->android as $token){
+        foreach ($advert->user->android as $token){
             $this->android($token,$room,$message);
         }
         return ['mid'=>$message->id,'msg'=>'sent'];
