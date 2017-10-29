@@ -137,7 +137,7 @@ class MessageController extends BaseController
             $this->android($token,$room,$message);
         }
 
-        Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
+        Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
 
         return ['room_id'=>$room->id,'msg'=>'sent','mid'=>$message->id];
 
@@ -160,11 +160,11 @@ class MessageController extends BaseController
         }
 
         $message->save();
-
-        Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
         foreach ($advert->user->android as $token){
             $this->android($token,$room,$message);
         }
+        Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+
         return ['mid'=>$message->id,'msg'=>'sent'];
 
     }
