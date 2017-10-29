@@ -76,6 +76,7 @@
                 </div>
                 <div class="right-div-messages {{$rightclass}}">
                     <div class="mtop">
+                        <a class="btn btn-default message-back-button" href="/user/manage/messages">Back</a>
                             <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4 class="product-title">{{$cur->advert->param('title')}}</h4></a>
                             @if($cur->advert->meta('price')>=0)
                                 <span class="product-price">£ {{$cur->advert->meta('price')/100}}{{$cur->advert->meta('price_frequency')}}
