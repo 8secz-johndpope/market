@@ -847,6 +847,9 @@ span.green-text {
     .left-div-noroom{
         display: block;
     }
+    .full-width {
+        height: auto;
+    }
     .main-search-div{
         width: 100%;
     }
