@@ -132,7 +132,7 @@
                  console.log(response.data);
                 if(response.data.length>0){
                     console.log( response.data[0].id);
-             //   exampleSocket.send(JSON.stringify({'token': response.data[0].id}));
+                exampleSocket.send(JSON.stringify({'token': response.data[0].id}));
 
             }else {
                     console.log("fdl");
