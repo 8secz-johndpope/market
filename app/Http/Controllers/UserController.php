@@ -720,7 +720,7 @@ class UserController extends BaseController
 
 
         $message = new Message;
-        $message->message=$cover->cover;
+        $message->message=$application->cover->cover;
         $message->from_msg=$user->id;
         $message->to_msg=$advert->user_id;
         $message->room_id=$room->id;
