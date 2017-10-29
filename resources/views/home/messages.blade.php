@@ -79,7 +79,7 @@
                     <div class="product">
                         <div class="listing-side">
                             <div class="listing-thumbnail">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($sale->advert->param('images'))>0?$sale->advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($cur->advert->param('images'))>0?$cur->advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
                                 @if($cur->advert->featured_expires())
                                     <span class="ribbon-featured">
@@ -117,7 +117,7 @@
 <span class="hide-visually">This ad is </span>Urgent
 </span>
                             @endif
-               
+
                         </div>
                     </div>
 
