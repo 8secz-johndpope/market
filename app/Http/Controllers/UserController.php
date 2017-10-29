@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Redis;
 
 use App\Mail\AccountCreated;
 use App\Mail\OrderShipped;
@@ -674,7 +675,7 @@ class UserController extends BaseController
 
     public function apply(Request $request)
     {
-        
+
         // Get the currently authenticated user...
         $user = Auth::user();
         $id = $request->id;
