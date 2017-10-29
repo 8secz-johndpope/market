@@ -54,7 +54,7 @@
             </ul>
             <div class="full-width">
                 @if(count($user->rooms)>0)
-                <div class="left-div-messages">
+                <div class="left-div-messages {{$leftclass}}">
                     @foreach($user->rooms as $room)
                         <div class="media @if($room->id===$cur->id) selected-room @endif">
                             <div class="media-left">
@@ -74,7 +74,7 @@
                         </div>
                         @endforeach
                 </div>
-                <div class="right-div-messages">
+                <div class="right-div-messages {{$rightclass}}">
                     <div class="mtop">
                             <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4 class="product-title">{{$cur->advert->param('title')}}</h4></a>
                             @if($cur->advert->meta('price')>=0)

@@ -29,7 +29,8 @@ class MessageController extends BaseController
     public function messages(Request $request){
         $user = Auth::user();
 
-        return view('home.messages',['cur'=>$user->rooms()->first(),'user'=>$user]);
+
+        return view('home.messages',['cur'=>$user->rooms()->first(),'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
     }
     public function gmessages(Request $request,$rid){
         $user = Auth::user();
@@ -38,7 +39,7 @@ class MessageController extends BaseController
             return redirect('/user/manage/messages');
 
         }
-        return view('home.messages',['cur'=>$room,'user'=>$user]);
+        return view('home.messages',['cur'=>$room,'user'=>$user,'leftclass'=>'left-div-room','rightclass'=>'right-div-room']);
     }
 
     public function reply(Request $request,$id){
