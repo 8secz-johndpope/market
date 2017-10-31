@@ -321,7 +321,7 @@
             </div>
             <div class="col-xs-12">
                 <div class="col">
-                    <img  class="img-responsive  footer_logo" src="/css/ic_launcher1.png" />
+                    <img  class="img-responsive  footer_logo" src="/css/ic_launcher2.png" />
                 </div>
             </div>
         </div>

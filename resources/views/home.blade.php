@@ -11,11 +11,11 @@
 @endsection
 
 @section('content')
-		<section class="categories">
-			<div class="container">
-				<div class ="row">
+		<section class="categories background-body">
+    			<div class="container">
+    				<div class="row box-rose">
 			 	@foreach($base as $cat)
-			 		<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+			 		<div class="col-xs-6 col-sm-3 col-lg-2">
 				 		<div class="panel panel-primary {{$cat->class}}">
 				 			<div class="panel-heading">
 				 				<a href="/{{$cat->slug}}">
@@ -62,76 +62,14 @@
 				</div>
 			</div>
 		</section>
-		<section class="spotligth">
+		<section class="spotligth background-body">
 			<div class="container">
-				<div class="row">
-					<div id="myCarousel-xs" class="carousel slide visible-xs" data-ride="carousel">
-						<!-- Indicators 
-						<ol class="carousel-indicators">
-							<li data-target="#myCarousel-xs" data-slide-to="0" class="active"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="1"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="2"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="3"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="4"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="5"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="6"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="7"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="8"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="9"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="10"></li>
-						    <li data-target="#myCarousel-xs" data-slide-to="11"></li>
-						</ol>
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner ">
-							<!-- small devices -->
+				<div class="row box-rose">
+                        <div class="title col-lg-12">
+                            <h2>Spotlight</h2>
+                        </div>
 							@for ($i = 0; $i < count($spotlight); $i++)
-							<div class="item">
-									@for ($j = 0; $j < 2 && $i < count($spotlight); $i++,$j++)
-						    		<div class="col-xs-6 col-md-4 col-lg-2">
-						    			<a href="#">
-								    		<div class="panel panel-primary">
-									 			<div class="panel-heading" style="background-image:url('https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}}');">
-									 			</div>
-									 			<div class="panel-body">
-									 				<h3 class="text">{{$spotlight[$i]['title']}}</h3>
-												 	@if($spotlight[$i]['meta']['price']>=0)
-				                                            <div class="items-box-price font-5">£	{{$spotlight[$i]['meta']['price']/100}}{{isset($spotlight[$i]['meta']['price_frequency']) ? $spotlight[$i]['meta']['price_frequency']:''}}
-				                                            </div>
-				                                   @endif
-												</div>
-											</div>
-										</a>
-									</div>
-									@endfor
-									@php
-										$i--;
-									@endphp
-						    </div>
-						    @endfor
-						</div>
-						<a class="left carousel-control" href="#myCarousel-xs" data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left"></span>
-						    <span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#myCarousel-xs" data-slide="next">
-						    <span class="glyphicon glyphicon-chevron-right"></span>
-						    <span class="sr-only">Next</span>
-						</a>
-					</div>
-					<!-- end small devices -->
-					<div id="myCarousel" class="carousel slide hidden-xs" data-ride="carousel">
-						<!-- Indicators -->
-						<ol class="carousel-indicators">
-							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						    <li data-target="#myCarousel" data-slide-to="1"></li>
-						    <li data-target="#myCarousel" data-slide-to="2"></li>
-						    <li data-target="#myCarousel" data-slide-to="3"></li>
-						</ol> 
-						<div class="carousel-inner">
-							@for ($i = 0; $i < count($spotlight); $i++)
-						    <div class="item">
-						    	@for ($j = 0; $j < 6 && $i < count($spotlight); $i++,$j++)
-						    		<div class="col-sm-4 col-md-4 col-lg-2">
+						    		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
 							    		<div class="panel panel-primary">
 								 			<div class="panel-heading" style="background-image:url('https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}}');">
 								 			</div>
@@ -144,10 +82,6 @@
 											</div>
 										</div>
 									</div>
-						    	@endfor
-						    	@php
-										$i--;
-								@endphp
 						    </div>
 						    @endfor
 						</div>
@@ -163,23 +97,6 @@
 					</div>
 				</div>
 			</div>
-		</section>
-
-		<section class="row-color white section section-siri loading-complete active animated" data-component-list="LoadingComponent" data-analytics-section-engagement="name:siri">
-			<div class="siri-command-wave enhanced" data-component-list="SiriCommandComponent">
-				<div class="wave-copy">
-					<a href=""><h2 class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">What is Sumra?</h2></a>
-				</div>
-				<div class="wave-container" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
-					<canvas class="webgl-object active"></canvas>
-				</div>
-				<div class="wave-copy">
-					<p class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">We're more than a marketplace.</p>
-				</div>
-				<div class="wave-copy">
-					<p class="typography-subsection-subheadline siri-command relative" style="opacity: 1;">Key Features:</p>
-				</div>
-			</div>	
 		</section>
 		<section class="features">
 			<div class="container">
