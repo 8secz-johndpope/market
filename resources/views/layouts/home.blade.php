@@ -116,11 +116,7 @@
 <body class="">
 <header>
     <div class="container-fluid top">
-        <div class="row hidden-xs">
-            <div class="col">
-                <img class="icon-small" src="/css/sumra-text.png">
-            </div>
-        </div>
+        <div class="row">
         <nav class="navbar navbar-default">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -204,6 +200,9 @@
             </div><!-- /.navbar-collapse -->
         </nav>
     </div>
+</div>
+<div class="container-fluid background-body">
+     <div class="row">
             <form class="navbar-form" action="/searchform" id="mainform">
                 @foreach($input as $key=>$value)
                     @if($key!=='q'&&$key!=='lat'&&$key!=='lng')
@@ -241,6 +240,8 @@
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
 
 </header>
 
