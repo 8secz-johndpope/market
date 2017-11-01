@@ -1360,12 +1360,6 @@ section.row-color.white {
   .categories li {
     font-size: 12px;
   }
-  .panel-heading img.icon-category {
-    height: 3em;
-  }
-  .categories .panel-primary>.panel-heading {
-    height: 4em;
-  }
   .search .col-lg-2 {
     width: 17.5%;
   }
