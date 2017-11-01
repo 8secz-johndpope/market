@@ -129,7 +129,7 @@
 
 
 
-                exampleSocket.send(JSON.stringify({'token': {{$user->access_token}}));
+                exampleSocket.send(JSON.stringify({'token': {{$user->access_token}}}));
 
         };
         exampleSocket.onmessage = function (event) {
