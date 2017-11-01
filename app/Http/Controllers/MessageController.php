@@ -114,7 +114,7 @@ class MessageController extends BaseController
     }
 public function notify($room,$message){
     $user = Auth::user();
-
+    $message->type=$message->type;
     foreach ($room->users as $usr){
         if($usr->id!==$user->id)
         {
