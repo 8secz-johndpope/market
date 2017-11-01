@@ -115,8 +115,11 @@
         </div>
     </div>
     <script>
-        var objDiv = document.getElementById("all-msg");
-        objDiv.scrollTop = objDiv.scrollHeight;
+        function scroll_bottom() {
+            var objDiv = document.getElementById("all-msg");
+            objDiv.scrollTop = objDiv.scrollHeight;
+        }
+      scroll_bottom();
 
         function onSubmit(token) {
 
@@ -140,10 +143,10 @@
         exampleSocket.onmessage = function (event) {
             console.log(event.data);
             var object = JSON.parse(event.data);
-            var message = $('#message').val();
-            if(!message&&object.message)
+            if(object.message&&object.room_id==room)
             {
-                location.reload();
+                $('#all-msg').appendChild('<div class="left-message"><span class="message">'+object.message+'</span></div>');
+                scroll_bottom()
             }
 
         }
