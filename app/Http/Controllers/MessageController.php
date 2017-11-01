@@ -118,7 +118,7 @@ public function notify($room,$message){
     foreach ($room->users as $usr){
         if($usr->id!==$user->id)
         {
-            $data=['id'=>$message->id,'message' => $message->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id,'room_id'=>$room->id];
+            $data=['id'=>$message->id,'message' => $message->message,'mtype'=>'text','time'=>$message->created_at->date,'from'=>$message->user->id,'room_id'=>$room->id];
             Redis::publish(''.$usr->id, json_encode($data));
             foreach ($usr->android as $token){
                 $this->android($token,$room,$message,$data);
