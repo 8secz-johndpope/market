@@ -125,7 +125,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img class="icon" src="/css/ic_launcher1.png"></a>
+                <a class="navbar-brand" href="https://sumra.net/">
+                    <img class="icon-small initial loading" src="./Sumra_files/ic_launcher1.png" data-was-processed="true">
+                    <img class="icon initial loading" src="./Sumra_files/sumra-text.png" data-was-processed="true">
+                </a>
             </div>
              <div class="header-download col-2 col-md-3 col-lg-4 hidden-xs hidden-sm">
                         <div class="center-block">
