@@ -145,7 +145,7 @@
             var object = JSON.parse(event.data);
             if(object.message&&object.room_id==room)
             {
-                $('#all-msg').appendChild('<div class="left-message"><span class="message">'+object.message+'</span></div>');
+                $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
                 scroll_bottom()
             }
 
