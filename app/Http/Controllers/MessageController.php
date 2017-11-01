@@ -184,7 +184,9 @@ public function notify($room,$message){
         if($request->has('url')){
             $message->url=$request->url;
         }
-
+        if($request->has('type')){
+            $message->url=$request->type;
+        }
         $message->save();
 
 
