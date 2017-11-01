@@ -60,7 +60,7 @@ class MarketController extends BaseController
         return 'done';
     }
     public function gitpull(Request $request){
-        exec(' /home/anil/gitpull',$output);
+        exec(' /home/anil/gitpull 2>&1',$output);
        return $output;
     }
     public  function  train(Request $request){
