@@ -127,17 +127,10 @@
         var exampleSocket = new WebSocket("wss://sumra.net:8080", "protocolOne");
         exampleSocket.onopen = function (event) {
 
-            axios.get('/oauth/personal-access-tokens')
-                .then(response => {
-                 console.log(response.data);
-                if(response.data.length>0){
-                    console.log( response.data[0].id);
-                exampleSocket.send(JSON.stringify({'token': response.data[0].id}));
 
-            }else {
-                    console.log("fdl");
-            }
-            });
+
+                exampleSocket.send(JSON.stringify({'token': {{$user->access_token}}));
+
         };
         exampleSocket.onmessage = function (event) {
             console.log(event.data);

@@ -28,6 +28,12 @@ class MessageController extends BaseController
     }
     public function messages(Request $request){
         $user = Auth::user();
+        if(!$user->access_token){
+            $token = $user->createToken('Message Token')->accessToken;
+
+            $user->access_token=$token;
+            $user->save();
+        }
 
 
         return view('home.messages',['cur'=>$user->rooms()->first(),'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
@@ -39,6 +45,13 @@ class MessageController extends BaseController
             return redirect('/user/manage/messages');
 
         }
+        if(!$user->access_token){
+            $token = $user->createToken('Message Token')->accessToken;
+
+            $user->access_token=$token;
+            $user->save();
+        }
+
         return view('home.messages',['cur'=>$room,'user'=>$user,'leftclass'=>'left-div-room','rightclass'=>'right-div-room']);
     }
 
