@@ -85,7 +85,7 @@
 
                     </div>
 
-                    <div class="all-messages">
+                    <div class="all-messages" id="all-msg">
                         @foreach($cur->messages as $message)
                             @if($message->from_msg===$user->id)
 
@@ -115,6 +115,9 @@
         </div>
     </div>
     <script>
+        var objDiv = document.getElementById("all-msg");
+        objDiv.scrollTop = objDiv.scrollHeight;
+
         function onSubmit(token) {
 
 
