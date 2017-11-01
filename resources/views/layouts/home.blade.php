@@ -118,7 +118,7 @@
     <div class="container-fluid top">
         <div class="row">
         <nav class="navbar navbar-default">
-            <div class="navbar-header">
+            <div class="col-lg-3 navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -126,17 +126,17 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/"><img class="icon" src="/css/ic_launcher1.png"></a>
-                <div class="col-2 col-md-8 col-lg-5 pull-right hidden-xs hidden-sm">
-                    <div class="center-block">
-                        <img class="img-responsive" src="/css/googleplayx233.png">
-                    </div>
-                    <div class="center-block">
-                        <img class="img-responsive" src="/css/appstorex233.png">
-                    </div>
-                    <div class="center-block">
-                        <img class="img-responsive" src="/css/windowsx233.png">
-                    </div>
-                </div>
+            </div>
+             <div class="header-download col-2 col-md-3 col-lg-4 hidden-xs hidden-sm">
+                        <div class="center-block">
+                            <img class="img-responsive initial loading" src="./Sumra_files/googleplayx233.png" data-was-processed="true">
+                        </div>
+                        <div class="center-block">
+                            <img class="img-responsive initial loading" src="./Sumra_files/appstorex233.png" data-was-processed="true">
+                        </div>
+                        <!-- <div class="center-block">
+                            <img class="img-responsive initial loading" src="./Sumra_files/windowsx233.png" data-was-processed="true">
+                        </div> -->
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
