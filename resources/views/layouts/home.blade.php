@@ -126,16 +126,16 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="https://sumra.net/">
-                    <img class="icon-small initial loading" src="./Sumra_files/ic_launcher1.png" data-was-processed="true">
-                    <img class="icon initial loading" src="./Sumra_files/sumra-text.png" data-was-processed="true">
+                    <img class="icon-small initial loading" src="css/ic_launcher1.png" data-was-processed="true">
+                    <img class="icon initial loading" src="css/sumra-text.png" data-was-processed="true">
                 </a>
             </div>
              <div class="header-download col-2 col-md-3 col-lg-4 hidden-xs hidden-sm">
                         <div class="center-block">
-                            <img class="img-responsive initial loading" src="./Sumra_files/googleplayx233.png" data-was-processed="true">
+                            <img class="img-responsive initial loading" src="css/googleplayx233.png" data-was-processed="true">
                         </div>
                         <div class="center-block">
-                            <img class="img-responsive initial loading" src="./Sumra_files/appstorex233.png" data-was-processed="true">
+                            <img class="img-responsive initial loading" src="css/appstorex233.png" data-was-processed="true">
                         </div>
                         <!-- <div class="center-block">
                             <img class="img-responsive initial loading" src="./Sumra_files/windowsx233.png" data-was-processed="true">
