@@ -139,8 +139,9 @@
         };
         exampleSocket.onmessage = function (event) {
             console.log(event.data);
+            var object = JSON.parse(event.data);
             var message = $('#message').val();
-            if(!message&&event.data.message)
+            if(!message&&object.message)
             {
                 location.reload();
             }
