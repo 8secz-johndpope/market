@@ -118,11 +118,6 @@ a.navbar-brand {
     opacity: 0.8;
 
 }
-img.icon-small {
-    width: 50px;
-    margin-left: 40px;
-    margin-top: 5px;
-}
 
 form.navbar-form {
     margin: 20px 0;
@@ -179,7 +174,7 @@ a.navbar-brand {
   height: 80px;
   /*margin-left: 70px;*/
 }
-img.icon-small {
+img.icon-small-h {
     width: 50px;
     margin-left: 40px;
     margin-top: 5px;
