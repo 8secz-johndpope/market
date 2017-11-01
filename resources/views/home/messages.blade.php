@@ -123,13 +123,14 @@
 
 
         }
+        var token = '{{$user->access_token}}' ;
 
         var exampleSocket = new WebSocket("wss://sumra.net:8080", "protocolOne");
         exampleSocket.onopen = function (event) {
 
 
 
-                exampleSocket.send(JSON.stringify({'token': {{$user->access_token}}}));
+                exampleSocket.send(JSON.stringify({'token': token}));
 
         };
         exampleSocket.onmessage = function (event) {
