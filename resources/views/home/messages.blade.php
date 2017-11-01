@@ -140,7 +140,7 @@
         exampleSocket.onmessage = function (event) {
             console.log(event.data);
             var message = $('#message').val();
-            if(!message)
+            if(!message&&event.data.message)
             {
                 location.reload();
             }
