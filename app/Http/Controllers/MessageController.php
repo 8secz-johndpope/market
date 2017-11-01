@@ -104,9 +104,15 @@ class MessageController extends BaseController
             $advert->replies++;
             $advert->save();
 
+
             foreach ($room->users as $usr){
                 if($usr->id!==$user->id)
+                {
                     Redis::publish(''.$usr->id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+                    foreach ($usr->android as $token){
+                        $this->android($token,$room,$message);
+                    }
+                }
             }
             return redirect('/user/manage/messages/' . $room->id);
         }else{
@@ -151,13 +157,16 @@ class MessageController extends BaseController
 
         foreach ($room->users as $usr){
             if($usr->id!==$user->id)
-            Redis::publish(''.$usr->id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+            {
+                Redis::publish(''.$usr->id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+                foreach ($usr->android as $token){
+                    $this->android($token,$room,$message);
+                }
+            }
         }
 
 
-        foreach ($advert->user->android as $token){
-            $this->android($token,$room,$message);
-        }
+
         return ['room_id'=>$room->id,'msg'=>'sent','mid'=>$message->id];
 
     }
@@ -180,12 +189,15 @@ class MessageController extends BaseController
 
         $message->save();
 
+
         foreach ($room->users as $usr){
             if($usr->id!==$user->id)
+            {
                 Redis::publish(''.$usr->id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
-        }
-        foreach ($advert->user->android as $token){
-            $this->android($token,$room,$message);
+                foreach ($usr->android as $token){
+                    $this->android($token,$room,$message);
+                }
+            }
         }
         return ['mid'=>$message->id,'msg'=>'sent'];
 
@@ -281,9 +293,15 @@ class MessageController extends BaseController
 
             $message->save();
 
+
             foreach ($room->users as $usr){
                 if($usr->id!==$user->id)
+                {
                     Redis::publish(''.$usr->id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+                    foreach ($usr->android as $token){
+                        $this->android($token,$room,$message);
+                    }
+                }
             }
 
 
