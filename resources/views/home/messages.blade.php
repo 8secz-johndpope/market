@@ -101,7 +101,7 @@
                     <div class="bottom-div-messages">
                         <form action="/user/message/rsend" method="post" id="login-form">
                             <input type="hidden" name="rid" value="{{$cur->id}}">
-                            {{ csrf_field() }}                            <div class="message-input-div"><input type="text" class="form-control"  name="message" placeholder="Type Your Message here" required></div>
+                            {{ csrf_field() }}                            <div class="message-input-div"><input type="text" class="form-control"  id="message" name="message" placeholder="Type Your Message here" required></div>
                             <div class="message-send-div"><button type="submit"  class="btn btn-primary g-recaptcha"
                                                                   data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
                                                                   data-callback="onSubmit">Send</button></div>
@@ -139,6 +139,12 @@
         };
         exampleSocket.onmessage = function (event) {
             console.log(event.data);
+            var message = $('#message').val();
+            if(!message)
+            {
+                location.reload();
+            }
+
         }
 
 
