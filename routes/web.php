@@ -20,6 +20,7 @@ Route::get('/searchform', 'MarketController@searchform');
 Route::get('/gads', 'MarketController@gads');
 Route::get('/parse', 'CronController@parse_page');
 Route::get('/indeed', 'CronController@indeed');
+Route::get('/gitpull', 'MarketController@gitpull');
 
 Route::get('/plate', 'HomeController@dvla');
 

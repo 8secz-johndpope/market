@@ -59,6 +59,10 @@ class MarketController extends BaseController
 
         return 'done';
     }
+    public function gitpull(Request $request){
+       $output = exec(' /home/anil/gitpull');
+       return $output;
+    }
     public  function  train(Request $request){
         $term = $request->q;
         $result = file_get_contents("https://www.gumtree.com/ajax/suggestions/prefix?input=".$term);
