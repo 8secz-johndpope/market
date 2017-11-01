@@ -336,6 +336,10 @@ a.post-advert:hover{
     background: #4a90e2;
     color: white;
 }
+.left-message .message {
+    background: #4a90e2;
+    color: white;
+}
 .main-search{
     margin-top: 15px;
 }
