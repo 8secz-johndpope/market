@@ -838,10 +838,10 @@ a.message-back-button {
         max-width: 70%;
     }
     .all-messages{
-        max-height: calc(100% - 225px);
+        max-height: calc(100% - 200px);
     }
     .bottom-div-messages{
-        margin-bottom: 80px;
+        margin-bottom: 20px;
     }
     .left-div-messages{
         width: 100%;
@@ -896,6 +896,9 @@ a.message-back-button {
     .main-second-div,.main-first-div{
         display: block;
         width: 100%;
+    }
+    .bottom-div-messages{
+        margin-bottom: 60px;
     }
     .all-filters {
         display: none;
