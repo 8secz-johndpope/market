@@ -132,23 +132,33 @@
         var token = '{{$user->access_token}}' ;
         var room = {{$cur->id}};
 
-        var exampleSocket = new WebSocket("wss://sumra.net:8080", "protocolOne");
-        exampleSocket.onopen = function (event) {
+        var exampleSocket;
+        reconnect();
+        function reconnect() {
+            exampleSocket = new WebSocket("wss://sumra.net:8080", "protocolOne");
+            exampleSocket.onopen = function (event) {
 
 
 
                 exampleSocket.send(JSON.stringify({'token': token}));
 
-        };
-        exampleSocket.onmessage = function (event) {
-            console.log(event.data);
-            var object = JSON.parse(event.data);
-            if(object.message&&object.room_id==room)
-            {
-                $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
-                scroll_bottom()
-            }
+            };
+            exampleSocket.onmessage = function (event) {
+                console.log(event.data);
+                var object = JSON.parse(event.data);
+                if(object.message&&object.room_id==room)
+                {
+                    $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
+                    scroll_bottom()
+                }
 
+            }
+            exampleSocket.onclose = function (event) {
+                console.log(event.data);
+                reconnect();
+
+
+            }
         }
 
 
