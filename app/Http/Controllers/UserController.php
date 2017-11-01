@@ -730,11 +730,7 @@ class UserController extends BaseController
         $message->url='';
         $message->save();
 
-        foreach ($advert->user->android as $token){
-            $this->android($token,$room,$message);
-        }
-
-        Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message]));
+       $this->notify($room,$message);
 
 
 

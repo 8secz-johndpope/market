@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 use Cassandra;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Redis;
 
 class BaseController extends Controller
 {
@@ -26,6 +27,20 @@ class BaseController extends Controller
         ->build();              // Build the client object
 
 
+    }
+    public function notify($room,$message){
+        $user = Auth::user();
+        if(!$message->type)
+            $message->type='text';
+        foreach ($room->users as $usr){
+            if($usr->id!==$user->id)
+            {
+                Redis::publish(''.$usr->id, json_encode($message));
+                foreach ($usr->android as $token){
+                    $this->android($token,$room,$message,$message);
+                }
+            }
+        }
     }
 
     public function android($token,$room,$message,$data){

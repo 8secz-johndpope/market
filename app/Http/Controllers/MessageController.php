@@ -112,20 +112,7 @@ class MessageController extends BaseController
         }
 
     }
-public function notify($room,$message){
-    $user = Auth::user();
-    if(!$message->type)
-    $message->type='text';
-    foreach ($room->users as $usr){
-        if($usr->id!==$user->id)
-        {
-            Redis::publish(''.$usr->id, json_encode($message));
-            foreach ($usr->android as $token){
-                $this->android($token,$room,$message,$message);
-            }
-        }
-    }
-}
+
     public function create_message(Request $request){
 
         $user = Auth::user();
