@@ -837,6 +837,12 @@ a.message-back-button {
         overflow: hidden;
         max-width: 70%;
     }
+    .all-messages{
+        max-height: calc(100% - 225px);
+    }
+    .bottom-div-messages{
+        margin-bottom: 80px;
+    }
     .left-div-messages{
         width: 100%;
     }
@@ -942,12 +948,8 @@ a.message-back-button {
         overflow: hidden;
         max-width: 50%;
     }
-    .all-messages{
-        max-height: calc(100% - 200px);
-    }
-    .bottom-div-messages{
-        margin-bottom: 80px;
-    }
+
+
     .right-div-messages {
         height: 59vh;
     }
