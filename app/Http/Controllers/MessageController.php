@@ -104,8 +104,10 @@ class MessageController extends BaseController
             $advert->replies++;
             $advert->save();
 
-            Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
-
+            foreach ($room->users as $usr){
+                if($usr->id!==$user->id)
+                    Redis::publish(''.$usr->id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+            }
             return redirect('/user/manage/messages/' . $room->id);
         }else{
             return redirect('/user/reply/' . $request->id);
@@ -147,8 +149,12 @@ class MessageController extends BaseController
         $message->save();
 
 
+        foreach ($room->users as $usr){
+            if($usr->id!==$user->id)
+            Redis::publish(''.$usr->id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+        }
 
-        Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+
         foreach ($advert->user->android as $token){
             $this->android($token,$room,$message);
         }
@@ -174,7 +180,10 @@ class MessageController extends BaseController
 
         $message->save();
 
-        Redis::publish($advert->user_id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+        foreach ($room->users as $usr){
+            if($usr->id!==$user->id)
+                Redis::publish(''.$usr->id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+        }
         foreach ($advert->user->android as $token){
             $this->android($token,$room,$message);
         }
@@ -272,8 +281,10 @@ class MessageController extends BaseController
 
             $message->save();
 
-            Redis::publish(''.$advert->user_id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
-
+            foreach ($room->users as $usr){
+                if($usr->id!==$user->id)
+                    Redis::publish(''.$usr->id, json_encode(['message' => $request->message,'mtype'=>'text','time'=>$message->created_at,'from'=>$message->user->id]));
+            }
 
 
 
