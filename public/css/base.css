@@ -118,6 +118,11 @@ a.navbar-brand {
     opacity: 0.8;
 
 }
+img.icon-small {
+    width: 50px;
+    margin-left: 40px;
+    margin-top: 5px;
+}
 
 form.navbar-form {
     margin: 20px 0;
