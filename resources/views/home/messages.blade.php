@@ -127,6 +127,7 @@
 
         }
         var token = '{{$user->access_token}}' ;
+        var room = {{$cur->id}};
 
         var exampleSocket = new WebSocket("wss://sumra.net:8080", "protocolOne");
         exampleSocket.onopen = function (event) {
