@@ -43,6 +43,7 @@ class MessageController extends BaseController
 
         $user = Auth::user();
         $room=Room::find($th);
+        $room->toggle=!$room->toggle;
         $room->save();
         return view('home.rooms',['cur'=>Room::find($id),'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
     }
