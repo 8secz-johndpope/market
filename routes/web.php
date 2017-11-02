@@ -60,7 +60,7 @@ Route::get('/userads/{id}', 'MarketController@userads');
 
 Route::get('/user/manage/messages', 'MessageController@messages');
 Route::get('/user/manage/messages/{rid}', 'MessageController@gmessages');
-Route::get('/user/manage/rooms/{id}/{ch}', 'MessageController@rooms');
+Route::get('/user/manage/rooms/{id}', 'MessageController@rooms');
 
 Route::get('/user/message/push','MessageController@push');
 

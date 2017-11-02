@@ -28,4 +28,8 @@ class Room extends Model
         $message = Message::where('room_id',$this->id)->orderby('id','desc')->first();
         return $message;
     }
+    public function modify(){
+        $this->toggle=!$this->toggle;
+        $this->save();
+    }
 }

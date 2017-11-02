@@ -152,7 +152,7 @@
                     scroll_bottom()
                 }else if(object.message){
                    // location.reload();
-                    axios.get('/user/manage/rooms/'+room+'/'+object.room_id, {
+                    axios.get('/user/manage/rooms/'+room, {
                         params: {}
                     })
                         .then(function (response) {

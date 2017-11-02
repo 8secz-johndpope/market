@@ -39,12 +39,10 @@ class MessageController extends BaseController
         return view('home.messages',['cur'=>$user->rooms()->first(),'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
     }
 
-    public function rooms(Request $request,$id,$th){
+    public function rooms(Request $request,$id){
 
         $user = Auth::user();
-        $room=Room::find($th);
-        $room->toggle=!$room->toggle;
-        $room->save();
+
         return view('home.rooms',['cur'=>Room::find($id),'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
     }
     public function gmessages(Request $request,$rid){
@@ -113,6 +111,8 @@ class MessageController extends BaseController
             $advert->replies++;
             $advert->save();
 
+            $room->modify();
+
         $this->notify($room,$message);
 
             return redirect('/user/manage/messages/' . $room->id);
@@ -154,7 +154,7 @@ class MessageController extends BaseController
         $message->room_id=$room->id;
         $message->url='';
         $message->save();
-
+        $room->modify();
 
         $this->notify($room,$message);
 
@@ -185,7 +185,7 @@ class MessageController extends BaseController
         }
         $message->save();
 
-
+        $room->modify();
         $this->notify($room,$message);
 
         return ['mid'=>$message->id,'msg'=>'sent'];
@@ -282,7 +282,7 @@ class MessageController extends BaseController
 
             $message->save();
 
-
+            $room->modify();
             $this->notify($room,$message);
 
 
