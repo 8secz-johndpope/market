@@ -198,7 +198,7 @@ class MessageController extends BaseController
         $room->users=$room->users()->pluck('user_id')->toArray();
         return $room;
     }
-    public function call(Request $request){
+    public function create_call(Request $request){
         $advert=Advert::find($request->id);
         $user = Auth::user();
 
@@ -231,7 +231,39 @@ class MessageController extends BaseController
 
         foreach ($room->users as $usr) {
             if ($usr->id !== $user->id) {
-                foreach ($advert->user->android as $token) {
+                foreach ($usr->android as $token) {
+                    $this->android_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
+                }
+            }
+        }
+
+
+
+        return ['msg'=>'sent','room_id'=>$room->id];
+    }
+
+    public function call(Request $request){
+        $user = Auth::user();
+
+        $room = Room::find($request->id);
+
+
+        $advert=$room->advert;
+
+
+
+        $message = new Message;
+        $message->message='Call';
+        $message->from_msg=$user->id;
+        $message->to_msg=$advert->user_id;
+        $message->room_id=$room->id;
+        $message->url='';
+        $message->save();
+        $room->modify();
+
+        foreach ($room->users as $usr) {
+            if ($usr->id !== $user->id) {
+                foreach ($usr->android as $token) {
                     $this->android_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
                 }
             }
@@ -242,12 +274,22 @@ class MessageController extends BaseController
         return ['msg'=>'sent','room_id'=>$room->id];
     }
     public function end_call(Request $request){
-        $advert=Advert::find($request->id);
         $user = Auth::user();
-        if($advert->user_id!==$user->id)
-            foreach ($advert->user->android as $token){
-                $this->android_call($token,['title'=>$advert->param('title'),'subtitle'=>$user->name,'group'=>$request->group,'action'=>'call','video'=>'1']);
+
+        $room = Room::find($request->id);
+
+
+
+        foreach ($room->users as $usr) {
+            if ($usr->id !== $user->id) {
+                foreach ($usr->android as $token) {
+                    $this->android_call($token, [  'action' => 'end','room_id'=>$room->id]);
+                }
             }
+        }
+
+
+
 
 
 
