@@ -42,7 +42,7 @@ class MessageController extends BaseController
     public function rooms(Request $request,$id){
 
         $user = Auth::user();
-        return view('home.messages',['cur'=>Room::find($id),'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
+        return view('home.rooms',['cur'=>Room::find($id),'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
     }
     public function gmessages(Request $request,$rid){
         $user = Auth::user();
