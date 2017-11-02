@@ -93,7 +93,7 @@
                     @endif
                     @if($advert->has_meta('key_features'))
                     <div class="key-features">
-                        <h2>Key features</h2> 
+                        <h3>Key features</h3> 
                         <ul>
                         @foreach($advert->meta('key_features') as $key)
                             <li>{{$key}}</li>
