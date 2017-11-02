@@ -922,7 +922,7 @@ class MarketController extends BaseController
         $latlng=explode(',',$latlng);
 
         $meta = $product['meta'];
-        var_dump($meta)
+        var_dump($meta);
         $metas = array();
         foreach ($meta as $key => $value){
             $field = Field::where('slug',$key)->first();
