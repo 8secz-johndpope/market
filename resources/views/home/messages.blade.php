@@ -151,7 +151,19 @@
                     $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
                     scroll_bottom()
                 }else if(object.message){
-                    location.reload();
+                   // location.reload();
+                    axios.get('/user/manage/rooms/'+room, {
+                        params: {}
+                    })
+                        .then(function (response) {
+                            console.log(response);
+                            $('#all-rooms').html(response.data);
+
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+
                 }
 
             }
