@@ -205,7 +205,7 @@ class MessageController extends BaseController
                 foreach ($advert->user->android as $token){
                     $this->android_call($token,['title'=>$advert->param('title'),'subtitle'=>$user->name,'group'=>$request->group]);
                 }
-              
+
 
 
         return ['msg'=>'sent'];
