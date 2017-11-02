@@ -199,12 +199,18 @@ class MessageController extends BaseController
         return $room;
     }
     public function call(Request $request){
+        $advert=Advert::find($request->id);
+        $user = Auth::user();
+                if($advert->user_id!==$user->id)
+                foreach ($advert->user->android as $token){
+                    $this->android_call($token,['title'=>$advert->param('title'),'subtitle'=>$user->name,'group'=>$request->group]);
+                }
+              
+
 
         return ['msg'=>'sent'];
     }
-    public function push(Request $request){
-      return $this->ios();
-    }
+
 
     public function all_messages(Request $request){
         $user = Auth::user();
