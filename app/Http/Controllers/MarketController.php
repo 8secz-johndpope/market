@@ -969,10 +969,10 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        /*if($advert->has_meta('available_date')){
+        if(isset($meta['available_date'])){
             $date = $metas['available_date'];
             $metas['available_date'] = date("d F Y", $date / 1000);
-        }*/
+        }
         return View('market.product',['advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1]]);
     }
     private  function haversineGreatCircleDistance(
