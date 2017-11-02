@@ -487,7 +487,7 @@ class HomeController extends BaseController
             $meta['price']=-1;
         }
         if($request->has('available_date')){
-            $meta['available_date'] =  strtotime($request->get('available_date')) * 1000
+            $meta['available_date'] =  strtotime($request->get('available_date')) * 1000;
         }
         $advert->update_meta($meta);
         if($request->has('post')){
