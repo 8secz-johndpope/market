@@ -241,21 +241,20 @@
                                                                 @endforeach
                                                             </select>
                                                         @elseif($field->type==='bullet')
+                                                            <div class="key-features">
 
-                                                                <div class="key-features">
-
-                                                                    <ul>
-                                                                        @if($advert->has_meta('key_features'))
-                                                                        @foreach($advert->meta('key_features') as $key)
+                                                                <ul id="ul_{{$field->slug}}">
+                                                                    @if($advert->has_meta($field->slug))
+                                                                        @foreach($advert->meta($field->slug) as $key)
                                                                             <li>{{$key}} <input type="hidden" name="key_features[]" value="{{$key}}"></li>
                                                                         @endforeach
-                                                                        @endif
+                                                                    @endif
 
-                                                                    </ul>
-                                                                    <input type="text" class="form-control" id="{{$field->slug}}" > <a class="add-bullet btn btn-primary" data-id="{{$field->slug}}" >Add</a>
+                                                                </ul>
+                                                                <input type="text" class="form-control" id="{{$field->slug}}" > <a class="add-bullet btn btn-primary" data-id="{{$field->slug}}" >Add</a>
 
+                                                            </div>
 
-                                                                </div>
                                                         @else
                                                             <input class="form-control" type="text" name="{{$field->slug}}"   value="{{$advert->meta($field->slug)}}">
                                                         @endif
