@@ -242,19 +242,18 @@
                                                             </select>
                                                         @elseif($field->type==='bullet')
                                                             <div class="key-features">
-
                                                                 <ul id="ul_{{$field->slug}}">
                                                                     @if($advert->has_meta($field->slug))
                                                                         @foreach($advert->meta($field->slug) as $key)
                                                                             <li>{{$key}} <input type="hidden" name="key_features[]" value="{{$key}}"></li>
                                                                         @endforeach
                                                                     @endif
-
                                                                 </ul>
                                                                 <input type="text" class="form-control" id="{{$field->slug}}" > <a class="add-bullet btn btn-primary" data-id="{{$field->slug}}" >Add</a>
-
                                                             </div>
-
+                                                        @elseif($field->type === 'date')
+                                                            <input class="form-control" type="date" name="{{$field->slug}}"   value="{{$advert->meta($field->slug)}}">
+                                                        @endif
                                                         @else
                                                             <input class="form-control" type="text" name="{{$field->slug}}"   value="{{$advert->meta($field->slug)}}">
                                                         @endif
