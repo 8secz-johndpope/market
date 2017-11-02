@@ -232,7 +232,7 @@ class MessageController extends BaseController
         foreach ($room->users as $usr) {
             if ($usr->id !== $user->id) {
                 foreach ($advert->user->android as $token) {
-                    $this->android_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => '1','room_id'=>$room->id]);
+                    $this->android_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
                 }
             }
         }
