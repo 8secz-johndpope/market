@@ -252,6 +252,8 @@
                                                                         @endif
 
                                                                     </ul>
+                                                                    <input type="text" class="form-control" id="{{$field->slug}}" > <a class="add-bullet btn btn-primary" data-id="{{$field->slug}}" >Add</a>
+
 
                                                                 </div>
                                                         @else
@@ -605,6 +607,10 @@
                 $("#delivery").val(0.00);
                 $("#delivery").prop('disabled', true);
             }
+        });
+        $('.add-bullet').click(function () {
+            var text = $('#'+$(this).data('id')).val();
+            $('#ul_'+$(this).data('id')).append('<li>'+text+'<input type="hidden" name="'+$(this).data('id')+'[]" value="'+text+'"> </li>');
         });
     </script>
 @endsection
