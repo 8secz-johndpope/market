@@ -253,7 +253,6 @@
                                                             </div>
                                                         @elseif($field->type === 'date')
                                                             <input class="form-control" type="date" name="{{$field->slug}}"   value="{{$advert->meta($field->slug)}}">
-                                                        @endif
                                                         @else
                                                             <input class="form-control" type="text" name="{{$field->slug}}"   value="{{$advert->meta($field->slug)}}">
                                                         @endif
