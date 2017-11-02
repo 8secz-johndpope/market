@@ -152,7 +152,19 @@
                                                                         @endforeach
                                                                     </select>
                                                                 @elseif($field->type==='bullet')
+                                                                    <div class="key-features">
 
+                                                                        <ul id="ul_{{$field->slug}}">
+                                                                            @if($advert->has_meta($field->slug))
+                                                                                @foreach($advert->meta($field->slug) as $key)
+                                                                                    <li>{{$key}} <input type="hidden" name="key_features[]" value="{{$key}}"></li>
+                                                                                @endforeach
+                                                                            @endif
+
+                                                                        </ul>
+                                                                        <input type="text" class="form-control" id="{{$field->slug}}" > <a class="add-bullet btn btn-primary" data-id="{{$field->slug}}" >Add</a>
+
+                                                                    </div>
 
                                                                 @else
                                                                     <input class="form-control" type="text" name="{{$field->slug}}" required  value="{{$advert->meta($field->slug)}}">
@@ -398,6 +410,10 @@
                 $("#delivery").val(0.00);
                 $("#delivery").prop('disabled', true);
             }
+        });
+        $('.add-bullet').click(function () {
+           var text = $('#'+$(this).id).val();
+            $('#ul_'+$(this).id).append('<li>'+text+'<input type="hidden" name="'+$(this).id+'[]" value="'+text+'"> </li>');
         });
     </script>
 @endsection

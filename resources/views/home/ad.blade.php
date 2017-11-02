@@ -242,6 +242,18 @@
                                                             </select>
                                                         @elseif($field->type==='bullet')
 
+                                                                <div class="key-features">
+
+                                                                    <ul>
+                                                                        @if($advert->has_meta('key_features'))
+                                                                        @foreach($advert->meta('key_features') as $key)
+                                                                            <li>{{$key}} <input type="hidden" name="key_features[]" value="{{$key}}"></li>
+                                                                        @endforeach
+                                                                        @endif
+
+                                                                    </ul>
+
+                                                                </div>
                                                         @else
                                                             <input class="form-control" type="text" name="{{$field->slug}}"   value="{{$advert->meta($field->slug)}}">
                                                         @endif
