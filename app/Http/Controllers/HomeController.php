@@ -1291,7 +1291,7 @@ class HomeController extends BaseController
                 "destination" => $sale->advert->user->stripe_account
             ));
 
-            $sale->advert->update_fiels(['sold'=>1]);
+            $sale->advert->update_fields(['sold'=>1]);
 
                 return redirect('/user/manage/orders');
 
