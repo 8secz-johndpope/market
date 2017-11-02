@@ -416,5 +416,8 @@
            var text = $('#'+$(this).data('id')).val();
             $('#ul_'+$(this).data('id')).append('<li>'+text+'<input type="hidden" name="'+$(this).data('id')+'[]" value="'+text+'"><a href="javascript(0)">X</a> </li>');
         });
+        $('.key-features ul>li').click(function () {
+           var text = $(this).remove()
+        });
     </script>
 @endsection
