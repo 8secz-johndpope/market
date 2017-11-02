@@ -203,7 +203,7 @@ class MessageController extends BaseController
         $user = Auth::user();
                 if($advert->user_id!==$user->id)
                 foreach ($advert->user->android as $token){
-                    $this->android_call($token,['title'=>$advert->param('title'),'subtitle'=>$user->name,'group'=>$request->group]);
+                    $this->android_call($token,['title'=>$advert->param('title'),'subtitle'=>$user->name,'group'=>$request->group,'action'=>'call']);
                 }
 
 
