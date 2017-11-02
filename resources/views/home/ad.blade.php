@@ -240,6 +240,8 @@
                                                                     <option value="{{$value->slug}}" @if($value->slug===$advert->meta($field->slug)) selected @endif>{{$value->title}}</option>
                                                                 @endforeach
                                                             </select>
+                                                        @elseif($field->type==='bullet')
+
                                                         @else
                                                             <input class="form-control" type="text" name="{{$field->slug}}"   value="{{$advert->meta($field->slug)}}">
                                                         @endif
