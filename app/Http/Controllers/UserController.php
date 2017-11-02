@@ -1617,7 +1617,15 @@ class UserController extends BaseController
         if (!$request->has('password'))
             return ['msg' => "Password can't be blank"];
         if (!$request->has('name'))
-            return ['msg' => "Name can't be blank"];
+            return ['msg' => "First Name can't be blank"];
+        if (!$request->has('last'))
+            return ['msg' => "Last Name can't be blank"];
+        if (!$request->has('day'))
+            return ['msg' => "Birth  day can't be blank"];
+        if (!$request->has('month'))
+            return ['msg' => "Birth  month can't be blank"];
+        if (!$request->has('year'))
+            return ['msg' => "Birth  year can't be blank"];
         if (preg_match('/\s/', $request->name) === 0)
             return ['msg' => 'Should have full name'];
         if (!$request->has('phone'))
@@ -1629,7 +1637,7 @@ class UserController extends BaseController
         $user = new User;
 
 
-        $user->more(['email' => $request->email, 'name' => $request->name, 'password' => bcrypt($request->password), 'phone' => $request->phone]);
+        $user->more(['email' => $request->email, 'name' => $request->name, 'password' => bcrypt($request->password), 'phone' => $request->phone,'last'=>$request->last,'day'=>$request->day,'month'=>$request->month,'year'=>$request->year]);
         $user->save();
         $acc = new AccountCreated();
         $verify = new EmailCode;
