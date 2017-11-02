@@ -928,6 +928,7 @@ class MarketController extends BaseController
             if($field!==null&&$key!=='price'){
                 if(is_numeric($value)){
                     if($key === 'available_date'){
+                        //TODO compare with today and write NOW
                         $field->value = date('d F Y', $value / 1000);
 
                     }
