@@ -969,7 +969,7 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        if(isset($meta['available_date'])){
+        if(isset($metas['available_date'])){
             $date = $metas['available_date'];
             $metas['available_date'] = date("d F Y", $date / 1000);
         }
