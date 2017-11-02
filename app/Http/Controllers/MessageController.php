@@ -221,7 +221,7 @@ class MessageController extends BaseController
 
 
         $message = new Message;
-        $message->message='Incoming Call';
+        $message->message='Call';
         $message->from_msg=$user->id;
         $message->to_msg=$advert->user_id;
         $message->room_id=$room->id;
