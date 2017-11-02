@@ -91,6 +91,15 @@
                         <div class="number-text"></div>
                     </div>
                     @endif
+                    @if($advert->has_meta('key_features'))
+                    <div class="key-features">
+                        <ul>
+                        @foreach($advert->meta('key_features') as $key)
+                        <li>{{$key}}</li>
+                        @endforeach
+                        </ul>
+                    </div>
+                    @endif
                     <div class="row meta">
                         @foreach($metas as $meta)
                             <div class="col-sm-3 meta-bold">
