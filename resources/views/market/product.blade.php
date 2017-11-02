@@ -95,6 +95,9 @@
                     <div class="key-features">
                         <ul>
                         @foreach($advert->meta('key_features') as $key)
+                        @php
+                            var_dump($key);
+                        @endphp
                         <li>{{$key}}</li>
                         @endforeach
                         </ul>
