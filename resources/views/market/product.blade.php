@@ -98,7 +98,6 @@
                         @php
                             var_dump($key);
                         @endphp
-                        <li>{{$key}}</li>
                         @endforeach
                         </ul>
                     </div>
