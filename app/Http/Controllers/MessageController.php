@@ -39,12 +39,12 @@ class MessageController extends BaseController
         return view('home.messages',['cur'=>$user->rooms()->first(),'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
     }
 
-    public function rooms(Request $request,$id){
+    public function rooms(Request $request,$id,$th){
 
         $user = Auth::user();
-        $room=Room::find($id);
+        $room=Room::find($th);
         $room->touch();
-        return view('home.rooms',['cur'=>$room,'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
+        return view('home.rooms',['cur'=>Room::find($id),'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
     }
     public function gmessages(Request $request,$rid){
         $user = Auth::user();
