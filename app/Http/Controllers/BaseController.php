@@ -11,7 +11,11 @@ use Cassandra;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Auth;
-
+use Pushok\AuthProvider;
+use Pushok\Client as PClient;
+use Pushok\Notification;
+use Pushok\Payload;
+use Pushok\Payload\Alert;
 class BaseController extends Controller
 {
     protected $site_settings;
@@ -59,6 +63,51 @@ class BaseController extends Controller
 
         //return ['great'=>'yes','res'=>$g];
     }
+    public function ios(){
+        $options = [
+            'key_id' => '7936W52Q85', // The Key ID obtained from Apple developer account
+            'team_id' => 'BK9Z8824K9', // The Team ID obtained from Apple developer account
+            'app_bundle_id' => 'net.sumra.sumraios', // The bundle ID for app obtained from Apple developer account
+            'private_key_path' => '/home/anil/market/storage/private/APNsAuthKey_7936W52Q85.p8', // Path to private key
+            'private_key_secret' => null // Private key secret
+        ];
 
+        $authProvider = AuthProvider\Token::create($options);
+
+        $alert = Alert::create()->setTitle('Hello!');
+        $alert = $alert->setBody('First push notification');
+
+        $payload = Payload::create()->setAlert($alert);
+
+//set notification sound to default
+        $payload = $payload->setSound('default');
+
+//add custom value to your notification, needs to be customized
+        $payload = $payload->setCustomValue('key', 'value');
+
+        $deviceTokens = ['879a49e68119a290d8be9a020f3dceef8ee01dba0f711c84865b61a2580056d4'];
+
+        $notifications = [];
+        foreach ($deviceTokens as $deviceToken) {
+            $notifications[] = new Notification($payload,$deviceToken);
+        }
+
+        $client = new PClient($authProvider, $production = false);
+        $client->addNotifications($notifications);
+
+
+
+        $responses = $client->push(); // returns an array of ApnsResponseInterface (one Response per Notification)
+
+        foreach ($responses as $response) {
+            $response->getApnsId();
+            $response->getStatusCode();
+            $response->getReasonPhrase();
+            $response->getErrorReason();
+            $response->getErrorDescription();
+        }
+        return $responses;
+        //return ['great'=>'yes','res'=>$g];
+    }
 
 }
