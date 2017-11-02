@@ -91,16 +91,7 @@
                         <div class="number-text"></div>
                     </div>
                     @endif
-                    @if($advert->has_meta('key_features'))
-                    <div class="key-features">
-                        <h3>Key features</h3> 
-                        <ul>
-                        @foreach($advert->meta('key_features') as $key)
-                            <li>{{$key}}</li>
-                        @endforeach
-                        </ul>
-                    </div>
-                    @endif
+                    
                     <div class="row meta">
                         @foreach($metas as $meta)
                             <div class="col-sm-3 meta-bold">
@@ -111,6 +102,16 @@
                             </div>
                             @endforeach
                     </div>
+                    @if($advert->has_meta('key_features'))
+                    <div class="key-features">
+                        <h3>Key features</h3> 
+                        <ul>
+                        @foreach($advert->meta('key_features') as $key)
+                            <li>{{$key}}</li>
+                        @endforeach
+                        </ul>
+                    </div>
+                    @endif
                     <div class="description">
                         <h3>Description</h3>
                         @foreach($r = preg_split("/(\r\n|\n|\r)/", $product['description']) as $part)
