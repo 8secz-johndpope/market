@@ -922,13 +922,18 @@ class MarketController extends BaseController
         $latlng=explode(',',$latlng);
 
         $meta = $product['meta'];
-        var_dump($meta);
         $metas = array();
         foreach ($meta as $key => $value){
             $field = Field::where('slug',$key)->first();
             if($field!==null&&$key!=='price'){
                 if(is_numeric($value)){
-                    $field->value = $value;
+                    if($key === 'available_date'){
+                        $field->value = date('d F Y', $value / 1000);
+
+                    }
+                    else{
+                        $field->value = $value;
+                    }
                 }else{
                     $fval = FieldValue::where('slug',$value)->first();
                     if($fval!==null){
