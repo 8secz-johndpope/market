@@ -412,8 +412,8 @@
             }
         });
         $('.add-bullet').click(function () {
-           var text = $('#'+$(this).id).val();
-            $('#ul_'+$(this).id).append('<li>'+text+'<input type="hidden" name="'+$(this).id+'[]" value="'+text+'"> </li>');
+           var text = $('#'+$(this).data('id')).val();
+            $('#ul_'+$(this).data('id')).append('<li>'+text+'<input type="hidden" name="'+$(this).data('id')+'[]" value="'+text+'"> </li>');
         });
     </script>
 @endsection
