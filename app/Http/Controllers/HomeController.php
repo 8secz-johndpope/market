@@ -177,14 +177,17 @@ class HomeController extends BaseController
     }
     public function edit(Request $request,$id)
     {
-        $advert=Advert::find($id);
-        $user = Auth::user();
         $advert = Advert::find($id);
+        $user = Auth::user();
+        //$advert = Advert::find($id);
         $categories = Category::where('parent_id', 0)->get();
         if($advert->has_param('shipping')){
             $shipping=Shipping::find($advert->param('shipping'));
         }else{
             $shipping=Shipping::find(1);
+        }
+        if($advert->has_meta('available_date')){
+            var_dump("has date");
         }
 
         return view('home.edit',['user'=>$user,'advert'=>$advert,'categories' => $categories,'shipping'=>$shipping,'economies'=>Shipping::where('type',0)->get(),'standards'=>Shipping::where('type',1)->get(),'expresses'=>Shipping::where('type',2)->get(),'distances'=>Distance::all(),'dispatches'=>Dispatch::all()]);
