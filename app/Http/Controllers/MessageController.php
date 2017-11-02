@@ -201,16 +201,58 @@ class MessageController extends BaseController
     public function call(Request $request){
         $advert=Advert::find($request->id);
         $user = Auth::user();
-                if($advert->user_id!==$user->id)
-                foreach ($advert->user->android as $token){
-                    $this->android_call($token,['title'=>$advert->param('title'),'subtitle'=>$user->name,'group'=>$request->group,'action'=>'call','video'=>'1']);
+
+        $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
+        if($room===null){
+            $room = new Room;
+            $room->advert_id = $advert->id;
+            $room->image=$advert->first_image();
+            $room->title=$advert->param('title');
+            $room->sender_id=$user->id;
+            $room->save();
+            $room->users()->save($user);
+            if($user->id!==$advert->user_id)
+                $room->users()->save($advert->user);
+            $advert->replies++;
+            $advert->save();
+        }
+
+
+
+
+        $message = new Message;
+        $message->message='Incoming Call';
+        $message->from_msg=$user->id;
+        $message->to_msg=$advert->user_id;
+        $message->room_id=$room->id;
+        $message->url='';
+        $message->save();
+        $room->modify();
+
+        foreach ($room->users as $usr) {
+            if ($usr->id !== $user->id) {
+                foreach ($advert->user->android as $token) {
+                    $this->android_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => '1','room_id'=>$room->id]);
                 }
+            }
+        }
 
 
 
         return ['msg'=>'sent'];
     }
+    public function end_call(Request $request){
+        $advert=Advert::find($request->id);
+        $user = Auth::user();
+        if($advert->user_id!==$user->id)
+            foreach ($advert->user->android as $token){
+                $this->android_call($token,['title'=>$advert->param('title'),'subtitle'=>$user->name,'group'=>$request->group,'action'=>'call','video'=>'1']);
+            }
 
+
+
+        return ['msg'=>'sent'];
+    }
 
     public function all_messages(Request $request){
         $user = Auth::user();
