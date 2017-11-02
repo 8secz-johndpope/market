@@ -239,7 +239,7 @@ class MessageController extends BaseController
 
 
 
-        return ['msg'=>'sent'];
+        return ['msg'=>'sent','room_id'=>$room->id];
     }
     public function end_call(Request $request){
         $advert=Advert::find($request->id);
