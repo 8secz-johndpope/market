@@ -187,7 +187,7 @@ class HomeController extends BaseController
             $shipping=Shipping::find(1);
         }
         if($advert->has_meta('available_date')){
-            $advert->dateString = date('Y-m-d', $advert->meta('available_date') / 1000)
+            $advert->dateString = date('Y-m-d', $advert->meta('available_date') / 1000);
         }
 
         return view('home.edit',['user'=>$user,'advert'=>$advert,'categories' => $categories,'shipping'=>$shipping,'economies'=>Shipping::where('type',0)->get(),'standards'=>Shipping::where('type',1)->get(),'expresses'=>Shipping::where('type',2)->get(),'distances'=>Distance::all(),'dispatches'=>Dispatch::all()]);
