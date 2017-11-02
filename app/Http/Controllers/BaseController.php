@@ -52,6 +52,8 @@ class BaseController extends Controller
     }
 
     public function android($token,$room,$message,$data){
+        $user = Auth::user();
+
         $client = new Client([
             'headers' => [
                 'Content-Type'=> 'application/json',
@@ -60,13 +62,15 @@ class BaseController extends Controller
         ]);
         //$tk='cFX7C7fVoHA:APA91bE4gCqSZ6YynKZd98Ar8ZoI8ST1HBToikZjTk1Q0xyT6qOvm06kg8inGioJ7P9MCYrATTUQNmurmQAq3wCtheaH9yb2COtNSR4SDUD2l-h5uuS9idhPHJBRpvU0_5K5lFAoyXmh';
         $g = $client->request('POST', 'https://fcm.googleapis.com/fcm/send', [
-            'json' => ['to' => $token->token , 'priority'=>'high','data'=>$data,'notification'=>['title'=>$room->title,'body'=>$message->message,'sound'=>'mySound']]
+            'json' => ['to' => $token->token , 'priority'=>'high','data'=>$data,'notification'=>['title'=>$room->title,'body'=>$user->name.': '.$message->message,'sound'=>'mySound']]
         ]);
         $g = json_decode($g->getBody(), true);
 
         //return ['great'=>'yes','res'=>$g];
     }
     public function ios($token,$room,$message,$data){
+        $user = Auth::user();
+
         $client = new Client([
             'headers' => [
                 'Content-Type'=> 'application/json',
@@ -75,7 +79,7 @@ class BaseController extends Controller
         ]);
         //$tk='cFX7C7fVoHA:APA91bE4gCqSZ6YynKZd98Ar8ZoI8ST1HBToikZjTk1Q0xyT6qOvm06kg8inGioJ7P9MCYrATTUQNmurmQAq3wCtheaH9yb2COtNSR4SDUD2l-h5uuS9idhPHJBRpvU0_5K5lFAoyXmh';
         $g = $client->request('POST', 'https://sumra.net:8080/push', [
-            'json' => ['to' => $token->token , 'priority'=>'high','data'=>$data,'notification'=>['title'=>$room->title,'body'=>$message->message,'sound'=>'mySound']]
+            'json' => ['to' => $token->token , 'priority'=>'high','data'=>$data,'notification'=>['title'=>$room->title,'body'=>$user->name.': '.$message->message,'sound'=>'mySound']]
         ]);
         $g = json_decode($g->getBody(), true);
     }
