@@ -157,7 +157,7 @@
                                                                         <ul id="ul_{{$field->slug}}">
                                                                             @if($advert->has_meta($field->slug))
                                                                                 @foreach($advert->meta($field->slug) as $key)
-                                                                                    <li>{{$key}} <input type="hidden" name="key_features[]" value="{{$key}}"><a href="javascript(0)">X</a></li>
+                                                                                    <li>{{$key}} <input type="hidden" name="key_features[]" value="{{$key}}"><a href="#">X</a></li>
                                                                                 @endforeach
                                                                             @endif
 
