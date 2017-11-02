@@ -1284,6 +1284,7 @@ class HomeController extends BaseController
             }
             $sale->status=1;
             $sale->save();
+            $sale->advert->update_fields(['sold'=>1]);
 
             \Stripe\Transfer::create(array(
                 "amount" => (int)(95*$sale->advert->price()),
@@ -1291,7 +1292,6 @@ class HomeController extends BaseController
                 "destination" => $sale->advert->user->stripe_account
             ));
 
-            $sale->advert->update_fields(['sold'=>1]);
 
                 return redirect('/user/manage/orders');
 
