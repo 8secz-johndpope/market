@@ -44,6 +44,9 @@ class BaseController extends Controller
                 foreach ($usr->android as $token){
                     $this->android($token,$room,$message,$message);
                 }
+                foreach ($usr->ios as $token){
+                    $this->ios($token,$room,$message,$message);
+                }
             }
         }
     }

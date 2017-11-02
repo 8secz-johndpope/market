@@ -126,6 +126,9 @@ class User extends Authenticatable
     public function android(){
         return $this->hasMany('App\Model\Token')->where('type',0);
     }
+    public function ios(){
+        return $this->hasMany('App\Model\Token')->where('type',1);
+    }
     public function images()
     {
         return $this->hasMany('App\Model\Image')->orderBy('id','desc');
