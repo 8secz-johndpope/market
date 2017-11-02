@@ -56,7 +56,7 @@
                 @if(count($user->rooms)>0)
                 <div class="left-div-messages {{$leftclass}}" id="all-rooms">
                     @foreach($user->rooms as $room)
-                        <div class="media @if($room->id===$cur->id) selected-room @endif">
+                        <div class="media @if($room->id===$cur->id) selected-room @endif @if($room->unread===1) unread-room @endif">
                             <div class="media-left">
                                 <a href="#">
                                     <div class="listing-side">

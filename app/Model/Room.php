@@ -30,6 +30,11 @@ class Room extends Model
     }
     public function modify(){
         $this->toggle=!$this->toggle;
+        $this->unread=1;
+        $this->save();
+    }
+    public function read(){
+        $this->unread=0;
         $this->save();
     }
 }
