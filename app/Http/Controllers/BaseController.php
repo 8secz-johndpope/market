@@ -63,51 +63,18 @@ class BaseController extends Controller
 
         //return ['great'=>'yes','res'=>$g];
     }
-    public function ios(){
-        $options = [
-            'key_id' => '7936W52Q85', // The Key ID obtained from Apple developer account
-            'team_id' => 'BK9Z8824K9', // The Team ID obtained from Apple developer account
-            'app_bundle_id' => 'net.sumra.sumraios', // The bundle ID for app obtained from Apple developer account
-            'private_key_path' => '/home/anil/market/storage/private/APNsAuthKey_7936W52Q85.p8', // Path to private key
-            'private_key_secret' => null // Private key secret
-        ];
-
-        $authProvider = AuthProvider\Token::create($options);
-
-        $alert = Alert::create()->setTitle('Hello!');
-        $alert = $alert->setBody('First push notification');
-
-        $payload = Payload::create()->setAlert($alert);
-
-//set notification sound to default
-        $payload = $payload->setSound('default');
-
-//add custom value to your notification, needs to be customized
-        $payload = $payload->setCustomValue('key', 'value');
-
-        $deviceTokens = ['879a49e68119a290d8be9a020f3dceef8ee01dba0f711c84865b61a2580056d4'];
-
-        $notifications = [];
-        foreach ($deviceTokens as $deviceToken) {
-            $notifications[] = new Notification($payload,$deviceToken);
-        }
-
-        $client = new PClient($authProvider, $production = false);
-        $client->addNotifications($notifications);
-
-
-
-        $responses = $client->push(); // returns an array of ApnsResponseInterface (one Response per Notification)
-
-        foreach ($responses as $response) {
-            $response->getApnsId();
-            $response->getStatusCode();
-            $response->getReasonPhrase();
-            $response->getErrorReason();
-            $response->getErrorDescription();
-        }
-        return $responses;
-        //return ['great'=>'yes','res'=>$g];
+    public function ios($token,$room,$message,$data){
+        $client = new Client([
+            'headers' => [
+                'Content-Type'=> 'application/json',
+                'Authorization'=> 'key=AAAAxvu2uio:APA91bEv0upMJEfZC1Bv_kSH03KpsbZKP4zph4p8NXT0FO5Ihc2kLmtEUBHQ2rUoI0PXY2hyD70N3TjK2H4ARZP1hgffgJ8TeUCSMxRQNE9ADNR7zLNiMTNjajgiHHc795LAbs6akZD3'
+            ]
+        ]);
+        //$tk='cFX7C7fVoHA:APA91bE4gCqSZ6YynKZd98Ar8ZoI8ST1HBToikZjTk1Q0xyT6qOvm06kg8inGioJ7P9MCYrATTUQNmurmQAq3wCtheaH9yb2COtNSR4SDUD2l-h5uuS9idhPHJBRpvU0_5K5lFAoyXmh';
+        $g = $client->request('POST', 'https://sumra.net:8080/push', [
+            'json' => ['to' => $token->token , 'priority'=>'high','data'=>$data,'notification'=>['title'=>$room->title,'body'=>$message->message,'sound'=>'mySound']]
+        ]);
+        $g = json_decode($g->getBody(), true);
     }
 
 }
