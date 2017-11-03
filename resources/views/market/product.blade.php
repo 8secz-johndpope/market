@@ -146,7 +146,10 @@
                 </div>
             <div class="col-md-3 col-sm-12">
                 @if($advert->has_param('sold'))
-                    <img src="/css/sold.jpg">
+                    <div class="sold-div">
+                        <img class="sold-picture" src="/css/sold.jpg">
+
+                    </div>
 
                 @elseif($advert->category->can_ship())
                 <div class="delivery-options">
