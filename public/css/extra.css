@@ -765,6 +765,9 @@ img.icon-small {
 .sold-picture{
     max-width: 200px;
 }
+.sold-div {
+    padding: 20px;
+}
 .main-category {
     width: 14.28%;
     float: left;
