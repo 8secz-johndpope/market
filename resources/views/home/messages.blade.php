@@ -115,8 +115,8 @@
         </div>
     </div>
     <audio id="notify-tune" controls style="display: none">
-        <source src="/css/furrow.ogg" type="audio/ogg">
-        <source src="/css/furrow.mp3" type="audio/mpeg">
+        <source src="/css/y.ogg" type="audio/ogg">
+        <source src="/css/y.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <script>
