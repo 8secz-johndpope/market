@@ -398,7 +398,7 @@ class HomeController extends BaseController
 
     public function dvla(Request $request){
             $user = Auth::user();
-            return $user->token;
+            return $user->tokens;
         try {
 
 
