@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use App\Model\Advert;
 use App\Model\Message;
 use App\Model\Room;
+use App\Model\Sale;
 use GuzzleHttp\Pool;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -79,6 +80,21 @@ class MessageController extends BaseController
         return view('home.reply',['advert'=>$advert,'user'=>$user]);
 
     }
+
+
+    public function contact_buyer(Request $request,$id){
+        $user = Auth::user();
+        $sale = Sale::find($id);
+        $advert = $sale->advert;
+
+        $room = Room::where('advert_id',$advert->id)->where('sender_id',$sale->user->id)->first();
+        if($room!==null){
+            return redirect('/user/manage/messages/' . $room->id);
+        }
+
+        return view('home.contact_buyer',['advert'=>$advert,'user'=>$user,'sale'=>$sale]);
+
+    }
     public function send(Request $request){
         if($request->has('g-recaptcha-response')) {
             $user = Auth::user();
@@ -97,6 +113,8 @@ class MessageController extends BaseController
                 $room->users()->save($user);
                 if($user->id!==$advert->user_id)
                 $room->users()->save($advert->user);
+                $advert->replies++;
+                $advert->save();
             }
 
 
@@ -110,8 +128,7 @@ class MessageController extends BaseController
             $message->url='';
             $message->save();
 
-            $advert->replies++;
-            $advert->save();
+
 
             $room->modify();
 
@@ -120,6 +137,53 @@ class MessageController extends BaseController
             return redirect('/user/manage/messages/' . $room->id);
         }else{
             return redirect('/user/reply/' . $request->id);
+        }
+
+    }
+
+    public function bsend(Request $request){
+        if($request->has('g-recaptcha-response')) {
+            $user = Auth::user();
+            $sale = Sale::find($request->id);
+            $advert = $sale->advert;
+
+
+
+            $room = Room::where('advert_id',$advert->id)->where('sender_id',$sale->user->id)->first();
+            if($room===null){
+                $room = new Room;
+                $room->advert_id = $advert->id;
+                $room->image=$advert->first_image();
+                $room->title=$advert->param('title');
+                $room->sender_id=$sale->user->id;
+                $room->save();
+                $room->users()->save($user);
+                if($sale->user->id!==$advert->user_id)
+                    $room->users()->save($sale->user);
+                $advert->replies++;
+                $advert->save();
+
+            }
+
+
+
+
+            $message = new Message;
+            $message->message=$request->message;
+            $message->from_msg=$user->id;
+            $message->to_msg=$sale->user->id;
+            $message->room_id=$room->id;
+            $message->url='';
+            $message->save();
+
+
+            $room->modify();
+
+            $this->notify($room,$message);
+
+            return redirect('/user/manage/messages/' . $room->id);
+        }else{
+            return redirect('/user/breply/' . $request->id);
         }
 
     }

@@ -66,6 +66,8 @@ Route::get('/user/message/push','MessageController@push');
 
 
 Route::post('/user/message/send','MessageController@send');
+Route::post('/user/message/bsend','MessageController@bsend');
+
 Route::post('/user/message/rsend','MessageController@rsend');
 
 Route::get('/user/manage/favorites', 'HomeController@favorites');
@@ -120,6 +122,7 @@ Route::post('/business/manage/bump', 'BusinessController@bump');
 Route::get('/business/invoice/pay/{id}', 'BusinessController@invoice');
 
 Route::get('/user/reply/{id}', 'MessageController@reply');
+Route::get('/user/breply/{id}', 'MessageController@contact_buyer');
 
 
 Route::get('/user/manage/orders', 'HomeController@orders');
