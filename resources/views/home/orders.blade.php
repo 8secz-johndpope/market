@@ -100,6 +100,7 @@
 <span class="hide-visually">This ad is </span>Urgent
 </span>
                             @endif
+                            <br>
                           &nbsp;&nbsp;@if($sale->type===2)
                             <a class="btn btn-success">I've received the Item</a>
                             @elseif($sale->type===1)
@@ -154,7 +155,7 @@
                            <span class="product-price">£ {{$sale->advert->meta('price')/100}}{{$sale->advert->meta('price_frequency')}}
                                 </span>
                        @endif
-
+                        <br>
                        @if($sale->type===2)
                            <span class="green-text">Completed</span>
                        @elseif($sale->type===1)
