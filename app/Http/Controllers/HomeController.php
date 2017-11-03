@@ -1006,9 +1006,7 @@ class HomeController extends BaseController
         $message->url='';
         $message->save();
 
-        foreach ($advert->user->android as $token){
-            $this->android($token,$room,$message,$message);
-        }
+        $this->notify($room,$message);
 
         return redirect($advert->url());
 
