@@ -114,7 +114,7 @@
             </div>
         </div>
     </div>
-    <audio controls>
+    <audio id="notify-tune" controls style="display: none">
         <source src="/css/furrow.ogg" type="audio/ogg">
         <source src="/css/furrow.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -153,10 +153,13 @@
                 var object = JSON.parse(event.data);
                 if(object.message&&object.room_id==room)
                 {
+                    document.getElementById('notify-tune').play();
                     $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
                     scroll_bottom()
                 }else if(object.message){
-                   // location.reload();
+                    document.getElementById('notify-tune').play();
+
+                    // location.reload();
                     axios.get('/user/manage/rooms/'+room, {
                         params: {}
                     })
