@@ -1408,6 +1408,7 @@ class HomeController extends BaseController
     }
     public function sign(Request $request)
     {
+        $user = Auth::user();
 
 /*
         if ($request->session()->has('contract_id')) {
@@ -1446,9 +1447,9 @@ class HomeController extends BaseController
         $client = new \HelloSign\Client('ecd17a4e5e1e6b1d60d17a12711665789956cc4874b608f06f5de462ba26bbc1');
         $request = new \HelloSign\SignatureRequest;
         $request->enableTestMode();
-        $request->setSubject('My First embedded signature request with a template');
-        $request->setMessage('Awesome, right?');
-        $request->addSigner('anil@sumra.net', 'Anil');
+        $request->setSubject('Sumra Contract');
+        $request->setMessage('welcome to sumra');
+        $request->addSigner($user->email, $user->name.' '.$user->last);
         $request->addFile("/home/anil/market/storage/contracts/invoice.pdf");
 
         $client_id = 'd88c4209bd93093d3815ef0e26069793';
