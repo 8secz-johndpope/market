@@ -108,6 +108,7 @@
                                 <span class="green-text">To Be Delivered</span>
 
                             @endif
+                            <br>
                             <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
 
                         </div>
@@ -162,6 +163,7 @@
                            <a class="btn-primary btn">Update Deliver Info</a>
 
                        @endif
+                       <br>
                        <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Buyer</a>
 
                        @if($sale->advert->urgent_expires())
