@@ -154,7 +154,15 @@
                                 </span>
                        @endif
 
+                       @if($sale->type===2)
+                           <span class="green-text">Completed</span>
+                       @elseif($sale->type===1)
+                           <a class="btn btn-primary">Update Shipping Info</a>
+                       @else
+                           <a class="btn-primary btn">Update Deliver Info</a>
 
+                       @endif
+                       <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
 
                        @if($sale->advert->urgent_expires())
                            <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
