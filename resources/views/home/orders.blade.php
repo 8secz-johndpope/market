@@ -101,7 +101,7 @@
 </span>
                             @endif
                             <br>
-                          &nbsp;&nbsp;@if($sale->type===2)
+                          @if($sale->type===2)
                             <a class="btn btn-success">I've received the Item</a>
                             @elseif($sale->type===1)
                                           <span class="green-text">To Be Shipped</span>
