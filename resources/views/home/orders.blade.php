@@ -162,7 +162,7 @@
                            <a class="btn-primary btn">Update Deliver Info</a>
 
                        @endif
-                       <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
+                       <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Buyer</a>
 
                        @if($sale->advert->urgent_expires())
                            <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
