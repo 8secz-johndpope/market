@@ -153,6 +153,8 @@ class MessageController extends BaseController
         $message->message=$request->message;
         $message->from_msg=$user->id;
         $message->to_msg=$advert->user_id;
+
+
         $message->room_id=$room->id;
         $message->url='';
         $message->save();

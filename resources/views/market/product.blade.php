@@ -145,7 +145,10 @@
                     </div>
                 </div>
             <div class="col-md-3 col-sm-12">
-                @if($advert->category->can_ship())
+                @if($advert->has_param('sold'))
+                    <img src="/css/sold.jpg">
+
+                @elseif($advert->category->can_ship())
                 <div class="delivery-options">
                     @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <div id="check-div" @if (!Auth::guest()&& Auth::user()->default_address>0) style="display: none" @endif>
@@ -185,6 +188,20 @@
                             <button type="submit"  class="btn-success btn">Order to Ship</button>
                             </form>
 
+                        @endif
+
+                        @if($advert->category->has_price())
+
+                            <div class="collection-options">
+                                <h4>Near to Seller, liked the item?</h4>
+                                <form action="/user/ad/sale" method="post">
+                                    <input name="id" type="hidden" value="{{$advert->id}}">
+                                    <input name="type" type="hidden" value="2">
+                                    {{ csrf_field() }}
+                                    <button type="submit" class="btn-info btn">Purchase</button>
+                                </form>
+                                <p>Once you agree to buy, the seller will handover the item and get paid</p>
+                            </div>
                         @endif
                 </div>
                 @endif
@@ -245,19 +262,7 @@
                             @endif
                         </div>
                             @endif
-                    @if($advert->category->has_price())
 
-                    <div class="collection-options">
-                        <h4>Near to Seller, liked the item?</h4>
-                        <form action="/user/ad/sale" method="post">
-                            <input name="id" type="hidden" value="{{$advert->id}}">
-                            <input name="type" type="hidden" value="2">
-                            {{ csrf_field() }}
-                        <button type="submit" class="btn-info btn">Purchase</button>
-                        </form>
-                        <p>Once you agree to buy, the seller will handover the item and get paid</p>
-                    </div>
-                    @endif
 
                 <div class="buttons">
                     <ul class="list-group">
