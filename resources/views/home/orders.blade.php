@@ -100,8 +100,14 @@
 <span class="hide-visually">This ad is </span>Urgent
 </span>
                             @endif
-                          &nbsp;&nbsp;
+                          &nbsp;&nbsp;@if($sale->type===2)
                             <a class="btn btn-success">I've received the Item</a>
+                            @elseif($sale->type===1)
+                                          <span class="green-text">To Be Shipped</span>
+                                          @else
+                                <span class="green-text">To Be Delivered</span>
+
+                            @endif
                             <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
 
                         </div>
