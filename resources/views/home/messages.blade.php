@@ -130,7 +130,7 @@
 
         }
         var token = '{{$user->access_token}}' ;
-        var room = {{$cur->id}};
+        var room = @if($cur) {{$cur->id}} @else 0 @endif;
 
         var exampleSocket;
         reconnect();
