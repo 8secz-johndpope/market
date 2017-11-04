@@ -100,17 +100,17 @@
 <span class="hide-visually">This ad is </span>Urgent
 </span>
                             @endif
-                            <table class="table">
+                            <div class="row">
                           @if($sale->type===2)
-                                    <tr> <td><span class="green-text">Order Completed</span> </td> <td>  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></td> <td></td></tr>
+                                    <div class="col-sm-3"><span class="green-text">Order Completed</span> </div> <div class="col-sm-3">  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></div>
 
                             @elseif($sale->type===1)
-                                    <tr> <td> <span class="green-text">Waiting for Dispatch</span> </td> <td> <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></td><td></td> </tr>
+                                    <div class="col-sm-3"><span class="green-text">Waiting for Dispatch</span> </div> <div class="col-sm-3">  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></div>
 
                             @else
-                                    <tr> <td><span class="green-text">Waiting for Delivery</span> </td> <td>  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <p>to fix a delivery time.</p></td> <td> <a class="btn btn-primary">Mark Received</a></td> </tr>
+                                    <div class="col-sm-3"><span class="green-text">Waiting for Delivery</span>  </div> <div class="col-sm-3">   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <p>to fix a delivery time.</p> </div> <div class="col-sm-3">  <a class="btn btn-primary">Mark Received</a></div>
                             @endif
-                            </table>
+                            </div>
 
                         </div>
                     </div>
@@ -155,16 +155,16 @@
                            <span class="product-price">£ {{$sale->advert->meta('price')/100}}{{$sale->advert->meta('price_frequency')}}
                                 </span>
                        @endif
-                       <table class="table">
+                       <div class="row">
 
                        @if($sale->type===2)
-                           <tr><td><span class="green-text">Completed</span>    </td> <td>                    <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></td><td></td></tr>
+                               <div class="col-sm-3"> <span class="green-text">Completed</span>    </div> <div class="col-sm-3">                    <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></div>
                        @elseif($sale->type===1)
-                               <tr><td> <a class="btn btn-primary">Mark Shipped</a>  </td><td>              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></td> <td>     <a class="btn btn-danger">Cancel Order</a>           </td> </tr>
+                               <div class="col-sm-3"> <a class="btn btn-primary">Mark Shipped</a>   </div> <div class="col-sm-3">              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> </div> <div class="col-sm-3">    <a class="btn btn-danger">Cancel Order</a>           </div>
                        @else
-                               <tr><td><span class="yellow-text">Need to be Delivered</span> </td><td><a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <p>to fix a delivery time.</p>  </td> <td>     <a class="btn btn-danger">Cancel Order</a> </td></tr>
+                               <div class="col-sm-3"><span class="yellow-text">Need to be Delivered</span>  </div> <div class="col-sm-3"> <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <p>to fix a delivery time.</p>   </div> <div class="col-sm-3">     <a class="btn btn-danger">Cancel Order</a> </div>
                        @endif
-                       </table>
+                       </div>
 
                        <br>
 
