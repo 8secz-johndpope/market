@@ -470,9 +470,12 @@ class HomeController extends BaseController
         else
             $body['acceptreturns']=0;
         if($request->has('canship')){
+
             $body['canship']=1;
             $meta['dispatch']=(int)$request->dispatch;
             $body['shipping']=(int)$request->shipping;
+            $advert->shipping_id=(int)$request->shipping;
+            $advert->save();
         }else{
             $body['canship']=0;
         }
