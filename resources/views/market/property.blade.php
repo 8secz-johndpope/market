@@ -125,52 +125,31 @@
                             </div>
                         </div>
                         <div id="map" class="tab-pane fade">
-                            <div id="map"></div>
-                            <script>
-                                function initMap() {
-                                    var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
-                                    var map = new google.maps.Map(document.getElementById('map'), {
-                                        zoom: 18,
-                                        center: uluru
-                                    });
-                                    var marker = new google.maps.Marker({
-                                        position: uluru,
-                                        map: map
-                                    });
-                                }
-                                $(document).ready(function() {
-                                    initMap();
-//your code
-                                });
+                            <div class="row mapframe">
+                                <div class="col-sm-12">
 
-                            </script>
+                                    <div id="map"></div>
+                                    <script>
+                                        function initMap() {
+                                            var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
+                                            var map = new google.maps.Map(document.getElementById('map'), {
+                                                zoom: 18,
+                                                center: uluru
+                                            });
+                                            var marker = new google.maps.Marker({
+                                                position: uluru,
+                                                map: map
+                                            });
+                                        }
+                                        $(document).ready(function() {
+                                            initMap();
+        //your code
+                                        });
 
-                        </div>
-                        </div>
-                    </div>
-                    <div class="row mapframe">
-                        <div class="col-sm-12">
+                                    </script>
 
-                            <div id="map"></div>
-                            <script>
-                                function initMap() {
-                                    var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
-                                    var map = new google.maps.Map(document.getElementById('map'), {
-                                        zoom: 18,
-                                        center: uluru
-                                    });
-                                    var marker = new google.maps.Marker({
-                                        position: uluru,
-                                        map: map
-                                    });
-                                }
-                                $(document).ready(function() {
-                                    initMap();
-//your code
-                                });
-
-                            </script>
-
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
