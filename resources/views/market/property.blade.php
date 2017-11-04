@@ -28,6 +28,9 @@
 <div class="col-sm-2">@if($product['meta']['price']>=0)
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
+                    <div id="current-image">
+                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
+                    </div>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel"  style="display: none">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
@@ -39,14 +42,16 @@
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                            <div class="item frame active">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
-                            </div>
-                            @foreach($images as $image)
+                            @for($i=0; $i<$images.count(); $i++)
                             <div class="item frame">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
+                                @for($j=0; $j < 5; $j++)
+                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$images[$i+$j]}}?1500586448" alt="Los Angeles">
+                                @endfor
+                                @php
+                                    $i = $i + $j - 1
+                                @endphp
                             </div>
-                            @endforeach
+                            @endfor
                         </div>
 
                         <!-- Left and right controls -->
