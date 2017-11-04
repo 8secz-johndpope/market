@@ -68,36 +68,6 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                    @if(count($product['images'])>0)
-                    <div class="image-gallery">
-
-                        <ul class="image-gallery-ul" style="width: {{count($product['images'])*656}}px;">
-                        @foreach($product['images'] as $key=>$image)
-                            <li class="image-gallery-li">
-                                <div class="listing-side-big">
-                                    <div class="listing-thumbnail-big">
-                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
-                                        <div class="listing-meta txt-sub">
-                                            &nbsp;<span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> &nbsp; {{$key+1}} of {{count($product['images'])}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        @endforeach
-                        </ul>
-
-
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-circle-arrow-left image-gallery-left"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-circle-arrow-right image-gallery-right"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                        <div class="number-text"></div>
-                    </div>
-                    @endif
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map</a></li>
