@@ -329,8 +329,9 @@
     $('#upload-cv').change(function () {
         upload_cv();
     });
-    $('.nav nav-tabs a').click(function () {
+    $('.nav.nav-tabs a').click(function () {
         initMap();
+        console.log("init map");
     });
 </script>
 <script>
