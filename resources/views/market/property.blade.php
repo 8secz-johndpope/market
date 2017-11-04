@@ -93,6 +93,7 @@
                     @endif
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#description">Description</a></li>
+                        <li><a data-toggle="tab" href="#map">Map</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="description" class="tab-pane fade in active">
@@ -122,6 +123,29 @@
                                     <br>{{$part}}
                                 @endforeach
                             </div>
+                        </div>
+                        <div id="map" class="tab-pane fade">
+                            <div id="map"></div>
+                            <script>
+                                function initMap() {
+                                    var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 18,
+                                        center: uluru
+                                    });
+                                    var marker = new google.maps.Marker({
+                                        position: uluru,
+                                        map: map
+                                    });
+                                }
+                                $(document).ready(function() {
+                                    initMap();
+//your code
+                                });
+
+                            </script>
+
+                        </div>
                         </div>
                     </div>
                     <div class="row mapframe">
