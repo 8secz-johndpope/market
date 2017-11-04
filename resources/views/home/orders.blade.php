@@ -106,7 +106,7 @@
 
                             @elseif($sale->type===1)
                                     <div class="col-sm-3">
-                                        <span class="green-text">Waiting for Dispatch</span>
+                                        <span class="yellow-text">Waiting for Dispatch</span>
 
                                         <h4 class="bold-text">Shipping Address</h4>
                                         <p>{{$sale->address->line1}}</p>
@@ -116,7 +116,7 @@
                                     </div> <div class="col-sm-3">  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></div>
 
                             @else
-                                    <div class="col-sm-3"><span class="green-text">Waiting for Delivery</span>
+                                    <div class="col-sm-3"><span class="yellow-text">Waiting for Delivery</span>
                                         <h4 class="bold-text">Delivery Address</h4>
                                         <p>{{$sale->address->line1}}</p>
                                         <p>{{$sale->address->city}}</p>
