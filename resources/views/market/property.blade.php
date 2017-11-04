@@ -97,7 +97,7 @@
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
-                            @if($category == 307000000)
+                            @if($category->id == 307000000)
                                 <h3>Letting information:</h3>
                             @endif
                             <div class="row meta">
