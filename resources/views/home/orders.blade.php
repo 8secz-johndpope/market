@@ -108,7 +108,7 @@
                                     <div class="col-sm-3">
                                         <span class="green-text">Waiting for Dispatch</span>
 
-                                        <h4>Shipping Address</h4>
+                                        <h4 class="bold-text">Shipping Address</h4>
                                         <p>{{$sale->address->line1}}</p>
                                         <p>{{$sale->address->city}}</p>
                                         <p>{{$sale->address->postcode}}</p>
@@ -117,7 +117,7 @@
 
                             @else
                                     <div class="col-sm-3"><span class="green-text">Waiting for Delivery</span>
-                                        <h4>Delivery Address</h4>
+                                        <h4 class="bold-text">Delivery Address</h4>
                                         <p>{{$sale->address->line1}}</p>
                                         <p>{{$sale->address->city}}</p>
                                         <p>{{$sale->address->postcode}}</p>
@@ -174,7 +174,7 @@
                                <div class="col-sm-3"> <span class="green-text">Completed</span>    </div> <div class="col-sm-3">                    <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></div>
                        @elseif($sale->type===1)
                                <div class="col-sm-3">
-                                   <h4>Shipping Address</h4>
+                                   <h4 class="bold-text">Shipping Address</h4>
                                    <p>{{$sale->user->name.' '.$sale->user->last}}</p>
                                    <p>{{$sale->address->line1}}</p>
                                    <p>{{$sale->address->city}}</p>
@@ -182,7 +182,7 @@
                                </div> <div class="col-sm-3"> <a class="btn btn-primary">Mark Shipped</a>   </div> <div class="col-sm-3">              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> </div> <div class="col-sm-3">    <a class="btn btn-danger">Cancel Order</a>           </div>
                        @else
                                <div class="col-sm-3">
-                                   <h4>Delivery Address</h4>
+                                   <h4 class="bold-text">Delivery Address</h4>
                                    <p>{{$sale->user->name.' '.$sale->user->last}}</p>
                                    <p>{{$sale->address->line1}}</p>
                                    <p>{{$sale->address->city}}</p>
