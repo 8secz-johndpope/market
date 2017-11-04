@@ -68,7 +68,7 @@ ul.list-two-col{
 	padding-left: 0px;
 }
 .item{
-	background-color: none;
+	box-shadow:  none;
 }
 #current-image img {
     width: 100%;
