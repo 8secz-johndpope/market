@@ -22,7 +22,7 @@
                     <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
                 </ol>
                 <h2 class="item-name">{{$product['title']}}</h2>
-                <div class="col-sm-10">
+                <div class="col-sm-10 location-name">
                     <p>{{$product['location_name']}}</p>
                 </div>
 <div class="col-sm-2">@if($product['meta']['price']>=0)

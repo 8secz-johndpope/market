@@ -59,4 +59,7 @@ ul.list-two-col{
     border-bottom-color: transparent;
     color: #333;
 } 
+.location-name>p{
+	padding-left: 0px;
+}
 
