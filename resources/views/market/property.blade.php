@@ -44,12 +44,14 @@
                         <div class="carousel-inner">
                             @for($i=0; $i<count($images); $i++)
                             <div class="item frame">
-                                @for($j=0; $j < 5 && ($i+$j)<count($images); $j++)
+                                @for($j=0; $j < 5 && ($i+$j) < count($images); $j++)
+                                <div>
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$images[$i+$j]}}?1500586448" alt="Los Angeles">
                                 @endfor
                                 @php
                                     $i = $i + $j - 1
                                 @endphp
+                                </div>
                             </div>
                             @endfor
                         </div>
@@ -363,22 +365,6 @@
     });
     $('#upload-cv').change(function () {
         upload_cv();
-    });
-    $(document).ready(function() {
-    $('#imageGallery').lightSlider({
-        gallery:true,
-        item:1,
-        loop:true,
-        thumbItem:9,
-        slideMargin:0,
-        enableDrag: false,
-        currentPagerPosition:'left',
-        onSliderLoad: function(el) {
-            el.lightGallery({
-                selector: '#imageGallery .lslide'
-            });
-        }   
-        });  
     });
 
 
