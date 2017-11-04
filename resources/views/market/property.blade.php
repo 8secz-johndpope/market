@@ -14,20 +14,17 @@
     <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet">
     <div class="container">
         <div class="row">
-
-        <div class="col-lg-2"></div>
-                <div class="col-lg-6 col-md-9 col-sm-12">
-                    <ol class="breadcrumb">
-                        @foreach($parents as $parent)
-                        <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
-                        @endforeach
-                            <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
-
-                    </ol>
+            <div class="col-lg-6 col-md-9 col-sm-12">
+                <ol class="breadcrumb">
+                    @foreach($parents as $parent)
+                    <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
+                    @endforeach
+                    <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
+                </ol>
                 <h2 class="item-name">{{$product['title']}}</h2>
-<div class="col-sm-10">
-    <p>{{$product['location_name']}}</p>
-</div>
+                <div class="col-sm-10">
+                    <p>{{$product['location_name']}}</p>
+                </div>
 <div class="col-sm-2">@if($product['meta']['price']>=0)
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
