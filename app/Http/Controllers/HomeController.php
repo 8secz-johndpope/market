@@ -1293,8 +1293,10 @@ class HomeController extends BaseController
         return redirect('/user/manage/orders');
     }
     public function provide_tracking(Request $request,$id){
+        $user = Auth::user();
+
         $sale=Sale::find($id);
-        return view('home.tracking',['sale'=>$sale]);
+        return view('home.tracking',['sale'=>$sale,'user'=>$user]);
     }
     public function sale_stripe(Request $request,$id){
         $user = Auth::user();
