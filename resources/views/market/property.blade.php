@@ -135,7 +135,7 @@
                             <script>
                                 function initMap() {
                                     var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
-                                    console.log(JSON.stringif(uluru));
+                                    console.log(JSON.stringify(uluru));
                                     var map = new google.maps.Map(document.getElementById('map'), {
                                         zoom: 18,
                                         center: uluru
