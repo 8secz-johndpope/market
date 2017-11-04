@@ -33,4 +33,12 @@ class Sale extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public function address()
+    {
+        return $this->belongsTo('App\Model\Address');
+    }
+    public function billing_address()
+    {
+        return $this->belongsTo('App\Model\Address');
+    }
 }

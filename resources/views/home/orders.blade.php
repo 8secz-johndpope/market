@@ -105,10 +105,23 @@
                                     <div class="col-sm-3"><span class="green-text">Order Completed</span> </div> <div class="col-sm-3">  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></div>
 
                             @elseif($sale->type===1)
-                                    <div class="col-sm-3"><span class="green-text">Waiting for Dispatch</span> </div> <div class="col-sm-3">  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></div>
+                                    <div class="col-sm-3">
+                                        <span class="green-text">Waiting for Dispatch</span>
+
+                                        <h4>Shipping Address</h4>
+                                        <p>{{$sale->address->line1}}</p>
+                                        <p>{{$sale->address->city}}</p>
+                                        <p>{{$sale->address->postcode}}</p>
+
+                                    </div> <div class="col-sm-3">  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></div>
 
                             @else
-                                    <div class="col-sm-3"><span class="green-text">Waiting for Delivery</span>  </div> <div class="col-sm-3">   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <p>to fix a delivery time.</p> </div> <div class="col-sm-3">  <a class="btn btn-primary">Mark Received</a></div>
+                                    <div class="col-sm-3"><span class="green-text">Waiting for Delivery</span>
+                                        <h4>Delivery Address</h4>
+                                        <p>{{$sale->address->line1}}</p>
+                                        <p>{{$sale->address->city}}</p>
+                                        <p>{{$sale->address->postcode}}</p>
+                                    </div> <div class="col-sm-3">   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <p>to fix a delivery time.</p> </div> <div class="col-sm-3">  <a class="btn btn-primary">Mark Received</a></div>
                             @endif
                             </div>
 
@@ -160,9 +173,21 @@
                        @if($sale->type===2)
                                <div class="col-sm-3"> <span class="green-text">Completed</span>    </div> <div class="col-sm-3">                    <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></div>
                        @elseif($sale->type===1)
-                               <div class="col-sm-3"> <a class="btn btn-primary">Mark Shipped</a>   </div> <div class="col-sm-3">              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> </div> <div class="col-sm-3">    <a class="btn btn-danger">Cancel Order</a>           </div>
+                               <div class="col-sm-3">
+                                   <h4>Shipping Address</h4>
+                                   <p>{{$sale->user->name.' '.$sale->user->last}}</p>
+                                   <p>{{$sale->address->line1}}</p>
+                                   <p>{{$sale->address->city}}</p>
+                                   <p>{{$sale->address->postcode}}</p>
+                               </div> <div class="col-sm-3"> <a class="btn btn-primary">Mark Shipped</a>   </div> <div class="col-sm-3">              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> </div> <div class="col-sm-3">    <a class="btn btn-danger">Cancel Order</a>           </div>
                        @else
-                               <div class="col-sm-3"><span class="yellow-text">Need to be Delivered</span>  </div> <div class="col-sm-3"> <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <p>to fix a delivery time.</p>   </div> <div class="col-sm-3">     <a class="btn btn-danger">Cancel Order</a> </div>
+                               <div class="col-sm-3">
+                                   <h4>Delivery Address</h4>
+                                   <p>{{$sale->user->name.' '.$sale->user->last}}</p>
+                                   <p>{{$sale->address->line1}}</p>
+                                   <p>{{$sale->address->city}}</p>
+                                   <p>{{$sale->address->postcode}}</p>
+                               </div>  <div class="col-sm-3"><span class="yellow-text">Need to be Delivered</span>  </div> <div class="col-sm-3"> <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <p>to fix a delivery time.</p>   </div> <div class="col-sm-3">     <a class="btn btn-danger">Cancel Order</a> </div>
                        @endif
                        </div>
 

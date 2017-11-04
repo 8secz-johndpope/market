@@ -1287,7 +1287,12 @@ class HomeController extends BaseController
                 ));
             }
             $sale->status=1;
-            $sale->save();
+
+            if($request->has('delivery_address'))
+                $sale->address_id=$request->delivery_address;
+            if($request->has('billing_address'))
+                $sale->billing_address_id=$request->billing_address;
+                     $sale->save();
             $sale->advert->update_fields(['sold'=>1]);
 
             \Stripe\Transfer::create(array(
