@@ -4,7 +4,7 @@
 .meta-bold{
 	font-size: 14px;
     font-weight: normal;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 .tab-content {
     border: 1px solid #ddd;
@@ -16,4 +16,10 @@
 	color: #262637;
     font-size: 15px;
     font-weight: normal;
+}
+.list-two-col li {
+    display: inline-block;
+    margin: 0 0 0 -4px;
+    padding: 0;
+    vertical-align: top;
 }
