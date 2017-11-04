@@ -206,7 +206,7 @@
                                <div class="col-sm-3">
                                    @if($sale->status===1)
                                    <span class="yellow-text">Need to be Delivered</span>
-                                   @elseif($sale->satus===2)
+                                   @elseif($sale->status===2)
                                        <span class="green-text">Delivered</span>
                                    @elseif($sale->status==3)
                                            <span class="red-text">Canceled</span>
@@ -216,7 +216,7 @@
                                    <p>{{$sale->address->line1}}</p>
                                    <p>{{$sale->address->city}}</p>
                                    <p>{{$sale->address->postcode}}</p>
-                               </div>  <div class="col-sm-3"> <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <p>to fix a delivery time.</p>      <a class="btn btn-danger">Cancel Order</a> </div>
+                               </div>  <div class="col-sm-3"> <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> @if($sale->status===1) <p>to fix a delivery time.</p>      <a class="btn btn-danger">Cancel Order</a> @endif </div>
                        @endif
                        </div>
 
