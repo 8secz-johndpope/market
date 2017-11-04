@@ -74,4 +74,7 @@ ul.list-two-col{
  	width: 150px;
  	height: 150px; 
 }
+.small-image img {
+	width: 100%;
+}
 
