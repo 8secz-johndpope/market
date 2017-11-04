@@ -110,6 +110,9 @@
                                         <span class="yellow-text">Waiting for Dispatch</span>
                                         @elseif($sale->status===2)
                                             <span class="green-text">Shipped</span>
+                                        @if($sale->tracking)
+                                            <p class="bold-text">Tracking No: {{$sale->tracking}} </p>
+                                            @endif
                                         @elseif($sale->status==3)
                                             <span class="red-text">Canceled</span>
                                         @endif
