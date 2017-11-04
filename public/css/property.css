@@ -60,6 +60,9 @@ ul.list-two-col{
     color: #333;
 } 
 .location-name>p{
+	margin-left: 0px;
+}
+.location-name{
 	padding-left: 0px;
 }
 
