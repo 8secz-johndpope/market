@@ -1274,6 +1274,10 @@ class HomeController extends BaseController
     }
     public function mark_shipped(Request $request,$id){
         $sale=Sale::find($id);
+        if($sale->advert->shipping->tracking==='Yes')
+        {
+            return redirect('/user/order/provide/tracking/'.$sale->id);
+        }
         $sale->status=2;
         $sale->save();
         return redirect('/user/manage/orders');
@@ -1284,6 +1288,10 @@ class HomeController extends BaseController
         $sale->status=3;
         $sale->save();
         return redirect('/user/manage/orders');
+    }
+    public function provide_tracking(Request $request,$id){
+        $sale=Sale::find($id);
+        return view('home.tracking',['sale'=>$sale]);
     }
     public function sale_stripe(Request $request,$id){
         $user = Auth::user();

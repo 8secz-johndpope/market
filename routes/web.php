@@ -99,6 +99,10 @@ Route::get('/user/order/mark/received/{id}', 'HomeController@mark_received');
 Route::get('/user/order/mark/shipped/{id}', 'HomeController@mark_shipped');
 Route::get('/user/order/cancel/sale/{id}', 'HomeController@cancel_sale');
 
+
+Route::get('/user/order/provide/tracking/{id}', 'HomeController@provide_tracking');
+
+
 Route::post('/user/money/withdraw', 'HomeController@withdraw');
 Route::post('/user/documents/identity', 'HomeController@identity');
 
