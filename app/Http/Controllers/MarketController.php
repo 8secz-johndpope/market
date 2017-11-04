@@ -976,6 +976,7 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $view = 'market.product';
+        var_dump($category->id);
         if($category->id == 307000000 || $category->id == 306000000){
             $view = 'market.property';
         }
