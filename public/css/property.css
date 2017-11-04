@@ -67,4 +67,7 @@ ul.list-two-col{
 .location-name{
 	padding-left: 0px;
 }
+#current-image img {
+    width: 100%;
+}
 
