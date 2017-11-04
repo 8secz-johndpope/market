@@ -198,7 +198,10 @@
                                    <p>{{$sale->address->line1}}</p>
                                    <p>{{$sale->address->city}}</p>
                                    <p>{{$sale->address->postcode}}</p>
-                               </div> <div class="col-sm-3"> <a class="btn btn-primary" href="/user/order/mark/shipped/{{$sale->id}}">Mark Shipped</a>  <br>              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <br>    <a class="btn btn-danger">Cancel Order</a>           </div>
+                               </div> <div class="col-sm-3">                                   @if($sale->status===1)<a class="btn btn-primary" href="/user/order/mark/shipped/{{$sale->id}}">Mark Shipped</a>   <br> @endif
+                                   <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <br>
+
+                                   @if($sale->status===1) <a class="btn btn-danger">Cancel Order</a>           </div> @endif
                        @else
                                <div class="col-sm-3">
                                    @if($sale->status===1)
