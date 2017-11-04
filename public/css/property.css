@@ -26,6 +26,10 @@
 .list-style-square li {
     padding: 0 8px 8px 20px;
 }
+.list-two-col li:after {
+    border-color: #ececec;
+    border-style: solid;
+}
 .list-style-square:before, .list-style-square li:before {
     border-top: 8px solid #65af22;
     border-top-width: .8rem;
@@ -37,11 +41,4 @@
     width: 8px;
     width: .8rem;
 }
-.list-two-col, .list-two-col li:after {
-    border-color: #ececec;
-    border-style: solid;
-}
-.list-style-square li:after {
-    border-style: dashed;
-    border-color: #dfdfe1;
-}
+
