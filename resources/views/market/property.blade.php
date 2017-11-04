@@ -127,13 +127,9 @@
                                 @endforeach
                             </div>
                         </div>
-                        <div id="tap-map" class="tab-pane fade">
-                            <div class="row mapframe">
-                                <div class="col-sm-12">
-
-                                    <div id="map"></div>
-
-                                </div>
+                        <div id="tap-map" class="tab-pane fade">           
+                            <div class="col-sm-12">
+                                <div id="map"></div>
                             </div>
                         </div>
                     </div>
