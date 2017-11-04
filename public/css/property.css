@@ -58,6 +58,7 @@ ul.list-two-col{
     border: 1px solid #ccc;
     border-bottom-color: transparent;
     color: #333;
+    background: #f4f4f5;
 } 
 .location-name>p{
 	margin-left: 0px;
