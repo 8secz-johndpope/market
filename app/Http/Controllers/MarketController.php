@@ -980,7 +980,7 @@ class MarketController extends BaseController
         if($category->id == 307000000 || $category->id == 306000000){
             $view = 'market.property';
         }
-        var_dump($view)
+        var_dump($view);
         return View('market.product',['advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1]]);
     }
     private  function haversineGreatCircleDistance(
