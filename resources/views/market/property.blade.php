@@ -29,7 +29,7 @@
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
                     <div id="current-image">
-                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
+                        <img id="image-active" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
                     </div>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators 
@@ -46,7 +46,9 @@
                             <div class="item">
                                 @for($j=0; $j < 5 && ($i+$j) < count($images); $j++)
                                 <div class="small-image">
-                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$images[$i+$j]}}?1500586448" alt="Los Angeles">
+                                    <a href="javascript:void(0)">
+                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$images[$i+$j]}}?1500586448" alt="Los Angeles">
+                                    </a>
                                 </div>
                                 @endfor
                                 @php
@@ -369,6 +371,11 @@
     $('.carousel').carousel({
       interval: false
     })
+    $('.small-image>a').click(function () {
+        var src = $(this).children().first().attr('src');
+        $('#image-active').attr('src', src);
+    });
+
 
 
 </script>
