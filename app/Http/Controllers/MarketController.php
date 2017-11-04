@@ -977,7 +977,7 @@ class MarketController extends BaseController
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $view = 'market.product'
         if($category->id == 307000000 || $category->id == 306000000){
-            $view = 'market.property'
+            $view = 'market.property';
         }
         return View('market.product',['advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1]]);
     }
