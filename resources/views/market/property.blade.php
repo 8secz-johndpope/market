@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-
+    <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet">
         <div class="row">
 
         <div class="col-lg-3"></div>
