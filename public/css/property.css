@@ -69,6 +69,7 @@ ul.list-two-col{
 }
 .item{
 	box-shadow:  none;
+	padding: 0px;
 }
 #current-image img {
     width: 100%;
