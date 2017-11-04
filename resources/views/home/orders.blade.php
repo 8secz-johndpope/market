@@ -100,16 +100,16 @@
 <span class="hide-visually">This ad is </span>Urgent
 </span>
                             @endif
-                            <br>
+                            <table class="table">
                           @if($sale->type===2)
-                                <span class="green-text">Order Completed</span>   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
+                                    <tr> <td><span class="green-text">Order Completed</span> </td> <td>  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></td> <td></td></tr>
 
                             @elseif($sale->type===1)
-                                <span class="green-text">Waiting for Dispatch</span>  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
+                                    <tr> <td> <span class="green-text">Waiting for Dispatch</span> </td> <td> <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></td><td></td> </tr>
 
                             @else
-                                <span class="green-text">Waiting for Delivery</span>   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <span>to fix a delivery time.</span> <a class="btn btn-primary">Mark Received</a>
-
+                                    <tr> <td><span class="green-text">Waiting for Delivery</span> </td> <td>  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <span>to fix a delivery time.</span></td> <td> <a class="btn btn-primary">Mark Received</a></td> </tr>
+                            </table>
                             @endif
 
                         </div>
@@ -155,13 +155,15 @@
                            <span class="product-price">£ {{$sale->advert->meta('price')/100}}{{$sale->advert->meta('price_frequency')}}
                                 </span>
                        @endif
-                        <br>
+                       <table class="table">
+
                        @if($sale->type===2)
-                           <span class="green-text">Completed</span>                         <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a>
+                           <tr><td><span class="green-text">Completed</span>    </td> <td>                    <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></td><td></td></tr>
                        @elseif($sale->type===1)
-                           <a class="btn btn-primary">Mark Shipped</a>  <a class="btn btn-danger">Cancel Order</a>                        <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a>
+                               <tr><td> <a class="btn btn-primary">Mark Shipped</a>  </td> <td>     <a class="btn btn-danger">Cancel Order</a>           </td> <td>              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></td></tr>
                        @else
-                           <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <span>to fix a delivery time.</span>  <a class="btn btn-danger">Cancel Order</a>
+                               <tr><td><a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <span>to fix a delivery time.</span>  </td> <td>     <a class="btn btn-danger">Cancel Order</a> </td><td></td></tr>
+                       </table>
                        @endif
                        <br>
 
