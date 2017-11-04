@@ -102,10 +102,10 @@
                             @endif
                             <div class="row meta">
                                 @foreach($metas as $meta)
-                                    <div class="col-sm-3 meta-bold">
+                                    <div class="col-sm-6 meta-bold">
                                         {{$meta->title}}
                                     </div>
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-6">
                                         {{$meta->value}}
                                     </div>
                                 @endforeach
