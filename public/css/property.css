@@ -33,7 +33,7 @@ ul.list-two-col{
     border-color: #ececec;
     border-style: solid;
 }
-.list-style-square:before, .list-style-square li:before {
+.list-style-square li:before {
     border-top: 8px solid #65af22;
     border-top-width: .8rem;
     content: "";
