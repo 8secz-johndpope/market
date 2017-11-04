@@ -17,9 +17,23 @@
     font-size: 15px;
     font-weight: normal;
 }
+.list-style-square li {
+    padding: 0 8px 8px 20px;
+}
 .list-two-col li {
     display: inline-block;
     margin: 0 0 0 -4px;
     padding: 0;
     vertical-align: top;
+}
+.list-style-square:before, .list-style-square li:before {
+    border-top: 8px solid #65af22;
+    border-top-width: .8rem;
+    content: "";
+    position: absolute;
+    top: 5px;
+    top: .5rem;
+    left: 0;
+    width: 8px;
+    width: .8rem;
 }
