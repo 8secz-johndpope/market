@@ -97,6 +97,9 @@
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
+                            @if($category == 307000000)
+                                <h3>Letting information:</h3>
+                            @endif
                             <div class="row meta">
                                 @foreach($metas as $meta)
                                     <div class="col-sm-3 meta-bold">
