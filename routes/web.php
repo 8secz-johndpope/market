@@ -101,6 +101,7 @@ Route::get('/user/order/cancel/sale/{id}', 'HomeController@cancel_sale');
 
 
 Route::get('/user/order/provide/tracking/{id}', 'HomeController@provide_tracking');
+Route::post('/user/order/update/tracking', 'HomeController@update_tracking');
 
 
 Route::post('/user/money/withdraw', 'HomeController@withdraw');
