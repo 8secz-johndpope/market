@@ -7,7 +7,7 @@
     padding-left: 20px;
 }
 .tab-content {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-top-color: transparent;
     padding: 15px;
 }
@@ -55,7 +55,7 @@ ul.list-two-col{
     color: #ff9d2c ;
 }
 .nav-tabs>li>a {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-bottom-color: transparent;
     color: #333;
 } 
