@@ -1255,7 +1255,7 @@ class MarketController extends BaseController
 
         if($request->has('q')){
             $musts['title'] = [
-                'match' => [
+                'match_phrase' => [
                     'title'=>$request->q
                 ]
             ];
