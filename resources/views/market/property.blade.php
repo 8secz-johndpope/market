@@ -126,6 +126,7 @@
                                     <br>{{$part}}
                                 @endforeach
                             </div>
+                                                        <div id="map"></div>
 
                         </div>
                         <div id="tap-map" class="tab-pane fade">           
