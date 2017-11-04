@@ -76,6 +76,7 @@ ul.list-two-col{
 .small-image{
  	width: 150px;
  	height: 150px; 
+ 	display: inline-block
 }
 .small-image img {
 	width: 100%;
