@@ -108,7 +108,7 @@
                                     <tr> <td> <span class="green-text">Waiting for Dispatch</span> </td> <td> <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></td><td></td> </tr>
 
                             @else
-                                    <tr> <td><span class="green-text">Waiting for Delivery</span> </td> <td>  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <span>to fix a delivery time.</span></td> <td> <a class="btn btn-primary">Mark Received</a></td> </tr>
+                                    <tr> <td><span class="green-text">Waiting for Delivery</span> </td> <td>  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <p>to fix a delivery time.</p></td> <td> <a class="btn btn-primary">Mark Received</a></td> </tr>
                             @endif
                             </table>
 
