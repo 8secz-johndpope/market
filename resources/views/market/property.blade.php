@@ -126,18 +126,19 @@
                                     <br>{{$part}}
                                 @endforeach
                             </div>
-                                                        <div id="map" style="display: none;"></div>
 
                         </div>
                         <div id="tap-map" class="tab-pane fade">           
                             <div class="row mapframe">
                         <div class="col-sm-12">
+                                                        <div id="map"></div>
 
                             <script>
+                                var map;
                                 function initMap() {
                                     var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
                                     console.log(JSON.stringify(uluru));
-                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                     map = new google.maps.Map(document.getElementById('map'), {
                                         zoom: 18,
                                         center: uluru
                                     });
@@ -146,6 +147,11 @@
                                         map: map
                                     });
                                 }
+                                $('.nav.nav-tabs a').click(function () {
+     //   initMap();
+             google.maps.event.trigger(map, 'resize');
+        console.log("init map");
+    });
                                 
                                 $(document).ready(function() {
                             initMap();
@@ -351,10 +357,7 @@
     $('#upload-cv').change(function () {
         upload_cv();
     });
-    $('.nav.nav-tabs a').click(function () {
-     //   initMap();
-        console.log("init map");
-    });
+
 </script>
 
 
