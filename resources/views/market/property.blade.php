@@ -139,7 +139,7 @@
                                     var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
                                     console.log(JSON.stringify(uluru));
                                      map = new google.maps.Map(document.getElementById('map'), {
-                                        zoom: 16,
+                                        zoom: 18,
                                         center: uluru
                                     });
                                     var marker = new google.maps.Marker({
@@ -150,7 +150,13 @@
                                 $('.nav.nav-tabs a').click(function () {
      //   initMap();
      setTimeout(function(){
-        google.maps.event.trigger(map, 'resize');
+
+        x = map.getZoom();
+    c = map.getCenter();
+            google.maps.event.trigger(map, 'resize');
+
+    map.setZoom(x);
+    map.setCenter(c);
         console.log("init map");
     }, 1000);
     });
