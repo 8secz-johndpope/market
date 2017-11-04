@@ -745,7 +745,8 @@ class HomeController extends BaseController
             'type' => 'advert',
             'body' => [
                 'size' => 0,
-                'query' => ['bool'=>['should'=>[['term'=>$dict],['term'=>$dict2]]]],
+                'query'=>['match_phrase'=>['title'=>$text]],
+      //          'query' => ['bool'=>['should'=>[['term'=>$dict],['term'=>$dict2]]]],
                 'aggs' => [
                     'group_by_category' => [
                         "terms" => [ "field"=> "category", "size"=> 5]
