@@ -70,5 +70,8 @@ ul.list-two-col{
 #current-image img {
     width: 100%;
 }
-
+.small-image{
+ 	width: 150px;
+ 	height: 150px; 
+}
 
