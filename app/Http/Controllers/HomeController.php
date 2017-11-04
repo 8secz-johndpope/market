@@ -1298,6 +1298,15 @@ class HomeController extends BaseController
         $sale=Sale::find($id);
         return view('home.tracking',['sale'=>$sale,'user'=>$user]);
     }
+    public function update_tracking(Request $request,$id){
+        $user = Auth::user();
+
+        $sale=Sale::find($request->id);
+        $sale->tracking = $request->tracking;
+        $sale->status=2;
+        $sale->save();
+        return redirect('/user/manage/orders');
+    }
     public function sale_stripe(Request $request,$id){
         $user = Auth::user();
         $sale=Sale::find($id);

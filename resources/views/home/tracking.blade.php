@@ -105,7 +105,7 @@
         <div class="form-group">
             <label for="exampleInputEmail1">Tracking</label>
             <input type="hidden" name="id" value="{{$sale->id}}">
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Tracking ID">
+            <input type="text" name="tracking" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Tracking ID">
             <small id="emailHelp" class="form-text text-muted">Tracking ID is mandatory if shipping type specified in advert has tracking</small>
         </div>
 
