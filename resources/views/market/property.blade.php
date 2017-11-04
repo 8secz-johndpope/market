@@ -64,7 +64,7 @@
                     @if(count($product['images'])>0)
                     <div class="image-gallery">
 
-                        <ul class="image-gallery-ul" style="width: {{count($product['images'])*800}}px;">
+                        <ul class="image-gallery-ul" style="width: {{count($product['images'])*656}}px;">
                         @foreach($product['images'] as $key=>$image)
                             <li class="image-gallery-li">
                                 <div class="listing-side-big">
