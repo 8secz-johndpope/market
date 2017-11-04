@@ -12,8 +12,8 @@
 
 @section('content')
     <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/css/lightGallery.css" />                  
-    <script src="/js/lightGallery.js"></script>
+    <link type="text/css" rel="stylesheet" href="/css/lightslider.css" />                  
+    <script src="/js/lightslider.js"></script>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-9 col-sm-12">
