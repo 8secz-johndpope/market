@@ -1277,7 +1277,6 @@ class HomeController extends BaseController
     }
     public function mark_shipped(Request $request,$id){
         $sale=Sale::find($id);
-        return $sale->advert->shipping;
         if($sale->advert->shipping->tracking==='Yes')
         {
             return redirect('/user/order/provide/tracking/'.$sale->id);
