@@ -31,7 +31,9 @@
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
                     <div style="display:none;" class="html5gallery" data-skin="light" data-width="420" data-height="272">
+                        @foreach($images as $image)
                         <a href="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt=""></a>
+                        @endforeach
                     </div>
 
                     <div id="myCarousel" class="carousel slide" data-ride="carousel"  style="display: none">
