@@ -110,7 +110,7 @@ class MarketController extends BaseController
             'id' => $advert->elastic
         ];
         $response = $this->client->get($params);
-
+        $response['_source']['username']=$advert->user->name;
 
         return ['advert' => $response['_source']];
 
