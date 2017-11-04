@@ -12,8 +12,6 @@
 
 @section('content')
     <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/css/lightslider.css" />                  
-    <script src="/js/lightslider.js"></script>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-9 col-sm-12">
@@ -30,13 +28,6 @@
 <div class="col-sm-2">@if($product['meta']['price']>=0)
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
-    <ul id="imageGallery">
-        @foreach($images as $image)
-        <li data-thumb="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448">
-            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" />
-        </li>
-        @endforeach
-    </ul>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel"  style="display: none">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
