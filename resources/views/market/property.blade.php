@@ -151,8 +151,8 @@
      //   initMap();
      setTimeout(function(){
         google.maps.event.trigger(map, 'resize');
-    }, 50);
         console.log("init map");
+    }, 1000);
     });
                                 
                                 $(document).ready(function() {
