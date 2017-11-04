@@ -123,7 +123,7 @@
                             <div class="description">
                                 <h3>Description</h3>
                                 @foreach($r = preg_split("/(\r\n|\n|\r)/", $product['description']) as $part)
-                                    <br>{{$part}}
+                                    {{$part}}<br>
                                 @endforeach
                             </div>
 
