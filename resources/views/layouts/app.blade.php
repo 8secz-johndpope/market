@@ -270,7 +270,7 @@
                 <img id="footer_top_logo" class="img-responsive" title="" alt="" src="/css/sumra-text.png">
             </div>
 
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-2">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
                 <div class="col">
                     <h4>Company</h4>
                     <ul>
@@ -281,17 +281,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
-                <div class="col">
-                    <h4>Discover</h4>
-                    <ul>
-                        <li><a href="/why-us" title="Why Us">Why Us</a></li>
-                        <li><a href="/our-programs" title="Our programmes">Our academic programmes</a></li>
-                        <li><a href="/our-teaching-methods" title="Our teaching methods">Our teaching methods</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Experience</h4>
                     <ul>
@@ -301,19 +291,19 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
-                    <h4>Resources</h4>
+                    <h4>Help</h4>
                     <ul>
+                        <li><a href="/help" title="Help">Topics</a></li>
                         <li><a href="/faq" title="F.A.Q.">F.A.Q.</a></li>
-                        <li><a href="/help" title="Help">Help</a></li>
-                        <li><a href="/how-it-works" title="How it works">How it works</a></li>
+                        <li><a href="/delivery" title="Delivery">Delivery</a></li>
+                        <li><a href="/promote-ad" title="Promote Ad">Promote Ad</a></li>
+                        <li><a href="/contact-us" title="Contact Us">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-2">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
                 <div class="col">
                     <h4>Commitment</h4>
                     <ul>
@@ -323,7 +313,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Partnerships</h4>
                     <ul>
@@ -333,7 +323,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
+            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-0">
                 <div class="col">
                     <h4>Press & Opportunities</h4>
                     <ul>
@@ -342,9 +332,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-xs-5 col-xs-offset-1 col-md-offset-0">
+            <div class="col-xs-12">
                 <div class="col">
-                    <img  class="img-responsive  footer_logo" src="/css/ic_launcher1.png" />
+                    <img  class="img-responsive  footer_logo" src="/css/ic_launcher2.png" />
                 </div>
             </div>
         </div>
