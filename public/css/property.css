@@ -52,5 +52,6 @@ ul.list-two-col{
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     border-top: 2px solid #ff9d2c;
+    color: #ff9d2c ;
 }
 
