@@ -161,7 +161,7 @@
                        @elseif($sale->type===1)
                            <a class="btn btn-primary">Mark Shipped</a>  <a class="btn btn-danger">Cancel Order</a>                        <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a>
                        @else
-                           <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <span>to fix a delivery time.</span>
+                           <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <span>to fix a delivery time.</span>  <a class="btn btn-danger">Cancel Order</a>
                        @endif
                        <br>
 
