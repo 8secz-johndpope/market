@@ -133,7 +133,7 @@
                                         <p>{{$sale->address->line1}}</p>
                                         <p>{{$sale->address->city}}</p>
                                         <p>{{$sale->address->postcode}}</p>
-                                    </div> <div class="col-sm-3">   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <p>to fix a delivery time.</p>  <a class="btn btn-primary" href="/user/order/mark/received/{{$sale->id}}">Mark Received</a></div>
+                                    </div> <div class="col-sm-3">   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> @if($sale->status===1)<p>to fix a delivery time.</p>  <a class="btn btn-primary" href="/user/order/mark/received/{{$sale->id}}">Mark Received</a>@endif</div>
                             @endif
                             </div>
 
