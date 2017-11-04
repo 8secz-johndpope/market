@@ -94,6 +94,10 @@ Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/manage/sale/{id}', 'HomeController@sale');
 Route::post('/user/ad/sale', 'HomeController@agree_sale');
 
+
+Route::get('/user/order/mark/received/{id}', 'HomeController@mark_received');
+Route::get('/user/order/mark/shipped/{id}', 'HomeController@mark_shipped');
+
 Route::post('/user/money/withdraw', 'HomeController@withdraw');
 Route::post('/user/documents/identity', 'HomeController@identity');
 

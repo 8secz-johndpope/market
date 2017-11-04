@@ -1266,6 +1266,18 @@ class HomeController extends BaseController
         }
 
     }
+    public function mark_received(Request $request,$id){
+        $sale=Sale::fine($id);
+        $sale->status=2;
+        $sale->save();
+        return redirect('/user/manage/orders');
+    }
+    public function mark_shipped(Request $request,$id){
+        $sale=Sale::fine($id);
+        $sale->status=2;
+        $sale->save();
+        return redirect('/user/manage/orders');
+    }
     public function sale_stripe(Request $request,$id){
         $user = Auth::user();
         $sale=Sale::find($id);
