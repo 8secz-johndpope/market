@@ -160,9 +160,9 @@
                        @if($sale->type===2)
                            <tr><td><span class="green-text">Completed</span>    </td> <td>                    <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></td><td></td></tr>
                        @elseif($sale->type===1)
-                               <tr><td> <a class="btn btn-primary">Mark Shipped</a>  </td> <td>     <a class="btn btn-danger">Cancel Order</a>           </td> <td>              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></td></tr>
+                               <tr><td> <a class="btn btn-primary">Mark Shipped</a>  </td><td>              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></td> <td>     <a class="btn btn-danger">Cancel Order</a>           </td> </tr>
                        @else
-                               <tr><td><span class="yellow-text">Need to be Delivered</span> </td><td><a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <span>to fix a delivery time.</span>  </td> <td>     <a class="btn btn-danger">Cancel Order</a> </td></tr>
+                               <tr><td><span class="yellow-text">Need to be Delivered</span> </td><td><a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <p>to fix a delivery time.</p>  </td> <td>     <a class="btn btn-danger">Cancel Order</a> </td></tr>
                        @endif
                        </table>
 
