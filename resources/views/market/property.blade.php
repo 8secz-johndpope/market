@@ -147,7 +147,7 @@
                                         map: map
                                     });
                                 }
-                                $('.nav.nav-tabs a[href=#tap-map]').click(function () {
+                                $('.nav.nav-tabs a').click(function () {
                                     setTimeout(function(){
                                         x = map.getZoom();
                                         c = map.getCenter();
