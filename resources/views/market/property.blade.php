@@ -154,7 +154,7 @@
                                         google.maps.event.trigger(map, 'resize');
                                         map.setZoom(x);
                                         map.setCenter(c);
-                                    },1000});
+                                    },1000);
 
                                 });
                                 
