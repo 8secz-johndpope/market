@@ -112,6 +112,7 @@
                                             <span class="green-text">Shipped</span>
                                         @elseif($sale->status==3)
                                             <span class="red-text">Canceled</span>
+                                        @endif
                                         <p class="bold-text">Shipping Address</p>
                                         <p>{{$sale->address->line1}}</p>
                                         <p>{{$sale->address->city}}</p>
