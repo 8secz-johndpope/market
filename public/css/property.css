@@ -56,5 +56,6 @@ ul.list-two-col{
 }
 .nav-tabs>li>a {
     border: 1px solid #ddd;
+    border-bottom-color: transparent;
 } 
 
