@@ -193,7 +193,7 @@
 
                         @endif
 
-                        @if($advert->category->has_price())
+                        @if($advert->category->has_price()&&$advert->user->stripe_account)
 
                             <div class="collection-options">
                                 <h4>Near to Seller, liked the item?</h4>
