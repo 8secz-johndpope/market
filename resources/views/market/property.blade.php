@@ -12,6 +12,8 @@
 
 @section('content')
     <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/lightGallery.css" />                  
+    <script src="js/lightGallery.js"></script>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-9 col-sm-12">
@@ -28,6 +30,13 @@
 <div class="col-sm-2">@if($product['meta']['price']>=0)
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
+    <ul id="imageGallery">
+        @foreach($images as $image)
+        <li data-thumb="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448">
+            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" />
+        </li>
+        @endforeach
+    </ul>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel"  style="display: none">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
@@ -359,6 +368,23 @@
     $('#upload-cv').change(function () {
         upload_cv();
     });
+    $(document).ready(function() {
+    $('#imageGallery').lightSlider({
+        gallery:true,
+        item:1,
+        loop:true,
+        thumbItem:9,
+        slideMargin:0,
+        enableDrag: false,
+        currentPagerPosition:'left',
+        onSliderLoad: function(el) {
+            el.lightGallery({
+                selector: '#imageGallery .lslide'
+            });
+        }   
+        });  
+    });
+
 
 </script>
 
