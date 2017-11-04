@@ -144,10 +144,12 @@
                                         map: map
                                     });
                                 }
+                                /*
                                 $(document).ready(function() {
-                                    initMap();
+                            initMap();
 //your code
                                 });
+                                */
 
                             </script>
 
