@@ -149,7 +149,9 @@
                                 }
                                 $('.nav.nav-tabs a').click(function () {
      //   initMap();
-             google.maps.event.trigger(map, 'resize');
+     setTimeout(function(){
+        google.maps.event.trigger(map, 'resize');
+    }, 50);
         console.log("init map");
     });
                                 
