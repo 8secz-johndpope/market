@@ -108,7 +108,7 @@
                                 <span class="green-text">Waiting for Dispatch</span>  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
 
                             @else
-                                <span class="green-text">Waiting for Delivery</span>   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <span>to fix a delivery time.</span>
+                                <span class="green-text">Waiting for Delivery</span>   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <span>to fix a delivery time.</span> <a class="btn btn-primary">Mark Received</a>
 
                             @endif
 
