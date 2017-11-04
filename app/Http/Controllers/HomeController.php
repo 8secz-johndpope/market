@@ -730,11 +730,14 @@ class HomeController extends BaseController
     public function suggest(Request $request)
     {
         $text = $request->q;
+
         if(preg_match('/\s/',$text)>0){
             $dict = ['title.keyword'=> strtolower($text)];
+            $dict2 = ['description.keyword'=> strtolower($text)];
 
         }else{
             $dict = ['title'=> strtolower($text)];
+            $dict2 = ['description'=> strtolower($text)];
 
         }
         $params = [
@@ -742,7 +745,7 @@ class HomeController extends BaseController
             'type' => 'advert',
             'body' => [
                 'size' => 0,
-                'query' => ['bool'=>['should'=>[['term'=>$dict]]]],
+                'query' => ['bool'=>['should'=>[['term'=>$dict],['term'=>$dict2]]]],
                 'aggs' => [
                     'group_by_category' => [
                         "terms" => [ "field"=> "category", "size"=> 5]
