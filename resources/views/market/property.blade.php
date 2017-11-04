@@ -148,22 +148,15 @@
                                     });
                                 }
                                 $('.nav.nav-tabs a').click(function () {
-     //   initMap();
-     setTimeout(function(){
-
-        x = map.getZoom();
-    c = map.getCenter();
-            google.maps.event.trigger(map, 'resize');
-
-    map.setZoom(x);
-    map.setCenter(c);
-        console.log("init map");
-    }, 1000);
-    });
+                                    x = map.getZoom();
+                                    c = map.getCenter();
+                                    google.maps.event.trigger(map, 'resize');
+                                    map.setZoom(x);
+                                    map.setCenter(c);
+                                });
                                 
                                 $(document).ready(function() {
-                            initMap();
-//your code
+                                    initMap();
                                 });
                                 
 
