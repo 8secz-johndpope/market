@@ -252,7 +252,7 @@
                                                                 <input type="text" class="form-control" id="{{$field->slug}}" > <a class="add-bullet btn btn-primary" data-id="{{$field->slug}}" >Add</a>
                                                             </div>
                                                         @elseif($field->type === 'date')
-                                                            <input class="form-control" type="date" name="{{$field->slug}}"  min="date('y-m-d')" value="{{$advert->meta($field->slug)}}">
+                                                            <input class="form-control" type="date" name="{{$field->slug}}"  min="{{date('y-m-d')}}" value="{{$advert->meta($field->slug)}}">
                                                         @else
                                                             <input class="form-control" type="text" name="{{$field->slug}}"   value="{{$advert->meta($field->slug)}}">
                                                         @endif
