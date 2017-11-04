@@ -37,6 +37,10 @@
     width: 8px;
     width: .8rem;
 }
+.list-two-col, .list-two-col li:after {
+    border-color: #ececec;
+    border-style: solid;
+}
 .list-style-square li:after {
     border-style: dashed;
     border-color: #dfdfe1;
