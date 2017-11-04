@@ -109,8 +109,8 @@
 
                             @else
                                     <tr> <td><span class="green-text">Waiting for Delivery</span> </td> <td>  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <span>to fix a delivery time.</span></td> <td> <a class="btn btn-primary">Mark Received</a></td> </tr>
-                            </table>
                             @endif
+                            </table>
 
                         </div>
                     </div>
@@ -163,8 +163,9 @@
                                <tr><td> <a class="btn btn-primary">Mark Shipped</a>  </td> <td>     <a class="btn btn-danger">Cancel Order</a>           </td> <td>              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></td></tr>
                        @else
                                <tr><td><a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <span>to fix a delivery time.</span>  </td> <td>     <a class="btn btn-danger">Cancel Order</a> </td><td></td></tr>
-                       </table>
                        @endif
+                       </table>
+
                        <br>
 
                        @if($sale->advert->urgent_expires())
