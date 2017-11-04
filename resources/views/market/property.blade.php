@@ -373,6 +373,7 @@
     })
     $('.small-image>a').click(function () {
         var src = $(this).children().first().attr('src');
+        console.log(src);
         $('#image-active').attr('src', src);
     });
 
