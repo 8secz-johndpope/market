@@ -115,7 +115,7 @@
                                     <h3>Key features</h3> 
                                     <ul class="list-two-col list-style-square">
                                     @foreach($advert->meta('key_features') as $key)
-                                        <li>{{$key}}</li>
+                                        <li class="col-sm-6">{{$key}}</li>
                                     @endforeach
                                     </ul>
                                 </div>
@@ -329,6 +329,7 @@
     $('#upload-cv').change(function () {
         upload_cv();
     });
+    $
 </script>
 <script>
     function initMap() {
