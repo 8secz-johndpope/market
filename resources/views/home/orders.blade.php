@@ -106,8 +106,12 @@
 
                             @elseif($sale->type===1)
                                     <div class="col-sm-3">
+                                        @if($sale->status===1)
                                         <span class="yellow-text">Waiting for Dispatch</span>
-
+                                        @elseif($sale->satus===2)
+                                            <span class="green-text">Shipped</span>
+                                        @elseif($sale->status==3)
+                                            <span class="red-text">Canceled</span>
                                         <p class="bold-text">Shipping Address</p>
                                         <p>{{$sale->address->line1}}</p>
                                         <p>{{$sale->address->city}}</p>
@@ -116,7 +120,14 @@
                                     </div> <div class="col-sm-3">  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a></div>
 
                             @else
-                                    <div class="col-sm-3"><span class="yellow-text">Waiting for Delivery</span>
+                                    <div class="col-sm-3">
+                                        @if($sale->status===1)
+                                        <span class="yellow-text">Waiting for Delivery</span>
+                                        @elseif($sale->satus===2)
+                                            <span class="green-text">Delivered</span>
+                                        @elseif($sale->status==3)
+                                            <span class="red-text">Canceled</span>
+                                        @endif
                                         <p class="bold-text">Delivery Address</p>
                                         <p>{{$sale->address->line1}}</p>
                                         <p>{{$sale->address->city}}</p>
@@ -174,7 +185,14 @@
                                <div class="col-sm-3"> <span class="green-text">Completed</span>    </div> <div class="col-sm-3">                    <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a></div>
                        @elseif($sale->type===1)
                                <div class="col-sm-3">
+                                   @if($sale->status===1)
                                    <span class="yellow-text">Need to be Shipped</span>
+                                   @elseif($sale->satus===2)
+                                       <span class="green-text">Shipped</span>
+
+                                   @elseif($sale->status==3)
+                                       <span class="red-text">Canceled</span>
+                                   @endif
                                    <p class="bold-text">Shipping Address</p>
                                    <p>{{$sale->user->name.' '.$sale->user->last}}</p>
                                    <p>{{$sale->address->line1}}</p>
@@ -183,7 +201,13 @@
                                </div> <div class="col-sm-3"> <a class="btn btn-primary" href="/user/order/mark/shipped/{{$sale->id}}">Mark Shipped</a>  <br>              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <br>    <a class="btn btn-danger">Cancel Order</a>           </div>
                        @else
                                <div class="col-sm-3">
+                                   @if($sale->status===1)
                                    <span class="yellow-text">Need to be Delivered</span>
+                                   @elseif($sale->satus===2)
+                                       <span class="green-text">Delivered</span>
+                                   @elseif($sale->status==3)
+                                           <span class="red-text">Canceled</span>
+                                       @endif
                                    <p class="bold-text">Delivery Address</p>
                                    <p>{{$sale->user->name.' '.$sale->user->last}}</p>
                                    <p>{{$sale->address->line1}}</p>
