@@ -54,4 +54,7 @@ ul.list-two-col{
     border-top: 2px solid #ff9d2c;
     color: #ff9d2c ;
 }
+.nav-tabs>li>a {
+    border: 1px solid #ddd;
+} 
 
