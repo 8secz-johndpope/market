@@ -42,7 +42,7 @@
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                            @for($i=0; $i<$images.count(); $i++)
+                            @for($i=0; $i<count($images); $i++)
                             <div class="item frame">
                                 @for($j=0; $j < 5; $j++)
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$images[$i+$j]}}?1500586448" alt="Los Angeles">
