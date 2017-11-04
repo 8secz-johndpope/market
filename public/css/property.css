@@ -1,6 +1,10 @@
 .meta{
 	margin-top: 0px;
 }
+.meta-bold{
+	font-size: 14px;
+    font-weight: normal;
+}
 .tab-content {
     border: 1px solid #ddd;
     border-top-color: transparent;
