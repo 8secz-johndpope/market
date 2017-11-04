@@ -463,7 +463,7 @@ class UserController extends BaseController
             $categories[]=$category;
         }
 
-        return ['result'=>$categories];
+        return $categories;
     }
     public function save(Request $request){
         if($request->has('id'))

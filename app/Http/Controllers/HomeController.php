@@ -1272,16 +1272,27 @@ class HomeController extends BaseController
     public function mark_received(Request $request,$id){
         $sale=Sale::find($id);
         $sale->status=2;
+        \Stripe\Transfer::create(array(
+            "amount" => (int)(90*$sale->advert->price()),
+            "currency" => "gbp",
+            "destination" => $sale->advert->user->stripe_account
+        ));
         $sale->save();
         return redirect('/user/manage/orders');
     }
     public function mark_shipped(Request $request,$id){
+
         $sale=Sale::find($id);
         if($sale->advert->shipping->tracking==='Yes')
         {
             return redirect('/user/order/provide/tracking/'.$sale->id);
         }
         $sale->status=2;
+        \Stripe\Transfer::create(array(
+            "amount" => (int)(90*$sale->advert->price()),
+            "currency" => "gbp",
+            "destination" => $sale->advert->user->stripe_account
+        ));
         $sale->save();
         return redirect('/user/manage/orders');
     }
@@ -1304,6 +1315,11 @@ class HomeController extends BaseController
         $sale=Sale::find($request->id);
         $sale->tracking = $request->tracking;
         $sale->status=2;
+        \Stripe\Transfer::create(array(
+            "amount" => (int)(90*$sale->advert->price()),
+            "currency" => "gbp",
+            "destination" => $sale->advert->user->stripe_account
+        ));
         $sale->save();
         return redirect('/user/manage/orders');
     }
