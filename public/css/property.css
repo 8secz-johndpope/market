@@ -4,6 +4,7 @@
 .meta-bold{
 	font-size: 14px;
     font-weight: normal;
+    padding-left: 10px;
 }
 .tab-content {
     border: 1px solid #ddd;
