@@ -17,7 +17,7 @@ class Sale extends Model
         if($this->type===0)
         return $advert->price()+$advert->delivery();
         else if($this->type===1){
-            return $advert->price()+$advert->shipping();
+            return $advert->price()+$advert->shipping_cost();
         }else{
             return $advert->price();
         }
