@@ -108,7 +108,7 @@
                                     <div class="col-sm-3">
                                         <span class="yellow-text">Waiting for Dispatch</span>
 
-                                        <h4 class="bold-text">Shipping Address</h4>
+                                        <p class="bold-text">Shipping Address</p>
                                         <p>{{$sale->address->line1}}</p>
                                         <p>{{$sale->address->city}}</p>
                                         <p>{{$sale->address->postcode}}</p>
@@ -117,7 +117,7 @@
 
                             @else
                                     <div class="col-sm-3"><span class="yellow-text">Waiting for Delivery</span>
-                                        <h4 class="bold-text">Delivery Address</h4>
+                                        <p class="bold-text">Delivery Address</p>
                                         <p>{{$sale->address->line1}}</p>
                                         <p>{{$sale->address->city}}</p>
                                         <p>{{$sale->address->postcode}}</p>
@@ -175,7 +175,7 @@
                        @elseif($sale->type===1)
                                <div class="col-sm-3">
                                    <span class="yellow-text">Need to be Shipped</span>
-                                   <h4 class="bold-text">Shipping Address</h4>
+                                   <p class="bold-text">Shipping Address</p>
                                    <p>{{$sale->user->name.' '.$sale->user->last}}</p>
                                    <p>{{$sale->address->line1}}</p>
                                    <p>{{$sale->address->city}}</p>
@@ -184,7 +184,7 @@
                        @else
                                <div class="col-sm-3">
                                    <span class="yellow-text">Need to be Delivered</span>
-                                   <h4 class="bold-text">Delivery Address</h4>
+                                   <p class="bold-text">Delivery Address</p>
                                    <p>{{$sale->user->name.' '.$sale->user->last}}</p>
                                    <p>{{$sale->address->line1}}</p>
                                    <p>{{$sale->address->city}}</p>
