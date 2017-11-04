@@ -1278,6 +1278,13 @@ class HomeController extends BaseController
         $sale->save();
         return redirect('/user/manage/orders');
     }
+
+    public function cancel_sale(Request $request,$id){
+        $sale=Sale::find($id);
+        $sale->status=3;
+        $sale->save();
+        return redirect('/user/manage/orders');
+    }
     public function sale_stripe(Request $request,$id){
         $user = Auth::user();
         $sale=Sale::find($id);
