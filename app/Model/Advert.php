@@ -451,6 +451,9 @@ class Advert extends  BaseModel
         return $this->meta('price')/100;
     }
     public function shipping(){
+        return $this->belongsTo('App\Model\Shipping');
+    }
+    public function shipping_cost(){
         if($this->dict===null)
             $this->fetch();
         return $this->meta('shipping')/100;

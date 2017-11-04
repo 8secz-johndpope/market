@@ -104,7 +104,7 @@
 
                         @endif
                         @if($sale->type===1)
-                            <tr><td>Shipping:</td><td><span class="bold-text">£{{$sale->advert->shipping()}}</span></td></tr>
+                            <tr><td>Shipping:</td><td><span class="bold-text">£{{$sale->advert->shipping_cost()}}</span></td></tr>
 
                         @endif
 
