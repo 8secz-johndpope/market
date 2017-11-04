@@ -45,7 +45,7 @@
                             @for($i=0; $i< count($images); $i++)
                             <div class="item">
                                 @for($j=0; $j < 5 && ($i+$j) < count($images); $j++)
-                                <div class="col-sm-2 small-image">
+                                <div class="small-image">
                                     <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$images[$i+$j]}}?1500586448" alt="Los Angeles">
                                 </div>
                                 @endfor
