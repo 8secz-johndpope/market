@@ -1267,13 +1267,13 @@ class HomeController extends BaseController
 
     }
     public function mark_received(Request $request,$id){
-        $sale=Sale::fine($id);
+        $sale=Sale::find($id);
         $sale->status=2;
         $sale->save();
         return redirect('/user/manage/orders');
     }
     public function mark_shipped(Request $request,$id){
-        $sale=Sale::fine($id);
+        $sale=Sale::find($id);
         $sale->status=2;
         $sale->save();
         return redirect('/user/manage/orders');
