@@ -1336,11 +1336,14 @@ class HomeController extends BaseController
                      $sale->save();
             $sale->advert->update_fields(['sold'=>1]);
 
-            \Stripe\Transfer::create(array(
-                "amount" => (int)(95*$sale->advert->price()),
-                "currency" => "gbp",
-                "destination" => $sale->advert->user->stripe_account
-            ));
+            if($sale->type===2){
+                \Stripe\Transfer::create(array(
+                    "amount" => (int)(90*$sale->advert->price()),
+                    "currency" => "gbp",
+                    "destination" => $sale->advert->user->stripe_account
+                ));
+
+            }
 
 
                 return redirect('/user/manage/orders');
