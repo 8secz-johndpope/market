@@ -182,7 +182,7 @@
                         @if($advert->has_param('canship')&&$advert->param('canship')===1)
                             <h4>Can Ship Nationwide</h4>
                             <p>Price</p>
-                            <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->shipping()}}&nbsp;&nbsp; Shipping</span>
+                            <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->shipping_cost()}}&nbsp;&nbsp; Shipping</span>
                             <br><br>
                             <form action="/user/ad/sale" method="post">
                                 <input name="id" type="hidden" value="{{$advert->id}}">
