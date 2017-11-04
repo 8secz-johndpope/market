@@ -126,12 +126,13 @@
                                     <br>{{$part}}
                                 @endforeach
                             </div>
+                                                        <div id="map"></div>
+
                         </div>
                         <div id="tap-map" class="tab-pane fade">           
                             <div class="row mapframe">
                         <div class="col-sm-12">
 
-                            <div id="map"></div>
                             <script>
                                 function initMap() {
                                     var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
@@ -145,12 +146,12 @@
                                         map: map
                                     });
                                 }
-                                /*
+                                
                                 $(document).ready(function() {
                             initMap();
 //your code
                                 });
-                                */
+                                
 
                             </script>
 
@@ -351,7 +352,7 @@
         upload_cv();
     });
     $('.nav.nav-tabs a').click(function () {
-        initMap();
+     //   initMap();
         console.log("init map");
     });
 </script>
