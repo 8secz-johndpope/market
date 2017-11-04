@@ -102,15 +102,15 @@
                             @endif
                             <br>
                           @if($sale->type===2)
-                            <a class="btn btn-success">I've received the Item</a>
+                                <span class="green-text">Order Completed</span>   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
+
                             @elseif($sale->type===1)
-                                          <span class="green-text">To Be Shipped</span>
-                                          @else
-                                <span class="green-text">To Be Delivered</span>
+                                <span class="green-text">Waiting for Dispatch</span>  <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
+
+                            @else
+                                <span class="green-text">Waiting for Delivery</span>   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <span>to fix a delivery time.</span>
 
                             @endif
-                            <br>
-                            <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a>
 
                         </div>
                     </div>
@@ -157,14 +157,13 @@
                        @endif
                         <br>
                        @if($sale->type===2)
-                           <span class="green-text">Completed</span>
+                           <span class="green-text">Completed</span>                         <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a>
                        @elseif($sale->type===1)
-                           <a class="btn btn-primary">Update Shipping Info</a>
+                           <a class="btn btn-primary">Mark Shipped</a>  <a class="btn btn-danger">Cancel Order</a>                        <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a>
                        @else
-                           <a class="btn-primary btn">Update Deliver Info</a>
+                           <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <span>to fix a delivery time.</span>
                        @endif
                        <br>
-                       <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a>
 
                        @if($sale->advert->urgent_expires())
                            <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
