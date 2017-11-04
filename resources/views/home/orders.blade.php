@@ -121,7 +121,7 @@
                                         <p>{{$sale->address->line1}}</p>
                                         <p>{{$sale->address->city}}</p>
                                         <p>{{$sale->address->postcode}}</p>
-                                    </div> <div class="col-sm-3">   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <p>to fix a delivery time.</p> </div> <div class="col-sm-3">  <a class="btn btn-primary">Mark Received</a></div>
+                                    </div> <div class="col-sm-3">   <a href="/user/reply/{{$sale->advert->id}}" class="btn btn-default">Contact Seller</a> <p>to fix a delivery time.</p>  <a class="btn btn-primary">Mark Received</a></div>
                             @endif
                             </div>
 
@@ -180,7 +180,7 @@
                                    <p>{{$sale->address->line1}}</p>
                                    <p>{{$sale->address->city}}</p>
                                    <p>{{$sale->address->postcode}}</p>
-                               </div> <div class="col-sm-3"> <a class="btn btn-primary">Mark Shipped</a>   </div> <div class="col-sm-3">              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> </div> <div class="col-sm-3">    <a class="btn btn-danger">Cancel Order</a>           </div>
+                               </div> <div class="col-sm-3"> <a class="btn btn-primary">Mark Shipped</a>  <br>              <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <br>    <a class="btn btn-danger">Cancel Order</a>           </div>
                        @else
                                <div class="col-sm-3">
                                    <span class="yellow-text">Need to be Delivered</span>
@@ -189,7 +189,7 @@
                                    <p>{{$sale->address->line1}}</p>
                                    <p>{{$sale->address->city}}</p>
                                    <p>{{$sale->address->postcode}}</p>
-                               </div>  <div class="col-sm-3"> <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <p>to fix a delivery time.</p>   </div> <div class="col-sm-3">     <a class="btn btn-danger">Cancel Order</a> </div>
+                               </div>  <div class="col-sm-3"> <a href="/user/breply/{{$sale->id}}" class="btn btn-default">Contact Buyer</a> <p>to fix a delivery time.</p>      <a class="btn btn-danger">Cancel Order</a> </div>
                        @endif
                        </div>
 
