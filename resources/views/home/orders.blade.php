@@ -108,7 +108,7 @@
                                     <div class="col-sm-3">
                                         @if($sale->status===1)
                                         <span class="yellow-text">Waiting for Dispatch</span>
-                                        @elseif($sale->satus===2)
+                                        @elseif($sale->status===2)
                                             <span class="green-text">Shipped</span>
                                         @elseif($sale->status==3)
                                             <span class="red-text">Canceled</span>
@@ -124,7 +124,7 @@
                                     <div class="col-sm-3">
                                         @if($sale->status===1)
                                         <span class="yellow-text">Waiting for Delivery</span>
-                                        @elseif($sale->satus===2)
+                                        @elseif($sale->status===2)
                                             <span class="green-text">Delivered</span>
                                         @elseif($sale->status==3)
                                             <span class="red-text">Canceled</span>
