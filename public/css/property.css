@@ -37,3 +37,7 @@
     width: 8px;
     width: .8rem;
 }
+.list-two-col li:nth-child(odd):after {
+    border-style: dashed;
+    border-color: #dfdfe1;
+}
