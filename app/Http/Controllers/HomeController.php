@@ -730,7 +730,7 @@ class HomeController extends BaseController
     public function suggest(Request $request)
     {
         $text = $request->q;
-        if(preg_match('/\s/',$text)===0){
+        if(preg_match('/\s/',$text)>0){
             $dict = ['title.keyword'=> strtolower($text)];
 
         }else{
