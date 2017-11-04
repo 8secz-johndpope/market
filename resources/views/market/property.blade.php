@@ -126,13 +126,12 @@
                                     <br>{{$part}}
                                 @endforeach
                             </div>
-                                                        <div id="map"></div>
+                                                        <div id="map" style="display: none;"></div>
 
                         </div>
                         <div id="tap-map" class="tab-pane fade">           
                             <div class="row mapframe">
                         <div class="col-sm-12">
-                                                        <div id="map"></div>
 
                             <script>
                                 function initMap() {
