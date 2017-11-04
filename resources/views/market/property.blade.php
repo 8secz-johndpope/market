@@ -92,11 +92,11 @@
                     </div>
                     @endif
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#description">Description</a></li>
-                        <li><a data-toggle="tab" href="#map">Map</a></li>
+                        <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
+                        <li><a data-toggle="tab" href="#tap-map">Map</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div id="description" class="tab-pane fade in active">
+                        <div id="tab-description" class="tab-pane fade in active">
                             <div class="row meta">
                                 @foreach($metas as $meta)
                                     <div class="col-sm-3 meta-bold">
@@ -124,7 +124,7 @@
                                 @endforeach
                             </div>
                         </div>
-                        <div id="map" class="tab-pane fade">
+                        <div id="tap-map" class="tab-pane fade">
                             <div class="row mapframe">
                                 <div class="col-sm-12">
 
