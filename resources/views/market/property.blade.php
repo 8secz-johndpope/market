@@ -148,11 +148,14 @@
                                     });
                                 }
                                 $('.nav.nav-tabs a').click(function () {
-                                    x = map.getZoom();
-                                    c = map.getCenter();
-                                    google.maps.event.trigger(map, 'resize');
-                                    map.setZoom(x);
-                                    map.setCenter(c);
+                                    setTimeout(function(){
+                                        x = map.getZoom();
+                                        c = map.getCenter();
+                                        google.maps.event.trigger(map, 'resize');
+                                        map.setZoom(x);
+                                        map.setCenter(c);
+                                    },1000});
+
                                 });
                                 
                                 $(document).ready(function() {
