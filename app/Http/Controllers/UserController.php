@@ -570,7 +570,20 @@ class UserController extends BaseController
         }
         return ['msg'=>'saved'];
     }
+    public function create_sale(Request $request){
 
+        $user = Auth::user();
+        $advert=Advert::find($request->id);
+        $sale = new Sale;
+        $sale->user_id=$user->id;
+        $sale->type=$request->type;
+        $sale->advert_id=$advert->id;
+        $sale->seller_id=$advert->user_id;
+        $sale->save();
+
+        return $sale;
+
+    }
     public function offer(Request $request)
     {
         // Get the currently authenticated user...

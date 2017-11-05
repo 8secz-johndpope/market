@@ -133,6 +133,8 @@ Route::post('/user/advert/apply','UserController@apply')->middleware('auth:api')
 
 Route::get('/user/order/shippings','UserController@shippings')->middleware('auth:api');
 
+Route::post('/user/order/sale','UserController@create_sale')->middleware('auth:api');
+
 
 Route::post('/user/advert/ccreate','UserController@ccreate');
 
