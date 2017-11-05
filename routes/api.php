@@ -131,6 +131,9 @@ Route::post('/user/order/review','UserController@review')->middleware('auth:api'
 Route::post('/user/advert/apply','UserController@apply')->middleware('auth:api');
 
 
+Route::get('/user/order/shippings','UserController@shippings')->middleware('auth:api');
+
+
 Route::post('/user/advert/ccreate','UserController@ccreate');
 
 Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');

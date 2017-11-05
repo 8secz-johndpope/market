@@ -1303,6 +1303,10 @@ class UserController extends BaseController
         return ['success' => true, 'result' => ['msg' => 'The amount is added to account']];
     }
 
+    public function shippings(Request $request){
+        return Shipping::all();
+    }
+
     public function buy(Request $request)
     {
         $user = Auth::user();
