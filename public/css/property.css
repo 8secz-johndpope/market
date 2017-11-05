@@ -163,4 +163,6 @@ h2.item-name {
 }
 .favroite-icon{
 	float: left;
+    font-size: 20px;
+    margin-right: 10px
 }
