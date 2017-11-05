@@ -162,7 +162,10 @@ h2.item-name {
 	display: inline;
 }
 .favroite-icon{
-	float: left;
-    font-size: 20px;
-    margin-right: 10px
+	float: inherit;
+}
+span.glyphicon {
+    margin-right: 10px;
+    color: mediumseagreen;
+    font-size: 18px;
 }
