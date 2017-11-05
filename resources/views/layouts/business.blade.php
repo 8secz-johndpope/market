@@ -438,6 +438,7 @@
                 var object = JSON.parse(event.data);
                 if(object.message)
                 $('#message-notification').addClass('green-text');
+                if(typeof got_message === "function")
                 got_message(event.data)
 
 
