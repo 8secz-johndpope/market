@@ -356,7 +356,7 @@
         var src = $(this).children().first().attr('src');
         console.log(src);
         $('#image-active').attr('src', src);
-        var index = $(this).attr('data-index');
+        var index = $(this).attr('data-index') + 1;
         $('#index').html(index);
     });
 
