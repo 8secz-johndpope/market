@@ -187,7 +187,47 @@ class MessageController extends BaseController
         }
 
     }
+    public function buyer_send(Request $request){
+            $user = Auth::user();
+            $sale = Sale::find($request->id);
+            $advert = $sale->advert;
 
+
+
+            $room = Room::where('advert_id',$advert->id)->where('sender_id',$sale->user->id)->first();
+            if($room===null){
+                $room = new Room;
+                $room->advert_id = $advert->id;
+                $room->image=$advert->first_image();
+                $room->title=$advert->param('title');
+                $room->sender_id=$sale->user->id;
+                $room->save();
+                $room->users()->save($user);
+                if($sale->user->id!==$advert->user_id)
+                    $room->users()->save($sale->user);
+                $advert->replies++;
+                $advert->save();
+
+            }
+
+
+
+
+            $message = new Message;
+            $message->message=$request->message;
+            $message->from_msg=$user->id;
+            $message->to_msg=$sale->user->id;
+            $message->room_id=$room->id;
+            $message->url='';
+            $message->save();
+
+
+            $room->modify();
+
+            $this->notify($room,$message);
+            return ['msg'=>'sent','room_id'=>$room->id,'mid'=>$message->id];
+
+    }
     public function create_message(Request $request){
 
         $user = Auth::user();
