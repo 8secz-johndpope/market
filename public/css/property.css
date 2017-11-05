@@ -240,3 +240,10 @@ a.left.carousel-control:hover {
     background: #f4f4f5;
     box-shadow: none;
 }
+.col-sm-8.left-content {
+    width: calc(100% - 192px);
+}
+.col-sm-4.right-content {
+    width: 192px;
+    padding: 0px;
+}
