@@ -233,7 +233,7 @@
                     @if (!Auth::guest())
 
                     <li class="dropdown"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <span  class="glyphicon glyphicon-envelope"></span><span>&nbsp;&nbsp;({{count( Auth::user()->rooms)}})</span><span class="caret"></span></a>
+                           <span id="message-notification"> <span  class="glyphicon glyphicon-envelope"></span><span>&nbsp;&nbsp;({{count( Auth::user()->rooms)}})</span></span><span class="caret"></span></a>
                         <ul class="dropdown-menu all-menu-messages list-group" role="menu">
                             @foreach(Auth::user()->rooms as $room)
                                 <li class="list-group-item">
@@ -436,6 +436,7 @@
             exampleSocket.onmessage = function (event) {
                 console.log(event.data);
                 got_message(event.data)
+                $('#message-notification').addClass('red-text');
 
             }
             exampleSocket.onclose = function (event) {
