@@ -390,12 +390,12 @@
         }
     });
     $('.next>a').click(function () {
-        var index = $('#image-active').attr('data-index');
+        var index = parseInt($('#image-active').attr('data-index'));
         var children = $('.carousel-inner .item').children();
         var numImg = children.length
         if(index <  numImg){
             var nextImage = children.eq(index).find('img').attr('src');
-            index += 1;
+            index = index + 1;
             console.log(index);
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', nextImage);
