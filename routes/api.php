@@ -137,6 +137,9 @@ Route::post('/user/create/sale','UserController@create_sale')->middleware('auth:
 
 Route::post('/user/complete/sale','UserController@complete_sale')->middleware('auth:api');
 
+Route::get('/user/sale/mark/received/{id}','UserController@mark_received')->middleware('auth:api');
+
+
 Route::post('/user/advert/ccreate','UserController@ccreate');
 
 Route::get('/user/profile', 'UserController@profile')->middleware('auth:api');

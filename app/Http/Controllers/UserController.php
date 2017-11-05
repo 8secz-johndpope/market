@@ -614,6 +614,18 @@ class UserController extends BaseController
 
 
     }
+
+    public function mark_received(Request $request,$id){
+        $sale=Sale::find($id);
+        $sale->status=2;
+        \Stripe\Transfer::create(array(
+            "amount" => (int)(90*$sale->advert->price()),
+            "currency" => "gbp",
+            "destination" => $sale->advert->user->stripe_account
+        ));
+        $sale->save();
+        return ['msg'=>'done'];
+    }
     public function offer(Request $request)
     {
         // Get the currently authenticated user...
