@@ -311,12 +311,15 @@
                         <li class="list-group-item"><div class="favorite" style="width: 30px;padding-bottom: 30px;"><span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save property</div>
                         </li>
                         <li class="list-group-item">
+                            <span class="glyphicon glyphicon-pencil"></span>
                             Add notes
                         </li>
                         <li class="list-group-item">
+                            <span class="glyphicon glyphicon-print"></span>
                             Print
                         </li>
                         <li class="list-group-item">
+                            <span class="glyphicon glyphicon-envelope"></span>
                             Send to friend
                         </li>
                     </ul>
