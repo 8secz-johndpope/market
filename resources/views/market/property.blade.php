@@ -286,7 +286,7 @@
 
                 <div class="buttons">
                     <div class="details">
-                        <h4>This property is marketed by</h4>
+                        <h3>This property is marketed by</h3>
                         @if($advert->user!==null)
                         <div class="profile-picutre">
                             <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$advert->user->image}}">
