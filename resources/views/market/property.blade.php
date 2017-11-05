@@ -285,6 +285,25 @@
 
 
                 <div class="buttons">
+                    <div class="details">
+                        <h4>Info</h4>
+                        @if($advert->user!==null)
+                        <div class="profile-picutre">
+                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$advert->user->image}}">
+                        </div>
+                        <a href="/userads/{{$advert->user->id}}">Ads({{count($advert->user->adverts)}})</a>
+                        <ul class="list-group">
+                            <li class="list-group-item"><h4>{{$advert->user->display_name}}</h4></li>
+                            <li class="list-group-item">     <div class="user-badge">
+                                    {{$advert->user->vid}}
+                                </div></li>
+                        </ul>
+                        @else
+                        <ul class="list-group">
+                            <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
+                        </ul>
+                        @endif
+                    </div>
                     <ul class="list-group">
                         <li class="list-group-item"><div style="width: 30px;padding-bottom: 30px;"><span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span></div>
                         </li>
@@ -295,26 +314,6 @@
                         @endif
 
                     </ul>
-                    <h4>Info</h4>
-                    @if($advert->user!==null)
-                    <div class="profile-picutre">
-                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$advert->user->image}}">
-                    </div>
-                        <a href="/userads/{{$advert->user->id}}">Ads({{count($advert->user->adverts)}})</a>
-                        <ul class="list-group">
-                            <li class="list-group-item"><h4>{{$advert->user->display_name}}</h4></li>
-                            <li class="list-group-item">     <div class="user-badge">
-                                    {{$advert->user->vid}}
-                                </div></li>
-                        </ul>
-
-                        @else
-                        <ul class="list-group">
-                            <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
-                        </ul>
-                    @endif
-
-
                 </div>
 
             </div>

@@ -78,6 +78,7 @@ ul.list-two-col{
     position: absolute;
     left: 50%;
     top: 50%;
+    background: #ececec;
 }
 .small-image {
     width: calc((100% - 16px) / 5);
@@ -119,5 +120,12 @@ ul.list-two-col{
 }
 .images-info p {
     margin-bottom: 0px;
+}
+h2.item-name {
+    font-size: 23px;
+}
+.buttons {
+    margin-top: 150px;
+    border: 1px solid #ddd;
 }
 
