@@ -232,7 +232,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (!Auth::guest())
 
-                    <li class="dropdown"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span  class="glyphicon glyphicon-envelope"></span><span>&nbsp;&nbsp;({{count( Auth::user()->rooms)}})</span></a>
+                    <li class="dropdown"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span  class="glyphicon glyphicon-envelope"></span><span>&nbsp;&nbsp;({{count( Auth::user()->rooms)}})</span><span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                         </ul>
 
