@@ -571,6 +571,14 @@ class UserController extends BaseController
         }
         return ['msg'=>'saved'];
     }
+    public function buying(Request $request){
+        $user = Auth::user();
+        return $user->buying;
+    }
+    public function orders(Request $request){
+        $user = Auth::user();
+        return $user->orders;
+    }
     public function create_sale(Request $request){
 
 
