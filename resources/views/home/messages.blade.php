@@ -87,6 +87,9 @@
 
                     <div class="all-messages" id="all-msg">
                         @foreach($cur->messages as $message)
+                            @if($message->previous()&&$message->previous()->day()!==$message->day())
+                               <div class="day-seperator"><span class="day-seperator-text">{{$message->day()}}</span> </div>
+                                @endif
                             @if($message->from_msg===$user->id)
 
                             <div class="right-message"><span class="message"> {{$message->message}}&nbsp;&nbsp; <span class="message-time"> {{$message->timestamp()}}</span> </span></div>

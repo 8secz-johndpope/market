@@ -16,22 +16,16 @@ class Message extends Model
     {
         return $this->belongsTo('App\User','from_msg');
     }
+    public function previous(){
+        return Message::where('room_id',$this->room_id)->where('id','<',$this->id)->orderBy('id','desc')->first();
+    }
+    public function next(){
+        return Message::where('room_id',$this->room_id)->where('id','>',$this->id)->first();
+    }
     public function timestamp(){
         return date('H:i',strtotime($this->created_at));
     }
     public function day(){
-        $current = strtotime(date("Y-m-d"));
-        $yesterday = $current - 24*60*60;
-        $msg = strtotime(date('Y-m-d',strtotime($this->created_at)));
-
-        $diff = $msg-$current;
-        if($diff<24*3600){
-            return 'Today';
-        }
-        $diff = $msg-$yesterday;
-        if($diff<24*3600*2){
-            return 'Yesterday';
-        }
         return date('D d M',strtotime($this->created_at));
     }
 }
