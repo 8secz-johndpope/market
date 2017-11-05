@@ -68,25 +68,24 @@ ul.list-two-col{
 	padding-left: 0px;
 }
 .item{
-	width: 98%;
-    margin: 0 auto;
 	box-shadow:  none;
 	padding: 0px;
+	margin-bottom: 0px;
 }
 #current-image img {
     width: 100%;
 }
 .small-image {
-    width: calc(100%/5.28);
+    width: calc((100% - 16px) / 5);
     height: 90px;
     display: inline-block;
     overflow: hidden;
-    margin: 0 2px;
+    padding: 0px;
 }
 .small-image img {
 	width: 100%;
 }
 .carousel-inner {
-    padding: 10px 10px;
+    padding: 10px 0px;
 }
 
