@@ -767,6 +767,12 @@ img.icon-small {
 .all-menu-messages li a {
     color: blue;
 }
+.all-menu-messages li {
+    border-bottom: 1px solid lightgray;
+}
+.message-inside {
+    padding-left: 20px;
+}
 .unread-message {
     font-weight: bolder;
 }
