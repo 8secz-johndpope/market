@@ -147,6 +147,8 @@ h2.item-name {
     font-size: 17px;
 }
 .list-group-item{
+	padding-left: 15px;
+    padding-right: 15px;
 	border-bottom: 1px dashed #dfdfe1;
 }
 
