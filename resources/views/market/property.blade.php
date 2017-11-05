@@ -35,7 +35,7 @@
                                 <a href="javascript:void(0)" class="icon-before">Start slideshow</a>
                             </div>
                             <div class="col-sm-4 images-nav">
-                                <p> 1 of {{count($images)}}</p>
+                                <p> 1 of {{count($product['images'])}}</p>
                             </div>
                             <div class="col-sm-4 images-current">
                                 <p> Picture 1</p>
