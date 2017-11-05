@@ -202,12 +202,20 @@ h2.item-name {
 }
 a.carousel-control {
    margin: 10px 0;
+   width: 25px;
+   height: 90px;
 }
 a.right.carousel-control {
    background: rgba(0,0,0,0.3);
 }
 a.left.carousel-control {
    background: rgba(0,0,0,0.3);
+}
+a.right.carousel-control:hover {
+   background: rgba(0,0,0,0.5);
+}
+a.left.carousel-control:hover {
+   background: rgba(0,0,0,0.5);
 }
 .carousel-control span.glyphicon {
     font-size: 20px;
