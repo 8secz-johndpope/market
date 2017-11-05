@@ -224,25 +224,7 @@
             </div>
             <div class="business-drop collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    @if (!Auth::guest())
 
-                        <li class="dropdown  messages-nav"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <span > <span  class="glyphicon glyphicon-envelope"></span>    <span class="button__badge" style="display: none" id="message-notification">1</span></span><span class="caret"></span></a>
-                            <ul class="dropdown-menu all-menu-messages list-group" role="menu">
-                                @foreach(Auth::user()->rooms as $room)
-                                    <li class="list-group-item">
-                                        <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a>
-                                        <div class="message-inside">
-                                            <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
-                                            <span class="message-username">{{$room->last_message()->user->name}}</span>
-                                        </div>
-
-                                    </li>
-                                @endforeach
-                            </ul>
-
-                        </li>
-                    @endif
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Store</a></li>
                     @if (Auth::guest())
@@ -273,6 +255,25 @@
                                     </form>
                                 </li>
                             </ul>
+                        </li>
+                    @endif
+                    @if (!Auth::guest())
+
+                        <li class="dropdown  messages-nav"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <span > <span  class="glyphicon glyphicon-envelope"></span>    <span class="button__badge" style="display: none" id="message-notification">1</span></span><span class="caret"></span></a>
+                            <ul class="dropdown-menu all-menu-messages list-group" role="menu">
+                                @foreach(Auth::user()->rooms as $room)
+                                    <li class="list-group-item">
+                                        <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a>
+                                        <div class="message-inside">
+                                            <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
+                                            <span class="message-username">{{$room->last_message()->user->name}}</span>
+                                        </div>
+
+                                    </li>
+                                @endforeach
+                            </ul>
+
                         </li>
                     @endif
                 </ul>
