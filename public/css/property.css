@@ -230,3 +230,6 @@ a.left.carousel-control:hover {
 .tab-content>.active {
     display: inline-block;
 }
+.left-content{
+	padding-left: 0;
+}
