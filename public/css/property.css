@@ -73,7 +73,7 @@ ul.list-two-col{
 	margin-bottom: 0px;
 }
 #current-image img {
-    width: 100%;
+    height: 100%;
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
@@ -104,8 +104,9 @@ ul.list-two-col{
 #current-image {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 437px;
     overflow: hidden;
+    background: #ececec;
 }
 .images-info {
     position: absolute;
