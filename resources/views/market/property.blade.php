@@ -298,11 +298,6 @@
                             </address>
                             <p><a href="/userads/{{$advert->user->id}}">View other adverts from this user</a></p>
                         </div>
-                        <ul class="list-group">
-                            <li class="list-group-item">     <div class="user-badge">
-                                    {{$advert->user->vid}}
-                                </div></li>
-                        </ul>
                         @else
                         <ul class="list-group">
                             <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
