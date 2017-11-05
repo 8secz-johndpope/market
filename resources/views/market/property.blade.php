@@ -35,10 +35,10 @@
                                 <a href="javascript:void(0)" class="icon-before">Start slideshow</a>
                             </div>
                             <div class="col-sm-4 images-nav">
-                                <p><span id="index">1</span> of {{count($product['images'])}}</p>
+                                <p><span class="index">1</span> of {{count($product['images'])}}</p>
                             </div>
                             <div class="col-sm-4 images-current">
-                                <p> Picture <span id="index">1</span></p>
+                                <p> Picture <span class="index">1</span></p>
                             </div>
                         </div>
                     </div>
@@ -357,7 +357,7 @@
         console.log(src);
         $('#image-active').attr('src', src);
         var index = $(this).attr('data-index') + 1;
-        $('#index').html(index);
+        $('.index').html(index);
     });
 
 
