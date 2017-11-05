@@ -213,9 +213,11 @@ a.left.carousel-control {
 }
 a.right.carousel-control:hover {
    background: rgba(0,0,0,0.5);
+   color:#fff;
 }
 a.left.carousel-control:hover {
    background: rgba(0,0,0,0.5);
+   color:#fff;
 }
 .carousel-control span.glyphicon {
     font-size: 20px;
