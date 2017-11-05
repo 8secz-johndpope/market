@@ -434,8 +434,8 @@ a.red-color{
     font-weight: bold;
 }
 strong.ribbon {
-    background-color: #fff;
-    color: #3997ba;
+    background-color: #ff9d2c;
+    color: #fff;
     box-shadow: 0 0 2px 0 rgba(0,0,0,.2);
     text-transform: uppercase;
     /* color: #fff; */
