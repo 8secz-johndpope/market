@@ -139,6 +139,7 @@ Route::post('/user/complete/sale','UserController@complete_sale')->middleware('a
 
 Route::get('/user/sale/mark/received/{id}','UserController@mark_received')->middleware('auth:api');
 
+Route::get('/user/sale/mark/shipped/{id}','UserController@mark_shipped')->middleware('auth:api');
 
 Route::post('/user/advert/ccreate','UserController@ccreate');
 
