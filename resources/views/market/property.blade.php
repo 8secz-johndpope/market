@@ -308,9 +308,17 @@
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
                     </div>
                     <ul class="list-group">
-                        <li class="list-group-item"><div style="width: 30px;padding-bottom: 30px;"><span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span></div>
+                        <li class="list-group-item"><div style="width: 30px;padding-bottom: 30px;"><span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save property</div>
                         </li>
-
+                        <li class="list-group-item">
+                            Add notes
+                        </li>
+                        <li class="list-group-item">
+                            Print
+                        </li>
+                        <li class="list-group-item">
+                            Send to friend
+                        </li>
                     </ul>
                 </div>
 
