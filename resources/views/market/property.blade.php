@@ -14,7 +14,7 @@
     <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-9 col-sm-12">
+            <div class="col-offset-lg-1 col-lg-7 col-md-9 col-sm-12">
                 <ol class="breadcrumb">
                     @foreach($parents as $parent)
                     <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
