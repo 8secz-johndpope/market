@@ -204,10 +204,10 @@ a.carousel-control {
    margin: 10px 0;
 }
 a.right.carousel-control {
-   background: rgba(0,0,0,0.7);
+   background: rgba(0,0,0,0.3);
 }
 a.left.carousel-control {
-   background: rgba(0,0,0,0.7);
+   background: rgba(0,0,0,0.3);
 }
 .carousel-control span.glyphicon {
     font-size: 20px;
