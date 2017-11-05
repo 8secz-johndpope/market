@@ -505,7 +505,7 @@
 </script>
 @if (!Auth::guest())
     <script>
-        var token = '{{Auth::user()}}' ;
+        var token = '{{Auth::user()->access_token}}' ;
 
         var exampleSocket;
         reconnect();
