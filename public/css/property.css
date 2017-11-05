@@ -219,4 +219,8 @@ a.left.carousel-control:hover {
 }
 .carousel-control span.glyphicon {
     font-size: 20px;
+    color: rgba(255,255,255,0.6);
+}
+.carousel-control span.glyphicon:hover{
+	color:#fff;
 }
