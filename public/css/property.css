@@ -235,4 +235,8 @@ a.left.carousel-control:hover {
 }
 .color-grey{
 	padding: .8rem 8px !important;
+	border-bottom: 0;
+    border-top: 1px solid #dfdfe1;
+    background: #f4f4f5;
+    box-shadow: none;
 }
