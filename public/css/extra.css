@@ -772,6 +772,15 @@ span.message-time {
     font-size: 10px;
     font-weight: lighter;
 }
+span.day-seperator-text {
+    background: #673AB7;
+    color: white;
+    padding: 4px;
+    border-radius: 5px;
+}
+.day-seperator {
+    text-align: center;
+}
 .main-category {
     width: 14.28%;
     float: left;
