@@ -395,8 +395,8 @@
         var numImg = children.length
         if(index <  numImg){
             var nextImage = children.eq(index).find('img').attr('src');
-            console.log(nextImage);
-            index += 1
+            index += 1;
+            console.log(index);
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', nextImage);
             $('.index').text(index);
