@@ -188,8 +188,8 @@
 
 
                             @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
-                                    <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
-<span class="hide-visually">This ad is </span>Urgent
+                                    <span class="urgent-span">
+Urgent
 </span>
                             @endif
 
