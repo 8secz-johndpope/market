@@ -227,3 +227,6 @@ a.left.carousel-control:hover {
 .active-image{
 	border: 1px solid black;
 }
+.tab-content>.active {
+    display: inline-block;
+}

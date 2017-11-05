@@ -88,7 +88,7 @@
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
-                            <div class="left-content">
+                            <div class="col-sm-8 left-content">
                                 @if($category->id == 307000000)
                                     <h3>Letting information:</h3>
                                 @endif
@@ -119,7 +119,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <div class="right-content">
+                            <div class="col-sm-4 right-content">
                                 <div class="map-image">
                                     <img src="https://maps.googleapis.com/maps/api/staticmap?center={!! $lat !!},{!! $lng !!}&zoom=12&size=190x222&markers=color:blue%7Clabel:S%7C{!! $lat !!},{!! $lng !!}&key=AIzaSyCe5IY6S4WvKrjmvpgTwHyO1oiX4pRUUD8">
                                 </div>
