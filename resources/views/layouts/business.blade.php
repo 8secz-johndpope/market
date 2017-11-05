@@ -234,7 +234,7 @@
 
                     <li class="dropdown"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             <span  class="glyphicon glyphicon-envelope"></span><span>&nbsp;&nbsp;({{count( Auth::user()->rooms)}})</span><span class="caret"></span></a>
-                        <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-menu all-menu-messages" role="menu">
                             @foreach(Auth::user()->rooms as $room)
                                 <div class="media">
                                     <div class="media-left">
