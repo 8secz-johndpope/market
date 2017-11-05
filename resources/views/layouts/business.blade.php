@@ -230,8 +230,10 @@
             </div>
             <div class="business-drop collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/user/manage/messages"><span  class="glyphicon glyphicon-envelope"></span><span>&nbsp;&nbsp;({{count( Auth::user()->rooms)}})</span></a></li>
+                    @if (!Auth::guest())
 
+                    <li class="dropdown"><a href="/user/manage/messages"><span  class="glyphicon glyphicon-envelope"></span><span>&nbsp;&nbsp;({{count( Auth::user()->rooms)}})</span></a></li>
+                    @endif
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Store</a></li>
                     @if (Auth::guest())
