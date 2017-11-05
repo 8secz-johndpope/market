@@ -635,6 +635,10 @@ class UserController extends BaseController
     public function mark_shipped(Request $request,$id){
 
         $sale=Sale::find($id);
+        if($sale->status===0)
+        {
+            return ['msg'=>'Payment is not done for this sale'];
+        }
         if($sale->advert->shipping->tracking==='Yes')
         {
             if(!$request->has('tracking'))
