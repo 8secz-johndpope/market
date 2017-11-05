@@ -146,6 +146,9 @@ h2.item-name {
     padding-right: 50px;
     font-size: 17px;
 }
+.list-group {
+    margin-bottom: 0;
+}
 .list-group-item{
 	padding-left: 15px;
     padding-right: 15px;
