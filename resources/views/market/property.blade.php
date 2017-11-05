@@ -359,8 +359,13 @@
         var index = $(this).attr('data-index');
         $('.index').text(index);
         var indexCarousel = $('.carousel-inner .item.active').index();
-        if((indexCarousel+5) <= index){
+        var firsElementCarousel = indexCarousel * 5; 
+        var lastElementCarousel = firsElementCarousel + 5;
+
+        if(lastElementCarousel <= (index-1)){
             $("#myCarousel").carousel("next");
+        }else if(firsElementCarousel <= (index-1)){
+            $("#myCarousel").carousel("prev");
         }
     });
 
