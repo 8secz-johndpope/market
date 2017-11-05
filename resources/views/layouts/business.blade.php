@@ -237,7 +237,7 @@
                         <ul class="dropdown-menu all-menu-messages list-group" role="menu">
                             @foreach(Auth::user()->rooms as $room)
                                 <li class="list-group-item">
-                                        <a href="/user/manage/messages/{{$room->id}}"><p class="bold-text">{{$room->title}}</p></a>
+                                        <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a><br>
                                         <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
                                         <strong>{{$room->last_message()->user->name}}</strong>
                                 </li>
