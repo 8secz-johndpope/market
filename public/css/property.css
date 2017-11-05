@@ -201,10 +201,14 @@ h2.item-name {
     margin-bottom: 0;
 }
 a.carousel-control {
-    margin: 10px 0;
+   margin: 10px 0;
+}
+a.right.carousel-control {
    background: rgba(0,0,0,0.7);
 }
-
+a.left.carousel-control {
+   background: rgba(0,0,0,0.7);
+}
 .carousel-control .span.glyphicon {
     font-size: 20px;
 }
