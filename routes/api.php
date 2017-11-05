@@ -131,10 +131,11 @@ Route::post('/user/order/review','UserController@review')->middleware('auth:api'
 Route::post('/user/advert/apply','UserController@apply')->middleware('auth:api');
 
 
-Route::get('/user/order/shippings','UserController@shippings')->middleware('auth:api');
+Route::get('/user/sale/shippings','UserController@shippings')->middleware('auth:api');
 
-Route::post('/user/order/sale','UserController@create_sale')->middleware('auth:api');
+Route::post('/user/create/sale','UserController@create_sale')->middleware('auth:api');
 
+Route::post('/user/complete/sale','UserController@create_sale')->middleware('auth:api');
 
 Route::post('/user/advert/ccreate','UserController@ccreate');
 

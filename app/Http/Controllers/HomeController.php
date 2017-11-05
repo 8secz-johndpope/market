@@ -1358,7 +1358,7 @@ class HomeController extends BaseController
 
             if($sale->type===2){
                 \Stripe\Transfer::create(array(
-                    "amount" => (int)(90*$sale->advert->price()),
+                    "amount" => (int)(90*$sale->price()),
                     "currency" => "gbp",
                     "destination" => $sale->advert->user->stripe_account
                 ));

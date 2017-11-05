@@ -573,7 +573,7 @@ class UserController extends BaseController
     }
     public function create_sale(Request $request){
 
-        
+
         $user = Auth::user();
         $advert=Advert::find($request->id);
         $sale = new Sale;
@@ -584,6 +584,34 @@ class UserController extends BaseController
         $sale->save();
 
         return $sale;
+
+    }
+
+    public function complete_sale(Request $request){
+
+        $sale=Sale::find($request->id);
+        $transaction = Transaction::where('slug', $request->transaction_id)->first();
+        if ($transaction === null || $transaction->used === 1) {
+            return ['result' => ['msg' => 'Not a valid transaction id']];
+        }
+
+        if ($transaction->amount < $sale->amount()*100) {
+            return ['msg' => 'Wrong transaction amount'];
+        }
+        $transaction->used=1;
+        $transaction->save();
+
+        if($sale->type===2){
+            \Stripe\Transfer::create(array(
+                "amount" => (int)(90*$sale->price()),
+                "currency" => "gbp",
+                "destination" => $sale->advert->user->stripe_account
+            ));
+
+        }
+        return ['msg'=>'completed'];
+
+
 
     }
     public function offer(Request $request)
