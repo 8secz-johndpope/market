@@ -88,7 +88,6 @@ ul.list-two-col{
 }
 .small-image img {
 	width: 100%;
-	transform:translateY(20px);
 }
 .carousel-inner {
     padding: 10px 0px;
