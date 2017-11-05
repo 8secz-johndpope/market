@@ -226,7 +226,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (!Auth::guest())
 
-                        <li class="dropdown"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <li class="dropdown  messages-nav"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 <span > <span  class="glyphicon glyphicon-envelope"></span>    <span class="button__badge" style="display: none" id="message-notification">1</span></span><span class="caret"></span></a>
                             <ul class="dropdown-menu all-menu-messages list-group" role="menu">
                                 @foreach(Auth::user()->rooms as $room)
