@@ -150,10 +150,10 @@ h2.item-name {
     margin-bottom: 0;
 }
 .list-group-item{
+	padding: .8rem 0 1.6rem;
 	padding-left: 15px;
     padding-right: 15px;
 	border-bottom: 1px dashed #dfdfe1;
-	padding-top: .8rem;
 }
 .list-group-item:last-child{
 	border-bottom: none;
