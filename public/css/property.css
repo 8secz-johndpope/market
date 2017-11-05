@@ -136,4 +136,12 @@ h2.item-name {
 	padding: 15px;
 	border-bottom: 1px dashed #dfdfe1;
 }
+.btn-default {
+    color: #fff;
+    background-color: #ff8830;
+    border-color: #ff8830;
+    /* text-align: center; */
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
