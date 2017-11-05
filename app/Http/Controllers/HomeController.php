@@ -1364,6 +1364,7 @@ class HomeController extends BaseController
                 ));
 
             }
+            $this->notify_sale($sale);
 
 
                 return redirect('/user/manage/orders');

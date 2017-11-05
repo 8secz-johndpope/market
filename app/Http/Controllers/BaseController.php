@@ -42,16 +42,31 @@ class BaseController extends Controller
             {
                 Redis::publish(''.$usr->id, json_encode($message));
                 foreach ($usr->android as $token){
-                    $this->android($token,$room,$message,$message);
+                    $this->android($token,$room->title,$message->message,$message);
                 }
                 foreach ($usr->ios as $token){
-                    $this->ios($token,$room,$message,$message);
+                    $this->ios($token,$room->title,$message->message,$message);
                 }
             }
         }
     }
 
-    public function android($token,$room,$message,$data){
+
+
+    public function notify_sale($sale){
+
+
+                Redis::publish(''.$sale->advert->user_id, json_encode($sale));
+                foreach ($sale->advert->user->android as $token){
+                    $this->android($token,$sale->advert->param('title'),'Order Received',$sale);
+                }
+                foreach ($sale->advert->user->ios as $token){
+                    $this->ios($token,$sale->advert->param('title'),'Order Received',$sale);
+                }
+
+    }
+
+    public function android($token,$title,$message,$data){
         $user = Auth::user();
 
         $client = new Client([
@@ -62,7 +77,7 @@ class BaseController extends Controller
         ]);
         //$tk='cFX7C7fVoHA:APA91bE4gCqSZ6YynKZd98Ar8ZoI8ST1HBToikZjTk1Q0xyT6qOvm06kg8inGioJ7P9MCYrATTUQNmurmQAq3wCtheaH9yb2COtNSR4SDUD2l-h5uuS9idhPHJBRpvU0_5K5lFAoyXmh';
         $g = $client->request('POST', 'https://fcm.googleapis.com/fcm/send', [
-            'json' => ['to' => $token->token , 'priority'=>'high','data'=>$data,'notification'=>['title'=>$room->title,'body'=>$user->name.': '.$message->message,'sound'=>'mySound']]
+            'json' => ['to' => $token->token , 'priority'=>'high','data'=>$data,'notification'=>['title'=>$title,'body'=>$user->name.': '.$message,'sound'=>'mySound']]
         ]);
         $g = json_decode($g->getBody(), true);
 
@@ -85,7 +100,7 @@ class BaseController extends Controller
 
         //return ['great'=>'yes','res'=>$g];
     }
-    public function ios($token,$room,$message,$data){
+    public function ios($token,$title,$message,$data){
         $user = Auth::user();
 
         $client = new Client([
@@ -96,7 +111,7 @@ class BaseController extends Controller
         ]);
         //$tk='cFX7C7fVoHA:APA91bE4gCqSZ6YynKZd98Ar8ZoI8ST1HBToikZjTk1Q0xyT6qOvm06kg8inGioJ7P9MCYrATTUQNmurmQAq3wCtheaH9yb2COtNSR4SDUD2l-h5uuS9idhPHJBRpvU0_5K5lFAoyXmh';
         $g = $client->request('POST', 'https://sumra.net:8080/push', [
-            'json' => ['to' => $token->token , 'priority'=>'high','data'=>$data,'notification'=>['title'=>$room->title,'body'=>$user->name.': '.$message->message,'sound'=>'mySound']]
+            'json' => ['to' => $token->token , 'priority'=>'high','data'=>$data,'notification'=>['title'=>$title,'body'=>$user->name.': '.$message,'sound'=>'mySound']]
         ]);
         $g = json_decode($g->getBody(), true);
     }

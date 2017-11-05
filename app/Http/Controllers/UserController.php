@@ -639,6 +639,8 @@ class UserController extends BaseController
             ));
 
         }
+        $this->notify_sale($sale);
+
         return ['msg'=>'completed'];
 
 
