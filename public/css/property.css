@@ -126,9 +126,10 @@ h2.item-name {
 }
 .buttons {
     margin-top: 150px;
-    border: 1px dashed #dfdfe1;
+    border: 1px solid #ddd;
 }
 .details{
 	padding: 15px;
+	border: 1px dashed #dfdfe1;
 }
 
