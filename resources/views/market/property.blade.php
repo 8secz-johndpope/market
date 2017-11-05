@@ -362,9 +362,9 @@
         var firsElementCarousel = indexCarousel * 5; 
         var lastElementCarousel = firsElementCarousel + 5;
 
-        if(lastElementCarousel <= (index-1)){
+        if(lastElementCarousel < (index-1)){
             $("#myCarousel").carousel("next");
-        }else if(firsElementCarousel <= (index-1)){
+        }else if(firsElementCarousel > (index-1)){
             $("#myCarousel").carousel("prev");
         }
     });
