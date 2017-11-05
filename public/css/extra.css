@@ -764,6 +764,9 @@ img.icon-small {
     overflow: auto;
     padding: 10px;
 }
+.all-menu-messages li a {
+    color: blue;
+}
 .unread-message {
     font-weight: bolder;
 }
