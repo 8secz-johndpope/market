@@ -499,21 +499,71 @@ class UserController extends BaseController
             $body['images']=$request->images;
         if($request->has('description'))
             $body['description']=$request->description;
-        if(!empty($body))
+
+        $meta=[];
+
+        if($request->has('candeliver'))
+        {
+            $body['candeliver']=1;
+            $meta['distance']=(int)$request->distance;
+            $meta['delivery']=(int)($request->delivery*100);
+        }else{
+            $body['candeliver']=0;
+        }
+
+        if($request->has('freeshipping'))
+        {
+            $body['freeshipping']=1;
+            $meta['shipping']=0;
+        }else{
+            $body['freeshipping']=0;
+            $meta['shipping']=(int)($request->buyer_pays*100);
+        }
+
+        if($request->has('acceptreturns'))
+            $body['acceptreturns']=1;
+        else
+            $body['acceptreturns']=0;
+        if($request->has('canship')){
+
+            $body['canship']=1;
+            $meta['dispatch']=(int)$request->dispatch;
+            $body['shipping']=(int)$request->shipping;
+            $advert->shipping_id=(int)$request->shipping;
+            $advert->save();
+        }else{
+            $body['canship']=0;
+        }
+
         $advert->update_fields($body);
-        $body=[];
+
         foreach ($advert->category->fields as $field){
-            if($field->slug!=='price'&&$request->has($field->slug)){
-                $body[$field->slug] = $request->get($field->slug);
+            if($field->slug!=='price' && $field->slug!=='available_date' && $request->has($field->slug)){
+                $meta[$field->slug] = $request->get($field->slug);
             }
         }
         if($request->has('price')){
-            $body['price']=$request->get('price')*100;
+            $meta['price']=$request->price*100;
         }else{
-            $body['price']=-1;
+            $meta['price']=-1;
         }
+        if($request->has('available_date')){
+            $meta['available_date'] =  strtotime($request->get('available_date')) * 1000;
+        }
+
+
         if(!empty($body))
-        $advert->update_meta($body);
+            $advert->update_fields($body);
+        if(!empty($meta))
+            $advert->update_meta($meta);
+
+
+
+
+
+
+
+
         if($request->has('post')){
             $advert->publish();
             return ['msg'=>'posted'];
