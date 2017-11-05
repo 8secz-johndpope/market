@@ -436,7 +436,7 @@
             exampleSocket.onmessage = function (event) {
                 console.log(event.data);
                 got_message(event.data)
-                var object = JSON.parse(data);
+                var object = JSON.parse(event.data);
                 if(object.message)
                 $('#message-notification').addClass('red-text');
 
