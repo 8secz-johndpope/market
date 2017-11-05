@@ -291,6 +291,13 @@
                         <div class="profile-picutre">
                             <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$advert->user->image}}">
                         </div>
+                        <div class="user-details">
+                            <p><strong>{{$advert->user->name}}</strong></p>
+                            <address>
+                                
+                            </address>
+                            <p><a href="/userads/{{$advert->user->id}}">View other adverts from this user</a></p>
+                        </div>
                         <a href="/userads/{{$advert->user->id}}">Ads({{count($advert->user->adverts)}})</a>
                         <ul class="list-group">
                             <li class="list-group-item"><h4>{{$advert->user->name}}</h4></li>
