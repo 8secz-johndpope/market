@@ -245,7 +245,7 @@
                                                                 <ul id="ul_{{$field->slug}}">
                                                                     @if($advert->has_meta($field->slug))
                                                                         @foreach($advert->meta($field->slug) as $key)
-                                                                            <li>{{$key}} <input type="hidden" name="key_features[]" value="{{$key}}"></li>
+                                                                            <li>{{$key}} <input type="hidden" name="key_features[]" value="{{$key}}"><a href="javascript:void(0)">X</a></li>
                                                                         @endforeach
                                                                     @endif
                                                                 </ul>
@@ -608,6 +608,9 @@
         $('.add-bullet').click(function () {
             var text = $('#'+$(this).data('id')).val();
             $('#ul_'+$(this).data('id')).append('<li>'+text+'<input type="hidden" name="'+$(this).data('id')+'[]" value="'+text+'"> </li>');
+        });
+        $('.key-features ul>li>a').click(function () {
+           var text = $(this).parent().remove()
         });
     </script>
 @endsection
