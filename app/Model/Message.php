@@ -17,7 +17,7 @@ class Message extends Model
         return $this->belongsTo('App\User','from_msg');
     }
     public function timestamp(){
-        return date('G:i',strtotime($this->created_at));
+        return date('H:i',strtotime($this->created_at));
     }
     public function day(){
         $current = strtotime(date("Y-m-d"));
