@@ -203,6 +203,11 @@
 
 </head>
 <body class="">
+<audio id="notify-tune" controls style="display: none">
+    <source src="/css/y.ogg" type="audio/ogg">
+    <source src="/css/y.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 <header>
     
     <nav class="navbar navbar-inverse">
@@ -219,6 +224,25 @@
             </div>
             <div class="business-drop collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    @if (!Auth::guest())
+
+                        <li class="dropdown"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <span > <span  class="glyphicon glyphicon-envelope"></span>    <span class="button__badge" style="display: none" id="message-notification">1</span></span><span class="caret"></span></a>
+                            <ul class="dropdown-menu all-menu-messages list-group" role="menu">
+                                @foreach(Auth::user()->rooms as $room)
+                                    <li class="list-group-item">
+                                        <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a>
+                                        <div class="message-inside">
+                                            <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
+                                            <span class="message-username">{{$room->last_message()->user->name}}</span>
+                                        </div>
+
+                                    </li>
+                                @endforeach
+                            </ul>
+
+                        </li>
+                    @endif
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Store</a></li>
                     @if (Auth::guest())
@@ -793,5 +817,43 @@
     });
 
 </script>
+@if (!Auth::guest())
+    <script>
+        var token = '{{$user->access_token}}' ;
+
+        var exampleSocket;
+        reconnect();
+        function reconnect() {
+            exampleSocket = new WebSocket("wss://sumra.net:8080", "protocolOne");
+            exampleSocket.onopen = function (event) {
+
+
+
+                exampleSocket.send(JSON.stringify({'token': token}));
+
+            };
+            exampleSocket.onmessage = function (event) {
+                console.log(event.data);
+                var object = JSON.parse(event.data);
+                if(object.message)
+                {
+                    document.getElementById('notify-tune').play();
+                    $('#message-notification').show();
+
+                }
+                if(typeof got_message === "function")
+                    got_message(event.data)
+
+
+            }
+            exampleSocket.onclose = function (event) {
+                console.log(event.data);
+                reconnect();
+
+
+            }
+        }
+    </script>
+@endif
 </body>
 </html>
