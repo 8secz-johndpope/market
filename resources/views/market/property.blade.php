@@ -376,8 +376,8 @@
         if(index > 1){
             var children = $('.carousel-inner .item').children();
             var prevImage = children.eq(index - 2).find('i').attr('scr');
-            var numChildren = children.length;
-            console.log(prevImage);
+            $('#image-active').attr('data-index', index - 1);
+            $('#image-active').attr('src', prevImage);
         }
     });
 
