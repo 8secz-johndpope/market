@@ -126,6 +126,9 @@
                                 <div class="color-grey">
                                     <a href="#tap-map"> <span class="glyphicon glyphicon-zoom-in"></span>Enlarge this map</a>
                                 </div>
+                                <div class="color-grey nearest-stations">
+                                    <p>Nearest stations</p>
+                                </div>
                             </div>
                         </div>
                         <div id="tap-map" class="tab-pane fade">           
