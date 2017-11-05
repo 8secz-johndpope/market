@@ -172,6 +172,7 @@ span.glyphicon {
 .details h3{
 	font-size: 15px;
 	padding-bottom: 1.3rem;
+	margin-top: 0px;
 }
 .profile-picutre {
     display: block;
@@ -191,4 +192,5 @@ span.glyphicon {
 
 .user-details p {
     font-size: 13px;
+    margin-bottom: 0;
 }
