@@ -511,7 +511,7 @@ class UserController extends BaseController
             $body['candeliver']=0;
         }
 
-        if($request->has('freeshipping'))
+        if($request->has('freeshipping')&&$request->freeshipping===1)
         {
             $body['freeshipping']=1;
             $meta['shipping']=0;
