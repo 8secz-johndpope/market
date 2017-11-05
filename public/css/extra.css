@@ -848,6 +848,9 @@ a.message-back-button {
     }
 }
 @media (max-width: 1200px) {
+    .all-menu-messages {
+        display: none;
+    }
     h4.product-title {
         font-size: 17px;
         max-height: 34px;
