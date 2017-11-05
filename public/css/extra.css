@@ -768,6 +768,10 @@ img.icon-small {
 .sold-div {
     padding: 20px;
 }
+span.message-time {
+    font-size: 10px;
+    font-weight: lighter;
+}
 .main-category {
     width: 14.28%;
     float: left;
