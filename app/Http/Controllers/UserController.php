@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use App\Model\Sale;
 use Illuminate\Support\Facades\Redis;
 
 use App\Mail\AccountCreated;
@@ -572,6 +573,7 @@ class UserController extends BaseController
     }
     public function create_sale(Request $request){
 
+        
         $user = Auth::user();
         $advert=Advert::find($request->id);
         $sale = new Sale;
