@@ -247,3 +247,6 @@ a.left.carousel-control:hover {
     width: 192px;
     padding: 0px;
 }
+div#tap-map {
+    display: block;
+}
