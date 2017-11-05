@@ -376,8 +376,17 @@
         if(index > 1){
             var children = $('.carousel-inner .item').children();
             var prevImage = children.eq(index - 2).find('i').attr('scr');
-            $('#image-active').attr('data-index', index - 1);
+            index -= 1
+            $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', prevImage);
+            $('.index').text(index);
+            var indexCarousel = $('.carousel-inner .item.active').index();
+            var firsElementCarousel = indexCarousel * 5; 
+            var lastElementCarousel = firsElementCarousel + 5;
+
+            if(firsElementCarousel > (index-1)){
+                $("#myCarousel").carousel("prev");
+            }
         }
     });
 
