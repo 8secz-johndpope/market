@@ -87,7 +87,7 @@
 
                     <div class="all-messages" id="all-msg">
                         @foreach($cur->messages as $message)
-                            @if($message->previous()&&$message->previous()->day()!==$message->day())
+                            @if($message->previous()&&$message->previous()->day()!==$message->day()||!$message->previous())
                                <div class="day-seperator"><span class="day-seperator-text">{{$message->day()}}</span> </div>
                                 @endif
                             @if($message->from_msg===$user->id)
