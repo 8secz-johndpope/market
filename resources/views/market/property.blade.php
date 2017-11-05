@@ -358,6 +358,10 @@
         $('#image-active').attr('src', src);
         var index = $(this).attr('data-index');
         $('.index').text(index);
+        var indexCarousel = $('.carousel-inner .item.active').index();
+        if((indexCarousel+5) <= index){
+            $("#myCarousel").carousel("next");
+        }
     });
 
 
