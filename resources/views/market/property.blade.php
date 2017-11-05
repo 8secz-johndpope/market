@@ -403,7 +403,7 @@
             var indexCarousel = $('.carousel-inner .item.active').index();
             var firsElementCarousel = indexCarousel * 5; 
             var lastElementCarousel = firsElementCarousel + 5;
-            if(lastElementCarousel < (index-1)){
+            if(lastElementCarousel < (index)){
                 $("#myCarousel").carousel("next");
             }
         }
