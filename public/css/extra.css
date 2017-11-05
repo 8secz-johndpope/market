@@ -452,6 +452,12 @@ strong.ribbon {
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
+span.urgent-span {
+    background: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
 span.hide-visually {
     border: 0;
     clip: rect(0 0 0 0);
@@ -543,7 +549,7 @@ h4.product-title {
     max-width: 50px;
 }
 span.product-price {
-    color: orange;
+    color: black;
     font-weight: bold;
     font-size: 16px;
 }
