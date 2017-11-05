@@ -819,7 +819,7 @@
 </script>
 @if (!Auth::guest())
     <script>
-        var token = '{{$user->access_token}}' ;
+        var token = '{{Auth::user()->access_token}}' ;
 
         var exampleSocket;
         reconnect();
