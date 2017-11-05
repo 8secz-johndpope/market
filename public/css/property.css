@@ -161,3 +161,6 @@ h2.item-name {
 .favorite{
 	display: inline-block;
 }
+.favroite-icon{
+	float: left;
+}
