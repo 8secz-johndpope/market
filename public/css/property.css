@@ -209,6 +209,6 @@ a.right.carousel-control {
 a.left.carousel-control {
    background: rgba(0,0,0,0.7);
 }
-.carousel-control .span.glyphicon {
+.carousel-control span.glyphicon {
     font-size: 20px;
 }
