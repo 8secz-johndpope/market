@@ -130,6 +130,6 @@ h2.item-name {
 }
 .details{
 	padding: 15px;
-	border: 1px dashed #dfdfe1;
+	border-bottom: 1px dashed #dfdfe1;
 }
 
