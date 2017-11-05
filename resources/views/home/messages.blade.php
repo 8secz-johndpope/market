@@ -140,11 +140,9 @@
             var object = JSON.parse(data);
             if(object.message&&object.room_id==room)
             {
-                document.getElementById('notify-tune').play();
                 $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
                 scroll_bottom()
             }else if(object.message){
-                document.getElementById('notify-tune').play();
 
                 // location.reload();
                 axios.get('/user/manage/rooms/'+room, {
