@@ -149,6 +149,7 @@ Route::post('/user/sale/contact/buyer','MessageController@buyer_send')->middlewa
 Route::get('/user/sale/buying','UserController@buying')->middleware('auth:api');
 Route::get('/user/sale/orders','UserController@orders')->middleware('auth:api');
 
+Route::get('/user/address/{id}','UserController@address')->middleware('auth:api');
 
 Route::post('/user/sale/mark/shipped/{id}','UserController@mark_shipped')->middleware('auth:api');
 

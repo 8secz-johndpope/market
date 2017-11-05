@@ -1129,6 +1129,9 @@ class UserController extends BaseController
         $account->save();
         return ['status' => 'success'];
     }
+    public function address(Request $request,$id){
+        return Address::find($id);
+    }
 
     public function add_address(Request $request)
     {
