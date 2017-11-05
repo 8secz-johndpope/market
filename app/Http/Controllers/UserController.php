@@ -616,7 +616,12 @@ class UserController extends BaseController
     }
 
     public function mark_received(Request $request,$id){
+
         $sale=Sale::find($id);
+        if($sale->status===0)
+        {
+            return ['msg'=>'Payment is not done for this sale'];
+        }
         $sale->status=2;
         \Stripe\Transfer::create(array(
             "amount" => (int)(90*$sale->advert->price()),
