@@ -158,4 +158,6 @@ h2.item-name {
 .list-group-item:last-child{
 	border-bottom: none;
 }
-
+.favorite{
+	display: inline-block;
+}
