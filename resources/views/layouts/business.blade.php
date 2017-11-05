@@ -438,7 +438,7 @@
                 got_message(event.data)
                 var object = JSON.parse(event.data);
                 if(object.message)
-                $('#message-notification').addClass('red-text');
+                $('#message-notification').addClass('green-text');
 
             }
             exampleSocket.onclose = function (event) {
