@@ -359,6 +359,7 @@
         var src = $(this).children().first().attr('src');
         $('#image-active').attr('src', src);
         var index = $(this).attr('data-index');
+        $('#image-active').attr('data-index', index);
         $('.index').text(index);
         var indexCarousel = $('.carousel-inner .item.active').index();
         var firsElementCarousel = indexCarousel * 5; 
