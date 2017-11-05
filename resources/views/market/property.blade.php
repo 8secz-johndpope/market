@@ -357,7 +357,6 @@
     })
     $('.small-image>a').click(function () {
         var src = $(this).children().first().attr('src');
-        console.log(src);
         $('#image-active').attr('src', src);
         var index = $(this).attr('data-index');
         $('.index').text(index);
@@ -375,7 +374,8 @@
         var index = $('#image-active').attr('data-index');
         if(index > 1){
             var children = $('.carousel-inner .item').children();
-            var prevImage = children.eq(index - 2).find('i').attr('scr');
+            var prevImage = children.eq(index - 2).find('img').attr('scr');
+            console.log(prevImage);
             index -= 1
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', prevImage);
