@@ -29,15 +29,15 @@
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
                     <div id="current-image">
-                        <img id="image-active" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
+                        <img id="image-active" data-index="1" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
                         <div class="images-info">
                             <div class="col-sm-4 start-animation">
                                 <a href="javascript:void(0)" class="icon-before">Start slideshow</a>
                             </div>
                             <div class="col-sm-4 images-nav">
-                                <p><span class="prev"> < </span>
+                                <p><span class="prev"> <a href="javascript:void(0)"> < </a></span>
                                     <span class="index">1</span> of {{count($product['images'])}}
-                                    <span class="prev"> > </span>
+                                    <span class="prev"><a href="javascript:void(0)"> ></a></span>
                                 </p>
                             </div>
                             <div class="col-sm-4 images-current">
@@ -370,6 +370,11 @@
         }else if(firsElementCarousel > (index-1)){
             $("#myCarousel").carousel("prev");
         }
+    });
+    $('.prev>a').click(function () {
+        var index = $('#image-active').attr('data-index');
+        var numChildren = $('.carousel-inner .item').children().length;
+        console.log(numChildren);
     });
 
 
