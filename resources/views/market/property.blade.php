@@ -389,6 +389,25 @@
             }
         }
     });
+    $('.next>a').click(function () {
+        var index = $('#image-active').attr('data-index');
+        var children = $('.carousel-inner .item').children();
+        var numImg = children.length
+        if(index <  numImg){
+            var nextImage = children.eq(index).find('img').attr('src');
+            console.log(nextImage);
+            index += 1
+            $('#image-active').attr('data-index', index);
+            $('#image-active').attr('src', prevImage);
+            $('.index').text(index);
+            var indexCarousel = $('.carousel-inner .item.active').index();
+            var firsElementCarousel = indexCarousel * 5; 
+            var lastElementCarousel = firsElementCarousel + 5;
+            if(lastElementCarousel < (index-1)){
+                $("#myCarousel").carousel("next");
+            }
+        }
+    });
 
 
 
