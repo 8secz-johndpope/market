@@ -137,8 +137,36 @@
 
 
         }
-        var token = '{{$user->access_token}}' ;
+
         var room = @if($cur) {{$cur->id}} @else 0 @endif;
+
+        function got_message(data) {
+            var object = JSON.parse(data);
+            if(object.message&&object.room_id==room)
+            {
+                document.getElementById('notify-tune').play();
+                $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
+                scroll_bottom()
+            }else if(object.message){
+                document.getElementById('notify-tune').play();
+
+                // location.reload();
+                axios.get('/user/manage/rooms/'+room, {
+                    params: {}
+                })
+                    .then(function (response) {
+                        console.log(response);
+                        $('#all-rooms').html(response.data);
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+        }
+
+        var token = '{{$user->access_token}}' ;
 
         var exampleSocket;
         reconnect();
@@ -153,29 +181,7 @@
             };
             exampleSocket.onmessage = function (event) {
                 console.log(event.data);
-                var object = JSON.parse(event.data);
-                if(object.message&&object.room_id==room)
-                {
-                    document.getElementById('notify-tune').play();
-                    $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
-                    scroll_bottom()
-                }else if(object.message){
-                    document.getElementById('notify-tune').play();
-
-                    // location.reload();
-                    axios.get('/user/manage/rooms/'+room, {
-                        params: {}
-                    })
-                        .then(function (response) {
-                            console.log(response);
-                            $('#all-rooms').html(response.data);
-
-                        })
-                        .catch(function (error) {
-                            console.log(error);
-                        });
-
-                }
+                got_message(event.data)
 
             }
             exampleSocket.onclose = function (event) {
