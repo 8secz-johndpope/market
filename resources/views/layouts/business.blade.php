@@ -230,6 +230,8 @@
             </div>
             <div class="business-drop collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/user/manage/messages"><span class="glyphicon glyphicon-envelope"></span></a></li>
+
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Store</a></li>
                     @if (Auth::guest())
