@@ -224,3 +224,6 @@ a.left.carousel-control:hover {
 .carousel-control span.glyphicon:hover{
 	color:#fff;
 }
+.active-image{
+	border: 1px solid black;
+}
