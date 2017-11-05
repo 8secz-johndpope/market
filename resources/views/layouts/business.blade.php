@@ -234,17 +234,15 @@
 
                     <li class="dropdown"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             <span  class="glyphicon glyphicon-envelope"></span><span>&nbsp;&nbsp;({{count( Auth::user()->rooms)}})</span><span class="caret"></span></a>
-                        <div class="dropdown-menu all-menu-messages" role="menu">
+                        <ul class="dropdown-menu all-menu-messages list-group" role="menu">
                             @foreach(Auth::user()->rooms as $room)
-                                <div class="media">
-                                    <div class="media-body">
-                                        <a href="/user/manage/messages/{{$room->id}}"><h4 class="media-heading">{{$room->title}}</h4></a>
+                                <li class="list-group-item">
+                                        <a href="/user/manage/messages/{{$room->id}}"><p class="bold-text">{{$room->title}}</p></a>
                                         <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
                                         <strong>{{$room->last_message()->user->name}}</strong>
-                                    </div>
-                                </div>
+                                </li>
                             @endforeach
-                        </div>
+                        </ul>
 
                         </li>
                     @endif
