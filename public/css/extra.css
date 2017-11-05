@@ -780,6 +780,7 @@ span.day-seperator-text {
 }
 .day-seperator {
     text-align: center;
+    margin-top: 10px;
 }
 .main-category {
     width: 14.28%;
