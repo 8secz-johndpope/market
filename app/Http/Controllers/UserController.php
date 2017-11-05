@@ -579,6 +579,16 @@ class UserController extends BaseController
         $user = Auth::user();
         return $user->orders;
     }
+    public function cancel_sale(Request $request,$id){
+
+        $sale=Sale::find($id);
+        if($sale->status!==1){
+            return ['msg'=>'sale cannot be cancelled'];
+        }
+        $sale->status=3;
+        $sale->save();
+       return ['msg'=>'done'];
+    }
     public function distances(Request $request,$id){
         $user = Auth::user();
 
