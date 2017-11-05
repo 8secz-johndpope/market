@@ -96,7 +96,7 @@ ul.list-two-col{
     transform: translate(-50%, -50%);
 }
 .carousel-inner {
-    padding: 10px 0px;
+    padding: 5px 0px;
 }
 .items-box-price.font-5{
 	text-align: right;
@@ -201,7 +201,7 @@ h2.item-name {
     margin-bottom: 0;
 }
 a.carousel-control {
-   margin: 10px 0;
+   margin: 5px 0;
    width: 25px;
    height: 90px;
 }
