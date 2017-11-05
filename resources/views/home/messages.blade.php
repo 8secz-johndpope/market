@@ -166,31 +166,7 @@
             }
         }
 
-        var token = '{{$user->access_token}}' ;
 
-        var exampleSocket;
-        reconnect();
-        function reconnect() {
-            exampleSocket = new WebSocket("wss://sumra.net:8080", "protocolOne");
-            exampleSocket.onopen = function (event) {
-
-
-
-                exampleSocket.send(JSON.stringify({'token': token}));
-
-            };
-            exampleSocket.onmessage = function (event) {
-                console.log(event.data);
-                got_message(event.data)
-
-            }
-            exampleSocket.onclose = function (event) {
-                console.log(event.data);
-                reconnect();
-
-
-            }
-        }
 
 
     </script>
