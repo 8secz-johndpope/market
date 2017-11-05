@@ -20,7 +20,7 @@
 				 			<div class="panel-heading">
 				 				<a href="/{{$cat->slug}}">
 				 					<div class="center-block">
-				 						<img class="icon-category" src="css/icons/{{$cat->slug}}.png">
+				 						<img class="icon-category" src="css/icons/{{$cat->slug}}.png?76755">
 				 					</div>
 				 					<h1>{{$cat->title}}</h1>
 				 				</a>
