@@ -31,13 +31,13 @@
                     <div id="current-image">
                         <img id="image-active" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
                         <div class="images-info">
-                            <div class="start-animation">
+                            <div class="col-sm-4 start-animation">
                                 <a href="javascript:void(0)" class="icon-before">Start slideshow</a>
                             </div>
-                            <div class="images-nav">
+                            <div class="col-sm-4 images-nav">
                                 <p> 1 of {{count($images)}}</p>
                             </div>
-                            <div class="images-current">
+                            <div class="col-sm-4 images-current">
                                 <p> Picture 1</p>
                             </div>
                         </div>
