@@ -123,6 +123,9 @@
                                 <div class="map-image">
                                     <img src="https://maps.googleapis.com/maps/api/staticmap?center={!! $lat !!},{!! $lng !!}&zoom=12&size=190x222&markers=color:blue%7Clabel:S%7C{!! $lat !!},{!! $lng !!}&key=AIzaSyCe5IY6S4WvKrjmvpgTwHyO1oiX4pRUUD8">
                                 </div>
+                                <div class="color-grey">
+                                    <a href="#tap-map"> <span class="glyphicon glyphicon-zoom-in"></span>Enlarge this map</a>
+                                </div>
                             </div>
                         </div>
                         <div id="tap-map" class="tab-pane fade">           
