@@ -233,7 +233,7 @@
                     @if (!Auth::guest())
 
                     <li class="dropdown"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                           <span id="message-notification"> <span  class="glyphicon glyphicon-envelope"></span>    <span class="button__badge">1</span></span><span class="caret"></span></a>
+                           <span > <span  class="glyphicon glyphicon-envelope"></span>    <span class="button__badge" style="display: none" id="message-notification">1</span></span><span class="caret"></span></a>
                         <ul class="dropdown-menu all-menu-messages list-group" role="menu">
                             @foreach(Auth::user()->rooms as $room)
                                 <li class="list-group-item">
@@ -437,7 +437,7 @@
                 console.log(event.data);
                 var object = JSON.parse(event.data);
                 if(object.message)
-                $('#message-notification').addClass('green-text');
+                $('#message-notification').show();
                 if(typeof got_message === "function")
                 got_message(event.data)
 
