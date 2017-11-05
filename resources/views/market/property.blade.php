@@ -57,7 +57,7 @@
                             <div class="item">
                                 @for($j=0; $j < 5 && ($i+$j) < count($product['images']); $j++)
                                 <div class="small-image">
-                                    <a href="javascript:void(0)">
+                                    <a href="javascript:void(0)" data-index="{{$i+$j}}">
                                         <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][$i+$j]}}?1500586448" alt="Los Angeles">
                                     </a>
                                 </div>
