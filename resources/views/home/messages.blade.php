@@ -89,9 +89,9 @@
                         @foreach($cur->messages as $message)
                             @if($message->from_msg===$user->id)
 
-                            <div class="right-message"><span class="message"> {{$message->message}}</span></div>
+                            <div class="right-message"><span class="message"> {{$message->message}}&nbsp;&nbsp; {{$message->created_at}}</span></div>
                             @else
-                                <div class="left-message"><span class="message">{{$message->message}}</span></div>
+                                <div class="left-message"><span class="message">{{$message->message}}&nbsp;&nbsp; {{$message->created_at}}</span></div>
                             @endif
 
                         @endforeach
