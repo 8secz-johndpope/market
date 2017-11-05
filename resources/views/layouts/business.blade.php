@@ -233,7 +233,7 @@
                     @if (!Auth::guest())
 
                     <li class="dropdown"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                           <span id="message-notification"> <span  class="glyphicon glyphicon-envelope"></span><span>&nbsp;&nbsp;({{count( Auth::user()->rooms)}})</span></span><span class="caret"></span></a>
+                           <span id="message-notification"> <span  class="glyphicon glyphicon-envelope"></span>    <span class="button__badge">2</span><span>&nbsp;&nbsp;({{count( Auth::user()->rooms)}})</span></span><span class="caret"></span></a>
                         <ul class="dropdown-menu all-menu-messages list-group" role="menu">
                             @foreach(Auth::user()->rooms as $room)
                                 <li class="list-group-item">
