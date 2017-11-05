@@ -237,15 +237,6 @@
                         <div class="dropdown-menu all-menu-messages" role="menu">
                             @foreach(Auth::user()->rooms as $room)
                                 <div class="media">
-                                    <div class="media-left">
-                                        <a href="#">
-                                            <div class="listing-side">
-                                                <div class="listing-thumbnail">
-                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$room->image}}" class="lazyload" alt="">
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
                                     <div class="media-body">
                                         <a href="/user/manage/messages/{{$room->id}}"><h4 class="media-heading">{{$room->title}}</h4></a>
                                         <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
