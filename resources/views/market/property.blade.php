@@ -22,10 +22,10 @@
                     <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
                 </ol>
                 <h2 class="item-name">{{$product['title']}}</h2>
-                <div class="col-sm-10 location-name">
+                <div class="col-sm-9 location-name">
                     <p>{{$product['location_name']}}</p>
                 </div>
-<div class="col-sm-2">@if($product['meta']['price']>=0)
+<div class="col-sm-3">@if($product['meta']['price']>=0)
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
                     <div id="current-image">

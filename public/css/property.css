@@ -88,4 +88,7 @@ ul.list-two-col{
 .carousel-inner {
     padding: 10px 0px;
 }
+.items-box-price.font-5{
+	text-align: right;
+}
 
