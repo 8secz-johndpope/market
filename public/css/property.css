@@ -159,7 +159,7 @@ h2.item-name {
 	border-bottom: none;
 }
 .favorite{
-	display: inline-block;
+	display: inline;
 }
 .favroite-icon{
 	float: left;
