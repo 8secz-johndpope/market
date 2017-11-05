@@ -298,7 +298,6 @@
                             </address>
                             <p><a href="/userads/{{$advert->user->id}}">View other adverts from this user</a></p>
                         </div>
-                        <a href="/userads/{{$advert->user->id}}">Ads({{count($advert->user->adverts)}})</a>
                         <ul class="list-group">
                             <li class="list-group-item">     <div class="user-badge">
                                     {{$advert->user->vid}}
