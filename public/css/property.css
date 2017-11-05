@@ -169,7 +169,7 @@ h2.item-name {
 .favroite-icon{
 	float: inherit;
 }
-span.glyphicon {
+.details span.glyphicon {
     margin-right: 10px;
     color: mediumseagreen;
     font-size: 18px;
