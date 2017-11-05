@@ -398,7 +398,7 @@
             console.log(nextImage);
             index += 1
             $('#image-active').attr('data-index', index);
-            $('#image-active').attr('src', prevImage);
+            $('#image-active').attr('src', nextImage);
             $('.index').text(index);
             var indexCarousel = $('.carousel-inner .item.active').index();
             var firsElementCarousel = indexCarousel * 5; 
