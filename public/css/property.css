@@ -135,6 +135,7 @@ h2.item-name {
 .contact{
 	padding: 15px;
 	border-bottom: 1px dashed #dfdfe1;
+	text-align: center;
 }
 .btn-default {
     color: #fff;
