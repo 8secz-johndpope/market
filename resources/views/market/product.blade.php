@@ -273,9 +273,8 @@
                         </li>
 
 
-                        @if(!$advert->category->can_apply())
                             <li class="list-group-item"><a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a></li>
-                        @endif
+                        
 
                     </ul>
                     <h4>Info</h4>
