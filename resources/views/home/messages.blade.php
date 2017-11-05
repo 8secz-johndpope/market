@@ -117,11 +117,7 @@
             </div>
         </div>
     </div>
-    <audio id="notify-tune" controls style="display: none">
-        <source src="/css/y.ogg" type="audio/ogg">
-        <source src="/css/y.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+
     <script>
         function scroll_bottom() {
             var objDiv = document.getElementById("all-msg");
