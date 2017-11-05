@@ -579,6 +579,18 @@ class UserController extends BaseController
         $user = Auth::user();
         return $user->orders;
     }
+    public function distances(Request $request,$id){
+        $user = Auth::user();
+
+        $advert=Advert::find($id);
+        $addresses=[];
+        foreach ($user->addresses as $address){
+            $address->distance=$advert->distance($address->zip);
+            $address->candeliver=$advert->can_deliver_to($address->zip);
+            $addresses[]=$address;
+        }
+        return $addresses;
+    }
     public function create_sale(Request $request){
 
 

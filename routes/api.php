@@ -139,6 +139,9 @@ Route::post('/user/complete/sale','UserController@complete_sale')->middleware('a
 
 Route::get('/user/sale/mark/received/{id}','UserController@mark_received')->middleware('auth:api');
 
+Route::get('/user/sale/distances/{id}','UserController@distances')->middleware('auth:api');
+
+
 Route::get('/user/sale/buying','UserController@buying')->middleware('auth:api');
 Route::get('/user/sale/orders','UserController@orders')->middleware('auth:api');
 
