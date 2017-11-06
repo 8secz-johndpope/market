@@ -446,9 +446,7 @@
     });
     $('a[href="#tap-map"]').click(function(e){
         console.log("loading maps");
-        e.preventDefault();
         $('.nav-tabs a[href="#tap-map"]').tab('show');
-        console.log("loading tab maps");
         x = map.getZoom();
         c = map.getCenter();
         google.maps.event.trigger(map, 'resize');
