@@ -285,3 +285,11 @@ div#tap-map {
     font-size: 14px;
     font-weight: bold;
 }
+.request-details {
+    /* padding-left: 130px!important; */
+    /* padding-right: 135px!important; */
+    padding-top: 25px!important;
+    padding-bottom: 25px!important;
+    background-color: #262637;
+    text-align: center;
+}
