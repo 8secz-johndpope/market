@@ -88,7 +88,7 @@
                     <div id="tabs"> 
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
-                        <li><a data-toggle="tab" href="#tap-map">Map</a></li>
+                        <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
