@@ -102,7 +102,7 @@
                                             <div class="col-sm-6 meta-bold">
                                                 {{$meta->title}}:
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-6 meta-info">
                                                 {{$meta->value}}
                                             </div>
                                         @endforeach
