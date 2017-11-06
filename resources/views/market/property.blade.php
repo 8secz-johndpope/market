@@ -90,7 +90,6 @@
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map</a></li>
                     </ul>
-                    <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
                             <div class="content">
                                 <div class="col-sm-8 left-content">
@@ -141,7 +140,6 @@
                                         </small>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                         <div id="tap-map" class="tab-pane fade">           
                             <div class="row mapframe">
@@ -451,7 +449,7 @@
         e.preventDefault();
         $('.nav-tabs a[href="#tap-map"]').tab('show');
     });
-    $('.tab-content').on( "tabsload", function(event, ui) {
+    $('.nav.nav-tabs').on( "tabsload", function(event, ui) {
         console.log("loading tab maps");
         x = map.getZoom();
         c = map.getCenter();
@@ -459,7 +457,10 @@
         map.setZoom(x);
         map.setCenter(c);
     });
-    $('#tap-map').load(
+    $('.nav.nav-tabs').tabs({
+        beforeLoad: function(event, ui){
+            alert('loading');
+        },
         load: function(event, ui){
             console.log("loading tab maps");
             x = map.getZoom();
