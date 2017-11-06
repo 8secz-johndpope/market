@@ -99,7 +99,7 @@ ul.list-two-col{
     transform: translate(-50%, -50%);
 }
 .carousel-inner {
-    padding: 5px 0 0px;
+    padding: 0px;
 }
 .items-box-price.font-5{
 	text-align: right;
@@ -295,4 +295,5 @@ div#tap-map {
 }
 div#myCarousel {
     margin-bottom: 1.6rem;
+    padding-top: 5px;
 }
