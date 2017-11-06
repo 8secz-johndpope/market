@@ -27,6 +27,13 @@ section{
 	font-family: Effra-Regular,arial,helvetica,sans-serif;
 }
 
+.list-style-square li {
+    color: #262637;
+    font-family: Effra-Regular,arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
 .list-style-square li:before {
     border-top: 8px solid #ff9d2c;
     border-top-width: .8rem;
