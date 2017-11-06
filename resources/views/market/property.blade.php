@@ -475,7 +475,11 @@
             console.log("change to panorama");
             $('#map').hide();
             $('#pano').show();
+            x = panorama.getZoom();
+            c = panorama.getCenter();
             google.maps.event.trigger(panorama, 'resize');
+            panorama.setZoom(x);
+            panorama.setCenter(c);
         }
         else{
            console.log("change to map");
