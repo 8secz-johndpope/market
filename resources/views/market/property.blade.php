@@ -127,7 +127,7 @@
                                     <a href="#tap-map"> <span class="glyphicon glyphicon-zoom-in"></span>Enlarge this map</a>
                                 </div>
                                 <div class="color-grey nearest-stations">
-                                    <p>Nearest stations</p>
+                                    <h4>Nearest stations</h4>
                                     <ul class="stations-list">
 
                                     </ul>
