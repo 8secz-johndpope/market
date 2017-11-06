@@ -131,6 +131,9 @@
                                     <ul class="stations-list">
 
                                     </ul>
+                                    <small class="disclaimer">
+                                        Distances are straight line measurements from centre of postcode
+                                    </small>
                                 </div>
                             </div>
                         </div>

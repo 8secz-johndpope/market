@@ -264,7 +264,7 @@ div#tap-map {
     overflow: hidden;
     background-size: contain;
     background-position: center;
-    margin-right: 4px;
+    margin-right: 5px;
     margin-bottom: -5px;
 }
 .stations-list li>span{
