@@ -27,7 +27,7 @@ section{
 	font-family: Effra-Regular,arial,helvetica,sans-serif;
 }
 
-.list-style-square:before, .list-style-square li:before {
+.list-style-square li:before {
     border-top: 8px solid #ff9d2c;
     border-top-width: .8rem;
     content: "";
