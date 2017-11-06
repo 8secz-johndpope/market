@@ -106,6 +106,12 @@
                                                 {{$meta->value}}
                                             </div>
                                         @endforeach
+                                            <div class="col-sm-6 meta-bold">
+                                                Payments:
+                                            </div>
+                                            <div class="col-sm-6 meta-info">
+                                                
+                                            </div>
                                     </div>
                                     @if($advert->has_meta('key_features'))
                                         <div class="row key-features">
