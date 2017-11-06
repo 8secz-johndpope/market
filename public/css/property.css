@@ -63,13 +63,13 @@ section{
     content: "";
     height: 0;
     position: absolute;
-    top: -9px;
+    bottom: : 0;
     left: 0;
 }
 .list-two-col li:after {
     width: 100%;
 }
-.list-two-col li:nth-child(odd):after {
+.list-two-col li:after {
     border-style: dashed;
     border-color: #dfdfe1;
 }
