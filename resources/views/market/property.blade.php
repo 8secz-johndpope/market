@@ -449,7 +449,7 @@
         e.preventDefault();
         $('.nav-tabs a[href="#tap-map"]').tab('show');
     });
-    $('#tabs').on( "tabsload", function(event, ui) {
+    $('#tabs a[href="#tap-map"]').on( "tabsload", function(event, ui) {
         console.log("loading tab maps");
         x = map.getZoom();
         c = map.getCenter();
