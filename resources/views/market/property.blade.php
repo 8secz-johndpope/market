@@ -81,6 +81,9 @@
                             <span class="glyphicon glyphicon-chevron-right"></span>
                             <span class="sr-only">Next</span>
                         </a>
+                        <div class="request-details">
+                            <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
+                        </div>
                     </div>
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
