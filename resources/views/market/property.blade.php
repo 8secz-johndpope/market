@@ -91,52 +91,54 @@
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
-                            <div class="col-sm-8 left-content">
-                                @if($category->id == 307000000)
-                                    <h3>Letting information:</h3>
-                                @endif
-                                <div class="row meta">
-                                    @foreach($metas as $meta)
-                                        <div class="col-sm-6 meta-bold">
-                                            {{$meta->title}}:
-                                        </div>
-                                        <div class="col-sm-6">
-                                            {{$meta->value}}
-                                        </div>
-                                    @endforeach
-                                </div>
-                                @if($advert->has_meta('key_features'))
-                                    <div class="key-features">
-                                        <h3>Key features</h3> 
-                                        <ul class="list-two-col list-style-square">
-                                        @foreach($advert->meta('key_features') as $key)
-                                            <li class="col-sm-6">{{$key}}</li>
+                            <div class="content">
+                                <div class="col-sm-8 left-content">
+                                    @if($category->id == 307000000)
+                                        <h3>Letting information:</h3>
+                                    @endif
+                                    <div class="row meta">
+                                        @foreach($metas as $meta)
+                                            <div class="col-sm-6 meta-bold">
+                                                {{$meta->title}}:
+                                            </div>
+                                            <div class="col-sm-6">
+                                                {{$meta->value}}
+                                            </div>
                                         @endforeach
-                                        </ul>
                                     </div>
-                                @endif
-                                <div class="description">
-                                    <h3>Description</h3>
-                                    @foreach($r = preg_split("/(\r\n|\n|\r)/", $product['description']) as $part)
-                                        {{$part}}<br>
-                                    @endforeach
+                                    @if($advert->has_meta('key_features'))
+                                        <div class="key-features">
+                                            <h3>Key features</h3> 
+                                            <ul class="list-two-col list-style-square">
+                                            @foreach($advert->meta('key_features') as $key)
+                                                <li class="col-sm-6">{{$key}}</li>
+                                            @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+                                    <div class="description">
+                                        <h3>Description</h3>
+                                        @foreach($r = preg_split("/(\r\n|\n|\r)/", $product['description']) as $part)
+                                            {{$part}}<br>
+                                        @endforeach
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-4 right-content">
-                                <div class="map-image">
-                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center={!! $lat !!},{!! $lng !!}&zoom=12&size=190x222&markers=color:blue%7Clabel:S%7C{!! $lat !!},{!! $lng !!}&key=AIzaSyCe5IY6S4WvKrjmvpgTwHyO1oiX4pRUUD8">
-                                </div>
-                                <div class="color-grey">
-                                    <a href="#tap-map"> <span class="glyphicon glyphicon-zoom-in"></span>Enlarge this map</a>
-                                </div>
-                                <div class="color-grey nearest-stations">
-                                    <h4>Nearest stations</h4>
-                                    <ul class="stations-list">
+                                <div class="col-sm-4 right-content">
+                                    <div class="map-image">
+                                        <img src="https://maps.googleapis.com/maps/api/staticmap?center={!! $lat !!},{!! $lng !!}&zoom=12&size=190x222&markers=color:blue%7Clabel:S%7C{!! $lat !!},{!! $lng !!}&key=AIzaSyCe5IY6S4WvKrjmvpgTwHyO1oiX4pRUUD8">
+                                    </div>
+                                    <div class="color-grey">
+                                        <a href="#tap-map"> <span class="glyphicon glyphicon-zoom-in"></span>Enlarge this map</a>
+                                    </div>
+                                    <div class="color-grey nearest-stations">
+                                        <h4>Nearest stations</h4>
+                                        <ul class="stations-list">
 
-                                    </ul>
-                                    <small class="disclaimer">
-                                        Distances are straight line measurements from centre of postcode
-                                    </small>
+                                        </ul>
+                                        <small class="disclaimer">
+                                            Distances are straight line measurements from centre of postcode
+                                        </small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
