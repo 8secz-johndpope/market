@@ -181,7 +181,7 @@
                                     service.nearbySearch(request, callback);
                                     var panorama = new google.maps.StreetViewPanorama(
                                         document.getElementById('pano'), {
-                                            position: uluru
+                                            position: uluru,
                                             pov: {heading: 165, pitch: 0},
                                             motionTrackingControlOptions: {
                                             position: google.maps.ControlPosition.LEFT_BOTTOM
