@@ -434,7 +434,7 @@
         }
     });
     function getStations(){
-        $.getJSON("https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0&location={!! $lat !!},{!! $lng !!}}&rankby=distance&type=subway_station", function( data ) {
+        $.getJSON("https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0&location={!! $lat !!},{!! $lng !!}&rankby=distance&type=subway_station", function( data ) {
           var items = [];
           console.log(data);
           /*$.each( data, function( key, val ) {
