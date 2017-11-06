@@ -308,6 +308,6 @@ div#myCarousel {
     height: 400px;
     width: 100%;
 }
-#pano{
+.info-pano{
 	display: none;
 }

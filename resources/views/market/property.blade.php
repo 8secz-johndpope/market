@@ -479,14 +479,14 @@
         console.log(this);
         if(this.id == "option-view"){
             console.log("change to panorama");
-            $('#map').hide();
-            $('#pano').show();
+            $('.info-map').hide();
+            $('.info-pano').show();
             google.maps.event.trigger(panorama, 'resize');
         }
         else{
            console.log("change to map");
-            $('#map').show();
-            $('#pano').hide(); 
+            $('.info-map').show();
+            $('.info-pano').hide(); 
         }
         
     })
