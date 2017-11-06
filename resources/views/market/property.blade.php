@@ -156,6 +156,7 @@
                                 </label>
                             </div>
                             <div id="map"></div>
+                            <div id="pano"></div>
                             <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
                             <script>
                                 var map;
@@ -178,6 +179,14 @@
                                     infowindow = new google.maps.InfoWindow();
                                     var service = new google.maps.places.PlacesService(map);
                                     service.nearbySearch(request, callback);
+                                    var panorama = new google.maps.StreetViewPanorama(
+                                        document.getElementById('pano'), {
+                                            position: uluru
+                                            pov: {heading: 165, pitch: 0},
+                                            motionTrackingControlOptions: {
+                                            position: google.maps.ControlPosition.LEFT_BOTTOM
+                                        }
+                                    });
                                 }
                                 $(document).ready(function() {
                                     initMap();
