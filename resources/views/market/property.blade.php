@@ -165,13 +165,13 @@
                                     service.nearbySearch(request, callback);
                                                                     }
                                     $('.nav.nav-tabs a').click(function () {
-                                        setTimeout(function(){
+                                        /*setTimeout(function(){
                                             x = map.getZoom();
                                             c = map.getCenter();
                                             google.maps.event.trigger(map, 'resize');
                                             map.setZoom(x);
                                             map.setCenter(c);
-                                        },1000);
+                                        },1000);*/
 
                                     });
                                 
@@ -447,6 +447,14 @@
         console.log("loading maps");
         e.preventDefault();
         $('.nav-tabs a[href="#tap-map"]').tab('show');
+    });
+    $('.nav-tabs a[href="#tap-map"]').on( "tabsload", function(event, ui) {
+        console.log("loading tab maps");
+        x = map.getZoom();
+        c = map.getCenter();
+        google.maps.event.trigger(map, 'resize');
+        map.setZoom(x);
+        map.setCenter(c);
     });
     function callback(results, status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
