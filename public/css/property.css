@@ -326,3 +326,10 @@ div#myCarousel {
 .info-pano{
 	display: none;
 }
+label.btn.btn-primary.active {
+    border: 1px solid #ff8830;
+    background: #ff8830;
+}
+label.btn.btn-primary:hover {
+    box-shadow: none;
+}
