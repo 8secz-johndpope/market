@@ -451,7 +451,7 @@
         e.preventDefault();
         $('.nav-tabs a[href="#tap-map"]').tab('show');
     });
-    $('.nav.nav-tabs').on( "tabsload", function(event, ui) {
+    $('.tab-content').on( "tabsload", function(event, ui) {
         console.log("loading tab maps");
         x = map.getZoom();
         c = map.getCenter();
@@ -459,10 +459,7 @@
         map.setZoom(x);
         map.setCenter(c);
     });
-    $('.nav.nav-tabs').tabs({
-        beforeLoad: function(event, ui){
-            alert('loading');
-        },
+    $('#tap-map').load(
         load: function(event, ui){
             console.log("loading tab maps");
             x = map.getZoom();
