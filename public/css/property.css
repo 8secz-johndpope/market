@@ -318,3 +318,7 @@ label.btn.btn-primary:hover, label.btn.btn-primary:active {
     border-color: #ff8830;
     box-shadow: none;
 }
+.key-features.row {
+    margin-left: 0;
+    margin-right: 0;
+}
