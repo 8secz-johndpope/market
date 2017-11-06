@@ -99,7 +99,7 @@ ul.list-two-col{
     transform: translate(-50%, -50%);
 }
 .carousel-inner {
-    padding: 5px 0px;
+    padding: 5px 0 0px;
 }
 .items-box-price.font-5{
 	text-align: right;
