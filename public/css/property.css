@@ -38,7 +38,10 @@ section{
     width: 8px;
     width: .8rem;
 }
-
+.list-two-col li:nth-child(odd):after {
+    border-style: dashed;
+    border-color: #dfdfe1;
+}
 .tab-pane h3{
 	color: #262637;
     font-size: 15px;
