@@ -469,6 +469,10 @@
         map.setZoom(x);
         map.setCenter(c);
     });
+    $('#option-view').click(function(){
+        $('#map').hide();
+        $('#panorama').show();
+    })
     function callback(results, status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
             var stations = [];
