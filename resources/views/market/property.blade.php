@@ -446,7 +446,7 @@
     });
     $('a[href="#tap-map"]').click(function(){
         console.log("loading maps");
-        $('.tab-content').tabs( "enable", "#tap-map");
+        $('.nav-tabs a[href="#tap-map"]').tab('show');
     });
     function callback(results, status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
