@@ -278,3 +278,7 @@ div#tap-map {
     font-size: 9px;
     font-weight: normal;
 }
+.nearest-stations h4 {
+    font-size: 14px;
+    font-weight: bold;
+}
