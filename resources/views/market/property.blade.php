@@ -470,6 +470,7 @@
         map.setCenter(c);
     });
     $('#option-view').click(function(){
+        console.log("only panorama");
         $('#map').hide();
         $('#panorama').show();
     })
