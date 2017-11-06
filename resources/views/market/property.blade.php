@@ -457,6 +457,19 @@
         map.setZoom(x);
         map.setCenter(c);
     });
+    $('#tabs').tabs({
+        beforeLoad: function(event, ui){
+            alert('loading');
+        },
+        load: function(event, ui){
+            console.log("loading tab maps");
+            x = map.getZoom();
+            c = map.getCenter();
+            google.maps.event.trigger(map, 'resize');
+            map.setZoom(x);
+            map.setCenter(c);
+        }
+    });
     function callback(results, status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
             var stations = [];
