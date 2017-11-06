@@ -322,3 +322,6 @@ label.btn.btn-primary:hover, label.btn.btn-primary:active {
     margin-left: 0;
     margin-right: 0;
 }
+ul.list-two-col.list-style-square {
+    padding-left: 20px;
+}
