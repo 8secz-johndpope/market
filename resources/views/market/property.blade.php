@@ -128,6 +128,9 @@
                                 </div>
                                 <div class="color-grey nearest-stations">
                                     <p>Nearest stations</p>
+                                    <ul class="stations-list">
+
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -163,6 +166,7 @@
                                 
                                 $(document).ready(function() {
                                     initMap();
+                                    getStations();
                                 });
                                 
 
@@ -429,7 +433,20 @@
             }
         }
     });
-
+    function getStations(){
+        $.getJSON("https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDudGAsmRz-jqurdjSnt3vbqVv9qqwNqww&location={!! $lat !!},{!! $lng !!}}&rankby=distance&type=subway_station", function( data ) {
+          var items = [];
+          console.log(data);
+          /*$.each( data, function( key, val ) {
+            items.push( "<li id='" + key + "'>" + val + "</li>" );
+          });
+         
+          $( "<ul/>", {
+            "class": "my-new-list",
+            html: items.join( "" )
+          }).appendTo( "body" );*/
+        });
+    }
 
 
 </script>
