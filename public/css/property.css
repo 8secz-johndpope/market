@@ -36,6 +36,16 @@ section{
 .list-two-col li {
     margin-top: 8px;
 }
+.list-style-square li {
+    padding-left: 20px;
+    padding-left: 2rem;
+    position: relative;
+    line-height: inherit;
+}
+.list-style-square li {
+    padding: 0 8px 8px 20px;
+}
+
 .list-style-square li:before {
     border-top: 8px solid #ff9d2c;
     border-top-width: .8rem;
