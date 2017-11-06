@@ -333,7 +333,7 @@ label.btn.btn-primary.active {
 label.btn.btn-primary:hover {
     box-shadow: none;
 }
-label.btn.btn-primary.active:hover, label.btn.btn-primary.active:visited{
+label.btn.btn-primary.active:hover, label.btn.btn-primary.active:active{
     border: 1px solid #ff8830;
     background: #ff8830;
 }
