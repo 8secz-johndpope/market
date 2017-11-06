@@ -442,7 +442,15 @@
         }
     });
     function callback(results, status){
-        console.log(results);
+        if (status == google.maps.places.PlacesServiceStatus.OK){
+            var stations = [];
+            for(i = 0; i < results.length; i++){
+                stations.push( "<li>" + results[i].name + "</li>" );
+            }
+            var stationsList = stations.join("\n");
+            $('.stations-list').text(stationsList);
+            console.log(stationsList);
+        }
     }
 
 
