@@ -980,6 +980,7 @@ class MarketController extends BaseController
         //Changed of view for property view
         if($category->id == 307000000 || $category->id == 306000000){
             $view = 'market.property';
+            var_dump($advert->created_at);
             $date = date_create($advert->created_at);
             $advert->created_at =  date_format($date, 'd F Y');
             var_dump($advert->created_at);
