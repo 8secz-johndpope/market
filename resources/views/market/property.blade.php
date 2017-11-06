@@ -475,6 +475,7 @@
             console.log("change to panorama");
             $('#map').hide();
             $('#pano').show();
+            google.maps.event.trigger(panorama, 'resize');
         }
         else{
            console.log("change to map");
