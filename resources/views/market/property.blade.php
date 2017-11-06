@@ -444,6 +444,9 @@
             }
         }
     });
+    $('a[href="#tap-map"]').click(function(){
+        $( ".nav.nav-tabs" ).tabs( "enable", "#tap-map");
+    });
     function callback(results, status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
             var stations = [];
