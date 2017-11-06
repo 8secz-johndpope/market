@@ -33,7 +33,9 @@ section{
     font-size: 14px;
     font-weight: normal;
 }
-
+.list-two-col li {
+    margin-top: 8px;
+}
 .list-style-square li:before {
     border-top: 8px solid #ff9d2c;
     border-top-width: .8rem;
