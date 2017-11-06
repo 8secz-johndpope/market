@@ -274,3 +274,7 @@ div#tap-map {
 .stations-list li {
     padding: 0 0 6px;
 }
+.disclaimer {
+    font-size: 10px;
+    font-weight: normal;
+}
