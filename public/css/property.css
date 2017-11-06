@@ -6,13 +6,9 @@
     font-weight: normal;
     padding-left: 20px;
 }
-.tab-content {
-    border: 1px solid #ccc;
-    border-top-color: transparent;
-    padding: 15px;
-}
 
-.tab-content h3{
+
+.tab-pane h3{
 	color: #262637;
     font-size: 15px;
     font-weight: bold;
@@ -302,4 +298,9 @@ div#myCarousel {
 }
 .color-grey span.glyphicon {
     margin-right: 5px;
+}
+.tab-pane {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-top-color: transparent;
 }
