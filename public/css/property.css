@@ -33,39 +33,7 @@ section{
     margin-top: 0;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
-ul.list-two-col{
-	padding-left: 20px;
-}
-.list-two-col li {
-    display: inline-block;
-    margin: 0 0 0 -4px;
-    padding: 0;
-    vertical-align: top;
-}
-.list-style-square li {
-    padding-left: 20px;
-    padding-left: 2rem;
-    position: relative;
-    line-height: inherit;
-}
-.list-style-square li {
-    padding: 0 8px 8px 20px;
-}
-.list-style-square li:after {
-    border-color: #ececec;
-    border-style: solid;
-}
-.list-style-square li:before {
-    border-top: 8px solid #ff9d2c;
-    border-top-width: .8rem;
-    content: "";
-    position: absolute;
-    top: 5px;
-    top: .5rem;
-    left: 0;
-    width: 8px;
-    width: .8rem;
-}
+
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     border-top: 2px solid #ff9d2c;
     color: #ff9d2c ;
