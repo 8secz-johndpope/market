@@ -166,11 +166,10 @@
                                     infowindow = new google.maps.InfoWindow();
                                     var service = new google.maps.places.PlacesService(map);
                                     service.nearbySearch(request, callback);
+                                }
                                 $(document).ready(function() {
-                                    initMap();
+                                    //initMap();
                                 });
-                                
-
                             </script>
 
                         </div>
@@ -440,6 +439,7 @@
         $('.nav-tabs a[href="#tap-map"]').tab('show');
     });
     $('.nav-tabs a[href="#tap-map"]').on( "tabsload", function(event, ui) {
+        initMap();
         console.log("loading tab maps");
         x = map.getZoom();
         c = map.getCenter();
