@@ -474,12 +474,12 @@
         if(this.id == "option-view"){
             console.log("change to panorama");
             $('#map').hide();
-            $('#panorama').show();
+            $('#pano').show();
         }
         else{
            console.log("change to map");
             $('#map').show();
-            $('#panorama').hide(); 
+            $('#pano').hide(); 
         }
         
     })
