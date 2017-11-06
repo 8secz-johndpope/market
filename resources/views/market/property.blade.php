@@ -112,6 +112,12 @@
                                             <div class="col-sm-6 meta-info">
                                                 
                                             </div>
+                                            <div class="col-sm-6 meta-bold">
+                                                Added on Rightmove:
+                                            </div>
+                                            <div class="col-sm-6 meta-info">
+                                                {{date($advert->created_at)}}
+                                            </div>
                                     </div>
                                     @if($advert->has_meta('key_features'))
                                         <div class="row key-features">
