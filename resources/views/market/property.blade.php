@@ -447,18 +447,16 @@
         }
     });
     $('a[href="#tap-map"]').click(function(e){
-        console.log("loading maps");
         e.preventDefault();
         $('.nav-tabs a[href="#tap-map"]').tab('show');
+    });
+    $('a[href="#tap-map"]').on('shown.bs.tab', function () {
+        console.log("load maps tab");
         x = map.getZoom();
         c = map.getCenter();
         google.maps.event.trigger(map, 'resize');
         map.setZoom(x);
         map.setCenter(c);
-
-    });
-    $('a[href="#tap-map"]').on('shown.bs.tab', function () {
-        google.maps.event.trigger(map, 'resize');
     });
     function callback(results, status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
