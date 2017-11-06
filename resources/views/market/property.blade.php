@@ -457,7 +457,7 @@
         map.setZoom(x);
         map.setCenter(c);
     });
-    $('.nav.nav-tabs').tabs({
+    $('#tabs').tabs({
         beforeLoad: function(event, ui){
             alert('loading');
         },
