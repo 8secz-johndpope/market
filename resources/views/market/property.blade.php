@@ -160,6 +160,7 @@
                             <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
                             <script>
                                 var map;
+                                var panorama;
                                 function initMap() {
                                     var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
                                      map = new google.maps.Map(document.getElementById('map'), {
@@ -179,7 +180,7 @@
                                     infowindow = new google.maps.InfoWindow();
                                     var service = new google.maps.places.PlacesService(map);
                                     service.nearbySearch(request, callback);
-                                    var panorama = new google.maps.StreetViewPanorama(
+                                    panorama = new google.maps.StreetViewPanorama(
                                         document.getElementById('pano'), {
                                             position: uluru,
                                             pov: {heading: 165, pitch: 0},
@@ -464,6 +465,7 @@
         x = map.getZoom();
         c = map.getCenter();
         google.maps.event.trigger(map, 'resize');
+        google.maps.event.trigger(panorama, 'resize');
         map.setZoom(x);
         map.setCenter(c);
     });
