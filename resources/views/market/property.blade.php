@@ -163,18 +163,6 @@
                                     infowindow = new google.maps.InfoWindow();
                                     var service = new google.maps.places.PlacesService(map);
                                     service.nearbySearch(request, callback);
-                                                                    }
-                                    $('.nav.nav-tabs a').click(function () {
-                                        /*setTimeout(function(){
-                                            x = map.getZoom();
-                                            c = map.getCenter();
-                                            google.maps.event.trigger(map, 'resize');
-                                            map.setZoom(x);
-                                            map.setCenter(c);
-                                        },1000);*/
-
-                                    });
-                                
                                 $(document).ready(function() {
                                     initMap();
                                 });

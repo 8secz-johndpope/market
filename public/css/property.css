@@ -68,9 +68,12 @@ ul.list-two-col{
 	padding-left: 0px;
 }
 .item{
-	box-shadow:  none;
-	padding: 0px;
-	margin-bottom: 0px;
+    box-shadow: none;
+    padding: 0px;
+    margin-bottom: 0px;
+    background-color: #ececec;
+    height: 90px;
+    overflow: hidden;
 }
 #current-image img {
     height: 100%;
