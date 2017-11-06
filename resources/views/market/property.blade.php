@@ -459,7 +459,7 @@
         map.setZoom(x);
         map.setCenter(c);
     });
-    $('#tabs').tabs({
+    $('.nav.nav-tabs').tabs({
         beforeLoad: function(event, ui){
             alert('loading');
         },
