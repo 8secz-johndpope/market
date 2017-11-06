@@ -178,7 +178,6 @@
                                     infowindow = new google.maps.InfoWindow();
                                     var service = new google.maps.places.PlacesService(map);
                                     service.nearbySearch(request, callback);
-                                    google.maps.event.trigger(map, 'resize');
                                 }
                                 $(document).ready(function() {
                                     initMap();
@@ -453,9 +452,13 @@
         $('.nav-tabs a[href="#tap-map"]').tab('show');
         x = map.getZoom();
         c = map.getCenter();
+        google.maps.event.trigger(map, 'resize');
         map.setZoom(x);
         map.setCenter(c);
 
+    });
+    $('a[href="#tap-map"]').on('shown.bs.tab', function () {
+        google.maps.event.trigger(map, 'resize');
     });
     function callback(results, status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
