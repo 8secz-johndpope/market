@@ -337,3 +337,7 @@ label.btn.btn-primary.active:hover, label.btn.btn-primary:active{
     border: 1px solid #ff8830;
     background: #ff8830;
 }
+a.btn.btn-default:hover, a.btn.btn-default:active {
+    background-color: #ff8830;
+    border-color: #ff8830;
+}
