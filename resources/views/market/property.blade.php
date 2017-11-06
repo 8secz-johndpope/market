@@ -85,7 +85,8 @@
                             <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
                         </div>
                     </div>
-                    <ul id="tabs" class="nav nav-tabs">
+                    <div id="tabs"> 
+                    <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map</a></li>
                     </ul>
@@ -187,6 +188,7 @@
                     </div>
                         </div>
                     </div>
+                </div>
                 </div>
             <div class="col-md-3 col-sm-12">
                 @if($advert->has_param('sold'))
