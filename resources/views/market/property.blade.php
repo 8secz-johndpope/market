@@ -140,6 +140,7 @@
                                         </small>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                         <div id="tap-map" class="tab-pane fade">           
                             <div class="row mapframe">
@@ -186,7 +187,6 @@
                     </div>
                         </div>
                     </div>
-                </div>
                 </div>
             <div class="col-md-3 col-sm-12">
                 @if($advert->has_param('sold'))
