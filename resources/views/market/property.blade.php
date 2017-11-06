@@ -152,17 +152,26 @@
                                         position: uluru,
                                         map: map
                                     });
-                                }
-                                $('.nav.nav-tabs a').click(function () {
-                                    setTimeout(function(){
-                                        x = map.getZoom();
-                                        c = map.getCenter();
-                                        google.maps.event.trigger(map, 'resize');
-                                        map.setZoom(x);
-                                        map.setCenter(c);
-                                    },1000);
+                                    var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
+                                    var request = {
+                                        location: pos,
+                                        radius: 1000,
+                                        types: ['subway_station']
+                                    };
+                                    infowindow = new google.maps.InfoWindow();
+                                    var service = new google.maps.places.PlacesService(map);
+                                    service.nearbySearch(request, callback);
+                                                                    }
+                                    $('.nav.nav-tabs a').click(function () {
+                                        setTimeout(function(){
+                                            x = map.getZoom();
+                                            c = map.getCenter();
+                                            google.maps.event.trigger(map, 'resize');
+                                            map.setZoom(x);
+                                            map.setCenter(c);
+                                        },1000);
 
-                                });
+                                    });
                                 
                                 $(document).ready(function() {
                                     initMap();
@@ -433,33 +442,8 @@
             }
         }
     });
-    function getStations(){
-        /*$.getJSON("https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0&location={!! $lat !!},{!! $lng !!}&rankby=distance&type=subway_station", function( data ) {
-          var items = [];
-          console.log(data);
-          $.each( data, function( key, val ) {
-            items.push( "<li id='" + key + "'>" + val + "</li>" );
-          });
-         
-          $( "<ul/>", {
-            "class": "my-new-list",
-            html: items.join( "" )
-          }).appendTo( "body" );
-        });*/
-        $.ajax({
-             url:"https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0&location={!! $lat !!},{!! $lng !!}&rankby=distance&type=subway_station",
-             dataType: 'json', // Notice! JSONP <-- P (lowercase)
-             type: "GET",
-             crossDomain: true,
-             success:function(json){
-                 // do stuff with json (in this case an array)
-                 alert("Success");
-                 console.log(json);
-             },
-             error:function(){
-                 alert("Error");
-             }      
-        });
+    function callback(results, status){
+        console.log(results);
     }
 
 
