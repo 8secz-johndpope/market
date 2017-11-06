@@ -434,17 +434,29 @@
         }
     });
     function getStations(){
-        $.getJSON("https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0&location={!! $lat !!},{!! $lng !!}&rankby=distance&type=subway_station", function( data ) {
+        /*$.getJSON("https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0&location={!! $lat !!},{!! $lng !!}&rankby=distance&type=subway_station", function( data ) {
           var items = [];
           console.log(data);
-          /*$.each( data, function( key, val ) {
+          $.each( data, function( key, val ) {
             items.push( "<li id='" + key + "'>" + val + "</li>" );
           });
          
           $( "<ul/>", {
             "class": "my-new-list",
             html: items.join( "" )
-          }).appendTo( "body" );*/
+          }).appendTo( "body" );
+        });*/
+        $.ajax({
+             url:"https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0&location={!! $lat !!},{!! $lng !!}&rankby=distance&type=subway_station",
+             dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
+             success:function(json){
+                 // do stuff with json (in this case an array)
+                 alert("Success");
+                 console.log(json);
+             },
+             error:function(){
+                 alert("Error");
+             }      
         });
     }
 
