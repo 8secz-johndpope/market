@@ -475,11 +475,8 @@
             console.log("change to panorama");
             $('#map').hide();
             $('#pano').show();
-            x = panorama.getZoom();
-            c = panorama.getCenter();
             google.maps.event.trigger(panorama, 'resize');
-            panorama.setZoom(x);
-            panorama.setCenter(c);
+            $('.mapframe small').text("Start exploring the local area from here.");
         }
         else{
            console.log("change to map");
