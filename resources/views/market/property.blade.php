@@ -448,7 +448,7 @@
                 stations.push( "<li>" + results[i].name + "</li>" );
             }
             var stationsList = stations.join("\n");
-            $('.stations-list').text(stationsList);
+            $('.stations-list').html(stationsList);
             console.log(stationsList);
         }
     }
