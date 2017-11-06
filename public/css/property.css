@@ -1,10 +1,10 @@
 @font-face {
     font-family: Effra-Regular;
-    src: url(Effra_Std_Lt.ttf);
+    src: url('fonts/Effra_Std_Lt.ttf');
 }
 @font-face {
     font-family: Effra-Medium;
-    src: url(Effra_Std_Md.ttf);
+    src: url('fonts/Effra_Std_Md.ttf');
 }
 
 
