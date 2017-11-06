@@ -251,10 +251,6 @@ a.left.carousel-control:hover {
     width: 192px;
     padding: 0px;
 }
-div#tap-map {
-    display: block;
-}
-
 .icon-underground{
 	background-image: url('tube_icon.png');
 	background-repeat: no-repeat;
