@@ -471,8 +471,17 @@
     });
     $('input[type=radio][name=options]').change(function(){
         console.log(this);
-        //$('#map').hide();
-        //$('#panorama').show();
+        if(this.id == "option-view"){
+            console.log("change to panorama");
+            $('#map').hide();
+            $('#panorama').show();
+        }
+        else{
+           console.log("change to map");
+            $('#map').show();
+            $('#panorama').hide(); 
+        }
+        
     })
     function callback(results, status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
