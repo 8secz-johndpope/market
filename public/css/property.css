@@ -269,3 +269,6 @@ div#tap-map {
 	font-size: 1.2rem;
     letter-spacing: -0.01em;
 }
+.stations-list li {
+    padding: 0 0 6px;
+}
