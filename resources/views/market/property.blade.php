@@ -155,7 +155,7 @@
                                     var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
                                     var request = {
                                         location: pos,
-                                        radius: 1000,
+                                        radius: 5000,
                                         types: ['subway_station']
                                     };
                                     infowindow = new google.maps.InfoWindow();
@@ -175,7 +175,6 @@
                                 
                                 $(document).ready(function() {
                                     initMap();
-                                    getStations();
                                 });
                                 
 
