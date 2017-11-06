@@ -107,16 +107,16 @@
                                             </div>
                                         @endforeach
                                             <div class="col-sm-6 meta-bold">
-                                                Payments:
-                                            </div>
-                                            <div class="col-sm-6 meta-info">
-                                                
-                                            </div>
-                                            <div class="col-sm-6 meta-bold">
                                                 Added on Rightmove:
                                             </div>
                                             <div class="col-sm-6 meta-info">
                                                 {{date('d F Y',$advert->created_at)}}
+                                            </div>
+                                            <div class="col-sm-6 meta-bold">
+                                                Payments:
+                                            </div>
+                                            <div class="col-sm-6 meta-info">
+                                                
                                             </div>
                                     </div>
                                     @if($advert->has_meta('key_features'))
