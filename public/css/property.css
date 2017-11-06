@@ -304,3 +304,10 @@ div#myCarousel {
     border: 1px solid #ccc;
     border-top-color: transparent;
 }
+#map, #pano {
+    height: 400px;
+    width: 100%;
+}
+#pano{
+
+}
