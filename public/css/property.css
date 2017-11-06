@@ -300,3 +300,6 @@ div#myCarousel {
 .mapframe .btn-group {
     margin-bottom: 1.6rem;
 }
+.color-grey span.glyphicon {
+    margin-right: 5px;
+}
