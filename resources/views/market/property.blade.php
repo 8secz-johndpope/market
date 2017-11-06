@@ -178,6 +178,7 @@
                                     infowindow = new google.maps.InfoWindow();
                                     var service = new google.maps.places.PlacesService(map);
                                     service.nearbySearch(request, callback);
+                                    google.maps.event.trigger(map, 'resize');
                                 }
                                 $(document).ready(function() {
                                     initMap();
@@ -448,10 +449,10 @@
     });
     $('a[href="#tap-map"]').click(function(e){
         console.log("loading maps");
+        e.preventDefault();
         $('.nav-tabs a[href="#tap-map"]').tab('show');
         x = map.getZoom();
         c = map.getCenter();
-        google.maps.event.trigger(map, 'resize');
         map.setZoom(x);
         map.setCenter(c);
 
