@@ -143,8 +143,17 @@
                         <div id="tap-map" class="tab-pane fade">           
                             <div class="row mapframe">
                         <div class="col-sm-12">
-                                                        <div id="map"></div>
-
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-primary active">
+                                    <input type="radio" name="options" id="option-map" autocomplete="off" checked> map view
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="option-view" autocomplete="off">
+                                    street view
+                                </label>
+                            </div>
+                            <div id="map"></div>
+                            <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
                             <script>
                                 var map;
                                 function initMap() {
