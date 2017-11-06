@@ -445,7 +445,7 @@
         if (status == google.maps.places.PlacesServiceStatus.OK){
             var stations = [];
             for(i = 0; i < results.length; i++){
-                stations.push( "<li><i class=\"icon-underground\"></i>" + results[i].name + "</li>" );
+                stations.push( "<li><i class=\"icon-underground\"></i><span>" + results[i].name + "</span></li>" );
             }
             var stationsList = stations.join("\n");
             $('.stations-list').html(stationsList);

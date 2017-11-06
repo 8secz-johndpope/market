@@ -262,4 +262,10 @@ div#tap-map {
     white-space: nowrap;
     word-wrap: normal;
     overflow: hidden;
+    background-size: contain;
+    background-position: center;
+}
+.stations-list li>span{
+	font-size: 1.2rem;
+    letter-spacing: -0.01em;
 }
