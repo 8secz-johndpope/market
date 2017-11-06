@@ -85,7 +85,7 @@
                             <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
                         </div>
                     </div>
-                    <ul class="nav nav-tabs">
+                    <ul id="tabs" class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map</a></li>
                     </ul>
@@ -449,7 +449,7 @@
         e.preventDefault();
         $('.nav-tabs a[href="#tap-map"]').tab('show');
     });
-    $('.nav-tabs a[href="#tap-map"]').on( "tabsload", function(event, ui) {
+    $('#tabs').on( "tabsload", function(event, ui) {
         console.log("loading tab maps");
         x = map.getZoom();
         c = map.getCenter();

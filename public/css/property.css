@@ -297,3 +297,6 @@ div#myCarousel {
 .mapframe {
     margin-top: 0;
 }
+.mapframe .btn-group {
+    margin-bottom: 1.6rem;
+}
