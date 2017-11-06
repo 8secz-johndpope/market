@@ -448,7 +448,7 @@
         });*/
         $.ajax({
              url:"https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDsy5_jVhfZJ7zpDlSkGYs9xdo2yFJFpQ0&location={!! $lat !!},{!! $lng !!}&rankby=distance&type=subway_station",
-             dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
+             dataType: 'json', // Notice! JSONP <-- P (lowercase)
              type: "GET",
              success:function(json){
                  // do stuff with json (in this case an array)
