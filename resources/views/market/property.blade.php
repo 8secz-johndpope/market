@@ -446,12 +446,12 @@
             }
         }
     });
-    $('a[href="#tap-map"]').click(function(e){
+    $('.right-content a[href="#tap-map"]').click(function(e){
         console.log("loading maps");
         e.preventDefault();
         $('.nav-tabs a[href="#tap-map"]').tab('show');
     });
-    $('#tabs a[href="#tap-map"]').on( "tabsload", function(event, ui) {
+    $('.nav.nav-tabs').on( "tabsload", function(event, ui) {
         console.log("loading tab maps");
         x = map.getZoom();
         c = map.getCenter();
