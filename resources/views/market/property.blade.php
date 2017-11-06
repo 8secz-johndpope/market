@@ -155,9 +155,15 @@
                                     street view
                                 </label>
                             </div>
-                            <div id="map"></div>
-                            <div id="pano"></div>
-                            <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
+                            <div class="info-map">
+                                <div id="map"></div>
+                                <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
+                            </div>
+                            <div class="info-pano">
+                                <div id="pano"></div>
+                                <small>Note: Start exploring the local area from here.</small>
+                            </div>
+                            
                             <script>
                                 var map;
                                 var panorama;
@@ -476,7 +482,6 @@
             $('#map').hide();
             $('#pano').show();
             google.maps.event.trigger(panorama, 'resize');
-            $('.mapframe small').text("Start exploring the local area from here.");
         }
         else{
            console.log("change to map");
