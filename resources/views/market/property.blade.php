@@ -116,7 +116,7 @@
                                                 Added on Rightmove:
                                             </div>
                                             <div class="col-sm-6 meta-info">
-                                                {{date($advert->created_at)}}
+                                                {{date('d F Y',$advert->created_at)}}
                                             </div>
                                     </div>
                                     @if($advert->has_meta('key_features'))
