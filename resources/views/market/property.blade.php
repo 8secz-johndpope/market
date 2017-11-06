@@ -469,10 +469,10 @@
         map.setZoom(x);
         map.setCenter(c);
     });
-    $('#option-view').click(function(){
-        console.log("only panorama");
-        $('#map').hide();
-        $('#panorama').show();
+    $('input[type=radio][name=options]').change(function(){
+        console.log(this);
+        //$('#map').hide();
+        //$('#panorama').show();
     })
     function callback(results, status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
