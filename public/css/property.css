@@ -152,6 +152,7 @@ section{
 }
 .items-box-price.font-5{
 	text-align: right;
+	font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 #current-image {
     position: relative;
