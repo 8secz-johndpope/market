@@ -543,6 +543,18 @@
                 if(isUnderground(results[i].types)){
                     aux +="<i class=\"icon-underground\"></i>"
                 }
+                var service = new google.maps.DistanceMatrixService();
+                var request = {
+                    origins: [{{!! $lat !!},{!! $lng !!}}],
+                    destinations: [{results[i].geometry.lat, results[i]..geometry.lng}],
+                    travelMode: 'DRIVING',
+                    transitOptions: TransitOptions,
+                    drivingOptions: DrivingOptions,
+                    unitSystem: UnitSystem,
+                    avoidHighways: Boolean,
+                    avoidTolls: Boolean,
+                }
+                service.getDistanceMatrix(request, prueba);
                 //service.getDetails(request, printInfoStation);
                 aux = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
                 var length
@@ -573,6 +585,11 @@
             textHtml += dict[key] + "\n";
         }
         return textHtml;
+    }
+    function prueba(response, status) {
+    // See Parsing the Results for
+    // the basics of a callback function.
+        console.log(response);
     }
 
 
