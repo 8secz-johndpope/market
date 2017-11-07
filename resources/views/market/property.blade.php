@@ -196,7 +196,7 @@
                                     var request = {
                                         location: pos,
                                         radius: 2000,
-                                        types: ['subway_station']
+                                        types: ['subway_station', 'train_station']
                                     };
                                     infowindow = new google.maps.InfoWindow();
                                     var service = new google.maps.places.PlacesService(map);
