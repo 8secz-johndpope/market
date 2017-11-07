@@ -12,6 +12,8 @@
 
 @section('content')
     <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet">
+    <link href="/css/imageviewer.css"  rel="stylesheet" type="text/css" />
+<script src="/js/imageviewer.js"></script>
     <div class="container">
         <div class="row">
             <div class="col-lg-offset-1 col-lg-7 col-md-9 col-sm-12">
@@ -29,7 +31,7 @@
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
                     <div id="current-image">
-                        <img id="image-active" data-index="1" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
+                        <img id="image-active" data-index="1" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" class="gallery-items">
                         <div class="images-info">
                             <div class="col-sm-4 start-animation">
                                 <a href="javascript:void(0)" class="icon-before">Start slideshow</a>
@@ -410,6 +412,17 @@
                 </div>
 
             </div>
+            <div class="share">
+                <h3>Share this property</h3>
+                <div class=" media">
+                    <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></div>
+                    <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/twitter.svg"></a></div>
+                    <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/instagram.png"></a></div>
+                    <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/pinterest.svg"></a></div>
+                    <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/email.svg"></a></div>
+
+                </div>
+            </div>
         </div>
     </div>
 
@@ -587,6 +600,15 @@
         var distance = response.rows[0].elements[0].distance.value / 1600;
         console.log(distance + " mi");
     }
+    $(function () {
+    var viewer = ImageViewer();
+    $('.gallery-items').click(function () {
+        var imgSrc = this.src,
+            highResolutionImage = $(this).data('high-res-img');
+ 
+        viewer.show(imgSrc, highResolutionImage);
+    });
+});
 
 
 </script>
