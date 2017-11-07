@@ -424,4 +424,8 @@ img.payments-methods {
 .contact .btn-default {
     width: 200px;
 }
+.contact p {
+    margin-bottom: 0px;
+    font-weight: bold;
+}
 
