@@ -428,4 +428,8 @@ img.payments-methods {
     margin-bottom: 0px;
     font-weight: bold;
 }
+span .glyphicon {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
