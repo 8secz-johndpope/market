@@ -63,11 +63,11 @@ section{
     content: "";
     height: 0;
     position: absolute;
-    bottom: 0;
+    top: -9px;
     left: 0;
 }
 .list-two-col li:after {
-    width: 100%;
+    width: 200%;
 }
 .list-two-col {
     border-style: dashed;
