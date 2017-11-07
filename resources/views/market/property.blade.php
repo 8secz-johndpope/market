@@ -564,7 +564,7 @@
                     destinations: [{lat: results[i].geometry.location.lat(), lng: results[i].geometry.location.lng()}],
                     travelMode: 'WALKING'
                 }
-                service.getDistanceMatrix(request, prueba(results[i].name));
+                service.getDistanceMatrix(request, prueba);
                 //service.getDetails(request, printInfoStation);
                 aux = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
                 var length;
@@ -594,7 +594,7 @@
         }
         return textHtml;
     }
-    function prueba(other, response, status) {
+    function prueba(response, status) {
     // See Parsing the Results for
     // the basics of a callback function.
         console.log(response);
