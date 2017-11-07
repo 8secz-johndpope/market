@@ -513,7 +513,7 @@
             var request;
             for(i = 0; i < results.length; i++){
                 request = {
-                  placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4'
+                  placeId: results[i].place_id
                 };
                 service.getDetails(request, printInfoStation);
                 stations.push( "<li><i class=\"icon-underground\"></i><span>" + results[i].name + "</span></li>" );
