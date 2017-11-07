@@ -43,7 +43,7 @@
                                 </p>
                             </div>
                             <div class="col-sm-4 images-current">
-                                <p> Picture <span class="index">1</span></p>
+                                <a href="#"><p> Picture <span class="index">1</span></p></a>
                             </div>
                         </div>
                     </div>
@@ -605,9 +605,10 @@
     }
     $(function () {
         var viewer = ImageViewer();
-        $('.gallery-items').click(function () {
-            var imgSrc = this.src,
-                highResolutionImage = $(this).data('high-res-img');
+        $('.images-current').click(function (e) {
+            e.preventDefault();
+            var imgSrc = $('image-active').attr('src'),
+                highResolutionImage = $('image-active').data('high-res-img');
      
             viewer.show(imgSrc, highResolutionImage);
         });
