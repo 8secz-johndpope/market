@@ -468,7 +468,6 @@
         if(index > 1){
             var children = $('.carousel-inner .item').children();
             var prevImage = children.eq(index - 2).find('img').attr('src');
-            console.log(prevImage);
             index -= 1
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', prevImage);
@@ -488,7 +487,6 @@
         if(index <  numImg){
             var nextImage = children.eq(index).find('img').attr('src');
             index = index + 1;
-            console.log(index);
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', nextImage);
             $('.index').text(index);
