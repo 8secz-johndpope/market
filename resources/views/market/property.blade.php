@@ -176,6 +176,12 @@
                             <div class="info-map">
                                 <div id="map"></div>
                                 <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
+                                <div>
+                                    <h4>Nearest stations</h4>
+                                    <ul class="stations-list">
+
+                                    </ul>
+                                </div>
                             </div>
                             <div class="info-pano">
                                 <div id="pano"></div>
