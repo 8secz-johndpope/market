@@ -526,9 +526,9 @@
                 //service.getDetails(request, printInfoStation);
                 stations[results[i].name] = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
             }
-            //var stationsList = stations.join("\n");
+            var stationsList = getStationHtml(stations);
             $('.stations-list').html(stationsList);
-            console.log(stations);
+            console.log(stationsList);
         }
     }
     function printInfoStation(results, status){
@@ -551,6 +551,13 @@
             }
         }
         return false;
+    }
+    function getStationHtml(dict){
+        var textHtml = "";
+        for(key in dict){
+            textHtml += dict[key] + "\n";
+        }
+        return textHtml;
     }
 
 
