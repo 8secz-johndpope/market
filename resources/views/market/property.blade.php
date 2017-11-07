@@ -547,10 +547,9 @@
                 }
                 var service = new google.maps.DistanceMatrixService();
                 var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
-                console.log(results[i].geometry.location.lat());
                 var request = {
                     origins: [uluru],
-                    destinations: [{lat: results[i].geometry.location.lat, lng: results[i].geometry.location.lng}],
+                    destinations: [{lat: results[i].geometry.location.lat(), lng: results[i].geometry.location.lng()}],
                     travelMode: 'WALKING'
                 }
                 service.getDistanceMatrix(request, prueba);
