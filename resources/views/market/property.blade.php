@@ -119,7 +119,7 @@
                                                 Payments:
                                             </div>
                                             <div class="col-sm-6 meta-info">
-                                                <img class="payments-methods" src="/css/payments.png">
+                                                <a href="#"> <img class="payments-methods" src="/css/payments.png"></a>
                                             </div>
                                     </div>
                                     @if($advert->has_meta('key_features'))

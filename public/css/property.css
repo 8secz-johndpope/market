@@ -411,4 +411,7 @@ label.btn.btn-primary:hover, label.btn.btn-primary:active {
     margin-right: 0;
     margin: 0 0 1.4rem;
 }
+img.payments-methods {
+    height: 19px;
+}
 
