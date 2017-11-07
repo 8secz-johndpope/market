@@ -534,8 +534,7 @@
                 return true;
             }
         }
-        else
-            return false;
+        return false;
     }
     function isRail(types){
         for(i = 0; i < types.length; i++){
@@ -543,8 +542,7 @@
                 return true;
             }
         }
-        else
-            return false;
+        return false;
     }
 
 
