@@ -195,7 +195,7 @@ h2.item-name {
 	text-align: center;
 }
 .btn-default {
-        color: #fff;
+    color: #fff;
     background-color: #ff8830;
     border-color: #ff8830;
     /* text-align: center; */
@@ -207,6 +207,11 @@ h2.item-name {
     line-height: 29px;
     padding-top: 0;
     padding-bottom: 0;
+}
+.btn-default:hover, .btn-default:active{
+	color: #fff;
+    background-color: #ff8830;
+    border-color: #ff8830;
 }
 .list-group {
     margin-bottom: 0;
