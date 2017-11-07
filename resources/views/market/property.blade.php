@@ -587,7 +587,8 @@
     function prueba(response, status) {
     // See Parsing the Results for
     // the basics of a callback function.
-        console.log(response.rows[0].elements[0].distance);
+        var distance = response.rows[0].elements[0].distance.value * 1.6;
+        console.log(distance + " mi");
     }
 
 
