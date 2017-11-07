@@ -85,6 +85,9 @@ section{
     overflow: hidden;
     padding: 0;
 }
+.list-two-col li:nth-child(even):after {
+    border: 0;
+}
 .tab-pane h3{
 	color: #262637;
     font-size: 15px;
