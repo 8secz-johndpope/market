@@ -166,9 +166,13 @@
 
                                                                     </div>
                                                                 @elseif($field->type==='date')
-                                                                    <input class="form-control" type="date" name="{{$field->slug}}" min="{{date('Y-m-d')}}" required  value="{{$advert->meta($field->slug)}}">
+                                                                    <input class="form-control" type="date" name="{{$field->slug}}" min="{{date('Y-m-d')}}"  value="{{$advert->meta($field->slug)}}">
                                                                 @else
-                                                                    <input class="form-control" type="text" name="{{$field->slug}}" required  value="{{$advert->meta($field->slug)}}">
+                                                                    <input class="form-control" type="text" name="{{$field->slug}}" 
+                                                                    @if($field->required == 1)
+                                                                    required
+                                                                    @endif  
+                                                                    value="{{$advert->meta($field->slug)}}">
                                                                 @endif
                                                             </div>
                                                         @endif
