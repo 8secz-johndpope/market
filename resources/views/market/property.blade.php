@@ -508,6 +508,7 @@
     function callback(results, status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
             var stations = [];
+            console.log(results);
             for(i = 0; i < results.length; i++){
                 stations.push( "<li><i class=\"icon-underground\"></i><span>" + results[i].name + "</span></li>" );
             }
