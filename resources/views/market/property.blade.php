@@ -223,7 +223,7 @@
                     </div>
                         </div>
                         @if($advert->has_meta('property_floorplan'))
-                        <div id="tap-map" class="tab-pane fade">           
+                        <div id="tap-floorplan" class="tab-pane fade">           
                             <div class="col-sm-12 foorplan">
                                 <img src="{{$advert->meta('property_floorplan')}}">
                             </div>
