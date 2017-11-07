@@ -387,6 +387,8 @@
                     </div>
                     <div class="contact">
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
+                        <p>Or</p>
+                        <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Call</a>
                     </div>
                     <ul class="list-group">
                         <li class="list-group-item">
