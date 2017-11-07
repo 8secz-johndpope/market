@@ -195,7 +195,7 @@ h2.item-name {
 	text-align: center;
 }
 .btn-default {
-    color: #fff;
+        color: #fff;
     background-color: #ff8830;
     border-color: #ff8830;
     /* text-align: center; */
@@ -203,6 +203,10 @@ h2.item-name {
     padding-right: 50px;
     font-size: 17px;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: normal;
+    line-height: 29px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .list-group {
     margin-bottom: 0;
