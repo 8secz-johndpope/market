@@ -107,7 +107,7 @@
                                             </div>
                                         @endforeach
                                             <div class="col-sm-6 meta-bold">
-                                                Added on Rightmove:
+                                                Added on Sumra:
                                             </div>
                                             <div class="col-sm-6 meta-info">
                                                 {{$advert->created_at}}
