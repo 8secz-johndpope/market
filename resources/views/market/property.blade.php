@@ -526,7 +526,7 @@
                 //service.getDetails(request, printInfoStation);
                 stations[results[i].name] = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
             }
-            var stationsList = stations.join("\n");
+            //var stationsList = stations.join("\n");
             $('.stations-list').html(stationsList);
             console.log(stations);
         }
@@ -536,20 +536,20 @@
     }
     function isUnderground(types){
         console.log(types);
-        /*for(i = 0; i < types.length; i++){
+        for(i = 0; i < types.length; i++){
             if(types[i] == 'subway_station'){
                 return true;
             }
-        }*/
+        }
         return false;
     }
     function isRail(types){
         console.log(types);
-        /*for(i = 0; i < types.length; i++){
+        for(i = 0; i < types.length; i++){
             if(types[i] == 'train_station'){
                 return true;
             }
-        }*/
+        }
         return false;
     }
 
