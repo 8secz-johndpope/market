@@ -35,9 +35,9 @@
                                 <a href="javascript:void(0)" class="icon-before">Start slideshow</a>
                             </div>
                             <div class="col-sm-4 images-nav">
-                                <p><span class="prev"> <a href="javascript:void(0)"> < </a></span>
+                                <p><span class="prev"> <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-left"></span></a></span>
                                     <span class="index">1</span> of {{count($product['images'])}}
-                                    <span class="next"><a href="javascript:void(0)"> ></a></span>
+                                    <span class="next"><a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-right"></span></a></span>
                                 </p>
                             </div>
                             <div class="col-sm-4 images-current">
