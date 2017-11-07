@@ -432,4 +432,6 @@ span .glyphicon {
     margin-left: 5px;
     margin-right: 5px;
 }
-
+.images-current {
+    text-align: right;
+}
