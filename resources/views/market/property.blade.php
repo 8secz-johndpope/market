@@ -544,9 +544,10 @@
                     aux +="<i class=\"icon-underground\"></i>"
                 }
                 var service = new google.maps.DistanceMatrixService();
+                var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
                 var request = {
-                    origins: [{{!! $lat !!},{!! $lng !!}}],
-                    destinations: [{results[i].geometry.lat, results[i]..geometry.lng}],
+                    origins: [uluru],
+                    destinations: [{lat: results[i].geometry.lat, lng: results[i].geometry.lng}],
                     travelMode: 'DRIVING',
                     transitOptions: TransitOptions,
                     drivingOptions: DrivingOptions,
