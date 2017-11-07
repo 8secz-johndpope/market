@@ -181,6 +181,10 @@ section{
 h2.item-name {
     font-size: 23px;
 }
+.info-map h4 {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
 .buttons {
     margin-top: 150px;
     border: 1px solid #ddd;
