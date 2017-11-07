@@ -407,7 +407,7 @@
                         </li>
                         <li class="list-group-item">
                             <span class="glyphicon glyphicon-envelope"></span>
-                            Send to friend
+                            Email at friend
                         </li>
                     </ul>
                 </div>

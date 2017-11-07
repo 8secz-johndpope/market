@@ -444,3 +444,8 @@ span .glyphicon {
     padding-bottom: 15px;
     border-bottom: 1px dashed #ccc;
 }
+.share h3 {
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
