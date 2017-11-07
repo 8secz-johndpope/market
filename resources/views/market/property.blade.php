@@ -182,6 +182,7 @@
                             <script>
                                 var map;
                                 var panorama;
+                                var service;
                                 function initMap() {
                                     var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
                                      map = new google.maps.Map(document.getElementById('map'), {
@@ -199,15 +200,8 @@
                                         types: ['subway_station', 'train_station']
                                     };
                                     infowindow = new google.maps.InfoWindow();
-                                    var service = new google.maps.places.PlacesService(map);
+                                    service = new google.maps.places.PlacesService(map);
                                     service.nearbySearch(request, callback);
-                                    request = {
-                                        location: pos,
-                                        radius: 1500,
-                                        keyword: 'underground overground train',
-                                        types: ['subway_station', 'train_station']
-                                    };
-                                    service.radarSearch(request, callback);
                                     panorama = new google.maps.StreetViewPanorama(
                                         document.getElementById('pano'), {
                                             position: uluru,
@@ -516,13 +510,21 @@
         if (status == google.maps.places.PlacesServiceStatus.OK){
             var stations = [];
             console.log(results);
+            var request;
             for(i = 0; i < results.length; i++){
+                request = {
+                  placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4'
+                };
+                service.getDetails(request, printInfoStation);
                 stations.push( "<li><i class=\"icon-underground\"></i><span>" + results[i].name + "</span></li>" );
             }
             var stationsList = stations.join("\n");
             $('.stations-list').html(stationsList);
             console.log(stationsList);
         }
+    }
+    function printInfoStation(results, status){
+        console.log(results);
     }
 
 
