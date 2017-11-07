@@ -440,3 +440,7 @@ span .glyphicon {
 .images-current {
     text-align: right;
 }
+.share {
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+}
