@@ -555,11 +555,10 @@
                 service.getDistanceMatrix(request, prueba);
                 //service.getDetails(request, printInfoStation);
                 aux = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
-                var length
+                var length;
                 if(typeof(stations[results[i].name]) != "undefined"){
                     length = stations[results[i].name].length
                     if(aux.length > length){
-                        console.log("es mayor");
                         stations[results[i].name] = aux;
                     }
                 }
@@ -568,7 +567,6 @@
             }
             var stationsList = getStationHtml(stations);
             $('.stations-list').html(stationsList);
-            console.log(stationsList);
         }
     }
     function isUnderground(types){
