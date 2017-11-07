@@ -77,6 +77,14 @@ section{
     border-style: dashed;
     border-color: #dfdfe1;
 }
+.list-two-col {
+    border-width: 0;
+    border-bottom-width: 1px;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
 .tab-pane h3{
 	color: #262637;
     font-size: 15px;
