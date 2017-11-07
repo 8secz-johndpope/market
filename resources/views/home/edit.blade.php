@@ -170,7 +170,7 @@
                                                                 @else
                                                                     <input class="form-control" type="text" name="{{$field->slug}}" 
                                                                     @if($field->required == 1)
-                                                                    required
+                                                                        required
                                                                     @endif  
                                                                     value="{{$advert->meta($field->slug)}}">
                                                                 @endif
