@@ -201,6 +201,13 @@
                                     infowindow = new google.maps.InfoWindow();
                                     var service = new google.maps.places.PlacesService(map);
                                     service.nearbySearch(request, callback);
+                                    request = {
+                                        location: pos,
+                                        radius: 1500,
+                                        keyword: 'underground overground train',
+                                        types: ['subway_station', 'train_station']
+                                    };
+                                    service.radarSearch(request, callback);
                                     panorama = new google.maps.StreetViewPanorama(
                                         document.getElementById('pano'), {
                                             position: uluru,
