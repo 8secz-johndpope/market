@@ -182,6 +182,8 @@ section{
 h2.item-name {
 	font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-size: 23px;
+    letter-spacing: 0;
+    text-shadow: none;
 }
 .info-map h4 {
     font-weight: bold;
