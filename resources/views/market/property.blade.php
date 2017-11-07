@@ -223,9 +223,11 @@
                     </div>
                         </div>
                         @if($advert->has_meta('property_floorplan'))
-                        <div id="tap-floorplan" class="tab-pane fade">           
-                            <div class="col-sm-12 foorplan">
-                                <img src="{{$advert->meta('property_floorplan')}}">
+                        <div id="tap-floorplan" class="tab-pane fade">
+                            <div class="row">           
+                                <div class="col-sm-12 foorplan">
+                                    <img src="{{$advert->meta('property_floorplan')}}">
+                                </div>
                             </div>
                         </div>
                         @endif
