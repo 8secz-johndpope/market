@@ -409,19 +409,19 @@
                             Send to friend
                         </li>
                     </ul>
-                </div>
+                    <div class="share">
+                    <h3>Share this property</h3>
+                    <div class=" media">
+                        <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></div>
+                        <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/twitter.svg"></a></div>
+                        <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/instagram.png"></a></div>
+                        <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/pinterest.svg"></a></div>
+                        <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/email.svg"></a></div>
 
+                    </div>
             </div>
-            <div class="share">
-                <h3>Share this property</h3>
-                <div class=" media">
-                    <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></div>
-                    <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/twitter.svg"></a></div>
-                    <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/instagram.png"></a></div>
-                    <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/pinterest.svg"></a></div>
-                    <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/email.svg"></a></div>
-
                 </div>
+
             </div>
         </div>
     </div>
