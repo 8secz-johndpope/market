@@ -526,7 +526,7 @@
                 //service.getDetails(request, printInfoStation);
                 aux = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
                 var length
-                if(stations[results[i].name] != ""){
+                if(typeof(stations[results[i].name]) != "undefined"){
                     length = stations[results[i].name].length
                     if(aux.length > length){
                         console.log("es mayor");
