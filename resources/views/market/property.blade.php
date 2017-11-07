@@ -518,8 +518,7 @@
                   placeId: results[i].place_id
                 };
                 service.getDetails(request, printInfoStation);
-                if()
-                stations[results[i].name] = "<li><i class=\"icon-underground\"></i><span>" + results[i].name + "</span></li>" );
+                stations[results[i].name] = "<li><i class=\"icon-underground\"></i><span>" + results[i].name + "</span></li>";
             }
             var stationsList = stations.join("\n");
             $('.stations-list').html(stationsList);
@@ -532,6 +531,15 @@
     function isUnderground(types){
         for(i = 0; i < types.length; i++){
             if(types[i] == 'subway_station'){
+                return true;
+            }
+        }
+        else
+            return false;
+    }
+    function isRail(types){
+        for(i = 0; i < types.length; i++){
+            if(types[i] == 'train_station'){
                 return true;
             }
         }
