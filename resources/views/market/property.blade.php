@@ -13,7 +13,7 @@
 @section('content')
     <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet">
     <link href="/css/imageviewer.css"  rel="stylesheet" type="text/css" />
-<script src="/js/imageviewer.js"></script>
+<script src="/js/imageviewer.min.js"></script>
     <div class="container">
         <div class="row">
             <div class="col-lg-offset-1 col-lg-7 col-md-9 col-sm-12">
@@ -604,14 +604,14 @@
         console.log(distance + " mi");
     }
     $(function () {
-    var viewer = ImageViewer();
-    $('.gallery-items').click(function () {
-        var imgSrc = this.src,
-            highResolutionImage = $(this).data('high-res-img');
- 
-        viewer.show(imgSrc, highResolutionImage);
+        var viewer = ImageViewer();
+        $('.gallery-items').click(function () {
+            var imgSrc = this.src,
+                highResolutionImage = $(this).data('high-res-img');
+     
+            viewer.show(imgSrc, highResolutionImage);
+        });
     });
-});
 
 
 </script>
