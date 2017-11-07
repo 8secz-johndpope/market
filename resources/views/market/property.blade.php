@@ -195,7 +195,7 @@
                                     var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
                                     var request = {
                                         location: pos,
-                                        radius: 2000,
+                                        radius: 1500,
                                         types: ['subway_station', 'train_station']
                                     };
                                     infowindow = new google.maps.InfoWindow();
