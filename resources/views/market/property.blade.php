@@ -513,16 +513,22 @@
             var request;
             var aux;
             for(i = 0; i < results.length; i++){
-                aux = "<li>";
+                aux = "";
                 request = {
                   placeId: results[i].place_id
                 };
+                if(isRail(results[i].types)){
+                    aux += "<i class=\"icon-rail\"></i>"
+                }
+                if(isUnderground(results[i].types)){
+                    aux +="<i class=\"icon-underground\"></i>"
+                }
                 service.getDetails(request, printInfoStation);
-                stations[results[i].name] = "<li><i class=\"icon-underground\"></i><span>" + results[i].name + "</span></li>";
+                stations[results[i].name] = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
             }
             var stationsList = stations.join("\n");
             $('.stations-list').html(stationsList);
-            console.log(stationsList);
+            console.log(stations);
         }
     }
     function printInfoStation(results, status){
