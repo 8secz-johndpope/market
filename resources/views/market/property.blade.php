@@ -545,11 +545,12 @@
     }
     function isRail(types){
         console.log(types);
-        /*for(i = 0; i < types.length; i++){
+        for(i = 0; i < types.length; i++){
+            console.log(types[i]);
             if(types[i] == 'train_station'){
                 return true;
             }
-        }*/
+        }
         return false;
     }
     function getStationHtml(dict){
