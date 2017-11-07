@@ -536,11 +536,11 @@
     }
     function isUnderground(types){
         console.log(types);
-        return types.indexOf('subway_station');
+        return types.indexOf('subway_station') != -1;
     }
     function isRail(types){
         console.log(types);
-        return types.indexOf('train_station');
+        return types.indexOf('train_station') != -1;
     }
     function getStationHtml(dict){
         var textHtml = "";
