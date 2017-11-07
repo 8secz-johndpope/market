@@ -92,6 +92,9 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
+                        @if($advert->has_meta('property_floorplan'))
+                            <li><a data-toggle="tab" href="#tap-floorplan">Floorplan</a></li>
+                        @endif
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
@@ -219,6 +222,13 @@
                         </div>
                     </div>
                         </div>
+                        @if($advert->has_meta('property_floorplan'))
+                        <div id="tap-map" class="tab-pane fade">           
+                            <div class="col-sm-12 foorplan">
+                                <img src="{{$advert->meta('property_floorplan')}}">
+                            </div>
+                        </div>
+                        @endif
                     </div>
                     </div>
                 </div>
