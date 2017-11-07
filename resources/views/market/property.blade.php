@@ -548,12 +548,7 @@
                 var request = {
                     origins: [uluru],
                     destinations: [{lat: results[i].geometry.lat, lng: results[i].geometry.lng}],
-                    travelMode: 'DRIVING',
-                    transitOptions: TransitOptions,
-                    drivingOptions: DrivingOptions,
-                    unitSystem: UnitSystem,
-                    avoidHighways: Boolean,
-                    avoidTolls: Boolean,
+                    travelMode: 'WALKING'
                 }
                 service.getDistanceMatrix(request, prueba);
                 //service.getDetails(request, printInfoStation);
