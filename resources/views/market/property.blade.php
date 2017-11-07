@@ -523,7 +523,7 @@
                 if(isUnderground(results[i].types)){
                     aux +="<i class=\"icon-underground\"></i>"
                 }
-                service.getDetails(request, printInfoStation);
+                //service.getDetails(request, printInfoStation);
                 stations[results[i].name] = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
             }
             var stationsList = stations.join("\n");
