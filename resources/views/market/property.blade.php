@@ -511,12 +511,15 @@
             var stations = [];
             console.log(results);
             var request;
+            var aux;
             for(i = 0; i < results.length; i++){
+                aux = "<li>";
                 request = {
                   placeId: results[i].place_id
                 };
                 service.getDetails(request, printInfoStation);
-                stations.push( "<li><i class=\"icon-underground\"></i><span>" + results[i].name + "</span></li>" );
+                if()
+                stations[results[i].name] = "<li><i class=\"icon-underground\"></i><span>" + results[i].name + "</span></li>" );
             }
             var stationsList = stations.join("\n");
             $('.stations-list').html(stationsList);
@@ -525,6 +528,15 @@
     }
     function printInfoStation(results, status){
         console.log(results);
+    }
+    function isUnderground(types){
+        for(i = 0; i < types.length; i++){
+            if(types[i] == 'subway_station'){
+                return true;
+            }
+        }
+        else
+            return false;
     }
 
 
