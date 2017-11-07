@@ -69,10 +69,6 @@ section{
 .list-two-col li:after {
     width: 100%;
 }
-.list-two-col li:after {
-    border-style: dashed;
-    border-color: #dfdfe1;
-}
 .list-two-col {
     border-style: dashed;
     border-color: #dfdfe1;
@@ -85,6 +81,11 @@ section{
     overflow: hidden;
     padding: 0;
 }
+.list-two-col li:nth-child(odd):after {
+    border-style: dashed;
+    border-color: #dfdfe1;
+}
+
 .list-two-col li:nth-child(even):after {
     border: 0;
 }
