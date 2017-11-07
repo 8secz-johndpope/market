@@ -207,6 +207,8 @@ h2.item-name {
     line-height: 29px;
     padding-top: 0;
     padding-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .btn-default:hover, .btn-default:active{
 	color: #fff;
