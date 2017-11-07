@@ -420,8 +420,6 @@
                         <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/twitter.svg"></a></div>
                         <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/instagram.png"></a></div>
                         <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/pinterest.svg"></a></div>
-                        <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/email.svg"></a></div>
-
                     </div>
                 </div>
             </div>
