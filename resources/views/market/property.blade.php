@@ -245,6 +245,7 @@
                     </div>
                 </div>
             <div class="col-md-3 col-sm-12">
+                <div class="row">
                 @if($advert->has_param('sold'))
                     <div class="sold-div">
                         <img class="sold-picture" src="/css/sold.jpg">
@@ -409,7 +410,10 @@
                             Send to friend
                         </li>
                     </ul>
-                    <div class="share">
+                </div>
+            </div>
+            <div class="row">
+                <div class="share">
                     <h3>Share this property</h3>
                     <div class=" media">
                         <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/facebook.svg"></a></div>
@@ -419,9 +423,8 @@
                         <div class="center-block"><a href=""><img class="img-responsive" src="css/icons/email.svg"></a></div>
 
                     </div>
-            </div>
                 </div>
-
+            </div>
             </div>
         </div>
     </div>
