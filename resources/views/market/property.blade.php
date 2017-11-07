@@ -524,6 +524,7 @@
                     aux +="<i class=\"icon-underground\"></i>"
                 }
                 //service.getDetails(request, printInfoStation);
+                aux = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
                 stations[results[i].name] = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
             }
             var stationsList = getStationHtml(stations);
