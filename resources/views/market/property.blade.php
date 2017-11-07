@@ -82,7 +82,10 @@
                             <span class="sr-only">Next</span>
                         </a>
                         <div class="request-details">
+                            <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Call</a>
                             <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
+                            
+                            <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Videocall</a>
                         </div>
                     </div>
                     <div id="tabs"> 
