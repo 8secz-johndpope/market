@@ -184,6 +184,7 @@ h2.item-name {
     font-size: 23px;
     letter-spacing: 0;
     text-shadow: none;
+    margin-bottom: 0;
 }
 .info-map h4 {
     font-weight: bold;
