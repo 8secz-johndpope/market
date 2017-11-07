@@ -594,7 +594,7 @@
         }
         return textHtml;
     }
-    function prueba(response, status, other) {
+    function prueba(other, response, status) {
     // See Parsing the Results for
     // the basics of a callback function.
         console.log(response);
