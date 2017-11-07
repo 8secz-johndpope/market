@@ -545,6 +545,7 @@
                 }
                 var service = new google.maps.DistanceMatrixService();
                 var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
+                console.log(results[i].geometry.lat);
                 var request = {
                     origins: [uluru],
                     destinations: [{lat: results[i].geometry.lat, lng: results[i].geometry.lng}],
