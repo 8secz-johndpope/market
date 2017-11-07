@@ -110,7 +110,7 @@
                                                 Added on Sumra:
                                             </div>
                                             <div class="col-sm-6 meta-info">
-                                                {{$advert->created_at}}
+                                                {{$advert->created_at_format}}
                                             </div>
                                             <div class="col-sm-6 meta-bold">
                                                 Payments:

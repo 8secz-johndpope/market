@@ -981,10 +981,8 @@ class MarketController extends BaseController
         if($category->id == 307000000 || $category->id == 306000000){
             $view = 'market.property';
             //$advert->created_at =  $advert->created_at->format('d-F-Y');
-            $date = strtotime($advert->created_at); 
-            $date = date('d F Y', $date);
+            $date = date('d F Y', $advert->created_at);
             $advert->created_at_format = $date; 
-            var_dump($advert->created_at_format);
         }
         return View($view, ['advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1]]);
     }
