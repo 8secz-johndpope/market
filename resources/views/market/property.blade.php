@@ -564,7 +564,7 @@
                     destinations: [{lat: results[i].geometry.location.lat(), lng: results[i].geometry.location.lng()}],
                     travelMode: 'WALKING'
                 }
-                service.getDistanceMatrix(request, prueba);
+                service.getDistanceMatrix(request, prueba(results[i].name));
                 //service.getDetails(request, printInfoStation);
                 aux = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
                 var length;
@@ -594,10 +594,11 @@
         }
         return textHtml;
     }
-    function prueba(response, status) {
+    function prueba(response, status, other) {
     // See Parsing the Results for
     // the basics of a callback function.
         console.log(response);
+        console.log(other);
         var distance = response.rows[0].elements[0].distance.value / 1600;
         console.log(distance + " mi");
     }
