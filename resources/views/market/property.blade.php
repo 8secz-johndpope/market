@@ -181,6 +181,8 @@
                                     <ul class="stations-list">
 
                                     </ul>
+                                    <small>Distances are straight line measurements from centre of postcode
+</small>
                                 </div>
                             </div>
                             <div class="info-pano">
