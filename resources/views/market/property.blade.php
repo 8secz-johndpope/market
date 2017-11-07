@@ -525,22 +525,26 @@
                 }
                 //service.getDetails(request, printInfoStation);
                 aux = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
-                stations[results[i].name] = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
+                var length
+                if(stations[results[i].name] != ""){
+                    length = stations[results[i].name].length
+                    if(aux.length > length){
+                        console.log("es mayor");
+                        stations[results[i].name] = aux;
+                    }
+                }
+                else
+                    stations[results[i].name] = aux;
             }
             var stationsList = getStationHtml(stations);
             $('.stations-list').html(stationsList);
             console.log(stationsList);
         }
     }
-    function printInfoStation(results, status){
-        console.log(results);
-    }
     function isUnderground(types){
-        console.log(types);
         return types.indexOf('subway_station') != -1;
     }
     function isRail(types){
-        console.log(types);
         return types.indexOf('train_station') != -1;
     }
     function getStationHtml(dict){
