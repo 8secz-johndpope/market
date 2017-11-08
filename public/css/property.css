@@ -546,6 +546,9 @@ span.email-icon img {
     height: 30px;
     margin-left: -5px;
 }
+span.glyphicon.favroite-icon.glyphicon-heart {
+	color: mediumaquamarine;
+}
     
 @media (min-width: 1200px){
 	.container {
