@@ -537,8 +537,14 @@ span.glyphicon.glyphicon-heart-empty.favroite-icon {
 	background: url(icons/email.svg);
 	background-position: center;
     background-size: cover;
-    height: 18px;
-    width: 18px;
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+}
+span.email-icon img {
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
 }
     
 @media (min-width: 1200px){
