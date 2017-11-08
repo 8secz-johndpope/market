@@ -425,6 +425,7 @@
             <div class="row">
                 <div class="similar-adverts">
                     <h3>Similar Adverts</h3>
+                    <div class="listings-adverts">
                     @foreach($products as $product)
                         <div class="col-sm-6">
                             <div class="advert-img">
@@ -438,6 +439,7 @@
                             </div>
                         </div>
                     @endforeach
+                    </div>
                 </div>
             </div>
             </div>
