@@ -499,8 +499,6 @@ span .glyphicon {
 }
 .similar-adverts {
     display: table;
-    margin-top: 15px;
-    border: 1px solid #ddd;
 }
 .similar-adverts .col-sm-6 {
     padding-left: 5px;
@@ -512,4 +510,9 @@ span .glyphicon {
     padding-left: 5px;
     padding-right: 5px;
     margin-bottom: 5px;
+}
+.listings-adverts {
+    border: 1px solid #ddd;
+    display: table;
+    padding-top: 5px;
 }
