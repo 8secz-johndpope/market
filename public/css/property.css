@@ -223,7 +223,7 @@ h2.item-name {
     margin-left: 5px;
     margin-right: 5px;
 }
-.btn-default:hover, .btn-default:active{
+.btn-default:hover, .btn-default:active, .btn-default:link{
 	color: #fff;
     background-color: #ff8830;
     border-color: #ff8830;
@@ -255,6 +255,7 @@ h2.item-name {
 	font-size: 15px;
 	padding-bottom: 1.3rem;
 	margin-top: 0px;
+	font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 .profile-picutre {
     display: block;
