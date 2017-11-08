@@ -409,7 +409,7 @@
                             Print
                         </li>
                         <li class="list-group-item">
-                            <span class="glyphicon email-icon"></span>
+                            <span class="email-icon"></span>
                             Email to friend
                         </li>
                     </ul>
