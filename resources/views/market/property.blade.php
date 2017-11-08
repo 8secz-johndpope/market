@@ -514,7 +514,7 @@
             index -= 1
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', prevImage);
-            $('.index').text(index);
+            //$('.index').text(index);
             var indexCarousel = $('.carousel-inner .item.active').index();
             var firsElementCarousel = indexCarousel * 5; 
             var lastElementCarousel = firsElementCarousel + 5;
@@ -532,7 +532,7 @@
             index = index + 1;
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', nextImage);
-            $('.index').text(index);
+            //$('.index').text(index);
             var indexCarousel = $('.carousel-inner .item.active').index();
             var firsElementCarousel = indexCarousel * 5; 
             var lastElementCarousel = firsElementCarousel + 5;
