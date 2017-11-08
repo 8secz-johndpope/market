@@ -23,6 +23,10 @@
                     @endforeach
                     <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
                 </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
                 <h2 class="item-name">{{$product['title']}}</h2>
                 <div class="col-sm-9 location-name">
                     <p>{{$product['location_name']}}</p>
