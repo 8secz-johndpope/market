@@ -207,14 +207,15 @@
                                         map: map
                                     });
                                     var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
-                                    var request = {
+                                    /*var request = {
                                         location: pos,
                                         radius: 1500,
                                         types: ['subway_station', 'train_station']
                                     };
                                     infowindow = new google.maps.InfoWindow();
                                     service = new google.maps.places.PlacesService(map);
-                                    service.nearbySearch(request, callback);
+                                    service.nearbySearch(request, callback);*/
+                                    getTransport({!! $lat !!},{!! $lng !!});
                                     panorama = new google.maps.StreetViewPanorama(
                                         document.getElementById('pano'), {
                                             position: uluru,
@@ -423,6 +424,11 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="report">
+                    <h3>Report to Ad</h3>
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -557,14 +563,14 @@
                 if(isUnderground(results[i].types)){
                     aux +="<i class=\"icon-underground\"></i>"
                 }
-                var service = new google.maps.DistanceMatrixService();
+                /*var service = new google.maps.DistanceMatrixService();
                 var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
                 var request = {
                     origins: [uluru],
                     destinations: [{lat: results[i].geometry.location.lat(), lng: results[i].geometry.location.lng()}],
                     travelMode: 'WALKING'
                 }
-                service.getDistanceMatrix(request, prueba);
+                service.getDistanceMatrix(request, prueba);*/
                 //service.getDetails(request, printInfoStation);
                 aux = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
                 var length;
@@ -594,13 +600,21 @@
         }
         return textHtml;
     }
-    function prueba(response, status) {
+    function getTransport(lat, lng) {
     // See Parsing the Results for
     // the basics of a callback function.
+        $.ajax({
+            url: "https://api.tfl.gov.uk/Place?type=NaptanMetroStation,NaptanRailStation&lat=" + lat + "&lon=" + lng + "&radius=2000&app_id=2d80416f&app_key=31f4c6d3a317c8de56f699bb3aff9af2",
+            dataType: "json",
+            type: "GET",
+        }).done(function(data, textStatus){
+            console.log(data);
+        }).fail(function( jqXHR, textStatus, errorThrown ) {
+            if ( console && console.log ) {
+                console.log( "La solicitud a fallado: " +  textStatus);
+            }
+        });
         console.log(response);
-        console.log(other);
-        var distance = response.rows[0].elements[0].distance.value / 1600;
-        console.log(distance + " mi");
     }
     $(function () {
         var viewer = ImageViewer();
