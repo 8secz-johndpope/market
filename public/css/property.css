@@ -321,6 +321,7 @@ a.left.carousel-control:hover {
     padding: 0px;
 }
 .icon-transport{
+	background-repeat: no-repeat;
 	content: "";
     display: inline-block;
     height: 20px;
