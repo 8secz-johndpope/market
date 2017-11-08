@@ -367,7 +367,7 @@ a.left.carousel-control:hover {
     margin-bottom: -5px;
 }
 .icon-overground {
-    background-image: url(icon-overground.png);
+    background-image: url(icon-overground.svg);
     background-repeat: no-repeat;
     content: "";
     display: inline-block;
