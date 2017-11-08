@@ -505,8 +505,8 @@ span .glyphicon {
     padding-right: 7px;
 }
 .advert-details {
-    border-top-color: transparent;
     border: 1px solid #ccc;
+    border-top-color: transparent;
     padding-left: 5px;
     padding-right: 5px;
     margin-bottom: 5px;
