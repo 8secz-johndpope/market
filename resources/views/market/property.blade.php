@@ -428,7 +428,7 @@
             </div>
             <div class="row">
                 <div class="report">
-                    <h3>Report to Ad</h3>
+                    <h3>Report this Ad</h3>
                     <a href="#" class="btn btn-default">Report</a>
                 </div>
             </div>
