@@ -476,6 +476,7 @@ span .glyphicon {
     overflow: hidden;
     position: relative;
     border: 1px solid #ccc;
+    background: #ececec;
 }
 .advert-img img {
     position: absolute;
