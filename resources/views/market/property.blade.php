@@ -97,7 +97,7 @@
                             <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Call</a>
                             <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
                             
-                            <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Videocall</a>
+                            <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">VideoCall</a>
                         </div>
                     </div>
                     <div id="tabs"> 
