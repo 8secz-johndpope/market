@@ -495,3 +495,6 @@ span .glyphicon {
     color: #ff8830;
     font-weight: 600;
 }
+.similar-adverts {
+    display: table;
+}
