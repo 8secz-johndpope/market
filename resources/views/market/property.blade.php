@@ -422,6 +422,10 @@
                     <a href="#" class="btn btn-default">Report</a>
                 </div>
             </div>
+            <div class="row">
+                <div class="similar-adverts">
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -545,7 +549,7 @@
     }
     function isRail(types){
         for (var i = 0; i < types.length; i++) {
-            if(types[i].modeName == "national-rail")
+            if(types[i].modeName == "national-rail" || types[i].modeName == "tflrail")
                 return true;
         }
         return false;
@@ -555,6 +559,9 @@
     }
     function isBus(types){
         return types.indexOf('bus') != -1;
+    }
+    function isDlr(types){
+        return types.indexOf('dlr') != -1;
     }
     function getStationHtml(dict){
         var textHtml = "";
@@ -581,6 +588,9 @@
             }
             if(isBus(stops[i].modes)){
                 aux +="<i class=\"icon-transport icon-bus\"></i>";
+            }
+            if(isDlr(stops[i].modes)){
+                aux +="<i class=\"icon-transport icon-dlr\"></i>";
             }
             distance = parseFloat(stops[i].distance / 1600).toFixed(2);
             aux = "<li>" + aux + "<span>" + stops[i].commonName + " <small>(" + distance + " mi)</small></span></li>";
