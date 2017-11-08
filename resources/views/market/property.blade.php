@@ -592,7 +592,7 @@
     }
     function isRail(types){
         console.log(types);
-        for (var i = 0; i < types; i++) {
+        for (var i = 0; i < types.length; i++) {
             if(types[i].modeName == "national-rail")
                 return true;
         }
