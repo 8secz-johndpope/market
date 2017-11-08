@@ -594,6 +594,7 @@
         return types.indexOf('national-rail') != -1;
     }
     function isOverground(types){
+        console.log(types);
         return types.indexOf('overground') != -1;
     }
     function isBus(types){
