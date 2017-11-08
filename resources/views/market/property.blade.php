@@ -629,14 +629,14 @@
             distance = parseFloat(stops[i].distance / 1600).toFixed(2);
             aux = "<li>" + aux + "<span>" + stops[i].commonName + " <small>(" + distance + " mi)</small></span></li>";
             var length;
-            if(typeof(stations[results[i].name]) != "undefined"){
-                length = stations[results[i].name].length
+            if(typeof(stations[stops[i].commonName]) != "undefined"){
+                length = stations[stops[i].commonName].length
                 if(aux.length > length){
-                    stations[results[i].name] = aux;
+                    stations[stops[i].commonName] = aux;
                 }
             }
             else
-                stations[results[i].name] = aux;
+                stations[stops[i].commonName] = aux;
         }
         var stationsList = getStationHtml(stations);
         $('.stations-list').html(stationsList);
