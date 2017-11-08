@@ -264,18 +264,17 @@ class UserController extends BaseController
     public function review(Request $request)
     {
         $user = Auth::user();
-        $order_id = $request->order_id;
-        $order = Order::find($order_id);
+        $sale = Sale::find($request->sale_id);
 
-        if ($order === null) {
+        if ($sale === null) {
             return ['msg' => 'No order found'];
         }
-        if ($order->buyer_id !== $user->id) {
-            return ['msg' => 'You cannot rate this order'];
+        if($sale>user_id!==$user->id){
+            return ['msg'=>'you cant rate this review'];
         }
         $review = $request->review;
         $cv = new Review;
-        $cv->order_id = $order->id;
+        $cv->sale_id = $sale->id;
         $cv->review = $review;
         $cv->description_rating = $request->description_rating;
         $cv->communication_rating = $request->communication_rating;
