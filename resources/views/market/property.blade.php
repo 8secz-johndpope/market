@@ -383,7 +383,7 @@
                             <address>
                                 
                             </address>
-                            <p><a href="/userads/{{$advert->user->id}}">View other adverts from this user</a></p>
+                            <p><a href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                         </div>
                         @else
                         <ul class="list-group">
