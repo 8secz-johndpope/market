@@ -432,7 +432,7 @@
                             </div>
                             <div class="advert-info">
                                 <h4>{{$product['title']}}</h4>
-                                <h4>{{$product['meta']['price']}}</h4>
+                                <h4 class="items-box-price font-5">{{$product['meta']['price']}}</h4>
                             </div>
                         </div>
                     @endforeach
