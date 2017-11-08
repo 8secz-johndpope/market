@@ -207,14 +207,6 @@
                                         map: map
                                     });
                                     var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
-                                    /*var request = {
-                                        location: pos,
-                                        radius: 1500,
-                                        types: ['subway_station', 'train_station']
-                                    };
-                                    infowindow = new google.maps.InfoWindow();
-                                    service = new google.maps.places.PlacesService(map);
-                                    service.nearbySearch(request, callback);*/
                                     getTransport({!! $lat !!},{!! $lng !!});
                                     panorama = new google.maps.StreetViewPanorama(
                                         document.getElementById('pano'), {
@@ -546,47 +538,7 @@
         }
         
     })
-    function callback(results, status){
-        if (status == google.maps.places.PlacesServiceStatus.OK){
-            var stations = [];
-            console.log(results);
-            var request;
-            var aux;
-            for(i = 0; i < results.length; i++){
-                aux = "";
-                request = {
-                  placeId: results[i].place_id
-                };
-                if(isRail(results[i].types)){
-                    aux += "<i class=\"icon-rail\"></i>"
-                }
-                if(isUnderground(results[i].types)){
-                    aux +="<i class=\"icon-underground\"></i>"
-                }
-                /*var service = new google.maps.DistanceMatrixService();
-                var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
-                var request = {
-                    origins: [uluru],
-                    destinations: [{lat: results[i].geometry.location.lat(), lng: results[i].geometry.location.lng()}],
-                    travelMode: 'WALKING'
-                }
-                service.getDistanceMatrix(request, prueba);*/
-                //service.getDetails(request, printInfoStation);
-                aux = "<li>" + aux + "<span>" + results[i].name + "</span></li>";
-                var length;
-                if(typeof(stations[results[i].name]) != "undefined"){
-                    length = stations[results[i].name].length
-                    if(aux.length > length){
-                        stations[results[i].name] = aux;
-                    }
-                }
-                else
-                    stations[results[i].name] = aux;
-            }
-            var stationsList = getStationHtml(stations);
-            $('.stations-list').html(stationsList);
-        }
-    }
+    
     function isUnderground(types){
         return types.indexOf('tube') != -1;
     }
