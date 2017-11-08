@@ -430,9 +430,9 @@
                             <div class="advert-img">
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][0]}}?1500586448">
                             </div>
-                            <div class="advert-info">
+                            <div class="advert-details">
                                 <h4>{{$product['title']}}</h4>
-                                <h4 class="items-box-price font-5">{{$product['meta']['price']}}</h4>
+                                <h4 class="items-box-price font-6">{{$product['meta']['price']}}</h4>
                             </div>
                         </div>
                     @endforeach
