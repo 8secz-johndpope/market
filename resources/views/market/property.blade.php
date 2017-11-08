@@ -424,6 +424,7 @@
             </div>
             <div class="row">
                 <div class="similar-adverts">
+                    <h3>Similar Adverts</h3>
                 </div>
             </div>
             </div>
