@@ -521,6 +521,9 @@ span .glyphicon {
     display: table;
     padding: 15px 5px;
 }
+.images-current span.glyphicon {
+    margin-right: 8px;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
