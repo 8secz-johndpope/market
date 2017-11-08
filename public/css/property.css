@@ -487,6 +487,8 @@ span .glyphicon {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-size: 13px;
     font-weight: normal;
+    height: 2em;
+    overflow: hidden;
 }
 .items-box-price{
 	font-family: Effra-Medium,arial,helvetica,sans-serif;
