@@ -456,3 +456,7 @@ span .glyphicon {
 .report a{
 	text-align: center;
 }
+.report {
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+}
