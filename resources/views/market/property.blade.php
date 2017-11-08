@@ -608,13 +608,13 @@
             dataType: "json",
             type: "GET",
         }).done(function(data, textStatus){
-            console.log(data);
+            var places = data.places;
+            console.log(places);
         }).fail(function( jqXHR, textStatus, errorThrown ) {
             if ( console && console.log ) {
                 console.log( "La solicitud a fallado: " +  textStatus);
             }
         });
-        console.log(response);
     }
     $(function () {
         var viewer = ImageViewer();
