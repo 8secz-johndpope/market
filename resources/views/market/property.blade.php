@@ -426,9 +426,6 @@
                 <div class="similar-adverts">
                     <h3>Similar Adverts</h3>
                     @foreach($products as $product)
-                        @php
-                            var_dump($product);
-                        @endphp
                         <div class="col-sm-6">
                             <div class="advert-img">
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][0]}}?1500586448">
