@@ -532,6 +532,11 @@ span .glyphicon {
 span.glyphicon.glyphicon-heart-empty.favroite-icon {
     color: mediumaquamarine;
 }
+.email-icon{
+	font-size: 18px;
+	background: url(email.svg);
+}
+    
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
