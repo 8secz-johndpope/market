@@ -534,7 +534,7 @@ span.glyphicon.glyphicon-heart-empty.favroite-icon {
 }
 .email-icon{
 	font-size: 18px;
-	background: url(icons/email.svg);
+	/*background: url(icons/email.svg);*/
 	background-position: center;
     background-size: cover;
     height: 30px;
