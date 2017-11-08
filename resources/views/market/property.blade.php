@@ -433,6 +433,8 @@
                             <div class="advert-img">
                                 
                             </div>
+                            <h4>{{$product['title']}}</h4>
+                            <h4>{{$product['price']}}</h4>
                         </div>
                     @endforeach
                 </div>
