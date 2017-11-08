@@ -31,9 +31,15 @@
                 <div class="col-sm-9 location-name">
                     <p>{{$product['location_name']}}</p>
                 </div>
-<div class="col-sm-3">@if($product['meta']['price']>=0)
-        <div class="items-box-price font-5">£ {{number_format($product['meta']['price'] / 100, 0, '.', ',')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
-    @endif</div>
+                <div class="col-sm-3">
+                    @if($product['meta']['price']>=0)
+                    <div class="items-box-price font-5">£ {{number_format($product['meta']['price'] / 100, 0, '.', ',')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
+                    @endif
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
                     <div id="current-image">
                         <img id="image-active" data-index="1" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" class="gallery-items">
                         <div class="images-info">
