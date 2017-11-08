@@ -434,7 +434,6 @@
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$products['images'][0]}}?1500586448">
                             </div>
                             <h4>{{$product['title']}}</h4>
-                            <h4>{{$product['price']}}</h4>
                         </div>
                     @endforeach
                 </div>
