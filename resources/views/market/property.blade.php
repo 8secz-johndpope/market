@@ -426,11 +426,13 @@
                 <div class="similar-adverts">
                     <h3>Similar Adverts</h3>
                     @foreach($products as $product)
+                        @php
+                            var_dump($product);
+                        @endphp
                         <div class="col-sm-6">
                             <div class="advert-img">
                                 
                             </div>
-                            <h4>{{$product->title}}</h4>
                             <h4>{{$product->price}}</h4>
                         </div>
                     @endforeach
