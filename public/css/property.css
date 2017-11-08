@@ -483,3 +483,13 @@ span .glyphicon {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.similar-adverts h4 {
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+}
+.items-box-price{
+	font-family: Effra-Medium,arial,helvetica,sans-serif;
+    color: #ff8830;
+    font-weight: 600;
+}
