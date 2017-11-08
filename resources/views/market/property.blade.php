@@ -591,7 +591,6 @@
         return types.indexOf('tube') != -1;
     }
     function isRail(types){
-        console.log(types);
         for (var i = 0; i < types.length; i++) {
             if(types[i].modeName == "national-rail")
                 return true;
@@ -658,7 +657,7 @@
             processStops(places);
         }).fail(function( jqXHR, textStatus, errorThrown ) {
             if ( console && console.log ) {
-                console.log( "La solicitud a fallado: " +  textStatus);
+                console.log( "Error get stations: " +  textStatus);
             }
         });
     }
