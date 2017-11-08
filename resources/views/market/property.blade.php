@@ -591,7 +591,11 @@
         return types.indexOf('tube') != -1;
     }
     function isRail(types){
-        return types.indexOf('national-rail') != -1;
+        for (var i = 0; i < types; i++) {
+            if(types[i].modeName == "national-rail")
+                return true;
+        }
+        return false;
     }
     function isOverground(types){
         console.log(types);
@@ -614,7 +618,7 @@
         console.log(stops);
         for(i = 0; i < stops.length; i++){
             aux = "";
-            if(isRail(stops[i].modes)){
+            if(isRail(stops[i].lineModeGroups){
                 aux += "<i class=\"icon-transport icon-rail\"></i>";
             }
             if(isUnderground(stops[i].modes)){
