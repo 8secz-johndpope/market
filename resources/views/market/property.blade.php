@@ -618,7 +618,7 @@
         console.log(stops);
         for(i = 0; i < stops.length; i++){
             aux = "";
-            if(isRail(stops[i].lineModeGroups){
+            if(isRail(stops[i].lineModeGroups)){
                 aux += "<i class=\"icon-transport icon-rail\"></i>";
             }
             if(isUnderground(stops[i].modes)){
