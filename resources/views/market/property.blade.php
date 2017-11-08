@@ -53,7 +53,7 @@
                                 </p>
                             </div>
                             <div class="col-sm-4 images-current">
-                                <a href="#"><p> Picture <span class="index">1</span></p></a>
+                                <a href="#"><p><span class="glyphicon glyphicon-zoom-in"></span>Enlarge</p></a>
                             </div>
                         </div>
                     </div>
