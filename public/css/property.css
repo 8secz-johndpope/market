@@ -475,6 +475,7 @@ span .glyphicon {
     height: 20rem;
     overflow: hidden;
     position: relative;
+    border: 1px solid #ccc;
 }
 .advert-img img {
     position: absolute;
@@ -489,6 +490,7 @@ span .glyphicon {
     font-weight: normal;
     height: 2em;
     overflow: hidden;
+    margin-bottom: 0;
 }
 .items-box-price{
 	font-family: Effra-Medium,arial,helvetica,sans-serif;
@@ -499,4 +501,8 @@ span .glyphicon {
     display: table;
     margin-top: 15px;
     border: 1px solid #ddd;
+}
+.similar-adverts .col-sm-6 {
+    padding-left: 5px;
+    padding-right: 5px;
 }
