@@ -432,7 +432,9 @@
                             </div>
                             <div class="advert-details">
                                 <h4>{{$product['title']}}</h4>
-                                <h4 class="items-box-price font-6">£{{$product['meta']['price'] / 100}}</h4>
+                                @if($product['meta']['price'] > 0)
+                                    <h4 class="items-box-price font-6">£{{$product['meta']['price'] / 100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</h4>
+                                @endif
                             </div>
                         </div>
                     @endforeach
