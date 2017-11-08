@@ -615,22 +615,30 @@
         for(i = 0; i < stops.length; i++){
             aux = "";
             if(isRail(stops[i].modes)){
-                aux += "<i class=\"icon-rail\"></i>";
+                aux += "<i class=\"icon-transport icon-rail\"></i>";
             }
             if(isUnderground(stops[i].modes)){
-                aux +="<i class=\"icon-underground\"></i>";
+                aux +="<i class=\"icon-transport icon-underground\"></i>";
             }
             if(isOverground(stops[i].modes)){
-                aux +="<i class=\"icon-overground\"></i>";
+                aux +="<i class=\"iicon-transport con-overground\"></i>";
             }
             if(isBus(stops[i].modes)){
-                aux +="<i class=\"icon-bus\"></i>";
+                aux +="<i class=\"icon-transport icon-bus\"></i>";
             }
             distance = parseFloat(stops[i].distance / 1600).toFixed(2);
             aux = "<li>" + aux + "<span>" + stops[i].commonName + " <small>(" + distance + " mi)</small></span></li>";
-            stations.push(aux);
+            var length;
+            if(typeof(stations[results[i].name]) != "undefined"){
+                length = stations[results[i].name].length
+                if(aux.length > length){
+                    stations[results[i].name] = aux;
+                }
+            }
+            else
+                stations[results[i].name] = aux;
         }
-        var stationsList = stations.join("\n");
+        var stationsList = getStationHtml(stations);
         $('.stations-list').html(stationsList);
     }
 

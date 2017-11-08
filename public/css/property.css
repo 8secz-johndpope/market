@@ -320,6 +320,20 @@ a.left.carousel-control:hover {
     width: 192px;
     padding: 0px;
 }
+.icon_transport{
+	content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-indent: 100%;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center;
+    margin-right: 5px;
+    margin-bottom: -5px;
+}
 .icon-underground{
 	background-image: url('tube_icon.png');
 	background-repeat: no-repeat;
@@ -338,6 +352,22 @@ a.left.carousel-control:hover {
 }
 .icon-rail {
     background-image: url(icon-rail.png);
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-indent: 100%;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center;
+    margin-right: 5px;
+    margin-bottom: -5px;
+}
+.icon-overground {
+    background-image: url(icon-overground.png);
     background-repeat: no-repeat;
     content: "";
     display: inline-block;
