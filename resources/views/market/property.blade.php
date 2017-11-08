@@ -16,7 +16,7 @@
 <script src="/js/imageviewer.min.js"></script>
     <div class="container">
         <div class="row">
-            <div class="col-lg-offset-1 col-lg-7 col-md-9 col-sm-12">
+            <div class="col-lg-9 col-md-8 col-sm-12">
                 <ol class="breadcrumb">
                     @foreach($parents as $parent)
                     <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
@@ -237,7 +237,7 @@
                     </div>
                     </div>
                 </div>
-            <div class="col-md-3 col-sm-12">
+            <div class="col-lg-3 col-md-4 col-sm-12">
                 <div class="row">
                 @if($advert->has_param('sold'))
                     <div class="sold-div">
