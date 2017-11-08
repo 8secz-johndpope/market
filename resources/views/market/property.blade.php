@@ -588,10 +588,16 @@
         }
     }
     function isUnderground(types){
-        return types.indexOf('subway_station') != -1;
+        return types.indexOf('tube') != -1;
     }
     function isRail(types){
-        return types.indexOf('train_station') != -1;
+        return types.indexOf('national-rail') != -1;
+    }
+    function isOverground(types){
+        return types.indexOf('overground') != -1;
+    }
+    function isBus(types){
+        return types.indexOf('bus') != -1;
     }
     function getStationHtml(dict){
         var textHtml = "";
@@ -600,6 +606,32 @@
         }
         return textHtml;
     }
+    function processStops(stops){
+        var aux;
+        var stations = [];
+        var distance;
+        for(i = 0; i < stops.length; i++){
+            aux = "";
+            if(isRail(stops[i].modes)){
+                aux += "<i class=\"icon-rail\"></i>";
+            }
+            if(isUnderground(stops[i].modes)){
+                aux +="<i class=\"icon-underground\"></i>";
+            }
+            if(isOverground(stops[i].modes)){
+                aux +="<i class=\"icon-overground\"></i>";
+            }
+            if(isBus(stops[i].modes)){
+                aux +="<i class=\"icon-bus\"></i>";
+            }
+            distance = stops[i].distance / 1600;
+            aux = "<li>" + aux + "<span>" + stops[i].commonName + " <small>(" + distance + " mi)</small></span></li>";
+            stations.push(aux);
+        }
+        var stationsList = stations.join("\n");
+        $('.stations-list').html(stationsList);
+    }
+
     function getTransport(lat, lng) {
     // See Parsing the Results for
     // the basics of a callback function.
@@ -609,7 +641,7 @@
             type: "GET",
         }).done(function(data, textStatus){
             var places = data.places;
-            console.log(places);
+            processStops(places);
         }).fail(function( jqXHR, textStatus, errorThrown ) {
             if ( console && console.log ) {
                 console.log( "La solicitud a fallado: " +  textStatus);
