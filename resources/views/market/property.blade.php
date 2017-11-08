@@ -610,6 +610,7 @@
         var aux;
         var stations = [];
         var distance;
+        console.log(stops);
         for(i = 0; i < stops.length; i++){
             aux = "";
             if(isRail(stops[i].modes)){
@@ -624,7 +625,7 @@
             if(isBus(stops[i].modes)){
                 aux +="<i class=\"icon-bus\"></i>";
             }
-            distance = stops[i].distance / 1600;
+            distance = parseFloat(stops[i].distance / 1600).toFixed(2);
             aux = "<li>" + aux + "<span>" + stops[i].commonName + " <small>(" + distance + " mi)</small></span></li>";
             stations.push(aux);
         }
