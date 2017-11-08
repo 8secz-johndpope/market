@@ -157,7 +157,8 @@ section{
 #current-image {
     position: relative;
     width: 100%;
-    height: 437px;
+    /*height: 437px;*/
+    height: 487px;
     overflow: hidden;
     background: #ececec;
 }
