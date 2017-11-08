@@ -591,6 +591,7 @@
         return types.indexOf('tube') != -1;
     }
     function isRail(types){
+        console.log(types);
         for (var i = 0; i < types; i++) {
             if(types[i].modeName == "national-rail")
                 return true;
@@ -598,7 +599,6 @@
         return false;
     }
     function isOverground(types){
-        console.log(types);
         return types.indexOf('overground') != -1;
     }
     function isBus(types){
