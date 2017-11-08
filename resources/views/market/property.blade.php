@@ -587,11 +587,11 @@
             if(isOverground(stops[i].modes)){
                 aux +="<i class=\"icon-transport icon-overground\"></i>";
             }
-            if(isBus(stops[i].modes)){
-                aux +="<i class=\"icon-transport icon-bus\"></i>";
-            }
             if(isDlr(stops[i].modes)){
                 aux +="<i class=\"icon-transport icon-dlr\"></i>";
+            }
+            if(isBus(stops[i].modes)){
+                aux +="<i class=\"icon-transport icon-bus\"></i>";
             }
             distance = parseFloat(stops[i].distance / 1600).toFixed(2);
             aux = "<li>" + aux + "<span>" + stops[i].commonName + " <small>(" + distance + " mi)</small></span></li>";
