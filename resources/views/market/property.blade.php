@@ -646,7 +646,7 @@
     // See Parsing the Results for
     // the basics of a callback function.
         $.ajax({
-            url: "https://api.tfl.gov.uk/Place?type=NaptanMetroStation,NaptanRailStation&lat=" + lat + "&lon=" + lng + "&radius=2000&app_id=2d80416f&app_key=31f4c6d3a317c8de56f699bb3aff9af2",
+            url: "https://api.tfl.gov.uk/Place?type=NaptanMetroStation,NaptanRailStation&lat=" + lat + "&lon=" + lng + "&categories=Description&radius=1500&app_id=2d80416f&app_key=31f4c6d3a317c8de56f699bb3aff9af2",
             dataType: "json",
             type: "GET",
         }).done(function(data, textStatus){
