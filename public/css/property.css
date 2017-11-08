@@ -463,9 +463,14 @@ span .glyphicon {
 }
 
 .report {
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 15px;
     border-bottom: 1px dashed #ccc;
     text-align: center;
+}
+.report a.btn-default {
+    width: 80%;
 }
 .similar-adverts h3 {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
