@@ -432,7 +432,7 @@
                             </div>
                             <div class="advert-details">
                                 <h4>{{$product['title']}}</h4>
-                                <h4 class="items-box-price font-6">{{$product['meta']['price']}}</h4>
+                                <h4 class="items-box-price font-6">{{$product['meta']['price'] / 100}}</h4>
                             </div>
                         </div>
                     @endforeach
