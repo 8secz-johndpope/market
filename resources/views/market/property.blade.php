@@ -438,19 +438,19 @@
                     <h3>Similar Adverts</h3>
                     <div class="listings-adverts">
                     @foreach($products as $product)
+                    <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                         <div class="col-sm-6">
                             <div class="advert-img">
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][0]}}?1500586448">
                             </div>
-                            <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                             <div class="advert-details">
                                 <h4>{{$product['title']}}</h4>
                                 @if($product['meta']['price'] > 0)
                                     <h4 class="items-box-price font-6">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</h4>
                                 @endif
                             </div>
-                        </a>
                         </div>
+                    </a>
                     @endforeach
                     </div>
                 </div>
