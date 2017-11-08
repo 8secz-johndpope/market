@@ -248,7 +248,7 @@ h2.item-name {
 }
 .buttons span.glyphicon {
     margin-right: 10px;
-    color: mediumseagreen;
+    color: #333;
     font-size: 18px;
 }
 .details h3{
@@ -398,7 +398,7 @@ div#myCarousel {
     border-top-color: transparent;
 }
 #map, #pano {
-    height: 400px;
+    height: 470px;
     width: 100%;
 }
 .info-pano{
