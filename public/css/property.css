@@ -463,3 +463,10 @@ span .glyphicon {
     border-bottom: 1px dashed #ccc;
     text-align: left;
 }
+.similar-adverts h3 {
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    padding-left: 15px;
+    text-align: left;
+}
