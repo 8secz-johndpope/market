@@ -410,7 +410,7 @@
                         </li>
                         <li class="list-group-item">
                             <span class="glyphicon glyphicon-envelope"></span>
-                            Email at friend
+                            Email to friend
                         </li>
                     </ul>
                 </div>
