@@ -501,8 +501,8 @@ span .glyphicon {
     display: table;
 }
 .similar-adverts .col-sm-6 {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 .advert-details {
     border-top-color: transparent;
@@ -514,5 +514,5 @@ span .glyphicon {
 .listings-adverts {
     border: 1px solid #ddd;
     display: table;
-    padding-top: 5px;
+    padding: 15px 5px;
 }
