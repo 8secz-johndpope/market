@@ -621,7 +621,7 @@
                 aux +="<i class=\"icon-transport icon-underground\"></i>";
             }
             if(isOverground(stops[i].modes)){
-                aux +="<i class=\"iicon-transport con-overground\"></i>";
+                aux +="<i class=\"icon-transport icon-overground\"></i>";
             }
             if(isBus(stops[i].modes)){
                 aux +="<i class=\"icon-transport icon-bus\"></i>";
