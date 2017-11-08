@@ -28,7 +28,7 @@
                     <p>{{$product['location_name']}}</p>
                 </div>
 <div class="col-sm-3">@if($product['meta']['price']>=0)
-        <div class="items-box-price font-5">£ {{number_format($product['meta']['price'] / 100, 2, '.', '')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
+        <div class="items-box-price font-5">£ {{number_format($product['meta']['price'] / 100, 2, '.', ',')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
                     <div id="current-image">
                         <img id="image-active" data-index="1" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" class="gallery-items">
@@ -433,7 +433,7 @@
                             <div class="advert-details">
                                 <h4>{{$product['title']}}</h4>
                                 @if($product['meta']['price'] > 0)
-                                    <h4 class="items-box-price font-6">£{{number_format($product['meta']['price'] / 100, 2, '.', '')}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</h4>
+                                    <h4 class="items-box-price font-6">£{{number_format($product['meta']['price'] / 100, 2, '.', ',')}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</h4>
                                 @endif
                             </div>
                         </div>
