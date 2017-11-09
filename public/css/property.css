@@ -790,6 +790,18 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     font-size: 18px;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.reviews-stars-widget .rating {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.reviews-stars-widget {
+    margin-left: 10px;
+    margin-top: -5px;
+    display: inline-block;
+    vertical-align: middle;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
