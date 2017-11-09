@@ -27,7 +27,9 @@ section{
 	font-family: Effra-Regular,arial,helvetica,sans-serif;
 	line-height: 1.615;
 }
-
+.copyright {
+	z-index: 9999;
+}
 .list-style-square li {
     color: #262637;
     font-family: Effra-Regular,arial,helvetica,sans-serif;
