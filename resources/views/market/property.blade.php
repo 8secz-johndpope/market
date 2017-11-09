@@ -262,8 +262,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row content-reviews">
-                            <div class="ratings">
+                        <div class="ratings">
+                            <div class="row content-reviews">
                                 <div class="col-md-3 col-ratings ratings-stars">
                                     <h1>5,0</h1>
                                     <div class="stars">
