@@ -358,6 +358,8 @@
                                 </div>
                             </div>
                             <div id="make-review">
+                                <div class="row">
+                                </div>
                             </div>
                             <div id="make-rate">
                             </div>
