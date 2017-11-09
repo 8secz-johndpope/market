@@ -725,6 +725,22 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     height: 100%;
     overflow: hidden;
 }
+.per span {
+    background-color: #f18e00;
+    display: block;
+    width: 40px;
+    height: 80px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+}
+.per .left span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
