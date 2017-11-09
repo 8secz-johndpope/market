@@ -647,7 +647,19 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     -moz-border-radius: 30px;
     border-radius: 30px;
 }
-
+.reviews-item .empty-star {
+    background-image: url(icons-stars.png);
+    overflow: hidden;
+    background-size: 170px 125px;
+    width: 15px;
+    height: 15px;
+    text-align: left;
+    display: inline-block;
+    background-position: -68px -109px;
+    float: left;
+    margin-right: 4px;
+    margin-top: 1px;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
