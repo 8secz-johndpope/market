@@ -410,9 +410,23 @@
                                                     <label class="btn-gry" for="question1-no">no</label>
                                                 </div>
                                             </div>
-                                            <div>
+                                            <div class="aspects-questions">
+                                                <span>Would you recommend it?</span>
+                                                <div class="actions">
+                                                    <input type="radio" name="question1" id="question1-yes">
+                                                    <label class="btn-gry" for="question1-yes">yes</label>
+                                                    <input type="radio" name="question1" id="question1-no">
+                                                    <label class="btn-gry" for="question1-no">no</label>
+                                                </div>
                                             </div>
-                                            <div>
+                                            <div class="aspects-questions">
+                                                <span>Would you recommend it?</span>
+                                                <div class="actions">
+                                                    <input type="radio" name="question1" id="question1-yes">
+                                                    <label class="btn-gry" for="question1-yes">yes</label>
+                                                    <input type="radio" name="question1" id="question1-no">
+                                                    <label class="btn-gry" for="question1-no">no</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
