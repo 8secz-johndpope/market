@@ -812,6 +812,27 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     width: 1px;
     overflow: hidden;
 }
+.rating fieldset:not(:checked)>input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+}
+.rating fieldset:not(:checked)>label {
+    float: right;
+    background: url(icons-stars.png);
+    background-size: 170px 130px;
+    overflow: hidden;
+    text-align: left;
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    background-position: -16px -1px;
+    margin: 0 3px;
+}
+.rating fieldset:not(:checked)>label:before {
+    content: '';
+}
 fieldset {
     margin: 1.5rem 0;
 }
