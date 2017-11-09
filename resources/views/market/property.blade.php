@@ -281,8 +281,30 @@
                                 </div>
                                 <div class="col-md-3 col-ratings histogram">
                                     <ul class="reviews-list">
-                                        
-
+                                        <li>
+                                            <div class="reviews-item">
+                                                <i class="empty-star"></i>
+                                                <span>5</span>
+                                                <i class="r-list-bg">
+                                                    <!-- here is porcentage of the line for star-->
+                                                    <u class="r-list-fc" style="width: 100%"></u>
+                                                </i>
+                                                <span>2</span>
+                                            </div>
+                                        </li>
+                                        @for($i=4; $i > 0; $i--)
+                                        <li>
+                                            <div class="reviews-item">
+                                                <i class="empty-star"></i>
+                                                <span>{{$i}}</span>
+                                                <i class="r-list-bg">
+                                                    <!-- here is porcentage of the line for star-->
+                                                    <u class="r-list-fc" style="width: 0%"></u>
+                                                </i>
+                                                <span>0</span>
+                                            </div>
+                                        </li>
+                                        @endfor
                                     </ul>
                                 </div>
                                 <div class="col-md-3 col-ratings all-ratings">
