@@ -262,7 +262,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row content">
+                        <div class="row content-reviews">
                             <div class="ratings">
                             </div>
                             <div id="make-review">
