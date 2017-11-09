@@ -430,7 +430,6 @@
                                                     <input type="radio" name="question3" id="question3-no">
                                                     <label class="btn-gry" for="question3-no">no</label>
                                                 </div>
-                                                <div class="reviews-divider"></div>
                                             </div>
                                         </div>
                                     </div>

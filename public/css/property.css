@@ -905,14 +905,13 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 }
 .reviews-divider {
     width: 100%;
-    margin: 15px auto;
+    margin: 15px 0;
     border-bottom: 1px solid rgba(150,150,150,0.2);
     -webkit-appearance: none;
     height: 1px;
     clear: both;
 }
 .aspects-fieldset .reviews-divider {
-    width: 95%;
     border-bottom: 1px solid #ccc;
 }
 fieldset {
