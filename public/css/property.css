@@ -663,7 +663,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .review-item-l{
 	margin-top: 3px;
 }
-..review-item-l span{
+.review-item-l span{
 	font-size: 12px;
     color: #9b9b9b;
     line-height: 15px;
