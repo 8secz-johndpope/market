@@ -786,6 +786,10 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     word-wrap: break-word;
     width: 100%;
 }
+#make-review h2 {
+    font-size: 18px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
