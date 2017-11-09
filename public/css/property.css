@@ -802,6 +802,26 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     display: inline-block;
     vertical-align: middle;
 }
+.clipped {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+fieldset {
+    margin: 1.5rem 0;
+}
+legend {
+    padding-bottom: 1.25rem;
+    margin-bottom: .312rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    font-weight: 200;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
