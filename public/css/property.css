@@ -634,6 +634,9 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     -moz-border-radius: 30px;
     border-radius: 30px;
 }
+.reviews-list{
+	margin: 10px 0 0;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
