@@ -287,11 +287,13 @@
                                                 <div class="reviews-item-l">
                                                     <span>5</span>
                                                 </div>
-                                                <i class="r-list-bg">
-                                                    <!-- here is porcentage of the line for star-->
-                                                    <u class="r-list-fc" style="width: 100%"></u>
-                                                </i>
-                                                <span>2</span>
+                                                <div class="reviews-item-r">
+                                                    <i class="r-list-bg">
+                                                        <!-- here is porcentage of the line for star-->
+                                                        <u class="r-list-fc" style="width: 100%"></u>
+                                                    </i>
+                                                    <span>2</span>
+                                                </div>
                                             </div>
                                         </li>
                                         @for($i=4; $i > 0; $i--)
