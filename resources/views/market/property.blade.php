@@ -264,6 +264,30 @@
                         </div>
                         <div class="row content-reviews">
                             <div class="ratings">
+                                <div class="col-md-3 col-ratings ratings-stars">
+                                    <h1>5,0</h1>
+                                    <div class="stars">
+                                        <span>
+                                            <li class="fullstar"></li>
+                                            <li class="fullstar"></li>
+                                            <li class="fullstar"></li>
+                                            <li class="fullstar"></li>
+                                            <li class="fullstar"></li>
+                                        </span>
+                                    </div>
+                                    <span class="reviews-count">
+                                        2 products ratings
+                                    </span>
+                                </div>
+                                <div class="col-md-3 col-ratings histogram">
+                                    <ul class="reviews-list">
+                                        
+
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 col-ratings all-ratings">
+                                    
+                                </div>
                             </div>
                             <div id="make-review">
                             </div>
