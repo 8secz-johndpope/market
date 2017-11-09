@@ -660,6 +660,20 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     margin-right: 4px;
     margin-top: 1px;
 }
+.reviews-item>span{
+	float: left;
+    margin-top: 3px;
+	font-size: 12px;
+    color: #9b9b9b;
+}
+.review-item-r .r-list-bg .r-list-fc {
+    width: 0;
+    background-color: #999;
+    height: 12px;
+    display: inline-block;
+    max-width: 100%;
+    padding: 0 !important;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
