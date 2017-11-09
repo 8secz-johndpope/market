@@ -587,11 +587,6 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 
-.stars i {
-    background-size: 245px 185px;
-    width: 20px;
-    height: 20px;
-}
 .stars i{
     background-image: url(icons-stars.png);
     background-size: 185px 138px;
@@ -601,9 +596,16 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     text-align: left;
     display: inline-block;
 }
+.stars i {
+    background-size: 245px 185px;
+    width: 20px;
+    height: 20px;
+}
+
 .stars i.fullstar {
     background-position: -27px -163px;
 }
+
 .reviews-count {
     color: #999;
     font-size: 12px;
