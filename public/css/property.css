@@ -719,6 +719,12 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     -o-transform: translateX(-50%) translateY(-50%);
     -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(___YUICSSMIN_PRESERVED_TOKEN_0___)";
 }
+.per>div {
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
