@@ -410,6 +410,7 @@
                                                     <input type="radio" name="question1" id="question1-no">
                                                     <label class="btn-gry" for="question1-no">no</label>
                                                 </div>
+                                                <div class="reviews-divider"></div>
                                             </div>
                                             <div class="aspects-questions">
                                                 <span>Is it good value?</span>
@@ -419,6 +420,7 @@
                                                     <input type="radio" name="question2" id="question2-no">
                                                     <label class="btn-gry" for="question2-no">no</label>
                                                 </div>
+                                                <div class="reviews-divider"></div>
                                             </div>
                                             <div class="aspects-questions">
                                                 <span>Is it good quality?</span>
@@ -428,6 +430,7 @@
                                                     <input type="radio" name="question3" id="question3-no">
                                                     <label class="btn-gry" for="question3-no">no</label>
                                                 </div>
+                                                <div class="reviews-divider"></div>
                                             </div>
                                         </div>
                                     </div>
