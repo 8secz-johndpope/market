@@ -618,6 +618,19 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     margin-top: 5px;
     text-align: center;
 }
+.reviews-list{
+	margin: 10px 0 0;
+}
+.reviews-list li{
+	display: inline;
+	height: 20px;
+	width: 100%;
+}
+.reviews-item{
+	display: block;
+	text-decoration: none;
+	height: 20px;
+}
 .reviews-item .r-list-bg {
     max-width: 100%;
     z-index: 9999999;
@@ -634,14 +647,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     -moz-border-radius: 30px;
     border-radius: 30px;
 }
-.reviews-list{
-	margin: 10px 0 0;
-}
-.reviews-list li{
-	display: inline;
-	height: 20px;
-	width: 100%;
-}
+
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
