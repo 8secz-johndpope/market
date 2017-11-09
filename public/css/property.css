@@ -586,7 +586,9 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     text-align: center;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
-
+.stars {
+    text-align: center;
+}
 .stars i{
     background-image: url(icons-stars.png);
     background-size: 185px 138px;
