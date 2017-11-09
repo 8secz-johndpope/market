@@ -587,7 +587,23 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 
-
+.stars i {
+    background-size: 245px 185px;
+    width: 20px;
+    height: 20px;
+}
+.stars i, {
+    background-image: url(icons-stars.png);
+    background-size: 185px 138px;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    text-align: left;
+    display: inline-block;
+}
+.stars i.fullStar {
+    background-position: -27px -163px;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
