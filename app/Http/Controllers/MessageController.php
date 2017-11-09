@@ -417,6 +417,10 @@ class MessageController extends BaseController
          return $messages;
 
     }
+    public function all_rooms(Request $request){
+        $user = Auth::user();
+        return $user->rooms;
+    }
 
         public function rsend(Request $request){
         if($request->has('g-recaptcha-response')){
