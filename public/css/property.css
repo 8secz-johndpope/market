@@ -693,14 +693,11 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     padding: 0 !important;
 }
 .all-ratings {
-    max-width: 105%;
-    max-height: 100%;
     display: inline-block;
     position: relative;
     text-align: center;
     font-weight: 300;
     margin: 10px 0;
-    width: 105%;
     vertical-align: top;
 }
 .per-wrpr {

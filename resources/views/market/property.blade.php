@@ -315,7 +315,7 @@
                                         @endfor
                                     </ul>
                                 </div>
-                                <div class="col-md-3 col-ratings all-ratings">
+                                <div class="col-md-6 col-ratings all-ratings">
                                     <div class="per-wrpr">
                                         <div class="per" data-percent="66%">
                                             <div class="left">
