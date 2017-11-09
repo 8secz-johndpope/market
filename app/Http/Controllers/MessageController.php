@@ -413,8 +413,13 @@ class MessageController extends BaseController
             $messages = Message::whereIn('room_id',$rooms)->get();
 
         }
+        $msgs = [];
+        foreach ($messages as $message){
+            $message->room = $message->room;
+            $msgs[]=$message;
+        }
 
-         return $messages;
+         return $msgs;
 
     }
     public function all_rooms(Request $request){

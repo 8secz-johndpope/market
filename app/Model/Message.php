@@ -16,6 +16,10 @@ class Message extends Model
     {
         return $this->belongsTo('App\User','from_msg');
     }
+    public function room()
+    {
+        return $this->belongsTo('App\Model\Room');
+    }
     public function previous(){
         return Message::where('room_id',$this->room_id)->where('id','<',$this->id)->orderBy('id','desc')->first();
     }
