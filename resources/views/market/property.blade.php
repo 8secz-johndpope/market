@@ -316,7 +316,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-3 col-ratings all-ratings">
-                                    <div class="pie-wrpr">
+                                    <div class="per-wrpr">
                                         <div class="per" data-percent="66%">
                                             <div class="left">
                                                 <span style="transform: rotateZ(-122.44deg);">
@@ -329,7 +329,7 @@
                                             Would recommend
                                         </p>
                                     </div>
-                                    <div class="pie-wrpr">
+                                    <div class="per-wrpr">
                                         <div class="per" data-percent="66%">
                                             <div class="left">
                                                 <span style="transform: rotateZ(-122.44deg);">
@@ -342,7 +342,7 @@
                                             Good value
                                         </p>
                                     </div>
-                                    <div class="pie-wrpr">
+                                    <div class="per-wrpr">
                                         <div class="per" data-percent="66%">
                                             <div class="left">
                                                 <span style="transform: rotateZ(-122.44deg);">

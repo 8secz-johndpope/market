@@ -690,6 +690,13 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     max-width: 100%;
     padding: 0 !important;
 }
+.pie-wrpr {
+    display: inline-block;
+    width: 140px;
+    height: 150px;
+    font-weight: 300;
+    vertical-align: bottom;
+}
 .per {
     background-color: rgba(241,142,0,0.2);
     border-radius: 50%;
@@ -720,7 +727,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     height: 85%;
     z-index: 100;
 }
-.pie:after {
+.per:after {
     content: attr(data-percent);
     font-family: Arial,sans-serif;
     font-size: 21px;
