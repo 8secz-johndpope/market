@@ -549,6 +549,12 @@ span.email-icon img {
 span.glyphicon.favroite-icon.glyphicon-heart {
 	color: mediumaquamarine;
 }
+.reviews-ratings h3{
+	color: #262637;
+    font-size: 15px;
+    margin-top: 0;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
     
 @media (min-width: 1200px){
 	.container {
