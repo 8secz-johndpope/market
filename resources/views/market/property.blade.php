@@ -357,6 +357,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                             <div id="make-review">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -434,7 +435,6 @@
                             </div>
                             <div id="make-rate">
                             </div>
-                        </div>
                         <div class="row reviews">
                             <div class="col-md-4">
                             </div>
