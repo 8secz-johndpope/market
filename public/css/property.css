@@ -661,12 +661,12 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     margin-top: 1px;
 }
 .reviews-item>span{
-	float: left;
+	/*float: left;*/
     margin-top: 3px;
 	font-size: 12px;
     color: #9b9b9b;
 }
-.review-item-r .r-list-bg .r-list-fc {
+.review-item .r-list-bg .r-list-fc {
     width: 0;
     background-color: #999;
     height: 12px;
