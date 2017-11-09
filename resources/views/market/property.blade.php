@@ -308,7 +308,42 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-3 col-ratings all-ratings">
-                                    
+                                    <div class="pie-wrpr">
+                                        <div class="per" data-percent="66%">
+                                            <div class="left">
+                                                <span style="transform: rotateZ(-122.44deg);">
+                                            </div>
+                                            <div class="right">
+                                            </div>
+                                        </div>
+                                        <p class="por-title">
+                                            Would recommend
+                                        </p>
+                                    </div>
+                                    <div class="pie-wrpr">
+                                        <div class="per" data-percent="66%">
+                                            <div class="left">
+                                                <span style="transform: rotateZ(-122.44deg);">
+                                            </div>
+                                            <div class="right">
+                                            </div>
+                                        </div>
+                                        <p class="por-title">
+                                            Would recommend
+                                        </p>
+                                    </div>
+                                    <div class="pie-wrpr">
+                                        <div class="per" data-percent="66%">
+                                            <div class="left">
+                                                <span style="transform: rotateZ(-122.44deg);">
+                                            </div>
+                                            <div class="right">
+                                            </div>
+                                        </div>
+                                        <p class="por-title">
+                                            Would recommend
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             <div id="make-review">
