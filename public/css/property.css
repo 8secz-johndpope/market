@@ -637,6 +637,11 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .reviews-list{
 	margin: 10px 0 0;
 }
+.reviews-list li{
+	display: inline;
+	height: 20px;
+	width: 100%;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
