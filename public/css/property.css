@@ -702,8 +702,8 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 }
 .per-wrpr {
     display: inline-block;
-    width: 140px;
-    height: 150px;
+    width: 100px;
+    /*height: 150px;*/
     font-weight: 300;
     vertical-align: bottom;
 }
@@ -714,7 +714,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     height: 80px;
     overflow: hidden;
     position: relative;
-    margin: 10px 0 11px 35px;
+    margin: 10px 0 11px 15px;
 }
 
 .per:before, .per:after {
