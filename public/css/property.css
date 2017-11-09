@@ -846,6 +846,18 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     text-align: center;
     color: #767676;
 }
+.aspects-fieldset {
+    border: 1px solid #ccc;
+    padding: 20px 10px;
+    border-radius: 3px;
+    color: #777;
+    background-color: #fff;
+}
+.aspects-fieldset .aspect-question {
+    height: 30px;
+    width: 95%;
+    margin: 0 auto;
+}
 fieldset {
     margin: 1.5rem 0;
 }
