@@ -40,6 +40,7 @@ class BaseController extends Controller
         foreach ($room->users as $usr){
             if($usr->id!==$user->id)
             {
+                $message->room = $message->room;
                 Redis::publish(''.$usr->id, json_encode($message));
                 foreach ($usr->android as $token){
                     $this->android($token,$room->title,$message->message,$message);
