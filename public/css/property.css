@@ -604,6 +604,16 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .stars i.fullStar {
     background-position: -27px -163px;
 }
+.reviews-count {
+    color: #999;
+    font-size: 12px;
+    line-height: 117%;
+    display: inline-block;
+    font-weight: 200;
+    width: 140px;
+    margin-top: 5px;
+    margin-left: -5px;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
