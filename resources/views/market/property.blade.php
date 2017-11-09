@@ -329,7 +329,7 @@
                                             </div>
                                         </div>
                                         <p class="por-title">
-                                            Would recommend
+                                            Good value
                                         </p>
                                     </div>
                                     <div class="pie-wrpr">
@@ -341,7 +341,7 @@
                                             </div>
                                         </div>
                                         <p class="por-title">
-                                            Would recommend
+                                            Good quality
                                         </p>
                                     </div>
                                 </div>
