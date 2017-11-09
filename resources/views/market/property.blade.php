@@ -363,7 +363,7 @@
                                     <div class="col-md-4">
                                         <h2>Rate this product(required)</h2>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <div class="reviews-stars-widget">
                                             <div class="rating">
                                                 <fieldset>
