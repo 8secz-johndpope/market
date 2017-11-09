@@ -699,13 +699,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     position: relative;
     margin: 10px 0 11px 35px;
 }
-.per:before {
-    background-color: #fff;
-    content: "";
-    width: 85%;
-    height: 85%;
-    z-index: 100;
-}
+
 .per:before, .per:after {
     border-radius: 50%;
     display: block;
@@ -718,6 +712,24 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     -moz-transform: translateX(-50%) translateY(-50%);
     -o-transform: translateX(-50%) translateY(-50%);
     -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(___YUICSSMIN_PRESERVED_TOKEN_0___)";
+}
+.per:before {
+    background-color: #fff;
+    content: "";
+    width: 85%;
+    height: 85%;
+    z-index: 100;
+}
+.pie:after {
+    content: attr(data-percent);
+    font-family: Arial,sans-serif;
+    font-size: 21px;
+    z-index: 200;
+    top: 0;
+    position: relative;
+    text-align: center;
+    color: #555;
+    font-weight: 400;
 }
 .per>div {
     float: left;
