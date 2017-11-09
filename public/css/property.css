@@ -248,7 +248,7 @@ h2.item-name {
 }
 .buttons span.glyphicon {
     margin-right: 10px;
-    color: #333;
+    color: #000;
     font-size: 18px;
 }
 .details h3{
@@ -529,6 +529,27 @@ span .glyphicon {
 .images-current span.glyphicon {
     margin-right: 8px;
 }
+span.glyphicon.glyphicon-heart-empty.favroite-icon {
+    color: mediumaquamarine;
+}
+.email-icon{
+	font-size: 18px;
+	/*background: url(icons/email.svg);*/
+	background-position: center;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+}
+span.email-icon img {
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
+}
+span.glyphicon.favroite-icon.glyphicon-heart {
+	color: mediumaquamarine;
+}
+    
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;

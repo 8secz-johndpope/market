@@ -97,7 +97,7 @@
                             <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Call</a>
                             <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
                             
-                            <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Videocall</a>
+                            <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">VideoCall</a>
                         </div>
                     </div>
                     <div id="tabs"> 
@@ -383,7 +383,7 @@
                             <address>
                                 
                             </address>
-                            <p><a href="/userads/{{$advert->user->id}}">View other adverts from this user</a></p>
+                            <p><a href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                         </div>
                         @else
                         <ul class="list-group">
@@ -409,8 +409,9 @@
                             Print
                         </li>
                         <li class="list-group-item">
-                            <span class="glyphicon glyphicon-envelope"></span>
-                            Email at friend
+                            <span class="email-icon"><img src="/css/icons/email.svg"></span>
+
+                            Email to friend
                         </li>
                     </ul>
                 </div>
@@ -428,7 +429,7 @@
             </div>
             <div class="row">
                 <div class="report">
-                    <h3>Report to Ad</h3>
+                    <h3>Report this Ad</h3>
                     <a href="#" class="btn btn-default">Report</a>
                 </div>
             </div>
@@ -437,6 +438,7 @@
                     <h3>Similar Adverts</h3>
                     <div class="listings-adverts">
                     @foreach($products as $product)
+                    <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                         <div class="col-sm-6">
                             <div class="advert-img">
                                 <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][0]}}?1500586448">
@@ -448,6 +450,7 @@
                                 @endif
                             </div>
                         </div>
+                    </a>
                     @endforeach
                     </div>
                 </div>
