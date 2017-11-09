@@ -690,7 +690,15 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     max-width: 100%;
     padding: 0 !important;
 }
-
+.per {
+    background-color: rgba(241,142,0,0.2);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px 0 11px 35px;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
