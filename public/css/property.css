@@ -638,7 +638,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     background: transparent;
     box-sizing: border-box;
     background-color: #ddd;
-    width: 74%;
+    width: 86%;
     height: 10px;
     margin: 4px 0;
     display: inline-block;
@@ -664,7 +664,11 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 	float: left;
 	margin-top: 3px;
 }
-.reviews-item span{
+.reviews-item-r {
+    float: right;
+    width: 86%;
+}
+.reviews-item-r span{
 	position: absolute;
     color: #555;
     font-style: normal;

@@ -298,12 +298,16 @@
                                         <li>
                                             <div class="reviews-item">
                                                 <i class="empty-star"></i>
-                                                <span>{{$i}}</span>
-                                                <i class="r-list-bg">
-                                                    <!-- here is porcentage of the line for star-->
-                                                    <u class="r-list-fc" style="width: 0%"></u>
-                                                </i>
-                                                <span>0</span>
+                                                 <div class="reviews-item-l">
+                                                    <span>{{$i}}</span>
+                                                </div>
+                                                <div class="reviews-item-r">
+                                                    <i class="r-list-bg">
+                                                        <!-- here is porcentage of the line for star-->
+                                                        <u class="r-list-fc" style="width: 0%"></u>
+                                                    </i>
+                                                    <span>0</span>
+                                                </div>
                                             </div>
                                         </li>
                                         @endfor
