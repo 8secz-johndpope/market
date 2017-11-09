@@ -660,10 +660,11 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     margin-right: 4px;
     margin-top: 1px;
 }
-.review-item-l{
+.reviews-item-l{
+	float: left;
 	margin-top: 3px;
 }
-.review-item span{
+.reviews-item span{
 	position: absolute;
     color: #555;
     font-style: normal;
@@ -671,13 +672,13 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     font-size: 12px;
     line-height: 20px;
 }
-.review-item-l span{
+.reviews-item-l span{
 	font-size: 12px;
     color: #9b9b9b;
     line-height: 15px;
     margin: 0;
 }
-.review-item .r-list-bg .r-list-fc {
+.reviews-item .r-list-bg .r-list-fc {
     width: 0;
     background-color: #999;
     height: 12px;
