@@ -407,7 +407,7 @@ class MessageController extends BaseController
         $rooms = $user->rooms()->pluck('room_id')->toArray();
         if($request->has('time')){
             $x=date('Y-m-d H:i:s',$request->time);
-            $messages = Message::where('created_at','>=',$x)->whereIn('room_id',$rooms)->get();
+            $messages = Message::where('created_at','>',$x)->whereIn('room_id',$rooms)->get();
 
         }else{
             $messages = Message::whereIn('room_id',$rooms)->get();
