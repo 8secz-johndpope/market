@@ -285,7 +285,7 @@
                                             <div class="reviews-item">
                                                 <i class="empty-star"></i>
                                                 <div class="reviews-item-l">
-                                                    <span>5</span>
+                                                    <p>5</p>
                                                 </div>
                                                 <div class="reviews-item-r">
                                                     <i class="r-list-bg">
@@ -301,7 +301,7 @@
                                             <div class="reviews-item">
                                                 <i class="empty-star"></i>
                                                  <div class="reviews-item-l">
-                                                    <span>{{$i}}</span>
+                                                    <p>{{$i}}</p>
                                                 </div>
                                                 <div class="reviews-item-r">
                                                     <i class="r-list-bg">
