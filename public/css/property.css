@@ -841,6 +841,11 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     margin-top: -3px;
     margin-left: 35px;
 }
+.star-posted, .star-posting {
+    display: none;
+    text-align: center;
+    color: #767676;
+}
 fieldset {
     margin: 1.5rem 0;
 }
