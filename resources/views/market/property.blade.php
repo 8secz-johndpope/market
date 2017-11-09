@@ -247,7 +247,7 @@
                     </div>
                     </div>
                     <div class="reviews-ratings">
-                        <div class="row">
+                        <div class="row section-title">
                             <div class="col-md-8 title">
                                 <h3>Ratings and reviews</h3>
                             </div>
