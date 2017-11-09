@@ -411,21 +411,21 @@
                                                 </div>
                                             </div>
                                             <div class="aspects-questions">
-                                                <span>Would you recommend it?</span>
+                                                <span>Is it good value?</span>
                                                 <div class="actions">
-                                                    <input type="radio" name="question1" id="question1-yes">
-                                                    <label class="btn-gry" for="question1-yes">yes</label>
-                                                    <input type="radio" name="question1" id="question1-no">
-                                                    <label class="btn-gry" for="question1-no">no</label>
+                                                    <input type="radio" name="question2" id="question2-yes">
+                                                    <label class="btn-gry" for="question2-yes">yes</label>
+                                                    <input type="radio" name="question2" id="question2-no">
+                                                    <label class="btn-gry" for="question2-no">no</label>
                                                 </div>
                                             </div>
                                             <div class="aspects-questions">
-                                                <span>Would you recommend it?</span>
+                                                <span>Is it good quality?</span>
                                                 <div class="actions">
-                                                    <input type="radio" name="question1" id="question1-yes">
-                                                    <label class="btn-gry" for="question1-yes">yes</label>
-                                                    <input type="radio" name="question1" id="question1-no">
-                                                    <label class="btn-gry" for="question1-no">no</label>
+                                                    <input type="radio" name="question3" id="question3-yes">
+                                                    <label class="btn-gry" for="question3-yes">yes</label>
+                                                    <input type="radio" name="question3" id="question3-no">
+                                                    <label class="btn-gry" for="question3-no">no</label>
                                                 </div>
                                             </div>
                                         </div>
