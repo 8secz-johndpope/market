@@ -858,6 +858,13 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     width: 95%;
     margin: 0 auto;
 }
+.aspects-fieldset .aspect-question span {
+    margin-top: 6px;
+    display: inline-block;
+    font-size: 15px;
+    color: #555;
+    font-weight: 300;
+}
 fieldset {
     margin: 1.5rem 0;
 }
