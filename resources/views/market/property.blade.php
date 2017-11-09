@@ -268,11 +268,11 @@
                                     <h1>5,0</h1>
                                     <div class="stars">
                                         <span>
-                                            <li class="fullstar"></li>
-                                            <li class="fullstar"></li>
-                                            <li class="fullstar"></li>
-                                            <li class="fullstar"></li>
-                                            <li class="fullstar"></li>
+                                            <i class="fullstar"></i>
+                                            <i class="fullstar"></i>
+                                            <i class="fullstar"></i>
+                                            <i class="fullstar"></i>
+                                            <i class="fullstar"></i>
                                         </span>
                                     </div>
                                     <span class="reviews-count">
