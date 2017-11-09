@@ -663,6 +663,14 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .review-item-l{
 	margin-top: 3px;
 }
+.review-item span{
+	position: absolute;
+    color: #555;
+    font-style: normal;
+    padding-left: 7px;
+    font-size: 12px;
+    line-height: 20px;
+}
 .review-item-l span{
 	font-size: 12px;
     color: #9b9b9b;
@@ -677,6 +685,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     max-width: 100%;
     padding: 0 !important;
 }
+
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
