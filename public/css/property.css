@@ -549,6 +549,9 @@ span.email-icon img {
 span.glyphicon.favroite-icon.glyphicon-heart {
 	color: mediumaquamarine;
 }
+.reviews-ratings{
+	padding: 15px;
+}
 .reviews-ratings h3{
 	color: #262637;
     font-size: 15px;
