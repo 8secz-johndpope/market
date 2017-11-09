@@ -551,6 +551,8 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 }
 .reviews-ratings{
 	padding: 15px;
+	margin-top: 15px;
+	border: 1px solid #ccc;
 }
 .reviews-ratings h3{
 	color: #262637;
