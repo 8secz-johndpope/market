@@ -699,6 +699,26 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     position: relative;
     margin: 10px 0 11px 35px;
 }
+.per:before {
+    background-color: #fff;
+    content: "";
+    width: 85%;
+    height: 85%;
+    z-index: 100;
+}
+.per:before, .per:after {
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(___YUICSSMIN_PRESERVED_TOKEN_0___)";
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
