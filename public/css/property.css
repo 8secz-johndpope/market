@@ -582,6 +582,12 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 #make-review, #make-rate{
 	display: none;
 }
+.ratings h1 {
+    text-align: center;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
+
+
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
