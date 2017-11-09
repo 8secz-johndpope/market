@@ -324,7 +324,7 @@
                                             <div class="right">
                                             </div>
                                         </div>
-                                        <p class="por-title">
+                                        <p class="per-title">
                                             Would recommend
                                         </p>
                                     </div>
@@ -336,7 +336,7 @@
                                             <div class="right">
                                             </div>
                                         </div>
-                                        <p class="por-title">
+                                        <p class="per-title">
                                             Good value
                                         </p>
                                     </div>
@@ -348,7 +348,7 @@
                                             <div class="right">
                                             </div>
                                         </div>
-                                        <p class="por-title">
+                                        <p class="per-title">
                                             Good quality
                                         </p>
                                     </div>
