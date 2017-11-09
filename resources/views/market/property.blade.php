@@ -246,6 +246,35 @@
                         @endif
                     </div>
                     </div>
+                    <div class="reviews-ratings">
+                        <div class="row">
+                            <div class="col-md-8 title">
+                                <h3>Ratings and reviews</h3>
+                            </div>
+                            <div class="col-md-2 btn btn-review">
+                                <a href="#make-review">
+                                    Write reviews
+                                </a>
+                            </div>
+                            <div class="col-md-2 btn btn-rate">
+                                <a href="#make-rate">
+                                    Rate
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row content">
+                            <div class="ratings">
+                            </div>
+                            <div id="make-review">
+                            </div>
+                            <div id="make-rate">
+                            </div>
+                        </div>
+                        <div class="row reviews">
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             <div class="col-md-4 col-sm-12">
                 <div class="row">
