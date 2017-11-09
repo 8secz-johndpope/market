@@ -833,6 +833,14 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .rating fieldset:not(:checked)>label:before {
     content: '';
 }
+.star-txt, .star-posted, .star-posting {
+    font-size: 13px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    margin-top: -3px;
+    margin-left: 35px;
+}
 fieldset {
     margin: 1.5rem 0;
 }
