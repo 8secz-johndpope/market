@@ -865,6 +865,44 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     color: #555;
     font-weight: 300;
 }
+.aspects-fieldset .aspect-question .actions {
+    display: inline-block;
+    float: right;
+    padding: 1px;
+}
+.aspects-fieldset .aspect-question .actions input {
+    opacity: .011;
+    -ms-filter: alpha(opacity=0.011);
+    filter: alpha(opacity=0.011);
+    -moz-opacity: .011;
+    -khtml-opacity: .011;
+    z-index: 100;
+}
+.btn-gry {
+    display: inline-block;
+    padding: 8px 0;
+    text-align: center;
+    width: 80px;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #999;
+    font-weight: 300;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    color: #999;
+}
+.aspects-fieldset .aspect-question .actions label {
+    cursor: pointer;
+    z-index: 90;
+}
+.aspects-fieldset .aspect-question .actions input[type="radio"]:checked+label {
+    color: #555;
+    text-decoration: none;
+    border: 1px solid #555;
+    background-color: #fff;
+}
 fieldset {
     margin: 1.5rem 0;
 }
