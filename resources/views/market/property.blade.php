@@ -631,9 +631,6 @@
             </div>
             <div class="row">
                 <div class="similar-adverts">
-                    @php
-                        var_dump($products);
-                    @endphp
                     <h3>Similar Adverts</h3>
                     <div class="listings-adverts">
                     @foreach($products as $product)
