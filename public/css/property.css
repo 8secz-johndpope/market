@@ -701,7 +701,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     position: relative;
     text-align: center;
     font-weight: 300;
-    margin: 10px 0;
+    padding: 10px 0;
     vertical-align: top;
 }
 .per-wrpr {
