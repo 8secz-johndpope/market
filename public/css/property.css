@@ -950,6 +950,12 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .reviews .stars i.fullStar {
     background-position: -20px -122px;
 }
+.review-item-date {
+    color: #999;
+    line-height: 15px;
+    margin-top: 7px;
+    display: block;
+}
 .author-by {
     color: #999;
 }
