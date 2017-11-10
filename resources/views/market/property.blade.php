@@ -452,7 +452,17 @@
                             <div id="make-rate">
                             </div>
                         <div class="row reviews">
+                            <div class="col-md-12 title">
+                                <h3>Most relevant reviews</h3> 
+                            </div>
                             <div class="col-md-4">
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-12 read-more">
+                                <h3>Read more</h3>
                             </div>
                         </div>
                     </div>
