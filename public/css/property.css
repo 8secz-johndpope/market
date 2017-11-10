@@ -986,11 +986,13 @@ legend {
     width: 50%;
     float: left;
     display: inline-block;
+    border: none;
 }
 .nearby-list .advert-img {
     width: 50%;
     float: left;
     display: inline-block;
+    border: none;
 }
 @media (min-width: 1200px){
 	.container {
