@@ -948,6 +948,9 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     width: 15px;
     height: 15px;
 }
+.author-by {
+    color: #999;
+}
 fieldset {
     margin: 1.5rem 0;
 }
