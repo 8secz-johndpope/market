@@ -340,7 +340,7 @@
                                             </div>
                                         </div>
                                         <p class="per-title">
-                                            Would recommend
+                                            Good Description
                                         </p>
                                     </div>
                                     <div class="per-wrpr">
@@ -353,7 +353,7 @@
                                             </div>
                                         </div>
                                         <p class="per-title">
-                                            Good value
+                                            Communication
                                         </p>
                                     </div>
                                     <div class="per-wrpr">
@@ -366,7 +366,7 @@
                                             </div>
                                         </div>
                                         <p class="per-title">
-                                            Good quality
+                                            Dispatch time
                                         </p>
                                     </div>
                                 </div>
