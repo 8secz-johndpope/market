@@ -994,6 +994,11 @@ legend {
     display: inline-block;
     border: none;
 }
+.nearby-list .advert-img:before {
+    position: absolute;
+    border-top: 1px dashed #ccc;
+    width: 200%;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
