@@ -266,14 +266,14 @@
                                     <h3>Similar nearby properties</h3>
                                     <div class="options-buttons">
                                         <div class="btn-group" data-toggle="buttons">
-                                            <label class="btn btn-primary">
+                                            <label class="btn btn-primary active">
                                                 <input type="radio" name="options" id="option-sale" autocomplete="off" checked="">For sale
                                             </label>
-                                            <label class="btn btn-primary active">
+                                            <label class="btn btn-primary">
                                                 <input type="radio" name="options" id="option-under" autocomplete="off">
                                                 Under offer
                                             </label>
-                                            <label class="btn btn-primary active">
+                                            <label class="btn btn-primary">
                                                 <input type="radio" name="options" id="option-sold" autocomplete="off">
                                                 Sold
                                             </label>
