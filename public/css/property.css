@@ -228,7 +228,7 @@ h2.item-name {
 .btn-default:hover, .btn-default:active, .btn-default:link{
 	color: #fff;
     background-color: #ff8830;
-    border-color: #ff8830;
+    /*border-color: #ff8830;*/
 }
 .list-group {
     margin-bottom: 0;
