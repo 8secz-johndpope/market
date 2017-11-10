@@ -640,7 +640,7 @@
                     <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                         <div class="col-sm-6">
                             <div class="advert-img">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0]) : noimage.png }}?1500586448">
+                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : noimage.png }}?1500586448">
                             </div>
                             <div class="advert-details">
                                 <h4>{{$product['title']}}</h4>
