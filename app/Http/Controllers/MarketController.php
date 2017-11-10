@@ -887,7 +887,7 @@ class MarketController extends BaseController
 
         }
 
-
+        $similar = $advert->similar();
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
