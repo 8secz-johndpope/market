@@ -1013,6 +1013,9 @@ legend {
     padding-bottom: 1.6rem!important;
     color: #262637;
 }
+.nearby-item .carousel-inner{
+	width: 50%;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
