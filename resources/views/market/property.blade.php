@@ -635,7 +635,7 @@
                     <div class="listings-adverts">
                     @foreach($products as $product)
                     @php
-                        var_dump("working");
+                        var_dump($product);
                     @phpend
                     <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                         <div class="col-sm-6">
