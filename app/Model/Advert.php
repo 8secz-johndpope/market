@@ -549,6 +549,7 @@ class Advert extends  BaseModel
             ]
         ];
         $response = $this->client->search($params);
+        var_dump($this->location());
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         return $products;
     }
