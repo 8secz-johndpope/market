@@ -283,18 +283,12 @@
                                         <div class="nearby-properties-list">
                                              <span>These are the nearset properties on the market with the same number of bedrooms.</span>
                                              <div class="nearby-list">
-                                            @foreach($products as $product)
+                                            @foreach($similar as $product)
                                                 <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                                                     <div class="col-sm-12">
-                                                        <div class="advert-details">
-                                                            @if($product['meta']['price'] > 0)
-                                                                <h4 class="items-box-price font-6">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</h4>
-                                                            @endif
-                                                            <h4>{{$product['title']}}</h4>
-                                                        </div>
-                                                        <div class="advert-img">
-                                                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
-                                                        </div>
+                                                        @php
+                                                            var_dump($similar);
+                                                        @endphp
                                                     </div>
                                             </a>
                                             @endforeach
