@@ -284,8 +284,8 @@
                                              <span>These are the nearset properties on the market with the same number of bedrooms.</span>
                                              <div class="nearby-list">
                                             @foreach($similar as $product)
-                                                <a href="/p/{{$category->id}}/{{$product['source_id']}}">
-                                                    <div class="col-sm-12">
+                                                <div class="col-sm-12">
+                                                    <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                                                         <div class="advert-details">
                                                             @php
                                                                 var_dump($product);
@@ -296,11 +296,11 @@
                                                             <h4>{{$product['location_name']}}</h4>
                                                             <span class="nearby-distance">Within {{$product['distance']}} miles</span>
                                                         </div>
-                                                        <div class="advert-img">
-                                                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
-                                                        </div>
+                                                    </a>
+                                                    <div class="advert-img">
+                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
                                                     </div>
-                                            </a>
+                                                </div>
                                             @endforeach
                                             </div>
                                         </div>
