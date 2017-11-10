@@ -251,9 +251,25 @@
                         </div>
                         @if($category->id == 306000000)
                         <div id="tap-marketinfo" class="tab-pane fade">
-                            <div class="row">           
+                            <div class="row history-sale">           
                                 <div class="col-sm-12  marketinfo">
-                                    
+                                    <h3>This property's sale history</h3>
+                                    <div class="table-history">
+                                    </div> 
+                                    <small>
+                                        Source acknowledgement: House price data producted by the Land Registry.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="row similar-nearby">           
+                                <div class="col-sm-12 ">
+                                    <h3>Similar nearby properties</h3>
+                                    <div class="options-buttons">
+                                    </div>
+                                    <span>These are the nearset properties on the market with the same number of bedrooms.
+                                    </span>
+                                    <div class="nearby-properties-list">
+                                    </div> 
                                 </div>
                             </div>
                         </div>
