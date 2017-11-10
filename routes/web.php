@@ -23,6 +23,7 @@ Route::get('/indeed', 'CronController@indeed');
 Route::get('/gitpull', 'MarketController@gitpull');
 
 Route::get('/plate', 'HomeController@dvla');
+Route::get('/push', 'HomeController@push');
 
 Route::get('/allfields', 'MarketController@allfields');
 
