@@ -294,8 +294,24 @@
                                                             <span class="nearby-distance">Within {{number_format($product['distance'], 2,'.', ',')}} miles</span>
                                                         </div>
                                                     </a>
-                                                    <div class="advert-img">
-                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
+                                                    <div id="car-{{$product['source_id']}}" class="carousel slide" data-ride="carousel">
+                                                        <div class="carousel-inner">
+                                                            @if(isset($product['images'][0]))
+                                                            @foreach($product['images'] as $image)
+                                                                <div class="item">
+                                                                    <div class="advert-img">
+                                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448">
+                                                                    </div>
+                                                                </div>
+                                                            @endforeach
+                                                            @else
+                                                             <div class="item">
+                                                                <div class="advert-img">
+                                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
+                                                                </div>
+                                                            </div>
+                                                            @endif
+                                                        </div>
                                                     </div>
                                                 </div>
                                             @endforeach
