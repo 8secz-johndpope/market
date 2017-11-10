@@ -121,6 +121,10 @@ class HomeController extends BaseController
         }
         return view('home.verified',['msg'=>'Oops! Something went wrong here']);
     }
+    public function push(Request $request){
+        $this->ios_call('yea',['data'=>'yes']);
+    }
+
     public function post(Request $request)
     {
         $user = Auth::user();
