@@ -265,6 +265,19 @@
                                 <div class="col-sm-12 ">
                                     <h3>Similar nearby properties</h3>
                                     <div class="options-buttons">
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-primary">
+                                                <input type="radio" name="options" id="option-sale" autocomplete="off" checked="">For sale
+                                            </label>
+                                            <label class="btn btn-primary active">
+                                                <input type="radio" name="options" id="option-under" autocomplete="off">
+                                                Under offer
+                                            </label>
+                                            <label class="btn btn-primary active">
+                                                <input type="radio" name="options" id="option-sold" autocomplete="off">
+                                                Sold
+                                            </label>
+                                        </div>
                                     </div>
                                     <span>These are the nearset properties on the market with the same number of bedrooms.
                                     </span>
