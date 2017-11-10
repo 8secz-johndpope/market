@@ -982,6 +982,16 @@ legend {
 .options-buttons label.btn.btn-primary{
 	width: 130px;
 }
+.nearby-list .advert-details {
+    width: 50%;
+    float: left;
+    display: inline-block;
+}
+.nearby-list .advert-img {
+    width: 50%;
+    float: left;
+    display: inline-block;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
