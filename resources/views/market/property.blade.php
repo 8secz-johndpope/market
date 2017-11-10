@@ -318,6 +318,11 @@
                                                             </div>
                                                             @endif
                                                         </div>
+                                                        <div class="nearby-img-navigation">
+                                                            <a href="#car-{{$product['source_id']}}" class="left"> < </a>
+                                                            <span> 1 of {{count($product['images'])}}</span>
+                                                            <a href="#car-{{$product['source_id']}}" class="right"> > </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             @endforeach
