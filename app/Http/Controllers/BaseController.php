@@ -118,7 +118,7 @@ class BaseController extends Controller
     }
     public function ios_call($token,$data)
     {
-        $token='34f5094fc0754bfb7d0fb594dcae54d6069000e2ebcd54f2f3c4ba44fdc50b67';
+      //  $token='34f5094fc0754bfb7d0fb594dcae54d6069000e2ebcd54f2f3c4ba44fdc50b67';
 // Put your private key's passphrase here:
 $passphrase = '1234'; //for ck.pem
       //  $passphrase = 'abcd'; // for ck2.pem
@@ -140,7 +140,7 @@ $passphrase = '1234'; //for ck.pem
 // Encode the payload as JSON
         $payload = json_encode($body);
 // Build the binary notification
-        $msg = chr(0) . pack('n', 32) . pack('H*', $token) . pack('n', strlen($payload)) . $payload;
+        $msg = chr(0) . pack('n', 32) . pack('H*', $token->token) . pack('n', strlen($payload)) . $payload;
 // Send it to the server
         $result = fwrite($fp, $msg, strlen($msg));
         if (!$result)
