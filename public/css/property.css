@@ -947,7 +947,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .reviews .stars {
     text-align: left;
 }
-.reviews .stars i.fullStar {
+.reviews .stars i.fullstar {
     background-position: -20px -122px;
 }
 .review-item-date {
