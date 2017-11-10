@@ -976,6 +976,9 @@ legend {
 .nearby-tabs-content{
 	padding: 16px 0 0 0;
 }
+.nearby-properties-list{
+	margin-top: 20px;
+}
 .options-buttons label.btn.btn-primary{
 	width: 130px;
 }
