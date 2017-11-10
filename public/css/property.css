@@ -621,9 +621,6 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     background-position: -27px -163px;
 }
 
-.reviews .star i.fullStar {
-    background-position: -20px -122px;
-}
 .reviews-count {
     color: #999;
     font-size: 12px;
@@ -949,6 +946,9 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 }
 .reviews .stars {
     text-align: left;
+}
+.reviews .stars i.fullStar {
+    background-position: -20px -122px;
 }
 .author-by {
     color: #999;
