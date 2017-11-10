@@ -634,6 +634,9 @@
                     <h3>Similar Adverts</h3>
                     <div class="listings-adverts">
                     @foreach($products as $product)
+                    @php
+                        var_dump("working");
+                    @phpend
                     <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                         <div class="col-sm-6">
                             <div class="advert-img">
