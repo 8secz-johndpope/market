@@ -973,6 +973,9 @@ legend {
     border-bottom: 1px solid #ddd;
     font-weight: 200;
 }
+.nearby-tabs-content{
+	padding: 16px 0 0 0;
+}
 .options-buttons label.btn.btn-primary{
 	width: 130px;
 }

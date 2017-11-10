@@ -279,9 +279,10 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <span>These are the nearset properties on the market with the same number of bedrooms.
-                                    </span>
-                                    <div class="nearby-properties-list">
+                                    <div class="nearby-tabs-content">
+                                        <div class="nearby-properties-list">
+                                             <span>These are the nearset properties on the market with the same number of bedrooms.</span>
+                                        </div>
                                     </div> 
                                 </div>
                             </div>
