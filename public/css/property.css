@@ -313,6 +313,9 @@ a.left.carousel-control:hover {
 .left-content{
 	padding-left: 0;
 }
+.request-details .btn-default {
+    width: 200px;
+}
 .color-grey{
 	padding: .8rem 8px !important;
 	border-bottom: 0;
