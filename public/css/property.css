@@ -959,6 +959,9 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .author-by {
     color: #999;
 }
+.title{
+	padding-left: 15px;
+}
 fieldset {
     margin: 1.5rem 0;
 }
