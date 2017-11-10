@@ -1013,6 +1013,9 @@ legend {
     padding-bottom: 1.6rem!important;
     color: #262637;
 }
+.nearby-item .item{
+	height: 100%;
+}
 .nearby-item .carousel-inner {
     width: 297px;
     height: 197px;
