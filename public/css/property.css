@@ -929,6 +929,10 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     border-top: 1px solid #ccc;
     text-align: center;
 }
+.read-more-reviews .glyphicon-chevron-down {
+    margin-left: 10px;
+    top: 3px;
+}
 fieldset {
     margin: 1.5rem 0;
 }
