@@ -997,7 +997,7 @@ legend {
 .nearby-list .advert-details:before {
     position: absolute;
     border-top: 1px dashed #ccc;
-    width: calc(100% -30px);
+    width: calc(100% - 30px);
     content: " ";
 }
 @media (min-width: 1200px){
