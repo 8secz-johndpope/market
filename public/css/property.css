@@ -935,6 +935,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 }
 .reviews .title {
     height: 29px;
+    border-bottom: 1px solid #ccc;
 }
 fieldset {
     margin: 1.5rem 0;
