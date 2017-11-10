@@ -1003,6 +1003,8 @@ legend {
 .nearby-item {
     padding-top: 26px;
     border-top: 1px dashed #ccc;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 .font-7 {
     font-size: 19px;
