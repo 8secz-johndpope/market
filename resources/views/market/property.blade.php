@@ -303,7 +303,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            @for($i=1; $i < count($i$product['images']); $i++)
+                                                            @for($i=1; $i < count($product['images']); $i++)
                                                                 <div class="item">
                                                                     <div class="advert-img">
                                                                         <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][$i]}}?1500586448">
