@@ -1015,6 +1015,7 @@ legend {
 }
 .nearby-item .carousel-inner{
 	width: 50%;
+	height: 197px;
 }
 @media (min-width: 1200px){
 	.container {
