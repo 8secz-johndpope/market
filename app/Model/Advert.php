@@ -514,5 +514,43 @@ class Advert extends  BaseModel
                 cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
         return 0.000621371*$angle * $earthRadius;
     }
+    public  function similar(){
+        $category = Category::find($this->category_id);
+        $location = Location::find($this->postcode->location_id);
+        $musts=array();
+        $musts['category']= [
+            'range' => [
+                'category' => [
+                    'gte'=>$category->id,
+                    'lte'=>$category->ends
+                ]
+            ]
+        ];
+
+        $musts['location_id']= [
+            'range' => [
+                'location_id' => [
+                    'gte'=>$location->res,
+                    'lte'=>$location->ends
+                ]
+            ]
+        ];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>0,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($musts),
+                        /*     'filter' => $filte */
+                    ]
+                ],
+            ]
+        ];
+        $response = $this->client->search($params);
+        $total= $response['hits']['hits'];
+        return $total;
+    }
 
 }
