@@ -319,9 +319,9 @@
                                                             @endif
                                                         </div>
                                                         <div class="nearby-img-navigation">
-                                                            <a href="#car-{{$product['source_id']}}" class="left"> < </a>
+                                                            <a href="#car-{{$product['source_id']}}" class="left"><span class="glyphicon glyphicon-chevron-left"></a>
                                                             <span> 1 of {{count($product['images'])}}</span>
-                                                            <a href="#car-{{$product['source_id']}}" class="right"> > </a>
+                                                            <a href="#car-{{$product['source_id']}}" class="right"><span class="glyphicon glyphicon-chevron-right"></a>
                                                         </div>
                                                     </div>
                                                 </div>
