@@ -549,8 +549,8 @@ class Advert extends  BaseModel
             ]
         ];
         $response = $this->client->search($params);
-        $total= $response['hits']['hits'];
-        return $total;
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        return $products;
     }
 
 }
