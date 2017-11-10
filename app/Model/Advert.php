@@ -539,7 +539,7 @@ class Advert extends  BaseModel
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
-                'size'=>0,
+                'size'=>6,
                 'query' => [
                     'bool' => [
                         'must' => array_values($musts),
