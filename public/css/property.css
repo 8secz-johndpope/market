@@ -562,6 +562,10 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     margin-top: 0;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.tab-buttons {
+    padding-left: 0;
+    padding-right: 0;
+}
 .btn-review {
     padding-left: 5px;
     padding-right: 5px;

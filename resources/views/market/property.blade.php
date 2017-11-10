@@ -265,12 +265,12 @@
                             <div class="col-md-6 title">
                                 <h3>Ratings and reviews</h3>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 tab-buttons">
                                 <a class="btn btn-default btn-review" href="#make-review">
                                     Write reviews
                                 </a>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 tab-buttons">
                                 <a class="btn btn-default btn-rate" href="#make-rate">
                                     Rate
                                 </a>
