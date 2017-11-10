@@ -549,10 +549,14 @@ class Advert extends  BaseModel
             ]
         ];
         $response = $this->client->search($params);
-        $coordenates = explode(",", $this->param('location'));
+        $coordenatesFrom = explode(",", $this->param('location'));
         var_dump($coordenates);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        //haversineGreatCircleDistance()
+        for($products as $product){
+            $coordenatesTo = explode(",", $product['location']);
+            $product['distance'] = haversineGreatCircleDistance(floatval($coordenatesFrom[0]), floatval($coordenatesFrom[1]), floatval($coordenatesTo[0]), floatval($coordenatesTo[1]));
+
+        }
         return $products;
     }
 
