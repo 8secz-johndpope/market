@@ -284,7 +284,7 @@
                                              <span>These are the nearset properties on the market with the same number of bedrooms.</span>
                                              <div class="nearby-list">
                                             @php
-                                                var_dump($similar);
+                                                var_dump($similar[0]);
                                             @endphp
                                             @foreach($similar as $s)
                                                 <a href="/p/{{$category->id}}/">
