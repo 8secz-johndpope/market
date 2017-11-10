@@ -104,10 +104,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
-                        {{-- @if($advert->has_meta('property_floorplan')) --}
-                            <li><a data-toggle="tab" href="#tap-floorplan">Floorplan</a></li>
-                        }
-                        {{-- @endif --}}
+                        <li><a data-toggle="tab" href="#tap-floorplan">Floorplan</a></li>
                         @if($category->id == 306000000)
                             <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
                         @endif
