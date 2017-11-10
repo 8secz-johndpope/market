@@ -955,6 +955,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     line-height: 15px;
     margin-top: 7px;
     display: block;
+    margin-bottom: 10px;
 }
 .author-by {
     color: #999;
