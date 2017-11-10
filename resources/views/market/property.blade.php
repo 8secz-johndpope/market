@@ -631,12 +631,12 @@
             </div>
             <div class="row">
                 <div class="similar-adverts">
+                    @php
+                        var_dump($products);
+                    @endphp
                     <h3>Similar Adverts</h3>
                     <div class="listings-adverts">
                     @foreach($products as $product)
-                    @php
-                        var_dump($product['images']);
-                    @endphp
                     <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                         <div class="col-sm-6">
                             <div class="advert-img">
