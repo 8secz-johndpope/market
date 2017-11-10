@@ -614,7 +614,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     height: 20px;
 }
 
-.stars i.fullstar {
+.ratings-stars .stars i.fullstar {
     background-position: -27px -163px;
 }
 
