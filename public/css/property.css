@@ -950,10 +950,6 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .reviews .stars {
     text-align: left;
 }
-.reviews .stars i{
-    width: 15px;
-    height: 15px;
-}
 .author-by {
     color: #999;
 }
