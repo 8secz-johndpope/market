@@ -286,9 +286,10 @@
                                             @foreach($similar as $product)
                                                     <div class="col-sm-12">
                                                         @php
-                                                            var_dump($similar);
+                                                            var_dump($product);
                                                         @endphp
                                                     </div>
+    
                                             @endforeach
                                             </div>
                                         </div>
