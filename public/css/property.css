@@ -925,6 +925,10 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .reviews {
     border-top: 1px solid #ccc;
 }
+.read-more-reviews {
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
 fieldset {
     margin: 1.5rem 0;
 }
