@@ -461,7 +461,7 @@
                             </div>
                             <div class="col-md-4">
                             </div>
-                            <div class="col-md-12 read-more">
+                            <div class="col-md-12 read-more-reviews">
                                 <h3>Read more</h3>
                             </div>
                         </div>
