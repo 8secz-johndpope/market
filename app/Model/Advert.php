@@ -498,22 +498,6 @@ class Advert extends  BaseModel
         }
         return $total/100;
     }
-    private  function haversineGreatCircleDistance(
-        $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 6371000)
-    {
-        // convert from degrees to radians
-        $latFrom = deg2rad($latitudeFrom);
-        $lonFrom = deg2rad($longitudeFrom);
-        $latTo = deg2rad($latitudeTo);
-        $lonTo = deg2rad($longitudeTo);
-
-        $latDelta = $latTo - $latFrom;
-        $lonDelta = $lonTo - $lonFrom;
-
-        $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
-                cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
-        return 0.000621371*$angle * $earthRadius;
-    }
     public  function similar(){
         $category = Category::find($this->category_id);
         $location = Location::where('res',$this->param('location_id'))->first();
@@ -554,9 +538,24 @@ class Advert extends  BaseModel
         foreach($products as $product){
             $coordenatesTo = explode(",", $product['location']);
             $product['distance'] = haversineGreatCircleDistance(floatval($coordenatesFrom[0]), floatval($coordenatesFrom[1]), floatval($coordenatesTo[0]), floatval($coordenatesTo[1]));
-
         }
         return $products;
+    }
+    private  function haversineGreatCircleDistance(
+        $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 6371000)
+    {
+        // convert from degrees to radians
+        $latFrom = deg2rad($latitudeFrom);
+        $lonFrom = deg2rad($longitudeFrom);
+        $latTo = deg2rad($latitudeTo);
+        $lonTo = deg2rad($longitudeTo);
+
+        $latDelta = $latTo - $latFrom;
+        $lonDelta = $lonTo - $lonFrom;
+
+        $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
+                cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
+        return 0.000621371*$angle * $earthRadius;
     }
 
 }
