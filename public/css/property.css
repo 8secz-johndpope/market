@@ -1014,10 +1014,14 @@ legend {
 .nearby-item .carousel-inner {
     width: 297px;
     height: 197px;
+    margin: auto;
 }
 .nearby-item .carousel {
     width: 50%;
     display: inline-block;
+}
+.nearby-img-navigation {
+    text-align: center;
 }
 @media (min-width: 1200px){
 	.container {
