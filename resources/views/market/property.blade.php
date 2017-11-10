@@ -104,8 +104,12 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
-                        @if($advert->has_meta('property_floorplan'))
+                        {{-- @if($advert->has_meta('property_floorplan')) --}
                             <li><a data-toggle="tab" href="#tap-floorplan">Floorplan</a></li>
+                        }
+                        {{-- @endif --}}
+                        @if($category->id == 306000000)
+                            <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
                         @endif
                     </ul>
                     <div class="tab-content">
@@ -246,6 +250,15 @@
                                 </div>
                             </div>
                         </div>
+                        @if($category->id == 306000000)
+                        <div id="tap-marketinfo" class="tab-pane fade">
+                            <div class="row">           
+                                <div class="col-sm-12  marketinfo">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                     </div>
                     <div class="reviews-ratings">
