@@ -1007,6 +1007,10 @@ legend {
 .font-7 {
     font-size: 19px;
 }
+.nearby-distance {
+    padding-bottom: 1.6rem!important;
+    color: #262637;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;

@@ -291,7 +291,7 @@
                                                                 <span class="items-box-price font-7">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</span>
                                                             @endif
                                                             <h4>{{$product['location_name']}}</h4>
-                                                            <span class="nearby-distance">Within {{$product['distance']}} miles</span>
+                                                            <span class="nearby-distance">Within {{number_format($product['distance'], 2,'.', ',')}} miles</span>
                                                         </div>
                                                     </a>
                                                     <div class="advert-img">
