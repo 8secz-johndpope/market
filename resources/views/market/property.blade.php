@@ -288,7 +288,7 @@
                                                     <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                                                         <div class="advert-details">
                                                             @if($product['meta']['price'] > 0)
-                                                                <h4 class="items-box-price font-6">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</h4>
+                                                                <span class="items-box-price font-6">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</span>
                                                             @endif
                                                             <h4>{{$product['location_name']}}</h4>
                                                             <span class="nearby-distance">Within {{$product['distance']}} miles</span>
