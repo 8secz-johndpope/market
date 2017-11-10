@@ -297,13 +297,19 @@
                                                     <div id="car-{{$product['source_id']}}" class="carousel slide" data-ride="carousel">
                                                         <div class="carousel-inner">
                                                             @if(isset($product['images'][0]))
-                                                            @foreach($product['images'] as $image)
+                                                            <div class="item active">
+                                                                <div class="advert-img">
+                                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][0]}}?1500586448">
+                                                                </div>
+                                                            </div>
+
+                                                            @for($i=1; $i < count($i$product['images']); $i++)
                                                                 <div class="item">
                                                                     <div class="advert-img">
-                                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448">
+                                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][$i]}}?1500586448">
                                                                     </div>
                                                                 </div>
-                                                            @endforeach
+                                                            @endfor
                                                             @else
                                                              <div class="item">
                                                                 <div class="advert-img">
