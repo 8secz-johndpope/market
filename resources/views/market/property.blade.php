@@ -235,15 +235,17 @@
                         </div>
                     </div>
                         </div>
-                        @if($advert->has_meta('property_floorplan'))
                         <div id="tap-floorplan" class="tab-pane fade">
                             <div class="row">           
                                 <div class="col-sm-12 foorplan">
+                                    @if($advert->has_meta('property_floorplan'))    
                                     <img src="{{$advert->meta('property_floorplan')}}">
+                                    @else
+                                    <h3>This advert does not have a floor plan</h3>
+                                     @endif
                                 </div>
                             </div>
                         </div>
-                        @endif
                     </div>
                     </div>
                     <div class="reviews-ratings">
