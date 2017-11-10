@@ -45,6 +45,10 @@ a.btn.btn-info.bussines {
 border-color: #fff;
 border-radius: 30px;
 color: #000;*/
+}
+a.btn.btn-info.bussines:hover, a.btn.btn-info.bussines:focus, a.btn.btn-info.bussines:visited {
+    color: #000;
+    background: #ff9d2c;
 } 
 
 .col-2 img {
