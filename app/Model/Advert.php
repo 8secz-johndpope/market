@@ -516,7 +516,7 @@ class Advert extends  BaseModel
     }
     public  function similar(){
         $category = Category::find($this->category_id);
-        $location = Location::find($this->postcode->location_id);
+        $location = Location::where('res',$this->param('location_id'))->first();
         $musts=array();
         $musts['category']= [
             'range' => [
