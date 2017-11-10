@@ -552,7 +552,7 @@ class Advert extends  BaseModel
         $coordenates = explode(",", $this->params('location'));
         var_dump($coordenates);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        haversineGreatCircleDistance()
+        //haversineGreatCircleDistance()
         return $products;
     }
 
