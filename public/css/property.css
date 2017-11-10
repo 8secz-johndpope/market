@@ -499,6 +499,12 @@ span .glyphicon {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.advert-details h4 {
+    color: #262637;
+    font-family: Effra-Regular,arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
 .similar-adverts h4 {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-size: 13px;
