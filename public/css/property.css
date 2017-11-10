@@ -937,6 +937,10 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     height: 29px;
     border-bottom: 1px solid #ccc;
 }
+.reviews h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
 fieldset {
     margin: 1.5rem 0;
 }
