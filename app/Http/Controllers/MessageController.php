@@ -296,7 +296,7 @@ class MessageController extends BaseController
         $room->modify();
         $this->notify($room,$message);
 
-        return ['mid'=>$message->id,'msg'=>'sent'];
+        return ['mid'=>$message->id,'msg'=>'sent','message'=>$message];
 
     }
     public function room(Request $request,$id){
