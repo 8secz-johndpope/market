@@ -973,6 +973,9 @@ legend {
     border-bottom: 1px solid #ddd;
     font-weight: 200;
 }
+.options-buttons label.btn.btn-primary{
+	width: 130px;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
