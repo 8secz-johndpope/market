@@ -295,6 +295,7 @@ class MessageController extends BaseController
 
         $room->modify();
         $this->notify($room,$message);
+        $message->room = $message->room;
 
         return ['mid'=>$message->id,'msg'=>'sent','message'=>$message];
 
