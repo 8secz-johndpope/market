@@ -994,10 +994,11 @@ legend {
     display: inline-block;
     border: none;
 }
-.nearby-list .advert-img:before {
+.nearby-list .advert-details:before {
     position: absolute;
     border-top: 1px dashed #ccc;
     width: 200%;
+    content: " ";
 }
 @media (min-width: 1200px){
 	.container {
