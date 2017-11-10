@@ -294,6 +294,7 @@
                                                                 <h4 class="items-box-price font-6">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</h4>
                                                             @endif
                                                             <h4>{{$product['location_name']}}</h4>
+                                                            <span class="nearby-distance">Within {{$product['distance']}} miles</span>
                                                         </div>
                                                         <div class="advert-img">
                                                             <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
