@@ -298,7 +298,7 @@
                                                         <div class="carousel-inner">
                                                             @if(isset($product['images'][0]))
                                                             <div class="item active">
-                                                                <div class="advert-imgs">
+                                                                <div class="advert-img">
                                                                     <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][0]}}?1500586448">
                                                                 </div>
                                                             </div>
