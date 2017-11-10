@@ -341,6 +341,9 @@ class MessageController extends BaseController
                 foreach ($usr->android as $token) {
                     $this->android_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
                 }
+                foreach ($usr->voip as $token) {
+                    $this->ios_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
+                }
             }
         }
 
@@ -372,6 +375,9 @@ class MessageController extends BaseController
             if ($usr->id !== $user->id) {
                 foreach ($usr->android as $token) {
                     $this->android_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
+                }
+                foreach ($usr->voip as $token) {
+                    $this->ios_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
                 }
             }
         }
