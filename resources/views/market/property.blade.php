@@ -462,7 +462,7 @@
                             <div class="col-md-4">
                             </div>
                             <div class="col-md-12 read-more-reviews">
-                                <h3>Read more</h3>
+                                <h3>Read more<span class="glyphicon glyphicon-chevron-down"></span></h3>
                             </div>
                         </div>
                     </div>
