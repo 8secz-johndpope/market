@@ -941,6 +941,13 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     font-size: 1.3rem;
     font-weight: bold;
 }
+.reviews .stars {
+    text-align: left;
+}
+.reviews .stars i{
+    width: 15px;
+    height: 15px;
+}
 fieldset {
     margin: 1.5rem 0;
 }
