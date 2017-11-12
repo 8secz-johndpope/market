@@ -915,19 +915,14 @@
         e.preventDefault();
         var carousel = $(this).attr('href');
         $(carousel).carousel("prev");
-        var index = $(carousel + ' .item.active').index();
-        console.log(index);
-        $(carousel).find('.index').text(index + 1);
     });
     $('.nearby-img-navigation a.right').click(function(e){
         e.preventDefault();
         var carousel = $(this).attr('href');
-        console.log(carousel);
         $(carousel).carousel("next");
     });
     $('.nearby-item .carousel').on('slid.bs.carousel', function(){
         var index =  $(this).find('.item.active').index();
-        console.log(index);
         $(this).find('.index').text(index + 1);
     });
 

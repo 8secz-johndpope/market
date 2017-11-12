@@ -541,6 +541,59 @@ class Advert extends  BaseModel
         }
         return $products;
     }
+    public  function similarUnderPrice(){
+        $category = Category::find($this->category_id);
+        $location = Location::where('res',$this->param('location_id'))->first();
+        $min_price = -2;
+        $musts=array();
+        $musts['category']= [
+            'range' => [
+                'category' => [
+                    'gte'=>$category->id,
+                    'lte'=>$category->ends
+                ]
+            ]
+        ];
+
+        $musts['location_id']= [
+            'range' => [
+                'location_id' => [
+                    'gte'=>$location->res,
+                    'lte'=>$location->ends
+                ]
+            ]
+        ];
+        $musts['meta.price']= [
+            'range' => [
+                'meta.price' => [
+                    'gte'=>$min_price,
+                    'lte'=>$this->price * 100
+                ]
+            ]
+        ];
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size'=>6,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($musts),
+                        /*     'filter' => $filte */
+                    ]
+                ],
+            ]
+        ];
+        $response = $this->client->search($params);
+        $coordenatesFrom = explode(",", $this->param('location'));
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        for($i=0; $i < count($products); $i++){
+            $coordenatesTo = explode(",", $products[$i]['location']);
+            $products[$i]['distance'] = $this->haversineGreatCircleDistance(floatval($coordenatesFrom[0]), floatval($coordenatesFrom[1]), floatval($coordenatesTo[0]), floatval($coordenatesTo[1]));
+        }
+        return $products;
+    }
     private  function haversineGreatCircleDistance(
         $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 6371000)
     {
