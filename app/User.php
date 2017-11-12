@@ -188,7 +188,7 @@ class User extends Authenticatable
         if($this->default_address>0)
         return $this->belongsTo('App\Model\Address','default_address');
         else
-            return $this->hasOne('App\Model\Address');
+            return $this->hasOne('App\Model\Address')->getResults();
     }
     public function business()
     {
