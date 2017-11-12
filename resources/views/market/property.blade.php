@@ -453,10 +453,15 @@
                                                     <p>5</p>
                                                 </div>
                                                 <div class="reviews-item-r">
-                                                    <i class="r-list-bg">
-                                                        <!-- here is porcentage of the line for star-->
-                                                        <u class="r-list-fc" style="width: 100%"></u>
-                                                    </i>
+                                                    <div class="stars">
+                                                        <span>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                        </span>
+                                                    </div>
                                                     <span>2</span>
                                                 </div>
                                             </div>
