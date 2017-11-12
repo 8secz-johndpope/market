@@ -1029,8 +1029,8 @@ legend {
 .nearby-tabs-content>div{
 	display: none;
 }
-.tab-active{
-	display: block;
+.nearby-tabs-content .tab-active {
+    display: block;
 }
 
 @media (min-width: 1200px){
