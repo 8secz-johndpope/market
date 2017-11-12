@@ -313,9 +313,9 @@ a.left.carousel-control:hover {
 .left-content{
 	padding-left: 0;
 }
-.request-details .btn-default {
+/*.request-details .btn-default {
     width: 200px;
-}
+}*/
 .color-grey{
 	padding: .8rem 8px !important;
 	border-bottom: 0;
@@ -1109,5 +1109,8 @@ table.nearby-similar-history-table {
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
+	}
+	.request-details .btn-default {
+    	width: 200px;
 	}
 }
