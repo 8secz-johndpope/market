@@ -926,6 +926,8 @@
         $(carousel).carousel("next");
     });
     $('.nearby-item .carousel').on('slid.bs.carousel', function(){
+        var index =  $(this).find('.item.active').index();
+        console.log(index);
         $(this).find('.index').text(index + 1);
     });
 
