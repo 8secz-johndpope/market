@@ -634,7 +634,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     background-position: -20px -122px;
 }
 .reviews-item-r .stars {
-    width: 86%;
+    /*width: 86%;*/
     display: inline-block;
     vertical-align: text-top;
 }
@@ -700,7 +700,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     width: 83%;
 }
 .reviews-item-r span{
-	position: absolute;
+	/*position: absolute;*/
     color: #555;
     font-style: normal;
     padding-left: 7px;

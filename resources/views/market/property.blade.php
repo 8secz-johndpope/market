@@ -429,7 +429,7 @@
                         </div>
                         <div class="ratings">
                             <div class="row content-reviews">
-                                <div class="col-md-3 col-ratings ratings-stars">
+                                <div class="col-md-2 col-xs-12 col-ratings ratings-stars">
                                     <h1>5.0</h1>
                                     <div class="stars">
                                         <span>
@@ -444,7 +444,7 @@
                                         2 products ratings
                                     </span>
                                 </div>
-                                <div class="col-md-3 col-ratings histogram">
+                                <div class="col-md-4 col-xs-12 col-ratings histogram">
                                     <ul class="reviews-list">
                                         <li>
                                             <div class="reviews-item">
@@ -469,9 +469,9 @@
                                         @for($i=4; $i > 0; $i--)
                                         <li>
                                             <div class="reviews-item">
-                                                <i class="empty-star"></i>
+                                                <!-- <i class="empty-star"></i> -->
                                                  <div class="reviews-item-l">
-                                                    <p>{{$i}}</p>
+                                                    <p>Communication</p>
                                                 </div>
                                                 <div class="reviews-item-r">
                                                     <div class="stars">
