@@ -281,10 +281,12 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div> 
-                                    <small class="acknowledgment">
-                                        Source acknowledgement: House price data producted by the Land Registry.
-                                    </small>
+                                    </div>
+                                    <div class="acknowledgment">  
+                                        <small>
+                                            Source acknowledgement: House price data producted by the Land Registry.
+                                        </small>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row similar-nearby">           
