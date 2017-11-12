@@ -633,6 +633,11 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .reviews-item-r .stars i {
     background-position: -20px -122px;
 }
+.reviews-item-r .stars {
+    width: 86%;
+    display: inline-block;
+    vertical-align: text-top;
+}
 
 .reviews-count {
     color: #999;
