@@ -1026,6 +1026,13 @@ legend {
 .nearby-img-navigation span.glyphicon {
     color: #7b7b7b;
 }
+.nearby-tabs-content>div{
+	display: none;
+}
+.tab-active{
+	display: block;
+}
+
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;

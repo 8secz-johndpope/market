@@ -280,7 +280,7 @@
                                         </div>
                                     </div>
                                     <div class="nearby-tabs-content">
-                                        <div class="nearby-properties-list">
+                                        <div class="nearby-properties-list tab-active">
                                              <span>These are the nearset properties on the market with the same number of bedrooms.</span>
                                              <div class="nearby-list">
                                             @foreach($similar as $product)
@@ -964,7 +964,7 @@
         $(parent + ' .nearby-img-navigation a.left').click(function(e){
             e.preventDefault();
             var carousel = $(this).attr('href');
-            $(carousel).carousel("prev");
+            $(parent + " " + carousel).carousel("prev");
         });
         $(parent +' .nearby-img-navigation a.right').click(function(e){
             e.preventDefault();
