@@ -972,9 +972,9 @@
             $(carousel).carousel("next");
         });
     }
-    addListenerCarousel('nearby-under-list');
-    addListenerCarousel('nearby-properties-list');
-    
+    addListenerCarousel('.nearby-under-list');
+    addListenerCarousel('.nearby-properties-list');
+
     $('.nearby-item .carousel').on('slid.bs.carousel', function(){
         var index =  $(this).find('.item.active').index();
         $(this).find('.index').text(index + 1);
