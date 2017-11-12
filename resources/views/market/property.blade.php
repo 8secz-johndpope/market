@@ -280,7 +280,7 @@
                                         </div>
                                     </div>
                                     <div class="nearby-tabs-content">
-                                        <div class="nearby-properties-list tab-active">
+                                        <div class="nearby-properties-list option-sale tab-active">
                                              <span>These are the nearset properties on the market with the same number of bedrooms.</span>
                                              <div class="nearby-list">
                                             @foreach($similar as $product)
@@ -328,7 +328,7 @@
                                             @endforeach
                                             </div>
                                         </div>
-                                        <div class="nearby-under-list">
+                                        <div class="nearby-under-list option-under">
                                              <span>These are the nearest properties with the same number of bedrooms which are sold subject to contract.</span>
                                              <div class="nearby-list">
                                             @foreach($similarUnder as $product)
@@ -958,6 +958,11 @@
             $('.info-pano').hide(); 
         }
         
+    })
+    $('#tap-marketinfo input[type=radio][name=options]').change(function(){
+        console.log(this);
+        $('.nearby-tabs-content .tab-active').removeClass('tab-active');
+        $('.' + this.id).addClass('tab-active');
     })
 
     function addListenerCarousel(parent){
