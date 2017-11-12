@@ -320,7 +320,7 @@
                                                         </div>
                                                         <div class="nearby-img-navigation">
                                                             <a href="#car-{{$product['source_id']}}" class="left"><span class="glyphicon glyphicon-chevron-left"></a>
-                                                            <span> 1 of {{count($product['images'])}}</span>
+                                                            <span><span class="index">1</span> of {{count($product['images'])}}</span>
                                                             <a href="#car-{{$product['source_id']}}" class="right"><span class="glyphicon glyphicon-chevron-right"></a>
                                                         </div>
                                                     </div>
@@ -914,7 +914,8 @@
     $('.nearby-img-navigation a.left').click(function(e){
         e.preventDefault();
         var carousel = $(this).attr('href');
-        console.log(carousel);
+        var index = $(carousel + ' .item.active').index();
+        console.log(index);
         $(carousel).carousel("prev");
     });
     $('.nearby-img-navigation a.right').click(function(e){
