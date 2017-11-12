@@ -1048,6 +1048,10 @@ legend {
     color: #333;
     border: 1px solid #ccc;
 }
+.similar-nearby h3 {
+    padding-bottom: 8px;
+    margin-bottom: 1.2rem;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
