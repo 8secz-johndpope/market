@@ -596,7 +596,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     border-left-color: #ccc;
 }
 .reviews-ratings .col-md-2{
-	padding-left: 0px;
+	padding-left: 12px;
 	padding-right: 2px;
 }
 .content-reviews {
