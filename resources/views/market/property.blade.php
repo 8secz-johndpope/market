@@ -265,7 +265,7 @@
                                                 <tr>
                                                     <th>Date Sold</th>
                                                     <th>Sold Price</th>
-                                                    <th>Price Difference</th>
+                                                    <th class="text-center">Price Difference</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
