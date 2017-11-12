@@ -425,7 +425,7 @@ label.btn.btn-primary:hover {
 label.btn.btn-primary.active:hover, label.btn.btn-primary.active:active{
     border: 1px solid #ff8830;
     background: #ff8830;
-    box-shadow: none;
+    outline: none;
 }
 label.btn.btn-primary:hover, label.btn.btn-primary:active {
     background-color: #ff8830;
