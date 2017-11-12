@@ -888,7 +888,6 @@ class MarketController extends BaseController
         }
         $similar = $advert->similar();
         $similarUnder =  $advert->similarUnderPrice();
-        var_dump($advert->user->address);
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
