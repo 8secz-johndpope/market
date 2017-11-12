@@ -415,6 +415,9 @@ label.btn.btn-primary.active {
     background: #ff8830;
     color:#fff;
 }
+label.btn.btn-primary:focus {
+    outline: none;
+}
 label.btn.btn-primary:hover {
     box-shadow: none;
     background-color: #000;
