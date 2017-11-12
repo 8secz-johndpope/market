@@ -151,7 +151,7 @@
                                         </div>
                                     @endif
                                     <div class="description">
-                                        <h3>Description</h3>
+                                        <h3>Full Description</h3>
                                         @if($category->id == 306000000 && $advert->has_meta('property_tenure'))
                                         <div class="sec">
                                             <p><strong>Tenure: </strong>{{$advert->meta('property_tenure')}}</p>
