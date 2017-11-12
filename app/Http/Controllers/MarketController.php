@@ -926,7 +926,7 @@ class MarketController extends BaseController
         $metas = array();
         foreach ($meta as $key => $value){
             $field = Field::where('slug',$key)->first();
-            if($field!==null&&$key!=='price' && $key!='key_features' && $key !='property_floorplan'){
+            if($field!==null&&$key!=='price' && $key!='key_features' && $key !='property_floorplan' && $key != 'property_tenure'){
                 if(is_numeric($value)){
                     if($key === 'available_date'){
                         //TODO compare with today and write NOW
