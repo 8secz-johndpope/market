@@ -328,6 +328,54 @@
                                             @endforeach
                                             </div>
                                         </div>
+                                        <div class="nearby-under-list">
+                                             <span>These are the nearest properties with the same number of bedrooms which are sold subject to contract.</span>
+                                             <div class="nearby-list">
+                                            @foreach($similarUnder as $product)
+                                                <div class="col-sm-12 nearby-item">
+                                                    <a href="/p/{{$category->id}}/{{$product['source_id']}}">
+                                                        <div class="advert-details">
+                                                            @if($product['meta']['price'] > 0)
+                                                                <span class="items-box-price font-7">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</span>
+                                                            @endif
+                                                            <h4>{{$product['location_name']}}</h4>
+                                                            <span class="nearby-distance">Within {{number_format($product['distance'], 2,'.', ',')}} miles</span>
+                                                        </div>
+                                                    </a>
+                                                    <div id="car-{{$product['source_id']}}" class="carousel slide" data-ride="carousel">
+                                                        <div class="carousel-inner">
+                                                            @if(isset($product['images'][0]))
+                                                            <div class="item active">
+                                                                <div class="advert-img">
+                                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][0]}}?1500586448">
+                                                                </div>
+                                                            </div>
+
+                                                            @for($i=1; $i < count($product['images']); $i++)
+                                                                <div class="item">
+                                                                    <div class="advert-img">
+                                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][$i]}}?1500586448">
+                                                                    </div>
+                                                                </div>
+                                                            @endfor
+                                                            @else
+                                                             <div class="item">
+                                                                <div class="advert-img">
+                                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
+                                                                </div>
+                                                            </div>
+                                                            @endif
+                                                        </div>
+                                                        <div class="nearby-img-navigation">
+                                                            <a href="#car-{{$product['source_id']}}" class="left"><span class="glyphicon glyphicon-chevron-left"></a>
+                                                            <span><span class="index">1</span> of {{count($product['images'])}}</span>
+                                                            <a href="#car-{{$product['source_id']}}" class="right"><span class="glyphicon glyphicon-chevron-right"></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                            </div>
+                                        </div>
                                     </div> 
                                 </div>
                             </div>
