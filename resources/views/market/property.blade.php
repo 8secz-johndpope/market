@@ -914,9 +914,10 @@
     $('.nearby-img-navigation a.left').click(function(e){
         e.preventDefault();
         var carousel = $(this).attr('href');
+        $(carousel).carousel("prev");
         var index = $(carousel + ' .item.active').index();
         console.log(index);
-        $(carousel).carousel("prev");
+        $(this).find('.index').text(index + 1);
     });
     $('.nearby-img-navigation a.right').click(function(e){
         e.preventDefault();
