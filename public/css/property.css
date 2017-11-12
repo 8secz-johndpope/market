@@ -1099,6 +1099,13 @@ table.nearby-similar-history-table {
 .acknowledgment{
 	margin-bottom: 50px;
 }
+@media (min-width: 992px){
+	.request-details .btn-default {
+    	width: 180px;
+    	padding-left: 30px;
+    	padding-right: 30px;
+	}
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
