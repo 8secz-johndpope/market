@@ -959,16 +959,22 @@
         }
         
     })
-    $('.nearby-img-navigation a.left').click(function(e){
-        e.preventDefault();
-        var carousel = $(this).attr('href');
-        $(this).find(carousel).carousel("prev");
-    });
-    $('.nearby-img-navigation a.right').click(function(e){
-        e.preventDefault();
-        var carousel = $(this).attr('href');
-        $(carousel).carousel("next");
-    });
+
+    function addListenerCarousel(parent){
+        $(parent + ' .nearby-img-navigation a.left').click(function(e){
+            e.preventDefault();
+            var carousel = $(this).attr('href');
+            $(carousel).carousel("prev");
+        });
+        $(parent +' .nearby-img-navigation a.right').click(function(e){
+            e.preventDefault();
+            var carousel = $(this).attr('href');
+            $(carousel).carousel("next");
+        });
+    }
+    addListenerCarousel('nearby-under-list');
+    addListenerCarousel('nearby-properties-list');
+    
     $('.nearby-item .carousel').on('slid.bs.carousel', function(){
         var index =  $(this).find('.item.active').index();
         $(this).find('.index').text(index + 1);
