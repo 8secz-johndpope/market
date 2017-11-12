@@ -413,6 +413,7 @@ div#myCarousel {
 label.btn.btn-primary.active {
     border: 1px solid #ff8830;
     background: #ff8830;
+    color:#fff;
 }
 label.btn.btn-primary:hover {
     box-shadow: none;
@@ -1035,6 +1036,11 @@ legend {
 .nearby-img-navigation >span {
     line-height: 1.615;
     vertical-align: text-bottom;
+}
+.options-buttons .btn-primary {
+    background: #f4f4f5;
+    color: #333;
+    border: 1px solid #ccc;
 }
 @media (min-width: 1200px){
 	.container {
