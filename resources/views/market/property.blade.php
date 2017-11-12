@@ -260,6 +260,27 @@
                                 <div class="col-sm-12  marketinfo">
                                     <h3>This property's sale history</h3>
                                     <div class="table-history">
+                                        <table class="nearby-similar-history-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date Sold</th>
+                                                    <th>Sold Price</th>
+                                                    <th>Price Difference</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>25 Oct 2006</th>
+                                                    <th>385,000</th>
+                                                    <th>+6%</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>23 Jul 2001</th>
+                                                    <th>360,000</th>
+                                                    <th></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div> 
                                     <small>
                                         Source acknowledgement: House price data producted by the Land Registry.
