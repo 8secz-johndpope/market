@@ -270,14 +270,14 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th>25 Oct 2006</th>
-                                                    <th>385,000</th>
-                                                    <th>+6%</th>
+                                                    <td>25 Oct 2006</td>
+                                                    <td>385,000</td>
+                                                    <td>+6%</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>23 Jul 2001</th>
-                                                    <th>360,000</th>
-                                                    <th></th>
+                                                    <td>23 Jul 2001</td>
+                                                    <td>360,000</td>
+                                                    <td></td>
                                                 </tr>
                                             </tbody>
                                         </table>

@@ -1056,6 +1056,27 @@ legend {
 	clear: left;
     margin: 0 0 1.4rem;
 }
+table.nearby-similar-history-table {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+    margin-top: 15px;
+}
+.nearby-similar-history-table thead {
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 1px 0 0 #fff;
+    border-bottom: 1px dashed #dfdfe1;
+}
+.nearby-similar-history-table th {
+    color: #262637;
+    font-family: Effra-Medium;
+    font-size: 14px;
+    font-weight: normal;
+    border: 0 none;
+    vertical-align: middle;
+    padding: 4px 8px 4px 4px;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;
