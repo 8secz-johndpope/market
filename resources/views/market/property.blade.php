@@ -974,7 +974,7 @@
         $(parent +' .nearby-img-navigation a.right').click(function(e){
             e.preventDefault();
             var carousel = $(this).attr('href');
-            $(carousel).carousel("next");
+            $(parent + " " + carousel).carousel("next");
         });
     }
     addListenerCarousel('.nearby-under-list');
