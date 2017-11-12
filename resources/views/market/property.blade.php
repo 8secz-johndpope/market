@@ -468,7 +468,7 @@
                                             </div>
                                         </div>
                                         <p class="per-title">
-                                            Good Description
+                                            Positive
                                         </p>
                                     </div>
                                     <div class="per-wrpr">
@@ -481,7 +481,7 @@
                                             </div>
                                         </div>
                                         <p class="per-title">
-                                            Communication
+                                            Neutral
                                         </p>
                                     </div>
                                     <div class="per-wrpr">
@@ -494,7 +494,7 @@
                                             </div>
                                         </div>
                                         <p class="per-title">
-                                            Dispatch time
+                                            Negative
                                         </p>
                                     </div>
                                 </div>
