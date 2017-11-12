@@ -328,7 +328,7 @@
                                             @endforeach
                                             </div>
                                         </div>
-                                        <div class="nearby-under-list option-under">
+                                        <div class="nearby-properties-list option-under">
                                              <span>These are the nearest properties with the same number of bedrooms which are sold subject to contract.</span>
                                              <div class="nearby-list">
                                             @foreach($similarUnder as $product)
@@ -945,7 +945,6 @@
         map.setCenter(c);
     });
     $('input[type=radio][name=options]').change(function(){
-        console.log(this);
         if(this.id == "option-view"){
             console.log("change to panorama");
             $('.info-map').hide();
@@ -960,7 +959,6 @@
         
     })
     $('#tap-marketinfo input[type=radio][name=options]').change(function(){
-        console.log(this);
         $('.nearby-tabs-content .tab-active').removeClass('tab-active');
         $('.' + this.id).addClass('tab-active');
     })
@@ -977,8 +975,8 @@
             $(parent + " " + carousel).carousel("next");
         });
     }
-    addListenerCarousel('.nearby-under-list');
-    addListenerCarousel('.nearby-properties-list');
+    addListenerCarousel('.option-under');
+    addListenerCarousel('.option-sale');
 
     $('.nearby-item .carousel').on('slid.bs.carousel', function(){
         var index =  $(this).find('.item.active').index();
