@@ -457,15 +457,9 @@ class MarketController extends BaseController
         return $this->categories[$id];
     }
     public function categories(Request $request){
-        $base = Category::where('parent_id',0)->get();
-        $categories = Category::all();
-        $maps=array();
-        foreach ($categories as $category){
-            $category->children=$category->children;
-            $maps[$category->id]=$category;
-        }
 
-        return ['base'=>$base,'categories'=>$maps];
+
+        return Category::all();
 
     }
     public function locations(Request $request){
