@@ -448,9 +448,9 @@
                                     <ul class="reviews-list">
                                         <li>
                                             <div class="reviews-item">
-                                                <i class="empty-star"></i>
+                                                <!-- <i class="empty-star"></i> -->
                                                 <div class="reviews-item-l">
-                                                    <p>5</p>
+                                                    <p>Item as described</p>
                                                 </div>
                                                 <div class="reviews-item-r">
                                                     <div class="stars">
@@ -474,10 +474,15 @@
                                                     <p>{{$i}}</p>
                                                 </div>
                                                 <div class="reviews-item-r">
-                                                    <i class="r-list-bg">
-                                                        <!-- here is porcentage of the line for star-->
-                                                        <u class="r-list-fc" style="width: 0%"></u>
-                                                    </i>
+                                                    <div class="stars">
+                                                        <span>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                        </span>
+                                                    </div>
                                                     <span>0</span>
                                                 </div>
                                             </div>
