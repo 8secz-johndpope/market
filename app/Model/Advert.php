@@ -567,7 +567,7 @@ class Advert extends  BaseModel
             'range' => [
                 'meta.price' => [
                     'gte'=>$min_price,
-                    'lte'=>$this->price * 100
+                    'lte'=>$this->price() * 100
                 ]
             ]
         ];
