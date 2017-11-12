@@ -1023,6 +1023,9 @@ legend {
 .nearby-img-navigation {
     text-align: center;
 }
+.nearby-img-navigation span.glyphicon {
+    color: #7b7b7b;
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1170px;

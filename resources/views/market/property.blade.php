@@ -911,6 +911,12 @@
         }
         
     })
+    $('.nearby-img-navigation a.left').click(function(e){
+        e.preventDefault();
+        var carousel = $(this).attr(href);
+        console.log(carousel);
+        $(carousel).carousel("prev");
+    });
     
     function isUnderground(types){
         return types.indexOf('tube') != -1;
