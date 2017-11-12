@@ -917,6 +917,12 @@
         console.log(carousel);
         $(carousel).carousel("prev");
     });
+    $('.nearby-img-navigation a.right').click(function(e){
+        e.preventDefault();
+        var carousel = $(this).attr(href);
+        console.log(carousel);
+        $(carousel).carousel("next");
+    });
     
     function isUnderground(types){
         return types.indexOf('tube') != -1;
