@@ -1040,7 +1040,7 @@ legend {
     line-height: 1.615;
     vertical-align: text-bottom;
 }
-.options-buttons .btn-primary {
+.options-buttons .btn-primary, .btn-group .btn-primary {
     background: #f4f4f5;
     color: #333;
     border: 1px solid #ccc;
