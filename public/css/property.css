@@ -1070,7 +1070,7 @@ table.nearby-similar-history-table {
 }
 .nearby-similar-history-table th {
     color: #262637;
-    font-family: Effra-Medium;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-size: 14px;
     font-weight: normal;
 }
@@ -1081,6 +1081,12 @@ table.nearby-similar-history-table {
 }
 .nearby-similar-history-table tbody tr {
     border-bottom: 1px dashed #dfdfe1;
+}
+.nearby-similar-history-table .price-difference {
+    color: #ff8830;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
 }
 @media (min-width: 1200px){
 	.container {
