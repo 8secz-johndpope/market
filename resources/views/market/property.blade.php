@@ -962,7 +962,7 @@
     $('.nearby-img-navigation a.left').click(function(e){
         e.preventDefault();
         var carousel = $(this).attr('href');
-        $(carousel).carousel("prev");
+        $(this).find(carousel).carousel("prev");
     });
     $('.nearby-img-navigation a.right').click(function(e){
         e.preventDefault();
