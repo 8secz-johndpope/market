@@ -917,7 +917,7 @@
         $(carousel).carousel("prev");
         var index = $(carousel + ' .item.active').index();
         console.log(index);
-        $(this).find('.index').text(index + 1);
+        $(carousel).find('.index').text(index + 1);
     });
     $('.nearby-img-navigation a.right').click(function(e){
         e.preventDefault();
@@ -925,6 +925,10 @@
         console.log(carousel);
         $(carousel).carousel("next");
     });
+    $('.nearby-item .carousel').on{'slid.bs.carousel', function(){
+        $(this).find('.index').text(index + 1);
+    }}
+
     
     function isUnderground(types){
         return types.indexOf('tube') != -1;
