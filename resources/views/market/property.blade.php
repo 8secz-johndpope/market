@@ -925,9 +925,9 @@
         console.log(carousel);
         $(carousel).carousel("next");
     });
-    $('.nearby-item .carousel').on{'slid.bs.carousel', function(){
+    $('.nearby-item .carousel').on('slid.bs.carousel', function(){
         $(this).find('.index').text(index + 1);
-    }}
+    });
 
     
     function isUnderground(types){
