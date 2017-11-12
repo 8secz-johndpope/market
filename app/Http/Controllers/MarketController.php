@@ -886,7 +886,7 @@ class MarketController extends BaseController
             $advert= Advert::where('sid',$sid)->first();
 
         }
-        return $advert->user->address();
+        var_dump($advert->user->address());
         $similar = $advert->similar();
         $similarUnder =  $advert->similarUnderPrice();
         $params = [
