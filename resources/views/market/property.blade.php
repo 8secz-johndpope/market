@@ -271,7 +271,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td>25 Oct 2006</td>
-                                                    <td>385,000</td>
+                                                    <td>£ 385,000</td>
                                                     <td class="text-center price-difference">+6%</td>
                                                 </tr>
                                                 <tr>
