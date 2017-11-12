@@ -354,37 +354,41 @@ class MessageController extends BaseController
 
     public function call(Request $request){
         $user = Auth::user();
-
-        $room = Room::find($request->id);
-
-
-        $advert=$room->advert;
+        try{
+            $room = Room::find($request->id);
 
 
+            $advert=$room->advert;
 
-        $message = new Message;
-        $message->message='Call';
-        $message->from_msg=$user->id;
-        $message->to_msg=$advert->user_id;
-        $message->room_id=$room->id;
-        $message->url='';
-        $message->save();
-        $room->modify();
 
-        foreach ($room->users as $usr) {
-            if ($usr->id !== $user->id) {
-                foreach ($usr->android as $token) {
-                    $this->android_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
-                }
-                foreach ($usr->voip as $token) {
-                    $this->ios_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
+
+            $message = new Message;
+            $message->message='Call';
+            $message->from_msg=$user->id;
+            $message->to_msg=$advert->user_id;
+            $message->room_id=$room->id;
+            $message->url='';
+            $message->save();
+            $room->modify();
+
+            foreach ($room->users as $usr) {
+                if ($usr->id !== $user->id) {
+                    foreach ($usr->android as $token) {
+                        $this->android_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
+                    }
+                    foreach ($usr->voip as $token) {
+                        $this->ios_call($token, ['title' => $advert->param('title'), 'subtitle' => $usr->name, 'group' => $request->group, 'action' => 'call', 'video' => $request->video,'room_id'=>$room->id]);
+                    }
                 }
             }
+
+
+
+            return ['msg'=>'sent','room_id'=>$room->id];
+        }catch (\Exception $exception){
+            return $exception;
         }
 
-
-
-        return ['msg'=>'sent','room_id'=>$room->id];
     }
     public function end_call(Request $request){
         $user = Auth::user();
