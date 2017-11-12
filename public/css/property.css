@@ -1073,9 +1073,14 @@ table.nearby-similar-history-table {
     font-family: Effra-Medium;
     font-size: 14px;
     font-weight: normal;
-    border: 0 none;
+}
+.nearby-similar-history-table th, .nearby-similar-history-table td{
+	padding: 4px 8px 4px 4px;
+	border: 0 none;
     vertical-align: middle;
-    padding: 4px 8px 4px 4px;
+}
+.nearby-similar-history-table tbody tr {
+    border-bottom: 1px dashed #dfdfe1;
 }
 @media (min-width: 1200px){
 	.container {
