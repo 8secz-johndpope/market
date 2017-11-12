@@ -450,7 +450,7 @@
                                             <div class="reviews-item">
                                                 <!-- <i class="empty-star"></i> -->
                                                 <div class="reviews-item-l">
-                                                    <p>Item as described</p>
+                                                    <p>Overall Rating</p>
                                                 </div>
                                                 <div class="reviews-item-r">
                                                     <div class="stars">
@@ -466,12 +466,11 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        @for($i=4; $i > 0; $i--)
                                         <li>
                                             <div class="reviews-item">
                                                 <!-- <i class="empty-star"></i> -->
                                                  <div class="reviews-item-l">
-                                                    <p>Communication</p>
+                                                    <p>Fees</p>
                                                 </div>
                                                 <div class="reviews-item-r">
                                                     <div class="stars">
@@ -487,7 +486,66 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        @endfor
+                                        <li>
+                                            <div class="reviews-item">
+                                                <!-- <i class="empty-star"></i> -->
+                                                 <div class="reviews-item-l">
+                                                    <p>Professional</p>
+                                                </div>
+                                                <div class="reviews-item-r">
+                                                    <div class="stars">
+                                                        <span>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span>0</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="reviews-item">
+                                                <!-- <i class="empty-star"></i> -->
+                                                 <div class="reviews-item-l">
+                                                    <p>Speed of Service</p>
+                                                </div>
+                                                <div class="reviews-item-r">
+                                                    <div class="stars">
+                                                        <span>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span>0</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="reviews-item">
+                                                <!-- <i class="empty-star"></i> -->
+                                                 <div class="reviews-item-l">
+                                                    <p>Knowledgeable</p>
+                                                </div>
+                                                <div class="reviews-item-r">
+                                                    <div class="stars">
+                                                        <span>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span>0</span>
+                                                </div>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6 col-ratings all-ratings">
