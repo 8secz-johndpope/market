@@ -153,7 +153,9 @@
                                     <div class="description">
                                         <h3>Description</h3>
                                         @if($category->id == 306000000 && $advert->has_meta('property_tenure'))
-                                            <span class="tenure"><strong>Tenure: </strong>{{$advert->meta('property_tenure')}}</span>
+                                        <div class="sec">
+                                            <p><strong>Tenure: </strong>{{$advert->meta('property_tenure')}}</p>
+                                        </div>
                                         @endif
                                         @foreach($r = preg_split("/(\r\n|\n|\r)/", $product['description']) as $part)
                                             {{$part}}<br>
