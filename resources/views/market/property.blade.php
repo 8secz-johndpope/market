@@ -768,7 +768,9 @@
                         <div class="user-details">
                             <p><strong>{{$advert->user->name}}</strong></p>
                             <address>
-                            {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}      
+                            @if(isset($advert->user->address))
+                            {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
+                            @endif    
                             </address>
                             <p><a href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                         </div>
