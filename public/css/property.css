@@ -1040,6 +1040,9 @@ legend {
     line-height: 1.615;
     vertical-align: text-bottom;
 }
+.nearby-img-navigation a {
+    font-size: 20px;
+}
 .options-buttons .btn-primary, .btn-group .btn-primary {
     background: #f4f4f5;
     color: #333;
