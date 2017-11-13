@@ -814,6 +814,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div  class="row">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-default btn-submit">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                             <div id="make-rate">
                             </div>
