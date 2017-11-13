@@ -189,6 +189,10 @@ section{
     margin-bottom: 0px;
     font-size: 13px;
 }
+.description p {
+    padding-bottom: 1.2rem;
+    font-size: inherit;
+}
 h2.item-name {
 	font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-size: 23px;
