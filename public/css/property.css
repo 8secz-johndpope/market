@@ -1166,16 +1166,7 @@ button.btn.btn-default.btn-submit {
     color: #fff;
     font-size: 16px;
     /* text-decoration: underline; */
-    border: 1px solid;
-    padding-left: 42px;
-    padding-right: 42px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    /* margin-bottom: 10px; */
-    border-radius: 5px;
     background-color: #000;
-    text-align: center;
-    line-height: 29px;
 }
 p.link-about {
     margin-bottom: 10px;
