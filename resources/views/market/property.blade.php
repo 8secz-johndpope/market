@@ -1028,7 +1028,7 @@
         var numImg = children.length
         if(index <  numImg){
             currentSmall.removeClass('selected');
-            var child = children.next();
+            var child = currentSmall.next();
             child.addClass('selected');
             var nextImage = child.find('img').attr('src');
             index = index + 1;
