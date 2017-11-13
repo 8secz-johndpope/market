@@ -1240,7 +1240,7 @@
         var div = $(this).attr('href');
         $('.tab-buttons .btn-default.active').removeClass('active');
         $(this).addClass('active');
-        $(div + '.active-make').removeClass('active-make');   
+        $('.active-make').removeClass('active-make');   
         e.preventDefault();
         //Is best add class active, need change
         $(div).addClass('active-make');
