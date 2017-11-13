@@ -659,6 +659,10 @@
                                             <div class="aspects-questions">
                                                 <span>Is it good description?</span>
                                                 <div class="actions">
+                                                    <fieldset>
+                                                    <legend class="clipped full">
+                                                        Is it good description (required)
+                                                    </legend>
                                                     <input type="radio" title="Excellent" id="star5" name="rating" value="5" class="full">
                                                     <label for="star5" title="Excellent" class="full">
                                                         <span class="clipped">5 stars</span>
@@ -679,6 +683,7 @@
                                                     <label for="star1" title="Terrible" class="full">
                                                         <span class="clipped">1 stars</span>
                                                     </label>
+                                                </fieldset>
                                                 </div>
                                                 <div class="reviews-divider"></div>
                                             </div>
