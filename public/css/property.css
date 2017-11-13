@@ -1132,6 +1132,12 @@ table.nearby-similar-history-table {
     border: 1px solid #ccc;
     border-top: transparent;
 }
+@media (min-width: 768px){
+	.reviews-item-r{
+		width: auto;
+		float: right;
+	}
+}
 @media (min-width: 992px){
 	.request-details .btn-default {
     	width: 180px;
@@ -1152,10 +1158,6 @@ table.nearby-similar-history-table {
 	.per .left span{
 		width: 45px;
 		height: 90px;
-	}
-	.reviews-item-r{
-		width: auto;
-		float: right;
 	}
 	.review {
     	border-right: 1px solid #ccc;
