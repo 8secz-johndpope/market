@@ -1260,7 +1260,7 @@ section.row-color.white {
     /*width: 16%;*/
   }
   .categories .panel-body {
-    height: 22em;
+    height: 26em;
   }
   .header-download {
     margin-top: 10px;
@@ -1324,7 +1324,7 @@ section.row-color.white {
     padding: 6px 0;
   }
   .categories li {
-    font-size: 10px;
+    font-size: 1.2rem;
   }
   #carousel-featured .panel-primary>.panel-heading{
     height: 12em;
