@@ -1157,4 +1157,8 @@ table.nearby-similar-history-table {
 		width: 40px;
 		height: 80px;
 	}
+	.col-ratings.ratings-stars {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	}
 }
