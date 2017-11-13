@@ -1164,8 +1164,9 @@ button.btn.btn-default.btn-submit {
 }
 .link-about a.btn.btn-default, .link-about a.btn.btn-default:link {
     border-color: #000;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background: #000;
 }
 p.link-about {
     margin-bottom: 10px;
