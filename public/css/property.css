@@ -1137,6 +1137,9 @@ table.nearby-similar-history-table {
 		width: auto;
 		float: right;
 	}
+	.reviews-item-l {
+		width: 40%;
+	}
 }
 @media (min-width: 992px){
 	.request-details .btn-default {
@@ -1164,6 +1167,9 @@ table.nearby-similar-history-table {
 	}
 	.review:nth-child(3n+1) {
     	border-right: transparent;
+	}
+	.reviews-item-l {
+		width: auto;
 	}
 }
 @media (min-width: 1200px){
