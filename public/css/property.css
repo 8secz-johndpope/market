@@ -1144,6 +1144,9 @@ table.nearby-similar-history-table {
 	.reviews-item-l {
 		width: 40%;
 	}
+	.reviews-list li {
+		height: auto;
+	}
 }
 @media (min-width: 992px){
 	.request-details .btn-default {
@@ -1174,6 +1177,9 @@ table.nearby-similar-history-table {
 	}
 	.reviews-item-l {
 		width: auto;
+	}
+	.reviews-list li {
+		height: 20px;
 	}
 }
 @media (min-width: 1200px){
