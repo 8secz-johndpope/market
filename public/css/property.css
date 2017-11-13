@@ -1167,6 +1167,7 @@ button.btn.btn-default.btn-submit {
     padding-left: 35px;
     padding-right: 35px;
     background: #000;
+    font-size: 13px;
 }
 .link-about a.btn.btn-default:hover{
 	color: #fff;
