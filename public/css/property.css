@@ -237,7 +237,7 @@ h2.item-name {
     margin-right: 5px;
 }
 .btn-default:hover, .btn-default:active, .btn-default:link{
-	color: #fff;
+	color: #000;
     background-color: #ff8830;
     /*border-color: #ff8830;*/
 }
