@@ -637,13 +637,13 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     text-align: left;
     display: inline-block;
 }
-.rating-stars .stars i {
+.rating-avg .stars i {
     background-size: 245px 185px;
     width: 20px;
     height: 20px;
 }
 
-.rating-stars .stars i.fullstar {
+.rating-avg .stars i.fullstar {
     background-position: -27px -163px;
 }
 .reviews-item-r .stars i {
