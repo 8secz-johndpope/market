@@ -1118,12 +1118,6 @@ section.row-color.white {
   .categories .panel-primary>.panel-heading {
     height: auto;
   }
-  img.icon-small-h {
-    margin-left: 0px;
-  }
-  .navbar-right {
-    margin-right: 0px;
-  }
   .panel-heading img.icon-category {
     height: 6em;
     width: 6em;
@@ -1200,7 +1194,12 @@ section.row-color.white {
   .search input.form-control::-moz-placeholder {
       font-size: 12px;
   }
-
+  img.icon-small-h {
+    margin-left: 0px;
+  }
+  .navbar-right {
+    margin-right: 0px;
+  }
   section.social-media {
     background-size: cover;
   }
@@ -1284,6 +1283,13 @@ section.row-color.white {
   /*.categories .panel-primary>.panel-heading{
     height: 7.5em;
   }*/
+  img.icon-small-h {
+    margin-left: 40px;
+  }
+  .navbar-right {
+    margin-right: 20px;
+  }
+  }
   .read-more {
     bottom: 10px;
   }
