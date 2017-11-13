@@ -1025,7 +1025,10 @@
         var children = $('.carousel-inner .item').children();
         var numImg = children.length
         if(index <  numImg){
-            var nextImage = children.eq(index).find('img').attr('src');
+            $('.selected').removeClass('selected');
+            var child = children.eq(index);
+            child.addClass('selected');
+            var nextImage = child.find('img').attr('src');
             index = index + 1;
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', nextImage);
