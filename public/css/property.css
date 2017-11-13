@@ -1123,6 +1123,10 @@ table.nearby-similar-history-table {
 		width: 90px;
 		height: 90px;
 	}
+	.per span{
+		width: 45px;
+		height: 90px;
+	}
 	.per .left span{
 		width: 45px;
 		height: 90px;
@@ -1140,6 +1144,10 @@ table.nearby-similar-history-table {
 	}
 	.per{
 		width: 80px;
+		height: 80px;
+	}
+	.per span{
+		width: 40px;
 		height: 80px;
 	}
 	.per .left span{
