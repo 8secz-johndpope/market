@@ -1138,6 +1138,12 @@ table.nearby-similar-history-table {
 		width: auto;
 		float: right;
 	}
+	.review {
+    	border-right: 1px solid #ccc;
+	}
+	.review:nth-child(3n+1) {
+    	border-right: transparent;
+	}
 }
 @media (min-width: 1200px){
 	.container {
@@ -1167,11 +1173,5 @@ table.nearby-similar-history-table {
 	}
 	.reviews-item-r{
 		width: 55%;
-	}
-	.review {
-    	border-right: 1px solid #ccc;
-	}
-	.review:nth-child(3n+1) {
-    	border-right: transparent;
 	}
 }
