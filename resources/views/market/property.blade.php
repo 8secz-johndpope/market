@@ -1240,7 +1240,7 @@
         var div = $(this).attr('href');
         e.preventDefault();
         //Is best add class active, need change
-        div.show();
+        $(div).show();
     });
     
     function isUnderground(types){
