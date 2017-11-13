@@ -1159,6 +1159,12 @@ table.nearby-similar-history-table {
 	    padding-left: 0px;
 	    padding-right: 0px;
 	}
+	.all-ratings{
+		border-left: transparent;
+	}
+	.rating-starts {
+    	border-right: 1px solid #ccc;
+	}
 }
 @media (min-width: 992px){
 	.request-details .btn-default {
@@ -1196,6 +1202,12 @@ table.nearby-similar-history-table {
 	.col-ratings {
 	    padding-left: 15px;
 	    padding-right: 15px;
+	}
+	.rating-starts {
+    	border-right: none;
+	}
+	.all-ratings{
+		border-left: 1px solid #ccc;
 	}
 }
 @media (min-width: 1200px){
