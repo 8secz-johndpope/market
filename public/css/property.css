@@ -1147,6 +1147,9 @@ table.nearby-similar-history-table {
 #make-rate.active-make{
 	display: block;
 }
+.submit{
+	margin: 30px 0;
+}
 @media (min-width: 768px){
 	.request-details .btn-default {
     	width: 180px;

@@ -814,7 +814,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div  class="row">
+                                <div  class="row submit">
                                     <div class="col-sm-12">
                                         <button class="btn btn-default btn-submit">
                                             Submit
