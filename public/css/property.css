@@ -1134,6 +1134,10 @@ table.nearby-similar-history-table {
 		width: 45px;
 		height: 90px;
 	}
+	.reviews-item.r{
+		width: auto;
+		float: right;
+	}
 }
 @media (min-width: 1200px){
 	.container {
@@ -1160,5 +1164,8 @@ table.nearby-similar-history-table {
 	.col-ratings.ratings-stars {
 	    padding-left: 0px;
 	    padding-right: 0px;
+	}
+	.reviews-item.r{
+		width: 55%;
 	}
 }
