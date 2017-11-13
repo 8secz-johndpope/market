@@ -657,12 +657,28 @@
                                                 <div class="reviews-divider"></div>
                                             </div>
                                             <div class="aspects-questions">
-                                                <span>Is it good value?</span>
+                                                <span>Is it good description?</span>
                                                 <div class="actions">
-                                                    <input type="radio" name="question2" id="question2-yes">
-                                                    <label class="btn-gry" for="question2-yes">yes</label>
-                                                    <input type="radio" name="question2" id="question2-no">
-                                                    <label class="btn-gry" for="question2-no">no</label>
+                                                    <input type="radio" title="Excellent" id="star5" name="rating" value="5" class="full">
+                                                    <label for="star5" title="Excellent" class="full">
+                                                        <span class="clipped">5 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Good" id="star4" name="rating" value="4" class="full">
+                                                    <label for="star4" title="Good" class="full">
+                                                        <span class="clipped">4 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Okay" id="star3" name="rating" value="3" class="full">
+                                                    <label for="star3" title="Okay" class="full">
+                                                        <span class="clipped">3 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Unsatisfactory" id="star2" name="rating" value="2" class="full">
+                                                    <label for="star2" title="Unsatisfactory" class="full">
+                                                        <span class="clipped">2 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Terrible" id="star1" name="rating" value="1" class="full">
+                                                    <label for="star1" title="Terrible" class="full">
+                                                        <span class="clipped">1 stars</span>
+                                                    </label>
                                                 </div>
                                                 <div class="reviews-divider"></div>
                                             </div>
