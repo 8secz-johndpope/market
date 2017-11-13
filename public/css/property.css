@@ -667,6 +667,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 }
 .reviews-list{
 	margin: 10px 0 0;
+	padding-left: 10px;
 }
 .reviews-list li{
 	display: inline-block;
