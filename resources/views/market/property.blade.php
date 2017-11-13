@@ -984,6 +984,7 @@
     })
     $('.small-image>a').click(function () {
         var src = $(this).children().first().attr('src');
+        $(this).parent().addClass('selected');
         $('#image-active').attr('src', src);
         var index = $(this).attr('data-index');
         $('#image-active').attr('data-index', index);
