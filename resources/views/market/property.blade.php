@@ -1021,9 +1021,8 @@
         }
     });
     $('.next>a').click(function () {
-        //var index = parseInt($('#image-active').attr('data-index'));
+        var index = parseInt($('#image-active').attr('data-index'));
         var children = $('.carousel-inner .item').children();
-        var index = $('.selected').index() + 1;
         var numImg = children.length
         if(index <  numImg){
             console.log(index);
