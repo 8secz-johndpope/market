@@ -1004,7 +1004,10 @@
         var index = $('#image-active').attr('data-index');
         if(index > 1){
             var children = $('.carousel-inner .item').children();
-            var prevImage = children.eq(index - 2).find('img').attr('src');
+            $('.selected').removeClass('selected');
+            var child = children.eq(index - 2);
+            child.addClass('selected');
+            var prevImage = child.find('img').attr('src');
             index -= 1
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', prevImage);
