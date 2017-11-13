@@ -679,7 +679,7 @@
                             <div class="col-md-12 title">
                                 <h3>Most relevant reviews</h3> 
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 review">
                                 <h4>Excellent Agency</h4>
                                 <p>Good services and communication</p>
                                 <div class="stars">
@@ -695,7 +695,7 @@
                                 <a href="#" class="reviews-item-author">Anthony</a>
                                 <span class="review-item-date">08 Jun, 2017</span>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 review">
                                 <h4>Excellent Agency</h4>
                                 <p>Good services and communication</p>
                                 <div class="stars">
@@ -711,7 +711,7 @@
                                 <a href="#" class="reviews-item-author">Anthony</a>
                                 <span class="review-item-date">08 Jun, 2017</span>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 review">
                                 <h4>Excellent Agency</h4>
                                 <p>Good services and communication</p>
                                 <div class="stars">
