@@ -415,6 +415,9 @@
                     </div>
                     <div class="reviews-ratings">
                         <div class="row section-title">
+                            <div class="col-md-12">
+                                <p>Click below to:</p>
+                            </div>
                             <div class="col-md-6 title">
                                 <h3>Ratings and reviews</h3>
                             </div>
