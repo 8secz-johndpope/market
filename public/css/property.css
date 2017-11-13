@@ -974,6 +974,9 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     font-size: 1.5rem;
     font-weight: bold;
 }
+.click-title p {
+    margin-bottom: 0;
+}
 .reviews .stars {
     text-align: left;
 }
