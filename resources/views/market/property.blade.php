@@ -557,7 +557,7 @@
                                     </ul>
                                 </div>
                                 </div>
-                                <div class="col-md-6 col-sm-12 col-ratings all-ratings">
+                                <div class="col-md-6 col-sm-6 col-ratings all-ratings">
                                     <div class="per-wrpr">
                                         <div class="per" data-percent="66%">
                                             <div class="left">
