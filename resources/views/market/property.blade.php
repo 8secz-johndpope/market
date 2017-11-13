@@ -1176,6 +1176,7 @@
         });
     }
     $(function () {
+        $('.small-image').first().addClass('selected');
         var viewer = ImageViewer();
         $('.images-current').click(function (e) {
             e.preventDefault();
