@@ -890,6 +890,11 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .rating fieldset:not(:checked)>label:before {
     content: '';
 }
+.rating fieldset:not(:checked)>label:hover {
+    transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+}
 .star-txt, .star-posted, .star-posting {
     font-size: 13px;
     vertical-align: middle;
