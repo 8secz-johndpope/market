@@ -308,6 +308,7 @@ a.search-alert {
     border: 1px solid;
     padding: 5px;
     margin-left: 15px;
+    background-color: #000;
 }
 a.post-advert:hover{
     background: orange !important;
