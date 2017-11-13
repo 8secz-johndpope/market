@@ -955,7 +955,8 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     border-bottom: 1px solid #ccc;
 }
 .reviews .row{
-    border-top: 1px solid #ccc;
+    border: 1px solid #ccc;
+    border-top: transparent;
 }
 .read-more-reviews {
     border-top: 1px solid #ccc;
