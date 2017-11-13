@@ -436,7 +436,7 @@
                         </div>
                         <div class="ratings">
                             <div class="row content-reviews">
-                                <div class="col-md-6 col-sm-6 col-xs-12 rating-starts">
+                                <div class="col-md-6 col-sm-6 col-xs-12 rating-stars">
                                 <div class="col-lg-4 col-md-12 col-sm-5 col-ratings">
                                     <h1>5.0</h1>
                                     <div class="stars">
