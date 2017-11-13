@@ -816,6 +816,7 @@
                                 </div>
                                 <div  class="row">
                                     <div class="col-sm-12 submit">
+                                        <a href="#" class="cancel-review">Cancel</a>
                                         <button class="btn btn-default btn-submit">
                                             Submit
                                         </button>
@@ -1252,6 +1253,10 @@
         //Is best add class active, need change
         $(div).addClass('active-make');
     });
+    $(.'cancel-review').click(function(e){
+        e.preventDefault();
+        $('.active-make').removeClass('active-make');
+    })
     
     function isUnderground(types){
         return types.indexOf('tube') != -1;
