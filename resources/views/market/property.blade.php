@@ -1254,7 +1254,7 @@
         //Is best add class active, need change
         $(div).addClass('active-make');
     });
-    $(.'cancel-review').click(function(e){
+    $('.cancel-review').click(function(e){
         e.preventDefault();
         $('.active-make').removeClass('active-make');
     })
