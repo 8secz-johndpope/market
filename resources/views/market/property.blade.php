@@ -449,7 +449,7 @@
                                         </span>
                                     </div>
                                     <span class="reviews-count">
-                                        2 products ratings
+                                        2 reviews ratings
                                     </span>
                                 </div>
                                 <div class="col-lg-8 col-md-12 col-sm-6 col-ratings histogram">
