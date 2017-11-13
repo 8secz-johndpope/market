@@ -878,6 +878,10 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     background-position: -16px -1px;
     margin: 0 3px;
 }
+.actions fieldset:not(:checked)>label {
+    background-size: 120px 95px;
+    background-position: -11px -1px;
+ }
 .rating fieldset:not(:checked)>label:before {
     content: '';
 }
