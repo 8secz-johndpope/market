@@ -1236,10 +1236,10 @@
         var index =  $(this).find('.item.active').index();
         $(this).find('.index').text(index + 1);
     });
-    $('.btn-review').click(function(e){
+    $('.tab-buttons .btn-default').click(function(e){
         var div = $(this).attr('href');
         $(this).addClass('active');
-        $('.active-make').removeClass('active-make');   
+        $(div + ' .active-make').removeClass('active-make');   
         e.preventDefault();
         //Is best add class active, need change
         $(div).addClass('active-make');
