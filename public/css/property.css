@@ -1116,6 +1116,17 @@ table.nearby-similar-history-table {
     	padding-left: 30px;
     	padding-right: 30px;
 	}
+	.per-wrpr{
+		width: 110px;
+	}
+	.per{
+		width: 90px;
+		height: 90px;
+	}
+	.per .left span{
+		width: 45px;
+		height: 90px;
+	}
 }
 @media (min-width: 1200px){
 	.container {
@@ -1123,5 +1134,16 @@ table.nearby-similar-history-table {
 	}
 	.request-details .btn-default {
     	width: 200px;
+	}
+	.per-wrpr{
+		width: 100px;
+	}
+	.per{
+		width: 80px;
+		height: 80px;
+	}
+	.per .left span{
+		width: 40px;
+		height: 80px;
 	}
 }
