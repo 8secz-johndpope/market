@@ -1136,6 +1136,11 @@ table.nearby-similar-history-table {
     border: 1px solid #ccc;
     border-top: transparent;
 }
+#make-review .row {
+    border: 1px solid #ccc;
+    border-bottom: transparent;
+    border-top: transparent;
+}
 @media (min-width: 768px){
 	.request-details .btn-default {
     	width: 180px;
