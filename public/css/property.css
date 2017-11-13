@@ -1137,6 +1137,11 @@ table.nearby-similar-history-table {
     border-top: transparent;
 }
 @media (min-width: 768px){
+	.request-details .btn-default {
+    	width: 180px;
+    	padding-left: 30px;
+    	padding-right: 30px;
+	}
 	.reviews-item-r{
 		width: auto;
 		float: right;
