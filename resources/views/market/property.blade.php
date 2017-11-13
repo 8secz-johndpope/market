@@ -602,7 +602,7 @@
                         </div>
                             <div id="make-review">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-5">
                                         <h2>Rate this Advertiser(required)</h2>
                                     </div>
                                     <div class="col-md-4">
