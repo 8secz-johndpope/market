@@ -436,8 +436,8 @@
                         </div>
                         <div class="ratings">
                             <div class="row content-reviews">
-                                <div class="col-md-6 -col-xs-12">
-                                <div class="col-lg-4 col-md-12 col-sm-6 col-ratings ratings-stars">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-lg-4 col-md-12 col-sm-4 col-ratings ratings-stars">
                                     <h1>5.0</h1>
                                     <div class="stars">
                                         <span>
@@ -452,7 +452,7 @@
                                         2 reviews ratings
                                     </span>
                                 </div>
-                                <div class="col-lg-8 col-md-12 col-sm-6 col-ratings histogram">
+                                <div class="col-lg-8 col-md-12 col-sm-8 col-ratings histogram">
                                     <ul class="reviews-list">
                                         <li>
                                             <div class="reviews-item">
