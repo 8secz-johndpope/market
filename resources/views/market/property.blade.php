@@ -1236,7 +1236,11 @@
         var index =  $(this).find('.item.active').index();
         $(this).find('.index').text(index + 1);
     });
-
+    $('.btn-review').click(function(){
+        var div = $(this).attr('href');
+        //Is best add class active, need change
+        div.show();
+    });
     
     function isUnderground(types){
         return types.indexOf('tube') != -1;
