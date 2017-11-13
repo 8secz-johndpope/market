@@ -1276,6 +1276,7 @@ section.row-color.white {
   .col-2 img {
     height: 40px;
     margin: 15px 5px;
+    max-width: 120px;
   }
   .navbar-header {
     /*width: 60%;*/
