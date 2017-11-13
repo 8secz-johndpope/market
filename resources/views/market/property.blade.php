@@ -1024,7 +1024,7 @@
                             @endif    
                             </address>
                             <p class="link-about"><a href="#">Learn more about Advertiser</a></p>
-                            <p><a href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
+                            <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                         </div>
                         @else
                         <ul class="list-group">
