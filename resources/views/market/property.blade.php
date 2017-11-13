@@ -157,9 +157,11 @@
                                             <p><strong>Tenure: </strong>{{$advert->meta('property_tenure')}}</p>
                                         </div>
                                         @endif
+                                        <p>
                                         @foreach($r = preg_split("/(\r\n|\n|\r)/", $product['description']) as $part)
                                             {{$part}}<br>
                                         @endforeach
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 right-content">
