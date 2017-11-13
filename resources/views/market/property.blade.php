@@ -657,11 +657,11 @@
                                                 <div class="reviews-divider"></div>
                                             </div>
                                             <div class="aspects-questions">
-                                                <span>Is it good description?</span>
+                                                <span>Overall Rating</span>
                                                 <div class="actions">
                                                     <fieldset>
                                                     <legend class="clipped full">
-                                                        Is it good description (required)
+                                                        Overall Rating (required)
                                                     </legend>
                                                     <input type="radio" title="Excellent" id="star5" name="rating" value="5" class="full">
                                                     <label for="star5" title="Excellent" class="full">
@@ -688,11 +688,101 @@
                                                 <div class="reviews-divider"></div>
                                             </div>
                                             <div class="aspects-questions">
-                                                <span>Is communication good quality?</span>
+                                                <span>Fees</span>
                                                 <div class="actions">
                                                     <fieldset>
                                                     <legend class="clipped full">
-                                                        Is it good description (required)
+                                                        Fees
+                                                    </legend>
+                                                    <input type="radio" title="Excellent" id="star5" name="rating" value="5" class="full">
+                                                    <label for="star5" title="Excellent" class="full">
+                                                        <span class="clipped">5 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Good" id="star4" name="rating" value="4" class="full">
+                                                    <label for="star4" title="Good" class="full">
+                                                        <span class="clipped">4 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Okay" id="star3" name="rating" value="3" class="full">
+                                                    <label for="star3" title="Okay" class="full">
+                                                        <span class="clipped">3 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Unsatisfactory" id="star2" name="rating" value="2" class="full">
+                                                    <label for="star2" title="Unsatisfactory" class="full">
+                                                        <span class="clipped">2 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Terrible" id="star1" name="rating" value="1" class="full">
+                                                    <label for="star1" title="Terrible" class="full">
+                                                        <span class="clipped">1 stars</span>
+                                                    </label>
+                                                </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="aspects-questions">
+                                                <span>Professional</span>
+                                                <div class="actions">
+                                                    <fieldset>
+                                                    <legend class="clipped full">
+                                                        Professional
+                                                    </legend>
+                                                    <input type="radio" title="Excellent" id="star5" name="rating" value="5" class="full">
+                                                    <label for="star5" title="Excellent" class="full">
+                                                        <span class="clipped">5 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Good" id="star4" name="rating" value="4" class="full">
+                                                    <label for="star4" title="Good" class="full">
+                                                        <span class="clipped">4 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Okay" id="star3" name="rating" value="3" class="full">
+                                                    <label for="star3" title="Okay" class="full">
+                                                        <span class="clipped">3 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Unsatisfactory" id="star2" name="rating" value="2" class="full">
+                                                    <label for="star2" title="Unsatisfactory" class="full">
+                                                        <span class="clipped">2 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Terrible" id="star1" name="rating" value="1" class="full">
+                                                    <label for="star1" title="Terrible" class="full">
+                                                        <span class="clipped">1 stars</span>
+                                                    </label>
+                                                </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="aspects-questions">
+                                                <span>Speed of Service</span>
+                                                <div class="actions">
+                                                    <fieldset>
+                                                    <legend class="clipped full">
+                                                        Speed of Service
+                                                    </legend>
+                                                    <input type="radio" title="Excellent" id="star5" name="rating" value="5" class="full">
+                                                    <label for="star5" title="Excellent" class="full">
+                                                        <span class="clipped">5 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Good" id="star4" name="rating" value="4" class="full">
+                                                    <label for="star4" title="Good" class="full">
+                                                        <span class="clipped">4 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Okay" id="star3" name="rating" value="3" class="full">
+                                                    <label for="star3" title="Okay" class="full">
+                                                        <span class="clipped">3 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Unsatisfactory" id="star2" name="rating" value="2" class="full">
+                                                    <label for="star2" title="Unsatisfactory" class="full">
+                                                        <span class="clipped">2 stars</span>
+                                                    </label>
+                                                    <input type="radio" title="Terrible" id="star1" name="rating" value="1" class="full">
+                                                    <label for="star1" title="Terrible" class="full">
+                                                        <span class="clipped">1 stars</span>
+                                                    </label>
+                                                </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="aspects-questions">
+                                                <span>Knowledgeable</span>
+                                                <div class="actions">
+                                                    <fieldset>
+                                                    <legend class="clipped full">
+                                                        Knowledgeable
                                                     </legend>
                                                     <input type="radio" title="Excellent" id="star5" name="rating" value="5" class="full">
                                                     <label for="star5" title="Excellent" class="full">
