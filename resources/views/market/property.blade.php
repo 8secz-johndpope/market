@@ -1023,7 +1023,7 @@
                             {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
                             @endif    
                             </address>
-                            <p class="link-profile"><a href="#">Learn more about Advertiser</a></p>
+                            <p class="link-about"><a href="#">Learn more about Advertiser</a></p>
                             <p><a href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                         </div>
                         @else
