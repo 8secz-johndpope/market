@@ -420,15 +420,15 @@
                             </div>
                         </div>
                         <div class="row section-title">
-                            <div class="col-md-6 title">
+                            <div class="col-md-6 col-sm-6 title">
                                 <h3>Ratings and reviews</h3>
                             </div>
-                            <div class="col-md-3 tab-buttons">
+                            <div class="col-md-3 col-sm-3 tab-buttons">
                                 <a class="btn btn-default btn-review" href="#make-review">
                                     Write reviews
                                 </a>
                             </div>
-                            <div class="col-md-3 tab-buttons">
+                            <div class="col-md-3 col-sm-3 tab-buttons">
                                 <a class="btn btn-default btn-rate" href="#make-rate">
                                     Rate
                                 </a>
