@@ -1113,8 +1113,9 @@ table.nearby-similar-history-table {
 .small-image.selected img{
 	opacity: 0.5;
 }
-.click-title{
-	text-align: center;
+.click-title {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
 }
 @media (min-width: 992px){
 	.request-details .btn-default {
