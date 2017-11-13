@@ -603,7 +603,7 @@
                             <div id="make-review">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <h2>Rate this product(required)</h2>
+                                        <h2>Rate this Advertiser(required)</h2>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="reviews-stars-widget">
@@ -645,12 +645,14 @@
                                         <h3>Tell us more</h3>
                                         <div class="aspects-fieldset">
                                             <div class="aspects-questions">
-                                                <span>Would you recommend it?</span>
+                                                <span>Feedback</span>
                                                 <div class="actions">
-                                                    <input type="radio" name="question1" id="question1-yes">
-                                                    <label class="btn-gry" for="question1-yes">yes</label>
-                                                    <input type="radio" name="question1" id="question1-no">
-                                                    <label class="btn-gry" for="question1-no">no</label>
+                                                    <input type="radio" name="question1" id="question1-pos">
+                                                    <label class="btn-gry" for="question1-pos">Positive</label>
+                                                    <input type="radio" name="question1" id="question1-neu">
+                                                    <label class="btn-gry" for="question1-neu">Neutral</label>
+                                                    <input type="radio" name="question1" id="question1-ne">
+                                                    <label class="btn-gry" for="question1-ne">Negative</label>
                                                 </div>
                                                 <div class="reviews-divider"></div>
                                             </div>
