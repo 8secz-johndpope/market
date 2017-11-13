@@ -610,7 +610,8 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 	padding-right: 2px;
 }
 .content-reviews {
-    border-top: 1px solid #ccc;
+    border: 1px solid #ccc;
+    border-top: transparent;
 }
 #make-review, #make-rate{
 	display: none;
