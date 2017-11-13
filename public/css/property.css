@@ -1123,7 +1123,6 @@ table.nearby-similar-history-table {
 }
 .section-title {
     border: 1px solid #ccc;
-    border-bottom: transparent;
     border-top: transparent;
 }
 @media (min-width: 992px){
