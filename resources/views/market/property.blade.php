@@ -1027,9 +1027,9 @@
         var index = currentSmall.index() + 1;
         var numImg = children.length
         if(index <  numImg){
+            console.log(index);
             currentSmall.removeClass('selected');
             var child = currentSmall.next();
-            child.addClass('selected');
             var nextImage = child.find('img').attr('src');
             index = index + 1;
             $('#image-active').attr('data-index', index);
@@ -1041,6 +1041,7 @@
             if(lastElementCarousel < (index)){
                 $("#myCarousel").carousel("next");
             }
+            child.addClass('selected');
         }
     });
     $('a[href="#tap-map"]').click(function(e){
