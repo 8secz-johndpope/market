@@ -1026,6 +1026,7 @@
         var index = $('.selected').index() + 1;
         var numImg = children.length
         if(index <  numImg){
+            console.log(index);
             $('.selected').removeClass('selected');
             var child = children.eq(index);
             child.addClass('selected');
