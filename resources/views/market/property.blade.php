@@ -1238,9 +1238,11 @@
     });
     $('.btn-review').click(function(e){
         var div = $(this).attr('href');
+        $(this).addClass('active');
+        $('.active-make').removeClass('active-make');   
         e.preventDefault();
         //Is best add class active, need change
-        $(div).show();
+        $(div).addClass('active-make');
     });
     
     function isUnderground(types){

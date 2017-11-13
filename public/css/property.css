@@ -1141,6 +1141,9 @@ table.nearby-similar-history-table {
     border-bottom: transparent;
     border-top: transparent;
 }
+.active-make{
+	display: block;
+}
 @media (min-width: 768px){
 	.request-details .btn-default {
     	width: 180px;
