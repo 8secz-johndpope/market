@@ -610,7 +610,7 @@
                                             <div class="rating">
                                                 <fieldset>
                                                     <legend class="clipped full">
-                                                        Rate this product (required)
+                                                        Rate this Advertiser (required)
                                                     </legend>
                                                     <input type="radio" title="Excellent" id="star5" name="rating" value="5" class="full">
                                                     <label for="star5" title="Excellent" class="full">
