@@ -949,10 +949,10 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     z-index: 90;
 }
 .aspects-fieldset .aspects-questions .actions input[type="radio"]:checked+label {
-    color: #555;
+    color: #fff;
     text-decoration: none;
-    border: 1px solid #555;
-    background-color: #fff;
+    border: 1px solid #ff8830;
+    background-color: #ff8830;
 }
 .reviews-divider {
     width: 100%;
