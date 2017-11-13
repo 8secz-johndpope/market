@@ -1162,6 +1162,11 @@ button.btn.btn-default.btn-submit {
 .submit{
 	margin: 30px 0;
 }
+.link-about>a {
+    color: #ff8830;
+    font-size: 16px;
+    text-decoration: underline;
+}
 @media (min-width: 768px){
 	.request-details .btn-default {
     	width: 180px;
