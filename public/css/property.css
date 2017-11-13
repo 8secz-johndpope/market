@@ -1141,7 +1141,10 @@ table.nearby-similar-history-table {
     border-bottom: transparent;
     border-top: transparent;
 }
-.active-make{
+#make-review.active-make{
+	display: block;
+}
+#make-rate.active-make{
 	display: block;
 }
 @media (min-width: 768px){
