@@ -1236,8 +1236,9 @@
         var index =  $(this).find('.item.active').index();
         $(this).find('.index').text(index + 1);
     });
-    $('.btn-review').click(function(){
+    $('.btn-review').click(function(e){
         var div = $(this).attr('href');
+        e.preventDefault();
         //Is best add class active, need change
         div.show();
     });
