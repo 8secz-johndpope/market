@@ -1218,8 +1218,8 @@ section.row-color.white {
   }
   .categories ul {
     padding-left: 0px; 
-    width: 7em;
-    margin-left: calc((100% - 7em)/2);
+    width: 8em;
+    margin-left: calc((100% - 8em)/2);
   }
   .categories .panel-primary>.panel-heading {
     height: auto;
