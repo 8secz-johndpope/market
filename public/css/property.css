@@ -1113,6 +1113,9 @@ table.nearby-similar-history-table {
 .small-image.selected img{
 	opacity: 0.5;
 }
+.click-title{
+	text-align: center;
+}
 @media (min-width: 992px){
 	.request-details .btn-default {
     	width: 180px;
