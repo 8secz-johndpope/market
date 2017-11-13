@@ -876,6 +876,10 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     background-position: -16px -1px;
     margin: 0 3px;
 }
+.rating fieldset>input:focus+label {
+    outline: 1px dotted #676767;
+    outline-offset: 3px;
+}
 .actions fieldset:not(:checked)>label {
     background-size: 120px 95px;
     background-position: -11px -1px;
