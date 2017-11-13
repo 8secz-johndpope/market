@@ -588,7 +588,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     font-size: 15px;
     margin-top: 10px;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 .tab-buttons {
     padding-left: 0;
