@@ -1118,6 +1118,9 @@ section.row-color.white {
   .categories .panel-primary>.panel-heading {
     height: auto;
   }
+  img.icon-small-h {
+    margin-left: 0px;
+  }
   .panel-heading img.icon-category {
     height: 6em;
     width: 6em;
