@@ -879,6 +879,8 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .actions fieldset:not(:checked)>label {
     background-size: 120px 95px;
     background-position: -11px -1px;
+    width: 25px;
+    height: 25px;
  }
 .rating fieldset:not(:checked)>label:before {
     content: '';
