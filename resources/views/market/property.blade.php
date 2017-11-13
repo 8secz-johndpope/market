@@ -1023,7 +1023,7 @@
     $('.next>a').click(function () {
         var index = parseInt($('#image-active').attr('data-index'));
         var children = $('.carousel-inner .item').children();
-        index = $(this).parent().index() + 1;
+        index = $('.selected').index() + 1;
         var numImg = children.length
         if(index <  numImg){
             $('.selected').removeClass('selected');
