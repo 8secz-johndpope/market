@@ -866,7 +866,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     opacity: 0;
     z-index: 1;
 }
-.rating fieldset:not(:checked)>label {
+.rating fieldset:not(:checked)>label, .actions fieldset:not(:checked)>label {
     float: right;
     background: url(icons-stars.png);
     background-size: 170px 130px;
