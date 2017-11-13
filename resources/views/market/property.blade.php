@@ -1257,6 +1257,7 @@
     $('.cancel-review').click(function(e){
         e.preventDefault();
         $('.active-make').removeClass('active-make');
+        $('.tab-buttons .btn-default.active').removeClass('active');
     })
     
     function isUnderground(types){
