@@ -637,13 +637,13 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     text-align: left;
     display: inline-block;
 }
-.ratings-stars .stars i {
+.rating-stars .stars i {
     background-size: 245px 185px;
     width: 20px;
     height: 20px;
 }
 
-.ratings-stars .stars i.fullstar {
+.rating-stars .stars i.fullstar {
     background-position: -27px -163px;
 }
 .reviews-item-r .stars i {
@@ -1162,7 +1162,7 @@ table.nearby-similar-history-table {
 	.all-ratings{
 		border-left: transparent;
 	}
-	.rating-starts {
+	.rating-stars {
     	border-right: 1px solid #ccc;
 	}
 }
@@ -1203,7 +1203,7 @@ table.nearby-similar-history-table {
 	    padding-left: 15px;
 	    padding-right: 15px;
 	}
-	.rating-starts {
+	.rating-stars {
     	border-right: none;
 	}
 	.all-ratings{
@@ -1232,7 +1232,7 @@ table.nearby-similar-history-table {
 		width: 40px;
 		height: 80px;
 	}
-	.col-ratings.ratings-stars {
+	.col-ratings {
 	    padding-left: 0px;
 	    padding-right: 0px;
 	}
