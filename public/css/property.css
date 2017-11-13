@@ -1117,6 +1117,11 @@ table.nearby-similar-history-table {
     text-align: center;
     border-bottom: 1px solid #ccc;
 }
+.section-title {
+    border: 1px solid #ccc;
+    border-bottom: transparent;
+    border-top: transparent;
+}
 @media (min-width: 992px){
 	.request-details .btn-default {
     	width: 180px;
