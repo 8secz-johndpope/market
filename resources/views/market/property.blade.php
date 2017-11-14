@@ -839,8 +839,16 @@
                                                 <textarea name="wr-content" contenteditable="true" tabindex="0" spellcheck="true" maxlength="5000" placeholder="Write your review" title="Write your review" ></textarea>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div  class="row">
+                                    <div class="col-sm-12 submit">
+                                        <a href="#" class="cancel-review">Cancel</a>
+                                        <button class="btn btn-default btn-submit">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         <div class="reviews">    
                         <div class="row">
