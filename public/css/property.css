@@ -859,7 +859,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     width: 1px;
     overflow: hidden;
 }
-.rating fieldset:not(:checked)>input {
+.rating fieldset:not(:checked)>input, .actions fieldset:not(:checked)>input{
     position: absolute;
     cursor: pointer;
     opacity: 0;
