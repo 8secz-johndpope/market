@@ -1102,7 +1102,6 @@
 
 <script>
     var timer = null;
-    var viewer = ImageViewer();
     $("#check-button").click(function () {
         var id =$('#id').val();
         var postcode=$('#postcode').val();
@@ -1383,7 +1382,7 @@
         });
     }
     $(function () {
-        
+        var viewer = ImageViewer();
         $('.small-image').first().addClass('selected');
         $('.images-current').click(function (e) {
             e.preventDefault();
