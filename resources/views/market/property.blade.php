@@ -1264,7 +1264,7 @@
     $('.active-sld').click(function(e){
         e.preventDefault();
         $(this).removeClass('active-sld');
-        (this).txt('Start slideshow');
+        (this).text('Start slideshow');
 
         clearInterval(timer);
 
@@ -1272,7 +1272,7 @@
     $('.icon-before').click(function(e){
         e.preventDefault();
         $(this).addClass('active-sld');
-        $(this).txt('Stop slideshow');
+        $(this).text('Stop slideshow');
         timer = setInterval(changeImageGallery, 2000);
     })
     
