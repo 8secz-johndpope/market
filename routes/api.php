@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 Route::get('/aggs','MarketController@aggs');
+Route::get('/total','MarketController@total');
 
 Route::get('/advert/categories','MarketController@categories');
 Route::get('/advert/locations','MarketController@locations');

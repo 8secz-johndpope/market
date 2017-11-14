@@ -1189,6 +1189,37 @@ class MarketController extends BaseController
         return $categories;
 
     }
+    public function total(Request $request){
+        $location = Location::find(0);
+        $musts['location_id']= [
+            'range' => [
+                'location_id' => [
+                    'gte'=>$location->res,
+                    'lte'=>$location->ends
+                ]
+            ]
+        ];
+
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size' => 0,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($musts),
+                        /*    'filter' => $filte */
+                    ]
+                ]
+
+            ]
+        ];
+        $response = $this->client->search($params);
+
+        return ['total'=>$response['hits']['total']];
+
+    }
     public function filter($request,$category,$location){
         if($request->has('min_lat')){
             $location->min_lat = (double)$request->min_lat;
