@@ -1201,6 +1201,9 @@ section.row-color.white {
     margin-left: 0px;
     margin-top: 5px;
   }
+  .navbar-brand img.icon{
+    margin-top: 27px;
+  }
   .navbar-right {
     margin-right: 0px;
   }
