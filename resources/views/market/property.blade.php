@@ -468,7 +468,7 @@
                                                             <i class="fullstar"></i>
                                                         </span>
                                                     </div>
-                                                    <span>2</span>
+                                                    <span>3</span>
                                                 </div>
                                             </div>
                                         </li>
@@ -557,7 +557,7 @@
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-ratings all-ratings">
                                     <div class="per-wrpr">
-                                        <div class="per" data-percent="66%">
+                                        <div class="per" data-percent="100%">
                                             <div class="left">
                                                 <span style="transform: rotateZ(-122.44deg);">
                                             </div>
@@ -570,7 +570,7 @@
                                         </p>
                                     </div>
                                     <div class="per-wrpr">
-                                        <div class="per" data-percent="66%">
+                                        <div class="per" data-percent="0%">
                                             <div class="left">
                                                 <span style="transform: rotateZ(-122.44deg);">
                                             </div>
@@ -583,7 +583,7 @@
                                         </p>
                                     </div>
                                     <div class="per-wrpr">
-                                        <div class="per" data-percent="66%">
+                                        <div class="per" data-percent="0%">
                                             <div class="left">
                                                 <span style="transform: rotateZ(-122.44deg);">
                                             </div>
