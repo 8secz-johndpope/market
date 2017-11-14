@@ -901,6 +901,10 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .rating fieldset>input:checked ~ label {
     background-position: -52px -1px;
 }
+.actions fieldset>input:checked ~ label {
+    background-position: -52px -1px;
+}
+
 .star-txt, .star-posted, .star-posting {
     font-size: 13px;
     vertical-align: middle;
