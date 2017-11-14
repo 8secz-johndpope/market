@@ -824,6 +824,7 @@
                                 </div>
                             </div>
                             <div id="make-rate">
+                                <form>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <h2>Write your review</h2>
@@ -847,6 +848,7 @@
                                         </button>
                                     </div>
                                 </div>
+                            </form>
                             </div>
                         <div class="reviews">    
                         <div class="row">
@@ -1288,6 +1290,9 @@
             $(this).text('Stop slideshow');
             timer = setInterval(changeImageGallery, 2000);
         }
+    })
+    $('.input-elem-textbox input').focus(function(){
+        $(this).prev().css('visibility':'visible')
     })
     
     function stopAnimationGallery(element){
