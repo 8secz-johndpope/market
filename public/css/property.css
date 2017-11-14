@@ -1196,6 +1196,13 @@ p.link-about {
 a.advert-user {
     padding-left: 36px;
 }
+.review-content-section .input-elem-textbox {
+    position: relative;
+    margin-bottom: 7px;
+    width: 65%;
+    margin: 0;
+    clear: both;
+}
 .input-elem-textbox input {
     padding: 1rem;
     -webkit-appearance: none;
