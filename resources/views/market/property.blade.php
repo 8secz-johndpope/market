@@ -1273,7 +1273,7 @@
         e.preventDefault();
         $(this).addClass('active-sld');
         $(this).txt = 'Stop slideshow';
-        timer = setInterval(changeImageGallery(), 2000);
+        timer = setInterval(changeImageGallery, 2000);
     })
     
     function changeImageGallery(cycle = true){
