@@ -1283,6 +1283,7 @@
         console.log("is actived timer");
         if( cycle || index < numImg ){
             $('.selected').removeClass('selected');
+            console.log("next: " + index);
             var child = children.eq(index);
             child.addClass('selected');
             var nextImage = child.find('img').attr('src');
