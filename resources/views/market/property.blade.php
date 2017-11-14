@@ -685,7 +685,7 @@
                                 </form>
                             </div>
                             <div class="ratings">
-                            <div class="row content-reviews">
+                            <div class="row content-reviews border-top-transparent">
                                 <div class="col-md-6 col-sm-6 col-xs-12 rating-stars">
                                 <div class="col-lg-4 col-md-12 col-sm-5 col-ratings rating-avg">
                                     <h1>5.0</h1>
@@ -1270,6 +1270,7 @@
         $('.tab-buttons .btn-default.active').removeClass('active');
         $(this).addClass('active');
         $('.active-make').removeClass('active-make');   
+        $('.row.content-reviews').removeClass('border-top-transparent');
         
         //Is best add class active, need change
         $(div).addClass('active-make');
@@ -1279,6 +1280,7 @@
         $('.actions input:radio').prop('checked', false);
         $('.active-make').removeClass('active-make');
         $('.tab-buttons .btn-default.active').removeClass('active');
+        $('.row.content-reviews').addClass('border-top-transparent');
     })
     $('.icon-before').click(function(e){
         e.preventDefault();

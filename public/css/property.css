@@ -614,6 +614,9 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 	padding-left: 12px;
 	padding-right: 2px;
 }
+.border-top-transparent{
+	border-top: transparent;
+}
 .content-reviews {
     border: 1px solid #ccc;
     border-bottom: transparent;
