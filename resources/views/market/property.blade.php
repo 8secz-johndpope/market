@@ -1309,6 +1309,20 @@
         var lessCount = 5000 - value.length;
         $(this).prev().text(lessCount);
     });
+    $('.input-elem-textbox input').keyup(function(e){
+        if(e.keyCode == 46) {
+           var value = $(this).val();
+            var lessCount = 150 - value.length;
+            $(this).prev().text(lessCount);
+        }
+    });
+    $('.input-elem-textbox textarea').keyup(function(e){
+        if(e.keyCode == 46) {
+           var value = $(this).val();
+            var lessCount = 5000 - value.length;
+            $(this).prev().text(lessCount);
+        }
+    });
     function stopAnimationGallery(element){
         clearInterval(timer);
         timer = null;
