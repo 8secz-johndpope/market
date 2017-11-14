@@ -1289,12 +1289,9 @@
             child.addClass('selected');
             var nextImage = child.find('img').attr('src');
             index = index + 1;
-            /*if(cycle){
-                if(index == 0){
-                    index = 1;
-                    $("#myCarousel").carousel("next");
-                }
-            }*/
+            if(cycle && index == 1){
+                $("#myCarousel").carousel("next");
+            }
             console.log("next: " + index);
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', nextImage);
