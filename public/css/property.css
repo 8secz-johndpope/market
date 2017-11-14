@@ -898,6 +898,9 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .rating fieldset>label:hover, .rating fieldset:not(:checked)>label:hover, .rating fieldset:not(:checked)>label:hover ~ label {
     background-position: -52px -1px;
 }
+.actions fieldset>label:hover, .actions fieldset:not(:checked)>label:hover, .actions fieldset:not(:checked)>label:hover ~ label {
+    background-position: -52px -1px;
+}
 .rating fieldset>input:checked ~ label {
     background-position: -52px -1px;
 }
