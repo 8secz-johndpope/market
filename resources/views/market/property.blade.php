@@ -1294,6 +1294,9 @@
     $('.input-elem-textbox input, .input-elem-textbox textarea').focus(function(){
         $(this).prev().css('visibility','visible');
     });
+    $('.input-elem-textbox input, .input-elem-textbox textarea').focusout(function(){
+        $(this).prev().css('visibility','hidden');
+    });
     $('.input-elem-textbox input, .input-elem-textbox textarea').keypress(function(){
         var value = $(this).val();
         var lessCount = 150 - value.length;
