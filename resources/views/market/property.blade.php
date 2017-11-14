@@ -1292,7 +1292,7 @@
         }
     })
     $('.input-elem-textbox input').focus(function(){
-        $(this).prev().css('visibility':'visible');
+        $(this).prev().css('visibility','visible');
     });
     
     function stopAnimationGallery(element){
