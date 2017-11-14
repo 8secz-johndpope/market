@@ -1249,6 +1249,7 @@
     });
     $('.cancel-review').click(function(e){
         e.preventDefault();
+        $('fieldset>input').removeAttr('checked');
         $('.active-make').removeClass('active-make');
         $('.tab-buttons .btn-default.active').removeClass('active');
     })
