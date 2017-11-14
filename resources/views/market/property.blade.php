@@ -1270,6 +1270,7 @@
     $('.icon-before').click(function(e){
         e.preventDefault();
         $(this).addClass('active-sld');
+        $(this).txt = 'Stop slideshow';
         timer = setInterval(changeImageGallery(), 2000);
     })
     
