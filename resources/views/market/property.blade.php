@@ -1174,26 +1174,6 @@
     });
     $('.next>a').click(function () {
         changeImageGallery(false);
-        /*var index = parseInt($('#image-active').attr('data-index'));
-        var children = $('.carousel-inner .item').children();
-        var numImg = children.length
-        if(index <  numImg){
-            console.log(index);
-            $('.selected').removeClass('selected');
-            var child = children.eq(index);
-            child.addClass('selected');
-            var nextImage = child.find('img').attr('src');
-            index = index + 1;
-            $('#image-active').attr('data-index', index);
-            $('#image-active').attr('src', nextImage);
-            $('.index').text(index);
-            var indexCarousel = $('.carousel-inner .item.active').index();
-            var firsElementCarousel = indexCarousel * 5; 
-            var lastElementCarousel = firsElementCarousel + 5;
-            if(lastElementCarousel < (index)){
-                $("#myCarousel").carousel("next");
-            }
-        }*/
     });
     $('a[href="#tap-map"]').click(function(e){
         e.preventDefault();
@@ -1261,20 +1241,19 @@
         $('.active-make').removeClass('active-make');
         $('.tab-buttons .btn-default.active').removeClass('active');
     })
-
-    $('.icon-before.active-sld').click(function(e){
-        e.preventDefault();
-        $(this).removeClass('active-sld');
-        (this).text('Start slideshow');
-        console.log('stop animation');
-        clearInterval(timer);
-
-    })
     $('.icon-before').click(function(e){
         e.preventDefault();
-        $(this).addClass('active-sld');
-        $(this).text('Stop slideshow');
-        timer = setInterval(changeImageGallery, 2000);
+        if($(this).hasClass('active-sld')){
+            clearInterval(timer);
+            $(this).removeClass('active-sld');
+            $(this).text('Start slideshow');
+            console.log('stop animation');
+        }
+        else{
+            $(this).addClass('active-sld');
+            $(this).text('Stop slideshow');
+            timer = setInterval(changeImageGallery, 2000);
+        }
     })
     
     function changeImageGallery(cycle = true){
