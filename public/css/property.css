@@ -1203,6 +1203,13 @@ a.advert-user {
     margin: 0;
     clear: both;
 }
+.review-content-section span {
+    font-size: 11px;
+    visibility: hidden;
+    position: relative;
+    color: #999;
+    float: right;
+}
 .input-elem-textbox input {
     padding: 1rem;
     -webkit-appearance: none;
