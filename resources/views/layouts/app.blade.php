@@ -224,7 +224,7 @@
                     <img class="icon" src="/css/sumra-text.png">
                 </a>
             </div>
-             <div class="header-download col-2 col-md-3 col-lg-2 col-lg-offset-1 hidden-xs hidden-sm">
+             <div class="header-download col-2 col-md-3 col-lg-2 col-lg-offset-2 hidden-xs hidden-sm">
                         <div class="center-block">
                             <img class="img-responsive" src="/css/googleplayx233.png">
                         </div>

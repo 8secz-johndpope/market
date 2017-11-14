@@ -123,7 +123,7 @@
     <div class="container-fluid top">
         <div class="row">
         <nav class="navbar navbar-default">
-            <div class="col-lg-2 navbar-header">
+            <div class="col-lg-2 col-md-3 navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -135,7 +135,7 @@
                     <img class="icon" src="/css/sumra-text.png">
                 </a>
             </div>
-             <div class="header-download col-2 col-md-3 col-lg-2 col-lg-offset-1 hidden-xs hidden-sm">
+             <div class="header-download col-2 col-md-3 col-lg-2 col-lg-offset-2 hidden-xs hidden-sm">
                         <div class="center-block">
                             <img class="img-responsive" src="/css/googleplayx233.png">
                         </div>
