@@ -1260,20 +1260,21 @@
         $('.active-make').removeClass('active-make');
         $('.tab-buttons .btn-default.active').removeClass('active');
     })
-    $('.icon-before').click(function(e){
-        e.preventDefault();
-        $(this).addClass('active-sld');
-        timer = setInterval(changeImageGallery, 2000);
 
-    })
     $('.icon-before.active-sld').click(function(e){
         e.preventDefault();
         $(this).removeClass('active-sld');
         clearInterval(timer);
 
     })
+    $('.icon-before').click(function(e){
+        e.preventDefault();
+        $(this).addClass('active-sld');
+        timer = setInterval(changeImageGallery, 2000);
+
+    })
     
-    function changeImageGallery(){
+    function changeImageGallery(cycle){
         var index = parseInt($('#image-active').attr('data-index'));
         var children = $('.carousel-inner .item').children();
         var numImg = children.length
@@ -1284,6 +1285,9 @@
             child.addClass('selected');
             var nextImage = child.find('img').attr('src');
             index = index + 1;
+            if(cycle){
+                index = (index %  numImg) + 1 
+            }
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', nextImage);
             $('.index').text(index);
