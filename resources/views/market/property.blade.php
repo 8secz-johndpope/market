@@ -1281,7 +1281,7 @@
         var children = $('.carousel-inner .item').children();
         var numImg = children.length
         console.log("is actived timer");
-        if(index <  numImg){
+        if( cycle || index < numImg ){
             $('.selected').removeClass('selected');
             var child = children.eq(index);
             child.addClass('selected');
