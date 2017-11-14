@@ -1289,8 +1289,10 @@
             index = index + 1;
             if(cycle){
                 index = index %  (numImg + 1); 
-                if(index == 0)
+                if(index == 0){
                     index = 1;
+                    $("#myCarousel").carousel("next");
+                }
             }
             console.log("next: " + index);
             $('#image-active').attr('data-index', index);
