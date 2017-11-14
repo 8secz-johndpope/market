@@ -692,24 +692,24 @@
                                                     <legend class="clipped full">
                                                         Fees
                                                     </legend>
-                                                    <input type="radio" title="Excellent" id="star5" name="fees-rating" value="5" class="full">
-                                                    <label for="star5" title="Excellent" class="full">
+                                                    <input type="radio" title="Excellent" id="fees-star5" name="fees-rating" value="5" class="full">
+                                                    <label for="fees-star5" title="Excellent" class="full">
                                                         <span class="clipped">5 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Good" id="star4" name="fees-rating" value="4" class="full">
-                                                    <label for="star4" title="Good" class="full">
+                                                    <input type="radio" title="Good" id="fees-star4" name="fees-rating" value="4" class="full">
+                                                    <label for="fees-star4" title="Good" class="full">
                                                         <span class="clipped">4 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Okay" id="star3" name="fees-rating" value="3" class="full">
-                                                    <label for="star3" title="Okay" class="full">
+                                                    <input type="radio" title="Okay" id="fees-star3" name="fees-rating" value="3" class="full">
+                                                    <label for="fees-star3" title="Okay" class="full">
                                                         <span class="clipped">3 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Unsatisfactory" id="star2" name="fees-rating" value="2" class="full">
-                                                    <label for="star2" title="Unsatisfactory" class="full">
+                                                    <input type="radio" title="Unsatisfactory" id="fees-star2" name="fees-rating" value="2" class="full">
+                                                    <label for="fees-star2" title="Unsatisfactory" class="full">
                                                         <span class="clipped">2 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Terrible" id="star1" name="fees-rating" value="1" class="full">
-                                                    <label for="star1" title="Terrible" class="full">
+                                                    <input type="radio" title="Terrible" id="fees-star1" name="fees-rating" value="1" class="full">
+                                                    <label for="fees-star1" title="Terrible" class="full">
                                                         <span class="clipped">1 stars</span>
                                                     </label>
                                                 </fieldset>
