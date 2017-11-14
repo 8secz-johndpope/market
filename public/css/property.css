@@ -902,7 +902,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     background-position: -35px -1px;
 }
 .actions fieldset>input:checked ~ label {
-    background-position: -32px -1px;
+    background-position: -3px -1px;
 }
 .rating fieldset>input:checked ~ label {
     background-position: -52px -1px;
