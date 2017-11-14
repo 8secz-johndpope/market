@@ -1173,7 +1173,8 @@
         }
     });
     $('.next>a').click(function () {
-        var index = parseInt($('#image-active').attr('data-index'));
+        changeImageGallery(false);
+        /*var index = parseInt($('#image-active').attr('data-index'));
         var children = $('.carousel-inner .item').children();
         var numImg = children.length
         if(index <  numImg){
@@ -1192,7 +1193,7 @@
             if(lastElementCarousel < (index)){
                 $("#myCarousel").carousel("next");
             }
-        }
+        }*/
     });
     $('a[href="#tap-map"]').click(function(e){
         e.preventDefault();
@@ -1261,11 +1262,11 @@
         $('.tab-buttons .btn-default.active').removeClass('active');
     })
 
-    $('.active-sld').click(function(e){
+    $('.icon-before.active-sld').click(function(e){
         e.preventDefault();
         $(this).removeClass('active-sld');
         (this).text('Start slideshow');
-
+        console.log('stop animation');
         clearInterval(timer);
 
     })
