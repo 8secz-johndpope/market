@@ -432,172 +432,6 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="ratings">
-                            <div class="row content-reviews">
-                                <div class="col-md-6 col-sm-6 col-xs-12 rating-stars">
-                                <div class="col-lg-4 col-md-12 col-sm-5 col-ratings rating-avg">
-                                    <h1>5.0</h1>
-                                    <div class="stars">
-                                        <span>
-                                            <i class="fullstar"></i>
-                                            <i class="fullstar"></i>
-                                            <i class="fullstar"></i>
-                                            <i class="fullstar"></i>
-                                            <i class="fullstar"></i>
-                                        </span>
-                                    </div>
-                                    <span class="reviews-count">
-                                        Reviews ratings
-                                    </span>
-                                </div>
-                                <div class="col-lg-8 col-md-12 col-sm-7 col-ratings histogram">
-                                    <ul class="reviews-list">
-                                        <li>
-                                            <div class="reviews-item">
-                                                <!-- <i class="empty-star"></i> -->
-                                                <div class="reviews-item-l">
-                                                    <p>Overall Rating</p>
-                                                </div>
-                                                <div class="reviews-item-r">
-                                                    <div class="stars">
-                                                        <span>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                        </span>
-                                                    </div>
-                                                    <span>3</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="reviews-item">
-                                                <!-- <i class="empty-star"></i> -->
-                                                 <div class="reviews-item-l">
-                                                    <p>Fees</p>
-                                                </div>
-                                                <div class="reviews-item-r">
-                                                    <div class="stars">
-                                                        <span>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                        </span>
-                                                    </div>
-                                                    <span>3</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="reviews-item">
-                                                <!-- <i class="empty-star"></i> -->
-                                                 <div class="reviews-item-l">
-                                                    <p>Professional</p>
-                                                </div>
-                                                <div class="reviews-item-r">
-                                                    <div class="stars">
-                                                        <span>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                        </span>
-                                                    </div>
-                                                    <span>3</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="reviews-item">
-                                                <!-- <i class="empty-star"></i> -->
-                                                 <div class="reviews-item-l">
-                                                    <p>Speed of Service</p>
-                                                </div>
-                                                <div class="reviews-item-r">
-                                                    <div class="stars">
-                                                        <span>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                        </span>
-                                                    </div>
-                                                    <span>3</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="reviews-item">
-                                                <!-- <i class="empty-star"></i> -->
-                                                 <div class="reviews-item-l">
-                                                    <p>Knowledgeable</p>
-                                                </div>
-                                                <div class="reviews-item-r">
-                                                    <div class="stars">
-                                                        <span>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                        </span>
-                                                    </div>
-                                                    <span>3</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-ratings all-ratings">
-                                    <div class="per-wrpr">
-                                        <div class="per" data-percent="100%">
-                                            <div class="left">
-                                                <span style="transform: rotateZ(0deg);"></span>
-                                            </div>
-                                            <div class="right">
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                        <p class="per-title">
-                                            Positive
-                                        </p>
-                                    </div>
-                                    <div class="per-wrpr">
-                                        <div class="per" data-percent="0%">
-                                            <div class="left">
-                                                <span style="transform: rotateZ(-180deg);"></span>
-                                            </div>
-                                            <div class="right">
-                                                <span style="transform: rotateZ(-180deg);"></span>
-                                            </div>
-                                        </div>
-                                        <p class="per-title">
-                                            Neutral
-                                        </p>
-                                    </div>
-                                    <div class="per-wrpr">
-                                        <div class="per" data-percent="0%">
-                                            <div class="left">
-                                                <span style="transform: rotateZ(-180deg);"></span>
-                                            </div>
-                                            <div class="right">
-                                                <span style="transform: rotateZ(-180deg);"></span>
-                                            </div>
-                                        </div>
-                                        <p class="per-title">
-                                            Negative
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                             <div id="make-review">
                                 <div class="row">
                                     <form id="reviews-form" autocomplete="off">
@@ -848,8 +682,174 @@
                                         </button>
                                     </div>
                                 </div>
-                            </form>
+                                </form>
                             </div>
+                            <div class="ratings">
+                            <div class="row content-reviews">
+                                <div class="col-md-6 col-sm-6 col-xs-12 rating-stars">
+                                <div class="col-lg-4 col-md-12 col-sm-5 col-ratings rating-avg">
+                                    <h1>5.0</h1>
+                                    <div class="stars">
+                                        <span>
+                                            <i class="fullstar"></i>
+                                            <i class="fullstar"></i>
+                                            <i class="fullstar"></i>
+                                            <i class="fullstar"></i>
+                                            <i class="fullstar"></i>
+                                        </span>
+                                    </div>
+                                    <span class="reviews-count">
+                                        Reviews ratings
+                                    </span>
+                                </div>
+                                <div class="col-lg-8 col-md-12 col-sm-7 col-ratings histogram">
+                                    <ul class="reviews-list">
+                                        <li>
+                                            <div class="reviews-item">
+                                                <!-- <i class="empty-star"></i> -->
+                                                <div class="reviews-item-l">
+                                                    <p>Overall Rating</p>
+                                                </div>
+                                                <div class="reviews-item-r">
+                                                    <div class="stars">
+                                                        <span>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span>3</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="reviews-item">
+                                                <!-- <i class="empty-star"></i> -->
+                                                 <div class="reviews-item-l">
+                                                    <p>Fees</p>
+                                                </div>
+                                                <div class="reviews-item-r">
+                                                    <div class="stars">
+                                                        <span>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span>3</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="reviews-item">
+                                                <!-- <i class="empty-star"></i> -->
+                                                 <div class="reviews-item-l">
+                                                    <p>Professional</p>
+                                                </div>
+                                                <div class="reviews-item-r">
+                                                    <div class="stars">
+                                                        <span>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span>3</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="reviews-item">
+                                                <!-- <i class="empty-star"></i> -->
+                                                 <div class="reviews-item-l">
+                                                    <p>Speed of Service</p>
+                                                </div>
+                                                <div class="reviews-item-r">
+                                                    <div class="stars">
+                                                        <span>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span>3</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="reviews-item">
+                                                <!-- <i class="empty-star"></i> -->
+                                                 <div class="reviews-item-l">
+                                                    <p>Knowledgeable</p>
+                                                </div>
+                                                <div class="reviews-item-r">
+                                                    <div class="stars">
+                                                        <span>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                            <i class="fullstar"></i>
+                                                        </span>
+                                                    </div>
+                                                    <span>3</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-ratings all-ratings">
+                                    <div class="per-wrpr">
+                                        <div class="per" data-percent="100%">
+                                            <div class="left">
+                                                <span style="transform: rotateZ(0deg);"></span>
+                                            </div>
+                                            <div class="right">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <p class="per-title">
+                                            Positive
+                                        </p>
+                                    </div>
+                                    <div class="per-wrpr">
+                                        <div class="per" data-percent="0%">
+                                            <div class="left">
+                                                <span style="transform: rotateZ(-180deg);"></span>
+                                            </div>
+                                            <div class="right">
+                                                <span style="transform: rotateZ(-180deg);"></span>
+                                            </div>
+                                        </div>
+                                        <p class="per-title">
+                                            Neutral
+                                        </p>
+                                    </div>
+                                    <div class="per-wrpr">
+                                        <div class="per" data-percent="0%">
+                                            <div class="left">
+                                                <span style="transform: rotateZ(-180deg);"></span>
+                                            </div>
+                                            <div class="right">
+                                                <span style="transform: rotateZ(-180deg);"></span>
+                                            </div>
+                                        </div>
+                                        <p class="per-title">
+                                            Negative
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="reviews">    
                         <div class="row">
                             <div class="col-md-12 title">
