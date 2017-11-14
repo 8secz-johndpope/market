@@ -148,6 +148,7 @@ a.navbar-brand {
   color: #fff;
   display: inline-flex;
   height: 70px;
+  padding: 0;
 }
 .navbar-right{
   height: 45px;
@@ -180,9 +181,10 @@ a.navbar-brand {
   /*margin-left: 70px;*/
 }
 img.icon-small-h {
-    width: 50px;
+    width: 60px;
+    height: 60px;
     margin-left: 40px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .panel-heading img.icon-category{
   height: 3em;
@@ -494,7 +496,7 @@ section.features{
 .navbar-brand img.icon {
     /*margin-left: 40px;*/
   margin-left: 5px;
-  margin-top: 25px;
+  margin-top: 33px;
 }
 
 /* start section media */
