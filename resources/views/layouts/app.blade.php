@@ -212,7 +212,7 @@
     <div class="container-fluid top">
         <div class="row">
         <nav class="navbar navbar-default">
-            <div class="col-lg-2 navbar-header">
+            <div class="col-lg-2 col-md-3 navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
