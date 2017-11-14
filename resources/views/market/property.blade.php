@@ -1299,31 +1299,26 @@
     $('.input-elem-textbox input, .input-elem-textbox textarea').focusout(function(){
         $(this).prev().css('visibility','hidden');
     });
-    $('.input-elem-textbox input').keypress(function(){
+    /*$('.input-elem-textbox input').keypress(function(){
         var value = $(this).val();
         var lessCount = 150 - value.length;
         $(this).prev().text(lessCount);
-    });
+    });*/
     $('.input-elem-textbox textarea').keypress(function(){
         var value = $(this).val();
         var lessCount = 5000 - value.length;
         $(this).prev().text(lessCount);
     });
     $('.input-elem-textbox input').keydown(function(e){
-        console.log(e);
-        if(e.keyCode == 46) {
             console.log("delete");
             var value = $(this).val();
             var lessCount = 150 - value.length;
             $(this).prev().text(lessCount);
-        }
     });
-    $('.input-elem-textbox textarea').keyup(function(e){
-        if(e.keyCode == 46) {
+    $('.input-elem-textbox textarea').keydown(function(e){
            var value = $(this).val();
             var lessCount = 5000 - value.length;
             $(this).prev().text(lessCount);
-        }
     });
     function stopAnimationGallery(element){
         clearInterval(timer);
