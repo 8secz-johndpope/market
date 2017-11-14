@@ -1180,7 +1180,7 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        $buckets = $response['aggretations']['category']['buckets'];
+        $buckets = $response['aggregations']['category']['buckets'];
         foreach ($buckets as $bucket) {
             $cat = Category::find($bucket['from']);
             $cat->count = number_format( $bucket['doc_count']);
