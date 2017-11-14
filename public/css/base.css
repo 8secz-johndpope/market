@@ -1131,6 +1131,7 @@ section.row-color.white {
   }
   img.icon-small-h {
     padding-left: 0;
+    margin-top: 5px;
   }
   .categories .panel-body {
     height: 25em;
