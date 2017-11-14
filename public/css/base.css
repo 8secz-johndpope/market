@@ -1117,7 +1117,8 @@ section.row-color.white {
     margin-top: 10px;
   }
   .navbar-right{
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-right: 0;
   }
   .categories .panel-primary>.panel-heading {
     height: auto;
