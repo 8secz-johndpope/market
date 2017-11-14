@@ -1264,6 +1264,8 @@
     $('.active-sld').click(function(e){
         e.preventDefault();
         $(this).removeClass('active-sld');
+        (this).txt = 'Start slideshow';
+
         clearInterval(timer);
 
     })
