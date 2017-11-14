@@ -548,7 +548,7 @@
                                                             <i class="fullstar"></i>
                                                         </span>
                                                     </div>
-                                                    <span>0</span>
+                                                    <span>3</span>
                                                 </div>
                                             </div>
                                         </li>
