@@ -1213,6 +1213,13 @@ a.advert-user {
     color: #535353;
     line-height: normal;
 }
+.review-content-section {
+    margin: -10px 0 8px !important;
+    font-weight: 300;
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+}
 @media (min-width: 768px){
 	.request-details .btn-default {
     	width: 180px;
