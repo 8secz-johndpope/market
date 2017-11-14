@@ -1283,18 +1283,18 @@
         console.log("is actived timer");
         if( cycle || index < numImg ){
             $('.selected').removeClass('selected');
-            console.log("next: " + index);
+            index = index %  (numImg);
+            console.log("current: " + index);
             var child = children.eq(index);
             child.addClass('selected');
             var nextImage = child.find('img').attr('src');
             index = index + 1;
-            if(cycle){
-                index = index %  (numImg + 1); 
+            /*if(cycle){
                 if(index == 0){
                     index = 1;
                     $("#myCarousel").carousel("next");
                 }
-            }
+            }*/
             console.log("next: " + index);
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', nextImage);
