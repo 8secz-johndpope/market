@@ -1270,12 +1270,12 @@
     $('.icon-before').click(function(e){
         e.preventDefault();
         $(this).addClass('active-sld');
-        timer = setInterval(changeImageGallery(true), 2000);
+        timer = setInterval(changeImageGallery(), 2000);
         console.log("is actived timer");
 
     })
     
-    function changeImageGallery(cycle){
+    function changeImageGallery(cycle = true){
         var index = parseInt($('#image-active').attr('data-index'));
         var children = $('.carousel-inner .item').children();
         var numImg = children.length
