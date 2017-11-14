@@ -1249,7 +1249,7 @@
     });
     $('.cancel-review').click(function(e){
         e.preventDefault();
-        $('.actions input:checked').removeAttr('checked');
+        $('.actions input:checked').attr('checked', false);
         $('.active-make').removeClass('active-make');
         $('.tab-buttons .btn-default.active').removeClass('active');
     })
