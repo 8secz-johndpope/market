@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('/aggs','MarketController@aggs');
 
 Route::get('/advert/categories','MarketController@categories');
 Route::get('/advert/locations','MarketController@locations');

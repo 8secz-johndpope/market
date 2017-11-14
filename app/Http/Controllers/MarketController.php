@@ -1146,6 +1146,49 @@ class MarketController extends BaseController
         },$response['hits']['hits']);
         return ['adverts'=>$featured];
     }
+    public function aggs(Request $request){
+        $location = Location::find(0);
+        $musts['location_id']= [
+            'range' => [
+                'location_id' => [
+                    'gte'=>$location->res,
+                    'lte'=>$location->ends
+                ]
+            ]
+        ];
+
+        $aggs=array();
+
+            $ranges = array();
+            foreach (Category::all() as $cat){
+                $ranges[] = ['from'=>$cat->id,'to'=>$cat->ends];
+            }
+        $aggs['category']=['range'=>['field'=>'category','ranges'=>$ranges]];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size' => 0,
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($musts),
+                        /*    'filter' => $filte */
+                    ]
+                ],
+                'aggs' => ['category' => $aggs['category']]
+
+            ]
+        ];
+        $response = $this->client->search($params);
+        $buckets = $response['aggretations']['category']['buckets'];
+        foreach ($buckets as $bucket) {
+            $cat = Category::find($bucket['from']);
+            $cat->count = number_format( $bucket['doc_count']);
+            $categories[] = $cat;
+        }
+        return $categories;
+
+    }
     public function filter($request,$category,$location){
         if($request->has('min_lat')){
             $location->min_lat = (double)$request->min_lat;
