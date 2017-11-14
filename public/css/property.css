@@ -901,12 +901,13 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .actions fieldset>label:hover, .actions fieldset:not(:checked)>label:hover, .actions fieldset:not(:checked)>label:hover ~ label {
     background-position: -35px -1px;
 }
-.rating fieldset>input:checked ~ label {
-    background-position: -52px -1px;
-}
 .actions fieldset>input:checked ~ label {
     background-position: -52px -1px;
 }
+.rating fieldset>input:checked ~ label {
+    background-position: -52px -1px;
+}
+
 
 .star-txt, .star-posted, .star-posting {
     font-size: 13px;
