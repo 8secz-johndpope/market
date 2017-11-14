@@ -754,24 +754,24 @@
                                                     <legend class="clipped full">
                                                         Speed of Service
                                                     </legend>
-                                                    <input type="radio" title="Excellent" id="star5" name="rating" value="5" class="full">
-                                                    <label for="star5" title="Excellent" class="full">
+                                                    <input type="radio" title="Excellent" id="speed-star5" name="speed-rating" value="5" class="full">
+                                                    <label for="speed-star5" title="Excellent" class="full">
                                                         <span class="clipped">5 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Good" id="star4" name="rating" value="4" class="full">
-                                                    <label for="star4" title="Good" class="full">
+                                                    <input type="radio" title="Good" id="speed-star4" name="speed-rating" value="4" class="full">
+                                                    <label for="speed-star4" title="Good" class="full">
                                                         <span class="clipped">4 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Okay" id="star3" name="rating" value="3" class="full">
-                                                    <label for="star3" title="Okay" class="full">
+                                                    <input type="radio" title="Okay" id="speed-star3" name="speed-rating" value="3" class="full">
+                                                    <label for="speed-star3" title="Okay" class="full">
                                                         <span class="clipped">3 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Unsatisfactory" id="star2" name="rating" value="2" class="full">
-                                                    <label for="star2" title="Unsatisfactory" class="full">
+                                                    <input type="radio" title="Unsatisfactory" id="speed-star2" name="speed-rating" value="2" class="full">
+                                                    <label for="speed-star2" title="Unsatisfactory" class="full">
                                                         <span class="clipped">2 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Terrible" id="star1" name="rating" value="1" class="full">
-                                                    <label for="star1" title="Terrible" class="full">
+                                                    <input type="radio" title="Terrible" id="speed-star1" name="speed-rating" value="1" class="full">
+                                                    <label for="speed-star1" title="Terrible" class="full">
                                                         <span class="clipped">1 stars</span>
                                                     </label>
                                                 </fieldset>
@@ -785,24 +785,24 @@
                                                     <legend class="clipped full">
                                                         Knowledgeable
                                                     </legend>
-                                                    <input type="radio" title="Excellent" id="star5" name="rating" value="5" class="full">
-                                                    <label for="star5" title="Excellent" class="full">
+                                                    <input type="radio" title="Excellent" id="kwon-star5" name="know-rating" value="5" class="full">
+                                                    <label for="kwon-star5" title="Excellent" class="full">
                                                         <span class="clipped">5 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Good" id="star4" name="rating" value="4" class="full">
-                                                    <label for="star4" title="Good" class="full">
+                                                    <input type="radio" title="Good" id="kwon-star4" name="know-rating" value="4" class="full">
+                                                    <label for="kwon-star4" title="Good" class="full">
                                                         <span class="clipped">4 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Okay" id="star3" name="rating" value="3" class="full">
-                                                    <label for="star3" title="Okay" class="full">
+                                                    <input type="radio" title="Okay" id="kwon-star3" name="know-rating" value="3" class="full">
+                                                    <label for="kwon-star3" title="Okay" class="full">
                                                         <span class="clipped">3 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Unsatisfactory" id="star2" name="rating" value="2" class="full">
-                                                    <label for="star2" title="Unsatisfactory" class="full">
+                                                    <input type="radio" title="Unsatisfactory" id="kwon-star2" name="know-rating" value="2" class="full">
+                                                    <label for="kwon-star2" title="Unsatisfactory" class="full">
                                                         <span class="clipped">2 stars</span>
                                                     </label>
-                                                    <input type="radio" title="Terrible" id="star1" name="rating" value="1" class="full">
-                                                    <label for="star1" title="Terrible" class="full">
+                                                    <input type="radio" title="Terrible" id="kwon-star1" name="know-rating" value="1" class="full">
+                                                    <label for="kwon-star1" title="Terrible" class="full">
                                                         <span class="clipped">1 stars</span>
                                                     </label>
                                                 </fieldset>
