@@ -1264,7 +1264,16 @@
             timer = setInterval(changeImageGallery, 2000);
         }
     })
-    
+    $('.images-current').click(function (e) {
+        e.preventDefault();
+        if(timer != null){
+            var element = $('.icon-before');
+            stopAnimationGallery(element);
+        }
+        var imgSrc = $('#image-active').attr('src'),
+            highResolutionImage = $('image-active').data('high-res-img');
+        viewer.show(imgSrc, highResolutionImage);
+    });
     function stopAnimationGallery(element){
         clearInterval(timer);
         timer = null;
@@ -1381,19 +1390,9 @@
         });
     }
     $(function () {
-        var timer;
+        var timer = null;
         $('.small-image').first().addClass('selected');
         var viewer = ImageViewer();
-        $('.images-current').click(function (e) {
-            e.preventDefault();
-            if(timer != null){
-                var element = $('.icon-before');
-                stopAnimationGallery(element);
-            }
-            var imgSrc = $('#image-active').attr('src'),
-                highResolutionImage = $('image-active').data('high-res-img');
-            viewer.show(imgSrc, highResolutionImage);
-        });
     });
 
 
