@@ -1251,6 +1251,10 @@ a.advert-user {
     max-width: 1200px;
     width: 100%;
 }
+#make-rate .row {
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
 @media (min-width: 768px){
 	.request-details .btn-default {
     	width: 180px;
