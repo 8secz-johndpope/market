@@ -1271,6 +1271,7 @@
         e.preventDefault();
         $(this).addClass('active-sld');
         timer = setInterval(changeImageGallery(true), 2000);
+        console.log("is actived timer");
 
     })
     
