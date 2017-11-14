@@ -1286,7 +1286,7 @@
             var nextImage = child.find('img').attr('src');
             index = index + 1;
             if(cycle){
-                index = (index %  numImg) + 1; 
+                index = (index %  numImg); 
             }
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', nextImage);
