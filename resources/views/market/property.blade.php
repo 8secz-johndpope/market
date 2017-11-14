@@ -131,14 +131,12 @@
                                             <div class="col-sm-6 meta-info">
                                                 {{$advert->created_at->format('d F Y')}}
                                             </div>
-                                            @if($category->id == 307000000)
                                             <div class="col-sm-6 meta-bold">
                                                 Payments:
                                             </div>
                                             <div class="col-sm-6 meta-info">
                                                 <a href="#"> <img class="payments-methods" src="/css/payments.png"></a>
                                             </div>
-                                            @endif
                                     </div>
                                     @if($advert->has_meta('key_features'))
                                         <div class="row key-features">
