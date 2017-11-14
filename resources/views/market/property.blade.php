@@ -1291,7 +1291,7 @@
             timer = setInterval(changeImageGallery, 2000);
         }
     })
-    $('.input-elem-textbox input').focus(function(){
+    $('.input-elem-textbox input, .input-elem-textbox textarea').focus(function(){
         $(this).prev().css('visibility','visible');
     });
     $('.input-elem-textbox input').change(function(){
