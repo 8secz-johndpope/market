@@ -616,7 +616,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 }
 .content-reviews {
     border: 1px solid #ccc;
-    border-top: transparent;
+    border-bottom: transparent;
 }
 #make-review, #make-rate{
 	display: none;
