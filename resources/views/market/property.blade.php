@@ -1311,6 +1311,7 @@
     });
     $('.input-elem-textbox input').keyup(function(e){
         if(e.keyCode == 46) {
+            console.log("delete");
            var value = $(this).val();
             var lessCount = 150 - value.length;
             $(this).prev().text(lessCount);
