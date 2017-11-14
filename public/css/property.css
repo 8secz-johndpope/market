@@ -1196,6 +1196,23 @@ p.link-about {
 a.advert-user {
     padding-left: 36px;
 }
+.input-elem-textbox input {
+    padding: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    font-weight: 200;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background: #fff;
+    transition: all 0.15s ease-out;
+}
+.review-content-section .input-elem-textbox input {
+    border-radius: 2px;
+    width: 100%;
+    color: #535353;
+    line-height: normal;
+}
 @media (min-width: 768px){
 	.request-details .btn-default {
     	width: 180px;
