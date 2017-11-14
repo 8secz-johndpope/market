@@ -1217,7 +1217,7 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
 
-        return ['total'=>$response['hits']['total']];
+        return ['total'=>number_format($response['hits']['total'])];
 
     }
     public function filter($request,$category,$location){
