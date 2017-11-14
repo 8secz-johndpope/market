@@ -1271,14 +1271,13 @@
         e.preventDefault();
         $(this).addClass('active-sld');
         timer = setInterval(changeImageGallery(), 2000);
-        console.log("is actived timer");
-
     })
     
     function changeImageGallery(cycle = true){
         var index = parseInt($('#image-active').attr('data-index'));
         var children = $('.carousel-inner .item').children();
         var numImg = children.length
+        console.log("is actived timer");
         if(index <  numImg){
             console.log(index);
             $('.selected').removeClass('selected');
