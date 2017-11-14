@@ -644,7 +644,7 @@
                                         <div class="aspects-fieldset">
                                             <div class="aspects-questions">
                                                 <span>Feedback</span>
-                                                <div class="actions">
+                                                <div class="actions feedback">
                                                     <input type="radio" name="question1" id="question1-pos">
                                                     <label class="btn-gry" for="question1-pos">Positive</label>
                                                     <input type="radio" name="question1" id="question1-neu">

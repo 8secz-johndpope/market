@@ -902,7 +902,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     background-position: -35px -1px;
 }
 .actions fieldset>input:checked ~ label {
-    background-position: -52px -1px;
+    background-position: -32px -1px;
 }
 .rating fieldset>input:checked ~ label {
     background-position: -52px -1px;
@@ -972,7 +972,7 @@ span.glyphicon.favroite-icon.glyphicon-heart {
     cursor: pointer;
     z-index: 90;
 }
-.aspects-fieldset .aspects-questions .actions input[type="radio"]:checked+label {
+.aspects-fieldset .aspects-questions .actions.feedback input[type="radio"]:checked+label {
     color: #fff;
     text-decoration: none;
     border: 1px solid #ff8830;
