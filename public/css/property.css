@@ -1221,6 +1221,13 @@ a.advert-user {
     background: #fff;
     transition: all 0.15s ease-out;
 }
+.input-elem-textbox input:focus, .input-elem-textbox textarea:focus{
+	outline: 0 none;
+	border-color: #ff8830;
+}
+.input-elem-textbox textarea:focus{
+	height: 200px;
+}
 .review-content-section .input-elem-textbox input {
     border-radius: 2px;
     width: 100%;
