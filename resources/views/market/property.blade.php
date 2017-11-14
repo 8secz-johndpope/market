@@ -1261,7 +1261,7 @@
         $('.tab-buttons .btn-default.active').removeClass('active');
     })
 
-    $('.icon-before.active-sld').click(function(e){
+    $('.active-sld').click(function(e){
         e.preventDefault();
         $(this).removeClass('active-sld');
         clearInterval(timer);
