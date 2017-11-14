@@ -1110,7 +1110,7 @@ section.row-color.white {
     margin-left: 30px;
   }
   .top img.icon {
-    margin-left: 20px;
+    margin-left: 5px;
   }
   .navbar-default .navbar-nav>li>a {
     margin-top: 10px;
@@ -1129,7 +1129,9 @@ section.row-color.white {
   .categories .col-sm-3 {
     width: 25%;
   }
-
+  img.icon-small-h {
+    padding-left: 0;
+  }
   .categories .panel-body {
     height: 25em;
   }
