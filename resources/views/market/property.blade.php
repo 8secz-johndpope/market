@@ -1263,6 +1263,7 @@
     
     function stopAnimationGallery(element){
         clearInterval(timer);
+        timer = null;
         $(element).removeClass('active-sld');
         $(element).text('Start slideshow');
         console.log('stop animation');
