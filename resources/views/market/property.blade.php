@@ -1282,7 +1282,6 @@
         var numImg = children.length
         console.log("is actived timer");
         if(index <  numImg){
-            console.log(index);
             $('.selected').removeClass('selected');
             var child = children.eq(index);
             child.addClass('selected');
@@ -1293,6 +1292,7 @@
                 if(index == 0)
                     index = 1;
             }
+            console.log("next: " + index);
             $('#image-active').attr('data-index', index);
             $('#image-active').attr('src', nextImage);
             $('.index').text(index);
