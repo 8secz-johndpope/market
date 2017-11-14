@@ -1210,7 +1210,7 @@ a.advert-user {
     color: #999;
     float: right;
 }
-.input-elem-textbox input {
+.input-elem-textbox input, .input-elem-textbox textarea {
     padding: 1rem;
     -webkit-appearance: none;
     -moz-appearance: none;
