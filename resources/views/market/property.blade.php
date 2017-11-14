@@ -1157,6 +1157,10 @@
         }
     });
     $('.prev>a').click(function () {
+        if(timer != null){
+            var element = $('.icon-before');
+            stopAnimationGallery(element);
+        }
         var index = $('#image-active').attr('data-index');
         if(index > 1){
             var children = $('.carousel-inner .item').children();
@@ -1177,6 +1181,10 @@
         }
     });
     $('.next>a').click(function () {
+        if(timer != null){
+            var element = $('.icon-before');
+            stopAnimationGallery(element);
+        }
         changeImageGallery(false);
     });
     $('a[href="#tap-map"]').click(function(e){
@@ -1249,10 +1257,6 @@
         e.preventDefault();
         if($(this).hasClass('active-sld')){
             stopAnimationGallery(this);
-            /*clearInterval(timer);
-            $(this).removeClass('active-sld');
-            $(this).text('Start slideshow');
-            console.log('stop animation');*/
         }
         else{
             $(this).addClass('active-sld');
