@@ -559,7 +559,7 @@
                                     <div class="per-wrpr">
                                         <div class="per" data-percent="100%">
                                             <div class="left">
-                                                <span style="transform: rotateZ(-122.44deg);">
+                                                <span style="transform: rotateZ(0deg);"></span>
                                             </div>
                                             <div class="right">
                                                 <span></span>
@@ -572,10 +572,10 @@
                                     <div class="per-wrpr">
                                         <div class="per" data-percent="0%">
                                             <div class="left">
-                                                <span style="transform: rotateZ(-122.44deg);">
+                                                <span style="transform: rotateZ(-180deg);"></span>
                                             </div>
                                             <div class="right">
-                                                <span></span>
+                                                <span style="transform: rotateZ(-180deg);"></span>
                                             </div>
                                         </div>
                                         <p class="per-title">
@@ -585,10 +585,10 @@
                                     <div class="per-wrpr">
                                         <div class="per" data-percent="0%">
                                             <div class="left">
-                                                <span style="transform: rotateZ(-122.44deg);">
+                                                <span style="transform: rotateZ(-180deg);"></span>
                                             </div>
                                             <div class="right">
-                                                <span></span>
+                                                <span style="transform: rotateZ(-180deg);"></span>
                                             </div>
                                         </div>
                                         <p class="per-title">
