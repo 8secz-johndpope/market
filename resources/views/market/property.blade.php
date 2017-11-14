@@ -1310,6 +1310,7 @@
         $(this).prev().text(lessCount);
     });
     $('.input-elem-textbox input').keydown(function(e){
+        console.log(e);
         if(e.keyCode == 46) {
             console.log("delete");
             var value = $(this).val();
