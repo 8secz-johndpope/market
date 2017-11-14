@@ -413,7 +413,7 @@
                     </div>
                     <div class="reviews-ratings">
                         <div class="row click-title">
-                            <div class="col-md-offset-6 col-md-6">
+                            <div class="col-sm-offset-6 col-sm-6">
                                 <p>Click below to:</p>
                             </div>
                         </div>
