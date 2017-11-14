@@ -1294,7 +1294,11 @@
     $('.input-elem-textbox input').focus(function(){
         $(this).prev().css('visibility','visible');
     });
-    
+    $('.input-elem-textbox input').change(function(){
+        var value = $(this).val();
+        var lessCount = 150 - value.length;
+        $(this).prev().text(lessCount);
+    });
     function stopAnimationGallery(element){
         clearInterval(timer);
         timer = null;
