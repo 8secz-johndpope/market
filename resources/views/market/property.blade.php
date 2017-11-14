@@ -825,20 +825,22 @@
                             </div>
                             <div id="make-rate">
                                 <div class="row">
-                                    <h2>Write your review</h2>
-                                    <div class="review-content-section">
-                                        <div class="input-elem-textbox">
-                                            <span class="title-counter">150</span>
-                                            <input name="wr-title" type="text" maxlength="150" size="150" placeholder="Title your review" title="Title your review">
+                                    <div class="col-md-12">
+                                        <h2>Write your review</h2>
+                                        <div class="review-content-section">
+                                            <div class="input-elem-textbox">
+                                                <span class="title-counter">150</span>
+                                                <input name="wr-title" type="text" maxlength="150" size="150" placeholder="Title your review" title="Title your review">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="review-content-section">
-                                        <div class="input-elem-textbox">
-                                            <span class="content-counter">500</span>
-                                            <textarea name="wr-content" contenteditable="true" tabindex="0" spellcheck="true" maxlength="5000" placeholder="Write your review" title="Write your review" ></textarea>
+                                        <div class="review-content-section">
+                                            <div class="input-elem-textbox">
+                                                <span class="content-counter">500</span>
+                                                <textarea name="wr-content" contenteditable="true" tabindex="0" spellcheck="true" maxlength="5000" placeholder="Write your review" title="Write your review" ></textarea>
+                                            </div>
                                         </div>
-                                    </div>
                                 </div>
+                            </div>
                             </div>
                         <div class="reviews">    
                         <div class="row">
