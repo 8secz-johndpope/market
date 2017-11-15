@@ -1147,7 +1147,7 @@ class MarketController extends BaseController
         return ['adverts'=>$featured];
     }
     public function aggs(Request $request){
-        $location = Location::find(0);
+        $location = Location::find($request->location_id);
         $musts['location_id']= [
             'range' => [
                 'location_id' => [
@@ -1179,6 +1179,13 @@ class MarketController extends BaseController
 
             ]
         ];
+        if($location->id===0 || $location->parent_id===0 || $location->parent->parent_id===0){
+
+        }else{
+            $center = (($location->min_lat+$location->max_lat)/2).','.(($location->min_lng+$location->max_lng)/2);
+            $distance = Location::haversineGreatCircleDistance($location->min_lat,$location->min_lng,$location->max_lat,$location->max_lng)+$request->distance;
+            $params['body']['query']['bool']['filter'] = ['geo_distance'=>['distance'=>$distance.'mi','location'=>$center]];
+        }
         $response = $this->client->search($params);
         $buckets = $response['aggregations']['category']['buckets'];
         foreach ($buckets as $bucket) {
