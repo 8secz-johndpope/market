@@ -71,6 +71,9 @@ h4 {
 .q-code-wraper:nth-child(even){
     border-top: 0;
 }
+.q-code-wraper h4 {
+    text-align: left;
+}
 .qr-code-img-wrapper {
     padding: 5px;
 }
