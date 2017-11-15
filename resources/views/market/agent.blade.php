@@ -50,8 +50,8 @@
                     					</tr>
                     					<tr>
                     						<td><a>Residential to rent</a></td>
-                    						<td class="text-center">6</td>
-                    						<td class="text-center">1,010</td>
+                    						<td class="text-center">{{count($advertsForsale)}}</td>
+                    						<td class="text-center">{{$avgPriceSale}}</td>
                     						<td class="text-center">6 weeks</td>
                     					</tr>
                     					<tr>
