@@ -165,6 +165,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Advert')->where('status',1)->orderby('id','desc');
     }
+    public function adverts_category($category)
+    {
+        return $this->hasMany('App\Model\Advert')->where('category_id',$category)->where('status',1)->orderby('id','desc');
+    }
     public function live()
     {
         return $this->hasMany('App\Model\Advert')->where('status',1)->orderby('updated_at','desc');
