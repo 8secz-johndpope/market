@@ -14,7 +14,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="banner-agency">
-				<img src="" class="img-banner">
+				<img src="{{$user->business->banner_img}}" class="img-banner">
 				<span class="all-properties">
 					<a class="btn btn-default" href="#">View properties</a>
 				</span>
@@ -100,17 +100,19 @@
 				</div>
 				<div class="col-sm-12 details-agent">
 					<div class="profile-picutre">
-						<img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/no_avatar.jpg">
+						<img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$user->business->logo}}">
 					</div>
 					<div class="agent-details">
 						<p>
-							Knight Frank
+							{{$user->business->name}}
 						</p>
 						<address>
-							 South Kensington
+							 @if(isset($user->business->address))
+							 {{$user->business->address->line1}}, {{$user->business->address->city}}, {{$user->business->address->postcode}} 
+							 @endif
 						</address>
-						<p><strong>Tel: </strong>020 8012 2256</p>
-						<p><strong>Fax: </strong>020 7937 6699</p>
+						<p><strong>Tel: </strong>{{$user->business->phone}}</p>
+						<p><strong>Fax: </strong>{{$user->business->fax}}</p>
 						<a href="#" class="btn btn-default">Email agent</a>
 					</div>
 				</div>
@@ -152,4 +154,29 @@
 		<!-- end col-agency-contact -->
 	</div>
 </div>
+<script>
+	var map;
+	function initMap() {
+	    var uluru = {lat: {!! $postcode->lat !!}, lng: {!! $postcode->lng !!}};
+	     map = new google.maps.Map(document.getElementById('map'), {
+	        zoom: 18,
+	        center: uluru
+	    });
+	    var marker = new google.maps.Marker({
+	        position: uluru,
+	        map: map
+	    });
+	}
+	$(document).ready(function() {
+	    initMap();
+	});
+	$('a[href="#tab-branch-loc"]').on('shown.bs.tab', function () {
+        console.log("load maps tab");
+        x = map.getZoom();
+        c = map.getCenter();
+        google.maps.event.trigger(map, 'resize');
+        map.setZoom(x);
+        map.setCenter(c);
+    });
+</script>
 @endsection
