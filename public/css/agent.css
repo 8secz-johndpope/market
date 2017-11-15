@@ -110,6 +110,11 @@ h4 {
     margin-left: 5px;
     margin-right: 5px;
 }
+.tab-pane{
+	-webkit-box-shadow: inset 0px 0px 2px 0px rgba(3,3,3,0.2)
+    -moz-box-shadow: inset 0px 0px 2px 0px rgba(3,3,3,0.2)
+    box-shadow: inset 0px 0px 2px 0px rgba(3,3,3,0.2)
+}
 .agent-details .btn-default {
     width: 80%;
 }
