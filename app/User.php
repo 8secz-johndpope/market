@@ -167,7 +167,7 @@ class User extends Authenticatable
     }
     public function adverts_category($category)
     {
-        return $this->hasMany('App\Model\Advert')->where('category_id',$category)->where('status',1)->orderby('id','desc');
+        return $this->hasMany('App\Model\Advert')->where('category_id',$category)->where('status',1)->orderby('id','desc')->get();
     }
     public function live()
     {
