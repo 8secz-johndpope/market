@@ -123,13 +123,15 @@
 								{{$user->business->name}}
 							@endif
 						</p>
+						@if(isset($user->business)) 
 						<address>
-							 @if(isset($user->business->address))
+							 @if( isset($user->business->address))
 							 {{$user->business->address->line1}}, {{$user->business->address->city}}, {{$user->business->address->postcode}} 
 							 @endif
 						</address>
 						<p><strong>Tel: </strong>{{$user->business->phone}}</p>
 						<p><strong>Fax: </strong>{{$user->business->fax}}</p>
+						@endif
 						<a href="#" class="btn btn-default">Email agent</a>
 					</div>
 				</div>
