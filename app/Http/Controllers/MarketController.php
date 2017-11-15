@@ -1988,7 +1988,7 @@ class MarketController extends BaseController
     }
     public function agent(Request $request, $id){
         $user = User::find($id);
-        return $user->adverts_category(306000000)[0];
+        return $user->adverts_category(306000000);
         $postcode = $user->business->address->zip;
         return view('market.agent', ['user'=>User::find($id), 'postcode' => $postcode]);
     }
