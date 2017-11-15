@@ -2002,8 +2002,12 @@ class MarketController extends BaseController
             }
             $avgPriceRent += $price;
         }
-        $avgPriceSale = $avgPriceSale / count($advertsForsale);
-        $avgPriceRent = $avgPriceRent / count($advertsForRent);
+        if($avgPriceSale > 0){
+            $avgPriceSale = $avgPriceSale / count($advertsForsale);
+        }
+        if($avgPriceRent > 0){
+            $avgPriceRent = $avgPriceRent / count($advertsForRent);
+        }
         $postcode = $user->business->address->zip;
         return view('market.agent', ['user'=>User::find($id), 'postcode' => $postcode, 'advertsForsale' => $advertsForsale, 'avgPriceSale' => $avgPriceSale, 'advertsForRent' => $advertsForRent, 'avgPriceRent' => $avgPriceRent]);
     }
