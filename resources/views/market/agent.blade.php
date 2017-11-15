@@ -15,6 +15,9 @@
 		<div class="col-sm-12">
 			<div class="banner-agency">
 				<img src="" class="img-banner">
+				<span class="all-properties">
+					<a href="#">View properties</a>
+				</span>
 			</div>
 		</div>
 	</div> 

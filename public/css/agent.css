@@ -95,6 +95,12 @@ h4 {
     border: 1px solid #ccc;
     padding: 0;
     margin: 15px 5px 15px 0;
+    position: relative;
+}
+.all-properties{
+	position: absolute;
+	right: 10px;
+	top: 20px;
 }
 .img-banner{
 	height: 100px;
