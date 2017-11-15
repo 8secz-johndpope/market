@@ -100,7 +100,7 @@
 				</div>
 				<div class="col-sm-12 details-agent">
 					<div class="profile-picutre">
-						<img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/no_avatar.jpg">
+						<img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$user->business->logo}}">
 					</div>
 					<div class="agent-details">
 						<p>
