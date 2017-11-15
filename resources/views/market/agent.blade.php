@@ -67,6 +67,7 @@
                     		</div>
                     	</div>
                     	<div id="tab-contact" class="tab-pane fade">
+                    		<h3>Contact</h3>
                     	</div>
                     </div>
 
