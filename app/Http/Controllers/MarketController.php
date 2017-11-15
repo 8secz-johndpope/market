@@ -1989,9 +1989,9 @@ class MarketController extends BaseController
     public function agent(Request $request, $id){
         $user = User::find($id);
         $advertsForsale = $user->adverts_category(306000000);
-        $avgPrice = 0;
+        $avgPriceSale = 0;
         foreach ($advertsForsale as $advert) {
-            var_dump($advert;
+            var_dump($advert);
         }
         $advertsForRent = $user->adverts_category(307000000);
         $postcode = $user->business->address->zip;
