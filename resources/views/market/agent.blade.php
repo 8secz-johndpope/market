@@ -16,7 +16,7 @@
 			<div class="banner-agency">
 				<img src="" class="img-banner">
 				<span class="all-properties">
-					<a href="#">View properties</a>
+					<a class="btn btn-default" href="#">View properties</a>
 				</span>
 			</div>
 		</div>
