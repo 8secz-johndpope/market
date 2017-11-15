@@ -29,6 +29,7 @@ h3 {
 }
 .border-outside {
     border: 1px solid #ccc;
+    margin: 8px 5px;
 }
 .profile-picutre {
     display: block;

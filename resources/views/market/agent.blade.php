@@ -108,7 +108,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row border-outside">
 				<div class="col-sm-12 title">
 					<h3>See it? Scan it</h3>
 				</div>
