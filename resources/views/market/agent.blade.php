@@ -48,18 +48,22 @@
                     						<th>Avg. asking price</th>
                     						<th>Avg. listing age</th>
                     					</tr>
+                    					@if($avgPriceRent >0)
                     					<tr>
                     						<td><a>Residential to rent</a></td>
                     						<td class="text-center">{{count($advertsForRent)}}</td>
                     						<td class="text-center">£ {{number_format($avgPriceRent, 0, '.', ',')}}</td>
                     						<td class="text-center">6 weeks</td>
                     					</tr>
+                    					@endif
+                    					@if($avgPriceSale >0)
                     					<tr>
                     						<td><a>Residential to sale</a></td>
                     						<td class="text-center">{{count($advertsForsale)}}</td>
                     						<td class="text-center">£ {{number_format($avgPriceSale, 0, '.', ',')}}</td>
                     						<td class="text-center">6 weeks</td>
                     					</tr>
+                    					@endif
                     				</tbody>
                     			</table>
                     		</div>
