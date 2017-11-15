@@ -27,9 +27,18 @@ h3 {
     margin-top: 0;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
-.agent-logo {
+.profile-picutre {
     display: block;
     margin: 0 16px 8px 0;
     max-height: 141px;
     max-width: 141px;
+}
+.profile-picutre  img {
+    max-width: 100%;
+    max-height: 122px;
+    padding: 3px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: 1px solid #bfbfbf;
+    box-shadow: 0 0 1px #fff;
 }

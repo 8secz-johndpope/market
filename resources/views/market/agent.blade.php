@@ -93,8 +93,13 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12 details-agent">
-					<div class="agent-logo">
+					<div class="profile-picutre">
 						<img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/no_avatar.jpg">
+					</div>
+					<div class="agent-details">
+						<p>
+							Knight Frank
+						</p>
 					</div>
 				</div>
 			</div>
