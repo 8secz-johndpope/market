@@ -1990,9 +1990,8 @@ class MarketController extends BaseController
         $user = User::find($id);
         $advertsForsale = $user->adverts_category(306000000);
         $avgPrice = 0;
-        var_dump($advertsForsale);
         foreach ($advertsForsale as $advert) {
-            
+            var_dump($advert;
         }
         $advertsForRent = $user->adverts_category(307000000);
         $postcode = $user->business->address->zip;
