@@ -104,10 +104,10 @@
 					</div>
 					<div class="agent-details">
 						<p>
-							{{$user->name}}
+							{{$user->business->name}}
 						</p>
 						<address>
-							 @if(isset($user->address))
+							 @if(isset($user->business->address))
 							 {{$user->address->line1}}, {{$user->address->city}}, {{$user->address->postcode}} 
 							 @endif
 						</address>
@@ -155,6 +155,6 @@
 	</div>
 </div>
 @php
-	var_dump($user->business)
+	var_dump($user->business->address);
 @endphp
 @endsection
