@@ -1997,7 +1997,7 @@ class MarketController extends BaseController
         }
         foreach ($advertsForRent as $advert) {
             $price = $advert->price();
-            if($advert->meta['price_frequency'] === 'pw'){
+            if($advert->meta('price_frequency') === 'pw'){
                 $price = $price * 4; 
             }
             $avgPriceRent += $price;
