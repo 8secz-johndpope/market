@@ -108,7 +108,7 @@
 						</p>
 						<address>
 							 @if(isset($user->business->address))
-							 {{$user->address->line1}}, {{$user->address->city}}, {{$user->address->postcode}} 
+							 {{$user->business->address->line1}}, {{$user->business->address->city}}, {{$user->business->address->postcode}} 
 							 @endif
 						</address>
 						<p><strong>Tel: </strong>{{$user->business->phone}}</p>
