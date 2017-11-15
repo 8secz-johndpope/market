@@ -1179,12 +1179,40 @@ class MarketController extends BaseController
 
             ]
         ];
-        if($location->id===0 || $location->parent_id===0 || $location->parent->parent_id===0){
+        if($location->id===0 || $location->parent_id===0 ){
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'size' => 0,
+                    'query' => [
+                        'bool' => [
+                            'must' => array_values($musts),
+                            /*    'filter' => $filte */
+                        ]
+                    ],
+                    'aggs' => ['category' => $aggs['category']]
 
+                ]
+            ];
         }else{
             $center = (($location->min_lat+$location->max_lat)/2).','.(($location->min_lng+$location->max_lng)/2);
             $distance = Location::haversineGreatCircleDistance($location->min_lat,$location->min_lng,$location->max_lat,$location->max_lng)+$request->distance;
-            $params['body']['query']['bool']['filter'] = ['geo_distance'=>['distance'=>$distance.'mi','location'=>$center]];
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'size' => 0,
+                    'query' => [
+                        'bool' => [
+                                'filter' => ['geo_distance'=>['distance'=>$distance.'mi','location'=>$center]]
+                        ]
+                    ],
+                    'aggs' => ['category' => $aggs['category']]
+
+                ]
+            ];
+
         }
         $response = $this->client->search($params);
         $buckets = $response['aggregations']['category']['buckets'];
