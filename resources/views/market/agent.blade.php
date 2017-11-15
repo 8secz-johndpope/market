@@ -86,7 +86,11 @@
 		<!-- end info-content -->
 		<!-- div col-agency-contact -->
 		<div class="col-md-4 col-sm-12">
-
+			<div class="row">
+				<div class="col-sm-12">
+					
+				</div>
+			</div>
 		</div>
 		<!-- end col-agency-contact -->
 	</div>
