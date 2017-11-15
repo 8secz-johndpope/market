@@ -14,7 +14,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="banner-agency">
-				<img src="" class="img-banner">
+				<img src="{{$user->business->banner_img}}" class="img-banner">
 				<span class="all-properties">
 					<a class="btn btn-default" href="#">View properties</a>
 				</span>
@@ -111,8 +111,8 @@
 							 {{$user->address->line1}}, {{$user->address->city}}, {{$user->address->postcode}} 
 							 @endif
 						</address>
-						<p><strong>Tel: </strong>{{$user->phone}}</p>
-						<p><strong>Fax: </strong>020 7937 6699</p>
+						<p><strong>Tel: </strong>{{$user->business->phone}}</p>
+						<p><strong>Fax: </strong>{{$user->business->fax}}</p>
 						<a href="#" class="btn btn-default">Email agent</a>
 					</div>
 				</div>
