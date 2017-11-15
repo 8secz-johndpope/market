@@ -21,10 +21,15 @@ table.averages{
     line-height: 150%;
     padding: .3em 0;
 }
-
 h3 {
     color: #262637;
     font-size: 15px;
     margin-top: 0;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
+.agent-logo {
+    display: block;
+    margin: 0 16px 8px 0;
+    max-height: 141px;
+    max-width: 141px;
 }
