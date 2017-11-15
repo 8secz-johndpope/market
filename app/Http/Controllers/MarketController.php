@@ -2005,7 +2005,7 @@ class MarketController extends BaseController
             var_dump($avgPriceRent);
         }
         $avgPriceSale = $avgPriceSale / count($advertsForsale);
-        
+        $avgPriceRent = $avgPriceRent / count($advertsForRent);
         $postcode = $user->business->address->zip;
         return view('market.agent', ['user'=>User::find($id), 'postcode' => $postcode, 'advertsForsale' => $advertsForsale, 'avgPriceSale' => $avgPriceSale]);
     }
