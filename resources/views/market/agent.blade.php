@@ -170,6 +170,15 @@
 	$(document).ready(function() {
 	    initMap();
 	});
+	$('a[href="#tab-branch-loc"]').on('shown.bs.tab', function () {
+        console.log("load maps tab");
+        x = map.getZoom();
+        c = map.getCenter();
+        google.maps.event.trigger(map, 'resize');
+        google.maps.event.trigger(panorama, 'resize');
+        map.setZoom(x);
+        map.setCenter(c);
+    });
 </script>
 @php
 	var_dump($postcode);
