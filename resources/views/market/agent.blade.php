@@ -14,7 +14,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="banner-agency">
-				<img src="{{$user->business->banner_img}}" class="img-banner">
+				<img src="{{isset($user->business) ? $user->business->banner_img: ''}}" class="img-banner">
 				<span class="all-properties">
 					<a class="btn btn-default" href="#">View properties</a>
 				</span>
