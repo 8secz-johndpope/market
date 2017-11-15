@@ -2008,6 +2008,7 @@ class MarketController extends BaseController
         if($avgPriceRent > 0){
             $avgPriceRent = $avgPriceRent / count($advertsForRent);
         }
+        $postcode = null;
         if(isset($user->business)){
             $postcode = $user->business->address->zip;
         }
