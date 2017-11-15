@@ -726,15 +726,7 @@ a.tabs-simple-tab.all-spot {
     border-radius: 125px/12px;
     /*box-shadow: 0 0 6px #fe9c30;*/
 }
-/*.spotligth h2 {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    font-size: 32px;
-    margin-top:50px;
 
-}*/
 h2.typography-subsection-subheadline.siri-command.relative {
   text-align: center;
   color: #000;
@@ -827,30 +819,6 @@ section.row-color.white {
     text-align: center;
     display: table-cell;
 }
-/*.tabs-simple-tab:after {
-    content: "";
-    position: absolute;
-    top: 55px;
-    left: 50%;
-    margin-left: -10px;
-    -webkit-transform: rotate(45deg) scale(0);
-    -ms-transform: rotate(45deg) scale(0);
-    transform: rotate(45deg) scale(0);
-    transition: -webkit-transform .15s ease-in;
-    transition: transform .15s ease-in;
-    transition: transform .15s ease-in,-webkit-transform .15s ease-in;
-    display: block;
-    height: 20px;
-    width: 20px;
-    background: #f1f1f1;
-    box-shadow: inset 3px 3px 3px hsla(280,4%,69%,.3), inset 1px 1px 1px hsla(280,4%,69%,.3);
-}
-.tabs-simple-tab.all-spot:hover:after, .tabs-simple-tab.pop-se:hover:after {
-    -webkit-transform: rotate(45deg) scale(1);
-    -ms-transform: rotate(45deg) scale(1);
-    transform: rotate(45deg) scale(1);
-    text-decoration: none;
-}*/
 .text{
   line-height: 1.3em;
   max-height: 2.6em;
@@ -874,6 +842,17 @@ section.row-color.white {
     display: block;
 }
 
+/** css tabs **/
+.tab-pane {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-top-color: transparent;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    border-top: 2px solid #ff9d2c;
+    color: #ff9d2c;
+}
+/** end tabs **/
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0px;
@@ -1211,6 +1190,7 @@ section.row-color.white {
   }
   .navbar-right {
     margin-right: 0px;
+    margin-top: 16px;
   }
   section.social-media {
     background-size: cover;
@@ -1224,6 +1204,7 @@ section.row-color.white {
   .col-2 img {
     height: 35px;
     padding-left: 5px;
+    margin: 18px 5px;
   }
   .navbar-default .navbar-nav>li>a {
     font-size: 14px;
@@ -1283,10 +1264,13 @@ section.row-color.white {
     height: 26em;
   }
   .header-download {
-    margin-top: 10px;
+    /*margin-top: 10px;*/
   }
   .container{
     /*width: 90%;*/
+  }
+  .navbar-right {
+    margin-top: 16px;
   }
   .col-2 img {
     height: 40px;

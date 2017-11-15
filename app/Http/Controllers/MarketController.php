@@ -1956,4 +1956,7 @@ class MarketController extends BaseController
         foreach ($fields as $field)
             echo "'".$field->slug."',";
     }
+    public function agent(Request $request, $id){
+        return view('market.agent', ['id' => $id]);
+    }
 }
