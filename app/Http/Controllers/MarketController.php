@@ -1989,13 +1989,23 @@ class MarketController extends BaseController
     public function agent(Request $request, $id){
         $user = User::find($id);
         $advertsForsale = $user->adverts_category(306000000);
+        $advertsForRent = $user->adverts_category(307000000);
         $avgPriceSale = 0;
+        $avgPriceRent = 0;
         foreach ($advertsForsale as $advert) {
             $avgPriceSale += $advert->price();
             var_dump($avgPriceSale);
         }
+        foreach ($advertsForRent as $advert) {
+            $price = $advert->price();
+            if($advert->meta['price_frequency'] === 'pw'){
+                $price = $price * 4; 
+            }
+            $avgPriceRent += $price;
+            var_dump($avgPriceRent);
+        }
         $avgPriceSale = $avgPriceSale / count($advertsForsale);
-        $advertsForRent = $user->adverts_category(307000000);
+        
         $postcode = $user->business->address->zip;
         return view('market.agent', ['user'=>User::find($id), 'postcode' => $postcode, 'advertsForsale' => $advertsForsale, 'avgPriceSale' => $avgPriceSale]);
     }
