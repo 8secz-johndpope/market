@@ -173,7 +173,9 @@
 		<!-- end col-agency-contact -->
 	</div>
 </div>
+@if(isset($user->business)) 
 <script>
+
 	var map;
 	function initMap() {
 	    var uluru = {lat: {!! $postcode->lat !!}, lng: {!! $postcode->lng !!}};
@@ -198,4 +200,5 @@
         map.setCenter(c);
     });
 </script>
+@endif
 @endsection
