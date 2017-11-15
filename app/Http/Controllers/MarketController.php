@@ -1991,6 +1991,7 @@ class MarketController extends BaseController
         $advertsForsale = $user->adverts_category(306000000);
         $avgPriceSale = 0;
         foreach ($advertsForsale as $advert) {
+            $avgPriceSale += $advert->price();
             var_dump($advert);
         }
         $advertsForRent = $user->adverts_category(307000000);
