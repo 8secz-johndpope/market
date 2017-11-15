@@ -842,12 +842,17 @@ section.row-color.white {
     display: block;
 }
 
+/** css tabs **/
 .tab-pane {
     padding: 15px;
     border: 1px solid #ccc;
     border-top-color: transparent;
 }
-
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    border-top: 2px solid #ff9d2c;
+    color: #ff9d2c;
+}
+/** end tabs **/
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0px;
