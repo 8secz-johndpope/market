@@ -73,6 +73,17 @@
                     	</div>
                     	<div id="tab-contact" class="tab-pane fade">
                     		<h3>Contact</h3>
+                    		<div class="form-content">
+                    			<form id="letting-branch">
+                    				<fieldset>
+                    					<div class="inputset">
+                    						<label class="contact-form">
+                    							Name: <span class="required">*</span>
+                    						</label>
+                    					</div>
+                    				</fieldset>
+                    			</form>
+                    		</div>
                     	</div>
                     </div>
 
