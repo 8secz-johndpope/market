@@ -62,6 +62,9 @@
                     	<div id="tab-about" class="tab-pane fade">
                     	</div>
                     	<div id="tab-branch-loc" class="tab-pane fade">
+                    		<h3>Agent's branch</h3>
+                    		<div id="map">
+                    		</div>
                     	</div>
                     	<div id="tab-contact" class="tab-pane fade">
                     	</div>
