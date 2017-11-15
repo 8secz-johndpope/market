@@ -8,6 +8,11 @@ table.averages tr:nth-child(odd) {
 table.averages td{
 	border: 1px solid #dedede;
     padding: 0!important;
+}
+table.averages{
+	border: 1px solid #dedede;
+	width: 100%;
+    margin: 1.5em 0;
 } 
 .averages th {
     background: #eaecee;
