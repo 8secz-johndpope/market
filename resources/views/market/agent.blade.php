@@ -89,7 +89,7 @@
 			<div class="row">
 				
 			</div>
-			<div class="row">
+			<div class="row border-outside">
 				<div class="col-sm-12 details-agent title">
 					<h3>Contact details</h3>
 				</div>
