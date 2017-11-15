@@ -2001,7 +2001,6 @@ class MarketController extends BaseController
                 $price = $price * 4; 
             }
             $avgPriceRent += $price;
-            var_dump($avgPriceRent);
         }
         $avgPriceSale = $avgPriceSale / count($advertsForsale);
         $avgPriceRent = $avgPriceRent / count($advertsForRent);
