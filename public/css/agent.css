@@ -150,3 +150,8 @@ table.averages td a {
 .btns-properties .btn-default {
     width: 30%;
 }
+@media screen and (min-width: 1200px){
+	.container {
+	   width: 1170px;
+	}
+}
