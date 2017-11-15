@@ -12,8 +12,10 @@
  <link href="{{ asset('/css/agent.css?q=874') }}" rel="stylesheet">
 <div class="container">
 	<div class="row">
-		<div class="col-md-8 col-sm-12 banner-agency">
-			<img src="" class="img-banner">
+		<div class="col-md-8 col-sm-12">
+			<div class="banner-agency">
+				<img src="" class="img-banner">
+			</div>
 		</div>
 	</div> 
 	<div class="row">
