@@ -1985,6 +1985,6 @@ class MarketController extends BaseController
             echo "'".$field->slug."',";
     }
     public function agent(Request $request, $id){
-        return view('market.agent', ['id' => $id]);
+        return view('market.agent', ['user'=>User::find($id)]);
     }
 }

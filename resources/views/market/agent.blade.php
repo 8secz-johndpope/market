@@ -104,12 +104,12 @@
 					</div>
 					<div class="agent-details">
 						<p>
-							Knight Frank
+							{{$user->name}}
 						</p>
 						<address>
 							 South Kensington
 						</address>
-						<p><strong>Tel: </strong>020 8012 2256</p>
+						<p><strong>Tel: </strong>{{$user->phone}}</p>
 						<p><strong>Fax: </strong>020 7937 6699</p>
 						<a href="#" class="btn btn-default">Email agent</a>
 					</div>
