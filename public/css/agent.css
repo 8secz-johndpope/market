@@ -104,3 +104,6 @@ h4 {
     margin-left: 5px;
     margin-right: 5px;
 }
+.agent-details .btn-default {
+    width: 80%;
+}
