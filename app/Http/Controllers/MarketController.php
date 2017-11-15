@@ -1994,7 +1994,6 @@ class MarketController extends BaseController
         $avgPriceRent = 0;
         foreach ($advertsForsale as $advert) {
             $avgPriceSale += $advert->price();
-            var_dump($avgPriceSale);
         }
         foreach ($advertsForRent as $advert) {
             $price = $advert->price();
