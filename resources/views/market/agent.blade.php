@@ -179,7 +179,4 @@
         map.setCenter(c);
     });
 </script>
-@php
-	var_dump($postcode);
-@endphp
 @endsection
