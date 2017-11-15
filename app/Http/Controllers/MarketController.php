@@ -1992,8 +1992,9 @@ class MarketController extends BaseController
         $avgPriceSale = 0;
         foreach ($advertsForsale as $advert) {
             $avgPriceSale += $advert->price();
-            var_dump($advert);
+            var_dump($avgPriceSale);
         }
+        $avgPriceSale = $avgPriceSale / count($advertsForsale);
         $advertsForRent = $user->adverts_category(307000000);
         $postcode = $user->business->address->zip;
         return view('market.agent', ['user'=>User::find($id), 'postcode' => $postcode]);
