@@ -1,3 +1,7 @@
+section{
+	font-family: Effra-Regular,arial,helvetica,sans-serif;
+	line-height: 1.615;
+}
 table.averages tr:nth-child(odd) {
     background: #f5f5f5;
 }
