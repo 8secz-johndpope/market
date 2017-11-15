@@ -31,6 +31,9 @@ h3 {
     border: 1px solid #ccc;
     margin: 8px 5px;
 }
+.details-agent {
+    padding: 10px;
+}
 .profile-picutre {
     display: block;
     margin: 0 16px 8px 0;
