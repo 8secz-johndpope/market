@@ -109,7 +109,7 @@
 						<address>
 							 @if(isset($user->address))
 							 {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}} 
-							 endif
+							 @endif
 						</address>
 						<p><strong>Tel: </strong>{{$user->phone}}</p>
 						<p><strong>Fax: </strong>020 7937 6699</p>
