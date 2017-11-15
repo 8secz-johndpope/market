@@ -113,6 +113,7 @@ table.averages td a {
 }
 .img-banner{
 	height: 100px;
+	width: 100%;
 }
 .btn-default {
     color: #fff;
