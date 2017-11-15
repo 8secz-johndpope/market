@@ -50,7 +50,7 @@
                     					</tr>
                     					<tr>
                     						<td><a>Residential to rent</a></td>
-                    						td class="text-center">{{count($advertsForRent)}}</td>
+                    						<td class="text-center">{{count($advertsForRent)}}</td>
                     						<td class="text-center">£ {{number_format($avgPriceRent, 0, '.', ',')}}</td>
                     						<td class="text-center">6 weeks</td>
                     					</tr>
