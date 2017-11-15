@@ -45,15 +45,15 @@
                     					</tr>
                     					<tr>
                     						<td><a>Residential to rent</a></td>
-                    						<td>6</td>
-                    						<td>1,010</td>
-                    						<td>6 weeks</td>
+                    						<td class="text-center">6</td>
+                    						<td class="text-center">1,010</td>
+                    						<td class="text-center">6 weeks</td>
                     					</tr>
                     					<tr>
                     						<td><a>Residential to sale</a></td>
-                    						<td>6</td>
-                    						<td>1,010</td>
-                    						<td>6 weeks</td>
+                    						<td class="text-center">6</td>
+                    						<td class="text-center">1,010</td>
+                    						<td class="text-center">6 weeks</td>
                     					</tr>
                     				</tbody>
                     			</table>

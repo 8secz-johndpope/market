@@ -5,6 +5,10 @@ section{
 table.averages tr:nth-child(odd) {
     background: #f5f5f5;
 }
+table.averages td{
+	border: 1px solid #dedede;
+    padding: 0!important;
+} 
 .averages th {
     background: #eaecee;
     font-size: 1em;
