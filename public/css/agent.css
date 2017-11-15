@@ -122,3 +122,6 @@ h4 {
 .agent-details address {
     text-align: left;
 }
+.btns-properties .btn-default {
+    width: 30%;
+}
