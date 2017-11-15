@@ -87,8 +87,15 @@
 		<!-- div col-agency-contact -->
 		<div class="col-md-4 col-sm-12">
 			<div class="row">
-				<div class="col-sm-12">
-					
+				<div class="col-sm-12 details-agent-title">
+					<h3>Contact details</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 details-agent">
+					<div class="agent-logo">
+						<img src="">
+					</div>
 				</div>
 			</div>
 		</div>
