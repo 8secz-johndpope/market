@@ -1288,6 +1288,9 @@ section.row-color.white {
   .container{
     /*width: 90%;*/
   }
+  .navbar-right {
+    margin-top: 16px;
+  }
   .col-2 img {
     height: 40px;
     margin: 15px 5px;
