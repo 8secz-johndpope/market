@@ -195,6 +195,7 @@ Route::get('/fields/{any}', 'MarketController@fields');
 Route::get('/filters/{any}', 'MarketController@filters');
 
 Route::get('/id/{id}', 'MarketController@id');
+Route::get('/agent/{id}', 'MarketController@agent');
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Auth::routes();
