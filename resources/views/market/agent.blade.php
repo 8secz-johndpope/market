@@ -87,11 +87,12 @@
 		<!-- div col-agency-contact -->
 		<div class="col-md-4 col-sm-12">
 			<div class="row">
-				<div class="col-sm-12 details-agent-title">
-					<h3>Contact details</h3>
-				</div>
+				
 			</div>
 			<div class="row">
+				<div class="col-sm-12 details-agent title">
+					<h3>Contact details</h3>
+				</div>
 				<div class="col-sm-12 details-agent">
 					<div class="profile-picutre">
 						<img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/no_avatar.jpg">
@@ -100,7 +101,16 @@
 						<p>
 							Knight Frank
 						</p>
+						<address>
+							 South Kensington
+						</address>
+						<a href="#" class="btn btn-default">Email agent</a>
 					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 title">
+					<h3>See it? Scan it</h3>
 				</div>
 			</div>
 		</div>
