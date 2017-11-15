@@ -154,7 +154,24 @@
 		<!-- end col-agency-contact -->
 	</div>
 </div>
+<script>
+	var map;
+	function initMap() {
+	    var uluru = {lat: {!! $postcode->lat !!}, lng: {!! $postcode->lng !!}};
+	     map = new google.maps.Map(document.getElementById('map'), {
+	        zoom: 18,
+	        center: uluru
+	    });
+	    var marker = new google.maps.Marker({
+	        position: uluru,
+	        map: map
+	    });
+	}
+	$(document).ready(function() {
+	    initMap();
+	});
+</script>
 @php
-	var_dump($user->business->address->zip);
+	var_dump($postcode);
 @endphp
 @endsection
