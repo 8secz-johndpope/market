@@ -432,7 +432,7 @@
                                 </a>
                             </div>
                         </div>
-                            <div id="make-review">
+                            <div id="make-rate">
                                 <div class="row">
                                     <form id="reviews-form" autocomplete="off">
                                     <div class="col-md-5">
@@ -657,7 +657,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="make-rate">
+                            <div id="make-review">
                                 <form>
                                 <div class="row">
                                     <div class="col-md-12">
