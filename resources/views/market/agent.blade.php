@@ -119,6 +119,28 @@
 					<div class="qr-code-img-wrapper">
 						<img src="http://media.rightmove.co.uk/qr/www.rightmove.co.uk/s1r_39899_m/QR_Thackerays_London_RESALE_39899.png">
 					</div>
+					<div class="print-qr-code-link">
+						<a href="#">Print </a>
+						or 
+						<a href="#">Save</a>
+					</div>
+					<div class="print-qr-code-link">
+						this QR code for this agent's properties for sale
+					</div>
+				</div>
+				<div class="col-sm-12 ">
+					<h4>For sale</h4>
+					<div class="qr-code-img-wrapper">
+						<img src="http://media.rightmove.co.uk/qr/www.rightmove.co.uk/s1r_39899_m/QR_Thackerays_London_RESALE_39899.png">
+					</div>
+					<div class="print-qr-code-link">
+						<a href="#">Print </a>
+						or 
+						<a href="#">Save</a>
+					</div>
+					<div class="print-qr-code-link">
+						this QR code for this agent's properties for sale
+					</div>
 				</div>
 			</div>
 		</div>
