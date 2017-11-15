@@ -88,3 +88,19 @@ h4 {
 .img-banner{
 	height: 100px;
 }
+.btn-default {
+    color: #fff;
+    background-color: #ff8830;
+    border-color: #ff8830;
+    /* text-align: center; */
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 17px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: normal;
+    line-height: 29px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
