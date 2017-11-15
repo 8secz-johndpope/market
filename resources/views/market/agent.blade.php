@@ -119,7 +119,9 @@
 					</div>
 					<div class="agent-details">
 						<p>
-							{{$user->business->name}}
+							@if(isset($user->business))
+								{{$user->business->name}}
+							@endif
 						</p>
 						<address>
 							 @if(isset($user->business->address))
