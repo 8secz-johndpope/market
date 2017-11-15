@@ -73,7 +73,7 @@
 
 				</div>
 			</div>
-			<div class="row">
+			<div class="row btns-properties">
 				<div class="col-sm-12">
 					<h3>See all ads by this advertiser</h3>
 				</div>

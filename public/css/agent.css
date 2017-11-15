@@ -81,3 +81,7 @@ h4 {
 .qr-code-img-wrapper img {
     border: 1px solid #dedede;
 }
+.row.btns-properties {
+    padding-top: 15px;
+    text-align: center;
+}
