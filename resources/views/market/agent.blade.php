@@ -114,7 +114,7 @@
 				<div class="col-sm-12 title">
 					<h3>See it? Scan it</h3>
 				</div>
-				<div class="col-sm-12 ">
+				<div class="col-sm-12 q-code-wraper">
 					<h4>For sale</h4>
 					<div class="qr-code-img-wrapper">
 						<img src="http://media.rightmove.co.uk/qr/www.rightmove.co.uk/s1r_39899_m/QR_Thackerays_London_RESALE_39899.png">
@@ -128,7 +128,7 @@
 						this QR code for this agent's properties for sale
 					</div>
 				</div>
-				<div class="col-sm-12 ">
+				<div class="col-sm-12 q-code-wraper">
 					<h4>For rent</h4>
 					<div class="qr-code-img-wrapper">
 						<img src="http://media.rightmove.co.uk/qr/www.rightmove.co.uk/s1l_39899_m/QR_Thackerays_London_LETTINGS_39899.png">
