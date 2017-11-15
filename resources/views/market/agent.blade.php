@@ -155,6 +155,6 @@
 	</div>
 </div>
 @php
-	var_dump($user->business->address);
+	var_dump($user->business->address->zip);
 @endphp
 @endsection
