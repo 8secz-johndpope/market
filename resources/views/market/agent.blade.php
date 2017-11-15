@@ -154,7 +154,4 @@
 		<!-- end col-agency-contact -->
 	</div>
 </div>
-@php
-	var_dump($user->business->address);
-@endphp
 @endsection
