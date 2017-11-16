@@ -322,7 +322,7 @@
 	        map: map
 	    });
 	    var streeViewDiv = document.createElement('div');
-  		var streeView = new StreeView(centerControlDiv, map);
+  		var streeView = new StreeView(streeViewDiv, map);
 
   		streeViewDiv.index = 1;
   		map.controls[google.maps.ControlPosition.TOP_RIGHT].push(streeView);
