@@ -210,6 +210,14 @@
 
 </head>
 <body class="">
+<input type="hidden" id="amazon-region" value="{{env('AWS_REGION')}}">
+<input type="hidden" id="amazon-account-id" value="{{env('AWS_ACCOUNT_ID')}}">
+<input type="hidden" id="amazon-web-bucket" value="{{env('AWS_WEB_IMAGE_BUCKET')}}">
+<input type="hidden" id="amazon-cv-bucket" value="{{env('AWS_CV_IMAGE_BUCKET')}}">
+<input type="hidden" id="amazon-identity-pool-id" value="{{env('AWS_IDENTITY_POOL_ID')}}">
+<input type="hidden" id="amazon-cognito-role" value="{{env('AWS_COGNITO_ROLE')}}">
+<input type="hidden" id="amazon-web-bucket-url" value="{{env('AWS_WEB_IMAGE_URL')}}">
+<input type="hidden" id="amazon-cv-bucket-url" value="{{env('AWS_CV_IMAGE_URL')}}">
 <header>
 
     <nav class="navbar navbar-default">

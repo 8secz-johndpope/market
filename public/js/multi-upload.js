@@ -1,16 +1,20 @@
 /**
  * Created by anil on 6/19/17.
  */
-var albumBucketName = 'web.eu-central-1.sumra.net';
-var bucketRegion = 'eu-central-1';
-var IdentityPoolId = 'eu-central-1:860db8b5-a41e-4628-860d-7fa6823eb59c';
+var albumBucketName = $('#amazon-web-bucket').val();
 
+var IdentityPoolId = $('#amazon-identity-pool-id').val();
+var web_image_url = $('#amazon-web-bucket-url').val();
 
-AWS.config.region = 'eu-central-1'; // Region
+var awsregion = $('#amazon-region').val();
+var cognito_role = $('#amazon-cognito-role').val();
+var account_id = $('#amazon-account-id').val();
+
+AWS.config.region = awsregion; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    AccountId:'005279544259',
-    IdentityPoolId: 'eu-central-1:9586b07e-a6bb-4078-8560-bcfd74e133b1',
-    RoleArn:'arn:aws:iam::005279544259:role/Cognito_LastoneUnauth_Role'
+    AccountId:account_id,
+    IdentityPoolId: IdentityPoolId,
+    RoleArn:cognito_role
 });
 
 AWS.config.credentials.get(function(err) {
@@ -63,7 +67,7 @@ function upload_multi_file() {
                         .catch(function (error) {
                             console.log(error);
                         });
-                    $(".row-images").prepend('<div class="multi-image"><div class="cross-mark">X</div><input type="hidden" name="images[]" value="' + uname + '"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/' + uname + '"></div>');
+                    $(".row-images").prepend('<div class="multi-image"><div class="cross-mark">X</div><input type="hidden" name="images[]" value="' + uname + '"><img src="'+web_image_url+'/' + uname + '"></div>');
                     //  $("#advert-form").append('<input type="hidden" name="images[]" value="'+uname+'">');
 
                 }
