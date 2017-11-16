@@ -222,7 +222,7 @@
                                         <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a>
                                         <div class="message-inside">
                                             <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
-                                            <span class="message-username">{{$room->last_message()->user->name}}</span>
+                                            @if($room->last_message())<span class="message-username">{{$room->last_message()->user->name}}</span>@endif
                                         </div>
 
                                     </li>
