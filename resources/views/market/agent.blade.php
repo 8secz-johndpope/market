@@ -123,6 +123,15 @@
                     						<label class="contact-label">Your message: </label>
                     						<textarea id="comment" name="comment" rows="3"></textarea>
                     					</div>
+                    					<script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+                    					<script>
+									      function onCaptchaSubmit(token) {
+									        $("#letting-branch").submit();
+									      }
+									    </script>
+									    <div id="submit-inputset">
+									    	<input type="submit" name="send-email" value="Send Email to {{isset($user->business-)? $user->business->name: ''}}" class="btn btn-default">
+									    </div>
 
                     				</fieldset>
                     			</form>
