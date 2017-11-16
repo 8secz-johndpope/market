@@ -126,7 +126,7 @@
                                             </div>
                                         @endforeach
                                             <div class="col-sm-6 meta-bold">
-                                                Added on Sumra:
+                                                Added on {{env('APP_NAME')}}:
                                             </div>
                                             <div class="col-sm-6 meta-info">
                                                 {{$advert->created_at->format('d F Y')}}

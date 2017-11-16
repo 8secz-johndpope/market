@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Sumra') }}</title>
+    <title>{{ env('APP_NAME') }}</title>
 
 
     <style>

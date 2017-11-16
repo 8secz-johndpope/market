@@ -1119,7 +1119,7 @@ class HomeController extends BaseController
                 // A Twilio phone number you purchased at twilio.com/console
                 'from' => '+441202286628',
                 // the body of the text message you'd like to send
-                'body' => 'Sumra: Your verification code is '.$code
+                'body' => env('APP_NAME').': Your verification code is '.$code
             )
         );
         return ['code'=>'sent'];

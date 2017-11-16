@@ -265,7 +265,7 @@
                                                             @else
                                                             <input class="form-check-input extra-change" type="checkbox" name="spotlight" value="1" id="spotlight">
                                                             @endif
-                                                            <span class="span-spotlight">Spotlight</span> &nbsp; Have your Ad seen on the Sumra homepage!
+                                                            <span class="span-spotlight">Spotlight</span> &nbsp; Have your Ad seen on the {{env('APP_NAME')}} homepage!
                                                         </label>
                                                     </div>
                                                 </div>

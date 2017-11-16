@@ -321,7 +321,7 @@
 
                         </li>
                     @endif
-                    <li><a class="btn btn-info bussines" role="button" href="/user/contract/pricing">Sumra for Business</a></li>
+                    <li><a class="btn btn-info bussines" role="button" href="/user/contract/pricing">{{env('APP_NAME')}} for Business</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -416,7 +416,7 @@
     <div class="container">
         <div class="row">
             <div class="cell col-lg-4 col-md-8 col-xs-12 footer-copy col-md-offset-2 col-lg-offset-4">
-                All rights reserved. Copyright &copy; 2017 <span class="company-rights">SUMRA</span>
+                All rights reserved. Copyright &copy; 2017 <span class="company-rights">{{env('APP_NAME')}}</span>
             </div>
         </div>
     </div>

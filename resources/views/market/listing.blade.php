@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{$last}} - Sumra:  Buy Safe,Sell Safe</title>
+    <title>{{$last}} - {{env('APP_NAME')}}:  Buy Safe,Sell Safe</title>
     <meta name="description" content="Cargocategory.description.sub_category">
 
 
@@ -103,7 +103,7 @@
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
                         @endif
                     @endforeach
-                    <input type="search" name="q" value="@if(isset($input['q'])) {{$input['q']}} @endif" placeholder="Search Sumra" class="sp-header-search input-default">
+                    <input type="search" name="q" value="@if(isset($input['q'])) {{$input['q']}} @endif" placeholder="Search {{env('APP_NAME')}}" class="sp-header-search input-default">
                     <i class="icon-search"></i>
                 </form>
 
@@ -198,7 +198,7 @@
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
                         @endif
                     @endforeach
-                    <input type="search" name="q" value="@if(isset($input['q'])) {{$input['q']}} @endif" placeholder="Search Sumra" class="input-default" id="autocomplete">
+                    <input type="search" name="q" value="@if(isset($input['q'])) {{$input['q']}} @endif" placeholder="Search {{env('APP_NAME')}}" class="input-default" id="autocomplete">
                     <i class="icon-search"></i>
                 </form>
 

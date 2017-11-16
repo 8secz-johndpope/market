@@ -29,6 +29,6 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
-        return $this->subject('Welcome to Sumra!')->markdown('emails.name',['url'=>env('APP_URL').'/user/email/verify?code=12334232']);
+        return $this->subject('Welcome to '.env('APP_NAME').'!')->markdown('emails.name',['url'=>env('APP_URL').'/user/email/verify?code=12334232']);
     }
 }
