@@ -330,7 +330,7 @@
   		var streeView = new StreeView(streeViewDiv, map);
 
   		streeViewDiv.index = 1;
-  		map.controls[google.maps.ControlPosition.TOP_RIGHT].push(streeViewDiv);
+  		map.controls[google.maps.ControlPosition.RIGHT_TOP].push(streeViewDiv);
 	}
 	function StreeView(controlDiv, map) {
 
@@ -350,7 +350,7 @@
 	  controlText.style.color = 'rgb(25,25,25)';
 	  controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
 	  controlText.style.fontSize = '13px';
-	  controlText.style.lineHeight = '38px';
+	  controlText.style.lineHeight = '25px';
 	  controlText.style.paddingLeft = '5px';
 	  controlText.style.paddingRight = '5px';
 	  controlText.innerHTML = 'StreetView';
