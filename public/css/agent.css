@@ -171,6 +171,14 @@ table.averages td a {
     border-color: #000;
     min-width: 30%;
 }
+.btns-properties .btn-default{
+    width: 30%;
+}
+.website {
+    background: #ff9d2c;
+    border-color: #ff9d2c;
+    /* color: #fff; */
+}
 #letting-branch fieldset {
     clear: both;
 }
