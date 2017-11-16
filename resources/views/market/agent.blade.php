@@ -342,6 +342,7 @@
 	  controlUI.style.cursor = 'pointer';
 	  controlUI.style.marginBottom = '22px';
 	  controlUI.style.marginRight = '15px';
+	  controlUI.style.marginTop = '9px';
 	  controlUI.style.textAlign = 'center';
 	  controlUI.title = 'Click to recenter the map';
 	  controlDiv.appendChild(controlUI);
