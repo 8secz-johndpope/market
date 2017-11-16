@@ -257,7 +257,7 @@
     		if(value.length == 0){
     			$(this).next().addClass('failed');
     		}
-    		else if(isNaN(value)){
+    		else if(!isNaN(value)){
     			$(this).next().addClass('failed');
     		}
     	}
