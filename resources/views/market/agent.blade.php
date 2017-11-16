@@ -325,7 +325,7 @@
   		var streeView = new StreeView(streeViewDiv, map);
 
   		streeViewDiv.index = 1;
-  		map.controls[google.maps.ControlPosition.TOP_RIGHT].push(streeView);
+  		map.controls[google.maps.ControlPosition.TOP_RIGHT].push(streeViewDiv);
 	}
 	function StreeView(controlDiv, map) {
 
