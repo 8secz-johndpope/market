@@ -339,10 +339,10 @@
 	  controlText.style.paddingLeft = '5px';
 	  controlText.style.paddingRight = '5px';
 	  controlText.innerHTML = 'StreetView';
-	  controlUI.appendChild(controlText);
+	  controlDiv.appendChild(controlText);
 
 	  // Setup the click event listeners: simply set the map to Chicago.
-	  controlUI.addEventListener('click', function() {
+	  controlDiv.addEventListener('click', function() {
 	    panorama.setVisible(true);
 	  });
 
