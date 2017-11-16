@@ -47,11 +47,11 @@
     <link href="/css/mercari.css?3198405465" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://sumra.net/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="https://sumra.net/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://sumra.net/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="https://sumra.net/favicons/manifest.json">
-    <link rel="mask-icon" href="https://sumra.net/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{env('APP_URL')}}/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="{{env('APP_URL')}}/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{env('APP_URL')}}/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="{{env('APP_URL')}}/favicons/manifest.json">
+    <link rel="mask-icon" href="{{env('APP_URL')}}/favicons/safari-pinned-tab.svg" color="#5bbad5">
 
 
     <meta name="msapplication-TileColor" content="#ffc40d">
@@ -738,13 +738,13 @@
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
-<script src="https://sumra.net/js/jquery.autocomplete.js"></script>
+<script src="{{env('APP_URL')}}/js/jquery.autocomplete.js"></script>
 <script>
     $('#autocomplete').autocomplete({
         paramName :'q',
         serviceUrl: '/api/suggest',
         onSelect: function (suggestion) {
-            window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
+            window.location.href = "{{env('APP_URL')}}/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });

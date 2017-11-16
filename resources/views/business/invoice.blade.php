@@ -52,7 +52,7 @@
 <body>
 <div class="row">
     <div class="col-sm-12">
-        <img src="https://sumra.net/css/brand.png" style="width: 100%">
+        <img src="{{env('APP_URL')}}/css/brand.png" style="width: 100%">
 
         <table class="customers" >
             <tr><td>Name </td><td>{{$user->name}}</td></tr>

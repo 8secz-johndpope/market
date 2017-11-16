@@ -5,7 +5,7 @@ $('#autocomplete').autocomplete({
     paramName :'q',
     serviceUrl: '/api/suggest',
     onSelect: function (suggestion) {
-        window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
+        window.location.href = "{{env('APP_URL')}}/"+suggestion.slug+"?q="+suggestion.value
         // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
     }
 });

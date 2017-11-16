@@ -413,12 +413,12 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
-<script src="https://sumra.net/js/jquery.autocomplete.js"></script>
-<script src="https://sumra.net/js/aws-sdk.js"></script>
-<script src="https://sumra.net/js/load.js"></script>
-<script src="https://sumra.net/js/multi-upload.js"></script>
+<script src="{{env('APP_URL')}}/js/jquery.autocomplete.js"></script>
+<script src="{{env('APP_URL')}}/js/aws-sdk.js"></script>
+<script src="{{env('APP_URL')}}/js/load.js"></script>
+<script src="{{env('APP_URL')}}/js/multi-upload.js"></script>
 
-<script src="https://sumra.net/js/contract.js"></script>
+<script src="{{env('APP_URL')}}/js/contract.js"></script>
 @if (!Auth::guest())
     <script>
         var token = '{{$user->access_token}}' ;

@@ -219,7 +219,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://sumra.net/">
+                <a class="navbar-brand" href="{{env('APP_URL')}}/">
                     <img class="icon-small-h" src="/css/ic_launcher1.png">
                     <img class="icon" src="/css/sumra-text.png">
                 </a>
@@ -454,9 +454,9 @@
         src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
-<script src="https://sumra.net/js/jquery.autocomplete.js"></script>
-<script src="https://sumra.net/js/aws-sdk.js"></script>
-<script src="https://sumra.net/js/load.js"></script>
+<script src="{{env('APP_URL')}}/js/jquery.autocomplete.js"></script>
+<script src="{{env('APP_URL')}}/js/aws-sdk.js"></script>
+<script src="{{env('APP_URL')}}/js/load.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
@@ -482,7 +482,7 @@
         paramName :'q',
         serviceUrl: '/api/suggest',
         onSelect: function (suggestion) {
-            window.location.href = "https://sumra.net/"+suggestion.slug+"?q="+suggestion.value
+            window.location.href = "{{env('APP_URL')}}/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
     });

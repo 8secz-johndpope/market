@@ -52,7 +52,7 @@
 <body>
 <div class="row">
     <div class="col-sm-12">
-        <img src="https://sumra.net/css/brand.png" style="width: 100%">
+        <img src="{{env('APP_URL')}}/css/brand.png" style="width: 100%">
 
         <table class="customers" >
             <tr><td>Name</td><td>{{$user->name}}</td></tr>
@@ -72,9 +72,9 @@
             <tr><td><span class="bold-text">VAT @ 20%</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_vat()}}</span></td></tr>
             <tr><td><span class="bold-text">Total</span></td><td></td><td></td><td></td><td><span class="bold-text"> £{{$contract->total_after_vat()}}</span></td></tr>
         </table>
-        <img src="https://sumra.net/css/footerbrand.png" style="width: 100%">
+        <img src="{{env('APP_URL')}}/css/footerbrand.png" style="width: 100%">
         <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" style="width: 100%">
+        <img src="{{env('APP_URL')}}/css/brand.png" style="width: 100%">
 <h4>Payment Schedule</h4>
 <table class="customers">
     <tr><th>Reference</th><th>Payment Date</th><th>Amount</th></tr>
@@ -90,10 +90,10 @@
         <p>4. The Company confirms that it is VAT registered and it’s VAT number is. </p>
         <p>the Company confirms it is not, and is not required to be, VAT registered. By not filling in this box</p>
 
-        <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
+        <img src="{{env('APP_URL')}}/css/footerbrand.png" class="footer-brand">
 
         <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" class="header-brand">
+        <img src="{{env('APP_URL')}}/css/brand.png" class="header-brand">
 
 <h4>Terms and Conditions</h4>
         <p>Standard Advertising Terms and Conditions</p>
@@ -124,10 +124,10 @@ and</p>
         <h4>5 Warranties</h4>
         <p>5.1 Each party to this Agreement represents and warrants and undertakes to the other that it has, and shall retain throughout the Term, all right, title and authority to enter into, and perform all of its obligations under this Agreement.
         </p>
-        <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
+        <img src="{{env('APP_URL')}}/css/footerbrand.png" class="footer-brand">
 
         <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" class="header-brand">
+        <img src="{{env('APP_URL')}}/css/brand.png" class="header-brand">
         <p>5.2 Company represents, warrants and undertakes throughout the Term that Company (a) complies with, and shall continue to comply with, all laws and regulations as may be applicable to Company posting job advertisements on the Site; and (b) complies with, and shall continue to comply all applicable Data Protection laws and regulations including but not limited to the EU Data Protection Directive 95/46/EC, The Data Protection Act 1998, The Privacy and Electronic Communications (EC Directive) Regulations 2003 and any other applicable data protection legislation.</p>
 
         <h4>6 Indemnities
@@ -154,10 +154,10 @@ and</p>
         </h4><p>10.1 Any termination of this Agreement shall not affect any accrued rights or liabilities of either party nor shall it affect the status of any provision of this Agreement which is expressly or by implication intended to come into or continue in force on or after such termination. Clauses 4 (Fees and Payment), 5 (Warranties), 6 (Indemnities), 7 (Limitation of Liability), 10 (Consequences of Termination), 11 (Confidentiality), and 12 (General) shall continue to have effect after the end of the Term.
 
         </p>
-        <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
+        <img src="{{env('APP_URL')}}/css/footerbrand.png" class="footer-brand">
 
         <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" class="header-brand">
+        <img src="{{env('APP_URL')}}/css/brand.png" class="header-brand">
         <h4>11 Confidentiality</h4>
         <p>11.1 Each of the parties shall not disclose to any person any information, whether in written or any other form, disclosed by or on behalf of one party ("Disclosing Party") to the other party ("Receiving Party") in the course of the discussions leading up to or the entering into or during the performance of this Agreement and which is identified as confidential or is clearly by its nature confidential including, but not limited to, the Works provided by Company under this Agreement and all personal data relating to SUMRA's users as well as any other information internal to SUMRA or any SUMRA subsidiary, holding or parent company (and any of their subsidiaries) ("Confidential Information") except insofar as: (a) is required by a person employed or engaged by the Receiving Party in connection with the proper performance of this Agreement (but only to the extent that any person to whom the information is disclosed needs to know the same for the performance of their duties and provided the Receiving Party shall be obliged to procure that all such persons are aware of the obligation of confidentiality and undertake to comply with it); or (b) is required to be disclosed by law (provided that the party disclosing the information shall notify the other party of the information to be disclosed and of the circumstances in which the disclosure is alleged to be required as early as reasonably possible before such disclosure shall be made and takes all reasonable action to avoid and limit such disclosure).
         </p><p>11.2 Any disclosure of Confidential Information shall be in confidence, shall only be to the extent that any persons to whom the information is disclosed need to know the same for the performance of their duties and the Receiving Party shall procure that all such persons are aware of the obligation of confidentiality and undertake to comply with it.
@@ -173,10 +173,10 @@ and</p>
         </h4>
         <p>12.1 If a party is prevented from performing any or all of its obligations of this Agreement by any act, event, omission or condition beyond a party's control (a "Force Majeure Event"), the affected party shall give written notice to the other party within two (2) business days of the occurrence of the Force Majeure Event and the affected party shall be excused from such performance during, but not longer than, the continuance of such Force Majeure Event. Each party shall bear their own costs arising from the Force Majeure Event and shall take all reasonable steps to find ways to perform their obligations despite the Force Majeure Event. If the Force Majeure Event continues for more than thirty (30) consecutive days, the other party may immediately terminate this Agreement on giving written notice to the affected party.</p>
         <p>12.2 This Agreement (including any documents referred to) (the "Contractual Documents") contains the entire agreement between the parties relating to the subject matter covered in the Contractual Documents and supersedes any previous agreements, arrangements, undertakings, negotiations, discussions or proposals, written or oral, between the parties in relation to such matters. No oral explanation or oral information given by any party shall alter the interpretation of the Contractual Documents. Each party confirms that, in agreeing to enter into the Contractual Documents, it has not relied on any statement, representation, warranty, understanding, undertaking, promise or assurance (whether negligently or innocently made) of any person save insofar as the same has expressly been made in the Contractual Documents and agrees that it shall have no remedy in respect of any misrepresentation which has notbecome a term of the Contractual Documents except that this Clause shall not apply in respect of any fraudulent or negligent misrepresentation whether or not such has become a term of the Contractual Documents.</p>
-        <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
+        <img src="{{env('APP_URL')}}/css/footerbrand.png" class="footer-brand">
 
         <div class="page-break"></div>
-        <img src="https://sumra.net/css/brand.png" class="header-brand">
+        <img src="{{env('APP_URL')}}/css/brand.png" class="header-brand">
         <p>12.3 Nothing in this Agreement shall be construed as creating a partnership or joint venture of any kind between the parties or as constituting or authorising either party as the agent of the other party for any purpose whatsoever. Neither party shall have the authority or power to bind the other, or to contract in the name of, or hold itself out as, or create a liability against the other in any way or for any purpose.</p><p>12.4 Neither party shall assign (including by way of a charge or declaration of trust) sub-license or deal in any way with this Agreement or any of its rights under this Agreement, without the prior written consent of the other party, such consent not be unreasonably withheld or delayed, provided that each party shall have the right to assign this Agreement to a subsidiary, holding or parent company (and any of their subsidiaries) of that party on prior written notice to the other party.</p>
         <p>12.5 Except as expressly set out in this Agreement, a person who is not a party to this Agreement has no right to rely upon or enforce any term of this Agreement.
         </p><p>12.6 The validity, construction and performance of this Agreement (and any claim, dispute or matter arising under or in connection with it or its enforceability) shall be governed by and interpreted in accordance with the laws of England and Wales. Each party irrevocably agrees to the exclusive jurisdiction of the English courts over any claim, dispute or matter arising under or in connection with this Agreement or its enforceability or the legal relationships established by this Agreement.
@@ -189,7 +189,7 @@ and</p>
         </p><p>12.13 This Agreement may be signed in duplicate, each of which, when signed, shall be original, and all the duplicates together shall constitute the same Agreement.
         </p><p>SUMRA
         </p><p>I have read, understood and agree to the SUMRA standard terms and conditions above:</p>
-        <img src="https://sumra.net/css/footerbrand.png" class="footer-brand">
+        <img src="{{env('APP_URL')}}/css/footerbrand.png" class="footer-brand">
 
     </div>
 </div>
