@@ -173,6 +173,13 @@ table.averages td a {
     float: left;
     padding: .2em 0 .1em 0;
 }
+.required {
+    font-weight: normal;
+    white-space: nowrap;
+    color: #999;
+    font-weight: normal;
+    white-space: nowrap;
+}
 @media screen and (min-width: 1200px){
 	.container {
 	   width: 1170px;

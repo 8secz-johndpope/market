@@ -85,7 +85,7 @@
                     							Name: <span class="required">*</span>
                     						</label>
                     						<div class="input-name is-valid">
-                    							<input id="branch-enquiry-title" type="text" name="title" title="Title" placeholder="Title">
+                    							<input id="branch-enquiry-title" type="text" name="title" title="Title" placeholder="Title" class="title">
                     							<input id="branch-enquiry-first-name" type="text" name="first-name" title="First name" placeholder="First name">
                     							<input id="branch-enquiry-last-name" type="text" name="last-name"
                     							title="Last name" placeholder="Last name">
