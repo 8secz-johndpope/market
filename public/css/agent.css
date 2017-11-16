@@ -203,7 +203,7 @@ table.averages td a {
     margin-left: 20%;
 }
 .validation-container {
-    display: hidden;
+    display: none;
     float: left;
     font-size: .9em;
     padding: 1px 0 0 25px;
