@@ -1,4 +1,4 @@
-git pull origin master
+git pull origin live
 git add .
 git commit -m "auto"
-git push origin master
+git push origin live
