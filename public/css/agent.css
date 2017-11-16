@@ -201,6 +201,14 @@ table.averages td a {
     margin-top: 6em;
     margin-left: 32%;
 }
+.validation-container {
+    display: block;
+    float: left;
+    font-size: .9em;
+    padding: 1px 0 0 25px;
+    white-space: nowrap;
+    margin-bottom: 1px;
+}
 @media screen and (min-width: 1200px){
 	.container {
 	   width: 1170px;
