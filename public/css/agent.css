@@ -196,6 +196,10 @@ table.averages td a {
     float: left;
     border-color: #dcdcdc;
 }
+.inputset select {
+    background: #fff;
+    width: 44%;
+}
 #submit-inputset {
     height: auto;
     margin-bottom: .7em;
