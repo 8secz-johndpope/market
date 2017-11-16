@@ -182,7 +182,7 @@ table.averages td a {
 }
 .inputset input {
     float: left;
-    width: 40%;
+    width: 44%;
 }
 .inputset .title-name {
     width: 10%;
@@ -192,7 +192,7 @@ table.averages td a {
     margin-left: 1%;
 }
 .inputset textarea {
-    width: 40%;
+    width: 44%;
     float: left;
 }
 #submit-inputset {
