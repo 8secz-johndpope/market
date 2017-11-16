@@ -147,6 +147,19 @@
                     						<input id="postcode" type="postcode" name="postcode" title="Postcode" placeholder="">
                     					</div>
                     					<div class="inputset large-validation is-valid">
+                    						<label class="contact-label" for="type-enquiry">
+                    							Type of enquiry: 
+                    						</label>
+                    						<select name="type-enquiry" id="type-enquiry">
+                    							<option value selected="selected">Please select:</option>
+                    							<option value="looking_to_rent">I am looking to rent a property</option>
+                    							<option value="looking_to_buy">I am looking to buy a property</option>
+                    							<option value="arrange_valuation">I want a valuation of my property</option>
+                    							<option value="looking_to_let">I have a property to let</option>
+                    							<option value="looking_to_sale">I have a property to sale</option>
+                    						</select>
+                    					</div>
+                    					<div class="inputset large-validation is-valid">
                     						<label class="contact-label" class="contact-label">Your message: </label>
                     						<textarea id="comment" name="comment" rows="3"></textarea>
                     					</div>
