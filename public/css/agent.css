@@ -249,6 +249,9 @@ p.contact-form-disclaimer {
     display: inline-block;
     width: calc(100% - 170px);
 }
+.member-details h4 {
+    margin-bottom: 0;
+}
 .team-member {
     margin: 30px 0;
 }
