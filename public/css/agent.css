@@ -144,6 +144,9 @@ table.averages td a {
     color: #fff;
     border-color: #000;
 }
+.banner-agency .btn-default {
+    padding-left: 25px;
+}
 .agent-details {
     text-align: center;
 }
