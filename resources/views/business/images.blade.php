@@ -55,7 +55,7 @@
             </div>
             <div class="row row-images"  id="sortable">
                 @foreach($user->images as $image)
-                    <div class="multi-image"><input type="hidden" name="images[]" value="{{$image->image}}"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}" data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}"></div>
+                    <div class="multi-image"><input type="hidden" name="images[]" value="{{$image->image}}"><img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image->image}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image->image}}"></div>
                 @endforeach
 
             </div>

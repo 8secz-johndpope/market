@@ -61,7 +61,7 @@
                 <div class="product">
                     <div class="listing-side">
                         <div class="listing-thumbnail">
-                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
                             @if($advert->featured_expires())
                                 <span class="ribbon-featured">

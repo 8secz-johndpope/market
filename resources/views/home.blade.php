@@ -71,7 +71,7 @@
 							@for ($i = 0; $i < count($spotlight); $i++)
 						    		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
 							    		<div class="panel panel-primary">
-								 			<div class="panel-heading" style="background-image:url('https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}}');">
+								 			<div class="panel-heading" style="background-image:url('{{env('AWS_WEB_IMAGE_URL')}}/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"1000006.jpg"}}');">
 								 			</div>
 								 			<div class="panel-body">
 								 				<h3 class="text">{{$spotlight[$i]['title']}}</h3>

@@ -4,7 +4,7 @@
             <a href="#">
                 <div class="listing-side">
                     <div class="listing-thumbnail">
-                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$room->image}}" class="lazyload" alt="">
+                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$room->image}}" class="lazyload" alt="">
                     </div>
                 </div>
             </a>

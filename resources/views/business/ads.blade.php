@@ -94,7 +94,7 @@
                     <div class="product">
                         <div class="listing-side">
                             <div class="listing-thumbnail">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
                                 @if($advert->featured_expires())
                                     <span class="ribbon-featured">
@@ -157,7 +157,7 @@
                                         <div class="product">
                                             <div class="listing-side">
                                                 <div class="listing-thumbnail">
-                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
                                                     @if($advert->featured_expires())
                                                         <span class="ribbon-featured">
@@ -219,7 +219,7 @@
                                         <div class="product">
                                             <div class="listing-side">
                                                 <div class="listing-thumbnail">
-                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
                                                     @if($advert->featured_expires())
                                                         <span class="ribbon-featured">
@@ -323,7 +323,7 @@
                 <div class="modal-body">
                     <div class="row row-images-modal"  id="sortable">
                         @foreach($user->images as $image)
-                            <div class="multi-image"><input type="checkbox" name="images[]" value="{{$image->image}}"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}" data-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image->image}}"></div>
+                            <div class="multi-image"><input type="checkbox" name="images[]" value="{{$image->image}}"><img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image->image}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image->image}}"></div>
                         @endforeach
 
                     </div>

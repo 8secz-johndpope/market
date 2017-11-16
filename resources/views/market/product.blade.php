@@ -42,11 +42,11 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item frame active">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles">
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Los Angeles">
                             </div>
                             @foreach($images as $image)
                             <div class="item frame">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Chicago">
                             </div>
                             @endforeach
                         </div>
@@ -69,7 +69,7 @@
                             <li class="image-gallery-li">
                                 <div class="listing-side-big">
                                     <div class="listing-thumbnail-big">
-                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Chicago">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Chicago">
                                         <div class="listing-meta txt-sub">
                                             &nbsp;<span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> &nbsp; {{$key+1}} of {{count($product['images'])}}</span>
                                         </div>
@@ -280,7 +280,7 @@
                     <h4>Info</h4>
                     @if($advert->user!==null)
                     <div class="profile-picutre">
-                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$advert->user->image}}">
+                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
                     </div>
                         <a href="/userads/{{$advert->user->id}}">Ads({{count($advert->user->adverts)}})</a>
                         <ul class="list-group">

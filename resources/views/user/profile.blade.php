@@ -1443,7 +1443,7 @@ Enter a location to see results close by
                                                 <div class="listing-card">
                                                     <a class="listing-card-link" href="/p/citroen/2014-citroen-ds3-e-hdi-airdream-dstyle-plus-hatchback-diesel/1238897263" data-analytics='gaEvent:Homepage_listing_rec,gaLabel:{Position:0}'>
                                                         <div class="listing-card-aside">
-                                                            <img class="listing-card-thumb" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"1000006.jpg"}}" alt="2014 CITROEN DS3 E-HDI AIRDREAM DSTYLE PLUS HATCHBACK DIESEL"/>
+                                                            <img class="listing-card-thumb" src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"1000006.jpg"}}" alt="2014 CITROEN DS3 E-HDI AIRDREAM DSTYLE PLUS HATCHBACK DIESEL"/>
                                                         </div>
                                                         <div class="listing-card-content">
                                                             <h2 class="listing-card-title">{{$product['title']}}</h2>

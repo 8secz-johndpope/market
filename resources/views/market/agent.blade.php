@@ -153,7 +153,7 @@
 				</div>
 				<div class="col-sm-12 details-agent">
 					<div class="profile-picutre">
-						<img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($user->business) ? $user->business->logo: 'no_avatar.jpg'}}">
+						<img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($user->business) ? $user->business->logo: 'no_avatar.jpg'}}">
 					</div>
 					<div class="agent-details">
 						<p>

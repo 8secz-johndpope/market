@@ -41,7 +41,7 @@
         <div class="row">
             <div class="col-md-8 col-sm-12">
                     <div id="current-image">
-                        <img id="image-active" data-index="1" src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$image}}?1500586448" class="gallery-items">
+                        <img id="image-active" data-index="1" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" class="gallery-items">
                         <div class="images-info">
                             <div class="col-sm-4 start-animation">
                                 <a href="javascript:void(0)" class="icon-before">Start slideshow</a>
@@ -73,7 +73,7 @@
                                 @for($j=0; $j < 5 && ($i+$j) < count($product['images']); $j++)
                                 <div class="small-image">
                                     <a href="javascript:void(0)" data-index="{{$i+$j+1}}">
-                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][$i+$j]}}?1500586448" alt="Los Angeles">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$product['images'][$i+$j]}}?1500586448" alt="Los Angeles">
                                     </a>
                                 </div>
                                 @endfor
@@ -327,21 +327,21 @@
                                                             @if(isset($product['images'][0]))
                                                             <div class="item active">
                                                                 <div class="advert-img">
-                                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][0]}}?1500586448">
+                                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$product['images'][0]}}?1500586448">
                                                                 </div>
                                                             </div>
 
                                                             @for($i=1; $i < count($product['images']); $i++)
                                                                 <div class="item">
                                                                     <div class="advert-img">
-                                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][$i]}}?1500586448">
+                                                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$product['images'][$i]}}?1500586448">
                                                                     </div>
                                                                 </div>
                                                             @endfor
                                                             @else
                                                              <div class="item">
                                                                 <div class="advert-img">
-                                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
+                                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
                                                                 </div>
                                                             </div>
                                                             @endif
@@ -375,21 +375,21 @@
                                                             @if(isset($product['images'][0]))
                                                             <div class="item active">
                                                                 <div class="advert-img">
-                                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][0]}}?1500586448">
+                                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$product['images'][0]}}?1500586448">
                                                                 </div>
                                                             </div>
 
                                                             @for($i=1; $i < count($product['images']); $i++)
                                                                 <div class="item">
                                                                     <div class="advert-img">
-                                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$product['images'][$i]}}?1500586448">
+                                                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$product['images'][$i]}}?1500586448">
                                                                     </div>
                                                                 </div>
                                                             @endfor
                                                             @else
                                                              <div class="item">
                                                                 <div class="advert-img">
-                                                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
+                                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
                                                                 </div>
                                                             </div>
                                                             @endif
@@ -1039,7 +1039,7 @@
                         <h3>This property is marketed by</h3>
                         @if($advert->user!==null)
                         <div class="profile-picutre">
-                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$advert->user->image}}">
+                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
                         </div>
                         <div class="user-details">
                             <p><strong>{{$advert->user->name}}</strong></p>
@@ -1107,7 +1107,7 @@
                     <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                         <div class="col-sm-6">
                             <div class="advert-img">
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
                             </div>
                             <div class="advert-details">
                                 <h4>{{$product['title']}}</h4>

@@ -134,7 +134,7 @@
                                             <div class="row">
                                                 <div class="col-sm-4">
                                                     <div class="profile-picture">
-                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$user->image}}">
+                                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
                                                     </div>
 
                                                 </div>
@@ -152,7 +152,7 @@
                                             <div class="row">
                                                 <div class="col-sm-4">
                                                     <div class="profile-picture">
-                                                        <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$user->image}}">
+                                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
                                                     </div>
 
                                                 </div>

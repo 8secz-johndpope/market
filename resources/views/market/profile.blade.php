@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="profile-picutre-big">
-                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{$user->image}}">
+                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
             </div>
             <h4 class="profile-name-big">{{$user->name}}</h4>
 @foreach($user->adverts as $advert)
@@ -22,7 +22,7 @@
                 <div class="product">
                     <div class="listing-side">
                         <div class="listing-thumbnail">
-                            <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
                             @if($advert->featured_expires())
                                 <span class="ribbon-featured">

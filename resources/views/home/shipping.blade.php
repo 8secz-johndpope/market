@@ -20,7 +20,7 @@
                         <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}">
                             <div class="listing-img">
                                 <div class="main-img">
-                                    <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
 
                                     <div class="listing-meta">

@@ -118,7 +118,7 @@
             @foreach($products as $product)
                     <div class="item">
 
-                                <img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="The north Face Men&#039;s Size 34 Pants">
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="The north Face Men&#039;s Size 34 Pants">
 
                             <div class="items-box-body">
                                 <a href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="items-box-name font-2">{{$product['title']}}</h4>  </a>
