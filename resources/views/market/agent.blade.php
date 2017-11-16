@@ -243,6 +243,27 @@
 				</div>
 			</div>
 			<div class="row border-outside">
+				<div class="col-sm-12 details-agent title">
+					<h3>Opening hours</h3>
+				</div>
+				<div class="col-sm-12 details-agent">
+					<ul >
+						<li>Monday 8.30am - 6.00pm</li>
+						<li>Tuesday 8.30am - 6.00pm</li>
+						<li>Wednesday 8.30am - 6.00pm</li>
+						<li>Thursday 8.30am - 6.00pm</li>
+						<li>Friday 8.30am - 6.00pm</li>
+						<li>Saturday 8.30am - 6.30pm</li>
+						<li>Sunday 8.30am - 6.30pm</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row border-outside">
+				<div class="col-sm-12 details-agent">
+					<h3>Visit the advertiser's website</h3>
+				</div>
+			</div>
+			<div class="row border-outside">
 				<div class="col-sm-12 title">
 					<h3>See it? Scan it</h3>
 				</div>
