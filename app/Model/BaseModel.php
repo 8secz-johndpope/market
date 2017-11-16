@@ -17,7 +17,7 @@ class BaseModel extends Model
     {
         $hosts = [
 
-            'http://145.239.66.50:9200'        // SSL to localhost
+            'http://127.0.0.1:9200'        // SSL to localhost
         ];
         $this->client = \Elasticsearch\ClientBuilder::create()// Instantiate a new ClientBuilder
         ->setHosts($hosts)// Set the hosts
