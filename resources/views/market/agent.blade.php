@@ -90,10 +90,13 @@
                     							<input id="branch-enquiry-last-name" type="text" name="last-name"
                     							title="Last name" placeholder="Last name">
                     						</div>
-                    						<div class="input-name large-validation">
-                    							<input type="" name="" title="" placeholder="">
-                    						</div>
                     					</div>
+                    					<div class="inputset large-validation">
+                    							<label for="telephone">
+                    								Telephone: <span class="required">*</span>
+                    							</label>
+                    							<input id="telephone" type="text" name="telephone" title="telephone" placeholder="">
+                    						</div>
                     				</fieldset>
                     			</form>
                     		</div>
