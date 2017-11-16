@@ -209,6 +209,10 @@ table.averages td a {
     white-space: nowrap;
     margin-bottom: 1px;
 }
+.failed {
+    background: #fff8e8 url(/css/alert.gif) no-repeat 4px 1px;
+    color: #F00;
+}
 @media screen and (min-width: 1200px){
 	.container {
 	   width: 1170px;
