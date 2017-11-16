@@ -12,6 +12,11 @@
  <link href="{{ asset('/css/agent.css?q=874') }}" rel="stylesheet">
 <div class="container">
 	<div class="row">
+		 <div class="col-md-8 col-sm-12">
+		 	<a href=""> < Go back</a>
+		 </div>
+	</div>
+	<div class="row">
 		<div class="col-sm-12">
 			<div class="banner-agency">
 				<img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($user->business) ? $user->business->banner_img: ''}}" class="img-banner">
