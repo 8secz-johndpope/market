@@ -537,7 +537,7 @@
                 var object = JSON.parse(event.data);
                 if(object.message)
                 {
-                    document.getElementById('notify-tune').play();
+                    //document.getElementById('notify-tune').play();
                     $('#message-notification').show();
 
                 }
