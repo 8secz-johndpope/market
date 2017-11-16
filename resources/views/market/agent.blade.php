@@ -92,11 +92,11 @@
                     						</div>
                     					</div>
                     					<div class="inputset large-validation">
-                    							<label for="telephone">
-                    								Telephone: <span class="required">*</span>
-                    							</label>
-                    							<input id="telephone" type="text" name="telephone" title="telephone" placeholder="">
-                    						</div>
+                							<label for="telephone">
+                								Telephone: <span class="required">*</span>
+                							</label>
+                							<input id="telephone" type="text" name="telephone" title="telephone" placeholder="">
+                    					</div>
                     				</fieldset>
                     			</form>
                     		</div>
