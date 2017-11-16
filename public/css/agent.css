@@ -166,7 +166,7 @@ table.averages td a {
     text-align: left;
     margin-bottom: 0px;
 }
-.btns-properties .btn-default {
+.btns-properties .btn-default, #submit-inputset .btn-default {
     width: 30%;
     background: #000;
     border-color: #000;
