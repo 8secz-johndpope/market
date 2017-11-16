@@ -136,7 +136,7 @@ table.averages td a {
     -moz-box-shadow: inset 0px 0px 2px 0px rgba(3,3,3,0.2);
     box-shadow: inset 0px 0px 2px 0px rgba(3,3,3,0.2);
 }
-.agent-details .btn-default {
+.agent-details .btn-default, .banner-agency .btn-default {
     width: 80%;
     margin-top: 10px;
     margin-bottom: 5px;
