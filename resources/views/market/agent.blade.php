@@ -91,12 +91,38 @@
                     							title="Last name" placeholder="Last name">
                     						</div>
                     					</div>
-                    					<div class="inputset large-validation">
-                    							<label for="telephone">
-                    								Telephone: <span class="required">*</span>
-                    							</label>
-                    							<input id="telephone" type="text" name="telephone" title="telephone" placeholder="">
-                    						</div>
+                    					<div class="inputset large-validation is-valid">
+                							<label for="telephone">
+                								Telephone: <span class="required">*</span>
+                							</label>
+                							<input id="telephone" type="text" name="telephone" title="Telephone" placeholder="">
+                							<div id="branch-enquiry-tel-error" class="validation-failed">
+                								Please enter a telephone number.
+                							</div>
+                    					</div>
+                    					<div class="inputset large-validation is-valid">
+                    						<label for="email">
+                    							Email: <span class="required">*</span>
+                    						</label>
+                    						<input id="email" type="email" name="email" title="Email" placeholder="">
+                    						<div id="branch-enquiry-email-error" class="validation-failed">
+                								Please enter your email address.
+                							</div>
+                    					</div>
+                    					<div class="inputset large-validation is-valid">
+                    						<label class="contact-label">Address</label>
+                    						<textarea id="address" name="address" rows="3"></textarea>
+                    					</div>
+                    					<div class="inputset large-validation is-valid">
+                    						<label for="email">
+                    							Email: <span class="required">*</span>
+                    						</label>
+                    						<input id="email" type="email" name="email" title="Email" placeholder="">
+                    						<div id="branch-enquiry-email-error" class="validation-failed">
+                								Please enter your email address.
+                							</div>
+                    					</div>
+
                     				</fieldset>
                     			</form>
                     		</div>
