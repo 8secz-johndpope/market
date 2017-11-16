@@ -76,6 +76,16 @@
                     	</div>
                     	<div id="tab-about" class="tab-pane fade">
                     		<h3>Meet the team</h3>
+                    		<div class="team-member">
+	                    		<div class="member-img">
+	                    			<img src="">
+	                    		</div>
+	                    		<div class="member-details">
+	                    			<h4>{{$user->name}}</h4>
+	                    			<p class="member-job">Head of Sales and Head of Notting Hill Office</p>
+	                    			<p class="member-summary">Jerry has been a property specialist for 26 years since graduating from Royal Agricultural College, Cirencester and then working with Knight Frank and several other national and international prime property brands. He is a member of the Royal Institute of Chartered Surveyors and has lived in Notting Hill for 15 years. Jerry has worked closely with YOUhome since 2011 and joined the firm in August 2013.</p>
+	                    		</div>
+                    		</div>
                     	</div>
                     	<div id="tab-branch-loc" class="tab-pane fade">
                     		<h3>Agent's branch</h3>
