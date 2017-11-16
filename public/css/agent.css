@@ -203,7 +203,7 @@ table.averages td a {
     margin-left: 20%;
 }
 .validation-container {
-    display: block;
+    display: hidden;
     float: left;
     font-size: .9em;
     padding: 1px 0 0 25px;
@@ -213,6 +213,7 @@ table.averages td a {
 .failed {
     background: #fff8e8 url(/css/alert.gif) no-repeat 4px 1px;
     color: #F00;
+    display: block;
 }
 .inputset:after {
     visibility: hidden;
