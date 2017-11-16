@@ -1960,18 +1960,8 @@ class MarketController extends BaseController
         if($advert->elastic===null)
             return ['c'=>'d'];
         if($advert->user===null){
-            $user = User::where('email','g'.$p.'@sumra.net')->first();
-            if($user===null){
-                $user = new User;
-                $user->name=$advert->param('username');
-                $user->email='g'.$p.'@sumra.net';
-                $user->password=bcrypt('password');
-               // $user->more(['email' => 'g'.$p.'@sumra.net', 'name' => $advert->param('username'), 'password' => bcrypt('password'), 'phone' => '07777777777']);
-                $user->save();
-            }
+            return ['c'=>'d'];
 
-            $advert->user_id=$user->id;
-            $advert->save();
         }
         $rem = Advert::where('sid',$q)->first();
         if($rem!==null&&$advert->user!==null){

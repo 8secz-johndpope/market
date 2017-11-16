@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Sumra') }}</title>
+    <title>{{ env('APP_NAME')  }}</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -240,7 +240,6 @@
                             <img class="img-responsive" src="/css/appstorex233.png">
                         </div>
                         <!-- <div class="center-block">
-                            <img class="img-responsive initial loading" src="./Sumra_files/windowsx233.png" data-was-processed="true">
                         </div> -->
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

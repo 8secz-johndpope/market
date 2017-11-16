@@ -53,25 +53,14 @@ class CronController extends BaseController
         else
             $url='http://www.greatcare.co.uk/recruiters/nannies_plus_us.html';
        $parts = explode('/',$url);
-       if(count($parts)>4)
-            $user = User::where('email',$parts[4].'@sumra.net')->first();
-       else
-           $user = User::where('email','nannies_plus_us.html@sumra.net')->first();
+       $user = User::find(0);
 
             if($image)
                 $company =  $image->getAttribute('title');
             else
                 $user->display_name;
             if($user===null){
-                $user = new User;
-                $user->email=$parts[4].'@sumra.net';
-                $user->name=$company;
-                $user->display_name=$company;
-                $user->password= bcrypt('password');
-                $user->phone='07777777777';
-                // $user->more(['email' => 'g'.$body['source_id'].'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
-                //  $user->id=(int)$body['user_id'];
-                $user->save();
+
             }
 
 
@@ -178,10 +167,10 @@ class CronController extends BaseController
 //Combine them together and print out the result.
             if ($nodes1[0]->nodeValue === 'Private Family') {
                 $fullname = $random_name . ' ' . $random_surname;
-                $email = $random_name . $random_surname . '@sumra.net';
+                $email = $random_name . $random_surname . '@ggg.net';
             } else {
                 $fullname = $nodes1[0]->nodeValue;
-                $email = str_replace(' ', '', $nodes1[0]->nodeValue) . '@sumra.net';
+                $email = str_replace(' ', '', $nodes1[0]->nodeValue) . '@ggg.net';
             }
             $user = User::where('email', $email)->first();
             if ($user === null) {
@@ -191,7 +180,6 @@ class CronController extends BaseController
                 $user->display_name = $fullname;
                 $user->password = bcrypt('password');
                 $user->phone = '07777777777';
-                // $user->more(['email' => 'g'.$body['source_id'].'@sumra.net', 'name' => $body['username'], 'password' => bcrypt('password'), 'phone' => '07777777777']);
                 //  $user->id=(int)$body['user_id'];
                 $user->save();
             }

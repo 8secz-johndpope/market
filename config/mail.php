@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'info@sumra.net'),
-        'name' => env('MAIL_FROM_NAME', 'Sumra'),
+        'address' => env('MAIL_FROM_ADDRESS'),
+        'name' => env('MAIL_FROM_NAME'),
     ],
 
     /*
