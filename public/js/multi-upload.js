@@ -63,7 +63,7 @@ function upload_multi_file() {
                         .catch(function (error) {
                             console.log(error);
                         });
-                    $(".row-images").prepend('<div class="multi-image"><div class="cross-mark">X</div><input type="hidden" name="images[]" value="' + uname + '"><img src="{{env('AWS_WEB_IMAGE_URL')}}/' + uname + '"></div>');
+                    $(".row-images").prepend('<div class="multi-image"><div class="cross-mark">X</div><input type="hidden" name="images[]" value="' + uname + '"><img src="https://s3.eu-central-1.amazonaws.com/web.eu-central-1.sumra.net/' + uname + '"></div>');
                     //  $("#advert-form").append('<input type="hidden" name="images[]" value="'+uname+'">');
 
                 }

@@ -515,7 +515,7 @@
         var exampleSocket;
         reconnect();
         function reconnect() {
-            exampleSocket = new WebSocket("wss://sumra.net:8080", "protocolOne");
+            exampleSocket = new WebSocket("wss://{{env('APP_HOST')}}:8080", "protocolOne");
             exampleSocket.onopen = function (event) {
 
 
