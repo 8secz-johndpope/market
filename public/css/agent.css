@@ -249,7 +249,7 @@ p.contact-form-disclaimer {
     display: inline-block;
     width: calc(100% - 170px);
 }
-.member-details h4 {
+.member-details h3 {
     margin-bottom: 0;
 }
 .team-member {

@@ -81,7 +81,7 @@
 	                    			<img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
 	                    		</div>
 	                    		<div class="member-details">
-	                    			<h4>{{$user->name}}</h4>
+	                    			<h3>{{$user->name}}</h3>
 	                    			<p class="member-job">Head of Sales and Head of Notting Hill Office</p>
 	                    			<p class="member-summary">Jerry has been a property specialist for 26 years since graduating from Royal Agricultural College, Cirencester and then working with Knight Frank and several other national and international prime property brands. He is a member of the Royal Institute of Chartered Surveyors and has lived in Notting Hill for 15 years. Jerry has worked closely with YOUhome since 2011 and joined the firm in August 2013.</p>
 	                    		</div>
@@ -91,7 +91,7 @@
 	                    			<img src="{{env('AWS_WEB_IMAGE_URL')}}/825060836495.jpg">
 	                    		</div>
 	                    		<div class="member-details">
-	                    			<h4>Will Thacker MARLA</h4>
+	                    			<h3>Will Thacker MARLA</h3>
 	                    			<p class="member-job">Lettings and Property Manager</p>
 	                    			<p class="member-summary">Will has been a property specialist for 7 years having worked for two of London's leading prime property agents. He has considerable experience managing the day-to-day administration of rental properties, tenant communications and overseeing repair and maintenance works. He has successfully managed the properties of both domestic and international private landlords and larger portfolio estates, including the Howard de Walden and Portman Estates. Will joined YOUhome in May 2013.</p>
 	                    		</div>
