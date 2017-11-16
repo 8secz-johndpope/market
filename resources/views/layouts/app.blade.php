@@ -563,7 +563,9 @@
         });
     });
     $("#continue-button").click(function () {
-        get_extras($(this).data('category'));
+        $('#category').val($(this).data('category'));
+        $('#change-category').submit();
+      //  get_extras($(this).data('category'));
     });
     $(".category-level-4").on("click","li", function(event) {
         $('.select-arrow').removeClass('glyphicon-ok-sign');
