@@ -289,6 +289,10 @@
     		}
     	}
     });
+    $('.agent-details a.btn').click(function(e){
+        e.preventDefault();
+        $('.nav-tabs a[href="#tab-contact"]').tab('show');
+    });
 </script>
 @endif
 @endsection
