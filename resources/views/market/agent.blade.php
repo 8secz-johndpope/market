@@ -309,7 +309,11 @@
 	     map = new google.maps.Map(document.getElementById('map'), {
 	        zoom: 18,
 	        center: uluru,
-	        streetViewControl: false 
+	        streetViewControl: true,
+			streetViewControlOptions: {
+			   position: google.maps.ControlPosition.TOP_RIGHT
+			}
+ 
 	    });
 	    var marker = new google.maps.Marker({
 	        position: uluru,
