@@ -96,7 +96,7 @@
                 								Telephone: <span class="required">*</span>
                 							</label>
                 							<input id="telephone" type="text" name="telephone" title="Telephone" placeholder="" required>
-                							<div id="branch-enquiry-tel-error" class="validation-container">
+                							<div id="branch-enquiry-telephone-error" class="validation-container">
                 								Please enter a telephone number.
                 							</div>
                     					</div>
@@ -250,13 +250,12 @@
         map.setZoom(x);
         map.setCenter(c);
     });
-    $('#telephone').focusout(function(){
-    	if($(this).val() == 0)
-    		$(this).next().addClass('failed');
+    $('form#letting-branch').focusout(function(){
+    	if($(this).attr('id') === 'telephone' || $(this).attr('id') === 'telephone'){
+    		if($(this).val() == 0)
+    			$(this).next().addClass('failed');
+    	}
     });
-    $('#telephone').focus(function(){
-    	$(this).removeClass('failed');
-    })
 </script>
 @endif
 @endsection
