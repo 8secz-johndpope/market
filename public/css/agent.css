@@ -227,6 +227,10 @@ table.averages td a {
     clear: both;
     height: 0;
 }
+.nav-tabs>li {
+    width: calc(100% / 4);
+    text-align: center;
+}
 p.contact-form-disclaimer {
     font-size: .8em;
     color: #666;
