@@ -1119,7 +1119,7 @@ class UserController extends BaseController
         $user = Auth::user();
 
         $filename = $request->name;
-        copy('https://s3.eu-central-1.amazonaws.com/chat.sumra.net/' . $filename, '/tmp/' . $filename);
+        copy(env('AWS_CHAT_IMAGE_URL').'/' . $filename, '/tmp/' . $filename);
         $fp = fopen('/tmp/' . $filename, 'r');
         $result = \Stripe\FileUpload::create(array(
             'purpose' => 'identity_document',
