@@ -283,6 +283,7 @@ p.contact-form-disclaimer {
     border: 1px solid #ccc;
     margin-top: 30px;
     padding: 15px;
+    font-size: 89%;
 }
 @media screen and (min-width: 1200px){
 	.container {
