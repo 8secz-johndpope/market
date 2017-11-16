@@ -78,7 +78,7 @@
                     		<h3>Meet the team</h3>
                     		<div class="team-member">
 	                    		<div class="member-img">
-	                    			<img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
+	                    			<img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
 	                    		</div>
 	                    		<div class="member-details">
 	                    			<h4>{{$user->name}}</h4>
