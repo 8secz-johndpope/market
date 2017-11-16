@@ -170,6 +170,7 @@ table.averages td a {
     width: 30%;
     background: #000;
     border-color: #000;
+    min-width: 30%;
 }
 #letting-branch fieldset {
     clear: both;
