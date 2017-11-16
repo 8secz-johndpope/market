@@ -158,6 +158,9 @@ table.averages td a {
 .btns-properties .btn-default {
     width: 30%;
 }
+#letting-branch fieldset {
+    clear: both;
+}
 @media screen and (min-width: 1200px){
 	.container {
 	   width: 1170px;
