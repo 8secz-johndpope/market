@@ -572,7 +572,7 @@ class HomeController extends BaseController
         }
 
         $gateway = new \Braintree\Gateway(array(
-            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+            'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
         ));
         $clientToken = $gateway->clientToken()->generate();
 
@@ -603,7 +603,7 @@ class HomeController extends BaseController
 
 
         $gateway = new \Braintree\Gateway(array(
-            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+            'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
         ));
         $clientToken = $gateway->clientToken()->generate();
         $sale=Sale::find($id);
@@ -629,7 +629,7 @@ class HomeController extends BaseController
         );
         */
         $gateway = new \Braintree\Gateway(array(
-            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+            'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
         ));
         $clientToken = $gateway->clientToken()->generate();
         $stripe_id = $user->stripe_id;
@@ -1387,7 +1387,7 @@ class HomeController extends BaseController
     public function paypal(Request $request){
         $user = Auth::user();
         $gateway = new \Braintree\Gateway(array(
-            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+            'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
         ));
 
         $order_id  = $request->session()->get('order_id');

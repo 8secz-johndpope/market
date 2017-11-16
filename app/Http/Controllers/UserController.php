@@ -973,7 +973,7 @@ class UserController extends BaseController
     public function token(Request $request)
     {
         $gateway = new \Braintree\Gateway(array(
-            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+            'accessToken' => env('PAYPAL_ACCESS_TOKEN') ,
         ));
         $clientToken = $gateway->clientToken()->generate();
         return ['token' => $clientToken];
@@ -1016,7 +1016,7 @@ class UserController extends BaseController
     public function nonce(Request $request)
     {
         $gateway = new \Braintree\Gateway(array(
-            'accessToken' => 'access_token$sandbox$jv3x2sd9tm2n385b$ec8ce1335aea01876baaf51326d9bd90',
+            'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
         ));
         try {
             $result = $gateway->transaction()->sale([

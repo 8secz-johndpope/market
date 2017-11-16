@@ -151,7 +151,7 @@
                     </script>
 
                     <script>
-                        var stripe = Stripe('pk_test_pSP0FdEAje47JIrZx4H8ActS');
+                        var stripe = Stripe('{{env('STRIPE_KEY')}}');
                         var elements = stripe.elements();
                         // Render the button into the container element
                         // Custom styling can be passed to options when creating an Element.
