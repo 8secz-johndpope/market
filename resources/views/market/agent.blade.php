@@ -95,7 +95,7 @@
                 							<label class="contact-label" for="telephone">
                 								Telephone: <span class="required">*</span>
                 							</label>
-                							<input id="telephone" type="text" name="telephone" title="Telephone" placeholder="">
+                							<input id="telephone" type="text" name="telephone" title="Telephone" placeholder="" required>
                 							<div id="branch-enquiry-tel-error" class="validation-container">
                 								Please enter a telephone number.
                 							</div>
@@ -104,7 +104,7 @@
                     						<label class="contact-label" for="email">
                     							Email: <span class="required">*</span>
                     						</label>
-                    						<input id="email" type="email" name="email" title="Email" placeholder="">
+                    						<input id="email" type="email" name="email" title="Email" placeholder="" required>
                     						<div id="branch-enquiry-email-error" class="validation-container">
                 								Please enter your email address.
                 							</div>
