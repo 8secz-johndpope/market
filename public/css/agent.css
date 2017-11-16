@@ -161,6 +161,18 @@ table.averages td a {
 #letting-branch fieldset {
     clear: both;
 }
+.inputset {
+    clear: both;
+    padding: .2em 0 .2em .6em;
+}
+.inputset label {
+    width: 32%;
+    font-weight: bold;
+    clear: both;
+    display: block;
+    float: left;
+    padding: .2em 0 .1em 0;
+}
 @media screen and (min-width: 1200px){
 	.container {
 	   width: 1170px;
