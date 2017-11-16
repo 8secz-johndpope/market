@@ -194,12 +194,13 @@ table.averages td a {
 .inputset textarea {
     width: 44%;
     float: left;
+    border-color: #dcdcdc;
 }
 #submit-inputset {
     height: auto;
     margin-bottom: .7em;
-    margin-top: 6em;
-    margin-left: 32%;
+    margin-top: .7em;
+    margin-left: 20%;
 }
 .validation-container {
     display: block;
