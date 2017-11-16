@@ -308,7 +308,8 @@
 	    var uluru = {lat: {!! $postcode->lat !!}, lng: {!! $postcode->lng !!}};
 	     map = new google.maps.Map(document.getElementById('map'), {
 	        zoom: 18,
-	        center: uluru
+	        center: uluru,
+	        streetViewControl: true 
 	    });
 	    var marker = new google.maps.Marker({
 	        position: uluru,
