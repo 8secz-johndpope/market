@@ -310,10 +310,10 @@
 	     map = new google.maps.Map(document.getElementById('map'), {
 	        zoom: 18,
 	        center: uluru,
-	        streetViewControl: true,
+	        /*streetViewControl: true,
 			streetViewControlOptions: {
 			   position: google.maps.ControlPosition.TOP_RIGHT
-			}
+			}*/
  
 	    });
 	    panorama = map.getStreetView();
