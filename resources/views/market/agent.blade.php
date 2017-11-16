@@ -341,6 +341,7 @@
 	  controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
 	  controlUI.style.cursor = 'pointer';
 	  controlUI.style.marginBottom = '22px';
+	  controlUI.style.marginRigth = '15px;'
 	  controlUI.style.textAlign = 'center';
 	  controlUI.title = 'Click to recenter the map';
 	  controlDiv.appendChild(controlUI);
@@ -349,7 +350,7 @@
 	  var controlText = document.createElement('div');
 	  controlText.style.color = 'rgb(25,25,25)';
 	  controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-	  controlText.style.fontSize = '13px';
+	  controlText.style.fontSize = '12px';
 	  controlText.style.lineHeight = '25px';
 	  controlText.style.paddingLeft = '5px';
 	  controlText.style.paddingRight = '5px';
