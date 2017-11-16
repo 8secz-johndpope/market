@@ -254,6 +254,9 @@
     	if($(this).val() == 0)
     		$(this).next().addClass('failed');
     });
+    $('#telephone').focus(function(){
+    	$(this).removeClass('failed');
+    })
 </script>
 @endif
 @endsection
