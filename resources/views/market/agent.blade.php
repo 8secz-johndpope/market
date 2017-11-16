@@ -305,6 +305,7 @@
     			$(this).next().addClass('failed');
     		}
     		else if(isNaN(value)){
+    			$(this).next().text('Please enter a valid telephone number.');
     			$(this).next().addClass('failed');
     		}
     	}
