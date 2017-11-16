@@ -81,7 +81,7 @@
                     			<form id="letting-branch">
                     				<fieldset>
                     					<div class="inputset">
-                    						<label class="contact-form" for="branch-enquiry-title">
+                    						<label class="contact-label" for="branch-enquiry-title">
                     							Name: <span class="required">*</span>
                     						</label>
                     						<div class="input-name is-valid">
@@ -92,7 +92,7 @@
                     						</div>
                     					</div>
                     					<div class="inputset large-validation is-valid">
-                							<label for="telephone">
+                							<label class="contact-label" for="telephone">
                 								Telephone: <span class="required">*</span>
                 							</label>
                 							<input id="telephone" type="text" name="telephone" title="Telephone" placeholder="">
@@ -101,7 +101,7 @@
                 							</div>
                     					</div>
                     					<div class="inputset large-validation is-valid">
-                    						<label for="email">
+                    						<label class="contact-label" for="email">
                     							Email: <span class="required">*</span>
                     						</label>
                     						<input id="email" type="email" name="email" title="Email" placeholder="">
@@ -110,17 +110,17 @@
                 							</div>
                     					</div>
                     					<div class="inputset large-validation is-valid">
-                    						<label class="contact-label">Address</label>
+                    						<label class="contact-label" class="contact-label">Address</label>
                     						<textarea id="address" name="address" rows="3"></textarea>
                     					</div>
                     					<div class="inputset large-validation is-valid">
-                    						<label for="postcode">
+                    						<label class="contact-label" for="postcode">
                     							Postcode: <span class="required">*</span>
                     						</label>
                     						<input id="postcode" type="postcode" name="postcode" title="Postcode" placeholder="">
                     					</div>
                     					<div class="inputset large-validation is-valid">
-                    						<label class="contact-label">Your message: </label>
+                    						<label class="contact-label" class="contact-label">Your message: </label>
                     						<textarea id="comment" name="comment" rows="3"></textarea>
                     					</div>
                     					<script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
