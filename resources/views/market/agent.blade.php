@@ -81,9 +81,14 @@
                     			<form id="letting-branch">
                     				<fieldset>
                     					<div class="inputset">
-                    						<label class="contact-form">
+                    						<label class="contact-form" for="branch-enquiry-title">
                     							Name: <span class="required">*</span>
                     						</label>
+                    						<div class="input-name is-valid">
+                    							<input id="branch-enquiry-title" type="text" name="title" title="Title" placeholder="Title">
+                    							<input id="branch-enquiry-first-name" type="text" name="first-name" title="First name" placeholder="First name">
+                    							<input id="branch-enquiry-last-name" type="text" name="last-name">
+                    						</div>
                     					</div>
                     				</fieldset>
                     			</form>
