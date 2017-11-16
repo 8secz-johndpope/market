@@ -1,4 +1,4 @@
-$( document ).ready(function() {ellipsis('.text'); activeFirstItem()});
+$( document ).ready(function() {ellipsis('.text');});
 
 function ellipsis(selector){
  var nodeList = document.querySelectorAll(selector);
@@ -20,9 +20,4 @@ function ellipsis(selector){
      }
    }
  }
-}
-
-function activeFirstItem(){
-  $('#myCarousel-xs .item').first().addClass( "active" );
-  $('#myCarousel .item').first().addClass( "active" );
 }
