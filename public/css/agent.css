@@ -184,8 +184,7 @@ table.averages td a {
     float: left;
     width: 40%;
 }
-.inputset .title {
-    background: #fff;
+.inputset .title-name {
     width: 10%;
 }
 .inputset .name {
