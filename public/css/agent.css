@@ -176,6 +176,9 @@ table.averages td a {
     margin-bottom: 5px;
     margin-top: 5px;
 }
+.website a:hover {
+    color: #fff;
+}
 .btns-properties .btn-default{
     width: 30%;
 }
