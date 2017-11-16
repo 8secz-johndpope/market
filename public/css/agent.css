@@ -222,6 +222,12 @@ table.averages td a {
     clear: both;
     height: 0;
 }
+p.contact-form-disclaimer {
+    font-size: .8em;
+    color: #666;
+    line-height: 1.2em;
+    padding-top: .5em;
+}
 @media screen and (min-width: 1200px){
 	.container {
 	   width: 1170px;
