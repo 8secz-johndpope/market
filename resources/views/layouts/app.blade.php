@@ -229,7 +229,7 @@
                 </button>
                 <a class="navbar-brand" href="{{env('APP_URL')}}/">
                     <img class="icon-small-h" src="/css/ic_launcher1.png">
-                    <img class="icon" src="/css/sumra-text.png">
+                    <img class="icon" src="/css/ggg-text.png">
                 </a>
             </div>
              <div class="header-download col-2 col-md-3 col-lg-2 col-lg-offset-2 hidden-xs hidden-sm">
@@ -338,7 +338,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <img id="footer_top_logo" class="img-responsive" title="" alt="" src="/css/sumra-text.png">
+                <img id="footer_top_logo" class="img-responsive" title="" alt="" src="/css/ggg-text.png">
             </div>
 
             <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">

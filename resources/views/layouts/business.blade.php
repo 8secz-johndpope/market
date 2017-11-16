@@ -229,9 +229,9 @@
                     <span class="icon-bar"></span>
                 </button>
                 @if(Auth::user()->contract!==null)
-                <a class="navbar-brand" href="/"><img class="icon-small" src="/css/sumra-business.png"></a>
+                <a class="navbar-brand" href="/"><img class="icon-small" src="/css/ggg-business.png"></a>
                     @else
-                    <a class="navbar-brand" href="/"><img class="icon-small" src="/css/sumra-text.png"></a>
+                    <a class="navbar-brand" href="/"><img class="icon-small" src="/css/ggg-text.png"></a>
 
                 @endif
 
