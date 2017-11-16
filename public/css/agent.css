@@ -171,6 +171,11 @@ table.averages td a {
     border-color: #000;
     min-width: 30%;
 }
+.website h3 {
+    color: #fff;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 .btns-properties .btn-default{
     width: 30%;
 }
