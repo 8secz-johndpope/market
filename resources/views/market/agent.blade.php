@@ -14,7 +14,7 @@
 	<div class="row">
 		 <div class="col-md-8 col-sm-12">
 		 	<div class="nav-back">
-		 	<a href=""> < Go back</a>
+		 	<a href="{{ url()->previous()}}"> < Go back</a>
 		 	</div>
 		 </div>
 	</div>
