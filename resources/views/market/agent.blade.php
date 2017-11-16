@@ -90,6 +90,9 @@
                     							<input id="branch-enquiry-last-name" type="text" name="last-name"
                     							title="Last name" placeholder="Last name">
                     						</div>
+                    						<div class="input-name large-validation">
+                    							<input type="" name="" title="" placeholder="">
+                    						</div>
                     					</div>
                     				</fieldset>
                     			</form>
