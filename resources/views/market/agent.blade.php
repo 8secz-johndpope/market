@@ -115,7 +115,7 @@
                     					</div>
                     					<div class="inputset large-validation is-valid">
                     						<label class="contact-label" for="postcode">
-                    							Postcode: <span class="required">*</span>
+                    							Postcode: 
                     						</label>
                     						<input id="postcode" type="postcode" name="postcode" title="Postcode" placeholder="">
                     					</div>
