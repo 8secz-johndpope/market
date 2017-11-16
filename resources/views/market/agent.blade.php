@@ -250,6 +250,10 @@
         map.setZoom(x);
         map.setCenter(c);
     });
+    $('#telephone').focusOut(function(){
+    	if($(this).val() == 0)
+    		$(this).next().addClass('failed');
+    });
 </script>
 @endif
 @endsection
