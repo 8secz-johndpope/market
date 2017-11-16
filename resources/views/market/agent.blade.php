@@ -317,6 +317,7 @@
  
 	    });
 	    panorama = map.getStreetView();
+	    panorama.setPosition(uluru);
 	    var marker = new google.maps.Marker({
 	        position: uluru,
 	        map: map
