@@ -188,6 +188,10 @@ table.averages td a {
     background: #fff;
     width: 10%;
 }
+.inputset .name {
+    width: 16%;
+    margin-left: 1%;
+}
 @media screen and (min-width: 1200px){
 	.container {
 	   width: 1170px;
