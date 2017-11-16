@@ -251,8 +251,8 @@
         map.setCenter(c);
     });
     $('form#letting-branch').focusout(function(){
-    	if($(this).attr('id') === 'telephone' || $(this).attr('id') === 'telephone'){
-    		if($(this).val() == 0){
+    	if($(this).attr('id') === 'telephone' || $(this).attr('id') === 'email'){
+    		if($(this).val().length == 0){
     			$(this).next().addClass('failed');
     		}
     	}
