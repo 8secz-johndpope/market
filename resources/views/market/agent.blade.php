@@ -113,6 +113,15 @@
                     						<label class="contact-label">Address</label>
                     						<textarea id="address" name="address" rows="3"></textarea>
                     					</div>
+                    					<div class="inputset large-validation is-valid">
+                    						<label for="email">
+                    							Email: <span class="required">*</span>
+                    						</label>
+                    						<input id="email" type="email" name="email" title="Email" placeholder="">
+                    						<div id="branch-enquiry-email-error" class="validation-failed">
+                								Please enter your email address.
+                							</div>
+                    					</div>
 
                     				</fieldset>
                     			</form>
