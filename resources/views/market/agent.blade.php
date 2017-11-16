@@ -250,7 +250,7 @@
         map.setZoom(x);
         map.setCenter(c);
     });
-    $('form#letting-branch').focusout(function(){
+    $('form#letting-branch input').focusout(function(){
     	if($(this).attr('id') === 'telephone' || $(this).attr('id') === 'email'){
     		console.log($(this).attr('id'));
     		if($(this).val().length == 0){
