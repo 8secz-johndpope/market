@@ -86,9 +86,9 @@
                     						</label>
                     						<div class="input-name is-valid">
                     							<input id="branch-enquiry-title" type="text" name="title" title="Title" placeholder="Title" class="title">
-                    							<input id="branch-enquiry-first-name" type="text" name="first-name" title="First name" placeholder="First name">
+                    							<input id="branch-enquiry-first-name" type="text" name="first-name" title="First name" placeholder="First name" class="name">
                     							<input id="branch-enquiry-last-name" type="text" name="last-name"
-                    							title="Last name" placeholder="Last name">
+                    							title="Last name" placeholder="Last name" class="name">
                     						</div>
                     					</div>
                     					<div class="inputset large-validation is-valid">
