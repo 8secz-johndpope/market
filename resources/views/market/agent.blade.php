@@ -252,8 +252,9 @@
     });
     $('form#letting-branch').focusout(function(){
     	if($(this).attr('id') === 'telephone' || $(this).attr('id') === 'telephone'){
-    		if($(this).val() == 0)
+    		if($(this).val() == 0){
     			$(this).next().addClass('failed');
+    		}
     	}
     });
 </script>
