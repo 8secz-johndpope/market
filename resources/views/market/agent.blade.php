@@ -318,6 +318,10 @@
 	    });
 	    panorama = map.getStreetView();
 	    panorama.setPosition(uluru);
+	    panorama.setPov({
+          heading: 45,
+          pitch:-10}
+      	);
 	    var marker = new google.maps.Marker({
 	        position: uluru,
 	        map: map
