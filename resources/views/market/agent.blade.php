@@ -259,7 +259,7 @@
 				</div>
 			</div>
 			<div class="row border-outside">
-				<div class="col-sm-12 details-agent">
+				<div class="col-sm-12 details-agent website">
 					<h3>Visit the advertiser's website</h3>
 				</div>
 			</div>
