@@ -111,7 +111,7 @@ class BaseController extends Controller
             ]
         ]);
         //$tk='cFX7C7fVoHA:APA91bE4gCqSZ6YynKZd98Ar8ZoI8ST1HBToikZjTk1Q0xyT6qOvm06kg8inGioJ7P9MCYrATTUQNmurmQAq3wCtheaH9yb2COtNSR4SDUD2l-h5uuS9idhPHJBRpvU0_5K5lFAoyXmh';
-        $g = $client->request('POST', 'https://sumra.net:8080/push', [
+        $g = $client->request('POST', env('APP_URL').':8080/push', [
             'json' => ['to' => $token->token , 'priority'=>'high','data'=>$data,'notification'=>['title'=>$title,'body'=>$user->name.': '.$message,'sound'=>'mySound']]
         ]);
         $g = json_decode($g->getBody(), true);
