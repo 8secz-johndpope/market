@@ -231,6 +231,9 @@ table.averages td a {
     width: calc(100% / 4);
     text-align: center;
 }
+.nav-tabs>li>a {
+    margin-right: 0;
+}
 p.contact-form-disclaimer {
     font-size: .8em;
     color: #666;
