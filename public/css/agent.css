@@ -168,6 +168,8 @@ table.averages td a {
 }
 .btns-properties .btn-default {
     width: 30%;
+    background: #000;
+    border-color: #000;
 }
 #letting-branch fieldset {
     clear: both;
