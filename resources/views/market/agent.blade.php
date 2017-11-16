@@ -12,8 +12,10 @@
  <link href="{{ asset('/css/agent.css?q=874') }}" rel="stylesheet">
 <div class="container">
 	<div class="row">
-		 <div class="col-md-8 col-sm-12 nav-back">
+		 <div class="col-md-8 col-sm-12">
+		 	<div class="nav-back">
 		 	<a href=""> < Go back</a>
+		 	</div>
 		 </div>
 	</div>
 	<div class="row">
