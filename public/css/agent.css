@@ -192,6 +192,10 @@ table.averages td a {
     width: 16%;
     margin-left: 1%;
 }
+.inputset textarea {
+    width: 40%;
+    float: left;
+}
 @media screen and (min-width: 1200px){
 	.container {
 	   width: 1170px;

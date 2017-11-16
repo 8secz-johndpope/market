@@ -110,7 +110,7 @@
                 							</div>
                     					</div>
                     					<div class="inputset large-validation is-valid">
-                    						<label class="contact-label" class="contact-label">Address</label>
+                    						<label class="contact-label" class="contact-label">Address: </label>
                     						<textarea id="address" name="address" rows="3"></textarea>
                     					</div>
                     					<div class="inputset large-validation is-valid">
