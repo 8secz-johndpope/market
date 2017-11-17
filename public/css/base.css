@@ -1008,7 +1008,12 @@ section.row-color.white {
   .search input.form-control::-moz-placeholder {
       font-size: 14px;
   }
-
+  img.icon-small-h {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 2px;
+  }
   footer .row {
     margin: 10px 0;
   }
