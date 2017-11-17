@@ -68,7 +68,6 @@
                         <div class="job-detail">
                             {{isset($advert->user->business)? $advert->user->business->name : $advert->user->name}}
                         </div>
-
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
