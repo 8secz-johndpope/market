@@ -1057,7 +1057,7 @@ class MarketController extends BaseController
                 'size'=> 24,
                 'query' =>
                     ['bool'=>[
-                        'must_not'=>['terms'=>['sid'=>$sids]],
+                        'must_not'=>['terms'=>['source_id'=>$sids]],
 
 
                     ]],
