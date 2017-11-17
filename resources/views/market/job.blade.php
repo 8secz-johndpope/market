@@ -226,9 +226,8 @@
                                          <input type="hidden" name="ctitle" value="{{$advert->category->title}}">
                                          <input type="hidden" name="ccategory" value="{{$advert->category->id}}">
                                     </div>
+                                    @if(!Auth::guest() && count(Auth::user()->covers)>0)
                                     <div class="cover-select">
-                                        @if(!Auth::guest() && count(Auth::user()->covers)>0)
-
                                         <label for="cover" class="h3">Select a Cover Letter</label>
                                         <select class="form-control" name="cover" required>
                                             <option value="0">Select</option>
@@ -236,8 +235,8 @@
                                                 <option value="{{$cover->id}}">{{$cover->title}}</option>
                                             @endforeach
                                         </select>
-                                        @endif
                                     </div>
+                                    @endif
                                 </div>
                                 <hr>
                             </div>
