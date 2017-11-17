@@ -48,7 +48,7 @@
                                 Salary/Rate
                         </div>
                         <div class="job-detail">
-                            {{isset($metas['salary_rate']) ? $metas['salary_rate']:''}}
+                            {{isset($metas['salary_rate']) ? $metas['salary_rate']:'£40,000/annum + Benefits'}}
                         </div>
                         <div class="job-criteria">
                                 Location
