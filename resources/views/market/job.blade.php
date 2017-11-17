@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12 border-left-right">
+                <div class="col-md-12 col-sm-12 border-top-left-right">
                     <div class="jobs-apply">
                         <h2>Apply for {{$product['title']}}</h2>
                     </div>
