@@ -59,6 +59,12 @@ h2.item-name, .jobs-apply h2, .field h2 {
     margin-bottom: 5px!important;
     border-radius: 4px;
 }
+.form-group hr {
+    margin: 15px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #fafafa;
+    border-left: 1px solid transparent;
+}
 .jobs-apply {
     padding: 10px!important;
 }
