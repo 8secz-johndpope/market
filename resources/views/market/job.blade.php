@@ -78,6 +78,13 @@
                             @endforeach
                             </p> 
                         </div>
+                        <div class="job-criteria">
+                            Type
+                        </div>
+                        <div class="job-detail">
+                            Permanent
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
