@@ -204,7 +204,7 @@
                                         <p>4000 characters left</p>
                                     </div>
                                     <div class="cover-select">
-                                        @if(count(Auth::user()->covers)>0)
+                                        @if(!Auth::guest() && count(Auth::user()->covers)>0)
 
                                         <label for="cover">Select a Cover Letter</label>
                                         <select class="form-control" name="cover" required>
