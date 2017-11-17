@@ -111,6 +111,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     border-color: #ff9d2c;
     color: #fff;
 }
+.company-img {
+    width: 240px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
