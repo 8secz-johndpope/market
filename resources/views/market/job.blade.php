@@ -68,6 +68,16 @@
                         <div class="job-detail">
                             {{isset($advert->user->business)? $advert->user->business->name : $advert->user->name}}
                         </div>
+                        <div class="job-criteria">
+                            Description
+                        </div>
+                        <div class="job-detail">
+                            <p>
+                            @foreach($r = preg_split("/(\r\n|\n|\r)/", $product['description']) as $part)
+                                {{$part}}<br>
+                            @endforeach
+                            </p> 
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
