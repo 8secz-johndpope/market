@@ -3,6 +3,25 @@ h2.item-name, .jobs-apply h2 {
     border: 0;
     margin: 0;
 }
+.field {
+    margin-bottom: 12px;
+}
+.field-indicator-required {
+    color: #BF210E;
+    font-size: 8px;
+}
+[data-icon].icon-required:after, [data-icon].icon-before:before {
+    /*font-family: 'mdgx-icons';*/
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    padding: 0 0 0 5px;
+    color: inherit;
+    font-style: normal;
+}
 
 @media screen and (min-width: 768px){
 	.job-criteria {
