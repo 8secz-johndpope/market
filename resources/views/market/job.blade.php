@@ -128,7 +128,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12 border-top-left-right">
+                <div class="col-md-12 col-sm-12 border-top-left-right background-color">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
@@ -217,6 +217,28 @@
                                     </div>
                                 </div>
                                 <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="field">
+                                 <div class="checkbox">
+                                      <input type="checkbox" name="email-me" id="email-me" value="true" checked="checked">
+                                      <label for="email-me">Email me jobs like this one when they become available</label>  
+                                 </div>
+                            </div>
+                            <p>
+                                <small>
+                                    By applying for a job listed on {{ env('APP_NAME')  }} Jobs you agree to our <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>. You should never be to provide bank account details. If you are, please <a href="#">email us</a>.
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="field button-submit">
+                                 <input type="submit" name="submit-cv" id="submit-cv" value="Send application">
                             </div>
                         </div>
                     </div>

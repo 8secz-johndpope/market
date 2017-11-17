@@ -57,6 +57,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .icon-before {
     margin-bottom: 12px;
 }
+.background-color{
+	background: #eee;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
