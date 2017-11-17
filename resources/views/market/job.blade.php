@@ -133,14 +133,25 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="field">
-                                    
-                                </div>
-                                <div class="field">
-                                    
+                                    <label for="first-name">
+                                        First name
+                                        <span class="field-indicator-required">
+                                            <i data-icon="*" class="icon-required"></i>
+                                        </span>
+                                    </label>
+                                    <input type="text" name="first-name" id="first-name" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                
+                                <div class="field">
+                                    <label for="last-name">
+                                        Last name
+                                        <span class="field-indicator-required">
+                                            <i data-icon="*" class="icon-required"></i>
+                                        </span>
+                                    </label>
+                                    <input type="text" name="last-name" id="last-name" required>
+                                </div>
                             </div>
                         </div>
                     </div>
