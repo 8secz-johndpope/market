@@ -176,8 +176,9 @@ class HomeController extends BaseController
         }else{
             $shipping=Shipping::find(1);
         }
+        $user = Auth::user();
 
-        return view('home.ad',['advert'=>$advert,'categories' => $categories,'shipping'=>$shipping,'economies'=>Shipping::where('type',0)->get(),'standards'=>Shipping::where('type',1)->get(),'expresses'=>Shipping::where('type',2)->get(),'distances'=>Distance::all(),'dispatches'=>Dispatch::all()]);
+        return view('home.ad',['user'=>$user,'advert'=>$advert,'categories' => $categories,'shipping'=>$shipping,'economies'=>Shipping::where('type',0)->get(),'standards'=>Shipping::where('type',1)->get(),'expresses'=>Shipping::where('type',2)->get(),'distances'=>Distance::all(),'dispatches'=>Dispatch::all()]);
     }
     public function edit(Request $request,$id)
     {
