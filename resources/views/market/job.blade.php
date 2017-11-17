@@ -12,17 +12,27 @@
 
 @section('content')
 
-        <div class="row">
-
-        <div class="col-lg-3"></div>
-                <div class="col-lg-6 col-md-9 col-sm-12">
-                    <ol class="breadcrumb">
-                        @foreach($parents as $parent)
-                        <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
-                        @endforeach
-                            <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
-
-                    </ol>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <ol class="breadcrumb">
+                @foreach($parents as $parent)
+                <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
+                @endforeach
+                <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <!-- search section -->
+        </div>
+        <div class="col-md-9 col-sm-12">
+            <div class="row">
+                <div class="col-md-2">
+                    <!-- titles -->
+                </div>
+            </div>
                 <h2 class="item-name">{{$product['title']}}</h2>
 <div class="col-sm-10">
     <p>{{$product['location_name']}}</p>
@@ -301,6 +311,7 @@
 
             </div>
         </div>
+</div>
 
 
 <script>
