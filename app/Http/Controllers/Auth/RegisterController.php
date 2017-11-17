@@ -81,7 +81,9 @@ class RegisterController extends BaseController
             'password' => bcrypt($data['password']),
         ]);
         $user->save();
-
+        $token = $user->createToken('Token Name')->accessToken;
+        $user->access_token = $token;
+        $user->save();
         $acc = new AccountCreated();
         $verify = new EmailCode;
         $verify->user_id = $user->id;

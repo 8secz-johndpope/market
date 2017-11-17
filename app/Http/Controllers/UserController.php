@@ -1805,6 +1805,8 @@ class UserController extends BaseController
 
         //Creating a token without scopes...
         $token = $user->createToken('Token Name')->accessToken;
+        $user->access_token = $token;
+        $user->save();
 
         return ['msg' => 'success', 'token' => $token, 'id' => $user->id, 'email' => $user->email, 'name' => $user->name];
     }
