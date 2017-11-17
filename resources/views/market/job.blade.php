@@ -588,7 +588,7 @@
     $('.btn.btn-saved').click(function(e){
         e.preventDefault();
         $('.active-cover').removeClass('active-cover');
-        $('.cover-write').addClass('active-cover');
+        $('.cover-select').addClass('active-cover');
     })
 </script>
 
