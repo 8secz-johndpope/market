@@ -121,15 +121,17 @@
                         <h2>Apply for {{$product['title']}}</h2>
                     </div>
                 </div>
+                @if (Auth::guest())
                 <div class="col-md-12 col-sm-12 border-top-left-right">
                     <div class="jobs-apply">
-                        @if (Auth::guest())
+                       
                         <span>Alredy uploaded your CV? <a href="/user/redirect/{{$advert->id}}">Sign in</a> to apply instantly</span>
-                        @endif
                     </div>
                 </div>
+                @endif
                 <div class="col-md-12 col-sm-12 border background-color">
                     <div class="form-group">
+                        @if (Auth::guest())
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="field">
@@ -166,6 +168,7 @@
                                 <hr>
                             </div>
                         </div>
+                        @endif
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="field">
