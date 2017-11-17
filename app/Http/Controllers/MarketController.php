@@ -309,9 +309,7 @@ class MarketController extends BaseController
                 return Category::find($a['key']) !== null;
             } );
             $bts = array_values($bts);
-            $titles = Category::where('title','like','%'.$term.'%')->get();
-            foreach ($titles as $title)
-                $bts[]=$title;
+
             $cats = array_map(function ($a) use  ($text) {
                 $ans = $a['key'];
                 $category = Category::find($ans);

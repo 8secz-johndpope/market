@@ -767,9 +767,8 @@ class HomeController extends BaseController
         } );
         $bts = array_values($bts);
         //return $bts;
-        $titles = Category::where('title','like','%'.$text.'%')->get();
-        foreach ($titles as $title)
-            $bts[]=$title;
+
+
         $categories=array();
         foreach ($bts as $bt){
             $category = Category::find($bt['key']);
@@ -786,7 +785,21 @@ class HomeController extends BaseController
             $category->parentstring = implode(' > ',$titles);
             $categories[]=$category;
         }
-
+        $titles = Category::where('title','like','%'.$text.'%')->get();
+        foreach ($titles as $category){
+            $parents = array();
+            $cur = $category;
+            while ($cur->parent!==null){
+                $parents[]=$cur->parent;
+                $cur=$cur->parent;
+            }
+            $titles =  array_map(function ($a) {
+                return $a->title;
+            }, $parents);
+            $titles =  array_reverse($titles);
+            $category->parentstring = implode(' > ',$titles);
+            $categories[]=$category;
+        }
         return view('home.suggest',['categories'=>$categories]);
     }
     public function string(Request $request,$id)
