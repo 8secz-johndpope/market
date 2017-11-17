@@ -182,7 +182,9 @@
                                     </div>
                                     <p>Or upload from one of follow in</p>
                                     <div class="buttons-cloud">
-
+                                        <a href="#" class="btn btn-dropbox">Dropbox</a>
+                                        <a href="#" class="btn btn-onedrive">OneDrive</a>
+                                        <a href="#" class="btn btn-googledrive">Google Drive</a>
                                     </div>
                                 </div>
                                 <p><small>Your CV must be a .doc, .pdf, rtf, and no bigger than 1MB</small></p>
@@ -197,9 +199,9 @@
                                 <div class="cover-letter-container">
                                     <p>Choose from:</p>
                                     <div class="buttons-option-cover">
-                                        <a href="">Profile</a>
-                                        <a href="">Saved cover letter</a>
-                                        <a href="">Write new</a>
+                                        <a href="" class="btn">Profile</a>
+                                        <a href="" class="btn">Saved cover letter</a>
+                                        <a href="" class="btn">Write new</a>
                                     </div>
                                     <div class="cover-write">
                                         <textarea id="cover-message" name="cover-message" placeholder="Write your application covering message here or copy and paste from a document."> 
