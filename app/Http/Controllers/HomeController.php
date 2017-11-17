@@ -820,6 +820,11 @@ class HomeController extends BaseController
         $category->parentstring = implode(' > ',$titles);
         return $category->parentstring.' > <span class="select-category">'.$category->title.'</span>';
     }
+    public function product_url(Request $request,$id)
+    {
+        $advert = Advert::find($id);
+        return redirect($advert->url());
+    }
     public function lstring(Request $request,$id)
     {
         $category = Location::find($id);

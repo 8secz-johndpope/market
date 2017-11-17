@@ -209,6 +209,7 @@ Route::get('/', 'MarketController@index');
 Route::get('/user/leaves','MarketController@leaves');
 
 Route::get('/p/{cat}/{id}', 'MarketController@product');
+Route::get('/p/r/{cat}/{id}', 'HomeController@product_url');
 
 Route::get('/{any}', 'MarketController@search');
 Route::get('/{any}/{loc}', 'MarketController@lsearch');
