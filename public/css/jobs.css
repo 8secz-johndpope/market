@@ -96,15 +96,15 @@ h2.item-name, .jobs-apply h2, .field h2 {
 	padding-bottom: 0;
 }
 .cover-write{
-	visibility: hidden;
+	display: none;
 	transition: opacity .25s ease;
 }
 .cover-select{
-	visibility: hidden;
+	display: : none;
 	transition: opacity .25s ease;
 }
 .active-cover{
-	visibility: visible;
+	display: block;
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
