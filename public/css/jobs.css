@@ -107,7 +107,8 @@ h2.item-name, .jobs-apply h2, .field h2 {
 	display: block;
 }
 .btn-cloud{
-	
+	background-color: #ff9d2c;
+    border-color: #ff9d2c;
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
