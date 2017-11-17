@@ -276,8 +276,11 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
       //  return $response['suggest']['search-suggest'][0]['options'];
-        if(isset($response['suggest']['search-suggest'][0]['options'][0]['text'])){
+        if(isset($response['suggest']['search-suggest'][0]['options'][0]['text'])) {
             $text = $response['suggest']['search-suggest'][0]['options'][0]['text'];
+        }else{
+            $text = $term;
+        }
             if(preg_match('/\s/',$text)>0){
                 $dict = ['title.keyword'=> strtolower($text)];
 
@@ -306,6 +309,9 @@ class MarketController extends BaseController
                 return Category::find($a['key']) !== null;
             } );
             $bts = array_values($bts);
+            $titles = Category::where('title','like','%'.$term.'%')->get();
+            foreach ($titles as $title)
+                $bts[]=$title;
             $cats = array_map(function ($a) use  ($text) {
                 $ans = $a['key'];
                 $category = Category::find($ans);
@@ -313,9 +319,7 @@ class MarketController extends BaseController
                 return ['value'=>strtolower($text).' in <span class="bold-category">'.$category->title.'</span>','category' => $category->title,'slug' => $category->slug,'data'=>$category->id,'val'=>strtolower($text)];
             }, $bts);
             return ['text'=>$text,'suggestions'=>$cats];
-        }else{
-            return ['text'=>'','suggestions'=>[]];
-        }
+
 
 
         /*
