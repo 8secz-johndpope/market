@@ -28,7 +28,7 @@ h2.item-name, .jobs-apply h2 {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.field input {
+.field input, .field textarea {
     width: 100%;
     margin: 0;
     padding: 5px;
