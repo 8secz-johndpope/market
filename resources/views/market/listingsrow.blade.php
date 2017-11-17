@@ -170,7 +170,7 @@
                             <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
 
                             <span class="listing-location">
-                                    {{\App\Model\Location::where('res',$product['location_id'])->first()->title}}, {{\App\Model\Location::where('res',$product['location_id'])->first()->parent->title}}
+                                    {{$product['location_name']}}
                                 </span>
                             <p class="listing-description">
                                 {{$product['description']}}
