@@ -451,7 +451,7 @@ class HomeController extends BaseController
         }else{
             $body['images']=[];
         }
-        if($request->has('candeliver'))
+        if($request->has('candeliver')&&$request->candeliver==='1')
         {
             $body['candeliver']=1;
             $meta['distance']=(int)$request->distance;
@@ -460,7 +460,7 @@ class HomeController extends BaseController
             $body['candeliver']=0;
         }
 
-        if($request->has('freeshipping'))
+        if($request->has('freeshipping')&&$request->freeshipping==='1')
         {
             $body['freeshipping']=1;
             $meta['shipping']=0;
@@ -469,11 +469,11 @@ class HomeController extends BaseController
             $meta['shipping']=(int)($request->buyer_pays*100);
         }
 
-        if($request->has('acceptreturns'))
+        if($request->has('acceptreturns')&&$request->acceptreturns==='1')
             $body['acceptreturns']=1;
         else
             $body['acceptreturns']=0;
-        if($request->has('canship')){
+        if($request->has('canship')&&$request->canship==='1'){
 
             $body['canship']=1;
             $meta['dispatch']=(int)$request->dispatch;
