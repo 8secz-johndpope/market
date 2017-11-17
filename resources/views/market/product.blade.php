@@ -145,6 +145,11 @@
                     </div>
                 </div>
             <div class="col-md-3 col-sm-12">
+                @if($advert->has_param('phone'))
+                <div class="reveal-phone">
+                    <table><tr><td><h4 class="bold-text">{{substr($advert->param('phone'),0,5)}}XXXXXX</h4></td><td><a class="btn btn-default">Reveal</a> </td></tr></table>
+                </div>
+                @endif
                 @if($advert->has_param('sold'))
                     <div class="sold-div">
                         <img class="sold-picture" src="/css/sold.jpg">
