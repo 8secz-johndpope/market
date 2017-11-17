@@ -166,7 +166,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 border-left-right">
+                            <div class="col-md-12">
                                 <div class="field">
                                 <label for="upload-cv">
                                     Upload your CV

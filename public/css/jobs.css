@@ -26,4 +26,8 @@
 	.border-top-left-right{
 		border-top: 1px solid #c9cfdd;
 	}
+	.border-bottom{
+		border-bottom: 1px solid #c9cfdd;
+		margin-bottom: 10px;
+	}
 }
