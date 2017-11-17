@@ -147,7 +147,7 @@
             <div class="col-md-3 col-sm-12">
                 @if($advert->has_param('phone'))
                 <div class="reveal-phone" style="margin-top:40px">
-                    <table><tr><td><h4 class="bold-text">{{substr($advert->param('phone'),0,5)}}XXXXXX</h4></td><td>&nbsp;&nbsp;<a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a> </td></tr></table>
+                    <table><tr><td><h4 class="bold-text">{{substr($advert->param('phone'),0,5)}}XXXXXX</h4></td><td>&nbsp;&nbsp;<a class="btn btn-default" href="/pp/{{$advert->category_id}}/{{$advert->id}}">Reveal</a> </td></tr></table>
                 </div>
                 @endif
                 @if($advert->has_param('sold'))
