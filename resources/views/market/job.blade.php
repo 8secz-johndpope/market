@@ -164,6 +164,7 @@
                                     <input type="text" name="email" id="email" required>
                                 </div>
                             </div>
+                            <hr>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
