@@ -24,15 +24,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-3">
-            <!-- search section -->
-        </div>
-        <div class="col-md-9 col-sm-12">
-            <div class="row">
-                <div class="col-md-2">
-                    <!-- titles -->
-                </div>
+        <div class="col-md-12">
+            <div class="company-img">
+                <img src="">
             </div>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <div class="jobs-details">
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <div class="jobs-description">
+            </div>
+        </div>
+    </div>
                 <h2 class="item-name">{{$product['title']}}</h2>
 <div class="col-sm-10">
     <p>{{$product['location_name']}}</p>
