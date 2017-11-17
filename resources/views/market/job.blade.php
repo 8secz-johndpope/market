@@ -35,7 +35,15 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
-                    <div class="jobs-details">
+                    <div class="job-details">
+                        <div class="job-title">
+                            <div class="job-criteria">
+                                Title
+                            </div>
+                            <div class="job-detail">
+                                <h2 class="item-name">{{$product['title']}}</h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
