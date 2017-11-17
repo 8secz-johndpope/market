@@ -16,4 +16,7 @@
 	    border-left: 1px solid #c9cfdd;
 	    position: relative;
 	}
+	.job-title>.job-criteria {
+    	padding-top: 4px;
+	}
 }
