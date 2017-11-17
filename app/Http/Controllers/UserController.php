@@ -1725,6 +1725,7 @@ class UserController extends BaseController
         $advert = Advert::where('sid', '=', (int)$body['source_id'])->first();
         if ($advert !== null) {
 
+            $advert->update_fields(['phone'=>$body['phone']]);
             return ['a' => 'b'];
         }
 
