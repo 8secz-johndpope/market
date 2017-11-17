@@ -29,7 +29,7 @@
         </div>
         <div class="col-md-9 col-sm-12">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 border-top-left-right">
                     <div class="company-img">
                         <img src="">
                     </div>
