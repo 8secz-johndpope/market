@@ -582,7 +582,12 @@
     });
     $('.btn.btn-new').click(function(e){
         e.preventDefault();
-        console.log("press");
+        $('.active-cover').removeClass('active-cover');
+        $('.cover-write').addClass('active-cover');
+    });
+    $('.btn.btn-saved').click(function(e){
+        e.preventDefault();
+        $('.active-cover').removeClass('active-cover');
         $('.cover-write').addClass('active-cover');
     })
 </script>

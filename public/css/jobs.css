@@ -99,7 +99,11 @@ h2.item-name, .jobs-apply h2, .field h2 {
 	visibility: hidden;
 	transition: opacity .25s ease;
 }
-.active-cover{
+.cover-write{
+	visibility: hidden;
+	transition: opacity .25s ease;
+}
+.cover-select{
 	visibility: visible;
 }
 @media screen and (min-width: 768px){
