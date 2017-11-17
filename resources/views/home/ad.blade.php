@@ -447,7 +447,14 @@
                             <h3 class="panel-title">Total</h3>
                         </div>
                         <div class="panel-body">
-                            £<span class="total-price">0.00</span>
+                            £<span class="total-price">
+                                @if($advert->extra_price('standard')>0)
+                                    {{$advert->extra_price('standard')/100}}
+                                    <input  type="hidden" name="standard" value="1" id="standard">
+                                @else
+                                0.00
+                                @endif
+                            </span>
                             <input type="hidden" value="0" name="total" id="total-price">
                         </div>
                     </div>
