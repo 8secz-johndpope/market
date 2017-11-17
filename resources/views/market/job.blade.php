@@ -154,6 +154,19 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="field">
+                                    <label for="email">
+                                        Email address
+                                        <span class="field-indicator-required">
+                                            <i data-icon="*" class="icon-required"></i>
+                                        </span>
+                                    </label>
+                                    <input type="text" name="email" id="email" required>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
