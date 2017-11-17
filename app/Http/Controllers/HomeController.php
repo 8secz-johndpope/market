@@ -785,7 +785,9 @@ class HomeController extends BaseController
             $category->parentstring = implode(' > ',$titles);
             $categories[]=$category;
         }
-        $titles = Category::where('title','like','%'.$text.'%')->limit(4)->get();
+        $sids = array_map(function ($a) { return $a->id; },$categories);
+
+        $titles = Category::where('title','like','%'.$text.'%')->whereNotIn('id',$sids)->limit(4)->get();
         foreach ($titles as $category){
             $parents = array();
             $cur = $category;
