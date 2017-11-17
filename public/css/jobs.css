@@ -47,6 +47,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     color: #686868;
     background: #fff;
 }
+.field textarea {
+    min-height: 150px;
+}
 .form-group {
     padding: 20px;
     margin-bottom: 0;
