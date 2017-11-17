@@ -107,14 +107,13 @@
                         @else
                     <h3>Steps Required to Withdraw Balance</h3>
                     <div class="legal-document">
-                        @if($account->legal_entity->verification->document)
-                        @elseif($account->legal_entity->verification->status==='pending')
+                        @if($account->legal_entity->verification->status==='pending')
                             <h4>Identity Document</h4>
 
                             <p class="yellow-text">Pending Verification </p>
 
                         @else
-                            @if($account->legal_entity->verification->status==='unverified')
+                            @if($account->legal_entity->verification->document&&$account->legal_entity->verification->status==='unverified')
                                 <p class="yellow-text">The Document provided couldn't be verified,please try again </p>
                                 @endif
                         <h4>Add Identity Document</h4>
@@ -162,7 +161,7 @@
                                 @endforeach
 
                         </table>
-                        @if($account->legal_entity->verification->document&&$account->tos_acceptance->ip&&$account->legal_entity->address->postal_code&&count($accounts)>0)
+                        @if($account->legal_entity->verification->status==='verified')
 
                         <h4>Withdraw</h4>
                         <form class="form-inline" method="post" action="/user/money/withdraw">
