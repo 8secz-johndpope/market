@@ -370,7 +370,15 @@
                         </div>
                     </div>
 
+                    <div class="panel panel-success contact-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Contact Information</h3>
+                        </div>
+                        <div class="panel-body">
+                            <input  type="checkbox" name="phone" id="phone"  value="1"  @if($advert->has_param('phone')) checked @endif><span class="delivery-text">Display Contact Number: &nbsp;&nbsp; <span class="bold-text">{{$user->phone}}</span></span>
 
+                        </div>
+                    </div>
 
                     <div class="panel panel-info post-panel">
                         <div class="panel-heading">
