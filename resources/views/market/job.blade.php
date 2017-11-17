@@ -126,9 +126,17 @@
                         @if (Auth::guest())
                         <span>Alredy uploaded your CV? <a href="/user/redirect/{{$advert->id}}">Sign in</a> to apply instantly</span>
                         @endif
-                        <div class="form-group">
-
-
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+                            </div>
+                            <div class="col-md-6">
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
