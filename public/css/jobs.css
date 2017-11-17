@@ -54,6 +54,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .h3{
 	font-size: 1.2em;
 	margin-bottom: 10px!important;
+	margin-top: 0;
 }
 .upload-container {
     background: #fafafa!important;
