@@ -1013,6 +1013,8 @@ class MarketController extends BaseController
     public function index(Request $request){
         //$base = Category::where('parent_id',0)->get();
         //Need  chande de response is not search client
+        $mustnot = [['exists'=>['field'=>'inactive']],['exists'=>['field'=>'draft']]];
+
         $base=Category::where('parent_id',0)->get();
         $j = 0;
         $all=array();
@@ -1059,7 +1061,7 @@ class MarketController extends BaseController
                 'size'=> 24,
                 'query' =>
                     ['bool'=>[
-                        'must_not'=>['terms'=>['source_id'=>$sids]],
+                        'must_not'=>[['exists'=>['field'=>'inactive']],['exists'=>['field'=>'draft']],['terms'=>['source_id'=>$sids]]],
 
 
                     ]],
