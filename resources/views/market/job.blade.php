@@ -581,7 +581,8 @@
     $('#upload-cv').change(function () {
         upload_cv();
     });
-    $('.btn-profile').click(function(){
+    $('.btn-profile').click(function(e){
+        e.preventDefault();
         $('.cover-write').addClass('active-cover');
     })
 </script>
