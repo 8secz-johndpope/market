@@ -1047,6 +1047,7 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $sids = array_map(function ($a) { return $a['sid']; },$products);
 
         $params = [
             'index' => 'adverts',
@@ -1054,7 +1055,12 @@ class MarketController extends BaseController
             'body' => [
                 'from' => 0,
                 'size'=> 24,
-                'query' => ['match_all'=>(object)[]],
+                'query' =>
+                    ['bool'=>[
+                        'must_not'=>['terms'=>['sid'=>$sids]],
+
+
+                    ]],
                 "sort"=> [
                     [
                         "created_at"=> ["order"=> "desc"]
