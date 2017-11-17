@@ -216,7 +216,20 @@ class Advert extends  BaseModel
         ];
         $response = $this->client->update($params);
     }
-    public function make_active(){
+    public function remove_param($param)
+    {
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'id' => $this->elastic,
+            'body' => [
+                "script" => "ctx._source.remove('$param')"
+            ]
+
+        ];
+        $response = $this->client->update($params);
+    }
+        public function make_active(){
         $milliseconds = round(microtime(true) * 1000);
         $params = [
             'index' => 'adverts',

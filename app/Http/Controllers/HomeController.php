@@ -484,7 +484,15 @@ class HomeController extends BaseController
             $body['canship']=0;
         }
 
-        $advert->update_fields($body);
+        if($request->has('phone')&&$request->phone==='1'){
+            $body['phone']=$user->phone;
+        }
+            else{
+                $advert->remove_param('phone');
+            }
+
+
+            $advert->update_fields($body);
 
         foreach ($advert->category->fields as $field){
             if($field->slug!=='price' && $field->slug!=='available_date' && $request->has($field->slug)){
