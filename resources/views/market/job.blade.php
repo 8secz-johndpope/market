@@ -163,8 +163,8 @@
                                     </label>
                                     <input type="text" name="email" id="email" required>
                                 </div>
+                                <hr>
                             </div>
-                            <hr>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
