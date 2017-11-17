@@ -45,16 +45,28 @@
                             </div>
                         </div>
                         <div class="job-criteria">
-                                Salary/Rate
+                            Salary/Rate
                         </div>
                         <div class="job-detail">
                             {{isset($metas['salary_rate']) ? $metas['salary_rate']:'£40,000/annum + Benefits'}}
                         </div>
                         <div class="job-criteria">
-                                Location
+                            Location
                         </div>
                         <div class="job-detail">
                             {{$product['location_name']}}
+                        </div>
+                        <div class="job-criteria">
+                            Posted
+                        </div>
+                        <div class="job-detail">
+                            {{$advert->created_at->format('d F Y')}}
+                        </div>
+                        <div class="job-criteria">
+                            Company
+                        </div>
+                        <div class="job-detail">
+                            {{isset($advert->user->business)? $advert->user->business->name : $advert->user->name}}
                         </div>
 
                     </div>
