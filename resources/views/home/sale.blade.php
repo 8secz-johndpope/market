@@ -143,7 +143,7 @@
                             },
                             onPaymentMethodReceived: function (obj) {
                                 //  doSomethingWithTheNonce(obj.nonce);
-                                document.location.href = '/user/payment/paypal?nonce='+obj.nonce
+                                document.location.href = '/user/payment/sale/paypal/{{$sale->id}}?nonce='+obj.nonce
 
                             }
                         });

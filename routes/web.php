@@ -157,6 +157,8 @@ Route::get('/user/contract/packs', 'HomeController@packs');
 Route::post('/user/payment/stripe', 'HomeController@stripe');
 Route::post('/user/payment/sale/stripe/{id}', 'HomeController@sale_stripe');
 
+Route::get('/user/payment/sale/paypal/{id}', 'HomeController@sale_paypal');
+
 Route::get('/user/payment/paypal', 'HomeController@paypal');
 
 Route::get('/user/email/verify', 'HomeController@verify');

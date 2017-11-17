@@ -1383,6 +1383,54 @@ class HomeController extends BaseController
         }
 
     }
+    public function sale_paypal(Request $request,$id){
+        $user = Auth::user();
+        $sale=Sale::find($id);
+
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
+        ));
+
+
+
+
+        try {
+            if($sale->amount()>0){
+                $result = $gateway->transaction()->sale([
+                    "amount" => $sale->amount(),
+                    'paymentMethodNonce' => $request->nonce,
+                    'options' => [
+                        'submitForSettlement' => True
+                    ]
+                ]);
+            }
+            $sale->status=1;
+
+            if($request->has('delivery_address'))
+                $sale->address_id=$request->delivery_address;
+            if($request->has('billing_address'))
+                $sale->billing_address_id=$request->billing_address;
+            $sale->save();
+            $sale->advert->update_fields(['sold'=>1]);
+
+            if($sale->type===2){
+                \Stripe\Transfer::create(array(
+                    "amount" => (int)(90*$sale->price()),
+                    "currency" => "gbp",
+                    "destination" => $sale->advert->user->stripe_account
+                ));
+
+            }
+            $this->notify_sale($sale);
+
+
+
+
+        } catch (Exception $e) {
+
+            return ['result' => ['msg' => 'failed']];
+        }
+    }
     public function paypal(Request $request){
         $user = Auth::user();
         $gateway = new \Braintree\Gateway(array(
