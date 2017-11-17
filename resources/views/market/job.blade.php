@@ -170,18 +170,19 @@
                         </div>
                         @elseif(count(Auth::user()->cvs)>0)
                         <div class="row">
-                           <div class="col-md-12">
-                            <div class="field">
-                                <label for="selected-cv" class="h3">
-                                    Select a CV
-                                </label>
-                                <select class="form-control" name="cv" required id="selected-cv">
-                                    <option value="0">Select</option>
-                                    @foreach(Auth::user()->cvs as $cv)
-                                        <option value="{{$cv->id}}">{{$cv->title}}</option>
-                                    @endforeach
-                                </select> 
-                           </div>     
+                            <div class="col-md-12">
+                                <div class="field">
+                                    <label for="selected-cv" class="h3">
+                                        Select a CV
+                                    </label>
+                                    <select class="form-control" name="cv" required id="selected-cv">
+                                        <option value="0">Select</option>
+                                        @foreach(Auth::user()->cvs as $cv)
+                                            <option value="{{$cv->id}}">{{$cv->title}}</option>
+                                        @endforeach
+                                    </select> 
+                                </div>     
+                            </div>
                         </div>
                         @endif
                         <div class="row">
