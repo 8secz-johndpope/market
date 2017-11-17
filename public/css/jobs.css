@@ -100,7 +100,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 	transition: opacity .25s ease;
 }
 .cover-select{
-	display: : none;
+	display: none;
 	transition: opacity .25s ease;
 }
 .active-cover{
