@@ -128,7 +128,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12 border-top-left-right background-color">
+                <div class="col-md-12 col-sm-12 border background-color">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">

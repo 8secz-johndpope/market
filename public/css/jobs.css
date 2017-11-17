@@ -60,6 +60,18 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .background-color{
 	background: #eee;
 }
+.border-left-right, .border-top-left-right, .border{
+	border-right: 1px solid #c9cfdd;
+	border-left: 1px solid #c9cfdd;
+}
+.border-top, .border-top-left-right, .border{
+	border-top: 1px solid #c9cfdd;
+}
+.border-bottom, .border{
+	border-bottom: 1px solid #c9cfdd;
+	margin-bottom: 10px;
+	padding-bottom: 15px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
@@ -80,17 +92,5 @@ h2.item-name, .jobs-apply h2, .field h2 {
 	}
 	.job-title>.job-criteria {
     	padding-top: 4px;
-	}
-	.border-left-right, .border-top-left-right{
-		border-right: 1px solid #c9cfdd;
-		border-left: 1px solid #c9cfdd;
-	}
-	.border-top, .border-top-left-right{
-		border-top: 1px solid #c9cfdd;
-	}
-	.border-bottom{
-		border-bottom: 1px solid #c9cfdd;
-		margin-bottom: 10px;
-		padding-bottom: 15px;
 	}
 }
