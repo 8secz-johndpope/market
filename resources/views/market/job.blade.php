@@ -198,9 +198,9 @@
                                     </div>
                                     <p>Or upload from one of follow in</p>
                                     <div class="buttons-cloud">
-                                        <a href="#" class="btn btn-cloud btn-dropbox">Dropbox</a>
-                                        <a href="#" class="btn btn-cloud btn-onedrive">OneDrive</a>
-                                        <a href="#" class="btn btn-cloud btn-googledrive">Google Drive</a>
+                                        <a href="#" class="btn btn-form btn-dropbox">Dropbox</a>
+                                        <a href="#" class="btn btn-form btn-onedrive">OneDrive</a>
+                                        <a href="#" class="btn btn-form btn-googledrive">Google Drive</a>
                                     </div>
                                 </div>
                                 <p><small>Your CV must be a .doc, .pdf, rtf, and no bigger than 1MB</small></p>
