@@ -1047,7 +1047,7 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        $sids = array_map(function ($a) { return $a['sid']; },$products);
+        $sids = array_map(function ($a) { return $a['source_id']; },$products);
 
         $params = [
             'index' => 'adverts',
