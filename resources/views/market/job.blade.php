@@ -583,6 +583,7 @@
     });
     $('.btn.btn-profile').click(function(e){
         e.preventDefault();
+        console.log("press");
         $('.cover-write').addClass('active-cover');
     })
 </script>
