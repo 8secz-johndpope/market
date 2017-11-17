@@ -767,6 +767,9 @@ class HomeController extends BaseController
         } );
         $bts = array_values($bts);
         //return $bts;
+        $titles = Category::where('title','like','%'.$text.'%')->get();
+        foreach ($titles as $title)
+            $bts[]=$title;
         $categories=array();
         foreach ($bts as $bt){
             $category = Category::find($bt['key']);
