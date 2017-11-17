@@ -84,7 +84,30 @@
                         <div class="job-detail">
                             Permanent
                         </div>
-
+                        <div class="job-criteria">
+                            Start Date
+                        </div>
+                        <div class="job-detail">
+                            N/A
+                        </div>
+                        <div class="job-criteria">
+                            Contact Name
+                        </div>
+                        <div class="job-detail">
+                            Login or register to view
+                        </div>
+                        <div class="job-criteria">
+                            Telephone
+                        </div>
+                        <div class="job-detail">
+                            Login or register to view
+                        </div>
+                        <div class="job-criteria">
+                            Job reference
+                        </div>
+                        <div class="job-detail">
+                            0611FEDLONDON
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
