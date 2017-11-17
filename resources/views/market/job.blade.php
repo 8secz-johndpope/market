@@ -186,6 +186,27 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class="field">
+                                <label for="upload-cv">
+                                    Upload your CV
+                                </label>
+                                <div class="upload-container">
+                                    <p>Upload from cumputer or mobile phone</p>
+                                    <div class="icon-before">
+                                        <input type="file" name="upload-cv" id="upload-cv">
+                                    </div>
+                                    <p>Or upload from one of follow in</p>
+                                    <div class="buttons-cloud">
+
+                                    </div>
+                                </div>
+                                <p>Your CV must be a .doc, .pdf, rtf, and no bigger than 1MB</p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
