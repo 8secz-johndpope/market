@@ -132,7 +132,12 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                
+                                <div class="field">
+                                    
+                                </div>
+                                <div class="field">
+                                    
+                                </div>
                             </div>
                             <div class="col-md-6">
                                 
