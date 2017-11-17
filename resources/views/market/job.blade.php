@@ -34,7 +34,7 @@
                         <img src="">
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12 border-left-right">
+                <div class="col-md-12 col-sm-12 border-left-right border-bottom">
                     <div class="job-details">
                         <div class="job-title">
                             <div class="job-criteria">
