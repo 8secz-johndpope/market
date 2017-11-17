@@ -29,5 +29,6 @@
 	.border-bottom{
 		border-bottom: 1px solid #c9cfdd;
 		margin-bottom: 10px;
+		padding-bottom: 15px;
 	}
 }
