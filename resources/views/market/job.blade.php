@@ -260,7 +260,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="field button-submit">
-                                 <input type="submit" name="submit-cv" id="submit-cv" value="Send application">
+                                 <input class="btn-form" type="submit" name="submit-cv" id="submit-cv" value="Send application">
                             </div>
                         </div>
                     </div>
