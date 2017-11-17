@@ -88,6 +88,12 @@
                             Start Date
                         </div>
                         <div class="job-detail">
+                            Immediate
+                        </div>
+                        <div class="job-criteria">
+                            Contract Length
+                        </div>
+                        <div class="job-detail">
                             N/A
                         </div>
                         <div class="job-criteria">
