@@ -215,9 +215,9 @@
                                 <div class="cover-letter-container">
                                     <p>Choose from:</p>
                                     <div class="buttons-option-cover">
-                                        <a href="" class="btn btn-profile">Profile</a>
-                                        <a href="" class="btn btn-saved">Saved cover letter</a>
-                                        <a href="" class="btn btn-new">Write new</a>
+                                        <a href="" class="btn btn-form btn-profile">Profile</a>
+                                        <a href="" class="btn btn-form btn-saved">Saved cover letter</a>
+                                        <a href="" class="btn btn-form btn-new">Write new</a>
                                     </div>
                                     <div class="cover-write">
                                         <textarea id="cover-message" name="cover-message" placeholder="Write your application covering message here or copy and paste from a document."> 
