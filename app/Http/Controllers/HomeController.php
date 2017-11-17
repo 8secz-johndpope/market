@@ -1103,7 +1103,7 @@ class HomeController extends BaseController
         $code = rand(1000,9999);
         $user->phone_code=$code;
         $user->save();
-        if($request->has('testing')){
+        if(env('APP_DEBUG')){
 
             return ['code'=>$code];
         }
