@@ -189,20 +189,20 @@
                     <div class="row">
                             <div class="col-md-12">
                                 <div class="field">
-                                <label for="upload-cv">
-                                    Upload your CV
-                                </label>
-                                <div class="upload-container">
-                                    <p>Upload from cumputer or mobile phone</p>
-                                    <div class="icon-before">
-                                        <input type="file" name="upload-cv" id="upload-cv">
+                                <h2>Cover message or cover letter for {{$product['title']}}</h2>
+                                <div class="cover-letter-container">
+                                    <p>Choose from:</p>
+                                    <div class="buttons-option-cover">
+                                        <a href="">Profile</a>
+                                        <a href="">Saved cover letter</a>
+                                        <a href="">Write new</a>>
                                     </div>
-                                    <p>Or upload from one of follow in</p>
-                                    <div class="buttons-cloud">
-
+                                    <div class="cover-write">
+                                        <textarea id="cover-message" name="cover-message" placeholder="Write your application covering message here or copy and paste from a document."> 
+                                        </textarea>
+                                        <p>4000 characters left</p>
                                     </div>
                                 </div>
-                                <p>Your CV must be a .doc, .pdf, rtf, and no bigger than 1MB</p>
                                 <hr>
                             </div>
                         </div>
