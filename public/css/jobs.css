@@ -41,7 +41,10 @@ h2.item-name, .jobs-apply h2 {
 .form-group {
     padding: 20px;
 }
-
+.h3{
+	font-size: 1.2em;
+	margin-bottom: 10px!important;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;

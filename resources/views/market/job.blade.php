@@ -169,7 +169,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="field">
-                                <label for="upload-cv">
+                                <label for="upload-cv" class="h3">
                                     Upload your CV
                                 </label>
                                 <div class="upload-container">
