@@ -22,6 +22,12 @@ h2.item-name, .jobs-apply h2 {
     color: inherit;
     font-style: normal;
 }
+[data-icon].icon-required:after, [data-icon].icon-before:before {
+    display: inline-block;
+    color: inherit!important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .field input {
     width: 100%;
     margin: 0;
