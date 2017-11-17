@@ -121,7 +121,7 @@
                         <h2>Apply for {{$product['title']}}</h2>
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-12 col-sm-12 border-top-left-right">
                     <div class="jobs-apply">
                         @if (Auth::guest())
                         <span>Alredy uploaded your CV? <a href="/user/redirect/{{$advert->id}}">Sign in</a> to apply instantly</span>
