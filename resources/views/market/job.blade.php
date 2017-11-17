@@ -182,7 +182,7 @@
 
                                     </div>
                                 </div>
-                                <p>Your CV must be a .doc, .pdf, rtf, and no bigger than 1MB</p>
+                                <p><small>Your CV must be a .doc, .pdf, rtf, and no bigger than 1MB</small></p>
                                 <hr>
                             </div>
                         </div>
