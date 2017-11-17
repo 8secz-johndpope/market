@@ -222,7 +222,7 @@
                                     <div class="cover-write">
                                         <textarea id="cover-message" name="cover-message" placeholder="Write your application covering message here or copy and paste from a document."> 
                                         </textarea>
-                                        <p>4000 characters left</p>
+                                        <p class="small text-right">4000 characters left</p>
                                          <input type="hidden" name="ctitle" value="{{$advert->category->title}}">
                                          <input type="hidden" name="ccategory" value="{{$advert->category->id}}">
                                     </div>
