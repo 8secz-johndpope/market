@@ -44,12 +44,19 @@
                                 <h2 class="item-name">{{$product['title']}}</h2>
                             </div>
                         </div>
-                         <div class="job-criteria">
+                        <div class="job-criteria">
                                 Salary/Rate
                         </div>
                         <div class="job-detail">
                             {{isset($metas['salary_rate']) ? $metas['salary_rate']:''}}
                         </div>
+                        <div class="job-criteria">
+                                Location
+                        </div>
+                        <div class="job-detail">
+                            {{$product['location_name']}}
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
