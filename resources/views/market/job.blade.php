@@ -190,7 +190,7 @@
                     <div class="row">
                             <div class="col-md-12">
                                 <div class="field">
-                                <h2>Cover message or cover letter for {{$product['title']}}</h2>
+                                <span class="h3">Cover message or cover letter for {{$product['title']}}</h3>
                                 <div class="cover-letter-container">
                                     <p>Choose from:</p>
                                     <div class="buttons-option-cover">
