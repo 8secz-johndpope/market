@@ -54,6 +54,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .jobs-apply {
     padding: 10px!important;
 }
+.icon-before {
+    margin-bottom: 12px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
