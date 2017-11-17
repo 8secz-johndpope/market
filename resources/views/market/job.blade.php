@@ -24,17 +24,24 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <div class="company-img">
-                <img src="">
-            </div>
+        <div class="col-md-3 col-sm-12">
+            <!-- search -->
         </div>
-        <div class="col-md-12 col-sm-12">
-            <div class="jobs-details">
-            </div>
-        </div>
-        <div class="col-md-12 col-sm-12">
-            <div class="jobs-description">
+        <div class="col-md-9 col-sm-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="company-img">
+                        <img src="">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="jobs-details">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="jobs-description">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
