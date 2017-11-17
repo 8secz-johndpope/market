@@ -22,6 +22,19 @@ h2.item-name, .jobs-apply h2 {
     color: inherit;
     font-style: normal;
 }
+.field input {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    font: inherit;
+    color: #686868;
+    background: #fff;
+}
+.form-group {
+    padding: 20px;
+}
 
 @media screen and (min-width: 768px){
 	.job-criteria {
