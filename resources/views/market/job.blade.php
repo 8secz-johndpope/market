@@ -202,6 +202,18 @@
                                         </textarea>
                                         <p>4000 characters left</p>
                                     </div>
+                                    <div class="cover-select">
+                                        @if(count(Auth::user()->covers)>0)
+
+                                        <label for="cover">Select a Cover Letter</label>
+                                        <select class="form-control" name="cover" required>
+                                            <option value="0">Select</option>
+                                            @foreach(Auth::user()->covers as $cover)
+                                                <option value="{{$cover->id}}">{{$cover->title}}</option>
+                                            @endforeach
+                                        </select>
+                                        @endif
+                                    </div>
                                 </div>
                                 <hr>
                             </div>
