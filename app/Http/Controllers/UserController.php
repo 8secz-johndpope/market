@@ -1737,12 +1737,15 @@ class UserController extends BaseController
 
         $advert->user_id =0;
         $advert->save();
-        $location = $body['location'];
+        $location = $body['location_name'];
         $parts = explode(',', $location);
-        $lat = (float)$parts[0];
-        $lng = (float)$parts[1];
-        $loc = Location::where('min_lat','<=',$lat)->where('max_lat','>=',$lat)->where('min_lng','<=',$lng)->where('max_lng','>=',$lng)->orderBy('product')->first();
+        $title = $parts[0];
+
+        $loc = Location::where('title',$title)->first();
+        if($loc)
         $body['location_id']=$loc->res;
+        else
+            $body['location_id']=119;
         $body['views']=0;
         $body['list_views']=0;
         $params = [
