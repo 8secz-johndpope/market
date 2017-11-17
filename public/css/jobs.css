@@ -19,8 +19,11 @@
 	.job-title>.job-criteria {
     	padding-top: 4px;
 	}
-	.border-left-right{
+	.border-left-right, .border-top-left-right{
 		border-right: 1px solid #c9cfdd;
 		border-left: 1px solid #c9cfdd;
+	}
+	.border-top-left-right{
+		border-top: 1px solid #c9cfdd;
 	}
 }
