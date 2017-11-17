@@ -822,6 +822,7 @@ class HomeController extends BaseController
     }
     public function product_url(Request $request,$id)
     {
+        return $id;
         $advert = Advert::find($id);
         return redirect($advert->url());
     }
