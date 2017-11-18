@@ -229,6 +229,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     padding: 15px 30px;
     font-size: 120%;
 }
+.buttons-cloud .btn-form {
+    width: calc(99% / 3);
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
