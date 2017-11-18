@@ -180,7 +180,7 @@
                                     {{$advert->param('location_name')}}
                                 </span>
                                                 <p class="listing-description">
-                                                    {{$advert->param('description')}}
+                                                    {!!$advert->param('description')  !!}
                                                 </p>
 
                                                 @if($advert->meta('price')>=0)
@@ -242,7 +242,7 @@
                                     {{$advert->param('location_name')}}
                                 </span>
                                                 <p class="listing-description">
-                                                    {{$advert->param('description')}}
+                                                    {!! $advert->param('description') !!}
                                                 </p>
 
                                                 @if($advert->meta('price')>=0)
