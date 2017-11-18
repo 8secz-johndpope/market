@@ -54,6 +54,14 @@
                 @endif
             </div>
             <div class="row">
+                <div class="col-sm-12 border-bottom-dashed">
+                    <div class="report">
+                        <h3>Report this Ad</h3>
+                        <a href="#" class="btn btn-default">Report</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-sm-12">
                     <div class="similar-adverts">
                         <h3>Similar Jobs</h3>

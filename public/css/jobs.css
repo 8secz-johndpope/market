@@ -209,6 +209,10 @@ h2.item-name, .jobs-apply h2, .field h2 {
 	color: #333;
 	font-size: 12px;
 }
+.report {
+    padding-bottom: 20px;
+    text-align: center;
+}
 .border-bottom-dashed {
     border-bottom: 1px dashed #ccc;
 }
