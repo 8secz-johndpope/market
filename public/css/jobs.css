@@ -114,6 +114,14 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .company-img {
     width: 240px;
 }
+.buttons-filters {
+    background-color: #fdfdfd;
+    border: 1px solid #c9cfdd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    margin: 0 0 5px 0;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
