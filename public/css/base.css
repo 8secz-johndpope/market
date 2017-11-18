@@ -104,8 +104,11 @@ a.navbar-brand {
   border-color: #000;
 }
 .main-search-div input, .main-search-div select{
-  border:1px solid #000;
-  border-radius: 0px;
+  /*border:1px solid #000;
+  border-radius: 0px;*/
+  border: 1px solid #a4a4a4;
+  border-radius: 4px;
+  height: 42px;
 }
 
 .main-search-div select{
