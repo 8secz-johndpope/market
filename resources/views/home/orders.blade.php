@@ -85,7 +85,7 @@
                                     {{$sale->advert->param('location_name')}}
                                 </span>
                             <p class="listing-description">
-                                {{$sale->advert->param('description')}}
+                                {!! $sale->advert->param('description') !!}}
                             </p>
 
                             @if($sale->advert->meta('price')>=0)

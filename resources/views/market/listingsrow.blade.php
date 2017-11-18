@@ -173,7 +173,7 @@
                                     {{$product['location_name']}}
                                 </span>
                             <p class="listing-description">
-                                {{$product['description']}}
+                                {!! $product['description'] !!}
                             </p>
 
                         @if($product['meta']['price']>=0)
