@@ -133,6 +133,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     color: #003777;
     /* text-indent: 70px; */
 }
+.buttons-filters a:last-child{
+	border:none;
+}
 .alerts {
     background: #eee!important;
     padding: 15px;
