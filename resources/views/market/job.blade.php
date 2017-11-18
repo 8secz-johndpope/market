@@ -321,6 +321,9 @@
                                         <a href="" class="btn btn-form btn-new">Write new</a>
                                     </div>
                                     <div class="cover-write">
+                                        <label for="cover-message"> 
+                                            Your covering message
+                                        </label>
                                         <textarea id="cover-message" name="cover-message" placeholder="Write your application covering message here or copy and paste from a document."> 
                                         </textarea>
                                         <p class="small text-right">4000 characters left</p>
