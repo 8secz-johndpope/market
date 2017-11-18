@@ -29,6 +29,14 @@
         </div>
         <div class="col-md-9 col-sm-12">
             <div class="row">
+                <div class="col-md-12 buttons-filters">
+                    <a class="btn">All lastest jobs</a>
+                    <a class="btn">Permanent</a>
+                    <a class="btn">Tempory</a>
+                    <a class="btn">Weekend</a>
+                    <a class="btn">Search recruiters</a>
+                    <a class="btn">Job Alerts</a>
+                </div>
                 <div class="col-md-12 border-top-left-right">
                     <div class="company-img center-block">
                         <img src="">
