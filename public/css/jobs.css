@@ -139,7 +139,11 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 .alerts a{
 	width: 48%;
-	border-right: 1px solid #c9cfdd;
+	border-right: 1px solid #ff9d2c;
+	color: #ff9d2c;
+}
+.alerts a:last-child{
+	border:none;
 }
 
 @media screen and (min-width: 768px){
