@@ -59,7 +59,7 @@
                     <div class="listings-adverts">
                     @foreach($products as $product)
                     <a href="/p/{{$category->id}}/{{$product['source_id']}}">
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 border-bottom-dashed">
                             <div class="advert-details">
                                 <h4>{{$product['title']}}</h4>
                                 @if($product['meta']['price'] > 0)
