@@ -151,5 +151,17 @@ $passphrase = '1234'; //for ck.pem
         fclose($fp);
 
     }
+    public function slugify($str){
+        $str = str_replace('&','and',$str);
+        $str = str_replace(' ','-',$str);
+        $str = strtolower($str);
+        return $str;
+    }
+    public function deslugify($str){
+        $str = str_replace('and','&',$str);
+        $str = str_replace('-',' ',$str);
+        $str = ucwords($str);
+        return $str;
+    }
 
 }

@@ -1793,12 +1793,7 @@ class UserController extends BaseController
 
     }
 
-    public function slugify($str){
-        $str = str_replace('&','and',$str);
-        $str = str_replace(' ','-',$str);
-        $str = strtolower($str);
-        return $str;
-    }
+
 
     public function ccreate(Request $request)
     {
