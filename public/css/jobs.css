@@ -181,7 +181,11 @@ h2.item-name, .jobs-apply h2, .field h2 {
     border-top: 1px solid #bfbfbf;
     box-shadow: 0 0 1px #fff;
 }
-
+.listings-adverts {
+    border: 1px solid #ddd;
+    display: table;
+    padding: 15px 5px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
