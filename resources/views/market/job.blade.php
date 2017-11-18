@@ -63,9 +63,7 @@
                             <div class="col-sm-12 border-bottom-dashed">
                                 <div class="advert-details">
                                     <h4>{{$product['title']}}</h4>
-                                    @if($product['meta']['price'] > 0)
-                                        <h4 class="items-box-price font-6">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</h4>
-                                    @endif
+                                    <p>$product['location_name']</p>
                                 </div>
                             </div>
                         </a>
