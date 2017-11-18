@@ -1741,18 +1741,22 @@ class UserController extends BaseController
         if($a){
             $params['location_id']=$a->location->res;
             $params['location']=$a->lat.','.$a->lng;
+            $params['location_name']=$a->location->title;
+
         }
         else if($loc){
             $params['location_id']=$loc->res;
             $center = (($loc->min_lat+$loc->max_lat)/2).','.(($loc->min_lng+$loc->max_lng)/2);
 
             $params['location'] = $center;
+            $params['location_name']=$loc->title;
+
         }
 
         else{
             $params['location_id']=1250000000;
             $params['location'] = '0,0';
-
+            $params['location_name']=$body['params']['Location'];
         }
         $meta=[];
         if(isset($body['params']['Recruiter'])){
