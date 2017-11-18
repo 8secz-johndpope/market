@@ -81,7 +81,7 @@
                             Company
                         </div>
                         <div class="job-detail">
-                            {{isset($advert->user->business)? $advert->user->business->name : $advert->user->name}}
+                            {{$advert->user_id>0&&isset($advert->user->business)? $advert->user->business->name : $advert->user->name}}
                         </div>
                         <div class="job-criteria">
                             Description
