@@ -142,7 +142,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 10px 15px 10px 15px;
-    margin: 0 0 5px 0;
+    margin: 0 0 15px 0;
 }
 .bottom-buttons a {
     width: calc(99.5% / 4);
