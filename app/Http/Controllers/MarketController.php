@@ -985,7 +985,7 @@ class MarketController extends BaseController
         $srn = false;
         if($request->has('srn'))
             $srn=true;
-        return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder]);
+        return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder, 'input' => []]);
     }
     private  function haversineGreatCircleDistance(
         $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 6371000)
