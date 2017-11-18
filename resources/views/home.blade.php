@@ -2,7 +2,7 @@
 
 @extends('layouts.home')
 
-@section('title', 'Page Title')
+@section('title', 'Buy and Sale | '. env('APP_NAME'))
 
 @section('sidebar')
 	@parent
