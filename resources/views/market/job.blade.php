@@ -66,12 +66,31 @@
                     <div class="similar-adverts">
                         <h3>Similar Jobs</h3>
                         <div class="listings-adverts">
-                        @foreach($products as $product)
+                        @foreach($products as $p)
                         <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                             <div class="col-sm-12 border-bottom-dashed">
                                 <div class="advert-details">
-                                    <h4>{{$product['title']}}</h4>
-                                    <p>{{$product['location_name']}}</p>
+                                    <h4>{{$p['title']}}</h4>
+                                    <p>{{$p['location_name']}}</p>
+                                </div>
+                            </div>
+                        </a>
+                        @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="similar-adverts">
+                        <h3>Similar Jobs</h3>
+                        <div class="listings-adverts">
+                        @foreach($products as $p)
+                        <a href="/p/{{$category->id}}/{{$product['source_id']}}">
+                            <div class="col-sm-12 border-bottom-dashed">
+                                <div class="advert-details">
+                                    <h4>{{$p['title']}}</h4>
+                                    <p>{{$p['location_name']}}</p>
                                 </div>
                             </div>
                         </a>
