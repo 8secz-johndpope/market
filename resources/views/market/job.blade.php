@@ -368,14 +368,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+            </div>
                         <div class="col-md-12">
                             <p>
-                                <small>Remember: You should never send cash or cheques to a prospective employer, or provide your bank details or any other financial information. We pay great attention to vetting all jobs that appear on our site, but please get in touch if you see any roles asking for such payments or financial details from you. For more information on conducting a safe job hunt online, visit <a href="">safer-jobs.</a></small>
+                                <small>Remember: You should never send cash or cheques to a prospective employer, or provide your bank details or any other financial information. We pay great attention to vetting all jobs that appear on our site, but please get in touch if you see any roles asking for such payments or financial details from you. For more information on conducting a safe job hunt online, visit safer-jobs.</small>
                             </p>
                         </div>
-                </div>
-            </div>
         </div>
     </div>
     <div style="display: none">
@@ -383,8 +381,6 @@
 <div class="col-sm-10">
     <p>{{$product['location_name']}}</p>
 </div>
-</div>
-<div style="display: none">
 <div class="col-sm-2">@if($product['meta']['price']>=0)
         <div class="items-box-price font-5">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
     @endif</div>
