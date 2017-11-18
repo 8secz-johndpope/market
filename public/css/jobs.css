@@ -239,10 +239,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 .link-about a.btn.btn-default, .link-about a.btn.btn-default:link {
     border-color: #000;
-    padding-left: 35px;
-    padding-right: 35px;
     background: #000;
     font-size: 13px;
+    color:#fff;
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
