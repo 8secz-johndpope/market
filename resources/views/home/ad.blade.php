@@ -169,7 +169,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-sm-6"><textarea type="text" name="description" rows="10"  class="ckeditor form-control  mb-2 mr-sm-2 mb-sm-0" >{{$advert->param('description')}}</textarea></div>
+                                <div class="col-sm-6"><textarea type="text" name="description" rows="10" id="editor" class="ckeditor form-control  mb-2 mr-sm-2 mb-sm-0" >{{$advert->param('description')}}</textarea></div>
                                 <div class="col-sm-6"><p>10000 characters remaining (12 words minimum).
                                         Enter as much information possible; ads with detailed and longer descriptions get more views and replies!
                                     </p></div>
@@ -628,5 +628,12 @@
         $('.key-features ul>li>a').click(function () {
            var text = $(this).parent().remove()
         });
+    </script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+            console.error( error );
+        } );
     </script>
 @endsection
