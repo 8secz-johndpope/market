@@ -222,6 +222,13 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .border-bottom-dashed {
     border-bottom: 1px dashed #ccc;
 }
+.field.button-submit {
+    float: right;
+}
+.button-submit .btn-form {
+    padding: 15px 30px;
+    font-size: 120%;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
