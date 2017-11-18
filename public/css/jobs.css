@@ -200,7 +200,13 @@ h2.item-name, .jobs-apply h2, .field h2 {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
+.advert-details {
+    border: 1px solid #ccc;
+    border-top-color: transparent;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
