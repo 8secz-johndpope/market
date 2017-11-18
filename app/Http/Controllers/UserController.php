@@ -1730,6 +1730,9 @@ class UserController extends BaseController
             $advert->create_draft_job('');
         }
         $advert->category_id=400000000;
+        if($sid){
+            $advert->sid=$sid;
+        }
         $advert->save();
 
         $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>400000000]);
