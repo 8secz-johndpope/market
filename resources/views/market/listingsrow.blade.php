@@ -2,7 +2,7 @@
 
 @extends('layouts.home')
 
-@section('title', 'Page Title')
+@section('title', $category->title)
 
 @section('sidebar')
     @parent
