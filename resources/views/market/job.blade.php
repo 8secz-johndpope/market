@@ -72,11 +72,8 @@
                             Description
                         </div>
                         <div class="job-detail">
-                            <p>
-                            @foreach($r = preg_split("/(\r\n|\n|\r)/", $product['description']) as $part)
-                                {{$part}}<br>
-                            @endforeach
-                            </p> 
+                            {!! $product['description'] !!}
+
                         </div>
                         <div class="job-criteria">
                             Type
