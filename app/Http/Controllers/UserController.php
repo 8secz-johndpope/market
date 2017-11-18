@@ -1758,7 +1758,7 @@ class UserController extends BaseController
         if($loc)
         $body['location_id']=$loc->res;
         else
-            $body['location_id']=119;
+            $body['location_id']=1250000000;
         $body['views']=0;
         $body['list_views']=0;
         $params = [
