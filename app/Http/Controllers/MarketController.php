@@ -1913,6 +1913,7 @@ class MarketController extends BaseController
         }
         $milliseconds = round(microtime(true) * 1000);
         $params['milli']=$milliseconds;
+        var_dump($params);
 /*
         $adverts = [];
         $products = $params['products'];
