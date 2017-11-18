@@ -28,21 +28,23 @@
             <!-- search -->
             <div class="row">
                 @if($advert->user!==null)
-                <div class="col-md-12 details">
-                    <h3>This Advert is marketed by</h3>
-                    
-                    <div class="profile-picutre">
-                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
-                    </div>
-                    <div class="user-details">
-                        <p><strong>{{$advert->user->name}}</strong></p>
-                        <address>
-                        @if(isset($advert->user->address))
-                        {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
-                        @endif    
-                        </address>
-                        <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
-                        <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
+                <div class="col-md-12">
+                    <div class="details">
+                        <h3>This Advert is marketed by</h3>
+                        
+                        <div class="profile-picutre">
+                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
+                        </div>
+                        <div class="user-details">
+                            <p><strong>{{$advert->user->name}}</strong></p>
+                            <address>
+                            @if(isset($advert->user->address))
+                            {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
+                            @endif    
+                            </address>
+                            <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
+                            <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
+                        </div>
                     </div>
                 </div>
                 @else
