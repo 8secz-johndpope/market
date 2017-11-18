@@ -96,9 +96,9 @@
                     <input type="hidden" name="{{$key}}" value="{{$value}}">
                 @endforeach
                     <div class="form-group">
-                        <label class="control-label col-sm-6" for="salary_min">Salary min:</label>
+                        <label class="control-label col-sm-6" for="sal_minimun">Salary min:</label>
                         <div class="col-sm-6">
-                        <input class="form-control" placeholder="Min" type="number" id="salary_min" name="salary_min" value="@if(isset($input['salary_min'])){{$input['salary_min']}}@endif" aria-invalid="false">
+                        <input class="form-control" placeholder="Min" type="number" id="sal_minimun" name="sal_minimun" value="@if(isset($input['sal_minimun'])){{$input['sal_minimun']}}@endif" aria-invalid="false">
                     </div>
                     </div>
 
