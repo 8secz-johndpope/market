@@ -11,8 +11,8 @@
 @endsection
 
 @section('content')
-    <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet">
     <link href="/css/imageviewer.css"  rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet" type="text/css">
 <script src="/js/imageviewer.min.js"></script>
     <div class="container">
         <div class="row">
