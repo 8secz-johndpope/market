@@ -213,6 +213,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     padding-bottom: 20px;
     text-align: center;
 }
+.report a.btn-default {
+    width: 80%;
+}
 .border-bottom-dashed {
     border-bottom: 1px dashed #ccc;
 }

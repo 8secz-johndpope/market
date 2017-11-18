@@ -54,8 +54,8 @@
                 @endif
             </div>
             <div class="row">
-                <div class="col-sm-12 border-bottom-dashed">
-                    <div class="report">
+                <div class="col-sm-12">
+                    <div class="report border-bottom-dashed">
                         <h3>Report this Ad</h3>
                         <a href="#" class="btn btn-default">Report</a>
                     </div>
