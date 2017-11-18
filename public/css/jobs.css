@@ -202,7 +202,8 @@ h2.item-name, .jobs-apply h2, .field h2 {
 	    min-height: 20px;
 	}
 	.job-detail:last-child {
-    	padding-bottom: 10px;
+    	padding-bottom: 20px;
+    	margin-bottom: 10px;
 	}
 	.job-title>.job-criteria {
     	padding-top: 4px;
