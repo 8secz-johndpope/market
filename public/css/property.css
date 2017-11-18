@@ -3,7 +3,7 @@
     src: url('fonts/Effra_Std_Lt.ttf');
 }
 .iv-close:after, .iv-close:before {
-    color: #ff9d2c;
+    background: #ff9d2c;
 }
 
 .meta {
