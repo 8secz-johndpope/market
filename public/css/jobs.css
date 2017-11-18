@@ -206,6 +206,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     padding-right: 5px;
     margin-bottom: 10px;
 }
+.border-bottom-dashed {
+    border-bottom: 1px dashed #ccc;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
