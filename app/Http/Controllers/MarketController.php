@@ -976,6 +976,10 @@ class MarketController extends BaseController
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $view = 'market.product';
         //Changed of view for property view
+        $srn = false;
+        if($request->has('srn'))
+            $srn=true;
+        
         if($category->id == 307000000 || $category->id == 306000000){
             $view = 'market.property'; 
         }
@@ -983,9 +987,6 @@ class MarketController extends BaseController
             $view = 'market.job';
             return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder, 'input' => [], 'location'=>Location::find(0)]);
         }
-        $srn = false;
-        if($request->has('srn'))
-            $srn=true;
         return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder]);
     }
     private  function haversineGreatCircleDistance(
