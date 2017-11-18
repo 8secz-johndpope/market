@@ -190,7 +190,6 @@ h2.item-name, .jobs-apply h2, .field h2 {
     /*font-family: Effra-Medium,arial,helvetica,sans-serif;*/
     font-size: 13px;
     font-weight: normal;
-    height: 2em;
     overflow: hidden;
     margin-bottom: 0;
 }
@@ -208,6 +207,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 .advert-details p{
 	color: #333;
+	font-size: 12px;
 }
 .border-bottom-dashed {
     border-bottom: 1px dashed #ccc;
