@@ -158,7 +158,11 @@
 
         @foreach($filters as $filter)
             <div class="l-visible-large">
-                <h4>{{$filter->title}}</h4>
+                @if($filter->title === 'Salary Period')
+                    <h4>Salary Bands</h4>
+                @else
+                    <h4>{{$filter->title}}</h4>
+                @endif
                 <ul class="list-group">
                     @foreach($filter->vals as $val)
                         @if($val->selected===1)
