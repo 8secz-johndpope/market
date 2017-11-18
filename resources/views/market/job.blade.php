@@ -332,8 +332,8 @@
                                     </div>
                                     @if(!Auth::guest() && count(Auth::user()->covers)>0)
                                     <div class="cover-select">
-                                        <label for="cover" class="h3">Select a Cover Letter</label>
-                                        <select class="form-control" name="cover" required>
+                                        <label for="cover">Select a Cover Letter</label>
+                                        <select class="form-control" name="cover" id="cover" required>
                                             <option value="0">Select</option>
                                             @foreach(Auth::user()->covers as $cover)
                                                 <option value="{{$cover->id}}">{{$cover->title}}</option>
