@@ -235,6 +235,7 @@
                                 }
                                 $(document).ready(function() {
                                     initMap();
+                                    activeFirstItem();
                                 });
                             </script>
 
@@ -1125,6 +1126,7 @@
 
 <script>
     var timer = null;
+
     $("#check-button").click(function () {
         var id =$('#id').val();
         var postcode=$('#postcode').val();
