@@ -18,7 +18,10 @@ body{
     background-position-y: 100px;
     background-position-x: -100px;
 }
-
+.info p.ad-description {
+    max-height: 40px;
+    overflow: hidden;
+  }
 
 .background-body{
   background-color: #fafafa;
@@ -1060,10 +1063,7 @@ section.row-color.white {
     font-size: 16px;
     margin-top: 0;
   }
-  .info p.ad-description {
-    max-height: 40px;
-    overflow: hidden;
-}}
+  
   .items-box-body.listing-content {
     /*width: 100%;*/
     min-height: 75px;
