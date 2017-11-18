@@ -109,9 +109,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
 	display: block;
 }
 .btn-form, .field .btn-form{
-	background-color: #ff9d2c;
+	background-color: #fff;
     border-color: #ff9d2c;
-    color: #fff;
+    color: #000;
 }
 .company-img {
     width: 240px;

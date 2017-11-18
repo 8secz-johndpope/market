@@ -116,7 +116,7 @@
                     <a class="btn">Tempory</a>
                     <a class="btn">Weekend</a>
                     <a class="btn">Search recruiters</a>
-                    <a class="btn">Job Alerts</a>
+                    <a class="btn">Get job Alerts</a>
                 </div>
                 <div class="col-md-12 alerts">
                     <p>Set your jobs search alerts, click below to:</p>
