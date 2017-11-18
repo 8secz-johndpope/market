@@ -168,6 +168,10 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .alerts a:last-child{
 	border:none;
 }
+.details{
+	padding: 15px;
+	border-bottom: 1px dashed #dfdfe1;
+}
 
 @media screen and (min-width: 768px){
 	.job-criteria {
