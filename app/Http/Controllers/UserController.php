@@ -1712,13 +1712,14 @@ class UserController extends BaseController
     {
         $body = $request->json()->all();
         $advert = new Advert;
-        $advert->category_id=400000000;
-        $advert->save();
+
         if(isset($body['params']['Recruiter'])) {
             $advert->create_draft_job($body['params']['Recruiter']);
         }else{
             $advert->create_draft_job('');
         }
+        $advert->category_id=400000000;
+        $advert->save();
 
         $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>400000000]);
         $location = $body['params']['Location'];
