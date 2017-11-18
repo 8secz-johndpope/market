@@ -1777,7 +1777,7 @@ class UserController extends BaseController
         }
         $advert->update_fields($params);
         $advert->update_meta($meta);
-
+        $advert->publish();
         return $advert;
 
     }
