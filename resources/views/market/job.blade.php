@@ -38,10 +38,10 @@
                     <a class="btn">Job Alerts</a>
                 </div>
                 <div class="col-md-12 alerts">
-                    <p>Set your jobs search alerts<p>
+                    <p>Set your jobs search alerts</p>
                     <div class="buttons-alerts">
-                        <a class="btn">Email Alert</a>
-                        <a class="btn">Mobile Alert</a>
+                        <a class="">Email Alert</a>
+                        <a class="">Mobile Alert</a>
                     </div>
                 </div>
                 <div class="col-md-12 border-top-left-right">
