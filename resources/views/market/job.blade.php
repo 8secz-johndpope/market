@@ -53,6 +53,28 @@
                     </ul>
                 @endif
             </div>
+            <div class="row">
+                <div class="similar-adverts">
+                    <h3>Similar Jobs</h3>
+                    <div class="listings-adverts">
+                    @foreach($products as $product)
+                    <a href="/p/{{$category->id}}/{{$product['source_id']}}">
+                        <div class="col-sm-6">
+                            <div class="advert-img">
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
+                            </div>
+                            <div class="advert-details">
+                                <h4>{{$product['title']}}</h4>
+                                @if($product['meta']['price'] > 0)
+                                    <h4 class="items-box-price font-6">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</h4>
+                                @endif
+                            </div>
+                        </div>
+                    </a>
+                    @endforeach
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-md-9 col-sm-12">
             <div class="row">
