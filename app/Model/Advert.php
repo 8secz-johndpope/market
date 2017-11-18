@@ -514,6 +514,7 @@ class Advert extends  BaseModel
     public  function similar(){
         $category = Category::find($this->category_id);
         $location = Location::where('res',$this->param('location_id'))->first();
+
         $musts=array();
         $musts['category']= [
             'range' => [
@@ -523,7 +524,7 @@ class Advert extends  BaseModel
                 ]
             ]
         ];
-
+        if($location)
         $musts['location_id']= [
             'range' => [
                 'location_id' => [
@@ -567,7 +568,7 @@ class Advert extends  BaseModel
                 ]
             ]
         ];
-
+        if($location)
         $musts['location_id']= [
             'range' => [
                 'location_id' => [
