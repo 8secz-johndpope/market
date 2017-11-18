@@ -1711,6 +1711,7 @@ class UserController extends BaseController
     public function cccreate(Request $request)
     {
         $body = $request->json()->all();
+        return $body;
         if(isset($body['source_id'])){
             $sid = (int)$body['source_id'];
             $advert = Advert::where('sid', '=', $sid)->first();
@@ -1730,9 +1731,7 @@ class UserController extends BaseController
             $advert->create_draft_job('');
         }
         $advert->category_id=400000000;
-        if($sid){
-            $advert->sid=$sid;
-        }
+
         $advert->save();
 
         $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>400000000]);
