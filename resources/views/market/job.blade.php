@@ -193,7 +193,7 @@
                                     <div class="icon-before">
                                         <input type="file" name="upload-cv" id="upload-cv">
                                     </div>
-                                    <p>Or upload from one of follow in</p>
+                                    <p>Or upload from one of the following</p>
                                     <div class="buttons-cloud">
                                         <a href="#" class="btn btn-form btn-dropbox">Dropbox</a>
                                         <a href="#" class="btn btn-form btn-onedrive">OneDrive</a>
