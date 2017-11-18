@@ -979,12 +979,13 @@ class MarketController extends BaseController
         $srn = false;
         if($request->has('srn'))
             $srn=true;
-        
+
         if($category->id == 307000000 || $category->id == 306000000){
             $view = 'market.property'; 
         }
         elseif($category->id >= 400000000 && $category->id <= 499999999){
             $view = 'market.job';
+            $base = Category::where('parent_id',0)->get();
             return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder, 'input' => [], 'location'=>Location::find(0)]);
         }
         return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder]);
