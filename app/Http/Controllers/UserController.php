@@ -1711,7 +1711,14 @@ class UserController extends BaseController
     public function cccreate(Request $request)
     {
         $body = $request->json()->all();
+        $sid = (int)$body['source_id'];
+        $advert = Advert::where('sid', '=', (int)$body['source_id'])->first();
+        if ($advert !== null) {
+
+            return ['a' => 'b'];
+        }
         $advert = new Advert;
+        $advert->sid=$sid;
         $advert->save();
 
         if(isset($body['params']['Recruiter'])) {
@@ -1722,7 +1729,7 @@ class UserController extends BaseController
         $advert->category_id=400000000;
         $advert->save();
 
-        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>400000000]);
+        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>400000000,'source_id'=>$sid]);
         $location = $body['params']['Location'];
         $parts = explode(',', $location);
         $title = $parts[0];
@@ -1805,7 +1812,6 @@ class UserController extends BaseController
         $advert = Advert::where('sid', '=', (int)$body['source_id'])->first();
         if ($advert !== null) {
 
-            $advert->update_fields(['phone'=>$body['phone']]);
             return ['a' => 'b'];
         }
 
