@@ -113,15 +113,15 @@
                     <input type="hidden" name="{{$key}}" value="{{$value}}">
                 @endforeach
                     <div class="form-group">
-                        <label class="control-label col-sm-6" for="min_price">Salary min:</label>
+                        <label class="control-label col-sm-6" for="salary_min">Salary min:</label>
                         <div class="col-sm-6">
-                        <input class="form-control" placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price'])){{$input['min_price']}}@endif" aria-invalid="false">
+                        <input class="form-control" placeholder="Min" type="number" id="salary_min" name="salary_min" value="@if(isset($input['salary_min'])){{$input['salary_min']}}@endif" aria-invalid="false">
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-6" for="max_price">Salary max:</label>
-                        <div class="col-sm-6"><input class="form-control" placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false">
+                        <label class="control-label col-sm-6" for="salary_max">Salary max:</label>
+                        <div class="col-sm-6"><input class="form-control" placeholder="Max" type="number" name="salary_max" value="@if(isset($input['salary_max'])){{$input['salary_max']}}@endif" aria-invalid="false">
                         </div>
                         </div>
                     <div class="form-group">
