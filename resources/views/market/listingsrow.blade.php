@@ -90,6 +90,23 @@
             </form>
 
             @if($category->id >= 400000000 && $category->id <= 499999999)
+
+            <form action="{{$url}}" >
+                <div class="form-group">
+                    <label for="sort"> Salary Bands:</label>
+                @foreach($input as $key=>$value)
+                    @if($key!=='sort')
+                        <input type="hidden" name="{{$key}}" value="{{$value}}">
+                    @endif
+                @endforeach
+                <select class="form-control" name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
+                    @foreach($sorts as $st)
+                        <option value="{{$st->key}}" @if(isset($input['sort'])&&$input['sort']===$st->key)) selected @endif>{{$st->title}}</option>
+                    @endforeach
+                </select>
+                </div>
+            </form>
+
             <form action="{{$url}}"  class="form-horizontal">
                 <label for="distance">Salary:</label>
                 @foreach($input as $key=>$value)
