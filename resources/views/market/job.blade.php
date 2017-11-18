@@ -1,8 +1,8 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.app', ['title' => $product['title']])
+@extends('layouts.app')
 
-@section('title', 'Page Title')
+@section('title', $product['title'])
 
 @section('sidebar')
     @parent
