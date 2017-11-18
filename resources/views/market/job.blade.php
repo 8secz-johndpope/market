@@ -130,6 +130,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-12 col-sm-12 bottom-buttons">
+                    <a class="btn">Save</a>
+                    <a class="btn">Call</a>
+                    <a class="btn">VideoCall</a>
+                    <a class="btn">Email</a>
+                </div>
                 <div class="col-md-12 col-sm-12 border-top">
                     <div class="jobs-apply">
                         <h2>Apply for {{$product['title']}}</h2>
@@ -223,9 +229,9 @@
                         </div>
                     </div>
                     <div class="row">
-                            <div class="col-md-12">
-                                <div class="field">
-                                <span class="h3">Cover message or cover letter for {{$product['title']}}</h3>
+                        <div class="col-md-12">
+                            <div class="field">
+                                <span class="h3">Cover message or cover letter for {{$product['title']}}</span>
                                 <div class="cover-letter-container">
                                     <p>Choose from:</p>
                                     <div class="buttons-option-cover">
