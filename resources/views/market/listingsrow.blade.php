@@ -13,7 +13,7 @@
 @section('content')
 
 
-<div class="row listings">
+<div class="listings">
     <div class="container-fluid">
         <div class="all">
             <div class="search-alert-div">
