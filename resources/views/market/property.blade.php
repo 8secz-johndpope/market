@@ -156,7 +156,7 @@
                                         </div>
                                         @endif
 
-                                      {!! $product['description'] !!}   
+                                      {!! $product['description'] !!}
 
                                     </div>
                                 </div>

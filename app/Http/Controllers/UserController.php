@@ -1708,6 +1708,18 @@ class UserController extends BaseController
 
         return ['success' => true, 'body' => $body, 'response' => $response];
     }
+    public function cccreate(Request $request)
+    {
+        $body = $request->json()->all();
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => $body
+        ];
+        $response = $this->client->index($params);
+        return $response;
+
+    }
 
     public function ccreate(Request $request)
     {
