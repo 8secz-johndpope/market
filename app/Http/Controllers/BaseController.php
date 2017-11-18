@@ -31,11 +31,7 @@ class BaseController extends Controller
         $this->client = \Elasticsearch\ClientBuilder::create()           // Instantiate a new ClientBuilder
         ->setHosts($hosts)      // Set the hosts
         ->build();              // Build the client object
-        $nulls = FieldValue::whereNull('title')->get();
-        foreach ($nulls as $null){
-            $null->title=$this->deslugify($null->slug);
-            $null->save();
-        }
+       
 
 
     }
