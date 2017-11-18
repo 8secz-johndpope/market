@@ -136,6 +136,14 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .buttons-filters a:last-child{
 	border:none;
 }
+.bottom-buttons {
+    background-color: #fdfdfd;
+    border: 1px solid #c9cfdd;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    margin: 0 0 5px 0;
+}
 .alerts {
     background: #eee!important;
     padding: 15px;
