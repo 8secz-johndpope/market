@@ -89,7 +89,7 @@
                 </div>
             </form>
 
-            @if($category->id >= 400000000 && $category->id <= 499999999){
+            @if($category->id >= 400000000 && $category->id <= 499999999)
             <form action="{{$url}}"  class="form-horizontal">
                 <label for="distance">Salary:</label>
                 @foreach($input as $key=>$value)
