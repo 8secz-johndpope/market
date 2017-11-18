@@ -59,10 +59,7 @@
                     <div class="listings-adverts">
                     @foreach($products as $product)
                     <a href="/p/{{$category->id}}/{{$product['source_id']}}">
-                        <div class="col-sm-6">
-                            <div class="advert-img">
-                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
-                            </div>
+                        <div class="col-sm-12">
                             <div class="advert-details">
                                 <h4>{{$product['title']}}</h4>
                                 @if($product['meta']['price'] > 0)
