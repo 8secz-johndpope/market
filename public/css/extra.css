@@ -38,6 +38,7 @@ span.active-strip {
 }
 .info .block.fix-text{
     max-height: 40px;
+    overflow: hidden;
 }
 .address-div {
     border: 1px solid lightgray;
