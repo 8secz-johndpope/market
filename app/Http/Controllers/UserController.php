@@ -1712,6 +1712,7 @@ class UserController extends BaseController
     {
         $body = $request->json()->all();
         $advert = new Advert;
+        $advert->save();
 
         if(isset($body['params']['Recruiter'])) {
             $advert->create_draft_job($body['params']['Recruiter']);
