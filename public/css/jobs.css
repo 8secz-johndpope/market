@@ -144,6 +144,18 @@ h2.item-name, .jobs-apply h2, .field h2 {
     padding: 10px 15px 10px 15px;
     margin: 0 0 5px 0;
 }
+.bottom-buttons a {
+    width: calc(99.5% / 4);
+    height: 30px;
+    float: left;
+    border-right: 1px solid #c9cfdd;
+    margin-right: 1px;
+    padding-left: 10px;
+    font: normal 13px/30px 'Open Sans', Arial, Helvetica, sans-serif;
+    color: #003777;
+    /* text-indent: 70px; */
+}
+
 .alerts {
     background: #eee!important;
     padding: 15px;
