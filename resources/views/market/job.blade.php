@@ -83,18 +83,26 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="similar-adverts">
-                        <h3>Similar Jobs</h3>
+                        <h3>Recommended Course</h3>
                         <div class="listings-adverts">
-                        @foreach($products as $p)
-                        <a href="/p/{{$category->id}}/{{$product['source_id']}}">
+                        <a href="#">
                             <div class="col-sm-12 border-bottom-dashed">
                                 <div class="advert-details">
-                                    <h4>{{$p['title']}}</h4>
-                                    <p>{{$p['location_name']}}</p>
+                                    <h4>Diploma of Childcare (Nany)</h4>
+                                    <p>Online, self-paced</p>
+                                    <p>Enquire now for pricing information</p>
                                 </div>
                             </div>
                         </a>
-                        @endforeach
+                        <a href="#">
+                            <div class="col-sm-12 border-bottom-dashed">
+                                <div class="advert-details">
+                                    <h4>Certificate in Childcare & Nannyng Training - Accredited by CPD</h4>
+                                    <p>Online, self-paced</p>
+                                    <p>£29.00</p>
+                                </div>
+                            </div>
+                        </a>
                         </div>
                     </div>
                 </div>
