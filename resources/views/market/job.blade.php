@@ -63,7 +63,7 @@
                             <div class="col-sm-12 border-bottom-dashed">
                                 <div class="advert-details">
                                     <h4>{{$product['title']}}</h4>
-                                    <p>$product['location_name']</p>
+                                    <p>{{$product['location_name']}}</p>
                                 </div>
                             </div>
                         </a>
