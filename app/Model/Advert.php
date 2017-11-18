@@ -123,6 +123,44 @@ class Advert extends  BaseModel
         }
 
     }
+    public function create_draft_job($title){
+
+        if($this->elastic===null){
+
+
+            $body['title']='';
+            $body['description']='';
+            $body['images']=[];
+            $body['draft']=1;
+            $milliseconds = round(microtime(true) * 1000);
+            $body['category']=0;
+            $body['location_id']=0;
+            $body['location']='0,0';
+            $body['location_name']='United Kingdom';
+            $body['views']=0;
+            $body['list_views']=0;
+            $body['meta']['price']=-1;
+            $body['source_id']=$this->id;
+            $body['username']=$title;
+            $body['created_at']=$milliseconds;
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => $body
+            ];
+
+            $response = $this->client->index($params);
+            $this->elastic = $response['_id'];
+            $this->sid=$this->id;
+            $this->status=0;
+            $this->category_id=0;
+
+            $this->user_id=0;
+            $this->postcode_id=0;
+            $this->save();
+        }
+
+    }
     public function create_dd($user){
 
         if($this->elastic===null){
