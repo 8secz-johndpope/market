@@ -103,6 +103,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .cover-select{
 	display: none;
 	transition: opacity .25s ease;
+	padding: 10px 0;
 }
 .active-cover{
 	display: block;
