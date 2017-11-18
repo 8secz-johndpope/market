@@ -233,6 +233,8 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .button-submit .btn-form {
     padding: 15px 30px;
     font-size: 120%;
+    background: #ff9d2c;
+    color: #fff;
 }
 .buttons-cloud .btn-form {
     width: calc(99% / 3);
@@ -241,8 +243,8 @@ h2.item-name, .jobs-apply h2, .field h2 {
     text-align: center;
 }
 .link-about a.btn.btn-default, .link-about a.btn.btn-default:link {
-    border-color: #000;
-    background: #000;
+    border-color: #ff9d2c;
+    background: #ff9d2c;
     font-size: 13px;
     color:#fff;
 }
