@@ -91,19 +91,19 @@
 
             @if($category->id >= 400000000 && $category->id <= 499999999){
             <form action="{{$url}}"  class="form-horizontal">
-                <label for="distance">Price:</label>
+                <label for="distance">Salary:</label>
                 @foreach($input as $key=>$value)
                     <input type="hidden" name="{{$key}}" value="{{$value}}">
                 @endforeach
                     <div class="form-group">
-                        <label class="control-label col-sm-6" for="min_price">Minimum Price:</label>
+                        <label class="control-label col-sm-6" for="min_price">Salary min:</label>
                         <div class="col-sm-6">
                         <input class="form-control" placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price'])){{$input['min_price']}}@endif" aria-invalid="false">
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-6" for="max_price">Maximum Price:</label>
+                        <label class="control-label col-sm-6" for="max_price">Salary max:</label>
                         <div class="col-sm-6"><input class="form-control" placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false">
                         </div>
                         </div>
