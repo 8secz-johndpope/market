@@ -133,7 +133,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     color: #003777;
     /* text-indent: 70px; */
 }
-.buttons-filters a:last-child{
+.buttons-filters a:last-child, .bottom-buttons a:last-child{
 	border:none;
 }
 .bottom-buttons {
