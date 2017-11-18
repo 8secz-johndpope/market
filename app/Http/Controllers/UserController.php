@@ -1744,6 +1744,12 @@ class UserController extends BaseController
         if(isset($body['params']['Recruiter'])){
             $meta['recruiter']=$body['params']['Recruiter'];
         }
+        if(isset($body['params']['Ref'])){
+            $meta['reference']=$body['params']['Ref'];
+        }
+        if(isset($body['params']['Salary'])){
+            $meta['salary']=$body['params']['Salary'];
+        }
         if(isset($body['params']['Posted'])){
             $meta['posted']=$body['params']['Posted'];
         }
@@ -1759,7 +1765,11 @@ class UserController extends BaseController
         if(isset($body['params']['Hours'])){
             $meta['hours']=$this->slugify($body['params']['Hours']);
         }
+        if(isset($body['params']['Job Level'])){
+            $meta['job_level']=$this->slugify($body['params']['Job Level']);
+        }
         $advert->update_fields($params);
+        $advert->update_meta($meta);
 
         return $advert;
 
