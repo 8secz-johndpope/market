@@ -223,6 +223,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 .report a.btn-default {
     width: 80%;
+    border: 1px solid #ff9d2c;
 }
 .border-bottom-dashed {
     border-bottom: 1px dashed #ccc;
