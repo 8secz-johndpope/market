@@ -36,6 +36,9 @@ span.active-strip {
 .ck-editor__editable{
     min-height: 250px;
 }
+.info .block.fix-text{
+    max-height: 40px;
+}
 .address-div {
     border: 1px solid lightgray;
     padding: 5px;
