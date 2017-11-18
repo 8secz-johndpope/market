@@ -30,18 +30,18 @@
         <div class="col-md-9 col-sm-12">
             <div class="row">
                 <div class="col-md-12 buttons-filters">
-                    <a class="">All lastest jobs</a>
-                    <a class="">Permanent</a>
-                    <a class="">Tempory</a>
-                    <a class="">Weekend</a>
-                    <a class="">Search recruiters</a>
-                    <a class="">Job Alerts</a>
+                    <a class="btn">All lastest jobs</a>
+                    <a class="btn">Permanent</a>
+                    <a class="btn">Tempory</a>
+                    <a class="btn">Weekend</a>
+                    <a class="btn">Search recruiters</a>
+                    <a class="btn">Job Alerts</a>
                 </div>
                 <div class="col-md-12 alerts">
                     <p>Set your jobs search alerts</p>
                     <div class="buttons-alerts">
-                        <a class="">Email Alert</a>
-                        <a class="">Mobile Alert</a>
+                        <a class="btn">Email Alert</a>
+                        <a class="btn">Mobile Alert</a>
                     </div>
                 </div>
                 <div class="col-md-12 border-top-left-right">
