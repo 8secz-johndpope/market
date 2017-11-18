@@ -186,6 +186,21 @@ h2.item-name, .jobs-apply h2, .field h2 {
     display: table;
     padding: 15px 5px;
 }
+.advert-img {
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ccc;
+    background: #ececec;
+}
+.advert-img img {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
