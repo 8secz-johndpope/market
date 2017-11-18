@@ -1711,18 +1711,14 @@ class UserController extends BaseController
     public function cccreate(Request $request)
     {
         $body = $request->json()->all();
-        return $body;
-        if(isset($body['source_id'])){
-            $sid = (int)$body['source_id'];
-            $advert = Advert::where('sid', '=', $sid)->first();
-            if ($advert !== null) {
+        $sid = (int)$body['source_id'];
+        $advert = Advert::where('sid', '=', (int)$body['source_id'])->first();
+        if ($advert !== null) {
 
-                return ['a' => 'b'];
-            }
+            return ['a' => 'b'];
         }
-
         $advert = new Advert;
-        //$advert->sid=$sid;
+        $advert->sid=$sid;
         $advert->save();
 
         if(isset($body['params']['Recruiter'])) {
@@ -1731,7 +1727,6 @@ class UserController extends BaseController
             $advert->create_draft_job('');
         }
         $advert->category_id=400000000;
-
         $advert->save();
 
         $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>400000000]);
