@@ -246,6 +246,10 @@ h2.item-name, .jobs-apply h2, .field h2 {
     font-size: 13px;
     color:#fff;
 }
+.buttons-alerts {
+    background: #fafafa!important;
+    padding: 5px 0;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
