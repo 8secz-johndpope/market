@@ -466,7 +466,7 @@
 <script src="{{env('APP_URL')}}/js/load.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-
+<script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
 <script>
     $('#sortable').sortable({placeholder: "ui-state-highlight",helper:'clone'});
     window.axios.defaults.headers.common = {
