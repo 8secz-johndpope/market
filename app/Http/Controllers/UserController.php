@@ -1711,14 +1711,65 @@ class UserController extends BaseController
     public function cccreate(Request $request)
     {
         $body = $request->json()->all();
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => $body
-        ];
-        $response = $this->client->index($params);
-        return $response;
+        $advert = new Advert;
+        $advert->category_id=400000000;
+        $advert->save();
+        $advert->create_draft();
+        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>400000000]);
+        $location = $body['params']['Location'];
+        $parts = explode(',', $location);
+        $title = $parts[0];
 
+        $loc = Location::where('title',$title)->first();
+        $up =   str_replace(' ','',strtoupper($title));
+        $a = Postcode::where('hash',crc32($up))->first();
+        $params=[];
+        if($a){
+            $params['location_id']=$a->location->res;
+            $params['location']=$a->lat.','.$a->lng;
+        }
+        else if($loc){
+            $params['location_id']=$loc->res;
+            $center = (($loc->min_lat+$loc->max_lat)/2).','.(($loc->min_lng+$loc->max_lng)/2);
+
+            $params['location'] = $center;
+        }
+
+        else{
+            $params['location_id']=1250000000;
+            $params['location'] = '0,0';
+
+        }
+        $meta=[];
+        if(isset($body['params']['Recruiter'])){
+            $meta['recruiter']=$body['params']['Recruiter'];
+        }
+        if(isset($body['params']['Posted'])){
+            $meta['posted']=$body['params']['Posted'];
+        }
+        if(isset($body['params']['Closes'])){
+            $meta['closes']=$body['params']['Closes'];
+        }
+        if(isset($body['params']['Sector'])){
+            $meta['sector']=$this->slugify($body['params']['Sector']);
+        }
+        if(isset($body['params']['Contract Type'])){
+            $meta['job_contract_type']=$this->slugify($body['params']['Contract Type']);
+        }
+        if(isset($body['params']['Hours'])){
+            $meta['hours']=$this->slugify($body['params']['Hours']);
+        }
+        $advert->update_fields($params);
+
+        return $advert;
+
+    }
+
+    public function slugify($str){
+        $str = str_replace('&','and',$str);
+        $str = str_replace(' ','-',$str);
+        $str = strtolower($str);
+        return $str;
     }
 
     public function ccreate(Request $request)
