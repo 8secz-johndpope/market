@@ -237,6 +237,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .buttons-cloud .btn-form {
     width: calc(99% / 3);
 }
+.link-about {
+    text-align: center;
+}
 .link-about a.btn.btn-default, .link-about a.btn.btn-default:link {
     border-color: #000;
     background: #000;
