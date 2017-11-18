@@ -2,9 +2,6 @@
     font-family: Effra-Regular-Lt
     src: url('fonts/Effra_Std_Lt.ttf');
 }
-.iv-close:after, .iv-close:before {
-    background: #ff9d2c;
-}
 
 .meta {
     margin: 0 0 1.4rem;
