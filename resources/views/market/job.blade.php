@@ -37,6 +37,13 @@
                     <a class="btn">Search recruiters</a>
                     <a class="btn">Job Alerts</a>
                 </div>
+                <div class="col-md-12 alerts">
+                    <p>Set your jobs search alerts<p>
+                    <div class="buttons-alerts">
+                        <a class="btn">Email Alert</a>
+                        <a class="btn">Mobile Alert</a>
+                    </div>
+                </div>
                 <div class="col-md-12 border-top-left-right">
                     <div class="company-img center-block">
                         <img src="">
