@@ -26,6 +26,30 @@
     <div class="row">
         <div class="col-md-3 col-sm-12">
             <!-- search -->
+            <div class="row">
+                <div class="col-md-12 details">
+                    <h3>This property is marketed by</h3>
+                    @if($advert->user!==null)
+                    <div class="profile-picutre">
+                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
+                    </div>
+                    <div class="user-details">
+                        <p><strong>{{$advert->user->name}}</strong></p>
+                        <address>
+                        @if(isset($advert->user->address))
+                        {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
+                        @endif    
+                        </address>
+                        <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
+                        <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
+                    </div>
+                    @else
+                    <ul class="list-group">
+                        <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
+                    </ul>
+                    @endif
+                </div>
+            </div>
         </div>
         <div class="col-md-9 col-sm-12">
             <div class="row">
