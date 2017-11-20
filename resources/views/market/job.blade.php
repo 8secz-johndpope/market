@@ -33,18 +33,22 @@
                 <a href="/p/{{$category->id}}/{{$nextAdvert->id}}"> Next > </a>
             @endif
         </div>
-        <div class="col-md-12 buttons-filters">
-            <a class="btn">All Lastest Jobs</a>
-            <a class="btn">Permanent</a>
-            <a class="btn">Temporary</a>
-            <a class="btn">Weekend</a>
-            <a class="btn">Search Recruiters</a>
+        <div class="col-md-12">
+            <div class="buttons-filters">
+                <a class="btn">All Lastest Jobs</a>
+                <a class="btn">Permanent</a>
+                <a class="btn">Temporary</a>
+                <a class="btn">Weekend</a>
+                <a class="btn">Search Recruiters</a>
+            </div>
         </div>
-        <div class="col-md-12 buttons-filters">
-            <a class="btn">Work Wanted</a>
-            <a class="btn">Daily / Gig Work</a>
-            <a class="btn">Freelance's</a>
-            <a class="btn">Part Time</a>
+        <div class="col-md-12">
+            <div class="buttons-filters">
+                <a class="btn">Work Wanted</a>
+                <a class="btn">Daily / Gig Work</a>
+                <a class="btn">Freelance's</a>
+                <a class="btn">Part Time</a>
+            </div>
         </div>
         <div class="col-md-12 alerts">
             <p>Set your jobs search alerts, click below to:</p>
