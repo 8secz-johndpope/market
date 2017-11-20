@@ -65,6 +65,7 @@
                         <li><a data-toggle="tab" href="#tab-map">Map & Street View</a></li>
                         <li><a data-toggle="tab" href="#tab-apply">Apply</a></li>
                     </ul>
+                    <div id="tabs">
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
                             <div class="job-details">
@@ -153,7 +154,7 @@
                                 <a class="btn">Email</a>
                             </div>
                         </div>
-                        <div class="tab-map" class="tab-pane fade">
+                        <div id="tab-map" class="tab-pane fade">
                             <div id="map"></div>
                             <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
                             <div>
@@ -322,6 +323,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
                 <div class="col-md-12 safe-jobs">
                     <p>
