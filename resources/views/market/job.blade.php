@@ -15,7 +15,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-2 back">
-            <a class="" href="{{ url()->previous()}}">< Go to back</a>
+            <a class="" href="{{ url()->previous()}}">< Back to search</a>
         </div>
         <div class="col-md-8 col-sm-12">
             <ol class="breadcrumb">
