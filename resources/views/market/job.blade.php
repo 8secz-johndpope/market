@@ -14,6 +14,9 @@
 <link href="{{ asset('/css/jobs.css?q=874') }}" rel="stylesheet">
 <div class="container">
     <div class="row">
+        <div class="col-md-2">
+            <a class="back" href="{{ url()->previous()}}">< Go to back</a>
+        </div>
         <div class="col-md-8 col-sm-12">
             <ol class="breadcrumb">
                 @foreach($parents as $parent)
