@@ -169,9 +169,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     background: #eee!important;
     padding: 15px;
     border: 1px solid #c9cfdd;
-    border-top: transparent;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 5px;
 }
 .alerts a {
     width: 40%;
