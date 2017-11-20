@@ -378,6 +378,9 @@
 
             <!-- fin -->
             </div>
+        </div>
+    </div>
+</div>
     <div style="display: none">
                 <h2 class="item-name">{{$product['title']}}</h2>
 <div class="col-sm-10">
