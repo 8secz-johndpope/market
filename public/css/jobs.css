@@ -281,6 +281,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .job-details:after{
 	clear: both;
 }
+.mapframe .btn-group {
+    margin-bottom: 1.6rem;
+}
 #map, #pano {
     height: 470px;
     width: 100%;
