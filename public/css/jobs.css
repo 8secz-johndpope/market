@@ -135,12 +135,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     color: #337ab7;
     /* text-indent: 70px; */
 }
-.buttons-filters:last-child {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}
+
 .field .buttons-option-cover .btn-form {
     width: calc(98% / 3);
 }
