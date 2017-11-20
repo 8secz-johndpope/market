@@ -52,6 +52,7 @@
                         <a class="btn">Mobile Alert</a>
                     </div>
                 </div> -->
+                @if(count($product['images']) > 0)
                 <div id="current-image">
                     <img id="image-active" data-index="1" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" class="gallery-items">
                     <div class="images-info">
@@ -112,6 +113,7 @@
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">VideoCall</a>
                     </div>
                 </div>
+                @endif
                 <div class="">
                     <div id="tabs">
                     <ul class="nav nav-tabs">
