@@ -340,6 +340,12 @@ h2.item-name, .jobs-apply h2, .field h2 {
     background-color: #262637;
     text-align: center;
 }
+.images-current {
+    text-align: right;
+}
+.images-nav {
+    text-align: center;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
