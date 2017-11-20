@@ -355,6 +355,12 @@ a.carousel-control {
     width: 25px;
     height: 90px;
 }
+a.left.carousel-control {
+    background: rgba(0,0,0,0.3);
+}
+a.right.carousel-control {
+    background: rgba(0,0,0,0.3);
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
