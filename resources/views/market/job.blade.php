@@ -59,13 +59,13 @@
                 </div>
 
                 <div class="border-left-right">
+                    <div id="tabs">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tab-video">Video Description</a></li>
                         <li><a data-toggle="tab" href="#tab-map">Map & Street View</a></li>
                         <li><a data-toggle="tab" href="#tab-apply">Apply</a></li>
                     </ul>
-                    <div id="tabs">
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
                             <div class="job-details">
