@@ -34,11 +34,13 @@
             @endif
         </div>
         <div class="col-md-12 buttons-filters">
+            <div class="buttons-border">
                 <a class="btn">All Lastest Jobs</a>
                 <a class="btn">Permanent</a>
                 <a class="btn">Temporary</a>
                 <a class="btn">Weekend</a>
                 <a class="btn">Search Recruiters</a>
+            </div>
         </div>
         <div class="col-md-12 buttons-filters last">
                 <a class="btn">Part Time</a>
