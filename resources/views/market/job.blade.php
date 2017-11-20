@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-2 prev-next">
             <a> < Prev</a>
-            <a> Next > </a>
+            <a href="/p/{{$category->id}}/{{$nextAdvert->id}}"> Next > </a>
         </div>
     </div>
     <div class="row">
