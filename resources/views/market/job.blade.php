@@ -69,92 +69,92 @@
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
                             <div class="row">
-                            <div class="job-details">
-                                <div class="job-title">
+                                <div class="job-details">
+                                    <div class="job-title">
+                                        <div class="job-criteria">
+                                            Title
+                                        </div>
+                                        <div class="job-detail">
+                                            <h2 class="item-name">{{$product['title']}}</h2>
+                                        </div>
+                                    </div>
                                     <div class="job-criteria">
-                                        Title
+                                        Salary/Rate
                                     </div>
                                     <div class="job-detail">
-                                        <h2 class="item-name">{{$product['title']}}</h2>
+                                        {{isset($metas['salary_rate']) ? $metas['salary_rate']:'£40,000/annum + Benefits'}}
+                                    </div>
+                                    <div class="job-criteria">
+                                        Location
+                                    </div>
+                                    <div class="job-detail">
+                                        {{$product['location_name']}}
+                                    </div>
+                                    <div class="job-criteria">
+                                        Posted
+                                    </div>
+                                    <div class="job-detail">
+                                        {{$advert->created_at->format('d F Y')}}
+                                    </div>
+                                    <div class="job-criteria">
+                                        Company
+                                    </div>
+                                    <div class="job-detail">
+                                    @if($advert->user)
+                                        {{isset($advert->user->business)? $advert->user->business->name : $advert->user->name}}
+                                        @endif
+                                    </div>
+                                    <div class="job-criteria">
+                                        Description
+                                    </div>
+                                    <div class="job-detail">
+                                        {!! $product['description'] !!}
+
+                                    </div>
+                                    <div class="job-criteria">
+                                        Type
+                                    </div>
+                                    <div class="job-detail">
+                                        Permanent
+                                    </div>
+                                    <div class="job-criteria">
+                                        Start Date
+                                    </div>
+                                    <div class="job-detail">
+                                        Immediate
+                                    </div>
+                                    <div class="job-criteria">
+                                        Contract Length
+                                    </div>
+                                    <div class="job-detail">
+                                        N/A
+                                    </div>
+                                    <div class="job-criteria">
+                                        Contact Name
+                                    </div>
+                                    <div class="job-detail">
+                                        Login or register to view
+                                    </div>
+                                    <div class="job-criteria">
+                                        Telephone
+                                    </div>
+                                    <div class="job-detail">
+                                        Login or register to view
+                                    </div>
+                                    <div class="job-criteria">
+                                        Job reference
+                                    </div>
+                                    <div class="job-detail">
+                                        0611FEDLONDON
                                     </div>
                                 </div>
-                                <div class="job-criteria">
-                                    Salary/Rate
-                                </div>
-                                <div class="job-detail">
-                                    {{isset($metas['salary_rate']) ? $metas['salary_rate']:'£40,000/annum + Benefits'}}
-                                </div>
-                                <div class="job-criteria">
-                                    Location
-                                </div>
-                                <div class="job-detail">
-                                    {{$product['location_name']}}
-                                </div>
-                                <div class="job-criteria">
-                                    Posted
-                                </div>
-                                <div class="job-detail">
-                                    {{$advert->created_at->format('d F Y')}}
-                                </div>
-                                <div class="job-criteria">
-                                    Company
-                                </div>
-                                <div class="job-detail">
-                                @if($advert->user)
-                                    {{isset($advert->user->business)? $advert->user->business->name : $advert->user->name}}
-                                    @endif
-                                </div>
-                                <div class="job-criteria">
-                                    Description
-                                </div>
-                                <div class="job-detail">
-                                    {!! $product['description'] !!}
-
-                                </div>
-                                <div class="job-criteria">
-                                    Type
-                                </div>
-                                <div class="job-detail">
-                                    Permanent
-                                </div>
-                                <div class="job-criteria">
-                                    Start Date
-                                </div>
-                                <div class="job-detail">
-                                    Immediate
-                                </div>
-                                <div class="job-criteria">
-                                    Contract Length
-                                </div>
-                                <div class="job-detail">
-                                    N/A
-                                </div>
-                                <div class="job-criteria">
-                                    Contact Name
-                                </div>
-                                <div class="job-detail">
-                                    Login or register to view
-                                </div>
-                                <div class="job-criteria">
-                                    Telephone
-                                </div>
-                                <div class="job-detail">
-                                    Login or register to view
-                                </div>
-                                <div class="job-criteria">
-                                    Job reference
-                                </div>
-                                <div class="job-detail">
-                                    0611FEDLONDON
+                                <div class="col-md-12 col-sm-12 bottom-buttons">
+                                    <a class="btn">Save</a>
+                                    <a class="btn">Call</a>
+                                    <a class="btn">VideoCall</a>
+                                    <a class="btn">Email</a>
                                 </div>
                             </div>
-                            <div class="col-md-12 col-sm-12 bottom-buttons">
-                                <a class="btn">Save</a>
-                                <a class="btn">Call</a>
-                                <a class="btn">VideoCall</a>
-                                <a class="btn">Email</a>
-                            </div>
-                        </div>
                         </div>
                         <div id="tab-map" class="tab-pane fade">
                             <div id="map"></div>
