@@ -543,6 +543,14 @@
     </div>
 </div>
 <script>
+    $('a[href="#tab-map"]').on('shown.bs.tab', function () {
+        x = map.getZoom();
+        c = map.getCenter();
+        google.maps.event.trigger(map, 'resize');
+        google.maps.event.trigger(panorama, 'resize');
+        map.setZoom(x);
+        map.setCenter(c);
+    });
     $("#check-button").click(function () {
         var id =$('#id').val();
         var postcode=$('#postcode').val();
