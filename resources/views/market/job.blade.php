@@ -152,7 +152,19 @@
                                 <a class="btn">Email</a>
                             </div>
                         </div>
-                        <div id="tap-apply">
+                        <div class="info-map" class="tab-pane fade">
+                            <div id="map"></div>
+                            <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
+                            <div>
+                                <h4>Nearest stations</h4>
+                                <ul class="stations-list">
+
+                                </ul>
+                                <small>Distances are straight line measurements from centre of postcode
+</small>
+                            </div>
+                        </div>
+                        <div id="tap-apply" class="tab-pane fade">
                             <!-- Apply -->
                             <div class="col-md-12 col-sm-12 border-top">
                                 <div class="jobs-apply">
