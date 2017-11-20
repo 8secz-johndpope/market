@@ -253,6 +253,10 @@ h2.item-name, .jobs-apply h2, .field h2 {
     background: #fafafa!important;
     padding: 5px 0;
 }
+.safe-jobs {
+    padding-left: 0;
+    padding-right: 0;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;

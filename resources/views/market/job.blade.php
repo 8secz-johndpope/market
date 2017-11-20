@@ -370,7 +370,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 safe-jobs">
                     <p>
                         <small>Remember: You should never send cash or cheques to a prospective employer, or provide your bank details or any other financial information. We pay great attention to vetting all jobs that appear on our site, but please get in touch if you see any roles asking for such payments or financial details from you. For more information on conducting a safe job hunt online, visit safer-jobs.</small>
                     </p>
