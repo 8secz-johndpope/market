@@ -392,7 +392,7 @@ a.right.carousel-control {
     padding-right: 15px;
     border-bottom: 1px dashed #dfdfe1;
 }
-.list-group-item{
+.list-group-item:last-child{
 	border-bottom: 0;
 }
 span.email-icon img {
