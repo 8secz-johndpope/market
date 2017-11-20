@@ -58,7 +58,7 @@
                     </div>
                 </div>
 
-                <div class="border-left-right">
+                <div class="">
                     <div id="tabs">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
