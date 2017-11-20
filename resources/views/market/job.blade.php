@@ -475,6 +475,19 @@
                 @endif
             </div>
             <div class="row">
+                 <div class="col-sm-12">
+                    <div class="share border-bottom-dashed">
+                        <h3>Share this property</h3>
+                        <div class=" media">
+                            <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/facebook.svg"></a></div>
+                            <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/twitter.svg"></a></div>
+                            <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/instagram.png"></a></div>
+                            <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/pinterest.svg"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-sm-12">
                     <div class="report border-bottom-dashed">
                         <h3>Report this Ad</h3>
