@@ -398,6 +398,11 @@ span.email-icon img {
     font-size: 18px;
     float: left;
 }
+.tab-pane {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-top-color: transparent;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
