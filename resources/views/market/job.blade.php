@@ -34,23 +34,18 @@
             @endif
         </div>
         <div class="col-md-12 buttons-filters">
-            <div class="">
                 <a class="btn">All Lastest Jobs</a>
                 <a class="btn">Permanent</a>
                 <a class="btn">Temporary</a>
                 <a class="btn">Weekend</a>
                 <a class="btn">Search Recruiters</a>
-            </div>
         </div>
         <div class="col-md-12 buttons-filters">
-            <div class="">
                 <a class="btn">Part Time</a>
                 <a class="btn">Work Wanted</a>
                 <a class="btn">Daily Work</a>
                 <a class="btn">Gig Work</a>
                 <a class="btn">Freelancers</a>
-                
-            </div>
         </div>
         <div class="col-md-12 alerts">
             <p>Set your jobs search alerts, click below to:</p>
