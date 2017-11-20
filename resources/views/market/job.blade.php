@@ -131,6 +131,36 @@
                         <div id="tab-description" class="tab-pane fade in active">
                             <div class="row">
                                 <div class="job-details">
+                                    <div class="col-sm-12 left-content">
+                                        <h3>Job information:</h3>
+                                        <div class="row meta">
+                                            @foreach($metas as $meta)
+                                                <div class="col-sm-6 meta-bold">
+                                                    {{$meta->title}}:
+                                                </div>
+                                                <div class="col-sm-6 meta-info">
+                                                    {{$meta->value}}
+                                                </div>
+                                            @endforeach
+                                                <div class="col-sm-6 meta-bold">
+                                                    Added on {{env('APP_NAME')}}:
+                                                </div>
+                                                <div class="col-sm-6 meta-info">
+                                                    {{$advert->created_at->format('d F Y')}}
+                                                </div>
+                                                <div class="col-sm-6 meta-bold">
+                                                    Payments:
+                                                </div>
+                                                <div class="col-sm-6 meta-info">
+                                                    <a href="#"> <img class="payments-methods" src="/css/payments.png"></a>
+                                                </div>
+                                        </div>
+                                        <div class="description">
+                                            <h3>Full Description</h3>
+                                            {!! $product['description'] !!}
+
+                                        </div>
+                                    </div>
                                     <div class="job-title">
                                         <div class="job-criteria">
                                             Title
