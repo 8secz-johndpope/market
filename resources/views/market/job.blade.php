@@ -180,15 +180,15 @@
                                     </div>
                                 </div>
                                 @if (Auth::guest())
-                                <div class="col-md-12 col-sm-12 border-top-left-right">
+                                <div class="col-md-12 col-sm-12 border-top">
                                     <div class="jobs-apply">
                                        
                                         <span>Alredy uploaded your CV? <a href="/user/redirect/{{$advert->id}}">Sign in</a> to apply instantly</span>
                                     </div>
                                 </div>
                                 @endif
-                                <div class="col-md-12 col-sm-12 border background-color">
-                                    <div class="form-group">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group background-color">
                                         @if (Auth::guest())
                                         <div class="row">
                                             <div class="col-md-6">
