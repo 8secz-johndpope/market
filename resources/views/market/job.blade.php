@@ -57,6 +57,7 @@
                         <img src="">
                     </div>
                 </div>
+                
                 <div class="col-md-12 col-sm-12 border-left-right">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
