@@ -148,17 +148,16 @@
                                                 <div class="col-sm-6 meta-info">
                                                     {{$advert->created_at->format('d F Y')}}
                                                 </div>
-                                                <div class="col-sm-6 meta-bold">
+                                                <!-- <div class="col-sm-6 meta-bold">
                                                     Payments:
                                                 </div>
                                                 <div class="col-sm-6 meta-info">
                                                     <a href="#"> <img class="payments-methods" src="/css/payments.png"></a>
-                                                </div>
+                                                </div> -->
                                         </div>
                                         <div class="description">
                                             <h3>Full Description</h3>
                                             {!! $product['description'] !!}
-
                                         </div>
                                     </div>
                                     <div class="job-title">
