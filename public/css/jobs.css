@@ -384,6 +384,11 @@ a.right.carousel-control {
     padding-right: 15px;
     border-bottom: 1px dashed #dfdfe1;
 }
+span.email-icon img {
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
