@@ -171,10 +171,10 @@ h2.item-name, .jobs-apply h2, .field h2 {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.alerts a{
-	width: 40%;
-	border-right: 1px solid #ff9d2c;
-	color: #ff9d2c;
+.alerts a {
+    width: 40%;
+    border-right: 1px solid #000;
+    color: #000;
 }
 .alerts a:last-child{
 	border:none;
