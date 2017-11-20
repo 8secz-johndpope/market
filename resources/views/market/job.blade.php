@@ -33,6 +33,21 @@
                 <a href="/p/{{$category->id}}/{{$nextAdvert->id}}"> Next > </a>
             @endif
         </div>
+        <div class="col-md-12 buttons-filters">
+            <a class="btn">All lastest jobs</a>
+            <a class="btn">Permanent</a>
+            <a class="btn">Tempory</a>
+            <a class="btn">Weekend</a>
+            <a class="btn">Search recruiters</a>
+            <a class="btn">Get job Alerts</a>
+        </div>
+        <div class="col-md-12 alerts">
+            <p>Set your jobs search alerts, click below to:</p>
+            <div class="buttons-alerts">
+                <a class="btn">Email Alert</a>
+                <a class="btn">Mobile Alert</a>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-8 col-sm-12">
@@ -50,21 +65,6 @@
     <div class="row">
         <div class="col-md-8 col-sm-12">
             <div class="row">
-                <div class="col-md-12 buttons-filters">
-                    <a class="btn">All lastest jobs</a>
-                    <a class="btn">Permanent</a>
-                    <a class="btn">Tempory</a>
-                    <a class="btn">Weekend</a>
-                    <a class="btn">Search recruiters</a>
-                    <a class="btn">Get job Alerts</a>
-                </div>
-                <div class="col-md-12 alerts">
-                    <p>Set your jobs search alerts, click below to:</p>
-                    <div class="buttons-alerts">
-                        <a class="btn">Email Alert</a>
-                        <a class="btn">Mobile Alert</a>
-                    </div>
-                </div>
                 @if(count($product['images']) > 0)
                 <div id="current-image">
                     <img id="image-active" data-index="1" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" class="gallery-items">
