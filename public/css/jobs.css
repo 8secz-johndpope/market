@@ -410,6 +410,9 @@ span.email-icon img {
 .top-space {
     margin-top: 15px;
 }
+.location-name {
+    padding-left: 0;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
