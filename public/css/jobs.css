@@ -407,6 +407,9 @@ span.email-icon img {
     margin-left: 0px;
     font-size: 17px;
 }
+.top-space {
+    margin-top: 15px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
