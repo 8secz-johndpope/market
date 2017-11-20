@@ -121,7 +121,7 @@
         </div>
         <div class="col-md-9 col-sm-12">
             <div class="row">
-                <!-- <div class="col-md-12 buttons-filters">
+                <div class="col-md-12 buttons-filters">
                     <a class="btn">All lastest jobs</a>
                     <a class="btn">Permanent</a>
                     <a class="btn">Tempory</a>
@@ -135,7 +135,7 @@
                         <a class="btn">Email Alert</a>
                         <a class="btn">Mobile Alert</a>
                     </div>
-                </div> -->
+                </div>
                 <div class="col-md-12 border-top-left-right">
                     <div class="company-img center-block">
                         <img src="">
