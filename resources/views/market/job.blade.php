@@ -467,24 +467,26 @@
                             <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                         </div>
                     </div>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save property
-                        </li>
-                        <li class="list-group-item">
-                            <span class="glyphicon glyphicon-pencil"></span>
-                            Add notes
-                        </li>
-                        <li class="list-group-item">
-                            <span class="glyphicon glyphicon-print"></span>
-                            Print
-                        </li>
-                        <li class="list-group-item">
-                            <span class="email-icon"><img src="/css/icons/email.svg"></span>
+                     <div class="contact">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save property
+                            </li>
+                            <li class="list-group-item">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                Add notes
+                            </li>
+                            <li class="list-group-item">
+                                <span class="glyphicon glyphicon-print"></span>
+                                Print
+                            </li>
+                            <li class="list-group-item">
+                                <span class="email-icon"><img src="/css/icons/email.svg"></span>
 
-                            Email to friend
-                        </li>
-                    </ul>
+                                Email to friend
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 @else
                     <ul class="list-group">
