@@ -361,6 +361,12 @@ a.left.carousel-control {
 a.right.carousel-control {
     background: rgba(0,0,0,0.3);
 }
+.share h3 {
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    padding-left: 15px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
