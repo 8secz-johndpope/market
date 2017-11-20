@@ -37,7 +37,7 @@
     <div class="row">
         <div class="col-md-8 col-sm-12">
             <div class="row">
-                <div class="col-md-12 buttons-filters">
+                <!-- <div class="col-md-12 buttons-filters">
                     <a class="btn">All lastest jobs</a>
                     <a class="btn">Permanent</a>
                     <a class="btn">Tempory</a>
@@ -51,8 +51,67 @@
                         <a class="btn">Email Alert</a>
                         <a class="btn">Mobile Alert</a>
                     </div>
+                </div> -->
+                <div id="current-image">
+                    <img id="image-active" data-index="1" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" class="gallery-items">
+                    <div class="images-info">
+                        <div class="col-sm-4 start-animation">
+                            <a href="javascript:void(0)" class="icon-before">Start slideshow</a>
+                        </div>
+                        <div class="col-sm-4 images-nav">
+                            <p><span class="prev"> <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-left"></span></a></span>
+                                <span class="index">1</span> of {{count($product['images'])}}
+                                <span class="next"><a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-right"></span></a></span>
+                            </p>
+                        </div>
+                        <div class="col-sm-4 images-current">
+                            <a href="#"><p><span class="glyphicon glyphicon-zoom-in"></span>Enlarge</p></a>
+                        </div>
+                    </div>
                 </div>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators 
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                       @foreach($counts as $number)
+                            <li data-target="#myCarousel" data-slide-to="{{$number}}"></li>
+                        @endforeach
+                    </ol> -->
 
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        @for($i=0; $i< count($product['images']); $i++)
+                        <div class="item">
+                            @for($j=0; $j < 5 && ($i+$j) < count($product['images']); $j++)
+                            <div class="small-image">
+                                <a href="javascript:void(0)" data-index="{{$i+$j+1}}">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$product['images'][$i+$j]}}?1500586448" alt="Los Angeles">
+                                </a>
+                            </div>
+                            @endfor
+                            @php
+                                $i = $i + $j - 1
+                            @endphp
+                        </div>
+                        @endfor
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <div class="request-details">
+                        <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Call</a>
+                        <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
+                        
+                        <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">VideoCall</a>
+                    </div>
+                </div>
                 <div class="">
                     <div id="tabs">
                     <ul class="nav nav-tabs">
