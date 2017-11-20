@@ -317,6 +317,15 @@ h2.item-name, .jobs-apply h2, .field h2 {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.images-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    padding: 10px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
