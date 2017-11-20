@@ -373,6 +373,14 @@ a.right.carousel-control {
 .info-pano{
 	display: none;
 }
+.buttons {
+    border: 1px solid #ccc;
+}
+.contact {
+    padding: 15px;
+    border-bottom: 1px dashed #dfdfe1;
+    text-align: center;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
