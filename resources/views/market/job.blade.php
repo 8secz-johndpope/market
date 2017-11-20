@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 @else
-                <div class="map-main"
+                <div class="map-main">
                     <div id="map"></div>
                 </div>
                 @endif
