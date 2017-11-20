@@ -60,9 +60,9 @@
                 <div class="col-md-12 col-sm-12 border-left-right">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
-                        <li><a data-toggle="tab" href="#tap-video">Floorplan</a></li>
+                        <li><a data-toggle="tab" href="#tap-video">Video Description</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
-                        <li><a data-toggle="tab" href="#tap-apply">Market Info</a></li>
+                        <li><a data-toggle="tab" href="#tap-apply">Apply</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
@@ -145,163 +145,166 @@
                                     0611FEDLONDON
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12 bottom-buttons">
-                    <a class="btn">Save</a>
-                    <a class="btn">Call</a>
-                    <a class="btn">VideoCall</a>
-                    <a class="btn">Email</a>
-                </div>
-                <div class="col-md-12 col-sm-12 border-top">
-                    <div class="jobs-apply">
-                        <h2>Apply for {{$product['title']}}</h2>
-                    </div>
-                </div>
-                @if (Auth::guest())
-                <div class="col-md-12 col-sm-12 border-top-left-right">
-                    <div class="jobs-apply">
-                       
-                        <span>Alredy uploaded your CV? <a href="/user/redirect/{{$advert->id}}">Sign in</a> to apply instantly</span>
-                    </div>
-                </div>
-                @endif
-                <div class="col-md-12 col-sm-12 border background-color">
-                    <div class="form-group">
-                        @if (Auth::guest())
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="field">
-                                    <label for="first-name">
-                                        First name
-                                        <span class="field-indicator-required">
-                                            <i data-icon="*" class="icon-required"></i>
-                                        </span>
-                                    </label>
-                                    <input type="text" name="first-name" id="first-name" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="field">
-                                    <label for="last-name">
-                                        Last name
-                                        <span class="field-indicator-required">
-                                            <i data-icon="*" class="icon-required"></i>
-                                        </span>
-                                    </label>
-                                    <input type="text" name="last-name" id="last-name" required>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="field">
-                                    <label for="email">
-                                        Email address
-                                        <span class="field-indicator-required">
-                                            <i data-icon="*" class="icon-required"></i>
-                                        </span>
-                                    </label>
-                                    <input type="text" name="email" id="email" required>
-                                </div>
-                                <hr>
+                            <div class="col-md-12 col-sm-12 bottom-buttons">
+                                <a class="btn">Save</a>
+                                <a class="btn">Call</a>
+                                <a class="btn">VideoCall</a>
+                                <a class="btn">Email</a>
                             </div>
                         </div>
-                        @elseif(count(Auth::user()->cvs)>0)
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="field">
-                                    <label for="selected-cv" class="h3">
-                                        Select a CV
-                                    </label>
-                                    <select class="form-control" name="cv" required id="selected-cv">
-                                        <option value="0">Select</option>
-                                        @foreach(Auth::user()->cvs as $cv)
-                                            <option value="{{$cv->id}}">{{$cv->title}}</option>
-                                        @endforeach
-                                    </select> 
-                                </div>     
+                        <div id="tap-apply">
+                            <!-- Apply -->
+                            <div class="col-md-12 col-sm-12 border-top">
+                                <div class="jobs-apply">
+                                    <h2>Apply for {{$product['title']}}</h2>
+                                </div>
                             </div>
-                        </div>
-                        @endif
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="field">
-                                    <label for="upload-cv" class="h3">
-                                        Upload your CV
-                                    </label>
-                                    <div class="upload-container">
-                                        <p>Upload from cumputer or mobile phone</p>
-                                        <div class="icon-before">
-                                            <input type="file" name="upload-cv" id="upload-cv">
+                            @if (Auth::guest())
+                            <div class="col-md-12 col-sm-12 border-top-left-right">
+                                <div class="jobs-apply">
+                                   
+                                    <span>Alredy uploaded your CV? <a href="/user/redirect/{{$advert->id}}">Sign in</a> to apply instantly</span>
+                                </div>
+                            </div>
+                            @endif
+                            <div class="col-md-12 col-sm-12 border background-color">
+                                <div class="form-group">
+                                    @if (Auth::guest())
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="field">
+                                                <label for="first-name">
+                                                    First name
+                                                    <span class="field-indicator-required">
+                                                        <i data-icon="*" class="icon-required"></i>
+                                                    </span>
+                                                </label>
+                                                <input type="text" name="first-name" id="first-name" required>
+                                            </div>
                                         </div>
-                                        <p>Or upload from one of the following</p>
-                                        <div class="buttons-cloud">
-                                            <a href="#" class="btn btn-form btn-dropbox">Dropbox</a>
-                                            <a href="#" class="btn btn-form btn-onedrive">OneDrive</a>
-                                            <a href="#" class="btn btn-form btn-googledrive">Google Drive</a>
+                                        <div class="col-md-6">
+                                            <div class="field">
+                                                <label for="last-name">
+                                                    Last name
+                                                    <span class="field-indicator-required">
+                                                        <i data-icon="*" class="icon-required"></i>
+                                                    </span>
+                                                </label>
+                                                <input type="text" name="last-name" id="last-name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="field">
+                                                <label for="email">
+                                                    Email address
+                                                    <span class="field-indicator-required">
+                                                        <i data-icon="*" class="icon-required"></i>
+                                                    </span>
+                                                </label>
+                                                <input type="text" name="email" id="email" required>
+                                            </div>
+                                            <hr>
                                         </div>
                                     </div>
-                                    <p><small>Your CV must be a .doc, .pdf, rtf, and no bigger than 1MB</small></p>
-                                    <hr>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="field">
-                                    <span class="h3">Cover message or cover letter for {{$product['title']}}</span>
-                                    <div class="cover-letter-container">
-                                        <p>Choose from:</p>
-                                        <div class="buttons-option-cover">
-                                            <a href="" class="btn btn-form btn-profile">Profile</a>
-                                            <a href="" class="btn btn-form btn-saved">Saved cover letter</a>
-                                            <a href="" class="btn btn-form btn-new">Write new</a>
+                                    @elseif(count(Auth::user()->cvs)>0)
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="field">
+                                                <label for="selected-cv" class="h3">
+                                                    Select a CV
+                                                </label>
+                                                <select class="form-control" name="cv" required id="selected-cv">
+                                                    <option value="0">Select</option>
+                                                    @foreach(Auth::user()->cvs as $cv)
+                                                        <option value="{{$cv->id}}">{{$cv->title}}</option>
+                                                    @endforeach
+                                                </select> 
+                                            </div>     
                                         </div>
-                                        <div class="cover-write">
-                                            <label for="cover-message"> 
-                                                Your covering message
-                                            </label>
-                                            <textarea id="cover-message" name="cover-message" placeholder="Write your application covering message here or copy and paste from a document."> 
-                                            </textarea>
-                                            <p class="small text-right">4000 characters left</p>
-                                             <input type="hidden" name="ctitle" value="{{$advert->category->title}}">
-                                             <input type="hidden" name="ccategory" value="{{$advert->category->id}}">
-                                        </div>
-                                        @if(!Auth::guest() && count(Auth::user()->covers)>0)
-                                        <div class="cover-select">
-                                            <label for="cover">Select a Cover Letter</label>
-                                            <select class="form-control" name="cover" id="cover" required>
-                                                <option value="0">Select</option>
-                                                @foreach(Auth::user()->covers as $cover)
-                                                    <option value="{{$cover->id}}">{{$cover->title}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        @endif
                                     </div>
-                                    <hr>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="field">
-                                     <div class="checkbox">
-                                          <input type="checkbox" name="email-me" id="email-me" value="true" checked="checked">
-                                          <label for="email-me">Email me jobs like this one when they become available</label>  
-                                     </div>
-                                </div>
-                                <p>
-                                    <small>
-                                        By applying for a job listed on {{ env('APP_NAME')  }} Jobs you agree to our <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>. You should never be to provide bank account details. If you are, please <a href="#">email us</a>.
-                                    </small>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="field button-submit">
-                                     <input class="btn-form" type="submit" name="submit-cv" id="submit-cv" value="Send application">
+                                    @endif
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="field">
+                                                <label for="upload-cv" class="h3">
+                                                    Upload your CV
+                                                </label>
+                                                <div class="upload-container">
+                                                    <p>Upload from cumputer or mobile phone</p>
+                                                    <div class="icon-before">
+                                                        <input type="file" name="upload-cv" id="upload-cv">
+                                                    </div>
+                                                    <p>Or upload from one of the following</p>
+                                                    <div class="buttons-cloud">
+                                                        <a href="#" class="btn btn-form btn-dropbox">Dropbox</a>
+                                                        <a href="#" class="btn btn-form btn-onedrive">OneDrive</a>
+                                                        <a href="#" class="btn btn-form btn-googledrive">Google Drive</a>
+                                                    </div>
+                                                </div>
+                                                <p><small>Your CV must be a .doc, .pdf, rtf, and no bigger than 1MB</small></p>
+                                                <hr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="field">
+                                                <span class="h3">Cover message or cover letter for {{$product['title']}}</span>
+                                                <div class="cover-letter-container">
+                                                    <p>Choose from:</p>
+                                                    <div class="buttons-option-cover">
+                                                        <a href="" class="btn btn-form btn-profile">Profile</a>
+                                                        <a href="" class="btn btn-form btn-saved">Saved cover letter</a>
+                                                        <a href="" class="btn btn-form btn-new">Write new</a>
+                                                    </div>
+                                                    <div class="cover-write">
+                                                        <label for="cover-message"> 
+                                                            Your covering message
+                                                        </label>
+                                                        <textarea id="cover-message" name="cover-message" placeholder="Write your application covering message here or copy and paste from a document."> 
+                                                        </textarea>
+                                                        <p class="small text-right">4000 characters left</p>
+                                                         <input type="hidden" name="ctitle" value="{{$advert->category->title}}">
+                                                         <input type="hidden" name="ccategory" value="{{$advert->category->id}}">
+                                                    </div>
+                                                    @if(!Auth::guest() && count(Auth::user()->covers)>0)
+                                                    <div class="cover-select">
+                                                        <label for="cover">Select a Cover Letter</label>
+                                                        <select class="form-control" name="cover" id="cover" required>
+                                                            <option value="0">Select</option>
+                                                            @foreach(Auth::user()->covers as $cover)
+                                                                <option value="{{$cover->id}}">{{$cover->title}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    @endif
+                                                </div>
+                                                <hr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="field">
+                                                 <div class="checkbox">
+                                                      <input type="checkbox" name="email-me" id="email-me" value="true" checked="checked">
+                                                      <label for="email-me">Email me jobs like this one when they become available</label>  
+                                                 </div>
+                                            </div>
+                                            <p>
+                                                <small>
+                                                    By applying for a job listed on {{ env('APP_NAME')  }} Jobs you agree to our <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>. You should never be to provide bank account details. If you are, please <a href="#">email us</a>.
+                                                </small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="field button-submit">
+                                                 <input class="btn-form" type="submit" name="submit-cv" id="submit-cv" value="Send application">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
