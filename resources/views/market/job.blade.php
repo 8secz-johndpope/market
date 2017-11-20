@@ -68,6 +68,7 @@
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
+                            <div class="row">
                             <div class="job-details">
                                 <div class="job-title">
                                     <div class="job-criteria">
@@ -153,6 +154,7 @@
                                 <a class="btn">VideoCall</a>
                                 <a class="btn">Email</a>
                             </div>
+                        </div>
                         </div>
                         <div id="tab-map" class="tab-pane fade">
                             <div id="map"></div>
