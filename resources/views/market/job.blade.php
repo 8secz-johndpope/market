@@ -37,7 +37,7 @@
             <a class="btn">All lastest jobs</a>
             <a class="btn">Permanent</a>
             <a class="btn">Temporary</a>
-            <a class="btn">Weekend</a>
+            <a class="btn">Part time & Weekend</a>
             <a class="btn">Search recruiters</a>
             <a class="btn">Get job Alerts</a>
         </div>
