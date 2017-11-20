@@ -64,7 +64,6 @@
     </div>
     <div class="row">
         <div class="col-md-8 col-sm-12">
-            <div class="row">
                 @if(count($product['images']) > 0)
                 <div id="current-image">
                     <img id="image-active" data-index="1" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" class="gallery-items">
@@ -410,7 +409,6 @@
                         <small>Remember: You should never send cash or cheques to a prospective employer, or provide your bank details or any other financial information. We pay great attention to vetting all jobs that appear on our site, but please get in touch if you see any roles asking for such payments or financial details from you. For more information on conducting a safe job hunt online, visit safer-jobs.</small>
                     </p>
                 </div>
-            </div>
         </div>
         <div class="col-md-4 col-sm-12">
             <!-- search -->
