@@ -438,6 +438,9 @@ span.email-icon img {
 	border-bottom-right-radius: 5px;
 	margin-bottom: 15px;
 }
+.map-main {
+    margin-bottom: 15px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
