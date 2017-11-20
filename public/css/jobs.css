@@ -376,10 +376,14 @@ a.right.carousel-control {
 .buttons {
     border: 1px solid #ccc;
 }
-.contact {
-    padding: 15px;
+.list-group {
+    margin-bottom: 0;
+}
+.list-group-item {
+    padding: .8rem 0 1.6rem;
+    padding-left: 15px;
+    padding-right: 15px;
     border-bottom: 1px dashed #dfdfe1;
-    text-align: center;
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
