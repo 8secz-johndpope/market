@@ -662,8 +662,11 @@ class Advert extends  BaseModel
                 cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
         return 0.000621371*$angle * $earthRadius;
     }
-    public function next_advert(){
+    public function nextAdvert(){
         return Advert::where('category_id',$this->category_id)->where('id','>',$this->id)->where('status',1)->first();
+    }
+    public function prevAdvert(){
+        return Advert::where('category_id',$this->category_id)->where('id','<',$this->id)->where('status',1)->first();
     }
 
 }

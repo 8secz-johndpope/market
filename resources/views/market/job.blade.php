@@ -26,8 +26,12 @@
             </ol>
         </div>
         <div class="col-md-2 prev-next">
-            <a> < Prev</a>
-            <a href="/p/{{$category->id}}/{{$nextAdvert->id}}"> Next > </a>
+            @if(isset($prevAdvert))
+                <a href="/p/{{$category->id}}/{{$prevAdvert->id}}"> < Prev</a>
+            @endif
+            @if(isset($nextAdvert))
+                <a href="/p/{{$category->id}}/{{$nextAdvert->id}}"> Next > </a>
+            @endif
         </div>
     </div>
     <div class="row">
