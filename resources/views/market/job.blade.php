@@ -159,6 +159,36 @@
                         <div id="tab-map" class="tab-pane fade">
                             <div class="row">
                                 <div id="map"></div>
+                                <script>
+                                var map;
+                                var panorama;
+                                var service;
+                                function initMap() {
+                                    var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
+                                     map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 18,
+                                        center: uluru
+                                    });
+                                    var marker = new google.maps.Marker({
+                                        position: uluru,
+                                        map: map
+                                    });
+                                    var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
+                                    getTransport({!! $lat !!},{!! $lng !!});
+                                    panorama = new google.maps.StreetViewPanorama(
+                                        document.getElementById('pano'), {
+                                            position: uluru,
+                                            pov: {heading: 165, pitch: 0},
+                                            motionTrackingControlOptions: {
+                                            position: google.maps.ControlPosition.LEFT_BOTTOM
+                                        }
+                                    });
+                                }
+                                $(document).ready(function() {
+                                    initMap();
+                                    activeFirstItem();
+                                });
+                            </script>
                                 <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
                                 <div>
                                     <h4>Nearest stations</h4>
@@ -466,6 +496,85 @@
         $('.active-cover').removeClass('active-cover');
         $('.cover-select').addClass('active-cover');
     })
+    function isUnderground(types){
+        return types.indexOf('tube') != -1;
+    }
+    function isRail(types){
+        for (var i = 0; i < types.length; i++) {
+            if(types[i].modeName == "national-rail" || types[i].modeName == "tflrail")
+                return true;
+        }
+        return false;
+    }
+    function isOverground(types){
+        return types.indexOf('overground') != -1;
+    }
+    function isBus(types){
+        return types.indexOf('bus') != -1;
+    }
+    function isDlr(types){
+        return types.indexOf('dlr') != -1;
+    }
+    function getStationHtml(dict){
+        var textHtml = "";
+        for(key in dict){
+            textHtml += dict[key] + "\n";
+        }
+        return textHtml;
+    }
+    function processStops(stops){
+        var aux;
+        var stations = [];
+        var distance;
+        console.log(stops);
+        for(i = 0; i < stops.length; i++){
+            aux = "";
+            if(isRail(stops[i].lineModeGroups)){
+                aux += "<i class=\"icon-transport icon-rail\"></i>";
+            }
+            if(isUnderground(stops[i].modes)){
+                aux +="<i class=\"icon-transport icon-underground\"></i>";
+            }
+            if(isOverground(stops[i].modes)){
+                aux +="<i class=\"icon-transport icon-overground\"></i>";
+            }
+            if(isDlr(stops[i].modes)){
+                aux +="<i class=\"icon-transport icon-dlr\"></i>";
+            }
+            if(isBus(stops[i].modes)){
+                aux +="<i class=\"icon-transport icon-bus\"></i>";
+            }
+            distance = parseFloat(stops[i].distance / 1600).toFixed(2);
+            aux = "<li>" + aux + "<span>" + stops[i].commonName + " <small>(" + distance + " mi)</small></span></li>";
+            var length;
+            if(typeof(stations[stops[i].commonName]) != "undefined"){
+                length = stations[stops[i].commonName].length
+                if(aux.length > length){
+                    stations[stops[i].commonName] = aux;
+                }
+            }
+            else
+                stations[stops[i].commonName] = aux;
+        }
+        var stationsList = getStationHtml(stations);
+        $('.stations-list').html(stationsList);
+    }
+    function getTransport(lat, lng) {
+    // See Parsing the Results for
+    // the basics of a callback function.
+        $.ajax({
+            url: "https://api.tfl.gov.uk/Place?type=NaptanMetroStation,NaptanRailStation&lat=" + lat + "&lon=" + lng + "&categories=Description&radius=1500&app_id=2d80416f&app_key=31f4c6d3a317c8de56f699bb3aff9af2",
+            dataType: "json",
+            type: "GET",
+        }).done(function(data, textStatus){
+            var places = data.places;
+            processStops(places);
+        }).fail(function( jqXHR, textStatus, errorThrown ) {
+            if ( console && console.log ) {
+                console.log( "Error get stations: " +  textStatus);
+            }
+        });
+    }
 </script>
 
 
