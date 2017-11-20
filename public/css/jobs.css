@@ -350,6 +350,11 @@ h2.item-name, .jobs-apply h2, .field h2 {
     margin-bottom: 1.6rem;
     padding-top: 5px;
 }
+a.carousel-control {
+    margin: 5px 0;
+    width: 25px;
+    height: 90px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
