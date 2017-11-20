@@ -370,6 +370,9 @@ a.right.carousel-control {
 .share {
     padding-bottom: 15px;
 }
+.info-pano{
+	display: none;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
