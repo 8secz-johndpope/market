@@ -1,3 +1,7 @@
+section{
+	font-family: Effra-Regular,arial,helvetica,sans-serif;
+	line-height: 1.615;
+}
 h2.item-name, .jobs-apply h2, .field h2 {
     font: 600 19px 'Open Sans', Arial, Helvetica, sans-serif;
     border: 0;
