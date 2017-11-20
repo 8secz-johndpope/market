@@ -172,7 +172,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     border-bottom-right-radius: 5px;
 }
 .alerts a{
-	width: 48%;
+	width: 40%;
 	border-right: 1px solid #ff9d2c;
 	color: #ff9d2c;
 }
@@ -418,6 +418,12 @@ span.email-icon img {
 }
 .location-name {
     padding-left: 0;
+}
+.buttons-alerts span {
+    background: #ff9d2c;
+    border: 1px solid #ff9d2c;
+    padding: 10px;
+    color: #fff;
 }
 @media screen and (min-width: 768px){
 	.job-criteria {

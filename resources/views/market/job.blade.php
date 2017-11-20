@@ -42,7 +42,7 @@
         </div>
         <div class="col-md-12 buttons-filters">
             <a class="btn">Work Wanted</a>
-            <a class="btn">Daily/ Gig Work</a>
+            <a class="btn">Daily / Gig Work</a>
             <a class="btn">Freelance's</a>
             <a class="btn">Part Time</a>
         </div>
