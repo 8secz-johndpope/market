@@ -160,7 +160,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     color: #003777;
     /* text-indent: 70px; */
 }
-
+.breadcrumb {
+    text-align: center;
+}
 .alerts {
     background: #eee!important;
     padding: 15px;
