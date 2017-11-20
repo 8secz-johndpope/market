@@ -52,17 +52,11 @@
                         <a class="btn">Mobile Alert</a>
                     </div>
                 </div>
-                <div class="col-md-12 border-top-left-right">
-                    <div class="company-img center-block">
-                        <img src="">
-                    </div>
-                </div>
 
                 <div class="">
                     <div id="tabs">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
-                        <li><a data-toggle="tab" href="#tab-video">Images Description</a></li>
                         <li><a data-toggle="tab" href="#tab-map">Map & Street View</a></li>
                         <li><a data-toggle="tab" href="#tab-apply">Apply</a></li>
                     </ul>
