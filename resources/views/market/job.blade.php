@@ -450,42 +450,44 @@
             <div class="row">
                 @if($advert->user!==null)
                 <div class="col-md-12">
-                    <div class="details">
-                        <h3>This Advert is marketed by</h3>
-                        
-                        <div class="profile-picutre">
-                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
+                    <div class="buttons">
+                        <div class="details">
+                            <h3>This Advert is marketed by</h3>
+                            
+                            <div class="profile-picutre">
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
+                            </div>
+                            <div class="user-details">
+                                <p><strong>{{$advert->user->name}}</strong></p>
+                                <address>
+                                @if(isset($advert->user->address))
+                                {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
+                                @endif    
+                                </address>
+                                <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
+                                <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
+                            </div>
                         </div>
-                        <div class="user-details">
-                            <p><strong>{{$advert->user->name}}</strong></p>
-                            <address>
-                            @if(isset($advert->user->address))
-                            {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
-                            @endif    
-                            </address>
-                            <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
-                            <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
-                        </div>
-                    </div>
-                     <div class="contact">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save property
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-pencil"></span>
-                                Add notes
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-print"></span>
-                                Print
-                            </li>
-                            <li class="list-group-item">
-                                <span class="email-icon"><img src="/css/icons/email.svg"></span>
+                         <div class="contact">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save property
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                    Add notes
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="glyphicon glyphicon-print"></span>
+                                    Print
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="email-icon"><img src="/css/icons/email.svg"></span>
 
-                                Email to friend
-                            </li>
-                        </ul>
+                                    Email to friend
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 @else
