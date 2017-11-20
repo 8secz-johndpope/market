@@ -289,93 +289,95 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="field">
-                                <label for="upload-cv" class="h3">
-                                    Upload your CV
-                                </label>
-                                <div class="upload-container">
-                                    <p>Upload from cumputer or mobile phone</p>
-                                    <div class="icon-before">
-                                        <input type="file" name="upload-cv" id="upload-cv">
+                                    <label for="upload-cv" class="h3">
+                                        Upload your CV
+                                    </label>
+                                    <div class="upload-container">
+                                        <p>Upload from cumputer or mobile phone</p>
+                                        <div class="icon-before">
+                                            <input type="file" name="upload-cv" id="upload-cv">
+                                        </div>
+                                        <p>Or upload from one of the following</p>
+                                        <div class="buttons-cloud">
+                                            <a href="#" class="btn btn-form btn-dropbox">Dropbox</a>
+                                            <a href="#" class="btn btn-form btn-onedrive">OneDrive</a>
+                                            <a href="#" class="btn btn-form btn-googledrive">Google Drive</a>
+                                        </div>
                                     </div>
-                                    <p>Or upload from one of the following</p>
-                                    <div class="buttons-cloud">
-                                        <a href="#" class="btn btn-form btn-dropbox">Dropbox</a>
-                                        <a href="#" class="btn btn-form btn-onedrive">OneDrive</a>
-                                        <a href="#" class="btn btn-form btn-googledrive">Google Drive</a>
-                                    </div>
+                                    <p><small>Your CV must be a .doc, .pdf, rtf, and no bigger than 1MB</small></p>
+                                    <hr>
                                 </div>
-                                <p><small>Your CV must be a .doc, .pdf, rtf, and no bigger than 1MB</small></p>
-                                <hr>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="field">
-                                <span class="h3">Cover message or cover letter for {{$product['title']}}</span>
-                                <div class="cover-letter-container">
-                                    <p>Choose from:</p>
-                                    <div class="buttons-option-cover">
-                                        <a href="" class="btn btn-form btn-profile">Profile</a>
-                                        <a href="" class="btn btn-form btn-saved">Saved cover letter</a>
-                                        <a href="" class="btn btn-form btn-new">Write new</a>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="field">
+                                    <span class="h3">Cover message or cover letter for {{$product['title']}}</span>
+                                    <div class="cover-letter-container">
+                                        <p>Choose from:</p>
+                                        <div class="buttons-option-cover">
+                                            <a href="" class="btn btn-form btn-profile">Profile</a>
+                                            <a href="" class="btn btn-form btn-saved">Saved cover letter</a>
+                                            <a href="" class="btn btn-form btn-new">Write new</a>
+                                        </div>
+                                        <div class="cover-write">
+                                            <label for="cover-message"> 
+                                                Your covering message
+                                            </label>
+                                            <textarea id="cover-message" name="cover-message" placeholder="Write your application covering message here or copy and paste from a document."> 
+                                            </textarea>
+                                            <p class="small text-right">4000 characters left</p>
+                                             <input type="hidden" name="ctitle" value="{{$advert->category->title}}">
+                                             <input type="hidden" name="ccategory" value="{{$advert->category->id}}">
+                                        </div>
+                                        @if(!Auth::guest() && count(Auth::user()->covers)>0)
+                                        <div class="cover-select">
+                                            <label for="cover">Select a Cover Letter</label>
+                                            <select class="form-control" name="cover" id="cover" required>
+                                                <option value="0">Select</option>
+                                                @foreach(Auth::user()->covers as $cover)
+                                                    <option value="{{$cover->id}}">{{$cover->title}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        @endif
                                     </div>
-                                    <div class="cover-write">
-                                        <label for="cover-message"> 
-                                            Your covering message
-                                        </label>
-                                        <textarea id="cover-message" name="cover-message" placeholder="Write your application covering message here or copy and paste from a document."> 
-                                        </textarea>
-                                        <p class="small text-right">4000 characters left</p>
-                                         <input type="hidden" name="ctitle" value="{{$advert->category->title}}">
-                                         <input type="hidden" name="ccategory" value="{{$advert->category->id}}">
-                                    </div>
-                                    @if(!Auth::guest() && count(Auth::user()->covers)>0)
-                                    <div class="cover-select">
-                                        <label for="cover">Select a Cover Letter</label>
-                                        <select class="form-control" name="cover" id="cover" required>
-                                            <option value="0">Select</option>
-                                            @foreach(Auth::user()->covers as $cover)
-                                                <option value="{{$cover->id}}">{{$cover->title}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    @endif
+                                    <hr>
                                 </div>
-                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="field">
+                                     <div class="checkbox">
+                                          <input type="checkbox" name="email-me" id="email-me" value="true" checked="checked">
+                                          <label for="email-me">Email me jobs like this one when they become available</label>  
+                                     </div>
+                                </div>
+                                <p>
+                                    <small>
+                                        By applying for a job listed on {{ env('APP_NAME')  }} Jobs you agree to our <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>. You should never be to provide bank account details. If you are, please <a href="#">email us</a>.
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="field button-submit">
+                                     <input class="btn-form" type="submit" name="submit-cv" id="submit-cv" value="Send application">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="field">
-                                 <div class="checkbox">
-                                      <input type="checkbox" name="email-me" id="email-me" value="true" checked="checked">
-                                      <label for="email-me">Email me jobs like this one when they become available</label>  
-                                 </div>
-                            </div>
-                            <p>
-                                <small>
-                                    By applying for a job listed on {{ env('APP_NAME')  }} Jobs you agree to our <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>. You should never be to provide bank account details. If you are, please <a href="#">email us</a>.
-                                </small>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="field button-submit">
-                                 <input class="btn-form" type="submit" name="submit-cv" id="submit-cv" value="Send application">
-                            </div>
-                        </div>
-                    </div>
+                </div>
                 <div class="col-md-12">
                     <p>
                         <small>Remember: You should never send cash or cheques to a prospective employer, or provide your bank details or any other financial information. We pay great attention to vetting all jobs that appear on our site, but please get in touch if you see any roles asking for such payments or financial details from you. For more information on conducting a safe job hunt online, visit safer-jobs.</small>
                     </p>
                 </div>
+
+            <!-- fin -->
             </div>
-        </div>
-    </div>
     <div style="display: none">
                 <h2 class="item-name">{{$product['title']}}</h2>
 <div class="col-sm-10">
