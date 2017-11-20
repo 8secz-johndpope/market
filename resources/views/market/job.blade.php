@@ -184,62 +184,64 @@
                         </div>
                         <div id="tab-map" class="tab-pane fade">
                             <div class="row">
-                                <div class="btn-group" data-toggle="buttons">
-                                    <label class="btn btn-primary active">
-                                        <input type="radio" name="options" id="option-map" autocomplete="off" checked> map view
-                                    </label>
-                                    <label class="btn btn-primary">
-                                        <input type="radio" name="options" id="option-view" autocomplete="off">
-                                        street view
-                                    </label>
-                                </div>
-                                <div class="info-map">
-                                    <div id="map"></div>
-                                    <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
-                                    <div>
-                                        <h4>Nearest stations</h4>
-                                        <ul class="stations-list">
-
-                                        </ul>
-                                        <small>
-                                            Distances are straight line measurements from centre of postcode
-                                        </small>
+                                <div class="col-md-12">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="options" id="option-map" autocomplete="off" checked> map view
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options" id="option-view" autocomplete="off">
+                                            street view
+                                        </label>
                                     </div>
-                                </div>
-                                <div class="info-pano">
-                                    <div id="pano"></div>
-                                    <small>Note: Start exploring the local area from here.</small>
-                                </div>
-                                <script>
-                                var map;
-                                var panorama;
-                                var service;
-                                function initMap() {
-                                    var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
-                                     map = new google.maps.Map(document.getElementById('map'), {
-                                        zoom: 18,
-                                        center: uluru
-                                    });
-                                    var marker = new google.maps.Marker({
-                                        position: uluru,
-                                        map: map
-                                    });
-                                    var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
-                                    getTransport({!! $lat !!},{!! $lng !!});
-                                    panorama = new google.maps.StreetViewPanorama(
-                                        document.getElementById('pano'), {
+                                    <div class="info-map">
+                                        <div id="map"></div>
+                                        <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
+                                        <div>
+                                            <h4>Nearest stations</h4>
+                                            <ul class="stations-list">
+
+                                            </ul>
+                                            <small>
+                                                Distances are straight line measurements from centre of postcode
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="info-pano">
+                                        <div id="pano"></div>
+                                        <small>Note: Start exploring the local area from here.</small>
+                                    </div>
+                                    <script>
+                                    var map;
+                                    var panorama;
+                                    var service;
+                                    function initMap() {
+                                        var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
+                                         map = new google.maps.Map(document.getElementById('map'), {
+                                            zoom: 18,
+                                            center: uluru
+                                        });
+                                        var marker = new google.maps.Marker({
                                             position: uluru,
-                                            pov: {heading: 165, pitch: 0},
-                                            motionTrackingControlOptions: {
-                                            position: google.maps.ControlPosition.LEFT_BOTTOM
-                                        }
+                                            map: map
+                                        });
+                                        var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
+                                        getTransport({!! $lat !!},{!! $lng !!});
+                                        panorama = new google.maps.StreetViewPanorama(
+                                            document.getElementById('pano'), {
+                                                position: uluru,
+                                                pov: {heading: 165, pitch: 0},
+                                                motionTrackingControlOptions: {
+                                                position: google.maps.ControlPosition.LEFT_BOTTOM
+                                            }
+                                        });
+                                    }
+                                    $(document).ready(function() {
+                                        initMap();
+                                        activeFirstItem();
                                     });
-                                }
-                                $(document).ready(function() {
-                                    initMap();
-                                    activeFirstItem();
-                                });
-                            </script>
+                                    </script>
+                                </div>
                             </div>
                         </div>
                         <div id="tab-apply" class="tab-pane fade">
