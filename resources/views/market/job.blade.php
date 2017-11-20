@@ -35,91 +35,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-3 col-sm-12">
-            <!-- search -->
-            <div class="row">
-                @if($advert->user!==null)
-                <div class="col-md-12">
-                    <div class="details">
-                        <h3>This Advert is marketed by</h3>
-                        
-                        <div class="profile-picutre">
-                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
-                        </div>
-                        <div class="user-details">
-                            <p><strong>{{$advert->user->name}}</strong></p>
-                            <address>
-                            @if(isset($advert->user->address))
-                            {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
-                            @endif    
-                            </address>
-                            <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
-                            <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
-                        </div>
-                    </div>
-                </div>
-                @else
-                    <ul class="list-group">
-                        <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
-                    </ul>
-                @endif
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="report border-bottom-dashed">
-                        <h3>Report this Ad</h3>
-                        <a href="#" class="btn btn-default">Report</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="similar-adverts">
-                        <h3>Similar Jobs</h3>
-                        <div class="listings-adverts">
-                        @foreach($products as $p)
-                        <a href="/p/{{$category->id}}/{{$product['source_id']}}">
-                            <div class="col-sm-12 border-bottom-dashed">
-                                <div class="advert-details">
-                                    <h4>{{$p['title']}}</h4>
-                                    <p>{{$p['location_name']}}</p>
-                                </div>
-                            </div>
-                        </a>
-                        @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="similar-adverts">
-                        <h3>Recommended Course</h3>
-                        <div class="listings-adverts">
-                        <a href="#">
-                            <div class="col-sm-12 border-bottom-dashed">
-                                <div class="advert-details">
-                                    <h4>Diploma of Childcare (Nany)</h4>
-                                    <p>Online, self-paced</p>
-                                    <p>Enquire now for pricing information</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="col-sm-12 border-bottom-dashed">
-                                <div class="advert-details">
-                                    <h4>Certificate in Childcare & Nannyng Training - Accredited by CPD</h4>
-                                    <p>Online, self-paced</p>
-                                    <p>£29.00</p>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-9 col-sm-12">
+        <div class="col-md-8 col-sm-12">
             <div class="row">
                 <div class="col-md-12 buttons-filters">
                     <a class="btn">All lastest jobs</a>
@@ -385,6 +301,90 @@
                     <p>
                         <small>Remember: You should never send cash or cheques to a prospective employer, or provide your bank details or any other financial information. We pay great attention to vetting all jobs that appear on our site, but please get in touch if you see any roles asking for such payments or financial details from you. For more information on conducting a safe job hunt online, visit safer-jobs.</small>
                     </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <!-- search -->
+            <div class="row">
+                @if($advert->user!==null)
+                <div class="col-md-12">
+                    <div class="details">
+                        <h3>This Advert is marketed by</h3>
+                        
+                        <div class="profile-picutre">
+                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
+                        </div>
+                        <div class="user-details">
+                            <p><strong>{{$advert->user->name}}</strong></p>
+                            <address>
+                            @if(isset($advert->user->address))
+                            {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
+                            @endif    
+                            </address>
+                            <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
+                            <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
+                        </div>
+                    </div>
+                </div>
+                @else
+                    <ul class="list-group">
+                        <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
+                    </ul>
+                @endif
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="report border-bottom-dashed">
+                        <h3>Report this Ad</h3>
+                        <a href="#" class="btn btn-default">Report</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="similar-adverts">
+                        <h3>Similar Jobs</h3>
+                        <div class="listings-adverts">
+                        @foreach($products as $p)
+                        <a href="/p/{{$category->id}}/{{$product['source_id']}}">
+                            <div class="col-sm-12 border-bottom-dashed">
+                                <div class="advert-details">
+                                    <h4>{{$p['title']}}</h4>
+                                    <p>{{$p['location_name']}}</p>
+                                </div>
+                            </div>
+                        </a>
+                        @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="similar-adverts">
+                        <h3>Recommended Course</h3>
+                        <div class="listings-adverts">
+                        <a href="#">
+                            <div class="col-sm-12 border-bottom-dashed">
+                                <div class="advert-details">
+                                    <h4>Diploma of Childcare (Nany)</h4>
+                                    <p>Online, self-paced</p>
+                                    <p>Enquire now for pricing information</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="col-sm-12 border-bottom-dashed">
+                                <div class="advert-details">
+                                    <h4>Certificate in Childcare & Nannyng Training - Accredited by CPD</h4>
+                                    <p>Online, self-paced</p>
+                                    <p>£29.00</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
