@@ -257,6 +257,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     padding-left: 0;
     padding-right: 0;
 }
+.back {
+    padding: 8px 15px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
