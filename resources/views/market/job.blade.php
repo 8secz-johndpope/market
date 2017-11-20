@@ -158,7 +158,32 @@
                         </div>
                         <div id="tab-map" class="tab-pane fade">
                             <div class="row">
-                                <div id="map"></div>
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-primary active">
+                                        <input type="radio" name="options" id="option-map" autocomplete="off" checked> map view
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="options" id="option-view" autocomplete="off">
+                                        street view
+                                    </label>
+                                </div>
+                                <div class="info-map">
+                                    <div id="map"></div>
+                                    <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
+                                    <div>
+                                        <h4>Nearest stations</h4>
+                                        <ul class="stations-list">
+
+                                        </ul>
+                                        <small>
+                                            Distances are straight line measurements from centre of postcode
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="info-pano">
+                                    <div id="pano"></div>
+                                    <small>Note: Start exploring the local area from here.</small>
+                                </div>
                                 <script>
                                 var map;
                                 var panorama;
@@ -189,16 +214,6 @@
                                     activeFirstItem();
                                 });
                             </script>
-                                <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
-                                <div>
-                                    <h4>Nearest stations</h4>
-                                    <ul class="stations-list">
-
-                                    </ul>
-                                    <small>
-                                        Distances are straight line measurements from centre of postcode
-                                    </small>
-                                </div>
                             </div>
                         </div>
                         <div id="tab-apply" class="tab-pane fade">
