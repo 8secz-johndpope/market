@@ -175,6 +175,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 .details{
 	padding: 15px;
+	border-bottom: 1px dashed #dfdfe1;
 }
 .profile-picutre img {
     max-width: 100%;
