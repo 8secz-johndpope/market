@@ -57,13 +57,13 @@
                         <img src="">
                     </div>
                 </div>
-                
-                <div class="col-md-12 col-sm-12 border-left-right">
+
+                <div class="border-left-right">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
-                        <li><a data-toggle="tab" href="#tap-video">Video Description</a></li>
-                        <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
-                        <li><a data-toggle="tab" href="#tap-apply">Apply</a></li>
+                        <li><a data-toggle="tab" href="#tab-video">Video Description</a></li>
+                        <li><a data-toggle="tab" href="#tab-map">Map & Street View</a></li>
+                        <li><a data-toggle="tab" href="#tab-apply">Apply</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
@@ -153,7 +153,7 @@
                                 <a class="btn">Email</a>
                             </div>
                         </div>
-                        <div class="info-map" class="tab-pane fade">
+                        <div class="tab-map" class="tab-pane fade">
                             <div id="map"></div>
                             <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
                             <div>
@@ -165,7 +165,7 @@
 </small>
                             </div>
                         </div>
-                        <div id="tap-apply" class="tab-pane fade">
+                        <div id="tab-apply" class="tab-pane fade">
                             <!-- Apply -->
                             <div class="col-md-12 col-sm-12 border-top">
                                 <div class="jobs-apply">
