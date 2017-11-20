@@ -260,6 +260,13 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .back {
     padding: 8px 15px;
 }
+.prev-next {
+    padding: 8px 15px;
+    text-align: right;
+}
+.prev-next a {
+    padding-left: 10px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
