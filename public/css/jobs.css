@@ -267,6 +267,10 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .prev-next a {
     padding-left: 10px;
 }
+.job-details:after{
+	clear: both;
+}
+
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
