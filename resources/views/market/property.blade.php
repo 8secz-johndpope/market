@@ -191,7 +191,7 @@
                                     street view
                                 </label>
                             </div>
-                            <div class="info-map" class="tab-pane fade">
+                            <div class="info-map">
                                 <div id="map"></div>
                                 <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
                                 <div>
