@@ -274,6 +274,23 @@ h2.item-name, .jobs-apply h2, .field h2 {
     height: 470px;
     width: 100%;
 }
+/** move a other css */
+#current-image {
+    position: relative;
+    width: 100%;
+    /* height: 437px; */
+    height: 487px;
+    overflow: hidden;
+    background: #ececec;
+}
+#current-image img {
+    height: 100%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #ececec;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
