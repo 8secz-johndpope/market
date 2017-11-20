@@ -34,12 +34,12 @@
             @endif
         </div>
         <div class="col-md-12 buttons-filters">
-            <a class="btn">All lastest jobs</a>
+            <a class="btn">All Lastest Jobs</a>
             <a class="btn">Permanent</a>
             <a class="btn">Temporary</a>
-            <a class="btn">Part time & Weekend</a>
-            <a class="btn">Search recruiters</a>
-            <a class="btn">Get job Alerts</a>
+            <a class="btn">Part Time & Weekend</a>
+            <a class="btn">Search Recruiters</a>
+            <a class="btn">Get Job Alerts</a>
         </div>
         <div class="col-md-12 alerts">
             <p>Set your jobs search alerts, click below to:</p>
