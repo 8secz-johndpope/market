@@ -25,6 +25,10 @@
                 <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
             </ol>
         </div>
+        <div class="col-md-2 prev-next">
+            <a> < Prev</a>
+            <a> > Next</a>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-3 col-sm-12">
