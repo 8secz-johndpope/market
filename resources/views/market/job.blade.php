@@ -113,6 +113,10 @@
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">VideoCall</a>
                     </div>
                 </div>
+                @else
+                <div class="map-main"
+                    <div id="map"></div>
+                </div>
                 @endif
                 <div class="">
                     <div id="tabs">
