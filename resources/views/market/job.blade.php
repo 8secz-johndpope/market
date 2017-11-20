@@ -40,7 +40,7 @@
                 <a class="btn">Weekend</a>
                 <a class="btn">Search Recruiters</a>
         </div>
-        <div class="col-md-12 buttons-filters">
+        <div class="col-md-12 buttons-filters last">
                 <a class="btn">Part Time</a>
                 <a class="btn">Work Wanted</a>
                 <a class="btn">Daily Work</a>
