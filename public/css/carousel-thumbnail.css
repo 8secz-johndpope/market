@@ -106,7 +106,7 @@ a.right.carousel-control {
     span.prev {
         float: left;
     }
-    .small-image {
+    .small-image, a.carousel-control {
         height: 70px;
     }
 }
