@@ -389,6 +389,12 @@ span.email-icon img {
     padding-bottom: 25px!important;
     text-align: center;
 }
+.nav-stacked>li+li {
+    margin-top: 0;
+}
+.nav-pills>li>a {
+    border: 1px solid #ccc;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;

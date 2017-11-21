@@ -157,7 +157,7 @@
                     <ul class="nav nav-pills visible-xs">
                       <li class="active"><a data-toggle="pill" href="#tab-description">Description</a></li>
                       @if(count($product['images']) > 0)
-                        <li><a data-toggle="pill" href="#tab-map">Map & Street View<</a></li>
+                        <li><a data-toggle="pill" href="#tab-map">Map & Street View</a></li>
                       @endif
                       <li><a data-toggle="pill" href="#tab-apply">Apply</a></li>
                     </ul>
