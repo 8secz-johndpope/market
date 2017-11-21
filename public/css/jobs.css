@@ -163,7 +163,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     border-right: 1px solid #ff9d2c;
     border-radius: 0;
     margin-right: 1px;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
     font: normal 13px;
     color: #000;
     /* text-indent: 70px; */
@@ -380,6 +380,13 @@ span.email-icon img {
 .meta-info {
     padding-bottom: 4px;
     padding-top: 4px;
+}
+.bottom-buttons {
+    background: #262637;
+    width: 100%;
+    padding-top: 25px!important;
+    padding-bottom: 25px!important;
+    text-align: center;
 }
 @media screen and (min-width: 768px){
 	.job-criteria {

@@ -423,10 +423,10 @@
                 </div>
                 @if(count($product['images']) == 0)
                 <div class="col-md-12 col-sm-12 bottom-buttons">
-                    <a class="btn">Save</a>
-                    <a class="btn">Call</a>
-                    <a class="btn">VideoCall</a>
-                    <a class="btn">Email</a>
+                    <a class="btn btn-default">Save</a>
+                    <a class="btn btn-default">Call</a>
+                    <a class="btn btn-default">VideoCall</a>
+                    <a class="btn btn-default">Email</a>
                 </div>
                 <div class="col-md-12 safe-jobs">
                     <p>
