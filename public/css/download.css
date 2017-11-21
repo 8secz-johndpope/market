@@ -38,6 +38,11 @@
     text-align: center;
     vertical-align: middle;
 }
+.main-header .main-container {
+    float: right;
+    width: 100%;
+    text-align: center;
+}
 @media (min-width: 64em){
 	.content-middle div p {
 	    display: block;
@@ -45,9 +50,20 @@
 	    margin-bottom: 25px;
 	    margin-top: 0;
 	}
+	.main-container {
+    	max-width: 512px;
+	}
 }
 @media (min-width: 80em){
 	.content-middle div p {
 	    display: inline-block;
+	}
+	.main-container {
+    	max-width: 640px;
+	}
+}
+@media (min-width: 84.3125em){
+	.main-container {
+	    max-width: 675px;
 	}
 }
