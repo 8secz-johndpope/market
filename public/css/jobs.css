@@ -418,12 +418,12 @@ span.email-icon img {
     .buttons-cloud .btn-form {
     	width: 100%;
 	}
+	.buttons{
+		margin-right: -15px;
+	 	margin-left: -15px;
+	}
 	 .buttons-cloud .btn-form:not(last-child){
 	 	margin-bottom: 15px;
-	 }
-	 .col-sm-12>.row>.col-sm-12>{
-	 	margin-right: 0;
-	 	margin-left: 0;
 	 }
 }
 @media screen and (min-width: 768px){
