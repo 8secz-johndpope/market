@@ -56,6 +56,12 @@ label.btn.btn-primary.active {
     border: 1px solid #ccc;
     height: auto;
 }
+.tab-pane h3 {
+    color: #262637;
+    font-size: 15px;
+    margin-top: 0;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
 
 .info .ad-description{
     max-height: 40px;
