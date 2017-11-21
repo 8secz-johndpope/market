@@ -121,13 +121,14 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .company-img {
     width: 240px;
 }
-.buttons-filters {
+.buttons-border {
     background-color: #fdfdfd;
     border: 1px solid #c9cfdd;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: 10px 15px 10px 15px;
-    margin: 0;
+    float: left;
+    width: 100%;
 }
 .buttons-filters a {
     width: calc(100% / 5.1);
@@ -291,15 +292,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 /** move a other css */
 
-.images-info {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0,0,0,.5);
-    color: #fff;
-    padding: 10px;
-}
+
 
 .request-details {
     padding-top: 25px!important;
