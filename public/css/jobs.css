@@ -360,7 +360,7 @@ span.email-icon img {
     color: #fff;
     vertical-align: middle;
 }
-.buttons-filters.last{
+.buttons-border.last{
 	border-top: transparent;
 	border-top-right-radius: 0;
 	border-top-left-radius: 0;
