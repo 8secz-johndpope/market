@@ -94,10 +94,10 @@
                             <span class="sr-only">Next</span>
                         </a>
                         <div class="request-details">
-                            <a href="/download-mobile-app/" class="btn btn-default">Call</a>
+                            <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
                             <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
                             
-                            <a href="/download-mobile-app/" class="btn btn-default">VideoCall</a>
+                            <a href="/download-mobile-apps/" class="btn btn-default">VideoCall</a>
                         </div>
                     </div>
                     <div id="tabs"> 
@@ -1059,7 +1059,7 @@
                     <div class="contact">
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
                         <p>Or</p>
-                        <a href="/download-mobile-app/" class="btn btn-default">Call</a>
+                        <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
                     </div>
                     <ul class="list-group">
                         <li class="list-group-item">
