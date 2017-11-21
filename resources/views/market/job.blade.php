@@ -57,7 +57,7 @@
             <div class="alerts">
                 <p>Set your jobs search alerts, click below to:</p>
                 <div class="buttons-alerts">
-                    <span>Get job Alerts:</span>
+                    <span>Get Job Alerts:</span>
                     <a class="btn">Email Alert</a>
                     <a class="btn">Mobile Alert</a>
                 </div>
