@@ -35,6 +35,8 @@
                 <a href="/p/{{$category->id}}/{{$nextAdvert->id}}"> Next > </a>
             @endif
         </div>
+    </div>
+    <div class="row">
         <div class="col-md-12">
             <div class="buttons-border">
                 <a class="btn">All Lastest Jobs</a>
