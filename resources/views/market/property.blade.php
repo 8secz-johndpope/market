@@ -2,7 +2,7 @@
 
 @extends('layouts.app')
 
-@section('title', $product['title'])
+@section('title', $product['title'] . ' | '. env('APP_NAME'))
 
 @section('sidebar')
     @parent

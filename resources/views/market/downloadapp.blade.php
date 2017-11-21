@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', env('APP_NAME'))
+@section('title', env('APP_NAME'). ' Mobile Apps')
 
 @section('sidebar')
     @parent
