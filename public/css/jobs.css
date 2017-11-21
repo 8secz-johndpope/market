@@ -415,6 +415,12 @@ span.email-icon img {
     .bottom-buttons a:not(last-child){
     	margin-bottom: 15px;
     }
+    .buttons-cloud .btn-form {
+    	width: 100%;
+	}
+	 .buttons-cloud .btn-form:not(last-child){
+	 	margin-bottom: 15px;
+	 }
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
