@@ -83,6 +83,11 @@
 	.buttons a:first-child {
     	margin-right: 10px;
 	}
+	.body-top p {
+    	padding: 0 20px;
+    	margin: 0 0 30px;
+    	border: 0;
+	}
 }
 @media (min-width: 64em){
 	.content-middle div p {
