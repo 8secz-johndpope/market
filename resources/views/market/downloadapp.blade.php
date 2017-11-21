@@ -11,7 +11,7 @@
 @section('content')
  <link href="{{ asset('/css/download.css?q=874') }}" rel="stylesheet">
 <div class="container">
-	<div class="row">
+	<div class="row hidden-xs">
 		 <div class="col-md-6 col-sm-12">
 		 	<div class="nav-back">
 		 	<a href="{{ url()->previous()}}"> < Go back to advert</a>
@@ -27,6 +27,11 @@
 				</div>
 			</div>
 		</div>
+		<div class="col-md-6 col-sm-12 visible-xs">
+		 	<div class="nav-back">
+		 	<a href="{{ url()->previous()}}"> < Go back to advert</a>
+		 	</div>
+		 </div>
 		<div class="col-md-6 col-sm-12 main-body">
 			<div class="main-container">
 				<div class="content-top">
