@@ -48,6 +48,12 @@
 .main-body .main-container {
     padding: 30px 0 30px 0;
 }
+.highlight{
+	font-weight: 600;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 40px;
+}
 @media (min-width: 64em){
 	.content-middle div p {
 	    display: block;

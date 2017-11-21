@@ -64,7 +64,7 @@
 						<h2>Simple -</h2>
 						<p>It takes seconds to access the most straightforward marketplace you'll find.</p>
 					</div>
-					<p>
+					<p class="highlight">
 						On Android, iPhone and iPad. Just tap and go.
 					</p>
 				</div>
