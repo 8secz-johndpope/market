@@ -92,6 +92,10 @@
     	max-width: initial;
     	width: 100%;
 	}
+	.row{
+		margin-right: -15px;
+    	margin-left: -15px;
+	}
 }
 @media (min-width: 64em){
 	.content-middle div p {
