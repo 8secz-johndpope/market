@@ -447,7 +447,7 @@
                          <div class="contact">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save property
+                                    <span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save job
                                 </li>
                                 <li class="list-group-item">
                                     <span class="glyphicon glyphicon-pencil"></span>
@@ -475,7 +475,7 @@
             <div class="row">
                  <div class="col-sm-12">
                     <div class="share border-bottom-dashed">
-                        <h3>Share this property</h3>
+                        <h3>Share this job</h3>
                         <div class=" media">
                             <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/facebook.svg"></a></div>
                             <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/twitter.svg"></a></div>
@@ -520,7 +520,7 @@
                         <a href="#">
                             <div class="col-sm-12 border-bottom-dashed">
                                 <div class="advert-details">
-                                    <h4>Diploma of Childcare (Nany)</h4>
+                                    <h4>Diploma of Childcare (Nanny)</h4>
                                     <p>Online, self-paced</p>
                                     <p>Enquire now for pricing information</p>
                                 </div>
