@@ -447,6 +447,9 @@ span.email-icon img {
 		background-color: transparent;
 		border: none;
 	}
+	#map, #pano {
+	    height: 370px;
+	}
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
