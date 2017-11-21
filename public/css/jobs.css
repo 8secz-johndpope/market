@@ -355,27 +355,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     background-color: #262637;
     text-align: center;
 }
-.images-current {
-    text-align: right;
-}
-.images-nav {
-    text-align: center;
-}
-#myCarousel {
-    margin-bottom: 1.6rem;
-    padding-top: 5px;
-}
-a.carousel-control {
-    margin: 5px 0;
-    width: 25px;
-    height: 90px;
-}
-a.left.carousel-control {
-    background: rgba(0,0,0,0.3);
-}
-a.right.carousel-control {
-    background: rgba(0,0,0,0.3);
-}
+
 .share h3 {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-size: 15px;
