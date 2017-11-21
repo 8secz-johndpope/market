@@ -105,5 +105,16 @@ $(function () {
 	    }
 	    changeImageGallery(false);
 	});
+	$('.icon-before').click(function(e){
+        e.preventDefault();
+        if($(this).hasClass('active-sld')){
+            stopAnimationGallery(this);
+        }
+        else{
+            $(this).addClass('active-sld');
+            $(this).text('Stop slideshow');
+            timer = setInterval(changeImageGallery, 2000);
+        }
+    })
 });
 
