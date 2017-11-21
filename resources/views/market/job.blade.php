@@ -186,14 +186,14 @@
                                             <h3>Full Description</h3>
                                             {!! $product['description'] !!}
                                         </div>
-                                        @if(count($product['images']) == 0)
+                                        <!--- @if(count($product['images']) == 0)
                                         <div class="col-md-12 col-sm-12 bottom-buttons">
                                             <a class="btn">Save</a>
                                             <a class="btn">Call</a>
                                             <a class="btn">VideoCall</a>
                                             <a class="btn">Email</a>
                                         </div>
-                                        @endif
+                                        @endif -->
                                     </div>  
                                 </div>
                             </div>
@@ -420,6 +420,13 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                @if(count($product['images']) == 0)
+                <div class="col-md-12 col-sm-12 bottom-buttons">
+                    <a class="btn">Save</a>
+                    <a class="btn">Call</a>
+                    <a class="btn">VideoCall</a>
+                    <a class="btn">Email</a>
                 </div>
                 <div class="col-md-12 safe-jobs">
                     <p>
