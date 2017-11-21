@@ -412,9 +412,14 @@ span.email-icon img {
 	.form-group {
     	padding: 20px 0;
     }
+    .bottom-buttons a{
+    	margin-left: 0;
+    	margin-right: 0;
+    }
     .bottom-buttons a:not(last-child){
     	margin-bottom: 15px;
     }
+
     .buttons-cloud .btn-form {
     	width: 100%;
 	}
