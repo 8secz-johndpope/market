@@ -456,8 +456,12 @@ span.email-icon img {
 	#map, #pano {
 	    height: 370px;
 	}
-	.request-details a{
-		width: 100%;
+	.request-details a {
+	    width: calc(100% - 30px);
+	    padding-left: 20px;
+	    padding-right: 20px;
+	    margin-left: 10px;
+	    margin-right: 10px;
 	}
 	.request-details a:not(last-child){
 		margin-bottom: 15px;
