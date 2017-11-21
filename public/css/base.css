@@ -54,6 +54,7 @@ label.btn.btn-primary.active {
     background: #f4f4f5;
     color: #333;
     border: 1px solid #ccc;
+    height: auto;
 }
 
 .info .ad-description{
