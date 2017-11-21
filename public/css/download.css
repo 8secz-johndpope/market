@@ -34,7 +34,7 @@
 .main-header {
     background: #f0f0f0;
 }
-.main-header{
+.main-header, .main-body{
     display: table-cell;
     width: 50%;
     vertical-align: middle;

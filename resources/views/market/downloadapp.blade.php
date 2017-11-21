@@ -27,7 +27,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6 col-sm-12">
+		<div class="col-md-6 col-sm-12 main-body">
 			<div class="main-container">
 				<div class="content-top">
 					<img src="/css/ic_launcher1.png" class="logo">
