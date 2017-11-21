@@ -83,3 +83,6 @@ a.right.carousel-control {
     margin-bottom: 0px;
     font-size: 13px;
 }
+.images-current span.glyphicon {
+    margin-right: 8px;
+}
