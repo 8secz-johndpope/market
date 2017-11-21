@@ -395,6 +395,11 @@ span.email-icon img {
 .nav-pills>li>a {
     border: 1px solid #ccc;
 }
+@media screen and (max-width: 767px){
+	.tab-pane {
+	    padding: 15px 0;
+	}
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
