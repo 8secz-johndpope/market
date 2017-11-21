@@ -38,6 +38,7 @@
     display: table-cell;
     width: 50%;
     vertical-align: middle;
+    float: none;
 }
 .main-header .main-container {
     float: right;
