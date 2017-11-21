@@ -429,6 +429,9 @@ span.email-icon img {
 	    padding-left: 30px;
 	    padding-right: 30px;
 	}
+	.bottom-buttons a {
+		margin-bottom: 0;
+	}
 }
 @media screen and (min-width: 1200px){
 	.request-details .btn-default {
