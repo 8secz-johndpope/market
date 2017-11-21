@@ -55,6 +55,8 @@
                 <a class="btn">Freelancers</a>
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class="col-md-12">
             <div class="alerts">
                 <p>Set your jobs search alerts, click below to:</p>
