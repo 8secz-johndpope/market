@@ -493,6 +493,7 @@ span.email-icon img {
 	}
 	.bottom-buttons a {
 		margin-bottom: 0;
+		width: calc(93% / 4);
 	}
 }
 @media screen and (min-width: 1200px){
