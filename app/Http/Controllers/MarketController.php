@@ -2027,4 +2027,7 @@ class MarketController extends BaseController
         }
         return view('market.agent', ['user'=>User::find($id), 'postcode' => $postcode, 'advertsForsale' => $advertsForsale, 'avgPriceSale' => $avgPriceSale, 'advertsForRent' => $advertsForRent, 'avgPriceRent' => $avgPriceRent]);
     }
+    public function downloadApps(Request $request){
+        return view('market.downloadapp');
+    }
 }
