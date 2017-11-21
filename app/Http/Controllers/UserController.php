@@ -1795,8 +1795,8 @@ class UserController extends BaseController
 
     public function acreate(Request $request){
         $body = $request->json()->all();
-        $sid = (int)$body['source_id'];
-        $advert = Advert::where('sid', '=', (int)$body['source_id'])->first();
+        $sid = $body['source_id']+0;
+        $advert = Advert::where('sid', '=', $sid)->first();
         if ($advert !== null) {
 
             return ['a' => 'b'];
