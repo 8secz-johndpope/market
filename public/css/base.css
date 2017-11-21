@@ -18,30 +18,7 @@ body{
     background-position-y: 100px;
     background-position-x: -100px;
 }
-.btn-default, .btn-advertiser{
-  color: #fff;
-  background-color: #ff9d2c;
-  border-color: #ff9d2c;
-  /* text-align: center; */
-  padding-left: 50px;
-  padding-right: 50px;
-  font-size: 17px;
-  font-family: Effra-Medium,arial,helvetica,sans-serif;
-  font-weight: normal;
-  line-height: 29px;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-.btn-advertiser{
-  color:#fff;
-  background-color: #000;
-  border-color: #000;
-  padding-left: 35px;
-  padding-right: 35px;
-  font-size: 13px;
-}
+
 label.btn.btn-primary.active {
     border: 1px solid #ff8830;
     background: #ff8830;
