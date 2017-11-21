@@ -33,6 +33,16 @@
 					<img src="/css/ic_launcher1.png" class="logo hidden-xs">
 					<h1>The {{ env('APP_NAME') }} APP</h1>
 					<h2>Connect, search, find, buy - <span>get it on the go</span></h2>
+					<div class="visible-xs">
+						<div class="stores-buttons">
+							<a href="#" title="{{ env('APP_NAME') }} app for iPhone">
+								<img src="/css/appstorex233.png" alt="Available on the Apple Store">
+							</a>
+							<a href="#" title="{{ env('APP_NAME') }} app for Android">
+								<img src="/css/googleplayx233.png" alt="Get it on Google Play">
+							</a>
+						</div>
+					</div>
 					<p>Whichever way you connect with Gumtree, it is always there for you.</p>
 				</div>
 				<div class="content-middle">

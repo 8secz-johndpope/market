@@ -70,6 +70,16 @@
     	margin: 0;
     	padding: 30px 20px 0;
 	}
+	.stores-buttons{
+		padding: 0 20px;
+	}
+	.stores-buttons a{
+		width: 48%;
+    	display: inline-block;
+	}
+	.stores-buttons img{
+		width: 100%;
+	}
 }
 @media (min-width: 64em){
 	.content-middle div p {
