@@ -597,6 +597,20 @@
         $('.active-cover').removeClass('active-cover');
         $('.cover-select').addClass('active-cover');
     })
+    $('input[type=radio][name=options]').change(function(){
+        if(this.id == "option-view"){
+            console.log("change to panorama");
+            $('.info-map').hide();
+            $('.info-pano').show();
+            google.maps.event.trigger(panorama, 'resize');
+        }
+        else{
+           console.log("change to map");
+            $('.info-map').show();
+            $('.info-pano').hide(); 
+        }
+        
+    });
     function isUnderground(types){
         return types.indexOf('tube') != -1;
     }
