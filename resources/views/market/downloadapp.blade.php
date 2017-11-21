@@ -30,7 +30,7 @@
 		<div class="col-md-6 col-sm-12 main-body">
 			<div class="main-container">
 				<div class="content-top">
-					<img src="/css/ic_launcher1.png" class="logo">
+					<img src="/css/ic_launcher1.png" class="logo hidden-xs">
 					<h1>The {{ env('APP_NAME') }} APP</h1>
 					<h2>Connect, search, find, buy - <span>get it on the go</span></h2>
 					<p>Whichever way you connect with Gumtree, it is always there for you.</p>
