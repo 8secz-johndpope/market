@@ -394,6 +394,14 @@ span.email-icon img {
 }
 .nav-pills>li>a {
     border: 1px solid #ccc;
+    background-color: #f4f4f5;
+    color: #333;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    border-top: 2px solid #ff9d2c;
+    background: #fff;
+    color: #ff9d2c;
+
 }
 @media screen and (max-width: 767px){
 	.tab-pane {
