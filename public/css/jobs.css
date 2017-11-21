@@ -398,6 +398,14 @@ span.email-icon img {
     	padding-top: 4px;
 	}
 }
+label.btn.btn-primary.active {
+    border: 1px solid #ff8830;
+    background: #ff8830;
+    color: #fff;
+}
+.btn-group {
+    margin-bottom: 1.6rem;
+}
 @media screen and (min-width: 992px){
 	.request-details .btn-default {
 	    width: 180px;
