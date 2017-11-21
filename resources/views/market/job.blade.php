@@ -36,7 +36,7 @@
             @endif
         </div>
     </div>
-    <div class="row">
+    <div class="row hidden-xs">
         <div class="col-md-12">
             <div class="buttons-border">
                 <a class="btn">All Lastest Jobs</a>
@@ -63,7 +63,7 @@
                 <div class="buttons-alerts">
                     <span>Get Job Alerts:</span>
                     <a class="btn">Email Alert</a>
-                    <a class="btn">Mobile Alert</a>
+                    <a href="/download-mobile-apps/" class="btn">Mobile Alert</a>
                 </div>
             </div>
         </div>
