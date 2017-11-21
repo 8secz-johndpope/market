@@ -68,7 +68,7 @@
 						On Android, iPhone and iPad. Just tap and go.
 					</p>
 				</div>
-				<div class="stores-buttons">
+				<div class="stores-buttons hidden-xs">
 					<a href="#" title="{{ env('APP_NAME') }} app for iPhone">
 						<img src="/css/appstorex233.png" alt="Available on the Apple Store">
 					</a>
