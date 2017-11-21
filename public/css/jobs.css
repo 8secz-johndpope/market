@@ -419,6 +419,9 @@ span.email-icon img {
 	.job-title>.job-criteria {
     	padding-top: 4px;
 	}
+	.bottom-buttons a {
+		margin-bottom: 10px;
+	}
 }
 @media screen and (min-width: 992px){
 	.request-details .btn-default {

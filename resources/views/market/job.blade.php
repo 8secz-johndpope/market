@@ -424,16 +424,16 @@
                 @if(count($product['images']) == 0)
                 <div class="col-md-12 col-sm-12 bottom-buttons">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <a class="btn btn-default">Save</a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <a class="btn btn-default">Call</a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <a class="btn btn-default">VideoCall</a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <a class="btn btn-default">Email</a>
                         </div>
                     </div>
