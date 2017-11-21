@@ -12,11 +12,6 @@ use Cassandra;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Auth;
-use Pushok\AuthProvider;
-use Pushok\Client as PClient;
-use Pushok\Notification;
-use Pushok\Payload;
-use Pushok\Payload\Alert;
 class BaseController extends Controller
 {
     protected $site_settings;

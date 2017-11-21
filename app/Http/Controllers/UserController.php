@@ -1793,6 +1793,16 @@ class UserController extends BaseController
 
     }
 
+    public function acreate(Request $request){
+        $body = $request->json()->all();
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => $body
+        ];
+        $response = $this->client->index($params);
+        return $response;
+    }
 
 
     public function ccreate(Request $request)
