@@ -25,6 +25,9 @@
     margin-bottom: 5px;
     font-size: 16px;
 }
+.stores-buttons img {
+    max-width: 188px;
+}
 @media (min-width: 64em){
 	.content-middle div p {
 	    display: block;
