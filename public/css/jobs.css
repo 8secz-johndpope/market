@@ -204,6 +204,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     border: 1px solid #ddd;
     display: table;
     padding: 15px 5px;
+    width: 100%;
 }
 .similar-adverts h4 {
     /*font-family: Effra-Medium,arial,helvetica,sans-serif;*/
