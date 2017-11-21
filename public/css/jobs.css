@@ -148,7 +148,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .buttons-filters a:last-child, .bottom-buttons a:last-child{
 	border:none;
 }
-.bottom-buttons {
+.bottom-border {
     background-color: #fdfdfd;
     border: 1px solid #ff9d2c;
     border-bottom-left-radius: 5px;
