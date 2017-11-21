@@ -211,8 +211,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     overflow: hidden;
     margin-bottom: 0;
 }
-.similar-adverts h3, .details h3, .report h3 {
-    /*font-family: Effra-Medium,arial,helvetica,sans-serif;*/
+/** is better other css common */
+.similar-adverts h3, .details h3, .report h3, .share h3 {
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-size: 15px;
     font-weight: normal;
     padding-left: 15px;
@@ -292,8 +293,6 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 /** move a other css */
 
-
-
 .request-details {
     padding-top: 25px!important;
     padding-bottom: 25px!important;
@@ -301,12 +300,6 @@ h2.item-name, .jobs-apply h2, .field h2 {
     text-align: center;
 }
 
-.share h3 {
-    font-family: Effra-Medium,arial,helvetica,sans-serif;
-    font-size: 15px;
-    font-weight: normal;
-    padding-left: 15px;
-}
 .share {
     padding-bottom: 15px;
 }
