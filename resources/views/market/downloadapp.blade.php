@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
- <link href="{{ asset('/css/agent.css?q=874') }}" rel="stylesheet">
+ <link href="{{ asset('/css/download.css?q=874') }}" rel="stylesheet">
 <div class="container">
 	<div class="row">
 		 <div class="col-md-6 col-sm-12">

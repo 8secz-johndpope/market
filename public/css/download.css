@@ -1,0 +1,39 @@
+.content-top .logo {
+    border-radius: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100px;
+}
+.content-top h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 15px;
+    /* margin-bottom: 0; */
+    font-size: 27px;
+}
+.content-top h2 {
+    margin: 30px 0 20px;
+    font-size: 22px;
+}
+.content-top p {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 40px;
+}
+.content-middle h2 {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+@media (min-width: 64em){
+	.content-middle div p {
+	    display: block;
+	    margin-left: 0;
+	    margin-bottom: 25px;
+	}
+}
+@media (min-width: 80em){
+	.content-middle div p {
+	    display: inline-block;
+	}
+}
