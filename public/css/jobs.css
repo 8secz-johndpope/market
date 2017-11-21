@@ -428,6 +428,9 @@ span.email-icon img {
 	.field .buttons-option-cover .btn-form {
 		width: 100%;
 	}
+	.buttons-alerts span, .alerts a {
+		width: 100%;
+	}
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
