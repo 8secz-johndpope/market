@@ -992,6 +992,9 @@ a.message-back-button {
         width: 100%;
         padding:15px 0;
     }
+    span.listing-location {
+        font-size: 13px;
+    }
     h4.product-title {
         font-size: 15px;
         max-height: 30px;
