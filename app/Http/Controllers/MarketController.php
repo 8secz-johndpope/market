@@ -2053,7 +2053,7 @@ class MarketController extends BaseController
         if(isset($user->business)){
             $postcode = $user->business->address->zip;
         }
-        return view('market.agent', ['user'=>User::find($id), 'postcode' => $postcode, 'advertsForsale' => $advertsForsale, 'avgPriceSale' => $avgPriceSale, 'advertsForRent' => $advertsForRent, 'avgPriceRent' => $avgPriceRent]);
+        return view('market.company', ['user'=>User::find($id), 'postcode' => $postcode, 'advertsForsale' => $advertsForsale, 'avgPriceSale' => $avgPriceSale, 'advertsForRent' => $advertsForRent, 'avgPriceRent' => $avgPriceRent]);
     }
     public function downloadApps(Request $request){
         return view('market.downloadapp');
