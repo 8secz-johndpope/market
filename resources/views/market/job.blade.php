@@ -134,10 +134,10 @@
                         <span class="sr-only">Next</span>
                     </a>
                     <div class="request-details">
-                        <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Call</a>
+                        <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
                         
-                        <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">VideoCall</a>
+                        <a href="/download-mobile-apps/" class="btn btn-default">VideoCall</a>
                     </div>
                 </div>
                 @else
@@ -435,13 +435,13 @@
                             <a class="btn btn-default">Save</a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a class="btn btn-default">Call</a>
+                            <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <a class="btn btn-default">VideoCall</a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a class="btn btn-default">Email</a>
+                            <a href="/download-mobile-apps/" class="btn btn-default">Email</a>
                         </div>
                     </div>
                 </div>
