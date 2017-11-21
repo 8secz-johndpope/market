@@ -90,7 +90,7 @@
                         <div class="col-sm-4 start-animation">
                             <a href="javascript:void(0)" class="icon-before">Start slideshow</a>
                         </div>
-                        <div class="col-sm-4 images-nav">
+                        <div class="col-sm-4 col-xs-12 images-nav">
                             <p><span class="prev"> <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-left"></span></a></span>
                                 <span class="index">1</span> of {{count($product['images'])}}
                                 <span class="next"><a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-right"></span></a></span>
