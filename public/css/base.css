@@ -38,6 +38,9 @@ body{
   color:#fff;
   background-color: #000;
   border-color: #000;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 13px;
 }
 
 .info .ad-description{
