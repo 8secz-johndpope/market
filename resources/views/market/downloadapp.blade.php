@@ -19,7 +19,7 @@
 		 </div>
 	</div>
 	<div class="row">
-		<div class="col-md-6 col-sm-12">
+		<div class="col-md-6 col-sm-12 main-header">
 			<div class="main-container">
 				<div class="content-header">
 					<img src="" class="visible-xs">

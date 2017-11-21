@@ -31,11 +31,12 @@
 .content-header img {
     max-width: 420px;
 }
-.content-header {
+.main-header {
     background: #f0f0f0;
-    /* height: 100%; */
-    width: 100%;
-    text-align: center;
+}
+.main-header{
+    display: table-cell;
+    width: 50%;
     vertical-align: middle;
 }
 .main-header .main-container {
