@@ -135,7 +135,7 @@
                                                 Payments:
                                             </div>
                                             <div class="col-sm-6 meta-info">
-                                                <a href="#"> <img class="payments-methods" src="/css/payments.png"></a>
+                                                <a href="/download-mobile-apps/"> <img class="payments-methods" src="/css/payments.png"></a>
                                             </div>
                                     </div>
                                     @if($advert->has_meta('key_features'))
