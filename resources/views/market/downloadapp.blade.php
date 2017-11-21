@@ -22,7 +22,7 @@
 		<div class="col-md-6 col-sm-12">
 			<div class="content-header">
 				<img src="" class="visible-xs">
-				<img src="" class="hidden-xs">
+				<img src="/img/iphone2.png" class="hidden-xs">
 			</div>
 		</div>
 		<div class="col-md-6 col-sm-12">
