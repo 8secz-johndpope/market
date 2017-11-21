@@ -225,7 +225,7 @@
 					<a href="#"><h3>Visit the advertiser's website</h3></a>
 				</div>
 			</div>
-			<div class="row border-outside">
+			<!-- <div class="row border-outside">
 				<div class="col-sm-12 title">
 					<h3>See it? Scan it</h3>
 				</div>
@@ -258,7 +258,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- end col-agency-contact -->
 	</div>
 </div>
