@@ -435,7 +435,7 @@ span.email-icon img {
 		width: 100%;
 	}
 	.alerts a:not(last-child){
-
+		margin-bottom: 15px;
 	}
 }
 @media screen and (min-width: 768px){
