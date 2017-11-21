@@ -17,7 +17,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-2 col-xs-6 back">
-            <a class="" href="{{ url()->previous()}}">< Back to search</a>
+            <a class="" href="/{{$category->slug}}">< Back to search</a>
         </div>
         <div class="col-md-8 col-sm-12 hidden-xs">
             <ol class="breadcrumb">
