@@ -370,6 +370,13 @@ span.email-icon img {
 .meta {
     margin: 0 0 1.4rem;
 }
+.meta-bold {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
