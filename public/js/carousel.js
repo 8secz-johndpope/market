@@ -39,7 +39,8 @@ function changeImageGallery(cycle = true){
 $(function () {
     var viewer = ImageViewer();
     $('.small-image').first().addClass('selected');
-    $('.images-current').click(function (e) {
+    $('.images-current a').click(function (e) {
+    	console.log('click enlarge');
         e.preventDefault();
         if(timer != null){
             var element = $('.icon-before');
