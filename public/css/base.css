@@ -924,43 +924,44 @@ section.row-color.white {
 /** end tabs **/
 @media screen and (max-width: 767px){
   .top {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
   .container-fluid.top{
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 0;
+    padding-left: 0;
   }
   .top .row{
     height: 100%;
-    margin-right: 0px;
+    margin-right: 0;
+    margin-left: 0;
   }
   .navbar-header {
     /*width: auto;*/
     background-color: black;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .navbar-default .navbar-brand{
     height: 50px;
   }
   .navbar-brand img.icon{
     height: 15px;
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 15px;
   }
   .navbar-form{
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .navbar-right {
     height: auto !important;
     margin-top: auto;
-    margin-right: 0px;
+    margin-right: 0;
     margin-left: 5px;
   }
   img.icon-small {
-    margin-left: 0px;
-    margin-top: 0px;
+    margin-left: 0;
+    margin-top: 0;
     width: 40px;
   }
   .search input.form-control.input-lg {
