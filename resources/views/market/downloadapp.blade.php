@@ -70,10 +70,10 @@
 				</div>
 				<div class="stores-buttons">
 					<a href="#" title="{{ env('APP_NAME') }} app for iPhone">
-						<img src="/css/googleplayx233.png" alt="Available on the Apple Store">
+						<img src="/css/appstorex233.png" alt="Available on the Apple Store">
 					</a>
 					<a href="#" title="{{ env('APP_NAME') }} app for Android">
-						<img src="/css/appstorex233.png" alt="Get it on Google Play">
+						<img src="/css/googleplayx233.png" alt="Get it on Google Play">
 					</a>
 				</div>
 			</div>
