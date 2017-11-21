@@ -12,8 +12,8 @@
 
 @section('content')
 <link href="{{ asset('/css/jobs.css?q=874') }}" rel="stylesheet">
-<script src="/js/carousel.js"></script>
 <script src="/js/imageviewer.min.js"></script>
+<script src="/js/carousel.js"></script>
 <div class="container">
     <div class="row">
         <div class="col-md-2 back">
