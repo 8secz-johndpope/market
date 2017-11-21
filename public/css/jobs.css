@@ -437,6 +437,9 @@ span.email-icon img {
 	.alerts a:not(last-child){
 		margin-bottom: 15px;
 	}
+	.alerts a, .alerts a:last-child {
+    	border: 1px solid #000;
+	}
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
