@@ -399,6 +399,9 @@ span.email-icon img {
 	.tab-pane {
 	    padding: 15px 0;
 	}
+	.form-group {
+    	padding: 20px 0;
+    }
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
