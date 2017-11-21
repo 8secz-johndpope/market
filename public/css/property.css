@@ -1249,6 +1249,11 @@ a.advert-user {
     border-right: 1px solid #ccc;
     border-left: 1px solid #ccc;
 }
+@media (max-width: 768px){
+    .col-sm-8.left-content, .col-sm-4.right-content {
+        width: 100%
+    }
+}
 @media (min-width: 768px){
 	.request-details .btn-default {
     	width: 180px;
