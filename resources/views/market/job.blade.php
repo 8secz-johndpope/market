@@ -434,20 +434,10 @@
                 </div>
                 @if(count($product['images']) == 0)
                 <div class="col-md-12 col-sm-12 bottom-buttons">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <a class="btn btn-default">Save</a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a class="btn btn-default">VideoCall</a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="/download-mobile-apps/" class="btn btn-default">Email</a>
-                        </div>
-                    </div>
+                    <a class="btn btn-default">Save</a>
+                    <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
+                    <a href="/download-mobile-apps/" class="btn btn-default">VideoCall</a>
+                    <a href="/download-mobile-apps/" class="btn btn-default">Email</a>
                 </div>
                 @endif
                 <div class="col-md-12 safe-jobs">
