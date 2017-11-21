@@ -19,16 +19,6 @@
 		 </div>
 	</div>
 	<div class="row">
-		<div class="col-sm-12">
-			<div class="banner-agency">
-				<img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($user->business) ? $user->business->banner_img: ''}}" class="img-banner">
-				<span class="all-properties">
-					<a class="btn btn-default" href="#">View properties</a>
-				</span>
-			</div>
-		</div>
-	</div> 
-	<div class="row">
 		<!-- div info-content -->
 		<div class="col-md-8 col-sm-12">
 			<div class="row">
