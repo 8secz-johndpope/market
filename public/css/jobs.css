@@ -428,6 +428,9 @@ span.email-icon img {
 	.field .buttons-option-cover .btn-form {
 		width: 100%;
 	}
+	.field .buttons-option-cover .btn-form:not(last-child) {
+		margin-bottom: 15px;
+	}
 	.buttons-alerts span, .alerts a {
 		width: 100%;
 	}
