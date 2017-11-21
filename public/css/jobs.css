@@ -367,6 +367,9 @@ span.email-icon img {
 .description {
     margin-bottom: 15px;
 }
+.meta {
+    margin: 0 0 1.4rem;
+}
 @media screen and (min-width: 768px){
 	.job-criteria {
 	    width: 130px;
