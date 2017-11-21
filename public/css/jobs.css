@@ -438,7 +438,12 @@ span.email-icon img {
 		margin-bottom: 15px;
 	}
 	.alerts a, .alerts a:last-child {
-    	border: 1px solid #000;
+    	border: 1px solid #ff9d2c;
+	}
+	.buttons-alerts span{
+		color: #ff9d2c;
+		background-color: transparent;
+		border: none;
 	}
 }
 @media screen and (min-width: 768px){
