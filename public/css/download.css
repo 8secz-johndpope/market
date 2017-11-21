@@ -45,6 +45,9 @@
     width: 100%;
     text-align: center;
 }
+.main-body .main-container {
+    padding: 30px 0 30px 0;
+}
 @media (min-width: 64em){
 	.content-middle div p {
 	    display: block;
@@ -62,6 +65,9 @@
 	}
 	.main-container {
     	max-width: 640px;
+	}
+	.main-body .main-container {
+    	padding: 50px 0 50px 0;
 	}
 }
 @media (min-width: 84.3125em){
