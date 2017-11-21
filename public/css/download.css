@@ -96,6 +96,9 @@
 		margin-right: -15px;
     	margin-left: -15px;
 	}
+	.main-body .main-container {
+    	padding: 0;
+	}
 }
 @media (min-width: 64em){
 	.content-middle div p {
