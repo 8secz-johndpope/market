@@ -490,6 +490,9 @@ span.email-icon img {
 	.bottom-buttons a {
 		margin-bottom: 10px;
 	}
+	.buttons-border a:last-child {
+    	border: none;
+	}
 }
 @media screen and (min-width: 992px){
 	.request-details .btn-default {
