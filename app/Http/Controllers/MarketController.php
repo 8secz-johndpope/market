@@ -2027,6 +2027,34 @@ class MarketController extends BaseController
         }
         return view('market.agent', ['user'=>User::find($id), 'postcode' => $postcode, 'advertsForsale' => $advertsForsale, 'avgPriceSale' => $avgPriceSale, 'advertsForRent' => $advertsForRent, 'avgPriceRent' => $avgPriceRent]);
     }
+    public function company(Request $request, $id){
+        $user = User::find($id);
+        $advertsForsale = $user->adverts_category(306000000);
+        $advertsForRent = $user->adverts_category(307000000);
+        $avgPriceSale = 0;
+        $avgPriceRent = 0;
+        foreach ($advertsForsale as $advert) {
+            $avgPriceSale += $advert->price();
+        }
+        foreach ($advertsForRent as $advert) {
+            $price = $advert->price();
+            if($advert->meta('price_frequency') === 'pw'){
+                $price = $price * 4; 
+            }
+            $avgPriceRent += $price;
+        }
+        if($avgPriceSale > 0){
+            $avgPriceSale = $avgPriceSale / count($advertsForsale);
+        }
+        if($avgPriceRent > 0){
+            $avgPriceRent = $avgPriceRent / count($advertsForRent);
+        }
+        $postcode = null;
+        if(isset($user->business)){
+            $postcode = $user->business->address->zip;
+        }
+        return view('market.agent', ['user'=>User::find($id), 'postcode' => $postcode, 'advertsForsale' => $advertsForsale, 'avgPriceSale' => $avgPriceSale, 'advertsForRent' => $advertsForRent, 'avgPriceRent' => $avgPriceRent]);
+    }
     public function downloadApps(Request $request){
         return view('market.downloadapp');
     }

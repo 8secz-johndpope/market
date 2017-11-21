@@ -465,7 +465,7 @@
                                 {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
                                 @endif    
                                 </address>
-                                <p class="link-about"><a class="btn btn-advertiser" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
+                                <p class="link-about"><a class="btn btn-advertiser" href="/company/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
                                 <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                             </div>
                         </div>

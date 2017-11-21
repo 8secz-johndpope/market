@@ -198,6 +198,7 @@ Route::get('/filters/{any}', 'MarketController@filters');
 
 Route::get('/id/{id}', 'MarketController@id');
 Route::get('/agent/{id}', 'MarketController@agent');
+Route::get('/company/{id}', 'MarketController@company');
 Route::get('/download-mobile-apps/', 'MarketController@downloadApps');
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
