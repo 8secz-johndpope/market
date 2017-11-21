@@ -489,6 +489,7 @@ span.email-icon img {
 	}
 	.bottom-buttons a {
 		margin-bottom: 10px;
+		width: 48%;
 	}
 	.buttons-border a:last-child {
     	border: none;
