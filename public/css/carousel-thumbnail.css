@@ -94,4 +94,7 @@ a.right.carousel-control {
     .start-animation{
         display: none;
     }
+    #current-image {
+        height: 387px;
+    }
 }
