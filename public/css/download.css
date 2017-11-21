@@ -53,6 +53,7 @@
     padding-bottom: 30px;
     border-bottom: 1px solid #e8e8e8;
     margin-bottom: 40px;
+    color: #ff9d2c;
 }
 @media (min-width: 64em){
 	.content-middle div p {
