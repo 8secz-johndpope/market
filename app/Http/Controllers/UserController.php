@@ -1813,9 +1813,9 @@ class UserController extends BaseController
 
         $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>105000000,'images'=>$body['images']]);
         $params=[];
-        $params['location_id']=1250000000;
+        $params['location_id']=1260000000;
         $params['location']='52.2,0';
-        $params['location_name']='London';
+        $params['location_name']='Manchester';
         if(count($body['phones'])>0){
             $params['phone']=$body['phones'][0];
             $params['phones']=$body['phones'];
