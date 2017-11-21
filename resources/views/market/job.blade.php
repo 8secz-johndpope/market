@@ -49,12 +49,14 @@
                 <a class="btn">Gig Work</a>
                 <a class="btn">Freelancers</a>
         </div>
-        <div class="col-md-12 alerts">
-            <p>Set your jobs search alerts, click below to:</p>
-            <div class="buttons-alerts">
-                <span>Get job Alerts:</span>
-                <a class="btn">Email Alert</a>
-                <a class="btn">Mobile Alert</a>
+        <div class="col-md-12">
+            <div class="alerts">
+                <p>Set your jobs search alerts, click below to:</p>
+                <div class="buttons-alerts">
+                    <span>Get job Alerts:</span>
+                    <a class="btn">Email Alert</a>
+                    <a class="btn">Mobile Alert</a>
+                </div>
             </div>
         </div>
     </div>
