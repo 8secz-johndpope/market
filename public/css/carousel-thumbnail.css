@@ -100,4 +100,10 @@ a.right.carousel-control {
     .images-current{
         display: none;
     }
+    span.next {
+        float: right;
+    }
+    span.prev {
+        float: left;
+    }
 }
