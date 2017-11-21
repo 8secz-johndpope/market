@@ -78,3 +78,7 @@ a.right.carousel-control {
     color: #fff;
     padding: 10px;
 }
+.images-info p {
+    margin-bottom: 0px;
+    font-size: 13px;
+}
