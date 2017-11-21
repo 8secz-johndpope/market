@@ -28,6 +28,16 @@
 .stores-buttons img {
     max-width: 188px;
 }
+.content-header img {
+    max-width: 420px;
+}
+.content-header {
+    background: #f0f0f0;
+    /* height: 100%; */
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
 @media (min-width: 64em){
 	.content-middle div p {
 	    display: block;
