@@ -86,3 +86,6 @@ a.right.carousel-control {
 .images-current span.glyphicon {
     margin-right: 8px;
 }
+.iv-close:after, .iv-close:before {
+    background-color: #ff9d2c;
+}
