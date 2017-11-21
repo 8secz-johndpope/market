@@ -1795,13 +1795,49 @@ class UserController extends BaseController
 
     public function acreate(Request $request){
         $body = $request->json()->all();
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => $body
-        ];
-        $response = $this->client->index($params);
-        return $response;
+        $sid = (int)$body['source_id'];
+        $advert = Advert::where('sid', '=', (int)$body['source_id'])->first();
+        if ($advert !== null) {
+
+            return ['a' => 'b'];
+        }
+        $advert = new Advert;
+        $advert->sid=$sid;
+        $advert->save();
+
+
+            $advert->create_draft_job('Trade Seller');
+
+        $advert->category_id=105000000;
+        $advert->save();
+
+        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>105000000,'images'=>$body['images']]);
+        $params=[];
+        $params['location_id']=1250000000;
+        $params['location']='52.2,0';
+        $params['location_name']='London';
+        $meta=[];
+        $price=str_replace('£','',$body['price']);
+        $price=str_replace(',','',$price);
+        $price = (int)($price*100);
+        $meta['price']=$price;
+        $meta['vehicle_registration_year']=(int)$body['facts'][0];
+        $meta['vehicle_body_type']=$this->slugify($body['facts'][1]);
+        $miles=str_replace(' miles','',$body['facts'][2]);
+        $miles=str_replace(',','',$miles);
+        $miles = (int)($miles);
+        $meta['vehicle_mileage']=$miles;
+        $meta['vehicle_transmission']=$this->slugify($body['facts'][3]);
+
+        $size=str_replace('L','',$body['facts'][4]);
+        $size = (int)($size*1000);
+        $meta['vehicle_engine_size']=$size;
+        $meta['vehicle_fuel_type']=$this->slugify($body['facts'][5]);
+        $advert->update_fields($params);
+        $advert->update_meta($meta);
+        $advert->publish();
+
+        return $advert;
     }
 
 
