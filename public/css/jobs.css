@@ -456,6 +456,9 @@ span.email-icon img {
 	#map, #pano {
 	    height: 370px;
 	}
+	.request-details a{
+		width: 100%;
+	}
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
