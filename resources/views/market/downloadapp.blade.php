@@ -22,7 +22,7 @@
 		<div class="col-md-6 col-sm-12 main-header">
 			<div class="main-container">
 				<div class="content-header">
-					<img src="" class="visible-xs">
+					<img src="/img/buyer-seller.jpg" class="visible-xs">
 					<img src="/img/iphone2.png" class="hidden-xs">
 				</div>
 			</div>

@@ -88,6 +88,10 @@
     	margin: 0 0 30px;
     	border: 0;
 	}
+	.main-header img {
+    	max-width: initial;
+    	width: 100%;
+	}
 }
 @media (min-width: 64em){
 	.content-middle div p {
