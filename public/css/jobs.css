@@ -402,7 +402,7 @@ span.email-icon img {
 	.form-group {
     	padding: 20px 0;
     }
-    .bottom-buttons a: not(last-child) {
+    .bottom-buttons a:not(last-child){
     	margin-bottom: 15px;
     }
 }
