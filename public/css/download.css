@@ -58,6 +58,12 @@
     margin-bottom: 40px;
     color: #ff9d2c;
 }
+@media (max-width: 47.99em){
+	.main-header, .main-body {
+	    display: block;
+	    width: 100%;
+	}
+}
 @media (min-width: 64em){
 	.content-middle div p {
 	    display: block;
