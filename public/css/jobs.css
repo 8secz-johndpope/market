@@ -432,13 +432,15 @@ span.email-icon img {
 		margin-bottom: 15px;
 	}
 	.buttons-alerts span, .alerts a {
-		width: 100%;
+		width: calc(100% - 20px);
 	}
 	.alerts a:not(last-child){
 		margin-bottom: 15px;
 	}
 	.alerts a, .alerts a:last-child {
     	border: 1px solid #ff9d2c;
+    	margin-left: 10px;
+    	margin-right: 10px;
 	}
 	.buttons-alerts span{
 		color: #ff9d2c;
