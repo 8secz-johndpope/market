@@ -63,6 +63,9 @@
 	    display: block;
 	    width: 100%;
 	}
+	.main-header{
+		padding: 0;
+	}
 	.main-header .main-container {
     	float: none;
 	}
