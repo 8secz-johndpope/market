@@ -235,8 +235,8 @@
 							 {{$user->business->address->line1}}, {{$user->business->address->city}}, {{$user->business->address->postcode}} 
 							 @endif
 						</address>
-						<p><strong>Tel: </strong>{{$user->business->phone}}</p>
-						<p><strong>Fax: </strong>{{$user->business->fax}}</p>
+						<p><strong>Tel: </strong>{{isset($user->business->phone) ? $user->business->phone : ''}}</p>
+						<p><strong>Fax: </strong>{{isset($user->business->fax) ? $user->business->fax : ''}}</p>
 						@endif
 						<a href="#" class="btn btn-default">Email agent</a>
 					</div>
