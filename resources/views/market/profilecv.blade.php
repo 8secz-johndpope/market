@@ -30,20 +30,20 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="top-card-body">
-                        <div class="top-card-info">
-                            <div class="align-items-center">
-                                <h1>David H.</h1>
+                        <div class="top-card-body">
+                            <div class="top-card-info">
+                                <div class="align-items-center">
+                                    <h1>David H.</h1>
+                                </div>
+                                <h2>Blenheim, New Zealand</h2>
                             </div>
-                            <h2>Blenheim, New Zealand</h2>
-                        </div>
-                        <div class="top-card-buttons">
-                            <ul class="looking-for">
-                                <li>IT</li>
-                                <li>Chef</li>
-                                <li>Driver</li>
-                            </ul>
+                            <div class="top-card-buttons">
+                                <ul class="looking-for">
+                                    <li>IT</li>
+                                    <li>Chef</li>
+                                    <li>Driver</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
