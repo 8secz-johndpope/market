@@ -43,7 +43,7 @@
 	                    		@endif
                     		</div>
                     	</div>
-                    	<div id="tab-about" class="tab-pane fade">
+                    	<!-- <div id="tab-about" class="tab-pane fade">
                     		<h3>Meet the team</h3>
                     		<div class="team-member">
 	                    		<div class="member-img">
@@ -65,7 +65,7 @@
 	                    			<p class="member-summary">Will has been a property specialist for 7 years having worked for two of London's leading prime property agents. He has considerable experience managing the day-to-day administration of rental properties, tenant communications and overseeing repair and maintenance works. He has successfully managed the properties of both domestic and international private landlords and larger portfolio estates, including the Howard de Walden and Portman Estates. Will joined YOUhome in May 2013.</p>
 	                    		</div>
                     		</div>
-                    	</div>
+                    	</div> -->
                     	<div id="tab-branch-loc" class="tab-pane fade">
                     		<h3>Agent's branch</h3>
                     		<div id="map">
