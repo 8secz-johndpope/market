@@ -15,12 +15,12 @@ class Category extends  BaseModel
     public $timestamps = false;
     public function children()
     {
-        return $this->hasMany('App\Model\Category','parent_id');
+        return $this->hasMany('App\Model\Category','parent_id')->orderBy('title');
     }
 
     public function mchildren()
     {
-        return $this->hasMany('App\Model\Category','parent_id')->limit(10);
+        return $this->hasMany('App\Model\Category','parent_id')->orderBy('title')->limit(10);
     }
 
     public function parent(){

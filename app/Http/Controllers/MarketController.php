@@ -124,6 +124,10 @@ class MarketController extends BaseController
         }
     }
     public function locs(Request $request){
+        $cats = Category::where('parent_id',400000000)->get();
+        foreach ($cats as $cat)
+
+        /*
         $fields=FieldValue::all();
         foreach ($fields as $field){
             $field->title=ucwords(str_replace('-',' ',$field->slug));
@@ -134,7 +138,7 @@ class MarketController extends BaseController
         $location=$price->location;
         $price->category_id=0;
         return count($location->postcodes);
-        /*
+
         $locations = Location::all();
 
         foreach ($locations as $location) {
