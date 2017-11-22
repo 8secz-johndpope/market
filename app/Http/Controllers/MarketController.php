@@ -943,7 +943,7 @@ class MarketController extends BaseController
                 }
                 $metas[]=$field;
             }
-        }
+        }/*
         $category= Category::find($product['category']);
 
         $rec = $category;
@@ -973,7 +973,8 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);*/
+        $products = $advert->similar();
         $view = 'market.product';
         //Changed of view for property view
         $srn = false;
