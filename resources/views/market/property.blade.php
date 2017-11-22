@@ -101,28 +101,12 @@
                         </div>
                     </div>
                     <div id="tabs"> 
-                    <ul class="nav nav-tabs hidden-xs">
+                    <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-floorplan">Floorplan</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
                         @if($category->id == 306000000)
                             <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
-                        @endif
-                    </ul>
-                    <ul class="panel-group visible-xs" id="accordion">
-                        <li class="panel panel-default">
-                            <div class="panel-heading">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#tab-description">Description</a>
-                            </div>
-                        </li>
-                        <li class="panel panel-default">
-                            <div class="panel-heading">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#tap-floorplan">Floorplan</a>
-                            </div>
-                        </li>
-                        <li class="panel panel-default"><a data-toggle="collapse" data-parent="#accordion" href="#tap-map">Map & Street View</a></li>
-                        @if($category->id == 306000000)
-                            <li class="panel panel-default"><a data-toggle="collapse" data-parent="#accordion" href="#tap-marketinfo">Market Info</a></li>
                         @endif
                     </ul>
                     <div class="tab-content">
