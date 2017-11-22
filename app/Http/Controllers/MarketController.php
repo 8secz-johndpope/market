@@ -124,39 +124,30 @@ class MarketController extends BaseController
         }
     }
     public function locs(Request $request){
-        $cats = Category::where('parent_id',400000000)->get();
-      //  $i=1;
+        $cats = Category::where('id','>',4000000000)->where('id','<',5000000000)->get();
+
         foreach ($cats as $cat){
-            $children = $cat->children;
-          //  $id = 400000000+$i*1000000;
-           // $i=1;
-            foreach ($children as $child){
-                //$id = $cat->id+$i*10000;
-                //$i=1;
-                foreach ($child->children as $ch){
-                   // $id = $child->id+$i*100;
-                    $i=1;
-                   foreach ($ch->children as $chh){
-                       $id = $ch->id+$i;
-                       foreach ($chh->children as $chhh) {
-                           $chhh->parent_id = $id;
-                           $chhh->save();
-                       }
-                       $chh->id=$id;
-                       $chh->save();
-                       $i++;
-                   }
-
-
-                }
-               // $child->id=$id;
-               // $child->save();
-              //  $i++;
+            if($cat->id%10000000===0){
+                $cat->ends=$cat->id+9999999;
+                $cat->save();
             }
-           // $cat->id=$id;
-           // $cat->save();
-           // $i++;
+            else if($cat->id%100000===0){
+                $cat->ends=$cat->id+99999;
+                $cat->save();
+            }
+            else if($cat->id%1000===0){
+                $cat->ends=$cat->id+999;
+                $cat->save();
+            }
+            else if($cat->id%10===0){
+                $cat->ends=$cat->id+9;
+                $cat->save();
+            }else{
+                $cat->ends=$cat->id;
+                $cat->save();
+            }
         }
+
 
         /*
         $fields=FieldValue::all();
