@@ -64,10 +64,9 @@
 }
 .top-card-info h1 {
     font-weight: 400;
-    margin-bottom: 2px;
     line-height: 32px;
     font-size: 26px;
-    margin: .67em 0;
+    margin: 0 0 2px 0;
 }
 .align-items-center {
     justify-content: center;
