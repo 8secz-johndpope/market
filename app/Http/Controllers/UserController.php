@@ -60,7 +60,7 @@ class UserController extends BaseController
     {
         $title = $request->title;
         $slug = $request->slug;
-        $category = Category::where('title',$title)->where('id','>',400000000)->where('id','<',500000000)->first();
+        $category = Category::where('title',$title)->where('id','>',4000000000)->where('id','<',5000000000)->first();
         if($category===null){
             $category = new Category;
             $category->title=$title;
@@ -68,7 +68,7 @@ class UserController extends BaseController
             $category->save();
         }
         if($request->has('parent')){
-            $parent = Category::where('slug',$request->parent)->where('id','>',400000000)->where('id','<',500000000)->first();
+            $parent = Category::where('slug',$request->parent)->where('id','>',4000000000)->where('id','<',5000000000)->first();
             if($parent)
             $category->parent_id=$parent->id;
             $category->save();
