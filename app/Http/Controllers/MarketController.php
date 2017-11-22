@@ -946,7 +946,7 @@ class MarketController extends BaseController
         }
         $category= Category::find($advert->category_id);
         return $category;
-        $rec = $category;
+        /*$rec = $category;
         while ($rec->parent_id!=-1){
             $rec = $rec->parent;
             $parents[] = $rec;
@@ -989,7 +989,7 @@ class MarketController extends BaseController
             $base = Category::where('parent_id',0)->get();
             $next = $advert->nextAdvert();
             $prev = $advert->prevAdvert();
-            return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder, 'input' => [], 'location'=>Location::find(0), 'base' => $base, 'nextAdvert' => $next, 'prevAdvert' => $prev]);
+            return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,/*'parents'=>$parents,*/'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder, 'input' => [], 'location'=>Location::find(0), 'base' => $base, 'nextAdvert' => $next, 'prevAdvert' => $prev]);
         }
         return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder]);
     }
