@@ -28,10 +28,10 @@
             </ol>
         </div>
         <div class="col-md-2 col-sm-3 col-xs-6 prev-next">
-            @if(isset($advert->prevAdvert()))
+            @if($advert->prevAdvert() !== null)
                 <a href="/p/{{$category->id}}/{{$advert->prevAdvert()->id}}"> < Prev</a>
             @endif
-            @if(isset($advert->nextAdvert()))
+            @if($advert->nextAdvert() !== null)
                 <a href="/p/{{$category->id}}/{{$advert->nextAdvert()->id}}"> Next > </a>
             @endif
         </div>
