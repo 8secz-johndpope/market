@@ -241,6 +241,7 @@
 </div>
 <div class="container-fluid background-body">
      <div class="row">
+            <div class="col-md-offset-2 col-md-8">
             <form class="navbar-form" action="/searchform" id="mainform">
                 @foreach($input as $key=>$value)
                     @if($key!=='q'&&$key!=='lat'&&$key!=='lng')
@@ -278,6 +279,7 @@
                     </div>
                 </div>
             </form>
+            </div>
         </div>
     </div>
 
