@@ -978,7 +978,7 @@ class MarketController extends BaseController
             }
         }
         $parents = array();
-        $category = Category::find(4000000000);
+        $category = $advert->category;
         if(isset($category)){
             $rec = $category;
             while ($rec->parent_id!=-1){
