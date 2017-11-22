@@ -554,7 +554,7 @@ class MarketController extends BaseController
 
 
 
-            
+
         $params = [
             'index' => 'adverts',
             'type' => 'advert',

@@ -1748,10 +1748,10 @@ class UserController extends BaseController
         }else{
             $advert->create_draft_job('');
         }
-        $advert->category_id=400000000;
+        $advert->category_id=4000000000;
         $advert->save();
 
-        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>400000000]);
+        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>4000000000]);
         $location = $body['params']['Location'];
         $parts = explode(',', $location);
         $title = $parts[0];
