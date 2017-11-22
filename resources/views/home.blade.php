@@ -70,7 +70,7 @@
                         </div>
 							@for ($i = 0; $i < count($spotlight); $i++)
 						    		<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-						    			<a href="/p/{{$spotlight['category']}}/{{$spotlight['source_id']}}">
+						    			<a href="/p/{{$spotlight[$i]['category']}}/{{$spotlight[$i]['source_id']}}">
 							    		<div class="panel panel-primary">
 								 			<div class="panel-heading" style="background-image:url('{{env('AWS_WEB_IMAGE_URL')}}/{{ count($spotlight[$i]['images'])>0?$spotlight[$i]['images'][0]:"noimage.png"}}');">
 								 			</div>
