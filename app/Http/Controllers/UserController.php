@@ -107,6 +107,7 @@ class UserController extends BaseController
         }
         $advert = new Advert;
         $advert->sid=$sid;
+        $advert->category_id=$category->id;
         $advert->save();
 
 
