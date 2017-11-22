@@ -550,15 +550,14 @@ class Advert extends  BaseModel
         return $total/100;
     }
     public  function similar(){
-        $category = Category::find($this->category_id);
         $location = Location::where('res',$this->param('location_id'))->first();
 
         $musts=array();
         $musts['category']= [
             'range' => [
                 'category' => [
-                    'gte'=>$category->id,
-                    'lte'=>$category->ends
+                    'gte'=>$this->category_id,
+                    'lte'=>$this->category_id
                 ]
             ]
         ];
@@ -594,15 +593,14 @@ class Advert extends  BaseModel
         return $products;
     }
     public  function similarUnderPrice(){
-        $category = Category::find($this->category_id);
         $location = Location::where('res',$this->param('location_id'))->first();
         $min_price = -2;
         $musts=array();
         $musts['category']= [
             'range' => [
                 'category' => [
-                    'gte'=>$category->id,
-                    'lte'=>$category->ends
+                    'gte'=>$this->category_id,
+                    'lte'=>$this->category_id
                 ]
             ]
         ];
