@@ -551,17 +551,10 @@ class MarketController extends BaseController
     }
 
     public function update(Request $request){
-        $users = User::whereBetween('id',[165,390])->get();
-        foreach ($users as $user){
-            $parts = explode('@',$user->email);
-            $id = substr($parts[0],1);
-            $user->id=$id;
-            $user->save();
-        }
 
-        /*
-            $id=$request->id;
-            $replace = $request->replace;
+
+
+            
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -569,7 +562,12 @@ class MarketController extends BaseController
                 'size' => 10000,
                 'query' => [
                     'bool' => [
-                        "must" => ['exists'=>['field'=>'user_id']]
+                        "must" => ['range' => [
+                            'category' => [
+                                'gte'=>400000000,
+                                'lte'=>499999999
+                            ]
+                        ]]
                     ]
                 ]
             ]
@@ -588,7 +586,7 @@ class MarketController extends BaseController
                 'id' => $product['id'],
                 'body' => [
                     'doc' => [
-                        'user_id' => (int)$product['user_id'],
+                        'category' => (int)$product['category']*10,
 
                     ]
                 ]
@@ -600,7 +598,7 @@ class MarketController extends BaseController
 // Update doc at /my_index/my_type/my_id
             $response = $this->client->update($params);
         }
-        */
+
 /*
         $params = [
             'index' => 'adverts',
