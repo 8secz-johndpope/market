@@ -948,15 +948,17 @@ class MarketController extends BaseController
                 $metas[]=$field;
             }
         }
-        $category= Category::find($product['category']);
-
-        $rec = $category;
-        while ($rec->parent_id!=-1){
-            $rec = $rec->parent;
-            $parents[] = $rec;
+        $parents = array();
+        $category = $advert->category;
+        if(isset($category)){
+            $rec = $category;
+            while ($rec->parent_id!=-1){
+                $rec = $rec->parent;
+                $parents[] = $rec;
+            }
+            $parents=array_reverse($parents);
         }
-        $parents=array_reverse($parents);
-        $params = [
+        /*$params = [
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
@@ -977,22 +979,23 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);*/
+        $products = $advert->similar();
         $view = 'market.product';
         //Changed of view for property view
         $srn = false;
         if($request->has('srn'))
             $srn=true;
 
-        if($category->id == 307000000 || $category->id == 306000000){
+        if($advert->category_id == 307000000 || $advert->category_id == 306000000){
             $view = 'market.property'; 
         }
-        elseif($category->id >= 400000000 && $category->id <= 499999999){
+        elseif($advert->category_id >= 400000000 && $advert->category_id <= 499999999){
             $view = 'market.job';
             $base = Category::where('parent_id',0)->get();
             $next = $advert->nextAdvert();
             $prev = $advert->prevAdvert();
-            return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder, 'input' => [], 'location'=>Location::find(0), 'base' => $base, 'nextAdvert' => $next, 'prevAdvert' => $prev]);
+            return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,/*'parents'=>$parents,*/'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder, 'input' => [], 'location'=>Location::find(0), 'base' => $base, 'nextAdvert' => $next, 'prevAdvert' => $prev]);
         }
         return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder]);
     }
