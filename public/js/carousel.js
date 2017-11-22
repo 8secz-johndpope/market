@@ -106,7 +106,7 @@ $(function () {
 	    }
 	    changeImageGallery(false);
 	});
-	$('.icon-before').click(function(e){
+	$('.images-info .icon-before').click(function(e){
         e.preventDefault();
         if($(this).hasClass('active-sld')){
             stopAnimationGallery(this);
