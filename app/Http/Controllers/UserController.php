@@ -64,10 +64,10 @@ class UserController extends BaseController
         if($category===null){
             $category = new Category;
             $category->title=$title;
-            $category->cslug=$slug;
+            $category->slug=$slug;
             $category->save();
         }else{
-            $category->cslug=$slug;
+            $category->slug=$slug;
             $category->save();
         }
         return $category;
