@@ -1053,7 +1053,14 @@ class MarketController extends BaseController
         //Need  chande de response is not search client
         $mustnot = [['exists'=>['field'=>'inactive']],['exists'=>['field'=>'draft']]];
 
-        $base=Category::where('parent_id',0)->get();
+        $base=[];
+        $base[]=Category::find(100000000);
+        $base[]=Category::find(200000000);
+        $base[]=Category::find(300000000);
+        $base[]=Category::find(4000000000);
+        $base[]=Category::find(500000000);
+        $base[]=Category::find(600000000);
+        $base[]=Category::find(700000000);
         $j = 0;
         $all=array();
         foreach ($base as $cat) {
