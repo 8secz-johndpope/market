@@ -101,18 +101,10 @@
                         </div>
                     </div>
                     <div id="tabs"> 
-                    <ul class="nav nav-tabs hidden-xs">
+                    <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-floorplan">Floorplan</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
-                        @if($category->id == 306000000)
-                            <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
-                        @endif
-                    </ul>
-                    <ul class="nav nav-tabs visible-xs">
-                        <li><a data-toggle="collapse" href="#tab-description">Description</a></li>
-                        <li><a data-toggle="collapse" href="#tap-floorplan">Floorplan</a></li>
-                        <li><a data-toggle="collapse" href="#tap-map">Map & Street View</a></li>
                         @if($category->id == 306000000)
                             <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
                         @endif

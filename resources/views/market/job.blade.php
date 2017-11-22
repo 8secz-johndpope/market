@@ -21,9 +21,9 @@
         </div>
         <div class="col-md-8 col-sm-6 hidden-xs">
             <ol class="breadcrumb">
-                <!-- @foreach($parents as $parent)
+                @foreach($parents as $parent)
                 <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
-                @endforeach -->
+                @endforeach
                 <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
             </ol>
         </div>
