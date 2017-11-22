@@ -4,7 +4,7 @@
     width: 200px;
 }
 .top-card {
-    margin: 16px 0;
+    margin: 0;
     padding: 24px;
     word-wrap: break-word;
 }
@@ -61,4 +61,23 @@
     justify-content: center;
     display: flex;
     align-items: center;
+}
+.top-card-info h1 {
+    font-weight: 400;
+    margin-bottom: 2px;
+    line-height: 32px;
+    font-size: 26px;
+}
+.align-items-center {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.top-card-info {
+    padding: 0 40px;
+    margin-bottom: 0;
+}
+.top-card-body {
+    position: relative;
+    text-align: center;
 }
