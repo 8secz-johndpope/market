@@ -157,10 +157,10 @@
 				<div class="col-sm-12">
 					<h3>See all ads by this advertiser</h3>
 				</div>
-				<div class="col-sm-12">
+				<!-- <div class="col-sm-12">
 					<a href="#" class="btn btn-default">For Sale</a>
 					<a href="#" class="btn btn-default">For Rent</a>
-				</div>
+				</div> -->
 			</div>
 			<!-- <div class="row">
 				<div class="col-md-12">
