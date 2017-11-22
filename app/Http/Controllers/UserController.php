@@ -1740,7 +1740,7 @@ class UserController extends BaseController
             return ['a' => 'b'];
         }
         $advert = new Advert;
-        $advert->sid=$sid;
+
         $advert->save();
 
         if(isset($body['params']['Recruiter'])) {
@@ -1749,6 +1749,7 @@ class UserController extends BaseController
             $advert->create_draft_job('');
         }
         $advert->category_id=4000000000;
+        $advert->sid=$sid;
         $advert->save();
 
         $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>4000000000]);
