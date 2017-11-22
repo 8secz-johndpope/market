@@ -38,6 +38,7 @@
                                 <h2>Blenheim, New Zealand</h2>
                             </div>
                             <div class="top-card-buttons">
+                                <p>Looking for:</p>
                                 <ul class="looking-for">
                                     <li>IT</li>
                                     <li>Chef</li>
