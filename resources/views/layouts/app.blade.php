@@ -882,7 +882,7 @@
 
             };
             exampleSocket.onmessage = function (event) {
-                console.log(event.data);
+                //console.log(event.data);
                 var object = JSON.parse(event.data);
                 if(object.message)
                 {
@@ -896,7 +896,7 @@
 
             }
             exampleSocket.onclose = function (event) {
-                console.log(event.data);
+                //console.log(event.data);
                 reconnect();
 
 
