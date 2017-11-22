@@ -19,6 +19,15 @@
                 </div>
                 <div class="profile-header">
                     <div class="top-card">
+                        <div class="profile-photo-container">
+                            <div class="profile-photo-wrapper">
+                                <div class="profile-photo">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/752734721579.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-card-body">
                     </div>
                 </div>
             </div>
