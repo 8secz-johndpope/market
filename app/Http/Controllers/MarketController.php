@@ -943,8 +943,8 @@ class MarketController extends BaseController
                 }
                 $metas[]=$field;
             }
-        }/*
-        $category= Category::find($product['category']);
+        }
+        $category= Category::find($advert->category_id);
 
         $rec = $category;
         while ($rec->parent_id!=-1){
@@ -952,7 +952,7 @@ class MarketController extends BaseController
             $parents[] = $rec;
         }
         $parents=array_reverse($parents);
-        $params = [
+        /*$params = [
             'index' => 'adverts',
             'type' => 'advert',
             'body' => [
