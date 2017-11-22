@@ -125,7 +125,20 @@ class MarketController extends BaseController
     }
     public function locs(Request $request){
         $cats = Category::where('parent_id',400000000)->get();
-        foreach ($cats as $cat){}
+        foreach ($cats as $cat){
+            $children = $cat->children;
+            $i=1;
+            foreach ($children as $child){
+                $id = $cat->id+$i*10000;
+                foreach ($child->children as $ch){
+                    $ch->parent_id=$id;
+                    $ch->save();
+                }
+                $child->id=$id;
+                $child->save();
+                $i++;
+            }
+        }
 
         /*
         $fields=FieldValue::all();
