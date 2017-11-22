@@ -109,12 +109,20 @@
                             <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
                         @endif
                     </ul>
-                    <ul class="panel-group visible-xs">
-                        <li class="panel panel-default"><a data-toggle="collapse" href="#tab-description">Description</a></li>
-                        <li class="panel panel-default"><a data-toggle="collapse" href="#tap-floorplan">Floorplan</a></li>
-                        <li class="panel panel-default"><a data-toggle="collapse" href="#tap-map">Map & Street View</a></li>
+                    <ul class="panel-group visible-xs" id="accordion">
+                        <li class="panel panel-default">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#tab-description">Description</a>
+                            </div>
+                        </li>
+                        <li class="panel panel-default">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#tap-floorplan">Floorplan</a>
+                            </div>
+                        </li>
+                        <li class="panel panel-default"><a data-toggle="collapse" data-parent="#accordion" href="#tap-map">Map & Street View</a></li>
                         @if($category->id == 306000000)
-                            <li class="panel panel-default"><a data-toggle="collapse" href="#tap-marketinfo">Market Info</a></li>
+                            <li class="panel panel-default"><a data-toggle="collapse" data-parent="#accordion" href="#tap-marketinfo">Market Info</a></li>
                         @endif
                     </ul>
                     <div class="tab-content">
