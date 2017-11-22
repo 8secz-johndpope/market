@@ -89,3 +89,7 @@
     font-size: 18px;
     margin: 0;
 }
+.looking-for {
+    list-style: none;
+    padding: 0;
+}
