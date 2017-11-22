@@ -14,7 +14,12 @@
     <div class="row">
         <div class="col-md-8">
             <div class="row">
-                <div class="">
+                <div class="profile-background">
+                    
+                </div>
+                <div class="profile-header">
+                    <div class="top-card">
+                    </div>
                 </div>
             </div>
         </div>
