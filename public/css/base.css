@@ -413,11 +413,11 @@ section.spotligth{
   border-color: #000;
 */
 }
-ul {
+/*ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
+}*/
 .categories li {
   padding-left: 1em; 
   text-indent: -.7em;
