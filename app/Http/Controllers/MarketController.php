@@ -945,8 +945,7 @@ class MarketController extends BaseController
             }
         }
         $category = $advert->category;
-        return $category;
-        /*$rec = $category;
+        $rec = $category;
         while ($rec->parent_id!=-1){
             $rec = $rec->parent;
             $parents[] = $rec;
