@@ -198,7 +198,9 @@
 							 @endif
 						</address>
 						<p><strong>Tel: </strong>{{$user->business->phone}}</p>
-						<p><strong>Fax: </strong>{{$user->business->fax}}</p>
+							@if(isset($user->business->fax))
+							<p><strong>Fax: </strong>{{$user->business->fax}}</p>
+							@endif
 						@endif
 						<a href="#" class="btn btn-default">Email agent</a>
 					</div>
