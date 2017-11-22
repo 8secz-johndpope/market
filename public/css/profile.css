@@ -92,5 +92,8 @@
 .looking-for {
     list-style: none;
     padding: 0;
+}
+ul.looking-for li {
+    width: calc(98% / 3);
     display: inline-block;
 }
