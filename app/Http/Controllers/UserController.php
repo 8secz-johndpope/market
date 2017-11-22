@@ -69,6 +69,7 @@ class UserController extends BaseController
         }
         if($request->has('parent')){
             $parent = Category::where('slug',$request->parent)->where('id','>',400000000)->where('id','<',500000000)->first();
+            if($parent)
             $category->parent_id=$parent->id;
             $category->save();
         }
