@@ -60,7 +60,7 @@ class UserController extends BaseController
     {
         $title = $request->title;
         $slug = $request->slug;
-        $category = Category::where('title',$title)->where('id','>',400000000)->where('id','<',500000000)->first();
+        $category = Category::where('title',$title)->where('id','>',4000000000)->where('id','<',5000000000)->first();
         if($category===null){
             $category = new Category;
             $category->title=$title;
@@ -68,7 +68,8 @@ class UserController extends BaseController
             $category->save();
         }
         if($request->has('parent')){
-            $parent = Category::where('slug',$request->parent)->where('id','>',400000000)->where('id','<',500000000)->first();
+            $parent = Category::where('slug',$request->parent)->where('id','>',4000000000)->where('id','<',5000000000)->first();
+            if($parent)
             $category->parent_id=$parent->id;
             $category->save();
         }
@@ -1732,14 +1733,14 @@ class UserController extends BaseController
     public function cccreate(Request $request)
     {
         $body = $request->json()->all();
-        $sid = (int)$body['source_id'];
-        $advert = Advert::where('sid', '=', (int)$body['source_id'])->first();
+        $sid = $body['source_id'];
+        $advert = Advert::where('sid', '=', $body['source_id'])->first();
         if ($advert !== null) {
 
             return ['a' => 'b'];
         }
         $advert = new Advert;
-        $advert->sid=$sid;
+
         $advert->save();
 
         if(isset($body['params']['Recruiter'])) {
@@ -1747,10 +1748,11 @@ class UserController extends BaseController
         }else{
             $advert->create_draft_job('');
         }
-        $advert->category_id=400000000;
+        $advert->category_id=4000000000;
+        $advert->sid=$sid;
         $advert->save();
 
-        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>400000000]);
+        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>4000000000]);
         $location = $body['params']['Location'];
         $parts = explode(',', $location);
         $title = $parts[0];
