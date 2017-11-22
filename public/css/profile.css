@@ -106,3 +106,7 @@ ul.looking-for li {
     margin: 0;
     border: 1px solid #ff9d2c;
 }
+.top-card-buttons p {
+    text-align: left;
+    padding-left: 5px;
+}
