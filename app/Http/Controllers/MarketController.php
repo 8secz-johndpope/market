@@ -944,8 +944,9 @@ class MarketController extends BaseController
                 $metas[]=$field;
             }
         }
+        $parents = array();
         $category = $advert->category;
-        if($advert->category_id < 400000000 && $advert->category_id > 499999999){
+        if(isset($category)){
             $rec = $category;
             while ($rec->parent_id!=-1){
                 $rec = $rec->parent;
