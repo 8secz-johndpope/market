@@ -78,6 +78,55 @@ class UserController extends BaseController
 
         return $category;
     }
+
+    public function cvcreate(Request $request)
+    {
+
+        $body = $request->json()->all();
+
+        $slug = $request->slug_url;
+        $parts = explode('/',$slug);
+        $category = Category::where('slug',$parts[count($parts)-1])->where('id','>',4000000000)->where('id','<',5000000000)->first();
+        if($category===null){
+            $category = Category::where('slug',$parts[count($parts)-2])->where('id','>',4000000000)->where('id','<',5000000000)->first();
+            if($category===null) {
+                return ['msg'=>'no category'];
+            }
+        }
+        $loc = Location::where('title',$body['location'])->first();
+
+        if($loc===null){
+            return ['msg'=>'no location'];
+        }
+
+        $sid = $body['source_id']+0;
+        $advert = Advert::where('sid', '=', $sid)->first();
+        if ($advert !== null) {
+
+            return ['a' => 'b'];
+        }
+        $advert = new Advert;
+        $advert->sid=$sid;
+        $advert->save();
+
+
+        $advert->create_draft_job($body['agency']);
+
+        $advert->category_id=$category->id;
+        $advert->save();
+        $params = ['title'=>$body['title'],'description'=>$body['description'],'category'=>$category->id,'source_id'=>$body['source_id']];
+        $params['location_id']=$loc->res;
+        $center = (($loc->min_lat+$loc->max_lat)/2).','.(($loc->min_lng+$loc->max_lng)/2);
+
+        $params['location'] = $center;
+        $params['location_name']=$loc->title;
+        $meta=['posted'=>$body['posted'],'salary'=>$body['salary']];
+        $advert->update_fields($params);
+        $advert->update_meta($meta);
+
+        return $advert;
+
+    }
         public function contacts(Request $request){
 
         $numbers = $request->numbers;

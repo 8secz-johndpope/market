@@ -157,6 +157,7 @@ Route::get('/user/address/{id}','UserController@address')->middleware('auth:api'
 Route::post('/user/sale/mark/shipped/{id}','UserController@mark_shipped')->middleware('auth:api');
 Route::post('/user/advert/acreate','UserController@acreate');
 Route::post('/user/category/create','UserController@add');
+Route::post('/user/advert/cvcreate','UserController@cvcreate');
 
 Route::post('/user/advert/ccreate','UserController@ccreate');
 Route::post('/user/advert/cccreate','UserController@cccreate');
