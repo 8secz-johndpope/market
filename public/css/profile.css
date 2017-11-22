@@ -82,3 +82,10 @@
     position: relative;
     text-align: center;
 }
+.top-card-info h2 {
+    margin-bottom: 2px;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0;
+}
