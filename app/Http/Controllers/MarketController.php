@@ -946,6 +946,7 @@ class MarketController extends BaseController
         }
         $parents = array();
         $category = $advert->category;
+        var_dump($category);
         if(isset($category)){
             $rec = $category;
             while ($rec->parent_id!=-1){
