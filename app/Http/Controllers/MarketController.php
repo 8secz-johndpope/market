@@ -1062,7 +1062,7 @@ class MarketController extends BaseController
 
             ]
         ];
-        $response = $this->client->search($params);
+        $response = $this->client->spotlight($request);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         $sids = array_map(function ($a) { return $a['source_id']; },$products);
 
