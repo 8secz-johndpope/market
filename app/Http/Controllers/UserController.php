@@ -75,6 +75,9 @@ class UserController extends BaseController
             $category->parent_id=$parent->id;
             $category->save();
         }
+        $category->cslug=1;
+        $category->save();
+
         return $category;
     }
         public function contacts(Request $request){
