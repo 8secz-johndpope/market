@@ -106,13 +106,12 @@ class UserController extends BaseController
             return ['a' => 'b'];
         }
         $advert = new Advert;
-        $advert->sid=$sid;
-        $advert->category_id=$category->id;
+
         $advert->save();
 
 
         $advert->create_draft_job($body['agency']);
-
+        $advert->sid=$sid;
         $advert->category_id=$category->id;
         $advert->save();
         $params = ['title'=>$body['title'],'description'=>$body['description'],'category'=>$category->id,'source_id'=>$body['source_id']];
