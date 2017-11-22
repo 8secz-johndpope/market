@@ -202,7 +202,7 @@
 							<p><strong>Fax: </strong>{{$user->business->fax}}</p>
 							@endif
 						@endif
-						<a href="#" class="btn btn-default">Email agent</a>
+						<a href="#" class="btn btn-default">Email Company</a>
 					</div>
 				</div>
 			</div>

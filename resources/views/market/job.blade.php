@@ -456,10 +456,20 @@
                             <h3>This Advert is marketed by</h3>
                             
                             <div class="profile-picutre">
-                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
+                                @if($advert->user->company)
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->business->logo}}">
+                                @else
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
+                                @endif
                             </div>
                             <div class="user-details">
-                                <p><strong>{{$advert->user->name}}</strong></p>
+                                <p>
+                                    @if($advert->user->company)
+                                    <strong>{{$advert->user->business->name}}</strong>
+                                    @else
+                                    <strong>{{$advert->user->name}}</strong>
+                                    @endif
+                                </p>
                                 <address>
                                 @if(isset($advert->user->address))
                                 {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
