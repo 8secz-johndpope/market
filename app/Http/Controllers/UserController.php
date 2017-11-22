@@ -1733,8 +1733,8 @@ class UserController extends BaseController
     public function cccreate(Request $request)
     {
         $body = $request->json()->all();
-        $sid = (int)$body['source_id'];
-        $advert = Advert::where('sid', '=', (int)$body['source_id'])->first();
+        $sid = $body['source_id'];
+        $advert = Advert::where('sid', '=', $body['source_id'])->first();
         if ($advert !== null) {
 
             return ['a' => 'b'];
