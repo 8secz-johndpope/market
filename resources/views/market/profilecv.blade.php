@@ -16,7 +16,9 @@
         <div class="col-md-8">
             <div class="row">
                 <div class="profile-background">
-                    
+                    <div class="profile-background-container">
+                        <img src="https://media.licdn.com/media/AAEAAQAAAAAAAArWAAAAJDE4ZTYwOTg3LTI5NTUtNDcwOS05N2E3LWNjNWJkNDRiYTI1OA.jpg">
+                    </div>
                 </div>
                 <div class="profile-header">
                     <div class="top-card">

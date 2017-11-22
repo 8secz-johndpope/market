@@ -1,0 +1,10 @@
+.profile-photo-container {
+    margin: -96px auto 0;
+    position: relative;
+    width: 200px;
+}
+.top-card {
+    margin: 16px 0;
+    padding: 24px;
+    word-wrap: break-word;
+}
