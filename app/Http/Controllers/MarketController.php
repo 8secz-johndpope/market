@@ -945,12 +945,14 @@ class MarketController extends BaseController
             }
         }
         $category = $advert->category;
-        $rec = $category;
-        while ($rec->parent_id!=-1){
-            $rec = $rec->parent;
-            $parents[] = $rec;
+        if($advert->category_id < 400000000 && $advert->category_id > 499999999){
+            $rec = $category;
+            while ($rec->parent_id!=-1){
+                $rec = $rec->parent;
+                $parents[] = $rec;
+            }
+            $parents=array_reverse($parents);
         }
-        $parents=array_reverse($parents);
         /*$params = [
             'index' => 'adverts',
             'type' => 'advert',
