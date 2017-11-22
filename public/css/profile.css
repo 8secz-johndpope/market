@@ -28,6 +28,7 @@
     overflow: hidden;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
+    background: #f9f0eb;
 }
 .profile-background-container img {
     width: 100%;
