@@ -223,6 +223,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 .details h3{
 	padding-left: 0;
+	margin-top: 0;
 }
 .advert-details {
     padding-left: 5px;
