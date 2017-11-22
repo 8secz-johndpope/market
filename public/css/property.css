@@ -23,6 +23,20 @@ section{
 	font-family: Effra-Regular,arial,helvetica,sans-serif;
 	line-height: 1.615;
 }
+.back {
+    padding: 8px 15px;
+}
+.breadcrumb {
+    text-align: center;
+    background-color: #fafafa;
+}
+.prev-next {
+    padding: 8px 15px;
+    text-align: right;
+}
+.prev-next a {
+    padding-left: 10px;
+}
 .copyright {
 	z-index: 9999;
 }
