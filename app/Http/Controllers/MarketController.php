@@ -981,10 +981,10 @@ class MarketController extends BaseController
         if($request->has('srn'))
             $srn=true;
 
-        if($category->id == 307000000 || $category->id == 306000000){
+        if($advert->category_id == 307000000 || $advert->category_id == 306000000){
             $view = 'market.property'; 
         }
-        elseif($category->id >= 400000000 && $category->id <= 499999999){
+        elseif($advert->category_id >= 400000000 && $advert->category_id <= 499999999){
             $view = 'market.job';
             $base = Category::where('parent_id',0)->get();
             $next = $advert->nextAdvert();
