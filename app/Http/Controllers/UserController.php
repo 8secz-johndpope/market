@@ -123,7 +123,7 @@ class UserController extends BaseController
         $meta=['posted'=>$body['posted'],'salary'=>$body['salary']];
         $advert->update_fields($params);
         $advert->update_meta($meta);
-
+        $advert->publish();
         return $advert;
 
     }
