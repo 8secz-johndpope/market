@@ -222,11 +222,13 @@
 					</ul>
 				</div>
 			</div>
+			@if($user->business && $user->business->website)
 			<div class="row border-outside">
 				<div class="col-sm-12 details-agent website">
-					<a href="#"><h3>Visit the advertiser's website</h3></a>
+					<a target="_black" href="http://{{$user->business->website}}"><h3>Visit the advertiser's website</h3></a>
 				</div>
 			</div>
+			@endif
 			<!-- <div class="row border-outside">
 				<div class="col-sm-12 title">
 					<h3>See it? Scan it</h3>
