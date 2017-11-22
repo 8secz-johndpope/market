@@ -56,7 +56,23 @@ use GuzzleHttp\Client as GClient;
 
 class UserController extends BaseController
 {
-    public function contacts(Request $request){
+    public function add(Request $request)
+    {
+        $title = $request->title;
+        $slug = $request->slug;
+        $category = Category::where('title',$title)->first();
+        if($category===null){
+            $category = new Category;
+            $category->title=$title;
+            $category->cslug=$slug;
+            $category->save();
+        }else{
+            $category->cslug=$slug;
+            $category->save();
+        }
+        return $category;
+    }
+        public function contacts(Request $request){
 
         $numbers = $request->numbers;
         foreach ($numbers as $number){
