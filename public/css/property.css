@@ -26,6 +26,10 @@ section{
 .copyright {
 	z-index: 9999;
 }
+ul.stations-list {
+    list-style: none;
+    padding: 0;
+}
 .list-style-square li {
     color: #262637;
     font-family: Effra-Regular,arial,helvetica,sans-serif;
