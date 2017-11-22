@@ -151,7 +151,7 @@ class MarketController extends BaseController
                 }
                // $child->id=$id;
                // $child->save();
-                $i++;
+              //  $i++;
             }
            // $cat->id=$id;
            // $cat->save();
