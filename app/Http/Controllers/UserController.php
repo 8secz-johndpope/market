@@ -70,6 +70,11 @@ class UserController extends BaseController
             $category->slug=$slug;
             $category->save();
         }
+        if($request->has('parent')){
+            $parent = Category::where('slug',$request->parent)->first();
+            $category->parent_id=$parent->id;
+            $category->save();
+        }
         return $category;
     }
         public function contacts(Request $request){
