@@ -13,6 +13,10 @@
 @section('content')
     <div class="row">
         <div class="col-md-8">
+            <div class="row">
+                <div class="">
+                </div>
+            </div>
         </div>
         <div class="col-md-4 col-sm-12">
             <div class="row border-outside">

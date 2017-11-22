@@ -2093,4 +2093,7 @@ class MarketController extends BaseController
     public function downloadApps(Request $request){
         return view('market.downloadapp');
     }
+    public function profile(Request $request, $id){
+        return view('market.profilecv');
+    }
 }
