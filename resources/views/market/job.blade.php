@@ -456,7 +456,7 @@
                             <h3>This Advert is marketed by</h3>
                             
                             <div class="profile-picutre">
-                                @if($advert->user->company)
+                                @if(isset($advert->user->company))
                                     <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->business->logo}}">
                                 @else
                                     <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
@@ -464,7 +464,7 @@
                             </div>
                             <div class="user-details">
                                 <p>
-                                    @if($advert->user->company)
+                                    @if(isset($advert->user->company))
                                     <strong>{{$advert->user->business->name}}</strong>
                                     @else
                                     <strong>{{$advert->user->name}}</strong>
