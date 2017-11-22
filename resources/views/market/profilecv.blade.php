@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+    <link href="{{ asset('/css/profile.css?q=874') }}" rel="stylesheet">
     <div class="row">
         <div class="col-md-8">
             <div class="row">
@@ -28,7 +29,7 @@
                         </div>
                     </div>
                     <div class="top-card-body">
-                        
+
                     </div>
                 </div>
             </div>
