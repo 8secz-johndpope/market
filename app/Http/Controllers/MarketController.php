@@ -132,16 +132,21 @@ class MarketController extends BaseController
            // $i=1;
             foreach ($children as $child){
                 //$id = $cat->id+$i*10000;
-                $i=1;
+                //$i=1;
                 foreach ($child->children as $ch){
-                    $id = $child->id+$i*100;
+                   // $id = $child->id+$i*100;
+                    $i=1;
                    foreach ($ch->children as $chh){
-                       $chh->parent_id=$id;
+                       $id = $ch->id+$i;
+                       foreach ($chh->children as $chhh) {
+                           $chhh->parent_id = $id;
+                           $chhh->save();
+                       }
+                       $chh->id=$id;
                        $chh->save();
+                       $i++;
                    }
-                     $ch->id=$id;
-                     $ch->save();
-                    $i++;
+
 
                 }
                // $child->id=$id;
