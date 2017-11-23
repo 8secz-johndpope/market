@@ -28,6 +28,9 @@ span.red-text {
     position: relative;
     display: block;
 }
+.listing-max-pro:nth-last-child(2) {
+    border-bottom: 1px solid #ccc;
+}
 span.active-strip {
     background: green;
     padding: 5px;
