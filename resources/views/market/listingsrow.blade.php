@@ -202,9 +202,11 @@
                             <span class="listing-location">
                                     {{$product['location_name']}}
                                 </span>
+                            @if($category->id < 4000000000 || $category->id > 4999999999)
                             <div class="listing-description">
                                 {!! $product['description'] !!}
                             </div>
+                            @endif
 
                         @if($product['meta']['price']>=0)
                                 <span class="product-price">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
