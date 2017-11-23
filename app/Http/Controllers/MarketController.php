@@ -124,28 +124,13 @@ class MarketController extends BaseController
         }
     }
     public function locs(Request $request){
-        $cats = Category::where('id','>',4000000000)->where('id','<',5000000000)->get();
+        $cats = Category::where('id','>',0)->where('id','<',1000000000)->get();
 
         foreach ($cats as $cat){
-            if($cat->id%10000000===0){
-                $cat->ends=$cat->id+9999999;
-                $cat->save();
-            }
-            else if($cat->id%100000===0){
-                $cat->ends=$cat->id+99999;
-                $cat->save();
-            }
-            else if($cat->id%1000===0){
-                $cat->ends=$cat->id+999;
-                $cat->save();
-            }
-            else if($cat->id%10===0){
-                $cat->ends=$cat->id+9;
-                $cat->save();
-            }else{
-                $cat->ends=$cat->id;
-                $cat->save();
-            }
+            $cat->id = $cat->id*10;
+            $cat->parent_id=$cat->parent_id*10;
+            $cat->ends = $cat->ends*10+9;
+            $cat->save();
         }
 
 
