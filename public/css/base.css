@@ -625,6 +625,10 @@ footer a:hover {
 footer .row {
     margin: 40px 0;
 }
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
 .copyright.style-1 {
   background-color: black;
   text-align: center;
