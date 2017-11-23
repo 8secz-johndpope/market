@@ -319,9 +319,10 @@ a.post-advert {
 a.search-alert {
     color: orange;
     border: 1px solid;
-    padding: 5px;
+    padding: 5px 10px;
     margin-left: 15px;
     background-color: #000;
+    border-radius: 4px;
 }
 a.post-advert:hover{
     background: orange !important;
