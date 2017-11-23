@@ -540,8 +540,8 @@ class MarketController extends BaseController
                     'bool' => [
                         "must" => ['range' => [
                             'category' => [
-                                'gte'=>4000000000,
-                                'lte'=>4999999999
+                                'gte'=>400000000,
+                                'lte'=>499999999
                             ]
                         ]]
                     ]
