@@ -512,9 +512,10 @@ span.hide-visually {
 span.posted-text {
     text-align: right;
     color: gray;
-    bottom: 0;
+    /*bottom: 0;
     right: 0;
-    position: absolute;
+    /* position: absolute; */
+    float: right;
 }
 .favroite-icon {
     font-size: 30px;
