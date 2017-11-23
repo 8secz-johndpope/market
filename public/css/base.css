@@ -1412,7 +1412,7 @@ section.row-color.white {
     height: 26em;
     margin: 0 11px; 
   }
-  .categories .row {
+  /*.categories .row {
     width: 66%;
   }
   .container{
@@ -1420,7 +1420,7 @@ section.row-color.white {
   }
   .categories .container {
     width: 100%;
-  }
+  }*/
   
   .col-2 img {
     height: 40px;
