@@ -528,56 +528,55 @@ class MarketController extends BaseController
 
     public function update(Request $request){
 
-        $fieldvalues = FieldValue::where('field_id',34)->where('category_id','>','0')->where('category_id','!=',4250000000)->get();
 
-        foreach ($fieldvalues as $fieldvalue) {
+
+
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'size' => 10000,
+                'query' => [
+                    'bool' => [
+                        "must" => ['term' => [
+                            'meta.sector.keyword' => [
+                                'value'=>$request->sector,
+                            ]
+                        ]]
+                    ]
+                ]
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) {
+            $ans = $a['_source'];
+            $ans['id'] = $a['_id'];
+            return $ans;
+        }, $response['hits']['hits']);
+
+        foreach ($products as $product) {
+
+
 
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
+                'id' => $product['id'],
                 'body' => [
-                    'size' => 10000,
-                    'query' => [
-                        'bool' => [
-                            "must" => ['term' => [
-                                'meta.sector.keyword' => [
-                                    'value' => $fieldvalue->slug,
-                                ]
-                            ]]
-                        ]
+                    'doc' => [
+                        'category' => $request->id,
+
                     ]
                 ]
             ];
-            $response = $this->client->search($params);
-            $products = array_map(function ($a) {
-                $ans = $a['_source'];
-                $ans['id'] = $a['_id'];
-                return $ans;
-            }, $response['hits']['hits']);
-
-            foreach ($products as $product) {
-
-
-                $params = [
-                    'index' => 'adverts',
-                    'type' => 'advert',
-                    'id' => $product['id'],
-                    'body' => [
-                        'doc' => [
-                            'category' => $fieldvalue->category_id,
-
-                        ]
-                    ]
-                ];
-                //  $advert = Advert::where('sid',(int)$product['source_id'])->first();
-                // $advert->user_id=(int)$product['user_id'];
-                //$advert->save();
+            //  $advert = Advert::where('sid',(int)$product['source_id'])->first();
+            // $advert->user_id=(int)$product['user_id'];
+            //$advert->save();
 
 // Update doc at /my_index/my_type/my_id
-                $response = $this->client->update($params);
-
-            }
+            $response = $this->client->update($params);
         }
+
 /*
         $params = [
             'index' => 'adverts',
