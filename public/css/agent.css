@@ -37,6 +37,11 @@ h4 {
     margin-top: 0;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.details-agent ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 .border-outside {
     /*border: 1px solid #ccc;*/
     margin: 8px 5px;
