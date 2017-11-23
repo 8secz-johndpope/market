@@ -414,7 +414,7 @@ a.post-advert:hover{
 a.filter-button.btn.btn-default {
     float: right;
     margin-bottom: 5px;
-    display: none;
+    /*display: none;*/
 }
 a.nav-color {
     color: gray;
@@ -693,6 +693,7 @@ h2.items-box-head {
 }
 .top-bar {
     float: right;
+    padding-right: 10px;
 }
 .search-alert-div {
     display: inline-block;
@@ -1045,11 +1046,12 @@ a.message-back-button {
     .search-alert-div {
         width: auto;
     }
+    a.search-alert{
+        display: block;
+    }
     .filter-container{
         width: 100%;
-    }
-    a.filter-button.btn.btn-default{
-        display: block;
+        padding-left: 10px;
     }
     .all {
         margin-left: -15px;
