@@ -1895,7 +1895,7 @@ class UserController extends BaseController
         $params=[];
         $params['location_id']=1080080000;
         $params['location']='52.2,0';
-        $params['location_name']='Durham';
+        $params['location_name']='London';
         if(count($body['phones'])>0){
             $params['phone']=$body['phones'][0];
             $params['phones']=$body['phones'];
