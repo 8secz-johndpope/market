@@ -447,21 +447,18 @@ a.red-color{
 strong.ribbon {
     background-color: #ff9d2c;
     color: #fff;
-    box-shadow: 0 0 2px 0 rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.3);
     text-transform: uppercase;
-    /* color: #fff; */
     display: block;
     text-align: center;
-    top: 13px;
-    left: -33px;
     font-weight: 700;
     width: 112px;
     padding: 3px 0;
     position: relative;
     font-size: 10px;
-    -webkit-transform: rotate(-45deg);
+    /* -webkit-transform: rotate(-45deg); */
     -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
 }
 span.urgent-span {
     background: red;
