@@ -1042,6 +1042,9 @@ a.message-back-button {
         background: white;
         width: 100%;
     }
+    .search-alert-div {
+        width: auto;
+    }
     .filter-container{
         width: 100%;
     }
