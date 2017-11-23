@@ -919,6 +919,9 @@ section.row-color.white {
     margin-right: 0;
     margin-left: 0;
   }
+  form.navbar-form {
+    margin: 10px 0;
+  }
   .navbar-header {
     /*width: auto;*/
     background-color: black;
