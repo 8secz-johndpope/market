@@ -539,7 +539,7 @@ class MarketController extends BaseController
                         'bool' => [
                             "must" => ['term' => [
                                 'category' => [
-                                    'value' => 4250000000,
+                                    'value' => 105000000,
                                 ]
                             ]]
                         ]
@@ -559,17 +559,23 @@ class MarketController extends BaseController
                 $params = [
                     'index' => 'adverts',
                     'type' => 'advert',
-                    'id' => $product['id']
+                    'id' => $product['id'],
+                    'body' => [
+                        'doc' => [
+                            'category' => 1050000000,
+
+                        ]
+                    ]
                 ];
                 //  $advert = Advert::where('sid',(int)$product['source_id'])->first();
                 // $advert->user_id=(int)$product['user_id'];
                 //$advert->save();
 
 // Update doc at /my_index/my_type/my_id
-                $response = $this->client->delete($params);
+                $response = $this->client->update($params);
 
             }
-
+        
 
 /*
         $params = [
