@@ -57,12 +57,46 @@
                             <div id="tabs">
                                 <ul class="nav nav-tabs">
                                     <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
-                                    <li><a data-toggle="tab" href="#tab-about">About Us</a></li>
+                                    <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
                                     <li><a data-toggle="tab" href="#tab-branch-loc">Works</a></li>
                                     <li><a data-toggle="tab" href="#tab-contact">Contact Us</a></li>
                                 </ul>
                                 <div class="tab-content">
                                     <div id="tab-overview" class="tab-pane fade in active">
+                                        <div class="tab-vert">
+                                            <button class="tablinks">Resume</button>
+                                            <button class="tablinks">Area</button>
+                                            <button class="tablinks">Charges</button>
+                                        </div>
+                                        <div id="resume" class="tabcontent">
+                                            
+                                        </div>
+                                        <div id="area" class="tabcontent">
+                                            
+                                        </div>
+                                        <div id="charge" class="tabcontent">
+                                            
+                                        </div>
+                                    </div>
+                                    <div id="tab-about" class="tab-pane fade">
+                                        <div class="tab-vert">
+                                            <button class="tablinks">Why me</button>
+                                            <button class="tablinks">What i do</button>
+                                            <button class="tablinks">Reviews & ratings</button>
+                                            <button class="tablinks">Recommendations</button>
+                                        </div>
+                                        <div id="why-me" class="tabcontent">
+                                            
+                                        </div>
+                                        <div id="what-i-do" class="tabcontent">
+                                            
+                                        </div>
+                                        <div id="reviews-ratings" class="tabcontent">
+                                            
+                                        </div>
+                                        <div id="recommendations" class="tabcontent">
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
