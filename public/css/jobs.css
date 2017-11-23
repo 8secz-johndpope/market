@@ -442,7 +442,7 @@ span.email-icon img {
 }
 @media screen and (max-width: 767px){
 	.form-group {
-    	padding: 0;
+    	padding: 15px 0;
     }
     .bottom-buttons a{
     	margin-left: 0;
