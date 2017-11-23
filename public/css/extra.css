@@ -582,6 +582,8 @@ li.list-group-item a {
 }
 .listing-side {
     width: 120px;
+    position: relative;
+    float: left;
 }
 .listing-side .listing-thumbnail{
     height: 92px;
@@ -594,8 +596,6 @@ li.list-group-item a {
 }
 .listing-side .listing-thumbnail,.listing-side-big .listing-thumbnail-big {
     width: 100%;
-    float: left;
-    margin-bottom: 8px;
     overflow: hidden;
     position: relative;
     border: 1px solid #d8d6d9;
@@ -620,10 +620,11 @@ li.list-group-item a {
     background: rgba(0,0,0,.5);
     color: #fff;
 }
-.info{
+.info {
     position: relative;
-    margin-left: 40px;
-
+    margin-left: 15px;
+    width: calc(100% - 140px);
+    float: left;
 }
 .favor {
     position: absolute;
