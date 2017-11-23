@@ -115,3 +115,16 @@ ul.looking-for li {
 div#tabs {
     margin-top: 15px;
 }
+.tab-vert button {
+    display: block;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+.tab-vert {
+    float: left;
+    width: 150px;
+    height: 100%;
+}
