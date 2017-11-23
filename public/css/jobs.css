@@ -208,6 +208,10 @@ h2.item-name, .jobs-apply h2, .field h2 {
     padding: 15px 5px;
     width: 100%;
 }
+.listings-adverts a {
+    display: table;
+    width: 100%;
+}
 .similar-adverts h4 {
     /*font-family: Effra-Medium,arial,helvetica,sans-serif;*/
     font-size: 13px;

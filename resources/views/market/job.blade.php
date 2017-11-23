@@ -536,8 +536,8 @@
                         <h3>Similar Jobs</h3>
                         <div class="listings-adverts">
                         @foreach($products as $p)
-                        <a href="/p/{{$category->id}}/{{$product['source_id']}}">
-                            <div class="col-sm-12 border-bottom-dashed">
+                        <a class="border-bottom-dashed" href="/p/{{$category->id}}/{{$product['source_id']}}">
+                            <div class="col-sm-12">
                                 <div class="advert-details">
                                     <h4>{{$p['title']}}</h4>
                                     <p>{{$p['location_name']}}</p>
@@ -554,8 +554,8 @@
                     <div class="similar-adverts">
                         <h3>Recommended Course</h3>
                         <div class="listings-adverts">
-                        <a href="#">
-                            <div class="col-sm-12 border-bottom-dashed">
+                        <a class="border-bottom-dashed" href="#">
+                            <div class="col-sm-12">
                                 <div class="advert-details">
                                     <h4>Diploma of Childcare (Nanny)</h4>
                                     <p>Online, self-paced</p>
