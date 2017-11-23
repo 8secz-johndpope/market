@@ -864,6 +864,7 @@ a.message-back-button {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        word-wrap: break-word;
     }
 }
 @media (max-width: 1200px) {
