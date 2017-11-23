@@ -58,7 +58,7 @@
                                 <ul class="nav nav-tabs">
                                     <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                                     <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
-                                    <li><a data-toggle="tab" href="#tab-branch-loc">Works</a></li>
+                                    <li><a data-toggle="tab" href="#tab-work">Works</a></li>
                                     <li><a data-toggle="tab" href="#tab-contact">Contact Us</a></li>
                                 </ul>
                                 <div class="tab-content">
@@ -66,12 +66,16 @@
                                         <div class="tab-vert">
                                             <button class="tablinks">Resume</button>
                                             <button class="tablinks">Area</button>
+                                            <button class="tablinks">Cover</button>
                                             <button class="tablinks">Charges</button>
                                         </div>
                                         <div id="resume" class="tabcontent">
                                             
                                         </div>
                                         <div id="area" class="tabcontent">
+                                            
+                                        </div>
+                                        <div id="cover" class="tabcontent">
                                             
                                         </div>
                                         <div id="charge" class="tabcontent">
@@ -95,6 +99,38 @@
                                             
                                         </div>
                                         <div id="recommendations" class="tabcontent">
+                                            
+                                        </div>
+                                    </div>
+                                    <div id="tab-work" class="tab-pane fade">
+                                        <div class="tab-vert">
+                                            <button class="tablinks">Protfolio</button>
+                                            <button class="tablinks">Publications</button>
+                                            <button class="tablinks">Pictures</button>
+                                        </div>
+                                        <div id="portfolio" class="tabcontent">
+                                            
+                                        </div>
+                                        <div id="publications" class="tabcontent">
+                                            
+                                        </div>
+                                        <div id="pictures" class="tabcontent">
+                                            
+                                        </div>
+                                    </div>
+                                    <div id="tab-contact" class="tab-pane fade">
+                                        <div class="tab-vert">
+                                            <button class="tablinks">Contact me</button>
+                                            <button class="tablinks">Make an offer</button>
+                                            <button class="tablinks">Request my application</button>
+                                        </div>
+                                        <div id="contact-me" class="tabcontent">
+                                            
+                                        </div>
+                                        <div id="make-offer" class="tabcontent">
+                                            
+                                        </div>
+                                        <div id="req-application" class="tabcontent">
                                             
                                         </div>
                                     </div>
