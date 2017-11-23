@@ -168,4 +168,8 @@ li.tablinks a {
     width: calc(100% - 150px);
     min-height: 490px;
     float: right;
+    border-left: 1px solid #ddd;
+}
+.tab-content {
+    display: grid;
 }
