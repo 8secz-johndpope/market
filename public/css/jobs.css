@@ -441,9 +441,6 @@ span.email-icon img {
   font-size: 13px;
 }
 @media screen and (max-width: 767px){
-	.tab-pane {
-	    padding: 15px 0;
-	}
 	.form-group {
     	padding: 20px 0;
     }
