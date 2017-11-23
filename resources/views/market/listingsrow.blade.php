@@ -208,7 +208,7 @@
                             </div>
                             @else
                                 <div class="link-details">
-                                    <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> View full details</a>
+                                    <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
                                 </div>
                             @endif
 
