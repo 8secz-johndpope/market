@@ -150,9 +150,11 @@
                             </div>
                             <div id="tab-work" class="tab-pane fade">
                                 <ul class="tab-vert">
-                                    <li class="tablinks">
-                                        <span class="bullet branded"></span>
-                                        <a>Protfolio</a>
+                                    <li class="tablinks selected">
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            Protfolio
+                                        </a>
                                     </li>
                                     <li class="tablinks">
                                         <span class="bullet branded"></span>
@@ -174,11 +176,23 @@
                                 </div>
                             </div>
                             <div id="tab-contact" class="tab-pane fade">
-                                <div class="tab-vert">
-                                    <button class="tablinks">Contact me</button>
-                                    <button class="tablinks">Make an offer</button>
-                                    <button class="tablinks">Request my application</button>
-                                </div>
+                                <ul class="tab-vert">
+                                    <li class="tablinks selected">
+                                        <a>
+                                            <span class="bullet branded"></span>Contact me
+                                        </a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a>
+                                            <span class="bullet branded"></span>Make an offer
+                                        </a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a>
+                                            <span class="bullet branded"></span>Request my application
+                                        </a>
+                                    </li>
+                                </ul>
                                 <div id="contact-me" class="tabcontent">
                                     
                                 </div>
