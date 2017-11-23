@@ -184,7 +184,7 @@
                 @else
                     @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
                         <span class="ribbon-featured">
-                            <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+                            <strong class="ribbon-job" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
                         </span>
                     @endif
                 @endif
