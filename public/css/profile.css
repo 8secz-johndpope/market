@@ -117,14 +117,26 @@ div#tabs {
 }
 .tab-vert button {
     display: block;
-    border: none;
+    /* border: none; */
     outline: none;
     text-align: left;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 10px;
+    margin-left: 0;
+    margin-right: -1px;
+    position: relative;
+    font-size: 14px;
+    border-right: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
 }
 .tab-vert {
     float: left;
     width: 150px;
     height: 100%;
+    margin: 0;
+    padding-top: 42px;
+    position: relative;
+    z-index: 2;
 }
