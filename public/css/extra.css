@@ -694,6 +694,10 @@ h2.items-box-head {
 .top-bar {
     float: right;
 }
+.search-alert-div {
+    display: inline-block;
+    float: left;
+}
 span.image-number {
     float: right;
     padding-left: 2px;

@@ -19,7 +19,7 @@
             <div class="search-alert-div">
                 <a class="search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
             </div>
-            <div class="top-bar">
+            <div class="top-bar visible-xs">
                 <a class="filter-button btn btn-default">Filter</a>
             </div>
     <div class="filter-container">
