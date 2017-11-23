@@ -166,7 +166,7 @@
         @foreach($products as $product)
         <div class="listing-max-pro">
             <div class="product">
-                @if(!$category->can_apply())
+                @if($product['category'] < 4000000000 || product['category'] <= 4999999999)
                 <div class="listing-side">
                     <div class="listing-thumbnail">
                         <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
@@ -188,7 +188,7 @@
                         </span>
                     @endif
                 @endif
-                <div class="info{{$category->can_apply() ? ' margin-left' :''}}">
+                <div class="info{{($product['category'] < 4000000000 || product['category'] <= 4999999999) ? ' margin-left' :''}}">
                     <div class="favor">
                         @if (in_array($product['source_id'],$sids))
                             <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
@@ -202,7 +202,7 @@
                             <span class="listing-location">
                                     {{$product['location_name']}}
                                 </span>
-                            @if(!$category->can_apply())
+                            @if($product['category'] < 4000000000 || product['category'] <= 4999999999)
                             <div class="listing-description">
                                 {!! $product['description'] !!}
                             </div>
