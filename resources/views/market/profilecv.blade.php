@@ -87,7 +87,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="resume" class="tabcontent">
+                                <div id="resume" class="tabcontent active-tab">
                                    <p>
                                     I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
                                     <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
