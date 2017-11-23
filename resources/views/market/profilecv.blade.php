@@ -63,20 +63,28 @@
                             <div id="tab-overview" class="tab-pane fade in active">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
-                                        <span class="bullet branded"></span>
-                                        <a>Resume</a>
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            Resume
+                                        </a>
                                     </li>
                                     <li class="tablinks">
-                                        <span class="bullet branded"></span>
-                                        <a>Area</a>
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            Area
+                                        </a>
                                     </li>
                                     <li class="tablinks">
-                                        <span class="bullet branded"></span>
-                                        <a>Cover</a>
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            Cover
+                                        </a>
                                     </li>
                                     <li class="tablinks">
-                                        <span class="bullet branded"></span>
-                                        <a>Charges</a>
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            Charges
+                                        </a>
                                     </li>
                                 </ul>
                                 <div id="resume" class="tabcontent">
