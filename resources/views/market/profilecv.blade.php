@@ -97,12 +97,20 @@
                                 </div>
                             </div>
                             <div id="tab-about" class="tab-pane fade">
-                                <div class="tab-vert">
-                                    <button class="tablinks">Why me</button>
-                                    <button class="tablinks">What i do</button>
-                                    <button class="tablinks">Reviews & ratings</button>
-                                    <button class="tablinks">Recommendations</button>
-                                </div>
+                                <ul class="tab-vert">
+                                    <li class="tablinks">
+                                        <a>Why me</a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a>What i do</a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a>Reviews & ratings</a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a>Recommendations</a>
+                                    </li>
+                                </ul>
                                 <div id="why-me" class="tabcontent">
                                     
                                 </div>
