@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use App\Model\FieldValue;
 use App\Model\Sale;
 use Illuminate\Support\Facades\Redis;
 
@@ -1782,6 +1783,7 @@ class UserController extends BaseController
     public function cccreate(Request $request)
     {
         $body = $request->json()->all();
+        $sector = $this->slugify($body['params']['Sector']);
         $sid = $body['source_id'];
         $advert = Advert::where('sid', '=', $body['source_id'])->first();
         if ($advert !== null) {
@@ -1797,11 +1799,17 @@ class UserController extends BaseController
         }else{
             $advert->create_draft_job('');
         }
-        $advert->category_id=4000000000;
+        $field = FieldValue::where('slug',$sector)->first();
+        if($field===null){
+            $category = Category::find(4250000000);
+        }else{
+            $category = Category::find($field->category_id);
+        }
+        $advert->category_id=$category->id;
         $advert->sid=$sid;
         $advert->save();
 
-        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>4000000000]);
+        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>$category->id]);
         $location = $body['params']['Location'];
         $parts = explode(',', $location);
         $title = $parts[0];
@@ -1847,7 +1855,7 @@ class UserController extends BaseController
             $meta['closes']=$body['params']['Closes'];
         }
         if(isset($body['params']['Sector'])){
-            $meta['sector']=$this->slugify($body['params']['Sector']);
+            $meta['sector']=$sector;
         }
         if(isset($body['params']['Contract Type'])){
             $meta['job_contract_type']=$this->slugify($body['params']['Contract Type']);
