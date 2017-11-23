@@ -1888,10 +1888,10 @@ class UserController extends BaseController
 
             $advert->create_draft_job('Trade Seller');
 
-        $advert->category_id=105000000;
+        $advert->category_id=1050000000;
         $advert->save();
 
-        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>105000000,'images'=>$body['images']]);
+        $advert->update_fields(['title'=>$body['title'],'description'=>$body['description'],'category'=>1050000000,'images'=>$body['images']]);
         $params=[];
         $params['location_id']=1080080000;
         $params['location']='52.2,0';
