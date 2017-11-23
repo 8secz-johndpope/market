@@ -540,8 +540,8 @@ class MarketController extends BaseController
                     'bool' => [
                         "must" => ['range' => [
                             'category' => [
-                                'gte'=>400000000,
-                                'lte'=>499999999
+                                'gte'=>4000000000,
+                                'lte'=>4000000000
                             ]
                         ]]
                     ]
@@ -556,10 +556,7 @@ class MarketController extends BaseController
         }, $response['hits']['hits']);
 
         foreach ($products as $product) {
-            $category = Category::find($product['category']);
-            if($category!==null){
-                continue;
-            }
+            
 
 
             $params = [
