@@ -70,7 +70,15 @@
                                             <button class="tablinks">Charges</button>
                                         </div>
                                         <div id="resume" class="tabcontent">
-                                            
+                                           <p>
+                                            I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
+                                            <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
+                                            My recent work includes: SaaS & API development in Python, machine learning, systems integration for legacy systems, mobile app and game development, PLC programming with Lua, Twilio, Twitter, Stripe and other API dev, and much more.
+                                            <br>
+                                            My past work includes being technical lead at an academic social network startup, engaging in a broad array of web development with backends in Python, PHP, and C, providing ecommerce solutions, web interfaces for proprietary hardware, desktop software for OSX and Windows, among others.
+                                            <br>
+                                            I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
+                                           </p> 
                                         </div>
                                         <div id="area" class="tabcontent">
                                             
