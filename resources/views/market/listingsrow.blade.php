@@ -202,7 +202,7 @@
                             <span class="listing-location">
                                     {{$product['location_name']}}
                                 </span>
-                            @if($category->can_apply())
+                            @if(!$category->can_apply())
                             <div class="listing-description">
                                 {!! $product['description'] !!}
                             </div>
