@@ -540,8 +540,8 @@ class MarketController extends BaseController
                     'bool' => [
                         "must" => ['range' => [
                             'category' => [
-                                'gte'=>4000000001,
-                                'lte'=>4999999999
+                                'gte'=>0,
+                                'lte'=>999999999
                             ]
                         ]]
                     ]
@@ -562,7 +562,7 @@ class MarketController extends BaseController
                 'id' => $product['id'],
                 'body' => [
                     'doc' => [
-                        'category' => 4000000000,
+                        'category' => $product['category']*10,
 
                     ]
                 ]
