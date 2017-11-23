@@ -152,7 +152,7 @@ li.tablinks.selected, li.tablinks:hover{
     list-style: none;
     padding-left: 0;
 }
-.tab-vert a {
+li.tablinks a {
     display: block;
     position: relative;
     padding: 10px;
