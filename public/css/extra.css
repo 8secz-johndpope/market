@@ -627,9 +627,9 @@ li.list-group-item a {
     float: left;
 }
 .info.margin-left {
-    margin-left: 40px;
+    margin-left: 0;
     margin-top: 5px;
-    width: calc(100% - 40px);
+    width: 100%;
 }
 .favor {
     position: absolute;
