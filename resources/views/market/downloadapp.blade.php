@@ -48,7 +48,7 @@
 							</a>
 						</div>
 					</div>
-					<p>Whichever way you connect with Gumtree, it is always there for you.</p>
+					<p>Whichever way you connect with {{ env('APP_NAME') }}, it is always there for you.</p>
 				</div>
 				<div class="content-middle">
 					<div>
