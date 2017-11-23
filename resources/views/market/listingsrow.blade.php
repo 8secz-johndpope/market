@@ -24,13 +24,13 @@
             </div>
     <div class="filter-container">
         <div class="all-filters">
-        <div class="l-visible-large">
+        <!-- <div class="l-visible-large">
             <ul class="list-group">
                 @foreach($lparents as $parent)
                     <li class="list-group-item"><a href="/{{$category->slug}}/{{$parent->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
                 @endforeach
             </ul>
-        </div>
+        </div> -->
         <div class="l-visible-large">
             <h4>{{$location->title}}</h4>
             <ul class="list-group">
