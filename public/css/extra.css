@@ -1062,10 +1062,11 @@ a.message-back-button {
         font-size: 14px;
         max-height: 30px;
         overflow: hidden;
-        max-width: 50%;
+        max-width: calc(100% - 30px);
     }
-
-
+    .favor {
+        top: -5px;
+    }
     .right-div-messages {
         height: 59vh;
     }
