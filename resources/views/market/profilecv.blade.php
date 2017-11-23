@@ -54,14 +54,16 @@
                 <div class="col-md-8 col-sm-12">
                     <div class="row">
                         <div class="col-sm-12">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
-                                <li><a data-toggle="tab" href="#tab-about">About Us</a></li>
-                                <li><a data-toggle="tab" href="#tab-branch-loc">Works</a></li>
-                                <li><a data-toggle="tab" href="#tab-contact">Contact Us</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div id="tab-overview" class="tab-pane fade in active">
+                            <div id="tabs">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
+                                    <li><a data-toggle="tab" href="#tab-about">About Us</a></li>
+                                    <li><a data-toggle="tab" href="#tab-branch-loc">Works</a></li>
+                                    <li><a data-toggle="tab" href="#tab-contact">Contact Us</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="tab-overview" class="tab-pane fade in active">
+                                    </div>
                                 </div>
                             </div>
                         </div>
