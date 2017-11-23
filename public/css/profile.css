@@ -115,7 +115,7 @@ ul.looking-for li {
 div#tabs {
     margin-top: 15px;
 }
-.tab-vert button {
+.tab-vert li{
     display: block;
     /* border: none; */
     outline: none;
@@ -139,4 +139,7 @@ div#tabs {
     padding-top: 42px;
     position: relative;
     z-index: 2;
+    list-style: none;
+    padding-left: 0;
+
 }
