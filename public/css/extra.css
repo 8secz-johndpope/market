@@ -468,6 +468,9 @@ strong.ribbon-job {
     /* font-size: 13px; */
     font-weight: bold;
 }
+.link-details a {
+    color: #4a148c;
+}
 strong.ribbon {
     background-color: #ff9d2c;
     color: #fff;
