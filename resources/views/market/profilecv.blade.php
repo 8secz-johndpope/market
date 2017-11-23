@@ -62,7 +62,7 @@
                         <div class="tab-content">
                             <div id="tab-overview" class="tab-pane fade in active">
                                 <ul class="tab-vert">
-                                    <li class="tablinks">
+                                    <li class="tablinks selected">
                                         <a>Resume</a>
                                     </li>
                                     <li class="tablinks">
