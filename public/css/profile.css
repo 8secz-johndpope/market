@@ -131,7 +131,7 @@ li.tablinks span.bullet {
 .branded {
     background-color: #ff9d2c;
 }
-li.tablinks.selected span.bullet {
+li.tablinks.selected span.bullet, li.tablinks.selected span.bullet:hover {
     display: block;
     background-color: #ff9d2c;
 }
