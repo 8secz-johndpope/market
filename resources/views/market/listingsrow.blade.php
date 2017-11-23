@@ -160,42 +160,37 @@
         </div>
     </div>
     <div class="products">
-            <h2 class="items-box-head">
-                List of items for {{$category->title}}, {{number_format($total)}}
+        <h2 class="items-box-head">
+            List of items for {{$category->title}}, {{number_format($total)}}
+        </h2>
+        @foreach($products as $product)
+        <div class="well">
+            <div class="product">
+                <div class="listing-side">
+                    @if($category->id < 4000000000 && $category->id > 4999999999)
+                    <div class="listing-thumbnail">
+                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
-            </h2>
-
-
-
-            @foreach($products as $product)
-    <div class="well">
-        <div class="product">
-        <div class="listing-side">
-                <div class="listing-thumbnail">
-                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
-
-                    @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
-                        <span class="ribbon-featured">
-<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-</span>
-                    @endif
-
-                    <div class="listing-meta txt-sub">
-                        <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($product['images'])}}</span>
+                        @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
+                            <span class="ribbon-featured">
+                                <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+                            </span>
+                        @endif
+                        <div class="listing-meta txt-sub">
+                            <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($product['images'])}}</span>
+                        </div>
                     </div>
+                    @endif
                 </div>
-            </div>
+                <div class="info">
+                    <div class="favor">
+                        @if (in_array($product['source_id'],$sids))
+                            <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                        @else
+                            <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
 
-            <div class="info">
-
-                            <div class="favor">
-                                @if (in_array($product['source_id'],$sids))
-                                    <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
-                                @else
-                                    <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
-
-                                @endif
-                            </div>
+                        @endif
+                    </div>
                             <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
 
                             <span class="listing-location">
