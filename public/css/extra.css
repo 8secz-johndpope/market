@@ -680,6 +680,12 @@ li.list-group-item a {
     float: left;
     padding-top: 20px;
 }
+.filter-container h4 {
+    margin-top: 0;
+}
+h2.items-box-head {
+    margin-top: 0;
+}
 .all {
     max-width: 1400px;
     margin: auto;
