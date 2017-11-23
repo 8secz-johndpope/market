@@ -626,6 +626,11 @@ li.list-group-item a {
     width: calc(100% - 140px);
     float: left;
 }
+.info.margin-left {
+    margin-left: 40px;
+    margin-top: 5px;
+    width: calc(100% - 40px);
+}
 .favor {
     position: absolute;
     top: 0;
