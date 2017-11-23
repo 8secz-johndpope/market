@@ -564,7 +564,7 @@
                             </div>
                         </a>
                         <a href="#">
-                            <div class="col-sm-12 border-bottom-dashed">
+                            <div class="col-sm-12">
                                 <div class="advert-details">
                                     <h4>Certificate in Childcare & Nannyng Training - Accredited by CPD</h4>
                                     <p>Online, self-paced</p>
