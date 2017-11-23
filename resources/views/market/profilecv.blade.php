@@ -61,12 +61,20 @@
                         </ul>
                         <div class="tab-content">
                             <div id="tab-overview" class="tab-pane fade in active">
-                                <div class="tab-vert">
-                                    <button class="tablinks">Resume</button>
-                                    <button class="tablinks">Area</button>
-                                    <button class="tablinks">Cover</button>
-                                    <button class="tablinks">Charges</button>
-                                </div>
+                                <ul class="tab-vert">
+                                    <li class="tablinks">
+                                        <a>Resume</a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a>Area</a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a>Cover</a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a>Charges</a>
+                                    </li>
+                                </ul>
                                 <div id="resume" class="tabcontent">
                                    <p>
                                     I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
