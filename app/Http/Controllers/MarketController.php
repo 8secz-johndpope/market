@@ -541,7 +541,7 @@ class MarketController extends BaseController
                         "must" => ['range' => [
                             'category' => [
                                 'gte'=>4000000000,
-                                'lte'=>4000000000
+                                'lte'=>4999999999
                             ]
                         ]]
                     ]
@@ -556,21 +556,19 @@ class MarketController extends BaseController
         }, $response['hits']['hits']);
 
         foreach ($products as $product) {
-            if(!isset($product['meta']['sector'])){
+            $category = Category::find($product['category']);
+            if($category!==null){
                 continue;
             }
-            $sector = $product['meta']['sector'];
-            $field_value = FieldValue::where('slug',$sector)->first();
-            if($field_value===null){
-                continue;
-            }
+
+
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
                 'id' => $product['id'],
                 'body' => [
                     'doc' => [
-                        'category' => $field_value->category_id,
+                        'category' => 4250000000,
 
                     ]
                 ]
