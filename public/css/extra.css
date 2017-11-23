@@ -1048,6 +1048,7 @@ a.message-back-button {
     }
     a.search-alert{
         display: block;
+        margin-left: 0;
     }
     .filter-container{
         width: 100%;
