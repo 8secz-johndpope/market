@@ -1040,9 +1040,13 @@ a.message-back-button {
     a.filter-button.btn.btn-default{
         display: block;
     }
+    .all {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
     .products{
         width: 100%;
-        padding:15px 0;
+        padding: 10px;
     }
     span.listing-location {
         font-size: 13px;
