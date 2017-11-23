@@ -599,6 +599,7 @@ span.product-price {
     background: white;
     padding: 20px;
     margin-bottom: 20px;
+    border: 1px #ddd solid;
 }
 
 
