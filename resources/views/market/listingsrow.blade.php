@@ -206,6 +206,10 @@
                             <div class="listing-description">
                                 {!! $product['description'] !!}
                             </div>
+                            @else
+                                <div class="link-details">
+                                    <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> View full details</a>
+                                </div>
                             @endif
 
                         @if($product['meta']['price']>=0)
