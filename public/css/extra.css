@@ -697,6 +697,7 @@ h2.items-box-head {
 .search-alert-div {
     display: inline-block;
     float: left;
+    width: 100%;
 }
 span.image-number {
     float: right;
