@@ -528,13 +528,6 @@ class MarketController extends BaseController
 
     public function update(Request $request){
 
-        $fieldvalues = FieldValue::where('field_id',34)->where('category_id',4250000000)->get();
-
-        foreach ($fieldvalues as $fieldvalue) {
-            $category = Category::where('id', '>', 4250000000)->where('slug', $fieldvalue->slug)->first();
-            if ($category === null) {
-                continue;
-            }
 
 
             $params = [
@@ -545,8 +538,8 @@ class MarketController extends BaseController
                     'query' => [
                         'bool' => [
                             "must" => ['term' => [
-                                'meta.sector.keyword' => [
-                                    'value' => $fieldvalue->slug,
+                                'category' => [
+                                    'value' => 4250000000,
                                 ]
                             ]]
                         ]
@@ -566,24 +559,17 @@ class MarketController extends BaseController
                 $params = [
                     'index' => 'adverts',
                     'type' => 'advert',
-                    'id' => $product['id'],
-                    'body' => [
-                        'doc' => [
-                            'category' => $category->id,
-
-                        ]
-                    ]
+                    'id' => $product['id']
                 ];
                 //  $advert = Advert::where('sid',(int)$product['source_id'])->first();
                 // $advert->user_id=(int)$product['user_id'];
                 //$advert->save();
 
 // Update doc at /my_index/my_type/my_id
-                $response = $this->client->update($params);
-                $fieldvalue->category_id = $category->id;
-                $fieldvalue->save();
+                $response = $this->client->delete($params);
+
             }
-        }
+
 
 /*
         $params = [
