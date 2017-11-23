@@ -24,6 +24,7 @@ span.red-text {
 }
 .well{
     background: white;
+    position: relative;
 }
 span.active-strip {
     background: green;
