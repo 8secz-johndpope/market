@@ -538,10 +538,9 @@ class MarketController extends BaseController
                 'size' => 10000,
                 'query' => [
                     'bool' => [
-                        "must" => ['range' => [
-                            'category' => [
-                                'gte'=>4000000000,
-                                'lte'=>4000000000
+                        "must" => ['term' => [
+                            'meta.sector' => [
+                                'value'=>$request->sector,
                             ]
                         ]]
                     ]
@@ -556,7 +555,7 @@ class MarketController extends BaseController
         }, $response['hits']['hits']);
 
         foreach ($products as $product) {
-            
+
 
 
             $params = [
@@ -565,7 +564,7 @@ class MarketController extends BaseController
                 'id' => $product['id'],
                 'body' => [
                     'doc' => [
-                        'category' => 4250000000,
+                        'category' => $request->id,
 
                     ]
                 ]
