@@ -173,3 +173,6 @@ li.tablinks a {
 .tab-content {
     display: grid;
 }
+.tab-pane {
+    padding: 0;
+}
