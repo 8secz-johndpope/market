@@ -202,7 +202,7 @@
                             <span class="listing-location">
                                     {{$product['location_name']}}
                                 </span>
-                            @if($product['category'] < 4000000000 || product['category'] <= 4999999999)
+                            @if($product['category'] < 4000000000 || $product['category'] <= 4999999999)
                             <div class="listing-description">
                                 {!! $product['description'] !!}
                             </div>
