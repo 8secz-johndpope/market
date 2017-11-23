@@ -531,7 +531,7 @@ class MarketController extends BaseController
         $fieldvalues = FieldValue::where('field_id',34)->where('category_id',4250000000)->get();
 
         foreach ($fieldvalues as $fieldvalue) {
-            $category = Category::where('category_id', '>', 4250000000)->where('slug', $fieldvalue->slug)->first();
+            $category = Category::where('id', '>', 4250000000)->where('slug', $fieldvalue->slug)->first();
             if ($category === null) {
                 continue;
             }
