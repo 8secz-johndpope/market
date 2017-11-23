@@ -224,7 +224,7 @@ class HomeController extends BaseController
                     $field->values = $field->values;
                 }
             }
-            $forsale = Category::find(200000000);
+            $forsale = Category::find(2000000000);
 
             if($category->id>=$forsale->id&&$category->id<=$forsale->ends)
                 $extras = ExtraType::all();
@@ -880,7 +880,7 @@ class HomeController extends BaseController
     public  function prices(Request $request,$id){
         $category = Category::find($id);
 
-        $forsale = Category::find(200000000);
+        $forsale = Category::find(2000000000);
         if($category===null){
             return ['msg'=>'Catagory not found'];
         }
@@ -903,7 +903,7 @@ class HomeController extends BaseController
 
         $category = Category::find($id);
 
-        $forsale = Category::find(200000000);
+        $forsale = Category::find(2000000000);
         if($category===null){
             return ['msg'=>'Catagory not found'];
         }

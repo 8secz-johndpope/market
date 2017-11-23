@@ -480,7 +480,7 @@ class Advert extends  BaseModel
         return $this->belongsTo('App\Model\Postcode');
     }
     public function extras(){
-        $forsale = Category::find(200000000);
+        $forsale = Category::find(2000000000);
 
         if($this->category->id>=$forsale->id&&$this->category->id<=$forsale->ends)
             $extras = ExtraType::all();
