@@ -111,20 +111,28 @@
                             <div id="tab-about" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks">
-                                        <span class="bullet branded"></span>
-                                        <a>Why me</a>
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            Why me
+                                        </a>
                                     </li>
                                     <li class="tablinks">
-                                        <span class="bullet branded"></span>
-                                        <a>What i do</a>
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            What i do
+                                        </a>
                                     </li>
                                     <li class="tablinks">
-                                        <span class="bullet branded"></span>
-                                        <a>Reviews & ratings</a>
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            Reviews & ratings
+                                        </a>
                                     </li>
                                     <li class="tablinks">
-                                        <span class="bullet branded"></span>
-                                        <a>Recommendations</a>
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            Recommendations
+                                        </a>
                                     </li>
                                 </ul>
                                 <div id="why-me" class="tabcontent">
