@@ -89,7 +89,7 @@
                 </div>
             </form>
 
-            @if($category->id >= 400000000 && $category->id <= 499999999)
+            @if($category->id >= 4000000000 && $category->id <= 4999999999)
             <form action="{{$url}}"  class="form-horizontal">
                 <label for="distance">Salary:</label>
                 @foreach($input as $key=>$value)
@@ -167,7 +167,7 @@
         <div class="well">
             <div class="product">
                 <div class="listing-side">
-                    @if($category->id < 4000000000 && $category->id > 4999999999)
+                    @if(!($category->id >= 4000000000 && $category->id <= 4999999999))
                     <div class="listing-thumbnail">
                         <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
