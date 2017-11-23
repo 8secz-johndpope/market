@@ -180,14 +180,14 @@
                             <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($product['images'])}}</span>
                         </div>
                     </div>
-                    @else
-                        @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
-                            <span class="ribbon-featured">
-                                <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-                            </span>
-                        @endif
-                    @endif
                 </div>
+                @else
+                    @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
+                        <span class="ribbon-featured">
+                            <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+                        </span>
+                    @endif
+                @endif
                 <div class="info">
                     <div class="favor">
                         @if (in_array($product['source_id'],$sids))
