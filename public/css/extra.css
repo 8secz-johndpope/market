@@ -25,6 +25,7 @@ span.red-text {
 .listing-max-pro{
     background: white;
     position: relative;
+    display: block;
 }
 span.active-strip {
     background: green;
