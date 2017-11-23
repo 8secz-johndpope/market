@@ -166,7 +166,7 @@
         @foreach($products as $product)
         <div class="listing-max-pro">
             <div class="product">
-                @if($product['category'] < 4000000000 || product['category'] <= 4999999999)
+                @if($product['category'] < 4000000000 || $product['category'] <= 4999999999)
                 <div class="listing-side">
                     <div class="listing-thumbnail">
                         <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
