@@ -302,7 +302,7 @@ h4.items-box-name.font-2 {
   height: auto;
   -webkit-line-clamp: 1;
 }
-p.listing-description {
+.listing-description {
   color: #8a848d;
   max-height: 41px;
   overflow: hidden;
