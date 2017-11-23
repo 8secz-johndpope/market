@@ -539,7 +539,7 @@ class MarketController extends BaseController
                 'query' => [
                     'bool' => [
                         "must" => ['term' => [
-                            'meta.sector' => [
+                            'meta.sector.keyword' => [
                                 'value'=>$request->sector,
                             ]
                         ]]
