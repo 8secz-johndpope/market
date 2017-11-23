@@ -1083,6 +1083,8 @@ a.message-back-button {
         max-height: 30px;
         overflow: hidden;
         max-width: calc(100% - 30px);
+        white-space: pre-wrap;
+        height: auto;
     }
     .favor {
         top: -5px;
