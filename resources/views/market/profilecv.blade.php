@@ -51,7 +51,7 @@
             </div>
             <div class="row">
             <!-- div info-content -->
-                <div class="col-md-8 col-sm-12">
+                <div class="col-sm-12">
                     <div class="row">
                         <div class="col-sm-12">
                             <div id="tabs">
