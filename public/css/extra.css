@@ -1045,6 +1045,7 @@ a.message-back-button {
     }
     .search-alert-div {
         width: auto;
+        padding-left: 10px;
     }
     a.search-alert{
         display: block;
