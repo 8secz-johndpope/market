@@ -957,10 +957,10 @@ section.row-color.white {
     margin: 0;
     display: inline-block;
   }
-  .row {
+  /*.row {
     margin-left: 0; 
     margin-right:  0; 
-  }
+  }*/
   .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
     border-top-right-radius: 0;
   }
