@@ -110,7 +110,7 @@
                             </div>
                             <div id="tab-about" class="tab-pane fade">
                                 <ul class="tab-vert">
-                                    <li class="tablinks">
+                                    <li class="tablinks selected">
                                         <a>
                                             <span class="bullet branded"></span>
                                             Why me
