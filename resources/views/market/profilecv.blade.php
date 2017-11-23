@@ -67,12 +67,15 @@
                                         <a>Resume</a>
                                     </li>
                                     <li class="tablinks">
+                                        <span class="bullet branded"></span>
                                         <a>Area</a>
                                     </li>
                                     <li class="tablinks">
+                                        <span class="bullet branded"></span>
                                         <a>Cover</a>
                                     </li>
                                     <li class="tablinks">
+                                        <span class="bullet branded"></span>
                                         <a>Charges</a>
                                     </li>
                                 </ul>
@@ -100,15 +103,19 @@
                             <div id="tab-about" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks">
+                                        <span class="bullet branded"></span>
                                         <a>Why me</a>
                                     </li>
                                     <li class="tablinks">
+                                        <span class="bullet branded"></span>
                                         <a>What i do</a>
                                     </li>
                                     <li class="tablinks">
+                                        <span class="bullet branded"></span>
                                         <a>Reviews & ratings</a>
                                     </li>
                                     <li class="tablinks">
+                                        <span class="bullet branded"></span>
                                         <a>Recommendations</a>
                                     </li>
                                 </ul>
@@ -126,11 +133,20 @@
                                 </div>
                             </div>
                             <div id="tab-work" class="tab-pane fade">
-                                <div class="tab-vert">
-                                    <button class="tablinks">Protfolio</button>
-                                    <button class="tablinks">Publications</button>
-                                    <button class="tablinks">Pictures</button>
-                                </div>
+                                <ul class="tab-vert">
+                                    <li class="tablinks">
+                                        <span class="bullet branded"></span>
+                                        <a>Protfolio</a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <span class="bullet branded"></span>
+                                        <a>Publications</a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <span class="bullet branded"></span>
+                                        <a>Pictures</a>
+                                    </li>
+                                </ul>
                                 <div id="portfolio" class="tabcontent">
                                     
                                 </div>
