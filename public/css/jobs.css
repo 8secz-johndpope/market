@@ -458,10 +458,6 @@ span.email-icon img {
     .buttons-cloud .btn-form {
     	width: 100%;
 	}
-	.buttons, .share, .report, .similar-adverts{
-		margin-right: -15px;
-	 	margin-left: -15px;
-	}
 	.buttons-cloud .btn-form:not(last-child){
 		margin-bottom: 15px;
 	}
