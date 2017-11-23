@@ -576,6 +576,7 @@ h4.product-title {
     cursor: pointer;
     max-width: 80%;
     font-weight: bold;
+    color: #000;
 }
 .nomargin{
     margin:0;
