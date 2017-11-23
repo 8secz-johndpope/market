@@ -188,7 +188,7 @@
                         </span>
                     @endif
                 @endif
-                <div class="info">
+                <div class="info{{$category->can_apply() ? ' margin-left' :''}}">
                     <div class="favor">
                         @if (in_array($product['source_id'],$sids))
                             <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
