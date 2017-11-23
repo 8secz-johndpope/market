@@ -201,9 +201,9 @@
                             <span class="listing-location">
                                     {{$product['location_name']}}
                                 </span>
-                            <p class="listing-description">
+                            <div class="listing-description">
                                 {!! $product['description'] !!}
-                            </p>
+                            </div>
 
                         @if($product['meta']['price']>=0)
                                 <span class="product-price">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
