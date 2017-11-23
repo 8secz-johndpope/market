@@ -63,6 +63,7 @@
                             <div id="tab-overview" class="tab-pane fade in active">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
+                                        <span class="bullet branded"></span>
                                         <a>Resume</a>
                                     </li>
                                     <li class="tablinks">

@@ -120,6 +120,21 @@ li.tablinks{
 	border-bottom: 1px solid #ddd;
     margin: -1px 10px 0 10px; 
 }
+li.tablinks span.bullet {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    display: none;
+    left: -10px;
+}
+.branded {
+    background-color: #ff9d2c;
+}
+li.tablinks.selected span.bullet {
+    display: block;
+    background-color: #ff9d2c;
+}
 li.tablinks.selected, li.tablinks:hover{
 	background-color: #fff;
     margin-left: 0;
