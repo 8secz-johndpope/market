@@ -157,12 +157,16 @@
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <span class="bullet branded"></span>
-                                        <a>Publications</a>
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            Publications
+                                        </a>
                                     </li>
                                     <li class="tablinks">
-                                        <span class="bullet branded"></span>
-                                        <a>Pictures</a>
+                                        <a>
+                                            <span class="bullet branded"></span>
+                                            Pictures
+                                        </a>
                                     </li>
                                 </ul>
                                 <div id="portfolio" class="tabcontent">
