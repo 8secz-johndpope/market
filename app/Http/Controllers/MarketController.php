@@ -540,8 +540,8 @@ class MarketController extends BaseController
                     'bool' => [
                         "must" => ['range' => [
                             'category' => [
-                                'gte'=>0,
-                                'lte'=>999999999
+                                'gte'=>4000000000,
+                                'lte'=>4000000000
                             ]
                         ]]
                     ]
@@ -556,19 +556,27 @@ class MarketController extends BaseController
         }, $response['hits']['hits']);
 
         foreach ($products as $product) {
+            if(!isset($product['meta']['sector'])){
+                continue;
+            }
+            $sector = $product['meta']['sector'];
+            $field_value = FieldValue::where('slug',$sector)->first();
+            if($field_value===null){
+                continue;
+            }
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
                 'id' => $product['id'],
                 'body' => [
                     'doc' => [
-                        'category' => $product['category']*10,
+                        'category' => $field_value->category_id,
 
                     ]
                 ]
             ];
-          //  $advert = Advert::where('sid',(int)$product['source_id'])->first();
-           // $advert->user_id=(int)$product['user_id'];
+            //  $advert = Advert::where('sid',(int)$product['source_id'])->first();
+            // $advert->user_id=(int)$product['user_id'];
             //$advert->save();
 
 // Update doc at /my_index/my_type/my_id
