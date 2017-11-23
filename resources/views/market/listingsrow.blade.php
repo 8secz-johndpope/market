@@ -213,7 +213,7 @@
                             @endif
 
                         @if($product['meta']['price']>=0)
-                                <span class="product-price">£ {{$product['meta']['price']/100}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                                <span class="product-price">£ {{number_format($product['meta']['price']/100)}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                 </span>
                             @endif
                 @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
