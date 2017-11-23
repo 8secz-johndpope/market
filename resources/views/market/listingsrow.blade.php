@@ -164,10 +164,10 @@
             List of items for {{$category->title}}, {{number_format($total)}}
         </h2>
         @foreach($products as $product)
-        <div class="well">
+        <div class="listing-max-pro">
             <div class="product">
+                @if(!$category->can_apply())
                 <div class="listing-side">
-                    @if($category->id < 4000000000 || $category->id > 4999999999)
                     <div class="listing-thumbnail">
                         <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
 
@@ -202,7 +202,7 @@
                             <span class="listing-location">
                                     {{$product['location_name']}}
                                 </span>
-                            @if($category->id < 4000000000 || $category->id > 4999999999)
+                            @if($category->can_apply())
                             <div class="listing-description">
                                 {!! $product['description'] !!}
                             </div>
