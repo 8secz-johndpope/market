@@ -52,96 +52,92 @@
             <div class="row">
             <!-- div info-content -->
                 <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div id="tabs">
-                                <ul class="nav nav-tabs">
-                                    <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
-                                    <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
-                                    <li><a data-toggle="tab" href="#tab-work">Works</a></li>
-                                    <li><a data-toggle="tab" href="#tab-contact">Contact Us</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div id="tab-overview" class="tab-pane fade in active">
-                                        <div class="tab-vert">
-                                            <button class="tablinks">Resume</button>
-                                            <button class="tablinks">Area</button>
-                                            <button class="tablinks">Cover</button>
-                                            <button class="tablinks">Charges</button>
-                                        </div>
-                                        <div id="resume" class="tabcontent">
-                                           <p>
-                                            I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
-                                            <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
-                                            My recent work includes: SaaS & API development in Python, machine learning, systems integration for legacy systems, mobile app and game development, PLC programming with Lua, Twilio, Twitter, Stripe and other API dev, and much more.
-                                            <br>
-                                            My past work includes being technical lead at an academic social network startup, engaging in a broad array of web development with backends in Python, PHP, and C, providing ecommerce solutions, web interfaces for proprietary hardware, desktop software for OSX and Windows, among others.
-                                            <br>
-                                            I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
-                                           </p> 
-                                        </div>
-                                        <div id="area" class="tabcontent">
-                                            
-                                        </div>
-                                        <div id="cover" class="tabcontent">
-                                            
-                                        </div>
-                                        <div id="charge" class="tabcontent">
-                                            
-                                        </div>
-                                    </div>
-                                    <div id="tab-about" class="tab-pane fade">
-                                        <div class="tab-vert">
-                                            <button class="tablinks">Why me</button>
-                                            <button class="tablinks">What i do</button>
-                                            <button class="tablinks">Reviews & ratings</button>
-                                            <button class="tablinks">Recommendations</button>
-                                        </div>
-                                        <div id="why-me" class="tabcontent">
-                                            
-                                        </div>
-                                        <div id="what-i-do" class="tabcontent">
-                                            
-                                        </div>
-                                        <div id="reviews-ratings" class="tabcontent">
-                                            
-                                        </div>
-                                        <div id="recommendations" class="tabcontent">
-                                            
-                                        </div>
-                                    </div>
-                                    <div id="tab-work" class="tab-pane fade">
-                                        <div class="tab-vert">
-                                            <button class="tablinks">Protfolio</button>
-                                            <button class="tablinks">Publications</button>
-                                            <button class="tablinks">Pictures</button>
-                                        </div>
-                                        <div id="portfolio" class="tabcontent">
-                                            
-                                        </div>
-                                        <div id="publications" class="tabcontent">
-                                            
-                                        </div>
-                                        <div id="pictures" class="tabcontent">
-                                            
-                                        </div>
-                                    </div>
-                                    <div id="tab-contact" class="tab-pane fade">
-                                        <div class="tab-vert">
-                                            <button class="tablinks">Contact me</button>
-                                            <button class="tablinks">Make an offer</button>
-                                            <button class="tablinks">Request my application</button>
-                                        </div>
-                                        <div id="contact-me" class="tabcontent">
-                                            
-                                        </div>
-                                        <div id="make-offer" class="tabcontent">
-                                            
-                                        </div>
-                                        <div id="req-application" class="tabcontent">
-                                            
-                                        </div>
-                                    </div>
+                    <div id="tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
+                            <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
+                            <li><a data-toggle="tab" href="#tab-work">Works</a></li>
+                            <li><a data-toggle="tab" href="#tab-contact">Contact Us</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-overview" class="tab-pane fade in active">
+                                <div class="tab-vert">
+                                    <button class="tablinks">Resume</button>
+                                    <button class="tablinks">Area</button>
+                                    <button class="tablinks">Cover</button>
+                                    <button class="tablinks">Charges</button>
+                                </div>
+                                <div id="resume" class="tabcontent">
+                                   <p>
+                                    I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
+                                    <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
+                                    My recent work includes: SaaS & API development in Python, machine learning, systems integration for legacy systems, mobile app and game development, PLC programming with Lua, Twilio, Twitter, Stripe and other API dev, and much more.
+                                    <br>
+                                    My past work includes being technical lead at an academic social network startup, engaging in a broad array of web development with backends in Python, PHP, and C, providing ecommerce solutions, web interfaces for proprietary hardware, desktop software for OSX and Windows, among others.
+                                    <br>
+                                    I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
+                                   </p> 
+                                </div>
+                                <div id="area" class="tabcontent">
+                                    
+                                </div>
+                                <div id="cover" class="tabcontent">
+                                    
+                                </div>
+                                <div id="charge" class="tabcontent">
+                                    
+                                </div>
+                            </div>
+                            <div id="tab-about" class="tab-pane fade">
+                                <div class="tab-vert">
+                                    <button class="tablinks">Why me</button>
+                                    <button class="tablinks">What i do</button>
+                                    <button class="tablinks">Reviews & ratings</button>
+                                    <button class="tablinks">Recommendations</button>
+                                </div>
+                                <div id="why-me" class="tabcontent">
+                                    
+                                </div>
+                                <div id="what-i-do" class="tabcontent">
+                                    
+                                </div>
+                                <div id="reviews-ratings" class="tabcontent">
+                                    
+                                </div>
+                                <div id="recommendations" class="tabcontent">
+                                    
+                                </div>
+                            </div>
+                            <div id="tab-work" class="tab-pane fade">
+                                <div class="tab-vert">
+                                    <button class="tablinks">Protfolio</button>
+                                    <button class="tablinks">Publications</button>
+                                    <button class="tablinks">Pictures</button>
+                                </div>
+                                <div id="portfolio" class="tabcontent">
+                                    
+                                </div>
+                                <div id="publications" class="tabcontent">
+                                    
+                                </div>
+                                <div id="pictures" class="tabcontent">
+                                    
+                                </div>
+                            </div>
+                            <div id="tab-contact" class="tab-pane fade">
+                                <div class="tab-vert">
+                                    <button class="tablinks">Contact me</button>
+                                    <button class="tablinks">Make an offer</button>
+                                    <button class="tablinks">Request my application</button>
+                                </div>
+                                <div id="contact-me" class="tabcontent">
+                                    
+                                </div>
+                                <div id="make-offer" class="tabcontent">
+                                    
+                                </div>
+                                <div id="req-application" class="tabcontent">
+                                    
                                 </div>
                             </div>
                         </div>
