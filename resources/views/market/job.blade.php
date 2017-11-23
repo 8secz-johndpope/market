@@ -287,8 +287,8 @@
                                     </div>
                                 </div>
                                 @endif
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group background-color">
+                                <div class="col-md-12 col-sm-12 background-color">
+                                    <div class="form-group">
                                         @if (Auth::guest())
                                         <div class="row">
                                             <div class="col-md-6">
