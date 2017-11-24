@@ -239,7 +239,7 @@ li.tablinks a {
     border-color: #ff9d2c;
     /* color: #fff; */
 }
-.listings-adverts {
+.listings-profiles {
     border: 1px solid #ddd;
     display: table;
     padding: 15px 5px;
@@ -255,12 +255,12 @@ li.tablinks a {
 .advert-details p {
     color: #333;
     font-size: 12px;
-    display: inline-block;
 }
 .advert-details {
     padding-left: 5px;
     padding-right: 5px;
     margin-bottom: 10px;
+    display: inline-block;
 }
 .listings-adverts a {
     display: table;
