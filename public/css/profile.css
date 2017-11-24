@@ -265,7 +265,8 @@ li.tablinks a {
     padding-right: 5px;
     margin-bottom: 10px;
     display: inline-block;
-    width: calc(100% - 50px);
+    width: calc(100% - 60px);
+    vertical-align: middle;
 }
 .listings-profiles a {
     display: table;
