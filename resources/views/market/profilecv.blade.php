@@ -258,7 +258,23 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    
+                    <a target="_black" href="#">
+                        <h3>Website Link</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Availibility</h3>
+                    <p>
+                        Available
+                    </p>
+                    <p>
+                        Less than 30 hrs/week
+                    </p>
+                    <P>
+                        < 24 hour response time
+                    </P>
                 </div>
             </div>
         </div>
