@@ -282,7 +282,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 details-similar">
                     <div class="similar-adverts">
                         <h3>Similar Profile</h3>
                         <div class="listings-profiles">

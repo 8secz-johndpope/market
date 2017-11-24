@@ -268,6 +268,9 @@ li.tablinks a {
     width: calc(100% - 60px);
     vertical-align: middle;
 }
+.details-similar{
+    margin-left: 15px;
+}
 .listings-profiles a {
     display: table;
     width: 100%;
