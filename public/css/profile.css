@@ -282,6 +282,13 @@ li.tablinks a {
 .border-bottom-dashed {
     border-bottom: 1px dashed #ccc;
 }
+.border-bottom-dashed:first-child {
+    padding-top: 0;
+}
+.border-bottom-dashed:last-child {
+    padding-bottom: 0;
+    border: none;
+}
 .circle {
     border-radius: 50%;
     width: 49px;
