@@ -194,6 +194,7 @@
                             <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
                         @else
                             <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
+                            <span  class="favor-text">Save</span>
 
                         @endif
                     </div>
