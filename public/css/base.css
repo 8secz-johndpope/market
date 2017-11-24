@@ -306,6 +306,7 @@ h4.items-box-name.font-2 {
   color: #8a848d;
   max-height: 41px;
   overflow: hidden;
+  width: calc(100% - 40px);
 }
 .listing-location {
   color: #c0c0c0;

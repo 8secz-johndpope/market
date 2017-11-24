@@ -672,6 +672,9 @@ li.list-group-item a {
     position: absolute;
     top: 0;
     right: 0;
+    width: 40px;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 .center-text{
     text-align: center;
