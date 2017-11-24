@@ -1093,6 +1093,7 @@ a.message-back-button {
     }
     span.listing-location {
         font-size: 13px;
+        width: calc(100% - 40px);
     }
     h4.product-title {
         font-size: 15px;
