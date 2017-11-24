@@ -69,19 +69,19 @@
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="tab-area">
+                                        <a href="#tab-area">
                                             <span class="bullet branded"></span>
                                             Area
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="tab-cover">
+                                        <a href="#tab-cover">
                                             <span class="bullet branded"></span>
                                             Cover
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="tab-charge">
+                                        <a href="#tab-charge">
                                             <span class="bullet branded"></span>
                                             Charges
                                         </a>
