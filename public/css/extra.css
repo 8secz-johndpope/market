@@ -682,6 +682,9 @@ span.favor-text {
     position: relative;
     display: block;
 }
+.all-filters h4 {
+    text-transform: uppercase;
+}
 .all-filters .list-group {
     background-color: #fff;
     padding: 15px;
