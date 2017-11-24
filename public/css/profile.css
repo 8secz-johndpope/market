@@ -195,7 +195,7 @@ li.tablinks a {
     border: 1px solid #f4f4f5;
 }
 
-.title h3, .website h3  {
+.title h3, .website h3, .similar-adverts h3 {
     margin-bottom: 0;
     color: #262637;
     font-size: 15px;
@@ -235,4 +235,10 @@ li.tablinks a {
     background: #ff9d2c;
     border-color: #ff9d2c;
     /* color: #fff; */
+}
+.listings-adverts {
+    border: 1px solid #ddd;
+    display: table;
+    padding: 15px 5px;
+    width: 100%;
 }
