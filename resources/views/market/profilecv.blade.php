@@ -314,7 +314,7 @@
                                         <img src="{{env('AWS_WEB_IMAGE_URL')}}/66028142415.jpg" class="circle">
                                     </div>
                                     <div class="advert-details">
-                                        <h4>Victoriano Montesinos C...</h4>
+                                        <h4>Victoriano Montesinos Canovas</h4>
                                         <p>Computer Science Master's Student & Researcher</p>
                                     </div>
                                 </div>

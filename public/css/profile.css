@@ -270,7 +270,9 @@ li.tablinks a {
 }
 .details-similar{
     margin-left: 15px;
-}
+    padding-left: 0;
+    padding-right: 0;
+ }
 .listings-profiles a {
     display: table;
     width: 100%;
