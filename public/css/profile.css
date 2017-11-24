@@ -268,3 +268,7 @@ li.tablinks a {
 .border-bottom-dashed {
     border-bottom: 1px dashed #ccc;
 }
+.circle {
+    border-radius: 50%;
+    width: 49px;
+}
