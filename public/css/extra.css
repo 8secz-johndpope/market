@@ -23,7 +23,7 @@ span.red-text {
     padding-top: 0;
 }
 .listing-max-pro{
-    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     background: #fff;
     position: relative;
     display: block;
