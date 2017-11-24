@@ -470,7 +470,7 @@ strong.ribbon-job {
     /* transform: rotate(-45deg); */
 }
 .link-details {
-    padding: 10px 0;
+    padding: 10px 0 0 0;
     /* font-size: 13px; */
     font-weight: bold;
 }
