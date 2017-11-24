@@ -69,19 +69,19 @@
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a>
+                                        <a href="tab-area">
                                             <span class="bullet branded"></span>
                                             Area
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a>
+                                        <a href="tab-cover">
                                             <span class="bullet branded"></span>
                                             Cover
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a>
+                                        <a href="tab-charge">
                                             <span class="bullet branded"></span>
                                             Charges
                                         </a>
@@ -98,13 +98,13 @@
                                     I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
                                    </p> 
                                 </div>
-                                <div id="area" class="tabcontent">
+                                <div id="tab-area" class="tabcontent">
                                     
                                 </div>
-                                <div id="cover" class="tabcontent">
+                                <div id="tab-cover" class="tabcontent">
                                     
                                 </div>
-                                <div id="charge" class="tabcontent">
+                                <div id="tab-charge" class="tabcontent">
                                     
                                 </div>
                             </div>
@@ -235,6 +235,7 @@
 </div>
 <script>
     $('.tablinks a').click(function(e){
+        e.preventDefault();
         var tab = $(this).attr('href');
         $('.active-tab').removeClass('active-tab');
         $('.selected').removeClass('selected');
