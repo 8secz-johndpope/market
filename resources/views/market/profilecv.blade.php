@@ -286,56 +286,50 @@
                     <div class="similar-adverts">
                         <h3>Similar Profile</h3>
                         <div class="listings-profiles">
-                        <a class="border-bottom-dashed" href="#">
-                            <div class="col-sm-12">
-                                <div class="advert-img">
-                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/260650123898.jpg" class="circle">
+                            <a class="border-bottom-dashed" href="#">
+                                <div class="col-sm-12">
+                                    <div class="advert-img">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/260650123898.jpg" class="circle">
+                                    </div>
+                                    <div class="advert-details">
+                                        <h4>Piotr Chursciak</h4>
+                                        <p>Psychology student</p>
+                                    </div>
                                 </div>
-                                <div class="advert-details">
-                                    <h4>Piotr Chursciak</h4>
-                                    <p>Psychology student</p>
+                            </a>
+                            <a class="border-bottom-dashed" href="#">
+                                <div class="col-sm-12">
+                                    <div class="advert-img">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/52316802048.jpg" class="circle">
+                                    </div>
+                                    <div class="advert-details">
+                                        <h4>Luis Ernesto Alcantara</h4>
+                                        <p>Android Developer</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        </div>
-                        <div class="listings-profiles">
-                        <a class="border-bottom-dashed" href="#">
-                            <div class="col-sm-12">
-                                <div class="advert-img">
-                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/52316802048.jpg" class="circle">
+                            </a>
+                            <a class="border-bottom-dashed" href="#">
+                                <div class="col-sm-12">
+                                    <div class="advert-img">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/66028142415.jpg" class="circle">
+                                    </div>
+                                    <div class="advert-details">
+                                        <h4>Victoriano Montesinos C...</h4>
+                                        <p>Computer Science Master's Student & Researcher</p>
+                                    </div>
                                 </div>
-                                <div class="advert-details">
-                                    <h4>Luis Ernesto Alcantara</h4>
-                                    <p>Android Developer</p>
+                            </a>
+                            <a class="border-bottom-dashed" href="#">
+                                <div class="col-sm-12">
+                                    <div class="advert-img">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/509626763579.jpg" class="circle">
+                                    </div>
+                                    <div class="advert-details">
+                                        <h4>Ignacio Martinez Alpiste</h4>
+                                        <p>Researcher at University of the West of Scotland - Computer Engineer</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        </div>
-                        <div class="listings-profiles">
-                        <a class="border-bottom-dashed" href="#">
-                            <div class="col-sm-12">
-                                <div class="advert-img">
-                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/66028142415.jpg" class="circle">
-                                </div>
-                                <div class="advert-details">
-                                    <h4>Victoriano Montesinos C...</h4>
-                                    <p>Computer Science Master's Student & Researcher</p>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                        <div class="listings-profiles">
-                        <a class="border-bottom-dashed" href="#">
-                            <div class="col-sm-12">
-                                <div class="advert-img">
-                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/509626763579.jpg" class="circle">
-                                </div>
-                                <div class="advert-details">
-                                    <h4>Ignacio Martinez Alpiste</h4>
-                                    <p>Researcher at University of the West of Scotland - Computer Engineer</p>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
                         </div>
                     </div>
                 </div>
