@@ -205,6 +205,12 @@ li.tablinks a {
 .details-agent {
     border: 1px solid #ccc;
 }
+.personal-details {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    text-align: center;
+}
 .personal-details p, .personal-details address {
     text-align: left;
     margin-bottom: 0px;
