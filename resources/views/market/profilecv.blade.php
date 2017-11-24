@@ -237,7 +237,8 @@
     $('.tablinks a').click(function(e){
         e.preventDefault();
         var tab = $(this).attr('href');
-        $(this).closest('.tabcontent.active-tab').removeClass('active-tab');
+        console.log($(this).closest('ul').siblings());
+        $(this).closest('ul').siblings().removeClass('active-tab');
         $(this).parent().siblings().removeClass('selected');
         $(this).parent().addClass('selected');
         $(tab).addClass('active-tab');
