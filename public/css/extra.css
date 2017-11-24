@@ -1129,8 +1129,8 @@ a.message-back-button {
         white-space: pre-wrap;
         height: auto;
     }
-    .favor {
-        top: -5px;
+    .listing-max-pro{
+        padding: 10px;
     }
     .right-div-messages {
         height: 59vh;
