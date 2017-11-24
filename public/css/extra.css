@@ -675,6 +675,10 @@ li.list-group-item a {
     width: 40px;
     border: 1px solid #ccc;
     padding: 5px;
+    text-align: center;
+}
+span.favor-text {
+    font-size: 11px;
 }
 .center-text{
     text-align: center;
