@@ -239,6 +239,7 @@
         var tab = $(this).attr('href');
         $('.active-tab').removeClass('active-tab');
         $('.selected').removeClass('selected');
+        $(this).addClass('selected');
         $(tab).addClass('active-tab');
     })
 </script>
