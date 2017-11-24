@@ -204,6 +204,7 @@ li.tablinks a {
 }
 .details-agent {
     border: 1px solid #ccc;
+    margin-left: 15px;
 }
 .personal-details {
     padding-top: 15px;
@@ -226,4 +227,9 @@ li.tablinks a {
 .border-outside {
     padding-top: 15px;
     margin-left: 15px;
+}
+.website h3 {
+    color: #fff;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
