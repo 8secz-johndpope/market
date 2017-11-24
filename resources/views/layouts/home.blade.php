@@ -128,117 +128,117 @@
     Your browser does not support the audio element.
 </audio>
 <header>
-    <div class="container-fluid top">
-        <div class="row">
-        <nav class="navbar navbar-default">
-            <div class="col-lg-2 col-md-3 navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{env('APP_URL')}}/">
-                    <img class="icon-small-h" src="/css/ic_launcher1.png">
-                    <img class="icon" src="/css/ggg-text.png">
-                </a>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid top">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{env('APP_URL')}}/">
+                        <img class="icon-small-h" src="/css/ic_launcher1.png">
+                        <img class="icon" src="/css/ggg-text.png">
+                    </a>
+                </div>
+                 <div class="header-download col-2 col-md-3 col-lg-2 col-lg-offset-2 hidden-xs hidden-sm">
+                            <div class="center-block">
+                                <img class="img-responsive" src="/css/googleplayx233.png">
+                            </div>
+                            <div class="center-block">
+                                <img class="img-responsive" src="/css/appstorex233.png">
+                            </div>
+                            <!-- <div class="center-block">
+                            </div> -->
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+
+
+
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Store</a></li>
+                        @if (Auth::guest())
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/register">Sign Up</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    Hello, {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
+                                    <li>
+                                        <a class="nav-link nav-color" href="/user/manage/orders"><span class="glyphicon glyphicon-credit-card"></span> &nbsp;&nbsp; Orders</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link nav-color" href="/user/manage/messages"><span class="glyphicon glyphicon-envelope"></span> &nbsp;&nbsp; Messages</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp; My Details</a>
+                                    </li>
+                                    @if( Auth::user()->contract!==null)
+                                        <li>
+                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Company</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;&nbsp; Financials</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp; Metrics</a>
+                                        </li>
+                                    @endif
+                                    <li>
+                                        <a class="nav-link nav-color" href="/user/manage/favorites"><span class="glyphicon glyphicon-heart"></span> &nbsp;&nbsp; Favorites</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-bell"></span> &nbsp;&nbsp; Search Alerts</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                            <span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp; Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        @endif
+                        @if (!Auth::guest())
+
+                            <li class="dropdown messages-nav"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <span > <span  class="glyphicon glyphicon-envelope"></span>    <span class="button__badge" style="display: none" id="message-notification">1</span></span><span class="caret"></span></a>
+                                <ul class="dropdown-menu all-menu-messages list-group" role="menu">
+                                    @foreach(Auth::user()->rooms as $room)
+                                        <li class="list-group-item">
+                                            <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a>
+                                            @if($room->last_message())
+                                            <div class="message-inside">
+                                                <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
+                                                <span class="message-username">{{$room->last_message()->user->name}}</span>
+                                            </div>
+                                            @endif
+
+                                        </li>
+                                    @endforeach
+                                </ul>
+
+                            </li>
+                        @endif
+                        <li><a class="btn btn-info bussines" role="button" href="/user/contract/pricing">{{env('APP_NAME')}} for Business</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
             </div>
-             <div class="header-download col-2 col-md-3 col-lg-2 col-lg-offset-2 hidden-xs hidden-sm">
-                        <div class="center-block">
-                            <img class="img-responsive" src="/css/googleplayx233.png">
-                        </div>
-                        <div class="center-block">
-                            <img class="img-responsive" src="/css/appstorex233.png">
-                        </div>
-                        <!-- <div class="center-block">
-                        </div> -->
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-
-
-
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Store</a></li>
-                    @if (Auth::guest())
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/register">Sign Up</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                Hello, {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
-                                <li>
-                                    <a class="nav-link nav-color" href="/user/manage/orders"><span class="glyphicon glyphicon-credit-card"></span> &nbsp;&nbsp; Orders</a>
-                                </li>
-                                <li>
-                                    <a class="nav-link nav-color" href="/user/manage/messages"><span class="glyphicon glyphicon-envelope"></span> &nbsp;&nbsp; Messages</a>
-                                </li>
-                                <li>
-                                    <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp; My Details</a>
-                                </li>
-                                @if( Auth::user()->contract!==null)
-                                    <li>
-                                        <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Company</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;&nbsp; Financials</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp; Metrics</a>
-                                    </li>
-                                @endif
-                                <li>
-                                    <a class="nav-link nav-color" href="/user/manage/favorites"><span class="glyphicon glyphicon-heart"></span> &nbsp;&nbsp; Favorites</a>
-                                </li>
-                                <li>
-                                    <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-bell"></span> &nbsp;&nbsp; Search Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        <span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp; Logout
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
-
-                    @endif
-                    @if (!Auth::guest())
-
-                        <li class="dropdown messages-nav"><a href="/user/manage/messages"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <span > <span  class="glyphicon glyphicon-envelope"></span>    <span class="button__badge" style="display: none" id="message-notification">1</span></span><span class="caret"></span></a>
-                            <ul class="dropdown-menu all-menu-messages list-group" role="menu">
-                                @foreach(Auth::user()->rooms as $room)
-                                    <li class="list-group-item">
-                                        <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a>
-                                        @if($room->last_message())
-                                        <div class="message-inside">
-                                            <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
-                                            <span class="message-username">{{$room->last_message()->user->name}}</span>
-                                        </div>
-                                        @endif
-
-                                    </li>
-                                @endforeach
-                            </ul>
-
-                        </li>
-                    @endif
-                    <li><a class="btn btn-info bussines" role="button" href="/user/contract/pricing">{{env('APP_NAME')}} for Business</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </nav>
-    </div>
-</div>
+        </div>
+    </nav>
 <div class="container-fluid background-body">
      <div class="row">
             <div class="col-md-offset-1 col-md-10">
