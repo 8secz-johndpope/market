@@ -160,9 +160,9 @@
         </div>
     </div>
     <div class="products">
-        <h2 class="items-box-head">
+        <h4 class="items-box-head">
             List of items for {{$category->title}}, {{number_format($total)}}
-        </h2>
+        </h4>
         @foreach($products as $product)
         <div class="listing-max-pro">
             <div class="product">

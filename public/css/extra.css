@@ -23,7 +23,7 @@ span.red-text {
     padding-top: 0;
 }
 .listing-max-pro{
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #c0c0c0;
     background: #fff;
     position: relative;
     margin: 0 0 10px;
@@ -34,7 +34,7 @@ span.red-text {
 }
 
 .listing-max-pro:nth-last-child(2) {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #c0c0c0;
 }
 span.active-strip {
     background: green;
@@ -673,7 +673,7 @@ li.list-group-item a {
     top: 0;
     right: 0;
     width: 40px;
-    border: 1px solid #ccc;
+    border: 1px solid #c0c0c0;
     padding: 5px;
     text-align: center;
 }
@@ -708,7 +708,7 @@ span.favor-text {
 .filter-container h4 {
     margin-top: 0;
 }
-h2.items-box-head {
+h4.items-box-head {
     margin-top: 0;
 }
 .all {
