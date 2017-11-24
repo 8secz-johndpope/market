@@ -246,7 +246,7 @@ li.tablinks a {
 .listings-profiles {
     border: 1px solid #ddd;
     display: table;
-    padding: 15px 5px;
+    padding: 15px;
     width: 100%;
 }
 .similar-adverts h4 {
