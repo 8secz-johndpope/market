@@ -997,7 +997,7 @@ class MarketController extends BaseController
         if($advert->isPropertyToRent() || $advert->isPropertyForSale()){
             $view = 'market.property'; 
         }
-        elseif($advert->category_id >= 4000000000 && $advert->category_id <= 4999999999){
+        elseif($advert->category->can_apply()){
             $view = 'market.job';
             $base = Category::where('parent_id',0)->get();
             $next = $advert->nextAdvert();
