@@ -281,6 +281,65 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="similar-adverts">
+                        <h3>Similar Profile</h3>
+                        <div class="listings-adverts">
+                        <a class="border-bottom-dashed" href="#">
+                            <div class="col-sm-12">
+                                <div class="advert-img">
+                                    <img src="" class="circle">
+                                </div>
+                                <div class="advert-details">
+                                    <h4>Piotr Chursciak</h4>
+                                    <p>Psychology student</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="listings-adverts">
+                        <a class="border-bottom-dashed" href="#">
+                            <div class="col-sm-12">
+                                <div class="advert-img">
+                                    <img src="" class="circle">
+                                </div>
+                                <div class="advert-details">
+                                    <h4>Luis Ernesto Alcantara</h4>
+                                    <p>Android Developer</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="listings-adverts">
+                        <a class="border-bottom-dashed" href="#">
+                            <div class="col-sm-12">
+                                <div class="advert-img">
+                                    <img src="" class="circle">
+                                </div>
+                                <div class="advert-details">
+                                    <h4>Victoriano Montesinos C...</h4>
+                                    <p>Computer Science Master's Student & Researcher</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="listings-adverts">
+                        <a class="border-bottom-dashed" href="#">
+                            <div class="col-sm-12">
+                                <div class="advert-img">
+                                    <img src="" class="circle">
+                                </div>
+                                <div class="advert-details">
+                                    <h4>Ignacio Martinez Alpiste</h4>
+                                    <p>Researcher at University of the West of Scotland - Computer Engineer</p>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
