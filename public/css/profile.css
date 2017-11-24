@@ -274,6 +274,8 @@ li.tablinks a {
 .listings-profiles a {
     display: table;
     width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .border-bottom-dashed {
     border-bottom: 1px dashed #ccc;
