@@ -255,6 +255,7 @@ li.tablinks a {
 .advert-details p {
     color: #333;
     font-size: 12px;
+    display: inline-block;
 }
 .advert-details {
     padding-left: 5px;
@@ -271,4 +272,7 @@ li.tablinks a {
 .circle {
     border-radius: 50%;
     width: 49px;
+}
+.advert-img {
+    display: inline-block;
 }
