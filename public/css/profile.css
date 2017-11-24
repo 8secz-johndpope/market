@@ -200,6 +200,9 @@ h3 {
     margin-top: 0;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.title h3 {
+    margin-bottom: 0;
+}
 .details-agent {
     border: 1px solid #ccc;
 }
