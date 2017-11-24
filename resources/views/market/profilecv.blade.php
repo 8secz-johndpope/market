@@ -195,7 +195,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="tab-portfolio" class="tabcontent">
+                                <div id="tab-portfolio" class="tabcontent active-tab">
                                     
                                 </div>
                                 <div id="tab-publications" class="tabcontent">
@@ -223,7 +223,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="tab-contact-me" class="tabcontent">
+                                <div id="tab-contact-me" class="tabcontent active-tab">
                                     
                                 </div>
                                 <div id="tab-make-offer" class="tabcontent">
