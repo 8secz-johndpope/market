@@ -534,9 +534,9 @@ span.posted-text {
 }
 .favroite-icon {
     font-size: 30px;
-    float: right;
     cursor: pointer;
     color: mediumseagreen;
+    display: block;
 }
 
 .favroite-icon-gold {
@@ -679,6 +679,8 @@ li.list-group-item a {
 }
 span.favor-text {
     font-size: 11px;
+    position: relative;
+    display: block;
 }
 .all-filters .list-group {
     background-color: #fff;
