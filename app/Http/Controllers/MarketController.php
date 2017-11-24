@@ -994,7 +994,7 @@ class MarketController extends BaseController
         if($request->has('srn'))
             $srn=true;
 
-        if($advert->category_id == 307000000 || $advert->category_id == 306000000){
+        if($advert->isPropertyToRent() || $advert->category_id == 306000000){
             $view = 'market.property'; 
         }
         elseif($advert->category_id >= 4000000000 && $advert->category_id <= 4999999999){
