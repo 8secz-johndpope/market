@@ -39,6 +39,7 @@
                 @endforeach
             </ul>
         </div>
+        @if(count($parents) > 0)
         <div class="l-visible-large">
             <ul class="list-group">
                 @foreach($parents as $parent)
@@ -46,6 +47,7 @@
                 @endforeach
             </ul>
         </div>
+        @endif
         <div class="l-visible-large">
             <h4>{{$category->title}}</h4>
             <ul class="list-group">
