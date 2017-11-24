@@ -63,7 +63,7 @@
                             <div id="tab-overview" class="tab-pane fade in active">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
-                                        <a>
+                                        <a href="#tab-resume">
                                             <span class="bullet branded"></span>
                                             Resume
                                         </a>
@@ -87,7 +87,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="resume" class="tabcontent active-tab">
+                                <div id="tab-resume" class="tabcontent active-tab">
                                    <p>
                                     I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
                                     <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
@@ -233,4 +233,12 @@
         </div>
     </div>
 </div>
+<script>
+    $('.tablinks a').click(function(e){
+        var tab = $(this).attr('href');
+        $('.active-tab').removeClass('active-tab');
+        $('.selected').removeClass('selected');
+        $(tab).addClass('active-tab');
+    })
+</script>
 @endsection
