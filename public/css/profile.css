@@ -202,3 +202,7 @@ h3 {
 .details-agent {
     border: 1px solid #ccc;
 }
+.agent-details p, .agent-details address {
+    text-align: left;
+    margin-bottom: 0px;
+}
