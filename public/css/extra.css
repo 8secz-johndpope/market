@@ -434,6 +434,7 @@ p.listing-description {
 span.listing-location {
     font-weight: bold;
     font-size: 16px;
+    display: block;
 }
 .copyright {
     position: fixed;
@@ -473,6 +474,7 @@ strong.ribbon-job {
     padding: 10px 0 0 0;
     /* font-size: 13px; */
     font-weight: bold;
+    display: inline-block;
 }
 .link-details a {
     color: #4a148c;
