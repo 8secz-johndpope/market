@@ -258,3 +258,10 @@ li.tablinks a {
     padding-right: 5px;
     margin-bottom: 10px;
 }
+.listings-adverts a {
+    display: table;
+    width: 100%;
+}
+.border-bottom-dashed {
+    border-bottom: 1px dashed #ccc;
+}
