@@ -285,7 +285,7 @@
                 <div class="col-sm-12">
                     <div class="similar-adverts">
                         <h3>Similar Profile</h3>
-                        <div class="listings-adverts">
+                        <div class="listings-profiles">
                         <a class="border-bottom-dashed" href="#">
                             <div class="col-sm-12">
                                 <div class="advert-img">
@@ -298,7 +298,7 @@
                             </div>
                         </a>
                         </div>
-                        <div class="listings-adverts">
+                        <div class="listings-profiles">
                         <a class="border-bottom-dashed" href="#">
                             <div class="col-sm-12">
                                 <div class="advert-img">
@@ -311,7 +311,7 @@
                             </div>
                         </a>
                         </div>
-                        <div class="listings-adverts">
+                        <div class="listings-profiles">
                         <a class="border-bottom-dashed" href="#">
                             <div class="col-sm-12">
                                 <div class="advert-img">
@@ -324,7 +324,7 @@
                             </div>
                         </a>
                         </div>
-                        <div class="listings-adverts">
+                        <div class="listings-profiles">
                         <a class="border-bottom-dashed" href="#">
                             <div class="col-sm-12">
                                 <div class="advert-img">
