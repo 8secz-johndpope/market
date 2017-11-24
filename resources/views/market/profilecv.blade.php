@@ -110,7 +110,47 @@
                                    </p> 
                                 </div>
                                 <div id="tab-cover" class="tabcontent">
-                                    
+                                    <p>
+                                    Your Name
+                                    Your Address
+                                    Your City, State, Zip Code
+                                    Your Phone Number
+                                    Your Email
+
+                                    Date
+
+                                    Name
+                                    Title
+                                    Organization
+                                    Address
+                                    City, State, Zip Code
+
+                                    Dear Mr./Ms. Last Name:
+
+                                    I am interested in the Coordinator position advertised on XYZ. My resume is enclosed for your review. Given my related experience and excellent capabilities, I would appreciate your consideration for this job opening. My skills are an ideal match for this position.
+
+                                    Your Requirements:
+
+                                    Responsible for evening operations in Student Center and other facilities, including managing registration, solving customer problems, dealing with risk management and emergencies, enforcement of department policies.
+                                    Assists with hiring, training, and management of staff. Coordinate statistics and inventory.
+                                    Experience in the supervision of student staff and strong interpersonal skills are also preferred.
+                                    Valid Minnesota driver's license with good driving record. Ability to travel to different sites required.
+                                    Experience in collegiate programming and management.
+                                    My Qualifications:
+
+                                    Register students for courses, design and manage program software, solve customer problems, enforce department policies, and serve as a contact for students, faculty, and staff.
+                                    Hiring, training, scheduling and management of staff, managing supply inventory, and ordering.
+                                    Minnesota driver's license with NTSA defensive driving certification.
+                                    Extensive experience in collegiate programming and management.
+                                    Excellent interpersonal and communication skills.
+                                    I appreciate your taking the time to review my credentials and experience. Again, thank you for your consideration.
+
+                                    Sincerely,
+
+                                    Your Signature (for hard copy letter)
+
+                                    Your Typed Name
+                                    </p>
                                 </div>
                                 <div id="tab-charge" class="tabcontent">
                                     
