@@ -223,8 +223,11 @@ li.tablinks a {
     color: #fff;
     border-color: #000;
 }
-.border-outside {
+.border-outside:first-child {
     padding-top: 15px;
+}
+.border-outside {
+    margin-bottom: 15px;
 }
 .website h3 {
     color: #fff;
