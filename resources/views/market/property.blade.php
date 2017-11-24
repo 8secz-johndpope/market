@@ -116,7 +116,7 @@
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-floorplan">Floorplan</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
-                        @if($category->id == 306000000)
+                        @if($advert->isPropertyForSale())
                             <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
                         @endif
                     </ul>
@@ -124,7 +124,7 @@
                         <div id="tab-description" class="tab-pane fade in active">
                             <div class="content">
                                 <div class="col-sm-8 left-content">
-                                    @if($category->id == 307000000)
+                                    @if($category->can_rent())
                                         <h3>Letting information:</h3>
                                     @endif
                                     <div class="row meta">
