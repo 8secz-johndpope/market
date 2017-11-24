@@ -14,7 +14,7 @@
     <link href="{{ asset('/css/profile.css?q=874') }}" rel="stylesheet">
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-sm-8 col-xs-12">
             <div class="row">
                 <div class="profile-background">
                     <div class="profile-background-container">
@@ -99,7 +99,15 @@
                                    </p> 
                                 </div>
                                 <div id="tab-area" class="tabcontent">
-                                    
+                                    <p>
+                                    I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
+                                    <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
+                                    My recent work includes: SaaS & API development in Python, machine learning, systems integration for legacy systems, mobile app and game development, PLC programming with Lua, Twilio, Twitter, Stripe and other API dev, and much more.
+                                    <br>
+                                    My past work includes being technical lead at an academic social network startup, engaging in a broad array of web development with backends in Python, PHP, and C, providing ecommerce solutions, web interfaces for proprietary hardware, desktop software for OSX and Windows, among others.
+                                    <br>
+                                    I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
+                                   </p> 
                                 </div>
                                 <div id="tab-cover" class="tabcontent">
                                     
@@ -212,7 +220,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-sm-4 col-xs-12">
             <div class="row border-outside">
                 <div class="col-sm-12 details-agent title">
                     <h3>Contact and Personal Info</h3>
