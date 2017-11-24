@@ -215,3 +215,7 @@ h3 {
     color: #fff;
     border-color: #000;
 }
+.border-outside {
+    padding-top: 15px;
+    margin-left: 15px;
+}
