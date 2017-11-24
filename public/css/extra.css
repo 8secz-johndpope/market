@@ -24,10 +24,15 @@ span.red-text {
 }
 .listing-max-pro{
     border-top: 1px solid #ccc;
-    background: white;
+    background: #fff;
     position: relative;
     display: block;
+    margin: 0 0 10px;
 }
+.listing-max-pro:nth-child(1) {
+    animation-delay: .05s;
+}
+
 .listing-max-pro:nth-last-child(2) {
     border-bottom: 1px solid #ccc;
 }
@@ -596,10 +601,8 @@ span.product-price {
 .products {
     width: 76%;
     float: right;
-    background: white;
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px #ddd solid;
 }
 
 
