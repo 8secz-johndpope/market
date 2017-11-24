@@ -667,7 +667,7 @@ class Advert extends  BaseModel
         return Advert::where('category_id',$this->category_id)->where('id','<',$this->id)->where('status',1)->first();
     }
     public function isPropertyToRent(){
-        return $this->category->id == 3070000000;
+        return $this->category->can_rent();
     }
     public function isPropertyForSale(){
         return $this->category->id == 3060000000;

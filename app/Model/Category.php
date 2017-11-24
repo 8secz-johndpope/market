@@ -57,6 +57,10 @@ class Category extends  BaseModel
         else
             return false;
     }
+    public function can_rent(){
+        $rents = Category::find(3070000000);
+        return $this->id == $rents;
+    }
     public static function job_leaves(){
             $all=Category::where('id','>',4000000000)->where('id','<',5000000000)->orderBy('title')->get();
             $jobs=[];
