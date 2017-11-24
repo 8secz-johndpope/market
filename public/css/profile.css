@@ -188,3 +188,14 @@ li.tablinks a {
 .tab-pane {
     padding: 0;
 }
+/** try to move and general this is common for other page */
+.title {
+    padding: .4em .5em;
+    border: 1px solid #f4f4f5;
+}
+h3 {
+    color: #262637;
+    font-size: 15px;
+    margin-top: 0;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
