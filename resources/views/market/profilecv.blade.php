@@ -177,59 +177,59 @@
                             <div id="tab-work" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
-                                        <a>
+                                        <a href="tab-portfolio">
                                             <span class="bullet branded"></span>
                                             Protfolio
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a>
+                                        <a href="tab-publications">
                                             <span class="bullet branded"></span>
                                             Publications
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a>
+                                        <a href="tab-pictures">
                                             <span class="bullet branded"></span>
                                             Pictures
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="portfolio" class="tabcontent">
+                                <div id="tab-portfolio" class="tabcontent">
                                     
                                 </div>
-                                <div id="publications" class="tabcontent">
+                                <div id="tab-publications" class="tabcontent">
                                     
                                 </div>
-                                <div id="pictures" class="tabcontent">
+                                <div id="tab-pictures" class="tabcontent">
                                     
                                 </div>
                             </div>
                             <div id="tab-contact" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
-                                        <a>
+                                        <a href="#tab-contact-me">
                                             <span class="bullet branded"></span>Contact me
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a>
+                                        <a href="#tab-make-offer">
                                             <span class="bullet branded"></span>Make an offer
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a>
+                                        <a href="#tab-req-application">
                                             <span class="bullet branded"></span>Request my application
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="contact-me" class="tabcontent">
+                                <div id="tab-contact-me" class="tabcontent">
                                     
                                 </div>
-                                <div id="make-offer" class="tabcontent">
+                                <div id="tab-make-offer" class="tabcontent">
                                     
                                 </div>
-                                <div id="req-application" class="tabcontent">
+                                <div id="tab-req-application" class="tabcontent">
                                     
                                 </div>
                             </div>
