@@ -238,7 +238,7 @@
         e.preventDefault();
         var tab = $(this).attr('href');
         $('.active-tab').removeClass('active-tab');
-        $(this).siblings().removeClass('selected');
+        $(this).parent().siblings().removeClass('selected');
         $(this).parent().addClass('selected');
         $(tab).addClass('active-tab');
     })
