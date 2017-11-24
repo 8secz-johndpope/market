@@ -190,6 +190,7 @@ li.tablinks a {
 }
 /** try to move and general this is common for other page */
 .title {
+	background: #f4f4f5;
     padding: .4em .5em;
     border: 1px solid #f4f4f5;
 }
