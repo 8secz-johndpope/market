@@ -137,40 +137,40 @@
                             <div id="tab-about" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
-                                        <a>
+                                        <a href="#tab-why-me">
                                             <span class="bullet branded"></span>
                                             Why me
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a>
+                                        <a href="#tab-what-i-do">
                                             <span class="bullet branded"></span>
                                             What i do
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a>
+                                        <a href="#tab-reviews-ratings">
                                             <span class="bullet branded"></span>
                                             Reviews & ratings
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a>
+                                        <a href="#tab-recommendations">
                                             <span class="bullet branded"></span>
                                             Recommendations
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="why-me" class="tabcontent">
+                                <div id="tab-why-me" class="tabcontent active-tab">
                                     
                                 </div>
-                                <div id="what-i-do" class="tabcontent">
+                                <div id="tab-what-i-do" class="tabcontent">
                                     
                                 </div>
-                                <div id="reviews-ratings" class="tabcontent">
+                                <div id="tab-reviews-ratings" class="tabcontent">
                                     
                                 </div>
-                                <div id="recommendations" class="tabcontent">
+                                <div id="tab-recommendations" class="tabcontent">
                                     
                                 </div>
                             </div>
