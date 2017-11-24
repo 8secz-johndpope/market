@@ -1132,6 +1132,9 @@ a.message-back-button {
     .listing-max-pro{
         padding: 10px;
     }
+    .info{
+        margin-left: 10px;
+    }
     .right-div-messages {
         height: 59vh;
     }
