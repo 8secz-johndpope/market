@@ -289,7 +289,7 @@
                         <a class="border-bottom-dashed" href="#">
                             <div class="col-sm-12">
                                 <div class="advert-img">
-                                    <img src="" class="circle">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/260650123898.jpg" class="circle">
                                 </div>
                                 <div class="advert-details">
                                     <h4>Piotr Chursciak</h4>
@@ -302,7 +302,7 @@
                         <a class="border-bottom-dashed" href="#">
                             <div class="col-sm-12">
                                 <div class="advert-img">
-                                    <img src="" class="circle">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/52316802048.jpg" class="circle">
                                 </div>
                                 <div class="advert-details">
                                     <h4>Luis Ernesto Alcantara</h4>
@@ -315,7 +315,7 @@
                         <a class="border-bottom-dashed" href="#">
                             <div class="col-sm-12">
                                 <div class="advert-img">
-                                    <img src="" class="circle">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/66028142415.jpg" class="circle">
                                 </div>
                                 <div class="advert-details">
                                     <h4>Victoriano Montesinos C...</h4>
@@ -328,7 +328,7 @@
                         <a class="border-bottom-dashed" href="#">
                             <div class="col-sm-12">
                                 <div class="advert-img">
-                                    <img src="" class="circle">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/509626763579.jpg" class="circle">
                                 </div>
                                 <div class="advert-details">
                                     <h4>Ignacio Martinez Alpiste</h4>
