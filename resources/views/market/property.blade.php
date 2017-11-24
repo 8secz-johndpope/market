@@ -161,7 +161,7 @@
                                     @endif
                                     <div class="description">
                                         <h3>Full Description</h3>
-                                        @if($category->id == 306000000 && $advert->has_meta('property_tenure'))
+                                        @if($advert->isPropertyForSale() && $advert->has_meta('property_tenure'))
                                         <div class="sec">
                                             <p><strong>Tenure: </strong>{{$advert->meta('property_tenure')}}</p>
                                         </div>
@@ -264,7 +264,7 @@
                                 </div>
                             </div>
                         </div>
-                        @if($category->id == 306000000)
+                        @if($advert->isPropertyForSale())
                         <div id="tap-marketinfo" class="tab-pane fade">
                             <div class="row history-sale">           
                                 <div class="col-sm-12  marketinfo">
