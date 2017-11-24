@@ -680,6 +680,10 @@ li.list-group-item a {
 span.favor-text {
     font-size: 11px;
 }
+.list-group {
+    background-color: #fff;
+    padding: 15px;
+}
 .center-text{
     text-align: center;
 }
