@@ -1125,7 +1125,7 @@ a.message-back-button {
         font-size: 14px;
         max-height: 30px;
         overflow: hidden;
-        max-width: calc(100% - 30px);
+        max-width: calc(100% - 40px);
         white-space: pre-wrap;
         height: auto;
     }
