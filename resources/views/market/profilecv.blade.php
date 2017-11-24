@@ -177,19 +177,19 @@
                             <div id="tab-work" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
-                                        <a href="tab-portfolio">
+                                        <a href="#tab-portfolio">
                                             <span class="bullet branded"></span>
                                             Protfolio
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="tab-publications">
+                                        <a href="#tab-publications">
                                             <span class="bullet branded"></span>
                                             Publications
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="tab-pictures">
+                                        <a href="#tab-pictures">
                                             <span class="bullet branded"></span>
                                             Pictures
                                         </a>
