@@ -680,9 +680,12 @@ li.list-group-item a {
 span.favor-text {
     font-size: 11px;
 }
-.list-group {
+.all-filters .list-group {
     background-color: #fff;
     padding: 15px;
+}
+.all-filters li.list-group-item:last-child {
+    padding-bottom: 0;
 }
 .center-text{
     text-align: center;
