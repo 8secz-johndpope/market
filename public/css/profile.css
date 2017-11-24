@@ -202,6 +202,10 @@ li.tablinks a {
     margin-top: 0;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.similar-adverts h3{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
 .details-agent {
     border: 1px solid #ccc;
     margin-left: 15px;
