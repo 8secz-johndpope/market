@@ -162,7 +162,13 @@
                                     </li>
                                 </ul>
                                 <div id="tab-why-me" class="tabcontent active-tab">
-                                    
+                                    <p>
+                                        Register students for courses, design and manage program software, solve customer problems, enforce department policies, and serve as a contact for students, faculty, and staff.<br>
+                                        Hiring, training, scheduling and management of staff, managing supply inventory, and ordering.<br>
+                                        Minnesota driver's license with NTSA defensive driving certification.<br>
+                                        Extensive experience in collegiate programming and management.<br>
+                                        Excellent interpersonal and communication skills.<br>
+                                    </p>
                                 </div>
                                 <div id="tab-what-i-do" class="tabcontent">
                                     
