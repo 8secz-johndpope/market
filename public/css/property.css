@@ -276,6 +276,8 @@ h2.item-name {
     margin-right: 10px;
     color: #000;
     font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
 }
 .details h3{
 	font-size: 15px;
