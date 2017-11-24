@@ -669,4 +669,7 @@ class Advert extends  BaseModel
     public function isPropertyToRent(){
         return $this->category->id == 3070000000;
     }
+    public function isPropertyForSale(){
+        return $this->category->id == 3060000000;
+    }
 }
