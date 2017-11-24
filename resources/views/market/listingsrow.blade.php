@@ -48,6 +48,7 @@
             </ul>
         </div>
         @endif
+        @if(count($categories) > 0)
         <div class="l-visible-large">
             <h4>{{$category->title}}</h4>
             <ul class="list-group">
@@ -56,6 +57,7 @@
                 @endforeach
             </ul>
         </div>
+        @endif
         <form action="{{$url}}" >
             <div class="form-group">
                 <label for="distance">Distance:</label>
