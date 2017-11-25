@@ -594,6 +594,10 @@ ul.media {
     color: #000;
     margin-top: 9px;
 }
+.buttons .favroite-icon:before {
+    width: 20px;
+    height: 20px;
+}
 /* end*/
 footer{
   /*height: 500px;
