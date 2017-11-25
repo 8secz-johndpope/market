@@ -440,6 +440,13 @@ span.email-icon img {
   padding-right: 35px;
   font-size: 13px;
 }
+.favroite-icon:before {
+    width: 20px;
+    height: 20px;
+}
+.favroite-icon {
+    margin: 0;
+}
 @media screen and (max-width: 767px){
 	.form-group {
     	padding: 15px 0;

@@ -484,7 +484,7 @@
                          <div class="contact">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <span class="glyphicon  @if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) glyphicon-heart @else glyphicon-heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save job
+                                    <span class="@if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) heart @else heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save job
                                 </li>
                                 <li class="list-group-item">
                                     <span class="glyphicon glyphicon-pencil"></span>
