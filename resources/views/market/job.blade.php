@@ -453,7 +453,7 @@
                 <div class="col-md-12">
                     <div class="buttons">
                         <div class="details">
-                            <h3>This Advert is marketed by</h3>
+                            <h3>This Advert is by</h3>
                             
                             <div class="profile-picutre">
                                 @if(isset($advert->user->business))
