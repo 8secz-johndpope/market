@@ -115,7 +115,7 @@
                                     <div class="info-map">
                                         <div id="map"></div>
                                         <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
-                                        <div>
+                                        <!-- <div>
                                             <h4>Nearest stations</h4>
                                             <ul class="stations-list">
 
@@ -123,7 +123,7 @@
                                             <small>
                                                 Distances are straight line measurements from centre of postcode
                                             </small>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="info-pano">
                                         <div id="pano"></div>
