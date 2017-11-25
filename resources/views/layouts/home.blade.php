@@ -482,7 +482,7 @@
 
         }
     });
-    $(".favroite-icon").click(function (e) {
+    /*$(".favroite-icon").click(function (e) {
         e.preventDefault();
 
         var id = $(this).data('id');
@@ -519,8 +519,9 @@
         }
 
 
-    });
+    });*/
 </script>
+@yield('scripts')
 @if (!Auth::guest())
     <script>
         var token = '{{Auth::user()->access_token}}' ;
