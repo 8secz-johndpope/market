@@ -412,6 +412,20 @@
 </div>
 </div>
 <script>
+    function changeCenterMap(){
+        x = map.getZoom();
+        c = map.getCenter();
+        google.maps.event.trigger(map, 'resize');
+        map.setZoom(x);
+        map.setCenter(c); 
+    }
+    function changeCenterMap(){
+        x = map.getZoom();
+        c = map.getCenter();
+        google.maps.event.trigger(panorama, 'resize');
+        map.setZoom(x);
+        map.setCenter(c); 
+    }
     $('.tablinks a').click(function(e){
         e.preventDefault();
         var tab = $(this).attr('href');
@@ -421,12 +435,7 @@
         $(tab).addClass('active-tab');
     })
     $('a[href="#tab-location"]').click(function () {
-        x = map.getZoom();
-        c = map.getCenter();
-        google.maps.event.trigger(map, 'resize');
-        google.maps.event.trigger(panorama, 'resize');
-        map.setZoom(x);
-        map.setCenter(c);
+        changeCenterMap();
     });
     $('input[type=radio][name=options]').change(function(){
         if(this.id == "option-view"){
@@ -438,7 +447,8 @@
         else{
            console.log("change to map");
             $('.info-map').show();
-            $('.info-pano').hide(); 
+            $('.info-pano').hide();
+            google.maps.event.trigger(map, 'resize'); 
         } 
     });
 </script>
