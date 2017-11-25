@@ -1274,6 +1274,9 @@ a.advert-user {
     width: 18px;
     height: 18px;
 }
+.favroite-icon {
+    margin: 0;
+}
 @media (max-width: 768px){
     .col-sm-8.left-content, .col-sm-4.right-content {
         width: 100%
