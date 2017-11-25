@@ -827,7 +827,7 @@
             // something like $('#footAd').slideup();
         }
     });
-    $(".favroite-icon").click(function (e) {
+    /*$(".favroite-icon").click(function (e) {
         e.preventDefault();
 
         var id = $(this).data('id');
@@ -862,7 +862,7 @@
         }
 
 
-    });
+    });*/
 
 </script>
 @if (!Auth::guest())
