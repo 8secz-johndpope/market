@@ -343,10 +343,7 @@ span.email-icon img {
     color: #000;
     font-size: 18px;
     display: inline-block;
-    vertical-align: middle; {
-    margin-right: 10px;
-    font-size: 18px;
-    float: left;
+    vertical-align: middle; 
 }
 .favroite-icon:before {
     width: 20px;
