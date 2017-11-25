@@ -696,16 +696,16 @@ span.favor-text {
     content: '';
     width: 30px;
     height: 30px;
-    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: block;
 }
 
 .heart-empty:before{
-    background: url('icons/favor-empty-icon.svg');
+    background-image: url('icons/favor-empty-icon.svg');
 }
 .heart:before{
-    background: url('icons/favor-icon.svg');
+    background-image: url('icons/favor-icon.svg');
 }
 .all-filters li.list-group-item:last-child {
     padding-bottom: 0;
