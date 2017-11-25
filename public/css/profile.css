@@ -302,3 +302,7 @@ li.tablinks a {
 .advert-img {
     display: inline-block;
 }
+#pano {
+    height: 400px;
+    width: 100%;
+}
