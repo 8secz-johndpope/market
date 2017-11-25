@@ -46,5 +46,6 @@ fieldset {
 #submit-inputset .btn-default {
     background: #000;
     border-color: #000;
+    color: #fff;
     min-width: 30%;
 }
