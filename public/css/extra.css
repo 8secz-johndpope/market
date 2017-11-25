@@ -692,6 +692,14 @@ span.favor-text {
     position: relative;
     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.16), 0px 0px 1px rgba(0,0,0,.08);
 }
+.heart-empty:before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: url('icons/favor-empty-icon.svg');
+    background-size: cover;
+    background-position: center;
+}
 .all-filters li.list-group-item:last-child {
     padding-bottom: 0;
 }

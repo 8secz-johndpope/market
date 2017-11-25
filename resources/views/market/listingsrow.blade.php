@@ -198,7 +198,8 @@
                         @if (in_array($product['source_id'],$sids))
                             <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
                         @else
-                            <span class="glyphicon glyphicon-heart-empty favroite-icon" data-id="{{$product['source_id']}}"></span>
+                            <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
+                            </span>
                             <span  class="favor-text">SAVE</span>
 
                         @endif
