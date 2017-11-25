@@ -84,7 +84,7 @@
                                     <li class="tablinks">
                                         <a href="#tab-availibity">
                                             <span class="bullet branded"></span>
-                                            My Availibility
+                                            My Availability
                                         </a>
                                     </li>
                                 </ul>
