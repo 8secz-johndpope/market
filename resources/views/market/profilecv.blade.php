@@ -305,6 +305,81 @@
                                     </li>
                                 </ul>
                                 <div id="tab-contact-me" class="tabcontent active-tab">
+                                    <div class="form-content">
+                                        <form id="letting-branch">
+                                            <fieldset>
+                                                <div class="inputset">
+                                                    <label class="contact-label" for="branch-enquiry-title">
+                                                        Name: <span class="required">*</span>
+                                                    </label>
+                                                    <div class="input-name is-valid">
+                                                        <input id="branch-enquiry-title" type="text" name="title" title="Title" placeholder="Title" class="title-name">
+                                                        <input id="branch-enquiry-first-name" type="text" name="first-name" title="First name" placeholder="First name" class="name">
+                                                        <input id="branch-enquiry-last-name" type="text" name="last-name"
+                                                        title="Last name" placeholder="Last name" class="name">
+                                                    </div>
+                                                </div>
+                                                <div class="inputset large-validation is-valid">
+                                                    <label class="contact-label" for="telephone">
+                                                        Telephone: <span class="required">*</span>
+                                                    </label>
+                                                    <input id="telephone" type="text" name="telephone" title="Telephone" placeholder="" required>
+                                                    <div id="branch-enquiry-telephone-error" class="validation-container">
+                                                        Please enter a telephone number.
+                                                    </div>
+                                                </div>
+                                                <div class="inputset large-validation is-valid">
+                                                    <label class="contact-label" for="email">
+                                                        Email: <span class="required">*</span>
+                                                    </label>
+                                                    <input id="email" type="email" name="email" title="Email" placeholder="" required>
+                                                    <div id="branch-enquiry-email-error" class="validation-container">
+                                                        Please enter your email address.
+                                                    </div>
+                                                </div>
+                                                <div class="inputset large-validation is-valid">
+                                                    <label class="contact-label" class="contact-label">Address: </label>
+                                                    <textarea id="address" name="address" rows="3"></textarea>
+                                                </div>
+                                                <div class="inputset large-validation is-valid">
+                                                    <label class="contact-label" for="postcode">
+                                                        Postcode: 
+                                                    </label>
+                                                    <input id="postcode" type="postcode" name="postcode" title="Postcode" placeholder="">
+                                                </div>
+                                                <div class="inputset large-validation is-valid">
+                                                    <label class="contact-label" for="type-enquiry">
+                                                        Type of enquiry: 
+                                                    </label>
+                                                    <select name="type-enquiry" id="type-enquiry">
+                                                        <option value selected="selected">Please select:</option>
+                                                        <option value="looking_to_rent">I am looking to rent a property</option>
+                                                        <option value="looking_to_buy">I am looking to buy a property</option>
+                                                        <option value="arrange_valuation">I want a valuation of my property</option>
+                                                        <option value="looking_to_let">I have a property to let</option>
+                                                        <option value="looking_to_sale">I have a property to sale</option>
+                                                    </select>
+                                                </div>
+                                                <div class="inputset large-validation is-valid">
+                                                    <label class="contact-label" class="contact-label">Your message: </label>
+                                                    <textarea id="comment" name="comment" rows="3"></textarea>
+                                                </div>
+                                                <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+                                                <script>
+                                                  function onCaptchaSubmit(token) {
+                                                    $("#letting-branch").submit();
+                                                  }
+                                                </script>
+                                                <div id="submit-inputset">
+                                                    <input type="submit" name="send-email" value="Send Email to {{isset($user->business)? $user->business->name: ''}}" class="btn btn-default">
+                                                </div>
+
+                                            </fieldset>
+                                            <p class="contact-form-disclaimer">
+                                                Please note that Sumra will send the above details to {{isset($user->business) ? $user->business->name : ''}} only. By submitting this form, you confirm that you agree to our website <a href="#">terms of use</a>, our <a href="#">terms of use</a> and consent to <a href="">cookies</a> being stored on your computer.
+                                            </p>
+                                        </form>
+                                    </div>
                                     
                                 </div>
                                 <div id="tab-make-offer" class="tabcontent">
