@@ -174,7 +174,15 @@
                                    </p> 
                                 </div>
                                 <div id="tab-availibity" class="tabcontent">
-                                    
+                                    <p>
+                                        Available
+                                    </p>
+                                    <p>
+                                        Less than 30 hrs/week
+                                    </p>
+                                    <P>
+                                        < 24 hour response time
+                                    </P>
                                 </div>
                             </div>
                             <div id="tab-about" class="tab-pane fade">
