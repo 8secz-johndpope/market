@@ -101,25 +101,66 @@
                                    </p> 
                                 </div>
                                 <div id="tab-location" class="tabcontent">
-                                    <p>
-                                    I am interested in the Coordinator position advertised on XYZ. My resume is enclosed for your review. Given my related experience and excellent capabilities, I would appreciate your consideration for this job opening. My skills are an ideal match for this position.
-                                    <br><br>
-                                    Your Requirements:
-                                    <br><br>
-                                    Responsible for evening operations in Student Center and other facilities, including managing registration, solving customer problems, dealing with risk management and emergencies, enforcement of department policies.
-                                    Assists with hiring, training, and management of staff. Coordinate statistics and inventory.<br>
-                                    Experience in the supervision of student staff and strong interpersonal skills are also preferred.<br>
-                                    Valid Minnesota driver's license with good driving record. Ability to travel to different sites required.<br>
-                                    Experience in collegiate programming and management.
-                                    <br><br>
-                                    My Qualifications:
-                                    <br><br>
-                                    Register students for courses, design and manage program software, solve customer problems, enforce department policies, and serve as a contact for students, faculty, and staff.<br>
-                                    Hiring, training, scheduling and management of staff, managing supply inventory, and ordering.<br>
-                                    Minnesota driver's license with NTSA defensive driving certification.<br>
-                                    Extensive experience in collegiate programming and management.<br>
-                                    Excellent interpersonal and communication skills.<br>
-                                    </p>
+                                    <div class="row">
+                                <div class="col-md-12">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="options" id="option-map" autocomplete="off" checked> map view
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options" id="option-view" autocomplete="off">
+                                            street view
+                                        </label>
+                                    </div>
+                                    <div class="info-map">
+                                        <div id="map"></div>
+                                        <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
+                                        <div>
+                                            <h4>Nearest stations</h4>
+                                            <ul class="stations-list">
+
+                                            </ul>
+                                            <small>
+                                                Distances are straight line measurements from centre of postcode
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="info-pano">
+                                        <div id="pano"></div>
+                                        <small>Note: Start exploring the local area from here.</small>
+                                    </div>
+                                    <script>
+                                    var map;
+                                    var panorama;
+                                    var service;
+                                    function initMap() {
+                                        var uluru = {lat: 51.529068, lng: -0.215875};
+                                         map = new google.maps.Map(document.getElementById('map'), {
+                                            zoom: 18,
+                                            center: uluru
+                                        });
+                                        var marker = new google.maps.Marker({
+                                            position: uluru,
+                                            map: map
+                                        });
+                                        var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
+                                        //getTransport(51.529068,-0.215875);
+                                        panorama = new google.maps.StreetViewPanorama(
+                                            document.getElementById('pano'), {
+                                                position: uluru,
+                                                pov: {heading: 165, pitch: 0},
+                                                motionTrackingControlOptions: {
+                                                position: google.maps.ControlPosition.LEFT_BOTTOM
+                                            }
+                                        });
+                                    }
+                                    $(document).ready(function() {
+                                        initMap();
+                                        activeFirstItem();
+                                    });
+                                    </script>
+                                </div>
+                            </div>
                                 </div>
                                 <div id="tab-area" class="tabcontent">
                                     <p>
