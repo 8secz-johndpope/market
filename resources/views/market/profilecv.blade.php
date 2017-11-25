@@ -219,7 +219,7 @@
                                     <li class="tablinks selected">
                                         <a href="#tab-portfolio">
                                             <span class="bullet branded"></span>
-                                            Protfolio
+                                            Portfolio
                                         </a>
                                     </li>
                                     <li class="tablinks">
