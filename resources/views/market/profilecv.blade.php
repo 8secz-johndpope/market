@@ -442,13 +442,13 @@
             console.log("change to panorama");
             $('.info-map').hide();
             $('.info-pano').show();
-            
+            changeCenterStreet();
         }
         else{
            console.log("change to map");
             $('.info-map').show();
             $('.info-pano').hide();
-            google.maps.event.trigger(map, 'resize'); 
+            changeCenterMap();
         } 
     });
 </script>
