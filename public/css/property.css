@@ -273,7 +273,7 @@ h2.item-name {
 .favroite-icon{
 	float: inherit;
 }
-.buttons span.glyphicon {
+.buttons span.glyphicon, .buttons .heart, .buttons .heart-empty {
     margin-right: 10px;
     color: #000;
     font-size: 18px;
