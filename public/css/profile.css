@@ -306,3 +306,9 @@ li.tablinks a {
     height: 400px;
     width: 100%;
 }
+.background-body{
+	padding-bottom: 15px;
+}
+footer{
+	margin-top: 0;
+}
