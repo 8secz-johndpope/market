@@ -489,6 +489,7 @@
         if($(this).hasClass('heart')){
             $(this).addClass('heart-empty');
             $(this).removeClass('heart');
+            $(this).next().css('display', 'block');
 
             axios.post('/user/list/unfavorite', {
                 id:id
@@ -503,6 +504,7 @@
         }else{
             $(this).addClass('heart');
             $(this).removeClass('heart-empty');
+            $(this).next().css('display', 'none');
             axios.post('/user/list/favorite', {
                 id:id
             })

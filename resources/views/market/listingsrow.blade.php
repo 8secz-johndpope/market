@@ -197,6 +197,7 @@
                     <div class="favor">
                         @if (in_array($product['source_id'],$sids))
                             <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                            <span  class="favor-text" style="display: none">SAVE</span>
                         @else
                             <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
                             </span>
