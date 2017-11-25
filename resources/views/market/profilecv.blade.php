@@ -5,7 +5,7 @@
 @section('title', 'Josh E. |' . env('APP_NAME'))
 
 @section('styles')
-    <link href="{{ asset('/css/profile.css?q=874') }}" rel="stylesheet">
+<link href="{{ asset('/css/profile.css?q=874') }}" rel="stylesheet">
 @endsection
 
 @section('sidebar')
