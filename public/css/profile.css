@@ -139,7 +139,8 @@ li.tablinks.selected span.bullet, li.tablinks.selected span.bullet:hover {
     background-color: #ff9d2c;
 }
 li.tablinks.selected, li.tablinks:hover{
-	background-color: #f5f5f5;
+	/*background-color: #f5f5f5;*/
+	background-color: #f9f0eb;
     margin-left: 0;
     margin-right: -1px;
     padding: 0 10px 0 10px;
@@ -180,11 +181,13 @@ li.tablinks a {
 }
 .tabcontent.active-tab{
 	display: block;
-	background-color: #f5f5f5;
+	/*background-color: #f5f5f5;*/
+	background-color: #f9f0eb;
 	opacity: 1;
 }
 .tab-content {
     display: grid;
+    background-color: #fff;
 }
 .tab-pane {
     padding: 0;
