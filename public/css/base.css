@@ -636,6 +636,7 @@ footer ul {
   background-color: black;
   text-align: center;
   color: #fff;
+  z-index: 3;
 }
 .panel-body.hidden-xs {
     background: transparent;
