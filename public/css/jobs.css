@@ -348,6 +348,10 @@ span.email-icon img {
     font-size: 18px;
     float: left;
 }
+.favroite-icon:before {
+    width: 20px;
+    height: 20px;
+}
 .tab-pane {
     padding: 15px;
     border: 1px solid #ccc;
