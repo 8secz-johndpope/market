@@ -12,6 +12,7 @@
 
 @section('content')
     <link href="{{ asset('/css/profile.css?q=874') }}" rel="stylesheet">
+<div class="background-body">
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-xs-12">
@@ -367,6 +368,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <script>
     $('.tablinks a').click(function(e){
