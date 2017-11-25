@@ -338,7 +338,12 @@ span.email-icon img {
     height: 30px;
     margin-left: -5px;
 }
-.buttons span.glyphicon {
+.buttons span.glyphicon,.buttons .heart, .buttons .heart-empty {
+    margin-right: 10px;
+    color: #000;
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle; {
     margin-right: 10px;
     font-size: 18px;
     float: left;
