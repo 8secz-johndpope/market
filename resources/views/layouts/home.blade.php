@@ -486,9 +486,9 @@
         e.preventDefault();
 
         var id = $(this).data('id');
-        if($(this).hasClass('glyphicon-heart')){
-            $(this).addClass('glyphicon-heart-empty');
-            $(this).removeClass('glyphicon-heart');
+        if($(this).hasClass('heart')){
+            $(this).addClass('heart-empty');
+            $(this).removeClass('heart');
 
             axios.post('/user/list/unfavorite', {
                 id:id
@@ -501,8 +501,8 @@
                 });
 
         }else{
-            $(this).addClass('glyphicon-heart');
-            $(this).removeClass('glyphicon-heart-empty');
+            $(this).addClass('heart');
+            $(this).removeClass('heart-empty');
             axios.post('/user/list/favorite', {
                 id:id
             })
