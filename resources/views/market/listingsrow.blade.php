@@ -196,7 +196,7 @@
                 <div class="info{{($product['category'] >= 4000000000 && $product['category'] <= 4999999999) ? ' margin-left' :''}}">
                     <div class="favor">
                         @if (in_array($product['source_id'],$sids))
-                            <span class="glyphicon glyphicon-heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                            <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
                         @else
                             <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
                             </span>
