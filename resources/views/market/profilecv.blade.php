@@ -57,7 +57,8 @@
                             <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                             <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
                             <li><a data-toggle="tab" href="#tab-work">Works</a></li>
-                            <li><a data-toggle="tab" href="#tab-contact">Contact Us</a></li>
+                            <li><a data-toggle="tab" href="#tab-contact">Approval</a></li>
+                            <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="tab-overview" class="tab-pane fade in active">
@@ -211,6 +212,39 @@
                                     
                                 </div>
                             </div>
+                            <div id="tab-approval" class="tab-pane fade">
+                                <ul class="tab-vert">
+                                    <li class="tablinks selected">
+                                        <a href="#tab-contact-me">
+                                            <span class="bullet branded"></span>Contact me
+                                        </a>
+                                    </li>
+                                     <li class="tablinks">
+                                        <a href="#tab-make-offer">
+                                            <span class="bullet branded"></span>Request my application
+                                        </a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a href="#tab-make-offer">
+                                            <span class="bullet branded"></span>Charges
+                                        </a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a href="#tab-req-application">
+                                            <span class="bullet branded"></span>Make an offer
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div id="tab-contact-me" class="tabcontent active-tab">
+                                    
+                                </div>
+                                <div id="tab-make-offer" class="tabcontent">
+                                    
+                                </div>
+                                <div id="tab-req-application" class="tabcontent">
+                                    
+                                </div>
+                            </div>
                             <div id="tab-contact" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
@@ -218,14 +252,19 @@
                                             <span class="bullet branded"></span>Contact me
                                         </a>
                                     </li>
+                                     <li class="tablinks">
+                                        <a href="#tab-make-offer">
+                                            <span class="bullet branded"></span>Request my application
+                                        </a>
+                                    </li>
                                     <li class="tablinks">
                                         <a href="#tab-make-offer">
-                                            <span class="bullet branded"></span>Make an offer
+                                            <span class="bullet branded"></span>Charges
                                         </a>
                                     </li>
                                     <li class="tablinks">
                                         <a href="#tab-req-application">
-                                            <span class="bullet branded"></span>Request my application
+                                            <span class="bullet branded"></span>Make an offer
                                         </a>
                                     </li>
                                 </ul>
