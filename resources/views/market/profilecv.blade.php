@@ -419,7 +419,7 @@
         map.setZoom(x);
         map.setCenter(c); 
     }
-    function changeCenterMap(){
+    function changeCenterStreet(){
         x = map.getZoom();
         c = map.getCenter();
         google.maps.event.trigger(panorama, 'resize');
@@ -442,7 +442,7 @@
             console.log("change to panorama");
             $('.info-map').hide();
             $('.info-pano').show();
-            google.maps.event.trigger(panorama, 'resize');
+            
         }
         else{
            console.log("change to map");
