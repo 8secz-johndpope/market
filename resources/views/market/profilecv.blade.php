@@ -64,31 +64,31 @@
                             <div id="tab-overview" class="tab-pane fade in active">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
-                                        <a href="#tab-resume">
+                                        <a href="#tab-over">
                                             <span class="bullet branded"></span>
-                                            Resume
+                                            Overview
+                                        </a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a href="#tab-location">
+                                            <span class="bullet branded"></span>
+                                            My Location
                                         </a>
                                     </li>
                                     <li class="tablinks">
                                         <a href="#tab-area">
                                             <span class="bullet branded"></span>
-                                            Area
+                                            Area | cover
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="#tab-cover">
+                                        <a href="#tab-availibity">
                                             <span class="bullet branded"></span>
-                                            Cover
-                                        </a>
-                                    </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-charge">
-                                            <span class="bullet branded"></span>
-                                            Charges
+                                            My Availibility
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="tab-resume" class="tabcontent active-tab">
+                                <div id="tab-over" class="tabcontent active-tab">
                                    <p>
                                     I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
                                     <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
@@ -99,18 +99,7 @@
                                     I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
                                    </p> 
                                 </div>
-                                <div id="tab-area" class="tabcontent">
-                                    <p>
-                                    I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
-                                    <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
-                                    My recent work includes: SaaS & API development in Python, machine learning, systems integration for legacy systems, mobile app and game development, PLC programming with Lua, Twilio, Twitter, Stripe and other API dev, and much more.
-                                    <br>
-                                    My past work includes being technical lead at an academic social network startup, engaging in a broad array of web development with backends in Python, PHP, and C, providing ecommerce solutions, web interfaces for proprietary hardware, desktop software for OSX and Windows, among others.
-                                    <br>
-                                    I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
-                                   </p> 
-                                </div>
-                                <div id="tab-cover" class="tabcontent">
+                                <div id="tab-location" class="tabcontent">
                                     <p>
                                     I am interested in the Coordinator position advertised on XYZ. My resume is enclosed for your review. Given my related experience and excellent capabilities, I would appreciate your consideration for this job opening. My skills are an ideal match for this position.
                                     <br><br>
@@ -131,7 +120,18 @@
                                     Excellent interpersonal and communication skills.<br>
                                     </p>
                                 </div>
-                                <div id="tab-charge" class="tabcontent">
+                                <div id="tab-area" class="tabcontent">
+                                    <p>
+                                    I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
+                                    <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
+                                    My recent work includes: SaaS & API development in Python, machine learning, systems integration for legacy systems, mobile app and game development, PLC programming with Lua, Twilio, Twitter, Stripe and other API dev, and much more.
+                                    <br>
+                                    My past work includes being technical lead at an academic social network startup, engaging in a broad array of web development with backends in Python, PHP, and C, providing ecommerce solutions, web interfaces for proprietary hardware, desktop software for OSX and Windows, among others.
+                                    <br>
+                                    I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
+                                   </p> 
+                                </div>
+                                <div id="tab-availibity" class="tabcontent">
                                     
                                 </div>
                             </div>
@@ -150,9 +150,9 @@
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="#tab-reviews-ratings">
+                                        <a href="#tab-resume">
                                             <span class="bullet branded"></span>
-                                            Reviews & ratings
+                                            Resume
                                         </a>
                                     </li>
                                     <li class="tablinks">
