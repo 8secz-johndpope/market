@@ -57,8 +57,8 @@
                             <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                             <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
                             <li><a data-toggle="tab" href="#tab-work">Works</a></li>
-                            <li><a data-toggle="tab" href="#tab-contact">Approval</a></li>
-                            <li><a data-toggle="tab" href="#tab-approval">Contact</a></li>
+                            <li><a data-toggle="tab" href="#tab-approval">Approval</a></li>
+                            <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="tab-overview" class="tab-pane fade in active">
@@ -205,12 +205,7 @@
                             </div>
                             <div id="tab-approval" class="tab-pane fade">
                                 <ul class="tab-vert">
-                                    <li class="tablinks selected">
-                                        <a href="#tab-contact-me">
-                                            <span class="bullet branded"></span>
-                                        </a>
-                                    </li>
-                                     <li class="tablinks">
+                                     <li class="tablinks selected">
                                         <a href="#tab-verified">
                                             <span class="bullet branded"></span>Verified by Sumra
                                         </a>
