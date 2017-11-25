@@ -32,3 +32,8 @@ fieldset {
     clear: both;
     height: 0;
 }
+.inputset textarea {
+    width: 44%;
+    float: left;
+    border-color: #dcdcdc;
+}
