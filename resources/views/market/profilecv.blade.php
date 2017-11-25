@@ -58,7 +58,7 @@
                             <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
                             <li><a data-toggle="tab" href="#tab-work">Works</a></li>
                             <li><a data-toggle="tab" href="#tab-contact">Approval</a></li>
-                            <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
+                            <li><a data-toggle="tab" href="#tab-approval">Contact</a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="tab-overview" class="tab-pane fade in active">
