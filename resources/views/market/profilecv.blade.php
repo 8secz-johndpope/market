@@ -80,7 +80,7 @@
                                     <li class="tablinks">
                                         <a href="#tab-area">
                                             <span class="bullet branded"></span>
-                                            Areas | cover
+                                            Areas I cover
                                         </a>
                                     </li>
                                     <li class="tablinks">
