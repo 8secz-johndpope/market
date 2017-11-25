@@ -4,14 +4,17 @@
 
 @section('title', 'Josh E. |' . env('APP_NAME'))
 
+@section('styles')
+    <link href="{{ asset('/css/profile.css?q=874') }}" rel="stylesheet">
+@endsection
+
 @section('sidebar')
     @parent
 
     <p>This is appended to the master sidebar.</p>
 @endsection
 
-@section('content')
-    <link href="{{ asset('/css/profile.css?q=874') }}" rel="stylesheet">
+@section('content')   
 <div class="background-body">
 <div class="container">
     <div class="row">

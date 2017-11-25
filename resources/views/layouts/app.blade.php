@@ -15,7 +15,7 @@
     <link href="{{ asset('/css/base.css?q=34') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="{{ asset('/css/extra.css?q=43') }}" rel="stylesheet">
-
+    @yield('styles')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
 
