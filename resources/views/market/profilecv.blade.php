@@ -354,7 +354,7 @@
                                                   }
                                                 </script>
                                                 <div id="submit-inputset">
-                                                    <input type="submit" name="send-email" value="Send Email to {{isset($user->business)? $user->business->name: ''}}" class="btn btn-default">
+                                                    <input type="submit" name="send-email" value="Send Email to {{isset($user->business)? $user->business->name: ''}}David" class="btn btn-default">
                                                 </div>
 
                                             </fieldset>
