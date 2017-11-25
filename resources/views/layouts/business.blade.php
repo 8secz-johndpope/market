@@ -371,7 +371,7 @@
         }
 
     }
-    $(".favroite-icon").click(function (e) {
+    /*$(".favroite-icon").click(function (e) {
         e.preventDefault();
 
         var id = $(this).data('id');
@@ -406,7 +406,7 @@
         }
 
 
-    });
+    });*/
     $(".search-alert-check").click(function(){
         var id=$(this).val();
         axios.get('/user/toggle/alert/'+id, {
