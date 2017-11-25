@@ -216,7 +216,7 @@
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
                                         <a href="#tab-contact-me">
-                                            <span class="bullet branded"></span>Contact me
+                                            <span class="bullet branded"></span>
                                         </a>
                                     </li>
                                      <li class="tablinks">
