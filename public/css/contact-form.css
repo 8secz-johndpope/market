@@ -5,6 +5,10 @@ fieldset {
     clear: both;
     padding: .2em 0 .2em .6em;
 }
+.inputset input {
+    float: left;
+    width: 44%;
+}
 .inputset label {
 	width: 20%;
     font-weight: bold;
