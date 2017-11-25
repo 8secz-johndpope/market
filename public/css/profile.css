@@ -175,6 +175,7 @@ li.tablinks a {
     min-height: 490px;
     float: right;
     border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     opacity: 0;
     -webkit-transition: opacity .15s linear;
     -o-transition: opacity .15s linear;
