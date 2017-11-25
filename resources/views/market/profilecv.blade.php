@@ -420,5 +420,13 @@
         $(this).parent().addClass('selected');
         $(tab).addClass('active-tab');
     })
+    $('a[href="#tab-location"]').click(function () {
+        x = map.getZoom();
+        c = map.getCenter();
+        google.maps.event.trigger(map, 'resize');
+        google.maps.event.trigger(panorama, 'resize');
+        map.setZoom(x);
+        map.setCenter(c);
+    });
 </script>
 @endsection
