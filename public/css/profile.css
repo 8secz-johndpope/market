@@ -250,6 +250,7 @@ li.tablinks a {
     display: table;
     padding: 15px;
     width: 100%;
+    background: #fff;
 }
 .similar-adverts h4 {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
