@@ -306,6 +306,9 @@ li.tablinks a {
     height: 400px;
     width: 100%;
 }
+#pano{
+	display: none; 
+}
 .background-body{
 	padding-bottom: 15px;
 }
