@@ -690,7 +690,7 @@ span.favor-text {
     padding: 15px;
     border-bottom: 1px solid #ccc;
     position: relative;
-    box-shadow: 0 0 0 0px rgba(0,0,0,.1), 2px 2px 5px rgba(0,0,0,.2);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.16), 0px 0px 1px rgba(0,0,0,.08);
 }
 .all-filters li.list-group-item:last-child {
     padding-bottom: 0;
