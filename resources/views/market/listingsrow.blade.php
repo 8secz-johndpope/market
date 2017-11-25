@@ -321,8 +321,7 @@ Urgent
                 })
                 .catch(function (error) {
                     console.log(error);
-                    //document.location.href='/login';
-                    document.location.href={{ Request::url() }};
+                    document.location.href='/login';
                 });
         }
     });
