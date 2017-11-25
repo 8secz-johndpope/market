@@ -43,3 +43,8 @@ fieldset {
     margin-top: .7em;
     margin-left: 20%;
 }
+#submit-inputset .btn-default {
+    background: #000;
+    border-color: #000;
+    min-width: 30%;
+}
