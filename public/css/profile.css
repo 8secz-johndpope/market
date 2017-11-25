@@ -150,7 +150,8 @@ li.tablinks.selected, li.tablinks:hover{
     width: 150px;
     height: 100%;
     margin: 0;
-    padding-top: 42px;
+    /*padding-top: 42px;*/
+    padding-top: 1px;
     position: relative;
     z-index: 2;
     list-style: none;
@@ -191,6 +192,7 @@ li.tablinks a {
 }
 .tab-pane {
     padding: 0;
+    padding-top: 15px;
 }
 /** try to move and general this is common for other page */
 .title {
