@@ -10,7 +10,6 @@
     <p>This is appended to the master sidebar.</p>
 @endsection
 @section('style')
-<link href="/css/imageviewer.css"  rel="stylesheet" type="text/css" />
 <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet" type="text/css">
 @endsection
 
