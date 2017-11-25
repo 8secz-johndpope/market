@@ -293,13 +293,11 @@ Urgent
 <script>
     $(".favroite-icon").click(function (e) {
         e.preventDefault();
-
         var id = $(this).data('id');
         if($(this).hasClass('heart')){
             $(this).addClass('heart-empty');
             $(this).removeClass('heart');
             $(this).next().css('display', 'block');
-
             axios.post('/user/list/unfavorite', {
                 id:id
             })
@@ -323,11 +321,10 @@ Urgent
                 })
                 .catch(function (error) {
                     console.log(error);
-                    document.location.href='/login';
+                    //document.location.href='/login';
+                    document.location.href={{ Request::url() }};
                 });
         }
-
-
     });
 </script>
 @endsection
