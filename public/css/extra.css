@@ -537,7 +537,7 @@ span.posted-text {
 .favroite-icon {
     cursor: pointer;
     display: block;
-    margin: 0 4px;
+    margin: 4px;
 }
 
 .favroite-icon-gold {
