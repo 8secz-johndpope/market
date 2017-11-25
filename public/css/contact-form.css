@@ -49,3 +49,9 @@ fieldset {
     color: #fff;
     min-width: 56%;
 }
+p.contact-form-disclaimer {
+    font-size: .8em;
+    color: #666;
+    line-height: 1.2em;
+    padding-top: .5em;
+}
