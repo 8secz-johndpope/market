@@ -352,6 +352,9 @@ span.email-icon img {
     width: 20px;
     height: 20px;
 }
+.favroite-icon{
+	margin: 0;
+}
 .tab-pane {
     padding: 15px;
     border: 1px solid #ccc;
