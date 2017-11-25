@@ -1270,6 +1270,10 @@ a.advert-user {
     border-right: 1px solid #ccc;
     border-left: 1px solid #ccc;
 }
+.favroite-icon:before {
+    width: 18px;
+    height: 18px;
+}
 @media (max-width: 768px){
     .col-sm-8.left-content, .col-sm-4.right-content {
         width: 100%
