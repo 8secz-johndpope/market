@@ -20,7 +20,7 @@ class Category extends  BaseModel
 
     public function mchildren()
     {
-        return $this->hasMany('App\Model\Category','parent_id')->orderBy('title')->limit(10);
+        return $this->hasMany('App\Model\Category','parent_id')->orderBy('title')->limit(7);
     }
 
     public function parent(){
