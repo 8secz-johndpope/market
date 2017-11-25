@@ -155,12 +155,6 @@
                                             Resume
                                         </a>
                                     </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-recommendations">
-                                            <span class="bullet branded"></span>
-                                            Recommendations
-                                        </a>
-                                    </li>
                                 </ul>
                                 <div id="tab-why-me" class="tabcontent active-tab">
                                     <p>
@@ -174,10 +168,7 @@
                                 <div id="tab-what-i-do" class="tabcontent">
                                     
                                 </div>
-                                <div id="tab-reviews-ratings" class="tabcontent">
-                                    
-                                </div>
-                                <div id="tab-recommendations" class="tabcontent">
+                                <div id="tab-resume" class="tabcontent">
                                     
                                 </div>
                             </div>
@@ -220,28 +211,28 @@
                                         </a>
                                     </li>
                                      <li class="tablinks">
-                                        <a href="#tab-make-offer">
-                                            <span class="bullet branded"></span>Request my application
+                                        <a href="#tab-verified">
+                                            <span class="bullet branded"></span>Verified by Sumra
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="#tab-make-offer">
-                                            <span class="bullet branded"></span>Charges
+                                        <a href="#tab-reviews">
+                                            <span class="bullet branded"></span>Reviews & Ratings
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="#tab-req-application">
-                                            <span class="bullet branded"></span>Make an offer
+                                        <a href="#tab-recommendations">
+                                            <span class="bullet branded"></span>Recommendations
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="tab-contact-me" class="tabcontent active-tab">
+                                <div id="tab-verified" class="tabcontent active-tab">
                                     
                                 </div>
-                                <div id="tab-make-offer" class="tabcontent">
+                                <div id="tab-reviews" class="tabcontent">
                                     
                                 </div>
-                                <div id="tab-req-application" class="tabcontent">
+                                <div id="tab-recommendations" class="tabcontent">
                                     
                                 </div>
                             </div>
