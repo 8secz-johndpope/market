@@ -9,7 +9,7 @@
 
     <p>This is appended to the master sidebar.</p>
 @endsection
-@section('style')
+@section('styles')
 <link href="{{ asset('/css/property.css?q=874') }}" rel="stylesheet" type="text/css">
 @endsection
 
