@@ -379,7 +379,7 @@
                                                 <label for="msg-textarea">
                                                     Message: 
                                                 </label>
-                                                <textarea id="msg-textarea" maxlength="250">
+                                                <textarea id="msg-textarea" maxlength="250" rows="3">
                                                     
                                                 </textarea>
                                             </div>
