@@ -246,7 +246,9 @@
             <hr>
             @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
                 <span class="ribbon ribbon-featured">
+                    <span class="ribbon-left"></span>
                     <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+                    <span class="ribbon-right"></span> 
                 </span>
             @endif
             @if(isset($product['sold']) && $product['sold'] == 1)
