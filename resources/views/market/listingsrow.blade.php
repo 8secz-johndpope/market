@@ -10,13 +10,19 @@
     <p>This is appended to the master sidebar.</p>
 @endsection
 
+@section('next-search')
+    <div class="search-alert-div visible-xs">
+        <a class="search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
+    </div>
+@endsection
+
 @section('content')
 
 
 <div class="listings background-body">
     <div class="container-fluid">
         <div class="all">
-            <div class="search-alert-div">
+            <div class="search-alert-div visible-xs">
                 <a class="search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
             </div>
             <div class="top-bar visible-xs">

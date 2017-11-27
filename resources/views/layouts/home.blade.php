@@ -280,6 +280,9 @@
                 </div>
             </form>
             </div>
+            <div class="col-md-7">
+                @yield('next-search')
+            </div>
         </div>
     </div>
 
