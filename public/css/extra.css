@@ -383,6 +383,9 @@ a.search-alert {
 .stars i {
     background-position: -20px -122px;
 }
+.extra-options .ratings {
+    display: inline-block;
+}
 /*.ribbon .ribbon-left {
     height: 100%;
     width: 10px;
