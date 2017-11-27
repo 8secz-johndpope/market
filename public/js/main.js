@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   ellipsis('.text');
-  
+
   $(".favroite-icon").click(function (e) {
         e.preventDefault();
         var id = $(this).data('id');
@@ -31,7 +31,7 @@ $( document ).ready(function() {
                 })
                 .catch(function (error) {
                     console.log(error);
-                    document.location.href='/login';
+                    document.location ='/login';
                 });
         }
     });
