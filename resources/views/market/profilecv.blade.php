@@ -388,7 +388,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <div id="tab-carge" class="tabcontent">
+                                <div id="tab-charge" class="tabcontent">
                                     
                                 </div>
                                 <div id="tab-req-application" class="tabcontent">
