@@ -1149,9 +1149,6 @@ section.row-color.white {
 }
 
 @media (max-width: 991px) and (min-width: 768px){
-  .navbar-header {
-    width: 20%;
-  }
   .col-xs-12 .col {
     margin-top: 20px;
   }
