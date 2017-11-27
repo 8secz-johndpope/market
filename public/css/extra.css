@@ -415,6 +415,9 @@ a.post-advert:hover{
     /*width: 400px;*/
     width: 100%;
 }
+.ribbon.ribbon-shipping {
+    background-color: green;
+}
 .frame {
     width: 600px;
     height: 600px;
