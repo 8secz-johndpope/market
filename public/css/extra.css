@@ -359,6 +359,10 @@ a.search-alert {
     border-right: 1px solid #eee;
     display: inline-block;
 }
+.ribbon.ribbon-spotlight {
+    background: #06D1F2;
+    color: #fff;
+}
 .stars {
     /* width: 86%; */
     display: inline-block;
