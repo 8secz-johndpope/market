@@ -386,6 +386,12 @@ a.search-alert {
 .extra-options .ratings {
     display: inline-block;
 }
+.extra-options .verification {
+    display: inline-block;
+}
+.extra-options .make-offer {
+    display: inline-block;
+}
 /*.ribbon .ribbon-left {
     height: 100%;
     width: 10px;
