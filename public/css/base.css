@@ -1427,6 +1427,10 @@ section.row-color.white {
     font-size: 16px;
     color: #000;
   }
+  .favroite-icon:before{
+    height: 30px;
+    width: 30px;
+  }
 }
 @media screen and (min-width: 1400px){
   .categories .panel-body {
