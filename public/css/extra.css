@@ -402,13 +402,13 @@ a.post-advert:hover{
     margin-bottom: 10px;
 }
 .main-first-div {
-    width: 65%;
+    width: 70%;
 }
 .main-q-div{
     width: calc(100% - 160px);
 }
 .main-second-div {
-    width: 35%;
+    width: 34%;
 }
 .main-q-div .form-control {
     /*width: 400px;*/
