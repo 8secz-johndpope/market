@@ -116,6 +116,106 @@
 							 </div>
 						 </div>
 					 </div>
+					 <div class="col-xs-6 col-sm-3 col-lg-2">
+				 		<div class="panel panel-primary category-3">
+				 			<div class="panel-heading">
+				 				<a href="/jobs">
+				 					<div class="center-block">
+				 						<img class="icon-category" src="css/icons/jobs.png?76755">
+				 					</div>
+				 					<h1>Jobs</h1>
+				 				</a>
+				 			</div>
+				 			<div class="panel-body hidden-xs">
+							 	<ul>
+							 		<li><a href="account-management">Account Management</a></li>
+							 		<li><a href="accountancy">Accountancy</a></li>
+							 		<li><a href="administration">Administration</a></li>
+							 		<li><a href="construction">Construction</a></li>
+							 		<li><a href="consulting">Consulting</a></li>
+							 		<li><a href="creative-media-design">Creative Media &amp; Design</a></li>
+							 		<li><a href="customer-services">Customer Service</a></li>
+								 	<div class="read-more">
+								 		<a href="#" class="btn btn-info" role="button">more..</a>
+								 	</div>
+							 	</ul>
+							 </div>
+						 </div>
+					 </div>
+					 <div class="col-xs-6 col-sm-3 col-lg-2">
+				 		<div class="panel panel-primary category-4">
+				 			<div class="panel-heading">
+				 				<a href="/business-services">
+				 					<div class="center-block">
+				 						<img class="icon-category" src="css/icons/business-services.png?76755">
+				 					</div>
+				 					<h1>Services</h1>
+				 				</a>
+				 			</div>
+				 			<div class="panel-body hidden-xs">
+							 	<ul>
+							 		<li><a href="business-office-services">Business &amp; Office</a></li>
+							 		<li><a href="clothing-services">Clothing</a></li>
+							 		<li><a href="telecoms-computer-services">Computers &amp; Telecoms</a></li>
+							 		<li><a href="entertainment-services">Entertainment</a></li>
+							 		<li><a href="tax-money-visa-services">Finance &amp; Legal</a></li>
+							 		<li><a href="food-drink-services">Food &amp; Drink</a></li>
+							 		<li><a href="goods-supplier-retailer-services">Goods Suppliers &amp; Retailers</a></li>
+								 	<div class="read-more">
+								 		<a href="#" class="btn btn-info" role="button">more..</a>
+								 	</div>
+							 	</ul>
+							 </div>
+						 </div>
+					 </div>
+					 <div class="col-xs-6 col-sm-3 col-lg-2">
+				 		<div class="panel panel-primary category-5">
+				 			<div class="panel-heading">
+				 				<a href="/community">
+				 					<div class="center-block">
+				 						<img class="icon-category" src="css/icons/community.png?76755">
+				 					</div>
+				 					<h1>Community</h1>
+				 				</a>
+				 			</div>
+				 			<div class="panel-body hidden-xs">
+							 	<ul>
+							 		<li><a href="artists-theatres">Artists &amp; Theatres</a></li>
+							 		<li><a href="classes">Classes</a></li>
+							 		<li><a href="events-gigs-nightlife">Events, Gigs &amp; Nightlife</a></li>
+							 		<li><a href="groups-associations">Groups &amp; Associations</a></li>
+							 		<li><a href="lost-found-stuff">Lost &amp; Found Stuff</a></li>
+							 		<li><a href="music-bands-musicians-djs">Music, Bands &amp; Musicians</a></li>
+							 		<li><a href="rideshare-car-pooling">Rideshare &amp; Car Pooling</a></li>
+								 	<div class="read-more">
+								 		<a href="#" class="btn btn-info" role="button">more..</a>
+								 	</div>
+							 	</ul>
+							 </div>
+						 </div>
+					 </div>
+					 <div class="col-xs-6 col-sm-3 col-lg-2">
+				 		<div class="panel panel-primary category-6">
+				 			<div class="panel-heading">
+				 				<a href="/pets">
+				 					<div class="center-block">
+				 						<img class="icon-category" src="css/icons/pets.png?76755">
+				 					</div>
+				 					<h1>Pets</h1>
+				 				</a>
+				 			</div>
+				 			<div class="panel-body hidden-xs">
+							 	<ul>
+							 		<li><a href="pet-equipment-accessories">Equipment &amp; Accessories</a></li>
+							 		<li><a href="pets-missing-lost-found">Missing, Lost &amp; Found</a></li>
+							 		<li><a href="pets-for-sale">Pets for Sale</a></li>
+								 	<div class="read-more">
+								 		<a href="#" class="btn btn-info" role="button">more..</a>
+								 	</div>
+							 	</ul>
+							 </div>
+						 </div>
+					 </div>
 			 	</div>
 		 	</div>
 		</section>
