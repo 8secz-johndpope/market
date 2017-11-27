@@ -271,12 +271,15 @@ strong.ship-ribbon {
 span.currency {
     text-transform: uppercase;
 }
-strong.deliver-ribbon {
+.ribbon.ribbon-delivery {
+    background: rebeccapurple;
+}
+/*strong.deliver-ribbon {
     background: rebeccapurple;
     color: white;
     padding: 5px;
     border-radius: 10px;
-}
+}*/
 .cross-mark-add-bank {
     position: absolute;
     right: 0;
