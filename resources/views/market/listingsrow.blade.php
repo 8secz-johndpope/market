@@ -274,7 +274,12 @@
             @endif
             </div>
             <div class="extra-options">
-                
+                <div class="verification">
+                </div>
+                <div class="make-offer">
+                </div>
+                <div class="ratings">
+                </div>
             </div>
         </div>
     </div>
