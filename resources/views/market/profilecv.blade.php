@@ -369,6 +369,7 @@
                                 <div id="tab-make-offer" class="tabcontent">
                                     <h3>Make me an offer</h3>
                                     <div class="offer-content">
+                                        <p>Charges: £25.00 /hr
                                         <h4>Your offer:</h4>
                                         <form >
                                             <label for="price-input">
