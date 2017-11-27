@@ -90,6 +90,32 @@
 							 </div>
 						 </div>
 					 </div>
+					 <div class="col-xs-6 col-sm-3 col-lg-2">
+				 		<div class="panel panel-primary category-2">
+				 			<div class="panel-heading">
+				 				<a href="/flats-houses">
+				 					<div class="center-block">
+				 						<img class="icon-category" src="css/icons/flats-houses.png?76755">
+				 					</div>
+				 					<h1>Property</h1>
+				 				</a>
+				 			</div>
+				 			<div class="panel-body hidden-xs">
+							 	<ul>
+							 		<li><a href="commercial">Commercial</a></li>
+							 		<li><a href="property-for-sale">For Sale</a></li>
+							 		<li><a href="holiday-rentals">Holiday Rentals</a></li>
+							 		<li><a href="international-property-for-sale">International</a></li>
+							 		<li><a href="garage-parking">Parking &amp; Garage</a></li>
+							 		<li><a href="property-wanted">Property Wanted</a></li>
+							 		<li><a href="property-to-rent">To Rent</a></li>
+							 		<div class="read-more">
+							 			<a href="#" class="btn btn-info" role="button">more..</a>
+							 		</div>
+							 	</ul>
+							 </div>
+						 </div>
+					 </div>
 			 	</div>
 		 	</div>
 		</section>
