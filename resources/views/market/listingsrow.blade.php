@@ -251,14 +251,14 @@
             @endif
             @if(isset($product['sold']) && $product['sold'] == 1)
                 <span class="ribbon sold">
-                    <span class="ribbon-left"></span>
                    Sold
-                   <span class="ribbon-right"></span> 
                 </span>
             @endif
             @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
                 <span class="ribbon urgent-span">
+                    <span class="ribbon-text">
                     Urgent
+                    </span>
                 </span>
             @endif
             @if(isset($product['canship'])&&$product['canship']===1)
