@@ -417,6 +417,9 @@ a.post-advert:hover{
 .main-location-div {
     width: calc(100% - 47px);
 }
+input#pac-input {
+    width: 100%;
+}
 .main-q-div .form-control {
     /*width: 400px;*/
     width: 100%;
