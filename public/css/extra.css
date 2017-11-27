@@ -519,7 +519,6 @@ strong.ribbon {
 .ribbon.urgent-span {
     background: red;
     color: white;
-    border-radius: 5px;
 }
 span.hide-visually {
     border: 0;
