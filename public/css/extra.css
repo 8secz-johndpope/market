@@ -265,6 +265,9 @@ a.add-bank-link {
 strong.ship-ribbon {
     color: white;
 }
+.extra-info hr {
+    width: 95%;
+}
 span.currency {
     text-transform: uppercase;
 }
