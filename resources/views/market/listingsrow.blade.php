@@ -287,7 +287,9 @@ use App\Model\Advert;
                     </div>
                 </div>
                 <div class="make-offer">
-
+                    <div>
+                        <h4>Make an offer</h4>
+                    </div>
                 </div>
                 <div class="ratings">
                     <div class="stars">
