@@ -371,6 +371,18 @@ a.search-alert {
     font-size: 12px;
     line-height: 20px;
 }
+.stars i {
+    background-image: url(icons-stars.png);
+    background-size: 185px 138px;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    text-align: left;
+    display: inline-block;
+}
+.stars i {
+    background-position: -20px -122px;
+}
 /*.ribbon .ribbon-left {
     height: 100%;
     width: 10px;
