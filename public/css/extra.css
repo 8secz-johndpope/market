@@ -358,6 +358,11 @@ a.search-alert {
     border-right: 1px solid #eee;
     display: inline-block;
 }
+.stars {
+    /* width: 86%; */
+    display: inline-block;
+    vertical-align: text-top;
+}
 /*.ribbon .ribbon-left {
     height: 100%;
     width: 10px;
