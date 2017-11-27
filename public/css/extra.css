@@ -340,14 +340,14 @@ a.search-alert {
 }
 .ribbon {
     display: inline-block;
-    padding: 10px;
+    padding: 25px 3px;
     text-align: center;
     vertical-align: middle;
-    width: 60px;
-    height: 50px;
+    width: 58px;
+    height: 68px;
     text-transform: uppercase;
     /*border-radius: 5px;*/
-    font-size: 8px;
+    font-size: 10px;
     margin: 0 0 5px 0;
     box-shadow: 0px 4px 1px -2px rgba(0,0,0,0.16), 0px 0px 0px rgba(0,0,0,.08);
     position: relative;

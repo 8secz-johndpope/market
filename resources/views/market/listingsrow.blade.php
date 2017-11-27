@@ -246,9 +246,7 @@
             <hr>
             @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
                 <span class="ribbon ribbon-featured">
-                    <span class="ribbon-left"></span>
-                    <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-                    <span class="ribbon-right"></span> 
+                    <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong> 
                 </span>
             @endif
             @if(isset($product['sold']) && $product['sold'] == 1)
@@ -260,23 +258,17 @@
             @endif
             @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
                 <span class="ribbon urgent-span">
-                    <span class="ribbon-left"></span>
                     Urgent
-                    <span class="ribbon-right"></span> 
                 </span>
             @endif
             @if(isset($product['canship'])&&$product['canship']===1)
                 <span class="ribbon ribbon-shipping">
-                    <span class="ribbon-left"></span>
                     <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Shipping</strong>
-                    <span class="ribbon-right"></span> 
                 </span>
             @endif
             @if(isset($product['candeliver'])&&$product['candeliver']===1)
                 <span class="ribbon ribbon-delivery">
-                    <span class="ribbon-left"></span>
                     <strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Local Delivery</strong>
-                    <span class="ribbon-right"></span> 
                 </span>
             @endif
         </div>
