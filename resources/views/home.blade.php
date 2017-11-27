@@ -54,7 +54,7 @@
 							 		<li><a href="campervans-motorhomes">Campervans &amp; Motorhomes</a></li>
 							 		<li><a href="caravans">Caravans</a></li>
 							 		<li><a href="cars">Cars</a></li>
-							 		<li><a href="motorbikes-scooters">Motorbikes &amp; Scooters</a></li>
+							 		<li><a href="motorbikes-scooters">Motorbikes</a></li>
 							 		<li><a href="other-vehicles">Other Vehicles</a></li>
 							 		<li><a href="motors-parts">Parts</a></li>
 							 		<div class="read-more">
@@ -77,7 +77,7 @@
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
 							 		<li><a href="kitchen-appliances">Appliances</a></li>
-							 		<li><a href="stereos-audio">Audio &amp; Stereo</a></li>
+							 		<li><a href="stereos-audio">Audio</a></li>
 							 		<li><a href="baby-kids-stuff">Baby &amp; Kids Stuff</a></li>
 							 		<li><a href="cameras-studio-equipment">Cameras, Camcorders &amp; Studio Equipment</a></li>
 							 		<li><a href="christmas-decorations">Christmas Decorations</a></li>
