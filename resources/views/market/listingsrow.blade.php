@@ -277,14 +277,14 @@ use App\Model\Advert;
             </div>
             <div class="extra-options">
                 <div class="verification">
-                    <div class="user-badge">
-                        @php
+                    @php
                         $advert = Advert::find($product['source_id']);
-                        @endphp
-                        @if(isset($advert->user) && isset($advert->user->vid))
+                    @endphp
+                    @if(isset($advert->user) && isset($advert->user->vid))
+                    <div class="user-badge">
                             {{$advert->user->vid}}
-                        @endif
                     </div>
+                    @endif
                 </div>
                 <div class="make-offer">
                     <div>
