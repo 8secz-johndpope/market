@@ -363,6 +363,12 @@ a.search-alert {
     background: #06D1F2;
     color: #fff;
 }
+.extra-info .link-details {
+    /* float: right; */
+    position: relative;
+    display: block;
+    text-align: right;
+}
 .stars {
     /* width: 86%; */
     display: inline-block;
