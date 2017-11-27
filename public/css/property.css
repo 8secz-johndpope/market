@@ -551,6 +551,7 @@ span .glyphicon {
 }
 .similar-adverts {
     display: table;
+    width: 100%;
 }
 .similar-adverts .col-sm-6 {
     padding-left: 7px;
@@ -567,6 +568,7 @@ span .glyphicon {
     border: 1px solid #ddd;
     display: table;
     padding: 15px 5px;
+    width: 100%;
 }
 .images-current span.glyphicon {
     margin-right: 8px;
