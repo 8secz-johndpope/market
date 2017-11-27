@@ -385,12 +385,15 @@ a.search-alert {
 }
 .extra-options .ratings {
     display: inline-block;
+    width: calc(100% / 3);
 }
 .extra-options .verification {
     display: inline-block;
+    width: calc(100% / 3);
 }
 .extra-options .make-offer {
     display: inline-block;
+    width: calc(100% / 3);
 }
 /*.ribbon .ribbon-left {
     height: 100%;
