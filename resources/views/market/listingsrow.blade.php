@@ -231,27 +231,25 @@
                                 </span>
                             @endif
                 @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
-
-                    @else
-                <span class="posted-text">{{$product['posted']}}</span>
+                @else
+                    <span class="posted-text">{{$product['posted']}}</span>
                 @endif
-
-
-                            @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
-                                    <span class="urgent-span">
-Urgent
-</span>
-                            @endif
-
+            </div>
+            <div class="extra-info">
+                @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
+                    <span class="urgent-span">
+                        Urgent
+                    </span>
+                @endif
                 @if(isset($product['canship'])&&$product['canship']===1)
                     <span class="ribbon-shipping">
-<strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Ship</strong>
-</span>
+                        <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Ship</strong>
+                    </span>
                 @endif
                 @if(isset($product['candeliver'])&&$product['candeliver']===1)
-                <span class="ribbon-delivery">
-<strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Local Delivery</strong>
-</span>
+                    <span class="ribbon-delivery">
+                        <strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Local Delivery</strong>
+                    </span>
                 @endif
             </div>
         </div>
