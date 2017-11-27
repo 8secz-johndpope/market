@@ -453,7 +453,8 @@ input#pac-input {
     width: 100%;
 }
 .ribbon.ribbon-shipping {
-    background-color: green;
+    /*background-color: green;*/
+    background-color: #07E847;
 }
 .frame {
     width: 600px;
