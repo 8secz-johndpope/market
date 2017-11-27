@@ -385,10 +385,20 @@ a.search-alert {
 .circle {
     border-radius: 50%;
     background: #ED66A6;
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
     /* text-align: center; */
     vertical-align: middle;
+}
+span.ribbon.ribbon-delivery {
+    line-height: 14px;
+}
+.text-offer span {
+    /* padding-top: 32px; */
+    position: relative;
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
 }
 .stars {
     /* width: 86%; */
