@@ -243,6 +243,7 @@
             </div>
         </div>
         <div class="extra-info">
+            <hr>
             @if(isset($product['sold']) && $product['sold'] == 1)
                 <span class="ribbon sold">
                     <span class="ribbon-left"></span>
