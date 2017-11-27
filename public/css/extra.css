@@ -353,6 +353,10 @@ a.search-alert {
     position: relative;
     overflow: hidden;
 }
+.ribbons {
+    width: 50%;
+    border-right: 1px solid #eee;
+}
 .ribbon .ribbon-left {
     height: 100%;
     width: 10px;
