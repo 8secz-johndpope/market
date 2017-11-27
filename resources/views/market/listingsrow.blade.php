@@ -1,5 +1,7 @@
 <!-- Stored in resources/views/child.blade.php -->
-
+@php
+use App\Model\Advert;
+@endphp
 @extends('layouts.home')
 
 @section('title', $category->title)
