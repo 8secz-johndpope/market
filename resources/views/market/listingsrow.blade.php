@@ -281,7 +281,7 @@ use App\Model\Advert;
                         @php
                         $advert = Advert::find($product['source_id']);
                         @endphp
-                        @if(isset($advert->user))
+                        @if(isset($advert->user) && isset($advert->user->vid))
                             {{$advert->user->vid}}
                         @endif
                     </div>
