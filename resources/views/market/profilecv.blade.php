@@ -290,17 +290,17 @@
                                         </a>
                                     </li>
                                      <li class="tablinks">
-                                        <a href="#tab-make-offer">
+                                        <a href="#tab-req-application">
                                             <span class="bullet branded"></span>Request my application
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="#tab-make-offer">
+                                        <a href="#tab-charge">
                                             <span class="bullet branded"></span>Charges
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="#tab-req-application">
+                                        <a href="#tab-make-offer">
                                             <span class="bullet branded"></span>Make an offer
                                         </a>
                                     </li>
