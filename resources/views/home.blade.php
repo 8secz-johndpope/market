@@ -14,7 +14,7 @@
 		<section class="categories background-body">
     			<div class="container">
     				<div class="row box-rose">
-			 	@foreach($base as $cat)
+			 	<!-- @foreach($base as $cat)
 			 		<div class="col-xs-6 col-sm-3 col-lg-2">
 				 		<div class="panel panel-primary {{$cat->class}}">
 				 			<div class="panel-heading">
@@ -37,7 +37,59 @@
 							 </div>
 						 </div>
 					 </div>
-			 		@endforeach
+			 		@endforeach -->
+			 		<div class="col-xs-6 col-sm-3 col-lg-2">
+				 		<div class="panel panel-primary category-0">
+				 			<div class="panel-heading">
+				 				<a href="/cars-vans-motorbikes">
+				 					<div class="center-block">
+				 						<img class="icon-category" src="css/icons/cars-vans-motorbikes.png?76755">
+				 					</div>
+				 					<h1>Motors</h1>
+				 				</a>
+				 			</div>
+				 			<div class="panel-body hidden-xs">
+							 	<ul>
+							 		<li><a href="motors-accessories">Accessories</a></li>
+							 		<li><a href="campervans-motorhomes">Campervans &amp; Motorhomes</a></li>
+							 		<li><a href="caravans">Caravans</a></li>
+							 		<li><a href="cars">Cars</a></li>
+							 		<li><a href="motorbikes-scooters">Motorbikes &amp; Scooters</a></li>
+							 		<li><a href="other-vehicles">Other Vehicles</a></li>
+							 		<li><a href="motors-parts">Parts</a></li>
+							 		<div class="read-more">
+							 			<a href="#" class="btn btn-info" role="button">more..</a>
+							 		</div>
+							 	</ul>
+							</div>
+						 </div>
+					 </div>
+					 <div class="col-xs-6 col-sm-3 col-lg-2">
+				 		<div class="panel panel-primary category-1">
+				 			<div class="panel-heading">
+				 				<a href="/for-sale">
+				 					<div class="center-block">
+				 						<img class="icon-category" src="css/icons/for-sale.png?76755">
+				 					</div>
+				 					<h1>For Sale</h1>
+				 				</a>
+				 			</div>
+				 			<div class="panel-body hidden-xs">
+							 	<ul>
+							 		<li><a href="kitchen-appliances">Appliances</a></li>
+							 		<li><a href="stereos-audio">Audio &amp; Stereo</a></li>
+							 		<li><a href="baby-kids-stuff">Baby &amp; Kids Stuff</a></li>
+							 		<li><a href="cameras-studio-equipment">Cameras, Camcorders &amp; Studio Equipment</a></li>
+							 		<li><a href="christmas-decorations">Christmas Decorations</a></li>
+							 		<li><a href="clothing">Clothes, Footwear &amp; Accessories</a></li>
+							 		<li><a href="computers-software">Computers &amp; Software</a></li>
+							 		<div class="read-more">
+							 			<a href="#" class="btn btn-info" role="button">more..</a>
+							 		</div>
+							 	</ul>
+							 </div>
+						 </div>
+					 </div>
 			 	</div>
 		 	</div>
 		</section>
