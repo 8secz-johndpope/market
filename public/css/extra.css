@@ -341,9 +341,10 @@ a.search-alert {
     padding: 10px;
     text-align: center;
     vertical-align: middle;
-    width: 150px;
+    width: 105px;
     text-transform: uppercase;
     border-radius: 5px;
+    font-size: 11px;
 }
 .ribbon.sold {
     background: darkgray;
