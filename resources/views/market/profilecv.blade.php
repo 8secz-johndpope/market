@@ -258,7 +258,7 @@
                                 <ul class="tab-vert">
                                      <li class="tablinks selected">
                                         <a href="#tab-verified">
-                                            <span class="bullet branded"></span>Verified by Sumra
+                                            <span class="bullet branded"></span>Verified by {{env('APP_NAME')}}
                                         </a>
                                     </li>
                                     <li class="tablinks">
@@ -360,7 +360,7 @@
 
                                             </fieldset>
                                             <p class="contact-form-disclaimer">
-                                                Please note that Sumra will send the above details to {{isset($user->business) ? $user->business->name : ''}} only. By submitting this form, you confirm that you agree to our website <a href="#">terms of use</a>, our <a href="#">terms of use</a> and consent to <a href="">cookies</a> being stored on your computer.
+                                                Please note that {{env('APP_NAME')}} will send the above details to {{isset($user->business) ? $user->business->name : ''}} only. By submitting this form, you confirm that you agree to our website <a href="#">terms of use</a>, our <a href="#">terms of use</a> and consent to <a href="">cookies</a> being stored on your computer.
                                             </p>
                                         </form>
                                     </div>
