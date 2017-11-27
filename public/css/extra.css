@@ -385,15 +385,15 @@ a.search-alert {
 }
 .extra-options .ratings {
     display: inline-block;
-    width: calc(100% / 3);
+    width: calc(98% / 3);
 }
 .extra-options .verification {
     display: inline-block;
-    width: calc(100% / 3);
+    width: calc(99% / 3);
 }
 .extra-options .make-offer {
     display: inline-block;
-    width: calc(100% / 3);
+    width: calc(99% / 3);
 }
 /*.ribbon .ribbon-left {
     height: 100%;
@@ -422,6 +422,7 @@ a.search-alert {
 .extra-options {
     display: inline-block;
     width: 49%;
+    text-align: center;
 }
 a.post-advert:hover{
     background: orange !important;
