@@ -239,22 +239,22 @@
         </div>
         <div class="extra-info">
             @if(isset($product['sold']) && $product['sold'] == 1)
-                <span class="sold">
+                <span class="ribbon sold">
                    Sold 
                 </span>
             @endif
             @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
-                <span class="urgent-span">
+                <span class="ribbon urgent-span">
                     Urgent
                 </span>
             @endif
             @if(isset($product['canship'])&&$product['canship']===1)
-                <span class="ribbon-shipping">
+                <span class="ribbon ribbon-shipping">
                     <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Ship</strong>
                 </span>
             @endif
             @if(isset($product['candeliver'])&&$product['candeliver']===1)
-                <span class="ribbon-delivery">
+                <span class="ribbon ribbon-delivery">
                     <strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Local Delivery</strong>
                 </span>
             @endif
