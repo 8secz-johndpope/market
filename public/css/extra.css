@@ -276,6 +276,7 @@ span.currency {
 .ribbon.ribbon-delivery {
     background: #A52CDD;
     color: #fff;
+    padding-top: 3px;
 }
 /*strong.deliver-ribbon {
     background: rebeccapurple;
@@ -340,11 +341,11 @@ a.search-alert {
 }
 .ribbon {
     display: inline-block;
-    padding: 25px 3px;
+    padding: 12px 3px;
     text-align: center;
     vertical-align: middle;
-    width: 58px;
-    height: 68px;
+    width: 108px;
+    height: 43px;
     text-transform: uppercase;
     /*border-radius: 5px;*/
     font-size: 10px;

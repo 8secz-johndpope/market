@@ -247,6 +247,9 @@ use App\Model\Advert;
         <div class="extra-info">
             <hr>
             <div class="ribbons">
+                <span class="ribbon ribbon-spotlight">
+                    <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Spotlight</strong> 
+                </span>
             @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
                 <span class="ribbon ribbon-featured">
                     <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong> 
@@ -277,14 +280,7 @@ use App\Model\Advert;
             </div>
             <div class="extra-options">
                 <div class="verification">
-                    @php
-                        $advert = Advert::find($product['source_id']);
-                    @endphp
-                    @if(isset($advert->user) && isset($advert->user->vid))
-                    <div class="user-badge">
-                            {{$advert->user->vid}}
-                    </div>
-                    @endif
+                    
                 </div>
                 <div class="make-offer">
                     <div>
