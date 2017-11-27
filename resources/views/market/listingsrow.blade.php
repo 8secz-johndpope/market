@@ -261,7 +261,7 @@
             @if(isset($product['canship'])&&$product['canship']===1)
                 <span class="ribbon ribbon-shipping">
                     <span class="ribbon-left"></span>
-                    <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Ship</strong>
+                    <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Shipping</strong>
                     <span class="ribbon-right"></span> 
                 </span>
             @endif
