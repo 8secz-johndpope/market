@@ -367,7 +367,10 @@
                                     
                                 </div>
                                 <div id="tab-make-offer" class="tabcontent">
-                                    
+                                    <h3>Make me an offer</h3>
+                                    <div class="offer-content">
+                                        
+                                    </div>
                                 </div>
                                 <div id="tab-req-application" class="tabcontent">
                                     
