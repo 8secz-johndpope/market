@@ -402,6 +402,9 @@ a.post-advert:hover{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.main-first-div {
+    width: 65%;
+}
 .main-q-div .form-control {
     width: 400px;
 }
