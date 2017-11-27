@@ -339,6 +339,12 @@ a.search-alert {
     text-align: center;
     vertical-align: middle;
     width: 150px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.ribbon.sold {
+    background: darkgray;
+    color: #000;
 }
 a.post-advert:hover{
     background: orange !important;
