@@ -1086,10 +1086,10 @@ a.message-back-button {
     .main-search-div{
         width: 100%;
     }
-    .main-q-div{
+    /*.main-q-div{
         width : calc(100% - 150px);
     }
-    /*.main-first-div{
+    .main-first-div{
         width: 50%;
     }
     .main-second-div{
