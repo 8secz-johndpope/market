@@ -345,6 +345,7 @@ a.search-alert {
     text-transform: uppercase;
     border-radius: 5px;
     font-size: 11px;
+    margin: 0 0 5px 0;
 }
 .ribbon.sold {
     background: darkgray;
