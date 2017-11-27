@@ -319,6 +319,9 @@ li.tablinks a {
 .tabcontent h4 {
     font-size: 14px;
 }
+.offer-message label {
+    display: block;
+}
 footer{
 	margin-top: 0;
 }
