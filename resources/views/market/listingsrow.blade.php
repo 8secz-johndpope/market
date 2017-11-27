@@ -237,6 +237,11 @@
             </div>
         </div>
         <div class="extra-info">
+            @if(isset($product['sold']) && $product['sold'] == 1)
+                <span class="sold">
+                   Sold 
+                </span>
+            @endif
             @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
                 <span class="urgent-span">
                     Urgent
