@@ -383,6 +383,7 @@
                                                     
                                                 </textarea>
                                             </div>
+                                            <a class="btn submit-offer" href="#" data-url="">Review offer</a>
                                         </form>
                                     </div>
                                 </div>
