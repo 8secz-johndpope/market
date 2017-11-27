@@ -1225,6 +1225,10 @@ section.row-color.white {
   .container-fluid {
     padding-bottom: 5px;
   }
+  .favroite-icon:before{
+    height: 25px;
+    width: 25px;
+  }
 }
 @media screen and (min-width: 992px){
   .top .row{
