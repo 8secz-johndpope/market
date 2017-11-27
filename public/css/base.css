@@ -165,7 +165,8 @@ a.navbar-brand {
 }
 
 form.navbar-form {
-    margin: 20px 0;
+  margin: 20px 0;
+  padding: 0;
 }
 section .custompanel{
   display: inline-grid;
