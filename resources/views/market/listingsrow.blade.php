@@ -22,6 +22,11 @@
 <div class="listings background-body">
     <div class="container-fluid">
         <div class="row">
+            <div class="banner">
+                
+            </div>
+        </div>
+        <div class="row">
         <div class="all">
             <div class="search-alert-div visible-xs">
                 <a class="search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
