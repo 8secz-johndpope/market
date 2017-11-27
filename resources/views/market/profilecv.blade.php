@@ -391,7 +391,26 @@
                                 <div id="tab-charge" class="tabcontent">
                                     <h3>Charges</h3>
                                     <div>
-
+                                        <ul>
+                                            <li>
+                                                <div class="charge-item">
+                                                    <h4></h4>
+                                                    <span class="price-charge"></span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="charge-item">
+                                                    <h4></h4>
+                                                    <span class="price-charge"></span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="charge-item">
+                                                    <h4></h4>
+                                                    <span class="price-charge"></span>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div id="tab-req-application" class="tabcontent">
