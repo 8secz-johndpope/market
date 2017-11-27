@@ -302,7 +302,7 @@ use App\Model\Advert;
             </div>
             @else
                 <div class="link-details">
-                    <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
+                    <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> LEARN MORE ABOUT THIS ADVERTISER</a>
                 </div>
             @endif
         </div>
