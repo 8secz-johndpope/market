@@ -316,6 +316,9 @@ li.tablinks a {
 .background-body{
 	padding-bottom: 15px;
 }
+.tabcontent h4 {
+    font-size: 14px;
+}
 footer{
 	margin-top: 0;
 }
