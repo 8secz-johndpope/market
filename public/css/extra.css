@@ -357,7 +357,7 @@ a.search-alert {
     width: 50%;
     border-right: 1px solid #eee;
 }
-.ribbon .ribbon-left {
+/*.ribbon .ribbon-left {
     height: 100%;
     width: 10px;
     position: absolute;
@@ -376,10 +376,14 @@ a.search-alert {
     top: 0;
     border-radius: 50%;
     box-shadow: inset 1px -1px 0px -1px rgba(0,0,0,0.16), inset 0px 1px 1px rgba(0,0,0,.08);
-}
+}*/
 .ribbon.sold {
     background: darkgray;
     color: #000;
+}
+.extra-options {
+    display: inline-block;
+    width: 49%;
 }
 a.post-advert:hover{
     background: orange !important;
