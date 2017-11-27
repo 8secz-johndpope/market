@@ -363,6 +363,14 @@ a.search-alert {
     display: inline-block;
     vertical-align: text-top;
 }
+.stars span {
+    /* position: absolute; */
+    color: #555;
+    font-style: normal;
+    padding-left: 7px;
+    font-size: 12px;
+    line-height: 20px;
+}
 /*.ribbon .ribbon-left {
     height: 100%;
     width: 10px;
