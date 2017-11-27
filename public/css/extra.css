@@ -414,6 +414,9 @@ a.post-advert:hover{
 .main-second-div {
     width: 29%;
 }
+.main-location-div {
+    width: calc(100% - 47px);
+}
 .main-q-div .form-control {
     /*width: 400px;*/
     width: 100%;
