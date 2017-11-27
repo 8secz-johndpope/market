@@ -284,7 +284,7 @@ use App\Model\Advert;
                     
                 </div>
                 <div class="make-offer">
-                    <div>
+                    <div class="circle">
                         <span>Make an offer</span>
                     </div>
                 </div>
