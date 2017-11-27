@@ -281,7 +281,9 @@
             </form>
             </div>
             <div class="col-md-2">
-                @yield('next-search')
+                <div class="next-search">
+                    @yield('next-search')
+                </div>
             </div>
         </div>
     </div>
