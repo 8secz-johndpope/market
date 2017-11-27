@@ -263,10 +263,7 @@ a.add-bank-link {
     cursor: pointer;
 }
 strong.ship-ribbon {
-    background: green;
     color: white;
-    padding: 5px;
-    border-radius: 10px;
 }
 span.currency {
     text-transform: uppercase;
