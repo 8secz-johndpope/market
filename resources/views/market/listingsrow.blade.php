@@ -287,8 +287,18 @@ use App\Model\Advert;
                     </div>
                 </div>
                 <div class="make-offer">
+
                 </div>
                 <div class="ratings">
+                    <div class="stars">
+                        <span>
+                            <i class="fullstar"></i>
+                            <i class="fullstar"></i>
+                            <i class="fullstar"></i>
+                            <i class="fullstar"></i>
+                            <i class="fullstar"></i>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
