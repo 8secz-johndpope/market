@@ -322,6 +322,10 @@ li.tablinks a {
 .offer-message label {
     display: block;
 }
+.btn.submit-offer {
+    background: #000;
+    color: #fff;
+}
 footer{
 	margin-top: 0;
 }
