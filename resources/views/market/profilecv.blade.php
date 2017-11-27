@@ -371,7 +371,7 @@
                                     <div class="offer-content">
                                         <p><strong>Charges:</strong> £25.00 /hr
                                         <h4>Your offer:</h4>
-                                        <form >
+                                        <form id="form-make-offer">
                                             <label for="price-input">
                                                £ 
                                             </label>
@@ -389,7 +389,10 @@
                                     </div>
                                 </div>
                                 <div id="tab-charge" class="tabcontent">
-                                    
+                                    <h3>Charges</h3>
+                                    <div>
+
+                                    </div>
                                 </div>
                                 <div id="tab-req-application" class="tabcontent">
                                     
