@@ -369,7 +369,18 @@
                                 <div id="tab-make-offer" class="tabcontent">
                                     <h3>Make me an offer</h3>
                                     <div class="offer-content">
-                                        
+                                        <h4>Your offer:</h4>
+                                        <form >
+                                            <label for="price-input">
+                                               £ 
+                                            </label>
+                                            <input type="text" id="price-input" name="price-input">
+                                            <div class="offer-message">
+                                                <textarea id="msg-textarea">
+                                                    
+                                                </textarea>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                                 <div id="tab-req-application" class="tabcontent">
