@@ -11,7 +11,7 @@
 @endsection
 
 @section('next-search')
-    <div class="search-alert-div visible-xs">
+    <div class="search-alert-div">
         <a class="search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
     </div>
 @endsection
