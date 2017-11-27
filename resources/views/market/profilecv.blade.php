@@ -376,7 +376,10 @@
                                             </label>
                                             <input type="text" id="price-input" name="price-input">
                                             <div class="offer-message">
-                                                <textarea id="msg-textarea">
+                                                <label for="msg-textarea">
+                                                    Message: 
+                                                </label>
+                                                <textarea id="msg-textarea" maxlength="250">
                                                     
                                                 </textarea>
                                             </div>
