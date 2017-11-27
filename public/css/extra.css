@@ -411,9 +411,10 @@ a.post-advert:hover{
 .main-second-div {
     width: 35%;
 }
-/*.main-q-div .form-control {
-    width: 400px;
-}*/
+.main-q-div .form-control {
+    /*width: 400px;*/
+    width: 100%;
+}
 .frame {
     width: 600px;
     height: 600px;
