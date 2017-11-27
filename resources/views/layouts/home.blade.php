@@ -258,24 +258,29 @@
 
                 <div class="main-search-div">
                     <div class="main-first-div inline-block-div">
-                    <div class="main-cat-div inline-block-div">
-                        <select name="search_category" class="form-control" id="search_category">
-                            @if($category->id!==0&&$category->parent_id!==0)
-                                <option value="{{$category->slug}}">{{$category->title}}</option>
+                        <div class="main-cat-div inline-block-div">
+                            <select name="search_category" class="form-control" id="search_category">
+                                @if($category->id!==0&&$category->parent_id!==0)
+                                    <option value="{{$category->slug}}">{{$category->title}}</option>
 
-                            @endif
-                            <option value="all">All</option>
-                            @foreach($base as $cat)
-                                <option value="{{$cat->slug}}" @if($category->slug===$cat->slug) selected @endif>{{$cat->title}}</option>
-                            @endforeach
-                        </select>
-                    </div><div class="main-q-div inline-block-div"><input type="text" class="form-control" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif"></div>
+                                @endif
+                                <option value="all">All</option>
+                                @foreach($base as $cat)
+                                    <option value="{{$cat->slug}}" @if($category->slug===$cat->slug) selected @endif>{{$cat->title}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="main-q-div inline-block-div">
+                            <input type="text" class="form-control" id="autocomplete" name="q" placeholder="SEARCH" value="@if(isset($input['q'])) {{$input['q']}} @endif">
+                        </div>
                     </div>
                     <div class="main-second-div inline-block-div">
                         <div class="main-location-div inline-block-div">
-                        <input type="text" id="pac-input" class="form-control" placeholder="Location" name="location" value="@if($location->id!==0) @if($type==='location') {{$location->title}} @else {{$postcode->postcode}} @endif @endif" required></div>
+                            <input type="text" id="pac-input" class="form-control" placeholder="Location" name="location" value="@if($location->id!==0) @if($type==='location') {{$location->title}} @else {{$postcode->postcode}} @endif @endif" required>
+                        </div>
                         <div class="main-go-div inline-block-div">
-							     		<button class="btn btn-primary" type="submit" id="submitform">Go</button></div>
+							<button class="btn btn-primary" type="submit" id="submitform">Go</button>
+                        </div>
                     </div>
                 </div>
             </form>
