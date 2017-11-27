@@ -278,6 +278,10 @@ img.icon-small-h {
   padding: 9px 2px 32px 2px;
 }
 
+.next-search {
+    margin: 30px 0;
+}
+
 /* listing ui */
 a.listing-product{
   display: inline-flex;
