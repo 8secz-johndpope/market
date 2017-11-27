@@ -369,7 +369,7 @@
                                 <div id="tab-make-offer" class="tabcontent">
                                     <h3>Make me an offer</h3>
                                     <div class="offer-content">
-                                        <p><strong>Charges:</strong> £25.00 /hr
+                                        <p><strong>My charges:</strong> £25.00 /hr
                                         <h4>Your offer:</h4>
                                         <form id="form-make-offer">
                                             <label for="price-input">
@@ -394,13 +394,13 @@
                                         <ul>
                                             <li>
                                                 <div class="charge-item">
-                                                    <h4></h4>
-                                                    <span class="price-charge"></span>
+                                                    <h4>Website design</h4>
+                                                    <span class="price-charge">£25.00 /hr</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="charge-item">
-                                                    <h4></h4>
+                                                    <h4> </h4>
                                                     <span class="price-charge"></span>
                                                 </div>
                                             </li>
