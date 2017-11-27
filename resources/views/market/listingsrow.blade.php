@@ -246,6 +246,7 @@ use App\Model\Advert;
         </div>
         <div class="extra-info">
             <hr>
+             @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
             <div class="ribbons">
                 <span class="ribbon ribbon-spotlight">
                     <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Spotlight</strong> 
@@ -299,6 +300,11 @@ use App\Model\Advert;
                     </div>
                 </div>
             </div>
+            @else
+                <div class="link-details">
+                    <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
+                </div>
+            @endif
         </div>
     </div>
             @endforeach
