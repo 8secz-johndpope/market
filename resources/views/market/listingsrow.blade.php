@@ -244,6 +244,7 @@
         </div>
         <div class="extra-info">
             <hr>
+            <div class="ribbons">
             @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
                 <span class="ribbon ribbon-featured">
                     <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong> 
@@ -271,6 +272,10 @@
                     <strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Local Delivery</strong>
                 </span>
             @endif
+            </div>
+            <div class="extra-options">
+                
+            </div>
         </div>
     </div>
             @endforeach
