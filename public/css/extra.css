@@ -735,6 +735,7 @@ span.favor-text {
     background-position: center;
     background-repeat: no-repeat;
     display: block;
+    margin: auto;
 }
 
 .heart-empty:before{
