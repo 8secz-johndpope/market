@@ -369,6 +369,20 @@ span.email-icon img {
     height: 31px;
     border-bottom: 1px solid #ccc;
 }
+.reviews h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.author-by {
+    color: #999;
+}
+.review-item-date {
+    color: #999;
+    line-height: 15px;
+    margin-top: 7px;
+    display: block;
+    margin-bottom: 10px;
+}
 @media (min-width: 768px){
 	.reviews-item-l {
 	    width: 40%;
@@ -409,6 +423,9 @@ span.email-icon img {
 	.per span {
 	    width: 45px;
 	    height: 90px;
+	}
+	.review {
+	    border-right: 1px solid #ccc;
 	}
 }
 @media (min-width: 1200px){
