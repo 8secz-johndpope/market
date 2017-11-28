@@ -403,6 +403,9 @@ span.email-icon img {
     vertical-align: top;
     border-left: 1px solid #ccc;
 }
+img.payments-methods {
+    height: 19px;
+}
 @media (min-width: 768px){
 	.reviews-item-l {
 	    width: 40%;
