@@ -1004,6 +1004,9 @@ class MarketController extends BaseController
             $prev = $advert->prevAdvert();
             return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder, 'input' => [], 'location'=>Location::find(0), 'base' => $base, 'nextAdvert' => $next, 'prevAdvert' => $prev]);
         }
+        elseif($advert->can_ship()){
+            $view = 'market.forSale'
+        }
         return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder]);
     }
     private  function haversineGreatCircleDistance(
