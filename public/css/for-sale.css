@@ -26,11 +26,14 @@
 .seller-options ul {
     list-style: none;
     display: table;
+    height: 100%;
+    padding-left: 0;
 }
 .seller-options li {
     width: 33%;
     display: table-cell;
     vertical-align: middle;
+    height: 100%;
 }
 /** similar adverts */
 .listings-adverts {
