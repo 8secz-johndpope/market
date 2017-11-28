@@ -272,6 +272,14 @@ span.email-icon img {
     float: right;
     width: 55%;
 }
+.reviews-item-r span {
+    /* position: absolute; */
+    color: #555;
+    font-style: normal;
+    padding-left: 7px;
+    font-size: 12px;
+    line-height: 20px;
+}
 @media (min-width: 768px){
 	.reviews-item-l {
 	    width: 40%;
