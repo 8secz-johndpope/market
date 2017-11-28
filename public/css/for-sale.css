@@ -33,9 +33,7 @@
     text-align: center;
     margin-bottom: 0;
 }
-.delivery-options .items-box-price.font-5 {
-    text-align: left;
-}
+
 .seller-options li {
     width: 33%;
     display: table-cell;
@@ -104,6 +102,10 @@ h2.item-name {
 .location-name>p {
     margin-left: 0px;
     font-size: 17px;
+}
+.items-box-price.font-5 {
+    text-align: left;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 /** seller info **/
 .buttons {
@@ -448,6 +450,9 @@ span.email-icon img {
 }
 img.payments-methods {
     height: 19px;
+}
+.delivery-options .items-box-price.font-5 {
+    text-align: left;
 }
 @media (min-width: 768px){
 	.reviews-item-l {
