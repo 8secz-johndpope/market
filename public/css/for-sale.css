@@ -127,6 +127,9 @@ a.advert-user {
     padding-right: 15px;
     border-bottom: 1px dashed #dfdfe1;
 }
+.list-group-item:last-child {
+    border-bottom: none;
+}
 .buttons span.glyphicon, .buttons .heart, .buttons .heart-empty {
     margin-right: 10px;
     color: #000;
