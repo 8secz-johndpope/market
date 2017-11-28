@@ -253,6 +253,20 @@ span.email-icon img {
 .stars{
 	text-align: center;
 }
+.reviews-item {
+    display: block;
+    text-decoration: none;
+    height: 20px;
+}
+.reviews-item-l {
+    float: left;
+    margin-top: 3px;
+}
+@media (min-width: 768px){
+	.reviews-item-l {
+	    width: 40%;
+	}
+}
 @media (min-width: 992px){
 	.rating-stars {
 	    border-right: none;
@@ -263,6 +277,9 @@ span.email-icon img {
 	}
 	.reviews-list li {
 	    height: 20px;
+	}
+	.reviews-item-l {
+	    width: auto;
 	}
 }
 @media (min-width: 1200px){
