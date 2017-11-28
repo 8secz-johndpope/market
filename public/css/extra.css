@@ -1299,6 +1299,18 @@ a.message-back-button {
     ul.image-gallery-ul li{
         height: 500px;
     }
+    .make-offer{
+        width: 55px;
+    }
+    .text-offer{
+        width: 35px;
+        height: 35px;
+        padding: 15px 0;
+        line-height: 10px;
+    }
+    .text-offer span{
+        font-size: 8px;
+    }
 }
 @media (max-width: 400px) {
     h4.product-title {
