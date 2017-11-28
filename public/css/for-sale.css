@@ -64,7 +64,6 @@ h2.item-name {
 .details h3, .share h3, .report h3 {
     font-size: 15px;
     padding-bottom: 1.3rem;
-    margin-top: 0px;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-weight: normal;
     text-align: left;
@@ -163,8 +162,6 @@ span.email-icon img {
     border-bottom: 1px dashed #ccc;
 }
 .report {
-    padding-left: 15px;
-    padding-right: 15px;
     padding-bottom: 20px;
     border-bottom: 1px dashed #ccc;
     text-align: center;
