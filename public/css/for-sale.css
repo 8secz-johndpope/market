@@ -6,6 +6,11 @@
     background-color: #262637;
     text-align: center;
 }
+.delivery-options {
+    background: #e2e2e2;
+    padding: 15px;
+    margin-bottom: 10px;
+}
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
