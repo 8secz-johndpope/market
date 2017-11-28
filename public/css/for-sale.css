@@ -48,5 +48,9 @@ h2.item-name {
     margin-left: 0px;
     font-size: 17px;
 }
+.items-box-price.font-5 {
+    text-align: right;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
 
 /* end advert */
