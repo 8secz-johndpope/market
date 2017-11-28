@@ -280,6 +280,22 @@ span.email-icon img {
     font-size: 12px;
     line-height: 20px;
 }
+.per-wrpr {
+    display: inline-block;
+    width: 100px;
+    /* height: 150px; */
+    font-weight: 300;
+    vertical-align: bottom;
+}
+.per {
+    background-color: rgba(241,142,0,0.2);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px 0 11px 10px;
+}
 @media (min-width: 768px){
 	.reviews-item-l {
 	    width: 40%;
@@ -306,6 +322,13 @@ span.email-icon img {
 	.all-ratings {
 	    border-left: 1px solid #ccc;
 	}
+	.per-wrpr {
+	    width: 110px;
+	}
+	.per {
+	    width: 90px;
+	    height: 90px;
+	}
 }
 @media (min-width: 1200px){
 	.col-ratings {
@@ -317,5 +340,9 @@ span.email-icon img {
 	}
 	.per-wrpr {
 		width: 100px;
+	}
+	.per {
+	    width: 80px;
+	    height: 80px;
 	}
 }
