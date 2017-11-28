@@ -394,6 +394,15 @@ span.email-icon img {
     margin-left: 10px;
     top: 3px;
 }
+.all-ratings {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-weight: 300;
+    padding: 10px 0;
+    vertical-align: top;
+    border-left: 1px solid #ccc;
+}
 @media (min-width: 768px){
 	.reviews-item-l {
 	    width: 40%;
