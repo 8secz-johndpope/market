@@ -1017,11 +1017,6 @@
                                     <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                                 @endif
                             </div>
-                        <!-- @else
-                            <ul class="list-group">
-                                <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
-                            </ul>
-                        @endif -->
                     </div>
                     <div class="contact">
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
