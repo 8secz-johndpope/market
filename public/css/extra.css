@@ -766,9 +766,9 @@ span.product-price {
     font-size: 16px;
 }
 .products {
-    width: 76%;
-    float: right;
-    padding: 20px;
+    /*width: 76%;
+    float: right;*/
+    padding: 20px 0;
     margin-bottom: 20px;
 }
 
