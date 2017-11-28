@@ -205,3 +205,15 @@ span.email-icon img {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     margin-bottom: 0px;
 }
+.tab-buttons {
+    padding-left: 0;
+    padding-right: 0;
+}
+.btn-rate, .btn-review {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    margin-left: 0;
+    border-radius: 0;
+    border-left-color: #ccc;
+}
