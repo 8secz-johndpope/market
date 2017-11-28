@@ -61,11 +61,12 @@ h2.item-name {
     padding: 15px;
     border-bottom: 1px dashed #dfdfe1;
 }
-.details h3 {
+.details h3, .share h3 {
     font-size: 15px;
     padding-bottom: 1.3rem;
     margin-top: 0px;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: normal;
 }
 .profile-picutre {
     display: block;
