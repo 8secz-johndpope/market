@@ -435,10 +435,6 @@ span.ribbon.ribbon-delivery {
     display: inline-block;
     width: 100px;
 }
-.extra-options .verification {
-    display: inline-block;
-    width: calc(99% / 3);
-}
 .extra-options .make-offer {
     display: inline-block;
     width: 100px;
