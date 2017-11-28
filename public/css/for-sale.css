@@ -61,7 +61,7 @@ h2.item-name {
     padding: 15px;
     border-bottom: 1px dashed #dfdfe1;
 }
-.details h3, .share h3, .report h3 {
+.details h3, .share h3, .report h3, .similar-adverts h3 {
     font-size: 15px;
     padding-bottom: 1.3rem;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
