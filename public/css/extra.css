@@ -1320,6 +1320,7 @@ a.message-back-button {
         font-size: 10px;
         padding: 8px 3px;
         height: 30px;
+        width: 70px;
     }
     .ribbons{
         min-height: 45px;
