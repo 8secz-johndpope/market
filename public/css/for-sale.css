@@ -67,6 +67,7 @@ h2.item-name {
     margin-top: 0px;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-weight: normal;
+    text-align: left;
 }
 .profile-picutre {
     display: block;
