@@ -361,7 +361,7 @@ a.search-alert {
     max-width: calc(100% - 300px);
     border-right: 1px solid #eee;
     display: inline-block;
-    height: 55px;
+    min-height: 55px;
 }
 .ribbon.ribbon-spotlight {
     background: #000;
