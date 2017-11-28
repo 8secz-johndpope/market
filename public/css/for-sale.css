@@ -28,6 +28,7 @@
     display: table;
     height: 100%;
     padding-left: 0;
+    text-align: center;
 }
 .seller-options li {
     width: 33%;
