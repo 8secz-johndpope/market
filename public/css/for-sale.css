@@ -18,6 +18,14 @@
     border: 1px solid #ff9d2c;
     width: 80%;
 }
+.seller-options ul {
+    list-style: none;
+    display: inline-block;
+}
+.seller-options li {
+    width: calc(98% /3);
+    display: inline-block;
+}
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
