@@ -102,6 +102,9 @@ p.link-about {
 .link-about .btn-default {
     width: 80%;
 }
+a.advert-user {
+    padding-left: 36px;
+}
 /** end seller **/
 
 /* end advert */
