@@ -117,7 +117,7 @@
                     <div id="tabs"> 
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
-                        <li><a data-toggle="tab" href="#tap-floorplan">Postage and Returns</a></li>
+                        <li><a data-toggle="tab" href="#tap-postage">Postage and Returns</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
                         @if($advert->isPropertyForSale())
                             <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
@@ -141,12 +141,6 @@
                                             </div>
                                             <div class="col-sm-6 meta-info">
                                                 {{$advert->created_at->format('d F Y')}}
-                                            </div>
-                                            <div class="col-sm-6 meta-bold">
-                                                Payments:
-                                            </div>
-                                            <div class="col-sm-6 meta-info">
-                                                <a href="/download-mobile-apps/"> <img class="payments-methods" src="/css/payments.png"></a>
                                             </div>
                                     </div>
                                     @if($advert->has_meta('key_features'))
@@ -253,14 +247,15 @@
                         </div>
                     </div>
                         </div>
-                        <div id="tap-floorplan" class="tab-pane fade">
+                        <div id="tap-postage" class="tab-pane fade">
                             <div class="row">           
                                 <div class="col-sm-12 foorplan">
-                                    @if($advert->has_meta('property_floorplan'))    
-                                    <img src="{{$advert->meta('property_floorplan')}}">
-                                    @else
-                                    <h3>This advert does not have a floor plan</h3>
-                                     @endif
+                                    <div class="col-sm-6 meta-bold">
+                                                Payments:
+                                            </div>
+                                            <div class="col-sm-6 meta-info">
+                                                <a href="/download-mobile-apps/"> <img class="payments-methods" src="/css/payments.png"></a>
+                                            </div>
                                 </div>
                             </div>
                         </div>
