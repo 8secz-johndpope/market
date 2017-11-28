@@ -161,6 +161,14 @@ span.email-icon img {
     padding-bottom: 15px;
     border-bottom: 1px dashed #ccc;
 }
+.report {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+    text-align: center;
+}
+
 /** end seller **/
 
 /* end advert */
