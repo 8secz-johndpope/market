@@ -1049,7 +1049,7 @@
 
                 <div class="buttons">
                     <div class="details">
-                        <h3>This property is marketed by</h3>
+                        <h3>This advert is by</h3>
                         @if($advert->user!==null)
                         <div class="profile-picutre">
                             <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
@@ -1079,7 +1079,7 @@
                     </div>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <span class="@if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) heart @else heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save property
+                            <span class="@if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) heart @else heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save
                         </li>
                         <li class="list-group-item">
                             <span class="glyphicon glyphicon-pencil"></span>
@@ -1099,7 +1099,7 @@
             </div>
             <div class="row">
                 <div class="share">
-                    <h3>Share this property</h3>
+                    <h3>Share this advert</h3>
                     <div class=" media">
                         <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/facebook.svg"></a></div>
                         <div class="center-block"><a href=""><img class="img-responsive" src="/css/icons/twitter.svg"></a></div>
