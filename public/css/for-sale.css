@@ -296,6 +296,48 @@ span.email-icon img {
     position: relative;
     margin: 10px 0 11px 10px;
 }
+.per:before, .per:after {
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(___YUICSSMIN_PRESERVED_TOKEN_0___)";
+}
+.per:before {
+    background-color: #fff;
+    content: "";
+    width: 85%;
+    height: 85%;
+    z-index: 100;
+}
+.per>div {
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.per .left span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+}
+.per span {
+    background-color: #f18e00;
+    display: block;
+    width: 40px;
+    height: 80px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+}
 @media (min-width: 768px){
 	.reviews-item-l {
 	    width: 40%;
@@ -329,6 +371,14 @@ span.email-icon img {
 	    width: 90px;
 	    height: 90px;
 	}
+	.per .left span {
+	    width: 45px;
+	    height: 90px;
+	}
+	.per span {
+	    width: 45px;
+	    height: 90px;
+	}
 }
 @media (min-width: 1200px){
 	.col-ratings {
@@ -343,6 +393,14 @@ span.email-icon img {
 	}
 	.per {
 	    width: 80px;
+	    height: 80px;
+	}
+	.per .left span {
+	    width: 40px;
+	    height: 80px;
+	}
+	.per span {
+	    width: 40px;
 	    height: 80px;
 	}
 }
