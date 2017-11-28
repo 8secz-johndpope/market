@@ -281,11 +281,13 @@ use App\Model\Advert;
             </div>
             <div class="extra-options">
                 <div class="make-offer">
+                    <a href="#">
                     <div class="circle">
                         <div class="text-offer">
                             <span>Make an offer</span>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="ratings">
                     <div class="stars">
