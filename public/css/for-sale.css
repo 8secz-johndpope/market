@@ -191,3 +191,7 @@ span.email-icon img {
 .click-title p {
     margin-bottom: 0;
 }
+.section-title {
+    border: 1px solid #ccc;
+    border-top: transparent;
+}
