@@ -150,6 +150,9 @@ span.email-icon img {
     height: 30px;
     margin-left: -5px;
 }
+.report a.btn-default {
+    width: 80%;
+}
 /** end seller **/
 
 /* end advert */
