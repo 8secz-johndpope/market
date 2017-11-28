@@ -158,6 +158,7 @@ Route::post('/user/sale/mark/shipped/{id}','UserController@mark_shipped')->middl
 Route::post('/user/advert/acreate','UserController@acreate');
 Route::post('/user/category/create','UserController@add');
 Route::post('/user/advert/cvcreate','UserController@cvcreate');
+Route::post('/user/company/create','UserController@acompany');
 
 Route::post('/user/advert/ccreate','UserController@ccreate');
 Route::post('/user/advert/cccreate','UserController@cccreate');

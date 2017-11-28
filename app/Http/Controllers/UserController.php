@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use App\Model\Business;
 use App\Model\FieldValue;
 use App\Model\Sale;
 use Illuminate\Support\Facades\Redis;
@@ -1873,7 +1874,20 @@ class UserController extends BaseController
 
     }
 
-    public function acreate(Request $request){
+    public function acompany(Request $request)
+    {
+        $business = new Business;
+        $business->company=$request->title;
+        $business->logo=$request->image;
+        $business->phone = $request->phone;
+        $business->email=$request->email;
+        $business->description = $request->description;
+        $business->save();
+        return $business;
+
+    }
+
+        public function acreate(Request $request){
         $body = $request->json()->all();
         $sid = $body['source_id']+0;
         $advert = Advert::where('sid', '=', $sid)->first();
