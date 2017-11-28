@@ -124,7 +124,7 @@
                         @endif
                     </ul>
                     <div class="tab-content">
-                        <div id="tab-description" class="tab-pane fade in active">
+                        <div id="tab-description" class="clearfix tab-pane fade in active">
                             <div class="content">
                                 <div class="col-sm-8 left-content">
                                     @if($category->can_rent())
