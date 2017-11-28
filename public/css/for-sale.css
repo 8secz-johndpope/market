@@ -133,6 +133,10 @@ a.advert-user {
     display: inline-block;
     vertical-align: middle;
 }
+.favroite-icon {
+    margin: 0;
+}
+
 /** end seller **/
 
 /* end advert */
