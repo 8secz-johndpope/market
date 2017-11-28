@@ -270,7 +270,7 @@ use App\Model\Advert;
             @endif
             @if(isset($product['canship'])&&$product['canship']===1)
                 <span class="ribbon ribbon-shipping">
-                    <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Shipping</strong>
+                    <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Ship</strong>
                 </span>
             @endif
             @if(isset($product['candeliver'])&&$product['candeliver']===1)

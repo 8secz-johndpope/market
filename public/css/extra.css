@@ -390,6 +390,10 @@ a.search-alert {
     /* text-align: center; */
     vertical-align: middle;
 }
+.extra-info {
+    display: block;
+    position: relative;
+}
 span.ribbon.ribbon-delivery {
     line-height: 14px;
 }
