@@ -1913,7 +1913,8 @@ class UserController extends BaseController
         $miles = (int)($miles);
         $meta['vehicle_mileage']=$miles;
         $meta['vehicle_transmission']=$this->slugify($body['facts'][3]);
-
+        $meta['features']=$body['features'];
+        $meta['key_facts']=$body['key_facts'];
         $size=str_replace('L','',$body['facts'][4]);
         $size = (int)($size*1000);
         $meta['vehicle_engine_size']=$size;
