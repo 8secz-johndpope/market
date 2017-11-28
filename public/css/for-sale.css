@@ -383,6 +383,10 @@ span.email-icon img {
     display: block;
     margin-bottom: 10px;
 }
+.read-more-reviews {
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
 @media (min-width: 768px){
 	.reviews-item-l {
 	    width: 40%;
@@ -390,6 +394,9 @@ span.email-icon img {
 	.reviews-item-r {
 	    width: auto;
 	    float: right;
+	}
+	.read-more-reviews h3 {
+    	margin-bottom: 10px;
 	}
 }
 @media (min-width: 992px){
