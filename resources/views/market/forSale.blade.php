@@ -922,6 +922,9 @@
                     <img class="sold-picture" src="/css/sold.jpg">
                 </div>
                 @elseif($advert->category->can_ship())
+                <div class="title-advert">
+                    <h2 class="item-name">{{$product['title']}}</h2>
+                </div>
                 <div class="delivery-options">
                     @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <div id="check-div" @if (!Auth::guest()&& Auth::user()->default_address>0) style="display: none" @endif>
