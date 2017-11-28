@@ -41,5 +41,12 @@ h2.item-name {
     margin-top: 0;
     font-weight: normal;
 }
+.location-name {
+    padding-left: 0px;
+}
+.location-name>p {
+    margin-left: 0px;
+    font-size: 17px;
+}
 
 /* end advert */
