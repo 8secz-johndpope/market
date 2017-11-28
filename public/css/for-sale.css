@@ -126,6 +126,13 @@ a.advert-user {
     padding-right: 15px;
     border-bottom: 1px dashed #dfdfe1;
 }
+.buttons span.glyphicon, .buttons .heart, .buttons .heart-empty {
+    margin-right: 10px;
+    color: #000;
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+}
 /** end seller **/
 
 /* end advert */
