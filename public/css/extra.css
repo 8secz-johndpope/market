@@ -433,7 +433,7 @@ span.ribbon.ribbon-delivery {
 }
 .extra-options .ratings {
     display: inline-block;
-    width: calc(98% / 3);
+    width: 100px;
 }
 .extra-options .verification {
     display: inline-block;
@@ -441,7 +441,7 @@ span.ribbon.ribbon-delivery {
 }
 .extra-options .make-offer {
     display: inline-block;
-    width: calc(99% / 3);
+    width: 100px;
     vertical-align: middle;
     height: 100%;
 }
@@ -473,6 +473,7 @@ span.ribbon.ribbon-delivery {
     display: inline-block;
     width: 49%;
     text-align: center;
+    float: right;
 }
 a.post-advert:hover{
     background: orange !important;
