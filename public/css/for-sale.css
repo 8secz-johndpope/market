@@ -130,7 +130,7 @@ a.advert-user {
 .contact .btn-default {
     width: 80%;
 }
-.btn-default:link {
+.btn-default, .btn-default:link {
     color: #fff;
     background-color: #ff9d2c;
 }
