@@ -303,6 +303,9 @@ span.email-icon img {
 	.reviews-item-l {
 	    width: auto;
 	}
+	.all-ratings {
+	    border-left: 1px solid #ccc;
+	}
 }
 @media (min-width: 1200px){
 	.col-ratings {
@@ -311,5 +314,8 @@ span.email-icon img {
 	}
 	.reviews-item-r {
 	    width: 55%;
+	}
+	.per-wrpr {
+		width: 100px;
 	}
 }
