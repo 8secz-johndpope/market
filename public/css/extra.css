@@ -1321,7 +1321,7 @@ a.message-back-button {
         height: 30px;
     }
     .ribbons{
-        min-height: 0;
+        min-height: 45px;
     }
 }
 @media (max-width: 400px) {
