@@ -244,7 +244,7 @@ use App\Model\Advert;
                 @endif
             </div>
         </div>
-        <div class="extra-info">
+        <div class="clearfix extra-info">
             <hr>
              @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
             <div class="ribbons">
