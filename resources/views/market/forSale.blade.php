@@ -918,11 +918,9 @@
             <div class="col-md-4 col-sm-12">
                 <div class="row">
                 @if($advert->has_param('sold'))
-                    <div class="sold-div">
-                        <img class="sold-picture" src="/css/sold.jpg">
-
-                    </div>
-
+                <div class="sold-div">
+                    <img class="sold-picture" src="/css/sold.jpg">
+                </div>
                 @elseif($advert->category->can_ship())
                 <div class="delivery-options">
                     @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
@@ -980,65 +978,9 @@
                         @endif
                 </div>
                 @endif
-                    @if($advert->category->can_apply())
-                        <div class="apply-options">
-                            @if (Auth::guest())
-                                <br>
-                            <br>
-                            You need to login to apply.
-                                <a href="/user/redirect/{{$advert->id}}" class="btn btn-primary">Login</a>
-                                @elseif(Auth::user()->has_applied($advert->id))
-                                <br>
-                            <br>
-                            <br>
-                                <button class="btn-primary btn" disabled>Application Sent</button>
-                                @else
-                                <form action="/user/jobs/apply" method="post">
-                                    <input name="redirect" type="hidden" value="{{$advert->url()}}">
-                                    <input name="id" type="hidden" value="{{$advert->id}}">
-                                    {{ csrf_field() }}
 
-                                <div class="form-group">
-                                    <label for="cv">Select a CV</label>
-                                    @if(count(Auth::user()->cvs)>0)
-                                    <select class="form-control" name="cv" required>
-                                        <option value="0">Select</option>
-                                        @foreach(Auth::user()->cvs as $cv)
-                                            <option value="{{$cv->id}}">{{$cv->title}}</option>
-                                        @endforeach
-                                    </select>
-                                        @else
-                                        <input type="hidden" id="title" value="{{$advert->category->title}}">
-
-                                        <input type="hidden" id="category" value="{{$advert->category_id}}">
-                                        <input type="file" class="form-control-file" id="upload-cv">
-                                    @endif
-                                </div>
-                                    <div class="form-group">
-                                        @if(count(Auth::user()->covers)>0)
-
-                                        <label for="cover">Select a Cover Letter</label>
-                                        <select class="form-control" name="cover" required>
-                                            <option value="0">Select</option>
-                                            @foreach(Auth::user()->covers as $cover)
-                                                <option value="{{$cover->id}}">{{$cover->title}}</option>
-                                            @endforeach
-                                        </select>
-                                            @else
-                                            <label for="cover">Cover Letter</label>
-                                            <input type="hidden" name="ctitle" value="{{$advert->category->title}}">
-                                            <textarea name="ctext" class="form-control" rows="3"></textarea>
-                                        @endif
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Apply</button>
-                                </form>
-
-
-                            @endif
-                        </div>
-                            @endif
-
-
+                </div>
+                <div class="row">
                 <div class="buttons">
                     <div class="details">
                         <h3>This advert is by</h3>
