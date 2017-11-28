@@ -441,6 +441,9 @@ span.email-icon img {
 	.review {
 	    border-right: 1px solid #ccc;
 	}
+	.review:nth-child(3n+1) {
+    	border-right: transparent;
+	}
 }
 @media (min-width: 1200px){
 	.col-ratings {
