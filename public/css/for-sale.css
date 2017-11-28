@@ -52,5 +52,36 @@ h2.item-name {
     text-align: right;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+/** seller info **/
+.buttons {
+    margin-top: 0;
+    border: 1px solid #ddd;
+}
+.details {
+    padding: 15px;
+    border-bottom: 1px dashed #dfdfe1;
+}
+.details h3 {
+    font-size: 15px;
+    padding-bottom: 1.3rem;
+    margin-top: 0px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
+.profile-picutre {
+    display: block;
+    margin: 0 16px 8px 0;
+    max-height: 141px;
+    max-width: 141px;
+}
+.profile-picutre img {
+    max-width: 100%;
+    max-height: 122px;
+    padding: 3px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: 1px solid #bfbfbf;
+    box-shadow: 0 0 1px #fff;
+}
+/** end seller **/
 
 /* end advert */
