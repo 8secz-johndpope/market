@@ -280,9 +280,6 @@ use App\Model\Advert;
             @endif
             </div>
             <div class="extra-options">
-                <div class="verification">
-                    
-                </div>
                 <div class="make-offer">
                     <div class="circle">
                         <div class="text-offer">
