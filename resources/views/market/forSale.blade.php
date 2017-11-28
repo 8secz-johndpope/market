@@ -15,6 +15,8 @@
 
 @section('content')
 <script src="/js/imageviewer.min.js"></script>
+<script src="/js/carousel.js"></script>
+
     <div class="container">
         <div class="row">
         <div class="col-md-2 col-sm-3 col-xs-6 back">
