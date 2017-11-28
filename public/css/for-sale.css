@@ -1,5 +1,6 @@
 @import url('/css/carousel-thumbnail.css?q=874');
 
+/** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
     /* display: table; */
@@ -27,3 +28,18 @@
     padding-right: 5px;
     margin-bottom: 10px;
 }
+
+/* end similar */
+
+/* advert design*/
+h2.item-name {
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-size: 23px;
+    letter-spacing: 0;
+    text-shadow: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/* end advert */
