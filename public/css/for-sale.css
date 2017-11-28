@@ -136,7 +136,15 @@ a.advert-user {
 .favroite-icon {
     margin: 0;
 }
-
+.email-icon {
+    font-size: 18px;
+    /* background: url(icons/email.svg); */
+    background-position: center;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
+}
 /** end seller **/
 
 /* end advert */
