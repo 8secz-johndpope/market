@@ -1362,8 +1362,12 @@ a.message-back-button {
     .extra-options .make-offer{
         display: block;
     }
-    .extra-options .make-offer{
+    .extra-options .ratings{
         display: block;
+        margin-top: 10px;
+    }
+    .extra-options{
+        width: 49%;
     }
 }
 
