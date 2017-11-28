@@ -1317,10 +1317,11 @@ a.message-back-button {
         font-size: 8px;
     }
     .ribbon {
-        font-size: 10px;
+        font-size: 9px;
         padding: 8px 3px;
         height: 30px;
         width: 70px;
+        margin: 5px 5px 5px 0;
     }
     .ribbons{
         min-height: 45px;
