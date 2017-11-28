@@ -357,7 +357,8 @@ a.search-alert {
     overflow: hidden;
 }
 .ribbons {
-    width: 50%;
+    min-width: 50%;
+    max-width: calc(100% - 300px);
     border-right: 1px solid #eee;
     display: inline-block;
     height: 55px;
