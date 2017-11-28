@@ -1299,8 +1299,12 @@ a.message-back-button {
     ul.image-gallery-ul li{
         height: 500px;
     }
-    .make-offer{
+    .extra-options .make-offer{
         width: 55px;
+    }
+    .circle{
+        width: 45px;
+        height: 45px;
     }
     .text-offer{
         width: 35px;
