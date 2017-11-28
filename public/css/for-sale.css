@@ -28,7 +28,14 @@
     padding-right: 5px;
     margin-bottom: 10px;
 }
-
+.similar-adverts h4 {
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    height: 2em;
+    overflow: hidden;
+    margin-bottom: 0;
+}
 /* end similar */
 
 /* advert design*/
