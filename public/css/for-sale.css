@@ -105,6 +105,18 @@ p.link-about {
 a.advert-user {
     padding-left: 36px;
 }
+.contact {
+    padding: 15px;
+    border-bottom: 1px dashed #dfdfe1;
+    text-align: center;
+}
+.contact .btn-default {
+    width: 80%;
+}
+.btn-default:link {
+    color: #fff;
+    background-color: #ff9d2c;
+}
 /** end seller **/
 
 /* end advert */
