@@ -18,6 +18,11 @@
     border: 1px solid #ff9d2c;
     width: 80%;
 }
+.seller-options {
+    margin-bottom: 10px;
+    border: 1px solid #e2e2e2;
+    background-color: #f6f6f6;
+}
 .seller-options ul {
     list-style: none;
     display: inline-block;
