@@ -365,6 +365,10 @@ span.email-icon img {
     word-wrap: break-word;
     width: 100%;
 }
+.reviews .title {
+    height: 31px;
+    border-bottom: 1px solid #ccc;
+}
 @media (min-width: 768px){
 	.reviews-item-l {
 	    width: 40%;
