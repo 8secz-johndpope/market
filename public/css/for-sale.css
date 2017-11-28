@@ -241,6 +241,15 @@ span.email-icon img {
     margin-top: 5px;
     text-align: center;
 }
+.reviews-list {
+    margin: 10px 0 0;
+    padding-left: 10px;
+}
+.reviews-list li {
+    display: inline-block;
+    height: 20px;
+    width: 100%;
+}
 @media (min-width: 992px){
 	.rating-stars {
 	    border-right: none;
@@ -248,6 +257,9 @@ span.email-icon img {
 	.col-ratings {
     	padding-left: 15px;
     	padding-right: 15px;
+	}
+	.reviews-list li {
+	    height: 20px;
 	}
 }
 @media (min-width: 1200px){
