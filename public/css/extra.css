@@ -360,6 +360,7 @@ a.search-alert {
     width: 50%;
     border-right: 1px solid #eee;
     display: inline-block;
+    height: 55px;
 }
 .ribbon.ribbon-spotlight {
     background: #000;
