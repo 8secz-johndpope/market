@@ -8,14 +8,14 @@
 }
 .delivery-options {
     background: #e2e2e2;
-    padding: 15px;
+    padding: 15px calc(20% - 30px);
     text-align: center;
 }
 .btn-info {
     background: #fff;
     color: #000;
     border: 1px solid #ff9d2c;
-    width: 80%;
+    width: 100%;
 }
 .seller-options {
     margin-bottom: 10px;
