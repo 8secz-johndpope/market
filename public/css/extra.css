@@ -1305,6 +1305,7 @@ a.message-back-button {
     .circle{
         width: 45px;
         height: 45px;
+        margin: auto;
     }
     .text-offer{
         width: 35px;
