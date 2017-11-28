@@ -419,7 +419,7 @@ span.ribbon.ribbon-delivery {
     /* position: absolute; */
     color: #555;
     font-style: normal;
-    padding-left: 7px;
+    /*padding-left: 7px;*/
     font-size: 12px;
     line-height: 20px;
 }
