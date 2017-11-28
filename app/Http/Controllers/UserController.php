@@ -1882,6 +1882,7 @@ class UserController extends BaseController
         $business->phone = $request->phone;
         $business->email=$request->email;
         $business->description = $request->description;
+        $business->type=21;
         $business->save();
         return $business;
 
