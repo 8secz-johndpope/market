@@ -975,6 +975,13 @@
                                 <hr>
                                 <a href="#" class="btn btn-info">Make offer</a>
                             </div>
+                            <div class="seller-options">
+                                <ul>
+                                    <li>Zero customs charges</li>
+                                    <li>Located in United Kindom</li>
+                                    <li>Best Offer available</li>
+                                </ul>
+                            </div>
                         @endif
                 </div>
                 @endif
