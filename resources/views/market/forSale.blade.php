@@ -117,7 +117,7 @@
                     <div id="tabs"> 
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
-                        <li><a data-toggle="tab" href="#tap-floorplan">Delivery</a></li>
+                        <li><a data-toggle="tab" href="#tap-floorplan">Postage and Returns</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
                         @if($advert->isPropertyForSale())
                             <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
@@ -126,10 +126,7 @@
                     <div class="tab-content">
                         <div id="tab-description" class="clearfix tab-pane fade in active">
                             <div class="content">
-                                <div class="col-sm-8 left-content">
-                                    @if($category->can_rent())
-                                        <h3>Letting information:</h3>
-                                    @endif
+                                <div class="col-sm-12 left-content">
                                     <div class="row meta">
                                         @foreach($metas as $meta)
                                             <div class="col-sm-6 meta-bold">
@@ -174,7 +171,7 @@
 
                                     </div>
                                 </div>
-                                <div class="col-sm-4 right-content">
+                                <!-- <div class="col-sm-4 right-content">
                                     <div class="map-image">
                                         <img src="https://maps.googleapis.com/maps/api/staticmap?center={!! $lat !!},{!! $lng !!}&zoom=12&size=190x222&markers=color:blue%7Clabel:S%7C{!! $lat !!},{!! $lng !!}&key=AIzaSyCe5IY6S4WvKrjmvpgTwHyO1oiX4pRUUD8">
                                     </div>
@@ -190,7 +187,7 @@
                                             Distances are straight line measurements from centre of postcode
                                         </small>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div id="tap-map" class="tab-pane fade">           
