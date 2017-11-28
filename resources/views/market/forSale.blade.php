@@ -1117,7 +1117,7 @@
             <div class="row">
                 <div class="similar-adverts">
                     <h3>Similar Adverts</h3>
-                    <div class="listings-adverts">
+                    <div class="clearfix listings-adverts">
                     @foreach($products as $product)
                     <a href="/p/{{$category->id}}/{{$product['source_id']}}">
                         <div class="col-sm-6">

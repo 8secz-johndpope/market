@@ -1,1 +1,8 @@
 @import url('/css/carousel-thumbnail.css?q=874');
+
+.listings-adverts {
+    border: 1px solid #ddd;
+    /* display: table; */
+    padding: 15px 5px;
+    width: 100%;
+}
