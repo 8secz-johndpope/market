@@ -1000,23 +1000,28 @@
                             <div class="profile-picutre">
                                 <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
                             </div>
+                        @endif
                             <div class="user-details">
-                                <p><strong>{{$advert->user->name}}</strong></p>
+                                <p><strong>{{($advert->user != null) ? $advert->user->name:$product['username']}}</strong></p>
                                 <address>
-                                @if(isset($advert->user->address))
+                                @if($advert->user!==null && isset($advert->user->address))
                                 {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
+                                @else
+                                    {{$product['location_name']}}
                                 @endif    
                                 </address>
-                                @if(isset($advert->user->business))
-                                <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
+                                @if($advert->user!==null)
+                                    @if(isset($advert->user->business))
+                                    <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
+                                    @endif
+                                    <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                                 @endif
-                                <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                             </div>
-                        @else
+                        <!-- @else
                             <ul class="list-group">
                                 <li class="list-group-item"><h4>{{$product['username']}}</h4></li>
                             </ul>
-                        @endif
+                        @endif -->
                     </div>
                     <div class="contact">
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
