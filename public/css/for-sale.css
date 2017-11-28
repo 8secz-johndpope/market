@@ -82,6 +82,26 @@ h2.item-name {
     border-top: 1px solid #bfbfbf;
     box-shadow: 0 0 1px #fff;
 }
+.user-details p {
+    font-size: 13px;
+    margin-bottom: 0;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
+p.link-about {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.link-about a.btn.btn-default, .link-about a.btn.btn-default:link {
+    border-color: #000;
+    padding-left: 35px;
+    padding-right: 35px;
+    background: #000;
+    font-size: 13px;
+    color: #fff;
+}
+.link-about .btn-default {
+    width: 80%;
+}
 /** end seller **/
 
 /* end advert */
