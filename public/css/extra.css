@@ -358,7 +358,7 @@ a.search-alert {
 }
 .ribbons {
     min-width: 50%;
-    max-width: calc(100% - 300px);
+    max-width: calc(100% - 250px);
     border-right: 1px solid #eee;
     display: inline-block;
     min-height: 55px;
