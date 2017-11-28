@@ -1877,7 +1877,7 @@ class UserController extends BaseController
     public function acompany(Request $request)
     {
         $business = new Business;
-        $business->company=$request->title;
+        $business->name=$request->title;
         $business->logo=$request->image;
         $business->phone = $request->phone;
         $business->email=$request->email;
