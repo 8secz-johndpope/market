@@ -268,9 +268,17 @@ span.email-icon img {
     line-height: 15px;
     margin: 0;
 }
+.reviews-item-r {
+    float: right;
+    width: 55%;
+}
 @media (min-width: 768px){
 	.reviews-item-l {
 	    width: 40%;
+	}
+	.reviews-item-r {
+	    width: auto;
+	    float: right;
 	}
 }
 @media (min-width: 992px){
@@ -292,5 +300,8 @@ span.email-icon img {
 	.col-ratings {
 	    padding-left: 0px;
 	    padding-right: 0px;
+	}
+	.reviews-item-r {
+	    width: 55%;
 	}
 }
