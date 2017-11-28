@@ -316,6 +316,17 @@ span.email-icon img {
     height: 85%;
     z-index: 100;
 }
+.per:after {
+    content: attr(data-percent);
+    font-family: Arial,sans-serif;
+    font-size: 21px;
+    z-index: 200;
+    top: 0;
+    position: relative;
+    text-align: center;
+    color: #555;
+    font-weight: 400;
+}
 .per>div {
     float: left;
     width: 50%;
