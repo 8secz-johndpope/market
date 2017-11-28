@@ -195,3 +195,13 @@ span.email-icon img {
     border: 1px solid #ccc;
     border-top: transparent;
 }
+.title {
+    padding-left: 15px;
+}
+.reviews-ratings h3 {
+    color: #262637;
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    margin-bottom: 0px;
+}
