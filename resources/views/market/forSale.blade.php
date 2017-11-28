@@ -964,7 +964,7 @@
                         @endif
 
                         @if($advert->category->has_price())
-                            <h2 class="item-name">{{$product['title']}}</h2>
+
                             <div class="collection-options">
                                 <div class="items-box-price font-5">£ {{number_format($product['meta']['price'] / 100, 0, '.', ',')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                 </div>
