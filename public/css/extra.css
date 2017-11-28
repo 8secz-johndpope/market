@@ -884,7 +884,7 @@ span.favor-text {
 }
 .filter-container{
     position: relative;
-    width: 20%;
+    /*width: 20%;*/
     float: left;
     padding-top: 20px;
 }

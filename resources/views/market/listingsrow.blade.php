@@ -180,6 +180,7 @@ use App\Model\Advert;
         </div>
     </div>
 </div>
+<div class="col-sm-8">
     <div class="products">
         <h4 class="items-box-head">
             List of items for {{$category->title}}, {{number_format($total)}}
@@ -349,6 +350,9 @@ use App\Model\Advert;
             </div>
         </nav>
 
+    </div>
+    </div>
+    <div class="col-sm-2">
     </div>
         </div>
     </div>
