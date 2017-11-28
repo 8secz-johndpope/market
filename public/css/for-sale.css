@@ -12,6 +12,12 @@
     margin-bottom: 10px;
     text-align: center;
 }
+.btn-info {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ff9d2c;
+    width: 80%;
+}
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
