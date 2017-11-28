@@ -232,4 +232,14 @@ span.email-icon img {
 	.rating-stars {
 	    border-right: none;
 	}
+	.col-ratings {
+    	padding-left: 15px;
+    	padding-right: 15px;
+	}
+}
+@media (min-width: 1200px){
+	.col-ratings {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	}
 }
