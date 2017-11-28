@@ -154,6 +154,10 @@ span.email-icon img {
 .report a.btn-default {
     width: 80%;
 }
+.share {
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+}
 /** end seller **/
 
 /* end advert */
