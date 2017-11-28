@@ -1320,6 +1320,9 @@ a.message-back-button {
         padding: 8px 3px;
         height: 30px;
     }
+    .ribbons{
+        min-height: 0;
+    }
 }
 @media (max-width: 400px) {
     h4.product-title {
