@@ -250,6 +250,9 @@ span.email-icon img {
     height: 20px;
     width: 100%;
 }
+.stars{
+	text-align: center;
+}
 @media (min-width: 992px){
 	.rating-stars {
 	    border-right: none;
