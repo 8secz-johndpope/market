@@ -220,3 +220,16 @@ span.email-icon img {
 #make-review, #make-rate {
     display: none;
 }
+.content-reviews {
+    border: 1px solid #ccc;
+    border-bottom: transparent;
+}
+.border-top-transparent {
+    border-top: transparent;
+}
+
+@media (min-width: 992px){
+	.rating-stars {
+	    border-right: none;
+	}
+}
