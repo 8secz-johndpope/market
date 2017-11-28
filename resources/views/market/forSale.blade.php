@@ -966,14 +966,14 @@
                         @if($advert->category->has_price())
 
                             <div class="collection-options">
-                                <h4>Near to Seller, liked the item?</h4>
                                 <form action="/user/ad/sale" method="post">
                                     <input name="id" type="hidden" value="{{$advert->id}}">
                                     <input name="type" type="hidden" value="2">
                                     {{ csrf_field() }}
-                                    <button type="submit" class="btn-info btn">Purchase</button>
+                                    <button type="submit" class="btn-info btn">Buy it now</button>
                                 </form>
-                                <p>Once you agree to buy, the seller will handover the item and get paid</p>
+                                <hr>
+                                <a href="#" class="btn btn-info">Make offer</a>
                             </div>
                         @endif
                 </div>
