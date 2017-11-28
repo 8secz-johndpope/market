@@ -365,6 +365,9 @@ span.email-icon img {
     word-wrap: break-word;
     width: 100%;
 }
+.reviews .row {
+    border: 1px solid #ccc;
+}
 .reviews .title {
     height: 31px;
     border-bottom: 1px solid #ccc;
