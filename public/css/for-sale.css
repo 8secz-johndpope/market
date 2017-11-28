@@ -42,6 +42,7 @@
     vertical-align: middle;
     height: 100%;
     border-left: 1px solid #e2e2e2;
+    line-height: 14px;
 }
 .seller-options li:first-child {
     border-left-color: transparent;
