@@ -1358,4 +1358,12 @@ a.message-back-button {
         height: 350px;
     }
 }
+@media (max-width: 320px){
+    .extra-options .make-offer{
+        display: block;
+    }
+    .extra-options .make-offer{
+        display: block;
+    }
+}
 
