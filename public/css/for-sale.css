@@ -188,3 +188,6 @@ span.email-icon img {
     text-align: center;
     border-bottom: 1px solid #ccc;
 }
+.click-title p {
+    margin-bottom: 0;
+}
