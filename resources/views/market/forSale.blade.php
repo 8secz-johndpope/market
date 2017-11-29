@@ -119,9 +119,7 @@
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-postage">Postage & Returns</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
-                        @if($advert->isPropertyForSale())
-                            <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
-                        @endif
+                        <li><a data-toggle="tab" href="#tap-terms">Terms of Seller</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="clearfix tab-pane fade in active">
@@ -259,161 +257,12 @@
                                 </div>
                             </div>
                         </div>
-                        @if($advert->isPropertyForSale())
-                        <div id="tap-marketinfo" class="tab-pane fade">
-                            <div class="row history-sale">           
-                                <div class="col-sm-12  marketinfo">
-                                    <h3>This property's sale history</h3>
-                                    <div class="table-history">
-                                        <table class="nearby-similar-history-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Date Sold</th>
-                                                    <th>Sold Price</th>
-                                                    <th class="text-center">Price Difference</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>25 Oct 2006</td>
-                                                    <td>£ 385,000</td>
-                                                    <td class="text-center price-difference">+6%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>23 Jul 2001</td>
-                                                    <td>£ 360,000</td>
-                                                    <td class="text-center price-difference"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="acknowledgment">  
-                                        <small>
-                                            Source acknowledgement: House price data producted by the Land Registry.
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row similar-nearby">           
-                                <div class="col-sm-12 ">
-                                    <h3>Similar nearby properties</h3>
-                                    <div class="options-buttons">
-                                        <div class="btn-group" data-toggle="buttons">
-                                            <label class="btn btn-primary active">
-                                                <input type="radio" name="options" id="option-sale" autocomplete="off" checked="">For sale
-                                            </label>
-                                            <label class="btn btn-primary">
-                                                <input type="radio" name="options" id="option-under" autocomplete="off">
-                                                Under offer
-                                            </label>
-                                            <label class="btn btn-primary">
-                                                <input type="radio" name="options" id="option-sold" autocomplete="off">
-                                                Sold
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="nearby-tabs-content">
-                                        <div class="nearby-properties-list option-sale tab-active">
-                                             <span>These are the nearset properties on the market with the same number of bedrooms.</span>
-                                             <div class="nearby-list">
-                                            @foreach($similar as $product)
-                                                <div class="col-sm-12 nearby-item">
-                                                    <a href="/p/{{$category->id}}/{{$product['source_id']}}">
-                                                        <div class="advert-details">
-                                                            @if($product['meta']['price'] > 0)
-                                                                <span class="items-box-price font-7">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</span>
-                                                            @endif
-                                                            <h4>{{$product['location_name']}}</h4>
-                                                            <span class="nearby-distance">Within {{number_format($product['distance'], 2,'.', ',')}} miles</span>
-                                                        </div>
-                                                    </a>
-                                                    <div id="car-{{$product['source_id']}}" class="carousel slide" data-ride="carousel">
-                                                        <div class="carousel-inner">
-                                                            @if(isset($product['images'][0]))
-                                                            <div class="item active">
-                                                                <div class="advert-img">
-                                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$product['images'][0]}}?1500586448">
-                                                                </div>
-                                                            </div>
-
-                                                            @for($i=1; $i < count($product['images']); $i++)
-                                                                <div class="item">
-                                                                    <div class="advert-img">
-                                                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$product['images'][$i]}}?1500586448">
-                                                                    </div>
-                                                                </div>
-                                                            @endfor
-                                                            @else
-                                                             <div class="item">
-                                                                <div class="advert-img">
-                                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
-                                                                </div>
-                                                            </div>
-                                                            @endif
-                                                        </div>
-                                                        <div class="nearby-img-navigation">
-                                                            <a href="#car-{{$product['source_id']}}" class="left"><span class="glyphicon glyphicon-chevron-left"></a>
-                                                            <span><span class="index">1</span> of {{count($product['images'])}}</span>
-                                                            <a href="#car-{{$product['source_id']}}" class="right"><span class="glyphicon glyphicon-chevron-right"></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                            </div>
-                                        </div>
-                                        <div class="nearby-properties-list option-under">
-                                             <span>These are the nearest properties with the same number of bedrooms which are sold subject to contract.</span>
-                                             <div class="nearby-list">
-                                            @foreach($similarUnder as $product)
-                                                <div class="col-sm-12 nearby-item">
-                                                    <a href="/p/{{$category->id}}/{{$product['source_id']}}">
-                                                        <div class="advert-details">
-                                                            @if($product['meta']['price'] > 0)
-                                                                <span class="items-box-price font-7">£{{number_format($product['meta']['price'] / 100)}} {{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</span>
-                                                            @endif
-                                                            <h4>{{$product['location_name']}}</h4>
-                                                            <span class="nearby-distance">Within {{number_format($product['distance'], 2,'.', ',')}} miles</span>
-                                                        </div>
-                                                    </a>
-                                                    <div id="car-{{$product['source_id']}}" class="carousel slide" data-ride="carousel">
-                                                        <div class="carousel-inner">
-                                                            @if(isset($product['images'][0]))
-                                                            <div class="item active">
-                                                                <div class="advert-img">
-                                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$product['images'][0]}}?1500586448">
-                                                                </div>
-                                                            </div>
-
-                                                            @for($i=1; $i < count($product['images']); $i++)
-                                                                <div class="item">
-                                                                    <div class="advert-img">
-                                                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$product['images'][$i]}}?1500586448">
-                                                                    </div>
-                                                                </div>
-                                                            @endfor
-                                                            @else
-                                                             <div class="item">
-                                                                <div class="advert-img">
-                                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($product['images'][0]) ? $product['images'][0] : 'noimage.png' }}?1500586448">
-                                                                </div>
-                                                            </div>
-                                                            @endif
-                                                        </div>
-                                                        <div class="nearby-img-navigation">
-                                                            <a href="#car-{{$product['source_id']}}" class="left"><span class="glyphicon glyphicon-chevron-left"></a>
-                                                            <span><span class="index">1</span> of {{count($product['images'])}}</span>
-                                                            <a href="#car-{{$product['source_id']}}" class="right"><span class="glyphicon glyphicon-chevron-right"></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                            </div>
-                                        </div>
-                                    </div> 
+                        <div id="tap-terms" class="tab-pane fade">
+                            <div class="row">           
+                                <div class="col-sm-12">
                                 </div>
                             </div>
                         </div>
-                        @endif
                     </div>
                     </div>
                     <div class="reviews-ratings">
