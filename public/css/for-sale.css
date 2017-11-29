@@ -125,6 +125,10 @@ span.reveal-phone {
 #sorry-info {
     display: none;
 }
+#map, #pano {
+    height: 470px;
+    width: 100%;
+}
 /* end similar */
 
 /* advert design*/
