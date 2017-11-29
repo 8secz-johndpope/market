@@ -248,7 +248,7 @@
                                             <p>30 days refund, buyer pays return postage</p>
                                         </div>
                                     </div>
-                                    <div class="des-postage">
+                                    <div class="clearfix des-postage">
                                         <h3>Payment details</h3>
                                         <div class="col-sm-6 meta-bold">
                                                     Payments:
