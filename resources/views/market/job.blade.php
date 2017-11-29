@@ -282,11 +282,10 @@
                                 @if (Auth::guest())
                                 <div class="col-md-12 col-sm-12">
                                     <div class="jobs-apply">
-                                       
                                         <span>Alredy uploaded your CV? <a href="/user/redirect/{{$advert->id}}">Sign in</a> to apply instantly</span>
                                     </div>
                                 </div>
-                                @endif
+                                @else
                                 @if(Auth::user()->has_applied($advert->id))
                                 <div class="col-sm-12">
                                     <div class="jobs-applied">
@@ -444,6 +443,7 @@
                                 </form>
                                 </div>
                                 @endif
+                            @endif
                             </div>
                         </div>
                     </div>
