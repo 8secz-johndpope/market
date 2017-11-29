@@ -258,6 +258,11 @@
                                                 </table>
                                             </div>
                                             @endif
+                                            @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
+                                            <div class="">
+                                                <h4>Delivery Locally</h4>
+                                            </div>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="des-postage">
