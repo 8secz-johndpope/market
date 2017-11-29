@@ -1084,8 +1084,16 @@ class HomeController extends BaseController
             $room->sender_id=$user->id;
             $room->save();
             $room->users()->save($user);
-            if($user->id!==$advert->user_id)
-                $room->users()->save($advert->user);
+            if($user->id!==$advert->user_id){
+
+                if($advert->user===null){
+                    $room->users()->save(User::find(1));
+                }else{
+
+                    $room->users()->save($advert->user);
+                }
+            }
+
             $advert->replies++;
             $advert->save();
         }
