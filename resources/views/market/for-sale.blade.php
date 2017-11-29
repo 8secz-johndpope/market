@@ -265,6 +265,12 @@
                         <div id="tap-terms" class="tab-pane fade">
                             <div class="row">           
                                 <div class="col-sm-12">
+                                    <h3>Terms and conditions of the sale</h3>
+                                    <div class="terms-info">
+                                        <p>Your shipping address must match your PayPal address. Please note once you complete the checkout process, we will not be able to amend or cancel your order.<br>
+                                        If you want change shipping address,please change it before you make payment as we can not change the address later.  We can not check your messsages on order notes regarding address change or other information.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
