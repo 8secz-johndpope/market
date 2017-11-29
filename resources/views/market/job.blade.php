@@ -287,6 +287,15 @@
                                     </div>
                                 </div>
                                 @endif
+                                @if(Auth::user()->has_applied($advert->id))
+                                <div class="col-sm-12">
+                                    <div class="jobs-applied">
+                                        <span class="h3">
+                                            You have already applied
+                                        </span>
+                                    </div>
+                                </div>
+                                @else
                                 <div class="col-md-12 col-sm-12 background-color">
                                     <form action="/user/jobs/apply" method="post">
                                     <input name="redirect" type="hidden" value="{{$advert->url()}}">
@@ -432,6 +441,7 @@
                                     </div>
                                 </form>
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>
