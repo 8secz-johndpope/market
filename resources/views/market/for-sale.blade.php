@@ -283,6 +283,9 @@
                                                     <input type="text" name="postcode" id="postcode">
                                                     <input type="hidden" id="id" value="{{$advert->id}}">
                                                     <button id="check-button" class="btn">Check</button>
+                                                    <div>
+                                                        <p></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             @endif
