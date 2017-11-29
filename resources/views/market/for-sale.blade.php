@@ -240,6 +240,21 @@
                                         <h3>Postage and packaging</h3>
                                         <div class="postage-info">
                                             <p><strong>Item location: </strong>{{$product['location_name']}}</p>
+                                            @if($advert->has_param('canship')&&$advert->param('canship')===1)
+                                            <div class="">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>To</th>
+                                                            <th>Price</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="des-postage">
