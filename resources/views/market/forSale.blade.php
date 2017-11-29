@@ -980,6 +980,10 @@
                     </div>
                     <ul class="list-group">
                         <li class="list-group-item">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            
+                        </li>
+                        <li class="list-group-item">
                             <span class="@if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) heart @else heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save
                         </li>
                         <li class="list-group-item">
