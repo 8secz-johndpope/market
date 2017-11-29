@@ -979,10 +979,12 @@
                         <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
                     </div>
                     <ul class="list-group">
+                        @if($advert->has_param('phone'))
                         <li class="list-group-item">
                             <span class="glyphicon glyphicon-pencil"></span>
-                            
+                            {{substr($advert->param('phone'),0,5)}}XXXXXX
                         </li>
+                        @endif
                         <li class="list-group-item">
                             <span class="@if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) heart @else heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save
                         </li>
