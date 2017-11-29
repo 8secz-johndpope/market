@@ -1042,11 +1042,7 @@
             console.log("change to panorama");
             $('.info-map').hide();
             $('.info-pano').show();
-            x = map.getZoom();
-            c = map.getCenter();
             google.maps.event.trigger(panorama, 'resize');
-            map.setZoom(x);
-            map.setCenter(c);
         }
         else{
            console.log("change to map");
@@ -1059,26 +1055,6 @@
         $('.nearby-tabs-content .tab-active').removeClass('tab-active');
         $('.' + this.id).addClass('tab-active');
     })
-
-    function addListenerCarousel(parent){
-        $(parent + ' .nearby-img-navigation a.left').click(function(e){
-            e.preventDefault();
-            var carousel = $(this).attr('href');
-            $(parent + " " + carousel).carousel("prev");
-        });
-        $(parent +' .nearby-img-navigation a.right').click(function(e){
-            e.preventDefault();
-            var carousel = $(this).attr('href');
-            $(parent + " " + carousel).carousel("next");
-        });
-    }
-    addListenerCarousel('.option-under');
-    addListenerCarousel('.option-sale');
-
-    $('.nearby-item .carousel').on('slid.bs.carousel', function(){
-        var index =  $(this).find('.item.active').index();
-        $(this).find('.index').text(index + 1);
-    });
     $('.tab-buttons .btn-default').click(function(e){
         var div = $(this).attr('href');
         e.preventDefault();
