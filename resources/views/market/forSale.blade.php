@@ -812,7 +812,7 @@
                         <div class="ship-option">
                             <h3>Can Ship Nationwide</h3>
                             <p>Price</p>
-                            <span class="bold-text">£{{$advert->price()}}</span>
+                            <span class="bold-text">£{{$advert->shipping_cost()}}</span>
                         </div>
                         @endif
                     </div>
