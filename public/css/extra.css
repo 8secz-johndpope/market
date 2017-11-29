@@ -20,7 +20,7 @@ span.red-text {
 }
 .list-group-item{
     background-color: transparent;
-    border: 0px solid #ddd;
+    border: 0;
     padding-left: 0;
     padding-top: 0;
 }
