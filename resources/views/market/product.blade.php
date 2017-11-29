@@ -150,9 +150,9 @@
                     <table><tr><td><h4 class="bold-text">{{substr($advert->param('phone'),0,5)}}XXXXXX </h4></td><td>&nbsp;&nbsp;<a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a> </td></tr></table>
                     @else
                         @if($srn)
-                        <table><tr><td>   <h4 class="bold-text"><span>{{$advert->param('phone')}}</span></h4></td><td>&nbsp;&nbsp;<a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a> </td></tr></table>
+                        <table><tr><td>   <h4 class="bold-text"><span>{{$advert->param('phone')}}</span></h4></td><td>&nbsp;&nbsp;<a class="btn btn-default" href="/p/{{$advert->category_id}}/{{$advert->id}}">Reveal</a> </td></tr></table>
                         @else
-                            <table><tr><td>  <h4 class="bold-text">{{substr($advert->param('phone'),0,5)}}XXXXXX </h4></td><td>&nbsp;&nbsp;<a class="btn btn-default" href="/p/{{$advert->category_id}}/{{$advert->id}}">Reveal</a> </td></tr></table>
+                            <table><tr><td>  <h4 class="bold-text">{{substr($advert->param('phone'),0,5)}}XXXXXX </h4></td><td>&nbsp;&nbsp;<a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a> </td></tr></table>
 
                         @endif
                     @endif
