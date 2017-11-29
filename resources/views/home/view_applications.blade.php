@@ -59,6 +59,7 @@
 
         </div>
         <div class="col-md-6">
+            <h4>Applications for {{$job->param('title')}}</h4>
             <table class="table">
                 <tr><th>Name</th><th>Phone</th><th>Cover</th><th>CV</th></tr>
             @foreach($job->applications as $application)
