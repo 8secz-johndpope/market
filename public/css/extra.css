@@ -1342,6 +1342,9 @@ a.message-back-button {
     .ribbons{
         min-height: 45px;
     }
+    span.ribbon.ribbon-delivery {
+        line-height: 11px;
+    }
 }
 @media (max-width: 400px) {
     h4.product-title {
