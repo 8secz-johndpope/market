@@ -804,12 +804,17 @@
                 <div class="row">
                     <div class="shipping-options">
                         <div class="collect-option">
-                            
+
                         </div>
                         <div class="local-option">
                         </div>
+                        @if($advert->has_param('canship')&&$advert->param('canship')===1)
                         <div class="ship-option">
+                            <h3>Can Ship Nationwide</h3>
+                            <p>Price</p>
+                            <span class="bold-text">£{{$advert->price()}}</span>
                         </div>
+                        @endif
                     </div>
                 </div>
                 <div class="row">
