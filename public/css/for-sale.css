@@ -122,6 +122,9 @@ span.reveal-phone {
 .items-box-price {
     color: #ff8830;
 }
+#sorry-info {
+    display: none;
+}
 /* end similar */
 
 /* advert design*/
