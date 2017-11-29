@@ -54,6 +54,22 @@
             </ul>
         </div>
     </div>
-    {{$profile->user_id}}
+    <div class="row">
+        <div class="col-md-3">
 
+        </div>
+        <div class="col-md-6">
+            <h4>About me</h4>
+            <textarea type="text" name="about_me" rows="10" id="editor" class="ckeditor form-control  mb-2 mr-sm-2 mb-sm-0" >{{$user->profile->about_me}}</textarea>
+            <h4>Salary</h4>
+            <input type="text" class="form-control" name="salary" value="{{$user->profile->salary}}">
+        </div>
+    </div>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+            console.error( error );
+        } );
+    </script>
 @endsection
