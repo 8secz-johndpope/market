@@ -49,10 +49,20 @@ span.reveal-phone {
     display: inline-block;
     float: right;
 }
-.shipping-options {
+.shipping-options, .payments-options {
     border: 1px solid #ccc;
     padding: 15px;
     margin-bottom: 10px;
+}
+.local-option {
+    border-bottom: 1px dashed #dcdcdc;
+}
+.ship-option {
+    border-bottom: 1px dashed #dcdcdc;
+}
+.shipping-options h4 {
+    font-size: 14px;
+    margin-bottom: 0;
 }
 /** similar adverts */
 .listings-adverts {
@@ -134,16 +144,6 @@ h2.item-name {
 }
 .details h3, .shipping-options h3{
 	margin-top: 0;
-}
-.local-option {
-    border-bottom: 1px dashed #dcdcdc;
-}
-.ship-option {
-    border-bottom: 1px dashed #dcdcdc;
-}
-.shipping-options h4 {
-    font-size: 14px;
-    margin-bottom: 0;
 }
 .profile-picutre {
     display: block;
