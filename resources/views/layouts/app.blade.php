@@ -188,12 +188,10 @@
                 width: 1260px;
             }
         }
-.description, .meta, .mapframe{
+.description, .meta{
     margin-top: 30px;
 }
-.mapframe{
-    margin-bottom: 30px;
-}
+
         .meta-bold{
             font-weight: bold;
         }

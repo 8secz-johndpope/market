@@ -77,7 +77,9 @@ span.delivery-text {
 .media.selected-room {
     background: #eee;
 }
-
+.mapframe{
+    margin-bottom: 30px;
+}
 
 
 .subText {
