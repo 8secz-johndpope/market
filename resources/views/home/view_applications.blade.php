@@ -60,8 +60,9 @@
         </div>
         <div class="col-md-6">
             <table class="table">
+                <tr><th>Name</th><th>Phone</th><th>Cover</th><th>CV</th></tr>
             @foreach($job->applications as $application)
-                <tr><td>{{$application->user->name}}</td></tr>
+                <tr><td>{{$application->user->name}}</td><td>{{$application->user->phone}}</td><td>{{$application->cover->cover}}</td><td>{{$application->cv->file_name}}</td></tr>
             @endforeach
             </table>
         </div>
