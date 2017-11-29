@@ -242,6 +242,7 @@
                                             <p><strong>Item location: </strong>{{$product['location_name']}}</p>
                                             @if($advert->has_param('canship')&&$advert->param('canship')===1)
                                             <div class="">
+                                                <h4>Shipping</h4>
                                                 <table class="table table-hover">
                                                     <thead>
                                                         <tr>
