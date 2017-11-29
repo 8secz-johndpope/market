@@ -1155,6 +1155,10 @@ a.message-back-button {
     .image-gallery {
         width: 600px;
     }
+    .favroite-icon:before{
+        height: 30px;
+        width: 30px;
+    }
 }
 @media (max-width: 1040px) {
 
