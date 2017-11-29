@@ -135,6 +135,12 @@ h2.item-name {
 .details h3, .shipping-options h3{
 	margin-top: 0;
 }
+.local-option {
+    border-bottom: 1px dashed #dcdcdc;
+}
+.ship-option {
+    border-bottom: 1px dashed #dcdcdc;
+}
 .shipping-options h4 {
     font-size: 14px;
     margin-bottom: 0;
