@@ -807,6 +807,9 @@
 
                         </div>
                         <div class="local-option">
+                            <h3>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h3>
+                             <p>Price</p>
+                            <span class="bold-text">£{{$advert->delivery()}}</span>
                         </div>
                         @if($advert->has_param('canship')&&$advert->param('canship')===1)
                         <div class="ship-option">
