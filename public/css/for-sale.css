@@ -68,6 +68,10 @@ span.reveal-phone {
     padding-bottom: 10px;
     border-bottom: 1px dashed #dcdcdc;
 }
+.title-advert {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
 
 /** similar adverts */
 .listings-adverts {
@@ -480,6 +484,10 @@ img.payments-methods {
 }
 .delivery-options .items-box-price.font-5 {
     text-align: left;
+}
+h2.item-name{
+	margin-bottom: 10px;
+	padding-left: 15px;
 }
 @media (min-width: 768px){
 	.reviews-item-l {
