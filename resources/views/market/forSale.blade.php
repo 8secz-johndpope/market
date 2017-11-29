@@ -803,9 +803,6 @@
                 </div>
                 <div class="row">
                     <div class="shipping-options">
-                        <div class="collect-option">
-                            <h3>Can free colletion in person<h3>
-                        </div>
                         @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <div class="local-option">
                             <h3>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h3>
@@ -820,6 +817,9 @@
                             <span class="bold-text">£{{$advert->shipping_cost()}}</span>
                         </div>
                         @endif
+                        <div class="collect-option">
+                            <h3>Can free colletion in person<h3>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
