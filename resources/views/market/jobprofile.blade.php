@@ -17,6 +17,7 @@
 
         </div>
         <div class="col-md-6">
+            <h2>{{$user->name}}</h2>
             <h4>About me</h4>
             {!! $profile->about_me !!}
             <h4>Salary</h4>
