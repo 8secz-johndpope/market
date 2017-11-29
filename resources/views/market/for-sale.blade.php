@@ -250,7 +250,10 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        
+                                                        <tr>
+                                                            <td>United Kingdom</td>
+                                                            <td>{{ $advert->shipping_cost() }}</td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
