@@ -984,7 +984,7 @@
                             @else
                                 {{substr($advert->param('phone'),0,5)}}XXXXXX
                                 <span class="reveal-phone">
-                                    <a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a>
+                                    <a class="btn btn-default" href="/p/{{$advert->category_id}}/{{$advert->id}}">Reveal</a>
                                 </span>
                             @endif
                         </li>
