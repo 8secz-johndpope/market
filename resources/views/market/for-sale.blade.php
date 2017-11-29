@@ -803,22 +803,23 @@
                 </div>
                 <div class="row">
                     <div class="shipping-options">
+                        <h3>Postage options</h3>
                         @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <div class="local-option">
-                            <h3>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h3>
+                            <h4>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
                              <p>Price</p>
                             <span class="bold-text">£{{$advert->delivery()}}</span>
                         </div>
                         @endif
                         @if($advert->has_param('canship')&&$advert->param('canship')===1)
                         <div class="ship-option">
-                            <h3>Can Ship Nationwide</h3>
+                            <h4>Can Ship Nationwide</h4>
                             <p>Price</p>
                             <span class="bold-text">£{{$advert->shipping_cost()}}</span>
                         </div>
                         @endif
                         <div class="collect-option">
-                            <h3>Can free colletion in person<h3>
+                            <h4>Can free colletion in person</h4>
                         </div>
                     </div>
                 </div>
