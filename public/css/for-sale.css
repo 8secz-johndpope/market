@@ -45,6 +45,10 @@
 .seller-options li:first-child {
     border-left-color: transparent;
 }
+span.reveal-phone {
+    display: inline-block;
+    float: right;
+}
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
