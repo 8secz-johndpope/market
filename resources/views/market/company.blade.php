@@ -34,7 +34,7 @@
                     		<div class="content-text">
                     			@if(isset($user->business))
                     			<p>
-                    				{{$user->business->description}}
+                    				{!! $user->business->description !!}
                     			</p>
                     			@else
 	                    		<p>
