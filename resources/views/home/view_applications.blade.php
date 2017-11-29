@@ -61,9 +61,9 @@
         <div class="col-md-6">
             <a href="{{$job->url()}}"><h4>Applications for {{$job->param('title')}}</h4></a>
             <table class="table">
-                <tr><th>Name</th><th>Phone</th><th>Cover</th><th>CV</th></tr>
+                <tr><th>Name</th><th>Phone</th><th>Cover</th><th>CV</th><th>Profile</th></tr>
             @foreach($job->applications as $application)
-                <tr><td>{{$application->user->name}}</td><td>{{$application->user->phone}}</td><td>{{$application->cover->cover}}</td><td>{{$application->cv->file_name}}</td></tr>
+                <tr><td>{{$application->user->name}}</td><td>{{$application->user->phone}}</td><td>{{$application->cover->cover}}</td><td>{{$application->cv->file_name}}</td><td><a>View Profile</a></td></tr>
             @endforeach
             </table>
         </div>
