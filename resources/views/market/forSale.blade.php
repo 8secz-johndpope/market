@@ -981,7 +981,7 @@
                     <ul class="list-group">
                         @if($advert->has_param('phone'))
                         <li class="list-group-item">
-                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-earphone"></span>
                             {{substr($advert->param('phone'),0,5)}}XXXXXX
                         </li>
                         @endif
