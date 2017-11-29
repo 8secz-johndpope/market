@@ -994,10 +994,10 @@
                         <li class="list-group-item">
                             <span class="@if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) heart @else heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save
                         </li>
-                        <li class="list-group-item">
+                        <!-- <li class="list-group-item">
                             <span class="glyphicon glyphicon-pencil"></span>
                             Add notes
-                        </li>
+                        </li> -->
                         <li class="list-group-item">
                             <span class="glyphicon glyphicon-print"></span>
                             Print
