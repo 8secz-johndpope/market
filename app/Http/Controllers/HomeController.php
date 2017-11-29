@@ -845,7 +845,7 @@ class HomeController extends BaseController
             $profile->save();
 
         }
-        return view('home.jobprofile',['profile'=>$profile]);
+        return view('home.jobprofile',['profile'=>$profile,'user'=>$user]);
     }
     public function lstring(Request $request,$id)
     {
