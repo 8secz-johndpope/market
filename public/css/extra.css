@@ -1175,6 +1175,10 @@ a.message-back-button {
     ul.image-gallery-ul li{
         height: 520px;
     }
+    .favroite-icon:before{
+        height: 30px;
+        width: 30px;
+    }
 }
 @media (max-width: 900px) {
     h4.product-title {
