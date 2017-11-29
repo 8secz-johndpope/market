@@ -1002,13 +1002,9 @@
                             </div>
                         @endif
                             <div class="user-details">
-                                <p><strong>{{($advert->user != null) ? $advert->user->name:$product['username']}}</strong></p>
+                                <p><strong>{{$product['username']}}</strong></p>
                                 <address>
-                                @if($advert->user!==null && isset($advert->user->address))
-                                {{$advert->user->address->line1}}, {{$advert->user->address->city}}, {{$advert->user->address->postcode}}  
-                                @else
-                                    {{$product['location_name']}}
-                                @endif    
+                                    {{$product['location_name']}}  
                                 </address>
                                 @if($advert->user!==null)
                                     @if(isset($advert->user->business))
