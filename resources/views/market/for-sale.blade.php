@@ -1030,7 +1030,7 @@
         x = map.getZoom();
         c = map.getCenter();
         google.maps.event.trigger(map, 'resize');
-        google.maps.event.trigger(panorama, 'resize');
+        //google.maps.event.trigger(panorama, 'resize');
         map.setZoom(x);
         map.setCenter(c);
     });
@@ -1039,7 +1039,11 @@
             console.log("change to panorama");
             $('.info-map').hide();
             $('.info-pano').show();
+            x = map.getZoom();
+            c = map.getCenter();
             google.maps.event.trigger(panorama, 'resize');
+            map.setZoom(x);
+            map.setCenter(c);
         }
         else{
            console.log("change to map");
