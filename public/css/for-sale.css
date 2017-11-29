@@ -72,6 +72,11 @@ span.reveal-phone {
     margin-bottom: 15px;
     border-bottom: 1px solid #ccc;
 }
+.des-postage {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+}
 
 /** similar adverts */
 .listings-adverts {
