@@ -127,6 +127,9 @@ h2.item-name {
     font-weight: normal;
     text-align: left;
 }
+.details h3{
+	margin-top: 0;
+}
 .profile-picutre {
     display: block;
     margin: 0 16px 8px 0;
