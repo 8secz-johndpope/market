@@ -1013,6 +1013,7 @@
                     $('#sorry-info').hide();
                 }else{
                     $('#sorry-info').show();
+                    $('#can-info').hide();
                 }
 
             })
