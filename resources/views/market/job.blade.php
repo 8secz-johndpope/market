@@ -365,6 +365,8 @@
                                                     <div class="upload-container">
                                                         <p>Upload from cumputer or mobile phone</p>
                                                         <div class="icon-before">
+                                                            <input type="hidden" id="title" value="{{$advert->category->title}}">
+                                                            <input type="hidden" id="category" value="{{$advert->category_id}}">
                                                             <input type="file" name="upload-cv" id="upload-cv">
                                                         </div>
                                                         <p>Or upload from one of the following</p>
