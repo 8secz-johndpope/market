@@ -73,6 +73,8 @@ Route::post('/user/message/rsend','MessageController@rsend');
 
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::get('/user/manage/alerts', 'HomeController@alerts');
+Route::get('/user/manage/applications', 'HomeController@applications');
+
 Route::get('/user/create/alert/{id}', 'HomeController@alert');
 Route::get('/user/delete/alert/{id}', 'HomeController@delete_alert');
 Route::get('/user/toggle/alert/{id}', 'HomeController@toggle_alert');

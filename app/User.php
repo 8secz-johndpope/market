@@ -165,6 +165,13 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Advert')->where('status',1)->orderby('id','desc');
     }
+
+    public function jobs()
+    {
+        $jobs = Category::find(4000000000);
+
+        return $this->hasMany('App\Model\Advert')->where('status',1)->where('category_id','>=',$jobs->id)->where('category_id','<=',$jobs->ends)->orderby('id','desc');
+    }
     public function adverts_category($category)
     {
         return $this->hasMany('App\Model\Advert')->where('category_id',$category)->where('status',1)->orderby('id','desc')->get();
@@ -206,4 +213,5 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Model\Contract')->where('status','active');
     }
+
 }
