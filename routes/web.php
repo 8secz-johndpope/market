@@ -205,6 +205,7 @@ Route::get('/company/{id}', 'MarketController@company');
 
 Route::get('/job/profile/edit', 'HomeController@profile');
 Route::post('/job/profile/save', 'HomeController@save_profile');
+Route::get('/job/profile/view/{id}', 'HomeController@view_profile');
 
 Route::get('/profile/{id}', 'MarketController@profile');
 Route::get('/download-mobile-apps/', 'MarketController@downloadApps');

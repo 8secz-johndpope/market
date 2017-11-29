@@ -18,6 +18,7 @@ use App\Model\Room;
 use App\Model\Sale;
 use App\Model\SearchAlert;
 use App\Model\Shipping;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use PDF;
 use Illuminate\Support\Facades\Mail;
@@ -846,6 +847,14 @@ class HomeController extends BaseController
 
         }
         return view('home.jobprofile',['profile'=>$user->profile,'user'=>$user]);
+    }
+
+    public function view_profile(Request $request,$id)
+    {
+        $user = User::find($id);
+
+
+        return view('market.jobprofile',['profile'=>$user->profile,'user'=>$user]);
     }
 
     public function applications(Request $request)
