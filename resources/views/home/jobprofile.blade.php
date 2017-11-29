@@ -65,6 +65,7 @@
             <textarea type="text" name="about_me" rows="10" id="editor" class="ckeditor form-control  mb-2 mr-sm-2 mb-sm-0" >{{$user->profile->about_me}}</textarea>
             <h4>Salary</h4>
             <input type="text" class="form-control" name="salary" value="{{$user->profile->salary}}">
+                <br>
                 <input type="submit" class="btn-primary btn" value="Save">
             </form>
         </div>
