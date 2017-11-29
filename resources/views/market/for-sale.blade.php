@@ -239,7 +239,7 @@
                                     <div class="des-postage">
                                         <h3>Postage and packaging</h3>
                                         <div class="postage-info">
-                                            <p><strong>Item location: </strong>{{$product['location']}}</p>
+                                            <p><strong>Item location: </strong>{{$product['location_name']}}</p>
                                         </div>
                                     </div>
                                     <div class="des-postage">
