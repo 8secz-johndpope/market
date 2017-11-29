@@ -49,7 +49,7 @@ span.reveal-phone {
     display: inline-block;
     float: right;
 }
-.shipping-options, .payments-options {
+.shipping-options, .payment-options {
     border: 1px solid #ccc;
     padding: 15px;
     margin-bottom: 10px;
