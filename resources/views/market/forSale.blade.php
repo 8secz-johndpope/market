@@ -926,50 +926,7 @@
                     <h2 class="item-name">{{$product['title']}}</h2>
                 </div>
                 <div class="delivery-options">
-                    @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
-                        <div id="check-div" @if (!Auth::guest()&& Auth::user()->default_address>0) style="display: none" @endif>
-                        <p class="bold-text">Check if it can be delivered to you</p>
-                        <span class="red-text" id="sorry-info" style="display: none">Sorry, the item can't be delivered to your location</span>
-                        <input class="form-control" placeholder="SW153AZ" name="postcode" id="postcode">
-                        <input type="hidden" id="id" value="{{$advert->id}}">
-                    <button class="btn btn-default" id="check-button">Check</button>
-                        </div>
-                    <br>
-                        @if (Auth::guest()|| Auth::user()->default_address===0)
-                            @else
-                            <span><span id="delivery-info" @if(!$advert->can_deliver_to(Auth::user()->address->zip)) style="display: none" @endif>Can be delivered to </span> <span class="red-text" id="s-info" @if($advert->can_deliver_to(Auth::user()->address->zip)) style="display: none" @endif>Cannot be delivered to </span>  <span class="bold-text" id="postcode-text">{{ Auth::user()->address->postcode}} </span>
-                           <a id="edit-post">Edit</a></span>
-
-                        @endif
-                            <h4>Can Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
-                        <p>Price</p>
-                        <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->delivery()}}&nbsp;&nbsp; Delivery</span>
-                    <br><br>
-                        <form action="/user/ad/sale" method="post">
-                            <input name="id" type="hidden" value="{{$advert->id}}">
-                            <input name="type" type="hidden" value="0">
-                            {{ csrf_field() }}
-                        <button type="submit" class="btn-primary btn">Order to Deliver</button>
-                        </form>
-                        @endif
-                        @if($advert->has_param('canship')&&$advert->param('canship')===1)
-                            <h4>Can Ship Nationwide</h4>
-                            <p>Price</p>
-                            <span class="bold-text">£{{$advert->price()}}</span><span>+£{{$advert->shipping()}}&nbsp;&nbsp; Shipping</span>
-                            <br><br>
-                            <form action="/user/ad/sale" method="post">
-                                <input name="id" type="hidden" value="{{$advert->id}}">
-                                <input name="type" type="hidden" value="1">
-                                {{ csrf_field() }}
-                            <button type="submit"  class="btn-success btn">Order to Ship</button>
-                            </form>
-
-                        @endif
-
                         @if($advert->category->has_price())
-                            @php
-                                var_dump("ok");
-                            @endphp
                             <div class="collection-options">
                                 <div class="items-box-price font-5">£ {{number_format($product['meta']['price'] / 100, 0, '.', ',')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                 </div>
