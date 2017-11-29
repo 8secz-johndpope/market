@@ -800,7 +800,17 @@
                     </ul>
                 </div>
                 @endif
-
+                </div>
+                <div class="row">
+                    <div class="shipping-options">
+                        <div class="collect-option">
+                            
+                        </div>
+                        <div class="local-option">
+                        </div>
+                        <div class="ship-option">
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                 <div class="buttons">
