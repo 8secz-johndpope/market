@@ -11,6 +11,7 @@ use App\Model\Advert;
 use App\Model\Message;
 use App\Model\Room;
 use App\Model\Sale;
+use App\User;
 use GuzzleHttp\Pool;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -111,8 +112,14 @@ class MessageController extends BaseController
                 $room->sender_id=$user->id;
                 $room->save();
                 $room->users()->save($user);
-                if($user->id!==$advert->user_id)
-                $room->users()->save($advert->user);
+                if($user->id!==$advert->user_id){
+                    if($advert->user)
+                    $room->users()->save($advert->user);
+                    else
+                        $room->users()->save(User::find(1));
+
+                }
+
                 $advert->replies++;
                 $advert->save();
             }
