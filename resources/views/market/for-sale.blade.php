@@ -824,8 +824,11 @@
                 <div class="row">
                     <div class="payment-options">
                         <h3>Payments</h3>
-                        <div class="collect-option">
+                        <div class="payment-option cards">
                             <img class="payments-methods" src="/css/payments.png">
+                        </div>
+                        <div class="payment-option hands">
+                            <h4>Cash on collection</h4>
                         </div>
                     </div>
                 </div>
