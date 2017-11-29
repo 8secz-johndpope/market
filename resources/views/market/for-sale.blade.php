@@ -297,7 +297,20 @@
                                     <div class="des-postage">
                                         <h3>Returns policy</h3>
                                         <div class="postage-info">
-                                            <p>30 days refund, buyer pays return postage</p>
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Distance</th>
+                                                        <th>Price</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Within {{$advert->meta('distance')}}  Miles</td>
+                                                        <td>£{{ $advert->delivery() }}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                     <div class="clearfix des-postage">

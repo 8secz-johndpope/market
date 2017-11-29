@@ -50,13 +50,15 @@
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
-							 		<li><a href="motors-accessories">Accessories</a></li>
-							 		<li><a href="campervans-motorhomes">Campervans &amp; Motorhomes</a></li>
-							 		<li><a href="caravans">Caravans</a></li>
 							 		<li><a href="cars">Cars</a></li>
 							 		<li><a href="motorbikes-scooters">Motorbikes</a></li>
-							 		<li><a href="other-vehicles">Other Vehicles</a></li>
-							 		<li><a href="motors-parts">Parts</a></li>
+							 		<li><a href="motors-accessories">Accessories</a></li>
+							 		<!-- <li><a href="campervans-motorhomes">Campervans &amp; Motorhomes</a></li> -->
+							 		<li><a href="caravans">Caravans</a></li>
+							 		<li><a href="vans">Vans</a></li>
+							 		<li><a href="trucks">Trucks</a></li>
+							 		<!-- <li><a href="other-vehicles">Other Vehicles</a></li>
+							 		<li><a href="motors-parts">Parts</a></li> -->
 							 		<div class="read-more">
 							 			<a href="#" class="btn btn-info" role="button">more..</a>
 							 		</div>
@@ -128,11 +130,11 @@
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
-							 		<li><a href="account-management">Account Management</a></li>
-							 		<li><a href="accountancy">Accountancy</a></li>
-							 		<li><a href="administration">Administration</a></li>
-							 		<li><a href="construction">Construction</a></li>
-							 		<li><a href="consulting">Consulting</a></li>
+							 		<li><a href="account-management">All lastest job</a></li>
+							 		<li><a href="accountancy">All London jobs</a></li>
+							 		<li><a href="administration">General jobs</a></li>
+							 		<li><a href="construction">Permanent jobs</a></li>
+							 		<li><a href="consulting"></a></li>
 							 		<li><a href="creative-media-design">Creative Media &amp; Design</a></li>
 							 		<li><a href="customer-services">Customer Service</a></li>
 								 	<div class="read-more">
