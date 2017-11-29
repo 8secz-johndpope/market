@@ -234,13 +234,41 @@
                         </div>
                         <div id="tap-postage" class="tab-pane fade">
                             <div class="row">           
-                                <div class="col-sm-12 foorplan">
-                                    <div class="col-sm-6 meta-bold">
-                                                Payments:
-                                            </div>
-                                            <div class="col-sm-6 meta-info">
-                                                <a href="/download-mobile-apps/"> <img class="payments-methods" src="/css/payments.png"></a>
-                                            </div>
+                                <div class="col-sm-12">
+                                    <p>Seller assumes all responsibility for this listing</p>
+                                    <div class="des-postage">
+                                        <h3>Postage and packaging</h3>
+                                        <div class="col-sm-6 meta-bold">
+                                                    Payments:
+                                        </div>
+                                        <div class="col-sm-6 meta-info">
+                                            <a href="/download-mobile-apps/">
+                                                <img class="payments-methods" src="/css/payments.png">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="des-postage">
+                                        <h3>Returns policy</h3>
+                                        <div class="col-sm-6 meta-bold">
+                                                    Payments:
+                                        </div>
+                                        <div class="col-sm-6 meta-info">
+                                            <a href="/download-mobile-apps/">
+                                                <img class="payments-methods" src="/css/payments.png">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="des-postage">
+                                        <h3>Payment details</h3>
+                                        <div class="col-sm-6 meta-bold">
+                                                    Payments:
+                                        </div>
+                                        <div class="col-sm-6 meta-info">
+                                            <a href="/download-mobile-apps/">
+                                                <img class="payments-methods" src="/css/payments.png">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
