@@ -262,6 +262,20 @@
                                             @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                                             <div class="">
                                                 <h4>Delivery Locally</h4>
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Distance</th>
+                                                            <th>Price</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Within {{$advert->meta('distance')}}  Miles</td>
+                                                            <td>£{{ $advert->delivery() }}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                             @endif
                                         </div>
