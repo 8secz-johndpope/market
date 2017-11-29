@@ -61,6 +61,8 @@
         <div class="col-md-6">
             @foreach($jobs as $job)
                 <a href="{{$job->url()}}"><h4>{{$job->param('title')}}</h4></a>
+                <br>
+                <a>{{count($job->applications)}} Applications</a>
                 @endforeach
         </div>
     </div>
