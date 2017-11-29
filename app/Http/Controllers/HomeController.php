@@ -852,7 +852,12 @@ class HomeController extends BaseController
     public function view_profile(Request $request,$id)
     {
         $user = User::find($id);
+        if($user->profile===null){
+            $profile = new Profile();
+            $profile->user_id=$user->id;
+            $profile->save();
 
+        }
 
         return view('market.jobprofile',['profile'=>$user->profile,'user'=>$user]);
     }
