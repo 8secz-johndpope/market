@@ -238,13 +238,8 @@
                                     <p>Seller assumes all responsibility for this listing</p>
                                     <div class="des-postage">
                                         <h3>Postage and packaging</h3>
-                                        <div class="col-sm-6 meta-bold">
-                                                    Payments:
-                                        </div>
-                                        <div class="col-sm-6 meta-info">
-                                            <a href="/download-mobile-apps/">
-                                                <img class="payments-methods" src="/css/payments.png">
-                                            </a>
+                                        <div class="postage-info">
+                                            <p><strong>Item location: </strong>{{$product['location']}}</p>
                                         </div>
                                     </div>
                                     <div class="des-postage">
