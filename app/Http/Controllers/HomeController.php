@@ -852,7 +852,6 @@ class HomeController extends BaseController
     {
         $user = Auth::user();
 
-        return $user->jobs;
         return view('home.applications',['jobs'=>$user->jobs,'user'=>$user]);
     }
     public function save_profile(Request $request)
