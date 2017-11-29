@@ -1234,9 +1234,13 @@ a.message-back-button {
     .main-q-div .form-control{
         width:100%;
     }
-.main-location-div {
-    width: calc(100% - 48px);
-}
+    .main-location-div {
+        width: calc(100% - 48px);
+    }
+    .favroite-icon:before {
+        height: 25px;
+        width: 25px;
+    }
 }
 @media (max-width: 767px) {
     .main-second-div,.main-first-div{
