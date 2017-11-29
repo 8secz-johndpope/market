@@ -60,10 +60,11 @@ span.reveal-phone {
 .ship-option {
     border-bottom: 1px dashed #dcdcdc;
 }
-.shipping-options h4 {
+.shipping-options h4, .payment-options h4 {
     font-size: 14px;
     margin-bottom: 0;
 }
+
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
