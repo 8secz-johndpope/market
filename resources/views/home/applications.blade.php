@@ -60,7 +60,7 @@
         </div>
         <div class="col-md-6">
             @foreach($jobs as $job)
-                <h4>{{$job->param('title')}}</h4>
+                <a href="{{$job->url()}}"><h4>{{$job->param('title')}}</h4></a>
                 @endforeach
         </div>
     </div>
