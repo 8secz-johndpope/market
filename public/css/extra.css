@@ -1385,7 +1385,11 @@ a.message-back-button {
     }
 }
 @media screen and (max-width: 1200px) {
-    .favroite-icon:before{
+    .heart:before{
+        height: 30px;
+        width: 30px;
+    }
+    .empty-heart:before{
         height: 30px;
         width: 30px;
     }
