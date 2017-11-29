@@ -168,15 +168,17 @@
                 <div class="delivery-options">
                     @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <div id="check-div" @if (!Auth::guest()&& Auth::user()->default_address>0) style="display: none" @endif>
-                        <p class="bold-text">Check if it can be delivered to you</p>
-                        <span class="red-text" id="sorry-info" style="display: none">Sorry, the item can't be delivered to your location</span>
-                        <input class="form-control" placeholder="SW153AZ" name="postcode" id="postcode">
-                        <input type="hidden" id="id" value="{{$advert->id}}">
-                    <button class="btn btn-default" id="check-button">Check</button>
+                            <p class="bold-text">Check if it can be delivered to you</p>
+                            <span class="red-text" id="sorry-info" style="display: none">
+                                Sorry, the item can't be delivered to your location
+                            </span>
+                            <input class="form-control" placeholder="SW153AZ" name="postcode" id="postcode">
+                            <input type="hidden" id="id" value="{{$advert->id}}">
+                            <button class="btn btn-default" id="check-button">Check</button>
                         </div>
                     <br>
                         @if (Auth::guest()|| Auth::user()->default_address===0)
-                        
+
                         @else
                             <span>
                                 <span id="delivery-info" @if(!$advert->can_deliver_to(Auth::user()->address->zip)) style="display: none" @endif>
