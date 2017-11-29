@@ -822,6 +822,14 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="payment-options">
+                        <h3>Payments</h3>
+                        <div class="collect-option">
+                            <h4>Can free colletion in person</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                 <div class="buttons">
                     <div class="details">
                         <h3>This advert is by</h3>
