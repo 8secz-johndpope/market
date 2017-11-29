@@ -244,13 +244,8 @@
                                     </div>
                                     <div class="des-postage">
                                         <h3>Returns policy</h3>
-                                        <div class="col-sm-6 meta-bold">
-                                                    Payments:
-                                        </div>
-                                        <div class="col-sm-6 meta-info">
-                                            <a href="/download-mobile-apps/">
-                                                <img class="payments-methods" src="/css/payments.png">
-                                            </a>
+                                        <div class="postage-info">
+                                            <p>30 days refund, buyer pays return postage</p>
                                         </div>
                                     </div>
                                     <div class="des-postage">
