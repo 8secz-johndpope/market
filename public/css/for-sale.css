@@ -64,6 +64,10 @@ span.reveal-phone {
     font-size: 14px;
     margin-bottom: 0;
 }
+.payment-option.cards {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #dcdcdc;
+}
 
 /** similar adverts */
 .listings-adverts {
