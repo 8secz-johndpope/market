@@ -286,6 +286,9 @@
                                                     <div id="sorry-info">
                                                         <p>Sorry, the item can't be delivered to your location</p>
                                                     </div>
+                                                    <div id="can-info">
+                                                        <p>Can be delivered to <span id="write-postcode"></span></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             @endif
@@ -1005,8 +1008,8 @@
             .then(function (response) {
                 console.log(response);
                 if(response.data.can){
-                    $('#delivery-info').show();
-                    $('#postcode-text').html(postcode);
+                    $('#can-info').show();
+                    $('#write-postcode').html(postcode);
                     $('#sorry-info').hide();
                 }else{
                     $('#sorry-info').show();
