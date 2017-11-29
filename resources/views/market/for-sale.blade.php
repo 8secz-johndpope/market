@@ -825,7 +825,7 @@
                     <div class="payment-options">
                         <h3>Payments</h3>
                         <div class="collect-option">
-                            <h4>Can free colletion in person</h4>
+                            <img class="payments-methods" src="/css/payments.png">
                         </div>
                     </div>
                 </div>
