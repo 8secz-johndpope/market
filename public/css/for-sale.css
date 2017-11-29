@@ -80,7 +80,9 @@ span.reveal-phone {
 .mapframe {
     margin-bottom: 0;
 }
-
+.check-distance label {
+    display: block;
+}
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
