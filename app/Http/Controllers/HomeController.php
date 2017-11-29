@@ -854,6 +854,12 @@ class HomeController extends BaseController
 
         return view('home.applications',['jobs'=>$user->jobs,'user'=>$user]);
     }
+    public function view_applications(Request $request,$id)
+    {
+        $user = Auth::user();
+
+        return view('home.applications',['job'=>Advert::find($id),'user'=>$user]);
+    }
     public function save_profile(Request $request)
     {
         $user = Auth::user();

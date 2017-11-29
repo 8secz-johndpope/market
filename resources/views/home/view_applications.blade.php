@@ -59,11 +59,11 @@
 
         </div>
         <div class="col-md-6">
-            @foreach($jobs as $job)
-                <a href="{{$job->url()}}"><h4>{{$job->param('title')}}</h4></a>
-                <br>
-                <a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} Applications</a>
-                @endforeach
+            <table class="table">
+            @foreach($job->applications as $application)
+                <tr><td>{{$application->user->name}}</td></tr>
+            @endforeach
+            </table>
         </div>
     </div>
 
