@@ -276,6 +276,13 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
+                                                <div class="check-distance">
+                                                    <label for="input-distance">
+                                                       Check if it can be delivered to you
+                                                    </label>
+                                                    <input type="text" name="input-distance" id="input-distance">
+                                                    <button id="submit-distance" class="btn">Check</button>
+                                                </div>
                                             </div>
                                             @endif
                                         </div>
