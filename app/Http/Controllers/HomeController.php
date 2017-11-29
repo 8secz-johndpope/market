@@ -9,6 +9,7 @@ use App\Model\Cover;
 use App\Model\Cv;
 use App\Model\Dispatch;
 use App\Model\Distance;
+use App\Model\Profile;
 use App\Model\Message;
 use App\Model\Pack;
 use App\Model\Payment;
@@ -833,6 +834,18 @@ class HomeController extends BaseController
     {
         $advert = Advert::find($id);
         return redirect($advert->url().'?srn=true');
+    }
+    public function profile(Request $request)
+    {
+        $user = Auth::user();
+
+        if($user->profile===null){
+            $profile = new Profile();
+            $profile->user_id=$user->id;
+            $profile->save();
+
+        }
+        return view('home.jobprofile',['profile'=>$profile]);
     }
     public function lstring(Request $request,$id)
     {

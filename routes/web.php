@@ -199,6 +199,9 @@ Route::get('/filters/{any}', 'MarketController@filters');
 Route::get('/id/{id}', 'MarketController@id');
 Route::get('/agent/{id}', 'MarketController@agent');
 Route::get('/company/{id}', 'MarketController@company');
+
+Route::get('/job/profile/edit', 'HomeController@profile');
+
 Route::get('/profile/{id}', 'MarketController@profile');
 Route::get('/download-mobile-apps/', 'MarketController@downloadApps');
 
