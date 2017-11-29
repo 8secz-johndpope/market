@@ -847,6 +847,18 @@ class HomeController extends BaseController
         }
         return view('home.jobprofile',['profile'=>$user->profile,'user'=>$user]);
     }
+    public function save_profile(Request $request)
+    {
+        $user = Auth::user();
+
+        $profile=$user->profile;
+        $profile->about_me = $request->about_me;
+        $profile->salary=$request->salary;
+        $profile->save();
+
+        return redirect('/user/manage/details');
+
+    }
     public function lstring(Request $request,$id)
     {
         $category = Location::find($id);
