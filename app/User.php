@@ -5,6 +5,7 @@ namespace App;
 use App\Mail\AccountCreated;
 use App\Model\Address;
 use App\Model\Application;
+use App\Model\Category;
 use App\Model\EmailCode;
 use App\Model\Favorite;
 use App\Model\Order;
