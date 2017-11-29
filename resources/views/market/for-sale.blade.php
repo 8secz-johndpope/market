@@ -277,11 +277,12 @@
                                                     </tbody>
                                                 </table>
                                                 <div class="check-distance">
-                                                    <label for="input-distance">
+                                                    <label for="postcode">
                                                        Check if it can be delivered to you
                                                     </label>
-                                                    <input type="text" name="input-distance" id="input-distance">
-                                                    <button id="submit-distance" class="btn">Check</button>
+                                                    <input type="text" name="postcode" id="postcode">
+                                                    <input type="hidden" id="id" value="{{$advert->id}}">
+                                                    <button id="check-button" class="btn">Check</button>
                                                 </div>
                                             </div>
                                             @endif
@@ -1019,17 +1020,7 @@
         $('#check-div').show();
         $('#delivery-info').hide();
     });
-    $('#upload-cv').change(function () {
-        upload_cv();
-    });
     
-    $('.next>a').click(function () {
-        if(timer != null){
-            var element = $('.icon-before');
-            stopAnimationGallery(element);
-        }
-        changeImageGallery(false);
-    });
     $('a[href="#tap-map"]').click(function(e){
         e.preventDefault();
         $('.nav-tabs a[href="#tap-map"]').tab('show');
@@ -1099,17 +1090,7 @@
         $('.tab-buttons .btn-default.active').removeClass('active');
         $('.row.content-reviews').addClass('border-top-transparent');
     })
-    $('.icon-before').click(function(e){
-        e.preventDefault();
-        if($(this).hasClass('active-sld')){
-            stopAnimationGallery(this);
-        }
-        else{
-            $(this).addClass('active-sld');
-            $(this).text('Stop slideshow');
-            timer = setInterval(changeImageGallery, 2000);
-        }
-    })
+    
     $('.input-elem-textbox input, .input-elem-textbox textarea').focus(function(){
         $(this).prev().css('visibility','visible');
     });
@@ -1126,13 +1107,7 @@
             var lessCount = 5000 - value.length;
             $(this).prev().text(lessCount);
     });
-    function stopAnimationGallery(element){
-        clearInterval(timer);
-        timer = null;
-        $(element).removeClass('active-sld');
-        $(element).text('Start slideshow');
-        console.log('stop animation');
-    }
+    
     
     function isUnderground(types){
         return types.indexOf('tube') != -1;
