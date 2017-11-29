@@ -288,6 +288,10 @@
                                 </div>
                                 @endif
                                 <div class="col-md-12 col-sm-12 background-color">
+                                    <form action="/user/jobs/apply" method="post">
+                                    <input name="redirect" type="hidden" value="{{$advert->url()}}">
+                                    <input name="id" type="hidden" value="{{$advert->id}}">
+                                    {{ csrf_field() }}
                                     <div class="form-group">
                                         @if (Auth::guest())
                                         <div class="row">
@@ -381,7 +385,7 @@
                                                             <label for="cover-message"> 
                                                                 Your covering message
                                                             </label>
-                                                            <textarea id="cover-message" name="cover-message" placeholder="Write your application covering message here or copy and paste from a document."> 
+                                                            <textarea id="cover-message" name="ctext" placeholder="Write your application covering message here or copy and paste from a document."> 
                                                             </textarea>
                                                             <p class="small text-right">4000 characters left</p>
                                                              <input type="hidden" name="ctitle" value="{{$advert->category->title}}">
@@ -426,6 +430,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                </form>
                                 </div>
                             </div>
                         </div>
