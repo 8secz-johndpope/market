@@ -135,6 +135,10 @@ h2.item-name {
 .details h3, .shipping-options h3{
 	margin-top: 0;
 }
+.shipping-options h4 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
 .profile-picutre {
     display: block;
     margin: 0 16px 8px 0;
