@@ -241,7 +241,7 @@
                                         <div class="postage-info">
                                             <p><strong>Item location: </strong>{{$product['location_name']}}</p>
                                             @if($advert->has_param('canship')&&$advert->param('canship')===1)
-                                            <div class="">
+                                            <div class="info-type">
                                                 <h4>Shipping</h4>
                                                 <table class="table table-hover">
                                                     <thead>
@@ -260,7 +260,7 @@
                                             </div>
                                             @endif
                                             @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
-                                            <div class="">
+                                            <div class="info-type">
                                                 <h4>Delivery Locally</h4>
                                                 <table class="table table-hover">
                                                     <thead>
