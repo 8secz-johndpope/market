@@ -339,6 +339,7 @@ span.email-icon img {
 .section-title {
     border: 1px solid #ccc;
     border-top: transparent;
+    background: #fff;
 }
 .title {
     padding-left: 15px;
