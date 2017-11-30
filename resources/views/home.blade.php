@@ -178,7 +178,7 @@
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
-							 		<li><a href="music-bands-musicians-djs">Bands &amp; Musicians</a></li>
+							 		<li><a href="music-bands-musicians-djs">Music & Bands</a></li>
 							 		<li><a href="classes">Classes</a></li>
 							 		<li><a href="events-gigs-nightlife">Events</a></li>
 							 		<li><a href="sports-teams-partners">Sports Teams</a></li>
