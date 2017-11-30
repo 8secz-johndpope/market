@@ -61,6 +61,7 @@
         <div class="col-md-6">
             <br><br><br><br>
             <form action="/room/invoice/save" method="post" id="change-category">
+                <input name="id" type="hidden" value="{{$room->id}}">
                 {{ csrf_field() }}
                 <div class="form-group row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>

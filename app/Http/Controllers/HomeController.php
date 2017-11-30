@@ -9,6 +9,8 @@ use App\Model\Cover;
 use App\Model\Cv;
 use App\Model\Dispatch;
 use App\Model\Distance;
+use App\Model\Invoice;
+use App\Model\InvoiceItem;
 use App\Model\Profile;
 use App\Model\Message;
 use App\Model\Pack;
@@ -873,8 +875,34 @@ class HomeController extends BaseController
     }
     public function save_invoice(Request $request)
     {
+        $user = Auth::user();
 
-        return $request->items;
+        $room =  Room::find($request->id);
+        $invoice = new Invoice();
+        $invoice->title=$request->title;
+        $invoice->save();
+
+        $items = $request->items;
+        $amounts = $request->prices;
+        for($i=0;$i<count($amounts);$i++){
+            $invoice_item = new InvoiceItem();
+            $invoice_item->invoice_id = $invoice->id;
+            $invoice_item->title = $items[$i];
+            $invoice_item->amount = $amounts[$i];
+            $invoice_item->save();
+        }
+
+
+        $message = new Message;
+        $message->message='Invoice';
+        $message->type='invoice';
+        $message->from_msg=$user->id;
+        $message->to_msg=$room->other()->id;
+        $message->room_id=$room->id;
+        $message->url='';
+        $message->save();
+
+        return redirect('/user/manage/messages');
     }
     public function applications(Request $request)
     {

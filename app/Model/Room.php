@@ -8,6 +8,7 @@
 
 namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 
 class Room extends Model
@@ -36,5 +37,14 @@ class Room extends Model
     public function read(){
         $this->unread=0;
         $this->save();
+    }
+    public function other(){
+        $user = Auth::user();
+        foreach ($this->users as $usr){
+            if($usr->id!==$user->id){
+                return $usr;
+            }
+        }
+        return $user;
     }
 }
