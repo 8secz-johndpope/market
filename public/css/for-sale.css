@@ -189,6 +189,7 @@ span.reveal-phone {
 }
 #sorry-info {
     display: none;
+    color: darkred;
 }
 #map, #pano {
     height: 470px;
