@@ -214,7 +214,7 @@
             if(idDiv != "collect"){
                 console.log($(this).attr('data-href'));
                 $('.post-address').hide();
-                idDiv.show();
+                $('#'+idDiv).show();
             }
         });
     </script>
