@@ -123,7 +123,7 @@
             .catch( error => {
             console.error( error );
         } );
-        $('.delete-item').on('click',function () {
+        $('#items').on('click','.delete-item',function () {
             $(this).parent().parent().remove();
         });
         $('.add-more-items').click(function () {
