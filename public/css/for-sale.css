@@ -143,6 +143,9 @@ span.reveal-phone {
     border: 1px solid #ff9d2c;
     vertical-align: middle;
 }
+.info-type table {
+    margin-bottom: 0;
+}
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
