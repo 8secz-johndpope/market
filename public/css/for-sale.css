@@ -127,6 +127,9 @@ span.reveal-phone {
 .shipping-options {
     background: #fff;
 }
+.info-type thead {
+    background: #ddd;
+}
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
