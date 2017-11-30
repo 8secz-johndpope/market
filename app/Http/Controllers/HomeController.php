@@ -1330,7 +1330,7 @@ class HomeController extends BaseController
 
 
         $description = 'Payment towards to Order id '.$order_id;
-       try {
+      /// try {
            if($order->amount_in_pence()>0){
                $charge = \Stripe\Charge::create(array(
                    "amount" => $order->amount_in_pence(),
@@ -1358,14 +1358,14 @@ class HomeController extends BaseController
                return redirect('/business/manage/finance');
            }
 
-        }
-        catch (\Exception $e) {
-            return [
-                'status' => 'failed',
-                'error' => $e,
-                'result' => ['msg' => 'error charging the card']
-            ];
-        }
+       // }
+       // catch (\Exception $e) {
+         //   return [
+         //       'status' => 'failed',
+        //        'error' => $e,
+          //      'result' => ['msg' => 'error charging the card']
+        //    ];
+        //}
 
     }
     public function mark_received(Request $request,$id){
