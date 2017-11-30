@@ -67,17 +67,17 @@
                         <label>
                             Collection in person
                         </label>
-                        <input type="radio" name="post-option" id="collect" checked>
+                        <input type="radio" name="post-option" data-href="collect" checked>
                         <br>
                         <label>
                             Local delivery
                         </label>
-                        <input type="radio" name="post-option" id="del-address">
+                        <input type="radio" name="post-option" data-href="del-address">
                         <br>
                         <label>
                             United Kingdom delivery
                         </label>
-                        <input type="radio" name="post-option" id="ship-address">
+                        <input type="radio" name="post-option" data-href="ship-address">
                     </div>
                     <div id="ship-address">
                             <h4>Shipping Address</h4>
@@ -210,9 +210,8 @@
             $(".add-card-form").hide();
         });
         $('input[type=radio][name=post-option]').change(function(){
-            if(this.id != "collect"){
+            if($(this).attr('data-href') != "collect"){
                 console.log(this.id);
-                
             }
         });
     </script>
