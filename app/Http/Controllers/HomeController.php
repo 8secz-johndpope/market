@@ -888,7 +888,7 @@ class HomeController extends BaseController
             $invoice_item = new InvoiceItem();
             $invoice_item->invoice_id = $invoice->id;
             $invoice_item->title = $items[$i];
-            $invoice_item->amount = $amounts[$i];
+            $invoice_item->amount = $amounts[$i]*100;
             $invoice_item->save();
         }
 
