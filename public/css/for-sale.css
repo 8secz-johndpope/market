@@ -561,6 +561,11 @@ span.email-icon img {
 img.payments-methods {
     height: 19px;
 }
+.info-type {
+    background: #f9f0eb;
+    padding: 15px;
+    margin-bottom: 10px;
+}
 .delivery-options .items-box-price.font-5 {
     text-align: left;
 }
