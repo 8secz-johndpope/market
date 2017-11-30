@@ -187,10 +187,12 @@ span.reveal-phone {
 .items-box-price {
     color: #ff8830;
 }
-#sorry-info {
+#sorry-info, #can-info {
     display: none;
-    color: darkred;
     margin-top: 10px;
+}
+#sorry-info{
+	color: darkred;
 }
 #map, #pano {
     height: 470px;
