@@ -60,13 +60,31 @@ span.reveal-phone {
 .ship-option {
     border-bottom: 1px dashed #dcdcdc;
 }
-.shipping-options h4, .payment-options h4 {
+.payment-options h4 {
     font-size: 14px;
     margin-bottom: 0;
+    margin-top: 0;
+    line-height: 19px;
+}
+.payment-options{
+	background: #e2e2e2;
+}
+.payment-option{
+	text-align: center;
+    margin-bottom: 10px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #ff9d2c;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.payment-option:last-child{
+	margin-bottom: 0;
 }
 .payment-option.cards {
     padding-bottom: 10px;
-    border-bottom: 1px dashed #dcdcdc;
+    text-align: center;
 }
 .title-advert {
     margin-bottom: 15px;
