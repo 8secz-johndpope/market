@@ -68,6 +68,7 @@
                         <input type="text" name="title" class="form-control" id="staticEmail" value="{{$room->title}}">
                     </div>
                 </div>
+                <div id="items">
                 <div class="form-group row">
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="inputPassword" placeholder="Deposit" name="items[]">
@@ -76,7 +77,7 @@
                         <input type="number" class="form-control" id="inputPassword" placeholder="500" name="prices[]">
                     </div>
                     <div class="col-sm-1">
-                        <a class="btn btn-danger delete-item">Delete</a>
+                        <a class="btn btn-danger delete-item">Delete Item</a>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -87,7 +88,7 @@
                         <input type="number" class="form-control" id="inputPassword" placeholder="100" name="prices[]">
                     </div>
                     <div class="col-sm-1">
-                        <a class="btn btn-danger delete-item">Delete</a>
+                        <a class="btn btn-danger delete-item">Delete Item</a>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -98,8 +99,9 @@
                         <input type="number" class="form-control" id="inputPassword" placeholder="35" name="prices[]">
                     </div>
                     <div class="col-sm-1">
-                        <a class="btn btn-danger delete-item">Delete</a>
+                        <a class="btn btn-danger delete-item">Delete Item</a>
                     </div>
+                </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-8">
@@ -107,7 +109,7 @@
                     <div class="col-sm-3">
                     </div>
                     <div class="col-sm-1">
-                        <a class="btn btn-default">Add More Items</a>
+                        <a class="btn btn-default add-more-items">Add More Items</a>
                     </div>
                 </div>
 
@@ -123,6 +125,19 @@
         } );
         $('.delete-item').on('click',function () {
             $(this).parent().parent().remove();
+        });
+        $('.add-more-items').click(function () {
+            $('#items').append('<div class="form-group row">\n' +
+                '                    <div class="col-sm-8">\n' +
+                '                        <input type="text" class="form-control" id="inputPassword" placeholder="One More Item" name="items[]">\n' +
+                '                    </div>\n' +
+                '                    <div class="col-sm-3">\n' +
+                '                        <input type="number" class="form-control" id="inputPassword" placeholder="100" name="prices[]">\n' +
+                '                    </div>\n' +
+                '                    <div class="col-sm-1">\n' +
+                '                        <a class="btn btn-danger delete-item">Delete Item</a>\n' +
+                '                    </div>\n' +
+                '                </div>');
         });
     </script>
 @endsection
