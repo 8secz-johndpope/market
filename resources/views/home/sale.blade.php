@@ -207,7 +207,7 @@
             $(".all-divs").show();
             $(".add-card-form").hide();
         });
-        $('input[type=radio][name=options]').change(function(){
+        $('input[type=radio][name=post-option]').change(function(){
             if(this.id != "collect"){
                 console.log(this.id);
                 
