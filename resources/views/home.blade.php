@@ -108,6 +108,7 @@
 							 		<li><a href="commercial">Commercial</a></li>
 							 		<li><a href="property-to-share">To Share</a></li>
 							 		<li><a href="garage-parking">Parking &amp; Garage</a></li>
+							 		<li><a href="holiday-rentals">Holiday Rentals</a></li>
 							 		<div class="read-more">
 							 			<a href="#" class="btn btn-info" role="button">more..</a>
 							 		</div>
