@@ -59,6 +59,7 @@
 
         </div>
         <div class="col-md-6">
+            <br><br><br><br>
             <form action="/room/invoice/save" method="post" id="change-category">
                 {{ csrf_field() }}
                 <div class="form-group row">
@@ -69,12 +70,29 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="inputPassword" placeholder="Deposit">
+                        <input type="text" class="form-control" id="inputPassword" placeholder="Deposit" name="items[]">
                     </div>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" id="inputPassword" placeholder="500">
+                        <input type="number" class="form-control" id="inputPassword" placeholder="500" name="prices[]">
                     </div>
                 </div>
+                <div class="form-group row">
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputPassword" placeholder="Admin Fee" name="items[]">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="inputPassword" placeholder="100" name="prices[]">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputPassword" placeholder="Credit Check Fee" name="items[]">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="inputPassword" placeholder="35" name="prices[]">
+                    </div>
+                </div>
+                
                 <input type="submit" value="Create Invoice" class="btn btn-primary">
             </form>
         </div>
