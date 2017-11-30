@@ -8,6 +8,9 @@
 
     <p>This is appended to the master sidebar.</p>
 @endsection
+@section('styles')
+<link href="{{ asset('/css/sale.css?q=874') }}" rel="stylesheet" type="text/css">
+@endsection
 
 @section('content')
     <div class="row all-divs">
@@ -259,5 +262,6 @@
             $(".all-divs").show();
             $(".add-card-form").hide();
         });
+        
     </script>
 @endsection
