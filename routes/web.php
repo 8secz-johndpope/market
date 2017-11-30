@@ -67,6 +67,8 @@ Route::get('/user/message/push','MessageController@push');
 
 
 Route::post('/user/message/send','MessageController@send');
+Route::post('/user/message/asend','MessageController@asend');
+
 Route::post('/user/message/bsend','MessageController@bsend');
 
 Route::post('/user/message/rsend','MessageController@rsend');
