@@ -189,14 +189,14 @@ h2.item-name {
     padding: 15px;
     border-bottom: 1px dashed #dfdfe1;
 }
-.details h3, .share h3, .report h3, .similar-adverts h3, .shipping-r h3, .payment-options h3 {
+.details h3, .share h3, .report h3, .similar-adverts h3, .shipping-r h3, .payments-r h3 {
     font-size: 15px;
     padding-bottom: 1.3rem;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-weight: normal;
     text-align: left;
 }
-.details h3, .shipping-options h3, .payment-options h3{
+.details h3{
 	margin-top: 0;
 }
 .profile-picutre {
