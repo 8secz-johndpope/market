@@ -881,6 +881,12 @@
                     <div class="shipping-options">
                         <h3>Postage options</h3>
                         <p><strong>Location:</strong> {{$product['location_name']}}<p>
+                        <div class="collect-option">
+                            <span class="postage-price">
+                                FREE
+                            </span>
+                            <span class="postage-type">Free colletion in person</span>
+                        </div>
                         @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <div class="local-option">
                             <span class="postage-price">
@@ -891,13 +897,12 @@
                         @endif
                         @if($advert->has_param('canship')&&$advert->param('canship')===1)
                         <div class="ship-option">
-                            <h4>Ship Nationwide</h4>
-                            <p>Price: <span class="bold-text">£{{$advert->shipping_cost()}}</span></p>
+                            <span class="postage-price">
+                                £{{$advert->shipping_cost()}}
+                            </span>
+                            <span class="postage-type">Ship Nationwide</span>
                         </div>
                         @endif
-                        <div class="collect-option">
-                            <h4>Free colletion in person</h4>
-                        </div>
                     </div>
                 </div>
                 <div class="row">
