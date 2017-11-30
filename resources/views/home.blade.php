@@ -60,7 +60,7 @@
 							 		<!-- <li><a href="other-vehicles">Other Vehicles</a></li>
 							 		<li><a href="motors-parts">Parts</a></li> -->
 							 		<div class="read-more">
-							 			<a href="#" class="btn btn-info" role="button">more..</a>
+							 			<a href="/more/1000000000" class="btn btn-info" role="button">more..</a>
 							 		</div>
 							 	</ul>
 							</div>
@@ -85,7 +85,7 @@
 							 		<li><a href="sports-leisure-travel">Sports</a></li>
 							 		<li><a href="clothing">Clothes</a></li>
 							 		<div class="read-more">
-							 			<a href="#" class="btn btn-info" role="button">more..</a>
+							 			<a href="/more/2000000000" class="btn btn-info" role="button">more..</a>
 							 		</div>
 							 	</ul>
 							 </div>
@@ -110,7 +110,7 @@
 							 		<li><a href="garage-parking">Parking &amp; Garage</a></li>
 							 		<li><a href="holiday-rentals">Holiday Rentals</a></li>
 							 		<div class="read-more">
-							 			<a href="#" class="btn btn-info" role="button">more..</a>
+							 			<a href="/more/3000000000" class="btn btn-info" role="button">more..</a>
 							 		</div>
 							 	</ul>
 							 </div>
@@ -135,7 +135,7 @@
 							 		<li><a href="/jobs/uk?hours=weekends">Weekend jobs</a></li>
 							 		<li><a href="#">All Recruiters</a></li>
 								 	<div class="read-more">
-								 		<a href="#" class="btn btn-info" role="button">more..</a>
+								 		<a href="/more/4000000000" class="btn btn-info" role="button">more..</a>
 								 	</div>
 							 	</ul>
 							 </div>
@@ -160,7 +160,7 @@
 							 		<li><a href="property-shipping-services">Maintenance</a></li>
 							 		<li><a href="wedding-services">Weddings</a></li>
 								 	<div class="read-more">
-								 		<a href="#" class="btn btn-info" role="button">more..</a>
+								 		<a href="/more/5000000000" class="btn btn-info" role="button">more..</a>
 								 	</div>
 							 	</ul>
 							 </div>
@@ -185,7 +185,7 @@
 							 		<li><a href="groups-associations">Associations</a></li>
 							 		<li><a href="travel-travel-partners">Travel</a></li>
 								 	<div class="read-more">
-								 		<a href="#" class="btn btn-info" role="button">more..</a>
+								 		<a href="/more/6000000000" class="btn btn-info" role="button">more..</a>
 								 	</div>
 							 	</ul>
 							 </div>
@@ -207,7 +207,7 @@
 							 		<li><a href="pets-missing-lost-found">Missing, Lost &amp; Found</a></li>
 							 		<li><a href="pets-for-sale">Pets for Sale</a></li>
 								 	<div class="read-more">
-								 		<a href="#" class="btn btn-info" role="button">more..</a>
+								 		<a href="/more/7000000000" class="btn btn-info" role="button">more..</a>
 								 	</div>
 							 	</ul>
 							 </div>
