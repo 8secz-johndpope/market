@@ -82,10 +82,7 @@ span.reveal-phone {
 .payment-option:last-child{
 	margin-bottom: 0;
 }
-.payment-option.cards {
-    padding-bottom: 10px;
-    text-align: center;
-}
+
 .title-advert {
     margin-bottom: 15px;
     border-bottom: 1px solid #ccc;
