@@ -70,11 +70,11 @@
                         <label>
                             Local delivery
                         </label>
-                        <input type="radio" name="post-option" id="del-address">
+                        <input type="radio" name="post-option" id="delivery">
                         <label>
                             United Kingdom delivery
                         </label>
-                        <input type="radio" name="post-option" id="ship-address">
+                        <input type="radio" name="post-option" id="shipping">
                     </div>
                     <div id="ship-address">
                             <h4>Shipping Address</h4>
