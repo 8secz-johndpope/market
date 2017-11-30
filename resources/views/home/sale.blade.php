@@ -84,17 +84,17 @@
                                 </div>
                             @endforeach
                         @endif
-                        @if($sale->type===0)
-                    <h4>Delivery Address</h4>
-                    @foreach($user->addresses as $address)
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="delivery_address" id="exampleRadios1" value="{{$address->id}}" @if(!$advert->can_deliver_to($address->zip)) disabled @endif required>
-                            {{$address->line1}},{{$address->city}},{{$address->postcode}}<br>@if(!$advert->can_deliver_to($address->zip))<span class="red-text"> Outside of the delivery area</span> @else <span class="green-text" > Can Deliver </span> @endif --- {{$advert->distance($address->zip) }} Miles
-                        </label>
-                    </div>
-                    @endforeach
-                        @endif
+                    @if($sale->type===0)
+                        <h4>Delivery Address</h4>
+                        @foreach($user->addresses as $address)
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="delivery_address" id="exampleRadios1" value="{{$address->id}}" @if(!$advert->can_deliver_to($address->zip)) disabled @endif required>
+                                {{$address->line1}},{{$address->city}},{{$address->postcode}}<br>@if(!$advert->can_deliver_to($address->zip))<span class="red-text"> Outside of the delivery area</span> @else <span class="green-text" > Can Deliver </span> @endif --- {{$advert->distance($address->zip) }} Miles
+                            </label>
+                        </div>
+                        @endforeach
+                    @endif
                     <h4>Billing Address</h4>
                     @foreach($user->addresses as $address)
                         <div class="form-check">
