@@ -266,7 +266,7 @@
                                             @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                                             <div class="info-type">
                                                 <h4>Local Delivery</h4>
-                                                <table class="table table-hover">
+                                                <table class="table table-bordered table-hover">
                                                     <thead>
                                                         <tr>
                                                             <th>Distance</th>
@@ -302,7 +302,7 @@
                                         <h3>Returns policy</h3>
                                         <div class="postage-info">
                                             <p>Returns accepted</p>
-                                            <table class="table table-hover">
+                                            <table class="table table-bordered table-hover">
                                                 <thead>
                                                     <tr>
                                                         <th>After receiving the item, cancel the purchase within</th>
