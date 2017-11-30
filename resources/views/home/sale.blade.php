@@ -79,7 +79,7 @@
                         </label>
                         <input type="radio" name="post-option" data-href="ship-address">
                     </div>
-                    <div id="ship-address">
+                    <div class="post-address" id="ship-address">
                             <h4>Shipping Address</h4>
                             @foreach($user->addresses as $address)
                                 <div class="form-check">
@@ -90,7 +90,7 @@
                                 </div>
                             @endforeach
                     </div>
-                    <div id="del-address"> 
+                    <div class="post-address" id="del-address"> 
                         <h4>Delivery Address</h4>
                         @foreach($user->addresses as $address)
                         <div class="form-check">
@@ -213,6 +213,7 @@
             var idDiv = $(this).attr('data-href');
             if(idDiv != "collect"){
                 console.log($(this).attr('data-href'));
+                $('.post-address').hide();
                 idDiv.show();
             }
         });
