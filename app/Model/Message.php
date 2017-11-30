@@ -20,6 +20,10 @@ class Message extends Model
     {
         return $this->belongsTo('App\Model\Room');
     }
+    public function invoice()
+    {
+        return $this->belongsTo('App\Model\Invoice');
+    }
     public function previous(){
         return Message::where('room_id',$this->room_id)->where('id','<',$this->id)->orderBy('id','desc')->first();
     }
