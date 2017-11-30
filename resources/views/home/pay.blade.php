@@ -13,6 +13,7 @@
 @section('content')
     <div class="row all-divs">
         <div class="col-sm-8 col-sm-offset-2">
+            <form action="/user/payment/invoice/stripe/{{$invoice->id}}" method="post">
 
             <div class="row">
                 <div class="col-sm-8">
@@ -45,7 +46,6 @@
                     </table>
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
                     <h4>Pay by Card</h4>
-                    <form action="/user/payment/invoice/stripe/{{$invoice->id}}" method="post">
                         {{ csrf_field() }}
                     <ul class="list-group" >
                         @foreach($cards as $card)
@@ -58,9 +58,9 @@
                     </ul>
                         <button type="submit" class="btn btn-primary">Make Payment</button>
 
-                    </form>
+
                     </div>
-                    <button class="btn btn-default add-card">Add New Card</button>
+                    <a class="btn btn-default add-card">Add New Card</a>
 
                     <p>Or</p>
 
@@ -142,6 +142,7 @@
                     </script>
                 </div>
             </div>
+            </form>
         </div>
     </div>
     <div class="add-card-form" style="display: none">
