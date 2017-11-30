@@ -211,7 +211,7 @@
         });
         $('input[type=radio][name=post-option]').change(function(){
             if($(this).attr('data-href') != "collect"){
-                console.log(this.id);
+                console.log($(this).attr('data-href'));
             }
         });
     </script>
