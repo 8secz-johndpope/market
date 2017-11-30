@@ -130,6 +130,19 @@ span.reveal-phone {
 .info-type thead {
     background: #ddd;
 }
+.check-distance {
+    padding: 0 8px;
+}
+.check-distance input {
+    height: 34px;
+    vertical-align: middle;
+}
+.btn-check {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ff9d2c;
+    vertical-align: middle;
+}
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;

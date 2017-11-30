@@ -282,7 +282,7 @@
                                                     </label>
                                                     <input type="text" name="postcode" id="postcode">
                                                     <input type="hidden" id="id" value="{{$advert->id}}">
-                                                    <button id="check-button" class="btn">Check</button>
+                                                    <button id="check-button" class="btn btn-check">Check</button>
                                                     <div id="sorry-info">
                                                         <p>Sorry, the item can't be delivered to your location</p>
                                                     </div>
