@@ -72,27 +72,36 @@
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="inputPassword" placeholder="Deposit" name="items[]">
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <input type="number" class="form-control" id="inputPassword" placeholder="500" name="prices[]">
+                    </div>
+                    <div class="col-sm-1">
+                        <a class="btn btn-danger">Delete</a>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="inputPassword" placeholder="Admin Fee" name="items[]">
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <input type="number" class="form-control" id="inputPassword" placeholder="100" name="prices[]">
+                    </div>
+                    <div class="col-sm-1">
+                        <a class="btn btn-danger">Delete</a>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="inputPassword" placeholder="Credit Check Fee" name="items[]">
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <input type="number" class="form-control" id="inputPassword" placeholder="35" name="prices[]">
                     </div>
+                    <div class="col-sm-1">
+                        <a class="btn btn-danger">Delete</a>
+                    </div>
                 </div>
-                
+
                 <input type="submit" value="Create Invoice" class="btn btn-primary">
             </form>
         </div>
