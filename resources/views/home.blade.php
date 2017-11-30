@@ -153,13 +153,12 @@
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
-							 		<li><a href="business-office-services">Business &amp; Office</a></li>
-							 		<li><a href="clothing-services">Clothing</a></li>
-							 		<li><a href="telecoms-computer-services">Computers &amp; Telecoms</a></li>
-							 		<li><a href="entertainment-services">Entertainment</a></li>
-							 		<li><a href="tax-money-visa-services">Finance &amp; Legal</a></li>
-							 		<li><a href="food-drink-services">Food &amp; Drink</a></li>
-							 		<li><a href="goods-supplier-retailer-services">Goods Suppliers &amp; Retailers</a></li>
+							 		<li><a href="healt-beauty-services">Health & Beauty</a></li>
+							 		<li><a href="tuition-lessons">Classes</a></li>
+							 		<li><a href="building-home-removal-services">Construction</a></li>
+							 		<li><a href="motoring-services">Motoring</a></li>
+							 		<li><a href="property-shipping-services">Maintenance</a></li>
+							 		<li><a href="wedding-services">Weddings</a></li>
 								 	<div class="read-more">
 								 		<a href="#" class="btn btn-info" role="button">more..</a>
 								 	</div>
