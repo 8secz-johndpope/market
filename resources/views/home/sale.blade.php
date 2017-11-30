@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <div class="postage-options">
-                        <div id="#card-element"></div>
+                        <div id="card-element"></div>
                         <h4>Select delivery</h4>
                         <label>
                             Collection in person
