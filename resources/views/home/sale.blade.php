@@ -68,10 +68,12 @@
                             Collection in person
                         </label>
                         <input type="radio" name="post-option" id="collect" checked>
+                        <br>
                         <label>
                             Local delivery
                         </label>
                         <input type="radio" name="post-option" id="del-address">
+                        <br>
                         <label>
                             United Kingdom delivery
                         </label>
