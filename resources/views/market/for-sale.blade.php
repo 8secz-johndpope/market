@@ -879,8 +879,8 @@
                 </div>
                 <div class="row">
                     <div class="shipping-r">
+                        <h3>Postage options</h3>
                         <div class="shipping-options">
-                            <h3>Postage options</h3>
                             <p><strong>Location:</strong> {{$product['location_name']}}</p>
                             <div class="postage-option">
                                 <span class="postage-price">
