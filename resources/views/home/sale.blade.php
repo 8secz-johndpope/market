@@ -63,7 +63,7 @@
                         <label>
                             Collection in person
                         </label>
-                        <input type="radio" name="post-option" id="collect" >
+                        <input type="radio" name="post-option" id="collect" checked>
                         <label>
                             Local delivery
                         </label>
