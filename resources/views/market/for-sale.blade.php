@@ -261,7 +261,7 @@
                                             @endif
                                             @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                                             <div class="info-type">
-                                                <h4>Delivery Locally</h4>
+                                                <h4>Local Delivery</h4>
                                                 <table class="table table-hover">
                                                     <thead>
                                                         <tr>
