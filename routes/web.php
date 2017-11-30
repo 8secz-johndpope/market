@@ -57,6 +57,7 @@ Route::post('/user/advert/location/change', 'HomeController@change_location');
 Route::get('/user/ad/create', 'HomeController@create');
 
 Route::get('/room/invoice/create/{id}', 'HomeController@create_invoice');
+Route::post('/room/invoice/save', 'HomeController@save_invoice');
 
 
 Route::get('/user/manage/ad/{id}', 'HomeController@manage');

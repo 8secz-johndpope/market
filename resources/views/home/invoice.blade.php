@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <input type="submit" value="Create Invoice" class="btn btn-primary">
+                <input type="submit" value="Send Invoice" class="btn btn-primary">
             </form>
         </div>
     </div>
