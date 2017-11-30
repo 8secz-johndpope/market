@@ -82,10 +82,8 @@
 							 		<li><a href="computers-software">Computers</a></li>
 							 		<li><a href="home-garden">Home & Garden</a></li>
 							 		<li><a href="baby-kids-stuff">Baby &amp; Kids</a></li>
-							 		<li><a href="cameras-studio-equipment">Cameras, Camcorders &amp; Studio Equipment</a></li>
-							 		<li><a href="christmas-decorations">Christmas Decorations</a></li>
+							 		<li><a href="sports-leisure-travel">Sports</a></li>
 							 		<li><a href="clothing">Clothes</a></li>
-							 		
 							 		<div class="read-more">
 							 			<a href="#" class="btn btn-info" role="button">more..</a>
 							 		</div>
