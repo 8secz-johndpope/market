@@ -168,6 +168,7 @@ Route::get('/user/contract/packs', 'HomeController@packs');
 
 Route::post('/user/payment/stripe', 'HomeController@stripe');
 Route::post('/user/payment/sale/stripe/{id}', 'HomeController@sale_stripe');
+Route::post('/user/payment/invoice/stripe/{id}', 'HomeController@invoice_stripe');
 
 Route::get('/user/payment/sale/paypal/{id}', 'HomeController@sale_paypal');
 

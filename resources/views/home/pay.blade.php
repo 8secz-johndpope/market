@@ -34,7 +34,7 @@
                     </table>
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
                     <h4>Pay by Card</h4>
-                    <form action="/user/payment/stripe" method="post">
+                    <form action="/user/payment/invoice/stripe/{{$invoice->id}}" method="post">
                         {{ csrf_field() }}
                     <ul class="list-group" >
                         @foreach($cards as $card)
@@ -66,7 +66,7 @@
                             },
                             onPaymentMethodReceived: function (obj) {
                               //  doSomethingWithTheNonce(obj.nonce);
-                                document.location.href = '/user/payment/paypal?nonce='+obj.nonce
+                                document.location.href = '/user/payment/invoice/paypal/{{$invoice->id}}?nonce='+obj.nonce
 
                             }
                         });
