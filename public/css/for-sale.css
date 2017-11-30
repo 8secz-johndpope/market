@@ -194,6 +194,9 @@ span.reveal-phone {
 #sorry-info{
 	color: darkred;
 }
+.postage-info thead {
+    background: #ddd;
+}
 #map, #pano {
     height: 470px;
     width: 100%;
