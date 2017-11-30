@@ -190,6 +190,7 @@ span.reveal-phone {
 #sorry-info {
     display: none;
     color: darkred;
+    margin-top: 10px;
 }
 #map, #pano {
     height: 470px;
