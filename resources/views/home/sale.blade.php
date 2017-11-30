@@ -1,4 +1,3 @@
-<!-- Stored in resources/views/child.blade.php -->
 
 @extends('layouts.app')
 
@@ -27,19 +26,15 @@
 
                                 @if($advert->featured_expires())
                                     <span class="ribbon-featured">
-<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-</span>
+                                        <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+                                    </span>
                                 @endif
-
                                 <div class="listing-meta txt-sub">
                                     <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($advert->param('images'))}}</span>
                                 </div>
                             </div>
                         </div>
-
                         <div class="info">
-
-
                             <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->id}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
 
                             <span class="listing-location">
@@ -62,6 +57,21 @@
 </span>
                             @endif
                         </div>
+                    </div>
+                    <div class="postage-options">
+                        <h4>Select delivery</h4>
+                        <label>
+                            Collection in person
+                        </label>
+                        <input type="radio" name="collect" >
+                        <label>
+                            Local delivery
+                        </label>
+                        <input type="radio" name="delivery">
+                        <label>
+                            United Kingdom delivery
+                        </label>
+                        <input type="radio" name="shipping">
                     </div>
                         @if($sale->type===1)
                             <h4>Shipping Address</h4>
