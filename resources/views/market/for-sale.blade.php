@@ -247,7 +247,7 @@
                                             @if($advert->has_param('canship')&&$advert->param('canship')===1)
                                             <div class="info-type">
                                                 <h4>Shipping</h4>
-                                                <table class="table table-hover">
+                                                <table class="table table-bordered table-hover">
                                                     <thead>
                                                         <tr>
                                                             <th>To</th>
