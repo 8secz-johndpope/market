@@ -74,11 +74,11 @@ span.reveal-phone {
 }
 .payment-option{
 	text-align: center;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
     background: #fff;
     color: #000;
     border: 1px solid #ff9d2c;
-    width: 100%;
+    width: 80%;
     padding-bottom: 10px;
     padding-top: 10px;
     border-radius: 4px;
