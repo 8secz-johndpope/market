@@ -864,6 +864,13 @@ class HomeController extends BaseController
         return view('market.jobprofile',['profile'=>$user->profile,'user'=>$user]);
     }
 
+    public function create_invoice(Request $request,$id)
+    {
+        $room = Room::find($id);
+        $user = Auth::user();
+
+        return view('home.invoice',['room'=>$room,'user'=>$user]);
+    }
     public function applications(Request $request)
     {
         $user = Auth::user();
