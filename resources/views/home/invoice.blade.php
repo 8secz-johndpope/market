@@ -122,7 +122,7 @@
             console.error( error );
         } );
         $('.delete-item').on('click',function () {
-            $(this).parent().parent().delete();
+            $(this).parent().parent().remove();
         });
     </script>
 @endsection
