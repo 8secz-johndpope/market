@@ -856,8 +856,10 @@ class HomeController extends BaseController
             $profile = new Profile();
             $profile->user_id=$user->id;
             $profile->save();
+            $user->profile=$profile;
 
         }
+
 
         return view('market.jobprofile',['profile'=>$user->profile,'user'=>$user]);
     }
