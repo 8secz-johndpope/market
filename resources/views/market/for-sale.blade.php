@@ -327,7 +327,7 @@
                                             <p>
                                                 <a href="/download-mobile-apps/">
                                                     <img class="payments-methods" src="/css/payments.png">
-                                                </a> or cash on collection
+                                                </a> or Cash on collection
                                             
                                             </p>
                                         </div>
