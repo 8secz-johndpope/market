@@ -85,7 +85,10 @@ span.reveal-phone {
 }
 .postage-option {
     display: table;
-    padding: 10px 0;
+    padding: 0 0 10px 0;
+}
+.postage-option:last-child{
+    padding: 0;
 }
 .postage-price {
     width: 60px;
