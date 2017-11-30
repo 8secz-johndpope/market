@@ -101,6 +101,15 @@
                         <a class="btn btn-danger">Delete</a>
                     </div>
                 </div>
+                <div class="form-group row">
+                    <div class="col-sm-8">
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-1">
+                        <a class="btn btn-default">Add More Items</a>
+                    </div>
+                </div>
 
                 <input type="submit" value="Create Invoice" class="btn btn-primary">
             </form>
