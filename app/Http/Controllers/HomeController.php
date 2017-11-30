@@ -904,6 +904,9 @@ class HomeController extends BaseController
         $message->url='';
         $message->save();
 
+        $invoice->message_id=$message->id;
+        $invoice->save();
+
         return redirect('/user/manage/messages');
     }
     public function pay(Request $request,$id){
