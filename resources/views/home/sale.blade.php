@@ -263,10 +263,10 @@
             $(".add-card-form").hide();
         });
         $('input[type=radio][name=post-option]').change(function(){
-            if(this.id != "collect"){
+            /*if(this.id != "collect"){
                 var div = this.id;
                 $('#'+div).show();
-            }
+            }*/
         });
     </script>
 @endsection
