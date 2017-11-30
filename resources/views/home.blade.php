@@ -78,13 +78,14 @@
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
-							 		<li><a href="kitchen-appliances">Appliances</a></li>
-							 		<li><a href="stereos-audio">Audio</a></li>
-							 		<li><a href="baby-kids-stuff">Baby &amp; Kids Stuff</a></li>
+							 		<li><a href="phones">Mobile Phones</a></li>
+							 		<li><a href="computers-software">Computers</a></li>
+							 		<li><a href="home-garden">Home & Garden</a></li>
+							 		<li><a href="baby-kids-stuff">Baby &amp; Kids</a></li>
 							 		<li><a href="cameras-studio-equipment">Cameras, Camcorders &amp; Studio Equipment</a></li>
 							 		<li><a href="christmas-decorations">Christmas Decorations</a></li>
-							 		<li><a href="clothing">Clothes, Footwear &amp; Accessories</a></li>
-							 		<li><a href="computers-software">Computers &amp; Software</a></li>
+							 		<li><a href="clothing">Clothes</a></li>
+							 		
 							 		<div class="read-more">
 							 			<a href="#" class="btn btn-info" role="button">more..</a>
 							 		</div>
