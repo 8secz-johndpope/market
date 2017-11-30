@@ -88,11 +88,13 @@ span.reveal-phone {
     padding: 10px 0;
 }
 .postage-price {
-    width: 100px;
+    width: 60px;
     height: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid #ff9d2c;
     display: table-cell;
     vertical-align: middle;
+    text-align: center;
+    font-weight: bolder;
 }
 .postage-type {
     display: table-cell;

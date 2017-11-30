@@ -885,7 +885,7 @@
                             <span class="postage-price">
                                 FREE
                             </span>
-                            <span class="postage-type">Free colletion in person</span>
+                            <span class="postage-type">Collection in person</span>
                         </div>
                         @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <div class="postage-option">
