@@ -883,8 +883,10 @@
                         <p><strong>Location:</strong> {{$product['location_name']}}<p>
                         @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
                         <div class="local-option">
-                            <h4>Delivery Locally(Within {{$advert->meta('distance')}}  Miles)</h4>
-                            <p>Price: <span class="bold-text">£{{$advert->delivery()}}</span></p>
+                            <span class="postage-price">
+                                £{{$advert->delivery()}}
+                            </span>
+                            <span class="postage-type">Local Delivery</span>
                         </div>
                         @endif
                         @if($advert->has_param('canship')&&$advert->param('canship')===1)
