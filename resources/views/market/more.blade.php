@@ -23,6 +23,7 @@ use App\Model\Advert;
             </div>
             <div class="col-sm-6">
                 <ul class="list-group">
+                    <li class="list-group-item"><a href="/{{$category->slug}}">All in {{$category->title}}</a> </li>
                     @foreach($category->children as $child)
                         <li class="list-group-item"><a href="/more/{{$child->id}}">{{$child->title}}</a></li>
                         @endforeach
