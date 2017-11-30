@@ -15,6 +15,10 @@ class Application extends Model
     public function cover(){
         return $this->belongsTo('App\Model\Cover');
     }
+
+    public function advert(){
+        return $this->belongsTo('App\Model\Advert');
+    }
     public function cv(){
         return $this->belongsTo('App\Model\Cv');
     }

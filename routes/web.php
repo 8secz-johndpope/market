@@ -136,6 +136,7 @@ Route::post('/business/manage/bump', 'BusinessController@bump');
 Route::get('/business/invoice/pay/{id}', 'BusinessController@invoice');
 
 Route::get('/user/reply/{id}', 'MessageController@reply');
+Route::get('/user/areply/{id}', 'MessageController@contact_applicant');
 Route::get('/user/breply/{id}', 'MessageController@contact_buyer');
 
 

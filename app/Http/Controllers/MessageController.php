@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 use App\Model\Advert;
+use App\Model\Application;
 use App\Model\Message;
 use App\Model\Room;
 use App\Model\Sale;
@@ -81,7 +82,18 @@ class MessageController extends BaseController
         return view('home.reply',['advert'=>$advert,'user'=>$user]);
 
     }
+    public function contact_applicant(Request $request,$id){
+        $user = Auth::user();
+        $application = Application::find($id);
 
+        $room = Room::where('advert_id',$application->advert_id)->where('sender_id',$application->user_id)->first();
+        if($room!==null){
+            return redirect('/user/manage/messages/' . $room->id);
+        }
+
+        return view('home.contact_applicant',['application'=>$application,'user'=>$user]);
+
+    }
 
     public function contact_buyer(Request $request,$id){
         $user = Auth::user();
@@ -147,7 +159,55 @@ class MessageController extends BaseController
         }
 
     }
+    public function asend(Request $request){
+        if($request->has('g-recaptcha-response')) {
+            $user = Auth::user();
+            $application = Application::find($request->id);
+            $advert = $application->advert;
 
+
+            $room = Room::where('advert_id',$application->advert_id)->where('sender_id',$application->user_id)->first();
+            if($room===null){
+                $room = new Room;
+                $room->advert_id = $application->advert->id;
+                $room->image=$application->advert->first_image();
+                $room->title=$application->advert->param('title');
+                $room->sender_id=$application->user->id;
+                $room->save();
+                $room->users()->save($application->user);
+                if($user->id!==$application->user->id){
+                        $room->users()->save($user);
+
+
+                }
+
+                $advert->replies++;
+                $advert->save();
+            }
+
+
+
+
+            $message = new Message;
+            $message->message=$request->message;
+            $message->from_msg=$user->id;
+            $message->to_msg=$application->user_id;
+            $message->room_id=$room->id;
+            $message->url='';
+            $message->save();
+
+
+
+            $room->modify();
+
+            $this->notify($room,$message);
+
+            return redirect('/user/manage/messages/' . $room->id);
+        }else{
+            return redirect('/user/areply/' . $request->id);
+        }
+
+    }
     public function bsend(Request $request){
         if($request->has('g-recaptcha-response')) {
             $user = Auth::user();
