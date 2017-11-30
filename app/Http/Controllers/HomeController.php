@@ -899,6 +899,8 @@ class HomeController extends BaseController
         $message->from_msg=$user->id;
         $message->to_msg=$room->other()->id;
         $message->room_id=$room->id;
+        $message->invoice_id=$invoice->id;
+
         $message->url='';
         $message->save();
 
