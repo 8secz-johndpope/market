@@ -248,8 +248,6 @@
                         <input type="hidden" name="{{$key}}" value="{{$value}}">
                     @endif
                 @endforeach
-                <input type="hidden" id="lat" name="lat" value="{{$lat}}">
-                <input type="hidden" id="lng" name="lng" value="{{$lng}}">
                     <input type="hidden" id="min_lat" name="min_lat" value="-99">
                     <input type="hidden" id="min_lng" name="min_lng" value="-99">
                     <input type="hidden" id="max_lat" name="max_lat" value="99">
