@@ -1605,6 +1605,62 @@ class HomeController extends BaseController
         }
 
     }
+    public function invoice_paypal(Request $request,$id){
+        $user = Auth::user();
+        $invoice=Invoice::find($id);
+
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
+        ));
+
+
+
+        $description = 'Payment towards to Invoice id '.$invoice->id;
+        try {
+
+            if($invoice->amount()>0){
+                $result = $gateway->transaction()->sale([
+                    "amount" => $invoice->amount(),
+                    'paymentMethodNonce' => $request->nonce,
+                    'options' => [
+                        'submitForSettlement' => True
+                    ]
+                ]);
+            }
+
+            if($invoice->type===0){
+                \Stripe\Transfer::create(array(
+                    "amount" => (int)(90*$invoice->amount()),
+                    "currency" => "gbp",
+                    "destination" => $invoice->message->user->stripe_account
+                ));
+
+            }
+            $invoice->status=1;
+
+
+            if($request->has('billing_address'))
+                $invoice->billing_address_id=$request->billing_address;
+            $invoice->save();
+
+
+
+            $this->notify_invoice($invoice);
+
+
+            return redirect('/user/manage/messages');
+
+
+        }
+        catch (\Exception $e) {
+            return [
+                'status' => 'failed',
+                'error' => $e,
+                'result' => ['msg' => 'error charging the card']
+            ];
+        }
+
+    }
     public function sale_paypal(Request $request,$id){
         $user = Auth::user();
         $sale=Sale::find($id);
