@@ -914,6 +914,7 @@
                             <div class="payment-option cards">
                                 <img class="payments-methods" src="/css/payments.png">
                             </div>
+                            <hr>
                             <div class="payment-option hands">
                                 <h4>Cash on collection</h4>
                             </div>
