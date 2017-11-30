@@ -1287,12 +1287,14 @@ class HomeController extends BaseController
                     $body['bumped']=1;
                 $body['created_at']=$milliseconds;
             }else{
-                $body[$item->type->extra_type->slug] = 1;
+                if([$item->type->extra_type){
+                    $body[$item->type->extra_type->slug] = 1;
 
-                $body[$item->type->extra_type->slug.'_count'] = 0;
+                    $body[$item->type->extra_type->slug.'_count'] = 0;
 
+                    $body[$item->type->extra_type->slug.'_expires'] = $milliseconds + $item->type->quantity * 24 * 3600 * 1000;
+                }
 
-                $body[$item->type->extra_type->slug.'_expires'] = $milliseconds + $item->type->quantity * 24 * 3600 * 1000;
             }
 
 
