@@ -109,7 +109,7 @@
                     <div class="col-sm-3">
                     </div>
                     <div class="col-sm-1">
-                        <a class="btn btn-default add-more-items">Add More Items</a>
+                        <a class="btn btn-default add-more-items">Add Item</a>
                     </div>
                 </div>
 
