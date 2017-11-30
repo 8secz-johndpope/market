@@ -60,6 +60,8 @@ class MessageController extends BaseController
             return redirect('/user/manage/messages');
 
         }
+        $room->modify();
+
         if(!$user->access_token){
             $token = $user->createToken('Message Token')->accessToken;
 
