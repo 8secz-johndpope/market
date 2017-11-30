@@ -370,6 +370,9 @@ span.email-icon img {
     border-bottom: transparent;
     background-color: #fff;
 }
+.review {
+    background: #fff;
+}
 .border-top-transparent {
     border-top: transparent;
 }
