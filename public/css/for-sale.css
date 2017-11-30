@@ -33,7 +33,10 @@
     text-align: center;
     margin-bottom: 0;
 }
-
+.payments-r hr {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 .seller-options li {
     width: 33%;
     display: table-cell;
