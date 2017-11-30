@@ -70,11 +70,11 @@
                         <label>
                             Local delivery
                         </label>
-                        <input type="radio" name="post-option" id="delivery">
+                        <input type="radio" name="post-option" id="del-address">
                         <label>
                             United Kingdom delivery
                         </label>
-                        <input type="radio" name="post-option" id="shipping">
+                        <input type="radio" name="post-option" id="ship-address">
                     </div>
                     <div id="ship-address">
                             <h4>Shipping Address</h4>
@@ -262,6 +262,11 @@
             $(".all-divs").show();
             $(".add-card-form").hide();
         });
-        
+        $('input[type=radio][name=post-option]').change(function(){
+            if(this.id != "collect"){
+                var div = this.id;
+                $('#'+div).show();
+            }
+        });
     </script>
 @endsection
