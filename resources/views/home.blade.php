@@ -178,13 +178,12 @@
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
-							 		<li><a href="artists-theatres">Artists &amp; Theatres</a></li>
+							 		<li><a href="music-bands-musicians-djs">Bands &amp; Musicians</a></li>
 							 		<li><a href="classes">Classes</a></li>
-							 		<li><a href="events-gigs-nightlife">Events, Gigs &amp; Nightlife</a></li>
-							 		<li><a href="groups-associations">Groups &amp; Associations</a></li>
-							 		<li><a href="lost-found-stuff">Lost &amp; Found Stuff</a></li>
-							 		<li><a href="music-bands-musicians-djs">Music, Bands &amp; Musicians</a></li>
-							 		<li><a href="rideshare-car-pooling">Rideshare &amp; Car Pooling</a></li>
+							 		<li><a href="events-gigs-nightlife">Events</a></li>
+							 		<li><a href="sports-teams-partners">Sports Teams</a></li>
+							 		<li><a href="groups-associations">Associations</a></li>
+							 		<li><a href="travel-travel-partners">Travel</a></li>
 								 	<div class="read-more">
 								 		<a href="#" class="btn btn-info" role="button">more..</a>
 								 	</div>
