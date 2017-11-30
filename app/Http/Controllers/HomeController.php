@@ -1568,12 +1568,22 @@ class HomeController extends BaseController
                     "description" => $description
                 ));
             }
+
+            if($invoice->type===0){
+                \Stripe\Transfer::create(array(
+                    "amount" => (int)(90*$invoice->amount()),
+                    "currency" => "gbp",
+                    "destination" => $invoice->message->user->stripe_account
+                ));
+
+            }
             $invoice->status=1;
 
 
             if($request->has('billing_address'))
                 $invoice->billing_address_id=$request->billing_address;
             $invoice->save();
+
 
 
             $this->notify_invoice($invoice);
