@@ -19,7 +19,7 @@
             <h4 class="bold-text">Application for {{$application->advert->param('title')}}</h4>
             <div class="well">
                 <div class="under-heading">
-                    <h4 class="bold-text">Reply to the listing</h4>
+                    <h4 class="bold-text">Reply to the Application</h4>
                 </div>
                 <p>Your message to {{$application->user->name}}</p>
                 <textarea cols="50" rows="5" name="message"></textarea>
