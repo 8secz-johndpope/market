@@ -139,6 +139,7 @@ Route::get('/business/manage/metrics', 'BusinessController@metrics');
 Route::get('/business/manage/support', 'BusinessController@support');
 
 Route::post('/business/manage/bump', 'BusinessController@bump');
+Route::get('/pay/invoice/{id}', 'HomeController@pay');
 
 Route::get('/business/invoice/pay/{id}', 'BusinessController@invoice');
 

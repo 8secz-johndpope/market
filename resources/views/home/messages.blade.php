@@ -99,7 +99,7 @@
                                         <div class="right-message"><span class="message"> Invoice Sent for {{$message->invoice->amount()}} &nbsp;&nbsp; <span class="message-time"> {{$message->timestamp()}}</span> </span></div>
 
                                     @else
-                                        <div class="left-message"><span class="message"> Invoice received for {{$message->invoice->amount()}} <a class="btn btn-primary">Pay Now</a> &nbsp;&nbsp;  <span class="message-time"> {{$message->timestamp()}}</span></span></div>
+                                        <div class="left-message"><span class="message"> Invoice received for {{$message->invoice->amount()}} <a class="btn btn-primary" href="/pay/invoice/{{$message->invoice->id}}">Pay Now</a> &nbsp;&nbsp;  <span class="message-time"> {{$message->timestamp()}}</span></span></div>
 
                                     @endif
 

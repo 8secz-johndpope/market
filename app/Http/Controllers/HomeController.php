@@ -906,6 +906,30 @@ class HomeController extends BaseController
 
         return redirect('/user/manage/messages');
     }
+    public function pay(Request $request,$id){
+        $user = Auth::user();
+
+        $stripe_id = $user->stripe_id;
+        $customer = \Stripe\Customer::retrieve($stripe_id);
+
+        try{
+            $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+                'limit' => 10, 'object' => 'card'));
+            $card = $customer->sources->retrieve($customer->default_source);
+            $cards = $cards['data'];
+
+        }catch (\Exception $exception){
+            $cards = [];
+            $card=null;
+        }
+
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
+        ));
+        $clientToken = $gateway->clientToken()->generate();
+
+        return view('home.pay',['invoice'=>Invoice::find($id),'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user]);
+    }
     public function applications(Request $request)
     {
         $user = Auth::user();
