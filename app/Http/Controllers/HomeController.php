@@ -1287,7 +1287,7 @@ class HomeController extends BaseController
                     $body['bumped']=1;
                 $body['created_at']=$milliseconds;
             }else{
-                if([$item->type->extra_type){
+                if($item->type->extra_type){
                     $body[$item->type->extra_type->slug] = 1;
 
                     $body[$item->type->extra_type->slug.'_count'] = 0;
