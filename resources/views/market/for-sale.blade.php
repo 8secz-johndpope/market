@@ -320,13 +320,16 @@
                                     </div>
                                     <div class="clearfix des-postage">
                                         <h3>Payment details</h3>
-                                        <div class="col-sm-6 meta-bold">
+                                        <div class="col-sm-3 meta-bold">
                                                     Payments:
                                         </div>
-                                        <div class="col-sm-6 meta-info">
-                                            <a href="/download-mobile-apps/">
-                                                <img class="payments-methods" src="/css/payments.png">
-                                            </a>
+                                        <div class="col-sm-9 meta-info">
+                                            <p>
+                                                <a href="/download-mobile-apps/">
+                                                    <img class="payments-methods" src="/css/payments.png">
+                                                </a> or cash on collection
+                                            
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
