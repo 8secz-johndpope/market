@@ -524,6 +524,7 @@ span.email-icon img {
 .reviews .title {
     height: 31px;
     border-bottom: 1px solid #ccc;
+    background: #fff;
 }
 .reviews h4 {
     font-size: 1.5rem;
