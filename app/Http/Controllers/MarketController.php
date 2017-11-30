@@ -30,7 +30,7 @@ class MarketController extends BaseController
     public function more(Request $request,$id){
     $category = Category::find($id);
     if(count($category->children)>0){
-        return view('market.more',['category'=>$category]);
+        return view('market.more',['category'=>$category,'input'=>[]]);
     }else{
         return redirect('/'+$category->slug);
     }
