@@ -73,7 +73,7 @@
                         </label>
                         <input type="radio" name="post-option" id="shipping">
                     </div>
-                        @if($sale->type===1)
+                    <div id="ship-address">
                             <h4>Shipping Address</h4>
                             @foreach($user->addresses as $address)
                                 <div class="form-check">
@@ -83,8 +83,8 @@
                                     </label>
                                 </div>
                             @endforeach
-                        @endif
-                    @if($sale->type===0)
+                    </div>
+                    <div id="del-address"> 
                         <h4>Delivery Address</h4>
                         @foreach($user->addresses as $address)
                         <div class="form-check">
@@ -94,7 +94,7 @@
                             </label>
                         </div>
                         @endforeach
-                    @endif
+                    </div>
                     <h4>Billing Address</h4>
                     @foreach($user->addresses as $address)
                         <div class="form-check">
