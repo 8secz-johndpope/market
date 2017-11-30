@@ -121,12 +121,16 @@ span.reveal-phone {
     vertical-align: middle;
     padding-left: 10px;
 }
+.shipping-options {
+    background: #fff;
+}
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
     /* display: table; */
     padding: 15px 5px;
     width: 100%;
+    background: #fff;
 }
 .advert-img {
     height: 20rem;
@@ -173,6 +177,9 @@ span.reveal-phone {
 #can-info{
 	display: none;
 }
+.tab-content {
+    background: #fff;
+}
 /* end similar */
 
 /* advert design*/
@@ -200,6 +207,7 @@ h2.item-name {
 .buttons {
     margin-top: 0;
     border: 1px solid #ddd;
+    background-color: #fff;
 }
 .details {
     padding: 15px;
@@ -360,6 +368,7 @@ span.email-icon img {
 .content-reviews {
     border: 1px solid #ccc;
     border-bottom: transparent;
+    background-color: #fff;
 }
 .border-top-transparent {
     border-top: transparent;
