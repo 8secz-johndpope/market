@@ -42,7 +42,7 @@ class MarketController extends BaseController
         }
         return view('market.more',['base'=>$base,'category'=>$category,'input'=>[],'location'=>Location::find(0)]);
     }else{
-        return redirect('/'+$category->slug);
+        return redirect($category->slug);
     }
 }
     public function show($id)
