@@ -1297,18 +1297,21 @@ class HomeController extends BaseController
 
             }
 
-
-            $params = [
-                'index' => 'adverts',
-                'type' => 'advert',
-                'id' => $advert->elastic,
-                'body' => [
-                    'doc' => $body
-                ]
-            ];
+            if(!empty($body)){
+                $params = [
+                    'index' => 'adverts',
+                    'type' => 'advert',
+                    'id' => $advert->elastic,
+                    'body' => [
+                        'doc' => $body
+                    ]
+                ];
 
 // Update doc at /my_index/my_type/my_id
-            $response = $this->client->update($params);
+                $response = $this->client->update($params);
+            }
+
+
         }
 
 
