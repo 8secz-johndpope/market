@@ -538,6 +538,7 @@ span.email-icon img {
 .read-more-reviews {
     border-top: 1px solid #ccc;
     text-align: center;
+    background: #fff;
 }
 .read-more-reviews .glyphicon-chevron-down {
     margin-left: 10px;
