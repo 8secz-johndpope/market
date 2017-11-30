@@ -103,13 +103,11 @@
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
-							 		<li><a href="commercial">Commercial</a></li>
 							 		<li><a href="property-for-sale">For Sale</a></li>
-							 		<li><a href="holiday-rentals">Holiday Rentals</a></li>
-							 		<li><a href="international-property-for-sale">International</a></li>
-							 		<li><a href="garage-parking">Parking &amp; Garage</a></li>
-							 		<li><a href="property-wanted">Property Wanted</a></li>
 							 		<li><a href="property-to-rent">To Rent</a></li>
+							 		<li><a href="commercial">Commercial</a></li>
+							 		<li><a href="property-to-share">To Share</a></li>
+							 		<li><a href="garage-parking">Parking &amp; Garage</a></li>
 							 		<div class="read-more">
 							 			<a href="#" class="btn btn-info" role="button">more..</a>
 							 		</div>
