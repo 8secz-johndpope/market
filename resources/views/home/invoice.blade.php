@@ -76,7 +76,7 @@
                         <input type="number" class="form-control" id="inputPassword" placeholder="500" name="prices[]">
                     </div>
                     <div class="col-sm-1">
-                        <a class="btn btn-danger">Delete</a>
+                        <a class="btn btn-danger delete-item">Delete</a>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -87,7 +87,7 @@
                         <input type="number" class="form-control" id="inputPassword" placeholder="100" name="prices[]">
                     </div>
                     <div class="col-sm-1">
-                        <a class="btn btn-danger">Delete</a>
+                        <a class="btn btn-danger delete-item">Delete</a>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -98,7 +98,7 @@
                         <input type="number" class="form-control" id="inputPassword" placeholder="35" name="prices[]">
                     </div>
                     <div class="col-sm-1">
-                        <a class="btn btn-danger">Delete</a>
+                        <a class="btn btn-danger delete-item">Delete</a>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -121,5 +121,8 @@
             .catch( error => {
             console.error( error );
         } );
+        $('.delete-item').on('click',function () {
+            $(this).parent().parent().delete();
+        });
     </script>
 @endsection
