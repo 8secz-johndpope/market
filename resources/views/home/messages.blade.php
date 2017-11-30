@@ -93,13 +93,25 @@
                             @if($message->previous()&&$message->previous()->day()!==$message->day()||!$message->previous())
                                <div class="day-seperator"><span class="day-seperator-text">{{$message->day()}}</span> </div>
                                 @endif
+
+                            @if($message->type==='invoice')
+                                    @if($message->from_msg===$user->id)
+                                        <div class="right-message"><span class="message"> Invoice Sent for &nbsp;&nbsp; <span class="message-time"> {{$message->timestamp()}}</span> </span></div>
+
+                                    @else
+                                        <div class="left-message"><span class="message"> Invoice received for &nbsp;&nbsp;  <span class="message-time"> {{$message->timestamp()}}</span></span></div>
+
+                                    @endif
+
+                                    @else
+
                             @if($message->from_msg===$user->id)
 
                             <div class="right-message"><span class="message"> {{$message->message}}&nbsp;&nbsp; <span class="message-time"> {{$message->timestamp()}}</span> </span></div>
                             @else
                                 <div class="left-message"><span class="message">{{$message->message}}&nbsp;&nbsp;  <span class="message-time"> {{$message->timestamp()}}</span></span></div>
                             @endif
-
+@endif
                         @endforeach
                     </div>
 
