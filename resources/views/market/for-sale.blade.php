@@ -284,10 +284,10 @@
                                                     <input type="hidden" id="id" value="{{$advert->id}}">
                                                     <button id="check-button" class="btn btn-check">Check</button>
                                                     <div id="sorry-info">
-                                                        <p>Sorry, the item can't be delivered to your location</p>
+                                                        <p><span class="glyphicon glyphicon-info-sign"></span>Sorry, the item can't be delivered to your location</p>
                                                     </div>
                                                     <div id="can-info">
-                                                        <p>Can be delivered to <span id="write-postcode"></span></p>
+                                                        <p><span class="glyphicon glyphicon-ok-circle"></span>Can be delivered to <span id="write-postcode"></span></p>
                                                     </div>
                                                 </div>
                                             </div>
