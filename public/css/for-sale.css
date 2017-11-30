@@ -587,6 +587,7 @@ span.email-icon img {
 }
 img.payments-methods {
     height: 19px;
+    margin-right: 10px;
 }
 .info-type {
     background: #f9f0eb;
