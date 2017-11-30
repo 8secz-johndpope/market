@@ -83,6 +83,22 @@ span.reveal-phone {
 .check-distance label {
     display: block;
 }
+.postage-option {
+    display: table;
+    padding: 10px 0;
+}
+.postage-price {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    display: table-cell;
+    vertical-align: middle;
+}
+.postage-type {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+}
 /** similar adverts */
 .listings-adverts {
     border: 1px solid #ddd;
