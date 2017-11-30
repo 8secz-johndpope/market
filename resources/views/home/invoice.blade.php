@@ -64,7 +64,7 @@
                 <div class="form-group row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
                     <div class="col-sm-10">
-                        <input type="text" name="title" class="form-control-plaintext" id="staticEmail" value="{{$room->title}}">
+                        <input type="text" name="title" class="form-control" id="staticEmail" value="{{$room->title}}">
                     </div>
                 </div>
                 <div class="form-group row">
