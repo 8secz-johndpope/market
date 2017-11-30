@@ -16,11 +16,18 @@ class Invoice extends Model
         return $this->hasMany('App\Model\InvoiceItem');
     }
     public function amount(){
-          $total = 0;
-            foreach ($this->items as $item){
-                $total += $item->amount;
-            }
-            return $total/100;
+         return $this->amount_in_pence()/100;
 
+    }
+    public function message()
+    {
+        return $this->belongsTo('App\Model\Message');
+    }
+    public function amount_in_pence(){
+        $total = 0;
+        foreach ($this->items as $item){
+            $total += $item->amount;
+        }
+        return $total;
     }
 }

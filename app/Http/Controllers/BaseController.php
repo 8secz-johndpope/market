@@ -63,7 +63,18 @@ class BaseController extends Controller
                 }
 
     }
+    public function notify_invoice($invoice){
 
+
+        Redis::publish(''.$invoice->message->from_msg, json_encode($invoice));
+        foreach ($invoice->message->user->android as $token){
+            $this->android($token,$invoice->title,'Invoice',$invoice);
+        }
+        foreach ($invoice->message->user->ios as $token){
+            $this->ios($token,$invoice->title,'Invoice',$invoice);
+        }
+
+    }
     public function android($token,$title,$message,$data){
         $user = Auth::user();
 

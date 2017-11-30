@@ -1548,6 +1548,50 @@ class HomeController extends BaseController
         }
 
     }
+    public function invoice_stripe(Request $request,$id){
+        $user = Auth::user();
+        $invoice=Invoice::find($id);
+        $stripe_id = $user->stripe_id;
+        $card = $request->card;
+
+
+
+
+        $description = 'Payment towards to Invoice id '.$invoice->id;
+        try {
+            if($invoice->amount_in_pence()>0){
+                $charge = \Stripe\Charge::create(array(
+                    "amount" => $invoice->amount_in_pence(),
+                    "currency" => "gbp",
+                    "customer" => $stripe_id,
+                    "source" => $card, // obtained with Stripe.js
+                    "description" => $description
+                ));
+            }
+            $invoice->status=1;
+
+
+            if($request->has('billing_address'))
+                $invoice->billing_address_id=$request->billing_address;
+            $invoice->save();
+
+
+            $this->notify_invoice($invoice);
+
+
+            return redirect('/user/manage/messages');
+
+
+        }
+        catch (\Exception $e) {
+            return [
+                'status' => 'failed',
+                'error' => $e,
+                'result' => ['msg' => 'error charging the card']
+            ];
+        }
+
+    }
     public function sale_paypal(Request $request,$id){
         $user = Auth::user();
         $sale=Sale::find($id);
