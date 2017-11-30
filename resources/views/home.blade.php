@@ -130,13 +130,12 @@
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
-							 		<li><a href="account-management">All lastest job</a></li>
-							 		<li><a href="accountancy">All London jobs</a></li>
+							 		<li><a href="jobs">All lastest job</a></li>
+							 		<li><a href="jobs/london">All London jobs</a></li>
 							 		<li><a href="administration">General jobs</a></li>
 							 		<li><a href="construction">Permanent jobs</a></li>
-							 		<li><a href="consulting"></a></li>
-							 		<li><a href="creative-media-design">Creative Media &amp; Design</a></li>
-							 		<li><a href="customer-services">Customer Service</a></li>
+							 		<li><a href="consulting">Weekend jobs</a></li>
+							 		<li><a href="creative-media-design">All Recruiters</a></li>
 								 	<div class="read-more">
 								 		<a href="#" class="btn btn-info" role="button">more..</a>
 								 	</div>
