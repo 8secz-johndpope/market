@@ -1508,7 +1508,7 @@ class HomeController extends BaseController
 
 
         $description = 'Payment towards to Order id '.$sale->id;
-        try {
+      //  try {
             if($sale->amount_in_pence()>0){
                 $charge = \Stripe\Charge::create(array(
                     "amount" => $sale->amount_in_pence(),
@@ -1541,14 +1541,14 @@ class HomeController extends BaseController
                 return redirect('/user/manage/orders');
 
 
-        }
-        catch (\Exception $e) {
-            return [
-                'status' => 'failed',
-                'error' => $e,
-                'result' => ['msg' => 'error charging the card']
-            ];
-        }
+       // }
+        //catch (\Exception $e) {
+        //    return [
+        //        'status' => 'failed',
+         //       'error' => $e,
+         //       'result' => ['msg' => 'error charging the card']
+       //     ];
+      //  }
 
     }
     public function invoice_stripe(Request $request,$id){
