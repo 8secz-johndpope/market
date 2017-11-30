@@ -240,6 +240,9 @@
                                         <h3>Postage and packaging</h3>
                                         <div class="postage-info">
                                             <p><strong>Item location: </strong>{{$product['location_name']}}</p>
+                                            <div class="info-type">
+                                                <h4>Collection in person</h4>
+                                            </div>
                                             @if($advert->has_param('canship')&&$advert->param('canship')===1)
                                             <div class="info-type">
                                                 <h4>Shipping</h4>
