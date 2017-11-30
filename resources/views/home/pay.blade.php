@@ -25,6 +25,17 @@
                             @endforeach
                         </table>
 
+                    <div>
+                        @foreach($user->addresses as $address)
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="billing_address" id="exampleRadios1" value="{{$address->id}}" @if($user->default_address===$address->id) checked @endif required>
+                                    {{$address->line1}},{{$address->city}},{{$address->postcode}}
+                                </label>
+                            </div>
+                        @endforeach
+                    </div>
+
                 </div>
                 <div class="col-sm-4">
                     <table class="table">
