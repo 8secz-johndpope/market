@@ -27,6 +27,14 @@ use App\Model\Categories;
 
 class MarketController extends BaseController
 {
+    public function more(Request $request,$id){
+    $category = Category::find($id);
+    if(count($category->children)>0){
+        return view('home.more',['category'=>$category]);
+    }else{
+        return redirect('/'+$category->slug);
+    }
+}
     public function show($id)
     {
 
