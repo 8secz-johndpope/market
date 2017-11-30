@@ -297,17 +297,18 @@
                                     <div class="des-postage">
                                         <h3>Returns policy</h3>
                                         <div class="postage-info">
+                                            <p>Returns accepted</p>
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th>Distance</th>
-                                                        <th>Price</th>
+                                                        <th>After receiving the item, cancel the purchase within</th>
+                                                        <th>Return postage</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>Within {{$advert->meta('distance')}}  Miles</td>
-                                                        <td>£{{ $advert->delivery() }}</td>
+                                                        <td>30 days</td>
+                                                        <td>Buyer pays return postage</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
