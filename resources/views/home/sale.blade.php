@@ -210,8 +210,10 @@
             $(".add-card-form").hide();
         });
         $('input[type=radio][name=post-option]').change(function(){
-            if($(this).attr('data-href') != "collect"){
+            var idDiv = $(this).attr('data-href');
+            if(idDiv != "collect"){
                 console.log($(this).attr('data-href'));
+                idDiv.show();
             }
         });
     </script>
