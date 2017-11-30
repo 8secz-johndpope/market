@@ -63,15 +63,15 @@
                         <label>
                             Collection in person
                         </label>
-                        <input type="radio" name="collect" >
+                        <input type="radio" name="post-option" id="collect" >
                         <label>
                             Local delivery
                         </label>
-                        <input type="radio" name="delivery">
+                        <input type="radio" name="post-option" id="delivery">
                         <label>
                             United Kingdom delivery
                         </label>
-                        <input type="radio" name="shipping">
+                        <input type="radio" name="post-option" id="shipping">
                     </div>
                         @if($sale->type===1)
                             <h4>Shipping Address</h4>
