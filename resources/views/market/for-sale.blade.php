@@ -878,31 +878,33 @@
                 @endif
                 </div>
                 <div class="row">
-                    <div class="shipping-options">
-                        <h3>Postage options</h3>
-                        <p><strong>Location:</strong> {{$product['location_name']}}<p>
-                        <div class="postage-option">
-                            <span class="postage-price">
-                                FREE
-                            </span>
-                            <span class="postage-type">Collection in person</span>
+                    <div class="shipping-r">
+                        <div class="shipping-options">
+                            <h3>Postage options</h3>
+                            <p><strong>Location:</strong> {{$product['location_name']}}</p>
+                            <div class="postage-option">
+                                <span class="postage-price">
+                                    FREE
+                                </span>
+                                <span class="postage-type">Collection in person</span>
+                            </div>
+                            @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
+                            <div class="postage-option">
+                                <span class="postage-price">
+                                    £{{$advert->delivery()}}
+                                </span>
+                                <span class="postage-type">Local Delivery</span>
+                            </div>
+                            @endif
+                            @if($advert->has_param('canship')&&$advert->param('canship')===1)
+                            <div class="postage-option">
+                                <span class="postage-price">
+                                    £{{$advert->shipping_cost()}}
+                                </span>
+                                <span class="postage-type">United Kingdom Delivery</span>
+                            </div>
+                            @endif
                         </div>
-                        @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
-                        <div class="postage-option">
-                            <span class="postage-price">
-                                £{{$advert->delivery()}}
-                            </span>
-                            <span class="postage-type">Local Delivery</span>
-                        </div>
-                        @endif
-                        @if($advert->has_param('canship')&&$advert->param('canship')===1)
-                        <div class="postage-option">
-                            <span class="postage-price">
-                                £{{$advert->shipping_cost()}}
-                            </span>
-                            <span class="postage-type">United Kingdom Delivery</span>
-                        </div>
-                        @endif
                     </div>
                 </div>
                 <div class="row">
