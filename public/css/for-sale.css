@@ -614,6 +614,15 @@ legend {
     cursor: pointer;
     z-index: 90;
 }
+.aspects-fieldset .aspects-questions .actions.feedback input[type="radio"]:checked+label {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #ff8830;
+    background-color: #ff8830;
+}
+.rating fieldset>input:checked ~ label {
+    background-position: -52px -1px;
+}
 button.btn.btn-default.btn-submit {
     float: right;
 }
