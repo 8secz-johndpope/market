@@ -223,7 +223,7 @@
             if(idDiv != "collect"){
                 $('.post-address').hide();
                 $('.post-price').hide();
-                $('.post-address').attr('required', false);
+                $('.post-address input').attr('required', false);
                 $('#'+idDiv).show();
                 $('#'+idDiv +' input').attr('required', true);
                 $('#' + idDiv + '-price').show();
@@ -231,7 +231,7 @@
             }
             else{
                 $('.post-address').hide();
-                $('.post-address').attr('required', false);
+                $('.post-address input').attr('required', false);
                 $('.post-price').hide()
             }
             console.log(type);
