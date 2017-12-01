@@ -434,6 +434,10 @@ span.email-icon img {
     border-bottom: transparent;
     border-top: transparent;
 }
+#make-rate h2, #make-review h2 {
+    font-size: 18px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
 .reviews-list {
     margin: 10px 0 0;
     padding-left: 10px;
