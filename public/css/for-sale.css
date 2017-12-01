@@ -617,8 +617,8 @@ legend {
 .aspects-fieldset .aspects-questions .actions.feedback input[type="radio"]:checked+label {
     color: #fff;
     text-decoration: none;
-    border: 1px solid #ff8830;
-    background-color: #ff8830;
+    border: 1px solid #ff9d2c;
+    background-color: #ff9d2c;
 }
 .rating fieldset>input:checked ~ label {
     background-position: -52px -1px;
@@ -632,6 +632,9 @@ legend {
     background-position: -52px -1px;
 }
 .actions fieldset>label:hover, .actions fieldset:not(:checked)>label:hover, .actions fieldset:not(:checked)>label:hover ~ label {
+    background-position: -35px -1px;
+}
+.actions fieldset>input:checked ~ label {
     background-position: -35px -1px;
 }
 button.btn.btn-default.btn-submit {
