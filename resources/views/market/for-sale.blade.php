@@ -330,23 +330,27 @@
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="clearfix des-postage">
-                                        <h3>Payment details</h3>
-                                        <div class="col-sm-3 meta-bold">
-                                                    Payments:
-                                        </div>
-                                        <div class="col-sm-9 meta-info">
-                                            <p>
-                                                @if($advert->user!==null)
-                                                <a href="/download-mobile-apps/">
-                                                    <img class="payments-methods" src="/css/payments.png">
-                                                </a> or 
-                                                @endif
-                                                Cash on collection
-                                            </p>
-                                        </div>
-                                    </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div id="tap-pay" class="tab-pane fade">
+                            <div class="row">
+                                 <div class="col-sm-12">
+                                    <h3>Payments</h3>
+                                    <div class="col-sm-3 meta-bold">
+                                                    Payments:
+                                    </div>
+                                    <div class="col-sm-9 meta-info">
+                                        <p>
+                                            @if($advert->user!==null)
+                                            <a href="/download-mobile-apps/">
+                                                <img class="payments-methods" src="/css/payments.png">
+                                            </a> or 
+                                            @endif
+                                            Cash on collection
+                                        </p>
+                                    </div>
+                                 </div>
                             </div>
                         </div>
                         <div id="tap-terms" class="tab-pane fade">
