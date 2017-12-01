@@ -864,10 +864,8 @@
                                 <div class="items-box-price font-5">£ {{number_format($product['meta']['price'] / 100, 0, '.', ',')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
                                 </div>
                                 @if($advert->user !== null)
-                                <form action="/user/ad/sale" method="post">
+                                <form action="/user/ad/sale">
                                     <input name="id" type="hidden" value="{{$advert->id}}">
-                                    <input name="type" type="hidden" value="2">
-                                    {{ csrf_field() }}
                                     <button type="submit" class="btn-info btn">Buy it now</button>
                                 </form>
                                 <hr>
