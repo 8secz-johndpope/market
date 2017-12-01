@@ -116,19 +116,19 @@
                     <table class="table">
                         <tr>
                             <td>Price:</td>
-                            <td><span class="bold-text">£{{$sale->advert->price()}}</span></td>
+                            <td><span class="bold-text">£<span id="sale-price">{{$sale->advert->price()}}</span></span></td>
                         </tr>
                         <tr class="post-price" id="del-address-price">
                             <td>Delivery:</td>
-                            <td><span class="bold-text">£{{$sale->advert->delivery()}}</span></td>
+                            <td><span class="bold-text">£<span id="post-price">{{$sale->advert->delivery()}}</span></span></td>
                         </tr>
                         <tr class="post-price" id="ship-address-price">
                             <td>Shipping:</td>
-                            <td><span class="bold-text">£{{$sale->advert->shipping_cost()}}</span></td>
+                            <td><span class="bold-text">£<span id="post-price">{{$sale->advert->shipping_cost()}}</span></span></td>
                         </tr>
                         <tr>
                             <td>Total:</td>
-                            <td><span class="bold-text">£{{$sale->amount()}}</span></td>
+                            <td><span class="bold-text">£<span id="sale-total-price">{{$sale->amount()}}</span></span></td>
                         </tr>
                     </table>
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
@@ -216,12 +216,14 @@
         });
         $('input[type=radio][name=post-option]').change(function(){
             var idDiv = $(this).attr('data-href');
+            var total = $('#sale-price').text();
             if(idDiv != "collect"){
                 console.log($(this).attr('data-href'));
                 $('.post-address').hide();
                 $('.post-price').hide()
                 $('#'+idDiv).show();
-                 $('#' + idDiv + '-price').show();
+                $('#' + idDiv + '-price').show();
+                var total += $("#sale-total-price").text() + 
             }
             else{
                 $('.post-address').hide();
