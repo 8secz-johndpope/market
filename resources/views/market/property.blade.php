@@ -15,6 +15,7 @@
 
 @section('content')
 <script src="/js/imageviewer.min.js"></script>
+<div class="body">
     <div class="container">
         <div class="row">
         <div class="col-md-2 col-sm-3 col-xs-6 back">
@@ -1137,7 +1138,7 @@
             </div>
         </div>
     </div>
-
+</div>
 <script>
     var timer = null;
 
