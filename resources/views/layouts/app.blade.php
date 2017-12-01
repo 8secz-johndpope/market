@@ -215,7 +215,7 @@
     Your browser does not support the audio element.
 </audio>
 <header>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid top">
             <div class="row">
                 <div class="col-lg-2 col-md-3 navbar-header">
