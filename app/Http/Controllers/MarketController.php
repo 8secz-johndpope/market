@@ -913,6 +913,10 @@ class MarketController extends BaseController
             $advert= Advert::where('sid',$sid)->first();
 
         }
+        if($advert->category_id===0){
+            $advert->category_id=$cat;
+            $advert->save();
+        }
         $similar = $advert->similar();
         $similarUnder =  $advert->similarUnderPrice();
         $params = [
