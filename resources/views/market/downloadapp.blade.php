@@ -7,9 +7,13 @@
 
     <p>This is appended to the master sidebar.</p>
 @endsection
+@section('styles')
+<link href="{{ asset('/css/download.css?q=874') }}" rel="stylesheet">
+@endsection
 
 @section('content')
- <link href="{{ asset('/css/download.css?q=874') }}" rel="stylesheet">
+ 
+<div class="body">
 <div class="container">
 	<div class="row hidden-xs">
 		 <div class="col-md-6 col-sm-12">
@@ -94,5 +98,6 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 @endsection
