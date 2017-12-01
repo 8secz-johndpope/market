@@ -907,7 +907,7 @@
                                 <span class="postage-price">
                                     £{{$advert->shipping_cost()}}
                                 </span>
-                                <span class="postage-type">United Kingdom Delivery</span>
+                                <span class="postage-type">United Kingdom Shipping</span>
                             </div>
                             @endif
                         </div>

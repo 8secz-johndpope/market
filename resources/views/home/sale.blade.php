@@ -76,7 +76,7 @@
                         <input type="radio" name="post-option" data-href="del-address" value="0">
                         <br>
                         <label>
-                            United Kingdom delivery
+                            United Kingdom Shipping
                         </label>
                         <input type="radio" name="post-option" data-href="ship-address" value="1">
                     </div>
