@@ -1522,7 +1522,7 @@ class HomeController extends BaseController
             }
             else if($sale->type == 1){
                 if($request->has('shipping_address'))
-                    $sale->address_id = $request->shipping_address
+                    $sale->address_id = $request->shipping_address;
             }
             if($request->has('billing_address'))
                 $sale->billing_address_id=$request->billing_address;
