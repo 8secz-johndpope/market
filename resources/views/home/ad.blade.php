@@ -17,7 +17,7 @@
         }
     </style>
 
-
+<div class="body">
     <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-10  nopadding">
@@ -593,6 +593,7 @@
             </div>
         </div>
     </div>
+</div>
     <script>
         $(".change-shipping").change( function(){
 
