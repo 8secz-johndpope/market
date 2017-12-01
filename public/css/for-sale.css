@@ -433,6 +433,7 @@ span.email-icon img {
     border: 1px solid #ccc;
     border-bottom: transparent;
     border-top: transparent;
+    background: #fff;
 }
 #make-rate h2, #make-review h2 {
     font-size: 18px;
