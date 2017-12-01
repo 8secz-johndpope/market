@@ -10,6 +10,7 @@
 
 @section('content')
  <link href="{{asset('/css/agent.css?q=874')}} | {{ isset($user->business) ? $user->business->name : 'Company'}}" rel="stylesheet">
+ <div class="body">
 <div class="container">
 	<div class="row">
 		 <div class="col-md-8 col-sm-12">
@@ -265,6 +266,7 @@
 		</div> -->
 		<!-- end col-agency-contact -->
 	</div>
+</div>
 </div>
 @if(isset($user->business)) 
 <script>
