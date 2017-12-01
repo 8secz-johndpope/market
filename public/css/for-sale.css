@@ -462,6 +462,22 @@ span.email-icon img {
     color: #535353;
     line-height: normal;
 }
+.review-content-section .input-elem-textbox textarea {
+    border-radius: 2px;
+    width: 100%;
+    resize: vertical;
+    max-height: 800px;
+    min-height: 32px;
+    color: #535353;
+    overflow: auto;
+    clear: both;
+}
+button.btn.btn-default.btn-submit {
+    float: right;
+}
+.submit {
+    margin: 30px 0;
+}
 .reviews-list {
     margin: 10px 0 0;
     padding-left: 10px;
