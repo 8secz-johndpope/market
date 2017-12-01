@@ -90,12 +90,12 @@
                             <span class="glyphicon glyphicon-chevron-right"></span>
                             <span class="sr-only">Next</span>
                         </a>
-                        <div class="request-details">
-                            <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
-                            <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
-                            
-                            <a href="/download-mobile-apps/" class="btn btn-default">VideoCall</a>
-                        </div>
+                    </div>
+                    <div class="request-details">
+                        <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
+                        <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
+                        
+                        <a href="/download-mobile-apps/" class="btn btn-default">VideoCall</a>
                     </div>
                     @endif
                     <div id="tabs"> 
