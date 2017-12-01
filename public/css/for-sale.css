@@ -623,6 +623,14 @@ legend {
 .rating fieldset>input:checked ~ label {
     background-position: -52px -1px;
 }
+.rating fieldset:not(:checked)>label:hover, .actions fieldset:not(:checked)>label:hover {
+    transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+}
+.rating fieldset>label:hover, .rating fieldset:not(:checked)>label:hover, .rating fieldset:not(:checked)>label:hover ~ label {
+    background-position: -52px -1px;
+}
 button.btn.btn-default.btn-submit {
     float: right;
 }
