@@ -216,19 +216,21 @@
         });
         $('input[type=radio][name=post-option]').change(function(){
             var idDiv = $(this).attr('data-href');
-            var total = $('#sale-price').text();
+            var total = parseInt($('#sale-price').text());
             if(idDiv != "collect"){
                 console.log($(this).attr('data-href'));
                 $('.post-address').hide();
                 $('.post-price').hide()
                 $('#'+idDiv).show();
                 $('#' + idDiv + '-price').show();
-                var total += $("#sale-total-price").text() + 
+                total += parseInt($("#post-price")).text();
             }
             else{
                 $('.post-address').hide();
                 $('.post-price').hide()
             }
+            console.log(total);
+            $('#sale-total-price').text(total);
         });
     </script>
 @endsection
