@@ -43,10 +43,12 @@
             <div class="col-md-8 col-sm-12">
                     <div id="current-image">
                         <img id="image-active" data-index="1" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" class="gallery-items">
+                        @if(count($product['images']) > 0)
                         <div class="images-info">
                             <div class="col-sm-4 start-animation">
                                 <a href="javascript:void(0)" class="icon-before">Start slideshow</a>
                             </div>
+
                             <div class="col-sm-4 images-nav">
                                 <p><span class="prev"> <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-left"></span></a></span>
                                     <span class="index">1</span> of {{count($product['images'])}}
@@ -57,6 +59,7 @@
                                 <a href="#"><p><span class="glyphicon glyphicon-zoom-in"></span>Enlarge</p></a>
                             </div>
                         </div>
+                        @endif
                     </div>
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators 
