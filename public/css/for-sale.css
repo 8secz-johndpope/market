@@ -479,6 +479,43 @@ span.email-icon img {
     display: inline-block;
     vertical-align: middle;
 }
+.reviews-stars-widget .rating {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.star-posted, .star-posting {
+    display: none;
+    text-align: center;
+    color: #767676;
+}
+fieldset {
+    margin: 1.5rem 0;
+}
+legend {
+    padding-bottom: 1.25rem;
+    margin-bottom: .312rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    font-weight: 200;
+}
+.clipped {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+.rating fieldset:not(:checked)>input, .actions fieldset:not(:checked)>input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+}
 button.btn.btn-default.btn-submit {
     float: right;
 }
