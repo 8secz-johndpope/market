@@ -350,7 +350,10 @@
                                             Cash on collection
                                         </p>
                                     </div>
-                                 </div>
+                                </div>
+                                <div class="col-sm-12">
+                                </div>
+
                             </div>
                         </div>
                         <div id="tap-terms" class="tab-pane fade">
