@@ -1,5 +1,14 @@
 @import url('/css/carousel-thumbnail.css?q=874');
 
+.prev-next a {
+    padding-left: 10px;
+}
+.prev-next a {
+    padding-left: 10px;
+}
+.back {
+    padding: 8px 15px;
+}
 .request-details {
     padding-top: 25px!important;
     padding-bottom: 25px!important;
