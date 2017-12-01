@@ -120,16 +120,13 @@ span.reveal-phone {
     color: #000;
     background:#fff;
 }
-.shipping-options {
-    background: #e2e2e2;
-}
 .postage-type {
     display: table-cell;
     vertical-align: middle;
     padding-left: 10px;
 }
 .shipping-options {
-    background: #fff;
+    background: #e2e2e2;
 }
 .info-type thead {
     background: #ddd;
