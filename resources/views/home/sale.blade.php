@@ -120,11 +120,11 @@
                         </tr>
                         <tr class="post-price" id="del-address-price">
                             <td>Delivery:</td>
-                            <td><span class="bold-text">£<span id="post-price">{{$sale->advert->delivery()}}</span></span></td>
+                            <td><span class="bold-text">£<span class="col-post-price">{{$sale->advert->delivery()}}</span></span></td>
                         </tr>
                         <tr class="post-price" id="ship-address-price">
                             <td>Shipping:</td>
-                            <td><span class="bold-text">£<span id="post-price">{{$sale->advert->shipping_cost()}}</span></span></td>
+                            <td><span class="bold-text">£<span class="col-post-price">{{$sale->advert->shipping_cost()}}</span></span></td>
                         </tr>
                         <tr>
                             <td>Total:</td>
@@ -223,7 +223,7 @@
                 $('.post-price').hide()
                 $('#'+idDiv).show();
                 $('#' + idDiv + '-price').show();
-                total += parseInt($("#post-price").text());
+                total += parseInt($('#' + idDiv + '-price .col-post-price').text());
             }
             else{
                 $('.post-address').hide();
