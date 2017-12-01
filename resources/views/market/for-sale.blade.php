@@ -323,10 +323,12 @@
                                         </div>
                                         <div class="col-sm-9 meta-info">
                                             <p>
+                                                @ @if($advert->user!==null)
                                                 <a href="/download-mobile-apps/">
                                                     <img class="payments-methods" src="/css/payments.png">
-                                                </a> or Cash on collection
-                                            
+                                                </a> or 
+                                                @endif
+                                                Cash on collection
                                             </p>
                                         </div>
                                     </div>
@@ -915,10 +917,12 @@
                     <div class="payments-r">
                         <h3>Payments</h3>
                         <div class="payment-options">
+                            @if($advert->user!==null)
                             <div class="payment-option cards">
                                 <img class="payments-methods" src="/css/payments.png">
                             </div>
                             <hr>
+                            @endif
                             <div class="payment-option hands">
                                 <h4>Cash on collection</h4>
                             </div>
