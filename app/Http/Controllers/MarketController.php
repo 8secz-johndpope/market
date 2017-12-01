@@ -1316,12 +1316,8 @@ class MarketController extends BaseController
 
     }
     public function filter($request,$category,$location){
-        if($request->has('min_lat')){
-            $location->min_lat = (double)$request->min_lat;
-            $location->min_lng =(double) $request->min_lng;
-            $location->max_lat = (double)$request->max_lat;
-            $location->max_lng =(double) $request->max_lng;
-        }
+        $lat = ($location->min_lat+$location->max_lat)/2;
+        $lng = ($location->min_lng+$location->max_lng)/2;
             $any = $category->slug;
         $fields = $category->fields()->where('can_filter',1)->get();
         $input = $request->all();
@@ -1344,10 +1340,7 @@ class MarketController extends BaseController
         }
 
         $musts=array();
-        $lat = 52.1;
-        $lng = 0.1;
-        $input['lat']=$lat;
-        $input['lng']=$lng;
+
         $musts['category']= [
             'range' => [
                 'category' => [
@@ -1367,24 +1360,7 @@ class MarketController extends BaseController
             ]
         ];
 
-        /*
-        $musts['lat']= [
-            'range' => [
-                'lat' => [
-                    'gte'=>$location->min_lat,
-                    'lte'=>$location->max_lat
-                ]
-            ]
-        ];
-        $musts['lng']= [
-            'range' => [
-                'lng' => [
-                    'gte'=>$location->min_lng,
-                    'lte'=>$location->max_lng
-                ]
-            ]
-        ];
-        */
+
         $min_price = -2;
         if($request->has('min_price')){
             if(is_numeric($request->min_price))
@@ -1423,28 +1399,7 @@ class MarketController extends BaseController
                 ]
             ];
         }
-        if($request->has('lat')&&$request->has('lng')){
-            /*
-            $lat = $request->lat;
-            $lng = $request->lng;
-            $input['lat']=$lat;
-            $input['lng']=$lng;
-            if($request->has('distance')){
-                $distance = $request->distance;
-            }else{
-                $distance = '2000';
-            }
-            $filte = [
-                "geo_distance" => [
-                    "distance" => $distance."mi",
-                    "location" => [
-                        "lat" => $lat,
-                        "lon" => $lng
-                    ]
-                ]
-            ];
-            */
-        }
+
 
 
         foreach ($fields as $field){
@@ -1542,8 +1497,8 @@ class MarketController extends BaseController
             [
                 "_geo_distance"=> [
                     "location" => [
-                        "lat" =>  52.5,
-                        "lon" => 1.2
+                        "lat" =>  $lat,
+                        "lon" => $lng
                     ],
                     "order"=> "asc",
                     "unit"=> "km",
@@ -1554,8 +1509,7 @@ class MarketController extends BaseController
         if($request->has('sort')){
             $skey = $request->sort;
             if($skey==='distance'){
-                $lat = $request->lat;
-                $lng = $request->lng;
+
                 $sort = [
 
                     [
@@ -1905,7 +1859,7 @@ class MarketController extends BaseController
             $this->client->update($params);
         }
         $distances = [1=>'Default',2=>'+ 1 miles',3=>'+ 3 miles',5=>'+ 5 miles',10=>'+ 10 miles',15=>'+ 15 miles',30=>'+ 30 miles',50=>'+ 50 miles',75=>'+ 75 miles',100=>'+ 100 miles',1000=>'Nationwide'];
-        return ['location'=>$location,'lparents'=>$lparents,'pageurl'=>$pageurl,'sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'lat'=>$lat,'lng'=>$lng,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'products'=>$products,'breads'=>$breads,'last'=>$any,'base'=>$base,'chs'=>$chs,'filters'=>$filters,'categories'=>$categories,'parents'=>$parents,'locs'=>$locs];
+        return ['location'=>$location,'lparents'=>$lparents,'pageurl'=>$pageurl,'sorts'=>$sorts,'prices'=>$prices,'distances'=>$distances,'url'=>$request->url(),'input'=>$input,'max'=>$max,'pages'=>$pages,'total'=>$total,'page'=>$page,'category'=>$category,'products'=>$products,'breads'=>$breads,'last'=>$any,'base'=>$base,'chs'=>$chs,'filters'=>$filters,'categories'=>$categories,'parents'=>$parents,'locs'=>$locs];
     }
     public function search(Request $request,$any){
         return redirect('/'.$any.'/uk');
