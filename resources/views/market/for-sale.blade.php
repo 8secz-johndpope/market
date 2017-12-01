@@ -19,26 +19,39 @@
 <div class=" body background-body">
     <div class="container">
         <div class="row">
-        <div class="col-md-2 col-sm-3 col-xs-6 back">
-            <a class="" href="/{{$category->slug}}">< Back to search</a>
+            <div class="col-md-2 col-sm-3 col-xs-6 back">
+                <a class="" href="/{{$category->slug}}">< Back to search</a>
+            </div>
+            <div class="col-md-8 col-sm-6 hidden-xs">
+                <ol class="breadcrumb">
+                    @foreach($parents as $parent)
+                    <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
+                    @endforeach
+                    <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
+                </ol>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 prev-next">
+                @if($advert->prevAdvert() !== null)
+                    <a href="/p/{{$category->id}}/{{$advert->prevAdvert()->id}}"> < Prev</a>
+                @endif
+                @if($advert->nextAdvert() !== null)
+                    <a href="/p/{{$category->id}}/{{$advert->nextAdvert()->id}}"> Next > </a>
+                @endif
+            </div>
         </div>
-        <div class="col-md-8 col-sm-6 hidden-xs">
-            <ol class="breadcrumb">
-                @foreach($parents as $parent)
-                <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
-                @endforeach
-                <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
-            </ol>
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <h2 class="item-name">{{$product['title']}}</h2>
+                <div class="col-sm-9 location-name">
+                    <p>{{$product['location_name']}}</p>
+                </div>
+                <div class="col-sm-3">
+                    @if($product['meta']['price']>=0)
+                    <div class="items-box-price font-5">£ {{number_format($product['meta']['price'] / 100, 0, '.', ',')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
+                    @endif
+                </div>
+            </div>
         </div>
-        <div class="col-md-2 col-sm-3 col-xs-6 prev-next">
-            @if($advert->prevAdvert() !== null)
-                <a href="/p/{{$category->id}}/{{$advert->prevAdvert()->id}}"> < Prev</a>
-            @endif
-            @if($advert->nextAdvert() !== null)
-                <a href="/p/{{$category->id}}/{{$advert->nextAdvert()->id}}"> Next > </a>
-            @endif
-        </div>
-    </div>
         <div class="row">
             <div class="col-md-8 col-sm-12">
                     <div id="current-image">
@@ -103,6 +116,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-postage">Postage & Returns</a></li>
+
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
                         <li><a data-toggle="tab" href="#tap-terms">Terms of Seller</a></li>
                     </ul>
