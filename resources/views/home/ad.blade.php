@@ -117,7 +117,7 @@
                         <div class="col-sm-12 location-selected" @if($advert->postcode_id===0) style="display: none" @endif>
                             <p>Your Location</p>
                             <span class="extra-large"> @if($advert->postcode_id>0){{$advert->postcode->postcode}} @endif</span><a class="edit-location-button">(Edit)</a><br>
-                            <input  type="checkbox" name="displaymap" id="displaymap"  value="1"  @if($advert->has_param('displaymap')) checked @endif><span class="delivery-text">Display map on the advert &nbsp;&nbsp; </span>
+                            <input  type="checkbox" name="map" id="map"  value="1"  @if($advert->has_param('map')) checked @endif><span class="delivery-text">Display map on the advert &nbsp;&nbsp; </span>
 
                         </div>
 

@@ -496,6 +496,20 @@ class HomeController extends BaseController
                 $advert->remove_param('phone');
             }
 
+        if($request->has('offer')&&$request->offer==='1'){
+            $body['offer']=1;
+        }
+        else{
+            $body['offer']=0;
+        }
+
+        if($request->has('map')&&$request->map==='1'){
+            $body['map']=1;
+        }
+        else{
+            $body['map']=0;
+        }
+
 
             $advert->update_fields($body);
 
