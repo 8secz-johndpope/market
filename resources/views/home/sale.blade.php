@@ -223,7 +223,7 @@
                 $('.post-price').hide()
                 $('#'+idDiv).show();
                 $('#' + idDiv + '-price').show();
-                total += parseInt($("#post-price")).text();
+                total += parseInt($("#post-price").text());
             }
             else{
                 $('.post-address').hide();
