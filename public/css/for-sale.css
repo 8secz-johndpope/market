@@ -535,6 +535,75 @@ legend {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     margin-bottom: 0px;
 }
+.aspects-fieldset {
+    border: 1px solid #ccc;
+    padding: 20px 10px;
+    border-radius: 3px;
+    color: #777;
+    background-color: #fff;
+}
+.aspects-fieldset .aspects-questions {
+    width: 95%;
+    margin: 0 auto;
+}
+.aspects-fieldset .aspects-questions span {
+    margin-top: 6px;
+    display: inline-block;
+    font-size: 15px;
+    color: #555;
+    font-weight: 300;
+}
+.aspects-fieldset .aspects-questions .actions {
+    display: inline-block;
+    float: right;
+    padding: 1px;
+}
+.reviews-divider {
+    width: 100%;
+    margin: 15px 0;
+    border-bottom: 1px solid rgba(150,150,150,0.2);
+    -webkit-appearance: none;
+    height: 1px;
+    clear: both;
+}
+.aspects-fieldset .reviews-divider {
+    border-bottom: 1px solid #ccc;
+}
+.aspects-fieldset .aspects-questions .actions input {
+    opacity: .011;
+    -ms-filter: alpha(opacity=0.011);
+    filter: alpha(opacity=0.011);
+    -moz-opacity: .011;
+    -khtml-opacity: .011;
+    z-index: 100;
+}
+.btn-gry {
+    display: inline-block;
+    padding: 8px 0;
+    text-align: center;
+    width: 80px;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #999;
+    font-weight: 300;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    color: #999;
+}
+.aspects-fieldset .aspects-questions span {
+    margin-top: 6px;
+    display: inline-block;
+    font-size: 15px;
+    color: #555;
+    font-weight: 300;
+}
+.aspects-fieldset .aspects-questions .actions {
+    display: inline-block;
+    float: right;
+    padding: 1px;
+}
 button.btn.btn-default.btn-submit {
     float: right;
 }
