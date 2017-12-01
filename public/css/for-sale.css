@@ -117,7 +117,11 @@ span.reveal-phone {
     vertical-align: middle;
     text-align: center;
     font-weight: bolder;
-    color: #ff9d2c;
+    color: #000;
+    background:#fff;
+}
+.shipping-options {
+    background: #e2e2e2;
 }
 .postage-type {
     display: table-cell;
