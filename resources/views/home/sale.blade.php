@@ -114,16 +114,15 @@
                 </div>
                 <div class="col-sm-4">
                     <table class="table">
-                        <tr><td>Price:</td><td><span class="bold-text">£{{$sale->advert->price()}}</span></td></tr>
-                        @if($sale->type===0)
-                            <tr><td>Delivery:</td><td><span class="bold-text">£{{$sale->advert->delivery()}}</span></td></tr>
-
-                        @endif
-                        @if($sale->type===1)
+                        <tr>
+                            <td>Price:</td>
+                            <td><span class="bold-text">£{{$sale->advert->price()}}</span></td>
+                        </tr>
+                        <tr class="post-price" id="del-address-price">
+                            <td>Delivery:</td>
+                            <td><span class="bold-text">£{{$sale->advert->delivery()}}</span></td>
+                        </tr class="post-price" id="ship-address-price">
                             <tr><td>Shipping:</td><td><span class="bold-text">£{{$sale->advert->shipping_cost()}}</span></td></tr>
-
-                        @endif
-
                         <tr><td>Total:</td><td><span class="bold-text">£{{$sale->amount()}}</span></td></tr>
                     </table>
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
