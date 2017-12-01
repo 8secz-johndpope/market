@@ -229,6 +229,7 @@ class Advert extends  BaseModel
         $advert->elastic = $response['_id'];
         $advert->status=0;
         $advert->save();
+        $advert->update_fields(['source_id'=>$advert->id]);
 
     }
     public function prices(){
