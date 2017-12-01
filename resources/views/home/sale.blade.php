@@ -160,7 +160,8 @@
                             paypal: {
                                 container: 'paypal-container',
                                 singleUse: true, // Required
-                                amount: {{$sale->amount()}}, // Required
+                                //amount: {{$sale->amount()}}, // Required
+                                amount: parseInt($('#sale-total-price').text()),
                                 currency: 'GBP', // Required
                             },
                             onPaymentMethodReceived: function (obj) {
