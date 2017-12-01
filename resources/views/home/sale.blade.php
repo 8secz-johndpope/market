@@ -222,13 +222,16 @@
             var type = $(this).val();
             if(idDiv != "collect"){
                 $('.post-address').hide();
-                $('.post-price').hide()
+                $('.post-price').hide();
+                $('.post-address').attr('required', false);
                 $('#'+idDiv).show();
+                $('#'+idDiv +' input').attr('required', true);
                 $('#' + idDiv + '-price').show();
                 total += parseInt($('#' + idDiv + '-price .col-post-price').text());
             }
             else{
                 $('.post-address').hide();
+                $('.post-address').attr('required', false);
                 $('.post-price').hide()
             }
             console.log(type);
