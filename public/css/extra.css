@@ -606,8 +606,8 @@ span.listing-location {
     width: calc(100% - 40px);
 }
 .copyright {
-    position: fixed;
-    bottom: 0;
+    /*position: fixed;
+    bottom: 0;*/
     background: black;
     color: white;
     width: 100%;
