@@ -213,7 +213,9 @@
             if(idDiv != "collect"){
                 console.log($(this).attr('data-href'));
                 $('.post-address').hide();
+                $('.post-price').hide()
                 $('#'+idDiv).show();
+                 $('#' + idDiv + '-price').show();
             }
         });
     </script>
