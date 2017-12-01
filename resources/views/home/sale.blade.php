@@ -223,6 +223,10 @@
                 $('#'+idDiv).show();
                  $('#' + idDiv + '-price').show();
             }
+            else{
+                $('.post-address').hide();
+                $('.post-price').hide()
+            }
         });
     </script>
 @endsection
