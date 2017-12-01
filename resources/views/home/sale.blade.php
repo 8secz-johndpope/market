@@ -18,7 +18,8 @@
 
             <div class="row">
                 <div class="col-sm-8">
-                    <form action="/user/payment/sale/stripe/{{$sale->id}}" method="post">
+                    <form action="/user/payment/sale/stripe/{{$sale->id}}" method="post" id="payment-form">
+                        <input name="nonce" value="xyz" type="hidden" id="nonce">
                         {{ csrf_field() }}
                         <input type="hidden" value="2" name="type" id="type">
                     <h4>Your Order</h4>
@@ -166,7 +167,12 @@
                             },
                             onPaymentMethodReceived: function (obj) {
                                 //  doSomethingWithTheNonce(obj.nonce);
-                                document.location.href = '/user/payment/sale/paypal/{{$sale->id}}?nonce='+obj.nonce
+                                $('#nonce').val(obj.nonce);
+                                $("#payment-form").attr("action", '/user/payment/sale/paypal/{{$sale->id}}');
+
+                                $("#payment-form").submit();
+
+                               // document.location.href = '/user/payment/sale/paypal/{{$sale->id}}?nonce='+obj.nonce
 
                             }
                         });

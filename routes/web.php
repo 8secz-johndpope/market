@@ -172,6 +172,8 @@ Route::post('/user/payment/sale/stripe/{id}', 'HomeController@sale_stripe');
 Route::post('/user/payment/invoice/stripe/{id}', 'HomeController@invoice_stripe');
 
 Route::get('/user/payment/sale/paypal/{id}', 'HomeController@sale_paypal');
+Route::post('/user/payment/sale/paypal/{id}', 'HomeController@sale_paypal');
+
 Route::get('/user/payment/invoice/paypal/{id}', 'HomeController@invoice_paypal');
 
 Route::get('/user/payment/paypal', 'HomeController@paypal');
