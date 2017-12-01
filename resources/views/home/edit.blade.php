@@ -48,7 +48,7 @@
                     <div class="row">
                         <div class="col-sm-11 location-selected">
                             <span class="extra-large">{{$advert->postcode->postcode}} </span>
-                            <br>                            <input  type="checkbox" name="map" id="map"  value="1"  @if($advert->has_param('map')) checked @endif><span class="delivery-text">Display map on the advert &nbsp;&nbsp; </span>
+                            <br>                            <input  type="checkbox" name="showmap" id="showmap"  value="1"  @if($advert->has_param('showmap')) checked @endif><span class="delivery-text">Display map on the advert &nbsp;&nbsp; </span>
 
                         </div>
                         <div class="col-sm-1">

@@ -503,11 +503,11 @@ class HomeController extends BaseController
             $body['offer']=0;
         }
 
-        if($request->has('map')&&$request->map==='1'){
-            $body['map']=1;
+        if($request->has('showmap')&&$request->showmap==='1'){
+            $body['showmap']=1;
         }
         else{
-            $body['map']=0;
+            $body['showmap']=0;
         }
 
 
