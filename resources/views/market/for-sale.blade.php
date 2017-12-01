@@ -61,15 +61,8 @@
                         </div>
                         @endif
                     </div>
+                    @if(count($product['images']) > 0)
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators 
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                           @foreach($counts as $number)
-                                <li data-target="#myCarousel" data-slide-to="{{$number}}"></li>
-                            @endforeach
-                        </ol> -->
-
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             @for($i=0; $i< count($product['images']); $i++)
@@ -104,6 +97,7 @@
                             <a href="/download-mobile-apps/" class="btn btn-default">VideoCall</a>
                         </div>
                     </div>
+                    @endif
                     <div id="tabs"> 
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
