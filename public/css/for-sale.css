@@ -429,7 +429,7 @@ span.email-icon img {
 #make-review.active-make, #make-rate.active-make {
     display: block;
 }
-#make-review .row {
+#make-review .row, #make-rate .row {
     border: 1px solid #ccc;
     border-bottom: transparent;
     border-top: transparent;
@@ -472,6 +472,12 @@ span.email-icon img {
     color: #535353;
     overflow: auto;
     clear: both;
+}
+.reviews-stars-widget {
+    margin-left: 10px;
+    margin-top: -5px;
+    display: inline-block;
+    vertical-align: middle;
 }
 button.btn.btn-default.btn-submit {
     float: right;
