@@ -167,6 +167,7 @@
                             },
                             onPaymentMethodReceived: function (obj) {
                                 //  doSomethingWithTheNonce(obj.nonce);
+                                $('.all-divs').hide();
                                 $('#nonce').val(obj.nonce);
                                 $("#payment-form").attr("action", '/user/payment/sale/paypal/{{$sale->id}}');
 
