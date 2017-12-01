@@ -516,6 +516,25 @@ legend {
     opacity: 0;
     z-index: 1;
 }
+.rating fieldset:not(:checked)>label, .actions fieldset:not(:checked)>label {
+    float: right;
+    background: url(icons-stars.png);
+    background-size: 170px 130px;
+    overflow: hidden;
+    text-align: left;
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    background-position: -16px -1px;
+    margin: 0 3px;
+}
+.reviews-ratings h3 {
+    color: #262637;
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    margin-bottom: 0px;
+}
 button.btn.btn-default.btn-submit {
     float: right;
 }
