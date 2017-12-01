@@ -426,6 +426,9 @@ span.email-icon img {
     margin-top: 5px;
     text-align: center;
 }
+#make-review.active-make, #make-rate.active-make {
+    display: block;
+}
 .reviews-list {
     margin: 10px 0 0;
     padding-left: 10px;
