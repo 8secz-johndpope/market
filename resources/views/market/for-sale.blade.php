@@ -323,7 +323,7 @@
                                         </div>
                                         <div class="col-sm-9 meta-info">
                                             <p>
-                                                @ @if($advert->user!==null)
+                                                @if($advert->user!==null)
                                                 <a href="/download-mobile-apps/">
                                                     <img class="payments-methods" src="/css/payments.png">
                                                 </a> or 
