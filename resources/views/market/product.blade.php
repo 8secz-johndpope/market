@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-
+<div class="body">
         <div class="row">
 
         <div class="col-lg-3"></div>
@@ -324,7 +324,7 @@
             </div>
         </div>
 
-
+</div>
 <script>
     $("#check-button").click(function () {
         var id =$('#id').val();

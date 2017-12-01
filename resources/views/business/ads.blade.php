@@ -125,8 +125,12 @@
                                 </span>
                             @endif
 
-
-
+                            
+                            @if($advert->urgent_expires())
+                                <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
+<span class="hide-visually">This ad is </span>Urgent
+</span>
+                            @endif
                             @if($advert->urgent_expires())
                                 <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
 <span class="hide-visually">This ad is </span>Urgent
