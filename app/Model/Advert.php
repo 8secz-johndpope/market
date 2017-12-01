@@ -210,6 +210,7 @@ class Advert extends  BaseModel
         unset($body['urgent']);
         unset($body['spotlight']);
         unset($body['shipping']);
+        unset($body['sold']);
 
         $params = [
             'index' => 'adverts',
