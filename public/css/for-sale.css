@@ -27,6 +27,10 @@
 #myCarousel{
 	margin-bottom: 0;
 }
+#current-image{
+	background: #fff;
+	border: 1px solid #dfdfe1;
+}
 .delivery-options {
     background: #e2e2e2;
     padding: 15px calc(20% - 30px);
@@ -79,10 +83,10 @@ span.reveal-phone {
     margin-bottom: 10px;
 }
 .local-option {
-    border-bottom: 1px dashed #dcdcdc;
+    border-bottom: 1px dashed #dfdfe1;
 }
 .ship-option {
-    border-bottom: 1px dashed #dcdcdc;
+    border-bottom: 1px dashed #dfdfe1;
 }
 .payment-options h4 {
     font-size: 14px;
