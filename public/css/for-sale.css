@@ -5,7 +5,10 @@
     padding-bottom: 25px!important;
     background-color: #262637;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 1.6rem;
+}
+#myCarousel{
+	margin-bottom: 0;
 }
 .delivery-options {
     background: #e2e2e2;
