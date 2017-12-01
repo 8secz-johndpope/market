@@ -41,7 +41,7 @@
         </div>
         <div class="row">
             <div class="col-md-8 col-sm-12">
-                <h2 class="item-name">{{$product['title']}}</h2>
+                <h2 class="item-name header">{{$product['title']}}</h2>
                 <div class="col-sm-9 location-name">
                     <p>{{$product['location_name']}}</p>
                 </div>
