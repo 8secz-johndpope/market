@@ -13,6 +13,10 @@
 .back {
     padding: 8px 15px;
 }
+.breadcrumb {
+    text-align: center;
+    background-color: #fafafa;
+}
 .request-details {
     padding-top: 25px!important;
     padding-bottom: 25px!important;
