@@ -91,13 +91,14 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
+                    @endif
                     <div class="request-details">
                         <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
                         
                         <a href="/download-mobile-apps/" class="btn btn-default">VideoCall</a>
                     </div>
-                    @endif
+                    
                     <div id="tabs"> 
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
