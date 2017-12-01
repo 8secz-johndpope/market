@@ -17,6 +17,10 @@
     text-align: center;
     background-color: transparent;
 }
+h2.item-name.header {
+    padding-left: 0;
+    margin-bottom: 0;
+}
 .request-details {
     padding-top: 25px!important;
     padding-bottom: 25px!important;
