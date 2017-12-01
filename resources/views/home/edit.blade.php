@@ -297,7 +297,7 @@
                                         <input  type="checkbox" name="candeliver" id="candeliver"  value="1"  @if($advert->has_param('candeliver')) checked @endif><span class="delivery-text">Can Deliver Locally</span>
                                         <p>Note: Need to delivery the product within 2 days of receiving the order</p>
                                         <div class="well">
-                                            <p class="bold-text">Buyer Pays</p>
+                                            <p class="bold-text">What should your Buyer Pay for Local Delivery?</p>
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
                                                 <input type="number" name="delivery" id="delivery"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="" @if(!$advert->has_param('candeliver')||$advert->param('candeliver')!==1) disabled @endif  value="@if($advert->has_param('candeliver')&&$advert->param('candeliver')===1&&$advert->has_meta('delivery')){{$advert->delivery()}}@endif" >
@@ -333,7 +333,7 @@
                                             </div>
                                             <a  data-toggle="modal" data-target="#myModal">Change Shipping Method</a>
 
-                                            <p class="bold-text">Buyer Pays</p>
+                                            <p class="bold-text">What should your Buyer Pay for National Wide Shipping?</p>
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
                                                 <input type="number" name="buyer_pays" id="buyer_pays"  class="form-control  mb-2 mr-sm-2 mb-sm-0" placeholder="" @if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) disabled @endif  value="@if($advert->has_param('freeshipping')&&$advert->param('freeshipping')===1) 0.00 @elseif($advert->has_meta('shipping')&&$advert->meta('shipping')>=0){{$advert->shipping_cost()}}@endif" >
@@ -377,6 +377,15 @@
                         <div class="panel-body">
                             <input  type="checkbox" name="phone" id="phone"  value="1"  @if($advert->has_param('phone')) checked @endif><span class="delivery-text">Display Contact Number: &nbsp;&nbsp; <span class="bold-text">{{$user->phone}}</span></span>
 
+                        </div>
+                    </div>
+
+                    <div class="panel panel-success offer-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Can a buyer make an offer?</h3>
+                        </div>
+                        <div class="panel-body">
+                            <input  type="checkbox" name="offer" id="offer"  value="1"  @if($advert->has_param('offer')) checked @endif><span class="delivery-text">Can Make Offers&nbsp;&nbsp; </span>
                         </div>
                     </div>
 
