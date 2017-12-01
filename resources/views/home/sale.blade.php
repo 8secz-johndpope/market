@@ -20,6 +20,7 @@
                 <div class="col-sm-8">
                     <form action="/user/payment/sale/stripe/{{$sale->id}}" method="post">
                         {{ csrf_field() }}
+                        <input type="hidden" value="2" name="type" id="type">
                     <h4>Your Order</h4>
 
                     <div class="product">
@@ -67,17 +68,17 @@
                         <label>
                             Collection in person
                         </label>
-                        <input type="radio" name="post-option" data-href="collect" checked>
+                        <input type="radio" name="post-option" data-href="collect" checked value="2">
                         <br>
                         <label>
                             Local delivery
                         </label>
-                        <input type="radio" name="post-option" data-href="del-address">
+                        <input type="radio" name="post-option" data-href="del-address" value="0">
                         <br>
                         <label>
                             United Kingdom delivery
                         </label>
-                        <input type="radio" name="post-option" data-href="ship-address">
+                        <input type="radio" name="post-option" data-href="ship-address" value="1">
                     </div>
                     <div class="post-address" id="ship-address">
                             <h4>Shipping Address</h4>
@@ -217,6 +218,7 @@
         $('input[type=radio][name=post-option]').change(function(){
             var idDiv = $(this).attr('data-href');
             var total = parseInt($('#sale-price').text());
+            var type = $(this).val();
             if(idDiv != "collect"){
                 console.log($(this).attr('data-href'));
                 $('.post-address').hide();
@@ -229,7 +231,8 @@
                 $('.post-address').hide();
                 $('.post-price').hide()
             }
-            console.log(total);
+            console.log(type);
+            $("#type").val(type);
             $('#sale-total-price').text(total);
         });
     </script>

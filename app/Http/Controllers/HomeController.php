@@ -1503,10 +1503,7 @@ class HomeController extends BaseController
         $sale=Sale::find($id);
         $stripe_id = $user->stripe_id;
         $card = $request->card;
-
-
-
-
+        $sale->type=$request->type;
         $description = 'Payment towards to Order id '.$sale->id;
         try {
             if($sale->amount_in_pence()>0){
