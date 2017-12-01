@@ -121,9 +121,15 @@
                         <tr class="post-price" id="del-address-price">
                             <td>Delivery:</td>
                             <td><span class="bold-text">£{{$sale->advert->delivery()}}</span></td>
-                        </tr class="post-price" id="ship-address-price">
-                            <tr><td>Shipping:</td><td><span class="bold-text">£{{$sale->advert->shipping_cost()}}</span></td></tr>
-                        <tr><td>Total:</td><td><span class="bold-text">£{{$sale->amount()}}</span></td></tr>
+                        </tr>
+                        <tr class="post-price" id="ship-address-price">
+                            <td>Shipping:</td>
+                            <td><span class="bold-text">£{{$sale->advert->shipping_cost()}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Total:</td>
+                            <td><span class="bold-text">£{{$sale->amount()}}</span></td>
+                        </tr>
                     </table>
                     <div class="display-cards" @if(count($cards)===0) style="display: none" @endif>
                         <h4>Pay by Card</h4>
