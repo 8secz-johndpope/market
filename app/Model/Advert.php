@@ -468,6 +468,13 @@ class Advert extends  BaseModel
             return false;
         }
     }
+    public function canDeliverSomeAddress($addresses){
+        foreach ($addresses as $address) {
+            if($this->can_deliver_to($address))
+                return true;
+        }
+        return false;
+    }
     public function distance($postcode){
 
         $distance = $this->haversineGreatCircleDistance($this->postcode->lat,$this->postcode->lng,$postcode->lat,$postcode->lng);
