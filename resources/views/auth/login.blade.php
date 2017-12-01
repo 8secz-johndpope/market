@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="body">
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -70,6 +71,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <script>
     function onSubmit(token) {
