@@ -149,10 +149,10 @@ class User extends Authenticatable
         return $items;
     }
     public function orders(){
-        return $this->hasMany('App\Model\Sale','seller_id')->where('status','>',0);
+        return $this->hasMany('App\Model\Sale','seller_id')->where('status','>',0)->orderBy('id','desc');
     }
     public function buying(){
-        return $this->hasMany('App\Model\Sale')->where('status','>',0);
+        return $this->hasMany('App\Model\Sale')->where('status','>',0)->orderBy('id','desc');
     }
     public function favorites()
     {
