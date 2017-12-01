@@ -1688,8 +1688,8 @@ class HomeController extends BaseController
 
             if($request->has('delivery_address'))
                 $sale->address_id=$request->delivery_address;
-            if($request->has('billing_address'))
-                $sale->billing_address_id=$request->billing_address;
+            if($request->has('shipping_address'))
+                $sale->address_id=$request->shipping_address;
             $sale->save();
             $sale->advert->update_fields(['sold'=>1]);
 
