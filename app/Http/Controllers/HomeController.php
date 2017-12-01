@@ -1685,6 +1685,7 @@ class HomeController extends BaseController
                 ]);
             }
             $sale->status=1;
+            $sale->type=$request->type;
 
             if($request->has('delivery_address'))
                 $sale->address_id=$request->delivery_address;
