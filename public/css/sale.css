@@ -188,6 +188,7 @@ ul.cc-logos li {
 .cf-form .floating-label {
     padding-top: 18px;
     position: relative;
+    margin-right: 15px;
 }
 .cf-form span.floating-label {
     display: inline-block;
