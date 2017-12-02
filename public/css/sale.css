@@ -156,3 +156,18 @@ ul.cc-logos li {
     vertical-align: middle;
     display: inline-block;
 }
+#cc-new-ctr {
+    border-top: 0;
+}
+#inst-details {
+    padding: 8px 15px 15px 50px;
+    font-size: .875rem;
+    background-color: #fff;
+}
+.bdr-btm {
+    border-bottom: 1px solid #ccc;
+}
+.cf-from {
+    margin-bottom: 5px;
+    margin: auto;
+}
