@@ -254,3 +254,6 @@ ul.cc-logos li {
 #card-fields .cc-logos li {
     display: none;
 }
+.w100p {
+    width: 100%;
+}
