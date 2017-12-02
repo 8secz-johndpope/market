@@ -25,11 +25,18 @@
                             <legend>
                                 Select a payment option
                             </legend>
+                            @if(count($cards) > 0)
                             <div class="pay-method">
                                 <div class="col-l-p">
                                     <div class="radio-l">
                                         <input type="radio" name="pay-meth-radio" id="saved-card">
                                         <span class="custom-radio"></span>
+                                    </div>
+                                    <div class="radio-r">
+                                        <label class="mt-label" for="new-card">
+                                            <span class="mt-cc"></span>
+                                            {{$cards[0]['last4']}}
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="col-r-p">
@@ -38,6 +45,7 @@
                                     </label>
                                 </div>
                             </div>
+                            @endif
                             <div class="pay-method" data-mp-id="new-cc">
                                 <div class="col-l-p">
                                     <div class="radio-l">
