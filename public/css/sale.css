@@ -30,3 +30,15 @@ legend {
     clear: both;
     border-bottom: 1px solid #ccc;
 }
+.col-l-p .radio-l{
+	width: 15%;
+    max-width: 35px;
+    display: inline-block;
+    vertical-align: middle;
+}
+input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    margin: 3px .5ex;
+}
