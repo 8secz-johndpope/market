@@ -221,10 +221,10 @@
 			 			</a>
 			 		</div>
 			 		<div class="col-sm-12">
-			 			
+			 			<a href="#">Popular Searches</a>
 			 		</div>
 			 		<div class="col-sm-12">
-			 			
+			 			<a href="#">Popular Searches</a>
 			 		</div>
 			 	</div>
 		 	</div>
