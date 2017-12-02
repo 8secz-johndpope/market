@@ -45,6 +45,7 @@
                                 <div class="col-r-p">
                                     <label class="mt-label" for="new-card">
                                         <span class="mt-cc"></span>
+                                        Credit or debit card
                                     </label>
                                 </div>
                             </div>
