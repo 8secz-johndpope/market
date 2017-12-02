@@ -118,8 +118,8 @@
                                         </div>
                                         <div id="bill-edit-ctr">
                                             <div class="addr-read-version">
-                                                {{$address->line1}}<br> 
-                                                {{$address->city}} {{$address->postcode}}
+                                                {{$user->address->line1}}<br> 
+                                                {{$user->address->city}} {{$user->address->postcode}}
                                             </div>
                                         </div>
                                         @endif
