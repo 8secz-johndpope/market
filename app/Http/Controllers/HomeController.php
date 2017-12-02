@@ -1961,7 +1961,7 @@ class HomeController extends BaseController
             $contract->type = $id;
             if((int)$id===2){
                 $contract->discount = 35;
-                $contract->minimum = 1000000;
+                $contract->minimum = 1500000;
             }
             else if((int)$id===3){
                 $contract->discount = 45;
@@ -1981,11 +1981,11 @@ class HomeController extends BaseController
             $contract = $order->contract;
             if((int)$id===1){
                 $contract->discount = 25;
-                $contract->minimum = 250000;
+                $contract->minimum = 300000;
             }
             else if((int)$id===2){
                 $contract->discount = 35;
-                $contract->minimum = 1000000;
+                $contract->minimum = 1500000;
             }
             else if((int)$id===3){
                 $contract->discount = 45;
