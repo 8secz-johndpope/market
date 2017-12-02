@@ -85,6 +85,21 @@
                                     <div id="card-fields">
                                         <div class="cf-from">
                                             <div class="row">
+                                                <span class="floating-label">
+                                                    <label for="card">Card Number</label>
+                                                    <input class="input-field cf-card-number" name="card" placeholder="Card number">
+                                                    <ul class="cc-logos">
+                                                        <li class="visa"></li>
+                                                        <li class="mastercard"></li>
+                                                        <li class="discover"></li>
+                                                        <li class="am-ex"></li>
+                                                        <li class="maestro"></li>
+                                                    </ul>
+                                                </span>
+                                            </div>
+                                            <div class="row">
+                                                <span class="floating-label">
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
