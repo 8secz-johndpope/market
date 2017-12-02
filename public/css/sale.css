@@ -174,3 +174,14 @@ ul.cc-logos li {
 .cf-from .floating-label {
     padding-top: 18px;
 }
+.cf-form span.floating-label {
+    display: inline-block;
+    vertical-align: top;
+    background-image: none;
+}
+.cf-form .floating-label label {
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    color: #767676;
+}
