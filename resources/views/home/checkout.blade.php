@@ -27,9 +27,10 @@
                             </legend>
                             <div class="pay-method">
                                 <div class="col-l-p">
-                                    <input type="radio" name="pay-meth-radio" id="saved-card">
-                                    <span class="custom-radio">
-                                    </span>
+                                    <div class="radio-l">
+                                        <input type="radio" name="pay-meth-radio" id="saved-card">
+                                        <span class="custom-radio"></span>
+                                    </div>
                                 </div>
                                 <div class="col-r-p">
                                     <label class="mt-label" for="saved-card">
@@ -39,9 +40,11 @@
                             </div>
                             <div class="pay-method">
                                 <div class="col-l-p">
-                                    <input type="radio" name="pay-meth-radio" id="new-card">
-                                    <span class="custom-radio">
-                                    </span>
+                                    <div class="radio-l">
+                                        <input type="radio" name="pay-meth-radio" id="new-card">
+                                        <span class="custom-radio">
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="col-r-p">
                                     <label class="mt-label" for="new-card">
@@ -52,9 +55,11 @@
                             </div>
                             <div class="pay-method">
                                 <div class="col-l-p">
-                                    <input type="radio" name="pay-meth-radio" id="paypal">
-                                    <span class="custom-radio">
-                                    </span>
+                                    <div class="radio-l">
+                                        <input type="radio" name="pay-meth-radio" id="paypal">
+                                        <span class="custom-radio">
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="col-r-p">
                                     <label class="mt-label" for="paypal">
