@@ -53,7 +53,18 @@
                                     </div>
                                 </div>
                                 <div class="col-r-p">
-                                    
+                                    <div id="funding-source">
+                                        <div class="fs-summary fade in">
+                                            <ul class="cc-logos">
+                                                <li class="visa"></li>
+                                                <li class="mastercard"></li>
+                                                <li class="discover"></li>
+                                                <li class="maestro"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="fs-edit">
+                                    </div>
                                 </div>
                             </div>
                             <div class="pay-method">
