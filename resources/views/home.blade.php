@@ -237,12 +237,6 @@
 					</div>
 					<div class="col-xs-8 col-sm-8 col-md-6 col-lg-4">
 						<h2>{{env('APP_NAME')}} is safe, free and trusted</h2>
-						<div class="col-sm-6 col-md-6 col-lg-6">
-							<a class="tabs-simple-tab all-spot" href="#">All Spotlights</a>
-						</div>
-						<div class="col-sm-6 col-md-6 col-lg-6">
-							<a class="tabs-simple-tab pop-se" href="#">Popular Searches</a>
-						</div>
 					</div>
 					<div class="col-md-3 col-lg-4 hidden-xs hidden-sm">
 						<img class="img-right" src="css/section-gold2.png">
