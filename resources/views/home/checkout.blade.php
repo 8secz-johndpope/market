@@ -99,6 +99,10 @@
                                             </div>
                                             <div class="row">
                                                 <span class="floating-label">
+                                                    label for="cvc">CVC:</label>
+                                                    <input class="form-control" name="cvc" placeholder="cvc (3 digits)">
+                                                </span>
+                                                <span class="floating-label">
                                                 </span>
                                             </div>
                                         </div>
