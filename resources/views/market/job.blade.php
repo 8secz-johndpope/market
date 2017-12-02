@@ -39,20 +39,20 @@
     <div class="row hidden-xs">
         <div class="col-md-12">
             <div class="buttons-border">
-                <a class="btn">All Lastest Jobs</a>
-                <a class="btn">Permanent</a>
-                <a class="btn">Temporary</a>
-                <a class="btn">Weekend</a>
+                <a href="/jobs" class="btn">All Lastest Jobs</a>
+                <a href="/jobs/uk?job_contract_type=permanent" class="btn">Permanent</a>
+                <a href="/jobs/uk?hours=term-time" class="btn">Temporary</a>
+                <a href="/jobs/uk?hours=weekends" class="btn">Weekend</a>
                 <a class="btn">Search Recruiters</a>
             </div>
         </div>
         <div class="col-md-12">
             <div class="buttons-border last">
-                <a class="btn">Part Time</a>
+                <a href="/jobs/uk?hours=part-time" class="btn">Part Time</a>
                 <a class="btn">Work Wanted</a>
                 <a class="btn">Daily Work</a>
                 <a class="btn">Gig Work</a>
-                <a class="btn">Freelancers</a>
+                <a href="/jobs/uk?job_contract_type=freelance" class="btn">Freelancers</a>
             </div>
         </div>
     </div>
