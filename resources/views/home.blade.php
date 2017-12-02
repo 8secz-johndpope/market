@@ -244,7 +244,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="spotligth background-body">
+		<section class="spotligth background-body" id="spotlight">
 			<div class="container">
 				<div class="row box-rose">
                         <div class="title col-lg-12">
