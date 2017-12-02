@@ -190,6 +190,12 @@
                         </tr>
                     </table>
                 </div>
+                <div class="checkout-order">
+                    <div class="order-total"></div>
+                    <div class="call-to-action">
+                        <button type="submit" class="btn btn-info">Confirm and pay</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
