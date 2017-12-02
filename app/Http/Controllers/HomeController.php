@@ -636,7 +636,7 @@ class HomeController extends BaseController
         $sale=Sale::find($id);
         return view('home.sale',['sale'=>$sale,'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user,'advert'=>$sale->advert]);
     }
-    public function sale(Request $request,$id){
+    public function checkout(Request $request,$id){
         $user = Auth::user();
         /*
         $balance = \Stripe\Balance::retrieve(
