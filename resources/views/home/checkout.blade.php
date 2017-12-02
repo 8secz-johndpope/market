@@ -100,11 +100,11 @@
                                             <div class="row">
                                                 <span class="floating-label">
                                                     <label for="expiry">Expiry date:</label>
-                                                    <input type="text" class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
+                                                    <input type="text" class="input-field cf-card-exp" name="expiry">
                                                 </span>
                                                 <span class="floating-label">
                                                     <label for="cvc">CVC:</label>
-                                                    <input type="text" class="form-control" name="cvc" placeholder="cvc (3 digits)">
+                                                    <input type="text" class="input-field cf-card-sec" name="cvc">
                                                 </span>
                                             </div>
                                         </div>
