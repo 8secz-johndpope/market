@@ -45,6 +45,9 @@
                                         <span class="custom-radio">
                                         </span>
                                     </div>
+                                    <div class="radio-r">
+                                        
+                                    </div>
                                 </div>
                                 <div class="col-r-p">
                                     <label class="mt-label" for="new-card">

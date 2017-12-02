@@ -30,11 +30,17 @@ legend {
     clear: both;
     border-bottom: 1px solid #ccc;
 }
+.col-l-p .radio-l, .col-l-p .radio-l{
+	display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
 .col-l-p .radio-l{
 	width: 15%;
     max-width: 35px;
-    display: inline-block;
-    vertical-align: middle;
+}
+.col-l-p .radio-l{
+	width: 85%;
 }
 input[type=radio] {
     position: absolute;
@@ -58,6 +64,11 @@ input[type=radio] {
     width: 16px;
     height: 16px;
 }
+.col-l-p {
+    width: 47%;
+    display: inline-block;
+    vertical-align: middle;
+}
 .col-r-p {
     width: 85%;
     cursor: pointer;
@@ -66,4 +77,16 @@ input[type=radio] {
 }
 .mt-label {
     word-break: break-word;
+}
+.mt-cc {
+    background-image: url(https://securepics.ebaystatic.com/aw/pics/checkout/sprs/spr_PROX_13.svg);
+    background-repeat: no-repeat;
+    background-size: 248px 1388px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 248px;
+    height: 1215px;
+    background-position: -11px -506px;
+    width: 34px;
+    height: 22px;
 }
