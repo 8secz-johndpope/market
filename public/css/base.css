@@ -978,6 +978,9 @@ section.row-color.white {
     margin: 0;
     display: inline-block;
   }
+  .categories .panel.panel-primary{
+    margin-bottom: 0;
+  }
   /*.row {
     margin-left: 0; 
     margin-right:  0; 
