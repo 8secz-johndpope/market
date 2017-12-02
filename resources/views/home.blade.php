@@ -215,15 +215,15 @@
 					 </div>
 			 	</div>
 			 	<div class="row box-rose">
-			 		<div class="col-sm-12">
+			 		<div class="col-sm-4">
 			 			<a href="#spotlight">
 			 				All Spotlight
 			 			</a>
 			 		</div>
-			 		<div class="col-sm-12">
+			 		<div class="col-sm-4">
 			 			<a href="#">Popular Searches</a>
 			 		</div>
-			 		<div class="col-sm-12">
+			 		<div class="col-sm-4">
 			 			<a href="#">Popular Searches</a>
 			 		</div>
 			 	</div>
