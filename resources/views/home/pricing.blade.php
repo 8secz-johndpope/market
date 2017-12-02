@@ -31,7 +31,7 @@
 
                         <div class="cd-price">
                             <span class="cd-currency">£</span>
-                            <span class="cd-value">2500</span>
+                            <span class="cd-value">3000</span>
                             <span class="cd-duration">minimum</span>
                         </div>
                     </header> <!-- .cd-pricing-header -->
@@ -88,7 +88,7 @@
 
                         <div class="cd-price">
                             <span class="cd-currency">£</span>
-                            <span class="cd-value">10000</span>
+                            <span class="cd-value">15000</span>
                             <span class="cd-duration">minimum</span>
                         </div>
                     </header> <!-- .cd-pricing-header -->
