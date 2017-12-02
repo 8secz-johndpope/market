@@ -104,6 +104,7 @@ Route::post('/user/jobs/apply', 'HomeController@apply');
 
 Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/manage/sale/{id}', 'HomeController@sale');
+Route::get('/user/manage/checkout/{id}', 'HomeController@checkout');
 Route::get('/user/ad/sale', 'HomeController@agree_sale');
 
 

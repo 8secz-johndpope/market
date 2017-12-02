@@ -636,6 +636,35 @@ class HomeController extends BaseController
         $sale=Sale::find($id);
         return view('home.sale',['sale'=>$sale,'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user,'advert'=>$sale->advert]);
     }
+    public function sale(Request $request,$id){
+        $user = Auth::user();
+        /*
+        $balance = \Stripe\Balance::retrieve(
+            array("stripe_account" => $user->stripe_account)
+        );
+        */
+        $stripe_id = $user->stripe_id;
+        $customer = \Stripe\Customer::retrieve($stripe_id);
+
+        try{
+            $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
+                'limit' => 10, 'object' => 'card'));
+            $card = $customer->sources->retrieve($customer->default_source);
+            $cards = $cards['data'];
+
+        }catch (\Exception $exception){
+            $cards = [];
+            $card=null;
+        }
+
+
+        $gateway = new \Braintree\Gateway(array(
+            'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
+        ));
+        $clientToken = $gateway->clientToken()->generate();
+        $sale=Sale::find($id);
+        return view('home.checkout',['sale'=>$sale,'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user,'advert'=>$sale->advert]);
+    }
     public function agree_sale(Request $request)
     {
         $user = Auth::user();

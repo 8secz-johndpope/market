@@ -64,6 +64,27 @@
                         </fieldset>
                     </div>
                 </div>
+                <div class="col-sm-12">
+                    <h3>Post to</h3>
+                    <div class="postage-address">
+                        <div class="main-pa">
+                        </div>
+                        <div id="sa-change-link">
+                            <a href="javascript:;">Change</a>
+                        </div>
+                        <div class="sa-edit">
+                            <button type="button"><span></span></button>
+                        </div>
+                    </div>
+                    <div class="sa-edit-ctr">
+                        <div id="shipping-address">
+                            <fieldset class="sa-radiogroup">
+                                <legend></legend>
+
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-sm-2">
