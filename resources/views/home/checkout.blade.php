@@ -89,11 +89,11 @@
                                                     <label for="card">Card Number</label>
                                                     <input class="input-field cf-card-number" id="cardNumber" name="card" placeholder="">
                                                     <ul class="cc-logos">
-                                                        <li class="visa"></li>
-                                                        <li class="mastercard"></li>
-                                                        <li class="discover"></li>
-                                                        <li class="am-ex"></li>
-                                                        <li class="maestro"></li>
+                                                        <li class="visa small"></li>
+                                                        <li class="mastercard small"></li>
+                                                        <li class="discover small"></li>
+                                                        <li class="am-ex small"></li>
+                                                        <li class="maestro small"></li>
                                                     </ul>
                                                 </span>
                                             </div>

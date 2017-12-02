@@ -216,3 +216,16 @@ ul.cc-logos li {
 #card-fields .cf-card-number{
 	width: 254px;
 }
+#card-fields .cc-logos {
+    display: inline-block;
+    position: absolute;
+    top: 24px;
+    right: 0;
+}
+#card-fields .row li {
+    float: left;
+    margin-right: 5px;
+}
+#card-fields .cc-logos li {
+    display: none;
+}
