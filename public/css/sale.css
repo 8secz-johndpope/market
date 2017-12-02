@@ -217,6 +217,17 @@ ul.cc-logos li {
     border-radius: 0;
     background-clip: padding-box;
 }
+.floating-label input[type="text"]:focus{
+	border: 0;
+    border-bottom: 2px solid #4a90e2;
+    border-radius: 0;
+    background-clip: padding-box;
+    background: transparent;
+    background-image: none;
+    -webkit-filter: none;
+    filter: none;
+    outline: 0;
+}
 #card-fields .row input {
     margin-top: 10px;
 }
