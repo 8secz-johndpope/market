@@ -1182,6 +1182,7 @@ section.row-color.white {
   }
   .categories .panel-primary>.panel-heading {
     height: auto;
+    padding-bottom: 0;
   }
   .panel-heading img.icon-category {
     height: 6em;
@@ -1197,6 +1198,7 @@ section.row-color.white {
   }
   .categories .panel-body {
     height: 10em;
+    padding-top: 0;
   }
   section.social-media {
     background-size: cover;
