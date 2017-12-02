@@ -199,6 +199,7 @@ ul.cc-logos li {
 }
 .cf-form .floating-label input{
 	line-height: 17px;
+	position: relative;
 }
 .floating-label input[type="text"]{
 	padding: 0 0 4px 0;
