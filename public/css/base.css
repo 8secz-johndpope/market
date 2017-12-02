@@ -825,13 +825,10 @@ h2.typography-subsection-subheadline.siri-command.relative {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-/*section.row-color.gold {
-    background-color: #fe9c30;
-}*/
 .row-color h2 {
     color: #000;
-    /*color: #fff;*/
     text-align: center;
+    margin-top: 10px;
 }
 
 a.tabs-simple-tab.btn {
@@ -846,8 +843,8 @@ a.tabs-simple-tab.btn:hover{
 .row-color{
   /*height: 400px;*/
   background-color: #f9f0eb;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   margin-top: 14px;
 }
 section.row-color.white {
