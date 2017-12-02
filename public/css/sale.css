@@ -78,7 +78,7 @@ input[type=radio] {
     vertical-align: middle;
     text-align: right;
 }
-#pay-method-ctr [data-mp-id="new-cc"] .col-5-p{
+#pay-method-ctr [data-mp-id="new-cc"] .col-r-p{
 	width: 43%;
 }
 .mt-label {
