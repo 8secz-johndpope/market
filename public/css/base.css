@@ -373,6 +373,8 @@ section.spotligth{
 .categories .row.box-rose:last-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    padding: 10px 0;
+    line-height: 13px;
 }
 .border-rose-right{
   border-right: 1px solid #f0c3ae;
