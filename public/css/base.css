@@ -375,6 +375,7 @@ section.spotligth{
     border-top-right-radius: 0;
     padding: 10px 0;
     line-height: 13px;
+    text-align: center;
 }
 .border-rose-right{
   border-right: 1px solid #f0c3ae;
