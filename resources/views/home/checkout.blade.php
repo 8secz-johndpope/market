@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h3>Pay with</h3>
-                    <div class="pay-methods">
+                    <div class="pay-methods" id="pay-method-ctr">
                         <fieldset>
                             <legend>
                                 Select a payment option
@@ -38,7 +38,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="pay-method">
+                            <div class="pay-method" data-mp-id="new-cc">
                                 <div class="col-l-p">
                                     <div class="radio-l">
                                         <input type="radio" name="pay-meth-radio" id="new-card">

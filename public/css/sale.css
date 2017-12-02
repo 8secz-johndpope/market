@@ -69,11 +69,17 @@ input[type=radio] {
     display: inline-block;
     vertical-align: middle;
 }
+#pay-method-ctr [data-mp-id="new-cc"] .col-l-p{
+	width: 57%;
+}
 .col-r-p {
     width: 53%;
     display: inline-block;
     vertical-align: middle;
     text-align: right;
+}
+#pay-method-ctr [data-mp-id="new-cc"] .col-5-p{
+	width: 43%;
 }
 .mt-label {
     word-break: break-word;
