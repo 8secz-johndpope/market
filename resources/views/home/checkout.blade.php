@@ -198,7 +198,7 @@
                         </table>
                     </div>
                     <div class="call-to-action">
-                        <button type="submit" class="btn btn-info">Confirm and pay</button>
+                        <button type="submit" class="btn btn-submit">Confirm and pay</button>
                     </div>
                 </div>
             </div>
