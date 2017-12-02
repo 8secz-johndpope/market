@@ -171,3 +171,6 @@ ul.cc-logos li {
     margin-bottom: 5px;
     margin: auto;
 }
+.cf-from .floating-label {
+    padding-top: 18px;
+}
