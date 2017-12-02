@@ -1144,7 +1144,7 @@ section.row-color.white {
   img.img-left {
     position: absolute;
     left: -40%;
-    top: 20px;
+    top: -10px;
   }
   a.tabs-simple-tab.all-spot {
     text-align: center;
