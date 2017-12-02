@@ -140,3 +140,8 @@ ul.cc-logos li:not(:last-child) {
 ul.cc-logos li {
     display: inline-block;
 }
+.fs-edit {
+    width: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
