@@ -738,14 +738,14 @@ a.left.carousel-control {
 img.img-left {
     position: absolute;
     left: 20%;
-    top: 0px;
+    top: -25px;
     height: 150px;
 }
 img.img-right {
     /* transform: translateX(100%); */
     position: absolute;
     right: 20%;
-    top: 0px;
+    top: -25px;
     height: 160px;
 }
 a.tabs-simple-tab{
