@@ -228,6 +228,13 @@ ul.cc-logos li {
     filter: none;
     outline: 0;
 }
+.checkout-summry {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-clip: padding-box;
+    margin-top: 15px;
+}
 #card-fields .row input {
     margin-top: 10px;
 }
