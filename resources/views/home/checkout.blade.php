@@ -79,6 +79,11 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="cc-new-ctr">
+                                <div id="inst-details" class="bdr-btm">
+                                    <div id="inst-error"></div>
+                                </div>
+                            </div>
                             <div class="pay-method" data-mp-id="paypal">
                                 <div class="col-l-p">
                                     <div class="radio-l">
