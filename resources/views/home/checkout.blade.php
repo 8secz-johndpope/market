@@ -87,7 +87,7 @@
                                             <div class="row">
                                                 <span class="floating-label">
                                                     <label for="card">Card Number</label>
-                                                    <input class="input-field cf-card-number" id="cardNumber" name="card" placeholder="Card number">
+                                                    <input class="input-field cf-card-number" id="cardNumber" name="card" placeholder="">
                                                     <ul class="cc-logos">
                                                         <li class="visa"></li>
                                                         <li class="mastercard"></li>
