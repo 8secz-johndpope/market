@@ -422,7 +422,7 @@
         });
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
-            console.log(label);
+            console.log(this.id);
             label.css('top', '8px');
         });
     </script>
