@@ -77,10 +77,6 @@ a.btn.btn-info.bussines, a.btn.btn-info.bussines:visited {
   border-color: #ff9d2c;
   border-radius: 30px;
   color:#fff;
-  /*background-color: #fff;
-border-color: #fff;
-border-radius: 30px;
-color: #000;*/
 }
 a.btn.btn-info.bussines:hover, a.btn.btn-info.bussines:focus, a.btn.btn-info.bussines:active {
     color: #000;
@@ -97,19 +93,13 @@ a.navbar-brand {
 
 
 .categories{
-  /*margin: 30px auto;*/
   padding-top: 0px;
-  padding-bottom: 80px;
-  /*background-color: #fafafa;*/
+  padding-bottom: 20px;
 }
 .categories .row{
   height: inherit;
   padding: 20px 0;
   margin: 0 auto;
-  /*border-radius: 10px;
-  background-color: #fff;
-  border: 1px solid #f0c3ae;
-  width: 90%;*/
 }
 .categories ul {
     padding-left: 20px;
