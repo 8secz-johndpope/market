@@ -365,7 +365,15 @@ section.spotligth{
     padding-bottom: 30px;
 
 }
-
+.categories .row.box-rose:first-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: transparent;
+}
+.categories .row.box-rose:last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
 .row.menu {
   margin: 0;
   /* padding: 100px 0; */
@@ -984,6 +992,7 @@ section.row-color.white {
     padding-left: 0; 
     padding-right: 0;
   }
+
   .categories {
     margin: 0px auto;
   }
