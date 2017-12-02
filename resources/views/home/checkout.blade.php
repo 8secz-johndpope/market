@@ -434,7 +434,7 @@
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
             if(this.id == 'expiry'){
-                label.attr('placeholder', 'MM/YYYY')
+                $(this).attr('placeholder', 'MM/YYYY')
             }
             label.css('top', '8px');
         });
@@ -442,7 +442,7 @@
             var label = $('label[for="' + this.id + '"]');
             if($(this).val() == ''){
                 label.css('top', '27px');
-                label.removeAttr('placeholder');
+                $(this).removeAttr('placeholder');
             }
         });
     </script>
