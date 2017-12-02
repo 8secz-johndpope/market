@@ -51,7 +51,6 @@ input[type=radio] {
 .custom-radio{
 	position: relative;
 	margin-right: 30px;
-	font-size: 1rem;
 }
 .custom-radio::before{
 	border-radius: 50%;
