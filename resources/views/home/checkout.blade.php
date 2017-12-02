@@ -78,11 +78,13 @@
                                         <span class="custom-radio">
                                         </span>
                                     </div>
-                                </div>
-                                <div class="col-r-p">
-                                    <label class="mt-label" for="paypal">
+                                    <div class="radio-r">
+                                        <label class="mt-label" for="paypal">
                                         <span class="mt-logo paypal"></span>
                                     </label>
+                                    </div>
+                                </div>
+                                <div class="col-r-p">
                                 </div>
                             </div>
                         </fieldset>
