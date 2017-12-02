@@ -128,11 +128,11 @@
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
-							 		<li><a href="jobs">All lastest job</a></li>
-							 		<li><a href="jobs/london">All London jobs</a></li>
+							 		<li><a href="jobs">All Lastest Jobs</a></li>
+							 		<li><a href="jobs/london">All London Jobs</a></li>
 							 		<li><a href="general-jobs">General jobs</a></li>
-							 		<li><a href="/jobs/uk?job_contract_type=permanent">Permanent jobs</a></li>
-							 		<li><a href="/jobs/uk?hours=weekends">Weekend jobs</a></li>
+							 		<li><a href="/jobs/uk?job_contract_type=permanent">Permanent Jobs</a></li>
+							 		<li><a href="/jobs/uk?hours=weekends">Weekend Jobs</a></li>
 							 		<li><a href="#">All Recruiters</a></li>
 								 	<div class="read-more">
 								 		<a href="/more/4000000000" class="btn btn-info" role="button">more..</a>
@@ -213,6 +213,19 @@
 							 </div>
 						 </div>
 					 </div>
+			 	</div>
+			 	<div class="row box-rose">
+			 		<div class="col-sm-12">
+			 			<a href="#spotlight">
+			 				All Spotlight
+			 			</a>
+			 		</div>
+			 		<div class="col-sm-12">
+			 			
+			 		</div>
+			 		<div class="col-sm-12">
+			 			
+			 		</div>
 			 	</div>
 		 	</div>
 		</section>
