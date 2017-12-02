@@ -433,7 +433,6 @@
         });
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
-            console.log(this.id);
             if(this.id == 'expiry'){
                 label.attr('placeholder', 'MM/YYYY')
             }
