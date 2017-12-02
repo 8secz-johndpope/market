@@ -1,3 +1,13 @@
 #del-address, #ship-address, #del-address-price, #ship-address-price{
 	display: none;
 }
+
+.pay-methods {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-clip: padding-box;
+}
+fieldset{
+	width: 100%;
+}
