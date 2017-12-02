@@ -109,6 +109,21 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div id="bill-add-ctr">
+                                        @if($user->default_address===$address->id)
+                                        <div id="bill-head">
+                                            <div class="cc-title-text">
+                                                Billing Address
+                                            </div>
+                                        </div>
+                                        <div id="bill-edit-ctr">
+                                            <div class="addr-read-version">
+                                                {{$address->line1}}<br> 
+                                                {{$address->city}} {{$address->postcode}}
+                                            </div>
+                                        </div>
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                             <div class="pay-method" data-mp-id="paypal">
