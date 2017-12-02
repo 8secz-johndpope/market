@@ -87,7 +87,7 @@
                                             <div class="row">
                                                 <span class="floating-label">
                                                     <label for="card">Card Number</label>
-                                                    <input class="input-field cf-card-number" id="cardNumber" name="card" placeholder="">
+                                                    <input type="text" class="input-field cf-card-number" id="cardNumber" name="card" placeholder="">
                                                     <ul class="cc-logos">
                                                         <li class="visa small"></li>
                                                         <li class="mastercard small"></li>
@@ -100,11 +100,11 @@
                                             <div class="row">
                                                 <span class="floating-label">
                                                     <label for="expiry">Expiry date:</label>
-                                                    <input class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
+                                                    <input type="text" class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
                                                 </span>
                                                 <span class="floating-label">
                                                     <label for="cvc">CVC:</label>
-                                                    <input class="form-control" name="cvc" placeholder="cvc (3 digits)">
+                                                    <input type="text" class="form-control" name="cvc" placeholder="cvc (3 digits)">
                                                 </span>
                                             </div>
                                         </div>
