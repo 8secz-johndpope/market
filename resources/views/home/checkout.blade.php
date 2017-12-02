@@ -83,7 +83,7 @@
                                 <div id="inst-details" class="bdr-btm">
                                     <div id="inst-error"></div>
                                     <div id="card-fields">
-                                        <div class="cf-from">
+                                        <div class="cf-form">
                                             <div class="row">
                                                 <span class="floating-label">
                                                     <label for="card">Card Number</label>
