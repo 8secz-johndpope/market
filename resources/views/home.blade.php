@@ -232,13 +232,13 @@
 		<section class="row-color gold">
 			<div class="container">
 				<div class="row menu">
-					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
+					<div class="col-xs-3 col-sm-3 col-md-4">
 						<img class="img-left" src="css/section-gold1.png">
 					</div>
-					<div class="col-xs-8 col-sm-8 col-md-6 col-lg-4">
+					<div class="col-xs-8 col-sm-8 col-md-4">
 						<h2>{{env('APP_NAME')}} is safe, free and trusted</h2>
 					</div>
-					<div class="col-md-3 col-lg-4 hidden-xs hidden-sm">
+					<div class="col-md-4 hidden-xs hidden-sm">
 						<img class="img-right" src="css/section-gold2.png">
 					</div>
 				</div>
