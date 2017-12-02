@@ -223,7 +223,7 @@
 			 		<div class="col-sm-4 border-rose-right">
 			 			<a href="#">Popular Searches</a>
 			 		</div>
-			 		<div class="col-sm-4 border-rose-right">
+			 		<div class="col-sm-4">
 			 			<a href="#">Popular Searches</a>
 			 		</div>
 			 	</div>
