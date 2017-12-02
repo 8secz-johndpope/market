@@ -59,6 +59,7 @@
                                                 <li class="visa"></li>
                                                 <li class="mastercard"></li>
                                                 <li class="discover"></li>
+                                                <li class="am-ex"></li>
                                                 <li class="maestro"></li>
                                             </ul>
                                         </div>
