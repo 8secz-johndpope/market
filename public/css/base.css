@@ -374,6 +374,9 @@ section.spotligth{
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+.border-rose-right{
+  border-right: 1px solid #f0c3ae;
+}
 .row.menu {
   margin: 0;
   /* padding: 100px 0; */
