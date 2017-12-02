@@ -14,6 +14,7 @@
 
 @section('content')
 <div class="body background-body">
+    <div class="container">
     <div class="row">
         <div class="col-sm-10">
             <div class="row">
@@ -112,6 +113,7 @@
             </div>
         </div>
     </div>
+</div>
     <div class="row all-divs">
         <div class="col-sm-8 col-sm-offset-2">
 
