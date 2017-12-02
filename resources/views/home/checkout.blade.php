@@ -71,7 +71,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="pay-method">
+                            <div class="pay-method" data-mp-id="paypal">
                                 <div class="col-l-p">
                                     <div class="radio-l">
                                         <input type="radio" name="pay-meth-radio" id="paypal">
