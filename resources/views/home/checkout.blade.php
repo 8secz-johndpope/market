@@ -431,5 +431,9 @@
             console.log(this.id);
             label.css('top', '8px');
         });
+        $('#card-fields input').focusout(function(){
+            var label = $('label[for="' + this.id + '"]');
+            label.css('top', '27px');
+        });
     </script>
 @endsection
