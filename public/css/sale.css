@@ -63,6 +63,16 @@ input[type=radio] {
     width: 16px;
     height: 16px;
 }
+.custom-radio::after {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border: 1px solid #0654ba;
+    display: none;
+}
+.custom-radio::after {
+    background-image: url(https://ir.ebaystatic.com/rs/c/xonyx-src-pres-styles-img-icon-radio-0f2f4c85.svg);
+}
 .col-l-p {
     width: 47%;
     display: inline-block;
