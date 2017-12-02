@@ -35,7 +35,7 @@
                                     <div class="radio-r">
                                         <label class="mt-label" for="new-card">
                                             <span class="mt-cc"></span>
-                                            {{$cards[0]['last4']}}
+                                            xxxx-xxx-xxxx-{{$cards[0]['last4']}}
                                         </label>
                                     </div>
                                 </div>
