@@ -81,7 +81,7 @@
                                 </div>
                                 <div class="col-r-p">
                                     <label class="mt-label" for="paypal">
-                                        <span class="mt-paypal"></span>
+                                        <span class="mt-logo paypal"></span>
                                     </label>
                                 </div>
                             </div>
