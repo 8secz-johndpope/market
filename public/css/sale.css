@@ -70,10 +70,10 @@ input[type=radio] {
     vertical-align: middle;
 }
 .col-r-p {
-    width: 85%;
-    cursor: pointer;
+    width: 53%;
     display: inline-block;
     vertical-align: middle;
+    text-align: right;
 }
 .mt-label {
     word-break: break-word;
