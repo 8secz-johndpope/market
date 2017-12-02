@@ -99,10 +99,12 @@
                                             </div>
                                             <div class="row">
                                                 <span class="floating-label">
-                                                    label for="cvc">CVC:</label>
-                                                    <input class="form-control" name="cvc" placeholder="cvc (3 digits)">
+                                                    <label for="expiry">Expiry date:</label>
+                                                    <input class="form-control" name="expiry" placeholder="Expiry MM/YYYY">
                                                 </span>
                                                 <span class="floating-label">
+                                                    <label for="cvc">CVC:</label>
+                                                    <input class="form-control" name="cvc" placeholder="cvc (3 digits)">
                                                 </span>
                                             </div>
                                         </div>
