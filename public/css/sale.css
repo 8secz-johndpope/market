@@ -30,7 +30,7 @@ legend {
     clear: both;
     border-bottom: 1px solid #ccc;
 }
-.col-l-p .radio-l, .col-l-p .radio-l{
+.col-l-p .radio-l, .col-l-p .radio-r{
 	display: inline-block;
     vertical-align: middle;
     cursor: pointer;
