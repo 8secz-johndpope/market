@@ -52,9 +52,8 @@ input[type=radio] {
 	position: relative;
 	margin-right: 30px;
 }
-.custom-radio::before{
+.custom-radio::before, .custom-radio::after{
 	border-radius: 50%;
-	border: 1px solid #aaa;
 	content: '';
     display: block;
     position: absolute;
@@ -62,6 +61,9 @@ input[type=radio] {
     top: 0;
     width: 16px;
     height: 16px;
+}
+.custom-radio::before{
+	border: 1px solid #aaa;
 }
 .custom-radio::after {
     background-position: center center;
