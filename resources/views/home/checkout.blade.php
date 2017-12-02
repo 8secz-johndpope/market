@@ -420,5 +420,10 @@
             $("#type").val(type);
             $('#sale-total-price').text(total);
         });
+        $('.card-fields input').focus(function(){
+            var label = $('label[for="' + this.id + '"]');
+            console.log(label);
+            label.css('top', '8px');
+        });
     </script>
 @endsection
