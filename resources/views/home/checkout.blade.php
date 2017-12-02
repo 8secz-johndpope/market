@@ -110,7 +110,7 @@
                                         </div>
                                     </div>
                                     <div id="bill-add-ctr">
-                                        @if($user->default_address !=0 )
+                                        @if($user->default_address != 0)
                                         <div id="bill-head">
                                             <div class="cc-title-text">
                                                 Billing Address
