@@ -42,3 +42,19 @@ input[type=radio] {
     z-index: 2;
     margin: 3px .5ex;
 }
+.custom-radio{
+	position: relative;
+	margin-right: 30px;
+	font-size: 1rem;
+}
+.custom-radio::before{
+	border-radius: 50%;
+	border: 1px solid #aaa;
+	content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+}
