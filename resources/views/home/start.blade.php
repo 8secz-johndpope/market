@@ -161,15 +161,7 @@
                     <div class="checkbox">
                         <label><input type="checkbox" name="type[]" value="bump" class="pack-class">Bump</label>
                     </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" name="type[]" value="shipping_1" class="pack-class">Shipping (2kg)</label>
-                    </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" name="type[]" value="shipping_2" class="pack-class">Shipping (5kg)</label>
-                    </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" name="type[]" value="shipping_3" class="pack-class">Shipping (10kg)</label>
-                    </div>
+
 
                     <a class="btn btn-primary add-pack">Add Packs</a>
 

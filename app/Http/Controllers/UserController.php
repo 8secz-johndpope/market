@@ -292,8 +292,8 @@ class UserController extends BaseController
 
         $price = $this->cprice($request);
         $discounted = (int)(0.75 * $price);
-        if ($discounted < 250000) {
-            return ['msg' => 'Minimum £2500 is needed to start a contract'];
+        if ($discounted < 300000) {
+            return ['msg' => 'Minimum £3000 is needed to start a contract'];
         }
         if (!$request->has('transaction_id')) {
             return ['msg' => '5% deposit is required to start the contract'];
