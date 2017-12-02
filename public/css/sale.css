@@ -217,7 +217,7 @@ ul.cc-logos li {
 #card-fields .row input {
     margin-top: 10px;
 }
-#card-fields .cf-card-number, #card-fields .cf-card-number, #card-fields .cf-card-sec{
+#card-fields .cf-card-number, #card-fields .cf-card-exp, #card-fields .cf-card-sec{
 	width: 254px;
 }
 #card-fields .cc-logos {
