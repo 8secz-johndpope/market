@@ -82,6 +82,12 @@
                             <div id="cc-new-ctr">
                                 <div id="inst-details" class="bdr-btm">
                                     <div id="inst-error"></div>
+                                    <div id="card-fields">
+                                        <div class="cf-from">
+                                            <div class="row">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="pay-method" data-mp-id="paypal">
