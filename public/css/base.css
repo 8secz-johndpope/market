@@ -1183,6 +1183,7 @@ section.row-color.white {
   .categories .panel-primary>.panel-heading {
     height: auto;
     padding-bottom: 0;
+    padding-top: 0;
   }
   .panel-heading img.icon-category {
     height: 6em;
