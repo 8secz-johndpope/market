@@ -65,6 +65,9 @@
                                         </div>
                                     </div>
                                     <div class="fs-edit">
+                                        <button type="button fs-edit-btn img-btn">
+                                            <span class=""></span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

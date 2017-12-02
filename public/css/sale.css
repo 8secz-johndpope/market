@@ -144,4 +144,5 @@ ul.cc-logos li {
     width: 20px;
     margin-left: 10px;
     vertical-align: middle;
+    display: inline-block;
 }
