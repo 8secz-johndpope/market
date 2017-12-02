@@ -115,6 +115,11 @@ input[type=radio] {
     width: 38px;
     height: 24px;
 }
+.visa.small {
+    background-position: -11px -379px;
+    width: 27px;
+    height: 18px;
+}
 .discover {
     background-position: -11px -75px;
     width: 38px;
