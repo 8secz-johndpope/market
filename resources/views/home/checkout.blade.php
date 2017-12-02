@@ -184,14 +184,19 @@
                             <td>Shipping:</td>
                             <td><span class="bold-text">£<span class="col-post-price">{{$sale->advert->shipping_cost()}}</span></span></td>
                         </tr>
-                        <tr>
-                            <td>Total:</td>
-                            <td><span class="bold-text">£<span id="sale-total-price">{{$sale->amount()}}</span></span></td>
-                        </tr>
                     </table>
                 </div>
                 <div class="checkout-order">
-                    <div class="order-total"></div>
+                    <div class="order-total">
+                        <table class="w100p">
+                            <tbody>
+                                <tr>
+                                    <td>Total:</td>
+                                    <td><span class="bold-text">£<span id="sale-total-price">{{$sale->amount()}}</span></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="call-to-action">
                         <button type="submit" class="btn btn-info">Confirm and pay</button>
                     </div>
