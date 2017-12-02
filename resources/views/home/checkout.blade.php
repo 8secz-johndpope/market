@@ -433,7 +433,9 @@
         });
         $('#card-fields input').focusout(function(){
             var label = $('label[for="' + this.id + '"]');
-            label.css('top', '27px');
+            if($(this).val() == ''){
+                label.css('top', '27px');
+            }
         });
     </script>
 @endsection
