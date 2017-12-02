@@ -84,11 +84,10 @@ input[type=radio] {
     background-size: 248px 1388px;
     display: inline-block;
     vertical-align: middle;
-}
-.mt-cc {
-    
     width: 248px;
     height: 1215px;
+}
+.mt-cc {
     background-position: -11px -506px;
     width: 34px;
     height: 22px;
