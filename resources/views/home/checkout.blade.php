@@ -86,7 +86,7 @@
                                         <div class="cf-form">
                                             <div class="row">
                                                 <span class="floating-label">
-                                                    <label for="card">Card Number</label>
+                                                    <label for="cardNumber">Card Number</label>
                                                     <input type="text" class="input-field cf-card-number" id="cardNumber" name="card" placeholder="">
                                                     <ul class="cc-logos">
                                                         <li class="visa small"></li>
