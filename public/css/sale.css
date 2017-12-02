@@ -82,6 +82,9 @@ input[type=radio] {
 }
 .mt-label {
     word-break: break-word;
+    margin-bottom: 0;
+    display: block;
+
 }
 .visa, .mt-cc, .mastercard, .discover, .am-ex, .maestro, .paypal{
 	background-image: url(https://securepics.ebaystatic.com/aw/pics/checkout/sprs/spr_PROX_13.svg);
