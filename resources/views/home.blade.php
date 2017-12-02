@@ -224,7 +224,7 @@
 			 			<a href="#">Popular Searches</a>
 			 		</div>
 			 		<div class="col-xs-12 col-sm-4">
-			 			<a href="#">Popular Searches</a>
+			 			<a href="#">Lastest Listings</a>
 			 		</div>
 			 	</div>
 		 	</div>
