@@ -420,7 +420,7 @@
             }
         });
         $(window).scroll(function(e) {
-            console.log($('body').scrollTop());
+            console.log($('.body').scrollTop());
             if ($('body').scrollTop() > $('#pay-method-ctr').position().top) {
                 console.log($('.checkout-summry').position().top);
                 $('.checkout-summry').css('position', 'fixed');
