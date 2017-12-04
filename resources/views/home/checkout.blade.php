@@ -392,6 +392,7 @@
             else{
                 $('.col-post-price').text(stringPrice);
             }
+            $('#type').val($(this).val());
             $('#sale-total-price').text(total);
         });
         $('#card-fields input').focus(function(){
