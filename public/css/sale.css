@@ -431,7 +431,7 @@ ul.cc-logos li {
 	display: block;
 }
 .shp-opt.show{
-	display: inline;
+	display: inline!important;
 }
 .item-shipping .is-rdo {
     width: 20%;

@@ -242,7 +242,7 @@
                                                                         </div>
                                                                         <label for="s-col-person" class="lbl col-r-p">
                                                                             <span class="shp-serv">
-                                                                                Collection in person <span class="shp-opt"> - <span>FREE</span></span>
+                                                                                Collection in person <span class="shp-opt"> - <span>Free</span></span>
                                                                             </span>
                                                                         </label>
                                                                     </div>
