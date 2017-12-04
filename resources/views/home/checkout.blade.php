@@ -371,23 +371,7 @@
             $('.col-post-price').text('£'+price);
             console.log(price);
             //$('.shp-price').addClass('show');
-            var idDiv = $(this).attr('data-href');
-            var total = parseInt($('#sale-price').text());
-            if(idDiv != "collect"){
-                $('.post-address').hide();
-                $('.post-price').hide();
-                $('.post-address input').attr('required', false);
-                $('#'+idDiv).show();
-                $('#'+idDiv +' input').attr('required', true);
-                $('#' + idDiv + '-price').show();
-                total += parseInt($('#' + idDiv + '-price .col-post-price').text());
-            }
-            else{
-                $('.post-address').hide();
-                $('.post-address input').attr('required', false);
-                $('.post-price').hide()
-            }
-            $("#type").val(type);
+            var total = parseInt($('#sale-price').text()) + price;
             $('#sale-total-price').text(total);
         });
         $('#card-fields input').focus(function(){
