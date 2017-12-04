@@ -429,7 +429,7 @@
             }
         });
         $(window).scroll(function(e) {
-            console.log($('section').scrollTop());
+            console.log($(window).scrollTop());
             if ($('body').scrollTop() > $('#pay-method-ctr').position().top) {
                 console.log($('.checkout-summry').position().top);
                 $('.checkout-summry').css('position', 'fixed');
