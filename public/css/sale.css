@@ -406,6 +406,19 @@ ul.cc-logos li {
     vertical-align: middle;
     text-align: center;
 }
+.seller-item-group .item-info {
+    vertical-align: top;
+}
+.seller-item-group .item-details {
+    margin-bottom: 15px;
+}
+.seller-item-group .item-details .item-title {
+    padding-left: 0;
+    line-height: 1.3;
+}
+.item-price {
+    text-align: right;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
