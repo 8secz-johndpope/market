@@ -584,7 +584,7 @@
             }
             else{
                 $('#sa-change-link').show();
-                $('#shipping-address').hide()
+                $('#shipping-address').hide();
             }
         });
         $(window).scroll(function(e) {
