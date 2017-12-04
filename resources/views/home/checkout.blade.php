@@ -312,14 +312,6 @@
                             <td class="text-left">Postage:</td>
                             <td><span class="bold-text"><span class="col-post-price">Free</span></span></td>
                         </tr>
-                        <tr class="post-price" id="del-address-price">
-                            <td>Delivery:</td>
-                            <td><span class="bold-text">£<span class="col-post-price">{{$sale->advert->delivery()}}</span></span></td>
-                        </tr>
-                        <tr class="post-price" id="ship-address-price">
-                            <td>Shipping:</td>
-                            <td><span class="bold-text">£<span class="col-post-price">{{$sale->advert->shipping_cost()}}</span></span></td>
-                        </tr>
                     </table>
                 </div>
                 <div class="checkout-order">
