@@ -351,6 +351,13 @@ ul.cc-logos li {
     color: #767676;
     margin-bottom: 2px;
 }
+.seller-container {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-clip: padding-box;
+    margin-bottom: 25px;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
