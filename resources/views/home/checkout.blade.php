@@ -432,11 +432,12 @@
             }
         });
         $(window).scroll(function(e) {
-            console.log($('header').scrollTop());
+            console.log($('body').scrollTop());
             if ($('body').scrollTop() > $('#pay-method-ctr').position().top) {
                 console.log($('.checkout-summry').position().top);
                 $('.checkout-summry').css('position', 'fixed');
                 $('.checkout-summry').css('top', '24px');
+                $('.checkout-summry').css('width', '308px');
             }
             else{
                 $('.checkout-summry').css('position', 'relative');
