@@ -432,6 +432,7 @@ ul.cc-logos li {
 }
 .item-shipping .lbl {
     width: 80%;
+    text-align: left;
 }
 .btn-submit {
     width: 100%;
