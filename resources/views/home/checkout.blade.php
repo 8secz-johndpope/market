@@ -170,7 +170,7 @@
                             <fieldset class="sa-radiogroup">
                                 <legend></legend>
                                 @foreach($user->addresses as $address)
-                                <div id="{{$address->id}}" class="sa-opt table">
+                                <div id="{{$address->id}}" class="sa-opt">
                                     <div class="sa-addr">
                                         <div class="radio-l">
                                             <input type="radio" name="addrs-post-radio" id="rdo-{{$address->id}}">
