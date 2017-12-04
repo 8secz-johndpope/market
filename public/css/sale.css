@@ -475,8 +475,11 @@ ul.cc-logos li {
 	-webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
-button.sa-edit-btn {
+button.sa-edit-btn, button.fs-edit-btn {
     border: none;
+}
+#shipping-address{
+	display: none;
 }
 .btn-submit {
     width: 100%;
