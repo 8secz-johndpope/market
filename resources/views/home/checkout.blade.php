@@ -161,7 +161,7 @@
                                 </div>
                             </div>
                              <div class="sa-edit col-r-p">
-                                <button type="button"><span class="glyphicon glyphicon-menu-down"></span></button>
+                                <button type="button" class="sa-edit-btn"><span class="glyphicon glyphicon-menu-down"></span></button>
                             </div>
                         </div>
                     </div>
@@ -575,5 +575,9 @@
                 $(this).removeAttr('placeholder');
             }
         });
+        $('.sa-edit button').click(function(){
+            $('#shipping-address-ctr .postage-address').toggleClass('expanded');
+            $('.sa-edit-btn span').toggleClass('expanded');
+        })
     </script>
 @endsection
