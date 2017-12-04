@@ -187,7 +187,7 @@
                     </table>
                 </div>
                 <div class="checkout-order">
-                    <div class="order-total">
+                    <div id="order-total" class="order-total">
                         <table class="w100p">
                             <tbody>
                                 <tr>
