@@ -587,6 +587,11 @@
                 $('#shipping-address').hide()
             }
         });
+        $(window).scroll(function(e) {
+            if ($('body').scrollTop() > $('checkout-summry').position().top) {
+                $('checkout-summry').css({'position', 'fixed', 'top', '0px'});
+            }
+        });
 
     </script>
 @endsection
