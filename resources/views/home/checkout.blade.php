@@ -394,7 +394,6 @@
                 $('.post-address input').attr('required', false);
                 $('.post-price').hide()
             }
-            console.log(type);
             $("#type").val(type);
             $('#sale-total-price').text(total);
         });
