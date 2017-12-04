@@ -364,6 +364,7 @@
         });
         $('input[type=radio][name=del-opt]').change(function(){
             $('label[for=' + this.id + '] .shp-opt').removeClass('show');
+            $('.shp-price.show').removeClass('show');
             $('.shp-price').addClass('show');
             var idDiv = $(this).attr('data-href');
             var total = parseInt($('#sale-price').text());
