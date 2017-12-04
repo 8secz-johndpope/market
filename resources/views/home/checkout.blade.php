@@ -594,6 +594,10 @@
                 $('.checkout-summry').css('position', 'fixed');
                 $('.checkout-summry').css('top', '24px');
             }
+            else{
+                $('.checkout-summry').css('position', 'relative');
+                $('.checkout-summry').css('top', '0px');
+            }
         });
 
     </script>
