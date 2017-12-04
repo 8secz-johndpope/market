@@ -371,7 +371,7 @@
         $('input[type=radio][name=del-opt]').change(function(){
             $('label[for=' + this.id + '] .shp-opt').removeClass('show');
             $('.shp-price.show').removeClass('show');
-            var parent = $('label[for=' + this.id + '] .shp-opt').closet('.shp-row');
+            var parent = $('label[for=' + this.id + '] .shp-opt').closest('.shp-row');
             console.log(parent);
             $('.shp-price').addClass('show');
             var idDiv = $(this).attr('data-href');
