@@ -424,7 +424,11 @@ ul.cc-logos li {
     padding-left: 0;
 }
 .item-shipping .shp-price {
-    display: block;
+    display: none;
+    text-align: right;
+}
+.show{
+	display: block;
 }
 .item-shipping .is-rdo {
     width: 20%;
