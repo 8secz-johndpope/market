@@ -580,9 +580,11 @@
             $('.sa-edit-btn span').toggleClass('expanded');
             if($('.sa-edit-btn span').hasClass('expanded')){
                 $('#sa-change-link').hide();
+                $('.shipping-address').hide()
             }
             else{
                 $('#sa-change-link').show();
+                $('.shipping-address').show()
             }
         });
 
