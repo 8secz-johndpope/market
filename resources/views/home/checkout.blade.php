@@ -240,7 +240,7 @@
                                                                             <input type="radio" name="del-opt" id="is-col-person" checked="true">
                                                                             <span class="custom-radio custom-ctr"></span>
                                                                         </div>
-                                                                        <label for="s-col-person" class="lbl col-r-p">
+                                                                        <label for="is-col-person" class="lbl col-r-p">
                                                                             <span class="shp-serv">
                                                                                 Collection in person <span class="shp-opt"> - <span>Free</span></span>
                                                                             </span>
@@ -257,7 +257,7 @@
                                                                             <input type="radio" name="del-opt" id="is-local-del">
                                                                             <span class="custom-radio custom-ctr"></span>
                                                                         </div>
-                                                                        <label for="s-col-person" class="lbl col-r-p">
+                                                                        <label for="is-local-del" class="lbl col-r-p">
                                                                             <span class="shp-serv">
                                                                                 Local delivery <span class="shp-opt show"> - <span>£{{$sale->advert->delivery()}}</span></span>
                                                                             </span>
@@ -272,7 +272,7 @@
                                                                             <input type="radio" name="del-opt" id="is-shipping">
                                                                             <span class="custom-radio custom-ctr"></span>
                                                                         </div>
-                                                                        <label for="s-col-person" class="lbl col-r-p">
+                                                                        <label for="is-shipping" class="lbl col-r-p">
                                                                             <span class="shp-serv">
                                                                                 United Kingdom Shipping <span class="shp-opt show"> - <span>£{{$sale->advert->shipping_cost()}}</span></span>
                                                                             </span>
