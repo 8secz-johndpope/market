@@ -173,8 +173,8 @@
                 <div class="checkout-details">
                     <table class="w100p">
                         <tr>
-                            <td>Price:</td>
-                            <td class="text-left"><span class="bold-text">£<span id="sale-price">{{$sale->advert->price()}}</span></span></td>
+                            <td class="text-left">Price:</td>
+                            <td><span class="bold-text">£<span id="sale-price">{{$sale->advert->price()}}</span></span></td>
                         </tr>
                         <tr class="post-price" id="del-address-price">
                             <td>Delivery:</td>
