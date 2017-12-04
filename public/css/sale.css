@@ -342,6 +342,7 @@ ul.cc-logos li {
 .sa-opt .lbl {
     width: 80%;
     line-height: 1.3;
+    cursor: pointer;
 }
 #shipping-addresses .pr-addr-lbl {
     color: #767676;
