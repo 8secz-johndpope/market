@@ -372,8 +372,9 @@
             $('label[for=' + this.id + '] .shp-opt').removeClass('show');
             $('.shp-price.show').removeClass('show');
             var parent = $('label[for=' + this.id + '] .shp-opt').closest('.shp-row');
-            console.log(parent);
-            $('.shp-price').addClass('show');
+            console.log(parent.next());
+            parent.next().addClass('show');
+            //$('.shp-price').addClass('show');
             var idDiv = $(this).attr('data-href');
             var total = parseInt($('#sale-price').text());
             var type = $(this).val();
