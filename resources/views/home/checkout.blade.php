@@ -124,6 +124,12 @@
                                         </div>
                                         @endif
                                     </div>
+                                    <div class="cta-wrapper">
+                                        <div class="action col-p">
+                                            <a href="#" class="cf-cancel">Cancel</a>
+                                            <button type="button" class="btn btn-cta-save">Done</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="pay-method" data-mp-id="paypal">
