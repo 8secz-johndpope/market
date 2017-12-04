@@ -179,8 +179,8 @@
                                         <label class="lbl" for="rdo-{{$address->id}}">
                                             @if($user->default_address===$address->id)
                                                 <span class="w600"> Primary address</span>
-                                                <span>{{$user->address->line1}}</span>
-                                                <span>{{$user->address->city}} {{$user->address->postcode}}</span>
+                                                <span>{{$address->line1}}</span>
+                                                <span>{{$user->address->city}} {{$address->postcode}}</span>
                                                 <span>United Kingdom</span>
                                             @endif
                                         </label>
