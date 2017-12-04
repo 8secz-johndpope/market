@@ -590,7 +590,6 @@
         $(window).scroll(function(e) {
             if ($('body').scrollTop() > $('checkout-summry').position().top) {
                 $('checkout-summry').css('position', 'fixed');
-                $('checkout-summry').css('top', '0px');
             }
         });
 
