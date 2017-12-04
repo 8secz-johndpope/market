@@ -539,7 +539,7 @@
             $(".all-divs").show();
             $(".add-card-form").hide();
         });
-        $('input[type=radio][name=post-option]').change(function(){
+        $('input[type=radio][name=del-opt]').change(function(){
             var idDiv = $(this).attr('data-href');
             var total = parseInt($('#sale-price').text());
             var type = $(this).val();
@@ -589,7 +589,7 @@
         });
         $(window).scroll(function(e) {
             console.log($('.checkout-summry').position().top);
-            if ($('.body').scrollTop() > $('.checkout-summry').position().top) {
+            if ($('.body').scrollTop() > $('.checkout-details').position().top) {
                 console.log($('.checkout-summry').position().top);
                 $('.checkout-summry').css('position', 'fixed');
                 $('.checkout-summry').css('top', '24px');
