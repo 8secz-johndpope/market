@@ -130,7 +130,7 @@
                                 <div class="col-l-p">
                                     <div class="radio-l">
                                         <input type="radio" name="pay-meth-radio" id="paypal">
-                                        <span class="custom-radio">
+                                        <span class="custom-radio custom-ctr">
                                         </span>
                                     </div>
                                     <div class="radio-r">
