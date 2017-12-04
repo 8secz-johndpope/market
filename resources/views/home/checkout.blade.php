@@ -300,7 +300,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 checkout-top">
             <div class="checkout-summry">
                 <div class="checkout-details">
                     <table class="w100p">
@@ -329,6 +329,7 @@
                         <form >
                             <input name="nonce" value="xyz" type="hidden" id="nonce">
                             <input type="hidden" name="type" id="type" value="2">
+                            <input type="hidden" name="shipping_address" id="shipping_address" value="">
                             <button type="submit" class="btn btn-submit">Confirm and pay</button>
                         </form>
                     </div>
@@ -424,7 +425,6 @@
                 console.log($('.checkout-summry').position().top);
                 $('.checkout-summry').css('position', 'fixed');
                 $('.checkout-summry').css('top', '24px');
-                $('.checkout-summry').css('width', '308px');
             }
             else{
                 $('.checkout-summry').css('position', 'relative');

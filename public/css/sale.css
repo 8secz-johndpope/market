@@ -513,6 +513,9 @@ button.sa-edit-btn, button.fs-edit-btn {
 #cc-new-ctr{
 	display: none;
 }
+.checkout-top{
+	position: relative;
+}
 input[type="radio"]:checked+.custom-ctr::after{
 	display: block;
 }
