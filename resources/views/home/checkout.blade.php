@@ -578,7 +578,7 @@
         $('.sa-edit button').click(function(){
             $('#shipping-address-ctr .postage-address').toggleClass('expanded');
             $('.sa-edit-btn span').toggleClass('expanded');
-            $('.sa-change-link').hide();
+            $('#sa-change-link').hide();
         })
     </script>
 @endsection
