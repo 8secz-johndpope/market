@@ -265,7 +265,7 @@
                                                                     </div>
                                                                 </div>
                                                                 @endif
-                                                                @if( @if($advert->has_param('canship')&&$advert->param('canship')===1))
+                                                                @if($advert->has_param('canship')&&$advert->param('canship')===1)
                                                                 <div class="row">
                                                                     <div class="col-xs-9 shp-row">
                                                                         <div class="is-rdo col-l-p">
