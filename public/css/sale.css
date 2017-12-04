@@ -265,6 +265,8 @@ ul.cc-logos li {
 .call-to-action {
     text-align: center;
     padding: 15px 15px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
 }
 .checkout-details {
     margin: 20px 15px 15px 15px;
