@@ -367,10 +367,11 @@
             var parent = $('label[for=' + this.id + '] .shp-opt').closest('.shp-row');
             parent.next().addClass('show');
             var stringPrice = parent.next().find('span').text();
+            var total = parseInt($('#sale-price').text()) + price;
             if(this.id != "is-col-person"){ 
                 var price = parseInt(stringPrice.substring(1, stringPrice.length));
                 $('.col-post-price').text('£'+ price);
-                var total = parseInt($('#sale-price').text()) + price;
+                total = parseInt($('#sale-price').text()) + price;
             }
             else{
                 $('.col-post-price').text(stringPrice);
