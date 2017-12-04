@@ -376,6 +376,7 @@
             parent.next().addClass('show');
             var stringPrice = parent.next().find('span').text();
             var price = parseInt(stringPrice.substring(1, stringPrice.length));
+            $('.col-post-price').text('£'+price);
             console.log(price);
             //$('.shp-price').addClass('show');
             var idDiv = $(this).attr('data-href');
