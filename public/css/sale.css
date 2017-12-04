@@ -266,10 +266,12 @@ ul.cc-logos li {
     text-align: center;
     padding: 15px 15px 0 15px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
 }
 .checkout-details {
+	text-align: right;
     margin: 20px 15px 15px 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
 }
 .btn-submit {
     width: 100%;
