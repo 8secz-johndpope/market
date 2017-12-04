@@ -176,6 +176,10 @@
                             <td class="text-left">Price:</td>
                             <td><span class="bold-text">£<span id="sale-price">{{$sale->advert->price()}}</span></span></td>
                         </tr>
+                        <tr class="post-price" id="post-price">
+                            <td>Postage:</td>
+                            <td><span class="bold-text"><span class="col-post-price">Free</span></span></td>
+                        </tr>
                         <tr class="post-price" id="del-address-price">
                             <td>Delivery:</td>
                             <td><span class="bold-text">£<span class="col-post-price">{{$sale->advert->delivery()}}</span></span></td>
