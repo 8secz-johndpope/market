@@ -425,6 +425,7 @@
                 console.log($('.checkout-summry').position().top);
                 $('.checkout-summry').css('position', 'fixed');
                 $('.checkout-summry').css('top', '24px');
+                $('.checkout-summry').css('width', '320px');
             }
             else{
                 $('.checkout-summry').css('position', 'relative');
