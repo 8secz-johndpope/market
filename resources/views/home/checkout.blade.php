@@ -233,7 +233,20 @@
                                                     <div>
                                                         <div class="item-shipping clearfix">
                                                             <fieldset>
-                                                                
+                                                                <legend>Select a delivery service</legend>
+                                                                <div class="row">
+                                                                    <div class="col-xs-9 shp-row">
+                                                                        <div class="is-rdo col-l-p">
+                                                                            <input type="radio" name="del-opt" id="is-col-person">
+                                                                            <span class="custom-radio"></span>
+                                                                        </div>
+                                                                        <label for="s-col-person" class="lbl col-r-p">
+                                                                            <span class="shp-serv">
+                                                                                Collection in person
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
                                                             </fieldset>
                                                         </div>
                                                     </div>
