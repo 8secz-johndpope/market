@@ -237,7 +237,7 @@
                                                                 <div class="row">
                                                                     <div class="col-xs-9 shp-row">
                                                                         <div class="is-rdo col-l-p">
-                                                                            <input type="radio" name="del-opt" id="is-col-person">
+                                                                            <input type="radio" name="del-opt" id="is-col-person" checked="true">
                                                                             <span class="custom-radio custom-ctr"></span>
                                                                         </div>
                                                                         <label for="s-col-person" class="lbl col-r-p">
