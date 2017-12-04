@@ -430,6 +430,9 @@ ul.cc-logos li {
 .show{
 	display: block;
 }
+.shp-opt.show{
+	display: inline;
+}
 .item-shipping .is-rdo {
     width: 20%;
     max-width: 35px;

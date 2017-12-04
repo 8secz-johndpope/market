@@ -246,7 +246,7 @@
                                                                             </span>
                                                                         </label>
                                                                     </div>
-                                                                    <div class="col-xs-3 shp-price">
+                                                                    <div class="col-xs-3 shp-price show">
                                                                         <span>Free</span>
                                                                     </div>
                                                                 </div>
@@ -259,7 +259,7 @@
                                                                         </div>
                                                                         <label for="s-col-person" class="lbl col-r-p">
                                                                             <span class="shp-serv">
-                                                                                Local delivery <span class="shp-opt"> - <span>£{{$sale->advert->delivery()}}</span></span>
+                                                                                Local delivery <span class="shp-opt show"> - <span>£{{$sale->advert->delivery()}}</span></span>
                                                                             </span>
                                                                         </label>
                                                                     </div>
@@ -274,7 +274,7 @@
                                                                         </div>
                                                                         <label for="s-col-person" class="lbl col-r-p">
                                                                             <span class="shp-serv">
-                                                                                United Kingdom Shipping <span class="shp-opt"> - <span>£{{$sale->advert->shipping_cost()}}</span></span>
+                                                                                United Kingdom Shipping <span class="shp-opt show"> - <span>£{{$sale->advert->shipping_cost()}}</span></span>
                                                                             </span>
                                                                         </label>
                                                                     </div>
