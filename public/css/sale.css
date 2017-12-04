@@ -47,6 +47,8 @@ input[type=radio] {
     opacity: 0;
     z-index: 2;
     margin: 3px .5ex;
+    padding: 0;
+    cursor: pointer;
 }
 .custom-radio{
 	position: relative;
@@ -328,6 +330,12 @@ ul.cc-logos li {
     padding: 15px;
     width: 100%;
     display: table-cell;
+    vertical-align: middle;
+}
+.sa-opt .radio-l {
+    width: 20%;
+    max-width: 35px;
+    display: inline-block;
     vertical-align: middle;
 }
 .btn-submit {
