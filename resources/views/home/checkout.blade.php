@@ -237,7 +237,7 @@
                                                                 <div class="row">
                                                                     <div class="col-xs-9 shp-row">
                                                                         <div class="is-rdo col-l-p">
-                                                                            <input type="radio" name="del-opt" id="is-col-person" checked="true">
+                                                                            <input type="radio" name="del-opt" id="is-col-person" checked="true" value="2">
                                                                             <span class="custom-radio custom-ctr"></span>
                                                                         </div>
                                                                         <label for="is-col-person" class="lbl col-r-p">
@@ -254,7 +254,7 @@
                                                                 <div class="row">
                                                                     <div class="col-xs-9 shp-row">
                                                                         <div class="is-rdo col-l-p">
-                                                                            <input type="radio" name="del-opt" id="is-local-del">
+                                                                            <input type="radio" name="del-opt" id="is-local-del" value="0">
                                                                             <span class="custom-radio custom-ctr"></span>
                                                                         </div>
                                                                         <label for="is-local-del" class="lbl col-r-p">
@@ -272,7 +272,7 @@
                                                                 <div class="row">
                                                                     <div class="col-xs-9 shp-row">
                                                                         <div class="is-rdo col-l-p">
-                                                                            <input type="radio" name="del-opt" id="is-shipping">
+                                                                            <input type="radio" name="del-opt" id="is-shipping" value="0">
                                                                             <span class="custom-radio custom-ctr"></span>
                                                                         </div>
                                                                         <label for="is-shipping" class="lbl col-r-p">
