@@ -188,6 +188,19 @@
                                 </div>
                                 @endforeach
                             </fieldset>
+                            <div class="sa-cta clearfix">
+                                <div class="sa-addr-addr"></div>
+                                <div  class=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cart-details-ctr" class="col-sm-12">
+                    <h3>Review item and postage</h3>
+                    <div class="seller-row">
+                        <div class="seller-container">
+                            <div id="seller-info" class="seller-info clearfix">
+                            </div>
                         </div>
                     </div>
                 </div>
