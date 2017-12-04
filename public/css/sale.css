@@ -430,6 +430,9 @@ ul.cc-logos li {
     width: 20%;
     max-width: 35px;
 }
+.item-shipping .lbl {
+    width: 80%;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
