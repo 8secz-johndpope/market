@@ -145,7 +145,7 @@
                         </fieldset>
                     </div>
                 </div>
-                <div class="col-sm-12">
+                <div id="shipping-address-ctr" class="col-sm-12">
                     <h3>Post to</h3>
                     <div class="postage-address">
                         <div class="main-pa">

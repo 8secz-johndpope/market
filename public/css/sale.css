@@ -302,7 +302,7 @@ ul.cc-logos li {
     text-align: right;
     cursor: pointer;
 }
-.sa-edit-ctr {
+#shipping-address-ctr .sa-edit-ctr {
     /* background: #fff; */
     background: #fff;
     border: 1px solid #ccc;
