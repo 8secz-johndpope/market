@@ -160,9 +160,9 @@
                                     <a href="javascript:;">Change</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="sa-edit col-r-p">
-                            <button type="button"><span></span></button>
+                             <div class="sa-edit col-r-p">
+                                <button type="button"><span></span></button>
+                            </div>
                         </div>
                     </div>
                     <div class="sa-edit-ctr">
