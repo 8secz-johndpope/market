@@ -427,6 +427,9 @@ ul.cc-logos li {
     display: none;
     text-align: right;
 }
+.item-shipping .shp-row .shp-opt {
+    display: none;
+}
 .show{
 	display: block;
 }
