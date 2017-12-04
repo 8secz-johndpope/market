@@ -273,6 +273,11 @@ ul.cc-logos li {
     padding-bottom: 10px;
     border-bottom: 1px solid #ddd;
 }
+.cf-form .row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
