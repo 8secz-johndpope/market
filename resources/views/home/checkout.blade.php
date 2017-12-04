@@ -73,7 +73,7 @@
                                         </div>
                                     </div>
                                     <div class="fs-edit">
-                                        <button type="button fs-edit-btn img-btn">
+                                        <button type="button" class="fs-edit-btn img-btn">
                                             <span class="glyphicon glyphicon-menu-down"></span>
                                         </button>
                                     </div>
