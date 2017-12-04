@@ -419,6 +419,17 @@ ul.cc-logos li {
 .item-price {
     text-align: right;
 }
+.item-shipping .shp-row {
+    line-height: 1.3;
+    padding-left: 0;
+}
+.item-shipping .shp-price {
+    display: block;
+}
+.item-shipping .is-rdo {
+    width: 20%;
+    max-width: 35px;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
