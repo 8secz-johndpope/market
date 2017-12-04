@@ -524,7 +524,10 @@ a.cf-cancel {
     margin-right: 15px;
 }
 .btn-cta-save {
-    border: 1px solid;
+    border: 1px solid #ff9d2c;
+    background: #ff9d2c;
+    color: #fff;
+    padding: 10px 20px;
 }
 .cta-wrapper .action.col-p {
     width: 100%;
