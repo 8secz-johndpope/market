@@ -369,11 +369,10 @@
             $(".add-card-form").hide();
         });
         $('input[type=radio][name=del-opt]').change(function(){
-            $('#seller-info label .shp-opt').addClass('show');
+            $('.shp-opt').addClass('show');
             $('label[for=' + this.id + '] .shp-opt').removeClass('show');
             $('.shp-price.show').removeClass('show');
             var parent = $('label[for=' + this.id + '] .shp-opt').closest('.shp-row');
-            console.log(parent.next());
             parent.next().addClass('show');
             //$('.shp-price').addClass('show');
             var idDiv = $(this).attr('data-href');
