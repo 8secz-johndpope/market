@@ -419,6 +419,15 @@
                 $('#shipping-address').hide();
             }
         });
+        $('.fs-edit-btn button').click(function(){
+            $('.fs-edit-btn').toggleClass('expanded');
+            if($('.sa-edit-btn span').hasClass('expanded')){
+                $('#cc-new-ctr').show()
+            }
+            else{
+                $('#cc-new-ctr').hide();
+            }
+        });
         $(window).scroll(function(e) {
             console.log($('.body').scrollTop());
             if ($('body').scrollTop() > $('#pay-method-ctr').position().top) {

@@ -467,11 +467,11 @@ ul.cc-logos li {
     width: 80%;
     text-align: left;
 }
-.sa-edit-btn span{
+.sa-edit-btn span, .fs-edit-btn span{
 	transition: -webkit-transform,0.5s;
     transition: transform,0.5s;
 }
-.sa-edit-btn span.expanded{
+.sa-edit-btn span.expanded, .fs-edit-btn span.expanded{
 	-webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
@@ -509,6 +509,9 @@ button.sa-edit-btn, button.fs-edit-btn {
     background-color: #fff;
     border: 1px solid #0654ba;
     display: none;
+}
+#cc-new-ctr{
+	display: none;
 }
 input[type="radio"]:checked+.custom-ctr::after{
 	display: block;
