@@ -420,8 +420,8 @@
             }
         });
         $('.fs-edit-btn button').click(function(){
-            $('.fs-edit-btn').toggleClass('expanded');
-            if($('.sa-edit-btn span').hasClass('expanded')){
+            $('.fs-edit-btn span').toggleClass('expanded');
+            if($('.fs-edit-btn span').hasClass('expanded')){
                 $('#cc-new-ctr').show()
             }
             else{
