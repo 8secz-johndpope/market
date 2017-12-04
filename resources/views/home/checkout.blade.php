@@ -212,7 +212,32 @@
                                     <div class="dtls-tcell">
                                         <div class="item-row">
                                             <div class="dtls-table">
-                                                
+                                                <div class="item-img-ctr">
+                                                    <div class="item-img">
+                                                        <span class="img-ctr">
+                                                             <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="item-info dtls-tcell">
+                                                    <div class="row item-details">
+                                                        <div class="col-xs-9 item-title">
+                                                            {{$advert->param('title')}}
+                                                        </div>
+                                                        <div class="item-price-group col-xs-3">
+                                                            <div class="item-price">
+                                                                <span>£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="item-shipping clearfix">
+                                                            <fieldset>
+                                                                
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
