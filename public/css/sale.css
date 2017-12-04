@@ -305,6 +305,26 @@ ul.cc-logos li {
     text-align: right;
     cursor: pointer;
 }
+#shipping-address-ctr .postage-address{
+	padding: 15px;
+    cursor: pointer;
+}
+#shipping-address-ctr .postage-address.expanded {
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 3px;
+    background-clip: padding-box;
+    color: #999;
+}
 #shipping-address-ctr .sa-edit-ctr {
     /* background: #fff; */
     background: #fff;
