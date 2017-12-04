@@ -302,6 +302,28 @@ ul.cc-logos li {
     text-align: right;
     cursor: pointer;
 }
+.sa-edit-ctr {
+    /* background: #fff; */
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-clip: padding-box;
+    border-top: 0;
+    /* display: none; */
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    -moz-border-radius-topleft: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 0;
+    background-clip: padding-box;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
