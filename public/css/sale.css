@@ -475,6 +475,9 @@ ul.cc-logos li {
 	-webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+button.sa-edit-btn {
+    border: none;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
