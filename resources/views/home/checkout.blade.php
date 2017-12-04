@@ -326,7 +326,11 @@
                         </table>
                     </div>
                     <div class="call-to-action">
-                        <button type="submit" class="btn btn-submit">Confirm and pay</button>
+                        <form >
+                            <input name="nonce" value="xyz" type="hidden" id="nonce">
+                            <input type="hidden" name="type" id="type" value="2">
+                            <button type="submit" class="btn btn-submit">Confirm and pay</button>
+                        </form>
                     </div>
                 </div>
             </div>
