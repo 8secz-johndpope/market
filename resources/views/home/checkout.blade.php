@@ -419,7 +419,7 @@
                 $('#shipping-address').hide();
             }
         });
-        $('.fs-edit-btn button').click(function(){
+        $('button.fs-edit-btn').click(function(){
             $('.fs-edit-btn span').toggleClass('expanded');
             if($('.fs-edit-btn span').hasClass('expanded')){
                 $('#cc-new-ctr').show()
