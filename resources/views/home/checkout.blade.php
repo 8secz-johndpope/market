@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="fs-edit">
                                         <button type="button fs-edit-btn img-btn">
-                                            <span class=""></span>
+                                            <span class="glyphicon glyphicon-menu-down"></span>
                                         </button>
                                     </div>
                                 </div>
@@ -161,7 +161,7 @@
                                 </div>
                             </div>
                              <div class="sa-edit col-r-p">
-                                <button type="button"><span></span></button>
+                                <button type="button"><span class="glyphicon glyphicon-menu-down"></span></button>
                             </div>
                         </div>
                     </div>
