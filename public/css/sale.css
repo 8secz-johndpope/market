@@ -292,6 +292,11 @@ ul.cc-logos li {
     border-radius: 3px;
     background-clip: padding-box;
 }
+.postage-address .main-pa .main-pa-inf {
+    width: 94%;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
