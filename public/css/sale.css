@@ -379,6 +379,33 @@ ul.cc-logos li {
     border-collapse: collapse;
     width: 100%;
 }
+.dtls-tcell {
+    display: table-cell;
+}
+.seller-item-group .item-row {
+    min-height: 96px;
+    padding-bottom: 15px;
+    position: relative;
+}
+.item-img-ctr {
+    display: table-cell;
+    width: 111px;
+}
+.item-img-ctr .item-img {
+    margin-right: 15px;
+    background: #fff;
+    border-radius: 3px;
+    background-clip: padding-box;
+    overflow: hidden;
+    width: 96px;
+    height: 96px;
+    display: table;
+}
+.item-img-ctr .item-img .img-ctr {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
