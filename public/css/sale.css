@@ -262,6 +262,10 @@ ul.cc-logos li {
     text-align: right;
     padding: 0 15px;
 }
+.call-to-action {
+    text-align: center;
+    padding: 15px 15px 0 15px;
+}
 .checkout-details {
     margin: 20px 15px 15px 15px;
 }
