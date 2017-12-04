@@ -174,7 +174,7 @@
                                     <div class="sa-addr">
                                         <div class="radio-l">
                                             <input type="radio" name="addrs-post-radio" id="rdo-{{$address->id}}">
-                                            <span class="custom-radio"></span>
+                                            <span class="custom-radio custom-ctr"></span>
                                         </div> 
                                         <label class="lbl" for="rdo-{{$address->id}}">
                                             @if($user->default_address===$address->id)
@@ -238,7 +238,7 @@
                                                                     <div class="col-xs-9 shp-row">
                                                                         <div class="is-rdo col-l-p">
                                                                             <input type="radio" name="del-opt" id="is-col-person">
-                                                                            <span class="custom-radio"></span>
+                                                                            <span class="custom-radio custom-ctr"></span>
                                                                         </div>
                                                                         <label for="s-col-person" class="lbl col-r-p">
                                                                             <span class="shp-serv">
@@ -255,7 +255,7 @@
                                                                     <div class="col-xs-9 shp-row">
                                                                         <div class="is-rdo col-l-p">
                                                                             <input type="radio" name="del-opt" id="is-local-del">
-                                                                            <span class="custom-radio"></span>
+                                                                            <span class="custom-radio custom-ctr"></span>
                                                                         </div>
                                                                         <label for="s-col-person" class="lbl col-r-p">
                                                                             <span class="shp-serv">
@@ -270,7 +270,7 @@
                                                                     <div class="col-xs-9 shp-row">
                                                                         <div class="is-rdo col-l-p">
                                                                             <input type="radio" name="del-opt" id="is-shipping">
-                                                                            <span class="custom-radio"></span>
+                                                                            <span class="custom-radio custom-ctr"></span>
                                                                         </div>
                                                                         <label for="s-col-person" class="lbl col-r-p">
                                                                             <span class="shp-serv">
