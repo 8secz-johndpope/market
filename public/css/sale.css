@@ -351,6 +351,9 @@ ul.cc-logos li {
     color: #767676;
     margin-bottom: 2px;
 }
+#seller-info {
+    padding: 15px;
+}
 .seller-container {
     background: #fff;
     border: 1px solid #ccc;
