@@ -149,19 +149,19 @@
                     <h3>Post to</h3>
                     <div class="postage-address">
                         <div class="main-pa">
-                            <div class="main-pa-inf">
+                            <div class="main-pa-inf col-l-p">
                                 <div>
                                     <div>{{$user->name}}</div>
                                     <div>{{$user->address->line1}}</div>
                                     <div>{{$user->address->city}} {{$user->address->postcode}}</div>
                                     <div>United Kingdom</div>
                                 </div>
+                                <div id="sa-change-link">
+                                    <a href="javascript:;">Change</a>
+                                </div>
                             </div>
                         </div>
-                        <div id="sa-change-link">
-                            <a href="javascript:;">Change</a>
-                        </div>
-                        <div class="sa-edit">
+                        <div class="sa-edit col-r-p">
                             <button type="button"><span></span></button>
                         </div>
                     </div>
@@ -169,7 +169,24 @@
                         <div id="shipping-address">
                             <fieldset class="sa-radiogroup">
                                 <legend></legend>
-
+                                @foreach($user->addresses as $address)
+                                <div id="{{$address->id}}" class="sa-opt table">
+                                    <div class="sa-addr">
+                                        <div class="radio-l">
+                                            <input type="radio" name="addrs-post-radio" id="rdo-{{$address->id}}">
+                                            <span class="custom-radio"></span>
+                                        </div> 
+                                        <label class="lbl" for="rdo-{{$address->id}}">
+                                            @if($user->default_address===$address->id)
+                                                <span class="w600"> Primary address</span>
+                                                <span>{{$user->address->line1}}</span>
+                                                <span>{{$user->address->city}} {{$user->address->postcode}}</span>
+                                                <span>United Kingdom</span>
+                                            @endif
+                                        </label>
+                                    </div>
+                                </div>
+                                @endforeach
                             </fieldset>
                         </div>
                     </div>
