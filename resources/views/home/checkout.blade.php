@@ -372,6 +372,7 @@
                 var price = parseInt(stringPrice.substring(1, stringPrice.length));
                 $('.col-post-price').text('£'+ price);
                 total = parseInt($('#sale-price').text()) + price;
+                console.log('not collection');
             }
             else{
                 $('.col-post-price').text(stringPrice);
