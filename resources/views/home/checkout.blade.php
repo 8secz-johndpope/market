@@ -191,7 +191,7 @@
                         <table class="w100p">
                             <tbody>
                                 <tr>
-                                    <td class="align-left">Total:</td>
+                                    <td class="text-left">Total:</td>
                                     <td><span class="bold-text">£<span id="sale-total-price">{{$sale->amount()}}</span></span></td>
                                 </tr>
                             </tbody>
