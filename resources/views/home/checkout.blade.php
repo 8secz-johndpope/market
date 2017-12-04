@@ -425,7 +425,7 @@
             $('.fs-edit-btn span').toggleClass('expanded');
             if($('.fs-edit-btn span').hasClass('expanded')){
                 $('#cc-new-ctr').show()
-                $('#new-cc input[type="radio"]').prop('checked');
+                $('#new-cc input[type="radio"]').prop('checked', true);
             }
             else{
                 $('#cc-new-ctr').hide();
