@@ -30,7 +30,7 @@
                                 <div class="col-l-p">
                                     <div class="radio-l">
                                         <input type="radio" name="pay-meth-radio" id="saved-card">
-                                        <span class="custom-radio"></span>
+                                        <span class="custom-radio custom-ctr custom-rb"></span>
                                     </div>
                                     <div class="radio-r">
                                         <label class="mt-label" for="new-card">

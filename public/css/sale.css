@@ -487,3 +487,33 @@ button.sa-edit-btn, button.fs-edit-btn {
     padding: 10px 20px;
     color: #fff;
 }
+.custom-ctr {
+    margin-right: 30px;
+    position: relative;
+}
+.custom-ctr::before {
+    border: 1px solid #aaa;
+}
+.custom-ctr::before, .custom-ctr::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+}
+.custom-ctr::after {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border: 1px solid #0654ba;
+    display: none;
+}
+input[type="radio"]:checked+.custom-ctr::after{
+	display: block;
+}
+input[type="radio"]:checked+.custom-ctr::before, input[type="radio"]:checked+.custom-ctr::after{
+	-webkit-animation: bounce .3s;
+    animation: bounce .3s;
+}
