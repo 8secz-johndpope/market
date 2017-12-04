@@ -416,6 +416,9 @@ ul.cc-logos li {
     padding-left: 0;
     line-height: 1.3;
 }
+.item-shipping .row {
+    margin-bottom: 11px;
+}
 .item-price {
     text-align: right;
 }
