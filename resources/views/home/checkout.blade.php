@@ -366,12 +366,13 @@
             $('.shp-price.show').removeClass('show');
             var parent = $('label[for=' + this.id + '] .shp-opt').closest('.shp-row');
             parent.next().addClass('show');
-            var stringPrice = parent.next().find('span').text();
-            var price = parseInt(stringPrice.substring(1, stringPrice.length));
-            $('.col-post-price').text('£'+price);
-            console.log(price);
-            //$('.shp-price').addClass('show');
-            var total = parseInt($('#sale-price').text()) + price;
+            if(this.id != "is-col-person"){
+                var stringPrice = parent.next().find('span').text();
+                var price = parseInt(stringPrice.substring(1, stringPrice.length));
+                $('.col-post-price').text('£'+ price);
+                //$('.shp-price').addClass('show');
+                var total = parseInt($('#sale-price').text()) + price;
+            }
             $('#sale-total-price').text(total);
         });
         $('#card-fields input').focus(function(){
