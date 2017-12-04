@@ -200,6 +200,23 @@
                     <div class="seller-row">
                         <div class="seller-container">
                             <div id="seller-info" class="seller-info clearfix">
+                                <div class="seller-name">
+                                    <span>
+                                        <span class="lbl">Seller:</span>
+                                        {{$user->display_name}}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="seller-item-group">
+                                <div class="dtls-table">
+                                    <div class="dtls-tcell">
+                                        <div class="item-row">
+                                            <div class="dtls-table">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
