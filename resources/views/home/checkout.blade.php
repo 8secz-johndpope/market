@@ -16,7 +16,7 @@
 <div class="body background-body">
     <div class="container">
     <div class="row">
-        <div class="col-sm-9">
+        <div class="col-sm-8">
             <div class="row">
                 <div class="col-sm-12">
                     <h3>Pay with</h3>
@@ -168,7 +168,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <div class="checkout-summry">
                 <div class="checkout-details">
                     <table class="table">
