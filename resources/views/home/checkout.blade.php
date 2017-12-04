@@ -263,6 +263,9 @@
                                                                             </span>
                                                                         </label>
                                                                     </div>
+                                                                    <div class="col-xs-3 shp-price">
+                                                                        <span>£{{$sale->advert->delivery()}}</span>
+                                                                    </div>
                                                                 </div>
                                                                 @endif
                                                                 @if($advert->has_param('canship')&&$advert->param('canship')===1)
@@ -277,6 +280,9 @@
                                                                                 United Kingdom Shipping <span class="shp-opt show"> - <span>£{{$sale->advert->shipping_cost()}}</span></span>
                                                                             </span>
                                                                         </label>
+                                                                    </div>
+                                                                    <div class="col-xs-3 shp-price">
+                                                                        <span>£{{$sale->advert->shipping_cost()}}</span>
                                                                     </div>
                                                                 </div>
                                                                 @endif
