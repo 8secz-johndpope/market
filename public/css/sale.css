@@ -369,6 +369,16 @@ ul.cc-logos li {
 #seller-info .seller-name .lbl {
     color: #767676;
 }
+.seller-item-group {
+    border-top: 1px solid #ccc;
+    padding: 15px;
+    border-collapse: separate;
+}
+.dtls-table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
