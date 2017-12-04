@@ -335,7 +335,7 @@
         </div>
     </div>
 </div>
-    <div class="row all-divs">
+    <div class="row all-divs" style="display: none;">
         <div class="col-sm-8 col-sm-offset-2">
 
             <div class="row">
@@ -529,7 +529,7 @@
             <button type="submit" class="btn btn-success">Save </button>
         </form>
     </div>
-</form>
+</div>
     <script>
         $(".add-card").click(function () {
             $(".all-divs").hide();
