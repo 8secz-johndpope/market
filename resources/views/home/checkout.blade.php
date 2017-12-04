@@ -380,7 +380,6 @@
             //$('.shp-price').addClass('show');
             var idDiv = $(this).attr('data-href');
             var total = parseInt($('#sale-price').text());
-            var type = $(this).val();
             if(idDiv != "collect"){
                 $('.post-address').hide();
                 $('.post-price').hide();
