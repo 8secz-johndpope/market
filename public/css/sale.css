@@ -324,6 +324,12 @@ ul.cc-logos li {
     border-top-left-radius: 0;
     background-clip: padding-box;
 }
+#shipping-address .sa-addr {
+    padding: 15px;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
