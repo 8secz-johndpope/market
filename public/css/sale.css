@@ -263,5 +263,6 @@ ul.cc-logos li {
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
-    color:#fff;
+    padding: 10px 20px;
+    color: #fff;
 }
