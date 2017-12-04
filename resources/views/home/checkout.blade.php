@@ -246,7 +246,40 @@
                                                                             </span>
                                                                         </label>
                                                                     </div>
+                                                                    <div class="col-xs-3 shp-price">
+                                                                        <span>Free</span>
+                                                                    </div>
                                                                 </div>
+                                                                @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
+                                                                <div class="row">
+                                                                    <div class="col-xs-9 shp-row">
+                                                                        <div class="is-rdo col-l-p">
+                                                                            <input type="radio" name="del-opt" id="is-local-del">
+                                                                            <span class="custom-radio"></span>
+                                                                        </div>
+                                                                        <label for="s-col-person" class="lbl col-r-p">
+                                                                            <span class="shp-serv">
+                                                                                Local delivery <span class="shp-opt"> - <span>{{$sale->advert->delivery()}}</span></span>
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                @endif
+                                                                @if( @if($advert->has_param('canship')&&$advert->param('canship')===1))
+                                                                <div class="row">
+                                                                    <div class="col-xs-9 shp-row">
+                                                                        <div class="is-rdo col-l-p">
+                                                                            <input type="radio" name="del-opt" id="is-shipping">
+                                                                            <span class="custom-radio"></span>
+                                                                        </div>
+                                                                        <label for="s-col-person" class="lbl col-r-p">
+                                                                            <span class="shp-serv">
+                                                                                United Kingdom Shipping <span class="shp-opt"> - <span>{{$sale->advert->shipping_cost()}}</span></span>
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                @endif
                                                             </fieldset>
                                                         </div>
                                                     </div>
