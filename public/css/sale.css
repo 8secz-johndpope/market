@@ -257,12 +257,17 @@ ul.cc-logos li {
 .w100p {
     width: 100%;
 }
-#order-total{
-	font-size: 1.375rem;
+#order-total {
+    font-size: 1.375rem;
+    text-align: right;
+    padding: 0 15px;
+}
+.checkout-details {
+    margin: 20px 15px 15px 15px;
 }
 .btn-submit {
     width: 100%;
     background: #ff9d2c;
     padding: 10px 20px;
     color: #fff;
-}
+

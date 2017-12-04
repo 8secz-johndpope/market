@@ -171,7 +171,7 @@
         <div class="col-sm-4">
             <div class="checkout-summry">
                 <div class="checkout-details">
-                    <table class="table">
+                    <table class="w100p">
                         <tr>
                             <td>Price:</td>
                             <td><span class="bold-text">£<span id="sale-price">{{$sale->advert->price()}}</span></span></td>
@@ -191,7 +191,7 @@
                         <table class="w100p">
                             <tbody>
                                 <tr>
-                                    <td>Total:</td>
+                                    <td class="align-left">Total:</td>
                                     <td><span class="bold-text">£<span id="sale-total-price">{{$sale->amount()}}</span></span></td>
                                 </tr>
                             </tbody>
