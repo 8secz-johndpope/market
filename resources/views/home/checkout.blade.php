@@ -149,6 +149,14 @@
                     <h3>Post to</h3>
                     <div class="postage-address">
                         <div class="main-pa">
+                            <div class="main-pa-inf">
+                                <div>
+                                    <div>{{$user->name}}</div>
+                                    <div>{{$user->address->line1}}</div>
+                                    <div>{{$user->address->city}} {{$user->address->postcode}}</div>
+                                    <div>United Kingdom</div>
+                                </div>
+                            </div>
                         </div>
                         <div id="sa-change-link">
                             <a href="javascript:;">Change</a>
