@@ -71,11 +71,11 @@
                                                 <li class="maestro"></li>
                                             </ul>
                                         </div>
-                                    </div>
-                                    <div class="fs-edit">
-                                        <button type="button" class="fs-edit-btn img-btn">
-                                            <span class="glyphicon glyphicon-menu-down"></span>
-                                        </button>
+                                        <div class="fs-edit">
+                                            <button type="button" class="fs-edit-btn img-btn">
+                                                <span class="glyphicon glyphicon-menu-down"></span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
