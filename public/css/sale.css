@@ -289,10 +289,6 @@ ul.cc-logos li {
 }
 .postage-address .main-pa {
     cursor: pointer;
-    padding: 15px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 3px;
     background-clip: padding-box;
 }
 .postage-address .main-pa .main-pa-inf {
@@ -306,7 +302,12 @@ ul.cc-logos li {
     cursor: pointer;
 }
 #shipping-address-ctr .postage-address{
+    padding: 15px;
     cursor: pointer;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-clip: padding-box;
 }
 #shipping-address-ctr .postage-address.expanded {
     -webkit-border-top-right-radius: 3px;
