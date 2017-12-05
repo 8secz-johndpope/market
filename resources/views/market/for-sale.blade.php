@@ -341,14 +341,19 @@
                                                     Payments:
                                     </div>
                                     <div class="col-sm-9 meta-info">
-                                        <p>
-                                            @if($advert->user!==null)
+                                        @if($advert->user!==null)
+                                        <div class="col-sm-4">
                                             <a href="/download-mobile-apps/">
                                                 <img class="payments-methods" src="/css/payments.png">
-                                            </a> or 
-                                            @endif
+                                            </a>
+                                        </div>
+                                        @endif
+                                        <div class="col-sm-4">
                                             Cash on collection
-                                        </p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            Request Invoice
+                                        </div>
                                     </div>
                                 </div>
                                 @if($advert->user!==null)
