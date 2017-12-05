@@ -100,7 +100,7 @@
                                                 <li class="visa"></li>
                                                 <li class="mastercard"></li>
                                                 <li class="discover"></li>
-                                                <li class="am-ex"></li>
+                                                <li class="americaexpress"></li>
                                                 <li class="maestro"></li>
                                             </ul>
                                         </div>
@@ -129,7 +129,7 @@
                                                         <li class="visa small"></li>
                                                         <li class="mastercard small"></li>
                                                         <li class="discover small"></li>
-                                                        <li class="am-ex small"></li>
+                                                        <li class="americaexpress small"></li>
                                                         <li class="maestro small"></li>
                                                     </ul>
                                                 </span>
@@ -462,7 +462,6 @@
             $('#saved-card').val(val);
             $('button.fs-change-cc-btn span').toggleClass('expanded');
             $('#cc-change-ctr').hide();
-            console.log($('label[for='+ this.id +']'));
             $('label[for=saved-card]').text($('label[for='+ this.id +']').text());  
         })
         $('#card-fields input').focus(function(){
