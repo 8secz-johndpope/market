@@ -74,7 +74,7 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        @endfor
+                                        @endforeach
                                     </fieldset>
                                 </div>
                             </div>
