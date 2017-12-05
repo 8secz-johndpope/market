@@ -230,6 +230,7 @@
                                             <span>United Kingdom</span>
                                         </label>
                                     </div>
+                                    <div class="bdr-top rdo"></div>
                                 </div>
                                 @endforeach
                             </fieldset>

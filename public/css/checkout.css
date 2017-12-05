@@ -591,6 +591,12 @@ input[type="radio"]:checked+.custom-ctr::before, input[type="radio"]:checked+.cu
     display: table;
     width: 100%;
 }
+#shipping-addresses .sa-opt .bdr-top {
+    margin: 0 15px 0 15px;
+}
+.bdr-top {
+    border-top: 1px solid #ccc;
+}
 body.loading {
     overflow: hidden;   
 }
