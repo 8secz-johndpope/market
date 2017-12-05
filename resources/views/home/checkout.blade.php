@@ -457,6 +457,11 @@
             $('.main-pa-inf div:first-child').text(address);
             $('#sa-change-link').show();
         });
+        $('input[type=radio][name=cc-saved-radio]').change(function(){
+            var val = $(this).val();
+            $('#saved-card').val(val);
+            $('label[for=saved-card]').text($('label[for='+ this.id +']').text()); 
+        })
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
             if(this.id == 'expiry'){
