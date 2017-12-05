@@ -343,16 +343,16 @@
                                     </div>
                                     <div class="col-sm-12 meta-info">
                                         @if($advert->user!==null)
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-4 border-left">
                                             <a href="/download-mobile-apps/">
                                                 <img class="payments-methods" src="/css/payments.png">
                                             </a>
                                         </div>
                                         @endif
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-4 border-left">
                                             Cash on collection
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-4 border-left">
                                             Request Invoice
                                         </div>
                                     </div>
