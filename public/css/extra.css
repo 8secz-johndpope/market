@@ -1132,6 +1132,9 @@ a.message-back-button {
         height: 30px;
         width: 30px;
 }
+.listing-description p {
+    margin-bottom: 0;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
