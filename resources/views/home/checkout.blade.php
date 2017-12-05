@@ -71,7 +71,7 @@
                                                 </div> 
                                                 <label class="lbl" for="rdo-{{$card['id']}}">
                                                     <span>xxxx-xxx-xxxx-{{$card['last4']}}</span>
-                                                    <span class="{{$card['brand']}}"></span>
+                                                    <span class="t-cc {{strtolower($card['brand']}})"></span>
                                                 </label>
                                             </div>
                                         </div>
