@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+<div class="body">
     <form action="/user/message/send" method="post" id="login-form">
         {{ csrf_field() }}
         <input type="hidden" name="id" value="{{$advert->id}}">
@@ -31,6 +32,7 @@
         </div>
     </div>
     </form>
+</div>
     <script>
         function onSubmit(token) {
 
