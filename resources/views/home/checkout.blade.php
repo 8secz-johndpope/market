@@ -395,8 +395,12 @@
             $('#sale-total-price').text(total);
         });
          $('input[type=radio][name=pay-meth-radio]').change(function(){
-            $('#shipping-address-ctr .postage-address').toggleClass('expanded');
-            $('.sa-edit-btn span').toggleClass('expanded');  
+            if(this.id == 'new-card'){
+                $('#shipping-address-ctr .postage-address').toggleClass('expanded');
+                $('.sa-edit-btn span').toggleClass('expanded');
+            }
+            else if(this.id == 'paypal')
+                $('#braintree-paypal-button').click();  
          });
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
