@@ -43,7 +43,7 @@
                                     <div id="funding-source">
                                         <div class="fs-summary fade in">
                                             <ul class="cc-logos ui-sortable">
-                                                <li class="{{str_replace(strtolower($cards[0]['brand']),' ', '')}} ui-sortable-handle"></li>
+                                                <li class="{{str_replace(strtolower($cards[0]['brand'])," ", "")}} ui-sortable-handle"></li>
                                                 <!-- <li class="mastercard ui-sortable-handle"></li>
                                                 <li class="discover ui-sortable-handle"></li>
                                                 <li class="am-ex ui-sortable-handle"></li>
@@ -71,7 +71,7 @@
                                                 </div> 
                                                 <label class="lbl" for="rdo-{{$card['id']}}">
                                                     <span>xxxx-xxx-xxxx-{{$card['last4']}}</span>
-                                                    <span class="t-cc {{str_replace(strtolower($card['brand']), ' ', '')}}"></span>
+                                                    <span class="t-cc {{str_replace(strtolower($card['brand']), " ", "")}}"></span>
                                                 </label>
                                             </div>
                                         </div>
