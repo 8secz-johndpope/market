@@ -29,7 +29,7 @@
                             <div class="pay-method">
                                 <div class="col-l-p">
                                     <div class="radio-l">
-                                        <input type="radio" name="pay-meth-radio" id="saved-card" checked="true" value="{{{$cards[0]['id']}}">
+                                        <input type="radio" name="pay-meth-radio" id="saved-card" checked="true" value="{{$cards[0]['id']}}">
                                         <span class="custom-radio custom-ctr custom-rb"></span>
                                     </div>
                                     <div class="radio-r">
