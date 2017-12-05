@@ -58,6 +58,17 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="cc-change-ctr">
+                                <div id="inst-details" class="bdr-btm">
+                                    <fieldset>
+                                        <legend></legend>
+                                        @foreach($cards as $card)
+                                        <div class="sa-opt">
+                                        </div>
+                                        @endif
+                                    </fieldset>
+                                </div>
+                            </div>
                             @endif
                             <div class="pay-method" data-mp-id="new-cc">
                                 <div class="col-l-p">

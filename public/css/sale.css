@@ -107,6 +107,9 @@ input[type=radio] {
 	width: 20px;
 	height: 20px;
 }
+#cc-change-ctr{
+	display: none;
+}
 .visa, .mt-cc, .mastercard, .discover, .am-ex, .maestro, .paypal{
 	background-image: url(https://securepics.ebaystatic.com/aw/pics/checkout/sprs/spr_PROX_13.svg);
     background-repeat: no-repeat;
