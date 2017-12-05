@@ -376,6 +376,7 @@
                             <input name="nonce" value="xyz" type="hidden" id="nonce">
                             <input type="hidden" name="type" id="type" value="2">
                             <input type="hidden" name="shipping_address" id="shipping_address" value="{{$user->address->id}}">
+                            <input type="hidden" name="billing_address" id="billing_address" value="{{$user->address->id}}">
                             <input type="hidden" name="card" id="card" value="{{$def->id}}">
                             <button type="submit" class="btn btn-submit">Confirm and pay</button>
                         </form>
@@ -453,9 +454,9 @@
                 $(divAddress[i+1]).text($(spanAddress[i]).text());
             }
             $('#shipping-address-ctr .postage-address').toggleClass('expanded');
+            $('#shipping_address').val($(this).val());
             $('.sa-edit-btn span').toggleClass('expanded');
             $('#shipping-address').hide();
-            $('.main-pa-inf div:first-child').text(address);
             $('#sa-change-link').show();
         });
         $('input[type=radio][name=cc-saved-radio]').change(function(){

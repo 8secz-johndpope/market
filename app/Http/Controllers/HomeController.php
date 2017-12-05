@@ -1563,11 +1563,12 @@ class HomeController extends BaseController
                 ));
             }
             $sale->status=1;
-            if($sale->type == 0){
+            /*if($sale->type == 0){
                 if($request->has('delivery_address'))
                     $sale->address_id=$request->delivery_address;
             }
-            else if($sale->type == 1){
+            else*/ 
+            if($sale->type < 2){
                 if($request->has('shipping_address'))
                     $sale->address_id = $request->shipping_address;
             }
