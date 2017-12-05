@@ -953,6 +953,9 @@
                             <div class="payment-option hands">
                                 <h4>Cash on collection</h4>
                             </div>
+                            <div class="payment-option hands">
+                                <h4>Request Invoice</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
