@@ -878,7 +878,8 @@
                 <div class="row">
                 @if($advert->has_param('sold'))
                 <div class="sold-div">
-                    <img class="sold-picture" src="/css/sold.jpg">
+                    <!-- <img class="sold-picture" src="/css/sold.jpg"> -->
+                    SOLD
                 </div>
                 @elseif($advert->category->can_ship())
                 <div class="title-advert">
