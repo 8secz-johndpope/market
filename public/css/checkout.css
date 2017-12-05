@@ -379,6 +379,8 @@ ul.cc-logos li {
     width: 80%;
     line-height: 1.3;
     cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
 }
 .sa-opt .lbl span{
 	display: block;
