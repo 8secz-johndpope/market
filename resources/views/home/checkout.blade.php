@@ -447,7 +447,7 @@
         });
         $(window).scroll(function(e) {
             console.log($(document).scrollTop());
-            if ($(document).scrollTop() > $('#pay-method-ctr').position().top) {
+            if ($(document).scrollTop() > $('#pay-method-ctr').position().top && $(document).scrollTop() < ($('#cart-details-ctr').position().top + ('.checkout-summry').outerHeight(true))) {
                 console.log($('.checkout-summry').position().top);
                 $('.checkout-summry').css('position', 'fixed');
                 $('.checkout-summry').css('top', '24px');
