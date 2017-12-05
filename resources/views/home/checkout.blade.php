@@ -493,7 +493,7 @@
             }
         });
         $('button.fs-change-cc-btn').click(function(){
-            var span = $(this).find('span').;
+            var span = $(this).find('span');
             $(span).toggleClass('expanded');
             if($(span).hasClass('expanded')){
                 $('#cc-change-ctr').show();
