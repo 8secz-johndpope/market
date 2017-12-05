@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
                                 <div class="col-r-p">
-                                    <div id="funding-source">
+                                    <div id="funding-cc">
                                         <div class="fs-summary fade in">
                                             <ul class="cc-logos ui-sortable">
                                                 <li class="{{str_replace(" ", "", strtolower($cards[0]['brand']))}} ui-sortable-handle"></li>
@@ -465,8 +465,8 @@
             $('button.fs-change-cc-btn span').toggleClass('expanded');
             $('#cc-change-ctr').hide();
             $('label[for=saved-card]').text($('label[for='+ this.id +']').text());
-            $('#funding-source li').attr('class', '');
-            $('#funding-source li').addClass($('label[for='+ this.id +'] .t-cc').attr('class'));  
+            $('#funding-cc li').attr('class', '');
+            $('#funding-cc li').addClass($('label[for='+ this.id +'] .t-cc').attr('class'));  
         })
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
