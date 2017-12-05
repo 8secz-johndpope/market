@@ -368,6 +368,10 @@ ul.cc-logos li {
     width: 100%;
     vertical-align: middle;
 }
+.pr-addr-lbl {
+    color: #767676;
+    margin-bottom: 2px;
+}
 .sa-opt .radio-l {
     width: 20%;
     max-width: 35px;
