@@ -414,7 +414,7 @@
             var spanAddress = label.children();
             var divAddress = $('.main-pa-inf div:first-child').children();
             for(var i=0; i < spanAddress.length; i++){
-                divAddress[i+1].text(spanAddress[i].text());
+                $(divAddress[i+1]).text($(spanAddress[i]).text());
             }
             $('#shipping-address-ctr .postage-address').toggleClass('expanded');
             $('.sa-edit-btn span').toggleClass('expanded');
