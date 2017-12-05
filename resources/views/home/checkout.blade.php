@@ -375,8 +375,8 @@
                             {{ csrf_field() }}
                             <input name="nonce" value="xyz" type="hidden" id="nonce">
                             <input type="hidden" name="type" id="type" value="2">
-                            <input type="hidden" name="shipping_address" id="shipping_address" value="">
-                            <input type="hidden" name="card" id="card" value="">
+                            <input type="hidden" name="shipping_address" id="shipping_address" value="{{$user->address->id}}">
+                            <input type="hidden" name="card" id="card" value="{{$def->id}}">
                             <button type="submit" class="btn btn-submit">Confirm and pay</button>
                         </form>
                     </div>
