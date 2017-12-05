@@ -64,7 +64,7 @@
                                         <legend></legend>
                                         @foreach($cards as $card)
                                         <div class="sa-opt">
-                                            <div class="sa-addr">
+                                            <div class="sa-cc">
                                                 <div class="radio-l">
                                                     <input type="radio" name="cc-saved-radio" id="rdo-{{$card['id']}}" value={{$card['id']}}>
                                                     <span class="custom-radio custom-ctr"></span>
