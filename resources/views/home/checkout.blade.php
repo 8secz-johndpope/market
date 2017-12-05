@@ -399,8 +399,15 @@
                 $('#cc-new-ctr').show();
                 $('.fs-edit-btn span').toggleClass('expanded');
             }
-            else if(this.id == 'paypal')
-                $('#braintree-paypal-button').click();  
+            else{ 
+                if(this.id == 'paypal'){
+                    $('#braintree-paypal-button').click();
+                }
+                if(this.id != 'new-card' && $('.fs-edit-btn span').hasClass('expanded')) {
+                    $('.fs-edit-btn span').toggleClass('expanded');
+                    $('#cc-new-ctr').hide();
+                } 
+            }
          });
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
