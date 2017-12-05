@@ -411,7 +411,11 @@
          });
         $('input[type=radio][name=addrs-post-radio]').change(function(){
             var label = $('label[for="' + this.id + '"]');
-            var address = label.text().replace("span", "div");
+            var spanAddress = label.children();
+            var divAddress = $('.main-pa-inf div:first-child').children();
+            for(var i=0; i < spanAddress.length; i++){
+                divAddress[i+1].text(spanAddress[i].text());
+            }
             $('#shipping-address-ctr .postage-address').toggleClass('expanded');
             $('.sa-edit-btn span').toggleClass('expanded');
             $('#shipping-address').hide();
