@@ -368,6 +368,9 @@ ul.cc-logos li {
     width: 100%;
     vertical-align: middle;
 }
+#braintree-paypal-loggedin{
+    visibility: hidden;
+}
 .pr-addr-lbl {
     color: #767676;
     margin-bottom: 2px;
