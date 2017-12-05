@@ -21,6 +21,13 @@ h2.item-name.header {
     padding-left: 0;
     margin-bottom: 0;
 }
+.sold-div {
+    padding: 15px;
+    background: #252729;
+    color: #ff9d2c;
+    text-align: center;
+    font-size: 29px;
+}
 .request-details {
     padding-top: 25px!important;
     padding-bottom: 25px!important;
