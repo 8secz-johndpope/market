@@ -115,7 +115,7 @@
                             <div id="cc-new-ctr">
                                 <div id="inst-details" class="bdr-btm">
                                     <form action="/user/cards/add" method="post">
-                                    <input name="redirect" type="hidden" value="/user/manage/order">
+                                    <input name="redirect" type="hidden" value="/user/manage/checkout/{{$sale->id}}">
                                     <input name="address" type="hidden" value="{{$user->address->id}}">
                                     {{ csrf_field() }} 
                                     <div id="inst-error"></div>
