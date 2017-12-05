@@ -460,7 +460,9 @@
         $('input[type=radio][name=cc-saved-radio]').change(function(){
             var val = $(this).val();
             $('#saved-card').val(val);
-            $('label[for=saved-card]').text($('label[for='+ this.id +']').text()); 
+            $('button.fs-change-cc-btn span').toggleClass('expanded');
+            $('#cc-change-ctr').hide();
+            $('label[for=saved-card]').text($('label[for='+ this.id +']').text());  
         })
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
