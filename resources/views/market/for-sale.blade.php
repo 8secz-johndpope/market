@@ -337,7 +337,7 @@
                             <div class="row">
                                  <div class="col-sm-12">
                                     <h3>Payments</h3>
-                                    <div class="col-sm-3 meta-bold">
+                                    <div class="col-sm-12 meta-bold">
                                                     Payments:
                                     </div>
                                     <div class="col-sm-9 meta-info">
