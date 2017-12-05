@@ -396,7 +396,7 @@
         });
          $('input[type=radio][name=pay-meth-radio]').change(function(){
             if(this.id == 'new-card'){
-                $('#shipping-address-ctr .postage-address').toggleClass('expanded');
+                $('#cc-new-ctr').show();
                 $('.fs-edit-btn span').toggleClass('expanded');
             }
             else if(this.id == 'paypal')
