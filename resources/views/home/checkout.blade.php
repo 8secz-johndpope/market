@@ -145,7 +145,7 @@
                                     </div>
                                     <div class="radio-r">
                                         <label class="mt-label" for="paypal">
-                                        <span class="mt-logo paypal"></span>
+                                        <span class="mt-logo paypal" id="paypal-container"></span>
                                     </label>
                                     </div>
                                 </div>
