@@ -371,7 +371,7 @@
                         </table>
                     </div>
                     <div class="call-to-action">
-                        <form action="">
+                        <form action="/user/payment/sale/stripe/{{$sale->id}}" method="post" id="payment-form">
                             {{ csrf_field() }}
                             <input name="nonce" value="xyz" type="hidden" id="nonce">
                             <input type="hidden" name="type" id="type" value="2">
