@@ -409,7 +409,7 @@
                 } 
             }
          });
-        $('input[type=radio][name=addrs-post-radio]'){
+        $('input[type=radio][name=addrs-post-radio]').change(function(){
             var label = $('label[for="' + this.id + '"]');
             var address = label.text().replace('span', 'div');
             $('#shipping-address-ctr .postage-address').toggleClass('expanded');
@@ -417,7 +417,7 @@
             $('#shipping-address').hide();
             $('.main-pa-inf div').text(address);
             $('#sa-change-link').show();
-        }
+        });
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
             if(this.id == 'expiry'){
