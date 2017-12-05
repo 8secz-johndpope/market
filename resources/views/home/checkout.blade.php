@@ -115,7 +115,7 @@
                             <div id="cc-new-ctr">
                                 <div id="inst-details" class="bdr-btm">
                                     <form action="/user/cards/add" method="post">
-                                    <input name="redirect" type="hidden" value="/user/manage/order">
+                                    <input name="redirect" type="hidden" value="/user/manage/checkout">
                                     <input name="address" type="hidden" value="{{$user->address->id}}">
                                     {{ csrf_field() }} 
                                     <div id="inst-error"></div>
@@ -370,7 +370,7 @@
                         </table>
                     </div>
                     <div class="call-to-action">
-                        <form >
+                        <form action="">
                             {{ csrf_field() }}
                             <input name="nonce" value="xyz" type="hidden" id="nonce">
                             <input type="hidden" name="type" id="type" value="2">
