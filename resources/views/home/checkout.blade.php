@@ -70,7 +70,7 @@
                                                     <span class="custom-radio custom-ctr"></span>
                                                 </div> 
                                                 <label class="lbl" for="rdo-{{$card['id']}}">
-                                                    <span>xxxx-xxx-xxxx-{{$card['last4']}}</span>
+                                                    <span>xxxx-xxx-xxxx-{{$card['last4']}}-{{$card['brand']}}</span>
                                                 </label>
                                             </div>
                                         </div>
