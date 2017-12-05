@@ -592,6 +592,11 @@ input[type="radio"]:checked+.custom-ctr::before, input[type="radio"]:checked+.cu
                 50% 50% 
                 no-repeat;
 }
+.sa-opt:not(.no-rdo):hover {
+    background-color: #fafafa;
+    margin-top: 1px;
+    padding-top: 0px;
+}
 .sa-opt:not(.no-rdo) {
     cursor: pointer;
     display: table;
