@@ -43,7 +43,7 @@
                                     <div id="funding-source">
                                         <div class="fs-summary fade in">
                                             <ul class="cc-logos ui-sortable">
-                                                <li class="{{str_replace(" ", "", strtolower($card['brand']))}} ui-sortable-handle"></li>
+                                                <li class="{{str_replace(" ", "", strtolower($cards[0]['brand']))}} ui-sortable-handle"></li>
                                                 <!-- <li class="mastercard ui-sortable-handle"></li>
                                                 <li class="discover ui-sortable-handle"></li>
                                                 <li class="am-ex ui-sortable-handle"></li>
@@ -514,7 +514,6 @@
         $(window).scroll(function(e) {
             console.log($(document).scrollTop());
             if ($(document).scrollTop() > $('#pay-method-ctr').position().top && $(document).scrollTop() < ($('#cart-details-ctr').position().top + $('.checkout-summry').outerHeight(true))) {
-                console.log($('.checkout-summry').position().top);
                 $('.checkout-summry').css('position', 'fixed');
                 $('.checkout-summry').css('top', '24px');
                 $('.checkout-summry').css('width', '320px');
