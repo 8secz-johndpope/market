@@ -494,6 +494,7 @@ ul.cc-logos li {
 }
 button.sa-edit-btn, button.fs-edit-btn {
     border: none;
+    background: none
 }
 #shipping-address{
 	display: none;
