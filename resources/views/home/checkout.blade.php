@@ -518,7 +518,7 @@
                $('#cc-change-ctr').hide(); 
         });
         $(window).scroll(function(e) {
-            if ($(document).scrollTop() > $('#pay-method-ctr').position().top && $(document).scrollTop() < ($('#cart-details-ctr').position().top + $('.checkout-summry').outerHeight(true))) {
+            if ($(document).scrollTop() > $('#pay-method-ctr').position().top && $(document).scrollTop() < ($('#cart-details-ctr').position().top + 100)) {
                 $('.checkout-summry').css('position', 'fixed');
                 $('.checkout-summry').css('top', '24px');
                 $('.checkout-summry').css('width', '320px');
