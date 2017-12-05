@@ -397,7 +397,9 @@
                 onPaymentMethodReceived: function (obj) {
                     //  doSomethingWithTheNonce(obj.nonce);
                     $('body').addClass('loading');
-                    document.location.href = '/user/payment/sale/paypal/{{$sale->id}}?nonce='+obj.nonce
+                    $('#nonce').val(obj.nonce);
+                    $("#payment-form").attr("action", '/user/payment/sale/paypal/{{$sale->id}}');
+                    $("#payment-form").submit();
                 }
             });
         </script>
