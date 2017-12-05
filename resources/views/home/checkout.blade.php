@@ -492,6 +492,15 @@
                 $('#cc-new-ctr').hide();
             }
         });
+        $('button.fs-change-cc-btn').click(function(){
+            var span = $(this).find('span').;
+            $(span).toggleClass('expanded');
+            if($(span).hasClass('expanded')){
+                $('#cc-change-ctr').show();
+            }
+            else
+               $('#cc-change-ctr').hide(); 
+        });
         $(window).scroll(function(e) {
             console.log($(document).scrollTop());
             if ($(document).scrollTop() > $('#pay-method-ctr').position().top && $(document).scrollTop() < ($('#cart-details-ctr').position().top + $('.checkout-summry').outerHeight(true))) {
