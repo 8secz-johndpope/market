@@ -446,6 +446,7 @@ ul.cc-logos li {
     vertical-align: top;
 }
 .seller-item-group .item-details {
+    margin: 0;
     margin-bottom: 15px;
 }
 .seller-item-group .item-details .item-title {
