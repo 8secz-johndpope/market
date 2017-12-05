@@ -337,10 +337,11 @@
                             <div class="row">
                                  <div class="col-sm-12">
                                     <h3>Payments</h3>
+                                    <div class="row">
                                     <div class="col-sm-12 meta-bold">
                                                     Payments:
                                     </div>
-                                    <div class="col-sm-9 meta-info">
+                                    <div class="col-sm-12 meta-info">
                                         @if($advert->user!==null)
                                         <div class="col-sm-4">
                                             <a href="/download-mobile-apps/">
@@ -354,6 +355,7 @@
                                         <div class="col-sm-4">
                                             Request Invoice
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
                                 @if($advert->user!==null)
