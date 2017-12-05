@@ -317,7 +317,7 @@
                                                                 <div class="row">
                                                                     <div class="col-xs-9 shp-row">
                                                                         <div class="is-rdo col-l-p">
-                                                                            <input type="radio" name="del-opt" id="is-shipping" value="0">
+                                                                            <input type="radio" name="del-opt" id="is-shipping" value="1">
                                                                             <span class="custom-radio custom-ctr"></span>
                                                                         </div>
                                                                         <label for="is-shipping" class="lbl col-r-p">
