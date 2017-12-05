@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                             <div id="cc-change-ctr">
-                                <div id="inst-details" class="bdr-btm">
+                                <div id="ccs-info" class="bdr-btm">
                                     <fieldset>
                                         <legend></legend>
                                         @foreach($cards as $card)

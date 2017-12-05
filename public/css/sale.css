@@ -110,6 +110,9 @@ input[type=radio] {
 #cc-change-ctr{
 	display: none;
 }
+#ccs-info{
+	padding: 15px;
+}
 .visa, .mt-cc, .mastercard, .discover, .am-ex, .maestro, .paypal{
 	background-image: url(https://securepics.ebaystatic.com/aw/pics/checkout/sprs/spr_PROX_13.svg);
     background-repeat: no-repeat;
