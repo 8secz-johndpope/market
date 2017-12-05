@@ -462,6 +462,7 @@
             $('#saved-card').val(val);
             $('button.fs-change-cc-btn span').toggleClass('expanded');
             $('#cc-change-ctr').hide();
+            console.log($('label[for='+ this.id +']'));
             $('label[for=saved-card]').text($('label[for='+ this.id +']').text());  
         })
         $('#card-fields input').focus(function(){
