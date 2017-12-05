@@ -396,13 +396,14 @@
                 },
                 onPaymentMethodReceived: function (obj) {
                     //  doSomethingWithTheNonce(obj.nonce);
+                    $('body').addClass('loading');
                     document.location.href = '/user/payment/sale/paypal/{{$sale->id}}?nonce='+obj.nonce
-
                 }
             });
         </script>
     </div>
 </div>
+<div class="modal"></div>
     <script>
         $(".add-card").click(function () {
             $(".all-divs").hide();
