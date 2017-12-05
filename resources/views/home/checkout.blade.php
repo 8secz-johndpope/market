@@ -33,7 +33,7 @@
                                         <span class="custom-radio custom-ctr custom-rb"></span>
                                     </div>
                                     <div class="radio-r">
-                                        <label class="mt-label" for="new-card">
+                                        <label class="mt-label" for="saved-card">
                                             <span class="mt-cc"></span>
                                             xxxx-xxx-xxxx-{{$cards[0]['last4']}}
                                         </label>
