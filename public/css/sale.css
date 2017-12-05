@@ -99,6 +99,7 @@ input[type=radio] {
     word-break: break-word;
     margin-bottom: 0;
     display: block;
+    cursor: pointer;
 
 }
 .visa, .mt-cc, .mastercard, .discover, .am-ex, .maestro, .paypal{
