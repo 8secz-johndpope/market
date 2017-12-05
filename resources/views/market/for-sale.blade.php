@@ -353,7 +353,7 @@
                                             Cash on collection
                                         </div>
                                         <div class="col-sm-4 border-left">
-                                            Request Invoice
+                                            <a href="#" class="req-invoice">Request Invoice</a>
                                         </div>
                                     </div>
                                     </div>
