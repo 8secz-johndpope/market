@@ -29,7 +29,7 @@
                             <div class="pay-method">
                                 <div class="col-l-p">
                                     <div class="radio-l">
-                                        <input type="radio" name="pay-meth-radio" id="saved-card" checked="true">
+                                        <input type="radio" name="pay-meth-radio" id="saved-card" checked="true" value="{{{$cards[0]['id']}}">
                                         <span class="custom-radio custom-ctr custom-rb"></span>
                                     </div>
                                     <div class="radio-r">
@@ -66,10 +66,10 @@
                                         <div class="sa-opt">
                                             <div class="sa-addr">
                                                 <div class="radio-l">
-                                                    <input type="radio" name="addrs-post-radio" id="rdo-75" value="75">
+                                                    <input type="radio" name="cc-saved-radio" id="rdo-{{$card['id']}}" value={{$card['id']}}>
                                                     <span class="custom-radio custom-ctr"></span>
                                                 </div> 
-                                                <label class="lbl" for="rdo-75">
+                                                <label class="lbl" for="rdo-{{$card['id']}}">
                                                     <span>xxxx-xxx-xxxx-{{$card['last4']}}</span>
                                                 </label>
                                             </div>
