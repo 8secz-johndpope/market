@@ -113,7 +113,7 @@ input[type=radio] {
 #ccs-info{
 	padding: 15px;
 }
-.visa, .mt-cc, .mastercard, .discover, .americaexpress, .maestro, .paypal{
+.visa, .mt-cc, .mastercard, .discover, .americanexpress, .maestro, .paypal{
 	background-image: url(https://securepics.ebaystatic.com/aw/pics/checkout/sprs/spr_PROX_13.svg);
     background-repeat: no-repeat;
     background-size: 248px 1388px;
@@ -147,7 +147,7 @@ input[type=radio] {
     width: 38px;
     height: 24px;
 }
-.americaexpress {
+.americanexpress {
     background-position: -11px -107px;
     width: 38px;
     height: 24px;
