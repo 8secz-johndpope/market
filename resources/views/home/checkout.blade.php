@@ -512,7 +512,6 @@
                $('#cc-change-ctr').hide(); 
         });
         $(window).scroll(function(e) {
-            console.log($(document).scrollTop());
             if ($(document).scrollTop() > $('#pay-method-ctr').position().top && $(document).scrollTop() < ($('#cart-details-ctr').position().top + $('.checkout-summry').outerHeight(true))) {
                 $('.checkout-summry').css('position', 'fixed');
                 $('.checkout-summry').css('top', '24px');
