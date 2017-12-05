@@ -588,6 +588,8 @@ input[type="radio"]:checked+.custom-ctr::before, input[type="radio"]:checked+.cu
 }
 .sa-opt:not(.no-rdo) {
     cursor: pointer;
+    display: table;
+    width: 100%;
 }
 body.loading {
     overflow: hidden;   
