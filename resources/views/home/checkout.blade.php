@@ -40,9 +40,22 @@
                                     </div>
                                 </div>
                                 <div class="col-r-p">
-                                    <label class="mt-label" for="saved-card">
-                                        <span class="mt-scc"></span>
-                                    </label>
+                                    <div id="funding-source">
+                                        <div class="fs-summary fade in">
+                                            <ul class="cc-logos ui-sortable">
+                                                <li class="visa ui-sortable-handle"></li>
+                                                <!-- <li class="mastercard ui-sortable-handle"></li>
+                                                <li class="discover ui-sortable-handle"></li>
+                                                <li class="am-ex ui-sortable-handle"></li>
+                                                <li class="maestro ui-sortable-handle"></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="fs-edit">
+                                            <button type="button" class="fs-change-cc-btn img-btn">
+                                                <span class="glyphicon glyphicon-menu-down"></span>
+                                            </button>
+                                        </div>   
+                                    </div>
                                 </div>
                             </div>
                             @endif
@@ -341,6 +354,7 @@
                             <input name="nonce" value="xyz" type="hidden" id="nonce">
                             <input type="hidden" name="type" id="type" value="2">
                             <input type="hidden" name="shipping_address" id="shipping_address" value="">
+                            <input type="hidden" name="card" value="">
                             <button type="submit" class="btn btn-submit">Confirm and pay</button>
                         </form>
                     </div>
