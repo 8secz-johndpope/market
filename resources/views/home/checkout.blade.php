@@ -395,6 +395,10 @@
             $('#type').val($(this).val());
             $('#sale-total-price').text(total);
         });
+         $('input[type=radio][name=pay-meth-radio]').change(function(){
+            $('#shipping-address-ctr .postage-address').toggleClass('expanded');
+            $('.sa-edit-btn span').toggleClass('expanded');  
+         });
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
             if(this.id == 'expiry'){
