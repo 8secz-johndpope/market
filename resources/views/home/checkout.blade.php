@@ -513,6 +513,7 @@
             $(span).toggleClass('expanded');
             if($(span).hasClass('expanded')){
                 $('#cc-change-ctr').show();
+                $('#saved-card').prop('checked');
             }
             else
                $('#cc-change-ctr').hide(); 
