@@ -190,7 +190,7 @@
             X
         </div>
         <form action="/user/cards/add" method="post" >
-            <input name="redirect" type="hidden" value="/user/manage/order">
+            <input name="redirect" type="hidden" value="/user/manage/sale/{{$sale->id}}">
             {{ csrf_field() }}
             <div class="form-group" style="margin-top: 25px">
                 <label for="card">Card Number:</label>
