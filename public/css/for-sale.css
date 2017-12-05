@@ -29,6 +29,10 @@ h2.item-name.header {
     font-size: 29px;
     box-shadow: 0px 4px 1px -2px rgba(0,0,0,0.16), 0px 0px 0px rgba(0,0,0,.08);
 }
+.meta-info {
+    padding: 15px;
+    text-align: center;
+}
 .request-details {
     padding-top: 25px!important;
     padding-bottom: 25px!important;
