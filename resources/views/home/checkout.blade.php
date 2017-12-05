@@ -464,7 +464,10 @@
             $('#card').val(val);
             $('button.fs-change-cc-btn span').toggleClass('expanded');
             $('#cc-change-ctr').hide();
-            $('label[for=saved-card]').text($('label[for='+ this.id +']').text());  
+            $('label[for=saved-card]').text($('label[for='+ this.id +']').text());
+            $('label[for=saved-card] li').attr('class', '');
+            $('label[for=saved-card] li').attr('class', '');
+            $('label[for=saved-card] li').addClass($('label[for='+ this.id +'] .t-cc').attr('class'));  
         })
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
