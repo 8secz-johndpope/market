@@ -1136,7 +1136,11 @@ class HomeController extends BaseController
         $customer->sources->create(array("source" => ['object'=>'card','number'=>$card,'exp_month'=>$month,'exp_year'=>$year,'cvc'=>$request->cvc]));
         $user->vid='V2';
         $user->save();
-        return redirect($request->redirect);
+        if($request->has('redirect'))
+            return redirect($request->redirect);
+        else{
+            return ['msg', 'ok'];
+        }
     }
     public function add_bank_account(Request $request)
     {
