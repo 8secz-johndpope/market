@@ -400,7 +400,7 @@
                     $('body').addClass('loading');
                     $('#nonce').val(obj.nonce);
                     $("#payment-form").attr("action", '/user/payment/sale/paypal/{{$sale->id}}');
-                    $("#payment-form").submit();
+                   // $("#payment-form").submit();
                 }
             });
         </script>
