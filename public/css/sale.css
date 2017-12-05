@@ -100,7 +100,12 @@ input[type=radio] {
     margin-bottom: 0;
     display: block;
     cursor: pointer;
-
+}
+.img-btn{
+	border:none;
+	background-color: transparent;
+	width: 20px;
+	height: 20px;
 }
 .visa, .mt-cc, .mastercard, .discover, .am-ex, .maestro, .paypal{
 	background-image: url(https://securepics.ebaystatic.com/aw/pics/checkout/sprs/spr_PROX_13.svg);
