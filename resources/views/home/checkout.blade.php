@@ -348,7 +348,6 @@
             </div>
         </div>
     </div>
-     <div id="paypal-container"></div>
      <script type="text/javascript">
             braintree.setup('{{$token}}', 'custom', {
                 paypal: {
