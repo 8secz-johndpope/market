@@ -259,6 +259,8 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
                                     <li>
+                                    <li><a href="/user/ad/create"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp;Post and Ad</a> </li>
+                                    <li>
                                         <a class="nav-link nav-color" href="/user/manage/orders"><span class="glyphicon glyphicon-credit-card"></span> &nbsp;&nbsp; Orders</a>
                                     </li>
                                     <li>
