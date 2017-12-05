@@ -416,6 +416,7 @@
             $('.sa-edit-btn span').toggleClass('expanded');
             $('#shipping-address').hide();
             $('.main-pa-inf div').text(address);
+            $('#sa-change-link').show();
         }
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
