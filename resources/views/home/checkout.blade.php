@@ -498,6 +498,9 @@
                 $('#shipping-address').hide();
             }
         });
+        $('#sa-change-link').click(function(){
+            $('.sa-edit button').click();
+        })
         $('button.fs-edit-btn').click(function(){
             $('.fs-edit-btn span').toggleClass('expanded');
             if($('.fs-edit-btn span').hasClass('expanded')){
