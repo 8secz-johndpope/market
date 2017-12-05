@@ -29,13 +29,13 @@
                             <div class="pay-method">
                                 <div class="col-l-p">
                                     <div class="radio-l">
-                                        <input type="radio" name="pay-meth-radio" id="saved-card" checked="true" value="{{$cards[0]['id']}}">
+                                        <input type="radio" name="pay-meth-radio" id="saved-card" checked="true" value="{{$def['id']}}">
                                         <span class="custom-radio custom-ctr custom-rb"></span>
                                     </div>
                                     <div class="radio-r">
                                         <label class="mt-label" for="saved-card">
                                             <span class="mt-cc"></span>
-                                            xxxx-xxx-xxxx-{{$cards[0]['last4']}}
+                                            xxxx-xxx-xxxx-{{$def['last4']}}
                                         </label>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@
                                     <div id="funding-cc">
                                         <div class="fs-summary fade in">
                                             <ul class="cc-logos ui-sortable">
-                                                <li class="{{str_replace(" ", "", strtolower($cards[0]['brand']))}} ui-sortable-handle"></li>
+                                                <li class="{{str_replace(" ", "", strtolower($def['brand']))}} ui-sortable-handle"></li>
                                                 <!-- <li class="mastercard ui-sortable-handle"></li>
                                                 <li class="discover ui-sortable-handle"></li>
                                                 <li class="am-ex ui-sortable-handle"></li>
@@ -66,7 +66,7 @@
                                         <div class="sa-opt">
                                             <div class="sa-cc">
                                                 <div class="radio-l">
-                                                    <input type="radio" name="cc-saved-radio" id="rdo-{{$card['id']}}" value={{$card['id']}}>
+                                                    <input type="radio" name="cc-saved-radio" id="rdo-{{$card['id']}}" value={{$card['id']}} @if($card['id'] == $def['id']) checked="true" @endif>
                                                     <span class="custom-radio custom-ctr"></span>
                                                 </div> 
                                                 <label class="lbl" for="rdo-{{$card['id']}}">
