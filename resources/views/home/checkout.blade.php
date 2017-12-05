@@ -183,7 +183,7 @@
                                 <div id="{{$address->id}}" class="sa-opt">
                                     <div class="sa-addr">
                                         <div class="radio-l">
-                                            <input type="radio" name="addrs-post-radio" id="rdo-{{$address->id}}"  @if($user->default_address===$address->id) checked="true" @endif>
+                                            <input type="radio" name="addrs-post-radio" id="rdo-{{$address->id}}" value="{{$address->id}}"  @if($user->default_address===$address->id) checked="true" @endif>
                                             <span class="custom-radio custom-ctr"></span>
                                         </div> 
                                         <label class="lbl" for="rdo-{{$address->id}}">
