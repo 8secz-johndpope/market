@@ -366,7 +366,6 @@ ul.cc-logos li {
 #shipping-address .sa-addr {
     padding: 15px;
     width: 100%;
-    display: table-cell;
     vertical-align: middle;
 }
 .sa-opt .radio-l {
