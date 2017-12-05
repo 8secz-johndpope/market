@@ -409,6 +409,14 @@
                 } 
             }
          });
+        $('input[type=radio][name=addrs-post-radio]'){
+            var label = $('label[for="' + this.id + '"]');
+            var address = label.text().replace('span', 'div');
+            $('#shipping-address-ctr .postage-address').toggleClass('expanded');
+            $('.sa-edit-btn span').toggleClass('expanded');
+            $('#shipping-address').hide();
+            $('.main-pa-inf div').text(address);
+        }
         $('#card-fields input').focus(function(){
             var label = $('label[for="' + this.id + '"]');
             if(this.id == 'expiry'){
