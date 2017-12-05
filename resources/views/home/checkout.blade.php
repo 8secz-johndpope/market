@@ -64,6 +64,15 @@
                                         <legend></legend>
                                         @foreach($cards as $card)
                                         <div class="sa-opt">
+                                            <div class="sa-addr">
+                                                <div class="radio-l">
+                                                    <input type="radio" name="addrs-post-radio" id="rdo-75" value="75">
+                                                    <span class="custom-radio custom-ctr"></span>
+                                                </div> 
+                                                <label class="lbl" for="rdo-75">
+                                                    <span>xxxx-xxx-xxxx-{{$card['last4']}}</span>
+                                                </label>
+                                            </div>
                                         </div>
                                         @endif
                                     </fieldset>
