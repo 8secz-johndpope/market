@@ -455,7 +455,6 @@
             }
             $('#shipping-address-ctr .postage-address').toggleClass('expanded');
             $('#shipping_address').val($(this).val());
-            $('#billing_address').val($(this).val());
             $('.sa-edit-btn span').toggleClass('expanded');
             $('#shipping-address').hide();
             $('#sa-change-link').show();
