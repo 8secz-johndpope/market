@@ -350,15 +350,20 @@
                                         <div class="col-sm-12 meta-info">
                                             @if($advert->user!==null)
                                             <div class="col-sm-4 border-left">
-                                                <a href="/download-mobile-apps/">
-                                                    <img class="payments-methods" src="/css/payments.png">
-                                                </a>
+                                                <div class="cell-content">
+                                                    <a href="/download-mobile-apps/">
+                                                        <img class="payments-methods" src="/css/payments.png">
+                                                    </a>
+                                                </div>
                                             </div>
                                             @endif
                                             <div class="col-sm-4 border-left">
-                                                Cash on collection
+                                                <div class="cell-content">
+                                                    Cash on collection
+                                                </div>
                                             </div>
                                             <div class="col-sm-4 border-left">
+                                                <div class="cell-content">
                                                 <form id="request-invoice" action="/user/message/send-req-inv" method="post">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="id" value="{{$advert->id}}">
@@ -367,6 +372,7 @@
                                                     <button class="btng-recaptcha" data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit">Send Request</button>
                                                     <!-- <a href="/user/message/request-invoice/{{$advert->id}}" class="req-invoice">Request Invoice</a> -->
                                                 </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
