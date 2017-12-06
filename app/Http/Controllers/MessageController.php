@@ -146,6 +146,9 @@ class MessageController extends BaseController
             $message->save();
             $room->modify();
             $this->notify($room,$message);
+            if($request->has('type')){
+                return ['response' => 'ok'];
+            }
             return redirect('/user/manage/messages/' . $room->id);
         }else{
             return redirect('/user/reply/' . $request->id);
