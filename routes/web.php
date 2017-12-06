@@ -71,6 +71,8 @@ Route::get('/user/manage/rooms/{id}/{ch}', 'MessageController@rooms');
 
 Route::get('/user/message/push','MessageController@push');
 
+Route::get('/user/message/send','MessageController@send');
+
 
 Route::post('/user/message/send','MessageController@send');
 Route::post('/user/message/send-req-inv','MessageController@reqInvsend');

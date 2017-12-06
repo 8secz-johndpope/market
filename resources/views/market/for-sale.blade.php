@@ -364,13 +364,13 @@
                                             </div>
                                             <div class="col-sm-4 border-left">
                                                 <div class="cell-content">
-                                                <form id="request-invoice" action="/user/message/send-req-inv" method="post">
+                                                <form id="request-invoice" action="/user/message/send">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="id" value="{{$advert->id}}">
                                                     <input type="hidden" name="message" value="Request Invoice">
                                                     <input type="hidden" name="type" value="request-invoice">
-                                                    <!-- <button class="btn g-recaptcha" data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit">Send Request</button>-->
-                                                    <a href="/user/message/request-invoice/{{$advert->id}}" class="req-invoice">Request Invoice</a>
+                                                     <button class="btn g-recaptcha" data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit">Send Request</button>
+                                                    <!--<a href="/user/message/request-invoice/{{$advert->id}}" class="req-invoice">Request Invoice</a>-->
                                                 </form>
                                                 </div>
                                             </div>
@@ -1183,6 +1183,7 @@
             var lessCount = 5000 - value.length;
             $(this).prev().text(lessCount);
     });
+    /*
     $('#request-invoice').submit(function(e){
         e.preventDefault();
         console.log('send message');
@@ -1202,10 +1203,11 @@
             }
         });
     });
-    /*$('.req-invoice').click(function(e){
+   
+    $('.req-invoice').click(function(e){
         e.preventDefault();
         $('#request-invoice').submit();
-    });*/
+    }); */
     function onSubmit(token) {
          $('#request-invoice').submit();
     }
