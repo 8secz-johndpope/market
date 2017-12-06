@@ -157,6 +157,11 @@ ul.cc-logos li {
     width: 38px;
     height: 24px;
 }
+.paypal {
+    background-position: -11px -632px;
+    width: 66px;
+    height: 19px;
+}
 .fs-summary {
     font-size: .8125rem;
     max-width: 90%;
