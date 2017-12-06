@@ -272,3 +272,6 @@ ul.cc-logos li {
 #cc-change-ctr {
     display: none;
 }
+#card-fields .cc-logos li {
+    display: none;
+}
