@@ -37,3 +37,12 @@
     padding: 0;
     cursor: pointer;
 }
+.custom-radio {
+    position: relative;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.custom-ctr {
+    margin-right: 30px;
+    position: relative;
+}
