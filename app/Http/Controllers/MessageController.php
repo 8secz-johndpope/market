@@ -151,6 +151,9 @@ class MessageController extends BaseController
             }
             return redirect('/user/manage/messages/' . $room->id);
         }else{
+            if($request->has('type')){
+                return ['response' => 'ok'];
+            }
             return redirect('/user/reply/' . $request->id);
         }
     }
