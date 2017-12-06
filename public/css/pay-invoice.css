@@ -42,6 +42,7 @@
 .total {
     border: 1px solid #ddd;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 .amount_total>tbody>tr>td {
     padding: 5px 10px;
