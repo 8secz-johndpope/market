@@ -77,7 +77,7 @@
                 <div class="col-sm-12">
                     <h2>Sent to</h2>
                     <div class="buyer-info">
-                        <p>$user->email</p>
+                        <p>{{$user->email}}</p>
                     </div>
                 </div>
                 <div class="col-sm-12">
