@@ -147,6 +147,16 @@ ul.cc-logos li {
     width: 38px;
     height: 24px;
 }
+.maestro {
+    background-position: -11px -138px;
+    width: 38px;
+    height: 24px;
+}
+.discover {
+    background-position: -11px -75px;
+    width: 38px;
+    height: 24px;
+}
 .fs-summary {
     font-size: .8125rem;
     max-width: 90%;
