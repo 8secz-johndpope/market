@@ -24,6 +24,7 @@
     border: 1px solid #ccc;
     margin-top: 15px;
     padding: 15px;
+    background: #fff;
 }
 .cell-amount {
     width: 20%;
