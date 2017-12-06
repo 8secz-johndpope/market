@@ -22,7 +22,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6"></div>
+                <div class="col-sm-6">
+                    <div class="seller-info">
+                        <div>
+                            <h2 class="seller-name">$user->name</h2>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-sm-6"></div>
                 <div class="col-sm-12"></div>
                 <div class="col-sm-12"></div>
