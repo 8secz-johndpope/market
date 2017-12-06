@@ -955,7 +955,7 @@ class HomeController extends BaseController
     public function pay(Request $request,$id){
         $user = Auth::user();
         $invoice = Invoice::find($id);
-        $seller = User::find($invoice->message->from_msg);
+        $seller = $invoice->message->user;
         $stripe_id = $user->stripe_id;
         $customer = \Stripe\Customer::retrieve($stripe_id);
 
