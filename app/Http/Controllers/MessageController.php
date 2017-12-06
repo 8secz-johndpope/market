@@ -152,6 +152,7 @@ class MessageController extends BaseController
         }
     }
     public function reqInvsend(Request $request){
+        return $request;
         if($request->has('g-recaptcha-response')) {
             $user = Auth::user();
             $advert = Advert::find($request->id);
