@@ -130,7 +130,173 @@
                     <div class="col-sm-12">
                         <h2>Pay with</h2>
                         <div class="pay-methods" id="pay-method-ctr">
-                            
+                            <fieldset>
+                                <legend>
+                                    Select a payment option
+                                </legend>
+                                @if(count($cards) > 0)
+                                <div class="pay-method">
+                                    <div class="col-l-p">
+                                        <div class="radio-l">
+                                            <input type="radio" name="pay-meth-radio" id="saved-card" checked="true" value="{{$def['id']}}">
+                                            <span class="custom-radio custom-ctr custom-rb"></span>
+                                        </div>
+                                        <div class="radio-r">
+                                            <label class="mt-label" for="saved-card">
+                                                <span class="mt-cc"></span>
+                                                xxxx-xxx-xxxx-{{$def['last4']}}
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-r-p">
+                                        <div id="funding-cc">
+                                            <div class="fs-summary fade in">
+                                                <ul class="cc-logos ui-sortable">
+                                                    <li class="{{str_replace(" ", "", strtolower($def['brand']))}} ui-sortable-handle"></li>
+                                                    <!-- <li class="mastercard ui-sortable-handle"></li>
+                                                    <li class="discover ui-sortable-handle"></li>
+                                                    <li class="am-ex ui-sortable-handle"></li>
+                                                    <li class="maestro ui-sortable-handle"></li> -->
+                                                </ul>
+                                            </div>
+                                            <div class="fs-edit">
+                                                <button type="button" class="fs-change-cc-btn img-btn">
+                                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                                </button>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="cc-change-ctr">
+                                    <div id="ccs-info" class="bdr-btm">
+                                        <fieldset>
+                                            <legend></legend>
+                                            @foreach($cards as $card)
+                                            <div class="sa-opt">
+                                                <div class="sa-cc">
+                                                    <div class="radio-l">
+                                                        <input type="radio" name="cc-saved-radio" id="rdo-{{$card['id']}}" value={{$card['id']}} @if($card['id'] == $def['id']) checked="true" @endif>
+                                                        <span class="custom-radio custom-ctr"></span>
+                                                    </div> 
+                                                    <label class="lbl" for="rdo-{{$card['id']}}">
+                                                        <span>xxxx-xxx-xxxx-{{$card['last4']}}</span>
+                                                        <span class="t-cc {{str_replace(" ", "", strtolower($card['brand']))}}"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            @endforeach
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                @endif
+                                <div class="pay-method" data-mp-id="new-cc">
+                                    <div class="col-l-p">
+                                        <div class="radio-l">
+                                            <input type="radio" name="pay-meth-radio" id="new-card">
+                                            <span class="custom-radio custom-ctr custom-rb">
+                                            </span>
+                                        </div>
+                                        <div class="radio-r">
+                                            <label class="mt-label" for="new-card">
+                                                <span class="mt-cc"></span>
+                                                Add credit or debit card
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-r-p">
+                                        <div id="funding-source">
+                                            <div class="fs-summary fade in">
+                                                <ul class="cc-logos">
+                                                    <li class="visa"></li>
+                                                    <li class="mastercard"></li>
+                                                    <li class="discover"></li>
+                                                    <li class="americaexpress"></li>
+                                                    <li class="maestro"></li>
+                                                </ul>
+                                            </div>
+                                            <div class="fs-edit">
+                                                <button type="button" class="fs-edit-btn img-btn">
+                                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="cc-new-ctr">
+                                    <div id="inst-details" class="bdr-btm">
+                                        <form action="/user/cards/add" method="post">
+                                        <input name="redirect" type="hidden" value="/user/manage/checkout/{{$sale->id}}">
+                                        <input name="address" type="hidden" value="{{$user->address->id}}">
+                                        {{ csrf_field() }} 
+                                        <div id="inst-error"></div>
+                                        <div id="card-fields">
+                                            <div class="cf-form">
+                                                <div class="row">
+                                                    <span class="floating-label">
+                                                        <label for="cardNumber">Card Number</label>
+                                                        <input type="text" class="input-field cf-card-number" id="cardNumber" name="card" placeholder="">
+                                                        <ul class="cc-logos">
+                                                            <li class="visa small"></li>
+                                                            <li class="mastercard small"></li>
+                                                            <li class="discover small"></li>
+                                                            <li class="americaexpress small"></li>
+                                                            <li class="maestro small"></li>
+                                                        </ul>
+                                                    </span>
+                                                </div>
+                                                <div class="row">
+                                                    <span class="floating-label">
+                                                        <label for="expiry">Expiry date:</label>
+                                                        <input type="text" class="input-field cf-card-exp" id="expiry" name="expiry">
+                                                    </span>
+                                                    <span class="floating-label">
+                                                        <label for="cvc">CVC:</label>
+                                                        <input type="text" class="input-field cf-card-sec" id="cvc" name="cvc">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="bill-add-ctr">
+                                            @if($user->default_address != 0)
+                                            <div id="bill-head">
+                                                <div class="cc-title-text">
+                                                    Billing Address
+                                                </div>
+                                            </div>
+                                            <div id="bill-edit-ctr">
+                                                <div class="addr-read-version">
+                                                    {{$user->address->line1}}<br> 
+                                                    {{$user->address->city}} {{$user->address->postcode}}
+                                                </div>
+                                            </div>
+                                            @endif
+                                        </div>
+                                        <div class="cta-wrapper">
+                                            <div class="action col-p">
+                                                <a href="#" class="cf-cancel">Cancel</a>
+                                                <button type="button" class="btn btn-cta-save">Done</button>
+                                            </div>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="pay-method" data-mp-id="paypal">
+                                    <div class="col-l-p">
+                                        <div class="radio-l">
+                                            <input type="radio" name="pay-meth-radio" id="paypal">
+                                            <span class="custom-radio custom-ctr">
+                                            </span>
+                                        </div>
+                                        <div class="radio-r">
+                                            <label class="mt-label" for="paypal">
+                                            <span class="mt-logo paypal" id="paypal-container"></span>
+                                        </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-r-p">
+                                    </div>
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
                 </div>
