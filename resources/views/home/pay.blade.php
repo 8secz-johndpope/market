@@ -44,8 +44,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6"></div>
-                <div class="col-sm-12"></div>
+                <div class="col-sm-6">
+                    <div class="invoice-details">
+                        <ul>
+                            <li>
+                                <div class="details-l">
+                                    <strong>Invoice number</strong>
+                                </div>
+                                <div class="details-r">{{$invoice->id}}</div>
+                            </li>
+                            <li>
+                                <div class="details-l">
+                                    <strong>Invoice date</strong>
+                                </div>
+                                <div class="details-r">{{$invoice->created_at}}</div>
+                            </li>
+                            <li>
+                                <div class="details-l">
+                                    <strong>Payment terms</strong>
+                                </div>
+                                <div class="details-r">Due on receipt</div>
+                            </li>
+                            <li>
+                                <div class="details-l">
+                                    <strong>Due date</strong>
+                                </div>
+                                <div class="details-r">{{$invoice->created_at}}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <
+                </div>
                 <div class="col-sm-12"></div>
                 <div class="col-sm-6"></div>
                 <div class="col-sm-6"></div>
