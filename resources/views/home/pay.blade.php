@@ -16,100 +16,104 @@
 <div class="body">
     <div class="container">
         <div class="row">
-            <div class="invoice-container">
-                <div class="col-sm-12">
-                    <div class="logo-container">
-                        <div class="logo-img">
-                            <img src="">
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="invoice-container">
+                        <div class="col-sm-12">
+                            <div class="logo-container">
+                                <div class="logo-img">
+                                    <img src="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="seller-info">
+                                <div>
+                                    <h2 class="seller-name">{{$seller->name}}</h2>
+                                </div>
+                                <div>
+                                    {{$seller->address->line1}}
+                                </div>
+                                <div>
+                                    {{$seller->address->city}} {{$seller->address->postcode}}
+                                </div>
+                                <div>
+                                    United Kingdom
+                                </div>
+                                <div>
+                                    {{$seller->phone}}
+                                </div>
+                                <div>
+                                    {{$seller->email}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="invoice-details">
+                                <ul>
+                                    <li>
+                                        <div class="details-l">
+                                            <strong>Invoice number</strong>
+                                        </div>
+                                        <div class="details-r">{{$invoice->id}}</div>
+                                    </li>
+                                    <li>
+                                        <div class="details-l">
+                                            <strong>Invoice date</strong>
+                                        </div>
+                                        <div class="details-r">{{$invoice->created_at}}</div>
+                                    </li>
+                                    <li>
+                                        <div class="details-l">
+                                            <strong>Payment terms</strong>
+                                        </div>
+                                        <div class="details-r">Due on receipt</div>
+                                    </li>
+                                    <li>
+                                        <div class="details-l">
+                                            <strong>Due date</strong>
+                                        </div>
+                                        <div class="details-r">{{$invoice->created_at}}</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h2>Sent to</h2>
+                            <div class="buyer-info">
+                                <p>{{$user->email}}</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <table class="table">
+                                <thead><th>Title</th><th>Amount</th></thead>
+                                <tbody>
+                                @foreach($invoice->items as $item)
+                                    <tr><td>{{$item->title}}</td><td>{{$item->amount/100}}</td></tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-6">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>Subtotal</td>
+                                        <td>£{{$invoice->amount()}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td>£{{$invoice->amount()}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="seller-info">
-                        <div>
-                            <h2 class="seller-name">{{$seller->name}}</h2>
-                        </div>
-                        <div>
-                            {{$seller->address->line1}}
-                        </div>
-                        <div>
-                            {{$seller->address->city}} {{$seller->address->postcode}}
-                        </div>
-                        <div>
-                            United Kingdom
-                        </div>
-                        <div>
-                            {{$seller->phone}}
-                        </div>
-                        <div>
-                            {{$seller->email}}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="invoice-details">
-                        <ul>
-                            <li>
-                                <div class="details-l">
-                                    <strong>Invoice number</strong>
-                                </div>
-                                <div class="details-r">{{$invoice->id}}</div>
-                            </li>
-                            <li>
-                                <div class="details-l">
-                                    <strong>Invoice date</strong>
-                                </div>
-                                <div class="details-r">{{$invoice->created_at}}</div>
-                            </li>
-                            <li>
-                                <div class="details-l">
-                                    <strong>Payment terms</strong>
-                                </div>
-                                <div class="details-r">Due on receipt</div>
-                            </li>
-                            <li>
-                                <div class="details-l">
-                                    <strong>Due date</strong>
-                                </div>
-                                <div class="details-r">{{$invoice->created_at}}</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <h2>Sent to</h2>
-                    <div class="buyer-info">
-                        <p>{{$user->email}}</p>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <table class="table">
-                        <thead><th>Title</th><th>Amount</th></thead>
-                        <tbody>
-                        @foreach($invoice->items as $item)
-                            <tr><td>{{$item->title}}</td><td>{{$item->amount/100}}</td></tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-6"></div>
-                <div class="col-sm-6">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <td>Subtotal</td>
-                                <td>£{{$invoice->amount()}}</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td>£{{$invoice->amount()}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
