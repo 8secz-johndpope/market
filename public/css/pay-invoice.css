@@ -6,11 +6,13 @@
     width: 100%;
     display: table;
 }
+.details-l{
+	background: #ddd;
+}
 .details-l, .details-r {
     width: 49%;
     display: inline-block;
     border: 1px solid #eee;
-    background: #ddd;
     line-height: 26px;
     padding-left: 10px;
 }
