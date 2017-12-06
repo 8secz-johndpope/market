@@ -118,6 +118,17 @@
                     </div>
                 </div>
             </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="pay-container">
+                            <form>
+                                <button class="btn btn-submit">Pay Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row all-divs" style="display: none;">
