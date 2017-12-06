@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+<div class="body">
     <div class="row all-divs">
         <div class="col-sm-8 col-sm-offset-2">
             <form action="/user/payment/invoice/stripe/{{$invoice->id}}" method="post">
@@ -117,6 +118,7 @@
             <button type="submit" class="btn btn-success">Save </button>
         </form>
     </div>
+</div>
 <script>
     $(".add-card").click(function () {
         $(".all-divs").hide();
