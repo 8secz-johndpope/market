@@ -1193,7 +1193,6 @@
         e.preventDefault();
         $('#request-invoice').submit();
     });
-    $('#request-invoice').submit()
     function isUnderground(types){
         return types.indexOf('tube') != -1;
     }
