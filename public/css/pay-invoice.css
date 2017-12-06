@@ -28,7 +28,7 @@
     width: 20%;
     text-align: right;
 }
-.items{
+.items, .w100p{
 	width: 100%;
 }
 .items>thead>tr>th, .items>tbody>tr>td {

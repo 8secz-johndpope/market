@@ -96,7 +96,7 @@
                         </div>
                         <div class="col-sm-6"></div>
                         <div class="col-sm-6">
-                            <table class="table">
+                            <table class="w100p amount_total">
                                 <tbody>
                                     <tr>
                                         <td>Subtotal</td>
