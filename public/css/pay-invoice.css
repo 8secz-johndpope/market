@@ -34,3 +34,6 @@
 .items>thead>tr>th, .items>tbody>tr>td {
     padding: 5px 10px;
 }
+.items>thead>tr>th{
+	background: #ccc;
+}
