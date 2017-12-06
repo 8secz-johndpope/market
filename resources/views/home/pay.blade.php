@@ -36,6 +36,12 @@
                         <div>
                             United Kingdom
                         </div>
+                        <div>
+                            {{$user->phone}}
+                        </div>
+                        <div>
+                            {{$user->email}}
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6"></div>
