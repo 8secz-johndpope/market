@@ -206,13 +206,13 @@
                                     <div class="col-r-p">
                                         <div id="funding-source">
                                             <div class="fs-summary fade in">
-                                                <ul class="cc-logos">
+                                                <!-- <ul class="cc-logos">
                                                     <li class="visa"></li>
                                                     <li class="mastercard"></li>
                                                     <li class="discover"></li>
                                                     <li class="americaexpress"></li>
                                                     <li class="maestro"></li>
-                                                </ul>
+                                                </ul> -->
                                             </div>
                                             <div class="fs-edit">
                                                 <button type="button" class="fs-edit-btn img-btn">
