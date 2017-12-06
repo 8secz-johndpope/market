@@ -4,3 +4,6 @@
     border-radius: 3px;
     background-clip: padding-box;
 }
+.pay-methods fieldset {
+    width: 100%;
+}
