@@ -313,6 +313,7 @@
                                     <div class="des-postage">
                                         <h3>Returns policy</h3>
                                         <div class="postage-info">
+                                            @if($advert->has_param('acceptreturns') && $advert->param('acceptreturns'))
                                             <p>Returns accepted</p>
                                             <table class="table table-bordered table-hover">
                                                 <thead>
@@ -328,6 +329,9 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            @else
+                                            <p>No returns accepted</p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
