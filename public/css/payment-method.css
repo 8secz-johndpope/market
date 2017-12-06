@@ -102,6 +102,9 @@
 .pay-methods input[type="radio"]:checked+.custom-ctr::after {
     display: block;
 }
+.custom-radio::after {
+    background-image: url(https://ir.ebaystatic.com/rs/c/xonyx-src-pres-styles-img-icon-radio-0f2f4c85.svg);
+}
 .mt-label {
     word-break: break-word;
     margin-bottom: 0;
