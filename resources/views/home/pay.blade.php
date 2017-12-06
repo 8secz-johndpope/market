@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12">
-                            <table class="table">
+                            <table class="table-bordered">
                                 <thead><th>Title</th><th>Amount</th></thead>
                                 <tbody>
                                 @foreach($invoice->items as $item)
