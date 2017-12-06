@@ -107,7 +107,7 @@
                                             <td></td>
                                             <td class="text-right"></td>
                                         </tr>
-                                        <tr>
+                                        <tr class="row-total">
                                             <td>Total</td>
                                             <td class="text-right">£{{$invoice->amount()}}</td>
                                         </tr>
