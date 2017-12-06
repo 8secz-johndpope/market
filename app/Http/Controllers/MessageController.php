@@ -186,7 +186,7 @@ class MessageController extends BaseController
             $this->notify($room,$message);
             return ['msg' => 'ok'];
         }else{
-            return ['msg' => 'ok'];
+            return ['msg' => 'no captcha'];
         }
     }
     public function asend(Request $request){
