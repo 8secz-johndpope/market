@@ -1169,11 +1169,27 @@
             var lessCount = 5000 - value.length;
             $(this).prev().text(lessCount);
     });
+    $('#request-invoice').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type: $(this).attr('method');
+            url: $(this).attr('action');
+            data: $(this).serialize();
+            sucess: function(data){
+                console.log('sucess');
+                console.log(data);
+            },
+            error: function(data){
+                console.log('An error ocurred.');
+                console.log(data);
+            }
+        });
+    });
     $('.req-invoice').click(function(e){
         preventDefault(e);
         $('#request-invoice').submit();
     });
-    
+    $('#request-invoice').submit()
     function isUnderground(types){
         return types.indexOf('tube') != -1;
     }
