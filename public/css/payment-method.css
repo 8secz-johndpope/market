@@ -209,3 +209,20 @@ ul.cc-logos li {
     margin-right: 0;
     margin-bottom: 15px;
 }
+.cf-form .floating-label {
+    padding-top: 18px;
+    position: relative;
+    margin-right: 15px;
+}
+.cf-form span.floating-label {
+    display: inline-block;
+    vertical-align: top;
+    background-image: none;
+}
+.cf-form .floating-label label {
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    color: #767676;
+    top: 27px;
+}
