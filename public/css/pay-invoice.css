@@ -54,3 +54,9 @@
     padding: 15px;
     text-align: center;
 }
+.btn-submit {
+    width: 100%;
+    background: #ff9d2c;
+    padding: 10px 20px;
+    color: #fff;
+}
