@@ -122,6 +122,13 @@ input[type="radio"]:checked+.custom-ctr::after {
     width: 34px;
     height: 22px;
 }
+.cc-logos {
+    padding-left: 0;
+    list-style: none;
+}
+ul.cc-logos li {
+    display: inline-block;
+}
 .fs-summary {
     font-size: .8125rem;
     max-width: 90%;
