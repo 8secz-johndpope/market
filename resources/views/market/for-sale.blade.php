@@ -360,7 +360,8 @@
                                                     <input type="hidden" name="id" value="{{$advert->id}}">
                                                     <input type="hidden" name="message" value="Request Invoice">
                                                     <input type="hidden" name="type" value="request-invoice">
-                                                    <a href="/user/message/request-invoice" class="req-invoice g-recaptcha"  data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit">Request Invoice</a>
+                                                    <button class="g-recaptcha" data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit">Send Request</button>
+                                                    <a href="/user/message/request-invoice" class="req-invoice">Request Invoice</a>
                                                 </form>
                                             </div>
                                         </div>
