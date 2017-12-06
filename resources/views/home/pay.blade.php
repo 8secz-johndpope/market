@@ -96,22 +96,24 @@
                         </div>
                         <div class="col-sm-6"></div>
                         <div class="col-sm-6">
-                            <table class="w100p amount_total">
-                                <tbody>
-                                    <tr>
-                                        <td>Subtotal</td>
-                                        <td>£{{$invoice->amount()}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Total</td>
-                                        <td>£{{$invoice->amount()}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="total">
+                                <table class="w100p amount_total">
+                                    <tbody>
+                                        <tr>
+                                            <td>Subtotal</td>
+                                            <td>£{{$invoice->amount()}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>£{{$invoice->amount()}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
