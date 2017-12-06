@@ -1190,7 +1190,7 @@
                 console.log(data);
         }).fail(function( jqXHR, textStatus, errorThrown ) {
             if ( console && console.log ) {
-                console.log( "Error get stations: " +  textStatus);
+                console.log( "Error send request: " +  textStatus);
             }
         });
     });
