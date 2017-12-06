@@ -269,3 +269,6 @@ ul.cc-logos li {
     width: 100%;
     text-align: right;
 }
+#cc-change-ctr {
+    display: none;
+}
