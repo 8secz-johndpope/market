@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-sm-8">
                 <div class="row">
-                    <div class="invoice-container">
+                    <div class="invoice-container clearfix">
                         <div class="col-sm-12">
                             <div class="logo-container">
                                 <div class="logo-img">
