@@ -954,7 +954,8 @@ class HomeController extends BaseController
     }
     public function pay(Request $request,$id){
         $user = Auth::user();
-
+        $invoice = Invoice::find($id);
+        $seller = User::find($invoice->message->from_msg);
         $stripe_id = $user->stripe_id;
         $customer = \Stripe\Customer::retrieve($stripe_id);
 
@@ -974,7 +975,7 @@ class HomeController extends BaseController
         ));
         $clientToken = $gateway->clientToken()->generate();
 
-        return view('home.pay',['invoice'=>Invoice::find($id),'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user]);
+        return view('home.pay',['invoice'=>$invoice, 'seller' => $seller,'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user]);
     }
     public function applications(Request $request)
     {

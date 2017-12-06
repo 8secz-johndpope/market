@@ -17,9 +17,17 @@
             <div class="invoice-container">
                 <div class="col-sm-12">
                     <div class="logo-container">
-                        <div class="logo-img"></div>
+                        <div class="logo-img">
+                            <img src="">
+                        </div>
                     </div>
                 </div>
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6"></div>
+                <div class="col-sm-12"></div>
+                <div class="col-sm-12"></div>
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6"></div>
             </div>
         </div>
     </div>
