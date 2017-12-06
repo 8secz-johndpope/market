@@ -2,7 +2,13 @@
     list-style: none;
     padding-left: 0;
 }
+.invoice-details li {
+    width: 100%;
+    display: table;
+}
 .details-l, .details-r {
     width: 49%;
     display: inline-block;
+    border: 1px solid #eee;
+    line-height: 26px;
 }
