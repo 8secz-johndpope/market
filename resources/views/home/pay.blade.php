@@ -123,7 +123,7 @@
                     <h4>{{$invoice->title}}</h4>
 
                         <table class="table">
-                            <thead><th>Title</th><th>Amount</th></thead>
+                            <thead><th>Description</th><th>Amount</th></thead>
                             @foreach($invoice->items as $item)
                                 <tr><td>{{$item->title}}</td><td>{{$item->amount/100}}</td></tr>
                             @endforeach
