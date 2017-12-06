@@ -204,3 +204,8 @@ ul.cc-logos li {
     padding: 8px 15px 15px 50px;
     background-color: #fff;
 }
+.cf-form .row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
