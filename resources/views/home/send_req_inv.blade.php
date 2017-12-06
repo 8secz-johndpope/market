@@ -20,11 +20,11 @@
             <p class="bold-text">{{$advert->param('location_name')}}</p>
             <div class="well">
                 <div class="under-heading">
-                    <h4 class="bold-text">Reply to the listing</h4>
+                    <h4 class="bold-text">Send Request Invoice</h4>
                 </div>
-                <p>Your message to {{$advert->param('username')}}</p>
+                <p>Your request to {{$advert->param('username')}}</p>
                 <input type="hidden" name="message" value="Request Invoice">
-                <p>Replies will be sent to <strong class="bold-text">{{$user->name}}</strong> at <strong class="bold-text">{{$user->email}}</strong> </p>
+                <p>Requests will be sent to <strong class="bold-text">{{$user->name}}</strong> at <strong class="bold-text">{{$user->email}}</strong> </p>
                 <button class="btn btn-primary g-recaptcha"  data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
                         data-callback="onSubmit">Send Message</button>
             </div>
