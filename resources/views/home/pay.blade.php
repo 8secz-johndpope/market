@@ -25,7 +25,16 @@
                 <div class="col-sm-6">
                     <div class="seller-info">
                         <div>
-                            <h2 class="seller-name">$user->name</h2>
+                            <h2 class="seller-name">{{$user->name}}</h2>
+                        </div>
+                        <div>
+                            {{$user->address->line1}}
+                        </div>
+                        <div>
+                            {{$user->address->city}} {{$user->address->postcode}}
+                        </div>
+                        <div>
+                            United Kingdom
                         </div>
                     </div>
                 </div>
