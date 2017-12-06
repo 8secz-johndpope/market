@@ -82,6 +82,13 @@
     width: 16px;
     height: 16px;
 }
+.custom-ctr::after {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border: 1px solid #0654ba;
+    display: none;
+}
 input[type="radio"]:checked+.custom-ctr::before, input[type="radio"]:checked+.custom-ctr::after {
     -webkit-animation: bounce .3s;
     animation: bounce .3s;
