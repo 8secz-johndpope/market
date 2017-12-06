@@ -86,10 +86,10 @@
                         </div>
                         <div class="col-sm-12">
                             <table class="table-bordered">
-                                <thead><th>Title</th><th>Amount</th></thead>
+                                <thead><th>Title</th><th class="cell-amount">Amount</th></thead>
                                 <tbody>
                                 @foreach($invoice->items as $item)
-                                    <tr><td>{{$item->title}}</td><td>{{$item->amount/100}}</td></tr>
+                                    <tr><td>{{$item->title}}</td><td class="cell-amount">{{$item->amount/100}}</td></tr>
                                 @endforeach
                                 </tbody>
                             </table>
