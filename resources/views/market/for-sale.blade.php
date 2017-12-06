@@ -339,7 +339,9 @@
                                     <h3>Payments</h3>
                                     <div class="row">
                                     <div class="col-sm-12 meta-bold">
+                                        <div class="border-left">
                                                     Payments:
+                                        <div>
                                     </div>
                                     <div class="col-sm-12 meta-info">
                                         @if($advert->user!==null)
