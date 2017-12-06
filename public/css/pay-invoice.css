@@ -31,3 +31,6 @@
 .items{
 	width: 100%;
 }
+.items>thead>tr>th {
+    padding: 5px 10px;
+}
