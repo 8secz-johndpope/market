@@ -98,7 +98,7 @@ class MessageController extends BaseController
         if($room!==null){
             return redirect('/user/manage/messages/' . $room->id);
         }
-        return view('home.reply',['advert'=>$advert,'user'=>$user]);
+        return view('home.send_req_inv',['advert'=>$advert,'user'=>$user]);
     }
     public function contact_applicant(Request $request,$id){
         $user = Auth::user();
