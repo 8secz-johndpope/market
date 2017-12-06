@@ -167,6 +167,9 @@ class MessageController extends BaseController
     public function reqInvsend(Request $request){
         if($request->has('g-recaptcha-response')) {
             $user = Auth::user();
+            if($user == null){
+                return ['msg' => 'error_unautorized'];
+            }
             $advert = Advert::find($request->id);
             $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
             if($room===null){
