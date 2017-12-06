@@ -87,6 +87,19 @@ class MessageController extends BaseController
         return view('home.reply',['advert'=>$advert,'user'=>$user]);
 
     }
+    public function reqInvoice(Request $request,$id){
+        $user = Auth::user();
+        $advert = Advert::find($id);
+        if($advert===null)
+        {
+            $advert=Advert::where('sid',$id)->first();
+        }
+        $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
+        if($room!==null){
+            return redirect('/user/manage/messages/' . $room->id);
+        }
+        return view('home.reply',['advert'=>$advert,'user'=>$user]);
+    }
     public function contact_applicant(Request $request,$id){
         $user = Auth::user();
         $application = Application::find($id);
