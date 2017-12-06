@@ -26,7 +26,7 @@
                 <input type="hidden" name="message" value="Request Invoice">
                 <p>Requests will be sent to <strong class="bold-text">{{$user->name}}</strong> at <strong class="bold-text">{{$user->email}}</strong> </p>
                 <button class="btn btn-primary g-recaptcha"  data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt"
-                        data-callback="onSubmit">Send Message</button>
+                        data-callback="onSubmit">Send Request Invoice</button>
             </div>
         </div>
     </div>
