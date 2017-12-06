@@ -12,7 +12,18 @@
 
 @section('content')
 <div class="body">
-    <div class="row all-divs">
+    <div class="container">
+        <div class="row">
+            <div class="invoice-container">
+                <div class="col-sm-12">
+                    <div class="logo-container">
+                        <div class="logo-img"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row all-divs" style="display: none;">
         <div class="col-sm-8 col-sm-offset-2">
             <form action="/user/payment/invoice/stripe/{{$invoice->id}}" method="post">
 
