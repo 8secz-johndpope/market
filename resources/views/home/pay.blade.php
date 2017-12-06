@@ -82,14 +82,33 @@
                 </div>
                 <div class="col-sm-12">
                     <table class="table">
-                            <thead><th>Title</th><th>Amount</th></thead>
-                            @foreach($invoice->items as $item)
-                                <tr><td>{{$item->title}}</td><td>{{$item->amount/100}}</td></tr>
-                            @endforeach
-                        </table>
+                        <thead><th>Title</th><th>Amount</th></thead>
+                        <tbody>
+                        @foreach($invoice->items as $item)
+                            <tr><td>{{$item->title}}</td><td>{{$item->amount/100}}</td></tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                 </div>
                 <div class="col-sm-6"></div>
-                <div class="col-sm-6"></div>
+                <div class="col-sm-6">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>£{{$invoice->amount()}}</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>£{{$invoice->amount()}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
