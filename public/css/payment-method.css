@@ -259,3 +259,13 @@ ul.cc-logos li {
 #cc-new-ctr {
     display: none;
 }
+#bill-head .cc-title-text {
+    font-size: 1.5rem;
+    line-height: 18px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+.cta-wrapper .action.col-p {
+    width: 100%;
+    text-align: right;
+}
