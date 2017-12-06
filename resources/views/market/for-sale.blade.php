@@ -1196,7 +1196,7 @@
                 console.log(data);
         }).fail(function( jqXHR, textStatus, errorThrown ) {
             if ( console && console.log ) {
-                console.log( "Error send request: " +  jqXHR);
+                console.log( "Error send request: " +  errorThrown);
             }
         });
     });
