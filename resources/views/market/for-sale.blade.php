@@ -1192,12 +1192,13 @@
             data: $(this).serialize(),
             dataType: 'json',
         }).done(function(data, textStatus){
-                console.log('sucess');
+                console.log(data.msg);
                 console.log(data);
                 alert('Sended');
         }).fail(function( jqXHR, textStatus, errorThrown ) {
             if ( console && console.log ) {
-                console.log( "Error send request: " +  jqXHR.error);
+                console.log(jqXHR);
+                console.log( "Error send request: " + textStatus);
             }
         });
     });
