@@ -361,7 +361,7 @@
                                                     <input type="hidden" name="message" value="Request Invoice">
                                                     <input type="hidden" name="type" value="request-invoice">
                                                     <button class="g-recaptcha" data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit">Send Request</button>
-                                                    <a href="/user/message/request-invoice" class="req-invoice">Request Invoice</a>
+                                                    <a href="/user/message/request-invoice/{{$advert->id}}" class="req-invoice">Request Invoice</a>
                                                 </form>
                                             </div>
                                         </div>
