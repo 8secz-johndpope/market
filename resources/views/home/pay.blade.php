@@ -81,7 +81,12 @@
                     </div>
                 </div>
                 <div class="col-sm-12">
-                    
+                    <table class="table">
+                            <thead><th>Title</th><th>Amount</th></thead>
+                            @foreach($invoice->items as $item)
+                                <tr><td>{{$item->title}}</td><td>{{$item->amount/100}}</td></tr>
+                            @endforeach
+                        </table>
                 </div>
                 <div class="col-sm-6"></div>
                 <div class="col-sm-6"></div>
