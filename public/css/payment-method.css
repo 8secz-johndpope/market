@@ -231,3 +231,22 @@ ul.cc-logos li {
     color: #767676;
     top: 27px;
 }
+.cf-form .floating-label input {
+    line-height: 17px;
+    position: relative;
+}
+.floating-label input[type="text"] {
+    padding: 0 0 4px 0;
+    background: transparent;
+    background-image: none;
+    border: 0;
+    border-bottom: 2px solid #ddd;
+    border-radius: 0;
+    background-clip: padding-box;
+}
+#card-fields .cf-card-number, #card-fields .cf-card-exp, #card-fields .cf-card-sec {
+    width: 254px;
+}
+#card-fields .row input {
+    margin-top: 10px;
+}
