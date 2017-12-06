@@ -152,7 +152,6 @@ class MessageController extends BaseController
         }
     }
     public function reqInvsend(Request $request){
-        return ['msg' => 'ok'];
         if($request->has('g-recaptcha-response')) {
             $user = Auth::user();
             $advert = Advert::find($request->id);
@@ -185,9 +184,9 @@ class MessageController extends BaseController
             $message->save();
             $room->modify();
             $this->notify($room,$message);
-            return redirect('/user/manage/messages/' . $room->id);
+            return ['msg' => 'ok'];
         }else{
-            return redirect('/user/reply/' . $request->id);
+            return ['msg' => 'ok'];
         }
     }
     public function asend(Request $request){
