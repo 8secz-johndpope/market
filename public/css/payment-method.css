@@ -12,3 +12,8 @@
     clear: both;
     border-bottom: 1px solid #ccc;
 }
+.col-l-p {
+    width: 47%;
+    display: inline-block;
+    vertical-align: middle;
+}
