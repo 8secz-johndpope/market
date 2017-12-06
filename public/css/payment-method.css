@@ -60,3 +60,29 @@
     margin-right: 30px;
     position: relative;
 }
+.custom-radio::before, .custom-radio::after {
+    border-radius: 50%;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+}
+.custom-ctr::before {
+    border: 1px solid #aaa;
+}
+.custom-ctr::before, .custom-ctr::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+}
+input[type="radio"]:checked+.custom-ctr::before, input[type="radio"]:checked+.custom-ctr::after {
+    -webkit-animation: bounce .3s;
+    animation: bounce .3s;
+}
