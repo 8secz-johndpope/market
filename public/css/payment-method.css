@@ -275,3 +275,12 @@ ul.cc-logos li {
 #card-fields .cc-logos li {
     display: none;
 }
+.btn-cta-save {
+    border: 1px solid #ff9d2c;
+    background: #ff9d2c;
+    color: #fff;
+    padding: 10px 20px;
+}
+#braintree-paypal-loggedin {
+    visibility: hidden;
+}
