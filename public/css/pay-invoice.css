@@ -76,3 +76,6 @@
 .custom-ctr {
     margin-right: 15px;
 }
+.col-l-p .radio-l {
+	max-width: 20px;
+}
