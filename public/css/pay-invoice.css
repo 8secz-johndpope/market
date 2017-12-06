@@ -24,3 +24,7 @@
     margin-top: 15px;
     padding: 15px;
 }
+.cell-amount {
+    width: 20%;
+    text-align: right;
+}
