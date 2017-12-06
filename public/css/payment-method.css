@@ -256,3 +256,6 @@ ul.cc-logos li {
     top: 24px;
     right: 0;
 }
+#cc-new-ctr {
+    display: none;
+}
