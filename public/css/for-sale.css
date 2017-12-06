@@ -40,6 +40,10 @@ h2.item-name.header {
 .border-left:not(:last-child) {
     border-right: none;
 }
+.meta-bold .border-left {
+    padding-left: 15px;
+    background: #ddd;
+}
 .req-invoice{
 	color: #000;
 }
