@@ -338,31 +338,32 @@
                                  <div class="col-sm-12">
                                     <h3>Payments</h3>
                                     <div class="row">
-                                    <div class="col-sm-12 meta-bold">
-                                        <div class="border-left">
-                                                    Payments:
+                                        <div class="col-sm-12 meta-bold">
+                                            <div class="border-left">
+                                                        Payments:
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-12 meta-info">
-                                        @if($advert->user!==null)
-                                        <div class="col-sm-4 border-left">
-                                            <a href="/download-mobile-apps/">
-                                                <img class="payments-methods" src="/css/payments.png">
-                                            </a>
+                                        <div class="col-sm-12 meta-info">
+                                            @if($advert->user!==null)
+                                            <div class="col-sm-4 border-left">
+                                                <a href="/download-mobile-apps/">
+                                                    <img class="payments-methods" src="/css/payments.png">
+                                                </a>
+                                            </div>
+                                            @endif
+                                            <div class="col-sm-4 border-left">
+                                                Cash on collection
+                                            </div>
+                                            <div class="col-sm-4 border-left">
+                                                <form id="request-invoice" action="/user/message/send" method="post">
+                                                    {{ csrf_field() }}
+                                                    <input type="hidden" name="id" value="{{$advert->id}}">
+                                                    <input type="hidden" name="message" value="Request Invoice">
+                                                    <input type="hidden" name="type" value="request-invoice">
+                                                    <a href="#" class="req-invoice"  data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit"">Request Invoice</a>
+                                                </form>
+                                            </div>
                                         </div>
-                                        @endif
-                                        <div class="col-sm-4 border-left">
-                                            Cash on collection
-                                        </div>
-                                        <div class="col-sm-4 border-left">
-                                            <form id="request-invoice" action="/user/message/send" method="post">
-                                                {{ csrf_field() }}
-                                                <input type="hidden" name="id" value="{{$advert->id}}">
-                                                <input type="hidden" name="message" value="Request Invoice">
-                                                <input type="hidden" name="type" value="request-invoice">
-                                                <a href="#" class="req-invoice"  data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit"">Request Invoice</a>
-                                            </form>
-                                    </div>
                                     </div>
                                 </div>
                                 @if($advert->user!==null && !$advert->has_param('sold'))
