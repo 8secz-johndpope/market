@@ -340,7 +340,7 @@
                                     <div class="row">
                                         <div class="col-sm-12 meta-bold">
                                             <div class="border-left">
-                                                        Payments:
+                                                        Payments Accepted:
                                             </div>
                                         </div>
                                         <div class="col-sm-12 meta-info">
