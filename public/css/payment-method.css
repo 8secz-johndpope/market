@@ -7,3 +7,8 @@
 .pay-methods fieldset {
     width: 100%;
 }
+.pay-method {
+    padding: 15px;
+    clear: both;
+    border-bottom: 1px solid #ccc;
+}
