@@ -250,3 +250,9 @@ ul.cc-logos li {
 #card-fields .row input {
     margin-top: 10px;
 }
+#card-fields .cc-logos {
+    display: inline-block;
+    position: absolute;
+    top: 24px;
+    right: 0;
+}
