@@ -365,7 +365,7 @@
                                     </div>
                                     </div>
                                 </div>
-                                @if($advert->user!==null)
+                                @if($advert->user!==null && !$advert->has_param('sold'))
                                 <div class="col-sm-12">
                                     <form action="/user/ad/sale">
                                         <input name="id" type="hidden" value="3471510">
