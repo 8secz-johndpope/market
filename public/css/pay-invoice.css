@@ -19,3 +19,8 @@
 .seller-name {
     margin-top: 0px;
 }
+.invoice-container {
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    padding: 15px;
+}
