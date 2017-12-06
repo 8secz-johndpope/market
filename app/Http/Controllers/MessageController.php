@@ -146,14 +146,46 @@ class MessageController extends BaseController
             $message->save();
             $room->modify();
             $this->notify($room,$message);
-            if($request->has('type')){
-                return ['response' => 'ok'];
-            }
             return redirect('/user/manage/messages/' . $room->id);
         }else{
-            if($request->has('type')){
-                return ['response' => 'ok'];
+            return redirect('/user/reply/' . $request->id);
+        }
+    }
+    public function reqInvsend(Request $request){
+        if($request->has('g-recaptcha-response')) {
+            $user = Auth::user();
+            $advert = Advert::find($request->id);
+            $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
+            if($room===null){
+                $room = new Room;
+                $room->advert_id = $advert->id;
+                $room->image=$advert->first_image();
+                $room->title=$advert->param('title');
+                $room->sender_id=$user->id;
+                $room->save();
+                $room->users()->save($user);
+                if($user->id!==$advert->user_id){
+                    if($advert->user)
+                    $room->users()->save($advert->user);
+                    else
+                        $room->users()->save(User::find(1));
+
+                }
+
+                $advert->replies++;
+                $advert->save();
             }
+            $message = new Message;
+            $message->message=$request->message;
+            $message->from_msg=$user->id;
+            $message->to_msg=$advert->user_id;
+            $message->room_id=$room->id;
+            $message->url='';
+            $message->save();
+            $room->modify();
+            $this->notify($room,$message);
+            return redirect('/user/manage/messages/' . $room->id);
+        }else{
             return redirect('/user/reply/' . $request->id);
         }
     }
