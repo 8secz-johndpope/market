@@ -13,7 +13,7 @@
 <link href="{{ asset('/css/pay-invoice.css?q=874') }}" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
-<div class="body background-color">
+<div class="body background-body">
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
