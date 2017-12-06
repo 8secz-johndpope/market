@@ -1174,6 +1174,7 @@
     });
     $('#request-invoice').submit(function(e){
         e.preventDefault();
+        console.log('send message');
         $.ajax({
             type: $(this).attr('method'),
             url: $(this).attr('action'),
