@@ -355,7 +355,7 @@
                                                 Cash on collection
                                             </div>
                                             <div class="col-sm-4 border-left">
-                                                <form id="request-invoice" action="/user/message/send-req-inv/" method="post">
+                                                <form id="request-invoice" action="/user/message/send-req-inv" method="post">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="id" value="{{$advert->id}}">
                                                     <input type="hidden" name="message" value="Request Invoice">
