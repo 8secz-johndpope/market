@@ -361,7 +361,7 @@
                                                     <input type="hidden" name="message" value="Request Invoice">
                                                     <input type="hidden" name="type" value="request-invoice">
                                                     <button class="g-recaptcha" data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit">Send Request</button>
-                                                    <a href="/user/message/request-invoice/{{$advert->id}}" class="req-invoice">Request Invoice</a>
+                                                    <!-- <a href="/user/message/request-invoice/{{$advert->id}}" class="req-invoice">Request Invoice</a> -->
                                                 </form>
                                             </div>
                                         </div>
@@ -1181,13 +1181,12 @@
             url: $(this).attr('action'),
             data: $(this).serialize(),
             dataType: 'json',
-            sucess: function(data){
+        }).done(function(data, textStatus){
                 console.log('sucess');
                 console.log(data);
-            },
-            error: function(data){
-                console.log('An error ocurred.');
-                console.log(data);
+        }).fail(function( jqXHR, textStatus, errorThrown ) {
+            if ( console && console.log ) {
+                console.log( "Error get stations: " +  textStatus);
             }
         });
     });
