@@ -1194,7 +1194,7 @@
         }).done(function(data, textStatus){
                 console.log('sucess');
                 console.log(data);
-                alert('Ok');
+                alert('Sended');
         }).fail(function( jqXHR, textStatus, errorThrown ) {
             if ( console && console.log ) {
                 console.log( "Error send request: " +  jqXHR.error);
