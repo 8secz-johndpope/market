@@ -1188,7 +1188,7 @@
         });
     });
     $('.req-invoice').click(function(e){
-        preventDefault(e);
+        e.preventDefault();
         $('#request-invoice').submit();
     });
     $('#request-invoice').submit()
