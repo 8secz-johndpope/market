@@ -128,6 +128,10 @@
                         </div>
                     </div>
                     <div class="col-sm-12">
+                        <h2>Pay with</h2>
+                        <div class="pay-methods" id="pay-method-ctr">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
