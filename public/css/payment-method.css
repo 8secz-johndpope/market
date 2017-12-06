@@ -93,3 +93,12 @@ input[type="radio"]:checked+.custom-ctr::before, input[type="radio"]:checked+.cu
     -webkit-animation: bounce .3s;
     animation: bounce .3s;
 }
+input[type="radio"]:checked+.custom-ctr::after {
+    display: block;
+}
+.mt-label {
+    word-break: break-word;
+    margin-bottom: 0;
+    display: block;
+    cursor: pointer;
+}
