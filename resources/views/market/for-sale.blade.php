@@ -1179,6 +1179,7 @@
             type: $(this).attr('method'),
             url: $(this).attr('action'),
             data: $(this).serialize(),
+            dataType: 'json',
             sucess: function(data){
                 console.log('sucess');
                 console.log(data);
