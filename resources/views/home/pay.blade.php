@@ -101,15 +101,15 @@
                                     <tbody>
                                         <tr>
                                             <td>Subtotal</td>
-                                            <td>£{{$invoice->amount()}}</td>
+                                            <td class="text-right">£{{$invoice->amount()}}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td></td>
+                                            <td class="text-right"></td>
                                         </tr>
                                         <tr>
                                             <td>Total</td>
-                                            <td>£{{$invoice->amount()}}</td>
+                                            <td class="text-right">£{{$invoice->amount()}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
