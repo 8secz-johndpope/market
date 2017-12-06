@@ -117,9 +117,6 @@ class MessageController extends BaseController
         if($request->has('g-recaptcha-response')) {
             $user = Auth::user();
             $advert = Advert::find($request->id);
-
-
-
             $room = Room::where('advert_id',$advert->id)->where('sender_id',$user->id)->first();
             if($room===null){
                 $room = new Room;
@@ -140,10 +137,6 @@ class MessageController extends BaseController
                 $advert->replies++;
                 $advert->save();
             }
-
-
-
-
             $message = new Message;
             $message->message=$request->message;
             $message->from_msg=$user->id;
@@ -151,18 +144,12 @@ class MessageController extends BaseController
             $message->room_id=$room->id;
             $message->url='';
             $message->save();
-
-
-
             $room->modify();
-
-        $this->notify($room,$message);
-
+            $this->notify($room,$message);
             return redirect('/user/manage/messages/' . $room->id);
         }else{
             return redirect('/user/reply/' . $request->id);
         }
-
     }
     public function asend(Request $request){
         if($request->has('g-recaptcha-response')) {

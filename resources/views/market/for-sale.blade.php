@@ -353,8 +353,13 @@
                                             Cash on collection
                                         </div>
                                         <div class="col-sm-4 border-left">
-                                            <a href="#" class="req-invoice">Request Invoice</a>
-                                        </div>
+                                            <form id="request-invoice" action="/user/message/send">
+                                                {{ csrf_field() }}
+                                                <input type="hidden" name="id" value="{{$advert->id}}">
+                                                <input type="hidden" name="message" value="Request Invoice">
+                                                <input type="hidden" name="type" value="request-invoice">
+                                                <a href="#" class="req-invoice g-recaptcha"  data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit"">Request Invoice</a>
+                                            </form>
                                     </div>
                                     </div>
                                 </div>
@@ -1164,7 +1169,10 @@
             var lessCount = 5000 - value.length;
             $(this).prev().text(lessCount);
     });
-    
+    $('.req-invoice').click(function(e){
+        preventDefault(e);
+        $('#request-invoice').submit();
+    });
     
     function isUnderground(types){
         return types.indexOf('tube') != -1;
