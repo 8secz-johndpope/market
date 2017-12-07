@@ -539,6 +539,8 @@ class UserController extends BaseController
         return $categories;
     }
     public function save(Request $request){
+        $user = Auth::user();
+
         if($request->has('id'))
         $advert=Advert::find($request->id);
         else
@@ -622,6 +624,26 @@ class UserController extends BaseController
         }
         if($request->has('available_date')){
             $meta['available_date'] =  strtotime($request->get('available_date')) * 1000;
+        }
+        if($request->has('phone')&&$request->phone==='1'){
+            $body['phone']=$user->phone;
+        }
+        else{
+            $advert->remove_param('phone');
+        }
+
+        if($request->has('offer')&&$request->offer==='1'){
+            $body['offer']=1;
+        }
+        else{
+            $body['offer']=0;
+        }
+
+        if($request->has('showmap')&&$request->showmap==='1'){
+            $body['showmap']=1;
+        }
+        else{
+            $body['showmap']=0;
         }
 
 
