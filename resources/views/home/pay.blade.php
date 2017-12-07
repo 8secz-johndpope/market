@@ -407,7 +407,6 @@
                               //  doSomethingWithTheNonce(obj.nonce);
                                 $('#nonce').val(obj.nonce);
                                 $('.btn.btn-submit').prop('disabled', false);
-                                console.log(obj.nonce);
                                 $("#payment-form").attr("action", '/user/payment/invoice/paypal/{{$invoice->id}}');
                                 /*document.location.href = '/user/payment/invoice/paypal/{{$invoice->id}}?nonce='+obj.nonce*/
 
