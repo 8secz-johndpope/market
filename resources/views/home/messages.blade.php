@@ -165,13 +165,14 @@
                     .then(function (response) {
                         console.log(response);
                         $('#all-msg').html(response.data);
+                        scroll_bottom();
 
                     })
                     .catch(function (error) {
                         console.log(error);
                     });
                // $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
-                scroll_bottom()
+
             }else if(object.message){
 
                 // location.reload();
