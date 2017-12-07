@@ -137,6 +137,7 @@
                             <img src="css/icon/icon-invoice.svg">
                         </div>
                         <div class="col-sm-4">
+                            <button class="btn btn-submit" type="submit">Pay Now</button>
                         </div>
                 </div>
             </div>
