@@ -448,6 +448,9 @@
                     $('#braintree-paypal-button').click();
                     $('#payment-form button[type=submit]').prop('disabled', true);
                 }
+                else if(this.id == 'saved-card'){
+                    $('#payment-form button[type=submit]').prop('disabled', false);
+                }
                 if(this.id != 'new-card' && $('.fs-edit-btn span').hasClass('expanded')) {
                     $('.fs-edit-btn span').toggleClass('expanded');
                     $('#cc-new-ctr').hide();
