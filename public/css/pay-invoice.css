@@ -100,8 +100,20 @@
     padding-right: 7px;
 }
 .img-invoice img {
-    height: 35px;
+    height: 34px;
 }
 .buttons-bottom {
     padding: 15px 0;
+}
+.img-invoice {
+    background: #e2e2e2;
+    border-radius: 4px;
+    text-align: center;
+    padding: 3px 20px;
+    width: 200px;
+    border: 1px solid #ff9d2c;
+}
+.btn-print {
+    padding: 10px 20px;
+    background: #ddd;
 }
