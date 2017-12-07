@@ -106,12 +106,13 @@
     padding: 15px 0;
 }
 .img-invoice {
-    background: #e2e2e2;
+    background: #fff;
     border-radius: 4px;
     text-align: center;
-    padding: 3px 20px;
-    width: 200px;
+    padding: 3px 0;
+    width: 49%;
     border: 1px solid #ff9d2c;
+    display: inline-block;
 }
 .btn-print {
     padding: 10px 20px;
