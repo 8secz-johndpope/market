@@ -99,3 +99,6 @@
     color: lightgray;
     padding-right: 7px;
 }
+.img-invoice img {
+    height: 35px;
+}
