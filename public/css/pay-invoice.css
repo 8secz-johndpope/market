@@ -79,3 +79,8 @@
 .col-l-p .radio-l {
 	max-width: 20px;
 }
+.title-invoice {
+    text-align: right;
+    color: lightgray;
+    padding-right: 7px;
+}
