@@ -478,5 +478,8 @@
         $('#funding-cc li').attr('class', '');
         $('#funding-cc li').addClass($('label[for='+ this.id +'] .t-cc').attr('class'));  
     });
+    $('.buttons-bottom .btn-submit').click(function(){
+        $('#payment-form').submit();
+    })
 </script>
 @endsection
