@@ -1127,6 +1127,9 @@ span.green-text {
 span.green-text, span.yellow-text{
     line-height: 35px;
 }
+.message.get-invoice {
+    background: #FAA73F;
+}
 .right-message span{
     float: right;
     margin-left: 7px;

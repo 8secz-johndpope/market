@@ -106,7 +106,7 @@
 
                                     @else
                                         <div class="left-message"><span class="message get-invoice"> Invoice received for {{$message->invoice->amount()}}  &nbsp;&nbsp;  <span class="message-time"> {{$message->timestamp()}}</span></span> <span>
-                                                @if($message->invoice->status==1)<span class="green-text">Paid</span> @else  <a class="btn btn-primary" href="/pay/invoice/{{$message->invoice->id}}">Pay Here</a> @endif
+                                                @if($message->invoice->status==1)<span class="green-text">Paid</span> @else  <a class="btn btn-primary btn-pay" href="/pay/invoice/{{$message->invoice->id}}">Pay Here</a> @endif
                                             </span></div>
 
 
