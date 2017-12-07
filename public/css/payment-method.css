@@ -282,6 +282,10 @@ ul.cc-logos li {
     color: #fff;
     padding: 10px 20px;
 }
+.sa-edit-btn span.expanded, .fs-edit-btn span.expanded, .img-btn span.expanded {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
 #braintree-paypal-loggedin {
     visibility: hidden;
 }
