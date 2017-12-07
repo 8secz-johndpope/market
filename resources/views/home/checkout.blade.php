@@ -445,7 +445,7 @@
             else{ 
                 if(this.id == 'paypal'){
                     $('#braintree-paypal-button').click();
-                    $('#payment-form input[type=submit]').prop('disabled', true);
+                    $('#payment-form button[type=submit]').prop('disabled', true);
                 }
                 if(this.id != 'new-card' && $('.fs-edit-btn span').hasClass('expanded')) {
                     $('.fs-edit-btn span').toggleClass('expanded');
