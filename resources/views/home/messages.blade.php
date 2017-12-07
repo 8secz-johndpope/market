@@ -159,7 +159,7 @@
             console.log(object);
             if(object.message&&object.room_id==room)
             {
-                axios.get('/user/manage/msgs/'+object.room_id+'/'+room, {
+                axios.get('/user/manage/msgs/'+object.room_id, {
                     params: {}
                 })
                     .then(function (response) {
