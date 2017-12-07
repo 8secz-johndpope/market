@@ -96,10 +96,12 @@
 
                             @if($message->type==='invoice')
                                     @if($message->from_msg===$user->id)
-                                        <div class="right-message"><span class="message"> Invoice Sent for {{$message->invoice->amount()}} &nbsp;&nbsp; <span class="message-time"> {{$message->timestamp()}}</span> </span>
+                                        <div class="right-message">
                                             <span>
                                                 @if($message->invoice->status==1)<span class="green-text">Paid</span> @else  <span class="yellow-text">Pending</span> @endif
                                             </span>
+                                            <span class="message"> Invoice Sent for {{$message->invoice->amount()}} &nbsp;&nbsp; <span class="message-time"> {{$message->timestamp()}}</span> </span>
+                                            
                                         </div>
 
                                     @else
