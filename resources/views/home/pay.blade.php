@@ -131,7 +131,7 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="container-print">
-                                <button>Print</button>
+                                <button class="btn btn-print">Print</button>
                             </div>
                         </div>
                         <div class="col-sm-4">
