@@ -950,6 +950,8 @@ class HomeController extends BaseController
         $invoice->message_id=$message->id;
         $invoice->save();
 
+        $this->notify($room,$message);
+
         return redirect('/user/manage/messages');
     }
     public function pay(Request $request,$id){
