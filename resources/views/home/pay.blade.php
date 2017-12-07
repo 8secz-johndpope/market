@@ -129,19 +129,22 @@
                 </div>
                 <div class="buttons-bottom">
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="container-print">
                                 <button class="btn btn-print">Print</button>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
                             <div class="container-img-invoice">
                                 <div class="img-invoice">
                                     <img src="/css/icons/icon-trans-invoce.svg">
                                 </div>
+                                <div class="img-invoice">
+                                    <img src="/css/icons/icon-by-stripe.svg">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <button class="btn btn-submit" type="submit">Pay Now</button>
                         </div>
                     </div>
