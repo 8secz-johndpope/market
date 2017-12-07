@@ -66,7 +66,7 @@ class BaseController extends Controller
     public function notify_invoice($invoice){
 
 
-        Redis::publish(''.$invoice->message->from_msg, json_encode($invoice));
+        Redis::publish(''.$invoice->message->from_msg, json_encode($invoice->message));
         foreach ($invoice->message->user->android as $token){
             $this->android($token,$invoice->title,'Invoice',$invoice);
         }
