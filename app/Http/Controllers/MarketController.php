@@ -1133,14 +1133,26 @@ class MarketController extends BaseController
        // return redirect('all');
     }
     public function leaves(Request $request){
-        foreach ($this->categories as $cat=>$val){
-            if(!isset($this->children[$cat]))
-            {
-                echo $cat.'<br>';
+        $categories = Category::all();
+        foreach ($categories as $category){
+            if(count($category->children)===0){
+                if(!$category->can_apply())
+                echo $category->slug.'<br>';
             }
         }
         return '';
     }
+    public function lleaves(Request $request){
+        $categories = Location::all();
+        foreach ($categories as $category){
+            if(count($category->children)===0){
+                echo $category->slug.'<br>';
+            }
+        }
+        return '';
+    }
+
+
     public function error(Request $request){
         return ['msg'=>'No route found'];
     }
