@@ -399,6 +399,7 @@
                     //  doSomethingWithTheNonce(obj.nonce);
                     //$('body').addClass('loading');
                     $('#nonce').val(obj.nonce);
+                    console.log(object.nonce);
                     $("#payment-form").attr("action", '/user/payment/sale/paypal/{{$sale->id}}');
                    // $("#payment-form").submit();
                 }
@@ -444,6 +445,7 @@
             else{ 
                 if(this.id == 'paypal'){
                     $('#braintree-paypal-button').click();
+                    $('#payment-form input[type=submit]').prop('disabled', true);
                 }
                 if(this.id != 'new-card' && $('.fs-edit-btn span').hasClass('expanded')) {
                     $('.fs-edit-btn span').toggleClass('expanded');
