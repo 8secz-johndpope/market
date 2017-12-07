@@ -127,8 +127,9 @@
 
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-4">
+                <div class="buttons-bottom">
+                    <div class="row">
+                        <div class="col-sm-4">
                             <div class="container-print">
                                 <button>Print</button>
                             </div>
@@ -143,6 +144,7 @@
                         <div class="col-sm-4">
                             <button class="btn btn-submit" type="submit">Pay Now</button>
                         </div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-4">
