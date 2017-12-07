@@ -619,8 +619,6 @@ class UserController extends BaseController
         }
         if($request->has('price')){
             $meta['price']=$request->price*100;
-        }else{
-            $meta['price']=-1;
         }
         if($request->has('available_date')){
             $meta['available_date'] =  strtotime($request->get('available_date')) * 1000;
