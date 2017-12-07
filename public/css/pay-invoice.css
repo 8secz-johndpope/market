@@ -25,6 +25,16 @@
     margin-top: 15px;
     padding: 15px;
     background: #fff;
+    position: relative;
+}
+.invoice-container:before {
+   content:"";
+   position:absolute;
+   top:0;
+   right:0;
+   border-width:0 16px 16px 0;
+   border-style:solid;
+   border-color:#658E15 #fff;
 }
 .cell-amount {
     width: 20%;
