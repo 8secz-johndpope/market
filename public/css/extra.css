@@ -1124,7 +1124,7 @@ span.green-text {
     color: green;
     font-weight: bold;
 }
-.right-message .green-text {
+.right-message span{
     float: right;
     margin-left: 10px;
     line-height: 35px;
