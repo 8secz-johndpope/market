@@ -22,7 +22,9 @@
                         <div class="col-sm-6">
                             <div class="logo-container">
                                 <div class="logo-img">
-                                    <img src="">
+                                    @if(isset($seller->business))
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$seller->business->logo}}">
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -37,24 +39,33 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="seller-info">
-                                <div>
-                                    <h2 class="seller-name">{{$seller->name}}</h2>
-                                </div>
-                                <div>
-                                    {{$seller->address->line1}}
-                                </div>
-                                <div>
-                                    {{$seller->address->city}} {{$seller->address->postcode}}
-                                </div>
-                                <div>
-                                    United Kingdom
-                                </div>
-                                <div>
-                                    {{$seller->phone}}
-                                </div>
-                                <div>
-                                    {{$seller->email}}
-                                </div>
+                                @if(isset($seller->business))
+                                    <div>
+                                        <h2 class="seller-name">{{$seller->business->name}}</h2>
+                                    </div>
+                                    <div>
+                                        {{$seller->business->address->line1}}
+                                    </div>
+                                    <div>
+                                        {{$seller->business->address->city}} {{$seller->business->address->postcode}}
+                                    </div>
+                                    <div>
+                                        United Kingdom
+                                    </div>
+                                    <div>
+                                        {{$seller->business->phone}}
+                                    </div>
+                                    <div>
+                                        {{$seller->business->email}}
+                                    </div>
+                                @else
+                                    <div>
+                                        <h2 class="seller-name">{{$seller->name}}</h2>
+                                    </div>
+                                    <div>
+                                        {{$seller->email}}
+                                    </div>
+                                @endif
                             </div>
                         </div>
                         <div class="col-sm-6">
