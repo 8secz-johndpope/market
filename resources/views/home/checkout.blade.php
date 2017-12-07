@@ -525,6 +525,7 @@
             if($(span).hasClass('expanded')){
                 $('#cc-change-ctr').show();
                 $('#saved-card').prop('checked', true);
+                $('#cc-new-ctr').hide()
             }
             else
                $('#cc-change-ctr').hide(); 
