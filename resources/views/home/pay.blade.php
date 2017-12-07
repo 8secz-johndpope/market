@@ -136,7 +136,7 @@
                         <div class="col-sm-4">
                             <div class="container-img-invoice">
                                 <div class="img-invoice">
-                                    <img src="/css/icons/icon-invoice.svg">
+                                    <img src="/css/icons/icon-trans-invoce.svg">
                                 </div>
                             </div>
                         </div>
