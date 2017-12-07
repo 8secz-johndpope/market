@@ -447,10 +447,10 @@
     $('input[type=radio][name=pay-meth-radio]').change(function(){
         if(this.id == 'paypal'){
             $('#braintree-paypal-button').click();
-            $('#payment-form button[type=submit]').prop('disabled', true);
+            $('.btn.btn-submit').prop('disabled', true);
         }
         else if(this.id == 'saved-card'){
-            $('#payment-form button[type=submit]').prop('disabled', false);
+            $('.btn.btn-submit').prop('disabled', false);
         }
         if($('.fs-edit-btn span').hasClass('expanded')) {
             $('.fs-edit-btn span').toggleClass('expanded');
