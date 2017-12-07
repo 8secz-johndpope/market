@@ -400,7 +400,7 @@
                     //$('body').addClass('loading');
                     $('#nonce').val(obj.nonce);
                     $('#payment-form button[type=submit]').prop('disabled', false);
-                    console.log(object.nonce);
+                    console.log(obj.nonce);
                     $("#payment-form").attr("action", '/user/payment/sale/paypal/{{$sale->id}}');
                    // $("#payment-form").submit();
                 }
