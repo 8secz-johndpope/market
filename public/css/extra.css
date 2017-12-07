@@ -1124,10 +1124,12 @@ span.green-text {
     color: green;
     font-weight: bold;
 }
+span.green-text, span.yellow-text{
+    line-height: 35px;
+}
 .right-message span{
     float: right;
     margin-left: 10px;
-    line-height: 35px;
 }
 a.message-back-button {
     display: none;
