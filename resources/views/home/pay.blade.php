@@ -420,10 +420,9 @@
         else if(this.id == 'saved-card'){
             $('#payment-form button[type=submit]').prop('disabled', false);
         }
-            if($('.fs-edit-btn span').hasClass('expanded')) {
-                $('.fs-edit-btn span').toggleClass('expanded');
-            } 
-        }
+        if($('.fs-edit-btn span').hasClass('expanded')) {
+            $('.fs-edit-btn span').toggleClass('expanded');
+        } 
     });
     $('button.fs-change-cc-btn').click(function(){
         var span = $(this).find('span');
