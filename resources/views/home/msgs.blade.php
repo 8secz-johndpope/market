@@ -5,12 +5,18 @@
 
     @if($message->type==='invoice')
         @if($message->from_msg===$user->id)
-            <div class="right-message"><span class="message"> Invoice Sent for {{$message->invoice->amount()}} &nbsp;&nbsp; <span class="message-time"> {{$message->timestamp()}}</span> </span></div>
+            <div class="right-message"><span class="message"> Invoice Sent for {{$message->invoice->amount()}} &nbsp;&nbsp; <span class="message-time"> {{$message->timestamp()}}</span> </span>
+                <span>
+                                                @if($message->invoice->status==1)<span class="green-text">Paid</span> @else  <span class="yellow-text">Pending</span> @endif
+                                            </span>
+            </div>
 
         @else
-            <div class="left-message"><span class="message"> Invoice received for {{$message->invoice->amount()}}  &nbsp;&nbsp;  <span class="message-time"> {{$message->timestamp()}}</span></span> <span>
+            <div class="left-message"><span class="message"> Invoice received for {{$message->invoice->amount()}}  &nbsp;&nbsp;  <span class="message-time"> {{$message->timestamp()}}</span></span>
+                <span>
                                                 @if($message->invoice->status==1)<span class="green-text">Paid</span> @else  <a class="btn btn-primary" href="/pay/invoice/{{$message->invoice->id}}">Pay Now</a> @endif
-                                            </span></div>
+                                            </span>
+            </div>
 
 
         @endif
