@@ -157,6 +157,7 @@
                             <form id="payment-form" action="/user/payment/invoice/stripe/{{$invoice->id}}" method="post">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="card" value="{{$def['id']}}" id="card">
+                                <input type="hidden" name="nonce" id="nonce">
                                 <button class="btn btn-submit" type="submit">Pay Now</button>
                             </form>
                         </div>
@@ -404,7 +405,11 @@
                             },
                             onPaymentMethodReceived: function (obj) {
                               //  doSomethingWithTheNonce(obj.nonce);
-                                document.location.href = '/user/payment/invoice/paypal/{{$invoice->id}}?nonce='+obj.nonce
+                                $('#nonce').val(obj.nonce);
+                                $('#payment-form button[type=submit]').prop('disabled', false);
+                                console.log(obj.nonce);
+                                $("#payment-form").attr("action", '/user/payment/invoice/paypal/{{$invoice->id}}');
+                                /*document.location.href = '/user/payment/invoice/paypal/{{$invoice->id}}?nonce='+obj.nonce*/
 
                             }
                         });

@@ -178,7 +178,7 @@ Route::get('/user/payment/sale/paypal/{id}', 'HomeController@sale_paypal');
 Route::post('/user/payment/sale/paypal/{id}', 'HomeController@sale_paypal');
 
 Route::get('/user/payment/invoice/paypal/{id}', 'HomeController@invoice_paypal');
-
+Route::post('/user/payment/invoice/paypal/{id}', 'HomeController@invoice_paypal');
 Route::get('/user/payment/paypal', 'HomeController@paypal');
 
 Route::get('/user/email/verify', 'HomeController@verify');
