@@ -164,7 +164,7 @@
             }else if(object.message){
 
                 // location.reload();
-                axios.get('/user/manage/rooms/'+room, {
+                axios.get('/user/manage/rooms/'+object.room_id+'/'+room, {
                     params: {}
                 })
                     .then(function (response) {
