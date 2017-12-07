@@ -125,6 +125,9 @@
                             </div>
                         </div>
                         <div class="col-sm-4">
+                            <div class="container-print">
+                                <button>Print</button>
+                            </div>
                         </div>
                         <div class="col-sm-4">
                         </div>
