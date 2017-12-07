@@ -1129,7 +1129,7 @@ span.green-text, span.yellow-text{
 }
 .right-message span{
     float: right;
-    margin-left: 10px;
+    margin-left: 7px;
 }
 a.message-back-button {
     display: none;
