@@ -124,16 +124,20 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
                             <div class="container-print">
                                 <button>Print</button>
                             </div>
                         </div>
                         <div class="col-sm-4">
+                            <img src="css/icon/icon-invoice.svg">
                         </div>
                         <div class="col-sm-4">
                         </div>
-                    </div>
                 </div>
             </div>
             <div class="col-sm-4">
