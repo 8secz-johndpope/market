@@ -641,7 +641,7 @@ class UserController extends BaseController
             $advert->publish();
             return ['msg'=>'posted'];
         }
-        return ['msg'=>'saved'];
+        return $advert;
     }
     public function buying(Request $request){
         $user = Auth::user();
