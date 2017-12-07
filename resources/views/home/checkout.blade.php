@@ -439,6 +439,7 @@
             if(this.id == 'new-card'){
                 $('#cc-new-ctr').show();
                 $('.fs-edit-btn span').toggleClass('expanded');
+                $('#payment-form input[type=submit]').prop('disabled', true);
             }
             else{ 
                 if(this.id == 'paypal'){
