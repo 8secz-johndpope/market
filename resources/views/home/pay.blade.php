@@ -189,7 +189,7 @@
                                     </div>
                                 </div>
                                 @endif
-                                <div class="pay-method" data-mp-id="new-cc">
+                                <!-- <div class="pay-method" data-mp-id="new-cc">
                                     <div class="col-l-p">
                                         <div class="radio-l">
                                             <input type="radio" name="pay-meth-radio" id="new-card">
@@ -212,7 +212,7 @@
                                                     <li class="discover"></li>
                                                     <li class="americaexpress"></li>
                                                     <li class="maestro"></li>
-                                                </ul> -->
+                                                </ul>
                                             </div>
                                             <div class="fs-edit">
                                                 <button type="button" class="fs-edit-btn img-btn">
@@ -280,6 +280,7 @@
                                         </form>
                                     </div>
                                 </div>
+                            -->
                                 <div class="pay-method" data-mp-id="paypal">
                                     <div class="col-l-p">
                                         <div class="radio-l">
