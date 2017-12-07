@@ -123,7 +123,7 @@
                     <div class="col-sm-12">
                         <div class="pay-container">
                             <form id="payment-form">
-                                <button class="btn btn-submit">Pay Now</button>
+                                <button class="btn btn-submit" type="submit">Pay Now</button>
                             </form>
                         </div>
                     </div>
