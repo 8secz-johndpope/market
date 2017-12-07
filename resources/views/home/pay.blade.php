@@ -140,7 +140,7 @@
                                     <img src="/css/icons/icon-trans-gray-invoce.svg">
                                 </div>
                                 <div class="img-invoice">
-                                    <img src="/css/icons/icon-by-stripe.svg">
+                                    <img src="/css/icons/icon-stripe.png">
                                 </div>
                             </div>
                         </div>
