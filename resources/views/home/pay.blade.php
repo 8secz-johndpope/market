@@ -67,7 +67,7 @@
                                         <div class="details-l">
                                             <strong>Payment terms</strong>
                                         </div>
-                                        <div class="details-r">Due on receipt</div>
+                                        <div class="details-r">Due inmediatly</div>
                                     </li>
                                     <li>
                                         <div class="details-l">
