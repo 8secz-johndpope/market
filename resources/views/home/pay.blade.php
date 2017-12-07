@@ -17,15 +17,24 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <div class="row">
-                    <div class="invoice-container clearfix">
-                        <div class="col-sm-12">
+                <div class="invoice-container clearfix">
+                    <div class="row">
+                        <div class="col-sm-6">
                             <div class="logo-container">
                                 <div class="logo-img">
                                     <img src="">
                                 </div>
                             </div>
                         </div>
+                         <div class="col-sm-6">
+                            <div class="title-inv-container">
+                                <div class="title-invoice">
+                                    <h3>INVOICE</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-sm-6">
                             <div class="seller-info">
                                 <div>
