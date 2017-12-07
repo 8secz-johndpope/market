@@ -156,6 +156,7 @@
 
         function got_message(data) {
             var object = JSON.parse(data);
+            console.log(object);
             if(object.message&&object.room_id==room)
             {
                 $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
