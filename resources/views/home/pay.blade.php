@@ -434,5 +434,15 @@
         else
            $('#cc-change-ctr').hide(); 
     });
+    $('input[type=radio][name=cc-saved-radio]').change(function(){
+        var val = $(this).val();
+        $('#saved-card').val(val);
+        $('#card').val(val);
+        $('button.fs-change-cc-btn span').toggleClass('expanded');
+        $('#cc-change-ctr').hide();
+        $('label[for=saved-card]').text($('label[for='+ this.id +']').text());
+        $('#funding-cc li').attr('class', '');
+        $('#funding-cc li').addClass($('label[for='+ this.id +'] .t-cc').attr('class'));  
+    });
 </script>
 @endsection
