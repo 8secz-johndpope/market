@@ -501,8 +501,8 @@ a.post-advert:hover{
 }
 .right-message .message {
     float: right;
-    background: #4a90e2;
-    color: white;
+    background: #e5ffca;
+    color: #555;
 }
 .left-message .message {
     background: #fff;
