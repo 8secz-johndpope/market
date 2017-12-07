@@ -67,7 +67,7 @@
                                         <div class="details-l">
                                             <strong>Payment terms</strong>
                                         </div>
-                                        <div class="details-r">Due inmediatly</div>
+                                        <div class="details-r">Due Immediately</div>
                                     </li>
                                     <li>
                                         <div class="details-l">
@@ -412,13 +412,18 @@
     </div>
 </div>
 <script>
-    $(".add-card").click(function () {
-        $(".all-divs").hide();
-        $(".add-card-form").show();
-    });
-    $(".cross-mark-add-card ").click(function () {
-        $(".all-divs").show();
-        $(".add-card-form").hide();
+    $('input[type=radio][name=pay-meth-radio]').change(function(){
+        if(this.id == 'paypal'){
+            $('#braintree-paypal-button').click();
+            $('#payment-form button[type=submit]').prop('disabled', true);
+        }
+        else if(this.id == 'saved-card'){
+            $('#payment-form button[type=submit]').prop('disabled', false);
+        }
+            if($('.fs-edit-btn span').hasClass('expanded')) {
+                $('.fs-edit-btn span').toggleClass('expanded');
+            } 
+        }
     });
 </script>
 @endsection
