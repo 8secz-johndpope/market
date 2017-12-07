@@ -154,7 +154,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="pay-container">
-                            <form id="payment-form">
+                            <form id="payment-form" action="/user/payment/invoice/stripe/{{$invoice->id}}" method="post">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="card" value="{{$def['id']}}" id="card">
                                 <button class="btn btn-submit" type="submit">Pay Now</button>
                             </form>
                         </div>
