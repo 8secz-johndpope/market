@@ -1136,6 +1136,7 @@ class MarketController extends BaseController
         $categories = Category::all();
         foreach ($categories as $category){
             if(count($category->children)===0){
+                if(!$category->can_apply())
                 echo $category->slug.'<br>';
             }
         }
