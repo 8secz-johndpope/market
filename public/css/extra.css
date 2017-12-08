@@ -550,6 +550,25 @@ span.message.get-invoice:before {
     margin-right: 7px;
     float: left;
 }
+.chat-secondary {
+    display: -webkit-flex;
+    display: flex;
+    font-size: 13px;
+    line-height: 19px;
+    margin-top: 2px;
+    min-width: 20px;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    color: rgba(0,0,0,0.6);
+}
+.chat-status {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    text-align: left;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
 .main-search{
     margin-top: 15px;
 }
