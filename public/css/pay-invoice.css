@@ -121,6 +121,18 @@
 .pay-methods{
 	margin-bottom: 15px;
 }
+.terms-container, .notes-container {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-right: -15px;
+}
+.notes-container {
+	border-top: none;
+}
+.terms-container{
+	border-bottom: none;
+}
 .btn-print {
     padding: 10px 20px;
     background: #ddd;
