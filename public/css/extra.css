@@ -1047,6 +1047,17 @@ ul.image-gallery-ul {
     margin-top: -1px;
     display: flex;
 }
+.media-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+    flex-grow: 1;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 21px;
+    vertical-align: baseline;
+}
 .media-left{
     vertical-align: middle;
     padding: 0 15px 0 13px;
