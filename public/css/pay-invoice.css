@@ -113,6 +113,9 @@
     width: 100%;
     display: inline-block;
 }
+.pay-methods{
+	padding-bottom: 15px;
+}
 .btn-print {
     padding: 10px 20px;
     background: #ddd;
