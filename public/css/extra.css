@@ -518,10 +518,16 @@ a.post-advert:hover{
     float: right;
     background: #e5ffca;
     color: #555;
+    position: relative;
 }
 .right-message .message:before{
     content: '';
-    position:absolute;
+    position: absolute;
+    border-width: 0px 0px 10px 10px;
+    border-style: solid;
+    top: 0;
+    right: -7px;
+    border-color: transparent #e5ffca;
 }
 .left-message .message {
     background: #fff;
