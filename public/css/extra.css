@@ -547,7 +547,6 @@ span.message.get-invoice:before {
     background: #fff;
     color: #555;
     position:relative;
-    float: left;
     margin-right: 7px;
 }
 .main-search{
