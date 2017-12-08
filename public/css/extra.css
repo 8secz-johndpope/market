@@ -852,6 +852,15 @@ li.list-group-item a {
     -webkit-flex-grow: 1;
     text-align: left;
 }
+.chat-meta {
+    flex: none;
+    line-height: 14px;
+    color: rgba(0,0,0,0.4);
+    margin-left: 6px;
+    font-size: 12px;
+    margin-top: 4px;
+    display: flex;
+}
 .listing-side .listing-thumbnail{
     height: 49px;
 }
@@ -1025,6 +1034,18 @@ ul.image-gallery-ul {
 .media-body {
     border-top: 1px solid #f2f2f2;
     vertical-align: middle;
+    flex-direction: column;
+    min-width: 0;
+    display: flex;
+    width: 323px;
+    padding-right: 15px;
+}
+.chat-main {
+    line-height: normal;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: -1px;
+    display: flex;
 }
 .media-left{
     vertical-align: middle;
