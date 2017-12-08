@@ -992,6 +992,8 @@ ul.image-gallery-ul {
     height: 100%;
     background: #e5ddd5 url(/css/back-messages-s.png);
     border-left: 1px solid rgba(0,0,0,0.03);
+    background-position: center 100%;
+    background-repeat: repeat;
     /*padding: 10px;*/
 }
 #all-rooms .media {
