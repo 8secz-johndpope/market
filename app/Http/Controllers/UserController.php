@@ -1362,9 +1362,9 @@ class UserController extends BaseController
         if($type==='live'){
             $adverts=$user->live()->paginate(15);
         }else if($type==='draft'){
-            $adverts=$user->drafts;
+            $adverts=$user->drafts()->paginate(15);
         }else{
-            $adverts=$user->inactive;
+            $adverts=$user->inactive()->paginate(15);
         }
         $ads=array();
         foreach ($adverts as $advert){
