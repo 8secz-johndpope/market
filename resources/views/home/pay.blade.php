@@ -150,9 +150,6 @@
                                 <div class="img-invoice">
                                     <img src="/css/icons/icon-invoice-ww.svg">
                                 </div>
-                                <div class="img-invoice">
-                                    <img src="/css/icons/icon-by-stripe.svg">
-                                </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
