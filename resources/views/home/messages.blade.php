@@ -79,13 +79,16 @@
                 <div class="right-div-messages {{$rightclass}}">
                     <div class="mtop">
                         <a class="message-back-button"  href="/user/manage/messages">Back</a>
+                        <div class="title-product">
                             <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4>{{$cur->advert->param('title')}}</h4></a>
-                        <a class="btn btn-primary" href="/room/invoice/create/{{$cur->id}}">Create Invoice</a>
                             @if($cur->advert->meta('price')>=0)
                                 <span class="product-price">£ {{$cur->advert->meta('price')/100}}{{$cur->advert->meta('price_frequency')}}
                                 </span>
                             @endif
-
+                        </div>
+                        <div class="button-invoice">
+                            <a class="btn btn-primary" href="/room/invoice/create/{{$cur->id}}">Create Invoice</a>
+                        </div>
                     </div>
 
                     <div class="all-messages" id="all-msg">
