@@ -1359,9 +1359,9 @@ class UserController extends BaseController
     public function add_images(Request $request){
         $user = Auth::user();
 
-        foreach ($request->images as $image) {
+        foreach ($request->images as $img) {
             $image = new Image;
-            $image->image = $image;
+            $image->image = $img;
             $image->user_id = $user->id;
             $image->save();
         }
