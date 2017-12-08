@@ -77,13 +77,16 @@
                                         <span class="message-time"> {{$room->last_message()->timestamp()}}</span>
                                     </div>
                                 </div>
-                                @if($room->last_message())
-                                <p class="@if($room->unread===1) unread-message @endif">
-                                    {{$room->last_message()->message}}
-                                </p>
-                                <strong>{{$room->last_message()->user->name}}</strong>
-                                @endif
-                                
+                                <div class="chat-secondary">
+                                    <div class="chat-status" 
+                                        @if($room->last_message())
+                                        <p class="@if($room->unread===1) unread-message @endif">
+                                            {{$room->last_message()->message}}
+                                        </p>
+                                        <strong>{{$room->last_message()->user->name}}</strong>
+                                    </div>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                         @endforeach
