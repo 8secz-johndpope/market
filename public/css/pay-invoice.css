@@ -134,6 +134,9 @@
 	margin-top: 15px;
 	border-bottom: none;
 }
+.terms-container p, .notes-container p {
+    margin-bottom: 0;
+}
 .btn-print {
     padding: 10px 20px;
     background: #ddd;
