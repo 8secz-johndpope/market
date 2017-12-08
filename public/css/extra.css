@@ -953,12 +953,10 @@ ul.image-gallery-ul {
     width: 400px;
     float: left;
     overflow: auto;
-    margin-bottom: 30px;
-    padding: 10px;
     height: 100%;
 }
 .full-width {
-    height: 70vh;
+    height: 75vh;
 }
 .right-div-messages {
     position: relative;
