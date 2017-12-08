@@ -135,7 +135,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-offset-6 col-sm-6">
                             <button class="btn btn-submit" type="submit">Pay Now</button>
                         </div>
                     </div>
