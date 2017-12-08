@@ -84,7 +84,6 @@
                                         <p class="@if($room->unread===1) unread-message @endif">
                                             {{$room->last_message()->message}}
                                         </p>
-                                        <strong>{{$room->last_message()->user->name}}</strong>
                                     </div>
                                     <div class="chat-meta">
                                          <strong>{{$room->last_message()->user->name}}</strong>
