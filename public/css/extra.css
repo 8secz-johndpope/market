@@ -1058,6 +1058,9 @@ ul.image-gallery-ul {
     line-height: 21px;
     vertical-align: baseline;
 }
+.grecaptcha-badge{
+    display: none;
+}
 .media-left{
     vertical-align: middle;
     padding: 0 15px 0 13px;
