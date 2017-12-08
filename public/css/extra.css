@@ -833,6 +833,7 @@ li.list-group-item a {
     border-radius: 50%;
     background-color: #dfe5e7;
     overflow: hidden;
+    border: 1px solid #d8d6d9;
 }
 .listing-side .listing-thumbnail{
     height: 49px;
@@ -847,7 +848,6 @@ li.list-group-item a {
     width: 100%;
     overflow: hidden;
     position: relative;
-    border: 1px solid #d8d6d9;
 }
  .listing-thumbnail img,.listing-thumbnail-big img{
     width: auto;
