@@ -154,7 +154,13 @@
                                 </div>
                             </div>
                         </div>
-                        
+                         <div class="col-sm-3">
+                            <div class="secure-stripe-container">
+                                <div class="secure-stripe-img">
+                                    <img src="/css/icons/stripe-secure.png">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
