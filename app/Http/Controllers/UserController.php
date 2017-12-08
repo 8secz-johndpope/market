@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 use App\Model\Business;
 use App\Model\FieldValue;
+use App\Model\Image;
 use App\Model\Sale;
 use Illuminate\Support\Facades\Redis;
 
@@ -1358,7 +1359,6 @@ class UserController extends BaseController
     }
     public function add_images(Request $request){
         $user = Auth::user();
-
         foreach ($request->images as $img) {
             $image = new Image;
             $image->image = $img;
