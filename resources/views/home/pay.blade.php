@@ -114,7 +114,16 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-sm-6"></div>
+                        <div class="col-sm-6">
+                            <div class="terms-container">
+                                <p><strong>Terms and conditions</strong></p>
+                                <p>Full refund for 60 days after purchase.</p>
+                            </div>
+                            <div class="notes-container">
+                                <p><strong>Note to recipient</strong></p>
+                                <p>Thank you for business. Enjoy</p>
+                            </div>
+                        </div>
                         <div class="col-sm-6">
                             <div class="total">
                                 <table class="w100p amount_total">
