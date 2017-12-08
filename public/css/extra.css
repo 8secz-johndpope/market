@@ -995,6 +995,9 @@ ul.image-gallery-ul {
     width: calc(100% - 60px);
     display: inline-block;
 }
+.message-input-div input {
+    border: none;
+}
 .message-send-div {
     width: 50px;
     display: inline-block;
