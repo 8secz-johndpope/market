@@ -113,6 +113,12 @@
     width: 100%;
     display: inline-block;
 }
+.secure-stripe-img {
+    text-align: center;
+}
+.secure-stripe-img img {
+    height: 94px;
+}
 .pay-methods{
 	margin-bottom: 15px;
 }
