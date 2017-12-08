@@ -142,19 +142,19 @@
                 </div>
                 <div class="buttons-bottom">
                     <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <div class="container-print">
                                 <button class="btn btn-print">Print</button>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="container-img-invoice">
                                 <div class="img-invoice">
                                     <img src="/css/icons/icon-invoice-ww.svg">
                                 </div>
                             </div>
                         </div>
-                         <div class="col-sm-3">
+                         <div class="col-sm-4">
                             <div class="secure-stripe-container">
                                 <div class="secure-stripe-img">
                                     <img src="/css/icons/stripe-secure.png">
@@ -349,12 +349,13 @@
                             </fieldset>
                         </div>
                     </div>
-                    <div class="col-sm-12">
+                    <!--<div class="col-sm-12">
                         <div class="secure-stripe-container">
                             <div class="secure-stripe-img">
                                 <img src="/css/icons/stripe-secure.svg">
                             </div>
                         </div>
+                    -->
                     </div>
                 </div>
             </div>
