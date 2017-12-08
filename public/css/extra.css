@@ -535,14 +535,15 @@ a.post-advert:hover{
     border-color: transparent #e5ffca;
 }
 .left-message .message:before{
-    border-width: 0px 0px 10px 10px;
+    border-width: 0px 10px 10px 0px;
     border-style: solid;
-    right: -7px;
-    border-color: transparent #e5ffca;
+    left: -7px;
+    border-color: transparent #fff;
 }
 .left-message .message {
     background: #fff;
     color: #555;
+    position:relative;
 }
 .main-search{
     margin-top: 15px;
