@@ -966,6 +966,7 @@ ul.image-gallery-ul {
     float: left;
     width: calc(100% - 400px);
     height: 100%;
+    background-color: #FAF7EB;
     /*padding: 10px;*/
 }
 .bottom-div-messages {
