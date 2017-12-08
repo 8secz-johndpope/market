@@ -1360,7 +1360,7 @@ class UserController extends BaseController
         $user = Auth::user();
 
         if($type==='live'){
-            $adverts=$user->live;
+            $adverts=$user->live()->paginate(15);
         }else if($type==='draft'){
             $adverts=$user->drafts;
         }else{
