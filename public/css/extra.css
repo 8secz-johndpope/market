@@ -254,6 +254,19 @@ a.add-bank-link {
     padding: 16px;
     background: #eee;
 }
+.title-product a {
+    display: inline-block;
+    margin-right: 10px;
+}
+.title-product {
+    display: inline-block;
+    width: 80%;
+}
+.button-invoice {
+    display: inline-block;
+    width: 19%;
+    text-align: right;
+}
 .all-messages {
     overflow: auto;
     max-height: calc(100% - 150px);
