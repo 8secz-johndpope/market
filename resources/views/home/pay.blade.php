@@ -148,7 +148,7 @@
                         <div class="col-sm-6">
                             <div class="container-img-invoice">
                                 <div class="img-invoice">
-                                    <img src="/css/icons/icon-trans-gray-invoce.svg">
+                                    <img src="/css/icons/icon-invoce-ww.svg">
                                 </div>
                                 <div class="img-invoice">
                                     <img src="/css/icons/icon-by-stripe.svg">
