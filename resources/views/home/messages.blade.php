@@ -67,11 +67,23 @@
                                 </a>
                             </div>
                             <div class="media-body">
-                                <a href="/user/manage/messages/{{$room->id}}"><h4 class="media-heading">{{$room->title}}</h4></a>
+                                <div class="chat-main">
+                                    <div class="chat-title">
+                                        <a href="/user/manage/messages/{{$room->id}}">
+                                            <h4 class="media-heading">{{$room->title}}</h4>
+                                        </a>
+                                    </div>
+                                    <div class="chat-meta">
+                                        <span class="message-time"> {{$room->last_message()->timestamp()}}</span>
+                                    </div>
+                                </div>
                                 @if($room->last_message())
-                                <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
+                                <p class="@if($room->unread===1) unread-message @endif">
+                                    {{$room->last_message()->message}}
+                                </p>
                                 <strong>{{$room->last_message()->user->name}}</strong>
-                                    @endif
+                                @endif
+                                
                             </div>
                         </div>
                         @endforeach
