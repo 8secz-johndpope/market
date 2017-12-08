@@ -827,12 +827,15 @@ li.list-group-item a {
     overflow: hidden;
 }
 .listing-side {
-    width: 120px;
+    width: 49px;
     position: relative;
     float: left;
+    border-radius: 50%;
+    background-color: #dfe5e7;
+    overflow: hidden;
 }
 .listing-side .listing-thumbnail{
-    height: 110px;
+    height: 49px;
 }
 .listing-side-big .listing-thumbnail-big{
     height: 450px;
