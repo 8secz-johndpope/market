@@ -990,7 +990,7 @@ ul.image-gallery-ul {
     float: left;
     width: calc(100% - 400px);
     height: 100%;
-    background-color: #E6DDD6;
+    background: #e5ddd5 url(/css/back-messages-s.png);
     border-left: 1px solid rgba(0,0,0,0.03);
     /*padding: 10px;*/
 }
