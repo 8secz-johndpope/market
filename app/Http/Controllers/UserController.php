@@ -1356,6 +1356,19 @@ class UserController extends BaseController
         $user = Auth::user();
         return $user->images;
     }
+    public function add_images(Request $request){
+        $user = Auth::user();
+
+        foreach ($request->images as $image) {
+            $image = new Image;
+            $image->image = $image;
+            $image->user_id = $user->id;
+            $image->save();
+        }
+            return ['msg'=>'done'];
+
+
+    }
 
     public function adverts(Request $request)
     {

@@ -47,6 +47,8 @@ Route::get('/user/room/{id}','MessageController@room')->middleware('auth:api');
 
 Route::get('/user/get/profile', 'UserController@pro')->middleware('auth:api');
 
+Route::get('/user/images/add', 'UserController@add_images')->middleware('auth:api');
+
 
 Route::post('/user/login', 'UserController@login');
 Route::middleware('auth:api')->get('/user/adverts', 'UserController@adverts');
