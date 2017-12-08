@@ -58,6 +58,9 @@
     border: 1px solid #ddd;
     margin-top: 15px;
     margin-bottom: 15px;
+    margin-left: -15px;
+    border-left: none;
+    height: 112px;
 }
 .amount_total>tbody>tr>td {
     padding: 5px 10px;
@@ -129,10 +132,12 @@
 }
 .notes-container {
 	border-top: none;
+	padding-bottom: 15px;
 }
 .terms-container{
 	margin-top: 15px;
 	border-bottom: none;
+	padding-top: 15px;
 }
 .terms-container p, .notes-container p {
     margin-bottom: 0;
