@@ -507,8 +507,11 @@ a.post-advert:hover{
     text-align: center;
 }
 .left-message,.right-message {
-    padding: 10px;
     min-height: 40px;
+    padding-left: 9%;
+    padding-right: 9%;
+    margin-bottom: 12px;
+    position: relative;
 }
 .message{
     padding: 6px 7px 8px 9px;
