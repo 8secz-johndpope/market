@@ -540,6 +540,9 @@ a.post-advert:hover{
     left: -7px;
     border-color: transparent #fff;
 }
+span.message.get-invoice:before {
+    border-color: transparent #FAA73F;
+}
 .left-message .message {
     background: #fff;
     color: #555;
