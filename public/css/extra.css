@@ -969,6 +969,10 @@ ul.image-gallery-ul {
     border-left: 1px solid rgba(0,0,0,0.03);
     /*padding: 10px;*/
 }
+#all-rooms .media {
+    margin-top: 0;
+    display: table;
+}
 .bottom-div-messages {
     position: absolute;
     bottom: 0;
