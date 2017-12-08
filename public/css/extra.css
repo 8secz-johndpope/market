@@ -252,6 +252,7 @@ a.add-bank-link {
 .mtop {
     border-bottom: 1px solid #d8d6d9;
     padding: 16px;
+    background: #eee;
 }
 .all-messages {
     overflow: auto;
