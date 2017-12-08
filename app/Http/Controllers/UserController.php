@@ -1351,7 +1351,11 @@ class UserController extends BaseController
 
         return ['status' => 'success'];
     }
-
+    public function images(Request $request)
+    {
+        $user = Auth::user();
+        return $user->images;
+    }
 
     public function adverts(Request $request)
     {
