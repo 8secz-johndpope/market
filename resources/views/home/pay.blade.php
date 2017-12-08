@@ -343,6 +343,13 @@
                             </fieldset>
                         </div>
                     </div>
+                    <div class="secure-stripe-container">
+                        <div class="col-ms-12">
+                            <div class="secure-stripe-img">
+                                <img src="/css/icons/stripe-secure.svg">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
