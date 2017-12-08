@@ -965,7 +965,7 @@ ul.image-gallery-ul {
     float: left;
     width: calc(100% - 400px);
     height: 100%;
-    background-color: #FAF7EB;
+    background-color: #E6DDD6;
     border-left: 1px solid rgba(0,0,0,0.03);
     /*padding: 10px;*/
 }
