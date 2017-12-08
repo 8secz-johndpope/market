@@ -1140,7 +1140,7 @@ img.icon-small {
     overflow: hidden;
     width: 260px;
     text-overflow: ellipsis;
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 .sold-picture{
     max-width: 200px;
