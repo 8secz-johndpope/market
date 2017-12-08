@@ -523,12 +523,20 @@ a.post-advert:hover{
     color: #555;
     position: relative;
 }
-.right-message .message:before{
+.message:before{
     content: '';
     position: absolute;
+    top: 0;
+}
+.right-message .message:before{
     border-width: 0px 0px 10px 10px;
     border-style: solid;
-    top: 0;
+    right: -7px;
+    border-color: transparent #e5ffca;
+}
+.left-message .message:before{
+    border-width: 0px 0px 10px 10px;
+    border-style: solid;
     right: -7px;
     border-color: transparent #e5ffca;
 }
