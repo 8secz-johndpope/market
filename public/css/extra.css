@@ -512,6 +512,8 @@ a.post-advert:hover{
     padding-right: 9%;
     margin-bottom: 12px;
     position: relative;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 .message{
     padding: 6px 7px 8px 9px;
@@ -547,6 +549,7 @@ span.message.get-invoice:before {
     background: #fff;
     color: #555;
     position:relative;
+    float: left;
 }
 .main-search{
     margin-top: 15px;
