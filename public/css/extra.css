@@ -1058,6 +1058,8 @@ ul.image-gallery-ul {
     display: flex;
     width: 323px;
     padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .chat-main {
     line-height: normal;

@@ -198,6 +198,17 @@
                     .catch(function (error) {
                         console.log(error);
                     });
+                    axios.get('/user/manage/rooms/'+object.room_id+'/'+room, {
+                    params: {}
+                })
+                    .then(function (response) {
+                        console.log(response);
+                        $('#all-rooms').html(response.data);
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
                // $('#all-msg').append('<div class="left-message"><span class="message">'+object.message+'</span></div>');
 
             }else if(object.message){
