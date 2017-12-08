@@ -835,6 +835,17 @@ li.list-group-item a {
     overflow: hidden;
     border: 1px solid #d8d6d9;
 }
+.media-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+    flex-grow: 1;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 21px;
+    vertical-align: baseline;
+}
 .listing-side .listing-thumbnail{
     height: 49px;
 }
