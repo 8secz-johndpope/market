@@ -122,8 +122,8 @@
 	margin-bottom: 15px;
 }
 .terms-container, .notes-container {
-    margin-top: 15px;
-    padding: 15px;
+   
+    padding: 0 15px;
     border: 1px solid #ddd;
     margin-right: -15px;
 }
@@ -131,6 +131,7 @@
 	border-top: none;
 }
 .terms-container{
+	margin-top: 15px;
 	border-bottom: none;
 }
 .btn-print {
