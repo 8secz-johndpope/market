@@ -519,6 +519,10 @@ a.post-advert:hover{
     background: #e5ffca;
     color: #555;
 }
+.right-message .message:before{
+    content: '';
+    position:absolute;
+}
 .left-message .message {
     background: #fff;
     color: #555;
