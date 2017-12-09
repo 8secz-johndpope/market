@@ -238,7 +238,7 @@
                                         <div class="radio-r">
                                             <label class="mt-label" for="new-card">
                                                 <span class="mt-cc"></span>
-                                                Add credit or debit card
+                                                Pay with credit card
                                             </label>
                                         </div>
                                     </div>
