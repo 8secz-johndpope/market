@@ -246,6 +246,9 @@ ul.cc-logos li {
     border-radius: 0;
     background-clip: padding-box;
 }
+.action .cf-cancel {
+    margin-right: 15px;
+}
 .form .floating-label .floated-always {
     top: -3px;
 }
