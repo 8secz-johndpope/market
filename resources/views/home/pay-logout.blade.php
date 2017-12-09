@@ -118,7 +118,7 @@
                             <div class="row total-terms-container">
                                 <div class="col-sm-6">
                                     <div class="terms-container">
-                                        <p><strong>Terms and conditions</strong></p>
+                                        <p><strong>Terms</strong></p>
                                         <p>Full refund for 60 days after purchase.</p>
                                     </div>
                                     <div class="notes-container">
