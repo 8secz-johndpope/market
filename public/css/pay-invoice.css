@@ -175,6 +175,12 @@
 	.seller-name{
 		font-size: 20px;
 	}
+	.pay-methods.logout .col-r-p {
+    	width: 25%;
+	}
+	.pay-methods.logout .col-l-p {
+    	width: 72%;
+	}
 }
 
 @media screen and (min-width: 992px){
