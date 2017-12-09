@@ -440,16 +440,13 @@
             $('.btn.btn-submit').prop('disabled', true);
             if($('button.fs-edit-btn').hasClass('expanded')){
                 $('button.fs-edit-btn').toggleClass('expanded');
-                $('#cc-new-ctr').hide(); 
             }
         }
         else if(this.id == 'new-card'){
             $('.btn.btn-submit').prop('disabled', false);
             $('#cc-new-ctr').show();
-        }
-        if($('.fs-edit-btn span').hasClass('expanded')) {
             $('.fs-edit-btn span').toggleClass('expanded');
-        } 
+        }
     });
     $('button.fs-edit-btn').click(function(){
         var span = $(this).find('span');
