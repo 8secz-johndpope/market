@@ -70,7 +70,7 @@
                                 <div class="chat-main">
                                     <div class="chat-title">
                                         <a href="/user/manage/messages/{{$room->id}}">
-                                            <h4 class="media-heading">{{$room->title}}</h4>
+                                            <h4 class="media-heading">{{$room->title}} ( {{$room->other()->display_name}})</h4>
                                         </a>
                                     </div>
                                     <div class="chat-meta">
