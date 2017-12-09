@@ -1041,6 +1041,9 @@ ul.image-gallery-ul {
     overflow: auto;
     height: 100%;
 }
+.chat-title a {
+    width: 100%;
+}
 .full-width {
     height: calc(100vh - 110px);
 }
