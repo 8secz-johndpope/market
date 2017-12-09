@@ -2010,6 +2010,7 @@ class UserController extends BaseController
 
 
         $body['user_id']=0;
+        $body['id']=$advert->id;
 
         $advert->user_id =0;
         $advert->save();
