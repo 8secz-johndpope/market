@@ -114,41 +114,40 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="row total-terms-container">
-                            <div class="col-sm-6">
-                                <div class="terms-container">
-                                    <p><strong>Terms and conditions</strong></p>
-                                    <p>Full refund for 60 days after purchase.</p>
+                        <div class="col-sm-12">
+                            <div class="row total-terms-container">
+                                <div class="col-sm-6">
+                                    <div class="terms-container">
+                                        <p><strong>Terms and conditions</strong></p>
+                                        <p>Full refund for 60 days after purchase.</p>
+                                    </div>
+                                    <div class="notes-container">
+                                        <p><strong>Note to recipient</strong></p>
+                                        <p>Thank you for business. Enjoy</p>
+                                    </div>
                                 </div>
-                                <div class="notes-container">
-                                    <p><strong>Note to recipient</strong></p>
-                                    <p>Thank you for business. Enjoy</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="total">
-                                    <table class="w100p amount_total">
-                                        <tbody>
-                                            <tr>
-                                                <td>Subtotal</td>
-                                                <td class="text-right">£{{$invoice->amount()}}</td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td class="text-right"></td>
-                                            </tr>
-                                            <tr class="row-total">
-                                                <td>Total</td>
-                                                <td class="text-right">£{{$invoice->amount()}}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="col-sm-6">
+                                    <div class="total">
+                                        <table class="w100p amount_total">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Subtotal</td>
+                                                    <td class="text-right">£{{$invoice->amount()}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td class="text-right"></td>
+                                                </tr>
+                                                <tr class="row-total">
+                                                    <td>Total</td>
+                                                    <td class="text-right">£{{$invoice->amount()}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                         <div class="col-sm-12 invoice-pay-logo">
                             <div class="row">
                                 <div class="col-sm-4">
