@@ -211,7 +211,7 @@
             </div>
             <div class="col-md-4 col-xs-12">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 hidden-xs hidden-sm">
                         <div class="pay-container">
                             <form id="payment-form" action="/user/payment/invoice/stripe/{{$invoice->id}}" method="post">
                                 {{ csrf_field() }}
