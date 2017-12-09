@@ -162,6 +162,9 @@
 	.total{
 		margin-left: 0;
 	}
+	.terms-container{
+		margin-right: 0;
+	}
 }
 
 @media screen and (min-width: 992px){
