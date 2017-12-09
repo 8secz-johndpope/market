@@ -29,11 +29,11 @@ a.right.carousel-control {
     background: #ececec;
 }
 #current-image img {
-    height: 100%;
+    height: calc(100% - 30px);
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: calc(50% - 20px);
     background: #ececec;
 }
 .carousel-inner {
