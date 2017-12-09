@@ -854,6 +854,12 @@ li.list-group-item a {
     overflow: hidden;
     border: 1px solid #d8d6d9;
 }
+.product .listing-side {
+    width: 110px;
+    border-radius: 0;
+    background-color: #dfe5e7;
+    border: 1px solid #d8d6d9;
+}
 .media-heading {
     margin-top: 0;
     margin-bottom: 5px;
@@ -882,6 +888,9 @@ li.list-group-item a {
 }
 .listing-side .listing-thumbnail{
     height: 49px;
+}
+.product .listing-side .listing-thumbnail {
+    height: 110px;
 }
 .listing-side-big .listing-thumbnail-big{
     height: 450px;
