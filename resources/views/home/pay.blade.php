@@ -19,7 +19,7 @@
             <div class="col-md-8 col-xs-12">
                 <div class="invoice-container clearfix">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 col-xs-6">
                             <div class="logo-container">
                                 <div class="logo-img">
                                     @if(isset($seller->business))
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                         </div>
-                         <div class="col-sm-6">
+                         <div class="col-sm-6 co-xs-6">
                             <div class="title-inv-container">
                                 <div class="title-invoice">
                                     <h3>INVOICE</h3>
