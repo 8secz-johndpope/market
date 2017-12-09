@@ -293,6 +293,16 @@
                                                         <input type="text" class="input-field cf-card-sec" id="cvc" name="cvc">
                                                     </span>
                                                 </div>
+                                                <div class="row">
+                                                    <span class="floating-label">
+                                                        <label for="expiry">First name:</label>
+                                                        <input type="text" class="input-field cf-card-fname" id="name" name="name">
+                                                    </span>
+                                                    <span class="floating-label">
+                                                        <label for="cvc">Surname:</label>
+                                                        <input type="text" class="input-field cf-card-sname" id="surname" name="surname">
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                         <div id="bill-add-ctr">
