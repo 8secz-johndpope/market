@@ -148,6 +148,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-sm-offset-6 col-sm-6 button-pay">
+                            <button class="btn btn-submit" type="submit" disabled="true">Pay Now</button>
+                        </div>
                         <div class="col-sm-12 invoice-pay-logo">
                             <div class="row">
                                 <div class="col-sm-4 col-xs-12">
@@ -172,9 +175,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-offset-6 col-sm-6 button-pay">
-                            <button class="btn btn-submit" type="submit" disabled="true">Pay Now</button>
                         </div>
                     </div>
                 </div>
