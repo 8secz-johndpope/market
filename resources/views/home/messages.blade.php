@@ -151,7 +151,7 @@
                             <input type="hidden" name="rid" value="{{$cur->id}}">
                             {{ csrf_field() }}                            <div class="message-input-div"><input type="text" class="form-control"  id="message" name="message" placeholder="Type Your Message here" required></div>
                             <div class="message-send-div">
-                                <button type="submit"  class="btn btn-primary g-recaptcha" data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit">
+                                <button type="submit"  class="btn btn-send-msg g-recaptcha" data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt" data-callback="onSubmit">
                                     <span class="glyphicon glyphicon-send send"></span>
                                 </button>
                             </div>

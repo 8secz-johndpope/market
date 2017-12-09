@@ -1113,8 +1113,8 @@ ul.image-gallery-ul {
     border: none;
 }
 .message-send-div {
-    width: 50px;
     display: inline-block;
+    vertical-align: middle;
 }
 ul.image-gallery-ul li {
     display: table-cell;
