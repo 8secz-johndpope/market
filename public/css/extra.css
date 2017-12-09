@@ -1079,14 +1079,17 @@ ul.image-gallery-ul {
 }
 .media-heading {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     flex-grow: 1;
     position: relative;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 16px;
     line-height: 21px;
-    vertical-align: baseline;
+    display: inline-block;
+    max-width: calc(100% - 75px);
+    overflow: hidden;
+    vertical-align: middle;
 }
 .grecaptcha-badge{
     display: none;
