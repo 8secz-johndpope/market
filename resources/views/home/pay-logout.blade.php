@@ -420,6 +420,10 @@
         if(this.id == 'paypal'){
             $('#braintree-paypal-button').click();
             $('.btn.btn-submit').prop('disabled', true);
+            if($('button.fs-edit-btn').hasClass('expanded')){
+                $('button.fs-edit-btn').toggleClass('expanded');
+                $('#cc-new-ctr').hide(); 
+            }
         }
         else if(this.id == 'saved-card'){
             $('.btn.btn-submit').prop('disabled', false);
