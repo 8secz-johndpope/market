@@ -154,6 +154,12 @@
     margin-bottom: 15px;
     margin-top: 15px;
 }
+@media screen and (max-width: 767px){
+	.row{
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
 
 @media screen and (min-width: 992px){
 	.col-l-p .radio-r {
