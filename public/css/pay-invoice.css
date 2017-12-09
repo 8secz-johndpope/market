@@ -169,6 +169,9 @@
 	.button-pay {
     	padding-left: 15px;
 	}
+	.seller-name{
+		font-size: 20px;
+	}
 }
 
 @media screen and (min-width: 992px){
