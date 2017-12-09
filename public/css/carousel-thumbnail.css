@@ -29,7 +29,7 @@ a.right.carousel-control {
     background: #ececec;
 }
 #current-image img {
-    height: calc(100% - 30px);
+    height: calc(100% - 40px);
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
