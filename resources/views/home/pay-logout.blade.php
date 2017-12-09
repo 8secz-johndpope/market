@@ -456,7 +456,7 @@
         else if(this.id == 'new-card'){
             $('.btn.btn-submit').prop('disabled', false);
             $('#cc-new-ctr').show();
-            if(!$('button.fs-edit-btn').hasClass()){
+            if(!($('button.fs-edit-btn').hasClass())){
                 $('.fs-edit-btn span').toggleClass('expanded');
             }
         }
