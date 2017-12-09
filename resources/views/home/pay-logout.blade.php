@@ -313,13 +313,27 @@
                                                             </span>
                                                         </div>
                                                         <div class="af-row">
-                                                            <div class="floating-label">
-                                                                <label for="address1">Street address</label>
+                                                            <span class="floating-label">
+                                                                <label for="address1" class="floated">Street address</label>
                                                                 <input type="text" name="address1" id="address1" class="input-field">
-                                                            </div>
+                                                            </span>
                                                         </div>
-                                                        <div class="af-row"></div>
-                                                        <div class="af-row"></div>
+                                                        <div class="af-row">
+                                                            <span class="floating-label">
+                                                                <label for="address2" class="floated">Street address 2(optional)</label>
+                                                                <input type="text" name="address2" id="address2" class="input-field">
+                                                            </span>
+                                                        </div>
+                                                        <div class="af-row">
+                                                            <span class="floating-label">
+                                                                <label for="city" class="floated">City</label>
+                                                                <input type="text" name="city" id="city" class="input-field">
+                                                            </span>
+                                                            <span class="floating-label postcode">
+                                                                <label for="postcode" class="floated">Postcode</label>
+                                                                <input type="text" name="postcode" id="postcode" class="input-field">
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
