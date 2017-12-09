@@ -456,7 +456,9 @@
         else if(this.id == 'new-card'){
             $('.btn.btn-submit').prop('disabled', false);
             $('#cc-new-ctr').show();
-            $('.fs-edit-btn span').toggleClass('expanded');
+            if(!$('button.fs-edit-btn').hasClass()){
+                $('.fs-edit-btn span').toggleClass('expanded');
+            }
         }
     });
     $('button.fs-edit-btn').click(function(){
