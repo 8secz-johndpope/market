@@ -561,7 +561,9 @@ class MarketController extends BaseController
                                 'field' => 'id'
                             ]]
                         ]
-                    ]
+                    ],
+                    "sort"=> [["created_at"=> ["order"=> "desc"]]]
+
                 ]
             ];
             $response = $this->client->search($params);
