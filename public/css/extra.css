@@ -1106,7 +1106,7 @@ ul.image-gallery-ul {
     background: #f5f1ee;
 }
 .message-input-div {
-    width: calc(100% - 60px);
+    width: calc(100% - 45px);
     display: inline-block;
 }
 .message-input-div input {
@@ -1115,6 +1115,11 @@ ul.image-gallery-ul {
 .message-send-div {
     display: inline-block;
     vertical-align: middle;
+}
+.btn.btn-send-msg {
+    border-radius: 50%;
+    color: #fff;
+    background: #009888;
 }
 ul.image-gallery-ul li {
     display: table-cell;
