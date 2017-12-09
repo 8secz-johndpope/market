@@ -981,7 +981,7 @@
                             </div>
                             <hr>
                             <div class="payment-option invoice">
-                                <h4>Send Me a Bill</h4>
+                                <h4>Send <em>Me</em> a Bill</h4>
                             </div>
                         </div>
                     </div>
