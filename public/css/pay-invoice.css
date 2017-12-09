@@ -161,6 +161,7 @@
 	}
 	.total{
 		margin-left: 0;
+		border-left: 1px solid #ddd;
 	}
 	.terms-container, .notes-container{
 		margin-right: 0;
