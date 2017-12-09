@@ -153,6 +153,11 @@
                         </div>
                         <div class="col-sm-12 invoice-pay-logo">
                             <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="container-print">
+                                        <button class="btn btn-print">Print</button>
+                                    </div>
+                                </div>
                                 <div class="col-sm-3 col-xs-12">
                                     <div class="container-img-invoice">
                                         <div class="img-invoice">
@@ -180,11 +185,7 @@
                 </div>
                 <div class="buttons-bottom hidden-xs">
                     <div class="row">
-                        <div class="col-sm-3">
-                            <div class="container-print">
-                                <button class="btn btn-print">Print</button>
-                            </div>
-                        </div>
+                        
                         <!-- <div class="col-sm-3">
                             <div class="container-img-invoice">
                                 <div class="img-invoice">
