@@ -926,7 +926,7 @@ li.list-group-item a {
 .info {
     position: relative;
     margin-left: 15px;
-    width: calc(100% - 140px);
+    width: calc(100% - 125px);
     float: left;
 }
 .info.margin-left {
