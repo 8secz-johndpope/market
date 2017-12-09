@@ -153,3 +153,10 @@
     padding: 10px 20px;
     background: #ddd;
 }
+
+@media screen and (min-width: 992px){
+	.col-l-p .radio-r {
+    	width: 87%;
+   	}
+}
+}
