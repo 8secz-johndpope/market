@@ -245,6 +245,13 @@ ul.cc-logos li {
     border-radius: 0;
     background-clip: padding-box;
 }
+.form .floating-label .floated-always {
+    top: -3px;
+}
+#bill-edit-ctr label {
+    display: block;
+    margin-bottom: 8px;
+}
 #card-fields .cf-card-number, #card-fields .cf-card-exp, #card-fields .cf-card-sec {
     width: 254px;
 }
