@@ -159,11 +159,13 @@
 		margin-right: 0;
 		margin-left: 0;
 	}
+	.total{
+		margin-left: 0;
+	}
 }
 
 @media screen and (min-width: 992px){
 	.col-l-p .radio-r {
     	width: 87%;
    	}
-}
 }
