@@ -1042,7 +1042,7 @@ ul.image-gallery-ul {
     height: 100%;
 }
 .full-width {
-    height: 75vh;
+    height: calc(100vh - 110px);
 }
 .right-div-messages {
     position: relative;
