@@ -119,11 +119,11 @@
                                 <div class="col-sm-6">
                                     <div class="terms-container">
                                         <p><strong>Terms</strong></p>
-                                        <p>Full refund for 60 days after purchase.</p>
+                                        <p>Full refund within 60 days after purchase.</p>
                                     </div>
                                     <div class="notes-container">
                                         <p><strong>Note to recipient</strong></p>
-                                        <p>Thank you for business. Enjoy</p>
+                                        <p>Thank for your business. Enjoy</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
