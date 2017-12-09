@@ -415,6 +415,24 @@
         </form>
     </div>
 </div>
+<script type="text/javascript">
+    braintree.setup('{{$token}}', 'custom', {
+        paypal: {
+            container: 'paypal-container',
+            singleUse: true, // Required
+            amount: {{$invoice->amount()}}, // Required
+            currency: 'GBP', // Required
+        },
+        onPaymentMethodReceived: function (obj) {
+          //  doSomethingWithTheNonce(obj.nonce);
+            $('#nonce').val(obj.nonce);
+            $('.btn.btn-submit').prop('disabled', false);
+            $("#payment-form").attr("action", '/user/payment/invoice/paypal/{{$invoice->id}}');
+            /*document.location.href = '/user/payment/invoice/paypal/{{$invoice->id}}?nonce='+obj.nonce*/
+
+        }
+    });
+</script>
 <script>
     $('input[type=radio][name=pay-meth-radio]').change(function(){
         if(this.id == 'paypal'){
