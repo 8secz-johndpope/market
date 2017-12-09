@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Savoye-Let;
-    src: url('fonts/Savoye_LET_Plain1.0.ttf');
+    src: url('fonts/Savoye_LET_Plain1.0.ttf') format('truetype');
 }
 em{
     font-family: Savoye-Let,arial,helvetica,sans-serif;
