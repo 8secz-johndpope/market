@@ -449,6 +449,20 @@
     });
     $('.buttons-bottom .btn-submit').click(function(){
         $('#payment-form').submit();
-    })
+    });
+    $('#card-fields input').focus(function(){
+        var label = $('label[for="' + this.id + '"]');
+        if(this.id == 'expiry'){
+            $(this).attr('placeholder', 'MM/YYYY')
+        }
+        label.css('top', '8px');
+    });
+    $('#card-fields input').focusout(function(){
+        var label = $('label[for="' + this.id + '"]');
+        if($(this).val() == ''){
+            label.css('top', '27px');
+            $(this).removeAttr('placeholder');
+        }
+    });
 </script>
 @endsection
