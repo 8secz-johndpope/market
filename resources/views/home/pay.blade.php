@@ -81,7 +81,7 @@
                                         <div class="details-l">
                                             <strong>Invoice date</strong>
                                         </div>
-                                        <div class="details-r">{{$invoice->created_at->format('dd/mm/YYYY')}}</div>
+                                        <div class="details-r">{{$invoice->created_at->format('d/m/Y')}}</div>
                                     </li>
                                     <li>
                                         <div class="details-l">
@@ -93,7 +93,7 @@
                                         <div class="details-l">
                                             <strong>Due date</strong>
                                         </div>
-                                        <div class="details-r">{{$invoice->created_at->format('dd/mm/YYYY')}}</div>
+                                        <div class="details-r">{{$invoice->created_at->format('d/m/Y')}}</div>
                                     </li>
                                 </ul>
                             </div>
