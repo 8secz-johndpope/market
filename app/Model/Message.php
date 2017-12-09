@@ -16,6 +16,10 @@ class Message extends Model
     {
         return $this->belongsTo('App\User','from_msg');
     }
+    public function toUser()
+    {
+        return $this->belongsTo('App\User','to_msg');
+    }
     public function room()
     {
         return $this->belongsTo('App\Model\Room');

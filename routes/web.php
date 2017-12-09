@@ -145,6 +145,7 @@ Route::get('/business/manage/support', 'BusinessController@support');
 
 Route::post('/business/manage/bump', 'BusinessController@bump');
 Route::get('/pay/invoice/{id}', 'HomeController@pay');
+Route::get('/pay/invoice-logout/{id}', 'HomeController@payLogout');
 
 Route::get('/business/invoice/pay/{id}', 'BusinessController@invoice');
 
