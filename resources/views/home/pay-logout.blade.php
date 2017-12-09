@@ -443,8 +443,9 @@
                 $('#cc-new-ctr').hide(); 
             }
         }
-        else if(this.id == 'saved-card'){
+        else if(this.id == 'new-card'){
             $('.btn.btn-submit').prop('disabled', false);
+            $('#cc-new-ctr').show();
         }
         if($('.fs-edit-btn span').hasClass('expanded')) {
             $('.fs-edit-btn span').toggleClass('expanded');
