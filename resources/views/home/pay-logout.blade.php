@@ -447,7 +447,7 @@
     $('input[type=radio][name=pay-meth-radio]').change(function(){
         if(this.id == 'paypal'){
             $('.btn.btn-submit').prop('disabled', true);
-            if($('button.fs-edit-btn').hasClass('expanded')){
+            if($('button.fs-edit-btn span').hasClass('expanded')){
                 $('button.fs-edit-btn').toggleClass('expanded');
                 $('#cc-new-ctr').css('display', 'none');
             }
@@ -456,7 +456,7 @@
         else if(this.id == 'new-card'){
             $('.btn.btn-submit').prop('disabled', false);
             $('#cc-new-ctr').show();
-            if(!($('button.fs-edit-btn').hasClass())){
+            if(!($('button.fs-edit-btn span').hasClass('expanded'))){
                 $('.fs-edit-btn span').toggleClass('expanded');
             }
         }
