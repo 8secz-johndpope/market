@@ -815,7 +815,11 @@ class UserController extends BaseController
         if ($advert === null) {
             return ['msg' => 'No Advert found'];
         }
-
+        $favorite =  Favorite::where('user_id',$user->id)->where('advert_id',$advert->id)->first();
+        if($favorite!==null) {
+            $favorite->delete();
+            return ['msg' => 'Favorite removed'];
+        }
 
         $favorite = new Favorite;
         $favorite->advert_id = $advert->id;
