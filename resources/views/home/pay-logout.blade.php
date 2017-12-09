@@ -440,6 +440,7 @@
             $('.btn.btn-submit').prop('disabled', true);
             if($('button.fs-edit-btn').hasClass('expanded')){
                 $('button.fs-edit-btn').toggleClass('expanded');
+                $('#cc-new-ctr').css('display', 'none')
             }
         }
         else if(this.id == 'new-card'){
