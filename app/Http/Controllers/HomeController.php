@@ -1003,7 +1003,7 @@ class HomeController extends BaseController
         ));
         $clientToken = $gateway->clientToken()->generate();
 
-        return view('home.pay-logout',['invoice'=>$invoice, 'seller' => $seller,'token' => $clientToken,'def'=>$card,'user'=>$user]);
+        return view('home.pay-logout',['invoice'=>$invoice, 'seller' => $seller,'token' => $clientToken,'user'=>$user]);
     }
     public function applications(Request $request)
     {
