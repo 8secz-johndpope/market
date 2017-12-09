@@ -210,17 +210,17 @@ ul.cc-logos li {
     padding: 8px 15px 15px 50px;
     background-color: #fff;
 }
-.cf-form .row {
+.cf-form .row, .form .row {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 15px;
 }
-.cf-form .floating-label {
+.cf-form .floating-label, .form .floating-label {
     padding-top: 18px;
     position: relative;
     margin-right: 15px;
 }
-.cf-form span.floating-label {
+.cf-form span.floating-label, .form span.floating-label {
     display: inline-block;
     vertical-align: top;
     background-image: none;
