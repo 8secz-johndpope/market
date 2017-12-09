@@ -557,42 +557,40 @@ class MarketController extends BaseController
                     'size' => 10000,
                     'query' => [
                         'bool' => [
-                            "must" => ['term' => [
-                                'category' => [
-                                    'value' => 105000000,
-                                ]
+                            "must_not" => ['exists' => [
+                                'field' => 'id'
                             ]]
                         ]
                     ]
                 ]
             ];
             $response = $this->client->search($params);
-            $products = array_map(function ($a) {
-                $ans = $a['_source'];
-                $ans['id'] = $a['_id'];
-                return $ans;
-            }, $response['hits']['hits']);
+            $products = $response['hits']['hits'];
 
             foreach ($products as $product) {
+                $advert = Advert::where('sid',$product['source_id'])->first();
+                if($advert){
+                    $params = [
+                        'index' => 'adverts',
+                        'type' => 'advert',
+                        'id' => $advert->elastic,
+                        'body' => [
+                            'doc' => [
+                                'id' => $advert->id,
 
-
-                $params = [
-                    'index' => 'adverts',
-                    'type' => 'advert',
-                    'id' => $product['id'],
-                    'body' => [
-                        'doc' => [
-                            'category' => 1050000000,
-
+                            ]
                         ]
-                    ]
-                ];
-                //  $advert = Advert::where('sid',(int)$product['source_id'])->first();
-                // $advert->user_id=(int)$product['user_id'];
-                //$advert->save();
+                    ];
+                    //  $advert = Advert::where('sid',(int)$product['source_id'])->first();
+                    // $advert->user_id=(int)$product['user_id'];
+                    //$advert->save();
 
 // Update doc at /my_index/my_type/my_id
-                $response = $this->client->update($params);
+                    $response = $this->client->update($params);
+                }
+
+
+
 
             }
         
