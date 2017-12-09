@@ -981,8 +981,8 @@ class HomeController extends BaseController
     }
     public function payLogout(Request $request,$id){
         //$user = Auth::user();
-        $user = $invoice->message->toUser;
         $invoice = Invoice::find($id);
+        $user = $invoice->message->toUser;
         $seller = $invoice->message->user;
         $stripe_id = $user->stripe_id;
         $customer = \Stripe\Customer::retrieve($stripe_id);
