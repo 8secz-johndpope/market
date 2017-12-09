@@ -250,11 +250,11 @@ a.add-bank-link {
     padding-top: 1px;
 }
 .mtop {
-    border-bottom: 1px solid #d8d6d9;
-    padding: 16px;
+    padding: 10px 15px 10px 16px;
     background: #eee;
     border-bottom: 1px solid rgba(0,0,0,0.08);
     border-left: 1px solid rgba(0,0,0,0.08)
+    height: 59px;
 }
 .title-product a {
     display: inline-block;
