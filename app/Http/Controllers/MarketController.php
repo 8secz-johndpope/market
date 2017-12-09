@@ -590,7 +590,7 @@ class MarketController extends BaseController
                         $response = $this->client->update($params);
                     }
                 }else{
-                    return $product;
+                  //  return $product;
                 }
 
 
