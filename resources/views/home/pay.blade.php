@@ -123,7 +123,7 @@
                                     </div>
                                     <div class="notes-container">
                                         <p><strong>Note to recipient</strong></p>
-                                        <p>Thank you for business. Enjoy</p>
+                                        <p>Thanks for your business. Enjoy</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
