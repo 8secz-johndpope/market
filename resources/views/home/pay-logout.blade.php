@@ -428,15 +428,14 @@
             $('.fs-edit-btn span').toggleClass('expanded');
         } 
     });
-    $('button.fs-change-cc-btn').click(function(){
+    $('button.fs-edit-btn').click(function(){
         var span = $(this).find('span');
         $(span).toggleClass('expanded');
         if($(span).hasClass('expanded')){
-            $('#cc-change-ctr').show();
-            $('#saved-card').prop('checked', true);
+            $('#cc-new-ctr').show();
         }
         else
-           $('#cc-change-ctr').hide(); 
+           $('#cc-new-ctr').hide(); 
     });
     $('input[type=radio][name=cc-saved-radio]').change(function(){
         var val = $(this).val();
