@@ -150,7 +150,7 @@
                         </div>
                         <div class="col-sm-12 invoice-pay-logo">
                             <div class="row">
-                                <div class="col-sm-4 col-xs-6">
+                                <div class="col-sm-4 col-xs-12">
                                     <div class="container-img-invoice">
                                         <div class="img-invoice">
                                             <img src="/css/icons/icon-invoice-ww.svg">
