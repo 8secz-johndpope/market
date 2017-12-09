@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+<div class="container">
     <div class="row">
         <div class="col-sm-12 over-hidden">
             <ul class="nav nav-tabs top-main-nav">
@@ -166,7 +167,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <script>
         function scroll_bottom() {
             var objDiv = document.getElementById("all-msg");
