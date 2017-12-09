@@ -232,7 +232,8 @@ ul.cc-logos li {
     color: #767676;
     top: 27px;
 }
-.cf-form .floating-label input {
+.cf-form .floating-label input, .form
+ .floating-label input {
     line-height: 17px;
     position: relative;
 }
@@ -254,6 +255,9 @@ ul.cc-logos li {
 }
 #card-fields .cf-card-number, #card-fields .cf-card-exp, #card-fields .cf-card-sec, #bill-edit-ctr .input-field {
     width: 254px;
+}
+#bill-edit-ctr input{
+	margin-top: 10px;
 }
 #card-fields .row input {
     margin-top: 10px;
