@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <div class="row">
+                        <div class="row total-terms-container">
                             <div class="col-sm-6">
                                 <div class="terms-container">
                                     <p><strong>Terms and conditions</strong></p>
