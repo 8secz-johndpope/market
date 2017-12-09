@@ -317,7 +317,7 @@
                                                         <div class="row">
                                                             <span class="floating-label">
                                                                 <label for="address1" class="floated">Street address</label>
-                                                                <input type="text" name="address1" id="address1" class="input-field">
+                                                                <input type="text" name="address1" id="address1" class="input-field" required>
                                                             </span>
                                                         </div>
                                                         <div class="row">
@@ -329,17 +329,17 @@
                                                         <div class="row">
                                                             <span class="floating-label">
                                                                 <label for="city" class="floated">City</label>
-                                                                <input type="text" name="city" id="city" class="input-field">
+                                                                <input type="text" name="city" id="city" class="input-field" required>
                                                             </span>
                                                             <span class="floating-label postcode">
                                                                 <label for="postcode" class="floated">Postcode</label>
-                                                                <input type="text" name="postcode" id="postcode" class="input-field">
+                                                                <input type="text" name="postcode" id="postcode" class="input-field" required>
                                                             </span>
                                                         </div>
                                                         <div class="row">
                                                             <span class="floating-label">
                                                                 <label for="telephone" class="floated">Phone number</label>
-                                                                <input type="text" name="telephone" id="telephone" class="input-field telephone">
+                                                                <input type="tel" name="telephone" id="telephone" class="input-field telephone" required>
                                                             </span>
                                                         </div>
                                                     </div>
