@@ -979,32 +979,7 @@ class HomeController extends BaseController
 
         return view('home.pay',['invoice'=>$invoice, 'seller' => $seller,'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user]);
     }
-    public function payLogout(Request $request,$id){
-        //$user = Auth::user();
-        $invoice = Invoice::find($id);
-        $user = $invoice->message->toUser;
-        $seller = $invoice->message->user;
-        //$stripe_id = $user->stripe_id;
-        //$customer = \Stripe\Customer::retrieve($stripe_id);
-
-        /*try{
-            $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
-                'limit' => 10, 'object' => 'card'));
-            $card = $customer->sources->retrieve($customer->default_source);
-            $cards = $cards['data'];
-
-        }catch (\Exception $exception){
-            $cards = [];
-            $card=null;
-        }*/
-
-        $gateway = new \Braintree\Gateway(array(
-            'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
-        ));
-        $clientToken = $gateway->clientToken()->generate();
-
-        return view('home.pay-logout',['invoice'=>$invoice, 'seller' => $seller,'token' => $clientToken,'user'=>$user]);
-    }
+    
     public function applications(Request $request)
     {
         $user = Auth::user();
