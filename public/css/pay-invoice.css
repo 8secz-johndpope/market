@@ -162,7 +162,7 @@
 	.total{
 		margin-left: 0;
 	}
-	.terms-container{
+	.terms-container, .notes-container{
 		margin-right: 0;
 	}
 }
