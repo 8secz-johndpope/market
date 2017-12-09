@@ -237,7 +237,7 @@ ul.cc-logos li {
     line-height: 17px;
     position: relative;
 }
-.floating-label input[type="text"] {
+.floating-label input[type="text"], .floating-label input[type="tel"] {
     padding: 0 0 4px 0;
     background: transparent;
     background-image: none;
@@ -245,6 +245,7 @@ ul.cc-logos li {
     border-bottom: 2px solid #ddd;
     border-radius: 0;
     background-clip: padding-box;
+    outline: 0;
 }
 .action .cf-cancel {
     margin-right: 15px;
