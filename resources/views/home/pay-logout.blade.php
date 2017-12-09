@@ -436,12 +436,12 @@
 <script>
     $('input[type=radio][name=pay-meth-radio]').change(function(){
         if(this.id == 'paypal'){
-            $('#braintree-paypal-button').click();
             $('.btn.btn-submit').prop('disabled', true);
             if($('button.fs-edit-btn').hasClass('expanded')){
                 $('button.fs-edit-btn').toggleClass('expanded');
                 $('#cc-new-ctr').css('display', 'none')
             }
+            $('#braintree-paypal-button').click();
         }
         else if(this.id == 'new-card'){
             $('.btn.btn-submit').prop('disabled', false);
