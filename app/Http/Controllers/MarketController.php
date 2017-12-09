@@ -24,6 +24,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use App\Model\Categories;
+use App\Model\Invoice;
+use App\Model\InvoiceItem;
 
 class MarketController extends BaseController
 {
