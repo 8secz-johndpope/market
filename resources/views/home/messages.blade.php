@@ -105,7 +105,7 @@
                             @endif
                         </div>
                         <div class="button-invoice">
-                            <a class="btn btn-primary" href="/room/invoice/create/{{$cur->id}}">Create Invoice</a>
+                            <a class="btn btn-primary" href="/room/invoice/create/{{$cur->id}}">Send Invoice</a>
                         </div>
                     </div>
 
