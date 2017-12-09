@@ -155,9 +155,9 @@
     margin-top: 15px;
 }
 @media screen and (max-width: 767px){
-	.row{
-		margin-right: 0;
-		margin-left: 0;
+	.col-xs-12 {
+    	padding-left: 15px;
+    	padding-right: 15px;
 	}
 	.total{
 		margin-left: 0;
