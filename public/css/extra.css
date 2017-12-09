@@ -1121,6 +1121,16 @@ ul.image-gallery-ul {
     color: #fff;
     background: #009888;
 }
+.title-user:after {
+    content: ')';
+}
+.title-user:before {
+    content: '(';
+}
+.title-user {
+    color: #555;
+    font-size: 14px;
+}
 ul.image-gallery-ul li {
     display: table-cell;
     height: 600px;
