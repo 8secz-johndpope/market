@@ -319,8 +319,6 @@
                                                                 <label for="address1" class="floated">Street address</label>
                                                                 <input type="text" name="address1" id="address1" class="input-field" required>
                                                             </span>
-                                                        </div>
-                                                        <div class="row">
                                                             <span class="floating-label">
                                                                 <label for="address2" class="floated">Street address 2(optional)</label>
                                                                 <input type="text" name="address2" id="address2" class="input-field">
