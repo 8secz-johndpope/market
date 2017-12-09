@@ -144,6 +144,31 @@
                                 </table>
                             </div>
                         </div>
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="container-img-invoice">
+                                        <div class="img-invoice">
+                                            <img src="/css/icons/icon-invoice-ww.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="col-sm-3">
+                                    <div class="secure-stripe-container">
+                                        <div class="secure-stripe-img">
+                                            <img src="/css/icons/stripe-secure.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="secure-paypal-container">
+                                        <div class="secure-paypal-img">
+                                            <img src="/css/icons/paypal-secure.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-sm-offset-6 col-sm-6 button-pay">
                             <button class="btn btn-submit" type="submit">Pay Now</button>
                         </div>
@@ -156,7 +181,7 @@
                                 <button class="btn btn-print">Print</button>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <!-- <div class="col-sm-3">
                             <div class="container-img-invoice">
                                 <div class="img-invoice">
                                     <img src="/css/icons/icon-invoice-ww.svg">
@@ -176,7 +201,7 @@
                                     <img src="/css/icons/paypal-secure.svg">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
