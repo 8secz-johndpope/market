@@ -129,6 +129,7 @@ Route::post('/user/advert/order','UserController@order')->middleware('auth:api')
 Route::post('/user/advert/offer','UserController@offer')->middleware('auth:api');
 Route::post('/user/advert/interest','UserController@interest')->middleware('auth:api');
 Route::post('/user/advert/favorite','UserController@favorite')->middleware('auth:api');
+Route::get('/user/advert/favorite','UserController@favorite')->middleware('auth:api');
 
 Route::post('/user/advert/unfavorite','UserController@unfavorite')->middleware('auth:api');
 
