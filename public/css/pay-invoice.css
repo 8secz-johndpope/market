@@ -149,6 +149,11 @@
 }
 .terms-container p, .notes-container p {
     margin-bottom: 0;
+    color: gray;
+    font-size: 11px;
+}
+.terms-container p>strong, .notes-container p>strong {
+    color: #000;
 }
 .btn-print {
     padding: 10px 20px;
