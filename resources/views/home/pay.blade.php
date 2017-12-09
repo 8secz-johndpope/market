@@ -81,7 +81,7 @@
                                         <div class="details-l">
                                             <strong>Invoice date</strong>
                                         </div>
-                                        <div class="details-r">{{$invoice->created_at}}</div>
+                                        <div class="details-r">{{$invoice->created_at->format('dd/mm/YYYY')}}</div>
                                     </li>
                                     <li>
                                         <div class="details-l">
@@ -93,7 +93,7 @@
                                         <div class="details-l">
                                             <strong>Due date</strong>
                                         </div>
-                                        <div class="details-r">{{$invoice->created_at}}</div>
+                                        <div class="details-r">{{$invoice->created_at->format('dd/mm/YYYY')}}</div>
                                     </li>
                                 </ul>
                             </div>
@@ -144,23 +144,23 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 invoice-pay-logo">
                             <div class="row">
-                                <div class="col-sm-3">
+                                <div class="col-sm-4">
                                     <div class="container-img-invoice">
                                         <div class="img-invoice">
                                             <img src="/css/icons/icon-invoice-ww.svg">
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="col-sm-3">
+                                 <div class="col-sm-4">
                                     <div class="secure-stripe-container">
                                         <div class="secure-stripe-img">
                                             <img src="/css/icons/stripe-secure.png">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-3">
+                                <div class="col-sm-4">
                                     <div class="secure-paypal-container">
                                         <div class="secure-paypal-img">
                                             <img src="/css/icons/paypal-secure.svg">
