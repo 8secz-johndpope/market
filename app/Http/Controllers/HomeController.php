@@ -984,8 +984,8 @@ class HomeController extends BaseController
         $invoice = Invoice::find($id);
         $user = $invoice->message->toUser;
         $seller = $invoice->message->user;
-        $stripe_id = $user->stripe_id;
-        $customer = \Stripe\Customer::retrieve($stripe_id);
+        //$stripe_id = $user->stripe_id;
+        //$customer = \Stripe\Customer::retrieve($stripe_id);
 
         /*try{
             $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
