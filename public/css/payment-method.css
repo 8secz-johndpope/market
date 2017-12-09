@@ -225,7 +225,7 @@ ul.cc-logos li {
     vertical-align: top;
     background-image: none;
 }
-.cf-form .floating-label label {
+.cf-form .floating-label label, .form .floating-label label {
     display: block;
     position: absolute;
     pointer-events: none;
