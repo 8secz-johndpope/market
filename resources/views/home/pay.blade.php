@@ -16,7 +16,7 @@
 <div class="body background-body">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-md-8 col-xs-12">
                 <div class="invoice-container clearfix">
                     <div class="row">
                         <div class="col-sm-6">
@@ -209,7 +209,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4 col-xs-12">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="pay-container">
