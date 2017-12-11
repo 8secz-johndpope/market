@@ -137,7 +137,7 @@
                           <div class="user-details">
                             <p><strong>{{$user->name}}</strong></p>
                             <address>
-                                $user->address->city
+                                {{$user->address->city}}
                             </address> 
                           </div> 
                         </div>
