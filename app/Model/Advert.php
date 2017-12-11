@@ -326,6 +326,9 @@ class Advert extends  BaseModel
         $this->status=1;
         $this->save();
     }
+    public function isSold(){
+        return (isset($this->has_param('sold')) && $this->param('sold') == 1)
+    }
     public function param($param){
        if($this->dict===null)
            $this->fetch();

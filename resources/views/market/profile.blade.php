@@ -65,7 +65,15 @@
                     </div>
                     <div class="clearfix extra-info">
                         <hr>
-                        <div class="ribbons">                                                                                                                                                               </div>
+                        <div class="ribbons">
+                            @if($advert->isSold())
+                                <span class="ribbon sold">
+                                   Sold
+                                </span>
+                            @else
+
+                            @endif
+                        </div>
                         <div class="extra-options">
                             <div class="make-offer">
                                 <a href="#">
