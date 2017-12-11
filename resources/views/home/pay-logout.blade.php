@@ -321,7 +321,7 @@
                                     <div class="cta-wrapper">
                                         <div class="action col-p">
                                             <a href="#" class="cf-cancel">Cancel</a>
-                                            <button type="button" class="btn btn-cta-save">Done</button>
+                                            <button type="button" class="btn btn-cta-save">Pay Now</button>
                                         </div>
                                     </div>
                                     </form>
