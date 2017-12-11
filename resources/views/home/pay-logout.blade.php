@@ -187,6 +187,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div id="cc-new-ctr">
+                                <h2>Credit or debit card</h2>
                                 <div id="inst-details" class="bdr-btm">
                                     <form action="/user/cards/add" method="post">
                                     <input name="redirect" type="hidden" value="/pay/invoice/{{$invoice->id}}">
