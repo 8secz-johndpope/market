@@ -221,6 +221,29 @@
                                                 <span class="floating-label">
                                                     <label for="cvc">CVC:</label>
                                                     <input type="text" class="input-field cf-card-sec" id="cvc" name="cvc">
+                                                    <a id="cvv-tooltip" class="cvv-tooltip ml2">
+                                                        <b class="help-icon-grey">i</b>
+                                                    </a>
+                                                    <div id="cvv-tooltip-content">
+                                                        <div class="row pb10">
+                                                            <div class="col-xs-4">
+                                                                <div class="visa-cvv">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-8">
+                                                                <div>
+                                                                    <div>
+                                                                        <b>Visa, MasterCard, Discover or Maestro</b>
+                                                                    </div>
+                                                                    <div>
+                                                                        This 3-digit number is on the back of the card next to the signature panel
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                        </div>
+                                                    </div>
                                                 </span>
                                             </div>
                                             <div class="row">

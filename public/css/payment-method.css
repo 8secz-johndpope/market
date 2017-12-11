@@ -317,3 +317,6 @@ ul.cc-logos li {
     -webkit-filter: none;
     filter: none;
 }
+#cvv-tooltip-content{
+	display: none;
+}
