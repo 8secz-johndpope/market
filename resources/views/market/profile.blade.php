@@ -59,7 +59,7 @@
                             <span class="listing-location">
                                 {{$advert->param('location_name')}}
                             </span>
-                            @if(!$advert->can_apply())
+                            @if(!$advert->category->can_apply())
                             <div class="listing-description">
                                 {!! $product['description'] !!}
                             </div>
