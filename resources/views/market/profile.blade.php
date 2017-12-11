@@ -57,11 +57,17 @@
                             </div>
                             <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->sid}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
                             <span class="listing-location">
-                                        {{$advert->param('location_name')}}
-                                    </span>
+                                {{$advert->param('location_name')}}
+                            </span>
+                            @if(!$advert->can_apply())
                             <div class="listing-description">
-                                {!! $advert->param('description')!!}
+                                {!! $product['description'] !!}
                             </div>
+                            @else
+                                <div class="link-details">
+                                    <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
+                                </div>
+                            @endif
                             @if($advert->meta('price')>=0)
                                 <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
                                     </span>
