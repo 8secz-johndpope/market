@@ -24,3 +24,9 @@
 .user-details p, .user-details address {
     margin-bottom: 0;
 }
+.app-call, .phone{
+	padding: 10px;
+}
+.app-call {
+    text-align: center;
+}
