@@ -127,14 +127,14 @@
                @endforeach
                </div> 
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-3">
                 <div class="details-user-container">
                     <div class="row">
                         <div class="col-xs-12">
                           <div class="profile-picutre-big">
                                 <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
-                                <h4 class="profile-name-big">{{$user->name}}</h4>
-                          </div>  
+                          </div>
+                          <h4 class="profile-name-big">{{$user->name}}</h4>  
                         </div>
                     </div>
                 </div>
