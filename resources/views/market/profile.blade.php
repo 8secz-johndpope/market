@@ -16,13 +16,18 @@
             <div class="col-sm-8">
             </div>
             <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-xs-12">
+                      <div class="profile-picutre-big">
+                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
+                      </div>  
+                    </div>
+                </div>
             </div>
         </div>
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-            <div class="profile-picutre-big">
-                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
-            </div>
+            
             <h4 class="profile-name-big">{{$user->name}}</h4>
 @foreach($user->adverts as $advert)
 
