@@ -168,6 +168,13 @@
 .pay-methods.logout .col-l-p .radio-r {
     width: 90%;
 }
+#cc-new-ctr {
+    border: 1px solid #ccc;
+    border-top: transparent;
+}
+#inst-details {
+    padding-top: 30px;
+}
 @media screen and (max-width: 767px){
 	.col-xs-12 {
     	padding-left: 15px;
