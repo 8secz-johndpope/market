@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-@section('title', 'Adverts by '. $user->display_name .' | '. env(''APP_NAME''))
+@section('title', 'Adverts by '. $user->display_name .' | '. env('APP_NAME'))
 
 @section('sidebar')
     @parent
