@@ -49,9 +49,9 @@
                             <span class="listing-location">
                                         {{$advert->param('location_name')}}
                                     </span>
-                            <p class="listing-description">
+                            <div class="listing-description">
                                 {!! $advert->param('description')!!}
-                            </p>
+                            </div>
                             @if($advert->meta('price')>=0)
                                 <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
                                     </span>
