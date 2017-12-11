@@ -10,10 +10,11 @@
     <p>This is appended to the master sidebar.</p>
 @endsection
 @php
-    $date_ms = new Datetime()->getTimestamp();
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
 @endphp
 @section('styles')
-<link href="{{ asset('\'/css/pay-invoice.css?q='. $date_ms .'874\'') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('\'/css/pay-invoice.css?q='. $dateMs .'874\'') }}" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
 <div class="body background-body">
