@@ -344,3 +344,21 @@ ul.cc-logos li {
     width: 300px;
     padding: 20px 15px;
 }
+#cvv-tooltip-content:after{
+	content: '';
+    position: absolute;
+    z-index: 0;
+    top: 32px;
+    left: -13px;
+    bottom: 0;
+    right: 0;
+    height: 24px;
+    width: 24px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
