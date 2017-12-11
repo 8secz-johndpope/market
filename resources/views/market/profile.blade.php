@@ -163,8 +163,16 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="app-call">
+                                <a href="" class="btn btn-default">Call</a>
                             </div>
                             <div class="phone">
+                                <span>
+                                    <span class="glyphicon glyphicon-earphone"></span>
+                                    {{substr($advert->param('phone'),0,5)}}XXXXXX
+                                    <span class="reveal-phone">
+                                        <a class="btn btn-default">Reveal</a>
+                                    </span>
+                                </span>
                             </div>
                         </div>
                     </div>
