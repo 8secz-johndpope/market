@@ -205,6 +205,9 @@
 	.col-xs-4{
 		width: 33.333333%
 	}
+	.body{
+		padding-top: 60px;
+	}
 }
 
 @media screen and (min-width: 992px){
