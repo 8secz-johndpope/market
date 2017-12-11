@@ -208,4 +208,10 @@
 	.col-l-p .radio-r {
     	width: 87%;
    	}
+   	.col-r-p{
+   		width: 9%;
+   	}
+   	.col-l-p{
+   		width: 87%;
+   	}
 }
