@@ -18,9 +18,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <div class="listings-adverts">
+                <div class="products">
                @foreach($user->adverts as $advert)
-               <div class="product">
+               <div class="listing-max-pro">
                     <div class="listing-side">
                         <div class="listing-thumbnail">
                             <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
