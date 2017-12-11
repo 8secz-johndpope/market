@@ -111,7 +111,7 @@
     display: block;
     cursor: pointer;
 }
-.visa, .mt-cc, .mastercard, .discover, .americanexpress, .maestro, .paypal {
+.visa, .mt-cc, .mastercard, .discover, .americanexpress, .maestro, .paypal, .visa-cvv {
     background-image: url(https://securepics.ebaystatic.com/aw/pics/checkout/sprs/spr_PROX_13.svg);
     background-repeat: no-repeat;
     background-size: 248px 1388px;
@@ -162,6 +162,11 @@ ul.cc-logos li {
     background-position: -11px -632px;
     width: 66px;
     height: 19px;
+}
+.visa-cvv {
+    background-position: -11px -1140px;
+    width: 72px;
+    height: 55px;
 }
 .fs-summary {
     font-size: .8125rem;
