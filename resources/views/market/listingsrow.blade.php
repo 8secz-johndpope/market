@@ -266,11 +266,6 @@ use App\Model\Advert;
                                 <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong> 
                             </span>
                         @endif
-                        @if(isset($product['sold']) && $product['sold'] == 1)
-                            <span class="ribbon sold">
-                               Sold
-                            </span>
-                        @endif
                         @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
                             <span class="ribbon urgent-span">
                                 <span class="ribbon-text">
