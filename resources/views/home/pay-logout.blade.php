@@ -473,6 +473,7 @@
     $('.action .cf-cancel').click(function(e){
         e.preventDefault();
         $('html, body').animate({scrollTop: 80}, 500);
+        $('.fs-edit-btn span').toggleClass('expanded');
         $('#cc-new-ctr').hide();
 
     });
