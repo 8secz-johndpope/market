@@ -447,7 +447,7 @@
         $(span).toggleClass('expanded');
         if($(span).hasClass('expanded')){
             $('#cc-new-ctr').show();
-            $('html').animate({scrollTop:  $('#cc-new-ctr').position().top}, 500);
+            $('body').animate({scrollTop:  $('#cc-new-ctr').position().top}, 500);
         }
         else
            $('#cc-new-ctr').hide(); 
