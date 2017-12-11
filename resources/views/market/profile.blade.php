@@ -134,7 +134,12 @@
                           <div class="profile-picutre-big">
                                 <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
                           </div>
-                          <h4 class="profile-name-big">{{$user->name}}</h4>  
+                          <div class="user-details">
+                            <p><strong>{{$user->name}}</strong></p>
+                            <address>
+                                $user->address->city
+                            </address> 
+                          </div> 
                         </div>
                     </div>
                 </div>
