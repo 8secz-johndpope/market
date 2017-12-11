@@ -223,4 +223,10 @@
    	.fs-edit{
    		margin-left: 0;
    	}
+   	.col-r-p.cc-logo {
+    	width: 29%;
+	}
+	.col-l-p.cc-logo {
+    	width: 70%;
+	}
 }
