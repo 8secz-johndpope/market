@@ -21,7 +21,7 @@
 <div class="body background-body">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-9">
                 <div class="products">
                @foreach($user->adverts as $advert)
                <div class="listing-max-pro">
@@ -127,7 +127,7 @@
                @endforeach
                </div> 
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-9">
                 <div class="details-user-container">
                     <div class="row">
                         <div class="col-xs-12">
