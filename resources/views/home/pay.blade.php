@@ -231,7 +231,7 @@
                                 </legend>
                                 @if(count($cards) > 0)
                                 <div class="pay-method">
-                                    <div class="col-l-p">
+                                    <div class="col-l-p cc-logo">
                                         <div class="radio-l">
                                             <input type="radio" name="pay-meth-radio" id="saved-card" checked="true" value="{{$def['id']}}">
                                             <span class="custom-radio custom-ctr custom-rb"></span>
@@ -243,7 +243,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="col-r-p">
+                                    <div class="col-r-p cc-logo">
                                         <div id="funding-cc">
                                             <div class="fs-summary fade in">
                                                 <ul class="cc-logos ui-sortable">
