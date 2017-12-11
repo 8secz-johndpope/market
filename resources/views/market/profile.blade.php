@@ -47,10 +47,10 @@
                         <div class="info">
                             <div class="favor">
                                 @if (in_array($advert->id,$sids))
-                                    <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                                    <span class="heart favroite-icon" data-id="$advert->id"></span>
                                     <span  class="favor-text" style="display: none">SAVE</span>
                                 @else
-                                    <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
+                                    <span class="heart-empty favroite-icon" data-id="{{$advert->id}}">
                                     </span>
                                     <span  class="favor-text">SAVE</span>
                                 @endif
