@@ -1950,7 +1950,17 @@ class MarketController extends BaseController
         return " Hello API Event Received";
     }
     public function userads(Request $request, $id){
-        return view('market.profile',['user'=>User::find($id)]);
+        $sids = array();
+        if (Auth::check()) {
+            // The user is logged in...
+            $user = $request->user();
+            // $favorites = $user->favs;
+            $favorites = $user->favorites;
+            foreach ($favorites as $favorite){
+                $sids[] = $favorite->sid;
+            }
+        }
+        return view('market.profile',['advertiser'=>User::find($id), 'sids'=> $sids]);
     }
     public function searchform(Request $request){
         $loc = $request->slug;

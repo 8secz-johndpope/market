@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-@section('title', 'Adverts by '. $user->display_name .' | '. env('APP_NAME'))
+@section('title', 'Adverts by '. $advertiser->display_name .' | '. env('APP_NAME'))
 
 @section('sidebar')
     @parent
@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-sm-9">
                 <div class="products">
-               @foreach($user->adverts as $advert)
+               @foreach($advertiser->adverts as $advert)
                <div class="listing-max-pro">
                     <div class="product">
                         <div class="listing-side">
@@ -45,6 +45,16 @@
                             </div>
                         </div>
                         <div class="info">
+                            <div class="favor">
+                                @if (in_array($advert->id,$sids))
+                                    <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                                    <span  class="favor-text" style="display: none">SAVE</span>
+                                @else
+                                    <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
+                                    </span>
+                                    <span  class="favor-text">SAVE</span>
+                                @endif
+                            </div>
                             <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->sid}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
                             <span class="listing-location">
                                         {{$advert->param('location_name')}}
@@ -132,12 +142,12 @@
                     <div class="row">
                         <div class="col-xs-12">
                           <div class="profile-picutre-big">
-                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advertiser->image}}">
                           </div>
                           <div class="user-details">
-                            <p><strong>{{$user->name}}</strong></p>
+                            <p><strong>{{$advertiser->name}}</strong></p>
                             <address>
-                                {{$user->address->city}}
+                                {{$advertiser->address->city}}
                             </address> 
                           </div> 
                         </div>
@@ -145,56 +155,6 @@
                 </div>
             </div>
         </div>
-    <div class="row" style="display: none">
-        <div class="col-sm-8 col-sm-offset-2">
-@foreach($user->adverts as $advert)
-
-                <div class="product">
-                    <div class="listing-side">
-                        <div class="listing-thumbnail">
-                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
-
-                            @if($advert->featured_expires())
-                                <span class="ribbon-featured">
-<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-</span>
-                            @endif
-
-                            <div class="listing-meta txt-sub">
-                                <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($advert->param('images'))}}</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="info">
-
-
-                        <a class="listing-product" href="/p/{{$advert->param('category')}}/{{$advert->sid}}"> <h4 class="product-title">{{$advert->param('title')}}</h4></a>
-
-                        <span class="listing-location">
-                                    {{$advert->param('location_name')}}
-                                </span>
-                        <p class="listing-description">
-                            {{$advert->param('description')}}
-                        </p>
-
-                        @if($advert->meta('price')>=0)
-                            <span class="product-price">£ {{$advert->meta('price')/100}}{{$advert->meta('price_frequency')}}
-                                </span>
-                        @endif
-
-
-
-                        @if($advert->urgent_expires())
-                            <span class="clearfix txt-agnosticRed txt-uppercase" data-q="urgentProduct">
-<span class="hide-visually">This ad is </span>Urgent
-</span>
-                        @endif
-                    </div>
-                </div>
-    @endforeach
-        </div>
-    </div>
     </div>
 </div>
 
