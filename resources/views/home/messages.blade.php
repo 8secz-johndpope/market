@@ -73,7 +73,7 @@
                                     <div class="chat-title">
                                         <a href="/user/manage/messages/{{$room->id}}">
                                             <span class="title-user">{{$room->other()->display_name}}</span>
-                                            <h4 class="media-heading">{{$room->title}}</h4> 
+                                            <span class="media-heading">{{$room->title}}</span> 
                                         </a>
                                     </div>
                                     <div class="chat-meta">
@@ -89,7 +89,6 @@
                                         </p>
                                     </div>
                                     <div class="chat-meta">
-                                         <strong>{{$room->last_message()->user->name}}</strong>
                                     </div>
                                     @endif
                                 </div>
