@@ -344,12 +344,15 @@ ul.cc-logos li {
     width: 300px;
     padding: 20px 15px;
     font-size: 10px;
-    position: relative;
+    /*position: relative;*/
     padding: 20px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 3px;
     box-shadow: 8px 8px 10px rgba(0,0,0,0.35);
+    position: absolute;
+    top: -58px;
+    right: -272px;
 }
 #cvv-tooltip-content:after{
 	content: '';
