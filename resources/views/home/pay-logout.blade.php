@@ -516,10 +516,10 @@
 
     });
     $('body').click(function(e){
-        if( e.target.id == 'cvv-tooltip' ||  e.target.className =='help-icon-grey')
+        if( e.target.id == 'cvv-tooltip' ||  e.target.className =='help-icon-grey'){
             e.preventDefault();
             $('#cvv-tooltip-content').show();
-        else
+        }else
              $('#cvv-tooltip-content').hide();
         console.log(e);
     })
