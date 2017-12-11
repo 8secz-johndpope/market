@@ -516,6 +516,8 @@
 
     });
     $('body').click(function(e){
+        if( e.target.id != 'cvv-tooltip')
+            $('#cvv-tooltip-content').hide();
         console.log(e);
     })
     $('#cvv-tooltip').click(function(e){
