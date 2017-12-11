@@ -71,7 +71,38 @@
                                    Sold
                                 </span>
                             @else
-
+                                @if(isset($product['spotlight'])&&$product['spotlight']===1&&$product['spotlight_expires']>$milli)
+                                <span class="ribbon ribbon-spotlight">
+                                    <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Spotlight</strong> 
+                                </span>
+                                @endif
+                                @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
+                                    <span class="ribbon ribbon-featured">
+                                        <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong> 
+                                    </span>
+                                @endif
+                                @if(isset($product['sold']) && $product['sold'] == 1)
+                                    <span class="ribbon sold">
+                                       Sold
+                                    </span>
+                                @endif
+                                @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
+                                    <span class="ribbon urgent-span">
+                                        <span class="ribbon-text">
+                                        Urgent
+                                        </span>
+                                    </span>
+                                @endif
+                                @if(isset($product['canship'])&&$product['canship']===1)
+                                    <span class="ribbon ribbon-shipping">
+                                        <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Ship</strong>
+                                    </span>
+                                @endif
+                                @if(isset($product['candeliver'])&&$product['candeliver']===1)
+                                    <span class="ribbon ribbon-delivery">
+                                        <strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Local Delivery</strong>
+                                    </span>
+                                @endif
                             @endif
                         </div>
                         <div class="extra-options">
