@@ -329,6 +329,12 @@ class Advert extends  BaseModel
     public function isSold(){
         return ($this->has_param('sold') && $this->param('sold') == 1);
     }
+    public function canShip(){
+        return ($this->has_param('canship') && $this->param('canShip') == 1);
+    }
+    public function canLocalDelivery(){
+        return ($this->has_param('candeliver') && $this->param('candeliver') == 1);
+    }
     public function param($param){
        if($this->dict===null)
            $this->fetch();

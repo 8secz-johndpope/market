@@ -71,9 +71,14 @@
                                    Sold
                                 </span>
                             @else
-                                @if($advert->featured_expires())
+                                @if($advert->spotlight_expires())
                                 <span class="ribbon ribbon-spotlight">
                                     <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Spotlight</strong> 
+                                </span>
+                                @endif
+                                @if($advert->featured_expires())
+                                <span class="ribbon ribbon-featured">
+                                    <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong> 
                                 </span>
                                 @endif
                                 @if($advert->urgent_expires())
@@ -81,6 +86,16 @@
                                         <span class="ribbon-text">
                                         Urgent
                                         </span>
+                                    </span>
+                                @endif
+                                @if($advert->canShip())
+                                    <span class="ribbon ribbon-shipping">
+                                        <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Ship</strong>
+                                    </span>
+                                @endif
+                                @if($advert->canLocalDelivery())
+                                    <span class="ribbon ribbon-delivery">
+                                        <strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Local Delivery</strong>
                                     </span>
                                 @endif
                             @endif
