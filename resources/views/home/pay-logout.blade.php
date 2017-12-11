@@ -519,7 +519,7 @@
         if( e.target.id == 'cvv-tooltip' ||  e.target.className =='help-icon-grey')
             $('#cvv-tooltip-content').show();
         else
-             $('#cvv-tooltip-content').hidden();
+             $('#cvv-tooltip-content').hide();
         console.log(e);
     })
     /*$('#cvv-tooltip').click(function(e){
