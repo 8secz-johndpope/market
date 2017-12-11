@@ -220,11 +220,11 @@
                                             </div>
                                             <div class="row">
                                                 <span class="floating-label">
-                                                    <label for="expiry">First name:</label>
+                                                    <label for="name">First name:</label>
                                                     <input type="text" class="input-field cf-card-fname" id="name" name="name">
                                                 </span>
                                                 <span class="floating-label">
-                                                    <label for="cvc">Surname:</label>
+                                                    <label for="surname">Surname:</label>
                                                     <input type="text" class="input-field cf-card-sname" id="surname" name="surname">
                                                 </span>
                                             </div>
