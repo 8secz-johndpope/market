@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-    <div class="row">
+    <div class="row" style="display: none">
         <div class="col-sm-8 col-sm-offset-2">
             
             
