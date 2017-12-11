@@ -144,8 +144,8 @@
                </div> 
             </div>
             <div class="col-sm-3">
-                <div class="details-user-container">
-                    <div class="row">
+                <div class="row">
+                    <div class="details-user-container">
                         <div class="col-xs-12">
                           <div class="profile-picutre-big">
                                 <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advertiser->image}}">
@@ -158,6 +158,8 @@
                           </div> 
                         </div>
                     </div>
+                </div>
+                <div class="contact">
                 </div>
             </div>
         </div>
