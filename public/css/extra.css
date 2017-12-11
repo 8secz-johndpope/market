@@ -1128,15 +1128,11 @@ ul.image-gallery-ul {
     color: #fff;
     background: #009888;
 }
-.title-user:after {
-    content: ')';
-}
-.title-user:before {
-    content: '(';
-}
+
 .title-user {
     color: #555;
     font-size: 14px;
+    display: block;
 }
 ul.image-gallery-ul li {
     display: table-cell;
