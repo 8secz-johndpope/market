@@ -516,7 +516,7 @@
 
     });
     $('body').click(function(e){
-        if( e.target.id == 'cvv-tooltip' ||  e.target.className =='help-icon-grey'){
+        if( e.target.id == 'cvv-tooltip' ||  e.target.className =='help-icon-grey' || e.target.id =='cvv-tooltip-content'){
             e.preventDefault();
             $('#cvv-tooltip-content').show();
         }else
