@@ -242,6 +242,17 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
+                                                            <div class="col-xs-4">
+                                                                <div class="amex-cvv"></div>
+                                                            </div>
+                                                            <div class="col-xs-8">
+                                                                <div>
+                                                                    <div>
+                                                                        <b>American Express</b>
+                                                                    </div>
+                                                                    <div>This 4-digit number is on the front of the card above the credit card number.</div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </span>
