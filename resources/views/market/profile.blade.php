@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+<div class="body background-body">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="profile-picutre-big">
@@ -65,6 +66,6 @@
     @endforeach
         </div>
     </div>
-
+</div>
 
 @endsection
