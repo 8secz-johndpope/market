@@ -162,10 +162,10 @@
                 <div class="contact">
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="app-call">
+                            <div class="app-call border-dashed-bottom">
                                 <a href="" class="btn btn-default">Call</a>
                             </div>
-                            <div class="phone">
+                            <div class="phone border-dashed-bottom">
                                 <span>
                                     <span class="glyphicon glyphicon-earphone"></span>
                                     {{substr($advert->param('phone'),0,5)}}XXXXXX
