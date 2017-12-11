@@ -221,7 +221,7 @@
                                                 <span class="floating-label">
                                                     <label for="cvc">CVC:</label>
                                                     <input type="text" class="input-field cf-card-sec" id="cvc" name="cvc">
-                                                    <a id="cvv-tooltip" class="cvv-tooltip ml2">
+                                                    <a id="cvv-tooltip" class="cvv-tooltip ml2" href="#">
                                                         <b class="help-icon-grey">i</b>
                                                     </a>
                                                     <div id="cvv-tooltip-content">
@@ -514,6 +514,10 @@
         $('.fs-edit-btn span').toggleClass('expanded');
         $('#cc-new-ctr').hide();
 
+    });
+    $('#cvv-tooltip').click(function(e){
+        e.preventDefault();
+        $('#cvv-tooltip-content').show();
     });
 </script>
 @endsection
