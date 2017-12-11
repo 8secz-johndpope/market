@@ -485,7 +485,7 @@ span.ribbon.ribbon-delivery {
 }*/
 .ribbon.sold {
     background: darkgray;
-    color: #000;
+    color: #fff;
 }
 .extra-options {
     display: inline-block;
