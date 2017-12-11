@@ -473,6 +473,7 @@
     $('.action .cf-cancel').click(function(e){
         e.preventDefault();
         $('#cc-new-ctr').hide();
+        $('html, body').animate({scrollTop: 80}, 500);
     });
 </script>
 @endsection
