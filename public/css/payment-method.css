@@ -351,8 +351,8 @@ ul.cc-logos li {
     border-radius: 3px;
     box-shadow: 8px 8px 10px rgba(0,0,0,0.35);
     position: absolute;
-    top: -58px;
-    right: -272px;
+    top: -9px;
+    right: -322px;
 }
 #cvv-tooltip-content:after{
 	content: '';
