@@ -63,6 +63,32 @@
                             @endif
                         </div>
                     </div>
+                    <div class="clearfix extra-info">
+                        <hr>
+                        <div class="ribbons">                                                                                                                                                               </div>
+                        <div class="extra-options">
+                            <div class="make-offer">
+                                <a href="#">
+                                <div class="circle">
+                                    <div class="text-offer">
+                                        <span>Make an offer</span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="ratings">
+                                <div class="stars">
+                                    <span>
+                                        <i class="fullstar"></i>
+                                        <i class="fullstar"></i>
+                                        <i class="fullstar"></i>
+                                        <i class="fullstar"></i>
+                                        <i class="fullstar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                @endforeach
                </div> 
