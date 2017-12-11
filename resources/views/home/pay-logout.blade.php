@@ -515,6 +515,9 @@
         $('#cc-new-ctr').hide();
 
     });
+    $('body').click(function(e){
+        console.log(e);
+    })
     $('#cvv-tooltip').click(function(e){
         e.preventDefault();
         $('#cvv-tooltip-content').show();
