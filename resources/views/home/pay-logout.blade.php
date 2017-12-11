@@ -10,7 +10,7 @@
     <p>This is appended to the master sidebar.</p>
 @endsection
 @section('styles')
-<link href="{{ asset('/css/pay-invoice.css?q=874') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset("'/css/pay-invoice.css?q='. Datetime()->getTimestamp() .'874'") }}" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
 <div class="body background-body">
