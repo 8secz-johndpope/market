@@ -1,8 +1,7 @@
-<!-- Stored in resources/views/child.blade.php -->
 
 @extends('layouts.app')
 
-@section('title', 'Page Title')
+@section('title', 'Adverts by '. $user->display_name .' | '. env(''APP_NAME''))
 
 @section('sidebar')
     @parent
@@ -13,6 +12,12 @@
 @section('content')
 <div class="body background-body">
     <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="profile-picutre-big">
