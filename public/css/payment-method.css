@@ -372,3 +372,11 @@ ul.cc-logos li {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+#cvv-tooltip {
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    background: darkgray;
+    border-radius: 50%;
+    color: #fff;
+}
