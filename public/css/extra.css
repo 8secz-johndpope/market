@@ -1040,6 +1040,7 @@ ul.image-gallery-ul {
     float: left;
     overflow: auto;
     height: 100%;
+    border: 1px solid #ff9d2c;
 }
 .chat-title a {
     width: 100%;
