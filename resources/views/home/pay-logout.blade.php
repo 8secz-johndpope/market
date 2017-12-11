@@ -470,5 +470,9 @@
             $(this).removeAttr('placeholder');
         }
     });
+    $('.action .cf-cancel').click(function(e){
+        e.preventDefault();
+        $('#cc-new-ctr').hide();
+    });
 </script>
 @endsection
