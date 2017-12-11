@@ -71,7 +71,18 @@
                                    Sold
                                 </span>
                             @else
-                                
+                                @if($advert->featured_expires())
+                                <span class="ribbon ribbon-spotlight">
+                                    <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Spotlight</strong> 
+                                </span>
+                                @endif
+                                @if($advert->urgent_expires())
+                                    <span class="ribbon urgent-span">
+                                        <span class="ribbon-text">
+                                        Urgent
+                                        </span>
+                                    </span>
+                                @endif
                             @endif
                         </div>
                         <div class="extra-options">
