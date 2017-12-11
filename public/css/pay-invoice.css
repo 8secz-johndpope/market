@@ -175,6 +175,9 @@
 #inst-details {
     padding-top: 30px;
 }
+#cc-new-ctr h2 {
+    font-size: 20px;
+}
 @media screen and (max-width: 767px){
 	.col-xs-12 {
     	padding-left: 15px;
