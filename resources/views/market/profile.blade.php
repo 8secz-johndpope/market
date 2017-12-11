@@ -61,11 +61,11 @@
                             </span>
                             @if(!$advert->category->can_apply())
                             <div class="listing-description">
-                                {!! $product['description'] !!}
+                                {!! $advert->param('description') !!}
                             </div>
                             @else
                                 <div class="link-details">
-                                    <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
+                                    <a href="/p/{{$advert->category_id}}/{{$advert->id}}">> VIEW FULL POSTING</a>
                                 </div>
                             @endif
                             @if($advert->meta('price')>=0)
