@@ -447,8 +447,8 @@
         $(span).toggleClass('expanded');
         if($(span).hasClass('expanded')){
             $('#cc-new-ctr').show();
-            console.log($('#inst-details').offset().top);
-            $(window).scrollTop($('#inst-details').position().top);
+            console.log($('#cc-new-ctr').offset().top);
+            $('body').animate({scrollTop:  $('#inst-details').offset().top}, 500);
         }
         else
            $('#cc-new-ctr').hide(); 
