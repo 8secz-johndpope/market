@@ -898,6 +898,10 @@ h2.item-name{
 	margin-bottom: 10px;
 	padding-left: 15px;
 }
+em.send-me {
+    font-size: 19px;
+    font-weight: bold;
+}
 @media (min-width: 768px){
 	.reviews-item-l {
 	    width: 40%;
