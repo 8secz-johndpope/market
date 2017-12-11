@@ -516,13 +516,15 @@
 
     });
     $('body').click(function(e){
-        if( e.target.id != 'cvv-tooltip' && e.target.className !='help-icon-grey')
-            $('#cvv-tooltip-content').hide();
+        if( e.target.id == 'cvv-tooltip' ||  e.target.className =='help-icon-grey')
+            $('#cvv-tooltip-content').show();
+        else
+             $('#cvv-tooltip-content').hidden();
         console.log(e);
     })
-    $('#cvv-tooltip').click(function(e){
+    /*$('#cvv-tooltip').click(function(e){
         e.preventDefault();
         $('#cvv-tooltip-content').show();
-    });
+    });*/
 </script>
 @endsection
