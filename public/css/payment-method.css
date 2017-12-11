@@ -343,6 +343,7 @@ ul.cc-logos li {
     display: none;
     width: 300px;
     padding: 20px 15px;
+    font-size: 10px;
 }
 #cvv-tooltip-content:after{
 	content: '';
