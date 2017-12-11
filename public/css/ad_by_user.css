@@ -21,3 +21,6 @@
     border-top: 1px solid #bfbfbf;
     box-shadow: 0 0 1px #fff;
 }
+.user-details p {
+    margin-bottom: 0;
+}
