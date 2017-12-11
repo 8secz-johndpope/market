@@ -339,3 +339,6 @@ ul.cc-logos li {
     width: 300px;
     padding: 20px 15px;
 }
+#card-fields #cvv-tooltip-content div {
+    margin-bottom: 20px;
+}
