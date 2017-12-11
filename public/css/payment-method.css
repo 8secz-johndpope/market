@@ -320,3 +320,17 @@ ul.cc-logos li {
 #cvv-tooltip-content{
 	display: none;
 }
+#card-fields .cvv-tooltip {
+    position: absolute;
+    right: 0;
+    top: 28px;
+}
+.help-icon-grey {
+    position: relative;
+    bottom: 1px;
+}
+#card-fields #cvv-tooltip-content {
+    display: none;
+    width: 300px;
+    padding: 20px 15px;
+}
