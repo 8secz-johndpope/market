@@ -557,12 +557,11 @@ class MarketController extends BaseController
                     'size' => 10000,
                     'query' => [
                         'bool' => [
-                            "must_not" => ['exists' => [
-                                'field' => 'id'
+                            "must" => ['term' => [
+                                'phone' => '07788778877'
                             ]]
                         ]
-                    ],
-                    "sort"=> [["created_at"=> ["order"=> "desc"]]]
+                    ]
 
                 ]
             ];
@@ -570,18 +569,13 @@ class MarketController extends BaseController
             $products = $response['hits']['hits'];
 
             foreach ($products as $product) {
-                if(isset($product['_source']['source_id'])) {
-                    $advert = Advert::where('sid', $product['_source']['source_id'])->first();
-                    if ($advert) {
+
                         $params = [
                             'index' => 'adverts',
                             'type' => 'advert',
-                            'id' => $advert->elastic,
+                            'id' => $product['_id'],
                             'body' => [
-                                'doc' => [
-                                    'id' => $advert->id,
-
-                                ]
+                                "script" => "ctx._source.remove('phone')"
                             ]
                         ];
                         //  $advert = Advert::where('sid',(int)$product['source_id'])->first();
@@ -590,10 +584,8 @@ class MarketController extends BaseController
 
 // Update doc at /my_index/my_type/my_id
                         $response = $this->client->update($params);
-                    }
-                }else{
-                  //  return $product;
-                }
+
+
 
 
 
