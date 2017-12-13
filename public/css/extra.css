@@ -1062,7 +1062,11 @@ ul.image-gallery-ul {
 }
 #all-rooms .media {
     margin-top: 0;
-    display: table;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 72px;
 }
 .media-body {
     border-top: 1px solid #f9f0eb;
