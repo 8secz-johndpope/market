@@ -40,4 +40,14 @@ class Message extends Model
     public function day(){
         return date('D d M',strtotime($this->created_at));
     }
+    public function stringDateTime(){
+        $milDate = strtotime($this->created_at) * 1000;
+        $currentDate =  new DateTime();
+        $diff = $currentDate->getTimestamp() - $milDate;
+        $diffOneDay = 24*3600*1000;
+        if($diff < $diffOneDay){
+            return date('H:i',strtotime($this->created_at));
+        }
+        return $milDate;
+    }
 }
