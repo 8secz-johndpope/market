@@ -1100,11 +1100,11 @@ ul.image-gallery-ul {
     vertical-align: middle;
     flex-direction: column;
     min-width: 0;
-    display: flex;
+    display: table-cell;
     width: 323px;
-    padding-right: 15px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    
+    /*padding-bottom: 10px;
+    padding-top: 10px;*/
     height: 70px;
 }
 #all-rooms .media-body{
@@ -1117,6 +1117,7 @@ ul.image-gallery-ul {
     flex-direction: column;
     -webkit-justify-content: center;
     justify-content: center;
+    padding-right: 15px;
 }
 .chat-main {
     line-height: normal;
