@@ -1100,6 +1100,11 @@ ul.image-gallery-ul {
     background: red;
     border-color: red;
 }
+.btn-default.add-more-items {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}
 .right-div-messages .button-invoice .btn-primary {
     background: darkgreen;
     border-color: darkgreen;
