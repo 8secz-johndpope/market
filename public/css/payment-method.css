@@ -357,6 +357,10 @@ ul.cc-logos li {
 		top: -192px;
     	right: -153px;
 	}
+	#cvv-tooltip-content:after{
+		top: 32px;
+    	left: -13px;
+	}
 }
 @media(min-width: 922px){
 	#card-fields #cvv-tooltip-content {
@@ -374,13 +378,15 @@ ul.cc-logos li {
 	    top: -9px;
 	    right: -322px;
 	}
+	#cvv-tooltip-content:after{
+		top: 32px;
+    	left: -13px;
+	}
 }
 #cvv-tooltip-content:after{
 	content: '';
     position: absolute;
     z-index: 0;
-    top: 32px;
-    left: -13px;
     bottom: 0;
     right: 0;
     height: 24px;
