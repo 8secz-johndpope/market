@@ -1096,7 +1096,7 @@ ul.image-gallery-ul {
     border-radius: 50%;
     overflow: hidden;
 }
-#all-rooms .button-invoice .btn-primary {
+.right-div-messages .button-invoice .btn-primary {
     background: darkgreen;
     border-color: darkgreen;
 }
