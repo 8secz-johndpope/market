@@ -1090,7 +1090,7 @@ ul.image-gallery-ul {
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 12px;
-    line-height: 21px;
+    line-height: 14px;
     display: inline-block;
     max-width: calc(100% - 75px);
     overflow: hidden;
@@ -1136,6 +1136,7 @@ ul.image-gallery-ul {
     font-size: 14px;
     display: block;
     font-weight: bold;
+    line-height: 16px;
 }
 ul.image-gallery-ul li {
     display: table-cell;
