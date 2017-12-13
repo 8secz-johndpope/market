@@ -1068,6 +1068,7 @@ ul.image-gallery-ul {
     -webkit-flex-direction: row;
     flex-direction: row;
     height: 72px;
+    border-right: 1px solid #ff9d2c;
 }
 #all-rooms .media-left{
     -webkit-flex: none;
@@ -1119,7 +1120,6 @@ ul.image-gallery-ul {
     -webkit-justify-content: center;
     justify-content: center;
     padding-right: 15px;
-    border-right: 1px solid #ff9d2c;
 }
 #all-rooms .media.selected-room {
     background: #f9f0eb;
