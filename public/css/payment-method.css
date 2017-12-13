@@ -373,8 +373,8 @@ ul.cc-logos li {
     	right: -15px;
 	}
 	#cvv-tooltip-content:after{
-		top: 183px;
-    	left: 123px;
+		top: 185px;
+    	left: 262px;
     	-webkit-transform: rotate(-45deg);
     	transform: rotate(-45deg);
 	}
