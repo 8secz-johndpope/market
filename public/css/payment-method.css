@@ -370,7 +370,7 @@ ul.cc-logos li {
 @media(max-width: 767px){
 	#card-fields #cvv-tooltip-content {
 		top: -192px;
-    	right: -153px;
+    	right: -15px;
 	}
 	#cvv-tooltip-content:after{
 		top: 183px;
