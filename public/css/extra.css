@@ -1084,11 +1084,12 @@ ul.image-gallery-ul {
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid #d8d6d9;
+    background: none;
 }
 
 
 #all-rooms .listing-side .listing-thumbnail{
-    background: none;
+    overflow: none;
 }
 .media-body {
     border-top: 1px solid #f9f0eb;
