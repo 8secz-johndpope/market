@@ -76,7 +76,7 @@ class User extends Authenticatable
     }
     public function rooms()
     {
-        return $this->belongsToMany('App\Model\Room')->orderBy('updated_at','asc');
+        return $this->belongsToMany('App\Model\Room')->orderBy('updated_at','desc');
     }
     public function addresses()
     {
