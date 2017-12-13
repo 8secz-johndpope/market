@@ -567,7 +567,7 @@ span.message.get-invoice:before {
     text-align: left;
     font-weight: normal;
     font-size: 12px;
-    line-height: 20px;
+    line-height: 14px;
 }
 .main-search{
     margin-top: 15px;
@@ -1314,7 +1314,7 @@ img.icon-small {
     right: 0;
 }
 .unread-message {
-    font-weight: bolder;
+    /*font-weight: bolder;*/
     white-space: nowrap;
     overflow: hidden;
     width: 260px;
