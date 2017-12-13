@@ -1096,7 +1096,10 @@ ul.image-gallery-ul {
     border-radius: 50%;
     overflow: hidden;
 }
-
+#all-rooms .button-invoice .btn-primary {
+    background: darkgreen;
+    border-color: darkgreen;
+}
 .media-body {
     border-top: 1px solid #f9f0eb;
     vertical-align: middle;
