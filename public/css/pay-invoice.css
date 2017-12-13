@@ -197,16 +197,19 @@
 		font-size: 20px;
 	}
 	.pay-methods.logout .col-r-p {
-    	width: 25%;
+    	width: 15%;
 	}
 	.pay-methods.logout .col-l-p {
-    	width: 72%;
+    	width: 84%;
 	}
 	.col-xs-4{
 		width: 33.333333%
 	}
 	.body{
 		padding-top: 60px;
+	}
+	.pay-methods.logout .col-l-p .radio-r {
+    	width: 90%;
 	}
 }
 
