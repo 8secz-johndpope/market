@@ -1042,6 +1042,7 @@ ul.image-gallery-ul {
     overflow: auto;
     height: 100%;
     border: 1px solid #ff9d2c;
+    border-right: transparent;
 }
 .chat-title a {
     width: 100%;
