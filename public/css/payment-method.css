@@ -339,20 +339,29 @@ ul.cc-logos li {
     position: relative;
     bottom: 1px;
 }
-#card-fields #cvv-tooltip-content {
-    display: none;
-    width: 300px;
-    padding: 20px 15px;
-    font-size: 10px;
-    /*position: relative;*/
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    box-shadow: 8px 8px 10px rgba(0,0,0,0.35);
-    position: absolute;
-    top: -9px;
-    right: -322px;
+
+@media(min-width: 768px){
+	#card-fields #cvv-tooltip-content {
+		top: -192px;
+    	right: -153px;
+	}
+}
+@media(min-width: 922px){
+	#card-fields #cvv-tooltip-content {
+	    display: none;
+	    width: 300px;
+	    padding: 20px 15px;
+	    font-size: 10px;
+	    /*position: relative;*/
+	    padding: 20px;
+	    background: #fff;
+	    border: 1px solid #ddd;
+	    border-radius: 3px;
+	    box-shadow: 8px 8px 10px rgba(0,0,0,0.35);
+	    position: absolute;
+	    top: -9px;
+	    right: -322px;
+	}
 }
 #cvv-tooltip-content:after{
 	content: '';
@@ -380,3 +389,5 @@ ul.cc-logos li {
     border-radius: 50%;
     color: #fff;
 }
+
+
