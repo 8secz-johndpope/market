@@ -48,6 +48,9 @@ class Message extends Model
         if($diff < $diffOneDay){
             return date('H:i',strtotime($this->created_at));
         }
+        else if($diffOneDay < $diff || ($diffOneDay * 2) > $diff){
+            return 'Yesterday';
+        }
         return $milDate;
     }
 }
