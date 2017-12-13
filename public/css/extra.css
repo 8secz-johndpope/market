@@ -278,6 +278,9 @@ a.add-bank-link {
 .over-hidden {
     overflow: auto;
 }
+.top-main-nav {
+    width: max-content;
+}
 .cross-mark-add-card,.cross-mark-add-address {
     position: absolute;
     right: 0;
