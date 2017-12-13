@@ -1088,7 +1088,7 @@ ul.image-gallery-ul {
 }
 
 #all-rooms .listing-side .listing-thumbnail{
-    overflow: none;
+    overflow: initial;
 }
 #all-rooms .listing-thumbnail img{
     border-radius: 50%;
