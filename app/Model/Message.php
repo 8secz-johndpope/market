@@ -44,7 +44,6 @@ class Message extends Model
         $milDate = strtotime($this->created_at) * 1000;
         $currentDate =  date_create();
         $diff = (date_timestamp_get($currentDate) * 1000) - $milDate;
-        var_dump($diff);
         $diffOneDay = 24*3600*1000;
         if($diff < $diffOneDay){
             return date('H:i',strtotime($this->created_at));
