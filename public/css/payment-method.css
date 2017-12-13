@@ -378,6 +378,9 @@ ul.cc-logos li {
     	-webkit-transform: rotate(-45deg);
     	transform: rotate(-45deg);
 	}
+	#inst-details{
+		padding-left: 35px;
+	}
 }
 @media(min-width: 768px){
 	#card-fields #cvv-tooltip-content {
