@@ -153,7 +153,7 @@
 				 			</div>
 				 			<div class="panel-body hidden-xs">
 							 	<ul>
-							 		<li><a href="healt-beauty-services">Health & Beauty</a></li>
+							 		<li><a href="health-beauty-services">Health & Beauty</a></li>
 							 		<li><a href="tuition-lessons">Classes</a></li>
 							 		<li><a href="building-home-removal-services">Construction</a></li>
 							 		<li><a href="motoring-services">Motoring</a></li>
