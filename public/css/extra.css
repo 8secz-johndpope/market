@@ -252,9 +252,11 @@ a.add-bank-link {
 .mtop {
     padding: 10px 15px 10px 16px;
     background: #f9f0eb;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-    border-left: 1px solid rgba(0,0,0,0.08) height: 59px;
+    /*border-bottom: 1px solid rgba(0,0,0,0.08);
+    border-left: 1px solid rgba(0,0,0,0.08) height: 59px;*/
     height: 75px;
+    border: 1px solid #ff9d2c;
+    border-left: transparent;
 }
 .title-product a {
     display: inline-block;
