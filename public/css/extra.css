@@ -846,7 +846,7 @@ li.list-group-item a {
     overflow: hidden;
 }
 .listing-side {
-    width: 49px;
+    width: 55px;
     position: relative;
     float: left;
     border-radius: 50%;
@@ -888,7 +888,7 @@ li.list-group-item a {
     display: flex;
 }
 .listing-side .listing-thumbnail{
-    height: 49px;
+    height: 55px;
 }
 .product .listing-side .listing-thumbnail {
     height: 110px;
