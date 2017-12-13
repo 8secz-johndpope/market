@@ -553,9 +553,9 @@ span.message.get-invoice:before {
 .chat-secondary {
     display: -webkit-flex;
     display: flex;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 19px;
-    margin-top: 2px;
+    /*margin-top: 2px;*/
     min-width: 20px;
     -webkit-align-items: flex-start;
     align-items: flex-start;
@@ -1089,12 +1089,13 @@ ul.image-gallery-ul {
     position: relative;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 21px;
     display: inline-block;
     max-width: calc(100% - 75px);
     overflow: hidden;
     vertical-align: middle;
+    color: rgba(0,0,0,0.6);
 }
 .grecaptcha-badge{
     display: none;
@@ -1134,6 +1135,7 @@ ul.image-gallery-ul {
     color: #555;
     font-size: 14px;
     display: block;
+    font-weight: bold;
 }
 ul.image-gallery-ul li {
     display: table-cell;
