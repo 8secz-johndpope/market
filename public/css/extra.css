@@ -1096,6 +1096,10 @@ ul.image-gallery-ul {
     border-radius: 50%;
     overflow: hidden;
 }
+.btn-danger{
+    background: red;
+    border-color: red;
+}
 .right-div-messages .button-invoice .btn-primary {
     background: darkgreen;
     border-color: darkgreen;
