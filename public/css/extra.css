@@ -1077,6 +1077,14 @@ ul.image-gallery-ul {
     align-items: center;
     margin-top: -1px;
 }
+#all-rooms .media-left .listing-side {
+    width: 55px;
+    height: 55px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #d8d6d9;
+}
 .media-body {
     border-top: 1px solid #f9f0eb;
     vertical-align: middle;
