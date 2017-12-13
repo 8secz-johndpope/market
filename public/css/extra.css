@@ -1119,6 +1119,10 @@ ul.image-gallery-ul {
     justify-content: center;
     padding-right: 15px;
 }
+#all-rooms .media.selected-room {
+    background: #f9f0eb;
+    border-right: transparent;
+}
 .chat-main {
     line-height: normal;
     align-items: flex-start;
