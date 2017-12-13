@@ -661,6 +661,11 @@ legend {
     position: relative;
     color: #999;
 }
+.btn-sm-bill {
+    padding-top: 0;
+    padding-bottom: 0;
+    outline: 0;
+}
 .aspects-fieldset .aspects-questions span {
     margin-top: 6px;
     display: inline-block;
