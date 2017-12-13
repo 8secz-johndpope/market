@@ -1085,6 +1085,11 @@ ul.image-gallery-ul {
     overflow: hidden;
     border: 1px solid #d8d6d9;
 }
+
+
+#all-rooms .listing-side .listing-thumbnail{
+    background: none;
+}
 .media-body {
     border-top: 1px solid #f9f0eb;
     vertical-align: middle;
