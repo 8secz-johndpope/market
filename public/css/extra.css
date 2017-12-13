@@ -1138,6 +1138,7 @@ ul.image-gallery-ul {
 #all-rooms .media.selected-room {
     background: #f9f0eb;
     border-right: transparent;
+    border-bottom: 1px solid #ff9d2c;
 }
 .chat-main {
     line-height: normal;
