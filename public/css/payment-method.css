@@ -351,6 +351,7 @@ ul.cc-logos li {
     border-radius: 3px;
     box-shadow: 8px 8px 10px rgba(0,0,0,0.35);
     position: absolute;
+    z-index: 400;
 }
 #cvv-tooltip-content:after{
 	content: '';
@@ -365,6 +366,18 @@ ul.cc-logos li {
     border-right: 1px solid #fff;
     border-top: 1px solid #fff;
     background: #fff;
+}
+@media(max-width: 767px){
+	#card-fields #cvv-tooltip-content {
+		top: -192px;
+    	right: -153px;
+	}
+	#cvv-tooltip-content:after{
+		top: 183px;
+    	left: 123px;
+    	-webkit-transform: rotate(-45deg);
+    	transform: rotate(-45deg);
+	}
 }
 @media(min-width: 768px){
 	#card-fields #cvv-tooltip-content {
