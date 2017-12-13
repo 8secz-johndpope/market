@@ -76,7 +76,7 @@
                                             <div class="media-heading">{{$room->title}}</div> 
                                         </div>
                                         <div class="chat-meta">
-                                            <span class="message-time"> {{$room->last_message()->timestamp()}}</span>
+                                            <span class="message-time"> {{$room->last_message()->day()}}</span>
                                         </div>
                                     </div>
                                     <div class="chat-secondary">
