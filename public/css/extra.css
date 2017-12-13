@@ -75,7 +75,7 @@ span.delivery-text {
     font-weight: bold;
 }
 .media.selected-room {
-    background: #eee;
+    background: #f9f0eb;
 }
 .mapframe{
     margin-bottom: 30px;
@@ -876,6 +876,7 @@ li.list-group-item a {
     flex-grow: 1;
     -webkit-flex-grow: 1;
     text-align: left;
+    flex-direction: column;
 }
 .chat-meta {
     flex: none;
