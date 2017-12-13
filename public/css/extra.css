@@ -1011,6 +1011,9 @@ h4.items-box-head {
     float: right;
     padding-right: 10px;
 }
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    border-top: 2px solid #ff9d2c;
+}
 .search-alert-div {
     display: inline-block;
     float: left;
