@@ -58,42 +58,42 @@
                 @if(count($user->rooms)>0)
                 <div class="left-div-messages {{$leftclass}}" id="all-rooms">
                     @foreach($user->rooms as $room)
-                        <div class="media @if($room->id===$cur->id) selected-room @endif ">
-                            <div class="media-left">
-                                <a href="#">
-                                    <div class="listing-side">
-                                        <div class="listing-thumbnail">
-                                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$room->image}}" class="lazyload" alt="">
+                        <a href="/user/manage/messages/{{$room->id}}">
+                            <div class="media @if($room->id===$cur->id) selected-room @endif ">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <div class="listing-side">
+                                            <div class="listing-thumbnail">
+                                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$room->image}}" class="lazyload" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <div class="chat-main">
-                                    <div class="chat-title">
-                                        <a href="/user/manage/messages/{{$room->id}}">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="chat-main">
+                                        <div class="chat-title">
                                             <span class="title-user">{{$room->other()->display_name}}</span>
                                             <span class="media-heading">{{$room->title}}</span> 
-                                        </a>
+                                        </div>
+                                        <div class="chat-meta">
+                                            <span class="message-time"> {{$room->last_message()->timestamp()}}</span>
+                                        </div>
                                     </div>
-                                    <div class="chat-meta">
-                                        <span class="message-time"> {{$room->last_message()->timestamp()}}</span>
+                                    <div class="chat-secondary">
+                                        @if($room->last_message())
+                                        <div class="chat-status"> 
+                                            
+                                            <p class="@if($room->unread===1) unread-message @endif">
+                                                {{$room->last_message()->message}}
+                                            </p>
+                                        </div>
+                                        <div class="chat-meta">
+                                        </div>
+                                        @endif
                                     </div>
-                                </div>
-                                <div class="chat-secondary">
-                                    @if($room->last_message())
-                                    <div class="chat-status"> 
-                                        
-                                        <p class="@if($room->unread===1) unread-message @endif">
-                                            {{$room->last_message()->message}}
-                                        </p>
-                                    </div>
-                                    <div class="chat-meta">
-                                    </div>
-                                    @endif
                                 </div>
                             </div>
-                        </div>
+                        </a>
                         @endforeach
                 </div>
                 <div class="right-div-messages {{$rightclass}}">
