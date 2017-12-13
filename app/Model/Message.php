@@ -52,7 +52,7 @@ class Message extends Model
             return 'Yesterday';
         }
         else if(($diffOneDay*2) < $diff && ($diffOneDay * 5) > $diff){
-            return date('D',strtotime($this->created_at));
+            return date('l',strtotime($this->created_at));
         }
         return date('d/m/Y',strtotime($this->created_at));;
     }
