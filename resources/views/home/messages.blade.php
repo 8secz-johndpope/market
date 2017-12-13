@@ -72,8 +72,8 @@
                                 <div class="media-body">
                                     <div class="chat-main">
                                         <div class="chat-title">
-                                            <span class="title-user">{{$room->other()->display_name}}</span>
-                                            <span class="media-heading">{{$room->title}}</span> 
+                                            <div class="title-user">{{$room->other()->display_name}}</div>
+                                            <div class="media-heading">{{$room->title}}</div> 
                                         </div>
                                         <div class="chat-meta">
                                             <span class="message-time"> {{$room->last_message()->timestamp()}}</span>
