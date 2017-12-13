@@ -100,11 +100,13 @@
                     <div class="mtop">
                         <a class="message-back-button"  href="/user/manage/messages">Back</a>
                         <div class="title-product">
-                            <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4>{{$cur->advert->param('title')}}</h4></a>
-                            @if($cur->advert->meta('price')>=0)
-                                <span class="product-price">£ {{$cur->advert->meta('price')/100}}{{$cur->advert->meta('price_frequency')}}
-                                </span>
-                            @endif
+                            <div class="title-main">
+                                <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4>{{$cur->advert->param('title')}}</h4></a>
+                                @if($cur->advert->meta('price')>=0)
+                                    <span class="product-price">£ {{$cur->advert->meta('price')/100}}{{$cur->advert->meta('price_frequency')}}
+                                    </span>
+                                @endif
+                            </div>
                         </div>
                         <div class="button-invoice">
                             <a class="btn btn-primary" href="/room/invoice/create/{{$cur->id}}">Send Invoice</a>
@@ -172,8 +174,7 @@
             var objDiv = document.getElementById("all-msg");
             objDiv.scrollTop = objDiv.scrollHeight;
         }
-      scroll_bottom();
-
+        scroll_bottom();
         function onSubmit(token) {
 
 
