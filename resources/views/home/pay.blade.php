@@ -122,12 +122,20 @@
                             <div class="row total-terms-container">
                                 <div class="col-sm-6">
                                     <div class="terms-container">
-                                        <p><strong>Terms and conditions</strong></p>
-                                        <p>Full refund within 60 days after purchase.</p>
+                                        <p><strong>Terms</strong></p>
+                                        @if($invoice->terms !== null)
+                                            <p>{{$invoice->terms}}</p>
+                                        @else
+                                            <p>Full refund within 60 days after purchase.</p>
+                                        @endif
                                     </div>
                                     <div class="notes-container">
                                         <p><strong>Note to recipient</strong></p>
-                                        <p>Thanks for your business. Enjoy</p>
+                                        @if($invoice->notes !== null)
+                                            <p>{{$invoice->notes}}</p>
+                                        @else
+                                            <p>Thank for your business. Enjoy</p>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
