@@ -131,7 +131,11 @@
                                     </div>
                                     <div class="notes-container">
                                         <p><strong>Note to recipient</strong></p>
-                                        <p>Thank for your business. Enjoy</p>
+                                        @if($invoice->notes !== null)
+                                            <p>{{$invoice->notes}}</p>
+                                        @else
+                                            <p>Thank for your business. Enjoy</p>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
