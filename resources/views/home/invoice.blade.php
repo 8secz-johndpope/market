@@ -197,7 +197,7 @@
                         <div class="vat-check">
                             <span>Add VAT information</span>
                             <label class="switch">
-                              <input type="checkbox" id="add-vat-info" name="add_vat_info" value="1">
+                              <input type="checkbox" id="add_vat_info" name="add_vat_info" value="1">
                               <span class="slider round"></span>
                             </label>
                         </div>
@@ -245,7 +245,7 @@
                     '<td><a class="btn btn-danger delete-item">X</a></td>'+
                 '</tr>');
         });
-        $('#add-ship-info').change(function(){
+        $('#add_ship_info').change(function(){
             if(this.checked){
                 $('#ship-container').show();
             }
@@ -253,7 +253,7 @@
                 $('#ship-container').hide();
             }
         });
-        $('#add-vat-info').change(function(){
+        $('#add_vat_info').change(function(){
             if(this.checked){
                 $('#vat-container').show();
             }
