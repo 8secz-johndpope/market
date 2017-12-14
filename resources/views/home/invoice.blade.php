@@ -156,7 +156,7 @@
                         <label for="notes">Subtotal</label>
                         <input type="text" name="" disabled="true" value="0">
                     </div>
-                    <div class="col-sm-12 text-right">
+                    <div class="col-sm-12 text-right" id="vat-container">
                         <label for="notes">VAT %</label>
                         <input type="text" name="por-vat">
                     </div>
@@ -254,6 +254,14 @@
             }
             else{
                 $('#ship-container').hide();
+            }
+        });
+        $('#add-vat-info').change(function(){
+            if(this.checked){
+                $('#vat-container').show();
+            }
+            else{
+                $('#vat-container').hide();
             }
         });
     </script>
