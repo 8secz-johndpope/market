@@ -264,6 +264,11 @@ a.add-bank-link {
     float: left;
     height: 100%;
 }
+.text-heading {
+    padding: 25px 10px;
+    text-align: center;
+    font-weight: bold;
+}
 .title-product a {
     display: inline-block;
     margin-right: 10px;
