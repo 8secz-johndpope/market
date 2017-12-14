@@ -46,7 +46,7 @@ class MessageController extends BaseController
 
         $user = Auth::user();
         $room = Room::find($id);
-        $room->modify();
+        //$room->modify();
 
 
         return view('home.rooms',['cur'=>$room,'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
@@ -55,7 +55,7 @@ class MessageController extends BaseController
 
         $user = Auth::user();
         $room = Room::find($id);
-        $room->modify();
+        //$room->modify();
 
 
         return view('home.msgs',['cur'=>$room,'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
