@@ -73,24 +73,31 @@
                 <div id="items">
                     <div class="form-group row">
                         <div class="table-container">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Item</th>
-                                        <th>Quantity</th>
-                                        <th>Rate</th>
-                                        <th>Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input type="text" class="form-control" placeholder="Deposit" name="items[]"></td>
-                                        <td><input type="number" class="form-control" placeholder="500" name="quantities[]"></td>
-                                        <td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="col-sm-12">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Quantity</th>
+                                            <th>Rate</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" class="form-control" placeholder="Deposit" name="items[]"></td>
+                                            <td><input type="number" class="form-control" placeholder="0" name="quantities[]"></td>
+                                            <td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="container-badd-item">
+                                    <a class="btn btn-default add-more-items">Add Item</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row">
