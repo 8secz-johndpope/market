@@ -54,7 +54,7 @@ class Message extends Model
             return date('H:i',strtotime($this->created_at));
         }
         /*else if($diffOneDay < $diff && ($diffOneDay * 2) > $diff){*/
-        else if($interval->d > 1){
+        else if(($dYearCreated + 1) == $dYearCurrent){
             return 'Yesterday';
         }
         /*else if(($diffOneDay*2) < $diff && ($diffOneDay * 5) > $diff){*/
