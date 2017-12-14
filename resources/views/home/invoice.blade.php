@@ -164,6 +164,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="vat-check">
+                        <span>Add VAT information</span>
                         <label class="switch">
                           <input type="checkbox" checked>
                           <span class="slider round"></span>
