@@ -164,11 +164,11 @@
                 <div class="form-group row">
                     <div class="col-sm-12">
                         <label for="notes">Notes</label>
-                        <textarea rows="3" name="notes" id="notes" placeholder="Notes - Any relevant information"></textarea>
+                        <textarea rows="3" name="notes" id="notes" placeholder="Notes - Any relevant information" class="w100p"></textarea>
                     </div>
                     <div class="col-sm-12">
                         <label for="terms">Terms</label>
-                        <textarea rows="3" name="terms" id="terms" placeholder="Terms and conditions"></textarea>
+                        <textarea rows="3" name="terms" id="terms" placeholder="Terms and conditions" class="w100p"></textarea>
                     </div>
                 </div>
                
