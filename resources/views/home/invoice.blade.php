@@ -56,9 +56,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <form action="/room/invoice/save" method="post" id="change-category">
+        <div class="col-sm-9">
             <br><br><br><br>
-            <form action="/room/invoice/save" method="post" id="change-category">
                 <input name="id" type="hidden" value="{{$room->id}}">
                 {{ csrf_field() }}
                 <div class="form-group row">
@@ -153,8 +153,26 @@
                         <textarea rows="3" name="terms" id="terms" placeholder="Terms and conditions"></textarea>
                     </div>
                 </div>
+               
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-sm-12">
                 <input type="submit" value="Send Invoice" class="btn btn-primary">
-            </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="vat-check">
+                        <label class="switch">
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
         </div>
     </div>
 </div>
