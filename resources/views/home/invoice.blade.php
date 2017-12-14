@@ -56,10 +56,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-3">
-
-        </div>
-        <div class="col-md-6">
+        <div class="col-sm-12">
             <br><br><br><br>
             <form action="/room/invoice/save" method="post" id="change-category">
                 <input name="id" type="hidden" value="{{$room->id}}">
