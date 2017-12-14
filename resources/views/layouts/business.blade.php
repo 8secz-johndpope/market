@@ -202,7 +202,7 @@
 
 
     </style>
-
+@yield('styles')
 </head>
 <body class="">
 <input type="hidden" id="amazon-region" value="{{env('AWS_REGION')}}">

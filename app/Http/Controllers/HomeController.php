@@ -913,7 +913,6 @@ class HomeController extends BaseController
     {
         $room = Room::find($id);
         $user = Auth::user();
-
         return view('home.invoice',['room'=>$room,'user'=>$user]);
     }
     public function save_invoice(Request $request)

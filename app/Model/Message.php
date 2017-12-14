@@ -43,15 +43,16 @@ class Message extends Model
     public function stringDateTime(){
         $milDate = strtotime($this->created_at) * 1000;
         $currentDate =  date_create();
-        $diff = (date_timestamp_get($currentDate) * 1000) - $milDate;
-        $diffOneDay = 24*3600*1000;
-        if($diff < $diffOneDay){
+        $dYearCreated = intval(date('z',strtotime($this->created_at)));
+        $dYearCurrent = intval($currentDate->format('z'));
+        $interval = date_diff(date_create($this->created_at), $currentDate);
+        if($dYearCreated == $dYearCurrent){
             return date('H:i',strtotime($this->created_at));
         }
-        else if($diffOneDay < $diff && ($diffOneDay * 2) > $diff){
+        else if(($dYearCreated + 1) == $dYearCurrent){
             return 'Yesterday';
         }
-        else if(($diffOneDay*2) < $diff && ($diffOneDay * 5) > $diff){
+        else if($interval->d > 1 && $interval->d < 5){
             return date('l',strtotime($this->created_at));
         }
         return date('d/m/Y',strtotime($this->created_at));;

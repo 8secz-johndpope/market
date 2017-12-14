@@ -63,8 +63,8 @@ class MessageController extends BaseController
     public function gmessages(Request $request,$rid){
         $user = Auth::user();
         $room=Room::find($rid);
-        if($room->last_message()->user->id!==$user->id)
-        $room->read();
+        if($room->last_message()->user->id!==$user->id && $room->unread == 1)
+            $room->read();
         if($room===null){
             return redirect('/user/manage/messages');
 

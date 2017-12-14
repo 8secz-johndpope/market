@@ -1,0 +1,52 @@
+.vat-check {
+    margin-top: 15px;
+}
+.cell-item{
+	width: 50%;
+}
+.w100p{
+	width: 100%;
+}
+.text-invoice {
+    width: 100%;
+    color: #ccc;
+    font-size: 2.3rem;
+}
+.vat-check span, .ship-check span {
+    display: block;
+}
+#items textarea {
+    border: 1px solid #dddd;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.col-options-send {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+.container-invoice {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+}
+#vat-container, #ship-container{
+	display: none;
+}
+.tinput-invoice th {
+    background: #000;
+    color: #fff;
+}
+.tinput-invoice th, .tinput-invoice td {
+    padding: 7px 10px;
+}
+.tinput-invoice th:first-child{
+	border-bottom-left-radius: 4px;
+	border-top-left-radius: 4px;
+}
+.tinput-invoice th:last-child{
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+}
