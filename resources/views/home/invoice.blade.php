@@ -71,17 +71,38 @@
                     </div>
                 </div>
                 <div id="items">
-                <div class="form-group row">
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="inputPassword" placeholder="Deposit" name="items[]">
+                    <div class="form-group row">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Quantity</th>
+                                    <th>Rate</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" class="form-control" placeholder="Deposit" name="items[]"></td>
+                                    <td><input type="number" class="form-control" placeholder="500" name="quantities[]"></td>
+                                    <td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="col-sm-3">
-                        <input type="number" class="form-control" id="inputPassword" placeholder="500" name="prices[]">
+                    <div class="form-group row">
+
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="inputPassword" placeholder="Deposit" name="items[]">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="number" class="form-control" id="inputPassword" placeholder="500" name="prices[]">
+                        </div>
+                        <div class="col-sm-1">
+                            <a class="btn btn-danger delete-item">Delete Item</a>
+                        </div>
                     </div>
-                    <div class="col-sm-1">
-                        <a class="btn btn-danger delete-item">Delete Item</a>
-                    </div>
-                </div>
                 <div class="form-group row">
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="inputPassword" placeholder="Admin Fee" name="items[]">
