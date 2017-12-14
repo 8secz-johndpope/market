@@ -206,7 +206,7 @@
                         <div class="ship-check">
                             <span>Add Shipping information</span>
                             <label class="switch">
-                              <input type="checkbox" id="add-ship-info" name="add_ship_info" value="1">
+                              <input type="checkbox" id="add_ship_info" name="add_ship_info" value="1">
                               <span class="slider round"></span>
                             </label>
                         </div>
