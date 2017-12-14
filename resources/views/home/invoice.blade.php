@@ -79,7 +79,7 @@
                     <div class="form-group row">
                         <div class="table-container">
                             <div class="col-sm-12">
-                                <table class="w100p" id="table-items">
+                                <table class="w100p tinput-invoice" id="table-items">
                                     <thead>
                                         <tr>
                                             <th class="cell-item">Item</th>
