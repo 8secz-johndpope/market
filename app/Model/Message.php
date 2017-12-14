@@ -47,7 +47,7 @@ class Message extends Model
         $dYearCurrent = intval($currentDate->format('z'));
         $interval = date_diff(date_create($this->created_at), $currentDate);
         var_dump($dYearCreated);
-        var_dump($interval->days);
+        var_dump($interval->d);
         $diff = (date_timestamp_get($currentDate) * 1000) - $milDate;
         $diffOneDay = 24*3600*1000;
         if($dYearCreated == $dYearCurrent){
