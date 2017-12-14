@@ -152,11 +152,11 @@
                     </div>
                 </div>-->
                 <div class="form-group row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 text-right">
                         <label for="notes">VAT %</label>
                         <input type="text" name="por-vat">
                     </div>
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 text-right">
                         <label for="terms">Shipping</label>
                         <input type="text" name="shipping">
                     </div>
