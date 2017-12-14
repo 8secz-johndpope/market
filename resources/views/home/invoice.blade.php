@@ -65,6 +65,11 @@
                 <input name="id" type="hidden" value="{{$room->id}}">
                 {{ csrf_field() }}
                 <div class="form-group row">
+                    <div class="col-sm-offset-6 col-sm-6">
+                        <span class="text-invoice">INVOICE</span>
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
                     <div class="col-sm-10">
                         <input type="text" name="title" class="form-control" id="staticEmail" value="{{$room->title}}">
@@ -146,6 +151,16 @@
                         <a class="btn btn-default add-more-items">Add Item</a>
                     </div>
                 </div>-->
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <label for="notes">Notes</label>
+                        <textarea rows="3" name="notes" id="notes" placeholder="Notes - Any relevant information"></textarea>
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="terms">Terms</label>
+                        <textarea rows="3" name="terms" id="terms" placeholder="Terms and conditions"></textarea>
+                    </div>
+                </div>
                 <div class="form-group row">
                     <div class="col-sm-12">
                         <label for="notes">Notes</label>
