@@ -922,6 +922,8 @@ class HomeController extends BaseController
         $room =  Room::find($request->id);
         $invoice = new Invoice();
         $invoice->title=$request->title;
+        $invoice->notes = $request->notes;
+        $invoice->terms = $request->terms;
         $invoice->save();
 
         $items = $request->items;
