@@ -16,9 +16,9 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12 over-hidden">
 
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs top-main-nav">
 
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
