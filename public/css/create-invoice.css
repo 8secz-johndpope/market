@@ -36,9 +36,11 @@
 	display: none;
 }
 .tinput-invoice th {
-    padding: 7px 10px;
     background: #000;
     color: #fff;
+}
+.tinput-invoice th, .tinput-invoice tr {
+    padding: 7px 10px;
 }
 .tinput-invoice th:first-child{
 	border-bottom-left-radius: 4px;
