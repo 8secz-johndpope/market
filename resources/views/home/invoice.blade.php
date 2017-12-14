@@ -74,10 +74,10 @@
                     <div class="form-group row">
                         <div class="table-container">
                             <div class="col-sm-12">
-                                <table>
+                                <table class="w100p">
                                     <thead>
                                         <tr>
-                                            <th>Item</th>
+                                            <th class="cell-item">Item</th>
                                             <th>Quantity</th>
                                             <th>Rate</th>
                                             <th>Amount</th>

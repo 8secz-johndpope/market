@@ -34,6 +34,9 @@ label.btn.btn-primary.active {
     height: auto;
     outline: 0;
 }
+.w100p {
+    width: 100%;
+}
 .tab-pane h3 {
     color: #262637;
     font-size: 15px;
