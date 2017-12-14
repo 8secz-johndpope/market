@@ -62,7 +62,11 @@
                                     <div>
                                         {{$seller->business->email}}
                                     </div>
-                                @else
+                                    @if($invoice->show_vat == 1)
+                                        <div>
+                                            VAT Registation No. {{$seller->business->vat}}
+                                        </div>
+                                    @else
                                     <div>
                                         <h2 class="seller-name">{{$seller->name}}</h2>
                                     </div>
