@@ -7,3 +7,8 @@
 .w100p{
 	width: 100%;
 }
+.text-invoice {
+    width: 100%;
+    color: #ccc;
+    font-size: 2.3rem;
+}

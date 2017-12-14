@@ -65,7 +65,7 @@
                 <input name="id" type="hidden" value="{{$room->id}}">
                 {{ csrf_field() }}
                 <div class="form-group row">
-                    <div class="col-sm-offset-6 col-sm-6">
+                    <div class="col-sm-offset-6 col-sm-6 text-right">
                         <span class="text-invoice">INVOICE</span>
                     </div>
                 </div>
