@@ -195,7 +195,7 @@
                         <div class="vat-check">
                             <span>Add VAT information</span>
                             <label class="switch">
-                              <input type="checkbox" id="add-vat-info" checked>
+                              <input type="checkbox" id="add-vat-info">
                               <span class="slider round"></span>
                             </label>
                         </div>
@@ -204,7 +204,7 @@
                         <div class="ship-check">
                             <span>Add Shipping information</span>
                             <label class="switch">
-                              <input type="checkbox" id="add-ship-info" checked>
+                              <input type="checkbox" id="add-ship-info">
                               <span class="slider round"></span>
                             </label>
                         </div>
