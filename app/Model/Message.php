@@ -44,7 +44,7 @@ class Message extends Model
         $milDate = strtotime($this->created_at) * 1000;
         $currentDate =  date_create();
         $dYearCreated = intval(date('z',strtotime($this->created_at)));
-        $dYearCurrent = intval(date('z',strtotime($this->created_at)));
+        $dYearCurrent = intval($currentDate->format('z'));
         $interval = date_diff(date_create($this->created_at), $currentDate);
         var_dump($dYearCreated);
         var_dump($interval->days);
