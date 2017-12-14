@@ -220,6 +220,6 @@
                     '<td></td>'+
                     '<td><a class="btn btn-danger delete-item">X</a></td>'+
                 '</tr>');
-        }
+        });
     </script>
 @endsection
