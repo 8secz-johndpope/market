@@ -160,7 +160,7 @@
                         <label for="notes">VAT %</label>
                         <input type="text" name="por-vat">
                     </div>
-                    <div class="col-sm-12 text-right">
+                    <div class="col-sm-12 text-right" id="ship-container">
                         <label for="terms">Shipping</label>
                         <input type="text" name="shipping">
                     </div>
@@ -247,6 +247,14 @@
                     '<td></td>'+
                     '<td><a class="btn btn-danger delete-item">X</a></td>'+
                 '</tr>');
+        });
+        $('#add-ship-info').change(function(){
+            if(this.checked){
+                $('#ship-container').show();
+            }
+            else{
+                $('#ship-container').hide();
+            }
         });
     </script>
 @endsection
