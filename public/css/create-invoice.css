@@ -39,7 +39,7 @@
     background: #000;
     color: #fff;
 }
-.tinput-invoice th, .tinput-invoice tr {
+.tinput-invoice th, .tinput-invoice td {
     padding: 7px 10px;
 }
 .tinput-invoice th:first-child{
