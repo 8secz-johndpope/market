@@ -158,6 +158,7 @@
                 </div>
                
         </div>
+    </div>
         <div class="col-md-3">
             <div class="row">
                 <div class="col-sm-12">
