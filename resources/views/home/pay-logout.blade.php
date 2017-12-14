@@ -66,7 +66,8 @@
                                         <div>
                                             VAT Registration No. {{$seller->business->vat}}
                                         </div>
-                                    @else
+                                    @endif
+                                @else
                                     <div>
                                         <h2 class="seller-name">{{$seller->name}}</h2>
                                     </div>
