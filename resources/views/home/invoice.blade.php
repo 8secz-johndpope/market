@@ -94,7 +94,7 @@
                                             <td><input type="text" class="form-control" placeholder="Deposit" name="items[]"></td>
                                             <td><input type="number" class="form-control" placeholder="0" name="quantities[]"></td>
                                             <td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>
-                                            <td></td>
+                                            <td>£ 0</td>
                                             <td><a class="btn btn-danger delete-item">X</a></td>
                                         </tr>
                                     </tbody>
