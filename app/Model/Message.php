@@ -53,11 +53,11 @@ class Message extends Model
             return date('H:i',strtotime($this->created_at));
         }
         /*else if($diffOneDay < $diff && ($diffOneDay * 2) > $diff){*/
-        else if($interval->days > 1){
+        else if($interval->d > 1){
             return 'Yesterday';
         }
         /*else if(($diffOneDay*2) < $diff && ($diffOneDay * 5) > $diff){*/
-        else if($interval->days > 5){
+        else if($interval->d > 5){
             return date('l',strtotime($this->created_at));
         }
         return date('d/m/Y',strtotime($this->created_at));;
