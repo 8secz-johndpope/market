@@ -72,24 +72,26 @@
                 </div>
                 <div id="items">
                     <div class="form-group row">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Item</th>
-                                    <th>Quantity</th>
-                                    <th>Rate</th>
-                                    <th>Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="text" class="form-control" placeholder="Deposit" name="items[]"></td>
-                                    <td><input type="number" class="form-control" placeholder="500" name="quantities[]"></td>
-                                    <td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Quantity</th>
+                                        <th>Rate</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" class="form-control" placeholder="Deposit" name="items[]"></td>
+                                        <td><input type="number" class="form-control" placeholder="500" name="quantities[]"></td>
+                                        <td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <div class="form-group row">
 
