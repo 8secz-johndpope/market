@@ -64,7 +64,7 @@
                                     </div>
                                     @if($invoice->show_vat == 1)
                                         <div>
-                                            VAT Registation No. {{$seller->business->vat}}
+                                            VAT Registration No. {{$seller->business->vat}}
                                         </div>
                                     @else
                                     <div>
