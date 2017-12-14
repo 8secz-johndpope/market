@@ -199,7 +199,7 @@
         $('#items').on('click','.delete-item',function () {
             $(this).parent().parent().remove();
         });
-        $('.add-more-items').click(function () {
+        /*$('.add-more-items').click(function () {
             $('#items').append('<div class="form-group row">\n' +
                 '                    <div class="col-sm-8">\n' +
                 '                        <input type="text" class="form-control" id="inputPassword" placeholder="One More Item" name="items[]">\n' +
@@ -211,7 +211,7 @@
                 '                        <a class="btn btn-danger delete-item">Delete Item</a>\n' +
                 '                    </div>\n' +
                 '                </div>');
-        });
+        });*/
         $('.add-more-items').click(function () {
             $('#table-items tbody').append(
                 '<tr>' +
