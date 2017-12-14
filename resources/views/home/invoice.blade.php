@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+<div class="container">
     <div class="row">
         <div class="col-sm-12">
 
@@ -113,11 +114,21 @@
                         <a class="btn btn-default add-more-items">Add Item</a>
                     </div>
                 </div>
-
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <label for="notes">Notes</label>
+                        <textarea rows="3" name="notes" id="notes" placeholder="Notes - Any relevant information"></textarea>
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="terms">Terms</label>
+                        <textarea rows="3" name="terms" id="terms" placeholder="Terms and conditions"></textarea>
+                    </div>
+                </div>
                 <input type="submit" value="Send Invoice" class="btn btn-primary">
             </form>
         </div>
     </div>
+</div>
     <script>
         ClassicEditor
             .create( document.querySelector( '#editor' ) )
