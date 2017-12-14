@@ -59,6 +59,7 @@
                 <div class="left-div-messages {{$leftclass}}" id="all-rooms">
                     <div class="l-top">
                         <div class="text-heading">
+                            <span>My Conversations</span>
                         </div>
                     </div>
                     @foreach($user->rooms as $room)
