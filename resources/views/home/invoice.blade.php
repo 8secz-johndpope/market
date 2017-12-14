@@ -61,6 +61,7 @@
     <div class="row">
         <form action="/room/invoice/save" method="post" id="change-category">
         <div class="col-sm-9">
+
             <br><br>
                 <input name="id" type="hidden" value="{{$room->id}}">
                 {{ csrf_field() }}
@@ -183,28 +184,30 @@
         </div>
     </div>
         <div class="col-md-3">
-            <div class="row">
-                <div class="col-sm-12">
-                <input type="submit" value="Send Invoice" class="btn btn-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="vat-check">
-                        <span>Add VAT information</span>
-                        <label class="switch">
-                          <input type="checkbox" id="add-vat-info" checked>
-                          <span class="slider round"></span>
-                        </label>
+            <div class="col-options-send">
+                <div class="row">
+                    <div class="col-sm-12">
+                    <input type="submit" value="Send Invoice" class="btn btn-primary">
                     </div>
                 </div>
-                <div class="col-sm-12">
-                    <div class="ship-check">
-                        <span>Add Shipping information</span>
-                        <label class="switch">
-                          <input type="checkbox" id="add-ship-info" checked>
-                          <span class="slider round"></span>
-                        </label>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="vat-check">
+                            <span>Add VAT information</span>
+                            <label class="switch">
+                              <input type="checkbox" id="add-vat-info" checked>
+                              <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="ship-check">
+                            <span>Add Shipping information</span>
+                            <label class="switch">
+                              <input type="checkbox" id="add-ship-info" checked>
+                              <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
