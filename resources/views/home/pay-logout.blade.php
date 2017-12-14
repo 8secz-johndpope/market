@@ -123,7 +123,11 @@
                                 <div class="col-sm-6">
                                     <div class="terms-container">
                                         <p><strong>Terms</strong></p>
-                                        <p>Full refund within 60 days after purchase.</p>
+                                        @if($invoice->terms !== null)
+                                            <p>{{$invoice->terms}}</p>
+                                        @else
+                                            <p>Full refund within 60 days after purchase.</p>
+                                        @endif
                                     </div>
                                     <div class="notes-container">
                                         <p><strong>Note to recipient</strong></p>
