@@ -94,7 +94,7 @@
                                             <td><input type="text" class="form-control" placeholder="Deposit" name="items[]"></td>
                                             <td><input type="number" class="form-control" placeholder="0" name="quantities[]"></td>
                                             <td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>
-                                            <td>£ 0</td>
+                                            <td id="amount">£ 0</td>
                                             <td><a class="btn btn-danger delete-item">X</a></td>
                                         </tr>
                                     </tbody>
@@ -219,11 +219,6 @@
     </div>
 </div>
     <script>
-        ClassicEditor
-            .create( document.querySelector( '#editor' ) )
-            .catch( error => {
-            console.error( error );
-        } );
         $('#items').on('click','.delete-item',function () {
             $(this).parent().parent().remove();
         });
