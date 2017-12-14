@@ -61,7 +61,7 @@
     <div class="row">
         <form action="/room/invoice/save" method="post" id="change-category">
         <div class="col-sm-9">
-            <br><br><br><br>
+            <br><br>
                 <input name="id" type="hidden" value="{{$room->id}}">
                 {{ csrf_field() }}
                 <div class="form-group row">
