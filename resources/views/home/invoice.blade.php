@@ -81,6 +81,7 @@
                                             <th>Quantity</th>
                                             <th>Rate</th>
                                             <th>Amount</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -89,6 +90,7 @@
                                             <td><input type="number" class="form-control" placeholder="0" name="quantities[]"></td>
                                             <td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>
                                             <td></td>
+                                            <td><a class="btn btn-danger delete-item">X</a></td>
                                         </tr>
                                     </tbody>
                                 </table>
