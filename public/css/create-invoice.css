@@ -22,3 +22,8 @@
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
+.col-options-send {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
