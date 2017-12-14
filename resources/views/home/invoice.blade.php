@@ -102,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <!-- <div class="form-group row">
 
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="inputPassword" placeholder="Deposit" name="items[]">
@@ -145,7 +145,7 @@
                     <div class="col-sm-1">
                         <a class="btn btn-default add-more-items">Add Item</a>
                     </div>
-                </div>
+                </div>-->
                 <div class="form-group row">
                     <div class="col-sm-12">
                         <label for="notes">Notes</label>
