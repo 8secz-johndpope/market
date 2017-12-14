@@ -74,7 +74,7 @@
                     <div class="form-group row">
                         <div class="table-container">
                             <div class="col-sm-12">
-                                <table class="w100p">
+                                <table class="w100p" id="table-items">
                                     <thead>
                                         <tr>
                                             <th class="cell-item">Item</th>
@@ -211,5 +211,15 @@
                 '                    </div>\n' +
                 '                </div>');
         });
+        $('.add-more-items').click(function () {
+            $('#table-items tbody').append(
+                '<tr>' +
+                    '<td><input type="text" class="form-control" placeholder="Deposit" name="items[]"></td>' +
+                    '<td><input type="number" class="form-control" placeholder="0" name="quantities[]"></td>' +
+                    '<td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>' +
+                    '<td></td>'+
+                    '<td><a class="btn btn-danger delete-item">X</a></td>'+
+                '</tr>');
+        }
     </script>
 @endsection
