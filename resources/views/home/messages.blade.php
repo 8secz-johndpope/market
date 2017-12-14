@@ -57,6 +57,8 @@
             <div class="full-width">
                 @if(count($user->rooms)>0)
                 <div class="left-div-messages {{$leftclass}}" id="all-rooms">
+                    <div class="l-top">
+                    </div>
                     @foreach($user->rooms as $room)
                             <div class="media @if($room->id===$cur->id) selected-room @endif ">
                                 <div class="media-left">
