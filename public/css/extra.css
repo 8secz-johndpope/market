@@ -1150,6 +1150,10 @@ ul.image-gallery-ul {
     border-bottom: 1px solid #ff9d2c;
     border-top: 1px solid #ff9d2c;
 }
+.l-top {
+    height: 73px;
+    background: #f9f0eb;
+}
 .chat-main {
     line-height: normal;
     align-items: flex-start;
