@@ -1686,6 +1686,15 @@ a.message-back-button {
         height: 25px;
         width: 25px;
     }
+    .chat-back {
+        -webkit-flex: none;
+        flex: none;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-top: -1px;
+    }
 }
 @media (max-width: 767px) {
     .main-second-div,.main-first-div{
@@ -1798,15 +1807,7 @@ a.message-back-button {
         font-size: 20px;
         margin: auto;
     }
-    .chat-back {
-        -webkit-flex: none;
-        flex: none;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-align-items: center;
-        align-items: center;
-        margin-top: -1px;
-    }
+    
     .full-width {
         height: calc(100vh - 100px);
     }
