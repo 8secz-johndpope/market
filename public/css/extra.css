@@ -1629,9 +1629,6 @@ a.message-back-button {
         overflow: hidden;
         max-width: 70%;
     }
-    .all-messages{
-        max-height: calc(100% - 200px);
-    }
     .conversations-container{
         width: 100%;
     }
