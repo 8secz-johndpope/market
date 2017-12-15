@@ -312,7 +312,8 @@ a.add-bank-link {
     text-align: right;
 }
 .all-messages {
-    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: hidden; 
     max-height: calc(100% - 133px);
     position: absolute;
     width: 100%;
