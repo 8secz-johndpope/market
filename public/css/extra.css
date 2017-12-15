@@ -284,7 +284,7 @@ a.add-bank-link {
 }
 .title-product {
     display: inline-block;
-    width: 80%;
+    /*width: 80%;*/
 }
 .button-invoice {
     display: inline-block;
