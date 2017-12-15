@@ -1693,9 +1693,6 @@ a.message-back-button {
     .messages-nav {
         display: none !important;
     }
-    .bottom-div-messages{
-        margin-bottom: 60px;
-    }
     .all-filters {
         display: none;
         position: absolute;
