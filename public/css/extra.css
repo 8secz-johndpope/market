@@ -1702,6 +1702,9 @@ a.message-back-button {
         background: white;
         width: 100%;
     }
+    .navbar{
+        margin-bottom: 0px;   
+    }
     .search-alert-div {
         width: auto;
         padding-left: 10px;
