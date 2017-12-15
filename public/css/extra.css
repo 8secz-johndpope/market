@@ -1711,6 +1711,10 @@ a.message-back-button {
     .media-heading{
         max-width: 100%;
     }
+    .left-message, .right-message {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .search-alert-div {
         width: auto;
         padding-left: 10px;
