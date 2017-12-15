@@ -271,6 +271,10 @@ a.add-bank-link {
     -webkit-flex: 1;
     flex: 1;
 }
+.pane-list-controls {
+    flex: none;
+    -webkit-flex: none;
+}
 .title-product a {
     display: inline-block;
     margin-right: 10px;
