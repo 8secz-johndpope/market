@@ -1143,6 +1143,7 @@ svg {
     /*border-left: 1px solid rgba(0,0,0,0.03);*/
     background-position: center 100%;
     background-repeat: repeat;
+    background-size: 45%;
     /*padding: 10px;*/
 }
 #all-rooms .media {
