@@ -1796,6 +1796,15 @@ a.message-back-button {
         height: 24px;
         font-size: 20px;
     }
+    .chat-back {
+        -webkit-flex: none;
+        flex: none;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-top: -1px;
+    }
 }
 @media (max-width: 400px) {
     h4.product-title {
