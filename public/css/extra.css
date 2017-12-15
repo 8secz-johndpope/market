@@ -1703,7 +1703,10 @@ a.message-back-button {
         width: 100%;
     }
     .navbar{
-        margin-bottom: 0px;   
+        margin-bottom: 0;   
+    }
+    .pane-chat-controls{
+        margin-left: 0;
     }
     .search-alert-div {
         width: auto;
