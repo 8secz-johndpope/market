@@ -64,7 +64,7 @@
                                     <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="avatar-image">
                                 </span>
                             </div>
-                            <span>My Conversations</span>
+                            <!-- <span>My Conversations</span> -->
                         </div>
                         <div class="pane-list-controls">
                         </div>
