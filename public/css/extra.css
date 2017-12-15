@@ -1251,6 +1251,11 @@ svg {
     flex-direction: column;
     -webkit-justify-content: center;
     justify-content: center;
+    border-top: 1px solid #f2f2f2;
+    padding-right: 15px;
+}
+.mtop .chat-body {
+    border-top: none !important;
 }
 .l-top {
     height: 59px;
