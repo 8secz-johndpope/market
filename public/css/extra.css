@@ -255,8 +255,8 @@ a.add-bank-link {
     /*border-bottom: 1px solid rgba(0,0,0,0.08);*/
     border-left: 1px solid rgba(0,0,0,0.08);
     height: 59px;
-    border: 1px solid #ff9d2c;
-    /*border-left: transparent;
+    /*border: 1px solid #ff9d2c;
+    border-left: transparent;
     border-bottom: transparent;*/
 }
 .conversations-container{
