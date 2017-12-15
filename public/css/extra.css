@@ -1635,6 +1635,9 @@ a.message-back-button {
     .bottom-div-messages{
         margin-bottom: 20px;
     }
+    .conversations-container{
+        width: 100%;
+    }
     .left-div-messages{
         width: 100%;
     }
@@ -1657,7 +1660,7 @@ a.message-back-button {
         display: block;
     }
     .full-width {
-        height: auto;
+        /*height: auto;*/
     }
     .right-div-messages{
         height: 70vh;
