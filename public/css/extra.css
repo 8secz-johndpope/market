@@ -1118,6 +1118,22 @@ ul.image-gallery-ul {
     -webkit-align-items: center;
     align-items: center;
 }
+.controls-fields {
+    -webkit-flex: none;
+    flex: none;
+    height: 24px;
+    position: relative;
+    transition: background-color .18s ease;
+    border-radius: 50%;
+    padding: 8px;
+}
+[role="button"] {
+    cursor: pointer;
+}
+svg {
+    display: block;
+    pointer-events: none;
+}
 .right-div-messages {
     position: relative;
     float: left;
