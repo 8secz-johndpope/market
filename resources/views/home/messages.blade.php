@@ -140,6 +140,13 @@
                 <div class="right-div-messages {{$rightclass}}">
                     <div class="mtop">
                         <a class="message-back-button"  href="/user/manage/messages">Back</a>
+                        <div class="chat-avatar">
+                            <div class="avatar">
+                                <span>
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$cur->image}}" class="avatar-image">
+                                </span>
+                            </div>
+                        </div>
                         <div class="title-product">
                             <div class="title-main">
                                 <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4>{{$cur->advert->param('title')}}</h4></a>
