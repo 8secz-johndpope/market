@@ -252,12 +252,15 @@ a.add-bank-link {
 .mtop {
     padding: 10px 15px 10px 16px;
     background: #eee;
-    /*border-bottom: 1px solid rgba(0,0,0,0.08);*/
+    /* border-bottom: 1px solid rgba(0,0,0,0.08); */
     border-left: 1px solid rgba(0,0,0,0.08);
     height: 59px;
-    /*border: 1px solid #ff9d2c;
-    border-left: transparent;
-    border-bottom: transparent;*/
+    position: relative;
+    display: flex;
+    -webkit-order: 1;
+    order: 1;
+    flex: none;
+    width: 100%;
 }
 .conversations-container{
     width: 400px;
