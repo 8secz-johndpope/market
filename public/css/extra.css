@@ -1228,6 +1228,19 @@ svg {
     border-bottom: 1px solid #ff9d2c;
     border-top: 1px solid #ff9d2c;*/
 }
+.mtop .chat-avatar {
+    margin-right: 15px;
+    padding: 0;
+}
+.chat-avatar {
+    -webkit-flex: none;
+    flex: none;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-top: -1px;
+}
 .l-top {
     height: 59px;
     flex: none;
