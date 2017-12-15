@@ -1650,6 +1650,7 @@ a.message-back-button {
     a.message-back-button {
         display: flex;
         align-content: center;
+        height: 100%;
     }
     .left-div-noroom{
         display: block;
