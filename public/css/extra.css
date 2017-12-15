@@ -263,6 +263,7 @@ a.add-bank-link {
     width: 400px;
     float: left;
     height: 100%;
+    overflow: hidden;
 }
 .text-heading {
     padding: 25px 10px;
