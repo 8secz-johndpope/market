@@ -1076,8 +1076,7 @@ ul.image-gallery-ul {
     float: left;
     overflow: auto;
     height: 100%;
-    border: 1px solid #ff9d2c;
-    border-right: transparent;
+    border-right: 1px solid rgba(0,0,0,0.03);
 }
 .chat-title a {
     width: 100%;
