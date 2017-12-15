@@ -167,8 +167,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="button-invoice">
-                            <a class="btn btn-primary" href="/room/invoice/create/{{$cur->id}}">Send Invoice</a>
+                        <div class="pane-chat-controls">
+                            <div class="controls-container">
+                                <div class="button-invoice">
+                                    <a class="btn btn-primary" href="/room/invoice/create/{{$cur->id}}">Send Invoice</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
