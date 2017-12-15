@@ -190,6 +190,13 @@
                                         </span>
                                     </div>
                                 </div>
+                                <div class="controls-fields">
+                                    <div role="button">
+                                        <span>
+                                            <img src="/css/icons/invoice-icon.svg" class="img-invoice">
+                                        </span>
+                                    </div>
+                                </div>
                                 <div class="button-invoice">
                                     <a class="btn btn-primary" href="/room/invoice/create/{{$cur->id}}">Send Invoice</a>
                                 </div>
