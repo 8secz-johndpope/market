@@ -1106,6 +1106,18 @@ ul.image-gallery-ul {
     border-radius: 50%;
     overflow: hidden;
 }
+.controls-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.controls-container > span {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
 .right-div-messages {
     position: relative;
     float: left;
