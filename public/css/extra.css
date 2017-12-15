@@ -249,6 +249,11 @@ a.add-bank-link {
     position: relative;
     padding-top: 1px;
 }
+.pane-chat-controls {
+    -webkit-flex: none;
+    flex: none;
+    margin-left: 20px;
+}
 .mtop {
     padding: 10px 15px 10px 16px;
     background: #eee;
