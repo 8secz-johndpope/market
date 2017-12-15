@@ -1154,7 +1154,6 @@ svg {
     -webkit-flex-direction: row;
     flex-direction: row;
     height: 72px;
-    border-right: 1px solid #ff9d2c;
 }
 #all-rooms .media-left{
     -webkit-flex: none;
