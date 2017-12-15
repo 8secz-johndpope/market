@@ -56,7 +56,7 @@
         <div class="col-sm-12">
             <div class="full-width">
                 @if(count($user->rooms)>0)
-                <div class="conversations-container">
+                <div class="conversations-container {{$leftclass}}">
                     <div class="l-top">
                         <div class="text-heading pane-list-user">
                             <div class="avatar">
@@ -96,7 +96,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="left-div-messages {{$leftclass}}" id="all-rooms">
+                    <div class="left-div-messages" id="all-rooms">
                         @foreach($user->rooms as $room)
                                 <div class="media @if($room->id===$cur->id) selected-room @endif ">
                                     <div class="media-left">
