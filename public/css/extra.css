@@ -1790,6 +1790,11 @@ a.message-back-button {
     span.ribbon.ribbon-delivery {
         line-height: 11px;
     }
+    .mtop .message-back-button .glyphicon {
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+    }
 }
 @media (max-width: 400px) {
     h4.product-title {
