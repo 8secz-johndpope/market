@@ -139,7 +139,9 @@
                 </div>
                 <div class="right-div-messages {{$rightclass}}">
                     <div class="mtop">
-                        <a class="message-back-button"  href="/user/manage/messages">Back</a>
+                        <div class="chat-back">
+                            <a class="message-back-button"  href="/user/manage/messages"><span class="glyphicon glyphicon-menu-left"></span></a>
+                        </div>
                         <div class="chat-avatar">
                             <div class="avatar">
                                 <span>

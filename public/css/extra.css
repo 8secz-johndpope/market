@@ -1708,6 +1708,9 @@ a.message-back-button {
     .pane-chat-controls{
         margin-left: 0;
     }
+    .media-heading{
+        max-width: 100%;
+    }
     .search-alert-div {
         width: auto;
         padding-left: 10px;
