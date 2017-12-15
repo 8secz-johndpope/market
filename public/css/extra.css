@@ -1695,6 +1695,15 @@ a.message-back-button {
         align-items: center;
         margin-top: -1px;
     }
+    .navbar{
+        margin-bottom: 0;   
+    }
+    .mtop .message-back-button .glyphicon {
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+        margin: auto;
+    }
 }
 @media (max-width: 767px) {
     .main-second-div,.main-first-div{
@@ -1713,9 +1722,7 @@ a.message-back-button {
         background: white;
         width: 100%;
     }
-    .navbar{
-        margin-bottom: 0;   
-    }
+    
     .pane-chat-controls{
         margin-left: 0;
     }
@@ -1801,12 +1808,7 @@ a.message-back-button {
     span.ribbon.ribbon-delivery {
         line-height: 11px;
     }
-    .mtop .message-back-button .glyphicon {
-        width: 24px;
-        height: 24px;
-        font-size: 20px;
-        margin: auto;
-    }
+    
     
     .full-width {
         height: calc(100vh - 100px);
