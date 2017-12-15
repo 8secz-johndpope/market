@@ -1165,8 +1165,9 @@ ul.image-gallery-ul {
 .l-top {
     height: 73px;
     background: #f9f0eb;
-    border-bottom: 1px solid #ff9d2c;
+    border-top: 1px solid #ff9d2c;
     border-right: 1px solid #ff9d2c;
+    border-left: 1px solid #ff9d2c;
 }
 .chat-main {
     line-height: normal;
