@@ -1163,7 +1163,14 @@ ul.image-gallery-ul {
     border-top: 1px solid #ff9d2c;
 }
 .l-top {
-    height: 73px;
+    height: 59px;
+    flex: none;
+    -webkit-flex: none;
+    width: 100%;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    position: relative;
+    padding: 10px;
     background: #f9f0eb;
     border-top: 1px solid #ff9d2c;
     border-right: 1px solid #ff9d2c;

@@ -60,7 +60,7 @@
                     <div class="l-top">
                         <div class="text-heading pane-list-user">
                             <div class="avatar">
-                                
+                                <span></span>
                             </div>
                             <span>My Conversations</span>
                         </div>
