@@ -1086,6 +1086,15 @@ ul.image-gallery-ul {
     height: calc(100vh - 110px);
     padding: 15px 0;
 }
+.avatar {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #dfe5e7;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
 .right-div-messages {
     position: relative;
     float: left;
