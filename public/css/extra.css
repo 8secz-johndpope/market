@@ -1084,6 +1084,9 @@ ul.image-gallery-ul {
 .chat-title a {
     width: auto;
 }
+.chat-body .product-price {
+    font-size: 12px;
+}
 .full-width {
     height: calc(100vh - 110px);
     margin: 15px 0;
