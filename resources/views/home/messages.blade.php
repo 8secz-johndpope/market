@@ -150,6 +150,9 @@
                         <div class="chat-body">
                             <div class="chat-main">
                                 <div class="chat-title">
+                                    <div class="title-user">
+                                        
+                                    </div>
                                     <div class="title-product">
                                         <div class="title-main">
                                             <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4>{{$cur->advert->param('title')}}</h4></a>
