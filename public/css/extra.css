@@ -1234,10 +1234,10 @@ svg {
     padding: 10px;
     padding-left: 16px;
     padding-right: 15px;
-    background: #f9f0eb;
-    border-top: 1px solid #ff9d2c;
+    background: #eee;
+    /*border-top: 1px solid #ff9d2c;
     border-right: 1px solid #ff9d2c;
-    border-left: 1px solid #ff9d2c;
+    border-left: 1px solid #ff9d2c;*/
     display: flex;
 }
 .chat-main {
