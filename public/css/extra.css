@@ -1146,6 +1146,7 @@ svg {
     background-repeat: repeat;
     background-size: 45%;
     /*padding: 10px;*/
+    overflow: hidden;
 }
 #all-rooms .media {
     margin-top: 0;
