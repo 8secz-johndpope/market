@@ -588,6 +588,13 @@ span.message.get-invoice:before {
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
+    overflow: hidden;
+}
+.chat-status p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*width: 100%;*/
+    overflow: hidden;
 }
 .main-search{
     margin-top: 15px;
