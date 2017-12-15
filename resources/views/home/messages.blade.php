@@ -149,13 +149,15 @@
                         </div>
                         <div class="chat-body">
                             <div class="chat-main">
-                                <div class="title-product">
-                                    <div class="title-main">
-                                        <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4>{{$cur->advert->param('title')}}</h4></a>
-                                        @if($cur->advert->meta('price')>=0)
-                                            <span class="product-price">£ {{$cur->advert->meta('price')/100}}{{$cur->advert->meta('price_frequency')}}
-                                            </span>
-                                        @endif
+                                <div class="chat-title">
+                                    <div class="title-product">
+                                        <div class="title-main">
+                                            <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4>{{$cur->advert->param('title')}}</h4></a>
+                                            @if($cur->advert->meta('price')>=0)
+                                                <span class="product-price">£ {{$cur->advert->meta('price')/100}}{{$cur->advert->meta('price_frequency')}}
+                                                </span>
+                                            @endif
+                                        </div>
                                     </div>
                                 </div>
                             </div>
