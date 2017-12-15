@@ -1084,6 +1084,7 @@ ul.image-gallery-ul {
 }
 .full-width {
     height: calc(100vh - 110px);
+    padding: 15px 0;
 }
 .right-div-messages {
     position: relative;
