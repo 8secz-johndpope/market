@@ -1648,7 +1648,8 @@ a.message-back-button {
         display: none;
     }
     a.message-back-button {
-        display: inline-block;
+        display: flex;
+        align-content: center;
     }
     .left-div-noroom{
         display: block;
