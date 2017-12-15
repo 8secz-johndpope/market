@@ -254,6 +254,11 @@ a.add-bank-link {
     flex: none;
     margin-left: 20px;
 }
+.controls-fields .img-invoice {
+    opacity: 0.5;
+    width: 24px;
+    height: 24px;
+}
 .mtop {
     padding: 10px 15px 10px 16px;
     background: #eee;
