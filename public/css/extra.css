@@ -314,6 +314,9 @@ a.add-bank-link {
 .all-messages {
     overflow: auto;
     max-height: calc(100% - 133px);
+    position: absolute;
+    width: 100%;
+    bottom: 63px;
 }
 .over-hidden {
     overflow: auto;

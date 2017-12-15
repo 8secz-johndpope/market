@@ -189,7 +189,7 @@
             <div class="col-options-send">
                 <div class="row">
                     <div class="col-sm-12">
-                    <input type="submit" value="Send Invoice" class="btn btn-primary">
+                    <input type="submit" value="Send Invoice" class="btn btn-primary send-invoice">
                     </div>
                 </div>
                 <div class="row">
