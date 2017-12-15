@@ -13,7 +13,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-12 over-hidden">
+        <!-- <div class="col-sm-12 over-hidden">
             <ul class="nav nav-tabs top-main-nav">
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/ads"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
@@ -37,7 +37,7 @@
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;&nbsp; Financials</a>
-                </li> -->
+                </li>
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp; Metrics</a>
                 </li>
@@ -50,9 +50,9 @@
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
-                </li> -->
+                </li>
             </ul>
-        </div>
+        </div> -->
         <div class="col-sm-12">
             <div class="full-width">
                 @if(count($user->rooms)>0)
