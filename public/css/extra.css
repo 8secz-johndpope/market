@@ -1084,7 +1084,9 @@ ul.image-gallery-ul {
 }
 .full-width {
     height: calc(100vh - 110px);
-    padding: 15px 0;
+    margin: 15px 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 .avatar {
     position: relative;
