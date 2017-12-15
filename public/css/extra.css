@@ -1796,6 +1796,7 @@ a.message-back-button {
         width: 24px;
         height: 24px;
         font-size: 20px;
+        margin: auto;
     }
     .chat-back {
         -webkit-flex: none;
