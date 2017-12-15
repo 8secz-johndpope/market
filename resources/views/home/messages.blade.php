@@ -61,7 +61,7 @@
                         <div class="text-heading pane-list-user">
                             <div class="avatar">
                                 <span>
-                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="avatar-image">
                                 </span>
                             </div>
                             <span>My Conversations</span>
