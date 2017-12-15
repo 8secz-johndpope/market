@@ -156,7 +156,7 @@
                                     <div class="media-heading">
                                         <div class="title-product">
                                             <div class="title-main">
-                                                <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <h4>{{$cur->advert->param('title')}}</h4></a>
+                                                <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <span>{{$cur->advert->param('title')}}</span></a>
                                                 @if($cur->advert->meta('price')>=0)
                                                     <span class="product-price">£ {{$cur->advert->meta('price')/100}}{{$cur->advert->meta('price_frequency')}}
                                                     </span>
