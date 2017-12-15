@@ -1704,6 +1704,9 @@ a.message-back-button {
         font-size: 20px;
         margin: auto;
     }
+    .full-width {
+        height: calc(100vh - 100px);
+    }
 }
 @media (max-width: 767px) {
     .main-second-div,.main-first-div{
@@ -1810,9 +1813,7 @@ a.message-back-button {
     }
     
     
-    .full-width {
-        height: calc(100vh - 100px);
-    }
+    
 }
 @media (max-width: 400px) {
     h4.product-title {
