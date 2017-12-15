@@ -1632,9 +1632,6 @@ a.message-back-button {
     .all-messages{
         max-height: calc(100% - 200px);
     }
-    .bottom-div-messages{
-        margin-bottom: 20px;
-    }
     .conversations-container{
         width: 100%;
     }
@@ -1662,9 +1659,9 @@ a.message-back-button {
     .full-width {
         /*height: auto;*/
     }
-    .right-div-messages{
-        height: 70vh;
-    }
+    /*.right-div-messages{
+        height: 100;
+    }*/
     .main-search-div{
         width: 100%;
     }
