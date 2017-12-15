@@ -1224,9 +1224,9 @@ svg {
 }
 #all-rooms .media.selected-room {
     background: #f9f0eb;
-    border-right: transparent;
+    /*border-right: transparent;
     border-bottom: 1px solid #ff9d2c;
-    border-top: 1px solid #ff9d2c;
+    border-top: 1px solid #ff9d2c;*/
 }
 .l-top {
     height: 59px;
