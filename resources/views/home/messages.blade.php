@@ -58,8 +58,13 @@
                 @if(count($user->rooms)>0)
                 <div class="conversations-container">
                     <div class="l-top">
-                        <div class="text-heading">
+                        <div class="text-heading pane-list-user">
+                            <div class="avatar">
+                                
+                            </div>
                             <span>My Conversations</span>
+                        </div>
+                        <div class="pane-list-controls">
                         </div>
                     </div>
                     <div class="left-div-messages {{$leftclass}}" id="all-rooms">
