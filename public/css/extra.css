@@ -1573,6 +1573,17 @@ a.message-back-button {
     display: flex;
     padding: 5px 15px;
 }
+.list-menu-common ul {
+    padding-left: 0px;
+    list-style: none;
+}
+.list-menu-common {
+    padding: 10px;
+    white-space: nowrap;
+}
+.list-menu-common:last-child {
+    border-left: 1px solid #ddd;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
