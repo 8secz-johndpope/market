@@ -282,21 +282,23 @@
                                     </ul>
                                 </div>
                                 <div class="list-menu-common">
-                                    <li>
-                                        <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Invoices</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Send Invoice</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Unpaid Invoice</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;paid Invoice</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Pending Invoices</a>
-                                    </li>
+                                    <ul>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Invoices</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Send Invoice</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Unpaid Invoice</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;paid Invoice</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Pending Invoices</a>
+                                        </li>
+                                    </ul>
                                 </div>
                                 @if($user->contract!==null)
                                 <div class="list-menu-common">
