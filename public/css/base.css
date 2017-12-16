@@ -930,6 +930,13 @@ section.row-color.white {
     font-size: 15px;
 }
 /** end tabs **/
+.stations-list li>span{
+  font-size: 1.2rem;
+    letter-spacing: -0.01em;
+}
+.stations-list li {
+    padding: 0 0 6px;
+}
 .icon-transport {
     background-repeat: no-repeat;
     content: "";
@@ -953,6 +960,15 @@ section.row-color.white {
     background-size: 96px 2902px;
     background-position: -5px -252px;
 }
+.icon-rail {
+    background-image: url(icon-rail.png);
+}
+.icon-overground {
+    background-image: url(icon-overground.svg);
+}
+.icon-dlr {
+    background-image: url(icon-dlr.svg);
+} 
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
