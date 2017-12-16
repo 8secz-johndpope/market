@@ -1186,6 +1186,7 @@ table.nearby-similar-history-table {
 .section-title {
     border: 1px solid #ccc;
     border-top: transparent;
+    background: #fff;
 }
 #make-review .row {
     border: 1px solid #ccc;
