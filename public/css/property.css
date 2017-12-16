@@ -1369,6 +1369,10 @@ a.advert-user {
 	.all-ratings{
 		border-left: 1px solid #ccc;
 	}
+    .link-about a.btn.btn-default, .link-about a.btn.btn-default:link{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 @media (min-width: 1200px){
 	.container {
@@ -1399,4 +1403,8 @@ a.advert-user {
 	.reviews-item-r{
 		width: 55%;
 	}
+    .link-about a.btn.btn-default, .link-about a.btn.btn-default:link{
+        padding-right: 35px;
+        padding-left: 35px;
+    }
 }
