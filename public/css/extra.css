@@ -1586,7 +1586,7 @@ a.message-back-button {
 .list-menu-common {
     padding: 10px;
 }
-.list-menu-common:last-child {
+.list-menu-common:not(:first-child) {
     border-left: 1px solid #ddd;
 }
 .dropdown-menu li>a {
