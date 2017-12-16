@@ -29,7 +29,7 @@ section{
 }
 .breadcrumb {
     text-align: center;
-    background-color: #fafafa;
+    /*background-color: #fafafa;*/
 }
 .prev-next {
     padding: 8px 15px;
