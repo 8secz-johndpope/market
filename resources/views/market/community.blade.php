@@ -358,7 +358,7 @@
                                             @endif
                                             <div class="col-sm-4 border-left">
                                                 <div class="cell-content">
-                                                    Cash on collection
+                                                    Cash in Person
                                                 </div>
                                             </div>
                                             <div class="col-sm-4 border-left">
@@ -376,14 +376,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                @if($advert->user!==null && !$advert->has_param('sold'))
-                                <div class="col-sm-12">
-                                    <form action="/user/ad/sale">
-                                        <input name="id" type="hidden" value="3471510">
-                                        <button type="submit" class="btn-info btn">Buy it now</button>
-                                    </form>
-                                </div>
-                                @endif
                             </div>
                         </div>
                         <div id="tap-terms" class="tab-pane fade">
