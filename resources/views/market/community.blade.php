@@ -151,14 +151,7 @@
                                     @endif
                                     <div class="description">
                                         <h3>Full Description</h3>
-                                        @if($advert->isPropertyForSale() && $advert->has_meta('property_tenure'))
-                                        <div class="sec">
-                                            <p><strong>Tenure: </strong>{{$advert->meta('property_tenure')}}</p>
-                                        </div>
-                                        @endif
-
-                                      {!! $product['description'] !!}
-
+                                        {!! $product['description'] !!}
                                     </div>
                                 </div>
                                 <!-- <div class="col-sm-4 right-content">
@@ -182,157 +175,63 @@
                         </div>
                         <div id="tap-map" class="tab-pane fade">           
                             <div class="row mapframe">
-                        <div class="col-sm-12">
-                            <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-primary active">
-                                    <input type="radio" name="options" id="option-map" autocomplete="off" checked> map view
-                                </label>
-                                <label class="btn btn-primary">
-                                    <input type="radio" name="options" id="option-view" autocomplete="off">
-                                    street view
-                                </label>
-                            </div>
-                            <div class="info-map">
-                                <div id="map"></div>
-                                <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
-                                <div>
-                                    <h4>Nearest stations</h4>
-                                    <ul class="stations-list">
-
-                                    </ul>
-                                    <small>Distances are straight line measurements from centre of postcode
-</small>
-                                </div>
-                            </div>
-                            <div class="info-pano">
-                                <div id="pano"></div>
-                                <small>Note: Start exploring the local area from here.</small>
-                            </div>
-                            
-                            <script>
-                                var map;
-                                var panorama;
-                                var service;
-                                function initMap() {
-                                    var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
-                                     map = new google.maps.Map(document.getElementById('map'), {
-                                        zoom: 18,
-                                        center: uluru
-                                    });
-                                    var marker = new google.maps.Marker({
-                                        position: uluru,
-                                        map: map
-                                    });
-                                    var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
-                                    getTransport({!! $lat !!},{!! $lng !!});
-                                    panorama = new google.maps.StreetViewPanorama(
-                                        document.getElementById('pano'), {
-                                            position: uluru,
-                                            pov: {heading: 165, pitch: 0},
-                                            motionTrackingControlOptions: {
-                                            position: google.maps.ControlPosition.LEFT_BOTTOM
-                                        }
-                                    });
-                                }
-                                $(document).ready(function() {
-                                    initMap();
-                                    activeFirstItem();
-                                });
-                            </script>
-
-                        </div>
-                    </div>
-                        </div>
-                        <div id="tap-postage" class="tab-pane fade">
-                            <div class="row">           
                                 <div class="col-sm-12">
-                                    <p>Seller assumes all responsibility for this listing</p>
-                                    <div class="des-postage">
-                                        <h3>Postage and packaging</h3>
-                                        <div class="postage-info">
-                                            <p><strong>Item location: </strong>{{$product['location_name']}}</p>
-                                            <div class="info-type">
-                                                <h4>Collection in person</h4>
-                                                <p>FREE</p>
-                                            </div>
-                                            @if($advert->has_param('canship')&&$advert->param('canship')===1)
-                                            <div class="info-type">
-                                                <h4>Shipping</h4>
-                                                <table class="table table-bordered table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>To</th>
-                                                            <th>Price</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>United Kingdom</td>
-                                                            <td>£{{ $advert->shipping_cost() }}</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            @endif
-                                            @if($advert->has_param('candeliver')&&$advert->param('candeliver')===1)
-                                            <div class="info-type">
-                                                <h4>Local Delivery</h4>
-                                                <table class="table table-bordered table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Distance</th>
-                                                            <th>Price</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Within {{$advert->meta('distance')}}  Miles</td>
-                                                            <td>£{{ $advert->delivery() }}</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="check-distance">
-                                                    <label for="postcode">
-                                                       Check if it can be delivered to you
-                                                    </label>
-                                                    <input type="text" name="postcode" id="postcode">
-                                                    <input type="hidden" id="id" value="{{$advert->id}}">
-                                                    <button id="check-button" class="btn btn-check">Check</button>
-                                                    <div id="sorry-info">
-                                                        <p><span class="glyphicon glyphicon-info-sign"></span> Sorry, the item can't be delivered to your location</p>
-                                                    </div>
-                                                    <div id="can-info">
-                                                        <p><span class="glyphicon glyphicon-ok-circle"></span> Can be delivered to <span id="write-postcode"></span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            @endif
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="options" id="option-map" autocomplete="off" checked> map view
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options" id="option-view" autocomplete="off">
+                                            street view
+                                        </label>
+                                    </div>
+                                    <div class="info-map">
+                                        <div id="map"></div>
+                                        <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
+                                        <div>
+                                            <h4>Nearest stations</h4>
+                                            <ul class="stations-list">
+
+                                            </ul>
+                                            <small>Distances are straight line measurements from centre of postcode</small>
                                         </div>
                                     </div>
-                                    <div class="des-postage">
-                                        <h3>Returns policy</h3>
-                                        <div class="postage-info">
-                                            @if($advert->has_param('acceptreturns') && $advert->param('acceptreturns'))
-                                            <p>Returns accepted</p>
-                                            <table class="table table-bordered table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th>After receiving the item, cancel the purchase within</th>
-                                                        <th>Return postage</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>30 days</td>
-                                                        <td>Buyer pays return postage</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            @else
-                                            <p>No returns accepted</p>
-                                            @endif
-                                        </div>
+                                    <div class="info-pano">
+                                        <div id="pano"></div>
+                                        <small>Note: Start exploring the local area from here.</small>
                                     </div>
+                                    
+                                    <script>
+                                        var map;
+                                        var panorama;
+                                        var service;
+                                        function initMap() {
+                                            var uluru = {lat: {!! $lat !!}, lng: {!! $lng !!}};
+                                             map = new google.maps.Map(document.getElementById('map'), {
+                                                zoom: 18,
+                                                center: uluru
+                                            });
+                                            var marker = new google.maps.Marker({
+                                                position: uluru,
+                                                map: map
+                                            });
+                                            var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
+                                            getTransport({!! $lat !!},{!! $lng !!});
+                                            panorama = new google.maps.StreetViewPanorama(
+                                                document.getElementById('pano'), {
+                                                    position: uluru,
+                                                    pov: {heading: 165, pitch: 0},
+                                                    motionTrackingControlOptions: {
+                                                    position: google.maps.ControlPosition.LEFT_BOTTOM
+                                                }
+                                            });
+                                        }
+                                        $(document).ready(function() {
+                                            initMap();
+                                            activeFirstItem();
+                                        });
+                                    </script>
+
                                 </div>
                             </div>
                         </div>
