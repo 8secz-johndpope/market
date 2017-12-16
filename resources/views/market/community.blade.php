@@ -911,7 +911,7 @@
                             <hr>
                             @endif
                             <div class="payment-option hands">
-                                <h4>Cash on collection</h4>
+                                <h4>Cash in Person</h4>
                             </div>
                             <hr>
                             <div class="payment-option invoice">

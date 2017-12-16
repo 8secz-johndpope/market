@@ -665,6 +665,7 @@ legend {
     padding-top: 0;
     padding-bottom: 0;
     outline: 0;
+    background: transparent;
 }
 .aspects-fieldset .aspects-questions span {
     margin-top: 6px;
