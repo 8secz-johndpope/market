@@ -1755,6 +1755,12 @@ a.message-back-button {
         height: calc(100vh - 100px);
     }
 }
+@media (min-width: 768px){
+    .navbar-right .dropdown-menu.options-user {
+        right: -20px;
+        left: auto;
+    }
+}
 @media (max-width: 767px) {
     .main-second-div,.main-first-div{
         display: block;
