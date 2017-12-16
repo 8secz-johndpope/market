@@ -249,7 +249,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 Hello, {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-menu options-user" role="menu">
                                 <div class="list-menu-common">
                                     <ul>
                                         <li><a href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
