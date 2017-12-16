@@ -310,6 +310,9 @@
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Metrics</a>
                                         </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 @endif
