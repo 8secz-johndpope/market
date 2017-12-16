@@ -637,6 +637,10 @@ span.glyphicon.favroite-icon.glyphicon-heart {
 .content-reviews {
     border: 1px solid #ccc;
     border-bottom: transparent;
+    background: #fff;
+}
+.reviews > .row {
+    background: #fff;
 }
 .border-top-transparent{
 	border-top: transparent;
@@ -1177,6 +1181,7 @@ table.nearby-similar-history-table {
 .click-title {
     text-align: center;
     border-bottom: 1px solid #ccc;
+    background: #fff;
 }
 .section-title {
     border: 1px solid #ccc;
