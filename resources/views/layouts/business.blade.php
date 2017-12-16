@@ -294,6 +294,9 @@
                                     <li>
                                         <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;paid Invoice</a>
                                     </li>
+                                    <li>
+                                        <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Pending Invoices</a>
+                                    </li>
                                 </div>
                                 @if($user->contract!==null)
                                 <div class="list-menu-common">
