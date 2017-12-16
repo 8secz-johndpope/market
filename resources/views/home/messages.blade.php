@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid background-body">
     <div class="row">
         <!-- <div class="col-sm-12 over-hidden">
             <ul class="nav nav-tabs top-main-nav">
