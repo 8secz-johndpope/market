@@ -1571,7 +1571,7 @@ a.message-back-button {
 .dropdown-menu.options-user {
     display: -webkit-flex;
     display: flex;
-    padding: 5px 15px;
+    padding: 5px;
 }
 .list-menu-common ul {
     padding-left: 0px;
