@@ -1267,6 +1267,9 @@ section.row-color.white {
   .navbar-form .input-group>.form-control {
       width: 100%;
   }
+  .nav-tabs>li>a{
+    font-size: 12px;
+  }
   .carousel-indicators {
     bottom: -30px;
   }
@@ -1381,6 +1384,9 @@ section.row-color.white {
   }
   .navbar-header {
     /*width: 60%;*/
+  }
+  .nav-tabs>li>a{
+    font-size: 15px;
   }
   /*.categories .panel-primary>.panel-heading{
     height: 7.5em;
