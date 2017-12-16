@@ -11,8 +11,6 @@
 
 body{
     background-color: #fff; 
-    /*background-image: url(back7.jpg);*/
-    /* background-position: center; */
     background-size: 160%;
     background-repeat: no-repeat;
     background-position-y: 100px;
@@ -930,6 +928,11 @@ section.row-color.white {
     font-size: 15px;
 }
 /** end tabs **/
+
+.stations-list {
+    list-style: none;
+    padding-left: 0;
+}
 .stations-list li>span{
   font-size: 1.2rem;
     letter-spacing: -0.01em;
