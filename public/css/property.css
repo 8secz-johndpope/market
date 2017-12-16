@@ -357,6 +357,7 @@ a.left.carousel-control:hover {
     width: 192px;
     padding: 0px;
 }
+/*
 .icon-transport{
 	background-repeat: no-repeat;
 	content: "";
@@ -395,7 +396,7 @@ a.left.carousel-control:hover {
 }
 .stations-list li {
     padding: 0 0 6px;
-}
+}*/
 .disclaimer {
     font-size: 9px;
     font-weight: normal;
