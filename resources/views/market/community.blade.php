@@ -115,10 +115,9 @@
                     <div id="tabs"> 
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
-                        <li><a data-toggle="tab" href="#tap-postage">Postage & Returns</a></li>
                         <li><a data-toggle="tab" href="#tap-pay">Payment</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
-                        <li><a data-toggle="tab" href="#tap-terms">Terms of Seller</a></li>
+                        <!-- <li><a data-toggle="tab" href="#tap-terms">Terms of Seller</a></li> -->
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="clearfix tab-pane fade in active">
