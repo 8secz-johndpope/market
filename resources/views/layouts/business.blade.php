@@ -250,7 +250,7 @@
                                 Hello, {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu" role="menu">
-                                <ul class="dropdown-menu" role="menu">
+                                <ul>
                                     <li><a href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
                                     <li>
                                         <a class="nav-link nav-color" href="/user/manage/orders"><span class="glyphicon glyphicon-credit-card"></span> &nbsp;&nbsp; Orders</a>
