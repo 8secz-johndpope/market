@@ -1114,7 +1114,7 @@ ul.image-gallery-ul {
     font-size: 12px;
 }
 .full-width {
-    height: calc(100vh - 110px);
+    height: calc(100vh - 100px);
     margin: 15px 0;
     border-radius: 3px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
