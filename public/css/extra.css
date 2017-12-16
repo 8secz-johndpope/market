@@ -1568,6 +1568,11 @@ a.message-back-button {
 .listing-description p {
     margin-bottom: 0;
 }
+.dropdown-menu.options-user {
+    display: -webkit-flex;
+    display: flex;
+    padding: 5px 15px;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
