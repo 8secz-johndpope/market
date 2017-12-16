@@ -1382,15 +1382,9 @@ section.row-color.white {
     margin: 15px 5px;
     max-width: 130px;
   }
-  .navbar-header {
-    /*width: 60%;*/
-  }
   .nav-tabs>li>a{
     font-size: 15px;
   }
-  /*.categories .panel-primary>.panel-heading{
-    height: 7.5em;
-  }*/
   img.icon-small-h {
     margin-left: 40px;
   }
