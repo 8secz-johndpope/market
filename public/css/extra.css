@@ -1592,6 +1592,7 @@ a.message-back-button {
     clear: both;
     font-weight: 400;
     line-height: 1.42857143;
+    color: #333;
     white-space: nowrap;
 }
 @media (max-width: 1500px) {
