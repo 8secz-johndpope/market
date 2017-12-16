@@ -366,7 +366,7 @@
 <div class="copyright style-1">
     <div class="container">
         <div class="row">
-            <div class="cell col-lg-4 col-md-8 col-xs-12 footer-copy col-md-offset-2 col-lg-offset-4">
+            <div class="cell col-md-8 col-xs-12 footer-copy col-md-offset-2 text-center">
                 All rights reserved. Copyright &copy; 2017 <span class="company-rights">{{env('APP_NAME')}}</span>
             </div>
         </div>
