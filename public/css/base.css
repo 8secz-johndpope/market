@@ -930,6 +930,29 @@ section.row-color.white {
     font-size: 15px;
 }
 /** end tabs **/
+.icon-transport {
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-indent: 100%;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center;
+    margin-right: 5px;
+    margin-bottom: -5px;
+}
+.icon-underground {
+    background-image: url(tube_icon.png);
+}
+.icon-bus {
+    background-image: url(tfl-icons.png);
+    background-size: 96px 2902px;
+    background-position: -5px -252px;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
