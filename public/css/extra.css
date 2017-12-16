@@ -1569,9 +1569,12 @@ a.message-back-button {
     margin-bottom: 0;
 }
 .dropdown-menu.options-user {
+    display: none;
+    padding: 5px;
+}
+.open>.dropdown-menu.options-user {
     display: -webkit-flex;
     display: flex;
-    padding: 5px;
 }
 .list-menu-common ul {
     padding-left: 0px;
