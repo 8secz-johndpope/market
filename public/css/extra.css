@@ -1622,6 +1622,7 @@ a.message-back-button {
 }
 nav.navbar.navbar-inverse {
     margin-bottom: 0;
+    border-radius: 0;
 }
 @media (max-width: 1500px) {
     h4.product-title {
