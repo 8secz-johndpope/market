@@ -1024,7 +1024,7 @@ class MarketController extends BaseController
             $prev = $advert->prevAdvert();
             return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder, 'input' => [], 'location'=>Location::find(0), 'base' => $base, 'nextAdvert' => $next, 'prevAdvert' => $prev]);
         }
-        elseif($advert->category->can_ship()){
+        elseif($advert->category->can_ship() || ($advert->category_id >= 7010103000 && $advert->category_id <= 7010103999)){
             $view = 'market.for-sale';
         }
         elseif($advert->category_id >= 5000000000 && $advert->category_id <= 7999999999){
