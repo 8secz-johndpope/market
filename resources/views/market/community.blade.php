@@ -892,26 +892,7 @@
                     </div>
                 </div>
             <div class="col-md-4 col-sm-12">
-                <div class="row">
-                    <div class="payments-r">
-                        <h3>Payments</h3>
-                        <div class="payment-options">
-                            @if($advert->user!==null)
-                            <div class="payment-option cards">
-                                <img class="payments-methods" src="/css/payments.png">
-                            </div>
-                            <hr>
-                            @endif
-                            <div class="payment-option hands">
-                                <h4>Cash in Person</h4>
-                            </div>
-                            <hr>
-                            <div class="payment-option invoice">
-                                <h4>Send <em class="send-me">Me</em> a Bill</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="row">
                 <div class="buttons">
                     <div class="details">
@@ -967,6 +948,26 @@
                             Email to friend
                         </li>
                     </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="payments-r">
+                    <h3>Payments</h3>
+                    <div class="payment-options">
+                        @if($advert->user!==null)
+                        <div class="payment-option cards">
+                            <img class="payments-methods" src="/css/payments.png">
+                        </div>
+                        <hr>
+                        @endif
+                        <div class="payment-option hands">
+                            <h4>Cash in Person</h4>
+                        </div>
+                        <hr>
+                        <div class="payment-option invoice">
+                            <h4>Send <em class="send-me">Me</em> a Bill</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
