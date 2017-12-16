@@ -173,6 +173,9 @@ span.reveal-phone {
 .mapframe {
     margin-bottom: 0;
 }
+.info-pano {
+    display: none;
+}
 .check-distance label {
     display: block;
 }
