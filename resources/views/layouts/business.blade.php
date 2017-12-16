@@ -252,7 +252,7 @@
                             <div class="dropdown-menu options-user" role="menu">
                                 <div class="list-menu-common">
                                     <ul>
-                                        <li><a href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
+                                        <li><a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/user/manage/orders"><span class="glyphicon glyphicon-credit-card"></span> &nbsp;&nbsp;Orders</a>
                                         </li>
@@ -269,7 +269,7 @@
                                             <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-bell"></span> &nbsp;&nbsp;Search Alerts</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('logout') }}"
+                                            <a class="nav-link nav-color" href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
                                                <span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp; Logout
