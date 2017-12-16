@@ -1027,6 +1027,9 @@ class MarketController extends BaseController
         elseif($advert->category->can_ship()){
             $view = 'market.for-sale';
         }
+        elseif($advert->category_id >= 6000000000 && $advert->category_id <= 6999999999){
+            $view = 'market.community';
+        }
         return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder]);
     }
     private  function haversineGreatCircleDistance(
