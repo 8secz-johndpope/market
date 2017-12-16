@@ -176,6 +176,9 @@ span.reveal-phone {
 .info-pano {
     display: none;
 }
+.contact p {
+    margin-bottom: 0;
+}
 .check-distance label {
     display: block;
 }
