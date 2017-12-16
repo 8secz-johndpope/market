@@ -219,6 +219,10 @@ h2.item-name {
 .buttons {
     margin-top: 0;
     border: 1px solid #ddd;
+    background-color: #fff;
+}
+.tab-content {
+    background: #fff;
 }
 .details{
 	padding: 15px;
@@ -570,6 +574,7 @@ span .glyphicon {
     display: table;
     padding: 15px 5px;
     width: 100%;
+    background: #fff;
 }
 .images-current span.glyphicon {
     margin-right: 8px;
