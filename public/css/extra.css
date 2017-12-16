@@ -1191,6 +1191,7 @@ svg {
     -webkit-flex-direction: row;
     flex-direction: row;
     height: 72px;
+    background: #fff;
 }
 #all-rooms .media-left{
     -webkit-flex: none;
