@@ -1617,6 +1617,9 @@ a.message-back-button {
     transform: rotate(134deg);
     display: none;
 }
+nav.navbar.navbar-inverse {
+    margin-bottom: 0;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
