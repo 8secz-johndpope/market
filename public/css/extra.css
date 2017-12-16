@@ -1582,10 +1582,17 @@ a.message-back-button {
 }
 .list-menu-common {
     padding: 10px;
-    white-space: nowrap;
 }
 .list-menu-common:last-child {
     border-left: 1px solid #ddd;
+}
+.dropdown-menu li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
 }
 @media (max-width: 1500px) {
     h4.product-title {
