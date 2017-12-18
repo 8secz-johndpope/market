@@ -1051,7 +1051,7 @@
                         <h3>This property is marketed by</h3>
                         @if($advert->user!==null)
                         <div class="profile-picutre">
-                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
+                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{isset($advert->user->bussines) ? $advert->user->business->logo : $advert->user->image}}">
                         </div>
                         <div class="user-details">
                             <p><strong>{{$advert->user->name}}</strong></p>
