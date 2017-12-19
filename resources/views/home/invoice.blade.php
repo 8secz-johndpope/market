@@ -261,7 +261,6 @@
         });
         $('.prices').focusout(function(){
             var quantity = parseFloat($(this).parent().prev().find('.quantities').val());
-            va
             var price = parseFloat($(this).val()) * quantity;
             $(this).parent().next().find('.amount').text(price);
             console.log(price);
