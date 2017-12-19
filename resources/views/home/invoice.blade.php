@@ -163,7 +163,7 @@
                     <div class="col-sm-3">
                         <div class="input-group">
                             <span class="input-group-addon">£</span>
-                            <input type="text" name="" disabled="true" value="0" class="form-control">
+                            <input type="text" name="amount-total" id="amount-total" disabled="true" value="0" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -274,6 +274,7 @@
             if(!isNaN(quantity) && !isNaN(price)){
                 var price = price * quantity;
                 $(this).parent().next().find('.amount').text(price);
+                $('#amount-total').val(price);
             }
         });
     </script>
