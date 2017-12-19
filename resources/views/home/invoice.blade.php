@@ -36,6 +36,10 @@
                         <label for="date-payment">Payment</label>
                         <input type="text" name="date-payment" class="form-control" id="date-payment" placeholder="Due Upon Receipt">
                     </div>
+                    <div class="col-sm-offset-6 col-sm-6">
+                        <label for="date-shipping">Shipping Date</label>
+                        <input type="text" name="date-shipping" class="form-control" id="date-shipping" placeholder="Next day">
+                    </div>
                 </div>
                 <div id="items">
                     <div class="form-group row">
@@ -127,7 +131,7 @@
                         <label for="notes">VAT %</label>
                         <input type="text" name="por-vat">
                     </div>
-                    <div class="col-sm-12 text-right" id="ship-container">
+                    <div class="col-sm-12 text-right ship-container" id="ship-container">
                         <label for="terms">Shipping</label>
                         <input type="text" name="shipping">
                     </div>
