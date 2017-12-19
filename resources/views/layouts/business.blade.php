@@ -251,20 +251,20 @@
                             </a>
                             <div class="dropdown-menu options-user" role="menu">
                                 <div class="list-menu-common">
+                                    <div class="title-list">
+                                        <span class="nav-link nav-color">Our Offers</span>
+                                    </div>
                                     <ul>
-                                        <li class="title-list">
-                                            <span class="nav-link nav-color">Our Offers</span>
-                                        </li>
                                         <li>
                                             <span class="nav-link nav-offer">We do not have offers at the moment</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="list-menu-common">
+                                    <div class="title-list">
+                                        <span class="nav-link nav-color">Your account</span>
+                                    </div>
                                     <ul>
-                                        <li class="title-list">
-                                            <span class="nav-link nav-color">Your account</span>
-                                        </li>
                                         <li><a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
                                         <li><a class="nav-link nav-color" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Post an Ad</a> </li>
                                         <li>
