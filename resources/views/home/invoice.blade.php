@@ -142,6 +142,9 @@
                             <span class="input-group-addon">%</span>
                             <select class="form-control">
                                 <option value="0">0</option>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
                                 <!--<input type="text" name="por-vat" class="form-control">-->
                             </select>
                         </div>
