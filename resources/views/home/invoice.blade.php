@@ -142,9 +142,9 @@
                             <span class="input-group-addon">%</span>
                             <select class="form-control" id="por-vat">
                                 <option value="0" checked>0</option>
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="20">20</option>
+                                <option value="0.05">5</option>
+                                <option value="0.1">10</option>
+                                <option value="0.2">20</option>
                                 <!--<input type="text" name="por-vat" class="form-control">-->
                             </select>
                         </div>
@@ -265,6 +265,10 @@
                 $('#vat-container').hide();
             }
         });
+        $('#por-vat').change(function(){
+            var total = totalWithVat();
+            $('#amount-total').val(total);
+        });
         $('.quantities').focusout(function(){
             var price = parseFloat($(this).parent().next().find('.prices').val());
             console.log(price);
@@ -290,5 +294,11 @@
                 $('#amount-total').val(price);
             }
         });
+        function totalWithVat(){
+            var porVat = parseFloat($('#por-vat').val());
+            var subtotal = parseFloat($('#subtotal').val());
+            var total = subtotal + (subtotal*porVat);
+            return total;
+        }
     </script>
 @endsection
