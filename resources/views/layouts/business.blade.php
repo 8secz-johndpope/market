@@ -338,7 +338,7 @@
                                     </ul>
                                 </div>
                                 @endif
-                                <div class="list-menu-common">
+                                <div class="list-menu-common list-messages">
                                     <ul>
                                         <li class="title-list">
                                             <span>Your messages</span>
