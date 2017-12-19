@@ -129,7 +129,7 @@
                     <div class="col-sm-3">
                         <div class="input-group">
                             <span class="input-group-addon">£</span>
-                            <input type="text" name="" disabled="true" value="0" class="form-control">
+                            <input type="text" name="subtotal" id="subtotal" disabled="true" value="0" class="form-control">
                         </div>
                     </div>
                 </div>
