@@ -56,3 +56,7 @@
     background: darkgreen;
     border-color: darkgreen;
 }
+.add-more-items {
+    cursor: pointer;
+    padding-left: 15px;
+}
