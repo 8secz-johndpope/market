@@ -140,7 +140,10 @@
                 <div class="form-group row">
                     <div class="col-sm-12 text-right">
                         <label for="notes">Total</label>
-                        <input type="text" name="" disabled="true" value="£ 0">
+                        <div class="input-group">
+                            <span class="input-group-addon">£</span>
+                            <input type="text" name="" disabled="true" value="0">
+                        </div>
                     </div>
                 </div>
                 <hr>
