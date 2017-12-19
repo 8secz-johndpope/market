@@ -1589,9 +1589,12 @@ a.message-back-button {
     padding-left: 0px;
     list-style: none;
 }
-
 .list-menu-common {
     min-width: 120px;
+}
+.nav-offer {
+    padding: 3px 20px;
+    display: block;
 }
 .list-menu-common:not(:first-child) {
     border-left: 1px solid #ddd;
