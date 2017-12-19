@@ -223,16 +223,16 @@
                                     </div>
                                     <ul>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Send Invoice</a>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Send Invoice</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Unpaid Invoice</a>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Unpaid Invoice</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Paid Invoice</a>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Paid Invoice</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Pending Invoices</a>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Pending Invoices</a>
                                         </li>
                                     </ul>
                                 </div>
