@@ -282,7 +282,7 @@
                 $('#amount-total').val(price);
             }
         });
-        $('input[name="prices[]"]').on('input',function(){
+        $(document).on('input', 'input[name="prices[]"]', function(){
             var totalPrice = 0.0;
             $('.prices').each(function(){
                 var price = getItemPrice(this);
