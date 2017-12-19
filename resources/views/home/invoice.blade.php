@@ -59,8 +59,8 @@
                                         <tr>
                                             <td><input type="text" class="form-control" placeholder="Item" name="items[]"></td>
                                             <td><input type="number" class="form-control" placeholder="0" name="quantities[]"></td>
-                                            <td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>
-                                            <td class="cell-amount">£ 0</td>
+                                            <td><input type="number" class="form-control prices" placeholder="500" name="prices[]"></td>
+                                            <td class="cell-amount">£ <span class="amount">0</span></td>
                                             <td>
                                                 <a class="delete-item"><span class="glyphicon glyphicon-trash"></span></a>
                                             </td>
@@ -239,7 +239,7 @@
                     '<td><input type="text" class="form-control" placeholder="Deposit" name="items[]"></td>' +
                     '<td><input type="number" class="form-control" placeholder="0" name="quantities[]"></td>' +
                     '<td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>' +
-                    '<td class="cell-amount">£ 0</td>'+
+                    '<td class="cell-amount">£ <span class="amount">0</span></td>'+
                     '<td><a class="delete-item"><span class="glyphicon glyphicon-trash"></span></a></td>'+
                 '</tr>');
         });
@@ -258,6 +258,11 @@
             else{
                 $('#vat-container').hide();
             }
+        });
+        $('.prices').focusout(function(){
+            var quantity = parseFloat($(this).parent().prev().find('.quantities').val);
+            var price = parseFloat($(this).val()) * quantity;
+            $(this).parent().next().find('.amount').text(price);
         });
     </script>
 @endsection
