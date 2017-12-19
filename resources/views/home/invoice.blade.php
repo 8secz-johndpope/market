@@ -111,6 +111,7 @@
                         <a class="btn btn-default add-more-items">Add Item</a>
                     </div>
                 </div>-->
+                <hr>
                 <div class="form-group row">
                     <div class="col-sm-12 text-right">
                         <label for="notes">Subtotal</label>
