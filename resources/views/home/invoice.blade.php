@@ -289,12 +289,14 @@
                 var price = price * quantity;
                 $(this).parent().next().find('.amount').text(price);
                 $('#subtotal').val(price);
-                var vat = price * (porVat/100);
-                price = price + vat;
+                price = totalWithVat();
                 console.log(price);
                 $('#amount-total').val(price);
             }
         });
+        function getItemPrice(element){
+
+        }
         function totalWithVat(){
             var porVat = parseFloat($('#por-vat').val());
             var subtotal = parseFloat($('#subtotal').val());
