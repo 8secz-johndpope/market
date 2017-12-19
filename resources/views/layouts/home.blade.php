@@ -247,6 +247,15 @@
                                         <li>
                                             <a class="nav-link nav-color" href="/user/manage/applications"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;&nbsp;Your Jobs Applications</a>
                                         </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/user/manage/applications"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;&nbsp;Your Motors</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/user/manage/applications"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;&nbsp;Your Properties</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/user/manage/applications"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;&nbsp;Your Sales</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 @endif
