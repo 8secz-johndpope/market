@@ -252,6 +252,12 @@
                             <div class="dropdown-menu options-user" role="menu">
                                 <div class="list-menu-common">
                                     <ul>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div class="list-menu-common">
+                                    <ul>
+                                        <li><span class="nav-link nav-color">Your account</span></li>
                                         <li><a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
                                         <li><a class="nav-link nav-color" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Post an Ad</a> </li>
                                         <li>
@@ -288,7 +294,7 @@
                                 <div class="list-menu-common">
                                     <ul>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Invoices</a>
+                                            <span class="nav-link nav-color"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Invoices</span>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Send Invoice</a>
@@ -307,6 +313,7 @@
                                 @if($user->contract!==null)
                                 <div class="list-menu-common">
                                     <ul>
+                                        <li>Your business</li>
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Company</a>
                                         </li>
