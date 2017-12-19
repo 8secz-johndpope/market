@@ -283,7 +283,6 @@
         });
         $('.prices').focusout(function(){
             var quantity = parseFloat($(this).parent().prev().find('.quantities').val());
-            var porVat = parseFloat($('#por-vat').val());
             var price = parseFloat($(this).val());
             if(!isNaN(quantity) && !isNaN(price)){
                 var price = price * quantity;
@@ -295,6 +294,8 @@
             }
         });
         function getItemPrice(element){
+            var quantity = parseFloat($(this).parent().parent().find('.quantities').val());
+            var price = parseFloat(parent().parent().find('.prices'));
 
         }
         function totalWithVat(){
