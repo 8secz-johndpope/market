@@ -137,8 +137,10 @@
                         <label for="terms">Shipping</label>
                     </div>
                     <div class="col-sm-3" >
-                        <span class="input-group-addon">£</span>
-                        <input type="text" name="shipping" class="form-control">
+                        <div class="input-group">
+                            <span class="input-group-addon">£</span>
+                            <input type="text" name="shipping" class="form-control">
+                        </div>
                     </div>
                 </div>
                 <hr>
