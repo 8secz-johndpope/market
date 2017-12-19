@@ -143,7 +143,7 @@
                             <select class="form-control">
                                 <option value="0">0</option>
                                 <!--<input type="text" name="por-vat" class="form-control">-->
-                        </select>
+                            </select>
                         </div>
                     </div>
                 </div>
