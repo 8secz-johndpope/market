@@ -286,7 +286,7 @@
             //var price = parseFloat($(this).val());
             //if(!isNaN(quantity) && !isNaN(price)){
             var price = getItemPrice(this);
-            if(price > 0)
+            if(price > 0){
                 var price = price * quantity;
                 $(this).parent().next().find('.amount').text(price);
                 $('#subtotal').val(price);
