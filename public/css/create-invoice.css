@@ -62,4 +62,5 @@
 }
 .delete-item {
     cursor: pointer;
+    color: red;
 }
