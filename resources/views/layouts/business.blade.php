@@ -252,7 +252,7 @@
                             <div class="dropdown-menu options-user" role="menu">
                                 <div class="list-menu-common">
                                     <ul>
-                                        <li>Our Offers</li>
+                                        <li class="title-list nav-link nav-color">Our Offers</li>
                                     </ul>
                                 </div>
                                 <div class="list-menu-common">
