@@ -125,6 +125,9 @@
                         <label for="terms">Shipping</label>
                         <input type="text" name="shipping">
                     </div>
+                </div>
+                <hr>
+                <div class="form-group row">
                     <div class="col-sm-12 text-right">
                         <label for="notes">Total</label>
                         <input type="text" name="" disabled="true" value="£ 0">
