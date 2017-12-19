@@ -243,8 +243,8 @@
             $('#table-items tbody').append(
                 '<tr>' +
                     '<td><input type="text" class="form-control" placeholder="Deposit" name="items[]"></td>' +
-                    '<td><input type="number" class="form-control" placeholder="0" name="quantities[]"></td>' +
-                    '<td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>' +
+                    '<td><input type="number" class="form-control quantities" placeholder="0" name="quantities[]"></td>' +
+                    '<td><input type="number" class="form-control prices" placeholder="500" name="prices[]"></td>' +
                     '<td class="cell-amount">£ <span class="amount">0</span></td>'+
                     '<td><a class="delete-item"><span class="glyphicon glyphicon-trash"></span></a></td>'+
                 '</tr>');
