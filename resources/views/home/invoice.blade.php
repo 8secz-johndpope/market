@@ -58,7 +58,7 @@
                                     <tbody>
                                         <tr>
                                             <td><input type="text" class="form-control" placeholder="Item" name="items[]"></td>
-                                            <td><input type="number" class="form-control" placeholder="0" name="quantities[]" class="quantities"></td>
+                                            <td><input type="number" class="form-control quantities" placeholder="0" name="quantities[]"></td>
                                             <td><input type="number" class="form-control prices" placeholder="500" name="prices[]"></td>
                                             <td class="cell-amount">£ <span class="amount">0</span></td>
                                             <td>
@@ -258,6 +258,9 @@
             else{
                 $('#vat-container').hide();
             }
+        });
+        $('.quantities').focusout(function(){
+
         });
         $('.prices').focusout(function(){
             var quantity = parseFloat($(this).parent().prev().find('.quantities').val());
