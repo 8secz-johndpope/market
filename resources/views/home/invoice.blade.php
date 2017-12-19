@@ -248,6 +248,7 @@
                     '<td class="cell-amount">£ <span class="amount">0</span></td>'+
                     '<td><a class="delete-item"><span class="glyphicon glyphicon-trash"></span></a></td>'+
                 '</tr>');
+            addEvent();
         });
         $('#add_ship_info').change(function(){
             if(this.checked){
@@ -282,16 +283,12 @@
             }
         });
         $('input[name="prices[]"]').on('input',function(){
-            //var quantity = parseFloat($(this).parent().prev().find('.quantities').val());
-            //var price = parseFloat($(this).val());
-            //if(!isNaN(quantity) && !isNaN(price)){
             var totalPrice = 0.0;
             $('.prices').each(function(){
                 var price = getItemPrice(this);
                 $(this).parent().next().find('.amount').text(price);
                 totalPrice += price;
             });
-            //var price = getItemPrice(this);
             console.log('price: ' + totalPrice);
             if(totalPrice > 0){
                 $('#subtotal').val(totalPrice);
@@ -300,8 +297,22 @@
                 $('#amount-total').val(totalPrice);
             }
         });
-        function calculateTotal(){
-
+        function addEvent(){
+            $('input[name="prices[]"]').on('input',function(){
+                var totalPrice = 0.0;
+                $('.prices').each(function(){
+                    var price = getItemPrice(this);
+                    $(this).parent().next().find('.amount').text(price);
+                    totalPrice += price;
+                });
+                console.log('price: ' + totalPrice);
+                if(totalPrice > 0){
+                    $('#subtotal').val(totalPrice);
+                    totalPrice = totalWithVat();
+                    console.log(totalPrice);
+                    $('#amount-total').val(totalPrice);
+                }
+            });
         }
         function getItemPrice(element){
             var quantity = parseFloat($(element).parent().parent().find('.quantities').val());
