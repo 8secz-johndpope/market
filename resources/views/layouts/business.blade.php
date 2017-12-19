@@ -370,11 +370,14 @@
                                 @foreach(Auth::user()->rooms as $room)
                                     <li class="list-group-item">
                                         @if($room->last_message())
-                                        <div class="message-inside">
-                                            <span class="message-username">{{$room->last_message()->user->name}}</span>
-                                            <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
-                                            <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a>
-                                        </div>
+                                        <a href="/user/manage/messages/{{$room->id}}">
+                                            <div class="message-inside">
+                                                <span class="message-username">{{$room->last_message()->user->name}}</span>
+                                                <span class="title-advert">{{$room->title}}</span>
+                                                <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
+                                                
+                                            </div>
+                                        </a>
                                         @endif
                                     </li>
                                 @endforeach
