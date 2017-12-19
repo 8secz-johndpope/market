@@ -1588,6 +1588,7 @@ a.message-back-button {
 .list-menu-common ul {
     padding-left: 0px;
     list-style: none;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.2);
 }
 .list-menu-common {
     min-width: 160px;
