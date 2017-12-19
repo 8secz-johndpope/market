@@ -248,7 +248,6 @@
                     '<td class="cell-amount">£ <span class="amount">0</span></td>'+
                     '<td><a class="delete-item"><span class="glyphicon glyphicon-trash"></span></a></td>'+
                 '</tr>');
-            $('input[name="prices[]"]').on('input');
         });
         $('#add_ship_info').change(function(){
             if(this.checked){
@@ -287,11 +286,7 @@
             //var price = parseFloat($(this).val());
             //if(!isNaN(quantity) && !isNaN(price)){
             var totalPrice = 0.0;
-            $('.prices').each(function(){
-                var price = getItemPrice(this);
-                $(this).parent().next().find('.amount').text(price);
-                totalPrice += price;
-            })
+            calculateItemsPrice();
             //var price = getItemPrice(this);
             console.log('price: ' + totalPrice);
             if(totalPrice > 0){
@@ -301,6 +296,13 @@
                 $('#amount-total').val(totalPrice);
             }
         });
+        function calculateItemsPrice(){
+            $('.prices').each(function(){
+                var price = getItemPrice(this);
+                $(this).parent().next().find('.amount').text(price);
+                totalPrice += price;
+            });
+        }
         function getItemPrice(element){
             var quantity = parseFloat($(element).parent().parent().find('.quantities').val());
             var price = parseFloat($(element).parent().parent().find('.prices').val());
