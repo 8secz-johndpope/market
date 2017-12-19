@@ -1619,6 +1619,10 @@ a.message-back-button {
     line-height: 12px;
     margin-bottom: 0;
 }
+.title-advert {
+    font-size: 11px;
+    line-height: 12px;
+}
 .dropdown-menu li>a {
     display: block;
     padding: 3px 20px;
