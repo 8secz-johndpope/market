@@ -248,6 +248,7 @@
                     '<td class="cell-amount">£ <span class="amount">0</span></td>'+
                     '<td><a class="delete-item"><span class="glyphicon glyphicon-trash"></span></a></td>'+
                 '</tr>');
+            $('input[name="prices[]"]').on('input');
         });
         $('#add_ship_info').change(function(){
             if(this.checked){
