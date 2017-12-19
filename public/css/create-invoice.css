@@ -72,3 +72,6 @@
 .background-body {
     min-height: calc(100vh - 72px);
 }
+.info-form {
+    margin-bottom: 40px;
+}
