@@ -171,16 +171,6 @@
                             <div class="dropdown-menu options-user" role="menu">
                                 <div class="list-menu-common">
                                     <div class="title-list">
-                                        <span class="nav-link nav-color">Our Offers</span>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <span class="nav-link nav-offer">We do not have offers at the moment</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="list-menu-common">
-                                    <div class="title-list">
                                         <span class="nav-link nav-color">Your account</span>
                                     </div>
                                     <ul>
@@ -257,25 +247,14 @@
                                     </ul>
                                 </div>
                                 @endif
-                                <div class="list-menu-common list-messages">
+                                <div class="list-menu-common">
                                     <div class="title-list">
-                                        <span>Your messages</span>
+                                        <span class="nav-link nav-color">Our Offers</span>
                                     </div>
                                     <ul>
-                                        @foreach(Auth::user()->rooms as $room)
-                                        <li class="list-group-item">
-                                            @if($room->last_message())
-                                                <a href="/user/manage/messages/{{$room->id}}">
-                                                    <div class="message-inside">
-                                                        <span class="message-username">{{$room->last_message()->user->name}}</span>
-                                                        <span class="title-advert">{{$room->title}}</span>
-                                                        <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
-                                                        
-                                                    </div>
-                                                </a>
-                                            @endif
+                                        <li>
+                                            <span class="nav-link nav-offer">We do not have offers at the moment</span>
                                         </li>
-                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
