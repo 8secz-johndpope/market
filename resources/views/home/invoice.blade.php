@@ -123,13 +123,25 @@
                 </div>-->
                 <hr>
                 <div class="form-group row">
-                    <div class="col-sm-12 text-right">
+                    <div class="col-sm-3 text-right">
                         <label for="notes">Subtotal</label>
-                        <input type="text" name="" disabled="true" value="£ 0">
                     </div>
-                    <div class="col-sm-12 text-right" id="vat-container">
-                        <label for="notes">VAT %</label>
-                        <input type="text" name="por-vat">
+                    <div class="col-sm-3">
+                        <div class="input-group">
+                            <span class="input-group-addon">£</span>
+                            <input type="text" name="" disabled="true" value="£ 0">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row" id="vat-container">
+                    <div class="col-sm-3 text-right" >
+                        <label for="notes">VAT</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="input-group">
+                            <span class="input-group-addon">%</span>
+                            <input type="text" name="por-vat" class="form-control">
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row ship-container" id="ship-container">
