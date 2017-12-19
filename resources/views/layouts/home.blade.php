@@ -253,7 +253,7 @@
                                             <a class="nav-link nav-color" href="#"><span class="fa fa-car"></span> &nbsp;&nbsp;Your Motors</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;&nbsp;Your Properties</a>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-building"></span> &nbsp;&nbsp;Your Properties</a>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-tag"></span> &nbsp;&nbsp;Your Sales</a>
