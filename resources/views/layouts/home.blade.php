@@ -229,6 +229,9 @@
                                         <li>
                                             <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Pending Invoices</a>
                                         </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Download Invoice CVS/Excel</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 @if(Auth::user()->contract!==null)
