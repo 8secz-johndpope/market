@@ -138,8 +138,10 @@
                 </div>
                 <hr>
                 <div class="form-group row">
-                    <div class="col-sm-12 text-right">
+                    <div class="col-sm-offset-6 col-sm-3">
                         <label for="notes">Total</label>
+                    </div>
+                    <div class="col-sm-3">
                         <div class="input-group">
                             <span class="input-group-addon">£</span>
                             <input type="text" name="" disabled="true" value="0">
