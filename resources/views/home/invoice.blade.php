@@ -276,8 +276,9 @@
             if(!isNaN(price) && !isNaN(quantity)){
                 price = price * quantity;
                 $(this).parent().parent().find('.amount').text(price);
-                $('#amount-total').val(price);
                 $('#subtotal').val(price);
+                price = totalWithVat();
+                $('#amount-total').val(price);
             }
         });
         $('.prices').focusout(function(){
