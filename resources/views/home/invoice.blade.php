@@ -265,7 +265,7 @@
             var quantity = parseFloat($(this).val());
             if(!isNaN(price) && !isNaN(quantity)){
                 price = price * quantity;
-                $(this).parent().next().find('.amount').text(price);
+                $(this).parent().parent().find('.amount').text(price);
                 $('#amount-total').val(price);
             }
         });
