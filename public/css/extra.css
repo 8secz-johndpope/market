@@ -1600,7 +1600,7 @@ a.message-back-button {
 .list-menu-common:not(:first-child) {
     /*border-left: 1px solid #ddd;*/
 }
-.list-menu-common.list-messages {
+.list-menu-common.list-messages ul {
     max-height: 300px;
     overflow-y: scroll;
 }
