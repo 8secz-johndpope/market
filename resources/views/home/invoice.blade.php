@@ -141,13 +141,13 @@
                 </div>
                 <hr>
                 <div class="form-group row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <label for="notes">Notes</label>
-                        <textarea rows="3" name="notes" id="notes" placeholder="Notes - Any relevant information" class="w100p"></textarea>
+                        <textarea rows="5" name="notes" id="notes" placeholder="Notes - Any relevant information" class="w100p"></textarea>
                     </div>
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <label for="terms">Terms</label>
-                        <textarea rows="3" name="terms" id="terms" placeholder="Terms and conditions" class="w100p"></textarea>
+                        <textarea rows="5" name="terms" id="terms" placeholder="Terms and conditions" class="w100p"></textarea>
                     </div>
                 </div>
                
