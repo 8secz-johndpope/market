@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-sm-6">
                         <label for="date-payment">Payment</label>
-                        <input type="text" name="date-payment" class="form-control" id="date-payment">
+                        <input type="text" name="date-payment" class="form-control" id="date-payment" placeholder="Due Upon Receipt">
                     </div>
                 </div>
                 <div id="items">
