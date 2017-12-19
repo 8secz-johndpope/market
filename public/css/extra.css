@@ -1484,6 +1484,7 @@ img.icon-small {
     color: black;
     font-size: 12px;
     font-weight: bold;
+    display: block;
 }
 .button__badge {
     background-color: #fa3e3e;
@@ -1614,6 +1615,9 @@ a.message-back-button {
     text-overflow: ellipsis;
     width: 100%;
     overflow: hidden;
+    font-size: 11px;
+    line-height: 12px;
+    margin-bottom: 0;
 }
 .dropdown-menu li>a {
     display: block;
