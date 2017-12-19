@@ -257,6 +257,7 @@
             }
             else{
                 $('.ship-container').hide();
+                $('#shipping').val('');
             }
         });
         $('#add_vat_info').change(function(){
@@ -265,6 +266,7 @@
             }
             else{
                 $('#vat-container').hide();
+                $('#por-vat').val(0);
             }
         });
         $('#por-vat').change(function(){
