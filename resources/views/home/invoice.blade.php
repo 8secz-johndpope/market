@@ -286,6 +286,7 @@
                 $('#subtotal').val(price);
                 var vat = price * (porVat/100);
                 price = price + vat;
+                console.log(price);
                 $(this).parent().next().find('.amount').text(price);
             }
         });
