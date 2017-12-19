@@ -251,9 +251,9 @@
                             </a>
                             <div class="dropdown-menu options-user" role="menu">
                                 <div class="list-menu-common">
-                                    <ul class="title-list">
-                                        <li class="nav-link nav-color">
-                                            <span>Our Offers</span>
+                                    <ul>
+                                        <li class="title-list">
+                                            <span class="nav-link nav-color">Our Offers</span>
                                         </li>
                                         <li>
                                     </ul>
