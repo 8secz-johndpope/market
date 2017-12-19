@@ -292,9 +292,8 @@
                 totalPrice += price;
             })
             //var price = getItemPrice(this);
-            console.log('price: ' + price);
+            console.log('price: ' + totalPrice);
             if(totalPrice > 0){
-                
                 $('#subtotal').val(totalPrice);
                 totalPrice = totalWithVat();
                 console.log(totalPrice);
