@@ -157,7 +157,7 @@
                     <div class="col-sm-3" >
                         <div class="input-group">
                             <span class="input-group-addon">£</span>
-                            <input type="text" name="shipping" class="form-control">
+                            <input type="text" name="shipping" id="shipping" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -304,7 +304,11 @@
         function totalWithVat(){
             var porVat = parseFloat($('#por-vat').val());
             var subtotal = parseFloat($('#subtotal').val());
+            var shipping = parseFloat($('#shipping').val());
             var total = subtotal + (subtotal*porVat);
+            if(!isNaN(shipping)){
+                total += shipping;
+            }
             return total;
         }
     </script>
