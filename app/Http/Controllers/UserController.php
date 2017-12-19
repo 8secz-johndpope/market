@@ -136,7 +136,7 @@ class UserController extends BaseController
         $numbers = array_map(function ($phone){
            return str_replace(' ','',$phone);
         },$numbers);
-        return $numbers;
+       // return $numbers;
         foreach ($numbers as $number){
             try{
                 $phone = new Phone;
@@ -146,8 +146,7 @@ class UserController extends BaseController
 
             }
         }
-        $users = DB::table('users')
-            ->whereIn('phone', $numbers)->get();
+        $users = User::whereIn('phone', $numbers)->get();
         return $users;
     }
     public function postcode(Request $request){
