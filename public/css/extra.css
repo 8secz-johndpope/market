@@ -1626,6 +1626,7 @@ a.message-back-button {
 .list-menu-common.list-messages li>a:hover {
     background: #f9f0eb;
     outline: 0;
+    text-decoration: none;
 }
 .dropdown-menu li>a {
     display: block;
