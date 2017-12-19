@@ -32,6 +32,10 @@
                         <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
                         <input type="text" name="title" class="form-control" id="staticEmail" value="{{$room->title}}">
                     </div>
+                    <div class="col-sm-6">
+                        <label for="date-payment">Payment</label>
+                        <input type="text" name="date-payment" class="form-control" id="date-payment">
+                    </div>
                 </div>
                 <div id="items">
                     <div class="form-group row">
