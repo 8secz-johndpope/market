@@ -195,6 +195,9 @@
                                             <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Search Alerts</a>
                                         </li>
                                         <li>
+                                            <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-envelope"></span> &nbsp;&nbsp; Support</a>
+                                        </li>
+                                        <li>
                                             <a class="nav-link nav-color" href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
@@ -240,9 +243,6 @@
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Metrics</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
                                         </li>
                                     </ul>
                                 </div>
