@@ -147,9 +147,9 @@ class UserController extends BaseController
             }
         }
         $users = User::whereIn('phone', $numbers)->get();
-        $users = array_map(function ($user){
+        $users = $users->map(function ($user){
             return ['id'=>$user->id,'name'=>$user->name,'image'=>$user->image];
-        },$users);
+        });
         return $users;
     }
     public function postcode(Request $request){
