@@ -236,7 +236,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                @if($user->contract!==null)
+                                @if(Auth::user()->contract!==null)
                                 <div class="list-menu-common">
                                     <div class="title-list">
                                         <span>Your business</span>
