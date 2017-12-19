@@ -1600,6 +1600,10 @@ a.message-back-button {
 .list-menu-common:not(:first-child) {
     /*border-left: 1px solid #ddd;*/
 }
+.list-menu-common.list-messages {
+    height: 300px;
+    overflow-y: scroll;
+}
 .dropdown-menu li>a {
     display: block;
     padding: 3px 20px;
