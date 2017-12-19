@@ -280,8 +280,6 @@
                                 </div>
                             </div>
                         </li>
-
-                    @endif
                         @endif
                         @if (!Auth::guest())
 
