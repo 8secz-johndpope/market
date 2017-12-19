@@ -286,7 +286,11 @@
             //var price = parseFloat($(this).val());
             //if(!isNaN(quantity) && !isNaN(price)){
             var totalPrice = 0.0;
-            calculateItemsPrice();
+            $('.prices').each(function(){
+                var price = getItemPrice(this);
+                $(this).parent().next().find('.amount').text(price);
+                totalPrice += price;
+            });
             //var price = getItemPrice(this);
             console.log('price: ' + totalPrice);
             if(totalPrice > 0){
@@ -296,12 +300,8 @@
                 $('#amount-total').val(totalPrice);
             }
         });
-        function calculateItemsPrice(){
-            $('.prices').each(function(){
-                var price = getItemPrice(this);
-                $(this).parent().next().find('.amount').text(price);
-                totalPrice += price;
-            });
+        function calculateTotal(){
+
         }
         function getItemPrice(element){
             var quantity = parseFloat($(element).parent().parent().find('.quantities').val());
