@@ -294,7 +294,7 @@
                                 <div class="list-menu-common">
                                     <ul>
                                         <li>
-                                            <span class="title-list nav-link nav-color"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Invoices</span>
+                                            <span class="title-list nav-link nav-color">Invoices</span>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Send Invoice</a>
