@@ -270,16 +270,19 @@
             var total = totalWithVat();
             $('#amount-total').val(total);
         });
-        $('.quantities').focusout(function(){
-            var price = parseFloat($(this).parent().next().find('.prices').val());
-            console.log(price);
-            var quantity = parseFloat($(this).val());
-            if(!isNaN(price) && !isNaN(quantity)){
-                price = price * quantity;
-                $(this).parent().parent().find('.amount').text(price);
-                $('#subtotal').val(price);
-                price = totalWithVat();
-                $('#amount-total').val(price);
+        $(document).on('input', 'input[name="quantities[]"]',function(){
+            var totalPrice = 0.0;
+            $('.prices').each(function(){
+                var price = getItemPrice(this);
+                $(this).parent().next().find('.amount').text(price);
+                totalPrice += price;
+            });
+            console.log('price: ' + totalPrice);
+            if(totalPrice > 0){
+                $('#subtotal').val(totalPrice);
+                totalPrice = totalWithVat();
+                console.log(totalPrice);
+                $('#amount-total').val(totalPrice);
             }
         });
         $(document).on('input', 'input[name="prices[]"]', function(){
@@ -297,23 +300,6 @@
                 $('#amount-total').val(totalPrice);
             }
         });
-        function addEvent(){
-            $('input[name="prices[]"]').on('input',function(){
-                var totalPrice = 0.0;
-                $('.prices').each(function(){
-                    var price = getItemPrice(this);
-                    $(this).parent().next().find('.amount').text(price);
-                    totalPrice += price;
-                });
-                console.log('price: ' + totalPrice);
-                if(totalPrice > 0){
-                    $('#subtotal').val(totalPrice);
-                    totalPrice = totalWithVat();
-                    console.log(totalPrice);
-                    $('#amount-total').val(totalPrice);
-                }
-            });
-        }
         function getItemPrice(element){
             var quantity = parseFloat($(element).parent().parent().find('.quantities').val());
             var price = parseFloat($(element).parent().parent().find('.prices').val());
