@@ -49,9 +49,9 @@
                                     <thead>
                                         <tr>
                                             <th class="cell-item">Item</th>
-                                            <th>Quantity</th>
-                                            <th>Price</th>
-                                            <th>Amount</th>
+                                            <th class="text-right">Quantity</th>
+                                            <th class="text-right">Price</th>
+                                            <th class="text-right">Amount</th>
                                             <th></th>
                                         </tr>
                                     </thead>
