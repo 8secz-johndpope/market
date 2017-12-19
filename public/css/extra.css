@@ -1604,6 +1604,16 @@ a.message-back-button {
     max-height: 300px;
     overflow-y: scroll;
 }
+.message-inside {
+    padding-left: 20px;
+    max-width: 260px;
+    white-space: nowrap;
+}
+.message-inside p {
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+}
 .dropdown-menu li>a {
     display: block;
     padding: 3px 20px;
