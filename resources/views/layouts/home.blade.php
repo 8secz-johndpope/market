@@ -245,7 +245,7 @@
                                             <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Metrics</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;&nbsp;Your Jobs Applocations</a>
+                                            <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;&nbsp;Your Jobs Applications</a>
                                         </li>
                                     </ul>
                                 </div>
