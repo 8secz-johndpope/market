@@ -225,6 +225,7 @@
     <script>
         $('#items').on('click','.delete-item',function () {
             $(this).parent().parent().remove();
+            calculateTotal();
         });
         /*$('.add-more-items').click(function () {
             $('#items').append('<div class="form-group row">\n' +
@@ -271,21 +272,12 @@
             $('#amount-total').val(total);
         });
         $(document).on('input', 'input[name="quantities[]"]',function(){
-            var totalPrice = 0.0;
-            $('.prices').each(function(){
-                var price = getItemPrice(this);
-                $(this).parent().next().find('.amount').text(price);
-                totalPrice += price;
-            });
-            console.log('price: ' + totalPrice);
-            if(totalPrice > 0){
-                $('#subtotal').val(totalPrice);
-                totalPrice = totalWithVat();
-                console.log(totalPrice);
-                $('#amount-total').val(totalPrice);
-            }
+            calculateTotal();
         });
         $(document).on('input', 'input[name="prices[]"]', function(){
+            calculateTotal();
+        });
+        function calculateTotal(){
             var totalPrice = 0.0;
             $('.prices').each(function(){
                 var price = getItemPrice(this);
@@ -299,7 +291,7 @@
                 console.log(totalPrice);
                 $('#amount-total').val(totalPrice);
             }
-        });
+        }
         function getItemPrice(element){
             var quantity = parseFloat($(element).parent().parent().find('.quantities').val());
             var price = parseFloat($(element).parent().parent().find('.prices').val());
