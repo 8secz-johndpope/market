@@ -314,7 +314,7 @@
             var shipping = 0;
             var porVat = parseFloat($('#por-vat').val());
             var subtotal = parseFloat($('#subtotal').val());
-            if ($('#add_ship_info').checked)
+            if($('#add_ship_info').prop('checked'))
                 shipping = parseFloat($('#shipping').val());
             var total = subtotal + (subtotal*porVat);
             if(!isNaN(shipping)){
