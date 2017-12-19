@@ -256,7 +256,7 @@
                                             <span class="nav-link nav-color">Our Offers</span>
                                         </li>
                                         <li>
-                                            <span class="nav-link nav-offer">We do not have offer at the moment</span>
+                                            <span class="nav-link nav-offer">We do not have offers at the moment</span>
                                         </li>
                                     </ul>
                                 </div>
