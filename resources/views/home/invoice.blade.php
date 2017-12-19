@@ -266,6 +266,7 @@
             if(!isNaN(price) && !isNaN(quantity)){
                 price = price * quantity;
                 $(this).parent().next().find('.amount').text(price);
+                $('#amount-total').val(price);
             }
         });
         $('.prices').focusout(function(){
