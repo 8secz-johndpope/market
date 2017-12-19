@@ -130,6 +130,7 @@
                         <input type="text" name="" disabled="true" value="£ 0">
                     </div>
                 </div>
+                <hr>
                 <div class="form-group row">
                     <div class="col-sm-12">
                         <label for="notes">Notes</label>
