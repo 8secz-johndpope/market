@@ -14,6 +14,7 @@
 @endsection
 
 @section('content')
+<div class="background-body">
 <div class="container">
     <div class="row">
         <form action="/room/invoice/save" method="post" id="change-category">
@@ -175,6 +176,7 @@
         </div>
     </div>
 </div>
+</di>
     <script>
         $('#items').on('click','.delete-item',function () {
             $(this).parent().parent().remove();
