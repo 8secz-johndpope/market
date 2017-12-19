@@ -282,12 +282,12 @@
             var price = parseFloat($(this).val());
             if(!isNaN(quantity) && !isNaN(price)){
                 var price = price * quantity;
-                $('#amount-total').val(price);
+                $(this).parent().next().find('.amount').text(price);
                 $('#subtotal').val(price);
                 var vat = price * (porVat/100);
                 price = price + vat;
                 console.log(price);
-                $(this).parent().next().find('.amount').text(price);
+                $('#amount-total').val(price);
             }
         });
     </script>
