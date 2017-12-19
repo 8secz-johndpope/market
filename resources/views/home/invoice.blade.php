@@ -27,7 +27,7 @@
                         <span class="text-invoice">INVOICE</span>
                     </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row info-form">
                     <div class="col-sm-6">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
                         <input type="text" name="title" class="form-control" id="staticEmail" value="{{$room->title}}">
