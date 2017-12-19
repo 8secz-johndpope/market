@@ -1594,6 +1594,8 @@ a.message-back-button {
 .list-menu-common {
     min-width: 190px;
     box-shadow: inset 1px 0px 1px rgba(0,0,0,0.2), inset 0px -1px 1px rgba(0,0,0,0.2);
+    display: inline-block;
+    width: max-content;
 }
 .nav-offer {
     padding: 3px 20px;
