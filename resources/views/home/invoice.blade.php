@@ -258,6 +258,8 @@
             else{
                 $('.ship-container').hide();
                 $('#shipping').val('');
+                var total = totalWithVat();
+                $('#amount-total').val(total);
             }
         });
         $('#add_vat_info').change(function(){
@@ -267,6 +269,8 @@
             else{
                 $('#vat-container').hide();
                 $('#por-vat').val(0);
+                var total = totalWithVat();
+                $('#amount-total').val(total);
             }
         });
         $('#por-vat').change(function(){
