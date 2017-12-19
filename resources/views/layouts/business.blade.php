@@ -338,25 +338,25 @@
                                     </ul>
                                 </div>
                                 @endif
-                            </div>
-                            <div class="list-menu-common">
-                                <ul>
-                                    <li class="title-list">
-                                        <span>Your messages</span>
-                                    </li>
-                                    @foreach(Auth::user()->rooms as $room)
-                                    <li class="list-group-item">
-                                        <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a>
-                                        @if($room->last_message())
-                                        <div class="message-inside">
-                                            <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
-                                            <span class="message-username">{{$room->last_message()->user->name}}</span>
-                                        </div>
-                                            @endif
+                                <div class="list-menu-common">
+                                    <ul>
+                                        <li class="title-list">
+                                            <span>Your messages</span>
+                                        </li>
+                                        @foreach(Auth::user()->rooms as $room)
+                                        <li class="list-group-item">
+                                            <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a>
+                                            @if($room->last_message())
+                                            <div class="message-inside">
+                                                <p class="@if($room->unread===1) unread-message @endif">{{$room->last_message()->message}}</p>
+                                                <span class="message-username">{{$room->last_message()->user->name}}</span>
+                                            </div>
+                                                @endif
 
-                                    </li>
-                                @endforeach
-                                </ul>
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                             </div>
                         </li>
 
