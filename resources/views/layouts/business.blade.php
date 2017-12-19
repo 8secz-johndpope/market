@@ -257,7 +257,7 @@
                                 </div>
                                 <div class="list-menu-common">
                                     <ul>
-                                        <li><span class="nav-link nav-color">Your account</span></li>
+                                        <li><span class="title-list nav-link nav-color">Your account</span></li>
                                         <li><a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
                                         <li><a class="nav-link nav-color" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Post an Ad</a> </li>
                                         <li>
@@ -294,7 +294,7 @@
                                 <div class="list-menu-common">
                                     <ul>
                                         <li>
-                                            <span class="nav-link nav-color"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Invoices</span>
+                                            <span class="title-list nav-link nav-color"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Invoices</span>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Send Invoice</a>
@@ -315,7 +315,7 @@
                                     <ul>
                                         <li>Your business</li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Company</a>
+                                            <a class="title-list nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Company</a>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;&nbsp;Financials</a>
