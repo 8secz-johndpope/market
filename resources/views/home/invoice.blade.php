@@ -131,9 +131,14 @@
                         <label for="notes">VAT %</label>
                         <input type="text" name="por-vat">
                     </div>
-                    <div class="col-sm-12 text-right ship-container" id="ship-container">
+                </div>
+                <div class="form-group row ship-container" id="ship-container">
+                    <div class="col-sm-offset-6 col-sm-3 text-right">
                         <label for="terms">Shipping</label>
-                        <input type="text" name="shipping">
+                    </div>
+                    <div class="col-sm-3" >
+                        <span class="input-group-addon">£</span>
+                        <input type="text" name="shipping" class="form-control">
                     </div>
                 </div>
                 <hr>
