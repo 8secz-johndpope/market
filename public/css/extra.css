@@ -1623,6 +1623,9 @@ a.message-back-button {
     font-size: 11px;
     line-height: 12px;
 }
+.list-menu-common.list-messages li>a:hover {
+    background: #f9f0eb;
+}
 .dropdown-menu li>a {
     display: block;
     padding: 3px 20px;
