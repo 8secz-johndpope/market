@@ -257,7 +257,6 @@
             }
             else{
                 $('.ship-container').hide();
-                $('#shipping').val('');
                 var total = totalWithVat();
                 $('#amount-total').val(total);
             }
@@ -312,9 +311,11 @@
 
         }
         function totalWithVat(){
+            var shipping = 0;
             var porVat = parseFloat($('#por-vat').val());
             var subtotal = parseFloat($('#subtotal').val());
-            var shipping = parseFloat($('#shipping').val());
+            if ($('#add_ship_info').checked)
+                shipping = parseFloat($('#shipping').val());
             var total = subtotal + (subtotal*porVat);
             if(!isNaN(shipping)){
                 total += shipping;
