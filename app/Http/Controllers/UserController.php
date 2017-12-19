@@ -133,10 +133,10 @@ class UserController extends BaseController
         public function contacts(Request $request){
 
         $numbers = $request->numbers;
-        $nums = array_map(function ($phone){
+            $numbers = array_map(function ($phone){
            return str_replace(chr( 194 ) . chr( 160 ),'',$phone);
         },$numbers);
-        return $nums;
+        //return $numbers;
         foreach ($numbers as $number){
             try{
                 $phone = new Phone;
