@@ -297,7 +297,7 @@
         });
         function getItemPrice(element){
             var quantity = parseFloat($(element).parent().parent().find('.quantities').val());
-            var price = parseFloat($(element).parent().parent().find('.prices'));
+            var price = parseFloat($(element).parent().parent().find('.prices').val());
             if(!isNaN(quantity) && !isNaN(price)){
                 return price * quantity;
             }
