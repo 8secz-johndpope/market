@@ -134,7 +134,7 @@ class UserController extends BaseController
 
         $numbers = $request->numbers;
         $numbers = array_map(function ($phone){
-           return str_replace(' ','',$phone);
+           return preg_replace('/\s+/','',$phone);
         },$numbers);
         return $numbers;
         foreach ($numbers as $number){
