@@ -36,7 +36,7 @@
                         <label for="date-payment">Payment</label>
                         <input type="text" name="date-payment" class="form-control" id="date-payment" placeholder="Due Upon Receipt">
                     </div>
-                    <div class="col-sm-offset-6 col-sm-6">
+                    <div class="col-sm-offset-6 col-sm-6 group-date-ship">
                         <label for="date-shipping">Shipping Date</label>
                         <input type="text" name="date-shipping" class="form-control" id="date-shipping" placeholder="Next day">
                     </div>
