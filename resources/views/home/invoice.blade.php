@@ -123,7 +123,7 @@
                 </div>-->
                 <hr>
                 <div class="form-group row">
-                    <div class="col-sm-3 text-right">
+                    <div class="col-sm-offset-6 col-sm-3 text-right">
                         <label for="notes">Subtotal</label>
                     </div>
                     <div class="col-sm-3">
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <div class="form-group row" id="vat-container">
-                    <div class="col-sm-3 text-right" >
+                    <div class="col-sm-offset-6 col-sm-3 text-right" >
                         <label for="notes">VAT</label>
                     </div>
                     <div class="col-sm-3">
