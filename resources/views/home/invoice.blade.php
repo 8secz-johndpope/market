@@ -140,8 +140,8 @@
                     <div class="col-sm-3">
                         <div class="input-group">
                             <span class="input-group-addon">%</span>
-                            <select class="form-control">
-                                <option value="0">0</option>
+                            <select class="form-control" id="por-vat">
+                                <option value="0" checked>0</option>
                                 <option value="5">5</option>
                                 <option value="10">10</option>
                                 <option value="20">20</option>
@@ -278,9 +278,12 @@
         });
         $('.prices').focusout(function(){
             var quantity = parseFloat($(this).parent().prev().find('.quantities').val());
+            var porVat = parseFloat($('#por-vat').val());
             var price = parseFloat($(this).val());
             if(!isNaN(quantity) && !isNaN(price)){
                 var price = price * quantity;
+                var vat = price * (porVat/100);
+                price = price + vat;
                 $(this).parent().next().find('.amount').text(price);
                 $('#amount-total').val(price);
                 $('#subtotal').val(price);
