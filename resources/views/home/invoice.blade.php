@@ -277,6 +277,10 @@
         $(document).on('input', 'input[name="prices[]"]', function(){
             calculateTotal();
         });
+        $('#shipping').on('input', function(){
+            var total = totalWithVat();
+            $('#amount-total').val(total);
+        });
         function calculateTotal(){
             var totalPrice = 0.0;
             $('.prices').each(function(){
