@@ -257,9 +257,9 @@
             }
             else{
                 $('.ship-container').hide();
-                var total = totalWithVat();
-                $('#amount-total').val(total);
             }
+            var total = totalWithVat();
+            $('#amount-total').val(total);
         });
         $('#add_vat_info').change(function(){
             if(this.checked){
@@ -312,8 +312,10 @@
         }
         function totalWithVat(){
             var shipping = 0;
-            var porVat = parseFloat($('#por-vat').val());
-            var subtotal = parseFloat($('#subtotal').val());
+            var porVat = 0;
+            var subtotal = parseFloat($('#subtotal').val()); 
+            if($('#add_vat_info').prop('checked'))
+                porVat = parseFloat($('#por-vat').val());
             if($('#add_ship_info').prop('checked'))
                 shipping = parseFloat($('#shipping').val());
             var total = subtotal + (subtotal*porVat);
