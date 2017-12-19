@@ -299,10 +299,10 @@
                                     </ul>
                                 </div>
                                 <div class="list-menu-common">
+                                    <div class="title-list">
+                                        <span class="nav-link nav-color">Invoices</span>
+                                    </div>
                                     <ul>
-                                        <li class="title-list">
-                                            <span class="nav-link nav-color">Invoices</span>
-                                        </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Send Invoice</a>
                                         </li>
@@ -319,10 +319,10 @@
                                 </div>
                                 @if($user->contract!==null)
                                 <div class="list-menu-common">
+                                    <div class="title-list">
+                                        <span>Your business</span>
+                                    </div>
                                     <ul>
-                                        <li class="title-list">
-                                            <span>Your business</span>
-                                        </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Company</a>
                                         </li>
@@ -339,10 +339,10 @@
                                 </div>
                                 @endif
                                 <div class="list-menu-common list-messages">
+                                    <div class="title-list">
+                                        <span>Your messages</span>
+                                    </div>
                                     <ul>
-                                        <li class="title-list">
-                                            <span>Your messages</span>
-                                        </li>
                                         @foreach(Auth::user()->rooms as $room)
                                         <li class="list-group-item">
                                             <a href="/user/manage/messages/{{$room->id}}">{{$room->title}}</a>
