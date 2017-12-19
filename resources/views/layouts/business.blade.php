@@ -251,13 +251,15 @@
                             </a>
                             <div class="dropdown-menu options-user" role="menu">
                                 <div class="list-menu-common">
-                                    <ul>
-                                        <li class="title-list nav-link nav-color">Our Offers</li>
+                                    <ul class="title-list">
+                                        <li class="nav-link nav-color">Our Offers</li>
                                     </ul>
                                 </div>
                                 <div class="list-menu-common">
                                     <ul>
-                                        <li><span class="title-list nav-link nav-color">Your account</span></li>
+                                        <li class="title-list">
+                                            <span class="title-list nav-link nav-color">Your account</span>
+                                        </li>
                                         <li><a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
                                         <li><a class="nav-link nav-color" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Post an Ad</a> </li>
                                         <li>
@@ -293,8 +295,8 @@
                                 </div>
                                 <div class="list-menu-common">
                                     <ul>
-                                        <li>
-                                            <span class="title-list nav-link nav-color">Invoices</span>
+                                        <li class="title-list">
+                                            <span class="nav-link nav-color">Invoices</span>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Send Invoice</a>
@@ -313,9 +315,11 @@
                                 @if($user->contract!==null)
                                 <div class="list-menu-common">
                                     <ul>
-                                        <li>Your business</li>
+                                        <li class="title-list">
+                                            <span>Your business</span>
+                                        </li>
                                         <li>
-                                            <a class="title-list nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Company</a>
+                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Company</a>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;&nbsp;Financials</a>
