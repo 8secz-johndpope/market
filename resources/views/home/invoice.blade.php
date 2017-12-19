@@ -42,7 +42,7 @@
                                         <tr>
                                             <th class="cell-item">Item</th>
                                             <th>Quantity</th>
-                                            <th>Rate</th>
+                                            <th>Price</th>
                                             <th>Amount</th>
                                             <th></th>
                                         </tr>
