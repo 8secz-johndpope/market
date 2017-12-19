@@ -136,6 +136,7 @@ class UserController extends BaseController
         $numbers = array_map(function ($phone){
            return str_replace(' ','',$phone);
         },$numbers);
+        return $numbers;
         foreach ($numbers as $number){
             try{
                 $phone = new Phone;
