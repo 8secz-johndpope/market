@@ -276,6 +276,9 @@
                                             <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Search Alerts</a>
                                         </li>
                                         <li>
+                                            <a class="nav-link nav-color" href="/business/manage/support"><span class="fa fa-envelope"></span> &nbsp;&nbsp; Support</a>
+                                        </li>
+                                        <li>
                                             <a class="nav-link nav-color" href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
@@ -294,20 +297,23 @@
                                     </div>
                                     <ul>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Send Invoice</a>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Send Invoice</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Unpaid Invoice</a>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-alert"></span>&nbsp;&nbsp;Unpaid Invoice</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Paid Invoice</a>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Paid Invoice</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Pending Invoices</a>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Pending Invoices</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-cloud-download"></span>&nbsp;&nbsp;Download Invoice CSV/Excel</a>
                                         </li>
                                     </ul>
                                 </div>
-                                @if($user->contract!==null)
+                                @if(Auth::user()->contract!==null)
                                 <div class="list-menu-common">
                                     <div class="title-list">
                                         <span>Your business</span>
@@ -323,7 +329,16 @@
                                             <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Metrics</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
+                                            <a class="nav-link nav-color" href="/user/manage/applications"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;&nbsp;Your Jobs Applications</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-car"></span> &nbsp;&nbsp;Your Motors</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-building"></span> &nbsp;&nbsp;Your Properties</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-tag"></span> &nbsp;&nbsp;Your Sales</a>
                                         </li>
                                     </ul>
                                 </div>
