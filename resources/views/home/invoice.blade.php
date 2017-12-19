@@ -281,7 +281,7 @@
                 $('#amount-total').val(price);
             }
         });
-        $('input.prices').on('input',function(){
+        $('input[name="prices[]"]').on('input',function(){
             //var quantity = parseFloat($(this).parent().prev().find('.quantities').val());
             //var price = parseFloat($(this).val());
             //if(!isNaN(quantity) && !isNaN(price)){
