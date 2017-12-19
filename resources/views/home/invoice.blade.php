@@ -140,7 +140,10 @@
                     <div class="col-sm-3">
                         <div class="input-group">
                             <span class="input-group-addon">%</span>
-                            <input type="text" name="por-vat" class="form-control">
+                            <select class="form-control">
+                                <option value="0">0</option>
+                                <!--<input type="text" name="por-vat" class="form-control">-->
+                        </select>
                         </div>
                     </div>
                 </div>
