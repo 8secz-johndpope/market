@@ -267,6 +267,7 @@
                 price = price * quantity;
                 $(this).parent().parent().find('.amount').text(price);
                 $('#amount-total').val(price);
+                $('#subtotal').val(price);
             }
         });
         $('.prices').focusout(function(){
@@ -276,6 +277,7 @@
                 var price = price * quantity;
                 $(this).parent().next().find('.amount').text(price);
                 $('#amount-total').val(price);
+                $('#subtotal').val(price);
             }
         });
     </script>
