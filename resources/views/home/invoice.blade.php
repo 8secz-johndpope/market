@@ -63,7 +63,7 @@
                     <div class="form-group row">
                         <div class="col-sm-12">
                             <div class="container-badd-item">
-                                <a class="btn btn-default add-more-items">Add Item</a>
+                                <a class="add-more-items">+ Add Item</a>
                             </div>
                         </div>
                     </div>
