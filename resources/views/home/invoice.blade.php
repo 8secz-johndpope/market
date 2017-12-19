@@ -36,7 +36,7 @@
                         <label for="date-payment">Payment</label>
                         <input type="text" name="date-payment" class="form-control" id="date-payment" placeholder="Due Upon Receipt">
                     </div>
-                    <div class="col-sm-offset-6 col-sm-6 group-date-ship">
+                    <div class="col-sm-offset-6 col-sm-6 group-date-ship ship-container">
                         <label for="date-shipping">Shipping Date</label>
                         <input type="text" name="date-shipping" class="form-control" id="date-shipping" placeholder="Next day">
                     </div>
@@ -231,10 +231,10 @@
         });
         $('#add_ship_info').change(function(){
             if(this.checked){
-                $('#ship-container').show();
+                $('.ship-container').show();
             }
             else{
-                $('#ship-container').hide();
+                $('.ship-container').hide();
             }
         });
         $('#add_vat_info').change(function(){
