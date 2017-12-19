@@ -260,11 +260,17 @@
             }
         });
         $('.quantities').focusout(function(){
-
+            var price = parseFloat($(this).parent().next().find('.prices').val());
+            var quantity = parseFloat($(this).val());
+            if(!isNaN(price) && !isNaN(quantity)){
+                price = price * quantity;
+                $(this).parent().next().find('.amount').text(price);
+            }
         });
         $('.prices').focusout(function(){
             var quantity = parseFloat($(this).parent().prev().find('.quantities').val());
-            if(!isNaN(quantity)){
+            var price = parseFloat($(this).val());
+            if(!isNaN(quantity) && !isNaN(price)){
                 var price = parseFloat($(this).val()) * quantity;
                 $(this).parent().next().find('.amount').text(price);
             }
