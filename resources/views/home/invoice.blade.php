@@ -28,8 +28,8 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-6">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
                         <input type="text" name="title" class="form-control" id="staticEmail" value="{{$room->title}}">
                     </div>
                 </div>
