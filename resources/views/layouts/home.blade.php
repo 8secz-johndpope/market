@@ -197,7 +197,7 @@
                                             <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Search Alerts</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-envelope"></span> &nbsp;&nbsp; Support</a>
+                                            <a class="nav-link nav-color" href="/business/manage/support"><span class="fa fa-envelope"></span> &nbsp;&nbsp; Support</a>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="{{ route('logout') }}"
