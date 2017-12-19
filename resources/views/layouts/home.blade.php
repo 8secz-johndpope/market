@@ -221,7 +221,7 @@
                                             <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Send Invoice</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Unpaid Invoice</a>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-alert"></span>&nbsp;&nbsp;Unpaid Invoice</a>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Paid Invoice</a>
