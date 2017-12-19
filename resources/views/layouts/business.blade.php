@@ -261,7 +261,7 @@
                                 <div class="list-menu-common">
                                     <ul>
                                         <li class="title-list">
-                                            <span class="title-list nav-link nav-color">Your account</span>
+                                            <span class="nav-link nav-color">Your account</span>
                                         </li>
                                         <li><a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
                                         <li><a class="nav-link nav-color" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Post an Ad</a> </li>
