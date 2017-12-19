@@ -282,9 +282,11 @@
             }
         });
         $('.prices').focusout(function(){
-            var quantity = parseFloat($(this).parent().prev().find('.quantities').val());
-            var price = parseFloat($(this).val());
-            if(!isNaN(quantity) && !isNaN(price)){
+            //var quantity = parseFloat($(this).parent().prev().find('.quantities').val());
+            //var price = parseFloat($(this).val());
+            //if(!isNaN(quantity) && !isNaN(price)){
+            var price = getItemPrice(this);
+            if(price > 0)
                 var price = price * quantity;
                 $(this).parent().next().find('.amount').text(price);
                 $('#subtotal').val(price);
@@ -294,8 +296,12 @@
             }
         });
         function getItemPrice(element){
-            var quantity = parseFloat($(this).parent().parent().find('.quantities').val());
-            var price = parseFloat(parent().parent().find('.prices'));
+            var quantity = parseFloat($(element).parent().parent().find('.quantities').val());
+            var price = parseFloat($(element).parent().parent().find('.prices'));
+            if(!isNaN(quantity) && !isNaN(price)){
+                return price * quantity;
+            }
+            return 0;
 
         }
         function totalWithVat(){
