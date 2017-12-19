@@ -53,7 +53,9 @@
                                             <td><input type="number" class="form-control" placeholder="0" name="quantities[]"></td>
                                             <td><input type="number" class="form-control" placeholder="500" name="prices[]"></td>
                                             <td id="amount">£ 0</td>
-                                            <td><a class="btn btn-danger delete-item">X</a></td>
+                                            <td>
+                                                <a class="delete-item"><span class="glyphicon glyphicon-trash"></span></a>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
