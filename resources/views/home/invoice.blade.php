@@ -261,6 +261,7 @@
         });
         $('.quantities').focusout(function(){
             var price = parseFloat($(this).parent().next().find('.prices').val());
+            console.log(price);
             var quantity = parseFloat($(this).val());
             if(!isNaN(price) && !isNaN(quantity)){
                 price = price * quantity;
