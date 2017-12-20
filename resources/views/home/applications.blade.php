@@ -128,9 +128,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <a class="btn btn-default">Upgrade</a>
-                                    <a class="btn btn-default">Expire</a>
-                                    <a class="btn btn-default">Refresh</a>
+                                    <div class="jobs-selected">
+                                        <strong>Jobs selected: </strong><span class="num-jobs">0</span>
+                                    </div>
+                                    <div class="btns-actions">
+                                        <a class="btn btn-default">Upgrade</a>
+                                        <a class="btn btn-default">Expire</a>
+                                        <a class="btn btn-default">Refresh</a>
+                                    </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <span>Sort by:</span>
