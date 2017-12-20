@@ -16,7 +16,7 @@
 
     <link href="{{ asset('/css/extra.css?q=43') }}" rel="stylesheet">
     <link href="{{ asset('/css/css/font-awesome.min.css?q=874') }}" rel="stylesheet">
-    @yield('style')
+    @yield('styles')
     <meta name="theme-color" content="#000000">
     <meta name="msapplication-navbutton-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
