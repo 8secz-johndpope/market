@@ -115,6 +115,17 @@
                                     </div>    
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="container-filter-by">
+                                        <span>Filter by:</span>
+                                        <ul class="type-filters">
+                                            <li>All Jobs</li>
+                                            <li>My Jobs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                             <table class="w100p table table-striped table-hover">
                                 <thead>
                                     <tr>
