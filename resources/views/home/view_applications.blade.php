@@ -18,6 +18,17 @@
 <div class="body background-body">
     <div class="container">
         <div class="row">
+            <div class="container-num-jobs clearfix">
+                <div class="col-sm-12 text-center">
+                    <h4>
+                        {{$job->param('title')}}
+                        <br>
+                        <<span class="num-jobs">{{count($job->applications)}}</span></h4>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12">
                 <a href="{{$job->url()}}"><h4>Applications for {{$job->param('title')}}</h4></a>
                 <table class="table table-striped table-hover">
