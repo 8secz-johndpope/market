@@ -69,8 +69,8 @@
                                             <div class="col-info-jobs">
                                                 <h4>Jobs</h4>
                                                 <ul class="list-group">
-                                                    <li class="list-group-item">Live</li>
-                                                    <li class="list-group-item">Inactive</li>
+                                                    <li class="list-group-item">Live <span class="quantity text-right">{{count($jobs)}}</span></li>
+                                                    <li class="list-group-item">Inactive <span class="quantity text-right">0</span></li>
                                                 </ul>
                                             </div>
                                         </div>
