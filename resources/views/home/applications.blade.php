@@ -59,6 +59,12 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
+                                    <div>
+                                        <h4>Jobs</h4>
+                                        <ul>
+                                            <li></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
