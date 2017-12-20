@@ -114,3 +114,6 @@
 .quantity{
 	float: right;
 }
+.container-job-title p {
+    margin-bottom: 0;
+}
