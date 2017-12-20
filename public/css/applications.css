@@ -49,8 +49,8 @@
     color: royalblue;
     font-size: 15px; 
 }
-.col-info-jobs .list-group-item{
-	color: lightgray;
+.col-info-jobs .list-group-item, .col-info-candidates .list-group-item{
+	color: #999;
 }
 .list-group-item:not(:last-child){
 	border-bottom: 1px solid #ddd;
