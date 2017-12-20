@@ -279,6 +279,10 @@
     $('.checkboxs-jobs').change(function(){
         var checkboxs = $(this).parent().parent().find('input:checked');
         console.log(checkboxs.length);
+        if(checkboxs.length > 0){
+            $('a.disable').removeClass('disable');
+            $('a.disable').addClass('btn-default');
+        }
     })
 </script>
 @endsection
