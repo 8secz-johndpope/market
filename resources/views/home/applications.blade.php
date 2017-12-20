@@ -46,7 +46,7 @@
                         </div>
                         <div class="tab-pane fade in" id="tab-jobs">
                             <div class="container-num-jobs">
-                                <h2>Your jobs <span class="num-jobs">{{count($jobs)}}</span></h2>
+                                <h3>Your jobs <span class="num-jobs">{{count($jobs)}}</span></h3>
                             </div>
                             <table class="w100p table table-striped table-bordered table-hover">
                                 <thead>
