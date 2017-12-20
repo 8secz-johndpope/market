@@ -137,7 +137,7 @@
                                         <a class="btn btn-default">Refresh</a>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 text-right">
                                     <span>Sort by:</span>
                                         <ul class="type-filters">
                                             <li><a href="#">Created</a></li>
