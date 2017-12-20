@@ -185,7 +185,7 @@
                                                 <th>Phone</th>
                                                 <th>Status</th>
                                                 <th>Date Applied</th>
-                                                <th>Cover Letter</th>
+                                                <th class="cell-cover">Cover Letter</th>
                                                 <th>Cvs</th>
                                                 <th>Profile</th>
                                                 <th>Replay</th>
