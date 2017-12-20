@@ -48,6 +48,26 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-sm-6">
+                <div class="jobs-selected">
+                    <strong>Jobs selected: </strong><span class="num-jobs">0</span>
+                </div>
+                <div class="btns-actions">
+                    <a class="btn btn-disable">Upgrade</a>
+                    <a class="btn btn-disable">Expire</a>
+                    <a class="btn btn-disable">Refresh</a>
+                </div>
+            </div>
+            <div class="col-sm-6 text-right">
+                <span>Sort by:</span>
+                    <ul class="type-filters">
+                        <li><a href="#">Created</a></li>
+                        <li><a href="#">Expiring</a></li>
+                        <li><a href="#">Recent Applications</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12">
                 <a href="{{$job->url()}}"><h4>Applications for {{$job->param('title')}}</h4></a>
                 <table class="table table-striped table-hover">
