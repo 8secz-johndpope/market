@@ -60,22 +60,26 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="row">
-                                        <div class="col-sm-12 col-info-jobs">
-                                            <h4>Jobs</h4>
-                                            <ul class="list-group">
-                                                <li class="list-group-item">Live</li>
-                                                <li class="list-group-item">Inactive</li>
-                                            </ul>
+                                        <div class="col-sm-12">
+                                            <div class="col-info-jobs">
+                                                <h4>Jobs</h4>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">Live</li>
+                                                    <li class="list-group-item">Inactive</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-12 col-info-candidates">
-                                            <h4>Candidates</h4>
-                                            <ul class="list-group">
-                                                <li class="list-group-item">New</li>
-                                                <li class="list-group-item">Reviewed</li>
-                                                <li class="list-group-item">Rejected</li>
-                                            </ul>
+                                        <div class="col-sm-12">
+                                            <div class="col-info-candidates">
+                                                <h4>Candidates</h4>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">New</li>
+                                                    <li class="list-group-item">Reviewed</li>
+                                                    <li class="list-group-item">Rejected</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
