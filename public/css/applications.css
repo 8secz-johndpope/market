@@ -67,3 +67,9 @@
 .blue-color{
 	color: royalblue;
 }
+.type-filters{
+	list-style: none;
+}
+.type-filters>li{
+	display: inline-block;
+}
