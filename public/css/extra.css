@@ -1919,6 +1919,9 @@ nav.navbar.navbar-inverse {
     .right-div-messages {
         background-size: 100%;
     }
+    .open>.dropdown-menu.options-user {
+        display: block;
+    }
 }
 @media (max-width: 400px) {
     h4.product-title {
