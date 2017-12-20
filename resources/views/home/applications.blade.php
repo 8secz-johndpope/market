@@ -43,7 +43,7 @@
                                                     @foreach($jobs as $job)
                                                     <li class="list-group-item">
                                                         <div class="container-job-title">
-                                                            <p>{{$job->param('title')}} - {{$job->param('location_name')}}</p>
+                                                            <p>{{$job->param('title')}} - <span class="job-location">{{$job->param('location_name')}}</span></p>
                                                             <p>{{count($job->applications)}} Unread Candidates</p>
                                                         </div>
                                                     </li>
