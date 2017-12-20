@@ -280,7 +280,7 @@
         var checkboxs = $(this).parent().parent().find('input:checked');
         console.log(checkboxs.length);
         if(checkboxs.length > 0){
-            $('a.btn-disable').removeClass('disable');
+            $('a.btn-disable').removeClass('btn-disable');
             $('a.btn-disable').addClass('btn-default');
         }
     })
