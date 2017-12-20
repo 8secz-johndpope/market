@@ -68,6 +68,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Phone</th>
+                            <th>Status</th>
                             <th>Cover</th>
                             <th>CV</th>
                             <th>Profile</th>
@@ -76,7 +77,15 @@
                     </thead>
                     <tbody>
                     @foreach($job->applications as $application)
-                        <tr><td>{{$application->user->name}}</td><td>{{$application->user->phone}}</td><td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td> <td>              @if($application->cv)                      <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">View/Download</a> @else <span>No Cv</span> @endif</td><td><a href="/job/profile/view/{{$application->user_id}}">View Profile</a></td><td><a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a></td></tr>
+                        <tr>
+                            <td>{{$application->user->name}}</td>
+                            <td>{{$application->user->phone}}</td>
+                            <td>New</td>
+                            <td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td> 
+                            <td>              @if($application->cv)                      <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">View/Download</a> @else <span>No Cv</span> @endif</td>
+                            <td><a href="/job/profile/view/{{$application->user_id}}">View Profile</a></td>
+                            <td><a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a></td>
+                        </tr>
                     @endforeach
                     </tbody>
                 </table>
