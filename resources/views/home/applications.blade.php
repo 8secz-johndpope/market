@@ -272,4 +272,9 @@
         </div>
     </div>
 </div>
+<script>
+    $('a.disable').click(function(e){
+        e.preventDefault();
+    })
+</script>
 @endsection
