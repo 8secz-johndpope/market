@@ -166,7 +166,14 @@
                                         <td>{{$job->param('location_name')}}</td>
                                         <td>{{$job->status == 1 ? 'Live': 'Inactive' }}</td>
                                         <td>{{$job->param('views')}}</td>
-                                        <td><a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} <span class="fa fa-file-text-o"></span></a></td>
+                                        <td>
+                                            @if(count($job->applications) > 0)
+                                            <a href="/job/manage/applications/{{$job->id}}">
+                                            {{count($job->applications)}} <span class="fa fa-file-text-o"></span></a>
+                                            @else
+                                                0 <span class="fa fa-file-text-o"></span>
+                                            @endif
+                                        </td>
                                         <td><a href="#">Expire</td>
                                     </tr>
                                     @endforeach
