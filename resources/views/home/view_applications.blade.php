@@ -50,21 +50,15 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="jobs-selected">
-                    <strong>Jobs selected: </strong><span class="num-jobs">0</span>
-                </div>
-                <div class="btns-actions">
-                    <a class="btn btn-disable">Upgrade</a>
-                    <a class="btn btn-disable">Expire</a>
-                    <a class="btn btn-disable">Refresh</a>
+                    <a href="/user/manage/applications">< Back to jobs</a>
                 </div>
             </div>
             <div class="col-sm-6 text-right">
                 <span>Sort by:</span>
-                    <ul class="type-filters">
-                        <li><a href="#">Created</a></li>
-                        <li><a href="#">Expiring</a></li>
-                        <li><a href="#">Recent Applications</a></li>
-                    </ul>
+                <ul class="type-filters">
+                    <li><a href="#">Newest First</a></li>
+                    <li><a href="#">Last Name</a></li>
+                </ul>
             </div>
         </div>
         <div class="row">
