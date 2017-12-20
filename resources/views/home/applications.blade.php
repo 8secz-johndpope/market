@@ -273,15 +273,15 @@
     </div>
 </div>
 <script>
-    $('a.disable').click(function(e){
+    $('a.btn-disable').click(function(e){
         e.preventDefault();
     });
     $('.checkboxs-jobs').change(function(){
         var checkboxs = $(this).parent().parent().find('input:checked');
         console.log(checkboxs.length);
         if(checkboxs.length > 0){
-            $('a.disable').removeClass('disable');
-            $('a.disable').addClass('btn-default');
+            $('a.btn-disable').removeClass('disable');
+            $('a.btn-disable').addClass('btn-default');
         }
     })
 </script>
