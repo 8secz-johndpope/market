@@ -63,7 +63,7 @@
                                 <tbody>
                                     @foreach($jobs as $job)
                                     <tr>
-                                        <td><a href="{{$job->url()}}"><h4>{{$job->param('title')}}</h4></a></td>
+                                        <td><a href="{{$job->url()}}">{{$job->param('title')}}</a></td>
                                         <td>{{$job->param('location_name')}}</td>
                                         <td></td>
                                         <td></td>
