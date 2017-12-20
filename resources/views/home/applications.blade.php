@@ -71,7 +71,11 @@
                                     </div>
                                     <div class="col-md-5">
                                         <label for="status">Status</label>
-                                        <input type="text" name="status" class="form-control">
+                                        <select class="form-control" name="status">
+                                            <option value="1" checked>Live</option>
+                                            <option value="0">Draft</option>
+                                            <option value="2">Inactive</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-2 container-btn">
                                         <button class="btn btn-filter">Filter</button>
