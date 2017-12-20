@@ -1922,6 +1922,9 @@ nav.navbar.navbar-inverse {
     .open>.dropdown-menu.options-user {
         display: block;
     }
+    .list-menu-common{
+        width: 100%;
+    }
 }
 @media (max-width: 400px) {
     h4.product-title {
