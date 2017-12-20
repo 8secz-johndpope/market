@@ -72,6 +72,7 @@
 }
 .type-filters>li{
 	display: inline-block;
+	padding: 8px;
 }
 .type-filters>li:not(:last-child){
 	border-right: 1px solid #ddd;
