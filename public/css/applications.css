@@ -104,3 +104,7 @@
 #tab-overview {
     padding-top: 15px;
 }
+.container-overview hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
