@@ -196,7 +196,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="jobs-selected">
-                                        <a href="#" class="btn btn-disable">< Change Status</a>
+                                        <a href="#" class="btn btn-disable">Change Status</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
