@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="container-filter">
+                                <div class="container-filter clearfix">
                                     <div class="col-md-5">
                                         <label for="keywords">Keywords</label>
                                         <input type="text" name="keywords" class="form-control">
