@@ -73,6 +73,7 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
+                            <th></th>
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Status</th>
@@ -85,6 +86,7 @@
                     <tbody>
                     @foreach($job->applications as $application)
                         <tr>
+                            <td><input type="checkbox" name="row-select"></td>
                             <td>{{$application->user->name}}</td>
                             <td>{{$application->user->phone}}</td>
                             <td>New</td>
