@@ -233,7 +233,7 @@
                                                     <td>{{$application->user->name}}</td>
                                                     <td>{{$application->user->phone}}</td>
                                                     <td>New</td>
-                                                    <td>{{$application->created_at->format('d/m/Y')}}</td>
+                                                    <td>{{$application->created_at->format('d M Y')}}</td>
                                                     <td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td> 
                                                     <td>
                                                         @if($application->cv)                      
