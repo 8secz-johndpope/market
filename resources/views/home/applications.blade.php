@@ -278,7 +278,7 @@
     });
     $('.checkboxs-jobs').change(function(){
         var checkboxs = $(this).parent().parent().find('input:checked');
-        console.log(checkboxs.leght());
+        console.log(checkboxs.length);
     })
 </script>
 @endsection
