@@ -63,7 +63,6 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <a href="{{$job->url()}}"><h4>Applications for {{$job->param('title')}}</h4></a>
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
