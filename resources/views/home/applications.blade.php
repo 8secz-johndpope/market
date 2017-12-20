@@ -128,7 +128,9 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
-
+                                    <a class="btn btn-default">Upgrade</a>
+                                    <a class="btn btn-default">Expire</a>
+                                    <a class="btn btn-default">Refresh</a>
                                 </div>
                                 <div class="col-sm-6">
                                     <span>Sort by:</span>
