@@ -39,6 +39,16 @@
                                             <h4>Unread Candidates</h4>
                                             <hr>
                                             <div class="container-candidates">
+                                                <ul>
+                                                    @foreach($jobs as $job)
+                                                    <li>
+                                                        <div class="container-job-title">
+                                                            <p>{{$job->param('title')}} - {{$job->param('location_name')}}</p>
+                                                            <p>{{count($job->applications)}} Unread Candidates</p>
+                                                        </div>
+                                                    </li>
+                                                    @endforeach
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
