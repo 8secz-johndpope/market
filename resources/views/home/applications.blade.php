@@ -9,15 +9,19 @@
 
     <p>This is appended to the master sidebar.</p>
 @endsection
-
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
+@section('styles')
+<link href="{{ asset("/css/applications.css?q=$dateMs") }}" rel="stylesheet" type="text/css">
+@endsection
 @section('content')
 <div class="body background-body">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="containe-num-jobs text-center">
-                    <h2>Your jobs <span>{{count($jobs)}}</span></h2>
-                </div>
+                
             </div>
         </div>
         <div class="row">
@@ -41,6 +45,9 @@
 
                         </div>
                         <div class="tab-pane fade in" id="tab-jobs">
+                            <div class="containe-num-jobs text-center">
+                                <h2>Your jobs <span>{{count($jobs)}}</span></h2>
+                            </div>
                             <table class="w100p table table-striped table-bordered table-hover">
                                 <thead>
                                     <tr>
