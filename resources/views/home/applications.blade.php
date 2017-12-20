@@ -42,7 +42,12 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-overview">
-
+                            <div class="row">
+                                <div class="col-sm-8">
+                                </div>
+                                <div class="col-sm-4">
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane fade in" id="tab-jobs">
                             <div class="container-num-jobs">
