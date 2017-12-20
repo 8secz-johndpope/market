@@ -175,6 +175,25 @@
                         </div>
                         <div class="tab-pane fade in" id="tab-candidates">
                             <div class="row">
+                                <div class="container-filter clearfix">
+                                    <div class="col-md-5">
+                                        <label for="keywords">Keywords</label>
+                                        <input type="text" name="keywords" class="form-control">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="status">Application Status</label>
+                                        <select class="form-control" name="status">
+                                            <option value="1" checked>New</option>
+                                            <option value="0">Reviewed</option>
+                                            <option value="2">Rejected</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 container-btn">
+                                        <button class="btn btn-filter">Filter</button>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-12">
                                     <table class="w100p table table-striped table-hover">
                                         <thead>
