@@ -74,7 +74,6 @@
                                         <th>Title</th>
                                         <th>Location</th>
                                         <th>Status</th>
-                                        <th>Period</th>
                                         <th>Views</th>
                                         <th>Applications</th>
                                         <th>Actions</th>
@@ -86,10 +85,9 @@
                                         <td><a href="{{$job->url()}}">{{$job->param('title')}}</a></td>
                                         <td>{{$job->param('location_name')}}</td>
                                         <td>{{$job->status == 1 ? 'Live': 'Inactive' }}</td>
-                                        <td></td>
                                         <td>{{$job->param('views')}}</td>
-                                        <td><a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} Applications</a></td>
-                                        <td></td>
+                                        <td><a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} <span class="fa fa-file-text-o"></span></a></td>
+                                        <td><a href="#">Expire</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
