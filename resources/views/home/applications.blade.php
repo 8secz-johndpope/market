@@ -162,7 +162,7 @@
                                         </thead>
                                         <tbody>
                                             @foreach($jobs as $job)
-                                                @foreach($job->applications as $applications)
+                                                @foreach($job->applications as $application)
                                                 <tr>
                                                     <td><input type="checkbox" ></td>
                                                     <td>{{$job->param('title')}}</td>
