@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="container-filter">
-                    
+
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                             @foreach($jobs as $job)
                             <tr>
                                 <td><a href="{{$job->url()}}"><h4>{{$job->param('title')}}</h4></a></td>
-                                <td></td>
+                                <td>{{$job->param('location_name')}}</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
