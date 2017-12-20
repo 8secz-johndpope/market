@@ -15,6 +15,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <div class="containe-num-jobs text-center">
+                    <h2>Your jobs <span>{{count($jobs)}}</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div class="container-applications">
                     <table class="w100p table table-striped table-bordered table-hover">
                         <thead>
