@@ -82,3 +82,6 @@
 .type-filters>li:not(:last-child)>a{
 	border-right: 1px solid #ddd;
 }
+.btns-actions, .jobs-selected {
+    display: inline-block;
+}
