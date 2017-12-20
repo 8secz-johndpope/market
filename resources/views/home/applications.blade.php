@@ -115,7 +115,7 @@
                                     </div>    
                                 </div>
                             </div>
-                            <table class="w100p table table-striped table-bordered table-hover">
+                            <table class="w100p table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th></th>
