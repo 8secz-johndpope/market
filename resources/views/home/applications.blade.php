@@ -126,6 +126,19 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <span>Sort by:</span>
+                                        <ul class="type-filters">
+                                            <li><a href="#">Created</a></li>
+                                            <li><a href="#">Expiring</a></li>
+                                            <li><a href="#">Recent Applications</a></li>
+                                        </ul>
+                                </div>
+                            </div>
                             <table class="w100p table table-striped table-hover">
                                 <thead>
                                     <tr>
