@@ -136,3 +136,6 @@
 .body-applications {
     min-height: auto;
 }
+.nav-tabs {
+    padding-left: 15px;
+}
