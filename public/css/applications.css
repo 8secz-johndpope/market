@@ -4,7 +4,6 @@
 }
 .body {
     min-height: calc(100vh - 72px);
-    font-size: 12px;
 }
 .container-applications {
     background: #fff;
@@ -40,7 +39,7 @@
 }
 .col-info-jobs h4, .col-info-candidates h4 {
     color: royalblue;
-    font-size: 14px; 
+    font-size: 15px; 
 }
 .list-group-item:not(:last-child){
 	border-bottom: 1px solid #ddd;
