@@ -194,6 +194,20 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="jobs-selected">
+                                        <a href="/user/manage/applications">< Back to jobs</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <span>Sort by:</span>
+                                    <ul class="type-filters">
+                                        <li><a href="#">Newest First</a></li>
+                                        <li><a href="#">Last Name</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-12">
                                     <table class="w100p table table-striped table-hover">
                                         <thead>
