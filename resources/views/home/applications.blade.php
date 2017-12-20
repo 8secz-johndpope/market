@@ -64,7 +64,7 @@
                                         <input type="text" name="status" class="form-control">
                                     </div>
                                     <div class="col-md-2 container-btn">
-                                        <button class="btn btn-default">Filter</button>
+                                        <button class="btn btn-filter">Filter</button>
                                     </div>    
                                 </div>
                             </div>
