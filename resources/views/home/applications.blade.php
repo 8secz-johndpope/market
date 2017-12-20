@@ -60,21 +60,21 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="row">
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-12 col-info-jobs">
                                             <h4>Jobs</h4>
                                             <ul class="list-group">
-                                                <li>Live</li>
-                                                <li>Inactive</li>
+                                                <li class="list-group-item">Live</li>
+                                                <li class="list-group-item">Inactive</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-12 col-info-candidates">
                                             <h4>Candidates</h4>
                                             <ul class="list-group">
-                                                <li>New</li>
-                                                <li>Reviewed</li>
-                                                <li>Rejected</li>
+                                                <li class="list-group-item">New</li>
+                                                <li class="list-group-item">Reviewed</li>
+                                                <li class="list-group-item">Rejected</li>
                                             </ul>
                                         </div>
                                     </div>
