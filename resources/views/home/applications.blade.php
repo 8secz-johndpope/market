@@ -2,7 +2,7 @@
 
 @extends('layouts.business')
 
-@section('title', 'Page Title')
+@section('title', 'Your Applications |')
 
 @section('sidebar')
     @parent
