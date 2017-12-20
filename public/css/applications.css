@@ -43,3 +43,7 @@
 .list-group-item:not(:last-child){
 	border-bottom: 1px solid #ddd;
 }
+.list-group-item{
+	padding-top: 7px;
+    padding-bottom: 5px;
+}

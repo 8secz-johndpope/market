@@ -55,6 +55,11 @@
                                             <div class="container-activity">
 
                                             </div>
+                                            <hr>
+                                            <h4>Interviews</h4>
+                                            <div class="container-activity">
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
