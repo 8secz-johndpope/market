@@ -37,3 +37,6 @@
     border: 1px solid #ddd;
     padding: 15px;
 }
+.col-info-jobs h4, .col-info-candidates h4 {
+    color: royalblue;
+}
