@@ -62,7 +62,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <h4>Jobs</h4>
-                                            <ul>
+                                            <ul class="list-group">
                                                 <li>Live</li>
                                                 <li>Inactive</li>
                                             </ul>
@@ -71,7 +71,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <h4>Candidates</h4>
-                                            <ul>
+                                            <ul class="list-group">
                                                 <li>New</li>
                                                 <li>Reviewed</li>
                                                 <li>Rejected</li>
