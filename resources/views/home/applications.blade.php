@@ -46,7 +46,8 @@
                                 <div class="col-sm-8">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <h4>Candidates</h4>
+                                            <h4>Unread Candidates</h4>
+                                            <hr>
                                             <div class="container-candidates">
                                             </div>
                                         </div>
