@@ -85,3 +85,6 @@
 .btns-actions, .jobs-selected {
     display: inline-block;
 }
+.jobs-selected {
+    margin-right: 10px;
+}
