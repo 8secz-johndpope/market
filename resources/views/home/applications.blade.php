@@ -80,9 +80,9 @@
                                             <div class="col-info-candidates">
                                                 <h4>Candidates</h4>
                                                 <ul class="list-group">
-                                                    <li class="list-group-item">New</li>
-                                                    <li class="list-group-item">Reviewed</li>
-                                                    <li class="list-group-item">Rejected</li>
+                                                    <li class="list-group-item">New <span class="quantity">1</span></li>
+                                                    <li class="list-group-item">Reviewed <span class="quantity">0</span></li>
+                                                    <li class="list-group-item">Rejected <span class="quantity">0</span></li>
                                                 </ul>
                                             </div>
                                         </div>
