@@ -165,17 +165,15 @@
                             <div class="app-call border-dashed-bottom">
                                 <a href="" class="btn btn-default">Call</a>
                             </div>
-                            @if($advert->has_param('phone'))
                             <div class="phone border-dashed-bottom">
                                 <span>
                                     <span class="glyphicon glyphicon-earphone"></span>
-                                    {{substr($advert->param('phone'),0,5)}}XXXXXX
+                                    {{substr($advertiser->phone,0,5)}}XXXXXX
                                     <span class="reveal-phone">
                                         <a class="btn btn-default">Reveal</a>
                                     </span>
                                 </span>
                             </div>
-                            @endif
                         </div>
                     </div>
                 </div>
