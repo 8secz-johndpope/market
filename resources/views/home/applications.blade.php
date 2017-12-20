@@ -22,6 +22,13 @@
         </div>
         <div class="row">
             <div class="col-md-12">
+                <div class="container-filter">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div class="container-applications">
                     <table class="w100p table table-striped table-bordered table-hover">
                         <thead>
