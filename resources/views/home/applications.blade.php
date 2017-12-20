@@ -32,7 +32,7 @@
                 <div class="container-applications">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
-                        <li><a data-toggle="tab" href="#tab-jobs">Overview</a></li>
+                        <li><a data-toggle="tab" href="#tab-jobs">Jobs</a></li>
                         <li><a data-toggle="tab" href="#tab-candidates">Candidates</a></li>
                         <li><a data-toggle="tab" href="#tab-invite">Invite User</a></li>
                     </ul>
