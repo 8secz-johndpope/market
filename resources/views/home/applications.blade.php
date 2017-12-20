@@ -117,7 +117,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <div class="container-filter-by">
+                                    <div class="container-filter-by text-right">
                                         <span>Filter by:</span>
                                         <ul class="type-filters">
                                             <li><a href="#">All Jobs</a></li>
