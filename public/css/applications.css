@@ -120,3 +120,6 @@
 .container-job-title p {
     margin-bottom: 0;
 }
+#tab-candidates .container-filter {
+    padding-top: 15px;
+}
