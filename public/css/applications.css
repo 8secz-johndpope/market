@@ -39,6 +39,7 @@
 }
 .col-info-jobs h4, .col-info-candidates h4 {
     color: royalblue;
+    font-size: 14px; 
 }
 .list-group-item:not(:last-child){
 	border-bottom: 1px solid #ddd;
