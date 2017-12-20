@@ -38,7 +38,7 @@
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                         <li><a data-toggle="tab" href="#tab-jobs">Jobs</a></li>
                         <li><a data-toggle="tab" href="#tab-candidates">Candidates</a></li>
-                        <li><a data-toggle="tab" href="#tab-invite">Invite User</a></li>
+                        <li><a data-toggle="tab" href="#tab-share">Share Credit</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-overview">
