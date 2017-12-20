@@ -168,7 +168,7 @@
                                                     <td>{{$job->param('title')}}</td>
                                                     <td>{{$application->user->name}}</td>
                                                     <td>{{$application->user->phone}}</td>
-                                                    <td></td>
+                                                    <td>{{$application->create_at}}</td>
                                                     <td></td>
                                                     <td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td> 
                                                     <td>
