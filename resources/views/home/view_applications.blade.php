@@ -1,5 +1,3 @@
-<!-- Stored in resources/views/child.blade.php -->
-
 @extends('layouts.business')
 
 @section('title', 'Page Title')
