@@ -165,6 +165,7 @@
                             <div class="app-call border-dashed-bottom">
                                 <a href="" class="btn btn-default">Call</a>
                             </div>
+                            @if($$advert->has_param('phone'))
                             <div class="phone border-dashed-bottom">
                                 <span>
                                     <span class="glyphicon glyphicon-earphone"></span>
@@ -174,6 +175,7 @@
                                     </span>
                                 </span>
                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>
