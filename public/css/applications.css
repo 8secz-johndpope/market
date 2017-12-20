@@ -49,6 +49,9 @@
     color: royalblue;
     font-size: 15px; 
 }
+.col-info-jobs .list-group-item{
+	color: lightgray;
+}
 .list-group-item:not(:last-child){
 	border-bottom: 1px solid #ddd;
 }
