@@ -50,6 +50,11 @@
                                                     @endforeach
                                                 </ul>
                                             </div>
+                                            <hr>
+                                            <h4>Activity</h4>
+                                            <div class="container-activity">
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
