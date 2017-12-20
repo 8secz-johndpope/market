@@ -118,6 +118,7 @@
                             <table class="w100p table table-striped table-bordered table-hover">
                                 <thead>
                                     <tr>
+                                        <th></th>
                                         <th>Title</th>
                                         <th>Location</th>
                                         <th>Status</th>
@@ -129,6 +130,7 @@
                                 <tbody>
                                     @foreach($jobs as $job)
                                     <tr>
+                                        <td><input type="checkbox" name="select-job[]"></td>
                                         <td><a href="{{$job->url()}}">{{$job->param('title')}}</a></td>
                                         <td>{{$job->param('location_name')}}</td>
                                         <td>{{$job->status == 1 ? 'Live': 'Inactive' }}</td>
