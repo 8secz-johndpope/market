@@ -142,6 +142,31 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="tab-pane fade in" id="tab-candidates">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="w100p table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Job</th>
+                                                <th>Name</th>
+                                                <th>Phone</th>
+                                                <th>Status</th>
+                                                <th>Date Applied</th>
+                                                <th>Cover Letter</th>
+                                                <th>Cvs</th>
+                                                <th>Profile</th>
+                                                <th>Replay</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
