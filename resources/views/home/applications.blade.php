@@ -33,7 +33,7 @@
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-overview">
                             <div class="row">
-                                <div class="col-sm-8">
+                                <div class="col-sm-9">
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <h4>Unread Candidates</h4>
@@ -58,7 +58,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="col-info-jobs">
