@@ -2,9 +2,9 @@
     padding: 15px;
     padding-top: 0;
 }
-.background-body {
+.body {
     min-height: calc(100vh - 72px);
-    font-size: 1rem;
+    font-size: 12px;
 }
 .container-applications {
     background: #fff;
