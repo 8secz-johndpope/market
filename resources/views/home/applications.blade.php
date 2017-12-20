@@ -161,7 +161,33 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            
+                                            @foreach($jobs as $job)
+                                                @foreach($job->applications as $applications)
+                                                <tr>
+                                                    <td><input type="checkbox" ></td>
+                                                    <td>{{$job->param('title')}}</td>
+                                                    <td>{{$application->user->name}}</td>
+                                                    <td>{{$application->user->phone}}</td>
+                                                    <td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td> 
+                                                    <td>
+                                                        @if($application->cv)                      
+                                                        <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">
+                                                            View/Download
+                                                        </a> 
+                                                        @else 
+                                                            <span>No Cv</span> 
+                                                        @endif
+                                                    </td>
+                                                    <td>
+                                                        <a href="/job/profile/view/{{$application->user_id}}">View Profile
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
