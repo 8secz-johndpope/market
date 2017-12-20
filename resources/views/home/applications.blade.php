@@ -44,7 +44,7 @@
                                                     <li class="list-group-item">
                                                         <div class="container-job-title">
                                                             <p><strong>{{$job->param('title')}}</strong> - <span class="job-location">{{$job->param('location_name')}}</span></p>
-                                                            <p>{{count($job->applications)}} Unread Candidates</p>
+                                                            <p class="blue-color">{{count($job->applications)}} Unread Candidates</p>
                                                         </div>
                                                     </li>
                                                     @endforeach
