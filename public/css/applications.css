@@ -86,6 +86,11 @@
 .btns-actions, .jobs-selected {
     display: inline-block;
 }
+.btn-disable{
+	border: 1px solid #ff9d2c;
+	color: #333;
+	background-color: #fff;
+}
 .jobs-selected {
     margin-right: 10px;
 }
