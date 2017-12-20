@@ -1,3 +1,6 @@
 .tab-content {
     padding: 15px;
 }
+.background-body {
+    min-height: calc(100vh - 72px);
+}
