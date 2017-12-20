@@ -19,13 +19,13 @@
                     <table class="w100p">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
+                                <th>Title</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Period</th>
+                                <th>Views</th>
+                                <th>Applications</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
