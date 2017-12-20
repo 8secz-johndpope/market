@@ -23,7 +23,7 @@
                     <h4>
                         {{$job->param('title')}}
                         <br>
-                        <<span class="num-jobs">{{count($job->applications)}}</span></h4>
+                        Applications <span class="num-jobs">{{count($job->applications)}}</span></h4>
                     </h4>
                 </div>
             </div>
