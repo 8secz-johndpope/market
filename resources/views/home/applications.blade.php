@@ -30,32 +30,45 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="container-applications">
-                    <table class="w100p table table-striped table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Location</th>
-                                <th>Status</th>
-                                <th>Period</th>
-                                <th>Views</th>
-                                <th>Applications</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($jobs as $job)
-                            <tr>
-                                <td><a href="{{$job->url()}}"><h4>{{$job->param('title')}}</h4></a></td>
-                                <td>{{$job->param('location_name')}}</td>
-                                <td></td>
-                                <td></td>
-                                <td>{{$job->param('views')}}</td>
-                                <td><a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} Applications</a></td>
-                                <td></td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
+                        <li><a data-toggle="tab" href="#tab-jobs">Overview</a></li>
+                        <li><a data-toggle="tab" href="#tab-candidates">Candidates</a></li>
+                        <li><a data-toggle="tab" href="#tab-invite">Invite User</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab-overview">
+
+                        </div>
+                        <div class="tab-pane fade in" id="tab-jobs">
+                            <table class="w100p table table-striped table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Location</th>
+                                        <th>Status</th>
+                                        <th>Period</th>
+                                        <th>Views</th>
+                                        <th>Applications</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($jobs as $job)
+                                    <tr>
+                                        <td><a href="{{$job->url()}}"><h4>{{$job->param('title')}}</h4></a></td>
+                                        <td>{{$job->param('location_name')}}</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{{$job->param('views')}}</td>
+                                        <td><a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} Applications</a></td>
+                                        <td></td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
