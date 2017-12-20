@@ -63,6 +63,13 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
+                <div class="btns-actions">
+                    <a href="#" class="btn btn-disable">Change Status</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
