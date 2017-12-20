@@ -161,7 +161,7 @@
                                 <tbody>
                                     @foreach($jobs as $job)
                                     <tr>
-                                        <td><input type="checkbox" name="select-job[]"></td>
+                                        <td><input type="checkbox" name="select-job[]" class="checkboxs-jobs"></td>
                                         <td><a href="{{$job->url()}}">{{$job->param('title')}}</a></td>
                                         <td>{{$job->param('location_name')}}</td>
                                         <td>{{$job->status == 1 ? 'Live': 'Inactive' }}</td>
@@ -275,6 +275,10 @@
 <script>
     $('a.disable').click(function(e){
         e.preventDefault();
+    });
+    $('.checkboxs-jobs').change(function(){
+        var checkboxs = $(this).parent().parent().find('input:checked');
+        console.log(checkboxs);
     })
 </script>
 @endsection
