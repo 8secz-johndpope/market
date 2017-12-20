@@ -15,8 +15,8 @@
 <link href="{{ asset("/css/applications.css?q=$dateMs") }}" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
-<div class="body background-body">
-    <div class="container">
+<div class="body background-body body-applications">
+    <div class="container all-applications">
         <div class="row">
             <div class="container-num-jobs clearfix">
                 <div class="col-sm-12 text-center">
