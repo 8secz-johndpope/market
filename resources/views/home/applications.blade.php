@@ -46,6 +46,9 @@
                                 <div class="col-sm-8">
                                     <div class="row">
                                         <div class="col-sm-12">
+                                            <h4>Candidates</h4>
+                                            <div class="container-candidates">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
