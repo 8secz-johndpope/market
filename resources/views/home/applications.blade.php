@@ -57,11 +57,11 @@
                                 <div class="container-filter">
                                     <div class="col-md-5">
                                         <label for="keywords">Keywords</label>
-                                        <input type="text" name="keywords">
+                                        <input type="text" name="keywords" class="form-control">
                                     </div>
                                     <div class="col-md-5">
                                         <label for="status">Status</label>
-                                        <input type="text" name="status">
+                                        <input type="text" name="status" class="form-control">
                                     </div>
                                     <div class="col-md-2">
                                         <button class="btn btn-default">Filter</button>
