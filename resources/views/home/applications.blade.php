@@ -19,18 +19,8 @@
 @section('content')
 <div class="body background-body">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="container-filter">
-
-                </div>
-            </div>
-        </div>
+        
+        
         <div class="row">
             <div class="col-md-12">
                 <div class="container-applications">
@@ -58,8 +48,25 @@
                             </div>
                         </div>
                         <div class="tab-pane fade in" id="tab-jobs">
-                            <div class="container-num-jobs">
-                                <h3>Your jobs <span class="num-jobs">{{count($jobs)}}</span></h3>
+                            <div class="row">
+                                <div class="container-num-jobs">
+                                    <h3>Your jobs <span class="num-jobs">{{count($jobs)}}</span></h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="container-filter">
+                                    <div class="col-md-5">
+                                        <label for="keywords">Keywords</label>
+                                        <input type="text" name="keywords">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="status">Status</label>
+                                        <input type="text" name="status">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button class="btn btn-default">Filter</button>
+                                    </div>    
+                                </div>
                             </div>
                             <table class="w100p table table-striped table-bordered table-hover">
                                 <thead>
