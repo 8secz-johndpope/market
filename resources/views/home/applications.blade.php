@@ -132,9 +132,9 @@
                                         <strong>Jobs selected: </strong><span class="num-jobs">0</span>
                                     </div>
                                     <div class="btns-actions">
-                                        <a class="btn btn-default">Upgrade</a>
-                                        <a class="btn btn-default">Expire</a>
-                                        <a class="btn btn-default">Refresh</a>
+                                        <a class="btn btn-disable">Upgrade</a>
+                                        <a class="btn btn-disable">Expire</a>
+                                        <a class="btn btn-disable">Refresh</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">

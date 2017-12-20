@@ -92,6 +92,9 @@
 	color: #333;
 	background-color: #fff;
 }
+.btns-actions {
+    margin-bottom: 15px;
+}
 .jobs-selected {
     margin-right: 10px;
 }
