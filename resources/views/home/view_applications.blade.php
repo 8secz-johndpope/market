@@ -69,7 +69,7 @@
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Status</th>
-                            <th>Cover</th>
+                            <th class="cell-cover">Cover</th>
                             <th>CV</th>
                             <th>Profile</th>
                             <th>Reply</th>
