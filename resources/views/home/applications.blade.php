@@ -85,7 +85,7 @@
                                     <tr>
                                         <td><a href="{{$job->url()}}">{{$job->param('title')}}</a></td>
                                         <td>{{$job->param('location_name')}}</td>
-                                        <td></td>
+                                        <td>{{$job->status == 1 ? 'Live': 'Inactive' }}</td>
                                         <td></td>
                                         <td>{{$job->param('views')}}</td>
                                         <td><a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} Applications</a></td>
