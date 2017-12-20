@@ -95,6 +95,9 @@
 	color: lightgray;
 	background-color: #fff;
 }
+.btn-disable:hover, .btn-disable:visited{
+	color:lightgray;;
+}
 .btns-actions {
     margin-bottom: 15px;
 }
