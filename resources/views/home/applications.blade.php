@@ -59,11 +59,24 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    <div>
-                                        <h4>Jobs</h4>
-                                        <ul>
-                                            <li></li>
-                                        </ul>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h4>Jobs</h4>
+                                            <ul>
+                                                <li>Live</li>
+                                                <li>Inactive</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <h4>Candidates</h4>
+                                            <ul>
+                                                <li>New</li>
+                                                <li>Reviewed</li>
+                                                <li>Rejected</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
