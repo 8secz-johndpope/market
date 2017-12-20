@@ -32,3 +32,8 @@
     background: #ddd;
     margin-bottom: 15px;
 }
+.col-info-jobs, .col-info-candidates {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
