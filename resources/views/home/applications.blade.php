@@ -44,6 +44,10 @@
                         <div class="tab-pane fade in active" id="tab-overview">
                             <div class="row">
                                 <div class="col-sm-8">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-sm-4">
                                 </div>
