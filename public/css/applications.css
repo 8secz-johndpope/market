@@ -74,7 +74,10 @@
 }
 .type-filters>li{
 	display: inline-block;
-	padding: 8px;
+	padding: 8px 4px;
+}
+.type-filters>li>a{
+	padding: 0 8px;
 }
 .type-filters>li:not(:last-child)>a{
 	border-right: 1px solid #ddd;
