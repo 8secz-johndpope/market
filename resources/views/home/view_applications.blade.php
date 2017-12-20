@@ -35,11 +35,11 @@
                     <input type="text" name="keywords" class="form-control">
                 </div>
                 <div class="col-md-5">
-                    <label for="status">Status</label>
+                    <label for="status">Application Status</label>
                     <select class="form-control" name="status">
-                        <option value="1" checked>Live</option>
-                        <option value="0">Draft</option>
-                        <option value="2">Inactive</option>
+                        <option value="1" checked>New</option>
+                        <option value="0">Reviewed</option>
+                        <option value="2">Rejected</option>
                     </select>
                 </div>
                 <div class="col-md-2 container-btn">
