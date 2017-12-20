@@ -33,7 +33,7 @@
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-overview">
                             <div class="row">
-                                <div class="col-sm-9">
+                                <div class="col-sm-9 container-overview">
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <h4>Unread Candidates</h4>
