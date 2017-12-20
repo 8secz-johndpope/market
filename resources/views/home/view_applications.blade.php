@@ -23,9 +23,28 @@
                     <h4>
                         {{$job->param('title')}}
                         <br>
-                        Applications <span class="num-jobs">{{count($job->applications)}}</span></h4>
+                        Applications <span class="num-jobs">{{count($job->applications)}}</span>
                     </h4>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-filter clearfix">
+                <div class="col-md-5">
+                    <label for="keywords">Keywords</label>
+                    <input type="text" name="keywords" class="form-control">
+                </div>
+                <div class="col-md-5">
+                    <label for="status">Status</label>
+                    <select class="form-control" name="status">
+                        <option value="1" checked>Live</option>
+                        <option value="0">Draft</option>
+                        <option value="2">Inactive</option>
+                    </select>
+                </div>
+                <div class="col-md-2 container-btn">
+                    <button class="btn btn-filter">Filter</button>
+                </div>    
             </div>
         </div>
         <div class="row">
