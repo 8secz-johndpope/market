@@ -73,3 +73,6 @@
 .type-filters>li{
 	display: inline-block;
 }
+.type-filters>li:not(:last-child){
+	border-right: 1px solid #ddd;
+}
