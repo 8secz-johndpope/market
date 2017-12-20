@@ -120,8 +120,8 @@
                                     <div class="container-filter-by">
                                         <span>Filter by:</span>
                                         <ul class="type-filters">
-                                            <li>All Jobs</li>
-                                            <li>My Jobs</li>
+                                            <li><a href="#">All Jobs</a></li>
+                                            <li><a href="#">My Jobs</a></li>
                                         </ul>
                                     </div>
                                 </div>
