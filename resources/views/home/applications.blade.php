@@ -268,19 +268,14 @@
                         </div>
                         <div class="tab-pane fade in" id="tab-share">
                             <div class="row">
-                                <div class="col-sm-12">
-                                    <h4>You will share your credit with</h4>
-                                    <input type="text" name="user-email" placeholder="User email" class="form-control">
+                                <div class="col-sm-4">
+                                    <div class="container-balance">
+                                        <h4>Your balance</h4>
+                                    </div>
                                 </div>
-                                <div class="col-sm-12">
-                                    <h5>You are going to send</h5>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <select name="currency">
-                                                <option value="gbp" checked>GBP</option>
-                                            </select>
-                                        </span>
-                                        <input type="number" name="quantity" class="form-control">
+                                <div class="col-sm-8">
+                                    <div>
+                                        
                                     </div>
                                 </div>
                             </div>
