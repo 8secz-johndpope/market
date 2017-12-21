@@ -233,3 +233,21 @@ a.module-header-link {
     padding-top: 0.02em;
     color: #2c2e2f;
 }
+.transaction-details-container .transaction-action {
+    margin-bottom: 0.5em;
+    margin-left: -0.25em;
+}
+
+.transaction-details-container .transaction-action a {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.82em 0 0.4em;
+    border-right: 1px solid #2c2e2f;
+    white-space: nowrap;
+}
+.transaction-details-container .transaction-action a:first-of-type {
+    padding-left: 0.2em;
+}
+.transaction-details-container .transaction-action a:last-of-type {
+    border-right: none;
+}
