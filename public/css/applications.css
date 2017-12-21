@@ -225,3 +225,11 @@ a.module-header-link {
     padding-top: 0.9em;
     line-height: 1.5em;
 }
+.transition-row .transaction-branch {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    padding-top: 0.02em;
+    color: #2c2e2f;
+}
