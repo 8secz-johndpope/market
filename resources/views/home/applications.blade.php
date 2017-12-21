@@ -279,8 +279,10 @@
                                 </div>
                                 <div class="col-sm-8">
                                     <div class="row">
-                                        <div class="container-history">
-                                            
+                                        <div class="col-sm-12">
+                                            <div class="container-history">
+                                                
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
