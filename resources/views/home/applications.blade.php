@@ -269,8 +269,12 @@
                         <div class="tab-pane fade in" id="tab-share">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <div class="container-balance">
-                                        <h4>Your balance</h4>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="container-balance">
+                                                <h4>Your balance</h4>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">
