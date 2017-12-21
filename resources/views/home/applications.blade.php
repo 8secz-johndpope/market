@@ -314,6 +314,12 @@
                                                                                 Company - Hackney
                                                                             </span>
                                                                         </div>
+                                                                        <div class="transaction-action">
+                                                                            <span class="glyphicon glyphicon-play-circle"></span>
+                                                                            <a href="#">
+                                                                                Repeat this transaction
+                                                                            </a>
+                                                                        </div>
                                                                         <div class="transaction-amount">
                                                                             <span class="net-amount">
                                                                                 46,00
