@@ -273,6 +273,7 @@
                                     <input type="text" name="user-email" placeholder="User email" class="form-control">
                                 </div>
                                 <div class="col-sm-12">
+                                    <h5>You are going to send</h5>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <select name="currency">
