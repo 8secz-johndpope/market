@@ -59,4 +59,11 @@ class Room extends Model
         }
         return $user;
     }
+    public function profile_image(){
+        if($this->direct===1){
+            return $this->other()->image;
+        }else{
+            return $this->image;
+        }
+    }
 }
