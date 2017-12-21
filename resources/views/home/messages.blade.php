@@ -157,6 +157,7 @@
                                     </div>
                                     <div class="media-heading">
                                         <div class="title-product">
+                                            @if($cur->advert!==null)
                                             <div class="title-main">
                                                 <a class="listing-product" href="/p/{{$cur->advert->param('category')}}/{{$cur->advert->id}}"> <span>{{$cur->advert->param('title')}}</span></a>
                                                 @if($cur->advert->meta('price')>=0)
@@ -164,6 +165,7 @@
                                                     </span>
                                                 @endif
                                             </div>
+                                                @endif
                                         </div>
                                     </div>
                                 </div>
