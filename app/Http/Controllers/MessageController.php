@@ -596,6 +596,10 @@ class MessageController extends BaseController
         $msgs = [];
         foreach ($messages as $message){
             $message->room = $message->room;
+            if($message->room->direct===1){
+                $message->room->title = $message->room->otitle();
+                $message->room->image = $message->room->profile_image();
+            }
 
             $msgs[]=$message;
         }

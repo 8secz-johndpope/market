@@ -66,4 +66,11 @@ class Room extends Model
             return $this->image;
         }
     }
+    public function otitle(){
+        if($this->direct===1){
+            return $this->other()->name;
+        }else{
+            return $this->title;
+        }
+    }
 }
