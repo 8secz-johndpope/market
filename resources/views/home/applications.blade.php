@@ -289,7 +289,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="container-history">
-                                                <h4>Completed <span> > </span></h4>
+                                                <a class="module-header-link">Completed</a>
                                                 <div class="list-history">
                                                     <ul class="list-group">
                                                         <li class="transition-row">
