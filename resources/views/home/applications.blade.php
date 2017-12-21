@@ -306,6 +306,16 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-xs-11">
+                                                                        <div class="txn-description">
+                                                                            <span class="transaction-user col-xs-7 col-lg-12">
+                                                                                Anthony
+                                                                            </span>
+                                                                            <span class="transaction-branch col-xs-7">
+                                                                                Company - Hackney
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
