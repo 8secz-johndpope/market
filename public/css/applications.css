@@ -151,3 +151,21 @@
     border: 1px solid #ddd;
     margin-top: 15px;
 }
+a.module-header-link:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    transform: rotate(45deg);
+}
+a.module-header-link {
+    position: relative;
+    width: 100%;
+    display: block;
+    color: #333;
+}
