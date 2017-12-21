@@ -427,6 +427,12 @@ class MessageController extends BaseController
         }else{
             $room=$direct->room;
         }
+
+        $users = $room->users;
+        $users = $users->map(function ($user){
+            return ['id'=>$user->id,'name'=>$user->name,'image'=>$user->image];
+        });
+        $room->users = $users;
         return $room;
     }
 
