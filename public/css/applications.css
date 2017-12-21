@@ -98,6 +98,10 @@
 .btn-disable:hover, .btn-disable:visited{
 	color:lightgray;
 }
+.btn-action{
+	background: #ff9d2c;
+	color:	#fff;
+}
 .btns-actions {
     margin-bottom: 15px;
 }

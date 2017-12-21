@@ -281,7 +281,7 @@
         console.log(checkboxs.length);
         if(checkboxs.length > 0){
             $('a.btn-disable').removeClass('btn-disable');
-            $('a.btn-disable').addClass('btn-default');
+            $('a.btn-disable').addClass('btn-action');
         }
     })
 </script>
