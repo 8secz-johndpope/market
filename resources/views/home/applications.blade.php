@@ -314,7 +314,13 @@
                                                                                 Company - Hackney
                                                                             </span>
                                                                         </div>
-                                                                        <div class="">
+                                                                        <div class="transaction-amount">
+                                                                            <span class="net-amount">
+                                                                                46,00
+                                                                                <span class="currency">
+                                                                                    GBP
+                                                                                </span>
+                                                                            </span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
