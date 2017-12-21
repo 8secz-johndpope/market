@@ -281,7 +281,9 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="container-history">
-                                                
+                                                <h4>Completed <span> > </span></h4>
+                                                <div class="list-history">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
