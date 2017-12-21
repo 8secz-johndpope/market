@@ -175,3 +175,15 @@ a.module-header-link {
     max-width: 1024px;
     margin: auto;
 }
+.transition-row {
+    position: relative;
+    border-left: 4px solid #ffffff;
+    margin-left: -4px;
+    background-color: #ffffff;
+    min-height: 4em;
+    display: block;
+}
+.transition-row:nth-child(odd) {
+    border-left-color: #f5f7fa;
+    background-color: #f5f7fa;
+}
