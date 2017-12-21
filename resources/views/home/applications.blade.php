@@ -273,6 +273,14 @@
                                         <div class="col-sm-12">
                                             <div class="container-balance">
                                                 <h4>Your balance</h4>
+                                                <div class="balance-numeral">
+                                                    <span class="balance">0,00 </span>
+                                                    <span class="balance-currency">GBP</span>
+                                                </div>
+                                                <p class="currenciesHeader"> Currencies</p>
+                                                <ul class="currencies-list">
+                                                    <li class="currencies-entry">0,00 GBP</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -284,7 +292,10 @@
                                                 <h4>Completed <span> > </span></h4>
                                                 <div class="list-history">
                                                     <ul class="list-group">
-                                                        
+                                                        <li class="transition-row">
+                                                            <div class="transition-item">
+                                                            </div>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
