@@ -197,3 +197,13 @@ a.module-header-link {
     display: block;
     padding-top: 1.2em;
 }
+.date-month, .date-day {
+    display: block;
+    text-align: center;
+    line-height: 1.1em;
+    color: #2c2e2f;
+}
+.date-month {
+    text-transform: uppercase;
+    font-weight: 400;
+}
