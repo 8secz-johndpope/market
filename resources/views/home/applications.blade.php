@@ -280,8 +280,8 @@
         var checkboxs = $(this).parent().parent().find('input:checked');
         console.log(checkboxs.length);
         if(checkboxs.length > 0){
-            $('a.btn-disable').removeClass('btn-disable');
             $('a.btn-disable').addClass('btn-action');
+            $('a.btn-disable').removeClass('btn-disable');
             $('.num-jobs').text(checkboxs.length);
         }else{
             $('.num-jobs').text(0);
