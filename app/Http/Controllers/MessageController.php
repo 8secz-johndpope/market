@@ -432,8 +432,7 @@ class MessageController extends BaseController
         $users = $users->map(function ($user){
             return ['id'=>$user->id,'name'=>$user->name,'image'=>$user->image];
         });
-        $room->users = $users;
-        return $room;
+        return ['id'=>$room->id,'users'=>$users];
     }
 
         public function normal_message(Request $request){
