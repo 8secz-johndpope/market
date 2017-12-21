@@ -251,3 +251,15 @@ a.module-header-link {
 .transaction-details-container .transaction-action a:last-of-type {
     border-right: none;
 }
+.transaction-amount {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 1.2em;
+    text-align: right;
+}
+.transition-row .transaction-amount {
+    line-height: 1rem;
+    margin-top: 0.5em;
+    height: 50%;
+}
