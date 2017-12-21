@@ -284,6 +284,7 @@
                                                 <h4>Completed <span> > </span></h4>
                                                 <div class="list-history">
                                                     <ul class="list-group">
+                                                        
                                                     </ul>
                                                 </div>
                                             </div>
