@@ -187,3 +187,6 @@ a.module-header-link {
     border-left-color: #f5f7fa;
     background-color: #f5f7fa;
 }
+.transition-item {
+    padding: 0 0 0 0.55em;
+}
