@@ -282,6 +282,9 @@
         if(checkboxs.length > 0){
             $('a.btn-disable').removeClass('btn-disable');
             $('a.btn-disable').addClass('btn-action');
+            $('.num-jobs').text(checkboxs.length);
+        }else{
+            $('.num-jobs').text(0);
         }
     })
 </script>
