@@ -445,6 +445,7 @@ class MessageController extends BaseController
         $message = new Message;
         $message->message=$request->message;
         $message->from_msg=$user->id;
+        if($advert!==null)
         $message->to_msg=$advert->user_id;
         $message->room_id=$room->id;
         if($request->has('url')){
