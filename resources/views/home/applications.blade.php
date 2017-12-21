@@ -292,7 +292,9 @@
             $('.num-jobs').text(checkboxs.length);
         }else{
             $('.num-jobs').text(0);
-        }
+            $('a.btn-action').addClass('btn-disable');
+            $('a.btn-action').removeClass('btn-action');
+        }   
     })
 </script>
 @endsection
