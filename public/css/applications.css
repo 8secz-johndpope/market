@@ -169,3 +169,8 @@ a.module-header-link {
     display: block;
     color: #333;
 }
+.list-history .list-group {
+    list-style: none;
+    max-width: 1024px;
+    margin: auto;
+}
