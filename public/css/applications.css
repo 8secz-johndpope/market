@@ -207,3 +207,7 @@ a.module-header-link {
     text-transform: uppercase;
     font-weight: 400;
 }
+.transaction-details-container {
+    padding-left: 0;
+    position: relative;
+}
