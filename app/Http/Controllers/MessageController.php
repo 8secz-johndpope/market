@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 use App\Model\Advert;
 use App\Model\Application;
+use App\Model\Direct;
 use App\Model\Message;
 use App\Model\Room;
 use App\Model\Sale;
@@ -400,8 +401,30 @@ class MessageController extends BaseController
         return ['room_id'=>$room->id,'msg'=>'sent','mid'=>$message->id];
 
     }
+    public function create_room(Request $request)
+    {
+        $user = Auth::user();
+        $to = $request->to;
+        $other = User::find($to);
+        $direct = Direct::where('u1',$user->id)->where('u2',$to)->get();
+        if($direct===null){
+            $direct = Direct::where('u2',$user->id)->where('u1',$to)->get();
+        }
+        if($direct===null){
+            $room = new Room;
+            $room->sender_id=$user->id;
+            $room->save();
+            $room->users()->save($user);
+            if($user->id!==$other->id){
+                $room->users()->save($other);
+            }
+        }else{
+            $room=$direct->room;
+        }
+        return $room;
+    }
 
-    public function normal_message(Request $request){
+        public function normal_message(Request $request){
 
 
         $user = Auth::user();

@@ -35,6 +35,8 @@ Route::post('/user/message/create', 'MessageController@fsend')->middleware('auth
 
 Route::post('/user/msg/create', 'MessageController@create_message')->middleware('auth:api');
 
+Route::get('/user/room/create', 'MessageController@create_room')->middleware('auth:api');
+
 Route::post('/user/msg/send', 'MessageController@normal_message')->middleware('auth:api');
 Route::post('/user/msg/all', 'MessageController@all_messages')->middleware('auth:api');
 Route::get('/user/rooms/all', 'MessageController@all_rooms')->middleware('auth:api');
