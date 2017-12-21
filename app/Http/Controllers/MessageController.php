@@ -596,6 +596,7 @@ class MessageController extends BaseController
         $msgs = [];
         foreach ($messages as $message){
             $message->room = $message->room;
+
             $msgs[]=$message;
         }
 

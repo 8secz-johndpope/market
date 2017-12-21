@@ -7,6 +7,7 @@
  */
 
 namespace App\Model;
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,8 +39,19 @@ class Room extends Model
         $this->unread=0;
         $this->save();
     }
+    public function conv()
+    {
+        return $this->hasOne('App\Model\Direct');
+    }
     public function other(){
         $user = Auth::user();
+        if($this->direct===1){
+            if($this->conv->u1===$user->id){
+                return User::find($this->conv->u2);
+            }else{
+                return User::find($this->conv->u1);
+            }
+        }
         foreach ($this->users as $usr){
             if($usr->id!==$user->id){
                 return $usr;

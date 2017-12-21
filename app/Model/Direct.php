@@ -16,4 +16,12 @@ class Direct extends Model
     {
         return $this->belongsTo('App\Model\Room');
     }
+    public function user1()
+    {
+        return $this->belongsTo('App\User','u1');
+    }
+    public function user2()
+    {
+        return $this->belongsTo('App\User','u2');
+    }
 }
