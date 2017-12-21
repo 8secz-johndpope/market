@@ -211,3 +211,17 @@ a.module-header-link {
     padding-left: 0;
     position: relative;
 }
+.transaction-user {
+    font-weight: 400;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.transaction-user {
+    color: #2c2e2f;
+}
+.transition-row .transaction-user {
+    padding-top: 0.9em;
+    line-height: 1.5em;
+}
