@@ -266,10 +266,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade in" id="#tab-share">
+                        <div class="tab-pane fade in" id="tab-share">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <h4>You will share your credit with</h4>
+                                    <input type="text" name="user-email" placeholder="User email">
+                                </div>
+                                <div class="col-sm-12">
                                 </div>
                             </div>
                         </div>
