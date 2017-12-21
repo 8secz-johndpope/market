@@ -418,6 +418,11 @@ class MessageController extends BaseController
             if($user->id!==$other->id){
                 $room->users()->save($other);
             }
+            $direct=new Direct();
+            $direct->u1 = $user->id;
+            $direct->u2 = $other->id;
+            $direct->room_id = $room->id;
+            $direct->save();
         }else{
             $room=$direct->room;
         }
