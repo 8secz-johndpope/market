@@ -274,7 +274,11 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="input-group">
-                                        <span>GBP</span>
+                                        <span class="input-group-addon">
+                                            <select name="currency">
+                                                <option value="gbp" checked>GBP</option>
+                                            </select>
+                                        </span>
                                         <input type="number" name="quantity" class="form-control">
                                     </div>
                                 </div>
