@@ -294,6 +294,20 @@
                                                     <ul class="list-group">
                                                         <li class="transition-row">
                                                             <div class="transition-item">
+                                                                <div class="row linked-block">
+                                                                    <div class="col-xs-1">
+                                                                        <div class="date-parts">
+                                                                            <span class="date-month">
+                                                                                Nov
+                                                                            </span>
+                                                                            <span class="date-day">
+                                                                                28
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xs-11">
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </li>
                                                     </ul>
