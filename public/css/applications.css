@@ -190,3 +190,10 @@ a.module-header-link {
 .transition-item {
     padding: 0 0 0 0.55em;
 }
+.transition-item .linked-block {
+    margin: 0;
+}
+.date-parts {
+    display: block;
+    padding-top: 1.2em;
+}
