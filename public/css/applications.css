@@ -146,3 +146,8 @@
 .nav-tabs {
     padding-left: 15px;
 }
+.container-balance {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+}
