@@ -406,9 +406,9 @@ class MessageController extends BaseController
         $user = Auth::user();
         $to = $request->to;
         $other = User::find($to);
-        $direct = Direct::where('u1',$user->id)->where('u2',$to)->get();
+        $direct = Direct::where('u1',$user->id)->where('u2',$to)->first();
         if($direct===null){
-            $direct = Direct::where('u2',$user->id)->where('u1',$to)->get();
+            $direct = Direct::where('u2',$user->id)->where('u1',$to)->first();
         }
         if($direct===null){
             $room = new Room;
