@@ -274,7 +274,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-8">
-                                    <div>
+                                    <div class="container-history">
                                         
                                     </div>
                                 </div>
