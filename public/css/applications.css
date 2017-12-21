@@ -150,6 +150,7 @@
     padding: 15px;
     border: 1px solid #ddd;
     margin-top: 15px;
+    border-radius: 5px;
 }
 a.module-header-link:after {
     content: '';
