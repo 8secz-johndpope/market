@@ -270,9 +270,13 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <h4>You will share your credit with</h4>
-                                    <input type="text" name="user-email" placeholder="User email">
+                                    <input type="text" name="user-email" placeholder="User email" class="form-control">
                                 </div>
                                 <div class="col-sm-12">
+                                    <div class="input-group">
+                                        <span>GBP</span>
+                                        <input type="number" name="quantity" class="form-control">
+                                    </div>
                                 </div>
                             </div>
                         </div>
