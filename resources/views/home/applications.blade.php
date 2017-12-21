@@ -307,7 +307,7 @@
                                                                             </span>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-xs-11">
+                                                                    <div class="col-xs-11 transaction-details-container">
                                                                         <div class="txn-description">
                                                                             <span class="transaction-user col-xs-7 col-lg-12">
                                                                                 Anthony
