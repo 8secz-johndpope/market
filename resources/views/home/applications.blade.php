@@ -294,13 +294,13 @@
         var checkboxs = $(this).parent().parent().find('input:checked');
         console.log(checkboxs.length);
         if(checkboxs.length > 0){
-            $('a.btn-disable').addClass('btn-action');
-            $('a.btn-disable').removeClass('btn-disable');
-            $('.num-jobs').text(checkboxs.length);
+            $('#tab-jobs a.btn-disable').addClass('btn-action');
+            $('#tab-jobs a.btn-disable').removeClass('btn-disable');
+            $('#tab-jobs .num-jobs').text(checkboxs.length);
         }else{
-            $('.num-jobs').text(0);
-            $('a.btn-action').addClass('btn-disable');
-            $('a.btn-action').removeClass('btn-action');
+            $('#tab-jobs .num-jobs').text(0);
+            $('#tab-jobs a.btn-action').addClass('btn-disable');
+            $('#tab-jobs a.btn-action').removeClass('btn-action');
         }   
     })
 </script>
