@@ -74,7 +74,9 @@
                                                 </a>
                                             </div>
                                             <div class="chat-meta">
+                                                @if($room->last_message())
                                                 <span class="message-time"> {{$room->last_message()->stringDateTime()}}</span>
+                                                    @endif
                                             </div>
                                         </div>
                                         <div class="chat-secondary">
