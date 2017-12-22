@@ -1158,7 +1158,7 @@ ul.image-gallery-ul {
 .controls-fields {
     -webkit-flex: none;
     flex: none;
-    height: 24px;
+    /*height: 24px;*/
     position: relative;
     transition: background-color .18s ease;
     border-radius: 50%;
