@@ -93,7 +93,7 @@ use App\Model\Advert;
                 </div>
             </form>
         </div>
-
+        <div class="l-visible-large">
             <form action="{{$url}}" >
                 <div class="form-group">
                     <label for="sort"> Sort By:</label>
@@ -109,7 +109,7 @@ use App\Model\Advert;
                 </select>
                 </div>
             </form>
-
+        </div>
             @if($category->id >= 4000000000 && $category->id <= 4999999999)
             <form action="{{$url}}"  class="form-horizontal">
                 <label for="distance">Salary:</label>
