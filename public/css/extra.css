@@ -1685,7 +1685,7 @@ nav.navbar.navbar-inverse {
     display: block;
 }
 .full-width .open>[role="button"]:hover:after{
-    display: block;
+    display: none;
 }
 
 .chat-options {
