@@ -338,6 +338,7 @@ use App\Model\Advert;
             <div class="form-group">
                 <input type="submit" name="submit-sendme" class="btn btn-submit">
             </div>
+            <small>By clicking Submit, you accept our <a>Terms & Conditions</a>, <a>Privacy policy</a> and consent to messages</small>
         </div>
     </div>
 
