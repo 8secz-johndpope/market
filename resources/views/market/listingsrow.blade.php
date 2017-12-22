@@ -129,7 +129,7 @@ use App\Model\Advert;
                         <div class=""><input class="form-control" placeholder="Any" type="number" name="sal_maximum" value="@if(isset($input['sal_maximum'])){{$input['sal_maximum']}}@endif" aria-invalid="false">
                         </div>
                         </div>
-                    <div class="form-group">
+                    <div class="form-group clearfix">
                             <div class="col-sm-offset-6 col-sm-6">
                                 <button type="submit" class="btn btn-default">Submit</button>
                             </div>
