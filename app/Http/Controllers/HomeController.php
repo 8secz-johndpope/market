@@ -2124,6 +2124,11 @@ class HomeController extends BaseController
 
         return view('home.addcontact',['user'=>$user]);
     }
+    public function create_group(Request $request){
+        $user=Auth::user();
+
+        return view('home.group',['user'=>$user]);
+    }
     public function adds_contact(Request $request){
         $user=Auth::user();
         $contact = new Contact();
