@@ -49,7 +49,7 @@ Route::get('/user/cvs/add', 'HomeController@add_cv');
 Route::get('/user/manage/contacts', 'HomeController@contacts');
 Route::get('/user/contacts/add', 'HomeController@add_contact');
 
-Route::get('/user/direct/message/{id}', 'HomeController@direct_message');
+Route::get('/user/direct/message/{id}', 'MessageController@direct_message');
 
 Route::post('/user/contact/add', 'HomeController@adds_contact');
 
