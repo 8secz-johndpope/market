@@ -317,7 +317,7 @@ use App\Model\Advert;
         </div>
     </div>
     @endforeach
-    <div class="listing-max-pro">
+    <div class="listing-max-pro container-emailme">
         <div class="container-emailme-header text-center">
             <h4>Let Us Help With Your Search</h4>
         </div>
