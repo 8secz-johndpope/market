@@ -1684,6 +1684,9 @@ nav.navbar.navbar-inverse {
 .full-width [role="button"]:hover:after{
     display: block;
 }
+.full-width .open>[role="button"]:hover:after{
+    display: block;
+}
 
 .chat-options {
     left: -121px;
