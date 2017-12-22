@@ -2118,6 +2118,11 @@ class HomeController extends BaseController
 
         return view('home.contacts',['user'=>$user]);
     }
+    public function add_contact(Request $request){
+        $user=Auth::user();
+
+        return view('home.addcontact',['user'=>$user]);
+    }
     public function stats(Request $request,$id){
         $advert = Advert::find($id);
         return view('business.stats',['advert'=>$advert]);

@@ -54,12 +54,30 @@
             </ul>
         </div>
     </div>
-    <a class="btn btn-primary" href="/user/contacts/add">Add Contact</a>
-    <table class="table">
-        <tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Email</th><th>Send Message</th></tr>
-        @foreach($user->contacts as $contact)
-            <tr><td>{{$contact->first}}</td><td>{{$contact->last}}</td><td>{{$contact->phone}}</td><td>{{$contact->email}}</td><td><a class="btn btn-primary">Send Message</a></td></tr>
-            @endforeach
-    </table>
+    <form>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Last name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Phone">
+            </div>
+            <div class="col">
+                <input type="email" class="form-control" placeholder="Email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <input type="submit" class="btn btn-primary" value="Add Contact">
+            </div>
+        </div>
+    </form>
 
 @endsection

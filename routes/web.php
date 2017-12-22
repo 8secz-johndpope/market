@@ -47,6 +47,7 @@ Route::post('/user/ad/images', 'BusinessController@add_images');
 Route::get('/user/p/deliver/{id}', 'MarketController@can_deliver');
 Route::get('/user/cvs/add', 'HomeController@add_cv');
 Route::get('/user/manage/contacts', 'HomeController@contacts');
+Route::get('/user/contacts/add', 'HomeController@add_contact');
 
 Route::get('/user/category/auto/{id}/{count}', 'BusinessController@auto');
 
