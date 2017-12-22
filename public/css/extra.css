@@ -835,6 +835,10 @@ span.posted-text {
     background-color: #fff;
     border: 1px solid #ff9d2c;
 }
+.listing-max-pro .input-group .form-control{
+    border:1px solid #a4a4a4;
+    border-left: transparent;
+}
 .container-emailme-header h4 {
     color: #2E2FC3;
 }
