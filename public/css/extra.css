@@ -831,7 +831,13 @@ span.posted-text {
     display: block;
     margin: 4px;
 }
-
+.listing-max-pro .input-group-addon{
+    background-color: #fff;
+    border: 1px solid #ff9d2c;
+}
+.listing-max-pro .input-group-addon:first-child{
+    border: 1px solid #ff9d2c;
+}
 .favroite-icon-gold {
     color: gold;
 }
