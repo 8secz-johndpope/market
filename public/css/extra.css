@@ -1577,6 +1577,10 @@ span.green-text, span.yellow-text{
     color: #fff;
     background: #ff9d2c;
 }
+#email-sendme {
+    padding-left: 16px;
+    padding-right: 16px;
+}
 .right-message span{
     float: right;
     margin-left: 7px;
