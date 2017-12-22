@@ -162,6 +162,7 @@ function upload_profile() {
                 } else {
                     console.log(data);
                     $('#image').val(uname);
+                    $('.add-profile-image').attr('src',web_image_url+'/' + uname);
 
                 }
             });
