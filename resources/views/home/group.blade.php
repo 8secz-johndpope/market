@@ -63,7 +63,7 @@
         <div class="form-check">
             <label class="form-check-label">
                 <input class="form-check-input" type="checkbox" value="">
-                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$contact->u()->image}}" class="lazyload" alt="">
+                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$contact->u()->image}}" class="lazyload" alt="" style="width: 100px">
                 {{$contact->first}}
             </label>
         </div>
