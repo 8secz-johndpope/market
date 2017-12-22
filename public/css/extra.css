@@ -1688,12 +1688,17 @@ nav.navbar.navbar-inverse {
     display: none;
 }
 
-.chat-options {
-    left: -121px;
-    top: 41px;
+.chat-options, .general-options{
     transform-origin: right top 0px;
     transform: scale(1);
     opacity: 1;
+}
+.chat-options {
+    left: -121px;
+    top: 41px;
+}
+.general-options {
+    left: -115px;
 }
 .controls-fields.open{
     background: rgba(0,0,0,0.2);
