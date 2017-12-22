@@ -65,7 +65,7 @@
             <div class="col-sm-12">
                 <a ><img src="/css/addimage.png" class="add-profile-image" style="cursor: pointer"></a>
                 <input type="file" id="upload-profile"  style="display: none">
-                <input type="hidden" name="image" value="no_avatar.jpg">
+                <input type="hidden" name="image" value="no_avatar.jpg" id="image">
 
             </div>
         </div>

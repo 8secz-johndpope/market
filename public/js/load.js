@@ -161,6 +161,7 @@ function upload_profile() {
                     console.log(err);
                 } else {
                     console.log(data);
+                    $('#image').val(uname);
 
                 }
             });
