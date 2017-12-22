@@ -55,6 +55,12 @@
         </div>
     </div>
     <form method="post" action="/user/groups/add">
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Group Title</label>
+            <div class="col-sm-10">
+                <input type="text"  class="form-control" name="title">
+            </div>
+        </div>
         {{ csrf_field() }}
         <ul class="list-group">
             @foreach($user->contacts as $contact)
