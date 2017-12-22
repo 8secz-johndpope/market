@@ -2116,7 +2116,7 @@ class HomeController extends BaseController
     public function contacts(Request $request){
         $user=Auth::user();
 
-        return view('home.contacts'.['user'=>$user]);
+        return view('home.contacts',['user'=>$user]);
     }
     public function stats(Request $request,$id){
         $advert = Advert::find($id);
