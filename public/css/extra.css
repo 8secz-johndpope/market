@@ -1050,6 +1050,9 @@ span.favor-text {
 .all-filters li.list-group-item:last-child {
     padding-bottom: 0;
 }
+.all-filters .form-group:last-child {
+    margin-bottom: 0;
+}
 .center-text{
     text-align: center;
 }
