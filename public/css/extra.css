@@ -1681,7 +1681,7 @@ nav.navbar.navbar-inverse {
     background: #eee;
     z-index: 100;
 }
-[role="button"]:hover:after{
+.full-width [role="button"]:hover:after{
     display: block;
 }
 @media (max-width: 1500px) {
