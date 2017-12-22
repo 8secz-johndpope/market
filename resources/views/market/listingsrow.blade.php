@@ -325,21 +325,23 @@ use App\Model\Advert;
             <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search suck less.</p>
             <div class="row">
                 <div class="col-sm-offset-2 col-sm-8">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon" id="email-sendme">Email</span>
-                            <input type="text" class="form-control" placeholder="example@email.com" aria-describedby="email-sendme">
+                    <form action="" id="sendme-search">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="email-sendme">Email</span>
+                                <input type="text" class="form-control" placeholder="example@email.com" aria-describedby="email-sendme">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon" id="phone-sendme">Mobile</span>
-                            <input type="text" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="phone-sendme">Mobile</span>
+                                <input type="text" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="submit-sendme" class="btn btn-submit">
-                    </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit-sendme" class="btn btn-submit">
+                        </div>
+                    </form>
                 </div>
             </div>
             <small>By clicking Submit, you accept our <a>Terms & Conditions</a>, <a>Privacy policy</a> and consent to messages</small>
