@@ -214,9 +214,16 @@ $(".edit-location-button").click(function () {
 $(".add-image").click(function () {
     $("#file-chooser").click();
 });
+$(".add-profile-image").click(function () {
+    $("#upload-profile").click();
+});
 $("#file-chooser").change(function () {
     console.log("did change");
     upload_file();
+});
+$("#upload-profile").change(function () {
+    console.log("did change");
+    upload_profile();
 });
 $("#file-chooser-x").change(function () {
     console.log("did change");
