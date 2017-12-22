@@ -54,6 +54,7 @@
             </ul>
         </div>
     </div>
+    <a class="btn btn-primary">Add Contact</a>
     <table class="table">
         <tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Email</th><th>Send Message</th></tr>
         @foreach($user->contacts as $contact)
