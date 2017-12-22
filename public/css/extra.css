@@ -1692,9 +1692,10 @@ nav.navbar.navbar-inverse {
     transform-origin: right top 0px;
     transform: scale(1);
     opacity: 1;
+    left: -121px;
 }
 .chat-options {
-    left: -121px;
+    
     top: 41px;
 }
 .general-options {
