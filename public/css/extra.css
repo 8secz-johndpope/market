@@ -1992,7 +1992,7 @@ nav.navbar.navbar-inverse {
     .list-menu-common{
         width: 100%;
     }
-    .dropdown-menu li>a{
+    .nav .dropdown-menu li>a{
         color: #fff;
     }
     .open>.dropdown-menu.options-user:after {
