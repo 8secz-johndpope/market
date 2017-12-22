@@ -49,6 +49,7 @@ Route::get('/user/cvs/add', 'HomeController@add_cv');
 Route::get('/user/manage/contacts', 'HomeController@contacts');
 Route::get('/user/contacts/add', 'HomeController@add_contact');
 Route::get('/user/groups/create', 'HomeController@create_group');
+Route::post('/user/groups/add', 'MessageController@add_group');
 
 Route::get('/user/direct/message/{id}', 'MessageController@direct_message');
 
