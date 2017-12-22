@@ -44,9 +44,9 @@
                                         </div>
                                         <ul class="dropdown-menu general-options">
                                           <li><a href="#">Contacts</a></li>
-                                          <li><a href="#">Settings</a></li>
-                                          <li><a href="#">New broadcast</a></li>
                                           <li><a href="#">Profile</a></li>
+                                          <li><a href="#">New broadcast</a></li>
+                                          <li><a href="#">Settings</a></li>
                                         </ul>
                                     </div>
                                 </span>
