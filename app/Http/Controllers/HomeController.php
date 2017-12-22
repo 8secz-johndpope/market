@@ -2123,6 +2123,11 @@ class HomeController extends BaseController
 
         return view('home.addcontact',['user'=>$user]);
     }
+    public function adds_contact(Request $request){
+        $user=Auth::user();
+
+        return redirect('/user/manage/contacts');
+    }
     public function stats(Request $request,$id){
         $advert = Advert::find($id);
         return view('business.stats',['advert'=>$advert]);

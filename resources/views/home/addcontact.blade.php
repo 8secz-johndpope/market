@@ -54,7 +54,8 @@
             </ul>
         </div>
     </div>
-    <form>
+    <form method="post" action="/user/contact/add">
+        {{ csrf_field() }}
         <div class="row">
             <div class="col">
                 <input type="text" class="form-control" placeholder="First name">
