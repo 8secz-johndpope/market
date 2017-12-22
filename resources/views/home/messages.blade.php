@@ -60,7 +60,7 @@
                                         <a href="#">
                                             <div class="listing-side">
                                                 <div class="listing-thumbnail">
-                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$room->image}}" class="lazyload" alt="">
+                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$room->profile_image()}}" class="lazyload" alt="">
                                                 </div>
                                             </div>
                                         </a>
