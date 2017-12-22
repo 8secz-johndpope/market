@@ -153,8 +153,12 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".6" d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z"></path></svg>
                                         </span>
                                     </div>
-                                    <div class="dropdown-menu">
-                                    </div>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">Contact info</a></li>
+                                      <li><a href="#">Select messages</a></li>
+                                      <li><a href="#">Clear messages</a></li>
+                                      <li><a href="#">Delete chat</a></li>
+                                    </ul>
                                 </div>
                                 
                                 <!-- <div class="button-invoice">
