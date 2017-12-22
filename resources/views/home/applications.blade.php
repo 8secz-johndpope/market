@@ -35,7 +35,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="row">
-                                        <div class="btns-actions">
+                                        <div class="btns-actions text-center">
                                             <a class="btn">Unread Candidates</a>
                                             <a class="btn">Activity</a>
                                             <a class="btn">Interviews</a>
