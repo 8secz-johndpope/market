@@ -13,46 +13,6 @@
 @section('content')
 <div class="container-fluid background-body">
     <div class="row">
-        <!-- <div class="col-sm-12 over-hidden">
-            <ul class="nav nav-tabs top-main-nav">
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/business/manage/ads"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link nav-color" href="/user/manage/images"><span class="glyphicon glyphicon-camera"></span>&nbsp;&nbsp;Images</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/orders"><span class="glyphicon glyphicon-credit-card"></span> &nbsp;&nbsp; Orders</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-envelope"></span> &nbsp;&nbsp;Messages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp; My Details</a>
-                </li>
-                @if($user->contract!==null)
-
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Company</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;&nbsp; Financials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp; Metrics</a>
-                </li>
-                @endif
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/favorites"><span class="glyphicon glyphicon-heart"></span> &nbsp;&nbsp; Favorites</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-bell"></span> &nbsp;&nbsp; Search Alerts</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
-                </li>
-            </ul>
-        </div> -->
         <div class="col-sm-12">
             <div class="full-width">
                 @if(count($user->rooms)>0)
@@ -69,15 +29,6 @@
                         <div class="pane-list-controls">
                             <div class="controls-container">
                                 <span>
-                                    <div class="controls-fields">
-                                        <div role="button">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                    <path fill="#727A7E" d="M12 20.664a9.163 9.163 0 0 1-6.521-2.702.977.977 0 0 1 1.381-1.381 7.269 7.269 0 0 0 10.024.244.977.977 0 0 1 1.313 1.445A9.192 9.192 0 0 1 12 20.664zm7.965-6.112a.977.977 0 0 1-.944-1.229 7.26 7.26 0 0 0-4.8-8.804.977.977 0 0 1 .594-1.86 9.212 9.212 0 0 1 6.092 11.169.976.976 0 0 1-.942.724zm-16.025-.39a.977.977 0 0 1-.953-.769 9.21 9.21 0 0 1 6.626-10.86.975.975 0 1 1 .52 1.882l-.015.004a7.259 7.259 0 0 0-5.223 8.558.978.978 0 0 1-.955 1.185z"></path>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </div>
                                     <div class="controls-fields">
                                         <div role="button">
                                             <span>
