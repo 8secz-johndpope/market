@@ -1744,6 +1744,9 @@ nav.navbar.navbar-inverse {
     .dropdown-menu li>a{
         white-space: normal;
     }
+    .open>.dropdown-menu.options-user {
+        max-width: 800px;
+    }
 }
 @media (max-width: 900px) {
     h4.product-title {
