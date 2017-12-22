@@ -59,6 +59,17 @@ class Room extends Model
         }
         return $user;
     }
+    public function others(){
+        $user = Auth::user();
+        $names = [];
+
+        foreach ($this->users as $usr){
+            if($usr->id!==$user->id){
+                $names[] = $usr->name;
+            }
+        }
+        return implode(',',$names);
+    }
     public function profile_image(){
         if($this->direct===1){
             return $this->other()->image;
