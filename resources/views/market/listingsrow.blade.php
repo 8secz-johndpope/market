@@ -136,7 +136,7 @@ use App\Model\Advert;
                         </div>
             </form>
             @else
-            <form action="{{$url}}"  class="form-horizontal">
+            <form action="{{$url}}">
                 <label for="distance">Price</label>
                 @foreach($input as $key=>$value)
                     <input type="hidden" name="{{$key}}" value="{{$value}}">
@@ -153,7 +153,7 @@ use App\Model\Advert;
                         <div class=""><input class="form-control" placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false">
                         </div>
                         </div>
-                    <div class="form-group">
+                    <div class="form-group clearfix">
                             <div class="col-sm-offset-6 col-sm-6">
                                 <button type="submit" class="btn btn-default">Submit</button>
                             </div>
