@@ -1673,8 +1673,8 @@ nav.navbar.navbar-inverse {
     position: absolute;
     font-size: 10px;
     width: max-content;
-    color: #888;
-    left: -7px;
+    color: #555;
+    left: 0px;
     top: 35px;
     padding: 5px;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.2), -1px 0px 2px rgba(0,0,0,0.2);
