@@ -110,6 +110,7 @@ use App\Model\Advert;
                 </div>
             </form>
         </div>
+        <div class="l-visible-large">
             @if($category->id >= 4000000000 && $category->id <= 4999999999)
             <form action="{{$url}}"  class="form-horizontal">
                 <label for="distance">Salary:</label>
@@ -159,7 +160,7 @@ use App\Model\Advert;
                         </div>
             </form>
             @endif
-
+        </div>
         @foreach($filters as $filter)
             <div class="l-visible-large">
                 @if($filter->title === 'Salary Period')
