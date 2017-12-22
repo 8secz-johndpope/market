@@ -36,4 +36,13 @@ class Contact extends Model
             return $user->id;
         return 0;
     }
+    public function u(){
+        $user = User::where('email',$this->email)->first();
+        if($user!==null)
+            return $user;
+        $user = User::where('phone',$this->phone)->first();
+        if($user!==null)
+            return $user;
+        return 0;
+    }
 }

@@ -57,14 +57,19 @@
     <form method="post" action="/user/groups/add">
         {{ csrf_field() }}
         <ul class="list-group">
+            @foreach($user->contacts as $contact)
+                @if($contact->is_user())
             <li class="list-group-item">
         <div class="form-check">
             <label class="form-check-label">
                 <input class="form-check-input" type="checkbox" value="">
-                Option one is this and that&mdash;be sure to include why it's great
+                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$contact->u()->image}}" class="lazyload" alt="">
+                {{$contact->first}}
             </label>
         </div>
             </li>
+                @endif
+                @endforeach
         </ul>
         <div class="row">
             <div class="col">
