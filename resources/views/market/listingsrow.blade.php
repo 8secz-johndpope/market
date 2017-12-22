@@ -329,6 +329,12 @@ use App\Model\Advert;
                     <input type="text" class="form-control" placeholder="example@email.com" aria-describedby="email-sendme">
                 </div>
             </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon" id="phone-sendme">Mobile</span>
+                    <input type="text" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
+                </div>
+            </div>
         </div>
     </div>
 
