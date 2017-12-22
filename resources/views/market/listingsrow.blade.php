@@ -335,6 +335,9 @@ use App\Model\Advert;
                     <input type="text" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
                 </div>
             </div>
+            <div class="form-group">
+                <input type="submit" name="submit-sendme" class="btn btn-submit">
+            </div>
         </div>
     </div>
 
