@@ -58,7 +58,7 @@
     <table class="table">
         <tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Email</th><th>Send Message</th></tr>
         @foreach($user->contacts as $contact)
-            <tr><td>{{$contact->first}}</td><td>{{$contact->last}}</td><td>{{$contact->phone}}</td><td>{{$contact->email}}</td><td><a class="btn btn-primary">Send Message</a></td></tr>
+            <tr><td>{{$contact->first}}</td><td>{{$contact->last}}</td><td>{{$contact->phone}}</td><td>{{$contact->email}}</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/direct/message/{{$contact->uid()}}">Send Message</a> @else <a class="btn btn-default">Invite</a> @endif</td></tr>
             @endforeach
     </table>
 
