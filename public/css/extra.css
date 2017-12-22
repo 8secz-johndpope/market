@@ -1833,6 +1833,10 @@ nav.navbar.navbar-inverse {
     .full-width {
         height: calc(100vh - 100px);
     }
+    .navbar-right .dropdown-menu.options-user {
+        right: -70px;
+        left: auto;
+    }
 }
 @media (min-width: 768px){
     .navbar-right .dropdown-menu.options-user {
