@@ -1581,6 +1581,9 @@ a.message-back-button {
 .open>.dropdown-menu.options-user {
     display: -webkit-flex;
     display: flex;
+    transform-origin: right top 0px;
+    transform: scale(1);
+    opacity: 1;
 }
 .open>.dropdown-menu.options-user:after {
     display: block;
