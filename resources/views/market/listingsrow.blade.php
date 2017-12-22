@@ -324,7 +324,10 @@ use App\Model\Advert;
         <div class="container-emailme-form text-center">
             <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search suck less.</p>
             <div class="form-group">
-
+                <div class="input-group">
+                    <span class="input-group-addon" id="email-sendme">Email</span>
+                    <input type="text" class="form-control" placeholder="example@email.com" aria-describedby="email-sendme">
+                </div>
             </div>
         </div>
     </div>
