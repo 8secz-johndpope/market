@@ -1050,8 +1050,7 @@ span.favor-text {
 }
 .filter-container{
     position: relative;
-    /*width: 20%;*/
-    float: left;
+    width: 100%;
     padding-top: 20px;
     margin-right: -15px;
 }
