@@ -113,20 +113,20 @@ use App\Model\Advert;
         <div class="l-visible-large">
             @if($category->id >= 4000000000 && $category->id <= 4999999999)
             <form action="{{$url}}"  class="form-horizontal">
-                <label for="distance">Salary:</label>
+                <label for="distance">Salary</label>
                 @foreach($input as $key=>$value)
                     <input type="hidden" name="{{$key}}" value="{{$value}}">
                 @endforeach
                     <div class="form-group">
-                        <label class="control-label col-sm-6" for="sal_minimum">Salary min:</label>
-                        <div class="col-sm-6">
-                        <input class="form-control" placeholder="Min" type="number" id="sal_minimum" name="sal_minimum" value="@if(isset($input['sal_minimum'])){{$input['sal_minimun']}}@endif" aria-invalid="false">
+                        <label class="control-label" for="sal_minimum">Salary min:</label>
+                        <div class="">
+                        <input class="form-control" placeholder="Any" type="number" id="sal_minimum" name="sal_minimum" value="@if(isset($input['sal_minimum'])){{$input['sal_minimun']}}@endif" aria-invalid="false">
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-6" for="salary_max">Salary max:</label>
-                        <div class="col-sm-6"><input class="form-control" placeholder="Max" type="number" name="sal_maximum" value="@if(isset($input['sal_maximum'])){{$input['sal_maximum']}}@endif" aria-invalid="false">
+                        <label class="control-label" for="salary_max">Salary max:</label>
+                        <div class=""><input class="form-control" placeholder="Any" type="number" name="sal_maximum" value="@if(isset($input['sal_maximum'])){{$input['sal_maximum']}}@endif" aria-invalid="false">
                         </div>
                         </div>
                     <div class="form-group">
@@ -137,20 +137,20 @@ use App\Model\Advert;
             </form>
             @else
             <form action="{{$url}}"  class="form-horizontal">
-                <label for="distance">Price:</label>
+                <label for="distance">Price</label>
                 @foreach($input as $key=>$value)
                     <input type="hidden" name="{{$key}}" value="{{$value}}">
                 @endforeach
                     <div class="form-group">
-                        <label class="control-label col-sm-6" for="min_price">Minimum Price:</label>
-                        <div class="col-sm-6">
+                        <label class="control-label" for="min_price">Minimum Price:</label>
+                        <div class="">
                         <input class="form-control" placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price'])){{$input['min_price']}}@endif" aria-invalid="false">
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-6" for="max_price">Maximum Price:</label>
-                        <div class="col-sm-6"><input class="form-control" placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false">
+                        <label class="control-label" for="max_price">Maximum Price:</label>
+                        <div class=""><input class="form-control" placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false">
                         </div>
                         </div>
                     <div class="form-group">
