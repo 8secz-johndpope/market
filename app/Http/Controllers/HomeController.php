@@ -5,6 +5,7 @@ use App\Mail\AccountCreated;
 use App\Model\Address;
 use App\Model\Application;
 use App\Model\Business;
+use App\Model\Contact;
 use App\Model\Cover;
 use App\Model\Cv;
 use App\Model\Dispatch;
@@ -2125,7 +2126,13 @@ class HomeController extends BaseController
     }
     public function adds_contact(Request $request){
         $user=Auth::user();
-
+        $contact = new Contact();
+        $contact->user_id=$user->id;
+        $contact->first = $request->first;
+        $contact->last = $request->last;
+        $contact->phone = $request->phone;
+        $contact->email = $request->email;
+        $contact->save();
         return redirect('/user/manage/contacts');
     }
     public function stats(Request $request,$id){

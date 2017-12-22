@@ -58,18 +58,18 @@
         {{ csrf_field() }}
         <div class="row">
             <div class="col">
-                <input type="text" class="form-control" placeholder="First name">
+                <input type="text" class="form-control" placeholder="First name" name="first" required>
             </div>
             <div class="col">
-                <input type="text" class="form-control" placeholder="Last name">
+                <input type="text" class="form-control" placeholder="Last name" name="last">
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <input type="text" class="form-control" placeholder="Phone">
+                <input type="text" class="form-control" placeholder="Phone" name="phone">
             </div>
             <div class="col">
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" class="form-control" placeholder="Email" name="email">
             </div>
         </div>
         <div class="row">
