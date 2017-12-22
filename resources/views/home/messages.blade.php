@@ -70,7 +70,7 @@
                                             <div class="chat-title">
                                                 <a href="/user/manage/messages/{{$room->id}}">
                                                     <div class="title-user">@if($room->direct===0&&$room->advert_id===0) {{$room->title}} @else {{$room->others()}} @endif</div>
-                                                    <div class="media-heading">@if($room->direct===0&&$room->advert_id===0) {{$room->others()}} @else {{$room->title}}</div>
+                                                    <div class="media-heading">@if($room->direct===0&&$room->advert_id===0) {{$room->others()}} @else {{$room->title}} @endif</div>
                                                 </a>
                                             </div>
                                             <div class="chat-meta">
