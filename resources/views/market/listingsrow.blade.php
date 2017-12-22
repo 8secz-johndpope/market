@@ -36,7 +36,7 @@ use App\Model\Advert;
             <div class="top-bar visible-xs">
                 <a class="filter-button btn btn-default">Filter</a>
             </div>
-    <div class="col-md-2 col-sm-3 col-xs-12">
+    <div class="col-md-3 col-sm-3 col-xs-12">
     <div class="filter-container">
         <div class="all-filters">
         <!-- <div class="l-visible-large">
@@ -180,7 +180,7 @@ use App\Model\Advert;
         </div>
     </div>
 </div>
-<div class="col-md-8 col-sm-9 col-xs-12">
+<div class="col-lg-7 col-sm-9 col-xs-12">
     <div class="products">
         <h4 class="items-box-head">
             List of items for {{$category->title}}, {{number_format($total)}}
