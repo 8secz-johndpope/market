@@ -117,6 +117,11 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Cover');
     }
+    public function contacts()
+    {
+        return $this->hasMany('App\Model\Contact');
+    }
+
     public function has_applied($id){
        $application = Application::where('advert_id',$id)->where('user_id',$this->id)->first();
        if($application===null)
