@@ -1020,7 +1020,8 @@ span.favor-text {
     padding: 15px;
     border-bottom: 1px solid #ccc;
     position: relative;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.16), 0px 0px 1px rgba(0,0,0,.08);
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.16), -1px 0px 1px rgba(0,0,0,.08);
+    margin-bottom: 30px;
 }
 .favroite-icon:before{
     content: '';
