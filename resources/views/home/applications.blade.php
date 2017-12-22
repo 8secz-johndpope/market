@@ -33,6 +33,15 @@
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-overview">
                             <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="row">
+                                        <div class="btns-actions">
+                                            <a class="btn">Unread Candidates</a>
+                                            <a class="btn">Activity</a>
+                                            <a class="btn">Interviews</a>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-sm-9 container-overview">
                                     <div class="row">
                                         <div class="col-sm-12">
