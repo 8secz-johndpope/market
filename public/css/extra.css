@@ -1573,6 +1573,10 @@ span.green-text, span.yellow-text{
     background-color: #F4793B;
     border-color: #F4793B;
 }
+.btn-submit {
+    color: #fff;
+    background: #ff9d2c;
+}
 .right-message span{
     float: right;
     margin-left: 7px;
