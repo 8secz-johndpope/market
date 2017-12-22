@@ -1032,6 +1032,7 @@ span.favor-text {
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.16), -1px 0px 1px rgba(0,0,0,.08);
     margin-bottom: 30px;
 }
+
 .favroite-icon:before{
     content: '';
     background-position: center;
@@ -1062,7 +1063,7 @@ span.favor-text {
 .filter-container{
     position: relative;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 48px;
     margin-right: -15px;
 }
 .filter-container h4 {
