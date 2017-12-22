@@ -1694,12 +1694,8 @@ nav.navbar.navbar-inverse {
     opacity: 1;
     left: -121px;
 }
-.chat-options {
-    
+.chat-options { 
     top: 41px;
-}
-.general-options {
-    left: -115px;
 }
 .controls-fields.open{
     background: rgba(0,0,0,0.2);
