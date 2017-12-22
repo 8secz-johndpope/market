@@ -434,7 +434,24 @@ class MessageController extends BaseController
         });
         return ['id'=>$room->id,'users'=>$users];
     }
+    public function add_group(Request $request)
+    {
+        $user = Auth::user();
 
+            $room = new Room;
+            $room->sender_id=$user->id;
+        $room->title=$request->title;
+        $room->image = $request->image;
+            $room->save();
+
+            foreach ($request->users as $uid){
+                $usr = User::find($uid);
+                $room->users()->save($usr);
+            }
+            $room->users()->save($user);
+        return redirect('/user/manage/messages/' . $room->id);
+
+    }
     public function direct_message(Request $request,$id)
     {
         $user = Auth::user();
