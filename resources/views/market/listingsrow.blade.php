@@ -74,24 +74,25 @@ use App\Model\Advert;
             </ul>
             @endif
         </div>
-        <form action="{{$url}}" >
-            <div class="form-group">
-                <label for="distance">Distance:</label>
-                @foreach($input as $key=>$value)
-                    @if($key!=='distance')
-                        <input type="hidden" name="{{$key}}" value="{{$value}}">
-                    @endif
-                @endforeach
-                <select class="form-control" data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
-                    @foreach($distances as $key=>$value)
-                        <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']==$key)) selected @endif>
-                            {{$value}}
-                        </option>
+        <div class="l-visible-large">
+            <form action="{{$url}}" >
+                <div class="form-group">
+                    <label for="distance">Distance:</label>
+                    @foreach($input as $key=>$value)
+                        @if($key!=='distance')
+                            <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endif
                     @endforeach
-                </select>
-            </div>
+                    <select class="form-control" data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
+                        @foreach($distances as $key=>$value)
+                            <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']==$key)) selected @endif>
+                                {{$value}}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
             </form>
-
+        </div>
 
             <form action="{{$url}}" >
                 <div class="form-group">
