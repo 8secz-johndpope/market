@@ -56,27 +56,17 @@
     </div>
     <form method="post" action="/user/groups/add">
         {{ csrf_field() }}
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="First name" name="first" required>
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Last name" name="last">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Phone" name="phone">
-            </div>
-            <div class="col">
-                <input type="email" class="form-control" placeholder="Email" name="email">
-            </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="">
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
         </div>
         <div class="row">
             <div class="col">
             </div>
             <div class="col">
-                <input type="submit" class="btn btn-primary" value="Add Contact">
+                <input type="submit" class="btn btn-primary" value="Create Group">
             </div>
         </div>
     </form>
