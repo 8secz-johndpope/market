@@ -1991,6 +1991,7 @@ nav.navbar.navbar-inverse {
     }
     .list-menu-common{
         width: 100%;
+        max-width: 100%;
     }
     .nav .dropdown-menu li>a{
         color: #fff;
