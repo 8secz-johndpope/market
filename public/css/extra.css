@@ -1717,6 +1717,9 @@ nav.navbar.navbar-inverse {
         height: 30px;
         width: 30px;
     }
+    .dropdown-menu li>a{
+        white-space: normal;
+    }
 }
 @media (max-width: 1040px) {
 
@@ -1741,11 +1744,8 @@ nav.navbar.navbar-inverse {
         min-width: 150px;
         max-width: 200px;
     }
-    .dropdown-menu li>a{
-        white-space: normal;
-    }
     .open>.dropdown-menu.options-user {
-        max-width: 800px;
+        max-width: 680px;
     }
 }
 @media (max-width: 900px) {
