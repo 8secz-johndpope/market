@@ -316,7 +316,15 @@ use App\Model\Advert;
             @endif
         </div>
     </div>
-            @endforeach
+    @endforeach
+    <div class="listing-max-pro">
+        <div class="container-emailme-header">
+            <h4>Let Us Help With Your Search</h4>
+        </div>
+        <div class="container-emailme-form">
+            <p></p>
+        </div>
+    </div>
 
 
         <nav aria-label="Page navigation">
