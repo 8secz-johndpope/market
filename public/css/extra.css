@@ -835,6 +835,9 @@ span.posted-text {
     background-color: #fff;
     border: 1px solid #ff9d2c;
 }
+.container-emailme-header h4 {
+    color: #2E2FC3;
+}
 .listing-max-pro .input-group-addon:first-child{
     border: 1px solid #ff9d2c;
 }
