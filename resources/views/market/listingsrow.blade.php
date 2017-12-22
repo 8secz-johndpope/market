@@ -112,7 +112,7 @@ use App\Model\Advert;
         </div>
         <div class="l-visible-large">
             @if($category->id >= 4000000000 && $category->id <= 4999999999)
-            <form action="{{$url}}"  class="form-horizontal">
+            <form action="{{$url}}">
                 <label for="distance">Salary</label>
                 @foreach($input as $key=>$value)
                     <input type="hidden" name="{{$key}}" value="{{$value}}">
