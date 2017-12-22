@@ -771,7 +771,8 @@ strong.ribbon-job {
     display: inline-block;
 }
 .link-details a {
-    color: #4a148c;
+    /*color: #4a148c;*/
+    color: #2E2FC3;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 strong.ribbon {
