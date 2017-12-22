@@ -112,7 +112,7 @@
                             <div class="chat-main">
                                 <div class="chat-title">
                                     <div class="title-user">
-                                        @if($room->direct===0&&$room->advert_id===0) {{$room->title}} @else {{$room->others()}} @endif
+                                        @if($cur->direct===0&&$cur->advert_id===0) {{$cur->title}} @else {{$cur->others()}} @endif
                                     </div>
                                     <div class="media-heading">
                                         <div class="title-product">
