@@ -55,6 +55,8 @@
         </div>
     </div>
     <a class="btn btn-primary" href="/user/contacts/add">Add Contact</a>
+    <a class="btn btn-success" href="/user/groups/create">New Group</a>
+
     <table class="table">
         <tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Email</th><th>Send Message</th></tr>
         @foreach($user->contacts as $contact)
