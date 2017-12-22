@@ -1707,6 +1707,17 @@ nav.navbar.navbar-inverse {
 .controls-fields:first-of-type {
     margin-left: 0;
 }
+.chat-options > li > a, .general-options > li > a {
+    height: 40px;
+    padding-top: 13px;
+    font-size: 14.5px;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
