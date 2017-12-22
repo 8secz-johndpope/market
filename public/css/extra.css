@@ -1737,6 +1737,10 @@ nav.navbar.navbar-inverse {
         height: 30px;
         width: 30px;
     }
+    .list-menu-common {
+        min-width: 150px;
+        max-width: 200px;
+    }
 }
 @media (max-width: 900px) {
     h4.product-title {
