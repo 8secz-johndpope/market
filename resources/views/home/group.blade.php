@@ -94,5 +94,14 @@
             </div>
         </div>
     </form>
+<script>
+    $(".add-profile-image").click(function () {
+        $("#upload-profile").click();
+    });
 
+    $("#upload-profile").change(function () {
+        console.log("did change");
+        upload_profile();
+    });
+</script>
 @endsection
