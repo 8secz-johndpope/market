@@ -56,17 +56,22 @@
     </div>
     <form method="post" action="/user/groups/add">
         {{ csrf_field() }}
+        <ul class="list-group">
+            <li class="list-group-item">
         <div class="form-check">
             <label class="form-check-label">
                 <input class="form-check-input" type="checkbox" value="">
                 Option one is this and that&mdash;be sure to include why it's great
             </label>
         </div>
+            </li>
+        </ul>
         <div class="row">
             <div class="col">
+                <input type="submit" class="btn btn-primary" value="Create Group">
+
             </div>
             <div class="col">
-                <input type="submit" class="btn btn-primary" value="Create Group">
             </div>
         </div>
     </form>
