@@ -824,6 +824,7 @@ span.posted-text {
     right: 0;
     /* position: absolute; */
     float: right;
+    margin-top: 5px;
 }
 .favroite-icon {
     cursor: pointer;
