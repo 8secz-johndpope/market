@@ -1692,6 +1692,9 @@ nav.navbar.navbar-inverse {
 .controls-fields.open{
     background: rgba(0,0,0,0.2);
 }
+.controls-fields:first-of-type {
+    margin-left: 0;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
