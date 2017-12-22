@@ -1679,7 +1679,7 @@ nav.navbar.navbar-inverse {
     padding: 5px;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.2), -1px 0px 2px rgba(0,0,0,0.2);
     background: #eee;
-    z-index: 100;
+    z-index: 300;
 }
 .full-width [role="button"]:hover:after{
     display: block;
