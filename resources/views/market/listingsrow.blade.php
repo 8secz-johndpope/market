@@ -318,10 +318,10 @@ use App\Model\Advert;
     </div>
     @endforeach
     <div class="listing-max-pro">
-        <div class="container-emailme-header">
+        <div class="container-emailme-header text-center">
             <h4>Let Us Help With Your Search</h4>
         </div>
-        <div class="container-emailme-form">
+        <div class="container-emailme-form text-center">
             <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search suck less.</p>
             <div class="form-group">
 
