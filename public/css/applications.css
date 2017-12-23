@@ -283,3 +283,6 @@ a.module-header-link {
 .net-amount {
     line-height: 1.33;
 }
+.currency {
+    display: block;
+}
