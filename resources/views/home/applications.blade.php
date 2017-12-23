@@ -34,7 +34,7 @@
                         <div class="tab-pane fade in active" id="tab-overview">
                             <div class="row">
                                 <div class="btns-actions-over clearfix">
-                                    <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="col-sm-offset-1 col-sm-10">
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <a class="btn btn-action form-control">Unread Candidates</a>
