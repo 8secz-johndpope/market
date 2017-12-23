@@ -358,7 +358,7 @@ span.email-icon img {
 	margin: 0;
 }
 .tab-pane {
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     border: 1px solid #ccc;
     border-top-color: transparent;
 }
