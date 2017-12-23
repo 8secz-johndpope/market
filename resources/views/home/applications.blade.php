@@ -286,6 +286,17 @@
                         </div>
                         <div class="tab-pane fade in" id="tab-share">
                             <div class="row">
+                                <div class="btns-actions-over clearfix">
+                                    <div class="col-sm-offset-1 col-sm-10">
+                                        <div class="row">
+                                            <div class="col-sm-offset-8 col-sm-4">
+                                                <a class="btn btn-action form-control">Send Credit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="col-sm-12">
@@ -308,17 +319,6 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-8">
-                                    <div class="row">
-                                        <div class="btns-actions-over clearfix">
-                                            <div class="col-sm-offset-1 col-sm-10">
-                                                <div class="row">
-                                                    <div class="col-sm-offset-8 col-sm-4">
-                                                        <a class="btn btn-action form-control">Send Credit</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="container-history">
