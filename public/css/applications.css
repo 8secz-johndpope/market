@@ -114,11 +114,11 @@
 #tab-overview {
     /*padding-top: 15px;*/
 }
-#tab-overview .list-group-item:last-child{
-	margin-bottom: 15px;
-}
 #tab-overview .list-group-item{
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+.container-candidates {
+    margin-bottom: 25px;
 }
 .container-overview hr {
     margin-top: 10px;
