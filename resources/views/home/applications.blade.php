@@ -407,6 +407,46 @@
                                                                 </div>
                                                             </div>
                                                         </li>
+                                                        <li class="transition-row">
+                                                            <div class="transition-item">
+                                                                <div class="row linked-block">
+                                                                    <div class="col-xs-1">
+                                                                        <div class="date-parts">
+                                                                            <span class="date-month">
+                                                                                Oct
+                                                                            </span>
+                                                                            <span class="date-day">
+                                                                                28
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xs-11 transaction-details-container">
+                                                                        <div class="txn-description row">
+                                                                            <span class="transaction-user col-xs-7 col-lg-12">
+                                                                                Zara
+                                                                            </span>
+                                                                            <span class="transaction-branch col-xs-7">
+                                                                                Company - Hammersmith
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="transaction-action">
+                                                                            <span class="glyphicon glyphicon-play-circle"></span>
+                                                                            <a href="#">
+                                                                                Repeat this transaction
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="transaction-amount">
+                                                                            <span class="net-amount">
+                                                                                46,00
+                                                                                <span class="currency">
+                                                                                    GBP
+                                                                                </span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
