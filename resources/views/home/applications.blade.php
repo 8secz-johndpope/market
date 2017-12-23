@@ -67,15 +67,14 @@
                                                     @endforeach
                                                 </ul>
                                             </div>
-                                            <hr>
-                                            <h4>Activity</h4>
                                             <div class="container-activity">
+                                                <h4>Activity</h4>
+                                            
 
                                             </div>
-                                            <hr>
-                                            <h4>Interviews</h4>
+                                            
                                             <div class="container-activity">
-
+                                                <h4>Interviews</h4>
                                             </div>
                                         </div>
                                     </div>
