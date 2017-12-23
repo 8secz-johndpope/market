@@ -300,3 +300,8 @@ a.module-header-link {
 .currenciesHeader {
     margin: 13px 0 0 10px;
 }
+.balance-numeral {
+    font-size: 1.875rem;
+    line-height: 1.4;
+    font-weight: 300;
+}
