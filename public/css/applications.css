@@ -286,3 +286,8 @@ a.module-header-link {
 .currency {
     display: block;
 }
+.currencies-list {
+    margin: 0 0 0 10px;
+    list-style: none;
+    padding-left: 0;
+}
