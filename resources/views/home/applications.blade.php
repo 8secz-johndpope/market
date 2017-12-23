@@ -342,7 +342,7 @@
                                                                         </div>
                                                                         <div class="transaction-amount">
                                                                             <span class="net-amount">
-                                                                                46,00
+                                                                                {{$balance}}
                                                                                 <span class="currency">
                                                                                     GBP
                                                                                 </span>

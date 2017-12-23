@@ -989,8 +989,8 @@ class HomeController extends BaseController
     public function applications(Request $request)
     {
         $user = Auth::user();
-
-        return view('home.applications',['jobs'=>$user->jobs,'user'=>$user]);
+        $balance = \Stripe\Balance::retrieve( array("stripe_account" => $user->stripe_account));
+        return view('home.applications',['jobs'=>$user->jobs,'user'=>$user, 'balance', $balance]);
     }
     public function view_applications(Request $request,$id)
     {
