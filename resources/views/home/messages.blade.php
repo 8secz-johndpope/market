@@ -45,7 +45,7 @@
                                         <ul class="dropdown-menu general-options">
                                           <li><a href="/user/manage/contacts">Contacts</a></li>
                                           <li><a href="#">Profile</a></li>
-                                          <li><a herf="/user/groups/create">New Group</a></li>
+                                          <li><a href="/user/groups/create">New Group</a></li>
                                           <li><a href="#">New broadcast</a></li>
                                           <li><a href="#">Settings</a></li>
                                         </ul>
