@@ -194,6 +194,10 @@ a.module-header-link {
     border-left-color: #f5f7fa;
     background-color: #f5f7fa;
 }
+.transition-row:hover {
+    background-color: #eeeeee;
+    border-left-color: #ff9d2c;
+}
 .transition-item {
     padding: 0 0 0 0.55em;
 }
