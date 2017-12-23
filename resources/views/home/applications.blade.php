@@ -36,14 +36,14 @@
                                 <div class="col-sm-12">
                                     <div class="row">
                                         <div class="btns-actions-over text-center">
-                                            <div class="col-sm-1 col-sm-3">
+                                            <div class="col-sm-offset-1 col-sm-3">
                                                 <a class="btn btn-action form-control">Unread Candidates</a>
                                             </div>
                                             <div class="col-sm-3">
-                                                <a class="btn btn-action">Activity</a>
+                                                <a class="btn btn-action form-control">Activity</a>
                                             </div>
                                             <div class="col-sm-3">
-                                                <a class="btn btn-action">Interviews</a>
+                                                <a class="btn btn-action form-control">Interviews</a>
                                             </div>
                                         </div>
                                     </div>
