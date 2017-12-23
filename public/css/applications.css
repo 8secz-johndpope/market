@@ -114,6 +114,9 @@
 #tab-overview {
     /*padding-top: 15px;*/
 }
+#tab-overview .list-group-item:last-child{
+	margin-bottom: 15px;
+}
 .container-overview hr {
     margin-top: 10px;
     margin-bottom: 10px;
