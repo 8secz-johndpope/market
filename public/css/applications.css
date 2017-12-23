@@ -313,3 +313,6 @@ a.module-header-link {
     padding-left: 1%;
     padding-right: 1%;
 }
+.welcome-msg {
+    margin-top: 0;
+}
