@@ -292,7 +292,7 @@
                                             <div class="container-balance">
                                                 <h4>Your balance</h4>
                                                 <div class="balance-numeral">
-                                                    <span class="balance">0,00 </span>
+                                                    <span class="balance">{{$balance['available']}} </span>
                                                     <span class="balance-currency">GBP</span>
                                                 </div>
                                                 <p class="currenciesHeader"> Currencies</p>
