@@ -213,6 +213,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     display: table;
     width: 100%;
 }
+.tab-content {
+    background: #fff;
+}
 .listings-adverts a:last-child {
     border: none;
 }
