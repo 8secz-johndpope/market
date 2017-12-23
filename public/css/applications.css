@@ -289,6 +289,8 @@ a.module-header-link {
 }
 .currency {
     display: block;
+    padding-top: 0.6em;
+    line-height: 0;
 }
 .currencies-list {
     margin: 0 0 0 10px;
