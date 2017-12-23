@@ -61,8 +61,8 @@
         <div class="col-md-12">
             <div class="alerts">
                 <p>Set your jobs search alerts, click below to:</p>
-                <div class="buttons-alerts input-group">
-                    <span class="input-group-addon">Get Job Alerts:</span>
+                <div class="buttons-alerts">
+                    <span>Get Job Alerts:</span>
                     <a class="btn">Email Alert</a>
                     <a href="/download-mobile-apps/" class="btn">Mobile Alert</a>
                 </div>
