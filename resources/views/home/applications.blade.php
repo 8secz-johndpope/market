@@ -290,7 +290,12 @@
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <h3 class="welcome-msg">Hi, {{$user->name}}</h3>
+                                                <div class="image-profile">
+                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="circle">
+                                                </div>
+                                                <div class="container-welcome">
+                                                    <h3 class="welcome-msg">Hi, {{$user->name}}</h3>
+                                                </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <a class="btn btn-action form-control">Request Credit</a>
