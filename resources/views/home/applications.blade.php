@@ -466,7 +466,7 @@
         e.preventDefault();
     });
     $('.checkboxs-jobs').change(function(){
-        var checkboxs = $(this).parent().parent().find('input:checked');
+        var checkboxs = $(this).parent().parent().parent().find('input:checked');
         console.log(checkboxs.length);
         if(checkboxs.length > 0){
             $('#tab-jobs a.btn-disable').addClass('btn-action');
