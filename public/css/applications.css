@@ -291,3 +291,6 @@ a.module-header-link {
     list-style: none;
     padding-left: 0;
 }
+.currenciesHeader {
+    margin: 13px 0 0 10px;
+}
