@@ -117,7 +117,7 @@
 #tab-overview .list-group-item{
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
-.container-candidates {
+.container-candidates, .container-activity {
     margin-bottom: 25px;
 }
 .container-overview hr {
