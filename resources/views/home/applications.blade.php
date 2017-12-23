@@ -58,12 +58,14 @@
                                             <div class="container-candidates">
                                                 <ul class="list-group">
                                                     @foreach($jobs as $job)
-                                                    <li class="list-group-item">
-                                                        <div class="container-job-title">
-                                                            <p><strong>{{$job->param('title')}}</strong> - <span class="job-location">{{$job->param('location_name')}}</span></p>
-                                                            <p class="blue-color"><a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} Unread Candidates</a></p>
-                                                        </div>
-                                                    </li>
+                                                    @if(count($job->applications) > 0)
+                                                        <li class="list-group-item">
+                                                            <div class="container-job-title">
+                                                                <p><strong>{{$job->param('title')}}</strong> - <span class="job-location">{{$job->param('location_name')}}</span></p>
+                                                                <p class="blue-color"><a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} Unread Candidates</a></p>
+                                                            </div>
+                                                        </li>
+                                                    @endif
                                                     @endforeach
                                                 </ul>
                                             </div>
