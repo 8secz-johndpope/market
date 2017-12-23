@@ -45,6 +45,7 @@
                                         <ul class="dropdown-menu general-options">
                                           <li><a href="#">Contacts</a></li>
                                           <li><a href="#">Profile</a></li>
+                                          <li><a herf="#">New Group</a></li>
                                           <li><a href="#">New broadcast</a></li>
                                           <li><a href="#">Settings</a></li>
                                         </ul>
@@ -163,8 +164,8 @@
                                     </div>
                                     <ul class="dropdown-menu chat-options">
                                       <li><a href="#">Contact info</a></li>
-                                      <li><a href="#">Select messages</a></li>
-                                      <li><a href="#">Clear messages</a></li>
+                                      <!-- <li><a href="#">Select messages</a></li>
+                                      <li><a href="#">Clear messages</a></li> -->
                                       <li><a href="#">Delete chat</a></li>
                                     </ul>
                                 </div>
