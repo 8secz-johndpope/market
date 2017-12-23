@@ -289,7 +289,10 @@
                                 <div class="btns-actions-over clearfix">
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <div class="row">
-                                            <div class="col-sm-offset-8 col-sm-4">
+                                            <div class="col-sm-offset-4 col-sm-4">
+                                                <a class="btn btn-action form-control">Request Credit</a>
+                                            </div>
+                                            <div class="col-sm-4">
                                                 <a class="btn btn-action form-control">Send Credit</a>
                                             </div>
                                         </div>
