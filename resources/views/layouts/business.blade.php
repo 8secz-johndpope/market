@@ -13,8 +13,11 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
-    <link href="{{ asset('/css/extra.css?q=43') }}" rel="stylesheet">
+    @php
+        $date = new Datetime();
+        $dateMs = $date->getTimestamp();
+    @endphp
+    <link href="{{ asset("/css/extra.css?q=$dateMs") }}" rel="stylesheet">
     <link href="{{ asset('/css/css/font-awesome.min.css?q=874') }}" rel="stylesheet">
     @yield('styles')
     <meta name="theme-color" content="#000000">
