@@ -189,6 +189,7 @@ a.module-header-link {
     background-color: #ffffff;
     min-height: 4em;
     display: block;
+    cursor: pointer;
 }
 .transition-row:nth-child(odd) {
     border-left-color: #f5f7fa;
