@@ -173,7 +173,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 .breadcrumb {
     text-align: center;
-    background-color: #fafafa;
+    background-color: transparent;
 }
 .alerts {
     background: #eee!important;
