@@ -33,7 +33,7 @@
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-overview">
                             <div class="row">
-                                <div class="btns-actions-over text-center">
+                                <div class="btns-actions-over clearfix">
                                     <div class="col-sm-offset-2 col-sm-10">
                                         <div class="row">
                                             <div class="col-sm-4">
