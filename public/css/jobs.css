@@ -320,6 +320,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 .buttons {
     border: 1px solid #ccc;
+    background: #fff;
 }
 .list-group {
     margin-bottom: 0;
