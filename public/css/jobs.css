@@ -207,6 +207,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     display: table;
     padding: 15px 5px;
     width: 100%;
+    background: #fff;
 }
 .listings-adverts a {
     display: table;
