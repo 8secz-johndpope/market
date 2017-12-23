@@ -358,7 +358,7 @@
                                                                     <div class="col-xs-1">
                                                                         <div class="date-parts">
                                                                             <span class="date-month">
-                                                                                Nov
+                                                                                Oct
                                                                             </span>
                                                                             <span class="date-day">
                                                                                 28
