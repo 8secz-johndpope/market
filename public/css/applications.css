@@ -46,7 +46,7 @@
     padding: 15px;
 }
 .col-info-jobs h4, .col-info-candidates h4 {
-    color: royalblue;
+    color: #555;
     font-size: 15px; 
 }
 .col-info-jobs .list-group-item, .col-info-candidates .list-group-item{
