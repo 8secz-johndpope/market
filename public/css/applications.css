@@ -263,3 +263,7 @@ a.module-header-link {
     margin-top: 0.5em;
     height: 50%;
 }
+.btns-actions-over {
+    padding: 15px;
+    background-color: #ddd;
+}
