@@ -36,9 +36,15 @@
                                 <div class="col-sm-12">
                                     <div class="row">
                                         <div class="btns-actions-over text-center">
-                                            <a class="btn btn-action">Unread Candidates</a>
-                                            <a class="btn btn-action">Activity</a>
-                                            <a class="btn btn-action">Interviews</a>
+                                            <div class="col-sm-1 col-sm-3">
+                                                <a class="btn btn-action form-control">Unread Candidates</a>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <a class="btn btn-action">Activity</a>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <a class="btn btn-action">Interviews</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
