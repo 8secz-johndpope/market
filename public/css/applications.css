@@ -305,3 +305,6 @@ a.module-header-link {
     line-height: 1.4;
     font-weight: 300;
 }
+.balance-currency {
+    text-transform: uppercase;
+}
