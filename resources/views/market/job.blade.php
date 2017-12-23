@@ -14,6 +14,7 @@
 <link href="{{ asset('/css/jobs.css?q=874') }}" rel="stylesheet">
 <script src="/js/imageviewer.min.js"></script>
 <script src="/js/carousel.js"></script>
+<div class="background-body">
 <div class="container">
     <div class="row">
         <div class="col-md-2 col-sm-3 col-xs-6 back">
@@ -595,6 +596,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <script>
     $('a[href="#tab-map"]').on('shown.bs.tab', function () {
