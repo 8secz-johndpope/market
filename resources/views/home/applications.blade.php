@@ -292,8 +292,12 @@
                                             <div class="container-balance">
                                                 <h4>Your balance</h4>
                                                 <div class="balance-numeral">
-                                                    <span class="balance">{{$balance['available']}} </span>
-                                                    <span class="balance-currency">GBP</span>
+                                                    @foreach($balance['available'] as $item)
+                                                    <span class="balance">
+                                                            {{number_format($item['amount']/100,2)}}
+                                                    </span>
+                                                    <span class="balance-currency">{{$item['currency']}}</span>
+                                                     @endforeach
                                                 </div>
                                                 <p class="currenciesHeader"> Currencies</p>
                                                 <ul class="currencies-list">
