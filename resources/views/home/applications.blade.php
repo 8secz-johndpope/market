@@ -290,7 +290,7 @@
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <h3>Hi, {{$user->name}}</h3>
+                                                <h3 class="welcome-msg">Hi, {{$user->name}}</h3>
                                             </div>
                                             <div class="col-sm-4">
                                                 <a class="btn btn-action form-control">Request Credit</a>
