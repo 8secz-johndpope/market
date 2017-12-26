@@ -1774,6 +1774,7 @@ nav.navbar.navbar-inverse {
 .container-img-mcontact {
     padding: 50px 0;
     background: url(/css/green.jpg);
+    background-position-y: 50%;
 }
 @media (max-width: 1500px) {
     h4.product-title {
