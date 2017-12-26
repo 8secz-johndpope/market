@@ -1928,7 +1928,7 @@ nav.navbar.navbar-inverse {
 @media (min-width: 768px){
     .navbar-right .dropdown-menu.options-user {
         right: -239px;
-        top: 58px;
+        top: 53px;
         left: auto;
         width: 100vw;
     }
