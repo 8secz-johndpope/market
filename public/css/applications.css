@@ -343,3 +343,6 @@ a.module-header-link {
     top: 18px;
     left: 17px;
 }
+.action-item {
+    text-align: center;
+}
