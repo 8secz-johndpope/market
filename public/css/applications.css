@@ -322,4 +322,5 @@ a.module-header-link {
 }
 .image-profile, .container-welcome {
     display: table-cell;
+    vertical-align: middle;
 }
