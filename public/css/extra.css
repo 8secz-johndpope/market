@@ -1771,6 +1771,9 @@ nav.navbar.navbar-inverse {
 .container-set-alarm {
     background: #ddd;
 }
+.container-img-mcontact {
+    padding: 50px 0;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
