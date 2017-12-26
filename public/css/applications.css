@@ -323,6 +323,7 @@ a.module-header-link {
 .image-profile, .container-welcome {
     display: table-cell;
     vertical-align: middle;
+    padding: 0 5px;
 }
 .container-welcome h3{
     margin-bottom: 0;
