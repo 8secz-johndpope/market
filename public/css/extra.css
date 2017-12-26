@@ -1628,7 +1628,6 @@ a.message-back-button {
     transform-origin: right top 0px;
     transform: scale(1);
     opacity: 1;
-    position:fixed;
 }
 .open>.dropdown-menu.options-user:after {
     display: block;
