@@ -275,6 +275,12 @@
                                         <li>
                                             <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-building"></span> &nbsp;&nbsp;Contacts</a>
                                         </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-building"></span> &nbsp;&nbsp;Profile</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-building"></span> &nbsp;&nbsp;New Group</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="list-menu-common">
