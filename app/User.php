@@ -178,6 +178,12 @@ class User extends Authenticatable
 
         return $this->hasMany('App\Model\Advert')->where('status',1)->where('category_id','>=',$jobs->id)->where('category_id','<=',$jobs->ends)->orderby('id','desc');
     }
+    public function motors()
+    {
+        $motors = Category::find(1000000000);
+
+        return $this->hasMany('App\Model\Advert')->where('status',1)->where('category_id','>=',$motors->id)->where('category_id','<=',$motors->ends)->orderby('id','desc');
+    }
     public function adverts_category($category)
     {
         return $this->hasMany('App\Model\Advert')->where('category_id',$category)->where('status',1)->orderby('id','desc')->get();

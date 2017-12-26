@@ -992,6 +992,11 @@ class HomeController extends BaseController
         $balance = \Stripe\Balance::retrieve( array("stripe_account" => $user->stripe_account));
         return view('home.applications',['jobs'=>$user->jobs,'user'=>$user, 'balance' => $balance]);
     }
+    public function motors(Request $request)
+    {
+        $user = Auth::user();
+        return view('home.applications',['jobs'=>$user->motors,'user'=>$user]);
+    }
     public function view_applications(Request $request,$id)
     {
         $user = Auth::user();
