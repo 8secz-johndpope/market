@@ -637,7 +637,7 @@ span.message.get-invoice:before {
 }
 .main-search-div {
     margin: auto;
-    max-width: 1000px;
+    /*max-width: 1000px;*/
 }
 
 
