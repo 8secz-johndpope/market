@@ -129,7 +129,7 @@
     <source src="/css/y.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
-<header>
+<header class="background-header">
     <nav class="navbar navbar-default">
         <div class="container-fluid top">
             <div class="row">
