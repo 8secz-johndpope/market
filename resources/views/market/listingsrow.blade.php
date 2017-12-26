@@ -187,7 +187,42 @@ use App\Model\Advert;
         <h4 class="items-box-head">
             List of items for {{$category->title}}, {{number_format($total)}}
         </h4>
+        @php
+            $i=0;
+        @endphp
         @foreach($products as $product)
+        @if($i == 9)
+        <div class="listing-max-pro container-emailme">
+            <div class="container-emailme-header text-center">
+                <h4>Let Us Help With Your Search</h4>
+            </div>
+            <div class="container-emailme-form text-center">
+                <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search suck less.</p>
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-8">
+                        <form action="" id="sendme-search">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="email-sendme">Email</span>
+                                    <input type="text" class="form-control" placeholder="example@email.com" aria-describedby="email-sendme">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="phone-sendme">Mobile</span>
+                                    <input type="text" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit-sendme" class="btn btn-submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <small>By clicking Submit, you accept our <a>Terms & Conditions</a>, <a>Privacy policy</a> and consent to messages</small>
+            </div>
+        </div>
+        @endif
         <div class="listing-max-pro">
             <div class="product">
                 @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
@@ -316,6 +351,9 @@ use App\Model\Advert;
             @endif
         </div>
     </div>
+    @php
+        $i = $i + 1;
+    @endphp
     @endforeach
     <div class="listing-max-pro container-emailme">
         <div class="container-emailme-header text-center">
