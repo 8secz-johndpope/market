@@ -85,7 +85,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="col-info-jobs">
-                                                <h4>Jobs</h4>
+                                                <h4>Motors</h4>
                                                 <ul class="list-group">
                                                     <li class="list-group-item">Live <span class="quantity">{{count($motors)}}</span></li>
                                                     <li class="list-group-item">Inactive <span class="quantity">0</span></li>
@@ -111,7 +111,7 @@
                         <div class="tab-pane fade in" id="tab-jobs">
                             <div class="row">
                                 <div class="col-sm-12 container-num-jobs">
-                                    <h4>Your jobs <span class="num-jobs-title">{{count($motors)}}</span></h4>
+                                    <h4>Your motors <span class="num-jobs-title">{{count($motors)}}</span></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -138,8 +138,8 @@
                                     <div class="container-filter-by text-right">
                                         <span>Filter by:</span>
                                         <ul class="type-filters">
-                                            <li><a href="#">All Jobs</a></li>
-                                            <li><a href="#">My Jobs</a></li>
+                                            <li><a href="#">All Motors</a></li>
+                                            <li><a href="#">My Motors</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -147,7 +147,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="jobs-selected">
-                                        <strong>Jobs selected: </strong><span class="num-jobs">0</span>
+                                        <strong>Motors selected: </strong><span class="num-jobs">0</span>
                                     </div>
                                     <div class="btns-actions">
                                         <a class="btn btn-disable">Upgrade</a>
@@ -160,7 +160,7 @@
                                         <ul class="type-filters">
                                             <li><a href="#">Created</a></li>
                                             <li><a href="#">Expiring</a></li>
-                                            <li><a href="#">Recent Applications</a></li>
+                                            <li><a href="#">Recent Views</a></li>
                                         </ul>
                                 </div>
                             </div>
