@@ -1776,6 +1776,7 @@ nav.navbar.navbar-inverse {
     background: url(/css/green.jpg);
     background-position-y: 50%;
     text-align: center;
+    background-size: cover;
 }
 .btn-make-contact {
     width: 200px;
