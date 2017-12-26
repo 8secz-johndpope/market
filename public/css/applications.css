@@ -335,6 +335,7 @@ a.module-header-link {
     display: block;
     border-radius: 50%;
     border: 1px solid;
+    margin: auto;
 }
 .icon:before {
     font-size: 34px;
