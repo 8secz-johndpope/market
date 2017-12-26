@@ -13,9 +13,7 @@ use App\Model\Advert;
 @endsection
 
 @section('next-search')
-    <div class="search-alert-div hidden-xs">
-        <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
-    </div>
+    
 @endsection
 
 @section('content')
@@ -190,6 +188,11 @@ use App\Model\Advert;
         @php
             $i=0;
         @endphp
+        <div class="listing-max-pro container-set-alarm">
+            <div class="search-alert-div">
+                <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
+            </div>
+        </div>
         @foreach($products as $product)
         @if($i == 10)
         <div class="listing-max-pro container-emailme">
@@ -355,9 +358,7 @@ use App\Model\Advert;
         $i = $i + 1;
     @endphp
     @endforeach
-    <div class="listing-max-pro container-set-alarm">
-        
-    </div>
+    
     <div class="listing-max-pro container-emailme">
         <div class="container-emailme-header text-center">
             <h3>Let Us Help With Your Search</h3>
