@@ -194,7 +194,7 @@ use App\Model\Advert;
         @if($i == 10)
         <div class="listing-max-pro container-emailme">
             <div class="container-emailme-header text-center">
-                <h4>Let Us Help With Your Search</h4>
+                <h3>Let Us Help With Your Search</h3>
             </div>
             <div class="container-emailme-form text-center">
                 <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search suck less.</p>
@@ -357,7 +357,7 @@ use App\Model\Advert;
     @endforeach
     <div class="listing-max-pro container-emailme">
         <div class="container-emailme-header text-center">
-            <h4>Let Us Help With Your Search</h4>
+            <h3>Let Us Help With Your Search</h3>
         </div>
         <div class="container-emailme-form text-center">
             <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search suck less.</p>
