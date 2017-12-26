@@ -273,9 +273,6 @@
                                             <a class="nav-link nav-color" href="/user/manage/orders"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;Orders</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/user/manage/messages"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Messages</a>
-                                        </li>
-                                        <li>
                                             <a class="nav-link nav-color" href="/business/manage/details"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;My Details</a>
                                         </li>
                                         <li>
