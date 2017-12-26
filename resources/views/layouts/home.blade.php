@@ -270,13 +270,13 @@
                                     </div>
                                     <ul>
                                         <li>
-                                            <a class="nav-link nav-color" href="/user/manage/messages"><span class="fa fa-building"></span> &nbsp;&nbsp;Messages</a>
+                                            <a class="nav-link nav-color" href="/user/manage/messages"><span class="fa fa-commenting"></span> &nbsp;&nbsp;Messages</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-building"></span> &nbsp;&nbsp;Contacts</a>
+                                            <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-address-book"></span> &nbsp;&nbsp;Contacts</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="#"><span class="fa fa-building"></span> &nbsp;&nbsp;Profile</a>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-id-card"></span> &nbsp;&nbsp;Profile</a>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="/user/groups/create"><span class="fa fa-building"></span> &nbsp;&nbsp;New Group</a>
