@@ -188,8 +188,8 @@ use App\Model\Advert;
         @php
             $i=0;
         @endphp
-        <div class="listing-max-pro container-set-alarm">
-            <div class="search-alert-div">
+        <div class="listing-max-pro container-set-alarm clearfix">
+            <div class="search-alert-div text-center">
                 <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
             </div>
         </div>
