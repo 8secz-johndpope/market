@@ -306,7 +306,7 @@
     </nav>
 <div class="container-fluid background-body">
      <div class="row">
-            <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+            <div class="col-sm-10 col-md-12">
             <form class="navbar-form" action="/searchform" id="mainform">
                 @foreach($input as $key=>$value)
                     @if($key!=='q'&&$key!=='lat'&&$key!=='lng')
@@ -347,11 +347,6 @@
                     </div>
                 </div>
             </form>
-            </div>
-            <div class="col-md-2">
-                <div class="next-search">
-                    @yield('next-search')
-                </div>
             </div>
         </div>
     </div>
