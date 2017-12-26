@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <div class="row container-img-mcontact">
             <div class="col-sm-12">
-                <a class="btn">MAKE CONTACT</a>
+                <a class="btn btn-make-contact">MAKE CONTACT</a>
             </div>
         </div>
     </div>
