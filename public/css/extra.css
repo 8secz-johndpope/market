@@ -405,16 +405,7 @@ a.post-advert {
     padding: 6px !important;
     margin-top: 10px;
 }
-a.search-alert {
-    color: #fff;
-    border: 1px solid #ff9d2c;
-    padding: 10px 10px;
-    background-color: #000;
-    border-radius: 4px;
-    height: 42px;
-    text-align: center;
-    vertical-align: middle;
-}
+
 .ribbon {
     display: inline-block;
     padding: 12px 3px;
@@ -864,7 +855,19 @@ span.posted-text {
 .modal {
     text-align: center;
 }
-
+.glyphicon-bell {
+    color: #ff9d2c;
+}
+a.search-alert {
+    color: #000;
+    border: 1px solid #ff9d2c;
+    padding: 10px 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    height: 42px;
+    text-align: center;
+    vertical-align: middle;
+}
 @media screen and (min-width: 768px) {
     .modal:before {
         display: inline-block;
