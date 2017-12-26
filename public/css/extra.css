@@ -1777,6 +1777,11 @@ nav.navbar.navbar-inverse {
     background-position-y: 50%;
     text-align: center;
 }
+.btn-make-contact {
+    width: 200px;
+    background: #fff;
+    color: #000;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
