@@ -24,6 +24,7 @@ label.btn.btn-primary.active {
 }
 .background-header {
     background: url(/css/search-bg.jpg);
+    background-size: 20%;
 }
 .btn-group {
     margin-bottom: 1.6rem;
@@ -98,7 +99,7 @@ a.navbar-brand {
 
 
 .categories{
-  padding-top: 0px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 .categories .row{
