@@ -338,10 +338,17 @@ a.module-header-link {
     margin: auto;
     color: #555;
 }
+.action-item span {
+    color: #333;
+}
+
 .icon:hover{
     color: #fff;
     background: #ff9d2c;
     border: 1px solid #ff9d2c;
+}
+.icon-action:hover{
+    color: #fff;
 }
 .icon:before {
     font-size: 34px;
