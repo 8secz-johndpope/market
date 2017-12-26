@@ -1782,6 +1782,7 @@ nav.navbar.navbar-inverse {
     width: 200px;
     background: #fff;
     color: #000;
+    border: 1px solid #ff9d2c;
 }
 @media (max-width: 1500px) {
     h4.product-title {
