@@ -39,7 +39,9 @@ span.red-text {
 .listing-max-pro:nth-child(1) {
     animation-delay: .05s;
 }
-
+.nav-link .glyphicon-bell {
+    color: #333;
+}
 .listing-max-pro:nth-last-child(2) {
     border-bottom: 1px solid #c0c0c0;
 }
