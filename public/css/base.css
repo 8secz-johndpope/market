@@ -23,7 +23,7 @@ label.btn.btn-primary.active {
     color: #fff;
 }
 .background-header {
-    background-color: #f5f5f5;
+    background: url(/css/search-bg.jpg);
 }
 .btn-group {
     margin-bottom: 1.6rem;
