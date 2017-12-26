@@ -197,7 +197,7 @@ use App\Model\Advert;
                 <h3>Let Us Help With Your Search</h3>
             </div>
             <div class="container-emailme-form text-center">
-                <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search suck less.</p>
+                <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search stress free.</p>
                 <div class="row">
                     <div class="col-sm-offset-2 col-sm-8">
                         <form action="" id="sendme-search">
@@ -361,7 +361,7 @@ use App\Model\Advert;
             <h3>Let Us Help With Your Search</h3>
         </div>
         <div class="container-emailme-form text-center">
-            <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search suck less.</p>
+            <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search stress free.</p>
             <div class="row">
                 <div class="col-sm-offset-2 col-sm-8">
                     <form action="" id="sendme-search">
