@@ -21,7 +21,7 @@
 <div class="body background-body">
     <div class="container-fluid">
         <div class="row container-img-mcontact">
-            <div class="col-sm-12">
+            <div class="col-sm-offset-4 col-sm-4">
                 <a class="btn">MAKE CONTACT</a>
             </div>
         </div>
