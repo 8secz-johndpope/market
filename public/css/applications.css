@@ -320,3 +320,6 @@ a.module-header-link {
     height: 95px;
     width: 95px;
 }
+.image-profile, .container-welcome {
+    display: table-cell;
+}
