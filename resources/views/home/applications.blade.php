@@ -311,7 +311,7 @@
                                                 <div class="action-item">
                                                     <a class="">
                                                         <span class="icon icon-request-credit fa fa-money">
-                                                            <span class="icon-action fa fa-share"></span>
+                                                            <span class="icon-action fa fa-reply"></span>
                                                         </span>
                                                         <span>Request Credit</span>
                                                     </a>

@@ -347,3 +347,8 @@ a.module-header-link {
 .action-item {
     text-align: center;
 }
+.icon-action:before {
+    position: absolute;
+    top: 7px;
+    left: 30px;
+}
