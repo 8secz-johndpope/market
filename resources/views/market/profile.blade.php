@@ -19,12 +19,14 @@
 
 @section('content')
 <div class="body background-body">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row container-img-mcontact">
             <div class="col-sm-12">
                 <a class="btn">MAKE CONTACT</a>
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="row">
             <div class="col-sm-9">
                 <div class="products">
