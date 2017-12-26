@@ -995,7 +995,7 @@ class HomeController extends BaseController
     public function motors(Request $request)
     {
         $user = Auth::user();
-        return view('home.applications',['jobs'=>$user->motors,'user'=>$user]);
+        return view('home.applications',['motors'=>$user->motors,'user'=>$user]);
     }
     public function view_applications(Request $request,$id)
     {
