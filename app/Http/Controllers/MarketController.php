@@ -1506,7 +1506,7 @@ class MarketController extends BaseController
         {
             $page=100;
         }
-        $pagesize = 50;
+        $pagesize = 25;
         $sort = [
             [
                 "created_at"=> ["order"=> "desc"]
