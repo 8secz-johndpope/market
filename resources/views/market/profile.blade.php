@@ -25,6 +25,10 @@
                 <a class="btn btn-make-contact">MAKE CONTACT</a>
             </div>
         </div>
+        <div class="row container-info">
+            <div class="col-sm-12">
+            </div>
+        </div>
     </div>
     <div class="container">
         <div class="row">
