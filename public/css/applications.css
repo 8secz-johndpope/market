@@ -316,3 +316,7 @@ a.module-header-link {
 .welcome-msg {
     margin-top: 0;
 }
+.circle {
+    height: 95px;
+    width: 95px;
+}
