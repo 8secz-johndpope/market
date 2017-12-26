@@ -270,7 +270,7 @@
                                     </div>
                                     <ul>
                                         <li>
-                                            <a class="nav-link nav-color" href="#"><span class="fa fa-building"></span> &nbsp;&nbsp;Messages</a>
+                                            <a class="nav-link nav-color" href="/user/manage/messages"><span class="fa fa-building"></span> &nbsp;&nbsp;Messages</a>
                                         </li>
                                     </ul>
                                 </div>
