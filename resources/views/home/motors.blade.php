@@ -96,7 +96,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="col-info-candidates">
-                                                <h4>Candidates</h4>
+                                                <h4>Reply</h4>
                                                 <ul class="list-group">
                                                     <li class="list-group-item">New <span class="quantity">1</span></li>
                                                     <li class="list-group-item">Reviewed <span class="quantity">0</span></li>
@@ -172,7 +172,6 @@
                                         <th>Location</th>
                                         <th>Status</th>
                                         <th>Views</th>
-                                        <th>Applications</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -184,14 +183,6 @@
                                         <td>{{$motor->param('location_name')}}</td>
                                         <td>{{$motor->status == 1 ? 'Live': 'Inactive' }}</td>
                                         <td>{{$motor->param('views')}}</td>
-                                        <td>
-                                            @if(count($motor->applications) > 0)
-                                            <a href="/job/manage/applications/{{$motor->id}}">
-                                            {{count($motor->applications)}} <span class="fa fa-file-text-o"></span></a>
-                                            @else
-                                                0 <span class="fa fa-file-text-o"></span>
-                                            @endif
-                                        </td>
                                         <td><a href="#">Expire</td>
                                     </tr>
                                     @endforeach
