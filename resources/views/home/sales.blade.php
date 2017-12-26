@@ -85,7 +85,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="col-info-jobs">
-                                                <h4>Motors</h4>
+                                                <h4>Adverts</h4>
                                                 <ul class="list-group">
                                                     <li class="list-group-item">Live <span class="quantity">{{count($motors)}}</span></li>
                                                     <li class="list-group-item">Inactive <span class="quantity">0</span></li>
@@ -111,7 +111,7 @@
                         <div class="tab-pane fade in" id="tab-jobs">
                             <div class="row">
                                 <div class="col-sm-12 container-num-jobs">
-                                    <h4>Your motors <span class="num-jobs-title">{{count($motors)}}</span></h4>
+                                    <h4>Your sales <span class="num-jobs-title">{{count($motors)}}</span></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -147,7 +147,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="jobs-selected">
-                                        <strong>Motors selected: </strong><span class="num-jobs">0</span>
+                                        <strong>Sales selected: </strong><span class="num-jobs">0</span>
                                     </div>
                                     <div class="btns-actions">
                                         <a class="btn btn-disable">Upgrade</a>
@@ -231,23 +231,46 @@
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th>Title</th>
-                                                <th>Views</th>
-                                                <th>Listing Views</th>
-                                                <th>Number of replies</th>
-                                                <th>Times bumped up</th>
+                                                <th>Job</th>
+                                                <th>Name</th>
+                                                <th>Phone</th>
+                                                <th>Status</th>
+                                                <th>Date Applied</th>
+                                                <th class="cell-cover">Cover Letter</th>
+                                                <th>Cvs</th>
+                                                <th>Profile</th>
+                                                <th>Reply</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach($motors as $motor)
+                                                @foreach($motor->applications as $application)
                                                 <tr>
                                                     <td><input type="checkbox" ></td>
                                                     <td>{{$motor->param('title')}}</td>
-                                                    <td>{{$motor->param('views')}}</td>
-                                                    <td>{{$motor->param('list_views')}}</td>
-                                                    <td>{{$motor->replies}}</td>
-                                                    <td>{{$motor->param('bumped')}}</td> 
+                                                    <td>{{$application->user->name}}</td>
+                                                    <td>{{$application->user->phone}}</td>
+                                                    <td>New</td>
+                                                    <td>{{$application->created_at->format('d M Y')}}</td>
+                                                    <td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td> 
+                                                    <td>
+                                                        @if($application->cv)                      
+                                                        <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">
+                                                            View/Download
+                                                        </a> 
+                                                        @else 
+                                                            <span>No Cv</span> 
+                                                        @endif
+                                                    </td>
+                                                    <td>
+                                                        <a href="/job/profile/view/{{$application->user_id}}">View Profile
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a>
+                                                    </td>
                                                 </tr>
+                                                @endforeach
                                             @endforeach
                                         </tbody>
                                     </table>
