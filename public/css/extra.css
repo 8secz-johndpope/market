@@ -1831,9 +1831,6 @@ nav.navbar.navbar-inverse {
         min-width: 150px;
         max-width: 200px;
     }
-    .open>.dropdown-menu.options-user {
-        max-width: 680px;
-    }
 }
 @media (max-width: 900px) {
     h4.product-title {
