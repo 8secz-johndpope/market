@@ -27,7 +27,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                         <li><a data-toggle="tab" href="#tab-jobs">Adverts</a></li>
-                        <li><a data-toggle="tab" href="#tab-candidates">Stats</a></li>
+                        <li><a data-toggle="tab" href="#tab-candidates">Reply</a></li>
                         <li><a data-toggle="tab" href="#tab-share">Share Credit</a></li>
                     </ul>
                     <div class="tab-content">
@@ -37,13 +37,13 @@
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <a class="btn btn-action form-control">Unread Views</a>
+                                                <a class="btn btn-action form-control">Unread Response</a>
                                             </div>
                                             <div class="col-sm-4">
                                                 <a class="btn btn-action form-control">Activity</a>
                                             </div>
                                             <div class="col-sm-4">
-                                                <a class="btn btn-action form-control">Interviews</a>
+                                                <a class="btn btn-action form-control">Appointments</a>
                                             </div>
                                         </div>
                                     </div>
