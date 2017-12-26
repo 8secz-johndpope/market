@@ -53,7 +53,7 @@
                                 <div class="col-sm-9 container-overview">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <h4>Unread Candidates</h4>
+                                            <h4>Unread Response</h4>
                                             <hr>
                                             <div class="container-candidates">
                                                 <ul class="list-group">
@@ -76,7 +76,7 @@
                                             </div>
                                             
                                             <div class="container-activity">
-                                                <h4>Interviews</h4>
+                                                <h4>Appointments</h4>
                                             </div>
                                         </div>
                                     </div>
