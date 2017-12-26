@@ -276,10 +276,13 @@
                                             <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-building"></span> &nbsp;&nbsp;Contacts</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-building"></span> &nbsp;&nbsp;Profile</a>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-building"></span> &nbsp;&nbsp;Profile</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-building"></span> &nbsp;&nbsp;New Group</a>
+                                            <a class="nav-link nav-color" href="/user/groups/create"><span class="fa fa-building"></span> &nbsp;&nbsp;New Group</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-building"></span> &nbsp;&nbsp;New Broadcast</a>
                                         </li>
                                     </ul>
                                 </div>
