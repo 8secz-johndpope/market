@@ -351,6 +351,31 @@
                                 @endif
                                 <div class="list-menu-common">
                                     <div class="title-list">
+                                        <span class="nav-link nav-color">Chat Centre</span>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/user/manage/messages"><span class="fa fa-commenting"></span> &nbsp;&nbsp;Messages</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-address-book"></span> &nbsp;&nbsp;Contacts</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-user-circle"></span> &nbsp;&nbsp;Profile</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/user/groups/create"><span class="fa fa-users"></span> &nbsp;&nbsp;New Group</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-reply-all"></span> &nbsp;&nbsp;New Broadcast</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-cog"></span> &nbsp;&nbsp;Settings</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="list-menu-common">
+                                    <div class="title-list">
                                         <span class="nav-link nav-color">Our Offers</span>
                                     </div>
                                     <ul>
