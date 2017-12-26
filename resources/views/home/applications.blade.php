@@ -297,11 +297,21 @@
                                                     <h3 class="welcome-msg">Hi, {{$user->name}}</h3>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-4">
-                                                <a class="btn btn-action form-control">Request Credit</a>
+                                            <div class=" col-sm-2 col-sm-3">
+                                                <div class="action-item">
+                                                    <a class="">
+                                                        <span class="icon icon-send-credit"></span>
+                                                        <span>Send Credit</span>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-4">
-                                                <a class="btn btn-action form-control">Send Credit</a>
+                                            <div class="col-sm-3">
+                                                <div class="action-item">
+                                                    <a class="">
+                                                        <span class="icon icon-request-credit"></span>
+                                                        <span>Request Credit</span>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
