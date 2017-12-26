@@ -324,3 +324,6 @@ a.module-header-link {
     display: table-cell;
     vertical-align: middle;
 }
+.container-welcome h3{
+    margin-bottom: 0;
+}
