@@ -22,7 +22,9 @@ label.btn.btn-primary.active {
     background: #ff9d2c;
     color: #fff;
 }
-.background-header{}
+.background-header {
+    background-color: #f5f5f5;
+}
 .btn-group {
     margin-bottom: 1.6rem;
 }
