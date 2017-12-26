@@ -191,7 +191,7 @@ use App\Model\Advert;
             $i=0;
         @endphp
         @foreach($products as $product)
-        @if($i == 9)
+        @if($i == 10)
         <div class="listing-max-pro container-emailme">
             <div class="container-emailme-header text-center">
                 <h4>Let Us Help With Your Search</h4>
