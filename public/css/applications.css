@@ -346,7 +346,7 @@ a.module-header-link {
     background: #ff9d2c;
     border: 1px solid #ff9d2c;
 }
-.icon-action:hover{
+.icon:hover .icon-action{
     color: #fff;
 }
 .icon:before {
