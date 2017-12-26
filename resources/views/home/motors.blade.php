@@ -57,12 +57,12 @@
                                             <hr>
                                             <div class="container-candidates">
                                                 <ul class="list-group">
-                                                    @foreach($jobs as $job)
-                                                    @if(count($job->applications) > 0)
+                                                    @foreach($motors as $motor)
+                                                    @if(count($motor->applications) > 0)
                                                         <li class="list-group-item">
                                                             <div class="container-job-title">
-                                                                <p><strong>{{$job->param('title')}}</strong> - <span class="job-location">{{$job->param('location_name')}}</span></p>
-                                                                <p class="blue-color"><a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} Unread Candidates</a></p>
+                                                                <p><strong>{{$motor->param('title')}}</strong> - <span class="job-location">{{$motor->param('location_name')}}</span></p>
+                                                                <p class="blue-color"><a href="/job/manage/applications/{{$motor->id}}">{{count($motor->applications)}} Unread Candidates</a></p>
                                                             </div>
                                                         </li>
                                                     @endif
@@ -87,7 +87,7 @@
                                             <div class="col-info-jobs">
                                                 <h4>Jobs</h4>
                                                 <ul class="list-group">
-                                                    <li class="list-group-item">Live <span class="quantity">{{count($jobs)}}</span></li>
+                                                    <li class="list-group-item">Live <span class="quantity">{{count($motors)}}</span></li>
                                                     <li class="list-group-item">Inactive <span class="quantity">0</span></li>
                                                 </ul>
                                             </div>
@@ -111,7 +111,7 @@
                         <div class="tab-pane fade in" id="tab-jobs">
                             <div class="row">
                                 <div class="col-sm-12 container-num-jobs">
-                                    <h4>Your jobs <span class="num-jobs-title">{{count($jobs)}}</span></h4>
+                                    <h4>Your jobs <span class="num-jobs-title">{{count($motors)}}</span></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -177,17 +177,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($jobs as $job)
+                                    @foreach($motors as $motor)
                                     <tr>
                                         <td><input type="checkbox" name="select-job[]" class="checkboxs-jobs"></td>
-                                        <td><a href="{{$job->url()}}">{{$job->param('title')}}</a></td>
-                                        <td>{{$job->param('location_name')}}</td>
-                                        <td>{{$job->status == 1 ? 'Live': 'Inactive' }}</td>
-                                        <td>{{$job->param('views')}}</td>
+                                        <td><a href="{{$motor->url()}}">{{$motor->param('title')}}</a></td>
+                                        <td>{{$motor->param('location_name')}}</td>
+                                        <td>{{$motor->status == 1 ? 'Live': 'Inactive' }}</td>
+                                        <td>{{$motor->param('views')}}</td>
                                         <td>
-                                            @if(count($job->applications) > 0)
-                                            <a href="/job/manage/applications/{{$job->id}}">
-                                            {{count($job->applications)}} <span class="fa fa-file-text-o"></span></a>
+                                            @if(count($motor->applications) > 0)
+                                            <a href="/job/manage/applications/{{$motor->id}}">
+                                            {{count($motor->applications)}} <span class="fa fa-file-text-o"></span></a>
                                             @else
                                                 0 <span class="fa fa-file-text-o"></span>
                                             @endif
@@ -250,11 +250,11 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($jobs as $job)
-                                                @foreach($job->applications as $application)
+                                            @foreach($motors as $motor)
+                                                @foreach($motor->applications as $application)
                                                 <tr>
                                                     <td><input type="checkbox" ></td>
-                                                    <td>{{$job->param('title')}}</td>
+                                                    <td>{{$motor->param('title')}}</td>
                                                     <td>{{$application->user->name}}</td>
                                                     <td>{{$application->user->phone}}</td>
                                                     <td>New</td>
