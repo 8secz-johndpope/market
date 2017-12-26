@@ -272,6 +272,9 @@
                                         <li>
                                             <a class="nav-link nav-color" href="/user/manage/messages"><span class="fa fa-building"></span> &nbsp;&nbsp;Messages</a>
                                         </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-building"></span> &nbsp;&nbsp;Contacts</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="list-menu-common">
