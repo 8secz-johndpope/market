@@ -284,6 +284,9 @@
                                         <li>
                                             <a class="nav-link nav-color" href="#"><span class="fa fa-building"></span> &nbsp;&nbsp;New Broadcast</a>
                                         </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-building"></span> &nbsp;&nbsp;Settings</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="list-menu-common">
