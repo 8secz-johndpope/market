@@ -336,3 +336,10 @@ a.module-header-link {
     border-radius: 50%;
     border: 1px solid;
 }
+.icon:before {
+    font-size: 34px;
+    /* padding: 15px; */
+    position: absolute;
+    top: 18px;
+    left: 17px;
+}
