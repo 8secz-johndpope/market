@@ -172,6 +172,7 @@
                                         <th>Location</th>
                                         <th>Status</th>
                                         <th>Views</th>
+                                        <th>Replies</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -183,6 +184,7 @@
                                         <td>{{$motor->param('location_name')}}</td>
                                         <td>{{$motor->status == 1 ? 'Live': 'Inactive' }}</td>
                                         <td>{{$motor->param('views')}}</td>
+                                        <td>{{$motor->replies}}</td>
                                         <td><a href="#">Expire</td>
                                     </tr>
                                     @endforeach
