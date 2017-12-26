@@ -246,7 +246,12 @@
                                                     <td>{{$motor->param('views')}}</td>
                                                     <td>{{$motor->param('list_views')}}</td>
                                                     <td>{{$motor->replies}}</td>
-                                                    <td>{{$motor->param('bumped')}}</td> 
+                                                    <td>@if($motor->has_param('bumped'))
+                                                        {{$motor->param('bumped')}}
+                                                        @else
+                                                            0
+                                                        @endif
+                                                    </td> 
                                                 </tr>
                                             @endforeach
                                         </tbody>
