@@ -1775,6 +1775,7 @@ nav.navbar.navbar-inverse {
     padding: 50px 0;
     background: url(/css/green.jpg);
     background-position-y: 50%;
+    text-align: center;
 }
 @media (max-width: 1500px) {
     h4.product-title {
