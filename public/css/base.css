@@ -118,9 +118,9 @@ a.navbar-brand {
   background-position-x: 10px;
 }
 .btn-primary{
-  background-color: #000;
+  background-color: #ff9d2c;
   /*border: 0px;*/
-  border-color: #000;
+  border-color: #ff9d2c;
   height: 42px;
 }
 .main-search-div input, .main-search-div select{

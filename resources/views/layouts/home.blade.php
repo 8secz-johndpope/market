@@ -304,7 +304,7 @@
             </div>
         </div>
     </nav>
-<div class="container-fluid">
+<div class="container">
      <div class="row">
             <div class="col-sm-10 col-md-12">
             <form class="navbar-form" action="/searchform" id="mainform">
