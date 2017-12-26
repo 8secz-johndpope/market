@@ -300,7 +300,7 @@
                                             <div class=" col-sm-2 col-sm-3">
                                                 <div class="action-item">
                                                     <a class="">
-                                                        <span class="icon icon-send-credit"></span>
+                                                        <span class="icon icon-send-credit fa fa-money"></span>
                                                         <span>Send Credit</span>
                                                     </a>
                                                 </div>
