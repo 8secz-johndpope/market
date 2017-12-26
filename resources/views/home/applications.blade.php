@@ -300,7 +300,9 @@
                                             <div class=" col-sm-offset-2 col-sm-3">
                                                 <div class="action-item">
                                                     <a class="">
-                                                        <span class="icon icon-send-credit fa fa-money fa-share"></span>
+                                                        <span class="icon icon-send-credit fa fa-money">
+                                                             <span class="icon-action fa fa-share"></span>
+                                                        </span>
                                                         <span>Send Credit</span>
                                                     </a>
                                                 </div>
@@ -308,7 +310,9 @@
                                             <div class="col-sm-3">
                                                 <div class="action-item">
                                                     <a class="">
-                                                        <span class="icon icon-request-credit fa fa-money fa-reply"></span>
+                                                        <span class="icon icon-request-credit fa fa-money fa-reply">
+                                                            <span class="icon-action fa fa-share"></span>
+                                                        </span>
                                                         <span>Request Credit</span>
                                                     </a>
                                                 </div>
