@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <ul class="nav nav-tabs top-main-nav">
+            <!-- <ul class="nav nav-tabs top-main-nav">
 
                 <li class="nav-item active">
                     <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
@@ -51,7 +51,7 @@
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
                 </li>
-            </ul>
+            </ul>-->
             <div class="row">
                 <div class="col-sm-8">
 
@@ -264,7 +264,9 @@
                                             </div>
                                         </div>
 
-                                            <table class="table"><tr><td><span class="red-text bold-text">Deleted</span></td><td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Add Images</a></td><td></td><td><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;Repost</a></td></tr></table>
+                                            <table class="table">
+                                                <tr><td><span class="red-text bold-text">Deleted</span></td>
+                                                    <td><a class="nav-color assign-images" data-id="{{$advert->id}}" ><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp; Add Images</a></td><td></td><td><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;Repost</a></td></tr></table>
 
                                     </td>
                                         <td colspan="5"><p>You need to repost advert to promote the advert. </p><a class="nav-color" href="/user/advert/repost/{{$advert->id}}"><span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp; Repost</a></td>
