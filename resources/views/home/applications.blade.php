@@ -297,7 +297,7 @@
                                                     <h3 class="welcome-msg">Hi, {{$user->name}}</h3>
                                                 </div>
                                             </div>
-                                            <div class=" col-sm-offset-2 col-sm-3">
+                                            <div class=" col-sm-offset-4 col-sm-2">
                                                 <div class="action-item">
                                                     <a class="">
                                                         <span class="icon icon-send-credit fa fa-money">
@@ -307,7 +307,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-2">
                                                 <div class="action-item">
                                                     <a class="">
                                                         <span class="icon icon-request-credit fa fa-money">
