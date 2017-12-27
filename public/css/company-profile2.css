@@ -34,6 +34,9 @@
     float: left;
     clear: both
 }
+.grid_1_1 img{
+	width: 100%;
+}
 .logo-block {
     text-align: right;
     width: 100%;
