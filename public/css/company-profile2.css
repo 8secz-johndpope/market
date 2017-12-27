@@ -301,3 +301,20 @@
     white-space: normal;
     zoom: 1;
 }
+.social.social-twitter .social-container .social-body, .social.social-facebook .social-container .social-body, .social.social-instagram .social-container .social-body, .social.social-linkedin .social-container .social-body, .social.social-klout .social-container .social-body {
+    padding: 10px 0 20px;
+}
+.social.social-twitter .social-container .social-body, .social.social-twitter .social-container .social-footer, .social.social-facebook .social-container .social-body, .social.social-facebook .social-container .social-footer, .social.social-instagram .social-container .social-body, .social.social-instagram .social-container .social-footer, .social.social-linkedin .social-container .social-body, .social.social-linkedin .social-container .social-footer, .social.social-klout .social-container .social-body, .social.social-klout .social-container .social-footer {
+    max-width: 300px;
+    word-wrap: break-word!important;
+    -ms-word-wrap: break-word;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    white-space: normal;
+    zoom: 1;
+    font-size: 16px;
+    line-height: 1.2em;
+}
