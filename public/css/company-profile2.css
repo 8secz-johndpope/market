@@ -416,3 +416,14 @@
     padding: 0;
     list-style: none;
 }
+.dropdown-wrapper, .dropdown-more {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    cursor: pointer;
+}
+.dropdown-wrapper>a, .dropdown-more>a {
+    display: block;
+    color: #333;
+    outline: 0;
+}
