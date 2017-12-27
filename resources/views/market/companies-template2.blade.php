@@ -14,7 +14,11 @@
 	<div class="container">
 		<div class="row">
 			<!-- div info-content -->
-			
+			<div class="col-sm-8">
+				
+			</div>
+			<div class="col-sm-4">
+			</div>
 		</div>
 	</div>
 </div>
