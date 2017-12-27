@@ -195,6 +195,22 @@
 						<img alt="“The things that we do here really impact people’s day-to-day lives and we’re proud of that.” " class="quote-bottom" src="https://www.themuse.com/static/images/quote_green_bottom.png?v=b075c27b5205eefaca5afe5c7dab5a4ddd9f8e2ec3d9489a6fe048d8856d0311">
 					</div>
 				</div>
+				<div data-widget-id="2276" class="widget  widget-col-2" data-muse-widget-name="quote_yellow">
+					<div class="quote quote-yellow">
+						<div class="quote-yellow-top">&nbsp;</div>
+						<div class="quote-yellow-side">&nbsp;</div>
+						<div class="quote-body">
+							“I downloaded Uber and it was a magical experience—you press a button, a town car rolls up, and there’s a amazing driver who opens the door for you with gum and candy inside!”
+							<div class="quote-source">
+								<div class="quote-author">-Swathy
+								</div>
+								<div class="quote-author-position">Operations &amp; Logistics Manager</div>
+							</div>
+						</div>
+						<div class="quote-yellow-side">&nbsp;</div>
+							<img alt="“I downloaded Uber and it was a magical experience—you press a button, a town car rolls up, and there’s a amazing driver who opens the door for you with gum and candy inside!”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_yellow_bottom.png?v=5a8a4600d998f7e1d0553d8062fda1c17cb42d2914e76ac96acfb8e679b683e9">
+						</div>
+					</div>
 			</div>
 		</div>
 	</div>
