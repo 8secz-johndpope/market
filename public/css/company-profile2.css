@@ -458,6 +458,13 @@
     transition: opacity .2s;
     list-style: none;
 }
+.profiles-subnav li>a {
+    display: block;
+    font-family: proxima,Helvetica,sans-serif;
+    font-size: 15px;
+    color: #333;
+    padding: 15px;
+}
 .subnav-dropdown li {
     -webkit-transition: background 200ms ease-out;
     -moz-transition: background 200ms ease-out;
