@@ -7,7 +7,12 @@
 
     <p>This is appended to the master sidebar.</p>
 @endsection
-
+@section('second-navbar')
+<div class="row">
+	<div class="col-sm-12">
+	</div>	
+</div>
+@endsection
 @section('content')
  <link href="{{asset('/css/company-profile2.css?q=874')}}" rel="stylesheet">
  <link href="{{ asset('/css/css/font-awesome.min.css?q=874') }}" rel="stylesheet">
