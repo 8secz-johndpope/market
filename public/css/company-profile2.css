@@ -25,6 +25,10 @@
     max-width: 650px;
     max-height: 480px;
 }
+.grid_1_1 {
+    max-width: 320px;
+    max-height: 235px;
+}
 .logo-block {
     text-align: right;
     width: 100%;
