@@ -1800,8 +1800,8 @@ nav.navbar.navbar-inverse {
     border-bottom: 1px solid #ddd;
 }
 .image-advertiser {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 @media (max-width: 1500px) {
     h4.product-title {
