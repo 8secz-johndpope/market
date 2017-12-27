@@ -34,6 +34,9 @@
                 </div>
             </div>
             <div class="col-sm-6">
+                <div class="container-info-advertiser">
+                    <p><strong>{{$advertiser->name}}</strong></p>
+                </div>
             </div>
         </div>
     </div>
