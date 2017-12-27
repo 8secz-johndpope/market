@@ -58,7 +58,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 back">
-                <a href="">< Go back</a>
+                <a href="{{url()->previous()}}">< Go back</a>
             </div>
         </div>
         <div class="row">
