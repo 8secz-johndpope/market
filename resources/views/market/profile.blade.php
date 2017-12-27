@@ -36,6 +36,9 @@
             <div class="col-sm-6">
                 <div class="container-info-advertiser">
                     <p><strong>{{$advertiser->name}}</strong></p>
+                    <address>
+                        {{$advertiser->address->city}}
+                    </address> 
                 </div>
             </div>
         </div>
