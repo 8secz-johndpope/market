@@ -115,13 +115,7 @@
 		<div class="row">
 			<div class="col-sm-4">
 				<div data-widget-id="2267" class="widget insight video grid_1_2 " data-muse-widget-name="video">
-					<a href="http://vimeo.com/53834658">
-						<div class="playhead-overlay"><img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video" /></div>
-						<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2267.jpg?v=None" alt="video thumbnail image" />
-						<div class="text-bottom">
-						<div class="video-text">Growing Globally </div>
-						</div>
-					</a>
+					<iframe src="//player.vimeo.com/video/53834658?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="320" height="440" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 				</div>
 				<div data-widget-id="2268" class="widget insight grid_1 " data-muse-widget-name="insight">
 					<div class="insight-image">
