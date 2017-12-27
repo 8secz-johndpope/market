@@ -10,6 +10,42 @@
 @section('second-navbar')
 <div class="row subnav-block top-nav fixed">
 	<div class="col-sm-12">
+		<ul class="profiles-subnav">
+			<li class="dropdown-wrapper active">
+				<a href="/companies/uber">About</a>
+			</li>
+			<li class="dropdown-wrapper ">
+				<a class="dropdown-link" href="/companies/uber/office">Offices <i class="fa fa-caret-down"></i></a>
+				<ul class="subnav-dropdown">
+					<li class="">
+						<a href="/companies/uber/office/uber">San Francisco, CA</a>
+					</li>
+					<li class="">
+						<a href="/companies/uber/office/london">London, United Kingdom</a>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown-wrapper ">
+				<a class="subnav-people dropdown-link" href="#">People <i class="fa fa-caret-down"></i></a>
+				<div class="people-dropdown" style="width: 110%">
+					<ul class="subnav-dropdown">
+						<li class=" people-list">
+							<a href="/companies/uber/people/brian">
+							Meet Brian</a>
+						</li>
+						<li class=" people-list">
+							<a href="/companies/uber/people/swathy">
+							Meet Swathy</a>
+						</li>
+						<li class=" people-list">
+							<a href="/companies/uber/people/jess">
+							Meet Jess</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="subnav-jobs"><a href="/jobs/c-uber-jobs">Jobs</a></li>
+		</ul>
 	</div>	
 </div>
 @endsection
