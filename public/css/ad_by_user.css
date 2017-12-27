@@ -57,3 +57,6 @@
 .container-info-advertiser address {
     margin-bottom: 0;
 }
+.advertiser-name {
+    font-size: 16px;
+}
