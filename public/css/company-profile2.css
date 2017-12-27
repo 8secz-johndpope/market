@@ -389,3 +389,23 @@
 .company-wrapper {
     padding-left: 70px;
 }
+.subnav-block {
+    -webkit-transition: color 200ms ease-out;
+    -moz-transition: color 200ms ease-out;
+    -ms-transition: color 200ms ease-out;
+    -o-transition: color 200ms ease-out;
+    transition: color 200ms ease-out;
+    width: 100%;
+    display: block;
+    text-align: center;
+    z-index: 100;
+}
+.subnav-block.fixed {
+    top: 50px;
+    position: fixed;
+}
+.subnav-block.top-nav {
+    background-color: #fff;
+    border-bottom: 5px solid #ff9d2c;
+    height: 50px;
+}
