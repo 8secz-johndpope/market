@@ -28,14 +28,14 @@
         <div class="row container-info">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-3">
                         <div class="container-img-advertiser">
                             <div class="img-advertiser">
                                 <img class="circle image-advertiser" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advertiser->image}}"> 
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-9">
                         <div class="container-info-advertiser">
                             <p><strong>{{$advertiser->name}}</strong></p>
                             <address>
