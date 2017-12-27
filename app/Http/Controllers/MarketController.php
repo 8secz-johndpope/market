@@ -2107,4 +2107,10 @@ class MarketController extends BaseController
         $user = User::find($id);
         return view('market.make-contact', ['user' => $user]);
     }
+    public function companies(Request $request, $id){
+        $view = 'market.companies-template1'
+        if($id === 'uber')
+            $view = 'market.companies-template2'
+        return view($view);
+    }
 }
