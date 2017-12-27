@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         @endif
-                        <div class="info">
+                        <div class="info{{$advert->category->can_apply() ? ' margin-left' : ''}}">
                             <div class="favor">
                                 @if (in_array($advert->id,$sids))
                                     <span class="heart favroite-icon" data-id="$advert->id"></span>
