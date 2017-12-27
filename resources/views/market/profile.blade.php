@@ -26,26 +26,30 @@
             </div>
         </div>
         <div class="row container-info">
-            <div class="col-sm-6">
-                <div class="container-img-advertiser">
-                    <div class="img-advertiser">
-                        <img class="circle image-advertiser" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advertiser->image}}"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="container-img-advertiser">
+                            <div class="img-advertiser">
+                                <img class="circle image-advertiser" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advertiser->image}}"> 
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="container-info-advertiser">
-                    <p><strong>{{$advertiser->name}}</strong></p>
-                    <address>
-                        {{$advertiser->address->city}}
-                    </address>
-                    <span>
-                        <span class="glyphicon glyphicon-earphone"></span>
-                        {{substr($advertiser->phone,0,5)}}XXXXXX
-                    </span>
-                    <p><a href="#">Send Message</a></p>
-                    <p><a href="#">Call</a></p>
-                    <p><a href="#">VideoCall</a></p> 
+                    <div class="col-sm-6">
+                        <div class="container-info-advertiser">
+                            <p><strong>{{$advertiser->name}}</strong></p>
+                            <address>
+                                {{$advertiser->address->city}}
+                            </address>
+                            <span>
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                {{substr($advertiser->phone,0,5)}}XXXXXX
+                            </span>
+                            <p><a href="#">Send Message</a></p>
+                            <p><a href="#">Call</a></p>
+                            <p><a href="#">VideoCall</a></p> 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
