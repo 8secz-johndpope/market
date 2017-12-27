@@ -166,6 +166,7 @@
 				<div data-widget-id="2271" class="widget insight video grid_1_2 " data-muse-widget-name="video">
 					<iframe src="//player.vimeo.com/video/53833676?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="320" height="440" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 				</div>
+			</div>
 			<div class="col-sm-4">
 				<div data-widget-id="2274" class="widget  widget-col-2" data-muse-widget-name="social_facebook">
 					<a href="https://www.facebook.com/uber" target="_blank">
