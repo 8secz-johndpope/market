@@ -283,3 +283,13 @@
     white-space: normal;
     zoom: 1;
 }
+.social {
+    display: table;
+    color: #fff;
+    padding-bottom: 10px;
+    font-size: 18px;
+    word-wrap: break-word!important;
+    -ms-word-wrap: break-word;
+    white-space: normal;
+    zoom: 1;
+}
