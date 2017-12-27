@@ -162,7 +162,7 @@
                         <div class="extra-options">
                             @if($advert->category->can_apply())
                             <div class="link-details">
-                                <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                                <a href="/p/{{$advert->category_id}}/{{$advert->id}}">> LEARN MORE ABOUT THIS ADVERTISER</a>
                             </div>
                             @else
                             <div class="make-offer">
