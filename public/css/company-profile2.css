@@ -210,3 +210,12 @@
     float: left;
     margin: 0 10px 0 0;
 }
+.insight .insight-image {
+    overflow: hidden;
+}
+.insight .insight-body {
+    padding: 20px;
+    border-left: 1px solid #efefef;
+    border-bottom: 2px solid #d7d7d7;
+    border-right: 1px solid #efefef;
+}
