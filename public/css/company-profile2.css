@@ -297,6 +297,10 @@
     background-image: url(/css/facebook_background.png);
     background-repeat: no-repeat;
 }
+.social.social-twitter {
+    background-image: url(/css/twitter_background.png?v=cbd2230…);
+    background-repeat: no-repeat;
+}
 .social .social-title {
     font-size: 21px;
     font-weight: 700;
