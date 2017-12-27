@@ -39,13 +39,13 @@
 			<div class="col-sm-offset-2 col-sm-10">
 				<div class="row">
 					<div class="col-sm-4">
-						<a class="btn">Send Message</a>
+						<a class="btn btn-default">Send Message</a>
 					</div>
 					<div class="col-sm-4">
-						<a class="btn">Call</a>
+						<a class="btn btn-default">Call</a>
 					</div>
 					<div class="col-sm-4">
-						<a class="btn">VideoCall</a>
+						<a class="btn btn-default">VideoCall</a>
 					</div>
 				</div>
 			</div>
