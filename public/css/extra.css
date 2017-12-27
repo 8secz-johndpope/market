@@ -1785,6 +1785,9 @@ nav.navbar.navbar-inverse {
     border: 1px solid #ff9d2c;
     font-size: 16px;
 }
+.img-advertiser {
+    float: right;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
