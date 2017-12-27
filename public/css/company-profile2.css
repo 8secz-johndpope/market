@@ -40,3 +40,7 @@
 .grid_2_2 img {
     width: 100%;
 }
+.metadata {
+    width: 100%;
+    float: right;
+}
