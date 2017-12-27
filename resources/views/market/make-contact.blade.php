@@ -22,6 +22,11 @@
 	<div class="row container-info-advertiser">
 		<!-- div info-content -->
 		<div class="col-sm-3">
+			<div class="container-img-advertiser">
+                <div class="img-advertiser">
+                    <img class="circle image-advertiser" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
+                </div>
+            </div>
 		</div>
 		<div class="col-sm-9">
 		</div>
