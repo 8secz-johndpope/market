@@ -23,6 +23,18 @@
 				<div class="logo-block">
 					<a href="/companies/uber"><img src="https://assets.themuse.com/uploaded/companies/61/small_logo.png?v=None" alt="Uber Careers"></a>
 				</div>
+				<div class="metadata">
+					<ul>
+						<li class="field_company_type">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<a href="/companies?company_industry=Travel%20and%20Hospitality">Travel and Hospitality</a>
+						</li>
+						<li class="field_company_size">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<a href="/companies/?company_size=Large Size">Large Size</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
