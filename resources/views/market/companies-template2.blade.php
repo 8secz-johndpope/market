@@ -128,6 +128,16 @@
 						<div class="insight-text">For Uber fans, the “White Unicorn” has become the stuff of San Francisco legends. The elusive white car—the only one in Uber’s all-black fleet—accomplishes Herculean feats, having even whisked one woman off her feet to a surprise engagement party. When not busy playing matchmaker, though, the Unicorn and its faithful driver, Sofian, can be found deftly battling rush-hour traffic on San Francisco’s winding streets, getting Uber users to their destinations.</div>
 					</div>
 				</div>
+				<div data-widget-id="2269" class="widget  " data-muse-widget-name="help_wanted_dynamic">
+					<a href="/jobs?company=Uber" target="_blank">
+						<div class="help-wanted">
+							<div class="help-wanted-title">We're Hiring</div>
+							<div class="help-wanted-job">Check out open jobs at Uber</div>
+							<div class="help-wanted-location"></div>
+							<div class="help-wanted-footer"></div>
+						</div>
+					</a>
+				</div>
 			</div>
 			<div class="col-sm-4">
 			</div>
