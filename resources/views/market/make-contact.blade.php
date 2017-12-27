@@ -32,6 +32,10 @@
 		</div>
 		<!-- end info-content -->
 	</div>
+	<div class="row container-buttons">
+		<div class="col-sm-12">
+		</div>
+	</div>
 </div>
 </div>
 @endsection
