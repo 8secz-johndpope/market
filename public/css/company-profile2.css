@@ -28,6 +28,11 @@
 .grid_1_1 {
     max-width: 320px;
     max-height: 235px;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    clear: both
 }
 .logo-block {
     text-align: right;
