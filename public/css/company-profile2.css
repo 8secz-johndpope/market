@@ -326,3 +326,16 @@
     font-size: 16px;
     line-height: 1.2em;
 }
+.quote {
+    font-family: proxima,Helvetica,sans-serif;
+    font-weight: 600;
+    font-size: 0;
+    max-width: 320px;
+    margin: 5px 5px 10px;
+    line-height: 18px;
+    float: left;
+}
+.quote.quote-green {
+    color: #589b4e;
+    background-repeat: repeat-y;
+}
