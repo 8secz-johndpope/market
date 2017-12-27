@@ -963,6 +963,7 @@ class HomeController extends BaseController
         $invoice->save();
 
         $this->notify($room,$message);
+        $room->modify();
 
         return redirect('/user/manage/messages');
     }
