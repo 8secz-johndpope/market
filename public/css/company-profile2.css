@@ -238,3 +238,19 @@
     font-size: 16px;
     word-wrap: break-word!important;
 }
+.help-wanted {
+    font-family: proxima,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-weight: 600;
+    display: inline-block;
+    width: 96%;
+    margin: 5px 5px 10px;
+    box-shadow: 3px 3px 0 #ccc;
+    border: 5px solid #ba432f;
+    color: #ba432f;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    clear: both;
+}
