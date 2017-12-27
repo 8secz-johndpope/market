@@ -116,3 +116,13 @@
     max-height: 440px;
     position: relative;
 }
+.spotlight-about {
+    background: linear-gradient(transparent,rgba(0,0,0,.1),rgba(0,0,0,.2),rgba(0,0,0,.4),rgba(0,0,0,.5));
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 50px;
+}
