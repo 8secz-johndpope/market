@@ -362,3 +362,12 @@
 .quote .quote-bottom {
     margin-top: -1px;
 }
+.quote .quote-source .quote-author, .quote .quote-source .quote-author-position {
+    text-align: right;
+    font-size: 16px;
+    font-weight: 400;
+}
+.quote .quote-source .quote-author {
+    font-weight: 700;
+    padding-bottom: 5px;
+}
