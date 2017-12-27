@@ -293,6 +293,10 @@
     white-space: normal;
     zoom: 1;
 }
+.social.social-facebook {
+    background-image: url(../images/social/facebook_background.png?v=ec0e889…);
+    background-repeat: no-repeat;
+}
 .social .social-title {
     font-size: 21px;
     font-weight: 700;
