@@ -122,6 +122,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Model\Contact');
     }
 
+    public function invoices()
+    {
+        return $this->hasMany('App\Model\Invoice');
+    }
+
     public function has_applied($id){
        $application = Application::where('advert_id',$id)->where('user_id',$this->id)->first();
        if($application===null)
