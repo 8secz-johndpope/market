@@ -38,7 +38,10 @@
                     <p><strong>{{$advertiser->name}}</strong></p>
                     <address>
                         {{$advertiser->address->city}}
-                    </address> 
+                    </address>
+                    <p><a href="#">Send Message</a></p>
+                    <p><a href="#">Call</a></p>
+                    <p><a href="#">VideoCall</a></p> 
                 </div>
             </div>
         </div>
@@ -178,7 +181,10 @@
                             <p><strong>{{$advertiser->name}}</strong></p>
                             <address>
                                 {{$advertiser->address->city}}
-                            </address> 
+                            </address>
+                            <p><a href="#">Send Message</a></p>
+                            <p><a href="#">Call</a></p>
+                            <p><a href="#">VideoCall</a></p>   
                           </div> 
                         </div>
                     </div>
