@@ -294,7 +294,7 @@
     zoom: 1;
 }
 .social.social-facebook {
-    background-image: url(../images/social/facebook_background.png?v=ec0e889…);
+    background-image: url(/css/facebook_background.png);
     background-repeat: no-repeat;
 }
 .social .social-title {
