@@ -126,3 +126,32 @@
     text-align: center;
     padding-top: 50px;
 }
+.spotlight-about .spotlight-name {
+    font-size: 32px;
+    line-height: 1.2em;
+    font-family: oswald,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    margin: 0 30px 25px;
+}
+.spotlight-about .spotlight-title {
+    font-family: proxima,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 18px;
+    margin: 0 30px;
+    line-height: 1.2em;
+}
+.spotlight-about .spotlight-clicktomeet {
+    font-family: proximabold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 12px;
+    text-shadow: 0 2px 2px #000;
+    text-transform: uppercase;
+    padding: 15px 0 20px;
+    min-width: 112px;
+}
