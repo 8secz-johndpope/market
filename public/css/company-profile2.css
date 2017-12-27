@@ -348,8 +348,14 @@
 .quote .quote-green-top {
     border-top: 6px solid #589b4e;
 }
+.quote .quote-yellow-top {
+    border-top: 6px solid #ffc657;
+}
 .quote .quote-green-side {
     border-right: 6px solid #589b4e;
+}
+.quote .quote-yellow-side {
+    border-right: 6px solid #ffc657;
 }
 .quote .quote-body {
     font-size: 18px;
