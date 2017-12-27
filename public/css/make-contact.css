@@ -5,3 +5,8 @@
     text-align: center;
     margin-bottom: 1.6rem;
 }
+.btn-default, .btn-default:link {
+    color: #fff;
+    background-color: #ff9d2c;
+    border: 1px solid #ff9d2c;
+}

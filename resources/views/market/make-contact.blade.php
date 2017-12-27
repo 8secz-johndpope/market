@@ -36,7 +36,7 @@
 			<!-- end info-content -->
 		</div>
 		<div class="row container-buttons">
-			<div class="col-sm-offset-2 col-sm-10">
+			<div class="col-sm-offset-2 col-sm-8">
 				<div class="row">
 					<div class="col-sm-4">
 						<a class="btn btn-default">Send Message</a>
