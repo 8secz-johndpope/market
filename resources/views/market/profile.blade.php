@@ -67,7 +67,7 @@
                @foreach($advertiser->adverts as $advert)
                <div class="listing-max-pro">
                     <div class="product">
-                        @if(!$advert->advert->can_apply())
+                        @if(!$advert->category->can_apply())
                         <div class="listing-side">
                             <div class="listing-thumbnail">
                                 <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
