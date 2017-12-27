@@ -2108,9 +2108,9 @@ class MarketController extends BaseController
         return view('market.make-contact', ['user' => $user]);
     }
     public function companies(Request $request, $id){
-        $view = 'market.companies-template1'
+        $view = 'market.companies-template1';
         if($id === 'uber')
-            $view = 'market.companies-template2'
+            $view = 'market.companies-template2';
         return view($view);
     }
 }
