@@ -18,6 +18,10 @@
 				<div class="title-block">
 					<h1>We are<br><div class="big-title">UBER</div></h1>
 				</div>
+				<div class="btn-row">
+					<a class="see-job blue-solid-button-xs" href="/jobs/uber" alt="Uber Careers - See Our Jobs">See Our Jobs</a>
+					<a class="next-company lt-grey-solid-button-xs" alt="Uber Careers - Next Company" href="/random/company">Next Company</a>
+				</div>
 			</div>
 			<div class="col-sm-4">
 				<div class="logo-block">
