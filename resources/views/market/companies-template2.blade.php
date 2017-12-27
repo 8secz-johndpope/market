@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
- <link href="{{asset('/css/agent.css?q=874')}}" rel="stylesheet">
+ <link href="{{asset('/css/company-profile2.css?q=874')}}" rel="stylesheet">
  <div class="body">
 	<div class="container">
 		<div class="row">
