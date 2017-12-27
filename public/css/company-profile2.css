@@ -342,6 +342,12 @@
 .quote.quote-yellow {
     color: #e9b651;
 }
+.quote .quote-green-top, .quote .quote-yellow-top, .quote .quote-red-top, .quote .quote-blue-top {
+    -moz-box-shadow: 2px 1px 1px 2px #dbdbdb;
+    -webkit-box-shadow: 2px 1px 1px 2px #dbdbdb;
+    box-shadow: 2px 1px 1px 2px #dbdbdb;
+    line-height: 0;
+}
 .quote .quote-green-side, .quote .quote-yellow-side, .quote .quote-red-side, .quote .quote-blue-side {
     -moz-box-shadow: 2px 2px 1px 2px #dbdbdb;
     -webkit-box-shadow: 2px 2px 1px 2px #dbdbdb;
