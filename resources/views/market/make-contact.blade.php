@@ -33,13 +33,13 @@
 			</div>
 			<div class="col-sm-9">
 				<div class="container-info-advertiser">
-                    <p><strong>{{$advertiser->name}}</strong></p>
+                    <p><strong>{{$user->name}}</strong></p>
                     <address>
-                        {{$advertiser->address->city}}
+                        {{$user->address->city}}
                     </address>
                     <span>
                         <span class="glyphicon glyphicon-earphone"></span>
-                        {{substr($advertiser->phone,0,5)}}XXXXXX
+                        {{substr($user->phone,0,5)}}XXXXXX
                     </span>
                 </div>
 			</div>
