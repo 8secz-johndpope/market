@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', env('APP_NAME').' | '. isset($user->business) ? $user->business->name : 'Company')
+@section('title', env('APP_NAME').' | Uber')
 
 @section('sidebar')
     @parent
