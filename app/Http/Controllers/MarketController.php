@@ -2103,4 +2103,8 @@ class MarketController extends BaseController
 
         return view('home.pay-logout',['invoice'=>$invoice, 'seller' => $seller,'token' => $clientToken,'user'=>$user]);
     }
+    public function makeContact(Request $request, $id){
+        $user = User::find($id);
+        return view('market.make-contact', ['user' => $user]);
+    }
 }
