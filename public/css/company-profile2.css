@@ -424,6 +424,7 @@
     display: inline-block;
     height: 50px;
     cursor: pointer;
+    vertical-align: middle;
 }
 .dropdown-wrapper>a, .dropdown-more>a {
     display: block;
