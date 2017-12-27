@@ -7,9 +7,12 @@
 
     <p>This is appended to the master sidebar.</p>
 @endsection
-
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
 @section('content')
- <link href="{{ asset('/css/agent.css?q=874') }}" rel="stylesheet">
+ <link href="{{ asset("/css/make-contact.css?q=$dateMs") }}" rel="stylesheet">
 <div class="body">
 	<div class="container">
 		<div class="row">
