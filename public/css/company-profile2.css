@@ -7,3 +7,11 @@
     text-align: left;
     margin: 14px 0 0;
 }
+.title-block h1 .big-title {
+    font-family: proximabold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 48px;
+    color: #000;
+}
