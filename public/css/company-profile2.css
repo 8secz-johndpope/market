@@ -28,7 +28,9 @@
 .grid_1_1 {
     max-width: 320px;
     max-height: 235px;
-    margin: 5px;
+}
+.grid_1_1, .grid_2_2{
+	margin: 5px;
     position: relative;
     overflow: hidden;
     float: left;
