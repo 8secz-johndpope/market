@@ -140,6 +140,29 @@
 				</div>
 			</div>
 			<div class="col-sm-4">
+				<div data-widget-id="2270" class="widget insight grid_1 " data-muse-widget-name="insight">
+					<div class="insight-image">
+						<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2270.jpg?v=None" alt="Careers - What Uber Does Uber 101">
+					</div>
+					<div class="insight-body">
+						<div class="insight-date">What Uber Does
+						</div>
+						<div class="insight-title">Uber 101
+						</div>
+						<div class="insight-text">Fasten your seat belts: Uber is an on-demand car service that’s shaking up the transportation systems in 20 cities (and growing) around the world. Customers use the Uber app, website, or text message service to connect with the nearest available driver. Customers can choose which kind of vehicle they want—from basic taxis to snazzy limousines to hybrid vehicles—and have their ride show up within minutes of their request.</div>
+					</div>
+				</div>
+				<div data-widget-id="2271" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+					<a href="http://vimeo.com/53833676">
+						<div class="playhead-overlay">
+							<img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video">
+						</div>
+						<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2271.jpg?v=None" alt="video thumbnail image">
+						<div class="text-bottom">
+							<div class="video-text">Riding the Uber Rocket Ship</div>
+						</div>
+					</a>
+				</div>
 			</div>
 			<div class="col-sm-4">
 			</div>
