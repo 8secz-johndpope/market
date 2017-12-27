@@ -925,6 +925,7 @@ class HomeController extends BaseController
         $invoice->title = $request->title;
         $invoice->notes = $request->notes;
         $invoice->terms = $request->terms;
+        $invoice->user_id = $user->id;
         if($request->has('add_ship_info'))
             $invoice->show_ship = $request->add_ship_info;
         if($request->has('add_vat_info'))
