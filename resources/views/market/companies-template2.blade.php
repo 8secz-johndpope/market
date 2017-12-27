@@ -180,6 +180,21 @@
 						</div>
 					</a>
 				</div>
+				<div data-widget-id="2275" class="widget  widget-col-2" data-muse-widget-name="quote_green">
+					<div class="quote quote-green">
+						<div class="quote-green-top">&nbsp;</div>
+						<div class="quote-green-side">&nbsp;</div>
+						<div class="quote-body">
+							“The things that we do here really impact people’s day-to-day lives and we’re proud of that.”
+							<div class="quote-source">
+								<div class="quote-author">-Brian </div>
+								<div class="quote-author-position">Community Management Specialist</div>
+							</div>
+						</div>
+						<div class="quote-green-side">&nbsp;</div>
+						<img alt="“The things that we do here really impact people’s day-to-day lives and we’re proud of that.” " class="quote-bottom" src="https://www.themuse.com/static/images/quote_green_bottom.png?v=b075c27b5205eefaca5afe5c7dab5a4ddd9f8e2ec3d9489a6fe048d8856d0311">
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
