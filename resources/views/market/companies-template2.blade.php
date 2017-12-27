@@ -169,6 +169,17 @@
 						</div>
 					</a>
 				</div>
+				<div data-widget-id="2273" class="widget  widget-col-2" data-muse-widget-name="social_twitter">
+					<a href="https://twitter.com/uber" target="_blank">
+						<div class="social social-twitter grid_1">
+							<div class="social-container">
+								<div class="social-title">‏@Uber </div>
+								<div class="social-body">Go NYC! RT @Uber_NYC: Subways may be closed but we're up! We have some cars available at the moment, and see more coming online. </div>
+								<div class="social-footer"></div>
+							</div>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
