@@ -1785,30 +1785,7 @@ nav.navbar.navbar-inverse {
     border: 1px solid #ff9d2c;
     font-size: 16px;
 }
-.img-advertiser {
-    float: right;
-}
-.container-img-advertiser {
-    padding: 15px 0;
-}
-.container-info-advertiser {
-    padding: 15px 0;
-}
-.container-info {
-    background: #e9e9eb;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-.image-advertiser {
-    width: 120px;
-    height: 120px;
-}
-.container-info-advertiser p {
-    margin-bottom: 0;
-}
-.container-info-advertiser address {
-    margin-bottom: 0;
-}
+
 .btn-advertiser {
     color: #fff;
     background-color: #000;
