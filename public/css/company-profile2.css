@@ -427,6 +427,10 @@
     color: #333;
     outline: 0;
 }
+.profiles-subnav li.active>a, .profiles-subnav li.active a:hover {
+    color: #fff;
+    font-weight: 700;
+}
 .profiles-subnav li {
     float: left;
 }
