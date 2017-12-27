@@ -43,6 +43,11 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-8">
+				<a href="/companies/uber/offices">
+					<div class="grid_2_2">
+						<img src="https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F61%2Fpages%2F674%2Ff1.jpg%3Fv%3DNone&amp;h=960&amp;w=1300" class="share-base" alt="Uber Careers">
+					</div>
+				</a>
 			</div>
 			<div class="col-sm-4">
 			</div>
