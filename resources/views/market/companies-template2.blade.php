@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.recruiters')
 
 @section('title', env('APP_NAME').' | Uber')
 
