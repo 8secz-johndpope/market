@@ -409,15 +409,14 @@
                 </div><!-- /.navbar-collapse -->
             
         </div>
-        @yield('second-navbar')
     </div>
 </nav>
 </header>
-
-
+<div class="container-fluid">
+    @yield('second-navbar')
+</div>
 <section>
     @yield('content')
-
 </section>
 <footer>
     <div class="container">
