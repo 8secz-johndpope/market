@@ -434,3 +434,30 @@
     background-color: #ff9d2c;
     font-weight: 700;
 }
+.subnav-dropdown {
+    background-color: #fff;
+    z-index: 300;
+    position: absolute;
+    top: 49px;
+    width: 110%;
+    left: -5%;
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: .3s;
+    transition: opacity .2s;
+    list-style: none;
+}
+.subnav-dropdown li {
+    -webkit-transition: background 200ms ease-out;
+    -moz-transition: background 200ms ease-out;
+    -ms-transition: background 200ms ease-out;
+    -o-transition: background 200ms ease-out;
+    transition: background 200ms ease-out;
+    display: block;
+    width: 100%!important;
+    height: auto!important;
+    font-weight: 200;
+    border-top: 1px solid #53b6d0;
+    border-left: 1px solid #53b6d0;
+    border-right: 1px solid #53b6d0;
+}
