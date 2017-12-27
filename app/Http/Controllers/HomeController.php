@@ -916,6 +916,11 @@ class HomeController extends BaseController
         $user = Auth::user();
         return view('home.invoice',['room'=>$room,'user'=>$user]);
     }
+    public function invoices(Request $request)
+    {
+        $user = Auth::user();
+        return view('home.invoice',['user'=>$user]);
+    }
     public function save_invoice(Request $request)
     {
         $user = Auth::user();
