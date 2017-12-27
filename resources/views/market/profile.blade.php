@@ -53,7 +53,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                
+
             </div>
             <div class="col-sm-12">
                 <div class="products">
@@ -176,44 +176,6 @@
                 </div>
                @endforeach
                </div> 
-            </div>
-            <div class="col-sm-12">
-                <div class="details-user-container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                          <div class="profile-picutre-big">
-                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advertiser->image}}">
-                          </div>
-                          <div class="user-details">
-                            <p><strong>{{$advertiser->name}}</strong></p>
-                            <address>
-                                {{$advertiser->address->city}}
-                            </address>
-                            <p><a href="#">Send Message</a></p>
-                            <p><a href="#">Call</a></p>
-                            <p><a href="#">VideoCall</a></p>   
-                          </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="app-call border-dashed-bottom">
-                                <a href="" class="btn btn-default">Call</a>
-                            </div>
-                            <div class="phone border-dashed-bottom">
-                                <span>
-                                    <span class="glyphicon glyphicon-earphone"></span>
-                                    {{substr($advertiser->phone,0,5)}}XXXXXX
-                                    <span class="reveal-phone">
-                                        <a class="btn btn-default">Reveal</a>
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
