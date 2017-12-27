@@ -81,6 +81,19 @@
 				</a>
 			</div>
 			<div class="col-sm-4">
+				<a href="/companies/uber/people/swathy&#10;&#10;" data-person-id="184" data-person-short-name="swathy" data-person-position="1">
+					<div class="spotlight grid_1_2">
+						<img src="https://assets.themuse.com/uploaded/companies/61/people/184-small.jpg?v=None" alt="Swathy Prithivi, Operations &amp; Logistics Manager - Uber Careers">
+						<div class="spotlight-about">
+						<div class="spotlight-name">Swathy Prithivi</div>
+						<div class="spotlight-title">Operations &amp; Logistics Manager</div>
+						<div class="spotlight-clicktomeet">
+							Click to meet Swathy 
+							<i class="fa fa-long-arrow-right"></i>
+						</div>
+						</div>
+					</div>
+				</a>
 			</div>
 			<div class="col-sm-4">
 			</div>
