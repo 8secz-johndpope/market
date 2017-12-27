@@ -37,7 +37,7 @@
                     </div>
                     <div class="col-sm-10">
                         <div class="container-info-advertiser">
-                            <p><strong>{{$advertiser->name}}</strong></p>
+                            <p class="advertiser-name"><strong>{{$advertiser->name}}</strong></p>
                             <address>
                                 {{$advertiser->address->city}}
                             </address>
