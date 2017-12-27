@@ -427,6 +427,9 @@
     color: #333;
     outline: 0;
 }
+.profiles-subnav>li:nth-child(1):nth-last-child(4), .profiles-subnav>li:nth-child(2):nth-last-child(3), .profiles-subnav>li:nth-child(3):nth-last-child(2), .profiles-subnav>li:nth-child(4):nth-last-child(1) {
+    width: 25%;
+}
 .profiles-subnav li.active>a, .profiles-subnav li.active a:hover {
     color: #fff;
     font-weight: 700;
