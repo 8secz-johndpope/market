@@ -254,3 +254,22 @@
     padding-bottom: 20px;
     clear: both;
 }
+.help-wanted div {
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.2em;
+}
+.help-wanted .help-wanted-title {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+.help-wanted .help-wanted-job {
+    font-size: 22px;
+}
+.help-wanted .help-wanted-location {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.help-wanted .help-wanted-footer {
+    font-size: 15px;
+}
