@@ -39,6 +39,10 @@
                     <address>
                         {{$advertiser->address->city}}
                     </address>
+                    <span>
+                        <span class="glyphicon glyphicon-earphone"></span>
+                        {{substr($advertiser->phone,0,5)}}XXXXXX
+                    </span>
                     <p><a href="#">Send Message</a></p>
                     <p><a href="#">Call</a></p>
                     <p><a href="#">VideoCall</a></p> 
