@@ -176,3 +176,7 @@
     color: #fff;
     border: 1px solid #53b6d0;
 }
+.see-job {
+    float: left;
+    margin: 0 10px 0 0;
+}
