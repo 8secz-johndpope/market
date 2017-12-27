@@ -79,3 +79,9 @@
     padding: 20px;
     margin: 0;
 }
+.text-lower-right.gradient {
+    background: linear-gradient(transparent,transparent,transparent,rgba(0,0,0,.3),rgba(0,0,0,.4));
+    top: 0;
+    margin: 0;
+    left: 0;
+}
