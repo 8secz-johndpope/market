@@ -8,6 +8,7 @@
     <p>This is appended to the master sidebar.</p>
 @endsection
 @section('second-navbar')
+<link href="{{ asset('/css/css/font-awesome.min.css?q=874') }}" rel="stylesheet">
 <div class="row subnav-block top-nav fixed">
 	<div class="col-sm-12">
 		<ul class="profiles-subnav">
@@ -15,7 +16,7 @@
 				<a href="/companies/uber">About</a>
 			</li>
 			<li class="dropdown-wrapper ">
-				<a class="dropdown-link" href="/companies/uber/office">Offices <i class="fa fa-caret-down"></i></a>
+				<a class="dropdown-link" href="/companies/uber/office" data-toggle="dropdown">Offices <i class="fa fa-caret-down"></i></a>
 				<ul class="subnav-dropdown">
 					<li class="">
 						<a href="/companies/uber/office/uber">San Francisco, CA</a>
@@ -26,7 +27,7 @@
 				</ul>
 			</li>
 			<li class="dropdown-wrapper ">
-				<a class="subnav-people dropdown-link" href="#">People <i class="fa fa-caret-down"></i></a>
+				<a class="subnav-people dropdown-link" href="#" data-toggle="dropdown">People <i class="fa fa-caret-down"></i></a>
 				<div class="people-dropdown" style="width: 110%">
 					<ul class="subnav-dropdown">
 						<li class=" people-list">
@@ -51,7 +52,7 @@
 @endsection
 @section('content')
  <link href="{{asset('/css/company-profile2.css?q=874')}}" rel="stylesheet">
- <link href="{{ asset('/css/css/font-awesome.min.css?q=874') }}" rel="stylesheet">
+ 
  <div class="body">
 	<div class="container">
 		<div class="row">
