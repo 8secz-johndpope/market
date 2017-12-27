@@ -1784,6 +1784,7 @@ nav.navbar.navbar-inverse {
     color: #000;
     border: 1px solid #ff9d2c;
     font-size: 16px;
+    border-radius: 20px;
 }
 
 .btn-advertiser {
@@ -1793,7 +1794,6 @@ nav.navbar.navbar-inverse {
     padding-left: 35px;
     padding-right: 35px;
     font-size: 13px;
-    border-radius: 20px;
 }
 @media (max-width: 1500px) {
     h4.product-title {
