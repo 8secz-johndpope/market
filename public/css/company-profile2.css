@@ -409,3 +409,9 @@
     border-bottom: 5px solid #ff9d2c;
     height: 50px;
 }
+.profiles-subnav {
+    max-width: 624px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
