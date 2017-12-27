@@ -1780,9 +1780,9 @@ nav.navbar.navbar-inverse {
 }
 .btn-make-contact {
     width: 200px;
-    background: #fff;
-    color: #000;
-    border: 1px solid #ff9d2c;
+    background: #366ffb;
+    color: #fff;
+    border: 1px solid #366ffb;
     font-size: 16px;
     border-radius: 20px;
 }
