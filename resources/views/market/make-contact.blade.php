@@ -35,13 +35,13 @@
 	<div class="row container-buttons">
 		<div class="col-sm-offset-2 col-sm-10">
 			<div class="row">
-				<div class="col-m-4">
+				<div class="col-sm-4">
 					<a class="btn">Send Message</a>
 				</div>
-				<div class="col-m-4">
+				<div class="col-sm-4">
 					<a class="btn">Call</a>
 				</div>
-				<div class="col-m-4">
+				<div class="col-sm-4">
 					<a class="btn">VideoCall</a>
 				</div>
 			</div>
