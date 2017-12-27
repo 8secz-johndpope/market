@@ -8,7 +8,7 @@
     <p>This is appended to the master sidebar.</p>
 @endsection
 @section('second-navbar')
-<div class="row">
+<div class="row subnav-block top-nav fixed">
 	<div class="col-sm-12">
 	</div>	
 </div>
