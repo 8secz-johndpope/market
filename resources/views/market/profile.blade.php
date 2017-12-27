@@ -46,8 +46,8 @@
                                 {{substr($advertiser->phone,0,5)}}XXXXXX
                             </span>
                             <p><a href="#">Send Message</a></p>
-                            <p><a href="#">Call</a></p>
                             <p><a href="#">VideoCall</a></p>
+                            <p><a href="#">Call</a></p>
                             <p><a href="/company/{{$advertiser->id}}" class="btn btn-advertiser">Learn more about the Advertiser</a></p> 
                         </div>
                     </div>
