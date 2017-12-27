@@ -225,3 +225,16 @@
     font-size: 20px;
     color: #333;
 }
+.insight .insight-body .insight-title {
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+}
+.insight .insight-body .insight-text {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    font-size: 16px;
+    word-wrap: break-word!important;
+}
