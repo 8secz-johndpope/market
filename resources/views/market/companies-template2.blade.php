@@ -163,8 +163,22 @@
 						</div>
 					</a>
 				</div>
-			</div>
+				<div data-widget-id="2271" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+					<iframe src="//player.vimeo.com/video/53833676?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="320" height="440" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+				</div>
 			<div class="col-sm-4">
+				<div data-widget-id="2274" class="widget  widget-col-2" data-muse-widget-name="social_facebook">
+					<a href="https://www.facebook.com/uber" target="_blank">
+						<div class="social social-facebook grid_1">
+							<div class="social-container">
+								<div class="social-title">Uber on Facebook
+								</div>
+								<div class="social-body">Choice is a beautiful thing! Now offering a SUV option in Dallas; your whole posse can show up together in style.</div>
+								<div class="social-footer"></div>
+							</div>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
