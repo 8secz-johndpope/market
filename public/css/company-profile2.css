@@ -273,3 +273,13 @@
 .help-wanted .help-wanted-footer {
     font-size: 15px;
 }
+.social.social-twitter .social-container, .social.social-facebook .social-container, .social.social-instagram .social-container, .social.social-linkedin .social-container, .social.social-klout .social-container {
+    padding: 10px;
+    display: inline-block;
+    min-height: 235px;
+    line-height: 1.2em;
+    word-wrap: break-word!important;
+    -ms-word-wrap: break-word;
+    white-space: normal;
+    zoom: 1;
+}
