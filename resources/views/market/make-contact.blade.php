@@ -32,6 +32,16 @@
 	            </div>
 			</div>
 			<div class="col-sm-9">
+				<div class="container-info-advertiser">
+                    <p><strong>{{$advertiser->name}}</strong></p>
+                    <address>
+                        {{$advertiser->address->city}}
+                    </address>
+                    <span>
+                        <span class="glyphicon glyphicon-earphone"></span>
+                        {{substr($advertiser->phone,0,5)}}XXXXXX
+                    </span>
+                </div>
 			</div>
 			<!-- end info-content -->
 		</div>
