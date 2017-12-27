@@ -153,17 +153,6 @@
 					</div>
 				</div>
 				<div data-widget-id="2271" class="widget insight video grid_1_2 " data-muse-widget-name="video">
-					<a href="http://vimeo.com/53833676">
-						<div class="playhead-overlay">
-							<img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video">
-						</div>
-						<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2271.jpg?v=None" alt="video thumbnail image">
-						<div class="text-bottom">
-							<div class="video-text">Riding the Uber Rocket Ship</div>
-						</div>
-					</a>
-				</div>
-				<div data-widget-id="2271" class="widget insight video grid_1_2 " data-muse-widget-name="video">
 					<iframe src="//player.vimeo.com/video/53833676?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="320" height="440" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 				</div>
 			</div>
