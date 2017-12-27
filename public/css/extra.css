@@ -1809,6 +1809,14 @@ nav.navbar.navbar-inverse {
 .container-info-advertiser address {
     margin-bottom: 0;
 }
+.btn-advertiser {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 13px;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
