@@ -293,3 +293,11 @@
     white-space: normal;
     zoom: 1;
 }
+.social .social-title {
+    font-size: 21px;
+    font-weight: 700;
+    padding: 10px 0;
+    -ms-word-wrap: break-word;
+    white-space: normal;
+    zoom: 1;
+}
