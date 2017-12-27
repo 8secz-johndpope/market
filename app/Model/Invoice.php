@@ -23,6 +23,10 @@ class Invoice extends Model
     {
         return $this->belongsTo('App\Model\Message');
     }
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
     public function amount_in_pence(){
         $total = 0;
         foreach ($this->items as $item){
