@@ -66,6 +66,19 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-4">
+				<a href="/companies/uber/people/brian&#10;&#10;" data-person-id="182" data-person-short-name="brian" data-person-position="0">
+					<div class="spotlight grid_1_2">
+						<img src="https://assets.themuse.com/uploaded/companies/61/people/182-small.jpg?v=None" alt="Brian McMullen, Community Management Specialist - Uber Careers">
+						<div class="spotlight-about">
+							<div class="spotlight-name">Brian McMullen</div>
+							<div class="spotlight-title">Community Management Specialist</div>
+							<div class="spotlight-clicktomeet">
+								Click to meet Brian 
+								<i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</a>
 			</div>
 			<div class="col-sm-4">
 			</div>
