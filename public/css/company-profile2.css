@@ -348,3 +348,17 @@
 .quote .quote-green-top {
     border-top: 6px solid #589b4e;
 }
+.quote .quote-green-side {
+    border-right: 6px solid #589b4e;
+}
+.quote .quote-body {
+    font-size: 18px;
+    line-height: 1.2em;
+    padding: 20px 30px;
+    width: 100%;
+    word-wrap: break-word!important;
+    display: table-cell;
+}
+.quote .quote-bottom {
+    margin-top: -1px;
+}
