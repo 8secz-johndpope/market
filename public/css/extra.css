@@ -1789,10 +1789,10 @@ nav.navbar.navbar-inverse {
     float: right;
 }
 .container-img-advertiser {
-    padding: 15px;
+    padding: 15px 0;
 }
 .container-info-advertiser {
-    padding: 15px;
+    padding: 15px 0;
 }
 .container-info {
     background: #e9e9eb;
