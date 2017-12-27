@@ -427,3 +427,10 @@
     color: #333;
     outline: 0;
 }
+.profiles-subnav li {
+    float: left;
+}
+.profiles-subnav li.active {
+    background-color: #ff9d2c;
+    font-weight: 700;
+}
