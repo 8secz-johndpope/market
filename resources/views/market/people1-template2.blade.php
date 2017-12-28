@@ -59,7 +59,7 @@
 			<!-- div info-content -->
 			<div class="col-sm-8">
 				<div class="title-block">
-					<h1>Meet Uber's<br><div class="big-title">UBER</div></h1>
+					<h1>Meet Uber's<br><div class="big-title">BRIAN MCMULLEN</div></h1>
 				</div>
 				<div class="btn-row">
 					<a class="lt-grey-border-button-xs" href="/companies/uber/people/swathy">Next Person</a>
