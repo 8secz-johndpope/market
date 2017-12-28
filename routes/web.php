@@ -51,6 +51,8 @@ Route::get('/user/manage/invoices', 'HomeController@invoices');
 
 Route::get('/user/contacts/add', 'HomeController@add_contact');
 Route::get('/user/groups/create', 'HomeController@create_group');
+Route::get('/user/new/broadcast', 'HomeController@create_broadcast');
+
 Route::post('/user/groups/add', 'MessageController@add_group');
 
 Route::get('/user/direct/message/{id}', 'MessageController@direct_message');

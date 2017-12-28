@@ -2142,6 +2142,16 @@ class HomeController extends BaseController
 
         return view('home.group',['user'=>$user]);
     }
+    public function create_broadcast(Request $request){
+        $user=Auth::user();
+
+        return view('home.broadcast',['user'=>$user]);
+    }
+
+
+
+
+
     public function adds_contact(Request $request){
         $user=Auth::user();
         $contact = new Contact();
