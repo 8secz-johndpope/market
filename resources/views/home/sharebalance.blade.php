@@ -61,14 +61,6 @@
                 <input type="text"  class="form-control" name="amount" placeholder="95 (£50 minimum)">
             </div>
         </div>
-        <div class="row form-group">
-            <div class="col-sm-12">
-                <a ><img src="/css/addimage.png" class="add-profile-image" style="cursor: pointer;width: 50px;"></a>
-                <input type="file" id="upload-profile"  style="display: none">
-                <input type="hidden" name="image" value="no_avatar.jpg" id="image">
-
-            </div>
-        </div>
         {{ csrf_field() }}
         <ul class="list-group">
 
