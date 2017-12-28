@@ -58,6 +58,10 @@
 .grid_1_1 img, .grid_1_2 img, .quote img {
 	width: 100%;
 }
+.grid_3_2 .text-bottom {
+    background: linear-gradient(transparent,transparent,transparent,rgba(0,0,0,.2),rgba(0,0,0,.5));
+    padding-top: 400px;
+}
 .logo-block {
     text-align: right;
     width: 100%;
