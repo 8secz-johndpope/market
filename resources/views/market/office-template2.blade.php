@@ -149,6 +149,12 @@
 							<div class="insight-text">London’s the most visited city in the world—so it’s only fitting that it’s one of Uber’s first international locations. With Uber, anyone can traverse London’s streets, often at prices up to 50% cheaper than the city’s local black cabs. Some of Uber’s favorite London spots? Though the list is ever-changing, Duck &amp; Waffle and the Tower of London are currently tied for the top.</div>
 						</div>
 					</div>
+					<div data-widget-id="10318" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+						<img data-cfsrc="https://assets.themuse.com/uploaded/companies/61/widgets/10318.jpg?v=None" src="https://assets.themuse.com/uploaded/companies/61/widgets/10318.jpg?v=None">
+						<div class="text-bottom">
+							<div class="video-text">Uber Nights On The Town: Exploring London’s Streets In Style</div>
+						</div>
+					</div>
 				</div>
 				<div class="col-sm-4">
 					<div data-widget-id="2274" class="widget  widget-col-2" data-muse-widget-name="social_facebook">
