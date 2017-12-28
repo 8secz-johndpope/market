@@ -510,3 +510,17 @@
 .company-job-tiles {
     background-color: #f7f7f7;
 }
+.header-row {
+    display: block;
+    margin: 37px 15px 0;
+}
+.header-row .section-header {
+    margin: 6px 20px 0 0;
+    float: left;
+    font-size: 32px;
+    font-family: proximalight,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    color: #666;
+}
