@@ -178,17 +178,38 @@
 							</div>
 						</a>
 					</div>
-					<div data-widget-id="10323" class="widget  widget-col-2" data-muse-widget-name="social_facebook">
-						<a href="https://www.facebook.com/uber" target="_blank">
-							<div class="social social-facebook grid_1">
-								<div class="social-container">
-									<div class="social-title">Uber on Facebook
+					<div data-widget-id="2265" class="widget  widget-col-2" data-muse-widget-name="quote_blue">
+						<div class="quote quote-blue">
+							<div class="quote-blue-top">&nbsp;</div>
+							<div class="quote-blue-side">&nbsp;</div>
+							<div class="quote-body">
+								“You want to be exposed to as much as possible, as early on as possible in your career. You get that at Uber.”
+								<div class="quote-source">
+									<div class="quote-author">-Ryan
 									</div>
-									<div class="social-body">We're teaming up with AT&amp;T to keep you moving in cities around the world. Read more on our blog!</div>
-									<div class="social-footer"></div>
+									<div class="quote-author-position">Head of Operations</div>
 								</div>
 							</div>
-						</a>
+							<div class="quote-blue-side">&nbsp;</div>
+							<img alt="“You want to be exposed to as much as possible, as early on as possible in your career. You get that at Uber.”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_blue_bottom.png?v=e5ef6d0e53ae08e56d593d5aba61bca8d2185a5bdec00b6eb967c5b6da13a41f">
+						</div>
+					</div>
+					<div data-widget-id="2266" class="widget  widget-col-2" data-muse-widget-name="quote_green">
+						<div class="quote quote-green">
+							<div class="quote-green-top">&nbsp;</div>
+							<div class="quote-green-side">&nbsp;</div>
+							<div class="quote-body">
+								“I wanted to work with a company who’s solving problems that’re so fascinating that I keep thinking about them even after I leave work.”
+								<div class="quote-source">
+									<div class="quote-author">-Swathy
+									</div>
+									<div class="quote-author-position">Operations &amp; Logistics Manager
+									</div>
+								</div>
+							</div>
+							<div class="quote-green-side">&nbsp;</div>
+							<img alt="“I wanted to work with a company who’s solving problems that’re so fascinating that I keep thinking about them even after I leave work.”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_green_bottom.png?v=b075c27b5205eefaca5afe5c7dab5a4ddd9f8e2ec3d9489a6fe048d8856d0311">
+						</div>
 					</div>
 				</div>
 			</div>
