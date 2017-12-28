@@ -458,6 +458,16 @@
     transition: opacity .2s;
     list-style: none;
 }
+.subnav-dropdown li>a {
+    -webkit-transition: color 100ms ease-out;
+    -moz-transition: color 100ms ease-out;
+    -ms-transition: color 100ms ease-out;
+    -o-transition: color 100ms ease-out;
+    transition: color 100ms ease-out;
+    height: auto;
+    display: block;
+    color: #333;
+}
 .profiles-subnav li>a {
     display: block;
     font-family: proxima,Helvetica,sans-serif;
@@ -482,4 +492,8 @@
 .dropdown-wrapper:hover .subnav-dropdown, .dropdown-wrapper:focus .subnav-dropdown, .dropdown-more:hover .subnav-dropdown, .dropdown-more:focus .subnav-dropdown {
     visibility: visible;
     opacity: 1;
+}
+.profiles-subnav .subnav-dropdown li a {
+    height: auto;
+    overflow-wrap: break-word;
 }
