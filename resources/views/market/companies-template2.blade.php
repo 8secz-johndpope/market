@@ -324,7 +324,7 @@
 		var idVideo = hrefVideo.substr(lastIndex, hrefVideo.length);
 		console.log(idVideo);
 		var parent = $(this).parent();
-		parent.remove($(this));
+		this.remove();
 		parent.append("<iframe src=\"//player.vimeo.com/video/" + idVideo + "?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1\" width=\"320\" height=\"440\" frameborder=\"0\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\" allowfullscreen=\"\"></iframe>");
 	});
 </script>
