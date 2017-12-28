@@ -486,9 +486,9 @@
     width: 100%!important;
     height: auto!important;
     font-weight: 200;
-    border-top: 1px solid #53b6d0;
-    border-left: 1px solid #53b6d0;
-    border-right: 1px solid #53b6d0;
+    border-top: 1px solid #ff9d2c;
+    border-left: 1px solid #ff9d2c;
+    border-right: 1px solid #ff9d2c;
 }
 .dropdown-wrapper:hover .subnav-dropdown, .dropdown-wrapper:focus .subnav-dropdown, .dropdown-more:hover .subnav-dropdown, .dropdown-more:focus .subnav-dropdown {
     visibility: visible;
@@ -497,4 +497,7 @@
 .profiles-subnav .subnav-dropdown li a {
     height: auto;
     overflow-wrap: break-word;
+}
+.subnav-dropdown li:last-child {
+    border-bottom: 1px solid #ff9d2c;
 }
