@@ -9,6 +9,9 @@
     margin: 0 auto;
     padding-bottom: 30px;
 }
+.company-profile-styling img {
+    width: 100%;
+}
 .company-profile-styling .col-sm-4, .company-profile-styling .col-sm-8{
 	padding: 0;
 }
