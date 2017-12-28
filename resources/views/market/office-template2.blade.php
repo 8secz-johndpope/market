@@ -179,6 +179,18 @@
 							</div>
 						</a>
 					</div>
+					<div data-widget-id="10323" class="widget  widget-col-2" data-muse-widget-name="social_facebook">
+						<a href="https://www.facebook.com/uber" target="_blank">
+							<div class="social social-facebook grid_1">
+								<div class="social-container">
+									<div class="social-title">Uber on Facebook
+									</div>
+									<div class="social-body">We're teaming up with AT&amp;T to keep you moving in cities around the world. Read more on our blog!</div>
+									<div class="social-footer"></div>
+								</div>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
