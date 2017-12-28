@@ -167,14 +167,13 @@
 						</a>
 					</div>
 					<div data-widget-id="10320" class="widget  widget-col-2" data-muse-widget-name="social_twitter">
-						<a href="https://twitter.com/Uber_LDN" target="_blank">
+						<a href="https://twitter.com/uber" target="_blank">
 							<div class="social social-twitter grid_1">
 								<div class="social-container">
-									<div class="social-title">@Uber_LDN
+									<div class="social-title">@Uber
 									</div>
-									<div class="social-body">Bored at work? Our full drone-view video of #UberIceCream2014 is ready to watch!
-									</div>
-									<div class="social-footer">http://youtu.be/zqPcadfc-Mw </div>
+									<div class="social-body">RT @TechCrunch: Uber Spins Its Latest Variation On Car Rides: DJs On Party Buses In Chicago http://tcrn.ch/NTv1zn&nbsp; by @ingridlunden </div>
+									<div class="social-footer"></div>
 								</div>
 							</div>
 						</a>
