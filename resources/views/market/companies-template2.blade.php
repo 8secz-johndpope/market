@@ -167,7 +167,6 @@
 								<div class="video-text">Growing Globally </div>
 							</div>
 						</a>
-						<iframe src="//player.vimeo.com/video/53834658?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="320" height="440" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 					</div>
 					<div data-widget-id="2268" class="widget insight grid_1 " data-muse-widget-name="insight">
 						<div class="insight-image">
@@ -317,4 +316,15 @@
 		</div>
 	</div>
 </div>
+<script>
+	$('.video a').click(function(e){
+		var hrefVideo = $(this).attr('href');
+		var lastIndex = hrefVideo.lastIndexOf('/');
+		var idVideo = hrefVideo.substr(lastIndex, hrefVideo.length);
+		console.log(idVideo);
+		var parent = $(this).parent();
+		parent.remove($(this));
+		parent.append("<iframe src=\"//player.vimeo.com/video/" + idVideo + "?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1\" width=\"320\" height=\"440\" frameborder=\"0\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\" allowfullscreen=\"\"></iframe>");
+	});
+</script>
 @endsection
