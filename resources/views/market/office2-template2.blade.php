@@ -107,11 +107,16 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-4">
-					<div data-widget-id="10314" class="widget insight video grid_1_2 " data-muse-widget-name="video">
-						<img data-cfsrc="https://assets.themuse.com/uploaded/companies/61/widgets/10314.jpg?v=None" src="https://assets.themuse.com/uploaded/companies/61/widgets/10314.jpg?v=None">
-						<div class="text-bottom">
-							<div class="video-text">Jumping For Joy: Uber’s Employees Love Working In London</div>
-						</div>
+					<div data-widget-id="2260" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+						<a href="http://vimeo.com/53830892">
+							<div class="playhead-overlay">
+								<img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video">
+							</div>
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2260.jpg?v=None" alt="video thumbnail image">
+							<div class="text-bottom">
+								<div class="video-text">A Place for Good Ideas</div>
+							</div>
+						</a>
 					</div>
 					<div data-widget-id="10315" class="widget insight grid_1 " data-muse-widget-name="insight">
 						<div class="insight-image">
@@ -243,4 +248,16 @@
 		</div>
 	</div>
 </div>
+<script>
+	$('.video a').click(function(e){
+		e.preventDefault();
+		var hrefVideo = $(this).attr('href');
+		var lastIndex = hrefVideo.lastIndexOf('/') + 1;
+		var idVideo = hrefVideo.substr(lastIndex, hrefVideo.length);
+		console.log(idVideo);
+		var parent = $(this).parent();
+		this.remove();
+		parent.append("<iframe src=\"//player.vimeo.com/video/" + idVideo + "?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1\" width=\"320\" height=\"440\" frameborder=\"0\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\" allowfullscreen=\"\"></iframe>");
+	});
+</script>
 @endsection
