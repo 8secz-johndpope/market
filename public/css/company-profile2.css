@@ -45,7 +45,7 @@
     float: left;
     clear: both
 }
-.grid_1_1 img, .grid_1_2 img{
+.grid_1_1 img, .grid_1_2 img, .quote img {
 	width: 100%;
 }
 .logo-block {
