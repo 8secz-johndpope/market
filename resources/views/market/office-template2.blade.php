@@ -59,11 +59,11 @@
 			<!-- div info-content -->
 			<div class="col-sm-8">
 				<div class="title-block">
-					<h1>We are<br><div class="big-title">UBER</div></h1>
+					<h1>The London, United Kingdom Office at<br><div class="big-title">UBER</div></h1>
 				</div>
 				<div class="btn-row">
 					<a class="see-job blue-solid-button-xs" href="/jobs/uber" alt="Uber Careers - See Our Jobs">See Our Jobs</a>
-					<a class="next-company lt-grey-solid-button-xs" alt="Uber Careers - Next Company" href="/random/company">Next Company</a>
+					<a class="next-company lt-grey-solid-button-xs" alt="Uber Careers - Next Company" href="/random/company">SEE SAN FRANCISCO, CA</a>
 				</div>
 			</div>
 			<div class="col-sm-4">
@@ -79,6 +79,14 @@
 						<li class="field_company_size">
 							<i class="fa fa-user" aria-hidden="true"></i>
 							<a href="/companies/?company_size=Large Size">Large Size</a>
+						</li>
+						<li class="field_company_location">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+							<a href="/companies?office_location=San Francisco, CA">San Francisco, CA</a>
+							|
+							<a href="/companies?office_location=Chicago, IL">Chicago, IL</a>
+							|
+							<a href="/companies?office_location=London, United Kingdom">London, United Kingdom</a>
 						</li>
 					</ul>
 				</div>
