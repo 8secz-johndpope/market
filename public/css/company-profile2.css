@@ -708,6 +708,17 @@
     background-color: rgba(0,0,0,.56);
     color: #fff;
 }
+.company-profile-styling .area-title {
+    color: #333;
+    font-family: proximathin,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 1.1em;
+    margin: 20px 0;
+}
 .company-profile-styling .text-bottom, .company-profile-styling .text-left, .company-profile-styling .text-right {
     position: absolute;
     overflow: auto;
