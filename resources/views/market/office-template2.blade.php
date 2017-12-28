@@ -94,73 +94,15 @@
 		</div>
 		<div class="company-wrapper">
 			<div class="row">
-				<div class="col-sm-8">
-					<a href="/companies/uber/offices">
-						<div class="grid_2_2">
-							<img src="https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F61%2Fpages%2F674%2Ff1.jpg%3Fv%3DNone&amp;h=960&amp;w=1300" class="share-base" alt="Uber Careers">
-							<div class="text-lower-right gradient"><h2>Our Office</h2></div>
-						</div>
-					</a>
-				</div>
-				<div class="col-sm-4">
-					<div class="grid_1_1">
-						<img src="https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F61%2Fpages%2F674%2Ff2.jpg%3Fv%3DNone&amp;h=235&amp;w=320" alt="Uber Careers">
-						<div class="text-lower-right gradient">
-							<p>We work &amp; ride in San Francisco</p>
+				<div class="col-sm-12">
+					<div class="spotlight grid_3_2 video">
+						<img data-cfsrc="https://assets.themuse.com/uploaded/companies/61/office/303/f1.jpg?v=None" class="share-base" alt="person photo" src="https://assets.themuse.com/uploaded/companies/61/office/303/f1.jpg?v=None">
+						<div class="text-bottom">
+							<div class="feature-text">
+								Uber’s U.K offices are headquartered in London.
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="grid_1_1">
-						<img src="https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F61%2Fpages%2F674%2Ff3.jpg%3Fv%3DNone&amp;h=235&amp;w=320" alt="Uber Careers">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<a href="/companies/uber/people/brian&#10;&#10;" data-person-id="182" data-person-short-name="brian" data-person-position="0">
-						<div class="spotlight grid_1_2">
-							<img src="https://assets.themuse.com/uploaded/companies/61/people/182-small.jpg?v=None" alt="Brian McMullen, Community Management Specialist - Uber Careers">
-							<div class="spotlight-about">
-								<div class="spotlight-name">Brian McMullen</div>
-								<div class="spotlight-title">Community Management Specialist</div>
-								<div class="spotlight-clicktomeet">
-									Click to meet Brian 
-									<i class="fa fa-long-arrow-right"></i>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-sm-4">
-					<a href="/companies/uber/people/swathy&#10;&#10;" data-person-id="184" data-person-short-name="swathy" data-person-position="1">
-						<div class="spotlight grid_1_2">
-							<img src="https://assets.themuse.com/uploaded/companies/61/people/184-small.jpg?v=None" alt="Swathy Prithivi, Operations &amp; Logistics Manager - Uber Careers">
-							<div class="spotlight-about">
-							<div class="spotlight-name">Swathy Prithivi</div>
-							<div class="spotlight-title">Operations &amp; Logistics Manager</div>
-							<div class="spotlight-clicktomeet">
-								Click to meet Swathy 
-								<i class="fa fa-long-arrow-right"></i>
-							</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-sm-4">
-					<a href="/companies/uber/people/jess&#10;&#10;" data-person-id="183" data-person-short-name="jess" data-person-position="2">
-						<div class="spotlight grid_1_2">
-							<img src="https://assets.themuse.com/uploaded/companies/61/people/183-small.jpg?v=None" alt="Jess Stanton, Software Engineer - Uber Careers">
-							<div class="spotlight-about">
-							<div class="spotlight-name">Jess Stanton</div>
-							<div class="spotlight-title">Software Engineer</div>
-							<div class="spotlight-clicktomeet">
-								Click to meet Jess 
-								<i class="fa fa-long-arrow-right"></i>
-							</div>
-							</div>
-						</div>
-					</a>
 				</div>
 			</div>
 			<div class="row">
