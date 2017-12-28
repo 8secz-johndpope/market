@@ -259,7 +259,8 @@
 		</div>
 	</div>
 	<div class="container company-job-tiles">
-		<div class="row">
+		<div class="row header-row">
+			<h3 class="section-header">Uber jobs</h3>
 		</div>
 	</div>
 </div>
