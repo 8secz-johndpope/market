@@ -243,16 +243,4 @@
 		</div>
 	</div>
 </div>
-<script>
-	$('.video a').click(function(e){
-		e.preventDefault();
-		var hrefVideo = $(this).attr('href');
-		var lastIndex = hrefVideo.lastIndexOf('/') + 1;
-		var idVideo = hrefVideo.substr(lastIndex, hrefVideo.length);
-		console.log(idVideo);
-		var parent = $(this).parent();
-		this.remove();
-		parent.append("<iframe src=\"//player.vimeo.com/video/" + idVideo + "?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1\" width=\"320\" height=\"440\" frameborder=\"0\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\" allowfullscreen=\"\"></iframe>");
-	});
-</script>
 @endsection
