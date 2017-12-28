@@ -53,7 +53,7 @@ Route::get('/user/contacts/add', 'HomeController@add_contact');
 Route::get('/user/groups/create', 'HomeController@create_group');
 Route::get('/user/new/broadcast', 'HomeController@create_broadcast');
 Route::get('/user/edit/profile', 'HomeController@edit_profile');
-Route::post('/user/save/profile', 'MessageController@save_pro');
+Route::post('/user/save/profile', 'HomeController@save_pro');
 
 Route::post('/user/groups/add', 'MessageController@add_group');
 Route::post('/user/send/broadcast', 'MessageController@send_broadcast');
