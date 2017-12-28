@@ -12,7 +12,7 @@
 .company-profile-styling img {
     width: 100%;
 }
-.company-profile-styling .col-sm-4, .company-profile-styling .col-sm-8{
+.company-profile-styling .col-sm-4, .company-profile-styling .col-sm-8, .company-profile-styling .col-sm-12{
 	padding: 0;
 }
 .title-block h1 {
