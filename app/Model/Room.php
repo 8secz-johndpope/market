@@ -65,7 +65,7 @@ class Room extends Model
 
         foreach ($this->users as $usr){
             if($usr->id!==$user->id){
-                $names[] = $usr->name;
+                $names[] = $usr->display_name;
             }
         }
         return implode(',',$names);
@@ -79,7 +79,7 @@ class Room extends Model
     }
     public function otitle(){
         if($this->direct===1){
-            return $this->other()->name;
+            return $this->other()->display_name;
         }else{
             return $this->title;
         }

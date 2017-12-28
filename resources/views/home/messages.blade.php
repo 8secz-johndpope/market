@@ -30,11 +30,13 @@
                             <div class="controls-container">
                                 <span>
                                     <div class="controls-fields">
+                                        <a href="/user/new/message">
                                         <div role="button" data-role="New Chat">
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path opacity=".55" fill="#263238" d="M19.005 3.175H4.674C3.642 3.175 3 3.789 3 4.821V21.02l3.544-3.514h12.461c1.033 0 2.064-1.06 2.064-2.093V4.821c-.001-1.032-1.032-1.646-2.064-1.646zm-4.989 9.869H7.041V11.1h6.975v1.944zm3-4H7.041V7.1h9.975v1.944z"></path></svg>
                                             </span>
                                         </div>
+                                            </a>
                                     </div>
                                     <div class="controls-fields dropdown">
                                         <div role="button" data-role="Menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,9 +46,9 @@
                                         </div>
                                         <ul class="dropdown-menu general-options">
                                           <li><a href="/user/manage/contacts">Contacts</a></li>
-                                          <li><a href="#">Profile</a></li>
+                                          <li><a href="/user/edit/profile">Profile</a></li>
                                           <li><a href="/user/groups/create">New Group</a></li>
-                                          <li><a href="#">New broadcast</a></li>
+                                          <li><a href="/user/new/broadcast">New broadcast</a></li>
                                           <li><a href="#">Settings</a></li>
                                         </ul>
                                     </div>
@@ -105,7 +107,7 @@
                         <div class="chat-avatar">
                             <div class="avatar">
                                 <span>
-                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$cur->image}}" class="avatar-image">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$cur->profile_image()}}" class="avatar-image">
                                 </span>
                             </div>
                         </div>

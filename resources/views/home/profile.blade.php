@@ -54,14 +54,39 @@
             </ul>
         </div>
     </div>
-    <a class="btn btn-primary" href="/user/contacts/add">Add Contact</a>
-    <a class="btn btn-success" href="/user/groups/create">New Group</a>
+    <form method="post" action="/user/save/profile">
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Display Name</label>
+            <div class="col-sm-10">
+                <input type="text"  class="form-control" name="display_name" value="{{$user->display_name}}">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-12">
+                <a ><img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="add-profile-image" style="cursor: pointer;width: 50px;"></a>
+                <input type="file" id="upload-profile"  style="display: none">
+                <input type="hidden" name="image" value="{{$user->image}}" id="image">
 
-    <table class="table">
-        <tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Email</th><th>Send Message</th><th>Send Invoice</th><th>Share Balance</th></tr>
-        @foreach($user->contacts as $contact)
-            <tr><td>{{$contact->first}}</td><td>{{$contact->last}}</td><td>{{$contact->phone}}</td><td>{{$contact->email}}</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/direct/message/{{$contact->uid()}}">Send Message</a> @else <a class="btn btn-outline-primary" href="#">Invite</a> @endif</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/direct/invoice/{{$contact->uid()}}">Send Invoice</a> @else  @endif</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/transfer/balance/{{$contact->uid()}}">Share Balance</a> @else  @endif</td></tr>
-            @endforeach
-    </table>
+            </div>
+        </div>
+        {{ csrf_field() }}
+        <div class="row">
+            <div class="col">
+                <input type="submit" class="btn btn-primary" value="Save Changes">
 
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </form>
+    <script>
+        $(".add-profile-image").click(function () {
+            $("#upload-profile").click();
+        });
+
+        $("#upload-profile").change(function () {
+            console.log("did change");
+            upload_profile();
+        });
+    </script>
 @endsection

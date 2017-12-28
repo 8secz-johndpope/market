@@ -207,10 +207,7 @@
         .meta-bold{
             font-weight: bold;
         }
-        .copyright {
-            position: absolute;
-            bottom: 0;
-        }
+
 
     </style>
 @yield('styles')

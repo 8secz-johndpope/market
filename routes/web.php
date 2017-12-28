@@ -51,7 +51,18 @@ Route::get('/user/manage/invoices', 'HomeController@invoices');
 
 Route::get('/user/contacts/add', 'HomeController@add_contact');
 Route::get('/user/groups/create', 'HomeController@create_group');
+Route::get('/user/new/broadcast', 'HomeController@create_broadcast');
+Route::get('/user/edit/profile', 'HomeController@edit_profile');
+Route::get('/user/new/message', 'HomeController@new_message');
+
+Route::get('/user/transfer/balance/{id}', 'HomeController@transfer_balance');
+Route::post('/user/share/balance', 'HomeController@share_balance');
+
+
+Route::post('/user/save/profile', 'HomeController@save_pro');
+
 Route::post('/user/groups/add', 'MessageController@add_group');
+Route::post('/user/send/broadcast', 'MessageController@send_broadcast');
 
 Route::get('/user/direct/message/{id}', 'MessageController@direct_message');
 Route::get('/user/direct/invoice/{id}', 'MessageController@direct_invoice');

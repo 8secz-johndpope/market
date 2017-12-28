@@ -2142,6 +2142,42 @@ class HomeController extends BaseController
 
         return view('home.group',['user'=>$user]);
     }
+    public function create_broadcast(Request $request){
+        $user=Auth::user();
+
+        return view('home.broadcast',['user'=>$user]);
+    }
+
+
+    public function edit_profile(Request $request){
+        $user=Auth::user();
+
+        return view('home.profile',['user'=>$user]);
+    }
+    public function new_message(Request $request){
+        $user=Auth::user();
+
+        return view('home.newmessage',['user'=>$user]);
+    }
+    public function transfer_balance(Request $request,$id){
+        $user=Auth::user();
+        $other = User::find($id);
+        return view('home.sharebalance',['user'=>$user,'other'=>$other]);
+    }
+    public function share_balance(Request $request){
+        $user=Auth::user();
+        $other = User::find($request->id);
+        return view('home.sharebalance',['user'=>$user,'other'=>$other]);
+    }
+    public function save_pro(Request $request){
+        $user=Auth::user();
+        $user->image = $request->image;
+        $user->display_name = $request->display_name;
+        $user->save();
+
+        return redirect('/user/manage/messages/');
+    }
+
     public function adds_contact(Request $request){
         $user=Auth::user();
         $contact = new Contact();

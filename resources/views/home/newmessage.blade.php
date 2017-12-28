@@ -54,14 +54,31 @@
             </ul>
         </div>
     </div>
-    <a class="btn btn-primary" href="/user/contacts/add">Add Contact</a>
-    <a class="btn btn-success" href="/user/groups/create">New Group</a>
+    <div class="row">
+        <div class="col-sm-3">
 
-    <table class="table">
-        <tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Email</th><th>Send Message</th><th>Send Invoice</th><th>Share Balance</th></tr>
-        @foreach($user->contacts as $contact)
-            <tr><td>{{$contact->first}}</td><td>{{$contact->last}}</td><td>{{$contact->phone}}</td><td>{{$contact->email}}</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/direct/message/{{$contact->uid()}}">Send Message</a> @else <a class="btn btn-outline-primary" href="#">Invite</a> @endif</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/direct/invoice/{{$contact->uid()}}">Send Invoice</a> @else  @endif</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/transfer/balance/{{$contact->uid()}}">Share Balance</a> @else  @endif</td></tr>
+        </div>
+        <div class="col-sm-6">
+
+        <ul class="list-group">
+            @foreach($user->contacts as $contact)
+                @if($contact->is_user())
+                    <li class="list-group-item">
+                        <a href="/user/direct/message/{{$contact->uid()}}">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$contact->u()->image}}" class="lazyload" alt="" style="width: 100px">
+                                {{$contact->first}}
+                            </label>
+                        </div>
+                        </a>
+                    </li>
+                @endif
             @endforeach
-    </table>
+        </ul>
+
+
+        </div>
+    </div>
 
 @endsection
