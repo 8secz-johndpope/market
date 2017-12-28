@@ -708,6 +708,10 @@
     background-color: rgba(0,0,0,.56);
     color: #fff;
 }
+.company-profile-styling .text-bottom, .company-profile-styling .text-left, .company-profile-styling .text-right {
+    position: absolute;
+    overflow: auto;
+}
 .company-profile-styling .text-bottom .video-text, .company-profile-styling .text-bottom .feature-text, .company-profile-styling .text-bottom .map-text {
     color: #fff;
 }
