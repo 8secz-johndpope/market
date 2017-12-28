@@ -207,7 +207,7 @@
         .meta-bold{
             font-weight: bold;
         }
-       
+
 
     </style>
 @yield('styles')
