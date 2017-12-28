@@ -55,6 +55,8 @@ Route::get('/user/new/broadcast', 'HomeController@create_broadcast');
 Route::get('/user/edit/profile', 'HomeController@edit_profile');
 Route::get('/user/new/message', 'HomeController@new_message');
 
+Route::get('/user/transfer/balance/{id}', 'HomeController@transfer_balance');
+
 
 Route::post('/user/save/profile', 'HomeController@save_pro');
 

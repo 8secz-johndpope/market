@@ -2159,6 +2159,11 @@ class HomeController extends BaseController
 
         return view('home.newmessage',['user'=>$user]);
     }
+    public function transfer_balance(Request $request,$id){
+        $user=Auth::user();
+        $other = User::find($id);
+        return view('home.sharebalance',['user'=>$user,'other'=>$other]);
+    }
     public function save_pro(Request $request){
         $user=Auth::user();
         $user->image = $request->image;
