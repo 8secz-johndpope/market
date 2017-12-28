@@ -479,3 +479,7 @@
     border-left: 1px solid #53b6d0;
     border-right: 1px solid #53b6d0;
 }
+.dropdown-wrapper:hover .subnav-dropdown, .dropdown-wrapper:focus .subnav-dropdown, .dropdown-more:hover .subnav-dropdown, .dropdown-more:focus .subnav-dropdown {
+    visibility: visible;
+    opacity: 1;
+}
