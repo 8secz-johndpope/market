@@ -678,6 +678,9 @@
     z-index: 22;
     padding-top: 10px;
 }
+.text-bottom .video-text {
+    background: linear-gradient(transparent,transparent,transparent,transparent,rgba(0,0,0,.3));
+}
 .block {
     padding-bottom: 80px;
 }
