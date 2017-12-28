@@ -320,7 +320,7 @@
 	$('.video a').click(function(e){
 		e.preventDefault();
 		var hrefVideo = $(this).attr('href');
-		var lastIndex = hrefVideo.lastIndexOf('/');
+		var lastIndex = hrefVideo.lastIndexOf('/') + 1;
 		var idVideo = hrefVideo.substr(lastIndex, hrefVideo.length);
 		console.log(idVideo);
 		var parent = $(this).parent();
