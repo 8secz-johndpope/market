@@ -729,3 +729,6 @@
     width: 70%;
     margin: 0 auto;
 }
+.company-profile-styling .text-bottom .map-text {
+    font-size: 14px;
+}
