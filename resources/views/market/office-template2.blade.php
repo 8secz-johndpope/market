@@ -12,7 +12,7 @@
 <div class="row subnav-block top-nav fixed">
 	<div class="col-sm-12">
 		<ul class="profiles-subnav">
-			<li class="dropdown-wrapper active">
+			<li class="dropdown-wrapper">
 				<a href="/companies/uber">About</a>
 			</li>
 			<li class="dropdown-wrapper ">
@@ -21,7 +21,7 @@
 					<li class="">
 						<a href="/companies/uber/office/uber">San Francisco, CA</a>
 					</li>
-					<li class="">
+					<li class="active">
 						<a href="/companies/uber/office/london">London, United Kingdom</a>
 					</li>
 				</ul>
