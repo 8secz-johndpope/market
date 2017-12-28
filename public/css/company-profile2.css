@@ -1,6 +1,9 @@
 .body {
     padding-top: 120px;
 }
+.container{
+	max-width: 1065px;
+}
 .title-block h1 {
     font-size: 28px;
     font-family: proximalight,Helvetica,sans-serif;
