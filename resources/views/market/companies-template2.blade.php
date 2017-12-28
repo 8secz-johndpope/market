@@ -54,7 +54,7 @@
  <link href="{{asset('/css/company-profile2.css?q=874')}}" rel="stylesheet">
  
  <div class="body">
-	<div class="container">
+	<div class="container company-profile-styling">
 		<div class="row">
 			<!-- div info-content -->
 			<div class="col-sm-8">
