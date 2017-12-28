@@ -583,3 +583,12 @@
     font-family: proxima,proximathin,sans-serif;
     color: #333;
 }
+.job-element .white-gradient {
+    height: 140px;
+    background: linear-gradient(rgba(255,255,255,0),transparent,transparent,transparent,transparent,transparent,rgba(255,255,255,.1),rgba(255,255,255,.6),rgba(255,255,255,.9));
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
