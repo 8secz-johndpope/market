@@ -43,7 +43,12 @@
     max-width: 320px;
     max-height: 235px;
 }
-.grid_1_1, .grid_2_2, .grid_1_2, .grid_1 {
+.grid_3_2 {
+    max-height: 480px;
+    max-width: 980px;
+    position: relative;
+}
+.grid_1_1, .grid_2_2, .grid_1_2, .grid_1, .grid_3_2 {
 	margin: 5px;
     position: relative;
     overflow: hidden;
