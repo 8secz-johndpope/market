@@ -571,3 +571,15 @@
     height: 140px;
     overflow: hidden;
 }
+.job-element h3 {
+    display: block;
+    color: #333;
+    margin: 20px 15px 10px;
+}
+.job-element .metadata {
+    text-align: left;
+    font-size: 13px;
+    padding: 0 15px 20px;
+    font-family: proxima,proximathin,sans-serif;
+    color: #333;
+}
