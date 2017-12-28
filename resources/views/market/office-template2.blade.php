@@ -113,6 +113,28 @@
 							<div class="video-text">Jumping For Joy: Uber’s Employees Love Working In London</div>
 						</div>
 					</div>
+					<div data-widget-id="10315" class="widget insight grid_1 " data-muse-widget-name="insight">
+						<div class="insight-image">
+							<img data-cfsrc="https://assets.themuse.com/uploaded/companies/61/widgets/10315.jpg?v=None" alt="Careers - Office Life London Calling" src="https://assets.themuse.com/uploaded/companies/61/widgets/10315.jpg?v=None">
+						</div>
+						<div class="insight-body">
+							<div class="insight-date">Office Life
+							</div>
+							<div class="insight-title">London Calling
+							</div>
+							<div class="insight-text">Uber’s employees love working in London. The U.K. capital has a lot to offer—including a rich cultural history and a vibrant arts community. With so much to see and do, it’s no wonder Uber’s employees are always smiling. Luckily for them, the feeling’s mutual: Uber’s list of London regulars is growing rapidly, with riders ranging from savvy students to esteemed celebs.</div>
+						</div>
+					</div>
+					<div data-widget-id="10316" class="widget  " data-muse-widget-name="help_wanted_dynamic">
+						<a href="/jobs?company=Uber" target="_blank">
+							<div class="help-wanted">
+								<div class="help-wanted-title">We're Hiring</div>
+								<div class="help-wanted-job">Check out open jobs at Uber</div>
+								<div class="help-wanted-location"></div>
+								<div class="help-wanted-footer"></div>
+							</div>
+						</a>
+					</div>
 				</div>
 				<div class="col-sm-4">
 					<div data-widget-id="2270" class="widget insight grid_1 " data-muse-widget-name="insight">
