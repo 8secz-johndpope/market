@@ -54,7 +54,7 @@
             </ul>
         </div>
     </div>
-    <form method="post" action="/user/new/broadcast">
+    <form method="post" action="/user/send/broadcast">
         <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Message</label>
             <div class="col-sm-10">

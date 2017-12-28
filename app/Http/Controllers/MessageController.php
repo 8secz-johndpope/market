@@ -452,6 +452,50 @@ class MessageController extends BaseController
         return redirect('/user/manage/messages/' . $room->id);
 
     }
+    public function send_broadcast(Request $request)
+    {
+        $user = Auth::user();
+
+
+
+        foreach ($request->users as $uid){
+            $other = User::find($uid);
+            $direct = Direct::where('u1',$user->id)->where('u2',$uid)->first();
+            if($direct===null){
+                $direct = Direct::where('u2',$user->id)->where('u1',$uid)->first();
+            }
+            if($direct===null){
+                $room = new Room;
+                $room->sender_id=$user->id;
+                $room->direct=1;
+                $room->save();
+                $room->users()->save($user);
+                if($user->id!==$other->id){
+                    $room->users()->save($other);
+                }
+                $direct=new Direct();
+                $direct->u1 = $user->id;
+                $direct->u2 = $other->id;
+                $direct->room_id = $room->id;
+                $direct->save();
+            }else{
+                $room=$direct->room;
+            }
+
+            $message = new Message;
+            $message->message=$request->message;
+            $message->from_msg=$user->id;
+                $message->to_msg=$other->id;
+            $message->room_id=$room->id;
+
+            $message->save();
+
+            $room->modify();
+            $this->notify($room,$message);
+        }
+        return redirect('/user/manage/messages/');
+
+    }
     public function direct_message(Request $request,$id)
     {
         $user = Auth::user();
