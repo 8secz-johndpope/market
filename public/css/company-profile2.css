@@ -682,3 +682,7 @@
     -o-transition: color 200ms ease-out;
     transition: color 200ms ease-out;
 }
+.favroite-icon:before {
+    height: 20px;
+    width: 20px;
+}
