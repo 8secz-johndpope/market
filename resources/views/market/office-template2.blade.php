@@ -157,60 +157,15 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div data-widget-id="2274" class="widget  widget-col-2" data-muse-widget-name="social_facebook">
-						<a href="https://www.facebook.com/uber" target="_blank">
-							<div class="social social-facebook grid_1">
-								<div class="social-container">
-									<div class="social-title">Uber on Facebook
-									</div>
-									<div class="social-body">Choice is a beautiful thing! Now offering a SUV option in Dallas; your whole posse can show up together in style.</div>
-									<div class="social-footer"></div>
-								</div>
+					<div data-widget-id="10319" class="widget insight grid_1 widget-col-2" data-muse-widget-name="map">
+						<a href="http://maps.google.com/maps?saddr=&amp;daddr=21 Caledonian Road, London N1 9GB, United Kingdom" target="_blank">
+							<img src="http://maps.googleapis.com/maps/api/staticmap?center=21+Caledonian+Road%2C+London+N1+9GB%2C+United+Kingdom&amp;markers=color%3Ablue%7C21+Caledonian+Road%2C+London+N1+9GB%2C+United+Kingdom&amp;sensor=false&amp;size=320x235&amp;zoom=15">
+							<div class="text-bottom transluscent-black">
+								<div class="map-text">
+								Take Me to the Uber Office!</div>
 							</div>
 						</a>
 					</div>
-					<div data-widget-id="2273" class="widget  widget-col-2" data-muse-widget-name="social_twitter">
-						<a href="https://twitter.com/uber" target="_blank">
-							<div class="social social-twitter grid_1">
-								<div class="social-container">
-									<div class="social-title">‏@Uber </div>
-									<div class="social-body">Go NYC! RT @Uber_NYC: Subways may be closed but we're up! We have some cars available at the moment, and see more coming online. </div>
-									<div class="social-footer"></div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div data-widget-id="2275" class="widget  widget-col-2" data-muse-widget-name="quote_green">
-						<div class="quote quote-green">
-							<div class="quote-green-top">&nbsp;</div>
-							<div class="quote-green-side">&nbsp;</div>
-							<div class="quote-body">
-								“The things that we do here really impact people’s day-to-day lives and we’re proud of that.”
-								<div class="quote-source">
-									<div class="quote-author">-Brian </div>
-									<div class="quote-author-position">Community Management Specialist</div>
-								</div>
-							</div>
-							<div class="quote-green-side">&nbsp;</div>
-							<img alt="“The things that we do here really impact people’s day-to-day lives and we’re proud of that.” " class="quote-bottom" src="https://www.themuse.com/static/images/quote_green_bottom.png?v=b075c27b5205eefaca5afe5c7dab5a4ddd9f8e2ec3d9489a6fe048d8856d0311">
-						</div>
-					</div>
-					<div data-widget-id="2276" class="widget  widget-col-2" data-muse-widget-name="quote_yellow">
-						<div class="quote quote-yellow">
-							<div class="quote-yellow-top">&nbsp;</div>
-							<div class="quote-yellow-side">&nbsp;</div>
-							<div class="quote-body">
-								“I downloaded Uber and it was a magical experience—you press a button, a town car rolls up, and there’s a amazing driver who opens the door for you with gum and candy inside!”
-								<div class="quote-source">
-									<div class="quote-author">-Swathy
-									</div>
-									<div class="quote-author-position">Operations &amp; Logistics Manager</div>
-								</div>
-							</div>
-							<div class="quote-yellow-side">&nbsp;</div>
-								<img alt="“I downloaded Uber and it was a magical experience—you press a button, a town car rolls up, and there’s a amazing driver who opens the door for you with gum and candy inside!”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_yellow_bottom.png?v=5a8a4600d998f7e1d0553d8062fda1c17cb42d2914e76ac96acfb8e679b683e9">
-							</div>
-						</div>
 				</div>
 			</div>
 		</div>
