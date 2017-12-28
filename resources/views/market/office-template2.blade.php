@@ -107,37 +107,11 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-4">
-					<div data-widget-id="2267" class="widget insight video grid_1_2 " data-muse-widget-name="video">
-						<a href="http://vimeo.com/53834658">
-							<div class="playhead-overlay">
-								<img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video">
-							</div>
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2267.jpg?v=None" alt="video thumbnail image">
-							<div class="text-bottom">
-								<div class="video-text">Growing Globally </div>
-							</div>
-						</a>
-					</div>
-					<div data-widget-id="2268" class="widget insight grid_1 " data-muse-widget-name="insight">
-						<div class="insight-image">
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2268.jpg?v=None" alt="Careers - Office Life
-						 The White Unicorn">
+					<div data-widget-id="10314" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+						<img data-cfsrc="https://assets.themuse.com/uploaded/companies/61/widgets/10314.jpg?v=None" src="https://assets.themuse.com/uploaded/companies/61/widgets/10314.jpg?v=None">
+						<div class="text-bottom">
+							<div class="video-text">Jumping For Joy: Uber’s Employees Love Working In London</div>
 						</div>
-						<div class="insight-body">
-							<div class="insight-date">Office Life</div>
-							<div class="insight-title">The White Unicorn</div>
-							<div class="insight-text">For Uber fans, the “White Unicorn” has become the stuff of San Francisco legends. The elusive white car—the only one in Uber’s all-black fleet—accomplishes Herculean feats, having even whisked one woman off her feet to a surprise engagement party. When not busy playing matchmaker, though, the Unicorn and its faithful driver, Sofian, can be found deftly battling rush-hour traffic on San Francisco’s winding streets, getting Uber users to their destinations.</div>
-						</div>
-					</div>
-					<div data-widget-id="2269" class="widget  " data-muse-widget-name="help_wanted_dynamic">
-						<a href="/jobs?company=Uber" target="_blank">
-							<div class="help-wanted">
-								<div class="help-wanted-title">We're Hiring</div>
-								<div class="help-wanted-job">Check out open jobs at Uber</div>
-								<div class="help-wanted-location"></div>
-								<div class="help-wanted-footer"></div>
-							</div>
-						</a>
 					</div>
 				</div>
 				<div class="col-sm-4">
