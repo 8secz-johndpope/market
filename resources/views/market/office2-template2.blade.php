@@ -18,10 +18,10 @@
 			<li class="dropdown-wrapper ">
 				<a class="dropdown-link" href="/companies/uber/office" data-toggle="dropdown">Offices <i class="fa fa-caret-down"></i></a>
 				<ul class="subnav-dropdown">
-					<li class="">
+					<li class="active">
 						<a href="/companies/uber/office/uber">San Francisco, CA</a>
 					</li>
-					<li class="active">
+					<li class="">
 						<a href="/companies/uber/office/london">London, United Kingdom</a>
 					</li>
 				</ul>
@@ -59,11 +59,11 @@
 			<!-- div info-content -->
 			<div class="col-sm-8">
 				<div class="title-block">
-					<h1>The London, United Kingdom Office at<br><div class="big-title">UBER</div></h1>
+					<h1>The San Francisco, CA Office at<br><div class="big-title">UBER</div></h1>
 				</div>
 				<div class="btn-row">
 					<a class="see-job blue-solid-button-xs" href="/jobs/uber" alt="Uber Careers - See Our Jobs">See Our Jobs</a>
-					<a class="next-company lt-grey-solid-button-xs" alt="Uber Careers - Next Company" href="/random/company">SEE SAN FRANCISCO, CA</a>
+					<a class="next-company lt-grey-solid-button-xs" alt="Uber Careers - Next Company" href="/random/company">SEE LONDON, UNITED KINGDOM</a>
 				</div>
 			</div>
 			<div class="col-sm-4">
@@ -96,10 +96,10 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="spotlight grid_3_2 video">
-						<img data-cfsrc="https://assets.themuse.com/uploaded/companies/61/office/303/f1.jpg?v=None" class="share-base" alt="person photo" src="https://assets.themuse.com/uploaded/companies/61/office/303/f1.jpg?v=None">
+						<img src="https://assets.themuse.com/uploaded/companies/61/office/61/f1.jpg?v=None" class="share-base" alt="person photo">
 						<div class="text-bottom">
 							<div class="feature-text">
-								Uber’s U.K offices are headquartered in London.
+							Uber’s offices are located in San Francisco.
 							</div>
 						</div>
 					</div>
