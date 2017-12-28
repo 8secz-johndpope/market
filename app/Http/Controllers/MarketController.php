@@ -2121,4 +2121,12 @@ class MarketController extends BaseController
             $view = 'market.office2-template2';
         return view($view);
     }
+    public function people(Request $request, $id, $people_id){
+        $view = 'market.office-template1';
+        if($id === 'uber' && $people_id === 'brian')
+            $view = 'market.people1-template2';
+        elseif($id === 'uber' && $people_id === 'swathy')
+            $view = 'market.people2-template2';
+        return view($view);
+    }
 }
