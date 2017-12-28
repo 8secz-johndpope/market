@@ -105,7 +105,7 @@
                         <div class="chat-avatar">
                             <div class="avatar">
                                 <span>
-                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$cur->image}}" class="avatar-image">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$cur->profile_image()}}" class="avatar-image">
                                 </span>
                             </div>
                         </div>
