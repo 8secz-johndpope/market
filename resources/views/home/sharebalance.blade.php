@@ -67,6 +67,7 @@
                     <li class="list-group-item">
                         <div class="form-check">
                             <label class="form-check-label">
+                                <input type="hidden" name="id" value="{{$other->id}}">
                                 <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$other->image}}" class="lazyload" alt="" style="width: 100px">
                                 {{$other->display_name}}
                             </label>

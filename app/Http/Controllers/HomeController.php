@@ -2164,6 +2164,11 @@ class HomeController extends BaseController
         $other = User::find($id);
         return view('home.sharebalance',['user'=>$user,'other'=>$other]);
     }
+    public function share_balance(Request $request){
+        $user=Auth::user();
+        $other = User::find($request->id);
+        return view('home.sharebalance',['user'=>$user,'other'=>$other]);
+    }
     public function save_pro(Request $request){
         $user=Auth::user();
         $user->image = $request->image;
