@@ -318,6 +318,7 @@
 </div>
 <script>
 	$('.video a').click(function(e){
+		e.preventDefault();
 		var hrefVideo = $(this).attr('href');
 		var lastIndex = hrefVideo.lastIndexOf('/');
 		var idVideo = hrefVideo.substr(lastIndex, hrefVideo.length);
