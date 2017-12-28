@@ -253,6 +253,7 @@ Route::get('/cleaves','MarketController@leaves');
 Route::get('/leaves','MarketController@lleaves');
 Route::get('/make-contact/{id}', 'MarketController@makeContact');
 Route::get('/companies/{id}', 'MarketController@companies');
+Route::get('/companies/{id}/office/{office_id}', 'MarketController@office');
 Route::get('/p/r/{cat}/{id}', 'HomeController@product_url');
 
 Route::get('/p/{cat}/{id}', 'MarketController@product');

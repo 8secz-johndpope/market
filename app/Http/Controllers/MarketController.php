@@ -2113,4 +2113,10 @@ class MarketController extends BaseController
             $view = 'market.companies-template2';
         return view($view);
     }
+    public function offices(Request $request, $id, $office_id){
+        $view = 'market.office-template1';
+        if($id === 'uber' && $office_id === 'london')
+            $view = 'market.office-template2';
+        return view($view);
+    }
 }
