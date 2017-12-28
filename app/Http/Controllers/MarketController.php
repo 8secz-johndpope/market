@@ -2117,7 +2117,7 @@ class MarketController extends BaseController
         $view = 'market.office-template1';
         if($id === 'uber' && $office_id === 'london')
             $view = 'market.office1-template2';
-        else($id === 'uber' && $office_id === 'uber')
+        elseif($id === 'uber' && $office_id === 'uber')
             $view = 'market.office2-template2';
         return view($view);
     }
