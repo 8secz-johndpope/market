@@ -2149,8 +2149,20 @@ class HomeController extends BaseController
     }
 
 
+    public function edit_profile(Request $request){
+        $user=Auth::user();
 
+        return view('home.profile',['user'=>$user]);
+    }
 
+    public function save_pro(Request $request){
+        $user=Auth::user();
+        $user->image = $request->image;
+        $user->display_name = $request->display_name;
+        $user->save();
+
+        return redirect('/user/manage/messages/');
+    }
 
     public function adds_contact(Request $request){
         $user=Auth::user();
