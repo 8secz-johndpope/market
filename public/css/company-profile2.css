@@ -582,6 +582,7 @@
     padding: 0 15px 20px;
     font-family: proxima,proximathin,sans-serif;
     color: #333;
+    list-style: none;
 }
 .job-element .white-gradient {
     height: 140px;
