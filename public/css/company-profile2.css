@@ -653,3 +653,10 @@
     max-height: 480px;
     max-width: 320px;
 }
+.company-profile-styling .text-bottom {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 22;
+    padding-top: 10px;
+}
