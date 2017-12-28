@@ -457,6 +457,7 @@
     transition-delay: .3s;
     transition: opacity .2s;
     list-style: none;
+    padding-left: 0;
 }
 .subnav-dropdown li>a {
     -webkit-transition: color 100ms ease-out;
