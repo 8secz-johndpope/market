@@ -701,6 +701,20 @@
     height: 20px;
     width: 20px;
 }
+.company-profile-styling .text-bottom .map-text, .company-profile-styling .text-bottom .feature-text, .company-profile-styling .text-bottom .video-text {
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px #000;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+    font-family: proximalight,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 15px;
+    font-weight: 700;
+}
 .text-bottom .video-text {
     background: linear-gradient(transparent,transparent,transparent,transparent,rgba(0,0,0,.3));
 }
