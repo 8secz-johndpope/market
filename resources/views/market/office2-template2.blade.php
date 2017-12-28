@@ -118,27 +118,17 @@
 							</div>
 						</a>
 					</div>
-					<div data-widget-id="10315" class="widget insight grid_1 " data-muse-widget-name="insight">
+					<div data-widget-id="2261" class="widget insight grid_1 " data-muse-widget-name="insight">
 						<div class="insight-image">
-							<img data-cfsrc="https://assets.themuse.com/uploaded/companies/61/widgets/10315.jpg?v=None" alt="Careers - Office Life London Calling" src="https://assets.themuse.com/uploaded/companies/61/widgets/10315.jpg?v=None">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2261.jpg?v=None" alt="Careers - Office Culture Work Friends and Watering Holes">
 						</div>
 						<div class="insight-body">
-							<div class="insight-date">Office Life
+							<div class="insight-date">Office Culture
 							</div>
-							<div class="insight-title">London Calling
+							<div class="insight-title">Work Friends and Watering Holes
 							</div>
-							<div class="insight-text">Uber’s employees love working in London. The U.K. capital has a lot to offer—including a rich cultural history and a vibrant arts community. With so much to see and do, it’s no wonder Uber’s employees are always smiling. Luckily for them, the feeling’s mutual: Uber’s list of London regulars is growing rapidly, with riders ranging from savvy students to esteemed celebs.</div>
+							<div class="insight-text">Uber employees love coming to work not only to connect users to great transportation, but also to connect and socialize with their own awesome co-workers. Day and night, the Uber team makes time to hang out: Workdays are interspersed with casual games of ping-pong or foosball, and happy hour at the local watering hole is an opportunity never missed. </div>
 						</div>
-					</div>
-					<div data-widget-id="10316" class="widget  " data-muse-widget-name="help_wanted_dynamic">
-						<a href="/jobs?company=Uber" target="_blank">
-							<div class="help-wanted">
-								<div class="help-wanted-title">We're Hiring</div>
-								<div class="help-wanted-job">Check out open jobs at Uber</div>
-								<div class="help-wanted-location"></div>
-								<div class="help-wanted-footer"></div>
-							</div>
-						</a>
 					</div>
 				</div>
 				<div class="col-sm-4">
