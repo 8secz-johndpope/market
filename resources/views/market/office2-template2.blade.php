@@ -132,23 +132,28 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div data-widget-id="10317" class="widget insight grid_1 " data-muse-widget-name="insight">
-						<div class="insight-image"><img data-cfsrc="https://assets.themuse.com/uploaded/companies/61/widgets/10317.jpg?v=None" alt="Careers - Uber in the World
-						 Look Out, London
-						" src="https://assets.themuse.com/uploaded/companies/61/widgets/10317.jpg?v=None"></div>
+					<div data-widget-id="2262" class="widget insight grid_1 " data-muse-widget-name="insight">
+						<div class="insight-image">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2262.jpg?v=None" alt="Careers - Office Life Happy Users, Happy Drivers">
+						</div>
 						<div class="insight-body">
-							<div class="insight-date">Uber in the World
+							<div class="insight-date">Office Life
 							</div>
-							<div class="insight-title">Look Out, London
-							</div>
-							<div class="insight-text">London’s the most visited city in the world—so it’s only fitting that it’s one of Uber’s first international locations. With Uber, anyone can traverse London’s streets, often at prices up to 50% cheaper than the city’s local black cabs. Some of Uber’s favorite London spots? Though the list is ever-changing, Duck &amp; Waffle and the Tower of London are currently tied for the top.</div>
+						<div class="insight-title">Happy Users, Happy Drivers
+						</div>
+							<div class="insight-text">Satisfaction is king at Uber, and one of the company’s priorities is to make sure both customers and drivers have a great experience with Uber. The car-booking experience gives users easy access to fast, clean, upscale rides—but what’s more, Uber also makes sure it’s easy for drivers to earn extra money by providing rides to Uber customers and keeps track of their satisfaction with Uber riders.</div>
 						</div>
 					</div>
-					<div data-widget-id="10318" class="widget insight video grid_1_2 " data-muse-widget-name="video">
-						<img data-cfsrc="https://assets.themuse.com/uploaded/companies/61/widgets/10318.jpg?v=None" src="https://assets.themuse.com/uploaded/companies/61/widgets/10318.jpg?v=None">
-						<div class="text-bottom">
-							<div class="video-text">Uber Nights On The Town: Exploring London’s Streets In Style</div>
-						</div>
+					<div data-widget-id="2263" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+						<a href="http://vimeo.com/53823637">
+							<div class="playhead-overlay">
+								<img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video">
+							</div>
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2263.jpg?v=None" alt="video thumbnail image">
+							<div class="text-bottom">
+								<div class="video-text">Mariachis on the Move</div>
+							</div>
+						</a>
 					</div>
 				</div>
 				<div class="col-sm-4">
