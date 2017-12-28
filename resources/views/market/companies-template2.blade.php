@@ -289,7 +289,12 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div>
+				<div>
 					<div class="col-sm-4">
+						<div class="job-element Uber" data-id="882521"><a href="/jobs/uber/us-canada-regional-courier-operations-manager-analytics-focus-uber-eats?ref=company-about-page-1" data-tile-link="true"><div class="tile-copy"><h3><span>Uber</span>US &amp; Canada Regional Courier Operations Manager, Analytics Focus - Uber Eats</h3><ul class="metadata"><li>New York City, NY</li></ul></div><div class="white-gradient hidden-xs"></div><div class="tile-bg"><img src="https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F61%2Foffice%2F61%2Ff1.jpg&amp;h=295&amp;w=400" alt="Now Hiring - US &amp; Canada Regional Courier Operations Manager, Analytics Focus - Uber Eats at Uber"></div></a><div class="favorite-container"><div><a aria-label="favorite" href="#" class="favorite"><i aria-hidden="true" class="fa fa-heart-o"></i></a></div></div></div>
 					</div>
 					<div class="col-sm-4">
 					</div>
