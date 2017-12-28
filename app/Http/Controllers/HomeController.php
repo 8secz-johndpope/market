@@ -2154,7 +2154,11 @@ class HomeController extends BaseController
 
         return view('home.profile',['user'=>$user]);
     }
+    public function new_message(Request $request){
+        $user=Auth::user();
 
+        return view('home.newmessage',['user'=>$user]);
+    }
     public function save_pro(Request $request){
         $user=Auth::user();
         $user->image = $request->image;
