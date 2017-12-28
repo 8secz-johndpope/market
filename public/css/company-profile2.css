@@ -678,7 +678,10 @@
     z-index: 22;
     padding-top: 10px;
 }
-
+.spotlight {
+    position: relative;
+    text-shadow: 0 1px 1px #000;
+}
 .block {
     padding-bottom: 80px;
 }
@@ -721,7 +724,7 @@
 .text-bottom .video-text {
     background: linear-gradient(transparent,transparent,transparent,transparent,rgba(0,0,0,.3));
 }
-.text-bottom .feature-text {
+.company-profile-styling .text-bottom .feature-text {
     padding: 20px;
     width: 70%;
     margin: 0 auto;
