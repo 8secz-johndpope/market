@@ -507,3 +507,6 @@
 .subnav-dropdown li:last-child {
     border-bottom: 1px solid #ff9d2c;
 }
+.company-job-tiles {
+    background-color: #f7f7f7;
+}

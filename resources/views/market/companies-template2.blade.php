@@ -261,6 +261,19 @@
 	<div class="container company-job-tiles">
 		<div class="row header-row">
 			<h3 class="section-header">Uber jobs</h3>
+			<a class="tm-bright-blue-round-button" href="/jobs/uber">Show me more jobs <i class="fa fa-long-arrow-right"></i></a>
+		</div>
+		<div class="row block">
+			<div>
+				<div>
+					<div class="col-sm-4">
+					</div>
+					<div class="col-sm-4">
+					</div>
+					<div class="col-sm-4">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
