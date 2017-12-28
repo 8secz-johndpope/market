@@ -554,3 +554,20 @@
 .header-row a {
     margin-top: 4px;
 }
+.job-element {
+    background-color: #f9f9f9;
+    -moz-box-shadow: 0 10px 20px 0 #eee;
+    -webkit-box-shadow: 0 10px 20px 0 #eee;
+    box-shadow: 0 10px 20px 0 #eee;
+    position: relative;
+    display: block;
+    margin-top: 37px;
+    background-color: #fff;
+}
+.job-element .tile-copy {
+    border-top: 3px solid #666;
+    background-color: #fff;
+    z-index: 20;
+    height: 140px;
+    overflow: hidden;
+}
