@@ -225,6 +225,18 @@
 						</a>
 					</div>
 					<div class="col-sm-4">
+						<a href="/companies/uber/people/jess&#10;&#10;" data-person-id="183" data-person-short-name="jess" data-person-position="2">
+							<div class="spotlight grid_1_2">
+								<img src="https://assets.themuse.com/uploaded/companies/61/people/183-small.jpg?v=None" alt="Jess Stanton, Software Engineer - Uber Careers">
+								<div class="spotlight-about">
+									<div class="spotlight-name">Jess Stanton</div>
+									<div class="spotlight-title">Software Engineer</div>
+									<div class="spotlight-clicktomeet">Click to meet Jess 
+										<i class="fa fa-long-arrow-right"></i>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
