@@ -4,6 +4,9 @@
 .container{
 	max-width: 1065px;
 }
+.col-sm-4, .col-sm-8{
+	padding: 0;
+}
 .title-block h1 {
     font-size: 28px;
     font-family: proximalight,Helvetica,sans-serif;
