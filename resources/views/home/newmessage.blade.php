@@ -67,7 +67,6 @@
                         <a href="/user/direct/message/{{$contact->uid()}}">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="users[]" value="{{$contact->uid()}}">
                                 <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$contact->u()->image}}" class="lazyload" alt="" style="width: 100px">
                                 {{$contact->first}}
                             </label>
