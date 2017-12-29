@@ -208,7 +208,7 @@
                                         @elseif($message->type==='image')
                                     @if($message->from_msg===$user->id)
                                         <div class="right-message clearfix">
-                                            <img src="{{$message->url}}">
+                                            <img src="{{$message->url}}" style="float: right">
                                         </div>
 
                                     @else
