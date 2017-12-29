@@ -254,7 +254,8 @@
 </div>
     <script>
         function handleBtnClick() {
-            $("#upload-image-chat").click();
+            console.log("yahoo")
+            //$("#upload-image-chat").click();
         };
         function scroll_bottom() {
             var objDiv = document.getElementById("all-msg");
