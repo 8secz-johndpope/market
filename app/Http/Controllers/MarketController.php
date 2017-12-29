@@ -1892,10 +1892,6 @@ class MarketController extends BaseController
         }
         $postcode=null;
         //check if it is listing for template and set loc with london
-        if($loc === 'c-uber-jobs'){
-            $loc = 'london';
-        }
-        
         $location = Location::where('slug',$loc)->first();
         if($location===null) {
             $postcode = Postcode::where('postcode', strtoupper($loc))->first();
