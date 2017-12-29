@@ -56,7 +56,13 @@
 						</div>
 					</div>
 					<div class="row">
-
+						<div class="col-sm-12">
+							<div class="form-group has-icon">
+								<label class="control-label sr-only" for="contact-subject">Subject</label>
+								<input type="text" id="contact-subject" name="contact-subject" class="form-control input">
+								<span class="fa fa-envelope-o form-control-icon"></span>
+							</div>
+						</div>
 					</div>
 					<div class="row">
 					</div>
