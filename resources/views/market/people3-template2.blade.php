@@ -252,6 +252,7 @@
 		e.preventDefault();
 		var vHeight = 440;
 		var vWidth = 320;
+		console.log($(this).closest('.person-tile'));
 		if($(this).closest('.person-tile') == null){
 			vHeight = 480;
 			vWidth = 980;
