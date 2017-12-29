@@ -2135,6 +2135,45 @@ class MarketController extends BaseController
     }
     public function companyJobs(Request $request, $id){
         $view = 'market.company-jobs';
-        return view($view);
+        $category = Category::where('slug','jobs')->first();
+        if($category===null){
+            return View('notfound');
+        }
+        $postcode=null;
+        //check if it is listing for template and set loc with london
+        $location = Location::where('slug','london')->first();
+        if($location===null) {
+            $postcode = Postcode::where('postcode', strtoupper($loc))->first();
+
+            if ($postcode === null) {
+            }else{
+                $location = $postcode->location;
+            }
+        }
+
+        $params = $this->filter($request,$category,$location);
+        if (Auth::check()) {
+            // The user is logged in...
+            $user = $request->user();
+            // $favorites = $user->favs;
+            $favorites = $user->favorites;
+            $sids = array();
+            foreach ($favorites as $favorite){
+                $sids[] = $favorite->sid;
+            }
+            $params['sids']=$sids;
+        }else{
+            $params['sids']=[];
+        }
+        if($postcode===null)
+            $params['type']='location';
+        else
+        {
+            $params['type']='postcode';
+            $params['postcode']=$postcode;
+        }
+        $milliseconds = round(microtime(true) * 1000);
+        $params['milli']=$milliseconds;
+        return view($view, $params);
     }
 }
