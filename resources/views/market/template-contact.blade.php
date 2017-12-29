@@ -41,7 +41,7 @@
 								<label class="control-label sr-only" for="contact-name">
 									Name
 								</label>
-								<input type="text" id="contact-name" class="form-control input">
+								<input type="text" id="contact-name" name="contact-name" class="form-control input">
 								<span class="fa fa-user form-control-icon"></span>	
 								<p class="help-block help-block-error"></p>
 							</div>					
@@ -49,13 +49,14 @@
 						<div class="col-sm-6">
 							<div class="form-group has-icon">
 								<label class="control-label sr-only" for="contact-email">Email</label>
-								<input type="text" id="contact-email" class="form-control input">
+								<input type="text" id="contact-email" name="contact-email" class="form-control input">
 								<span class="fa fa-envelope-o form-control-icon"></span>
 								<p class="help-block help-block-error"></p>
 							</div>
 						</div>
 					</div>
 					<div class="row">
+
 					</div>
 					<div class="row">
 					</div>
