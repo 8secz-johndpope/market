@@ -71,6 +71,22 @@
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+.form-control-icon {
+    color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    pointer-events: none;
+}
+.has-icon label.sr-only ~ .form-control-icon {
+    top: 0;
+}
 .has-icon .form-control {
     padding-left: 30px;
 }
