@@ -1600,6 +1600,7 @@ span.green-text, span.yellow-text{
     color: #fff;
     background: #ff9d2c;
     width: 200px;
+    padding: 10px 40px;
 }
 #email-sendme {
     padding-left: 16px;
