@@ -44,6 +44,14 @@
 			</li>
 			<li class="subnav-jobs"><a href="/company-jobs/c-uber-jobs">Jobs</a></li>
 		</ul>
+	</div>
+	<div class="col-sm-12">
+		<div class="showcase-like">
+			<h4>Showcase your company like Uber</h4>
+		</div>
+		<div class="container-bt-contact">
+			<a href="#" class="btn ">Contact</a>
+		</div>
 	</div>	
 </div>
 @endsection
@@ -53,14 +61,6 @@
  <div class="body">
 	<div class="container company-profile-styling">
 		<div class="row">
-			<div class="col-sm-12">
-				<div class="showcase-like">
-					<h4>Showcase your company like Uber</h4>
-				</div>
-				<div class="container-bt-contact">
-					<a href="#" class="btn ">Contact</a>
-				</div>
-			</div>
 			<!-- div info-content -->
 			<div class="col-sm-8">
 				<div class="title-block">
