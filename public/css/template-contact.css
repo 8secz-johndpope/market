@@ -24,3 +24,9 @@
     line-height: 30px;
     text-align: center;
 }
+.row.header-container {
+    background: url(/img/uber-office.jpg);
+    background-size: cover;
+    background-position: 52% center;
+    /* background-attachment: fixed; */
+}
