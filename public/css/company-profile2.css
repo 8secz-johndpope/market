@@ -854,3 +854,9 @@
     /*padding: 15px;*/
     text-align: left;
 }
+.container-bt-contact {
+    float: right;
+}
+.showcase-container {
+    background: #bbb;
+}
