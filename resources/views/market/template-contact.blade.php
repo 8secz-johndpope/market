@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<div class="col-sm-5">
-				<h3>Via Website:</h3>
+				<h3 class="options-contact-title">Via Website:</h3>
 				<form>
 					<div class="row">
 						<div class="col-sm-6">
@@ -75,13 +75,37 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-offset-6 col-sm-6">
-							<button type="submit" class="btn btn-submit" name="contact-button">
+							<button type="submit" class="btn btn-submit" name="contact-button">Send Message</button>
 						</div>
-					</div>
-					
+					</div>	
 				</form>
 			</div>
 			<div class="col-sm-3">
+				<h3 class="options-contact-title">By Email:</h3>
+				<ul class="list-style-1">
+					<li>
+						<i class="fa fa-envelope"></i>
+						<span>info@sumra.net</span>
+					</li>
+				</ul>
+				<h3 class="options-contact-title">By Phone:</h3>
+				<ul class="list-style-1">
+					<li>
+						<i class="fa fa-phone"></i>
+						<span> +44 208 777 7777</span>
+					</li>
+				</ul>
+				<h3 class="options-contact-title">Bussines Hours:</h3>
+				<ul class="list-style-1">
+					<li>
+						<i class="fa fa-calendar"></i>
+						<strong>Monday - Sunday</strong>
+					</li>
+					<li>
+						<i class="fa fa-clock-o"></i>
+						<span>09:00 to 21:00</span>
+					</li>
+				</ul>
 			</div>
 			<div class="col-sm-4">
 			</div>
