@@ -74,7 +74,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-offset-6 col-sm-6">
+						<div class="text-right col-sm-offset-6 col-sm-6">
 							<button type="submit" class="btn btn-submit" name="contact-button">Send Message</button>
 						</div>
 					</div>	
