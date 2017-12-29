@@ -18,7 +18,7 @@
 					<h1 class="header-title">
 						Sumra - Contact
 					</h1>
-					<p class="c-white">Uber - Company template</p>
+					<p class="c-white">Uber Template</p>
 				</div>
 			</div>
 		</div>
@@ -43,10 +43,14 @@
 								</label>
 								<input type="text" id="contact-name" class="form-control input">
 								<span class="fa fa-user form-control-icon"></span>	
+								<p class="help-block help-block-error"></p>
 							</div>					
 						</div>
 						<div class="col-sm-6">
-							
+							<div class="form-group has-icon">
+								<label class="control-label sr-only" for="contact-email">Email</label>
+								<input type="text" id="contact-email" class="form-control input">
+							</div>
 						</div>
 					</div>
 					<div class="row">
