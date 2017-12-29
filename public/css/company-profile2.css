@@ -787,3 +787,10 @@
     margin-bottom: 15px;
     color: #fff;
 }
+#person .person-bio {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+#person .person-video {
+    margin-top: 10px;
+}
