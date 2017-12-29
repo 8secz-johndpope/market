@@ -103,27 +103,27 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-4">
-					<div data-widget-id="2236" class="widget insight video grid_1_2 " data-muse-widget-name="video">
-						<a href="http://vimeo.com/53825150">
+					<div data-widget-id="2244" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+						<a href="http://vimeo.com/53825153">
 							<div class="playhead-overlay">
 								<img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video">
 							</div>
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2236.jpg?v=None" alt="video thumbnail image">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2244.jpg?v=None" alt="video thumbnail image">
 							<div class="text-bottom">
-								<div class="video-text">Fancy Fridays</div>
+								<div class="video-text">Programming Was In My Genes</div>
 							</div>
 						</a>
 					</div>
-					<div data-widget-id="2237" class="widget insight grid_1 " data-muse-widget-name="insight">
+					<div data-widget-id="2245" class="widget insight grid_1 " data-muse-widget-name="insight">
 						<div class="insight-image">
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2237.jpg?v=None" alt="Careers - Brian’s Story Friendly Suggestions">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2245.jpg?v=None" alt="Careers - Office Culture A Cohesive Crew">
 						</div>
 						<div class="insight-body">
-							<div class="insight-date">Brian’s Story
+							<div class="insight-date">Office Culture
 							</div>
-							<div class="insight-title">Friendly Suggestions
+							<div class="insight-title">A Cohesive Crew
 							</div>
-							<div class="insight-text">When Brian graduated from journalism school, he was on a quest to find a career that would let him flex his writing muscles and fuel his interest in marketing. Through a friend’s suggestion, he discovered Uber—and found the opportunity really fit the bill. Uber thought so, too, and jumped to offer him a role managing relationships with Uber’s diverse community, where he now thrives.</div>
+							<div class="insight-text">Uber runs like a well-oiled machine because its run by a tight-knit crew. Beyond informal happy hours, the team makes a point to organize group events—like its six-week dodgeball season. Recently, employees took a weekend day-cay to Napa Valley for a wine tasting trip where, in true Uber spirit, they enjoyed a day in the sun sipping and socializing.</div>
 						</div>
 					</div>
 				</div>
