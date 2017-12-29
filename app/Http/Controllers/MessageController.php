@@ -12,6 +12,7 @@ use App\Model\Application;
 use App\Model\Direct;
 use App\Model\Message;
 use App\Model\Room;
+use App\Model\RoomUser;
 use App\Model\Sale;
 use App\User;
 use GuzzleHttp\Pool;
