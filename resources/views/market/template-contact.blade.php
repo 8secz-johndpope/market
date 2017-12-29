@@ -36,6 +36,18 @@
 				<h3>Via Website:</h3>
 				<form>
 					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group has-icon">
+								<label class="control-label sr-only" for="contact-name">
+									Name
+								</label>
+								<input type="text" id="contact-name" class="form-control input">
+								<span class="fa fa-user form-control-icon"></span>	
+							</div>					
+						</div>
+						<div class="col-sm-6">
+							
+						</div>
 					</div>
 					<div class="row">
 					</div>
