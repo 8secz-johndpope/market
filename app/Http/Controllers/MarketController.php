@@ -2127,6 +2127,8 @@ class MarketController extends BaseController
             $view = 'market.people1-template2';
         elseif($id === 'uber' && $people_id === 'swathy')
             $view = 'market.people2-template2';
+        elseif($id === 'uber' && $people_id === 'jess')
+            $view = 'market.people3-template2';
         return view($view);
     }
 }
