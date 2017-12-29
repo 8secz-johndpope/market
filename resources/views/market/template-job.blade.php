@@ -40,6 +40,9 @@
 								<i aria-hidden="true" class="fa fa-long-arrow-right"></i>
 							</span>
 						</a>
+						<p class="hidden-xs">
+							Uber is your on-demand private driver. Request a ride at any time, to wherever you’re going, with Uber’s iPhone and Android apps.
+						</p>
 					</div>
 				</div>
 			</div>
