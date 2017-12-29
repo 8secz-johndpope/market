@@ -43,6 +43,14 @@
 						<p class="hidden-xs">
 							Uber is your on-demand private driver. Request a ride at any time, to wherever you’re going, with Uber’s iPhone and Android apps.
 						</p>
+						<div class="company-profile-preview-sidebar">
+							<div class="company-profile-preview-sidebar-image">
+								<a href="/companies/uber" target="_blank">
+									<img alt="Uber Company Image" src="https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F61%2Fpages%2F674%2Ff3.jpg%3Fv%3DNone&amp;h=352&amp;w=530">
+									<div class="tm-white-round-button">Company Profile</div>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
