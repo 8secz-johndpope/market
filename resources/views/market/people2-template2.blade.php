@@ -114,16 +114,16 @@
 							</div>
 						</a>
 					</div>
-					<div data-widget-id="2237" class="widget insight grid_1 " data-muse-widget-name="insight">
+					<div data-widget-id="2253" class="widget insight grid_1 " data-muse-widget-name="insight">
 						<div class="insight-image">
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2237.jpg?v=None" alt="Careers - Brian’s Story Friendly Suggestions">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2253.jpg?v=None" alt="Careers - Office Life The Uber Cocktail">
 						</div>
 						<div class="insight-body">
-							<div class="insight-date">Brian’s Story
+							<div class="insight-date">Office Life
 							</div>
-							<div class="insight-title">Friendly Suggestions
+							<div class="insight-title">The Uber Cocktail
 							</div>
-							<div class="insight-text">When Brian graduated from journalism school, he was on a quest to find a career that would let him flex his writing muscles and fuel his interest in marketing. Through a friend’s suggestion, he discovered Uber—and found the opportunity really fit the bill. Uber thought so, too, and jumped to offer him a role managing relationships with Uber’s diverse community, where he now thrives.</div>
+							<div class="insight-text">Swathy finds Uber’s innovative culture and startup ethos intoxicating. Team members are encouraged to “fail fast,” learn lessons, and move on. Great ideas, like the on-demand ice cream truck, can start out as a suggestion and quickly come to life—creating living, breathing, and extremely popular new product lines. These seemingly crazy ideas—that other companies might probably scoff off—thrive at Uber and keep the company innovative and its employees inspired. </div>
 						</div>
 					</div>
 				</div>
