@@ -128,25 +128,26 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div data-widget-id="2238" class="widget insight grid_1 " data-muse-widget-name="insight">
+					<div data-widget-id="2246" class="widget insight grid_1 " data-muse-widget-name="insight">
 						<div class="insight-image">
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2238.jpg?v=None" alt="Careers - What Brian Does Community Management Specialist ">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2246.jpg?v=None" alt="Careers - What Jess Does Software Engineer">
 						</div>
 						<div class="insight-body">
-							<div class="insight-date">What Brian Does
+							<div class="insight-date">What Jess Does
 							</div>
-							<div class="insight-title">Community Management Specialist </div>
-							<div class="insight-text">Brian gets into the office between 8 AM and 9 AM and kicks off the day by tackling customer support questions. He then digs in to marketing and PR efforts to keep users up-to-date on all the cool things Uber has in store—from Mariachis-for-rent to the launch of a new Uber city—and also works with the Driver Ops Team to make sure Uber is delivering the high-quality service users have come to expect.</div>
+							<div class="insight-title">Software Engineer
+							</div>
+							<div class="insight-text">Jess’s morning formally starts at 11 AM with the daily stand-up meeting, where she checks in with her focus group and goes over the day’s objectives. After lunch with co-workers, she spends a good part of her time working to internationalize Uber’s products. She and her team are currently busy translating the products and creating systems that’ll work across international lines, preparing for Uber to conquer the world.</div>
 						</div>
 					</div>
-					<div data-widget-id="2239" class="widget insight video grid_1_2 " data-muse-widget-name="video">
-						<a href="http://vimeo.com/53823638">
+					<div data-widget-id="2247" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+						<a href="http://vimeo.com/53825151">
 							<div class="playhead-overlay">
 								<img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video">
 							</div>
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2239.jpg?v=None" alt="video thumbnail image">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2247.jpg?v=None" alt="video thumbnail image">
 							<div class="text-bottom">
-								<div class="video-text">Merging Technology &amp; Real Life</div>
+								<div class="video-text">Creating A Feel-Good Situation </div>
 							</div>
 						</a>
 					</div>
