@@ -51,6 +51,17 @@
 								</a>
 							</div>
 						</div>
+						<h3 class="hidden-xs">About This Job</h3>
+						<div class="metadata metadata-list">
+							<div class="metadata-list_section metadata-list_section--blue">
+								<h4 class="metadata-list_header">Location</h4>
+								<ul class="metadata-list_items">
+									<li>
+										<a href="/jobs/l-London%2C-United-Kingdom-jobs">London, United Kingdom</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
