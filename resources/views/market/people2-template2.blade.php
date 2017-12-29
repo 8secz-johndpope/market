@@ -140,14 +140,14 @@
 							<div class="insight-text">Swathy kicks off her morning by interviewing new drivers and partners while everyone’s still at his or her freshest. Afterward, a good chunk of her day is devoted to inspecting Uber’s vehicles and meeting with the San Francisco team to discuss how to improve car quality. She then wraps up her work by digging into data and looking for areas of potential growth that’ll enable Uber to keep customers satisfied and entice new ones to give Uber a try. </div>
 						</div>
 					</div>
-					<div data-widget-id="2239" class="widget insight video grid_1_2 " data-muse-widget-name="video">
-						<a href="http://vimeo.com/53823638">
+					<div data-widget-id="2255" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+						<a href="http://vimeo.com/53830894">
 							<div class="playhead-overlay">
 								<img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video">
 							</div>
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2239.jpg?v=None" alt="video thumbnail image">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2255.jpg?v=None" alt="video thumbnail image">
 							<div class="text-bottom">
-								<div class="video-text">Merging Technology &amp; Real Life</div>
+								<div class="video-text">Engineering Uber’s Success</div>
 							</div>
 						</a>
 					</div>
