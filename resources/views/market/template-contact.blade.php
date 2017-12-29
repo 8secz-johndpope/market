@@ -61,6 +61,7 @@
 								<label class="control-label sr-only" for="contact-subject">Subject</label>
 								<input type="text" id="contact-subject" name="contact-subject" class="form-control input">
 								<span class="fa fa-envelope-o form-control-icon"></span>
+								<p class="help-block help-block-error"></p>
 							</div>
 						</div>
 					</div>
