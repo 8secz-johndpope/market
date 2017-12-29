@@ -18,9 +18,6 @@
 			<li class="dropdown-wrapper ">
 				<a class="dropdown-link" href="/companies/uber/office" data-toggle="dropdown">Offices <i class="fa fa-caret-down"></i></a>
 				<ul class="subnav-dropdown">
-					<li class="">
-						<a href="/companies/uber/office/uber">San Francisco, CA</a>
-					</li>
 					<li class="active">
 						<a href="/companies/uber/office/london">London, United Kingdom</a>
 					</li>
@@ -62,8 +59,7 @@
 					<h1>The London, United Kingdom Office at<br><div class="big-title">UBER</div></h1>
 				</div>
 				<div class="btn-row">
-					<a class="see-job blue-solid-button-xs" href="/jobs/uber" alt="Uber Careers - See Our Jobs">See Our Jobs</a>
-					<a class="next-company lt-grey-solid-button-xs" alt="Uber Careers - Next Company" href="/random/company">SEE SAN FRANCISCO, CA</a>
+					<a class="see-job blue-solid-button-xs" href="/company-jobs/c-uber-jobs" alt="Uber Careers - See Our Jobs">See Our Jobs</a>
 				</div>
 			</div>
 			<div class="col-sm-4">
@@ -82,10 +78,6 @@
 						</li>
 						<li class="field_company_location">
 							<i class="fa fa-map-marker" aria-hidden="true"></i>
-							<a href="/companies?office_location=San Francisco, CA">San Francisco, CA</a>
-							|
-							<a href="/companies?office_location=Chicago, IL">Chicago, IL</a>
-							|
 							<a href="/companies?office_location=London, United Kingdom">London, United Kingdom</a>
 						</li>
 					</ul>
