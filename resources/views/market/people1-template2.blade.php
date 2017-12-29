@@ -144,14 +144,14 @@
 							<div class="insight-text">Brian gets into the office between 8 AM and 9 AM and kicks off the day by tackling customer support questions. He then digs in to marketing and PR efforts to keep users up-to-date on all the cool things Uber has in store—from Mariachis-for-rent to the launch of a new Uber city—and also works with the Driver Ops Team to make sure Uber is delivering the high-quality service users have come to expect.</div>
 						</div>
 					</div>
-					<div data-widget-id="2263" class="widget insight video grid_1_2 " data-muse-widget-name="video">
-						<a href="http://vimeo.com/53823637">
+					<div data-widget-id="2239" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+						<a href="http://vimeo.com/53823638">
 							<div class="playhead-overlay">
 								<img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video">
 							</div>
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2263.jpg?v=None" alt="video thumbnail image">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2239.jpg?v=None" alt="video thumbnail image">
 							<div class="text-bottom">
-								<div class="video-text">Mariachis on the Move</div>
+								<div class="video-text">Merging Technology &amp; Real Life</div>
 							</div>
 						</a>
 					</div>
