@@ -55,7 +55,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="showcase-like">
-					<h3>Showcase your company like Uber</h3>
+					<h4>Showcase your company like Uber</h4>
 				</div>
 				<div class="container-bt-contact">
 					<a href="#" class="btn ">Contact</a>
