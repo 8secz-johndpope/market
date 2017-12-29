@@ -190,7 +190,7 @@ use App\Model\Advert;
                 <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
             </div>
         </div>
-        <div class="listing-max-pro container-emailme">
+        <!-- <div class="listing-max-pro container-emailme">
             <div class="container-emailme-header text-center">
                 <h3>Let Us Help With Your Search</h3>
             </div>
@@ -219,7 +219,7 @@ use App\Model\Advert;
                 </div>
                 <small>By clicking Submit, you accept our <a>Terms & Conditions</a>, <a>Privacy policy</a> and consent to messages</small>
             </div>
-        </div>
+        </div> -->
         <div class="listing-max-pro">
             <div class="product">
                 <div class="info margin-left">
