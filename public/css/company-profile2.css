@@ -754,3 +754,11 @@
 .company-profile-styling .text-bottom .map-text {
     font-size: 14px;
 }
+.company-profile-styling .text-right, .company-profile-styling .text-left {
+    max-width: 365px;
+    padding: 20px;
+    bottom: 65px;
+}
+.company-profile-styling .text-left {
+    left: 35px;
+}
