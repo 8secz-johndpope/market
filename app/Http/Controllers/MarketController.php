@@ -1891,7 +1891,11 @@ class MarketController extends BaseController
             return View('notfound');
         }
         $postcode=null;
-
+        //check if it is listing for template and set loc with london
+        if($loc === 'c-uber-jobs'){
+            $loc = 'london';
+        }
+        
         $location = Location::where('slug',$loc)->first();
         if($location===null) {
             $postcode = Postcode::where('postcode', strtoupper($loc))->first();
@@ -1901,6 +1905,7 @@ class MarketController extends BaseController
                 $location = $postcode->location;
             }
         }
+
         $params = $this->filter($request,$category,$location);
         if (Auth::check()) {
             // The user is logged in...
@@ -1939,6 +1944,7 @@ class MarketController extends BaseController
         $params['adverts']=$adverts;
 */
         //return View('market.listings',$params);
+
         return View('market.listingsrow',$params);
     }
     public function hellosign(Request $request){
