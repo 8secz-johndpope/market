@@ -32,151 +32,50 @@ use App\Model\Advert;
                 <a class="filter-button btn btn-default">Filter</a>
             </div>
     <div class="col-md-3 col-sm-3 col-xs-12">
-    <div class="filter-container">
-        <div class="all-filters">
-        <!-- <div class="l-visible-large">
-            <ul class="list-group">
-                @foreach($lparents as $parent)
-                    <li class="list-group-item"><a href="/{{$category->slug}}/{{$parent->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
-                @endforeach
-            </ul>
-        </div> -->
-        <div class="l-visible-large">
-            <h4>{{$location->title}}</h4>
-            <ul class="list-group">
-                @foreach($locs as $cat)
-                    <li class="list-group-item"><a href="/{{$category->slug}}/{{$cat->slug}}">{{$cat->title}}</a>&nbsp{{$cat->count}}</li>
-                @endforeach
-            </ul>
-        </div>
-        @if(count($parents) > 0)
-        <div class="l-visible-large">
-            <ul class="list-group">
-                @foreach($parents as $parent)
-                    <li class="list-group-item"><a href="/{{$parent->slug}}/{{$location->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-        
-        <div class="l-visible-large">
-            <h4>{{$category->title}}</h4>
-            @if(count($categories) > 0)
-            <ul class="list-group">
-                @foreach($categories as $cat)
-                        <li class="list-group-item"><a href="/{{$cat->slug}}/{{$location->slug}}">{{$cat->title}}</a>&nbsp;&nbsp;{{$cat->count}}</li>
-                @endforeach
-            </ul>
-            @endif
-        </div>
-        <div class="l-visible-large">
-            <form action="{{$url}}" >
-                <div class="form-group">
-                    <label for="distance">Distance:</label>
-                    @foreach($input as $key=>$value)
-                        @if($key!=='distance')
-                            <input type="hidden" name="{{$key}}" value="{{$value}}">
-                        @endif
-                    @endforeach
-                    <select class="form-control" data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
-                        @foreach($distances as $key=>$value)
-                            <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']==$key)) selected @endif>
-                                {{$value}}
-                            </option>
-                        @endforeach
-                    </select>
+        <div class="filter-container">
+            <div class="all-filters">
+                <div class="l-visible-large">
+                    <h4>Jobs at Uber</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="/jobs/london">See all companies</a>
+                        </li>
+                    </ul>
                 </div>
-            </form>
-        </div>
-        <div class="l-visible-large">
-            <form action="{{$url}}" >
-                <div class="form-group">
-                    <label for="sort"> Sort By:</label>
-                @foreach($input as $key=>$value)
-                    @if($key!=='sort')
-                        <input type="hidden" name="{{$key}}" value="{{$value}}">
-                    @endif
-                @endforeach
-                <select class="form-control" name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
-                    @foreach($sorts as $st)
-                        <option value="{{$st->key}}" @if(isset($input['sort'])&&$input['sort']===$st->key)) selected @endif>{{$st->title}}</option>
-                    @endforeach
-                </select>
+                <div class="l-visible-large">
+                    <h4>Job Level</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="#">Internship</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Mid Level</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Entry Level</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Senior Level</a>
+                        </li>
+                    </ul>
                 </div>
-            </form>
-        </div>
-        <div class="l-visible-large">
-            @if($category->id >= 4000000000 && $category->id <= 4999999999)
-            <form action="{{$url}}">
-                <label for="distance">Salary</label>
-                @foreach($input as $key=>$value)
-                    <input type="hidden" name="{{$key}}" value="{{$value}}">
-                @endforeach
-                    <div class="form-group">
-                        <label class="control-label" for="sal_minimum">Salary min:</label>
-                        <div class="">
-                        <input class="form-control" placeholder="Any" type="number" id="sal_minimum" name="sal_minimum" value="@if(isset($input['sal_minimum'])){{$input['sal_minimun']}}@endif" aria-invalid="false">
-                    </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label" for="salary_max">Salary max:</label>
-                        <div class=""><input class="form-control" placeholder="Any" type="number" name="sal_maximum" value="@if(isset($input['sal_maximum'])){{$input['sal_maximum']}}@endif" aria-invalid="false">
-                        </div>
-                        </div>
-                    <div class="form-group clearfix">
-                            <div class="col-sm-offset-6 col-sm-6">
-                                <button type="submit" class="btn btn-default">Submit</button>
-                            </div>
-                        </div>
-            </form>
-            @else
-            <form action="{{$url}}">
-                <label for="distance">Price</label>
-                @foreach($input as $key=>$value)
-                    <input type="hidden" name="{{$key}}" value="{{$value}}">
-                @endforeach
-                    <div class="form-group">
-                        <label class="control-label" for="min_price">Minimum Price:</label>
-                        <div class="">
-                        <input class="form-control" placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price'])){{$input['min_price']}}@endif" aria-invalid="false">
-                    </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label" for="max_price">Maximum Price:</label>
-                        <div class=""><input class="form-control" placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false">
-                        </div>
-                        </div>
-                    <div class="form-group clearfix">
-                            <div class="col-sm-offset-6 col-sm-6">
-                                <button type="submit" class="btn btn-default">Submit</button>
-                            </div>
-                        </div>
-            </form>
-            @endif
-        </div>
-        @foreach($filters as $filter)
-            <div class="l-visible-large">
-                @if($filter->title === 'Salary Period')
-                    <h4>Salary Bands</h4>
-                @else
-                    <h4>{{$filter->title}}</h4>
-                @endif
-                <ul class="list-group">
-                    @foreach($filter->vals as $val)
-                        @if($val->selected===1)
-                            <li class="list-group-item">{{$val->title}}</li>
-                        @else
-                            <li class="list-group-item"><a href="{!! $val->url !!}">{{$val->title}}</a>&nbsp;&nbsp;{{$val->count}}</li>
-                        @endif
-                    @endforeach
-                </ul>
+                <div class="l-visible-large">
+                    <h4>Company Size</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="#">Small</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Medium</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Large</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        @endforeach
         </div>
     </div>
-</div>
 <div class="col-lg-7 col-sm-9 col-xs-12">
     <div class="products">
         <h4 class="items-box-head">
