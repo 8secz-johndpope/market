@@ -1,5 +1,5 @@
 .body {
-    padding-top: 120px;
+    padding-top: 150px;
 }
 .company-profile-styling{
 	max-width: 1065px;
@@ -851,7 +851,8 @@
     margin-top: 0;
 }
 .showcase-like {
-    padding: 15px;
+    /*padding: 15px;*/
+    text-align: left;
 }
 .container-bt-contact {
     position: absolute;
