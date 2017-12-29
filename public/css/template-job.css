@@ -47,3 +47,9 @@
     border-radius: 25px;
     letter-spacing: 1px;
 }
+.tm-bright-blue-round-button:visited, .tm-bright-blue-round-button:focus {
+    color: #fff;
+}
+.header-container .ctas button, .header-container .ctas a, .header-container .ctas div {
+    display: inline-block;
+}
