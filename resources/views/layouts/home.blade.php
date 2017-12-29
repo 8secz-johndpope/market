@@ -273,16 +273,25 @@
                                             <a class="nav-link nav-color" href="/user/manage/contacts"><span class="fa fa-address-book"></span> &nbsp;&nbsp;Contacts</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="#"><span class="fa fa-user-circle"></span> &nbsp;&nbsp;Profile</a>
-                                        </li>
-                                        <li>
                                             <a class="nav-link nav-color" href="/user/groups/create"><span class="fa fa-users"></span> &nbsp;&nbsp;New Group</a>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="#"><span class="fa fa-reply-all"></span> &nbsp;&nbsp;New Broadcast</a>
                                         </li>
                                         <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-reply-all"></span> &nbsp;&nbsp;New Conversation</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-reply-all"></span> &nbsp;&nbsp;Share your Balance</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-reply-all"></span> &nbsp;&nbsp;Attachment</a>
+                                        </li>
+                                        <li>
                                             <a class="nav-link nav-color" href="#"><span class="fa fa-cog"></span> &nbsp;&nbsp;Settings</a>
+                                        </li>
+                                         <li>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-user-circle"></span> &nbsp;&nbsp;Profile</a>
                                         </li>
                                     </ul>
                                 </div>
