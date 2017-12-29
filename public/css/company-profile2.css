@@ -815,6 +815,17 @@
     color: #fff;
     padding: 0 10px 0 0;
 }
+.company-profile-styling .text-right, .company-profile-styling .text-left {
+    max-width: 365px;
+    padding: 20px;
+    bottom: 65px;
+}
+.company-profile-styling .text-right {
+    right: 35px;
+}
+.company-profile-styling .grid_3_2 .text-right {
+    font-size: 20px;
+}
 .lt-grey-border-button-xs {
     -webkit-transition: color 200ms ease-out;
     -moz-transition: color 200ms ease-out;
