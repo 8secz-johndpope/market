@@ -133,16 +133,15 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div data-widget-id="2262" class="widget insight grid_1 " data-muse-widget-name="insight">
+					<div data-widget-id="2238" class="widget insight grid_1 " data-muse-widget-name="insight">
 						<div class="insight-image">
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2262.jpg?v=None" alt="Careers - Office Life Happy Users, Happy Drivers">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2238.jpg?v=None" alt="Careers - What Brian Does Community Management Specialist ">
 						</div>
 						<div class="insight-body">
-							<div class="insight-date">Office Life
+							<div class="insight-date">What Brian Does
 							</div>
-						<div class="insight-title">Happy Users, Happy Drivers
-						</div>
-							<div class="insight-text">Satisfaction is king at Uber, and one of the company’s priorities is to make sure both customers and drivers have a great experience with Uber. The car-booking experience gives users easy access to fast, clean, upscale rides—but what’s more, Uber also makes sure it’s easy for drivers to earn extra money by providing rides to Uber customers and keeps track of their satisfaction with Uber riders.</div>
+							<div class="insight-title">Community Management Specialist </div>
+							<div class="insight-text">Brian gets into the office between 8 AM and 9 AM and kicks off the day by tackling customer support questions. He then digs in to marketing and PR efforts to keep users up-to-date on all the cool things Uber has in store—from Mariachis-for-rent to the launch of a new Uber city—and also works with the Driver Ops Team to make sure Uber is delivering the high-quality service users have come to expect.</div>
 						</div>
 					</div>
 					<div data-widget-id="2263" class="widget insight video grid_1_2 " data-muse-widget-name="video">
