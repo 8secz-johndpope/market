@@ -63,8 +63,6 @@
 			</div>
 			<!-- div info-content -->
 			<div class="col-sm-8">
-				<div class="showcase-like">
-				</div>
 				<div class="title-block">
 					<h1>We are<br><div class="big-title">UBER</div></h1>
 				</div>

@@ -853,3 +853,8 @@
 .showcase-like {
     padding: 15px;
 }
+.container-bt-contact {
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
