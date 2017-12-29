@@ -44,15 +44,17 @@
 			</li>
 			<li class="subnav-jobs"><a href="/company-jobs/c-uber-jobs">Jobs</a></li>
 		</ul>
-	</div>
-	<div class="col-sm-12">
+	</div>	
+</div>
+<div class="row">
+	<div class="col-sm-12 showcase-container">
 		<div class="showcase-like">
 			<h4>Showcase your company like Uber</h4>
 		</div>
 		<div class="container-bt-contact">
-			<a href="#" class="btn ">Contact</a>
+			<a href="#" class="btn btn-show-contact">Contact</a>
 		</div>
-	</div>	
+	</div>
 </div>
 @endsection
 @section('content')
