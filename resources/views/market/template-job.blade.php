@@ -179,6 +179,49 @@
 							</ul>
 						</section>
 					</div>
+					<section class="job-main-section">
+						<div class="job-body">
+							<div class="job-post">
+								<div class="bottom-ctas">
+									<div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
+										<div class="external-apply center">
+											<a class="tm-bright-blue-round-button btn-block apply-external" href="https://careers-uber.icims.com/jobs/34729/safety-lead-uki/job?iis=The+Muse&amp;iisn=The+Muse&amp;mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
+												Apply Now 
+												<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+											</a>
+										</div>
+									</div>
+									<div class="col-xs-12 visible-xs apply-later">
+										<div class="send-to-self">
+											<div>
+												<form method="POST" class="border-input form-styling" role="form">
+													<div>
+														<input type="hidden" name="_xsrf" value="2|2be55c91|c05cb2b21ed70e27cb87c3c642809261|1512660071">
+														<button type="submit" name="action" value="" class="tm-medium-grey-round-button">
+															<i class="fa fa-envelope-o"></i> 
+															Email To Myself For Later
+														</button>
+													</div>
+												</form>
+											</div>
+										</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+						<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Safety Lead UKI&amp;body=Just saw this awesome job I thought I would share with you! Check it out here: https://www.themuse.com/jobs/uber/safety-lead-uki?utm_source=job-individual" target="_blank">
+						Send To A Friend</a>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
+						<div class="favorite-box-container btn-block"><div><a href="#" class="favorite"><i class="fa fa-heart-o"></i> Save For Later</a></div></div>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="job-flag-parent center">
+						<div><a id="job-flag" href="#"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Flag this job as down</a></div>
+						</div>
+						</div>
+						</div>
+						</div>
+						</div>
+					</section>
 				</div>
 			</div>
 		</div>
