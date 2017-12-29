@@ -82,7 +82,7 @@
 		</div>
 		<div class="company-wrapper">
 			<div class="row">
-				<div class="person">
+				<div id="person">
 					<div class="col-sm-12">
 						<div class="spotlight grid_3_2 person-tile video">
 							<a href="http://vimeo.com/53823640">
