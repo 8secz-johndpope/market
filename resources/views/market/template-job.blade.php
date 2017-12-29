@@ -62,6 +62,16 @@
 								</ul>
 							</div>
 						</div>
+						<div class="hidden-xs">
+							<div class="favorite-box-container btn-block">
+								<div>
+									<a href="#" class="favorite">
+										<i class="fa fa-heart-o"></i> 
+										Save For Later
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
