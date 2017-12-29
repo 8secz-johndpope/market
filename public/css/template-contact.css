@@ -95,6 +95,15 @@
     margin: 0;
     list-style: none;
 }
+.list-style-1 > li {
+    padding: 6px 0;
+}
+.list-style-1 > li i {
+    margin-right: 4px;
+    text-align: center;
+    width: 12px;
+    color: #ffb301;
+}
 .container-logo {
     width: 100px;
     margin: auto;
