@@ -26,3 +26,24 @@
 .header-container .ctas {
     padding: 0 0 70px;
 }
+.tm-bright-blue-round-button {
+    -webkit-transition: background 200ms ease-out;
+    -moz-transition: background 200ms ease-out;
+    -ms-transition: background 200ms ease-out;
+    -o-transition: background 200ms ease-out;
+    transition: background 200ms ease-out;
+    padding: 12px 30px;
+    display: inline-block;
+    background-color: #366ffb;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: proximasemibold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 11px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+}
