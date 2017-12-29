@@ -205,6 +205,20 @@
 
                                     @endif
 
+                                        @elseif($message->type==='image')
+                                    @if($message->from_msg===$user->id)
+                                        <div class="right-message clearfix">
+                                            <img src="{{$message->url}}">
+                                        </div>
+
+                                    @else
+                                        <div class="left-message clearfix">
+                                            <img src="{{$message->url}}">
+                                        </div>
+
+
+                                    @endif
+
                                     @else
 
                             @if($message->from_msg===$user->id)
@@ -213,7 +227,7 @@
                             @else
                                 <div class="left-message clearfix"><span class="message">{{$message->message}}&nbsp;&nbsp;  <span class="message-time"> {{$message->timestamp()}}</span></span></div>
                             @endif
-@endif
+                            @endif
                         @endforeach
                     </div>
 
