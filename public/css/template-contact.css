@@ -46,3 +46,9 @@
     margin-bottom: 48px;
     width: 100%;
 }
+.options-contact-title{
+	background: #000 none repeat scroll 0 0;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 8px;
+}
