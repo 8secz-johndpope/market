@@ -29,7 +29,19 @@
 	<div class="white-container">
 		<div class="container">
 			<div class="row">
-				
+				<div class="col-sm-4">
+					<div class="job-side-section sidebar-content">
+						<a id="company-logo-link" href="/companies/uber">
+							<img class="company-logo" src="https://assets.themuse.com/uploaded/companies/61/small_logo.png?v=None" alt="Safety Lead UKI">
+						</a>
+						<a id="company-name-link" class="company-link visible-xs see-more-link" href="/companies/uber">
+							Uber
+							<span aria-hidden="true" class="no-wrap-space">
+								<i aria-hidden="true" class="fa fa-long-arrow-right"></i>
+							</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
