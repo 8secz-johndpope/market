@@ -2179,4 +2179,7 @@ class MarketController extends BaseController
     public function templateContact(Request $request){
         return view('market.template-contact');
     }
+    public function templateJob(Request $request, $id){
+        return view('market.template-job');
+    }
 }
