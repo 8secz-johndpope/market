@@ -163,6 +163,22 @@
 							<p>Swathy is part of the team that is the driving force behind Uber’s transportation options. She helps sign up the drivers, makes sure the vehicles run smoothly, and tackles any logistical bumps along the road.</p>
 						</div>
 					</div>
+					<div class="visible-xs">
+						<section class="job-side-section sidebar-content">
+							<h3>Useful Links</h3>
+							<ul class="useful-links">
+								<li>
+									<a href="/jobs?filter=true"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to All Jobs</a>
+								</li>
+								<li>
+									<a href="/jobs/c-uber-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all Uber Jobs</a>
+								</li>
+								<li>
+									<a href="/jobs/l-London%2C-United-Kingdom-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all London, United Kingdom Jobs</a>
+								</li>
+							</ul>
+						</section>
+					</div>
 				</div>
 			</div>
 		</div>
