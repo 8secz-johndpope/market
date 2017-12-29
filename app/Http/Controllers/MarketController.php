@@ -2131,4 +2131,8 @@ class MarketController extends BaseController
             $view = 'market.people3-template2';
         return view($view);
     }
+    public function companyJobs(Request $request, $id){
+        $view = 'market.company-jobs';
+        return view($view);
+    }
 }
