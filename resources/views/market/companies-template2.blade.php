@@ -55,7 +55,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="showcase-like">
-					<h1>Showcase your company like Uber</h1>
+					<h3>Showcase your company like Uber</h3>
 				</div>
 				<div class="container-bt-contact">
 					<a href="#" class="btn ">Contact</a>
@@ -284,7 +284,7 @@
 	<div class="container company-job-tiles">
 		<div class="row header-row">
 			<h3 class="section-header">Uber jobs</h3>
-			<a class="tm-bright-blue-round-button" href="/jobs/uber">Show me more jobs <i class="fa fa-long-arrow-right"></i></a>
+			<a class="tm-bright-blue-round-button" href="/company-jobs/c-uber-jobs">Show me more jobs <i class="fa fa-long-arrow-right"></i></a>
 		</div>
 		<div class="row block">
 			<div>
