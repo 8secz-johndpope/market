@@ -794,3 +794,9 @@
 #person .person-video {
     margin-top: 10px;
 }
+#person .person-position .video-text, #person .person-video .video-text {
+    float: left;
+    padding-top: 5px;
+    font-size: 20px;
+    color: #fff;
+}
