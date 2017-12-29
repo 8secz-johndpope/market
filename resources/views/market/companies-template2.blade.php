@@ -293,9 +293,9 @@
 						<div class="job-element Uber" data-id="713807">
 							<a href="#" data-tile-link="true">
 								<div class="tile-copy">
-									<h3><span>Uber</span>Executive Assistant</h3>
+									<h3><span>Uber</span>Safe Lead UKI</h3>
 									<ul class="metadata">
-										<li>San Francisco, CA</li>
+										<li>London, United Kingdom</li>
 									</ul>
 								</div>
 								<div class="white-gradient hidden-xs"></div>
@@ -322,10 +322,10 @@
 								<div class="tile-copy">
 									<h3>
 										<span>Uber</span>
-										US &amp; Canada Regional Courier Operations Manager, Analytics Focus - Uber Eats
+										Associate Counsel - UK $ Ireland
 									</h3>
 									<ul class="metadata">
-										<li>New York City, NY</li>
+										<li>London, United Kingdom</li>
 									</ul>
 								</div>
 								<div class="white-gradient hidden-xs"></div>
@@ -352,10 +352,10 @@
 								<div class="tile-copy">
 									<h3>
 										<span>Uber</span>
-										Travel &amp; Expenses Specialist, LATAM
+										Head of compliance - UK & Ireland
 									</h3>
 									<ul class="metadata">
-										<li>Mexico City, Mexico</li>
+										<li>London, United Kingdom</li>
 									</ul>
 								</div>
 								<div class="white-gradient hidden-xs"></div>
