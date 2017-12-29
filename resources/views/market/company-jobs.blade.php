@@ -249,6 +249,7 @@ use App\Model\Advert;
             </div>
         <div class="clearfix extra-info">
             <hr>
+            <!--
                 <div class="ribbons">
                 </div>
                 <div class="extra-options">
@@ -273,11 +274,10 @@ use App\Model\Advert;
                         </div>
                     </div>
                 </div>
-            @else
+            -->
                 <div class="link-details">
                     <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> LEARN MORE ABOUT THIS ADVERTISER</a>
                 </div>
-            @endif
         </div>
     </div>
     @php
