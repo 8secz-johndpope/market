@@ -52,11 +52,13 @@
  
  <div class="body">
  	<div class="container-fluid">
- 		<div class="row">
-			<div class="col-sm-12 showcase-container">
+ 		<div class="row showcase-container">
+			<div class="col-sm-10 ">
 				<div class="showcase-like">
 					<h4>Showcase your company like Uber</h4>
 				</div>
+			</div>
+			<div class="col-sm-2">
 				<div class="container-bt-contact">
 					<a href="#" class="btn btn-show-contact">Contact</a>
 				</div>
