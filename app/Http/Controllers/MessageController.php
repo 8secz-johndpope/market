@@ -606,6 +606,31 @@ class MessageController extends BaseController
         return ['mid'=>$message->id,'msg'=>'sent','message'=>$message];
 
     }
+    public function add_message(Request $request)
+    {
+        $user = Auth::user();
+
+        $room =  Room::find($request->room);
+        $message = new Message;
+        $message->message='';
+        $message->from_msg=$user->id;
+        $message->to_msg=0;
+        $message->room_id=$room->id;
+        if($request->has('url')){
+            $message->url=$request->url;
+        }
+        if($request->has('type')){
+            $message->url=$request->type;
+        }
+        $message->save();
+
+        $room->modify();
+        $this->notify($room,$message);
+        $message->room = $message->room;
+
+        return ['mid'=>$message->id,'msg'=>'sent','message'=>$message];
+
+    }
     public function room(Request $request,$id){
         $room =  Room::find($id);
         $room->users=$room->users()->pluck('user_id')->toArray();

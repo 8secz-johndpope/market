@@ -324,7 +324,20 @@
 
             }
         }
+    function add_message(url) {
+        axios.post('/user/add/message', {
+            room:room,
+            type:'image',
+            url:url
+        })
+            .then(function (response) {
+                console.log(response);
 
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
 
 
 

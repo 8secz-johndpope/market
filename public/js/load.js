@@ -200,6 +200,7 @@ function upload_image_chat() {
                     console.log(err);
                 } else {
                     console.log(data);
+                    add_message(web_image_url+'/' + uname);
                    $('#all-msg').append('<div class="right-message clearfix"><img src="'+web_image_url+'/' + uname + '" style="float: right; max-width: 90%;"></div>');
 
                 }
