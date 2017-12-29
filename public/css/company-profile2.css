@@ -422,6 +422,9 @@
     font-weight: 700;
     padding-bottom: 5px;
 }
+.quote.quote-blue {
+    color: #5767b0;
+}
 .company-wrapper {
     padding-left: 70px;
 }
