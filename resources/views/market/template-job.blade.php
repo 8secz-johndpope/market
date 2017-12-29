@@ -73,6 +73,22 @@
 							</div>
 						</div>
 					</div>
+					<div class="visible-sm visible-md visible-lg">
+						<section class="job-side-section sidebar-content">
+							<h3>Useful Links</h3>
+							<ul class="useful-links">
+								<li>
+									<a href="/jobs?filter=true"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to All Jobs</a>
+								</li>
+								<li>
+									<a href="/jobs/c-uber-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all Uber Jobs</a>
+								</li>
+								<li>
+								<a href="/jobs/l-London%2C-United-Kingdom-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all London, United Kingdom Jobs</a>
+								</li>
+							</ul>
+						</section>
+					</div>
 				</div>
 				<div class="col-sm-8">
 					<div class="job-body">
@@ -116,26 +132,37 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="visible-sm visible-md visible-lg">
-						<section class="job-side-section sidebar-content">
-							<h3>Useful Links</h3>
-							<ul class="useful-links">
-								<li>
-									<a href="/jobs?filter=true"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to All Jobs</a>
-								</li>
-								<li>
-									<a href="/jobs/c-uber-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all Uber Jobs</a>
-								</li>
-								<li>
-								<a href="/jobs/l-London%2C-United-Kingdom-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all London, United Kingdom Jobs</a>
-								</li>
-							</ul>
+					<div class="company-profile-preview">
+						<section class="sidebar-content visible-xs">
+							<h3>Meet employees</h3>
 						</section>
+						<section class="visible-sm visible-md visible-lg">
+							<hr>
+							<h1>Meet Some of Uber's Employees</h1>
+						</section>
+						<div class="employee-preview">
+							<div class="employee-preview-image">
+								<a target="_blank" href="/companies/uber/people/brian">
+									<div class="tm-white-round-button">Learn More</div>
+									<img alt="Uber Employee" src="https://assets.themuse.com/uploaded/companies/61/people/182-large.jpg?v=None">
+								</a>
+							</div>
+							<h2>Brian M.</h2>
+							<h3>Community Management Specialist</h3>
+							<p>Brian makes sure that every Uber user has an amazing experience. He troubleshoots roadblocks to customer happiness and also does outreach to attract new Uber users.</p>
+						</div>
+						<div class="employee-preview">
+							<div class="employee-preview-image">
+								<a target="_blank" href="/companies/uber/people/swathy">
+									<div class="tm-white-round-button">Learn More</div>
+									<img alt="Uber Employee" src="https://assets.themuse.com/uploaded/companies/61/people/184-large.jpg?v=None">
+								</a>
+							</div>
+							<h2>Swathy P.</h2>
+							<h3>Operations &amp; Logistics Manager</h3>
+							<p>Swathy is part of the team that is the driving force behind Uber’s transportation options. She helps sign up the drivers, makes sure the vehicles run smoothly, and tackles any logistical bumps along the road.</p>
+						</div>
 					</div>
-				</div>
-				<div class="col-sm-8">
 				</div>
 			</div>
 		</div>
