@@ -11,9 +11,10 @@
  <link href="{{asset('/css/template-contact.css?q=874')}}" rel="stylesheet">
  <link href="{{ asset('/css/css/font-awesome.min.css?q=874') }}" rel="stylesheet">
  <div class="body">
-	<div class="container">
-		<div class="row">
-			
+	<div class="container-fluid">
+		<div class="row header-container">
+			<div class="col-sm-12">
+			</div>
 		</div>
 	</div>
 </div>
