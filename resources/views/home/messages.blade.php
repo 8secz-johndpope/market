@@ -58,6 +58,7 @@
                     </div>
                     <div class="left-div-messages" id="all-rooms">
                         @foreach($user->rooms as $room)
+                            @if($room->is_visible())
                                 <div class="media @if($room->id===$cur->id) selected-room @endif ">
                                     <div class="media-left">
                                         <a href="#">
@@ -96,6 +97,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            @endif
                             @endforeach
                     </div>
                 </div>

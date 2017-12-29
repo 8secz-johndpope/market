@@ -28,6 +28,15 @@ class Room extends Model
         $room_user = RoomUser::where('room_id',$this->id)->where('user_id',$user->id)->first();
         return $this->hasMany('App\Model\Message')->where('id','>',$room_user->last_message_id);
     }
+    public function is_visible(){
+        $user = Auth::user();
+        $room_user = RoomUser::where('room_id',$this->id)->where('user_id',$user->id)->first();
+        if($room_user->last_message_id<$this->last_message()->id){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public function last_message(){
         $message = Message::where('room_id',$this->id)->orderby('id','desc')->first();
         return $message;
