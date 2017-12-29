@@ -135,6 +135,8 @@
 						</section>
 					</div>
 				</div>
+				<div class="col-sm-8">
+				</div>
 			</div>
 		</div>
 	</div>
