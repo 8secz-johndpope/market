@@ -79,13 +79,9 @@
 							<i class="fa fa-user" aria-hidden="true"></i>
 							<a href="/companies/?company_size=Large Size">Large Size</a>
 						</li>
-						<li class="field_company_location">
-							<i class="fa fa-map-marker" aria-hidden="true"></i>
-							<a href="/companies?office_location=San Francisco, CA">San Francisco, CA</a>
-							|
-							<a href="/companies?office_location=Chicago, IL">Chicago, IL</a>
-							|
-							<a href="/companies?office_location=London, United Kingdom">London, United Kingdom</a>
+						<li class="field_company_type">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<a href="/companies?company_industry=Travel and Hospitality&amp;filter=true">Travel and Hospitality</a>
 						</li>
 					</ul>
 				</div>
@@ -112,27 +108,27 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-4">
-					<div data-widget-id="2260" class="widget insight video grid_1_2 " data-muse-widget-name="video">
-						<a href="http://vimeo.com/53830892">
+					<div data-widget-id="2236" class="widget insight video grid_1_2 " data-muse-widget-name="video">
+						<a href="http://vimeo.com/53825150">
 							<div class="playhead-overlay">
 								<img src="https://www.themuse.com/static/images/white_playhead.png?v=83d7a8492a9fb5ac116accc9aefed38ff98b72c24eb3a5464f6d5d83d3e89f30" alt="click to play video">
 							</div>
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2260.jpg?v=None" alt="video thumbnail image">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2236.jpg?v=None" alt="video thumbnail image">
 							<div class="text-bottom">
-								<div class="video-text">A Place for Good Ideas</div>
+								<div class="video-text">Fancy Fridays</div>
 							</div>
 						</a>
 					</div>
-					<div data-widget-id="2261" class="widget insight grid_1 " data-muse-widget-name="insight">
+					<div data-widget-id="2237" class="widget insight grid_1 " data-muse-widget-name="insight">
 						<div class="insight-image">
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2261.jpg?v=None" alt="Careers - Office Culture Work Friends and Watering Holes">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2237.jpg?v=None" alt="Careers - Brian’s Story Friendly Suggestions">
 						</div>
 						<div class="insight-body">
-							<div class="insight-date">Office Culture
+							<div class="insight-date">Brian’s Story
 							</div>
-							<div class="insight-title">Work Friends and Watering Holes
+							<div class="insight-title">Friendly Suggestions
 							</div>
-							<div class="insight-text">Uber employees love coming to work not only to connect users to great transportation, but also to connect and socialize with their own awesome co-workers. Day and night, the Uber team makes time to hang out: Workdays are interspersed with casual games of ping-pong or foosball, and happy hour at the local watering hole is an opportunity never missed. </div>
+							<div class="insight-text">When Brian graduated from journalism school, he was on a quest to find a career that would let him flex his writing muscles and fuel his interest in marketing. Through a friend’s suggestion, he discovered Uber—and found the opportunity really fit the bill. Uber thought so, too, and jumped to offer him a role managing relationships with Uber’s diverse community, where he now thrives.</div>
 						</div>
 					</div>
 				</div>
