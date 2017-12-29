@@ -56,10 +56,10 @@
 			<!-- div info-content -->
 			<div class="col-sm-8">
 				<div class="title-block">
-					<h1>Meet Uber's<br><div class="big-title">BRIAN MCMULLEN</div></h1>
+					<h1>Meet Uber's<br><div class="big-title">JESS STANTON</div></h1>
 				</div>
 				<div class="btn-row">
-					<a class="lt-grey-border-button-xs" href="/companies/uber/people/swathy">Next Person</a>
+					<a class="lt-grey-border-button-xs" href="/companies/uber/people/brian">Next Person</a>
 				</div>
 			</div>
 			<div class="col-sm-4">
@@ -70,15 +70,11 @@
 					<ul>
 						<li class="field_company_type">
 							<i class="fa fa-home" aria-hidden="true"></i>
-							<a href="/companies?company_industry=Travel%20and%20Hospitality">Travel and Hospitality</a>
-						</li>
-						<li class="field_company_size">
-							<i class="fa fa-user" aria-hidden="true"></i>
-							<a href="/companies/?company_size=Large Size">Large Size</a>
-						</li>
-						<li class="field_company_type">
-							<i class="fa fa-home" aria-hidden="true"></i>
 							<a href="/companies?company_industry=Travel and Hospitality&amp;filter=true">Travel and Hospitality</a>
+						</li>
+						<li class="field_job_type">
+							<i class="fa fa-pencil" aria-hidden="true"></i>
+							<a href="/jobs/q-Engineering-jobs">Engineering</a>
 						</li>
 					</ul>
 				</div>
