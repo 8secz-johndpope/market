@@ -19,9 +19,6 @@
 				<a class="dropdown-link" href="/companies/uber/office" data-toggle="dropdown">Offices <i class="fa fa-caret-down"></i></a>
 				<ul class="subnav-dropdown">
 					<li class="">
-						<a href="/companies/uber/office/uber">San Francisco, CA</a>
-					</li>
-					<li class="">
 						<a href="/companies/uber/office/london">London, United Kingdom</a>
 					</li>
 				</ul>
@@ -98,7 +95,7 @@
 					<div class="grid_1_1">
 						<img src="https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F61%2Fpages%2F674%2Ff2.jpg%3Fv%3DNone&amp;h=235&amp;w=320" alt="Uber Careers">
 						<div class="text-lower-right gradient">
-							<p>We work &amp; ride in San Francisco</p>
+							<p>We work &amp; ride in London</p>
 						</div>
 					</div>
 				</div>
