@@ -190,8 +190,6 @@ use App\Model\Advert;
                 <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
             </div>
         </div>
-        @foreach($products as $product)
-        @if($i == 10)
         <div class="listing-max-pro container-emailme">
             <div class="container-emailme-header text-center">
                 <h3>Let Us Help With Your Search</h3>
@@ -222,20 +220,13 @@ use App\Model\Advert;
                 <small>By clicking Submit, you accept our <a>Terms & Conditions</a>, <a>Privacy policy</a> and consent to messages</small>
             </div>
         </div>
-        @endif
         <div class="listing-max-pro">
             <div class="product">
                 <div class="info margin-left">
                     <div class="favor">
-                        @if (in_array($product['source_id'],$sids))
-                            <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
-                            <span  class="favor-text" style="display: none">SAVE</span>
-                        @else
-                            <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
-                            </span>
-                            <span  class="favor-text">SAVE</span>
-
-                        @endif
+                        <span class="heart-empty favroite-icon" data-id="">
+                        </span>
+                        <span  class="favor-text">SAVE</span>
                     </div>
                     <a class="listing-product" href="#">
                         <h4 class="product-title">Safe Lead UKI</h4>
@@ -286,7 +277,7 @@ use App\Model\Advert;
             <div class="product">
                 <div class="info margin-left">
                     <div class="favor">
-                        <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
+                        <span class="heart-empty favroite-icon" data-id="">
                         </span>
                         <span  class="favor-text">SAVE</span>
                     </div>
@@ -339,24 +330,20 @@ use App\Model\Advert;
             <div class="product">
                 <div class="info margin-left">
                     <div class="favor">
-                        @if (in_array($product['source_id'],$sids))
-                            <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
-                            <span  class="favor-text" style="display: none">SAVE</span>
-                        @else
-                            <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
-                            </span>
-                            <span  class="favor-text">SAVE</span>
-
-                        @endif
+                        <span class="heart-empty favroite-icon" data-id="">
+                        </span>
+                        <span  class="favor-text">SAVE</span>
                     </div>
-                    <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
+                    <a class="listing-product" href="#"> 
+                        <h4 class="product-title">Head of compliance - UK & Ireland</h4>
+                    </a>
                     <span class="listing-location">
-                        {{$product['location_name']}}
+                        London, United Kingdom
                     </span>
                     <div class="link-details">
-                        <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
+                        <a href="#">> VIEW FULL POSTING</a>
                     </div>
-                    <span class="posted-text">{{$product['posted']}}</span>
+                    <span class="posted-text">34d ago</span>
                 </div>
             </div>
         <div class="clearfix extra-info">
@@ -388,15 +375,275 @@ use App\Model\Advert;
                 </div>
             -->
                 <div class="link-details">
-                    <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
                 </div>
         </div>
     </div>
-    @php
-        $i = $i + 1;
-    @endphp
-    @endforeach
-    
+    <div class="listing-max-pro">
+            <div class="product">
+                <div class="info margin-left">
+                    <div class="favor">
+                        <span class="heart-empty favroite-icon" data-id="">
+                        </span>
+                        <span  class="favor-text">SAVE</span>
+                    </div>
+                    <a class="listing-product" href="#"> 
+                        <h4 class="product-title">Senior Community Operations Manager, UberEATS - UKI</h4>
+                    </a>
+                    <span class="listing-location">
+                        London, United Kingdom
+                    </span>
+                    <div class="link-details">
+                        <a href="#">> VIEW FULL POSTING</a>
+                    </div>
+                    <span class="posted-text">34d ago</span>
+                </div>
+            </div>
+        <div class="clearfix extra-info">
+            <hr>
+            <!--
+                <div class="ribbons">
+                </div>
+                <div class="extra-options">
+                    <div class="make-offer">
+                        <a href="#">
+                        <div class="circle">
+                            <div class="text-offer">
+                                <span>Make an offer</span>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="ratings">
+                        <div class="stars">
+                            <span>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            -->
+                <div class="link-details">
+                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                </div>
+        </div>
+    </div>
+    <div class="listing-max-pro">
+            <div class="product">
+                <div class="info margin-left">
+                    <div class="favor">
+                        <span class="heart-empty favroite-icon" data-id="">
+                        </span>
+                        <span  class="favor-text">SAVE</span>
+                    </div>
+                    <a class="listing-product" href="#"> 
+                        <h4 class="product-title">Enterprise Account Executive, Uber Eats</h4>
+                    </a>
+                    <span class="listing-location">
+                        London, United Kingdom
+                    </span>
+                    <div class="link-details">
+                        <a href="#">> VIEW FULL POSTING</a>
+                    </div>
+                    <span class="posted-text">34d ago</span>
+                </div>
+            </div>
+        <div class="clearfix extra-info">
+            <hr>
+            <!--
+                <div class="ribbons">
+                </div>
+                <div class="extra-options">
+                    <div class="make-offer">
+                        <a href="#">
+                        <div class="circle">
+                            <div class="text-offer">
+                                <span>Make an offer</span>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="ratings">
+                        <div class="stars">
+                            <span>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            -->
+                <div class="link-details">
+                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                </div>
+        </div>
+    </div>
+    <div class="listing-max-pro">
+            <div class="product">
+                <div class="info margin-left">
+                    <div class="favor">
+                        <span class="heart-empty favroite-icon" data-id="">
+                        </span>
+                        <span  class="favor-text">SAVE</span>
+                    </div>
+                    <a class="listing-product" href="#"> 
+                        <h4 class="product-title">Head of Public Policy UK & Ireland / Nothern Europe</h4>
+                    </a>
+                    <span class="listing-location">
+                        London, United Kingdom
+                    </span>
+                    <div class="link-details">
+                        <a href="#">> VIEW FULL POSTING</a>
+                    </div>
+                    <span class="posted-text">34d ago</span>
+                </div>
+            </div>
+        <div class="clearfix extra-info">
+            <hr>
+            <!--
+                <div class="ribbons">
+                </div>
+                <div class="extra-options">
+                    <div class="make-offer">
+                        <a href="#">
+                        <div class="circle">
+                            <div class="text-offer">
+                                <span>Make an offer</span>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="ratings">
+                        <div class="stars">
+                            <span>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            -->
+                <div class="link-details">
+                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                </div>
+        </div>
+    </div>
+    <div class="listing-max-pro">
+            <div class="product">
+                <div class="info margin-left">
+                    <div class="favor">
+                        <span class="heart-empty favroite-icon" data-id="">
+                        </span>
+                        <span  class="favor-text">SAVE</span>
+                    </div>
+                    <a class="listing-product" href="#"> 
+                        <h4 class="product-title">Public Policy Senior Associate - UK & Ireland</h4>
+                    </a>
+                    <span class="listing-location">
+                        London, United Kingdom
+                    </span>
+                    <div class="link-details">
+                        <a href="#">> VIEW FULL POSTING</a>
+                    </div>
+                    <span class="posted-text">34d ago</span>
+                </div>
+            </div>
+        <div class="clearfix extra-info">
+            <hr>
+            <!--
+                <div class="ribbons">
+                </div>
+                <div class="extra-options">
+                    <div class="make-offer">
+                        <a href="#">
+                        <div class="circle">
+                            <div class="text-offer">
+                                <span>Make an offer</span>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="ratings">
+                        <div class="stars">
+                            <span>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            -->
+                <div class="link-details">
+                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                </div>
+        </div>
+    </div>
+    <div class="listing-max-pro">
+            <div class="product">
+                <div class="info margin-left">
+                    <div class="favor">
+                        <span class="heart-empty favroite-icon" data-id="">
+                        </span>
+                        <span  class="favor-text">SAVE</span>
+                    </div>
+                    <a class="listing-product" href="#"> 
+                        <h4 class="product-title">Senior Counsel - UK&I</h4>
+                    </a>
+                    <span class="listing-location">
+                        London, United Kingdom
+                    </span>
+                    <div class="link-details">
+                        <a href="#">> VIEW FULL POSTING</a>
+                    </div>
+                    <span class="posted-text">34d ago</span>
+                </div>
+            </div>
+        <div class="clearfix extra-info">
+            <hr>
+            <!--
+                <div class="ribbons">
+                </div>
+                <div class="extra-options">
+                    <div class="make-offer">
+                        <a href="#">
+                        <div class="circle">
+                            <div class="text-offer">
+                                <span>Make an offer</span>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="ratings">
+                        <div class="stars">
+                            <span>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            -->
+                <div class="link-details">
+                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                </div>
+        </div>
+    </div>
     <div class="listing-max-pro container-emailme">
         <div class="container-emailme-header text-center">
             <h3>Let Us Help With Your Search</h3>
@@ -433,23 +680,16 @@ use App\Model\Advert;
             <div class="text-center">
             <ul class="pagination">
 
-                <li class=" @if($page==1)disabled @endif">
-                    <a href="{{$pageurl}}&page={{$page-1}}" aria-label="Previous">
+                <li class="disabled">
+                    <a href="#" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
-                @foreach($pages as $p)
-                    <li class="{{$page==$p?'active':''}}">
-                        @if($page===$p)
-                            <span> {{$p}}<span class="sr-only">(current)</span></span>
-                        @else
-                            <a href="{{$pageurl}}&page={{$p}}">{{$p}}</a>
-                        @endif
-                    </li>
-                @endforeach
-
-                <li class=" @if($page==$max)disabled @endif">
-                    <a href="{{$pageurl}}&page={{$page+1}}" aria-label="Next">
+                <li class="active">
+                    <span>1<span class="sr-only">(current)</span></span>
+                </li>
+                <li class="disabled">
+                    <a href="#" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
