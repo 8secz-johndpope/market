@@ -14,6 +14,12 @@
 	<div class="container-fluid">
 		<div class="row header-container">
 			<div class="col-sm-12">
+				<div class="parallax-content">
+					<h1 class="header-title">
+						Sumra - Contact
+					</h1>
+					<p>Uber - Company template</p>
+				</div>
 			</div>
 		</div>
 	</div>
