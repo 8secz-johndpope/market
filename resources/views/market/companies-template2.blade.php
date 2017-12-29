@@ -53,10 +53,17 @@
  <div class="body">
 	<div class="container company-profile-styling">
 		<div class="row">
+			<div class="col-sm-12">
+				<div class="showcase-like">
+					<h1>Showcase your company like Uber</h1>
+				</div>
+				<div class="container-bt-contact">
+					<a href="#" class="btn ">Contact</a>
+				</div>
+			</div>
 			<!-- div info-content -->
 			<div class="col-sm-8">
 				<div class="showcase-like">
-
 				</div>
 				<div class="title-block">
 					<h1>We are<br><div class="big-title">UBER</div></h1>
