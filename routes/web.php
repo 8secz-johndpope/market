@@ -118,6 +118,7 @@ Route::get('/user/toggle/alert/{id}', 'HomeController@toggle_alert');
 Route::get('/user/delete/address/{id}', 'HomeController@delete_address');
 Route::get('/user/delete/cv/{id}', 'HomeController@delete_cv');
 Route::get('/user/delete/cover/{id}', 'HomeController@delete_cover');
+Route::get('/user/delete/chat/{id}', 'MessageController@delete_chat');
 
 Route::get('/user/primary/address/{id}', 'HomeController@primary_address');
 

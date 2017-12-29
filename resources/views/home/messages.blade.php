@@ -170,7 +170,7 @@
                                       <li><a href="#">Contact info</a></li>
                                       <!-- <li><a href="#">Select messages</a></li>
                                       <li><a href="#">Clear messages</a></li> -->
-                                      <li><a href="#">Delete chat</a></li>
+                                      <li><a href="/user/delete/chat/{{$cur->id}}">Delete chat</a></li>
                                     </ul>
                                 </div>
                                 

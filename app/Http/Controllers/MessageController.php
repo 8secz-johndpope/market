@@ -496,6 +496,17 @@ class MessageController extends BaseController
         return redirect('/user/manage/messages/');
 
     }
+    public function delete_chat(Request $request,$id)
+    {
+        $user = Auth::user();
+        $room = Room::find($id);
+        $room_user = RoomUser::where('room_id',$room->id)->where('user_id',$user->id)->first();
+        $room_user->last_message_id = $room->last_message()->id;
+        $room_user->save();
+        return redirect('/user/manage/messages/');
+
+
+    }
     public function direct_message(Request $request,$id)
     {
         $user = Auth::user();
