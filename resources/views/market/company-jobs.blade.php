@@ -124,14 +124,14 @@ use App\Model\Advert;
                         </span>
                         <span  class="favor-text">SAVE</span>
                     </div>
-                    <a class="listing-product" href="#">
+                    <a class="listing-product" href="/jobs/uber/safe-lead-uki">
                         <h4 class="product-title">Safe Lead UKI</h4>
                     </a>
                     <span class="listing-location">
                         London, United Kingdom
                     </span>
                     <div class="link-details">
-                        <a href="#">> VIEW FULL POSTING</a>
+                        <a href="/jobs/uber/safe-lead-uki">> VIEW FULL POSTING</a>
                     </div>
                     <span class="posted-text">34d ago</span>
                 </div>
