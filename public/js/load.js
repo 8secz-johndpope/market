@@ -200,7 +200,7 @@ function upload_image_chat() {
                     console.log(err);
                 } else {
                     console.log(data);
-                   $('#all-msg').append('<div class="right-message clearfix"><img src="'+web_image_url+'/' + uname + '" style="float: right"></div>');
+                   $('#all-msg').append('<div class="right-message clearfix"><img src="'+web_image_url+'/' + uname + '" style="float: right; max-width: 90%;"></div>');
 
                 }
             });
