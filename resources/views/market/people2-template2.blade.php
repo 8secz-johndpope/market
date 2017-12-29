@@ -165,34 +165,34 @@
 							</div>
 						</a>
 					</div>
-					<div data-widget-id="2241" class="widget  widget-col-2" data-muse-widget-name="quote_blue">
+					<div data-widget-id="2258" class="widget  widget-col-2" data-muse-widget-name="quote_green">
+						<div class="quote quote-green">
+							<div class="quote-green-top">&nbsp;</div>
+							<div class="quote-green-side">&nbsp;</div>
+							<div class="quote-body">
+								“I was a massive Uber user months before I joined. I joked that I had to join Uber for financial reasons—I was spending so much of my money on Uber, I thought why not join them?”
+								<div class="quote-source">
+									<div class="quote-author"></div>
+									<div class="quote-author-position"></div>
+								</div>
+							</div>
+							<div class="quote-green-side">&nbsp;</div>
+							<img alt="“I was a massive Uber user months before I joined. I joked that I had to join Uber for financial reasons—I was spending so much of my money on Uber, I thought why not join them?”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_green_bottom.png?v=b075c27b5205eefaca5afe5c7dab5a4ddd9f8e2ec3d9489a6fe048d8856d0311">
+						</div>
+					</div>
+					<div data-widget-id="2259" class="widget  widget-col-2" data-muse-widget-name="quote_blue">
 						<div class="quote quote-blue">
 							<div class="quote-blue-top">&nbsp;</div>
 							<div class="quote-blue-side">&nbsp;</div>
 							<div class="quote-body">
-								“It’s easy to look at Uber and say ‘it’s a tech company.’ But really what it is is a tech company with a real-world logistical side to it.”
+								“We have a saying: We give our riders high-fives and our drivers hugs. We treat people across the company well.”
 								<div class="quote-source">
 									<div class="quote-author"></div>
 									<div class="quote-author-position"></div>
 								</div>
 							</div>
 							<div class="quote-blue-side">&nbsp;</div>
-							<img alt="“It’s easy to look at Uber and say ‘it’s a tech company.’ But really what it is is a tech company with a real-world logistical side to it.”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_blue_bottom.png?v=e5ef6d0e53ae08e56d593d5aba61bca8d2185a5bdec00b6eb967c5b6da13a41f">
-						</div>
-					</div>
-					<div data-widget-id="2242" class="widget  widget-col-2" data-muse-widget-name="quote_green">
-						<div class="quote quote-green">
-							<div class="quote-green-top">&nbsp;</div>
-							<div class="quote-green-side">&nbsp;</div>
-							<div class="quote-body">
-							“Everyone’s very passionate about the product and it hardly ever feels like work.”
-							<div class="quote-source">
-							<div class="quote-author"></div>
-							<div class="quote-author-position"></div>
-							</div>
-						</div>
-						<div class="quote-green-side">&nbsp;</div>
-						<img alt="“Everyone’s very passionate about the product and it hardly ever feels like work.”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_green_bottom.png?v=b075c27b5205eefaca5afe5c7dab5a4ddd9f8e2ec3d9489a6fe048d8856d0311">
+							<img alt="“We have a saying: We give our riders high-fives and our drivers hugs. We treat people across the company well.”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_blue_bottom.png?v=e5ef6d0e53ae08e56d593d5aba61bca8d2185a5bdec00b6eb967c5b6da13a41f">
 						</div>
 					</div>
 				</div>
