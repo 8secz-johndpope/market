@@ -853,11 +853,20 @@
 .showcase-like {
     /*padding: 15px;*/
     text-align: left;
+    display: table-cell;
+    vertical-align: middle;
 }
 .container-bt-contact {
     float: right;
+    display: table-cell;
+    vertical-align: middle;
 }
 .showcase-container {
     background: #bbb;
     padding: 10px;
+}
+.btn-show-contact {
+    color: #fff;
+    border: 1px solid #000;
+    background: #000;
 }
