@@ -27,7 +27,7 @@
 				<a class="subnav-people dropdown-link" href="#" data-toggle="dropdown">People <i class="fa fa-caret-down"></i></a>
 				<div class="people-dropdown" style="width: 110%">
 					<ul class="subnav-dropdown">
-						<li class=" people-list active">
+						<li class=" people-list">
 							<a href="/companies/uber/people/brian">
 							Meet Brian</a>
 						</li>
@@ -35,7 +35,7 @@
 							<a href="/companies/uber/people/swathy">
 							Meet Swathy</a>
 						</li>
-						<li class=" people-list">
+						<li class=" people-list active">
 							<a href="/companies/uber/people/jess">
 							Meet Jess</a>
 						</li>
@@ -153,13 +153,13 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div data-widget-id="2240" class="widget  widget-col-2" data-muse-widget-name="social_twitter">
-						<a href="https://twitter.com/bmansayswhat" target="_blank">
+					<div data-widget-id="2248" class="widget  widget-col-2" data-muse-widget-name="social_twitter">
+						<a href="https://twitter.com/tiny_mouse" target="_blank">
 							<div class="social social-twitter grid_1">
 								<div class="social-container">
-									<div class="social-title">@bmansayswhat
+									<div class="social-title">@tiny_mouse
 									</div>
-									<div class="social-body">My TAXI driver was awesome this morning and stoked to be on @Uber. http://blog.uber.com/2012/10/17/taxi-is-arriving-in-san-francisco/&nbsp;…</div>
+									<div class="social-body">I flippin' love working for @Uber! #PrivateSailor hats are the best way to brighten this engineer's day! http://instagr.am/p/QXt7d2jdx-/</div>
 									<div class="social-footer"></div>
 								</div>
 							</div>
