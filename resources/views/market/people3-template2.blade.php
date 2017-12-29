@@ -165,34 +165,34 @@
 							</div>
 						</a>
 					</div>
-					<div data-widget-id="2241" class="widget  widget-col-2" data-muse-widget-name="quote_blue">
+					<div data-widget-id="2249" class="widget  widget-col-2" data-muse-widget-name="quote_yellow">
+						<div class="quote quote-yellow">
+							<div class="quote-yellow-top">&nbsp;</div>
+							<div class="quote-yellow-side">&nbsp;</div>
+							<div class="quote-body">
+								“I really love the happiness and goodwill that comes from Uber. People just get excited about it.”
+								<div class="quote-source">
+									<div class="quote-author"></div>
+									<div class="quote-author-position"></div>
+								</div>
+							</div>
+							<div class="quote-yellow-side">&nbsp;</div>
+							<img alt="“I really love the happiness and goodwill that comes from Uber. People just get excited about it.”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_yellow_bottom.png?v=5a8a4600d998f7e1d0553d8062fda1c17cb42d2914e76ac96acfb8e679b683e9">
+						</div>
+					</div>
+					<div data-widget-id="2251" class="widget  widget-col-2" data-muse-widget-name="quote_blue">
 						<div class="quote quote-blue">
 							<div class="quote-blue-top">&nbsp;</div>
 							<div class="quote-blue-side">&nbsp;</div>
 							<div class="quote-body">
-								“It’s easy to look at Uber and say ‘it’s a tech company.’ But really what it is is a tech company with a real-world logistical side to it.”
+								“We’re a boisterous company. We have a lot of fun.”
 								<div class="quote-source">
 									<div class="quote-author"></div>
 									<div class="quote-author-position"></div>
 								</div>
 							</div>
 							<div class="quote-blue-side">&nbsp;</div>
-							<img alt="“It’s easy to look at Uber and say ‘it’s a tech company.’ But really what it is is a tech company with a real-world logistical side to it.”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_blue_bottom.png?v=e5ef6d0e53ae08e56d593d5aba61bca8d2185a5bdec00b6eb967c5b6da13a41f">
-						</div>
-					</div>
-					<div data-widget-id="2242" class="widget  widget-col-2" data-muse-widget-name="quote_green">
-						<div class="quote quote-green">
-							<div class="quote-green-top">&nbsp;</div>
-							<div class="quote-green-side">&nbsp;</div>
-							<div class="quote-body">
-							“Everyone’s very passionate about the product and it hardly ever feels like work.”
-							<div class="quote-source">
-							<div class="quote-author"></div>
-							<div class="quote-author-position"></div>
-							</div>
-						</div>
-						<div class="quote-green-side">&nbsp;</div>
-						<img alt="“Everyone’s very passionate about the product and it hardly ever feels like work.”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_green_bottom.png?v=b075c27b5205eefaca5afe5c7dab5a4ddd9f8e2ec3d9489a6fe048d8856d0311">
+							<img alt="“We’re a boisterous company. We have a lot of fun.”" class="quote-bottom" src="https://www.themuse.com/static/images/quote_blue_bottom.png?v=e5ef6d0e53ae08e56d593d5aba61bca8d2185a5bdec00b6eb967c5b6da13a41f">
 						</div>
 					</div>
 				</div>
