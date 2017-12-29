@@ -30,3 +30,7 @@
     background-position: 52% center;
     /* background-attachment: fixed; */
 }
+.container-form-contact{
+	padding: 46px 0;
+    position: relative;
+}

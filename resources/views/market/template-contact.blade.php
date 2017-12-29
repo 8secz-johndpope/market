@@ -24,7 +24,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
+		<div class="row container-form-contact">
 			<div class="col-sm-12">
 				<h2 class="contact-title">
 					Contact Us About the Uber Template
