@@ -762,3 +762,28 @@
 .company-profile-styling .text-left {
     left: 35px;
 }
+#person .person-name {
+    font-family: oswald,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 33px;
+    line-height: 1.2em;
+}
+#person .person-position, #person .person-bio, #person .person-video {
+    font-family: proxima,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+#person .person-position {
+    border-bottom: 1px dashed #fff;
+    margin-top: 5px;
+    line-height: 1.3em;
+}
+#person .person-position, #person .person-video {
+    font-size: 16px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #fff;
+}
