@@ -95,3 +95,7 @@
     margin: 0;
     list-style: none;
 }
+.container-logo {
+    width: 100px;
+    margin: auto;
+}
