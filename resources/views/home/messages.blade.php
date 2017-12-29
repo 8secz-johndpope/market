@@ -327,6 +327,7 @@
     function add_message(url) {
         axios.post('/user/add/message', {
             room:room,
+            message:'image',
             type:'image',
             url:url
         })

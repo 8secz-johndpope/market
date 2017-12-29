@@ -612,7 +612,7 @@ class MessageController extends BaseController
 
         $room =  Room::find($request->room);
         $message = new Message;
-        $message->message='';
+        $message->message=$request->message;
         $message->from_msg=$user->id;
         $message->to_msg=0;
         $message->room_id=$room->id;
