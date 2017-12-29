@@ -42,7 +42,7 @@
 					</ul>
 				</div>
 			</li>
-			<li class="subnav-jobs"><a href="/jobs/c-uber-jobs">Jobs</a></li>
+			<li class="subnav-jobs"><a href="/company-jobs/c-uber-jobs">Jobs</a></li>
 		</ul>
 	</div>	
 </div>
