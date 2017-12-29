@@ -74,6 +74,9 @@
 						</div>
 					</div>
 					<div class="row">
+						<div class="col-sm-offset-6 col-sm-6">
+							<button type="submit" class="btn btn-submit" name="contact-button">
+						</div>
 					</div>
 					
 				</form>
