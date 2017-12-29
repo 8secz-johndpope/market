@@ -60,7 +60,7 @@
 			</div>
 			<div class="col-sm-2">
 				<div class="container-bt-contact">
-					<a href="#" class="btn btn-show-contact">Contact</a>
+					<a href="/template-contact" class="btn btn-show-contact">Contact</a>
 				</div>
 			</div>
 		</div>
