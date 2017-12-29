@@ -66,6 +66,12 @@
 						</div>
 					</div>
 					<div class="row">
+						<div class="col-sm-12">
+							<div class="form-group has-icon">
+								<textarea id="contact-body" name="contact-body" class="form-control" rows="6" placeholder="Message"></textarea>
+								<p class="help-block help-block-error"></p>
+							</div>
+						</div>
 					</div>
 					<div class="row">
 					</div>
