@@ -173,4 +173,41 @@ function upload_profile() {
     }
 
 }
+function upload_image_chat() {
+    var fileChooser = document.getElementById('upload-image-chat');
+
+
+    var file = fileChooser.files[0];
+    var number = 1 + Math.floor(Math.random() * 999999999999);
+
+    if (file) {
+        console.log(file.name);
+        var ext = file.name.split('.').pop();
+
+        var objKey = '' + file.name;
+        var uname = number + '.' + ext;
+        console.log(uname);
+        var params = {
+            Key: uname,
+            ContentType: file.type,
+            Body: file,
+            ACL: 'public-read'
+        };
+        (function (uname) {
+
+            bucket.putObject(params, function (err, data) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log(data);
+                   $('#all-msg').append('<div class="right-message clearfix"><img src="\'+web_image_url+\'/\' + uname + \'"></div>');
+
+                }
+            });
+        })(uname);
+
+    } else {
+        console.log("nothing to upload");
+    }
+}
 

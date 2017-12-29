@@ -257,6 +257,10 @@
             console.log("yahoo")
             $("#upload-image-chat").click();
         };
+        $("#upload-image-chat").change(function () {
+            console.log("did change");
+            upload_image_chat();
+        });
         function scroll_bottom() {
             var objDiv = document.getElementById("all-msg");
             objDiv.scrollTop = objDiv.scrollHeight;
