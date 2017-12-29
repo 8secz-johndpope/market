@@ -237,6 +237,118 @@ use App\Model\Advert;
 
                         @endif
                     </div>
+                    <a class="listing-product" href="#">
+                        <h4 class="product-title">Safe Lead UKI</h4>
+                    </a>
+                    <span class="listing-location">
+                        London, United Kingdom
+                    </span>
+                    <div class="link-details">
+                        <a href="#">> VIEW FULL POSTING</a>
+                    </div>
+                    <span class="posted-text">34d ago</span>
+                </div>
+            </div>
+        <div class="clearfix extra-info">
+            <hr>
+            <!--
+                <div class="ribbons">
+                </div>
+                <div class="extra-options">
+                    <div class="make-offer">
+                        <a href="#">
+                        <div class="circle">
+                            <div class="text-offer">
+                                <span>Make an offer</span>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="ratings">
+                        <div class="stars">
+                            <span>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            -->
+                <div class="link-details">
+                    <a href="/companies/uber">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                </div>
+        </div>
+    </div>
+    <div class="listing-max-pro">
+            <div class="product">
+                <div class="info margin-left">
+                    <div class="favor">
+                        <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
+                        </span>
+                        <span  class="favor-text">SAVE</span>
+                    </div>
+                    <a class="listing-product" href="#"> 
+                        <h4 class="product-title">Associate Counsel - UK & Ireland</h4>
+                    </a>
+                    <span class="listing-location">
+                        London, United Kingdom
+                    </span>
+                    <div class="link-details">
+                        <a href="#">> VIEW FULL POSTING</a>
+                    </div>
+                    <span class="posted-text">34d ago</span>
+                </div>
+            </div>
+        <div class="clearfix extra-info">
+            <hr>
+            <!--
+                <div class="ribbons">
+                </div>
+                <div class="extra-options">
+                    <div class="make-offer">
+                        <a href="#">
+                        <div class="circle">
+                            <div class="text-offer">
+                                <span>Make an offer</span>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="ratings">
+                        <div class="stars">
+                            <span>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            -->
+                <div class="link-details">
+                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                </div>
+        </div>
+    </div>
+    <div class="listing-max-pro">
+            <div class="product">
+                <div class="info margin-left">
+                    <div class="favor">
+                        @if (in_array($product['source_id'],$sids))
+                            <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                            <span  class="favor-text" style="display: none">SAVE</span>
+                        @else
+                            <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
+                            </span>
+                            <span  class="favor-text">SAVE</span>
+
+                        @endif
+                    </div>
                     <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
                     <span class="listing-location">
                         {{$product['location_name']}}
