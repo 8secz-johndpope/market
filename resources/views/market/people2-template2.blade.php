@@ -128,15 +128,16 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div data-widget-id="2238" class="widget insight grid_1 " data-muse-widget-name="insight">
+					<div data-widget-id="2254" class="widget insight grid_1 " data-muse-widget-name="insight">
 						<div class="insight-image">
-							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2238.jpg?v=None" alt="Careers - What Brian Does Community Management Specialist ">
+							<img src="https://assets.themuse.com/uploaded/companies/61/widgets/2254.jpg?v=None" alt="Careers - What Swathy Does Operations &amp; Logistics Manager">
 						</div>
 						<div class="insight-body">
-							<div class="insight-date">What Brian Does
+							<div class="insight-date">What Swathy Does
 							</div>
-							<div class="insight-title">Community Management Specialist </div>
-							<div class="insight-text">Brian gets into the office between 8 AM and 9 AM and kicks off the day by tackling customer support questions. He then digs in to marketing and PR efforts to keep users up-to-date on all the cool things Uber has in store—from Mariachis-for-rent to the launch of a new Uber city—and also works with the Driver Ops Team to make sure Uber is delivering the high-quality service users have come to expect.</div>
+							<div class="insight-title">Operations &amp; Logistics Manager
+							</div>
+							<div class="insight-text">Swathy kicks off her morning by interviewing new drivers and partners while everyone’s still at his or her freshest. Afterward, a good chunk of her day is devoted to inspecting Uber’s vehicles and meeting with the San Francisco team to discuss how to improve car quality. She then wraps up her work by digging into data and looking for areas of potential growth that’ll enable Uber to keep customers satisfied and entice new ones to give Uber a try. </div>
 						</div>
 					</div>
 					<div data-widget-id="2239" class="widget insight video grid_1_2 " data-muse-widget-name="video">
