@@ -50,6 +50,8 @@
 							<div class="form-group has-icon">
 								<label class="control-label sr-only" for="contact-email">Email</label>
 								<input type="text" id="contact-email" class="form-control input">
+								<span class="fa fa-envelope-o form-control-icon"></span>
+								<p class="help-block help-block-error"></p>
 							</div>
 						</div>
 					</div>
