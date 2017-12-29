@@ -153,13 +153,13 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div data-widget-id="2240" class="widget  widget-col-2" data-muse-widget-name="social_twitter">
-						<a href="https://twitter.com/bmansayswhat" target="_blank">
+					<div data-widget-id="2256" class="widget  widget-col-2" data-muse-widget-name="social_twitter">
+						<a href="https://twitter.com/swathyprithivi" target="_blank">
 							<div class="social social-twitter grid_1">
 								<div class="social-container">
-									<div class="social-title">@bmansayswhat
+									<div class="social-title">@swathyprithivi
 									</div>
-									<div class="social-body">My TAXI driver was awesome this morning and stoked to be on @Uber. http://blog.uber.com/2012/10/17/taxi-is-arriving-in-san-francisco/&nbsp;…</div>
+									<div class="social-body">"Every vehicle with a commercial license plate will one day be Uber-ized." @naval http://bit.ly/TQps6E</div>
 									<div class="social-footer"></div>
 								</div>
 							</div>
