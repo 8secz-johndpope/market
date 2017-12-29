@@ -46,21 +46,23 @@
 		</ul>
 	</div>	
 </div>
-<div class="row">
-	<div class="col-sm-12 showcase-container">
-		<div class="showcase-like">
-			<h4>Showcase your company like Uber</h4>
-		</div>
-		<div class="container-bt-contact">
-			<a href="#" class="btn btn-show-contact">Contact</a>
-		</div>
-	</div>
-</div>
 @endsection
 @section('content')
  <link href="{{asset('/css/company-profile2.css?q=874')}}" rel="stylesheet">
  
  <div class="body">
+ 	<div class="container-fluid">
+ 		<div class="row">
+			<div class="col-sm-12 showcase-container">
+				<div class="showcase-like">
+					<h4>Showcase your company like Uber</h4>
+				</div>
+				<div class="container-bt-contact">
+					<a href="#" class="btn btn-show-contact">Contact</a>
+				</div>
+			</div>
+		</div>
+ 	</div>
 	<div class="container company-profile-styling">
 		<div class="row">
 			<!-- div info-content -->
