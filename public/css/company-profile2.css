@@ -846,3 +846,7 @@
     line-height: 1.2em;
     background-color: transparent;
 }
+.showcase-like h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
