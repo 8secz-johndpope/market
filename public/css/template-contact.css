@@ -34,3 +34,8 @@
 	padding: 46px 0;
     position: relative;
 }
+.contact-title{
+	color: #000;
+    font-size: 25px;
+    font-weight: bold;
+}
