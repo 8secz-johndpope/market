@@ -39,3 +39,10 @@
     font-size: 25px;
     font-weight: bold;
 }
+.contact-form-yellow{
+	background: #ffb301 none repeat scroll 0 0;
+    display: block;
+    height: 3px;
+    margin-bottom: 48px;
+    width: 100%;
+}
