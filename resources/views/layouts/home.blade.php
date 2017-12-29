@@ -247,16 +247,16 @@
                                             <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp;Metrics</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/user/manage/applications"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;&nbsp;Your Jobs Applications</a>
+                                            <a class="nav-link nav-color" href="/user/manage/applications"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;&nbsp;Recruitment Portal</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="/user/manage/motors"><span class="fa fa-car"></span> &nbsp;&nbsp;Your Motors</a>
+                                            <a class="nav-link nav-color" href="/user/manage/motors"><span class="fa fa-car"></span> &nbsp;&nbsp;Motors Portal</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="#"><span class="fa fa-building"></span> &nbsp;&nbsp;Your Properties</a>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-building"></span> &nbsp;&nbsp;Properties Portal</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-tag"></span> &nbsp;&nbsp;Your Sales</a>
+                                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-tag"></span> &nbsp;&nbsp;For Sales Portal</a>
                                         </li>
                                     </ul>
                                 </div>
