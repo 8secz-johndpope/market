@@ -16,7 +16,7 @@
 			<div class="col-sm-12">
 				<div class="parallax-content">
 					<div class="container-logo">
-						<img src="">
+						<img src="/css/black-logo.svg" class="logo-black">
 					</div>
 					<p class="c-white">Contact - Uber Template</p>
 				</div>
