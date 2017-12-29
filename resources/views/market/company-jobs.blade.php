@@ -79,11 +79,8 @@ use App\Model\Advert;
 <div class="col-lg-7 col-sm-9 col-xs-12">
     <div class="products">
         <h4 class="items-box-head">
-            List of items for {{$category->title}}, {{number_format($total)}}
+            List of items for Uber, 8
         </h4>
-        @php
-            $i=0;
-        @endphp
         <div class="listing-max-pro container-set-alarm clearfix">
             <div class="search-alert-div text-center">
                 <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
