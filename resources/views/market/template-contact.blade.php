@@ -15,10 +15,10 @@
 		<div class="row header-container">
 			<div class="col-sm-12">
 				<div class="parallax-content">
-					<h1 class="header-title">
-						Sumra - Contact
-					</h1>
-					<p class="c-white">Uber Template</p>
+					<div class="container-logo">
+						<img src="">
+					</div>
+					<p class="c-white">Contact - Uber Template</p>
 				</div>
 			</div>
 		</div>

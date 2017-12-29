@@ -834,6 +834,7 @@ span.posted-text {
 }
 .container-emailme{
     border:1px solid #ff9d2c;
+    background: #ddd;
 }
 .container-emailme-header h3 {
     color: #2E2FC3;
