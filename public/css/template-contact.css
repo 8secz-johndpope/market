@@ -15,3 +15,12 @@
     text-shadow: 1px 1px 2px #000;
     color: #ffb301;
 }
+.parallax-section p {
+	font-size: 22px;
+    margin-top: 8px;
+    color: #ffb301 !important;
+    text-shadow: 2px 2px 16px #000000;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: center;
+}

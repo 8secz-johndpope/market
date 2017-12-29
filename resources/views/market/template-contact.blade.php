@@ -18,7 +18,7 @@
 					<h1 class="header-title">
 						Sumra - Contact
 					</h1>
-					<p>Uber - Company template</p>
+					<p class="c-white">Uber - Company template</p>
 				</div>
 			</div>
 		</div>
