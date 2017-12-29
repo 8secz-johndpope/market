@@ -2176,4 +2176,7 @@ class MarketController extends BaseController
         $params['milli']=$milliseconds;
         return view($view, $params);
     }
+    public function templateContact(Request $request){
+        return view('market.template-contact');
+    }
 }
