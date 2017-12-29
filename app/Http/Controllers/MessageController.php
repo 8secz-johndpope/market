@@ -39,9 +39,15 @@ class MessageController extends BaseController
             $user->access_token=$token;
             $user->save();
         }
+        $cur = $user->rooms()->first();
+        foreach ($user->rooms as $room){
+            if($room->is_visible()){
+                $cur=$room;
+                break;
+            }
+        }
 
-
-        return view('home.messages',['cur'=>$user->rooms()->first(),'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
+        return view('home.messages',['cur'=>$cur,'user'=>$user,'leftclass'=>'left-div-noroom','rightclass'=>'right-div-noroom']);
     }
 
     public function rooms(Request $request,$id){
