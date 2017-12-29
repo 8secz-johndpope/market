@@ -253,7 +253,7 @@
 		var vHeight = 440;
 		var vWidth = 320;
 		console.log($(this).closest('.person-tile'));
-		if($(this).closest('.person-tile') == null){
+		if($(this).closest('.person-tile').length > 0){
 			vHeight = 480;
 			vWidth = 980;
 			console.log('is title');	
