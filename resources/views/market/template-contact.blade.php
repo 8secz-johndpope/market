@@ -108,6 +108,7 @@
 				</ul>
 			</div>
 			<div class="col-sm-4">
+				<img src="/img/contact-img.jpg" class="img-responsive">
 			</div>
 		</div>
 	</div>
