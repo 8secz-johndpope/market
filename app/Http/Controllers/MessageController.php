@@ -595,7 +595,7 @@ class MessageController extends BaseController
             $message->url=$request->url;
         }
         if($request->has('type')){
-            $message->url=$request->type;
+            $message->type=$request->type;
         }
         $message->save();
 
@@ -620,7 +620,7 @@ class MessageController extends BaseController
             $message->url=$request->url;
         }
         if($request->has('type')){
-            $message->url=$request->type;
+            $message->type=$request->type;
         }
         $message->save();
 
