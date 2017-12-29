@@ -24,7 +24,9 @@ class Room extends Model
     }
     public function messages()
     {
-        return $this->hasMany('App\Model\Message');
+        $user = Auth::user();
+        $room_user = RoomUser::where('room_id',$this->id)->where('user_id',$user->id)->first();
+        return $this->hasMany('App\Model\Message')->where('id','>',$room_user->last_message_id);
     }
     public function last_message(){
         $message = Message::where('room_id',$this->id)->orderby('id','desc')->first();
