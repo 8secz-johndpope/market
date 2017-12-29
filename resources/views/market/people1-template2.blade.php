@@ -82,20 +82,22 @@
 		</div>
 		<div class="company-wrapper">
 			<div class="row">
-				<div class="col-sm-12">
-					<div class="spotlight grid_3_2 person-tile video">
-						<a href="http://vimeo.com/53823640">
-							<img src="https://assets.themuse.com/uploaded/companies/61/people/182-large.jpg?v=None" class="share-base" alt="Brian McMullen, Community Management Specialist - Uber Careers">
-							<div class="person-content desktop text-left transluscent-black">
-								<div class="person-name">Brian McMullen</div>
-								<div class="person-position">Community Management Specialist</div>
-								<div class="person-bio">Brian makes sure that every Uber user has an amazing experience. He troubleshoots roadblocks to customer happiness and also does outreach to attract new Uber users.</div>
-								<div class="person-video">
-									<img src="https://www.themuse.com/static/images/shared/playhead.png?v=cdd46bfc49626ae93cd7e91a28a0affb02ee3a1ff0ea45c49e32bbef12be32de">
-									<div class="video-text">Hear from Brian</div>
+				<div class="person">
+					<div class="col-sm-12">
+						<div class="spotlight grid_3_2 person-tile video">
+							<a href="http://vimeo.com/53823640">
+								<img src="https://assets.themuse.com/uploaded/companies/61/people/182-large.jpg?v=None" class="share-base" alt="Brian McMullen, Community Management Specialist - Uber Careers">
+								<div class="person-content desktop text-left transluscent-black">
+									<div class="person-name">Brian McMullen</div>
+									<div class="person-position">Community Management Specialist</div>
+									<div class="person-bio">Brian makes sure that every Uber user has an amazing experience. He troubleshoots roadblocks to customer happiness and also does outreach to attract new Uber users.</div>
+									<div class="person-video">
+										<img src="https://www.themuse.com/static/images/shared/playhead.png?v=cdd46bfc49626ae93cd7e91a28a0affb02ee3a1ff0ea45c49e32bbef12be32de">
+										<div class="video-text">Hear from Brian</div>
+									</div>
 								</div>
-							</div>
-						</a>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

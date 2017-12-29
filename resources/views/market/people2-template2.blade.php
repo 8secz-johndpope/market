@@ -82,20 +82,22 @@
 		</div>
 		<div class="company-wrapper">
 			<div class="row">
-				<div class="col-sm-12">
-					<div class="spotlight grid_3_2 person-tile video">
-						<a href="http://vimeo.com/54040719">
-							<img src="https://assets.themuse.com/uploaded/companies/61/people/184-large.jpg?v=None" class="share-base" alt="Swathy Prithivi, Operations &amp; Logistics Manager - Uber Careers">
-							<div class="person-content desktop text-right transluscent-black">
-								<div class="person-name">Swathy Prithivi</div>
-								<div class="person-position">Operations &amp; Logistics Manager</div>
-								<div class="person-bio">Swathy is part of the team that is the driving force behind Uber’s transportation options. She helps sign up the drivers, makes sure the vehicles run smoothly, and tackles any logistical bumps along the road.</div>
-								<div class="person-video">
-									<img src="https://www.themuse.com/static/images/shared/playhead.png?v=cdd46bfc49626ae93cd7e91a28a0affb02ee3a1ff0ea45c49e32bbef12be32de">
-									<div class="video-text">Hear from Swathy</div>
+				<div id="person">
+					<div class="col-sm-12">
+						<div class="spotlight grid_3_2 person-tile video">
+							<a href="http://vimeo.com/54040719">
+								<img src="https://assets.themuse.com/uploaded/companies/61/people/184-large.jpg?v=None" class="share-base" alt="Swathy Prithivi, Operations &amp; Logistics Manager - Uber Careers">
+								<div class="person-content desktop text-right transluscent-black">
+									<div class="person-name">Swathy Prithivi</div>
+									<div class="person-position">Operations &amp; Logistics Manager</div>
+									<div class="person-bio">Swathy is part of the team that is the driving force behind Uber’s transportation options. She helps sign up the drivers, makes sure the vehicles run smoothly, and tackles any logistical bumps along the road.</div>
+									<div class="person-video">
+										<img src="https://www.themuse.com/static/images/shared/playhead.png?v=cdd46bfc49626ae93cd7e91a28a0affb02ee3a1ff0ea45c49e32bbef12be32de">
+										<div class="video-text">Hear from Swathy</div>
+									</div>
 								</div>
-							</div>
-						</a>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
