@@ -225,29 +225,7 @@ use App\Model\Advert;
         @endif
         <div class="listing-max-pro">
             <div class="product">
-                @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
-                <div class="listing-side">
-                    <div class="listing-thumbnail">
-                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
-
-                        <!-- @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
-                            <span class="ribbon-featured">
-                                <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-                            </span>
-                        @endif -->
-                        <div class="listing-meta txt-sub">
-                            <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($product['images'])}}</span>
-                        </div>
-                    </div>
-                </div>
-                @else
-                    @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
-                        <span class="ribbon-featured">
-                            <strong class="ribbon-job" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-                        </span>
-                    @endif
-                @endif
-                <div class="info{{($product['category'] >= 4000000000 && $product['category'] <= 4999999999) ? ' margin-left' :''}}">
+                <div class="info margin-left">
                     <div class="favor">
                         @if (in_array($product['source_id'],$sids))
                             <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
@@ -259,68 +237,19 @@ use App\Model\Advert;
 
                         @endif
                     </div>
-                            <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
-
-                            <span class="listing-location">
-                                    {{$product['location_name']}}
-                                </span>
-                            @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
-                            <div class="listing-description">
-                                {!! $product['description'] !!}
-                            </div>
-                            @else
-                                <div class="link-details">
-                                    <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
-                                </div>
-                            @endif
-
-                        @if($product['meta']['price']>=0)
-                                <span class="product-price">£ {{number_format($product['meta']['price']/100)}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
-                                </span>
-                            @endif
-                @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
-                @else
+                    <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> <h4 class="product-title">{{$product['title']}}</h4></a>
+                    <span class="listing-location">
+                        {{$product['location_name']}}
+                    </span>
+                    <div class="link-details">
+                        <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
+                    </div>
                     <span class="posted-text">{{$product['posted']}}</span>
-                @endif
+                </div>
             </div>
-        </div>
         <div class="clearfix extra-info">
             <hr>
-             @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
                 <div class="ribbons">
-                    @if(isset($product['sold']) && $product['sold'] == 1)
-                        <span class="ribbon sold">
-                           Sold
-                        </span>
-                    @else
-                        @if(isset($product['spotlight'])&&$product['spotlight']===1&&$product['spotlight_expires']>$milli)
-                        <span class="ribbon ribbon-spotlight">
-                            <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Spotlight</strong> 
-                        </span>
-                        @endif
-                        @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
-                            <span class="ribbon ribbon-featured">
-                                <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong> 
-                            </span>
-                        @endif
-                        @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
-                            <span class="ribbon urgent-span">
-                                <span class="ribbon-text">
-                                Urgent
-                                </span>
-                            </span>
-                        @endif
-                        @if(isset($product['canship'])&&$product['canship']===1)
-                            <span class="ribbon ribbon-shipping">
-                                <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Ship</strong>
-                            </span>
-                        @endif
-                        @if(isset($product['candeliver'])&&$product['candeliver']===1)
-                            <span class="ribbon ribbon-delivery">
-                                <strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Local Delivery</strong>
-                            </span>
-                        @endif
-                    @endif
                 </div>
                 <div class="extra-options">
                     <div class="make-offer">
