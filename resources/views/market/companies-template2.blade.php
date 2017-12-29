@@ -56,7 +56,7 @@
 			<!-- div info-content -->
 			<div class="col-sm-8">
 				<div class="showcase-like">
-					
+
 				</div>
 				<div class="title-block">
 					<h1>We are<br><div class="big-title">UBER</div></h1>
@@ -96,7 +96,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="grid_1_1">
-						<img src="/img/london-bg.jpg">
+						<img src="/img/london-bg.jpeg">
 						<div class="text-lower-right gradient">
 							<p>We work &amp; ride in London</p>
 						</div>
