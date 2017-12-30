@@ -386,8 +386,5 @@
 		$('.docked-ctas .favroite-icon').toggleClass('heart-empty');
 		$('.docked-ctas .favroite-icon').toggleClass('heart');
 	});
-	$('.favroite-icon').click(function(e){
-		e.preventDefault();
-	})
 </script>
 @endsection
