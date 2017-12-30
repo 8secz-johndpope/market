@@ -413,9 +413,19 @@ $('.cross-mark-search').click(function () {
             var id = $(this).data('id');
             console.log($(this).data('id'));
             $('.search-div').hide();
-            $('#all-msg').animate({
-                scrollTop: $("#m"+id).offset().top
-            }, 2000);
+           
+
+            var $container = $('#all-msg'),
+                $scrollTo = $("#m"+id);
+
+            $container.scrollTop(
+                $scrollTo.offset().top - $container.offset().top + $container.scrollTop()
+            );
+
+// Or you can animate the scrolling:
+            $container.animate({
+                scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop()
+            });​
             /*
             setTimeout(function doSomethingLater() {
                 var $el = $("#m"+id),
@@ -427,7 +437,7 @@ $('.cross-mark-search').click(function () {
                     $el.css("background", originalColor);
                 }, x);
             }, 2000);
-            
+
             */
 
         });
