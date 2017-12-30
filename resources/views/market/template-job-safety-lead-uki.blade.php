@@ -382,10 +382,11 @@
 	$('.favorite').click(function(e){
 		e.preventDefault();
 		if($(this).children().hasClass('heart-empty')){
+			$(this).children().removeClass('heart-empty')
 			$(this).children().toggleClass('heart');
 		}
 		else{
-			$(this).children().toggleClass('heart-empty');
+			$(this).children().toggleClass('heart');
 		}
 	});
 </script>
