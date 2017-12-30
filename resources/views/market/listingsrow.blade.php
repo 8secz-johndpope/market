@@ -190,6 +190,8 @@ use App\Model\Advert;
                 <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
             </div>
         </div>
+        @if($category->can_apply())
+        @endif
         @foreach($products as $product)
         @if($i == 10)
         <div class="listing-max-pro container-emailme">
