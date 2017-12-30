@@ -309,6 +309,16 @@
     position: relative;
     width: 100%;
 }
+.company-profile-preview .employee-preview .employee-preview-image .tm-white-round-button {
+    position: absolute;
+    bottom: 23px;
+    right: 13px;
+}
+.company-profile-preview .employee-preview .employee-preview-image img {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
