@@ -20,6 +20,12 @@
             top: 0;
             background: white;
             margin-top: 120px;
+            display: none;
+        }
+        .cross-mark-search {
+            width: 40px;
+            font-size: 25px;
+            float: right;
         }
     </style>
 <div class="container-fluid background-body">
@@ -158,7 +164,7 @@
                                     </div>
                                 </div>
                                 <div class="controls-fields" data-role="Call">
-                                    <div role="button" data-role="Search">
+                                    <div role="button" data-role="Search" onclick="show_search()">
                                         <span>
                                             <i class="fa fa-phone" aria-hidden="true"></i>
                                         </span>
@@ -370,8 +376,12 @@
                 console.log(error);
             });
     }
-
-
+function show_search() {
+    $('.search-div').show();
+}
+$('.cross-mark-search').click(function () {
+    $('.search-div').hide();
+});
 
     </script>
 
