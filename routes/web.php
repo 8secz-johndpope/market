@@ -101,6 +101,7 @@ Route::post('/user/message/search','MessageController@message_search');
 
 Route::post('/user/message/send','MessageController@send');
 Route::post('/user/message/asend','MessageController@asend');
+Route::post('/user/notifications/toggle','MessageController@toggle_notifications');
 
 Route::post('/user/message/bsend','MessageController@bsend');
 

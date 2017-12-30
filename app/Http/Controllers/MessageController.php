@@ -816,5 +816,10 @@ class MessageController extends BaseController
 
     }
 
-
+    function toggle_notifications(Request $request){
+        $user = Auth::user();
+        $user->notifications = $request->notify;
+        $user->save();
+        return ['msg'=>'done'];
+    }
 }

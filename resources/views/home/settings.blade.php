@@ -68,12 +68,26 @@
     </div>
 <script>
     $('#notifications').change(function () {
+        var notify = 0;
         if ($(this).prop('checked')) {
             //blah blah
+            notify = 1;
             console.log('checked');
         } else {
+            notify = 0;
             console.log('not checked');
         }
+        axios.post('/user/notifications/toggle', {
+            notify:notify
+        })
+            .then(function (response) {
+                console.log(response);
+                $('#search-results').html(response.data);
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     });
 </script>
 
