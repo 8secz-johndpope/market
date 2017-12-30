@@ -353,7 +353,7 @@
 				<div>
 					<div class="col-sm-4">
 						<div class="job-element Uber" data-id="918069">
-							<a href="#" data-tile-link="true">
+							<a href="/jobs/uber/head-of-compliance-uk-ireland" data-tile-link="true">
 								<div class="tile-copy">
 									<h3>
 										<span>Uber</span>
