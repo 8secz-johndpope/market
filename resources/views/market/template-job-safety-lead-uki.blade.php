@@ -387,8 +387,8 @@
 			$(this).children().toggleClass('heart');
 		}
 		else{
-			$(this).children().removeClass('heart');
-			$(this).children().addClass('heart-empty');
+			$(this).children().toggleClass('heart');
+			$(this).children().toggleClass('heart-empty');
 		}
 	});
 </script>
