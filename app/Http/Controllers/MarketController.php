@@ -2193,6 +2193,9 @@ class MarketController extends BaseController
         else if($id === 'senior-community-operations-manager-ubereats-uki'){
             $view = 'market.template-job-senior-community-operations-manager-ubereats-uki';
         }
+        else if($id === 'enterprise-account-executive-uber-eats'){
+            $view = 'market.template-job-enterprise-account-executive-uber-eats';
+        }
         return view($view);
     }
 }
