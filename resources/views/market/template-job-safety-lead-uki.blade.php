@@ -384,5 +384,8 @@
 		$(this).children().toggleClass('heart-empty')
 		$(this).children().toggleClass('heart');
 	});
+	$('.favroite-icon').click(function(e){
+		e.preventDefault();
+	})
 </script>
 @endsection
