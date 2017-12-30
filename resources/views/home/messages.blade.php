@@ -146,8 +146,8 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="controls-fields" data-role="Call">
-                                    <div role="button" data-role="Search">
+                                <div class="controls-fields">
+                                    <div role="button" data-role="Call">
                                         <span>
                                             <i class="fa fa-phone" aria-hidden="true"></i>
                                         </span>
