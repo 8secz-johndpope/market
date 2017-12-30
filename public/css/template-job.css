@@ -212,6 +212,11 @@
     font-size: 17px;
     margin: 40px 0 0;
 }
+.job-post .job-post-description p, .job-individual .job-post .job-post-description li, .job-individual .job-post .job-post-description div {
+    font-family: Georgia!important;
+    margin: 0 0 15px;
+    line-height: 1.7em;
+}
 .favroite-icon {
     display: inline-block;
     vertical-align: middle;
