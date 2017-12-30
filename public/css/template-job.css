@@ -200,6 +200,9 @@
 .job-main-section {
     padding: 0 0 0 5px;
 }
+.favroite-icon {
+    display: inline-block;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
