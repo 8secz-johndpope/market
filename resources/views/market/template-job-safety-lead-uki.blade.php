@@ -382,6 +382,7 @@
 	$('.favorite').click(function(e){
 		e.preventDefault();
 		if($(this).children().hasClass('heart-empty')){
+			console.log('heart-empty');
 			$(this).children().removeClass('heart-empty')
 			$(this).children().addClass('heart');
 		}
