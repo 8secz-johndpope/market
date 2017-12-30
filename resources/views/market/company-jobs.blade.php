@@ -336,14 +336,14 @@ use App\Model\Advert;
                         </span>
                         <span  class="favor-text">SAVE</span>
                     </div>
-                    <a class="listing-product" href="#"> 
+                    <a class="listing-product" href="/jobs/uber/enterprise-account-executive-uber-eats"> 
                         <h4 class="product-title">Enterprise Account Executive, Uber Eats</h4>
                     </a>
                     <span class="listing-location">
                         London, United Kingdom
                     </span>
                     <div class="link-details">
-                        <a href="#">> VIEW FULL POSTING</a>
+                        <a href="/jobs/uber/enterprise-account-executive-uber-eats">> VIEW FULL POSTING</a>
                     </div>
                     <span class="posted-text">34d ago</span>
                 </div>
