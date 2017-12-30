@@ -197,6 +197,9 @@
 .sidebar-content .favorite-box-container .favorite, .sidebar-content .favorite-box-container .unfavorite, .fixed-apply-now .favorite-box-container .favorite, .fixed-apply-now .favorite-box-container .unfavorite {
     padding: 0;
 }
+.sidebar-content img{
+	width: 100%;
+}
 .job-main-section {
     padding: 0 0 0 5px;
 }
