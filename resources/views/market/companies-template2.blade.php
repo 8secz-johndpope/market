@@ -296,7 +296,7 @@
 				<div>
 					<div class="col-sm-4">
 						<div class="job-element Uber" data-id="713807">
-							<a href="#" data-tile-link="true">
+							<a href="/jobs/uber/safety-lead-uki" data-tile-link="true">
 								<div class="tile-copy">
 									<h3><span>Uber</span>Safe Lead UKI</h3>
 									<ul class="metadata">
