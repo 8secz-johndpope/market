@@ -54,11 +54,18 @@
             </ul>
         </div>
     </div>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="notifications">
-        <label class="form-check-label" for="defaultCheck1">
-            Receive Notifications
-        </label>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="notifications">
+                <label class="form-check-label" for="defaultCheck1">
+                    Receive Notifications
+                </label>
+            </div>
+        </div>
+
     </div>
+
 
 @endsection
