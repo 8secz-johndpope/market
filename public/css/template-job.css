@@ -538,6 +538,25 @@
 .docked-nav.job.open {
     top: 0;
 }
+.docked-nav.job h4 {
+    font-family: proximasemibold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin: 10px 0 5px;
+}
+.docked-nav.job h3 {
+    font-family: oswald,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 28px;
+    color: #333;
+    margin: 0 0 10px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
