@@ -163,13 +163,8 @@
                                         </span>
                                     </div>
                                 </div>
-<<<<<<< HEAD
                                 <div class="controls-fields" data-role="Call">
                                     <div role="button" data-role="Search" onclick="show_search()">
-=======
-                                <div class="controls-fields">
-                                    <div role="button" data-role="Call">
->>>>>>> 95a185d82862897cb45e77c841f0ceb9b370f85c
                                         <span>
                                             <i class="fa fa-phone" aria-hidden="true"></i>
                                         </span>
