@@ -72,7 +72,7 @@
                                           <li><a href="/user/new/broadcast">New broadcast</a></li>
                                           <li><a href="/download-mobile-apps">Call</a></li>
                                           <li><a href="/download-mobile-apps">VideoCall</a></li>
-                                          <li><a href="#">Settings</a></li>
+                                          <li><a href="/user/manage/settings">Settings</a></li>
                                         </ul>
                                     </div>
                                 </span>
