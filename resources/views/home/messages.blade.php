@@ -176,7 +176,9 @@
                                 <div class="controls-fields">
                                     <div role="button" data-role="VideoCall">
                                         <span>
-                                            <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                             <a href="/download-mobile-apps">
+                                                <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                            </a>
                                         </span>
                                     </div>
                                 </div>
