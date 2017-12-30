@@ -390,5 +390,10 @@
 		e.preventDefault();
 		$('html').animate({ scrollTop: 0}, 600);
 	});
+	$('.favorite').click(function(e){
+		e.preventDefault();
+		$(this).children().toggleClass('heart-empty');
+		$(this).children().toggleClass('heart');
+	});
 </script>
 @endsection
