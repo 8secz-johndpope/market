@@ -410,9 +410,10 @@ $('.cross-mark-search').click(function () {
         });
         $('#search-results').on('click', '.message-search-list-item', function() {
             // do something
+            var id = $(this).data('id');
             console.log($(this).data('id'));
             $('html, body').animate({
-                scrollTop: $("#m"+$(this).data('id')).offset().top
+                scrollTop: $("#m"+id).offset().top
             }, 2000);
         });
 
