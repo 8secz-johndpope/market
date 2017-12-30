@@ -2196,6 +2196,9 @@ class MarketController extends BaseController
         else if($id === 'enterprise-account-executive-uber-eats'){
             $view = 'market.template-job-enterprise-account-executive-uber-eats';
         }
+        else if($id === 'head-of-public-policy-uk-ireland-northern-europe'){
+            $view = 'market.template-job-head-of-public-policy-uk-ireland-northern-europe';
+        }
         return view($view);
     }
 }
