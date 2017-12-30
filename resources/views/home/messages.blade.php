@@ -417,7 +417,14 @@ $('.cross-mark-search').click(function () {
                 scrollTop: $("#m"+id).offset().top
             }, 2000);
             setTimeout(function doSomethingLater() {
-                $("#m"+id).css('background','green');
+                var $el = $("#m"+id),
+                    x = 1000,
+                    originalColor = $el.css("background");
+
+                $el.css("background", "green");
+                setTimeout(function(){
+                    $el.css("background", originalColor);
+                }, x);
             }, 2000);
 
         });
