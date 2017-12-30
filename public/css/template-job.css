@@ -484,6 +484,17 @@
     color: #333;
     margin:0;
 }
+.job-element .metadata li {
+    display: inline-block;
+    margin-bottom: 0;
+}
+.job-element .white-gradient:before, .job-element .white-gradient:after {
+    content: " ";
+    display: table;
+}
+.job-element .white-gradient:after {
+    clear: both;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
