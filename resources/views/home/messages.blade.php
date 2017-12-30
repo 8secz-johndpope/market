@@ -416,6 +416,7 @@ $('.cross-mark-search').click(function () {
             $('#all-msg').animate({
                 scrollTop: $("#m"+id).offset().top
             }, 2000);
+            /*
             setTimeout(function doSomethingLater() {
                 var $el = $("#m"+id),
                     x = 1000,
@@ -426,6 +427,8 @@ $('.cross-mark-search').click(function () {
                     $el.css("background", originalColor);
                 }, x);
             }, 2000);
+            
+            */
 
         });
 
