@@ -35,7 +35,7 @@ class BaseController extends Controller
         if(!$message->type)
             $message->type='text';
         foreach ($room->users as $usr){
-            if($usr->id!==$user->id)
+            if($usr->id!==$user->id&&$usr->notifications===1)
             {
                 $message->room = $message->room;
                 Redis::publish(''.$usr->id, json_encode($message));
