@@ -53,3 +53,20 @@
 .header-container .ctas button, .header-container .ctas a, .header-container .ctas div {
     display: inline-block;
 }
+.sidebar-content {
+    position: relative;
+    padding: 0 20px;
+    font-family: proxima,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+}
+
+@media (min-width: 768px){
+	.sidebar-content:first-child {
+	    margin-top: 20px;
+	}
+}
