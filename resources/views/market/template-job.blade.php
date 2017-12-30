@@ -367,4 +367,14 @@
 		</div>
 	</div>
 </div>
+<script>
+	$(window).scroll(function(){
+		if($(this).scrollTop() > 200 && !$('#job-nav').hasClass('open')){
+			$('#job-nav').addClass('open');
+		}
+		elseif($(this).scrollTop() < 200 && $('#job-nav').hasClass('open')){
+			$('#job-nav').removeClass('open');
+		}
+	});
+</script>
 @endsection
