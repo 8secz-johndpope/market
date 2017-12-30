@@ -90,7 +90,7 @@
 						</section>
 					</div>
 				</div>
-				<div class="col-sm-8">
+				<div class="col-sm-8 job-main-section">
 					<div class="job-body">
 						<div class="job-post">
 							<div class="job-post-description">
