@@ -557,6 +557,10 @@
     color: #333;
     margin: 0 0 10px;
 }
+.docked-nav.job .docked-ctas {
+    margin-top: 20px;
+    text-align: right;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
