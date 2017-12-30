@@ -431,6 +431,37 @@
 .recommended-jobs .section-header {
     margin: 10px;
 }
+.job-element {
+    background-color: #f9f9f9;
+    -moz-box-shadow: 0 10px 20px 0 #eee;
+    -webkit-box-shadow: 0 10px 20px 0 #eee;
+    box-shadow: 0 10px 20px 0 #eee;
+    position: relative;
+    display: block;
+    margin-top: 37px;
+    background-color: #fff;
+}
+.job-element .tile-copy {
+    border-top: 3px solid #666;
+    background-color: #fff;
+    z-index: 20;
+    height: 140px;
+    overflow: hidden;
+}
+.job-element .white-gradient {
+    height: 140px;
+    background: linear-gradient(rgba(255,255,255,0),transparent,transparent,transparent,transparent,transparent,rgba(255,255,255,.1),rgba(255,255,255,.6),rgba(255,255,255,.9));
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.job-element .tile-bg {
+    padding-top: 73.5%;
+    position: relative;
+    z-index: 0;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
