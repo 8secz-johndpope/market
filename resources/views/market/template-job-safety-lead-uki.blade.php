@@ -386,7 +386,7 @@
 			$(this).children().addClass('heart');
 		}
 		else{
-			$(this).children().toggleClass('heart');
+			$(this).children().removeClass('heart');
 			$(this).children().addClass('heart-empty');
 		}
 	});
