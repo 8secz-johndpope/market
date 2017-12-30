@@ -96,6 +96,8 @@ Route::get('/user/message/push','MessageController@push');
 
 Route::get('/user/message/send','MessageController@send');
 
+Route::post('/user/message/search','MessageController@message_search');
+
 
 Route::post('/user/message/send','MessageController@send');
 Route::post('/user/message/asend','MessageController@asend');
