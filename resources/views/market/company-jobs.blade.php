@@ -218,7 +218,7 @@ use App\Model\Advert;
                 </div>
             -->
                 <div class="link-details">
-                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                    <a href="/companies/uber">> LEARN MORE ABOUT THIS ADVERTISER</a>
                 </div>
         </div>
     </div>
@@ -271,7 +271,7 @@ use App\Model\Advert;
                 </div>
             -->
                 <div class="link-details">
-                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                    <a href="/companies/uber">> LEARN MORE ABOUT THIS ADVERTISER</a>
                 </div>
         </div>
     </div>
@@ -324,7 +324,7 @@ use App\Model\Advert;
                 </div>
             -->
                 <div class="link-details">
-                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                    <a href="/companies/uber">> LEARN MORE ABOUT THIS ADVERTISER</a>
                 </div>
         </div>
     </div>
