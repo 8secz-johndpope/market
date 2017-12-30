@@ -129,8 +129,24 @@
 .sidebar-content .metadata-list {
     margin: 25px 0 20px;
 }
+.metadata-list .metadata-list_header {
+    font-size: 12px;
+    font-family: proximasemibold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    margin: 15px 0 0;
+    padding: 0;
+    display: None;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
+	}
+	.metadata-list .metadata-list_header {
+    	display: block;
 	}
 }
