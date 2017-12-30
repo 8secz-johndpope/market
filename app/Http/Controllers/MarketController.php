@@ -2183,6 +2183,6 @@ class MarketController extends BaseController
         $view = 'market.template-job';
         if($id === 'safety-lead-uki')
             $view = 'market.template-job-safety-lead-uki';
-        return view('market.template-job');
+        return view($view);
     }
 }
