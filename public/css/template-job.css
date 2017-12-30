@@ -319,6 +319,12 @@
     overflow: hidden;
     margin-bottom: 10px;
 }
+.company-profile-preview .employee-preview h2, .company-profile-preview .employee-preview h3 {
+    margin: 0 0 2px;
+}
+.company-profile-preview .employee-preview h2 {
+    font-size: 22px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
