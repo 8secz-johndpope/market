@@ -374,7 +374,7 @@
 .apply-later .send-to-self {
     display: block;
 }
-.tm-orange-transparent-round-button, .docked-nav.job .docked-ctas .favorite-container a, .job-individual .job-post .favorite-box-container a {
+.tm-orange-transparent-round-button, .docked-nav.job .docked-ctas .favorite-container a, .job-post .favorite-box-container a {
     -webkit-transition: background 200ms ease-out;
     -moz-transition: background 200ms ease-out;
     -ms-transition: background 200ms ease-out;
