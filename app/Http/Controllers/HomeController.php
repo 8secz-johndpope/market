@@ -2159,6 +2159,11 @@ class HomeController extends BaseController
 
         return view('home.newmessage',['user'=>$user]);
     }
+    public function settings(Request $request){
+        $user=Auth::user();
+
+        return view('home.settings',['user'=>$user]);
+    }
     public function transfer_balance(Request $request,$id){
         $user=Auth::user();
         $other = User::find($id);

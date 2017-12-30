@@ -106,6 +106,7 @@ Route::post('/user/message/bsend','MessageController@bsend');
 
 Route::post('/user/message/rsend','MessageController@rsend');
 Route::post('/user/add/message','MessageController@add_message');
+Route::get('/user/manage/settings', 'HomeController@settings');
 
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::get('/user/manage/alerts', 'HomeController@alerts');
