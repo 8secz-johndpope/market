@@ -381,6 +381,7 @@
 	});
 	$('.favorite').click(function(e){
 		e.preventDefault();
+		
 	});
 </script>
 @endsection
