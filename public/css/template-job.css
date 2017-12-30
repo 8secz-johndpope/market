@@ -68,6 +68,9 @@
 .sidebar-content:first-child {
     margin-top: 10px;
 }
+.sidebar-content .company-logo {
+    width: 200px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
