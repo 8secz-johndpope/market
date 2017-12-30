@@ -244,13 +244,13 @@
     padding: 7px 20px;
     border-style: solid;
     border-width: 2px;
-    border-color: #333;
+    border-color: #fff;
     display: inline-block;
     background-color: #fff;
     line-height: 1.2em;
     text-align: center;
     text-transform: uppercase;
-    color: #fff;
+    color: #333;
     font-family: proximasemibold,Helvetica,sans-serif;
     font-weight: 400;
     font-style: normal;
