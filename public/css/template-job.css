@@ -561,6 +561,9 @@
     margin-top: 20px;
     text-align: right;
 }
+.docked-nav.job .docked-ctas .favorite-container {
+    display: inline-block;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
