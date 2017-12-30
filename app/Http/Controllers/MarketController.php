@@ -2199,6 +2199,9 @@ class MarketController extends BaseController
         else if($id === 'head-of-public-policy-uk-ireland-northern-europe'){
             $view = 'market.template-job-head-of-public-policy-uk-ireland-northern-europe';
         }
+        else if($id === 'public-policy-senior-associate-uk-ireland-021135'){
+            $view = 'market.template-job-public-policy-senior-associate-uk-ireland-021135';
+        }
         return view($view);
     }
 }
