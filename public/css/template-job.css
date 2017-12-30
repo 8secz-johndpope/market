@@ -301,6 +301,9 @@
     border-radius: 25px;
     letter-spacing: 1px;
 }
+.tm-input-grey-round-button:visited, .tm-input-grey-round-button:focus {
+    color: #333;
+}
 .tm-bright-blue-round-button:visited, .tm-bright-blue-round-button:focus {
     color: #fff;
 }
@@ -369,6 +372,30 @@
 }
 .apply-later .send-to-self {
     display: block;
+}
+.tm-orange-transparent-round-button, .docked-nav.job .docked-ctas .favorite-container a, .job-individual .job-post .favorite-box-container a {
+    -webkit-transition: background 200ms ease-out;
+    -moz-transition: background 200ms ease-out;
+    -ms-transition: background 200ms ease-out;
+    -o-transition: background 200ms ease-out;
+    transition: background 200ms ease-out;
+    padding: 10px 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f87964;
+    display: inline-block;
+    background-color: transparent;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f87964;
+    font-family: proximasemibold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 11px;
+    border-radius: 25px;
+    letter-spacing: 1px;
 }
 @media (min-width: 768px){
 	.sidebar-content:first-child {
