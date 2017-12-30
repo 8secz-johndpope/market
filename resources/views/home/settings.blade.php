@@ -54,7 +54,7 @@
             </ul>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="min-height: 600px">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <div class="form-check">
