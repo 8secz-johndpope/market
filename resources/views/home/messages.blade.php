@@ -413,7 +413,7 @@ $('.cross-mark-search').click(function () {
             var id = $(this).data('id');
             console.log($(this).data('id'));
             $('.search-div').hide();
-            $('html, body').animate({
+            $('#all-msg').animate({
                 scrollTop: $("#m"+id).offset().top
             }, 2000);
         });
