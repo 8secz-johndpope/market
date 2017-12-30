@@ -28,6 +28,9 @@
             float: right;
             cursor: pointer;
         }
+        .message-search-list-item{
+            cursor: pointer;
+        }
     </style>
 <div class="container-fluid background-body">
     <div class="row">
@@ -404,6 +407,10 @@ $('.cross-mark-search').click(function () {
                 .catch(function (error) {
                     console.log(error);
                 });
+        });
+        $('#search-results').on('click', '.message-search-list-item', function() {
+            // do something
+            console.log($(this).data('id'));
         });
 
     </script>
