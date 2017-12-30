@@ -209,7 +209,7 @@
 					<section class="job-main-section row">
 						<div class="job-body">
 							<div class="job-post">
-								<div class="bottom-ctas">
+								<div class="bottom-ctas clearfix">
 									<div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
 										<div class="external-apply center">
 											<a class="tm-bright-blue-round-button btn-block apply-external" href="https://careers-uber.icims.com/jobs/34729/safety-lead-uki/job?iis=The+Muse&amp;iisn=The+Muse&amp;mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
