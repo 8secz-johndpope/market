@@ -228,7 +228,7 @@
     display: inline-block;
     vertical-align: middle;
 }
-.favorite-box-container .favroite-icon{
+.sidebar-content .favorite-box-container .favroite-icon{
 	padding: 1em;
     border: 1px solid #f87964;
     border-radius: 50%;
