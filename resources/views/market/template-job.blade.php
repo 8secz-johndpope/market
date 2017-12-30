@@ -369,10 +369,10 @@
 </div>
 <script>
 	$(window).scroll(function(){
-		if($(this).scrollTop() > 200 && !$('#job-nav').hasClass('open')){
+		if($(this).scrollTop() > 300 && !$('#job-nav').hasClass('open')){
 			$('#job-nav').addClass('open');
 		}
-		else if($(this).scrollTop() < 200 && $('#job-nav').hasClass('open')){
+		else if($(this).scrollTop() < 300 && $('#job-nav').hasClass('open')){
 			$('#job-nav').removeClass('open');
 		}
 	});
