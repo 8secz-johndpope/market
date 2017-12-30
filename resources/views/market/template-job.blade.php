@@ -243,6 +243,98 @@
 					</div>					
 				</div>
 				<div class="col-sm-12">
+					<div class="block">
+						<div>
+							<div>
+								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 track-tile">
+									<div class="job-element Kaiser Associates" data-id="487096">
+										<a href="/jobs/kaiserassociates/vice-president-consumer-goods-and-private-equityma?ref=job-recommendation-0" data-tile-link="true">
+											<div class="tile-copy">
+												<h3>
+													<span>Kaiser Associates</span>
+													Vice President (Consumer Goods and Private Equity/M&amp;A)
+												</h3>
+												<ul class="metadata">
+													<li>London, United Kingdom</li>
+												</ul>
+											</div>
+											<div class="white-gradient hidden-xs"></div>
+											<div class="tile-bg">
+												<img src="https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1393%2Fmodules%2F9367%2Fasset1.jpg&amp;h=295&amp;w=400" alt="Now Hiring - Vice President (Consumer Goods and Private Equity/M&amp;A) at Kaiser Associates">
+											</div>
+										</a>
+										<div class="favorite-container">
+											<div>
+												<a aria-label="favorite" href="#" class="favorite">
+													<i aria-hidden="true" class="fa fa-heart-o"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 track-tile">
+									<div class="job-element Uber" data-id="782201">
+										<a href="/jobs/uber/senior-community-operations-manager-ubereats-uki?ref=job-recommendation-1" data-tile-link="true">
+											<div class="tile-copy">
+												<h3>
+													<span>Uber</span>
+													Senior Community Operations Manager, UberEATS - UKI
+												</h3>
+												<ul class="metadata">
+													<li>London, United Kingdom</li>
+												</ul>
+											</div>
+											<div class="white-gradient hidden-xs"></div>
+											<div class="tile-bg">
+												<img src="https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F61%2Fpages%2F674%2Ff1.jpg&amp;h=295&amp;w=400" alt="Now Hiring - Senior Community Operations Manager, UberEATS - UKI at Uber">
+											</div>
+										</a>
+										<div class="favorite-container">
+											<div>
+												<a aria-label="favorite" href="#" class="favorite">
+													<i aria-hidden="true" class="fa fa-heart-o"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 track-tile">
+									<div class="job-element Canada Goose" data-id="763458">
+										<a href="/jobs/canadagoose/mandarin-speaking-sales-associate?ref=job-recommendation-2" data-tile-link="true">
+											<div class="tile-copy">
+												<h3>
+													<span>Canada Goose</span>
+													Mandarin Speaking Sales Associate
+												</h3>
+												<ul class="metadata">
+													<li>London, United Kingdom</li>
+												</ul>
+											</div>
+											<div class="white-gradient hidden-xs"></div>
+											<div class="tile-bg">
+												<img src="https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1350%2Fmodules%2F9374%2Fasset1.jpg&amp;h=295&amp;w=400" alt="Now Hiring - Mandarin Speaking Sales Associate at Canada Goose">
+											</div>
+										</a>
+										<div class="favorite-container">
+											<div>
+												<a aria-label="favorite" href="#" class="favorite">
+													<i aria-hidden="true" class="fa fa-heart-o"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
