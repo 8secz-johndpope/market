@@ -383,5 +383,8 @@
 			$('.scroll').hide();
 		}
 	});
+	$('.scroll').click(function(){
+		$(window).scrollTop(0);
+	});
 </script>
 @endsection
