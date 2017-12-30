@@ -24,7 +24,7 @@
 					<div class="favorite-container">
 						<div>
 							<a aria-label="favorite" href="#" class="favorite">
-								<i aria-hidden="true" class="fa fa-heart-o"></i>
+								<i aria-hidden="true" class="heart-empty favroite-icon"></i>
 							</a>
 						</div>
 					</div>

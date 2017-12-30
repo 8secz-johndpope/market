@@ -24,7 +24,7 @@
 					<div class="favorite-container">
 						<div>
 							<a aria-label="favorite" href="#" class="favorite">
-								<i aria-hidden="true" class="fa fa-heart-o"></i>
+								<i aria-hidden="true" class="heart-empty favroite-icon"></i>
 							</a>
 						</div>
 					</div>
@@ -372,6 +372,11 @@
 	$('.btn-scroll').click(function(e){
 		e.preventDefault();
 		$('html').animate({ scrollTop: 0}, 600);
+	});
+	$('.favorite').click(function(e){
+		e.preventDefault();
+		$(this).children().toggleClass('heart-empty');
+		$(this).children().toggleClass('heart');
 	});
 </script>
 @endsection
