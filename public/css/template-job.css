@@ -71,6 +71,24 @@
 .sidebar-content .company-logo {
     width: 200px;
 }
+.see-more-link {
+    font-family: proximasemibold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    color: #3852d4;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: underline!important;
+    display: inline-block;
+}
+.sidebar-content .see-more-link {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 60%;
+    text-align: right;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
