@@ -503,6 +503,11 @@
     height: 100%;
     display: block;
 }
+.recommended-jobs {
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
