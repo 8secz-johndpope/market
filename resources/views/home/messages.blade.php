@@ -11,6 +11,17 @@
 @endsection
 
 @section('content')
+    <style>
+        .search-div {
+            position: absolute;
+            bottom: 0;
+            width: 300px;
+            right: 0;
+            top: 0;
+            background: white;
+            margin-top: 120px;
+        }
+    </style>
 <div class="container-fluid background-body">
     <div class="row">
         <div class="col-sm-12">
@@ -261,7 +272,8 @@
     </div>
     <input type="file" id="upload-image-chat"  style="display: none">
     <div class="search-div">
-        
+        <div class="cross-mark-search">X</div>
+        <input type="text" placeholder="Search this Conversation" class="form-control">
     </div>
 </div>
     <script>
