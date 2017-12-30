@@ -177,14 +177,14 @@ use App\Model\Advert;
                         </span>
                         <span  class="favor-text">SAVE</span>
                     </div>
-                    <a class="listing-product" href="/jobs/uber/safe-lead-uki"> 
+                    <a class="listing-product" href="/jobs/uber/associate-counsel-uk-ireland"> 
                         <h4 class="product-title">Associate Counsel - UK & Ireland</h4>
                     </a>
                     <span class="listing-location">
                         London, United Kingdom
                     </span>
                     <div class="link-details">
-                        <a href="/jobs/uber/safe-lead-uki">> VIEW FULL POSTING</a>
+                        <a href="/jobs/uber/associate-counsel-uk-ireland">> VIEW FULL POSTING</a>
                     </div>
                     <span class="posted-text">34d ago</span>
                 </div>
