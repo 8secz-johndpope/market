@@ -177,7 +177,7 @@
                                     <div role="button" data-role="VideoCall">
                                         <span>
                                              <a href="/download-mobile-apps">
-                                                <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                                <img src="/css/icons/icon-videocall.svg" class="img-call" alt="Make VideoCall">
                                             </a>
                                         </span>
                                     </div>
