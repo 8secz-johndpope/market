@@ -462,6 +462,14 @@
     position: relative;
     z-index: 0;
 }
+.job-element .favorite-container {
+    z-index: 20;
+    position: absolute;
+    right: 10px;
+}
+.job-element .favorite-container {
+    bottom: 10px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;

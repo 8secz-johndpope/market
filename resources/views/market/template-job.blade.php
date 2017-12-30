@@ -248,7 +248,7 @@
 							<div>
 								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 track-tile">
 									<div class="job-element Kaiser Associates" data-id="487096">
-										<a href="/jobs/kaiserassociates/vice-president-consumer-goods-and-private-equityma?ref=job-recommendation-0" data-tile-link="true">
+										<a href="#" data-tile-link="true">
 											<div class="tile-copy">
 												<h3>
 													<span>Kaiser Associates</span>
@@ -266,7 +266,7 @@
 										<div class="favorite-container">
 											<div>
 												<a aria-label="favorite" href="#" class="favorite">
-													<i aria-hidden="true" class="fa fa-heart-o"></i>
+													<i aria-hidden="true" class="heart-empty favroite-icon"></i>
 												</a>
 											</div>
 										</div>
@@ -296,7 +296,7 @@
 										<div class="favorite-container">
 											<div>
 												<a aria-label="favorite" href="#" class="favorite">
-													<i aria-hidden="true" class="fa fa-heart-o"></i>
+													<i aria-hidden="true" class="heart-empty favroite-icon"></i>
 												</a>
 											</div>
 										</div>
@@ -326,7 +326,7 @@
 										<div class="favorite-container">
 											<div>
 												<a aria-label="favorite" href="#" class="favorite">
-													<i aria-hidden="true" class="fa fa-heart-o"></i>
+													<i aria-hidden="true" class="heart-empty favroite-icon"></i>
 												</a>
 											</div>
 										</div>
