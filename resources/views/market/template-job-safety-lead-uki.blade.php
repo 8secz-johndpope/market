@@ -357,9 +357,11 @@
 		</div>
 	</div>
 	<div class="scroll" style="display: none;">
-		<i class="fa fa-chevron-up"></i>
-		<br>
-		Back to top
+		<a class="btn-scroll" href="#">
+			<i class="fa fa-chevron-up"></i>
+			<br>
+			Back to top
+		</a>
 	</div>
 </div>
 <script>
@@ -373,7 +375,8 @@
 			$('.scroll').hide();
 		}
 	});
-	$('.scroll').click(function(){
+	$('.btn-scroll').click(function(e){
+		e.preventDefault();
 		$('html').animate({ scrollTop: 0}, 600);
 	});
 </script>
