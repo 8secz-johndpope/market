@@ -85,7 +85,7 @@
 				<ul class="list-style-1">
 					<li>
 						<i class="fa fa-envelope"></i>
-						<span>sales@{{env('APP_NAME')}}.net</span>
+						<span>sales{{'@'.env('APP_NAME')}}.net</span>
 					</li>
 				</ul>
 				<h3 class="options-contact-title">By Phone:</h3>
