@@ -230,14 +230,14 @@ use App\Model\Advert;
                         </span>
                         <span  class="favor-text">SAVE</span>
                     </div>
-                    <a class="listing-product" href="#"> 
+                    <a class="listing-product" href="/jobs/uber/head-of-compliance-uk-ireland"> 
                         <h4 class="product-title">Head of compliance - UK & Ireland</h4>
                     </a>
                     <span class="listing-location">
                         London, United Kingdom
                     </span>
                     <div class="link-details">
-                        <a href="#">> VIEW FULL POSTING</a>
+                        <a href="/jobs/uber/head-of-compliance-uk-ireland">> VIEW FULL POSTING</a>
                     </div>
                     <span class="posted-text">34d ago</span>
                 </div>
