@@ -191,6 +191,16 @@ use App\Model\Advert;
             </div>
         </div>
         @if($category->can_apply())
+        <div class="listing-max-pro container-btns-recruiter">
+            <div class="row">
+                <div class="col-sm-6">
+                    <a href="#" class="btn-recruiter">Explore Companies</a>
+                </div>
+                <div class="col-sm-6">
+                    <a href="#" class="btn-recruiter">Search Recruiter</a>
+                </div>
+            </div>
+        </div>
         @endif
         @foreach($products as $product)
         @if($i == 10)
