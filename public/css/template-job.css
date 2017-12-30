@@ -96,6 +96,32 @@
     margin: 15px 0 20px;
     font-family: Georgia;
 }
+.sidebar-content .company-profile-preview-sidebar {
+    width: 100%;
+    color: #333;
+    margin-bottom: 20px;
+}
+.sidebar-content .company-profile-preview-sidebar .company-profile-preview-sidebar-image {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+.sidebar-content h3 {
+    font-size: 16px;
+    margin: 15px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+.sidebar-content h3 {
+    font-family: proximasemibold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
