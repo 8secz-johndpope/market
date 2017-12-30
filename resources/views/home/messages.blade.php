@@ -160,7 +160,9 @@
                                 <div class="controls-fields">
                                     <div role="button" data-role="Call">
                                         <span>
-                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <a href="/download-mobile-apps">
+                                                <img src="/css/icons/icon-call.svg" class="img-invoice" alt="Make Call">
+                                            </a>
                                         </span>
                                     </div>
                                 </div>
