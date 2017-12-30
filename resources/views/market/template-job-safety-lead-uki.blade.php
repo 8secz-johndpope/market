@@ -384,7 +384,7 @@
 		if($(this).children().hasClass('heart-empty')){
 			console.log('heart-empty');
 			$(this).children().removeClass('heart-empty')
-			$(this).children().addClass('heart');
+			$(this).children().toggleClass('heart');
 		}
 		else{
 			$(this).children().removeClass('heart');
