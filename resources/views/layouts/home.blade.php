@@ -279,13 +279,13 @@
                                             <a class="nav-link nav-color" href="#"><span class="fa fa-reply-all"></span> &nbsp;&nbsp;New Broadcast</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="#"><span class="fa fa-reply-all"></span> &nbsp;&nbsp;New Conversation</a>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-comments-o"></span> &nbsp;&nbsp;New Conversation</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="#"><span class="fa fa-reply-all"></span> &nbsp;&nbsp;Share your Balance</a>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-money"></span> &nbsp;&nbsp;Share your Balance</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link nav-color" href="#"><span class="fa fa-reply-all"></span> &nbsp;&nbsp;Attachment</a>
+                                            <a class="nav-link nav-color" href="#"><span class="fa fa-paperclip"></span> &nbsp;&nbsp;Attachment</a>
                                         </li>
                                         <li>
                                             <a class="nav-link nav-color" href="#"><span class="fa fa-cog"></span> &nbsp;&nbsp;Settings</a>
