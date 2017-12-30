@@ -285,6 +285,30 @@
     bottom: 10px;
     margin-left: 10px;
 }
+.company-profile-preview {
+    width: 100%;
+    overflow: hidden;
+    padding-left: 15px;
+}
+.company-profile-preview h1 {
+    font-family: oswald,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    margin: 0 0 20px;
+    letter-spacing: -1px;
+    text-align: left;
+}
+.company-profile-preview .employee-preview {
+    padding-right: 20px;
+    width: 50%;
+    height: 400px;
+    float: left;
+}
+.company-profile-preview .employee-preview .employee-preview-image {
+    position: relative;
+    width: 100%;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
