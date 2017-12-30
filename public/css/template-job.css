@@ -234,6 +234,35 @@
 .sidebar-content .useful-links {
     margin: 20px 0 30px;
 }
+.tm-white-round-button {
+    -webkit-transition: background 200ms ease-out;
+    -moz-transition: background 200ms ease-out;
+    -ms-transition: background 200ms ease-out;
+    -o-transition: background 200ms ease-out;
+    transition: background 200ms ease-out;
+    padding: 7px 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #333;
+    display: inline-block;
+    background-color: #fff;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: proximasemibold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 11px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+}
+.sidebar-content .company-profile-preview-sidebar .company-profile-preview-sidebar-image .tm-white-round-button {
+    position: absolute;
+    bottom: 10px;
+    margin-left: 10px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
