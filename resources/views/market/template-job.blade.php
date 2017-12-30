@@ -10,7 +10,7 @@
 @section('content')
  <link href="{{ asset('/css/css/font-awesome.min.css?q=874') }}" rel="stylesheet">
  <link href="{{asset('/css/template-job.css?q=874')}}" rel="stylesheet">
- <div id="job-nav" class="docked-nav job hidden-xs open">
+ <div id="job-nav" class="docked-nav job hidden-xs">
  	<div class="container">
  		<div class="row">
  			<div class="col-sm-8">
