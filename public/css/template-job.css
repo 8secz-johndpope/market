@@ -280,7 +280,7 @@
     border-radius: 25px;
     letter-spacing: 1px;
 }
-.tm-medium-grey-round-button {
+.tm-input-grey-round-button {
     -webkit-transition: background 200ms ease-out;
     -moz-transition: background 200ms ease-out;
     -ms-transition: background 200ms ease-out;
@@ -301,6 +301,7 @@
     border-radius: 25px;
     letter-spacing: 1px;
 }
+
 .tm-input-grey-round-button:visited, .tm-input-grey-round-button:focus {
     color: #333;
 }
