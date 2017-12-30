@@ -199,6 +199,7 @@
 }
 .sidebar-content img{
 	width: 100%;
+	outline: 0;
 }
 .job-main-section {
     padding: 0 0 0 5px;
@@ -280,5 +281,10 @@
 	.metadata-list .metadata-list_items a {
 	    color: #666;
 	    font-size: 14px;
+	}
+}
+@media (min-width: 992px){
+		.sidebar-content .company-profile-preview-sidebar .company-profile-preview-sidebar-image img {
+	    margin-top: -50px;
 	}
 }
