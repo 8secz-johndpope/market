@@ -55,6 +55,6 @@ class Message extends Model
         else if($interval->d > 0 && $interval->d < 5){
             return date('l',strtotime($this->created_at));
         }
-        return date('d/m/Y',strtotime($this->created_at));;
+        return date('d/m/Y',strtotime($this->created_at));
     }
 }
