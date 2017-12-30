@@ -423,8 +423,8 @@ $('.cross-mark-search').click(function () {
             );
 
 // Or you can animate the scrolling:
-           
-            /*
+
+
             setTimeout(function doSomethingLater() {
                 var $el = $("#m"+id),
                     x = 1000,
@@ -434,9 +434,9 @@ $('.cross-mark-search').click(function () {
                 setTimeout(function(){
                     $el.css("background", originalColor);
                 }, x);
-            }, 2000);
+            }, 1000);
 
-            */
+            
 
         });
 
