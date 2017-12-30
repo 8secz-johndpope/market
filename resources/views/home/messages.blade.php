@@ -153,6 +153,13 @@
                                         </span>
                                     </div>
                                 </div>
+                                <div class="controls-fields" data-role="VideoCall">
+                                    <div role="button" data-role="Search">
+                                        <span>
+                                            <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
                                 <div class="controls-fields">
                                     <div role="button" data-role="Attach" onclick="handleBtnClick()">
                                         <span>
