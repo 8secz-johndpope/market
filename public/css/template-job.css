@@ -122,6 +122,13 @@
     letter-spacing: 1px;
     color: #333;
 }
+.metadata-list {
+    font-size: 15px;
+    padding-left: 15px;
+}
+.sidebar-content .metadata-list {
+    margin: 25px 0 20px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
