@@ -381,8 +381,8 @@
 	});
 	$('.favorite').click(function(e){
 		e.preventDefault();
-		$(this).children().toggle('heart');
-		$(this).children().toggle('heart-empty');
+		$(this).children().toggleClass('heart');
+		$(this).children().toggleClass('heart-empty');
 	});
 </script>
 @endsection
