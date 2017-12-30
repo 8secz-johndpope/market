@@ -336,7 +336,7 @@
 							<div>
 								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 track-tile">
 									<div class="job-element Canada Goose" data-id="763458">
-										<a href="/jobs/canadagoose/mandarin-speaking-sales-associate?ref=job-recommendation-2" data-tile-link="true">
+										<a href="#" data-tile-link="true">
 											<div class="tile-copy">
 												<h3>
 													<span>Canada Goose</span>
