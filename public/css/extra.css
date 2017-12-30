@@ -265,6 +265,11 @@ a.add-bank-link {
     width: 24px;
     height: 24px;
 }
+.controls-fields .img-call {
+    opacity: 0.5;
+    width: 24px;
+    height: 20px;
+}
 .mtop {
     padding: 10px 15px 10px 16px;
     background: #eee;
