@@ -418,6 +418,19 @@
     display: block;
     margin: 37px 15px 0;
 }
+.header-row .section-header {
+    margin: 6px 20px 0 0;
+    float: left;
+    font-size: 32px;
+    font-family: proximalight,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    color: #666;
+}
+.recommended-jobs .section-header {
+    margin: 10px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
