@@ -127,35 +127,25 @@
 								<p>For the people who drive with Uber, our app represents a flexible new way to earn money. For cities, we help strengthen local economies, improve access to transportation, and make streets safer.</p>
 								<p>And that's just what we're doing today. We're thinking about the future, too. With teams working on autonomous trucking and self-driving cars, we're in for the long haul. We're reimagining how people and things move from one place to the next.</p>
 								<p>Job Description</p>
-								<p>About the Role</p>
-								<p>The Safety Lead is responsible for driving strategy, processes and partnerships that establish Uber as the industry leader in safety across the UK &amp; Ireland. You will lead the safety team and own the development of internal policies and procedures that inform incident prevention, investigation, treatment and accountability; liaise with our various rider and driver support teams; manage our driver appeals panel; and support the launch of new safety features in our apps.</p>
+								<p>The Enterprise Account Executive role is a great opportunity to leverage sales skills in order to expand the Uber Eats restaurant network in the United Kingdom. As Enterprise Account Executive your primary focus will be to bring on new restaurants, leveraging your relationship building and negotiation skills and driving internal processes to set up our partnerships for success.</p>
 								<p>Perks</p>
-								<p>What You'll Do</p>
+								<p>What you'll do:</p>
 								<ul>
-									<li>You will drive the conversation on measures to improve passenger safety with regulatory and industry bodies.</li>
-									<li>You will use analytics to help conduct investigations, assess trends and identify opportunities to deliver solutions to reduce their occurrence. You'll also be working closely with our communications and marketing teams on all safety-related materials for riders, drivers and the public.</li>
-									<li>Own and improve our safety policies and procedures across the UK &amp; Ireland</li>
-									<li>Manage internal procedures and the relationship with rider and driver support teams, including our Centre of Excellence - the support team dealing with responses to riders and drivers</li>
-									<li>Lead a team of Operations Managers based out of London</li>
-									<li>Work to improve and streamline our incident response processes</li>
-									<li>Conduct investigations in collaboration with our legal team</li>
-									<li>Develop and actively measure key performance indicators for safety, with a goal for prevention</li>
-									<li>Support the launch of safety related products and track their impact</li>
-									<li>Work with our policy and marketing team on key initiatives including partnerships with third-party organisations</li>
-									<li>Coordinate and own best-practice materials for major incidents</li>
+									<li>Leverage prospecting skills and senior relationships to build partnerships with brands and restaurants in the United Kingdom interested in UberEats</li>
+									<li>Manage contract negotiations aimed at establishing the foundation of a strong working relationship with our enterprise partners, including sustainable economics for both parties.</li>
+									<li>Build new customer relationships, and/or maintain relationships with existing customers.</li>
+									<li>Partner with internal stakeholders to smoothly activate the best restaurants in the United Kingdom</li>
+									<li>Work closely with product teams to innovate on our ability to grow our business &amp; form best in world customer relationships.</li>
 								</ul>
-								<p>What You'll Need</p>
+								<p>What you need:</p>
 								<ul>
-									<li>A minimum of 8 years of experience in an operational role in the area of safety</li>
-									<li>Experience with managing multiple stakeholders on projects with a high degree of complexity</li>
-									<li>Data-driven decision mentality and sound business judgment through strong analytical thinking.</li>
-									<li>High adaptability to change and ability to execute quickly.</li>
-									<li>Speed, resourcefulness, and go getter attitude - Uber is committed to constant improvement. You're excited to help create a product with value.</li>
-									<li>Curious and eager to learn - you are interested in all things and can build up skills and knowledge very fast to become a recognized subject matter expert amongst your peers</li>
-									<li>High Emotional IQ – you deal with partners, influencers, and riders with no problem.</li>
-									<li>Flexible and forward thinking - we need someone sharp and eager to play with different models to help us scale.</li>
-									<li>Self-starter and collaborative leader. Everywhere you go, you can't help but mobilize people, build things, resolve problems, get into the details, go above and beyond, and draw out the best in people. You are a doer and motivator of others.</li>
+									<li>At least 8 years of experience in sales, account management or similar client facing roles.</li>
+									<li>Experience sourcing, negotiating and driving contracts to closure and proven track record of growing client accounts and revenue targets.</li>
+									<li>Ability to fuse business, strategy, finance and legal concepts to lead complex, multifaceted deals</li>
 								</ul>
+								<p>About the Team</p>
+								<p>Uber Eats makes eating well effortless, at any time, for anyone</p>
+
 							</div>
 						</div>
 					</div>
