@@ -204,6 +204,11 @@
     background-color: #fff;
     padding: 0 15px;
 }
+.job-post .job-post-description {
+    font-family: Georgia!important;
+    font-size: 17px;
+    margin: 40px 0 0;
+}
 .favroite-icon {
     display: inline-block;
 }
