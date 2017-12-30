@@ -165,7 +165,7 @@
                                     </div>
                                 </div>
                                 <div class="controls-fields">
-                                    <div role="button" data-role="Call" onclick="show_search()">
+                                    <div role="button" data-role="Call">
                                         <span>
                                             <a href="/download-mobile-apps">
                                                 <img src="/css/icons/icon-call.svg" class="img-invoice" alt="Make Call">
