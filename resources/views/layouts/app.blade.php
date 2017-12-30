@@ -961,6 +961,7 @@
 @if (!Auth::guest())
     <script>
         var token = '{{Auth::user()->access_token}}' ;
+        var notifications = '{{Auth::user()->notifications}}';
 
         var exampleSocket;
         reconnect();
@@ -978,7 +979,10 @@
                 var object = JSON.parse(event.data);
                 if(object.message)
                 {
-                    document.getElementById('notify-tune').play();
+                    if(notifications=='1'){
+                        document.getElementById('notify-tune').play();
+
+                    }
                     $('#message-notification').show();
 
                 }
