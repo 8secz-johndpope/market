@@ -85,7 +85,7 @@
 				<ul class="list-style-1">
 					<li>
 						<i class="fa fa-envelope"></i>
-						<span>info@sumra.net</span>
+						<span>sales@sumra.net</span>
 					</li>
 				</ul>
 				<h3 class="options-contact-title">By Phone:</h3>
