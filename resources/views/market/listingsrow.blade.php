@@ -191,7 +191,7 @@ use App\Model\Advert;
             </div>
         </div>
         @if($category->can_apply())
-        <div class="listing-max-pro container-btns-recruiter">
+        <div class="listing-max-pro container-btns-recruiter text-center">
             <div class="row">
                 <div class="col-sm-6">
                     <a href="#" class="btn-recruiter">Explore Companies</a>
