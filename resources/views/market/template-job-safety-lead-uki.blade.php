@@ -381,7 +381,6 @@
 	});
 	$('.favorite').click(function(e){
 		e.preventDefault();
-		$(this + '>.favroite-icon').click();
 	});
 </script>
 @endsection
