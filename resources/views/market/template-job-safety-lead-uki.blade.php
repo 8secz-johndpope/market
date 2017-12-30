@@ -383,9 +383,11 @@
 		e.preventDefault();
 		if($(this).children().hasClass('heart-empty')){
 			$(this).children().toggleClass('heart');
+			$(this).children().removeClass('heart-empty');
 		}
 		else{
 			$(this).children().toggleClass('heart-empty');
+			$(this).children().removeClass('heart');
 		}
 	});
 </script>
