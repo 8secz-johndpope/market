@@ -379,5 +379,8 @@
 		e.preventDefault();
 		$('html').animate({ scrollTop: 0}, 600);
 	});
+	$('.favorite').click(function(){
+		$(this).find('.favroite-icon').click();
+	});
 </script>
 @endsection
