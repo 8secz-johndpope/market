@@ -212,7 +212,7 @@
 								<div class="bottom-ctas clearfix">
 									<div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
 										<div class="external-apply center">
-											<a class="tm-bright-blue-round-button btn-block apply-external" href="https://careers-uber.icims.com/jobs/34729/safety-lead-uki/job?iis=The+Muse&amp;iisn=The+Muse&amp;mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
+											<a class="tm-bright-blue-round-button btn-block apply-external" href="https://careers-uber.icims.com/jobs/34729/safety-lead-uki/job?iis=iisn=;mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
 												Apply Now 
 												<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 											</a>
@@ -234,7 +234,7 @@
 										</div>
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-										<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Safety Lead UKI&amp;body=Just saw this awesome job I thought I would share with you! Check it out here: https://dev.sumra.net/jobs/uber/safe-lead-uki?utm_source=job-individual" target="_blank">
+										<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Safety Lead UKI&amp;body=Just saw this awesome job I thought I would share with you! Check it out here: https://dev.{{env('APP_NAME')}}.net/jobs/uber/safe-lead-uki?utm_source=job-individual" target="_blank">
 											Send To A Friend
 										</a>
 									</div>

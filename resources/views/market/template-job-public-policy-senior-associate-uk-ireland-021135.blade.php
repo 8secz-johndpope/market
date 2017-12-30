@@ -224,7 +224,7 @@
 										</div>
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-										<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Public Policy Senior Associate - UK & Ireland&body=Just saw this awesome job I thought I would share with you! Check it out here: https://dev.sumra.com/jobs/uber/public-policy-senior-associate-uk-ireland-021135?utm_source=job-individual" target="_blank">
+										<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Public Policy Senior Associate - UK & Ireland&body=Just saw this awesome job I thought I would share with you! Check it out here: https://dev.{{env('APP_NAME')}}.com/jobs/uber/public-policy-senior-associate-uk-ireland-021135?utm_source=job-individual" target="_blank">
 											Send To A Friend
 										</a>
 									</div>
