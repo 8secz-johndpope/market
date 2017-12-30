@@ -2187,6 +2187,10 @@ class MarketController extends BaseController
         else if($id === 'associate-counsel-uk-ireland'){
             $view = 'market.template-job-associate-counsel-uk-ireland';
         }
+        else if($id === 'head-of-compliance-uk-ireland'){
+            $view = 'market.template-job-head-of-compliance-uk-ireland';
+        }
+        
         return view($view);
     }
 }
