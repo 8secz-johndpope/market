@@ -383,8 +383,6 @@
 		e.preventDefault();
 		$(this).children().toggleClass('heart-empty');
 		$(this).children().toggleClass('heart');
-		$('.docked-ctas .favroite-icon').toggleClass('heart-empty');
-		$('.docked-ctas .favroite-icon').toggleClass('heart');
 	});
 </script>
 @endsection
