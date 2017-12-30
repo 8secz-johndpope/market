@@ -1806,8 +1806,11 @@ nav.navbar.navbar-inverse {
 .container-btns-recruiter {
     padding: 0;
 }
-.ontainer-btn-recruiter{
+.container-btn-recruiter{
     padding: 15px;
+}
+.border-left{
+    border-left: 1px solid #ddd;
 }
 @media (max-width: 1500px) {
     h4.product-title {
