@@ -470,6 +470,20 @@
 .job-element .favorite-container {
     bottom: 10px;
 }
+.job-element h3 {
+    display: block;
+    color: #333;
+    margin: 20px 15px 10px;
+    font-size: 21px;
+}
+.job-element .metadata {
+    text-align: left;
+    font-size: 13px;
+    padding: 0 15px 20px;
+    font-family: proxima,proximathin,sans-serif;
+    color: #333;
+    margin:0;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
