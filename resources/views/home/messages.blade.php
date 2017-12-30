@@ -291,7 +291,7 @@
     <input type="file" id="upload-image-chat"  style="display: none">
     <div class="search-div">
         <div class="cross-mark-search">X</div>
-        <input type="text" placeholder="Search this Conversation" class="form-control">
+        <input type="text" placeholder="Search this Conversation" class="form-control" id="search-query">
     </div>
 </div>
     <script>
@@ -387,6 +387,20 @@ function show_search() {
 $('.cross-mark-search').click(function () {
     $('.search-div').hide();
 });
+        $('#search-query').change(function () {
+            var q = $('#search-query').val();
+            axios.post('/user/message/search', {
+                id:room,
+                q:q
+            })
+                .then(function (response) {
+                    console.log(response);
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        });
 
     </script>
 
