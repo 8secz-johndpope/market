@@ -127,35 +127,26 @@
 								<p>For the people who drive with Uber, our app represents a flexible new way to earn money. For cities, we help strengthen local economies, improve access to transportation, and make streets safer.</p>
 								<p>And that's just what we're doing today. We're thinking about the future, too. With teams working on autonomous trucking and self-driving cars, we're in for the long haul. We're reimagining how people and things move from one place to the next.</p>
 								<p>Job Description</p>
-								<p>About the Role</p>
-								<p>The Safety Lead is responsible for driving strategy, processes and partnerships that establish Uber as the industry leader in safety across the UK &amp; Ireland. You will lead the safety team and own the development of internal policies and procedures that inform incident prevention, investigation, treatment and accountability; liaise with our various rider and driver support teams; manage our driver appeals panel; and support the launch of new safety features in our apps.</p>
+								<p>About Public Policy at Uber</p>
+								<p>Our public policy team is responsible for working with policy makers and third parties to make the positive case for Uber. That's partly about building lasting relationships in the cities where we operate with politicians and their staff so they understand the benefits of ridesharing. It also about figuring out the best local regulatory framework and then developing campaigns to push reform through.</p>
+								<p>We are looking for someone to lead our Government Affairs &amp; Public Policy in Northern Europe, based in London.</p>
 								<p>Perks</p>
 								<p>What You'll Do</p>
 								<ul>
-									<li>You will drive the conversation on measures to improve passenger safety with regulatory and industry bodies.</li>
-									<li>You will use analytics to help conduct investigations, assess trends and identify opportunities to deliver solutions to reduce their occurrence. You'll also be working closely with our communications and marketing teams on all safety-related materials for riders, drivers and the public.</li>
-									<li>Own and improve our safety policies and procedures across the UK &amp; Ireland</li>
-									<li>Manage internal procedures and the relationship with rider and driver support teams, including our Centre of Excellence - the support team dealing with responses to riders and drivers</li>
-									<li>Lead a team of Operations Managers based out of London</li>
-									<li>Work to improve and streamline our incident response processes</li>
-									<li>Conduct investigations in collaboration with our legal team</li>
-									<li>Develop and actively measure key performance indicators for safety, with a goal for prevention</li>
-									<li>Support the launch of safety related products and track their impact</li>
-									<li>Work with our policy and marketing team on key initiatives including partnerships with third-party organisations</li>
-									<li>Coordinate and own best-practice materials for major incidents</li>
+									<li>Building an effective, credible government affairs team across the region;</li>
+									<li>Establishing Uber's brand and profile with policy makers:;including governments, third parties and academics; and</li>
+									<li>Working to ensure that the regulatory framework in every country supports ridesharing apps like Uber.</li>
+									<li>Representing the business externally with speaking events, select committees and in the media.</li>
 								</ul>
 								<p>What You'll Need</p>
 								<ul>
-									<li>A minimum of 8 years of experience in an operational role in the area of safety</li>
-									<li>Experience with managing multiple stakeholders on projects with a high degree of complexity</li>
-									<li>Data-driven decision mentality and sound business judgment through strong analytical thinking.</li>
-									<li>High adaptability to change and ability to execute quickly.</li>
-									<li>Speed, resourcefulness, and go getter attitude - Uber is committed to constant improvement. You're excited to help create a product with value.</li>
-									<li>Curious and eager to learn - you are interested in all things and can build up skills and knowledge very fast to become a recognized subject matter expert amongst your peers</li>
-									<li>High Emotional IQ – you deal with partners, influencers, and riders with no problem.</li>
-									<li>Flexible and forward thinking - we need someone sharp and eager to play with different models to help us scale.</li>
-									<li>Self-starter and collaborative leader. Everywhere you go, you can't help but mobilize people, build things, resolve problems, get into the details, go above and beyond, and draw out the best in people. You are a doer and motivator of others.</li>
+									<li>A self starter: Uber is a company of entrepreneurs and we want to work with people who enjoy building things from the bottom up. Stuff changes fast in our world so you'll need to be highly adaptable as well as calm under pressure.</li>
+									<li>A great advocate: We're looking to create new regulatory frameworks that encourage innovation and alternatives to individual car ownership. You'll need the intellectual fire power to grasp complex policy issues as well as the ability to articulate clearly and simply how apps like Uber can help improve transportation for everyone—both orally and in writing.</li>
+									<li>A strong campaigner: Smartphone apps are disruptive, and the interests being disrupted are deeply entrenched. So you'll need to put together proactive campaigns involving passengers, drivers and third parties that demonstrate there's a better alternative to today's outdated status quo. That means having a bias for action in everything you do—and a willingness to engage in debates, that can often become heated.</li>
+									<li>A team player: Success at Uber depends on the ability to organize different teams (internally and externally) around shared goals. It's why we're looking for well organized people who enjoy working with others to get stuff done—and who can deal with the ambiguity that sometimes comes from working cross-functionally.</li>
 								</ul>
+								<p>About the Team</p>
+								<p>Ideally you would have 8+ years experience in government affairs, but we're open to people in other walks of life (e.g. the law, media, consultancy) that intuitively get this stuff and may be looking for a career change. Fluency in English, both oral and written, is essential.</p>
 							</div>
 						</div>
 					</div>
