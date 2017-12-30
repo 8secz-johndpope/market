@@ -18,7 +18,7 @@
 					<div class="container-logo">
 						<img src="/css/black-logo.svg" class="logo-black">
 					</div>
-					<p class="c-white">Contact - Uber Template</p>
+					<p class="c-white">Contact</p>
 				</div>
 			</div>
 		</div>
@@ -27,7 +27,7 @@
 		<div class="row container-form-contact">
 			<div class="col-sm-12">
 				<h2 class="contact-title">
-					Contact Us About the Uber Template
+					Contact Us About the Company Showcase Board
 				</h2>
 				<div class="contact-form-yellow">
 				</div>
