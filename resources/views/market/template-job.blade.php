@@ -215,7 +215,7 @@
 											<div class="favorite-box-container btn-block"><div><a href="#" class="favorite"><i class="heart-empty favroite-icon"></i> Save For Later</a></div></div>
 										</div>
 										<div class="col-sm-12 col-xs-12">
-											<div class="job-flag-parent center">
+											<div class="job-flag-parent text-center">
 											<div>
 												<a id="job-flag" href="#">
 													<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 
