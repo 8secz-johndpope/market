@@ -280,6 +280,9 @@
     border-radius: 25px;
     letter-spacing: 1px;
 }
+.tm-bright-blue-round-button:visited, .tm-bright-blue-round-button:focus {
+    color: #fff;
+}
 .sidebar-content .company-profile-preview-sidebar .company-profile-preview-sidebar-image .tm-white-round-button {
     position: absolute;
     bottom: 10px;
@@ -324,6 +327,24 @@
 }
 .company-profile-preview .employee-preview h2 {
     font-size: 22px;
+}
+.company-profile-preview .employee-preview h3 {
+    font-size: 16px;
+    color: #366ffb;
+    padding-bottom: 5px;
+}
+.company-profile-preview p {
+    font-size: 15px;
+    font-family: georgia;
+    color: #333;
+    padding-right: 45px;
+    line-height: 1.7em;
+}
+.job-post .bottom-ctas {
+    margin: 40px 0;
+}
+.job-post .external-apply {
+    margin: 0 0 20px;
 }
 @media (min-width: 768px){
 	.sidebar-content:first-child {
