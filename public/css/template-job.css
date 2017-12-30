@@ -590,8 +590,9 @@
     text-align: center;
     display: none;
 }
-.btn-scroll{
+.btn-scroll, .btn-scroll:hover{
 	color:#ff9d2c;
+	text-decoration: none;
 }
 @media (min-width: 768px){
 	.sidebar-content:first-child {
