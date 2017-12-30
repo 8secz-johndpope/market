@@ -24,7 +24,7 @@
 					<div class="favorite-container">
 						<div>
 							<a aria-label="favorite" href="#" class="favorite">
-								<i aria-hidden="true" class="fa fa-heart-o"></i>
+								<i aria-hidden="true" class="heart-empty favroite-icon"></i>
 							</a>
 						</div>
 					</div>
@@ -381,8 +381,10 @@
 	});
 	$('.favorite').click(function(e){
 		e.preventDefault();
-		$(this).children().toggleClass('heart-empty')
+		$(this).children().toggleClass('heart-empty');
 		$(this).children().toggleClass('heart');
+		$('.docked-ctas .favroite-icon').toggleClass('heart-empty');
+		$('.docked-ctas .favroite-icon').toggleClass('heart');
 	});
 	$('.favroite-icon').click(function(e){
 		e.preventDefault();
