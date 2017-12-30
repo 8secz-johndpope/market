@@ -384,7 +384,7 @@
 		}
 	});
 	$('.scroll').click(function(){
-		$(window).scrollTop(0);
+		$('html').animate({ scrollTop: 0}, 600);
 	});
 </script>
 @endsection
