@@ -261,9 +261,9 @@
 
                             @if($message->from_msg===$user->id)
 
-                            <div class="right-message clearfix"><span class="message"> {{$message->message}}&nbsp;&nbsp; <span class="message-time"> {{$message->timestamp()}}</span> </span></div>
+                            <div class="right-message clearfix"><span class="message" id="m{{$message->id}}"> {{$message->message}}&nbsp;&nbsp; <span class="message-time"> {{$message->timestamp()}}</span> </span></div>
                             @else
-                                <div class="left-message clearfix"><span class="message">{{$message->message}}&nbsp;&nbsp;  <span class="message-time"> {{$message->timestamp()}}</span></span></div>
+                                <div class="left-message clearfix"><span class="message" id="m{{$message->id}}">{{$message->message}}&nbsp;&nbsp;  <span class="message-time"> {{$message->timestamp()}}</span></span></div>
                             @endif
                             @endif
                         @endforeach
