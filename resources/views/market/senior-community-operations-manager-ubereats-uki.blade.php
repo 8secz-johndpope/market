@@ -16,7 +16,7 @@
  			<div class="col-sm-8">
  				<div class="docked-title">
 					<h4>Uber</h4>
-					<h3>Safety Lead UK</h3>
+					<h3>Senior Community Operations Manager, UberEATS - UKI</h3>
 				</div>
  			</div>
  			<div class="col-sm-4">
@@ -28,7 +28,7 @@
 							</a>
 						</div>
 					</div>
-					<a class="tm-bright-blue-round-button apply-external" href="https://careers-uber.icims.com/jobs/34729/safety-lead-uki/job?iis=The+Muse&amp;iisn=The+Muse&amp;mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
+					<a class="tm-bright-blue-round-button apply-external" href="https://careers-uber.icims.com/jobs/29718/senior-community-operations-manager%2c-ubereats---uki/job?iis=&iisn=&mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
 						Apply Now 
 						<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 					</a>
@@ -42,9 +42,9 @@
 		<div class="row header-container">
 			<div class="col-sm-12">
 				<div id="top-image" class="bg-image">
-					<h1>Safety Lead UK</h1>
+					<h1>Senior Community Operations Manager, UberEATS - UKI</h1>
 					<div class="ctas text-center">
-						<a class="tm-bright-blue-round-button apply-external hidden-xs" href="https://careers-uber.icims.com/jobs/34729/safety-lead-uki/job?iis=The+Muse&amp;iisn=The+Muse&amp;mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
+						<a class="tm-bright-blue-round-button apply-external hidden-xs" href="https://careers-uber.icims.com/jobs/29718/senior-community-operations-manager%2c-ubereats---uki/job?iis=&iisn=&mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
 							Apply Now 
 							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						</a>
@@ -212,7 +212,7 @@
 								<div class="bottom-ctas clearfix">
 									<div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
 										<div class="external-apply center">
-											<a class="tm-bright-blue-round-button btn-block apply-external" href="https://careers-uber.icims.com/jobs/34729/safety-lead-uki/job?iis=The+Muse&amp;iisn=The+Muse&amp;mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
+											<a class="tm-bright-blue-round-button btn-block apply-external" href="https://careers-uber.icims.com/jobs/29718/senior-community-operations-manager%2c-ubereats---uki/job?iis=&iisn=&mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
 												Apply Now 
 												<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 											</a>
