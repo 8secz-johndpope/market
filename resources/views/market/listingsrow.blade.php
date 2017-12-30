@@ -196,7 +196,7 @@ use App\Model\Advert;
                 <div class="col-sm-6">
                     <a href="#" class="btn-recruiter">Explore Companies</a>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 border-left">
                     <a href="#" class="btn-recruiter">Search Recruiter</a>
                 </div>
             </div>
