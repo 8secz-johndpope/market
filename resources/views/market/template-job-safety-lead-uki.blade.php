@@ -195,13 +195,13 @@
 							<h3>Useful Links</h3>
 							<ul class="useful-links">
 								<li>
-									<a href="/jobs?filter=true"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to All Jobs</a>
+									<a href="/jobs/uk"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to All Jobs</a>
 								</li>
 								<li>
-									<a href="/jobs/c-uber-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all Uber Jobs</a>
+									<a href="/company-jobs/c-uber-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all Uber Jobs</a>
 								</li>
 								<li>
-									<a href="/jobs/l-London%2C-United-Kingdom-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all London, United Kingdom Jobs</a>
+									<a href="/jobs/london"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all London, United Kingdom Jobs</a>
 								</li>
 							</ul>
 						</section>
@@ -234,7 +234,7 @@
 										</div>
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-										<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Safety Lead UKI&amp;body=Just saw this awesome job I thought I would share with you! Check it out here: https://dev.sumra.net/jobs/uber/safety-lead-uki?utm_source=job-individual" target="_blank">
+										<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Safety Lead UKI&amp;body=Just saw this awesome job I thought I would share with you! Check it out here: https://dev.sumra.net/jobs/uber/safe-lead-uki?utm_source=job-individual" target="_blank">
 											Send To A Friend
 										</a>
 									</div>

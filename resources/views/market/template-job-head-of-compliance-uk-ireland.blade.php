@@ -245,7 +245,7 @@
 										</div>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-											<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Safety Lead UKI&amp;body=Just saw this awesome job I thought I would share with you! Check it out here: https://dev.sumra.net/jobs/uber/safety-lead-uki?utm_source=job-individual" target="_blank">
+											<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Head of Compliance - Uk & Ireland&body=Just saw this awesome job I thought I would share with you! Check it out here: https://dev.sumra.net/jobs/uber/head-of-compliance-uk-ireland?utm_source=job-individual" target="_blank">
 												Send To A Friend
 											</a>
 										</div>
@@ -337,7 +337,7 @@
 							<div>
 								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 track-tile">
 									<div class="job-element Canada Goose" data-id="763458">
-										<a href="/jobs/canadagoose/mandarin-speaking-sales-associate?ref=job-recommendation-2" data-tile-link="true">
+										<a href="#" data-tile-link="true">
 											<div class="tile-copy">
 												<h3>
 													<span>Canada Goose</span>
