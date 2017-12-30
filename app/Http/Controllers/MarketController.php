@@ -2180,6 +2180,8 @@ class MarketController extends BaseController
         return view('market.template-contact');
     }
     public function templateJob(Request $request, $id){
+        $uberSafe = array();
+        $uberSafe['title'] = 'Safety Lead UKI';
         $view = 'market.template-job';
         if($id === 'safety-lead-uki')
             $view = 'market.template-job-safety-lead-uki';
