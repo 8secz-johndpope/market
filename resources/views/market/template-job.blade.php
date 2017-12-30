@@ -366,14 +366,21 @@
 			</div>
 		</div>
 	</div>
+	<div class="scroll" style="display: none;">
+		<i class="fa fa-chevron-up"></i>
+		<br>
+		Back to top
+	</div>
 </div>
 <script>
 	$(window).scroll(function(){
 		if($(this).scrollTop() > 300 && !$('#job-nav').hasClass('open')){
 			$('#job-nav').addClass('open');
+			$('.scroll').show();
 		}
 		else if($(this).scrollTop() < 300 && $('#job-nav').hasClass('open')){
 			$('#job-nav').removeClass('open');
+			$('.scroll').hide();
 		}
 	});
 </script>
