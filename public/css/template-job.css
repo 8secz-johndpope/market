@@ -564,6 +564,12 @@
 .docked-nav.job .docked-ctas .favorite-container {
     display: inline-block;
 }
+.docked-nav.job .docked-ctas .favorite-container a {
+    padding: 1em!important;
+    border-radius: 100%!important;
+    margin-right: 10px;
+    border-width: 1px!important;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
