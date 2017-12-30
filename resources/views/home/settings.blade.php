@@ -58,7 +58,7 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="notifications">
+                <input class="form-check-input" type="checkbox" value="" id="notifications" @if($user->notifications===1) checked @endif>
                 <label class="form-check-label" for="defaultCheck1">
                     Receive Notifications
                 </label>
