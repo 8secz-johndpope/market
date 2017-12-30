@@ -265,11 +265,11 @@
 							<div>
 								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 track-tile">
 									<div class="job-element Kaiser Associates" data-id="487096">
-										<a href="#" data-tile-link="true">
+										<a href="/jobs/uber/safe-lead-uki" data-tile-link="true">
 											<div class="tile-copy">
 												<h3>
-													<span>Kaiser Associates</span>
-													Vice President (Consumer Goods and Private Equity/M&amp;A)
+													<span>Uber</span>
+													Safe Lead UKI
 												</h3>
 												<ul class="metadata">
 													<li>London, United Kingdom</li>
