@@ -381,8 +381,12 @@
 	});
 	$('.favorite').click(function(e){
 		e.preventDefault();
-		$(this).children().toggleClass('heart');
-		$(this).children().toggleClass('heart-empty');
+		if($(this).children().hasClass('heart-empty')){
+			$(this).children().toggleClass('heart');
+		}
+		else{
+			$(this).children().toggleClass('heart-empty');
+		}
 	});
 </script>
 @endsection
