@@ -383,10 +383,11 @@
 		e.preventDefault();
 		if($(this).children().hasClass('heart-empty')){
 			$(this).children().removeClass('heart-empty')
-			$(this).children().toggleClass('heart');
+			$(this).children().addClass('heart');
 		}
 		else{
 			$(this).children().toggleClass('heart');
+			$(this).children().addClass('heart-empty');
 		}
 	});
 </script>
