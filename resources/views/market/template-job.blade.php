@@ -179,7 +179,7 @@
 							</ul>
 						</section>
 					</div>
-					<section class="job-main-section">
+					<section class="job-main-section row">
 						<div class="job-body">
 							<div class="job-post">
 								<div class="bottom-ctas">
