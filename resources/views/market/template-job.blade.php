@@ -372,7 +372,7 @@
 		if($(this).scrollTop() > 200 && !$('#job-nav').hasClass('open')){
 			$('#job-nav').addClass('open');
 		}
-		elseif($(this).scrollTop() < 200 && $('#job-nav').hasClass('open')){
+		else if($(this).scrollTop() < 200 && $('#job-nav').hasClass('open')){
 			$('#job-nav').removeClass('open');
 		}
 	});
