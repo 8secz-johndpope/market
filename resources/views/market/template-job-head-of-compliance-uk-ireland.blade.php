@@ -206,13 +206,13 @@
 							<h3>Useful Links</h3>
 							<ul class="useful-links">
 								<li>
-									<a href="/jobs?filter=true"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to All Jobs</a>
+									<a href="/jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to All Jobs</a>
 								</li>
 								<li>
-									<a href="/jobs/c-uber-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all Uber Jobs</a>
+									<a href="/company-jobs/c-uber-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all Uber Jobs</a>
 								</li>
 								<li>
-									<a href="/jobs/l-London%2C-United-Kingdom-jobs"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all London, United Kingdom Jobs</a>
+									<a href="/jobs/london"><i class="fa fa-chevron-left" aria-hidden="true"></i> See all London, United Kingdom Jobs</a>
 								</li>
 							</ul>
 						</section>
