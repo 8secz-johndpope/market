@@ -214,10 +214,11 @@
 }
 .favroite-icon {
     display: inline-block;
+    vertical-align: middle;
 }
 .favroite-icon:before {
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
 }
 .sidebar-content .useful-links {
     margin: 20px 0 30px;
