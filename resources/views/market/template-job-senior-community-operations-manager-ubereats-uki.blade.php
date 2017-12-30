@@ -127,35 +127,29 @@
 								<p>For the people who drive with Uber, our app represents a flexible new way to earn money. For cities, we help strengthen local economies, improve access to transportation, and make streets safer.</p>
 								<p>And that's just what we're doing today. We're thinking about the future, too. With teams working on autonomous trucking and self-driving cars, we're in for the long haul. We're reimagining how people and things move from one place to the next.</p>
 								<p>Job Description</p>
-								<p>About the Role</p>
-								<p>The Safety Lead is responsible for driving strategy, processes and partnerships that establish Uber as the industry leader in safety across the UK &amp; Ireland. You will lead the safety team and own the development of internal policies and procedures that inform incident prevention, investigation, treatment and accountability; liaise with our various rider and driver support teams; manage our driver appeals panel; and support the launch of new safety features in our apps.</p>
+								<p>About the job</p>
+								<p>At Uber, support is more than just answering questions. It's about using the information customers give us as insights to help UberEATS grow. Moreover, providing amazing support that establishes trust within our community — UberEATS customers, delivery partners and restaurants — is at the centre of the UberEATS customer experience. We're obsessed about providing the highest quality service, in the smartest way. And for Uber to continue its growth and success, we need to be able to not only improve but also scale our fast-growing support operations.</p>
+								<p>We're looking for a Sr Community Operations Manager to build, operate, scale and improve Community Operations for our UK &amp; Nordics markets. This role comes with a heavy focus on solving problems through data analytics and leading teams to deliver stellar outcomes and continuous process improvement, advocating passionately on behalf of our community to influence the overall customer experience, and managing senior stakeholder relationships across the larger business to set the right expectations and deliver handsomely on them.</p>
+								<p>What you'll do</p>
+								<ul>
+									<li>Program/project management: Be a hustling multi-tasker, supporting projects across the region. You'll be THE go to person for many key initiatives within Community Operations.</li>
+									<li>Deliver stellar operations outcomes according to agreed service level agreements: working with partners to achieve the best outcomes across thousands of support interactions every week, and ensuring they operate as efficiently as possible while maintaining the highest level of quality</li>
+									<li>Pilot and own new initiatives that transform our support operations and improve the level of service we provide: iterating existing support modalities and launching new ones as UberEATS continues to grow.</li>
+									<li>Draw actionable recommendations that help drive our growth by diving deep into the numbers and finding insight; steering a team to make data-driven decisions and process improvements.</li>
+									<li>Lead by example: Be incredibly truth-seeking with data, set a high bar for the team to think boldly and creatively and then to funnel that energy into concrete processes and execution plans, move fast, be biased toward action.</li>
+									<li>Engage strategically with stakeholders, be it general managers and function leads to influence business goals and priorities, central global teams to improve internal tools and the overall user experience, or local teams.</li>
+								</ul>
+								<p>Who you are</p>
+								<ul>
+									<li>Proven experience: whether it be in a start up, bank, consultancy, or corporate, you are someone who loves driving change in a fast-paced environment (5+ years is preferred).</li>
+									<li>Data-driven and analytical in mindset. You can look at any spreadsheet or SQL query and know the right questions to ask to get to actionable outcomes, and you know how to explain data in a compelling way.</li>
+									<li>A problem solver. You embrace challenges, and would stop at nothing to create solutions—whether they're hacky, short-term workarounds, or more long-term process changes.</li>
+									<li>A brilliant communicator. You're eloquent and able to strike the perfect tone, whether you're explaining a new policy to customers in writing, or explaining the recommendations of a data-driven study you conducted to global stakeholders through a video conference.</li>
+									<li>A natural leader. You are passionate about leading ideas and developing teams to perform at the highest levels while maintaining a fun and collaborative environment.</li>
+									<li>A lover of process and optimisation. You will be revolutionising support for the UberEATS community. You're excited about the opportunity to create and experiment with support processes, and are willing and able to lead others in iterating and executing them.</li>
+								</ul>
 								<p>Perks</p>
-								<p>What You'll Do</p>
-								<ul>
-									<li>You will drive the conversation on measures to improve passenger safety with regulatory and industry bodies.</li>
-									<li>You will use analytics to help conduct investigations, assess trends and identify opportunities to deliver solutions to reduce their occurrence. You'll also be working closely with our communications and marketing teams on all safety-related materials for riders, drivers and the public.</li>
-									<li>Own and improve our safety policies and procedures across the UK &amp; Ireland</li>
-									<li>Manage internal procedures and the relationship with rider and driver support teams, including our Centre of Excellence - the support team dealing with responses to riders and drivers</li>
-									<li>Lead a team of Operations Managers based out of London</li>
-									<li>Work to improve and streamline our incident response processes</li>
-									<li>Conduct investigations in collaboration with our legal team</li>
-									<li>Develop and actively measure key performance indicators for safety, with a goal for prevention</li>
-									<li>Support the launch of safety related products and track their impact</li>
-									<li>Work with our policy and marketing team on key initiatives including partnerships with third-party organisations</li>
-									<li>Coordinate and own best-practice materials for major incidents</li>
-								</ul>
-								<p>What You'll Need</p>
-								<ul>
-									<li>A minimum of 8 years of experience in an operational role in the area of safety</li>
-									<li>Experience with managing multiple stakeholders on projects with a high degree of complexity</li>
-									<li>Data-driven decision mentality and sound business judgment through strong analytical thinking.</li>
-									<li>High adaptability to change and ability to execute quickly.</li>
-									<li>Speed, resourcefulness, and go getter attitude - Uber is committed to constant improvement. You're excited to help create a product with value.</li>
-									<li>Curious and eager to learn - you are interested in all things and can build up skills and knowledge very fast to become a recognized subject matter expert amongst your peers</li>
-									<li>High Emotional IQ – you deal with partners, influencers, and riders with no problem.</li>
-									<li>Flexible and forward thinking - we need someone sharp and eager to play with different models to help us scale.</li>
-									<li>Self-starter and collaborative leader. Everywhere you go, you can't help but mobilize people, build things, resolve problems, get into the details, go above and beyond, and draw out the best in people. You are a doer and motivator of others.</li>
-								</ul>
+								<p>Uber is an equal opportunity employer and enthusiastically encourages people from a wide variety of backgrounds and experiences to apply. Uber does not discriminate on the basis of race, color, religion, sex (including pregnancy), gender, national origin, citizenship, age, mental or physical disability, veteran status, marital status, sexual orientation or any other basis prohibited by law.</p>
 							</div>
 						</div>
 					</div>
@@ -234,7 +228,7 @@
 										</div>
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-										<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Safety Lead UKI&amp;body=Just saw this awesome job I thought I would share with you! Check it out here: https://dev.sumra.net/jobs/uber/safe-lead-uki?utm_source=job-individual" target="_blank">
+										<a class="tm-input-grey-round-button btn-block send-to-friend-btn" href="mailto:?Subject=Senior Community Operations Manager, UberEATS - UKI&body=Just saw this awesome job I thought I would share with you! Check it out here: https://dev.sumra.com/jobs/uber/senior-community-operations-manager-ubereats-uki?utm_source=job-individual" target="_blank">
 											Send To A Friend
 										</a>
 									</div>
