@@ -416,6 +416,10 @@ $('.cross-mark-search').click(function () {
             $('#all-msg').animate({
                 scrollTop: $("#m"+id).offset().top
             }, 2000);
+            setTimeout(function doSomethingLater() {
+                $("#m"+id).css('background','green');
+            }, 2000);
+
         });
 
     </script>
