@@ -238,6 +238,8 @@
 }
 .sidebar-content .useful-links {
     margin: 20px 0 30px;
+    list-style: none;
+    padding: 0;
 }
 .tm-white-round-button {
     -webkit-transition: background 200ms ease-out;
