@@ -164,8 +164,8 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="controls-fields" data-role="VideoCall">
-                                    <div role="button" data-role="Search">
+                                <div class="controls-fields">
+                                    <div role="button" data-role="VideoCall">
                                         <span>
                                             <i class="fa fa-video-camera" aria-hidden="true"></i>
                                         </span>
