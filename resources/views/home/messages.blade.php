@@ -251,6 +251,9 @@
         </div>
     </div>
     <input type="file" id="upload-image-chat"  style="display: none">
+    <div class="search-div">
+        
+    </div>
 </div>
     <script>
         function handleBtnClick() {
