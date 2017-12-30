@@ -20,6 +20,13 @@
             top: 0;
             background: white;
             margin-top: 120px;
+            display: none;
+        }
+        .cross-mark-search {
+            width: 40px;
+            font-size: 25px;
+            float: right;
+            cursor: pointer;
         }
     </style>
 <div class="container-fluid background-body">
@@ -151,14 +158,14 @@
                         <div class="pane-chat-controls">
                             <div class="controls-container">
                                 <div class="controls-fields">
-                                    <div role="button" data-role="Search">
+                                    <div role="button" data-role="Search" onclick="show_search()">
                                         <span>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".5" d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path></svg>
                                         </span>
                                     </div>
                                 </div>
-                                <div class="controls-fields">
-                                    <div role="button" data-role="Call">
+                                <div class="controls-fields" data-role="Call">
+                                    <div role="button" data-role="Search" onclick="show_search()">
                                         <span>
                                             <a href="/download-mobile-apps">
                                                 <img src="/css/icons/icon-call.svg" class="img-invoice" alt="Make Call">
@@ -372,8 +379,12 @@
                 console.log(error);
             });
     }
-
-
+function show_search() {
+    $('.search-div').show();
+}
+$('.cross-mark-search').click(function () {
+    $('.search-div').hide();
+});
 
     </script>
 
