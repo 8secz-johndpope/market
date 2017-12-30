@@ -168,7 +168,7 @@
                                     <div role="button" data-role="Call">
                                         <span>
                                             <a href="/download-mobile-apps">
-                                                <img src="/css/icons/icon-call.svg" class="img-invoice" alt="Make Call">
+                                                <img src="/css/icons/icon-call.svg" class="img-call" alt="Make Call">
                                             </a>
                                         </span>
                                     </div>
