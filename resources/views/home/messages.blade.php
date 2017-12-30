@@ -411,6 +411,9 @@ $('.cross-mark-search').click(function () {
         $('#search-results').on('click', '.message-search-list-item', function() {
             // do something
             console.log($(this).data('id'));
+            $('html, body').animate({
+                scrollTop: $("#m"+$(this).data('id')).offset().top
+            }, 2000);
         });
 
     </script>
