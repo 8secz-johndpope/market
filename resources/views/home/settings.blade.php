@@ -66,6 +66,15 @@
         </div>
 
     </div>
-
+<script>
+    $('#notifications').change(function () {
+        if ($(this).prop('checked')) {
+            //blah blah
+            console.log('checked');
+        } else {
+            console.log('not checked');
+        }
+    });
+</script>
 
 @endsection
