@@ -227,6 +227,7 @@
 .favroite-icon {
     display: inline-block;
     vertical-align: middle;
+    margin:	0;
 }
 .sidebar-content .favorite-box-container .favroite-icon{
 	padding: 1em;
