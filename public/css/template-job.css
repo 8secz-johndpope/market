@@ -203,6 +203,10 @@
 .favroite-icon {
     display: inline-block;
 }
+.favroite-icon:before {
+    height: 20px;
+    width: 20px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
