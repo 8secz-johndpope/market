@@ -10,6 +10,33 @@
 @section('content')
  <link href="{{ asset('/css/css/font-awesome.min.css?q=874') }}" rel="stylesheet">
  <link href="{{asset('/css/template-job.css?q=874')}}" rel="stylesheet">
+ <div id="job-nav" class="docked-nav job hidden-xs open">
+ 	<div class="container">
+ 		<div class="row">
+ 			<div class="col-sm-8">
+ 				<div class="docked-title">
+					<h4>Uber</h4>
+					<h3>Safety Lead UKI</h3>
+				</div>
+ 			</div>
+ 			<div class="col-sm-4">
+ 				<div class="docked-ctas">
+					<div class="favorite-container">
+						<div>
+							<a aria-label="favorite" href="#" class="favorite">
+								<i aria-hidden="true" class="fa fa-heart-o"></i>
+							</a>
+						</div>
+					</div>
+					<a class="tm-bright-blue-round-button apply-external" href="https://careers-uber.icims.com/jobs/34729/safety-lead-uki/job?iis=The+Muse&amp;iisn=The+Muse&amp;mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
+						Apply Now 
+						<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+					</a>
+				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
  <div class="body">
 	<div class="container-fluid">
 		<div class="row header-container">
