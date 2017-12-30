@@ -89,6 +89,9 @@
     width: 60%;
     text-align: right;
 }
+.see-more-link .no-wrap-space {
+    white-space: nowrap;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
