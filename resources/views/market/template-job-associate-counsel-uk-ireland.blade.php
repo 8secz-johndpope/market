@@ -44,7 +44,7 @@
 				<div id="top-image" class="bg-image">
 					<h1>Associate Counsel - UK & Ireland</h1>
 					<div class="ctas text-center">
-						<a class="tm-bright-blue-round-button apply-external hidden-xs" href="https://careers-uber.icims.com/jobs/34729/safety-lead-uki/job?iis=The+Muse&amp;iisn=The+Muse&amp;mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
+						<a class="tm-bright-blue-round-button apply-external hidden-xs" href="https://careers-uber.icims.com/jobs/35059/associate-counsel---uk-%26-ireland/job?iis=The+Muse&iisn=The+Muse&mode=job" target="_blank" alt="Safety Lead UKI - Apply Now">
 							Apply Now 
 							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						</a>
@@ -128,33 +128,27 @@
 								<p>And that's just what we're doing today. We're thinking about the future, too. With teams working on autonomous trucking and self-driving cars, we're in for the long haul. We're reimagining how people and things move from one place to the next.</p>
 								<p>Job Description</p>
 								<p>About the Role</p>
-								<p>The Safety Lead is responsible for driving strategy, processes and partnerships that establish Uber as the industry leader in safety across the UK &amp; Ireland. You will lead the safety team and own the development of internal policies and procedures that inform incident prevention, investigation, treatment and accountability; liaise with our various rider and driver support teams; manage our driver appeals panel; and support the launch of new safety features in our apps.</p>
+								<p>We are currently searching for an Associate Counsel to join our busy London team. Reporting to the Commercial Senior Counsel, you will be based at Uber's London office.</p>
 								<p>Perks</p>
 								<p>What You'll Do</p>
 								<ul>
-									<li>You will drive the conversation on measures to improve passenger safety with regulatory and industry bodies.</li>
-									<li>You will use analytics to help conduct investigations, assess trends and identify opportunities to deliver solutions to reduce their occurrence. You'll also be working closely with our communications and marketing teams on all safety-related materials for riders, drivers and the public.</li>
-									<li>Own and improve our safety policies and procedures across the UK &amp; Ireland</li>
-									<li>Manage internal procedures and the relationship with rider and driver support teams, including our Centre of Excellence - the support team dealing with responses to riders and drivers</li>
-									<li>Lead a team of Operations Managers based out of London</li>
-									<li>Work to improve and streamline our incident response processes</li>
-									<li>Conduct investigations in collaboration with our legal team</li>
-									<li>Develop and actively measure key performance indicators for safety, with a goal for prevention</li>
-									<li>Support the launch of safety related products and track their impact</li>
-									<li>Work with our policy and marketing team on key initiatives including partnerships with third-party organisations</li>
-									<li>Coordinate and own best-practice materials for major incidents</li>
+									<li>Work closely with the legal team on a range of issues including commercial, product and corporate matters</li>
+									<li>Be an active partner, and ensure the provision of timely business-focused advice, to a variety of business areas including marketing, cities and business development.</li>
+									<li>Work on commercial contracts such as promotional agreements, sponsorships, partnerships as well as general procurement and marketing and advertising initiatives</li>
+									<li>Assist with corporate and company secretarial matters</li>
+									<li>Provide strategic and proactive legal advice to internal business groups. It's our job to peer round corners for the business and ensure that we are well positioned for the future</li>
+									<li>Effectively and efficiently manage outside counsel</li>
+									<li>Work hard but have a lot of fun doing it!</li>
 								</ul>
 								<p>What You'll Need</p>
 								<ul>
-									<li>A minimum of 8 years of experience in an operational role in the area of safety</li>
-									<li>Experience with managing multiple stakeholders on projects with a high degree of complexity</li>
-									<li>Data-driven decision mentality and sound business judgment through strong analytical thinking.</li>
-									<li>High adaptability to change and ability to execute quickly.</li>
-									<li>Speed, resourcefulness, and go getter attitude - Uber is committed to constant improvement. You're excited to help create a product with value.</li>
-									<li>Curious and eager to learn - you are interested in all things and can build up skills and knowledge very fast to become a recognized subject matter expert amongst your peers</li>
-									<li>High Emotional IQ – you deal with partners, influencers, and riders with no problem.</li>
-									<li>Flexible and forward thinking - we need someone sharp and eager to play with different models to help us scale.</li>
-									<li>Self-starter and collaborative leader. Everywhere you go, you can't help but mobilize people, build things, resolve problems, get into the details, go above and beyond, and draw out the best in people. You are a doer and motivator of others.</li>
+									<li>At least 2 years post-qualification experience at a top-notch law firm or in-house (ideally some in-house experience)</li>
+									<li>Strong academic credentials and law degree from a top law school or university</li>
+									<li>A desire to take the initiative and think two steps ahead</li>
+									<li>Excellent business judgment, communication and interpersonal skills</li>
+									<li>To be able to think on your feet and make quick decisions</li>
+									<li>Thrive in high impact/high profile situations</li>
+									<li>Enthusiastic about Uber!</li>
 								</ul>
 							</div>
 						</div>
