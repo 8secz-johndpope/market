@@ -381,15 +381,8 @@
 	});
 	$('.favorite').click(function(e){
 		e.preventDefault();
-		if($(this).children().hasClass('heart-empty')){
-			console.log('heart-empty');
-			$(this).children().toggleClass('heart-empty')
-			$(this).children().toggleClass('heart');
-		}
-		else{
-			$(this).children().toggleClass('heart');
-			$(this).children().toggleClass('heart-empty');
-		}
+		$(this).children().toggleClass('heart-empty')
+		$(this).children().toggleClass('heart');
 	});
 </script>
 @endsection
