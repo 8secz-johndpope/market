@@ -232,5 +232,11 @@
 			</div>
 		</div>
 	</div>
+	<div class="recommend-jobs-wrapper">
+		<div class="container">
+			<div class="row">
+			</div>
+		</div>
+	</div>
 </div>
 @endsection
