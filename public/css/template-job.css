@@ -169,6 +169,34 @@
 .sidebar-content .favorite-box-container {
     margin-bottom: 10px;
 }
+.favorite-box-container .favorite, .favorite-box-container .unfavorite, .favorite-container .favorite, .favorite-container .unfavorite {
+    display: inline-block;
+    line-height: 1em;
+    color: #fd745a;
+    text-align: center;
+    font-size: 18px;
+    padding: 12px 11px 10px;
+    border-radius: 36px;
+    background-color: #fff;
+    -webkit-transition: color 200ms ease-out;
+    -moz-transition: color 200ms ease-out;
+    -ms-transition: color 200ms ease-out;
+    -o-transition: color 200ms ease-out;
+    transition: color 200ms ease-out;
+}
+.sidebar-content .favorite-box-container a, .fixed-apply-now .favorite-box-container a {
+    color: #f87964;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: proximasemibold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    text-align: left;
+}
+.sidebar-content .favorite-box-container .favorite, .sidebar-content .favorite-box-container .unfavorite, .fixed-apply-now .favorite-box-container .favorite, .fixed-apply-now .favorite-box-container .unfavorite {
+    padding: 0;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
