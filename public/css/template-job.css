@@ -227,10 +227,6 @@
 .favroite-icon {
     display: inline-block;
     vertical-align: middle;
-    padding: 1em;
-    border: 1px solid #f87964;
-    border-radius: 50%;
-    margin-right: 10px;
 }
 .favorite-box-container .favroite-icon{
 	padding: 1em;
