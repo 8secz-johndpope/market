@@ -54,7 +54,7 @@
             <table class="table">
                 <tr><th>Title</th><th>Amount</th><th>Status</th></tr>
                 @foreach($user->invoices as $invoice)
-                    <tr><td>{{$invoice->title}}</td><td>{{$invoice->amount()}}</td><td>@if($invoice->status===1) <span class="green-text">Paid</span> @else <span class="yellow-text">Pending</span> @endif</td></tr>
+                    <tr><td>{{$invoice->title}}</td><td>{{$invoice->amount()}}</td><td>@if($invoice->status===1) <span class="green-text">Paid</span> @elseif(strtotime($invoice->due_date)<time()) <span class="red-text">Unpaid</span> @else <span class="yellow-text">Pending</span> @endif</td></tr>
                 @endforeach
             </table>
         </div>
