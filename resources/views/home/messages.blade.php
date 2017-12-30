@@ -26,6 +26,7 @@
             width: 40px;
             font-size: 25px;
             float: right;
+            cursor: pointer;
         }
     </style>
 <div class="container-fluid background-body">
