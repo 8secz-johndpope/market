@@ -65,6 +65,9 @@
     color: #666;
 }
 
+.sidebar-content:first-child {
+    margin-top: 10px;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
