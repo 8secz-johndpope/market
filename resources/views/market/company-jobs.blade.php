@@ -377,7 +377,7 @@ use App\Model\Advert;
                 </div>
             -->
                 <div class="link-details">
-                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                    <a href="/companies/uber">> LEARN MORE ABOUT THIS ADVERTISER</a>
                 </div>
         </div>
     </div>
@@ -389,14 +389,14 @@ use App\Model\Advert;
                         </span>
                         <span  class="favor-text">SAVE</span>
                     </div>
-                    <a class="listing-product" href="#"> 
+                    <a class="listing-product" href="/jobs/uber/head-of-public-policy-uk-ireland-northern-europe"> 
                         <h4 class="product-title">Head of Public Policy UK & Ireland / Nothern Europe</h4>
                     </a>
                     <span class="listing-location">
                         London, United Kingdom
                     </span>
                     <div class="link-details">
-                        <a href="#">> VIEW FULL POSTING</a>
+                        <a href="/jobs/uber/head-of-public-policy-uk-ireland-northern-europe">> VIEW FULL POSTING</a>
                     </div>
                     <span class="posted-text">34d ago</span>
                 </div>
@@ -430,7 +430,7 @@ use App\Model\Advert;
                 </div>
             -->
                 <div class="link-details">
-                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                    <a href="/companies/uber">> LEARN MORE ABOUT THIS ADVERTISER</a>
                 </div>
         </div>
     </div>
@@ -483,7 +483,7 @@ use App\Model\Advert;
                 </div>
             -->
                 <div class="link-details">
-                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                    <a href="/companies/uber">> LEARN MORE ABOUT THIS ADVERTISER</a>
                 </div>
         </div>
     </div>
@@ -536,7 +536,7 @@ use App\Model\Advert;
                 </div>
             -->
                 <div class="link-details">
-                    <a href="#">> LEARN MORE ABOUT THIS ADVERTISER</a>
+                    <a href="/companies/uber">> LEARN MORE ABOUT THIS ADVERTISER</a>
                 </div>
         </div>
     </div>
