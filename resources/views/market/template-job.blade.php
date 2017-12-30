@@ -234,7 +234,7 @@
 	</div>
 	<div class="recommend-jobs-wrapper">
 		<div class="container">
-			<div class="row">
+			<div class="row recommended-jobs">
 				<div class="col-sm-12">
 					<div class="section">
 						<div class="header-row">
