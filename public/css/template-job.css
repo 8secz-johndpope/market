@@ -162,7 +162,7 @@
     font-size: 14px;
     color: #333;
 }
-.btn-block, .job-individual .job-post .favorite-box-container a, .job-individual .job-post .send-to-self button {
+.btn-block, .job-post .favorite-box-container a, .job-post .send-to-self button {
     width: 100%!important;
     display: block!important;
 }
