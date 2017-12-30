@@ -730,7 +730,7 @@ class MessageController extends BaseController
     }
     public function message_search(Request $request){
         $messages = Message::where('room_id',$request->id)->where('message','like','%'.$request->q.'%')->get();
-        return $messages;
+        return view('home.search_messages',['messages'=>$messages]);
     }
     public function end_call(Request $request){
         $user = Auth::user();

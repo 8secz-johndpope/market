@@ -292,6 +292,9 @@
     <div class="search-div">
         <div class="cross-mark-search">X</div>
         <input type="text" placeholder="Search this Conversation" class="form-control" id="search-query">
+        <div id="search-results">
+
+        </div>
     </div>
 </div>
     <script>
@@ -395,6 +398,7 @@ $('.cross-mark-search').click(function () {
             })
                 .then(function (response) {
                     console.log(response);
+                    $('#search-results').html(response.data);
 
                 })
                 .catch(function (error) {
