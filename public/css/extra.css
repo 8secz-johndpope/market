@@ -1803,6 +1803,9 @@ nav.navbar.navbar-inverse {
     padding-right: 35px;
     font-size: 13px;
 }
+.container-btns-recruiter {
+    padding: 0;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
