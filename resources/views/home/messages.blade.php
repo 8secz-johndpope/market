@@ -430,13 +430,13 @@ $('.cross-mark-search').click(function () {
                     x = 1000,
                     originalColor = $el.css("background");
 
-                $el.css("background", "green");
+                $el.css("background", "orange");
                 setTimeout(function(){
                     $el.css("background", originalColor);
                 }, x);
             }, 1000);
 
-            
+
 
         });
 
