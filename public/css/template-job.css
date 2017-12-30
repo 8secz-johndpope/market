@@ -590,6 +590,9 @@
     text-align: center;
     display: none;
 }
+.btn-scroll{
+	color:#ff9d2c;
+}
 @media (min-width: 768px){
 	.sidebar-content:first-child {
 	    margin-top: 20px;
