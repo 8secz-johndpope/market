@@ -413,7 +413,7 @@ $('.cross-mark-search').click(function () {
             var id = $(this).data('id');
             console.log($(this).data('id'));
             $('.search-div').hide();
-           
+
 
             var $container = $('#all-msg'),
                 $scrollTo = $("#m"+id);
@@ -423,9 +423,7 @@ $('.cross-mark-search').click(function () {
             );
 
 // Or you can animate the scrolling:
-            $container.animate({
-                scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop()
-            });​
+           
             /*
             setTimeout(function doSomethingLater() {
                 var $el = $("#m"+id),
