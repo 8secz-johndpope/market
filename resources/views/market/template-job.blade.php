@@ -235,6 +235,13 @@
 	<div class="recommend-jobs-wrapper">
 		<div class="container">
 			<div class="row">
+				<div class="col-sm-12">
+					<div class="section">
+						<div class="header-row">
+							<h3 class="section-header">A FEW MORE JOBS WE THINK YOU'LL LOVE</h3>
+						</div>
+					</div>					
+				</div>
 			</div>
 		</div>
 	</div>
