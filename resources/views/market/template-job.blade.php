@@ -66,7 +66,7 @@
 							<div class="favorite-box-container btn-block">
 								<div>
 									<a href="#" class="favorite">
-										<i class="fa fa-heart-o"></i> 
+										<i class="heart-empty favroite-icon"></i> 
 										Save For Later
 									</a>
 								</div>
