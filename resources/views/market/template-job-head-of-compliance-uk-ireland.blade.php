@@ -128,33 +128,44 @@
 								<p>And that's just what we're doing today. We're thinking about the future, too. With teams working on autonomous trucking and self-driving cars, we're in for the long haul. We're reimagining how people and things move from one place to the next.</p>
 								<p>Job Description</p>
 								<p>About the Role</p>
-								<p>The Safety Lead is responsible for driving strategy, processes and partnerships that establish Uber as the industry leader in safety across the UK &amp; Ireland. You will lead the safety team and own the development of internal policies and procedures that inform incident prevention, investigation, treatment and accountability; liaise with our various rider and driver support teams; manage our driver appeals panel; and support the launch of new safety features in our apps.</p>
+								<p>This role has a critical significance managing the design, implementation and maintenance of the structures comprising the new UKI Compliance programme.</p>
+								<p>The Head of Compliance will lead cross-functional work to design, build and implement a fit for purpose Compliance programme in the UK</p>
 								<p>Perks</p>
 								<p>What You'll Do</p>
 								<ul>
-									<li>You will drive the conversation on measures to improve passenger safety with regulatory and industry bodies.</li>
-									<li>You will use analytics to help conduct investigations, assess trends and identify opportunities to deliver solutions to reduce their occurrence. You'll also be working closely with our communications and marketing teams on all safety-related materials for riders, drivers and the public.</li>
-									<li>Own and improve our safety policies and procedures across the UK &amp; Ireland</li>
-									<li>Manage internal procedures and the relationship with rider and driver support teams, including our Centre of Excellence - the support team dealing with responses to riders and drivers</li>
-									<li>Lead a team of Operations Managers based out of London</li>
-									<li>Work to improve and streamline our incident response processes</li>
-									<li>Conduct investigations in collaboration with our legal team</li>
-									<li>Develop and actively measure key performance indicators for safety, with a goal for prevention</li>
-									<li>Support the launch of safety related products and track their impact</li>
-									<li>Work with our policy and marketing team on key initiatives including partnerships with third-party organisations</li>
-									<li>Coordinate and own best-practice materials for major incidents</li>
+									<li>Implement expectations for effective governance framework elements, including manual, policies, standards, processes, systems, tools, training and communications.</li>
+									<li>Coordinates the management of investigations across UK operations, project managing investigations across all appropriate functions. This could include triage, investigation process, output, reporting, communication and reporting.</li>
+									<li>Hold an independent view of the significant compliance risks faced, where those risks could materialise and the appropriate responses to be applied.</li>
+									<li>Conduct independent monitoring, reviews and investigations into regulatory compliance</li>
+									<li>Training and education of other Uber employees on compliance matters.</li>
+									<li>Maintain current knowledge of private hire and other relevant laws and regulations, keeping abreast of projected and recent changes.</li>
+									<li>Report to the Board and provide guidance to senior management, board / committee staff, and employees on compliance.</li>
+									<li>Monitor, and as necessary, coordinate compliance activities of other teams to remain abreast of the status of all compliance activities.</li>
+									<li>Work with HRBPs and others as appropriate to implement an effective compliance training programs for the business, including appropriate introductory training for new employees as well as ongoing training for all employees and managers as well</li>
+									<li>Track and report current status of any breaches; compliance education, complaints, investigations, inquiries and other control metrics as required.</li>
+									<li>Liaising with regulators both in London and across the UK to provide education and information materials on product and process changes, as well as holding relationships to satisfy that we are fully compliant with all our regulatory obligations.</li>
 								</ul>
 								<p>What You'll Need</p>
 								<ul>
-									<li>A minimum of 8 years of experience in an operational role in the area of safety</li>
-									<li>Experience with managing multiple stakeholders on projects with a high degree of complexity</li>
-									<li>Data-driven decision mentality and sound business judgment through strong analytical thinking.</li>
-									<li>High adaptability to change and ability to execute quickly.</li>
-									<li>Speed, resourcefulness, and go getter attitude - Uber is committed to constant improvement. You're excited to help create a product with value.</li>
-									<li>Curious and eager to learn - you are interested in all things and can build up skills and knowledge very fast to become a recognized subject matter expert amongst your peers</li>
-									<li>High Emotional IQ – you deal with partners, influencers, and riders with no problem.</li>
-									<li>Flexible and forward thinking - we need someone sharp and eager to play with different models to help us scale.</li>
-									<li>Self-starter and collaborative leader. Everywhere you go, you can't help but mobilize people, build things, resolve problems, get into the details, go above and beyond, and draw out the best in people. You are a doer and motivator of others.</li>
+									<li>Substantial and demonstrable experience in a senior compliance role in a regulated industry (e.g. financial services, telecommunications).</li>
+									<li>Ready to roll up your sleeves, dig in, and innovate on every single detail of the compliance process</li>
+									<li>Strong negotiating, influencing and communication skills</li>
+									<li>Clear understanding and absolute adherence to ethical principles, company values, Business Principles and policies.</li>
+									<li>Superior oral and written communication skills with a strong detail and analytical skills and the ability to identify and explain complex compliance requirements</li>
+									<li>Track record of collaborating with senior leaders and cross-functionally to help facilitate their role in ensuring the effectiveness of the ethics and compliance program.</li>
+									<li>Managing complexity in a fast moving environment.</li>
+									<li>Supports but also challenges for improvement.</li>
+									<li>Personally accountable.</li>
+									<li>Pragmatic, commercial, realistic and straightforward.</li>
+									<li>Demonstrates expediency and adaptability.</li>
+									<li>Direct experience and knowledge of change management and implementing</li>
+								</ul>
+								<p>Bonus Points If</p>
+								<ul>
+									<li>Experience of building, enhancing and maintaining a compliance programme in a heavily regulated company</li>
+									<li>Experience working in a fast paced company</li>
+									<li>Substantial experience of compliance management and leadership, including people development, project management and change management.</li>
+									<li>Significant, directly relevant professional experience in a compliance law firm or regulatory agency, relevant compliance, regulatory, legal, risk, auditing or internal controls work experience.</li>
 								</ul>
 							</div>
 						</div>
