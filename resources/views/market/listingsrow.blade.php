@@ -385,7 +385,7 @@ use App\Model\Advert;
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon" id="phone-sendme">Mobile</span>
-                                <input type="text" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
+                                <input type="tel" id="phone-number" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
                             </div>
                         </div>
                         <div class="form-group">
