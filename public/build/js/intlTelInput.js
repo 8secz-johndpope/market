@@ -771,10 +771,13 @@
         _selectListItem: function(listItem) {
             // update selected flag and active list item
             var flagChanged = this._setFlag(listItem.attr("data-country-code"));
+            console.log(flagChanged);
             this._closeDropdown();
             this._updateDialCode(listItem.attr("data-dial-code"), true);
             // focus the input
+            this.telInput.val(listItem.attr("data-country-code"));
             this.telInput.focus();
+
             // put cursor at end - this fix is required for FF and IE11 (with nationalMode=false i.e. auto inserting dial code), who try to put the cursor at the beginning the first time
             if (this.isGoodBrowser) {
                 var len = this.telInput.val().length;
