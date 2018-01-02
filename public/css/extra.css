@@ -1838,7 +1838,7 @@ nav.navbar.navbar-inverse {
     width: 100%;
     display: table !important;
 }
-#phone-number {
+#phone-number-1, #phone-number-2 {
     display: table-cell;
     border: 1px solid #a4a4a4;
     border-left: 0;
