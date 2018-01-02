@@ -51,7 +51,7 @@ class BankController extends BaseController
         }
 
 
-        return redirect('/bank/dashboard');
+        return redirect('/wallet/dashboard');
     }
     public function transfer_balance(Request $request,$id){
         $user=Auth::user();
