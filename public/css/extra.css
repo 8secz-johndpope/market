@@ -2044,6 +2044,9 @@ nav.navbar.navbar-inverse {
         display: block;
         margin-left: 0;
     }
+    .border-left{
+        border-left: 0;
+    }
     .filter-container{
         width: 100%;
         padding-left: 10px;
@@ -2051,6 +2054,9 @@ nav.navbar.navbar-inverse {
     .products{
         width: 100%;
         padding: 10px;
+    }
+    .container-btn-recruiter:last-child{
+        border-top: 1px solid #ddd;
     }
     span.listing-location {
         font-size: 13px;
