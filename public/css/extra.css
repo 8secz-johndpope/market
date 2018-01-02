@@ -1848,7 +1848,7 @@ nav.navbar.navbar-inverse {
     padding-left: 11px;
 }
 .intl-tel-input .country-list{
-    z-index: 100;
+    z-index: 100 !important;
 }
 @media (max-width: 1500px) {
     h4.product-title {
