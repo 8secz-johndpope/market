@@ -24,6 +24,9 @@
                 <a class="btn btn-primary">Withdraw</a>
 
             </div>
+            <br><br><br>
+            <h4>Transactions</h4>
+            
         </div>
     </div>
 
