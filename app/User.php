@@ -128,7 +128,7 @@ class User extends Authenticatable
     }
     public function transactions()
     {
-        return $this->hasMany('App\Model\Transaction');
+        return $this->hasMany('App\Model\Transaction')->orderBy('id','desc');
     }
     public function has_applied($id){
        $application = Application::where('advert_id',$id)->where('user_id',$this->id)->first();
