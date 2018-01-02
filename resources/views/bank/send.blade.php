@@ -28,7 +28,7 @@
         <tbody>
         @foreach($user->contacts as $contact)
             @if($contact->is_user())
-            <tr><td>                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$contact->u()->image}}" class="lazyload" alt="" style="width: 50px"></td><td>{{$contact->first}}, {{$contact->last}}</td><td><a class="btn btn-primary" href="/user/transfer/balance/{{$contact->uid()}}">Send Money</a> </td></tr>
+            <tr><td>                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$contact->u()->image}}" class="lazyload" alt="" style="width: 50px"></td><td>{{$contact->first}}, {{$contact->last}}</td><td><a class="btn btn-primary" href="/transfer/{{$contact->uid()}}">Send Money</a> </td></tr>
             @endif
         @endforeach
         </tbody>

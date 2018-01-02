@@ -27,4 +27,9 @@ class BankController extends BaseController
         $user=Auth::user();
         return view('bank.send',['user'=>$user]);
     }
+    public function transfer_balance(Request $request,$id){
+        $user=Auth::user();
+        $other = User::find($id);
+        return view('bank.transfer',['user'=>$user,'other'=>$other]);
+    }
 }
