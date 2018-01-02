@@ -1814,6 +1814,8 @@ nav.navbar.navbar-inverse {
 }
 .intl-tel-input.allow-dropdown .flag-container, .intl-tel-input.separate-dial-code .flag-container{
     width: 68px;
+    position: relative !important;
+    display: table-cell !important;
 }
 
 .intl-tel-input.allow-dropdown input, .intl-tel-input.allow-dropdown input[type=text], .intl-tel-input.allow-dropdown input[type=tel], .intl-tel-input.separate-dial-code input, .intl-tel-input.separate-dial-code input[type=text], .intl-tel-input.separate-dial-code input[type=tel]{
@@ -1830,6 +1832,7 @@ nav.navbar.navbar-inverse {
 }
 .intl-tel-input{
     width: 100%;
+    display: table !important;
 }
 @media (max-width: 1500px) {
     h4.product-title {
