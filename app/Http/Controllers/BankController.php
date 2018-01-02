@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 
 class BankController extends BaseController
 {
+    public function __construct()
+    {
+
+        $this->middleware('auth');
+        parent::__construct();
+    }
     public function dashboard(Request $request){
         $user=Auth::user();
         return view('bank.dashboard',['user'=>$user]);
