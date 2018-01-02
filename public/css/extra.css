@@ -1836,6 +1836,14 @@ nav.navbar.navbar-inverse {
     width: 100%;
     display: table !important;
 }
+#phone-number {
+    display: table-cell;
+    border: 1px solid #a4a4a4;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    vertical-align: middle;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
