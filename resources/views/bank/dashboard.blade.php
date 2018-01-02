@@ -36,13 +36,14 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach($user->transactions as $transaction)
                 <tr>
-                    <td><img src="/css/right.png" style="width: 30px"> </td>
-
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td><img src="@if($transaction->direction===1) /css/left.png @else /css/right.png @endif" style="width: 30px"> </td>
+                    <td>{{$transaction->description}}</td>
+                    <td>£{{number_format($transaction->amount/100,2)}}</td>
+                    <td>{{date('d/m/Y',strtotime($transaction->created_at))}}</td>
                 </tr>
+                @endforeach
                 <tr>
                     <td><img src="/css/left.png" style="width: 30px"> </td>
                     <td>Jacob</td>
