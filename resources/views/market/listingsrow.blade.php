@@ -440,7 +440,8 @@ use App\Model\Advert;
 @endsection
 
 @section('scripts')
+<script src="/build/js/intlTelInput.js"></script>
 <script>
-    
+    $("#phone-number").intlTelInput();
 </script>
 @endsection
