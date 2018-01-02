@@ -233,5 +233,8 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Model\Contract')->where('status','active');
     }
-
+    public function balance()
+    {
+        return $this->transactions()->where('direction',1)->sum('amount')-$this->transactions()->where('direction',0)->sum('amount');
+    }
 }
