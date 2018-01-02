@@ -23,4 +23,8 @@ class BankController extends BaseController
         $user=Auth::user();
         return view('bank.dashboard',['user'=>$user]);
     }
+    public function send(Request $request){
+        $user=Auth::user();
+        return view('bank.send',['user'=>$user]);
+    }
 }
