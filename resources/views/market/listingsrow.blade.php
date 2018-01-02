@@ -375,11 +375,11 @@ use App\Model\Advert;
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon" id="email-sendme">Email</span>
-                                <input type="text" class="form-control phone-number" placeholder="example@email.com" aria-describedby="email-sendme">
+                                <input type="text" class="form-control" placeholder="example@email.com" aria-describedby="email-sendme">
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="phone-number" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
+                            <input type="tel" id="phone-number" class="form-control phone-number" placeholder="00447777777777" aria-describedby="phone-sendme">
                         </div>
                         <div class="form-group">
                             <input type="submit" name="submit-sendme" class="btn btn-submit">
