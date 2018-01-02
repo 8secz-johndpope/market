@@ -44,18 +44,6 @@
                     <td>{{date('d/m/Y',strtotime($transaction->created_at))}}</td>
                 </tr>
                 @endforeach
-                <tr>
-                    <td><img src="/css/left.png" style="width: 30px"> </td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td><img src="/css/right.png" style="width: 30px"> </td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
                 </tbody>
             </table>
         </div>
