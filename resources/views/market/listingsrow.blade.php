@@ -218,7 +218,7 @@ use App\Model\Advert;
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control phone-numbers" placeholder="00447777777777" aria-describedby="phone-sendme">
+                                <input type="text" class="form-control" id="phone-number-2" placeholder="+44 7777777777" aria-describedby="phone-sendme">
                             </div>
                             <div class="form-group">
                                 <input type="submit" name="submit-sendme" class="btn btn-submit">
@@ -379,7 +379,7 @@ use App\Model\Advert;
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="phone-number" class="form-control phone-number" placeholder="00447777777777" aria-describedby="phone-sendme">
+                            <input type="tel" id="phone-number-1" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
                         </div>
                         <div class="form-group">
                             <input type="submit" name="submit-sendme" class="btn btn-submit">
@@ -435,6 +435,7 @@ use App\Model\Advert;
 @section('scripts')
 <script src="/build/js/intlTelInput.js"></script>
 <script>
-    $(".phone-number").intlTelInput();
+    $("#phone-number-2").intlTelInput();
+    $("#phone-number-1").intlTelInput();
 </script>
 @endsection
