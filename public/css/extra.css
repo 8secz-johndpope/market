@@ -1813,7 +1813,7 @@ nav.navbar.navbar-inverse {
     border-left: 1px solid #ddd;
 }
 .intl-tel-input.allow-dropdown .flag-container, .intl-tel-input.separate-dial-code .flag-container{
-    widows: 68px;
+    width: 68px;
 
 }
 .intl-tel-input.allow-dropdown input, .intl-tel-input.allow-dropdown input[type=text], .intl-tel-input.allow-dropdown input[type=tel], .intl-tel-input.separate-dial-code input, .intl-tel-input.separate-dial-code input[type=text], .intl-tel-input.separate-dial-code input[type=tel]{
