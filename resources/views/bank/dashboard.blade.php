@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-</head>
-<body>
+<!-- Stored in resources/views/child.blade.php -->
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="background-color: #000;">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" href="#">
-        <img src="/css/ic_launcher1.png" alt="logo" style="width:40px;">
-    </a>
+@extends('layouts.bank')
 
-    <!-- Links -->
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="/">Sumra</a>
-        </li>
-    </ul>
-</nav>
+@section('title', 'Dashboard')
 
-<div class="container-fluid">
-    <h3>Brand / Logo</h3>
-    <p>When using the .navbar-brand class on images, Bootstrap 4 will automatically style the image to fit the navbar.</p>
-</div>
+@section('sidebar')
+    @parent
 
-</body>
-</html>
+    <p>This is appended to the master sidebar.</p>
+@endsection
+
+@section('content')
+    <div class="row">
+        <div class="col-sm-12">
+
+
+
+
+        </div>
+    </div>
+
+
+@endsection
