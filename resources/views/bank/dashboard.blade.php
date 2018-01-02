@@ -32,7 +32,7 @@
                     <th>#</th>
                     <th scope="col">Description</th>
                     <th scope="col">Amount</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Date</th>
                 </tr>
                 </thead>
                 <tbody>
