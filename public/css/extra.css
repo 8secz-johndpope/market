@@ -1843,6 +1843,7 @@ nav.navbar.navbar-inverse {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     vertical-align: middle;
+    padding-left: 11px;
 }
 @media (max-width: 1500px) {
     h4.product-title {
