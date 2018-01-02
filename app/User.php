@@ -126,7 +126,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Invoice');
     }
-
+    public function transactions()
+    {
+        return $this->hasMany('App\Model\Transaction');
+    }
     public function has_applied($id){
        $application = Application::where('advert_id',$id)->where('user_id',$this->id)->first();
        if($application===null)
