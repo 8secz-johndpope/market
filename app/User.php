@@ -235,6 +235,6 @@ class User extends Authenticatable
     }
     public function balance()
     {
-        return number_format(( $this->transactions()->where('direction',1)->sum('amount')-$this->transactions()->where('direction',0)->sum('amount'))/100,2);
+        return  $this->transactions()->where('direction',1)->sum('amount')-$this->transactions()->where('direction',0)->sum('amount');
     }
 }

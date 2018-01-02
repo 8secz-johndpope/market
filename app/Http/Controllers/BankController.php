@@ -31,7 +31,26 @@ class BankController extends BaseController
     public function send_money(Request $request){
         $user=Auth::user();
         $other = User::find($request->id);
-        
+
+        $amount = (int)($request->amount*100);
+
+        if($user->balance()>$amount){
+            $transaction = new Transaction();
+            $transaction->amount = $amount;
+            $transaction->user_id = $user->id;
+            $transaction->description = "Transfer to ".$other->name;
+            $transaction->direction = 0;
+            $transaction->save();
+
+            $transaction = new Transaction();
+            $transaction->amount = $amount;
+            $transaction->user_id = $other->id;
+            $transaction->description = "Transfer from ".$user->name;
+            $transaction->direction = 1;
+            $transaction->save();
+        }
+
+
         return redirect('/bank/dashboard');
     }
     public function transfer_balance(Request $request,$id){
