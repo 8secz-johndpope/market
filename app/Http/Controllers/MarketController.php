@@ -19,6 +19,7 @@ use App\Model\Location;
 use App\Model\Postcode;
 use App\Model\Price;
 use App\Model\Relation;
+use App\Model\Transaction;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -144,14 +145,13 @@ class MarketController extends BaseController
         }
     }
     public function locs(Request $request){
-        $cats = Category::where('id','>',0)->where('id','<',1000000000)->get();
 
-        foreach ($cats as $cat){
-            $cat->id = $cat->id*10;
-            $cat->parent_id=$cat->parent_id*10;
-            $cat->ends = $cat->ends*10+9;
-            $cat->save();
-        }
+        $transaction = new Transaction();
+        $transaction->amount = 500;
+        $transaction->user_id = 104;
+        $transaction->description = "Registration Credit";
+        $transaction->direction = 1;
+        $transaction->save();
 
 
         /*
