@@ -1822,6 +1822,8 @@ nav.navbar.navbar-inverse {
 .intl-tel-input.allow-dropdown .selected-flag, .intl-tel-input.separate-dial-code .selected-flag{
     width: 55px;
     border: 1px solid #ff9d2c;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 .intl-tel-input .selected-flag .iti-flag{
     margin: auto 5px;
