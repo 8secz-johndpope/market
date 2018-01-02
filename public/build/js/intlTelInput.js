@@ -775,7 +775,7 @@
             this._closeDropdown();
             this._updateDialCode(listItem.attr("data-dial-code"), true);
             // focus the input
-            //this.telInput.val("+" + listItem.attr("data-dial-code") + " ");
+            this.telInput.val("+" + listItem.attr("data-dial-code") + " ");
             this.telInput.focus();
 
             // put cursor at end - this fix is required for FF and IE11 (with nationalMode=false i.e. auto inserting dial code), who try to put the cursor at the beginning the first time
