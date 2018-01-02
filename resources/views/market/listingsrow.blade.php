@@ -375,7 +375,7 @@ use App\Model\Advert;
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon" id="email-sendme">Email</span>
-                                <input type="text" class="form-control" placeholder="example@email.com" aria-describedby="email-sendme">
+                                <input type="text" class="form-control phone-number" placeholder="example@email.com" aria-describedby="email-sendme">
                             </div>
                         </div>
                         <div class="form-group">
@@ -435,6 +435,6 @@ use App\Model\Advert;
 @section('scripts')
 <script src="/build/js/intlTelInput.js"></script>
 <script>
-    $("#phone-number").intlTelInput();
+    $(".phone-number").intlTelInput();
 </script>
 @endsection
