@@ -16,7 +16,7 @@ use App\Model\Advert;
 @endsection
 
 @section('content')
-<link rel="stylesheet" href="/build/css/intTelInput.css">
+<link rel="stylesheet" href="/build/css/intlTelInput.css">
 <link rel="stylesheet" href="/build/css/demo.css">
 <div class="listings background-body">
     <div class="container-fluid">
