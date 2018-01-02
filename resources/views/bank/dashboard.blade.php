@@ -17,6 +17,9 @@
         <div class="col-sm-6">
             <br><br><br>
             <h4 style="text-align: center">Your Balance: £0</h4>
+            <div style="margin: auto">
+                <a class="btn btn-primary">Send Money</a>
+            </div>
         </div>
     </div>
 
