@@ -19,7 +19,7 @@
             <h4 style="text-align: center">Your Balance: £{{number_format($user->balance()/100,2)}}</h4>
             <br><br><br>
             <div style="margin: auto;    width: 400px;">
-                <a href="/bank/send" class="btn btn-primary">Send Money</a>
+                <a href="/wallet/send" class="btn btn-primary">Send Money</a>
                 <a class="btn btn-secondary">Receive Money</a>
                 <a class="btn btn-success">Withdraw</a>
 
