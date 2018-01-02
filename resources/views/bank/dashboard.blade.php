@@ -20,8 +20,8 @@
             <br><br><br>
             <div style="margin: auto;    width: 400px;">
                 <a class="btn btn-primary">Send Money</a>
-                <a class="btn btn-primary">Receive Money</a>
-                <a class="btn btn-primary">Withdraw</a>
+                <a class="btn btn-secondary">Receive Money</a>
+                <a class="btn btn-success">Withdraw</a>
 
             </div>
             <br><br><br>
