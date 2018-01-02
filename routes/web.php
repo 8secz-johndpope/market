@@ -76,7 +76,7 @@ Route::post('/user/upload/csv', 'BusinessController@csv');
 Route::post('/user/advert/category/change', 'HomeController@change_category');
 Route::post('/user/advert/location/change', 'HomeController@change_location');
 
-Route::get('/user/bank/dashboard', 'BankController@dashboard');
+Route::get('/bank/dashboard', 'BankController@dashboard');
 
 
 Route::get('/user/ad/create', 'HomeController@create');
