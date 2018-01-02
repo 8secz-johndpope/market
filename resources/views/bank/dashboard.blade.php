@@ -26,7 +26,37 @@
             </div>
             <br><br><br>
             <h4>Transactions</h4>
-            
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><img src="/css/right.png" style="width: 30px"> </td>
+
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td><img src="/css/right.png" style="width: 30px"> </td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td><img src="/css/right.png" style="width: 30px"> </td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
