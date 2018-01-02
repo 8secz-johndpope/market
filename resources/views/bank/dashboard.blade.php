@@ -44,7 +44,7 @@
                     <td>@mdo</td>
                 </tr>
                 <tr>
-                    <td><img src="/css/right.png" style="width: 30px"> </td>
+                    <td><img src="/css/left.png" style="width: 30px"> </td>
                     <td>Jacob</td>
                     <td>Thornton</td>
                     <td>@fat</td>
