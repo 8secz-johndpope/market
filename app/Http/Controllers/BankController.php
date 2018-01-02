@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 
 class BankController extends BaseController
 {
-    public function dashboard(Request $request,$id){
+    public function dashboard(Request $request){
         $user=Auth::user();
         return view('bank.dashboard',['user'=>$user]);
     }
