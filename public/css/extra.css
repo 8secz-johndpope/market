@@ -1822,6 +1822,9 @@ nav.navbar.navbar-inverse {
 .intl-tel-input.allow-dropdown .selected-flag, .intl-tel-input.separate-dial-code .selected-flag{
     width: 55px;
 }
+.intl-tel-input .selected-flag .iti-flag{
+    margin: auto 5px;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
