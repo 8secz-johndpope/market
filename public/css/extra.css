@@ -1828,6 +1828,7 @@ nav.navbar.navbar-inverse {
     border-bottom-left-radius: 4px;
     height: 34px;
     background: #fff;
+    outline: 0;
 }
 .intl-tel-input .selected-flag .iti-flag{
     margin: auto 5px !important;
