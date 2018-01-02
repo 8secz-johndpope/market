@@ -23,7 +23,7 @@
         // whether or not to allow the dropdown
         allowDropdown: true,
         // if there is just a dial code in the input: remove it on blur, and re-add it on focus
-        autoHideDialCode: true,
+        autoHideDialCode: false,
         // add a placeholder in the input with an example number for the selected country
         autoPlaceholder: "polite",
         // modify the auto placeholder
