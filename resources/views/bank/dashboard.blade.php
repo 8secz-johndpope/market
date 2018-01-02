@@ -19,6 +19,9 @@
             <h4 style="text-align: center">Your Balance: £0</h4>
             <div style="margin: auto">
                 <a class="btn btn-primary">Send Money</a>
+                <a class="btn btn-primary">Receive Money</a>
+                <a class="btn btn-primary">Withdraw</a>
+
             </div>
         </div>
     </div>
