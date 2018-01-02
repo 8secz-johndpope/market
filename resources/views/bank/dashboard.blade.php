@@ -11,22 +11,16 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="background-color: #000;">
     <!-- Brand/logo -->
     <a class="navbar-brand" href="#">
-        <img src="bird.jpg" alt="logo" style="width:40px;">
+        <img src="/css/ic_launcher1.png" alt="logo" style="width:40px;">
     </a>
 
     <!-- Links -->
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 3</a>
+            <a class="nav-link" href="/">Sumra</a>
         </li>
     </ul>
 </nav>
