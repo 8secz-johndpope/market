@@ -1828,10 +1828,10 @@ nav.navbar.navbar-inverse {
     border-bottom-left-radius: 4px;
 }
 .intl-tel-input .selected-flag .iti-flag{
-    margin: auto 5px;
+    margin: auto 5px !important;
 }
 .intl-tel-input{
-    width: 100%
+    width: 100%;
 }
 @media (max-width: 1500px) {
     h4.product-title {
