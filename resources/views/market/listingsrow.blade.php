@@ -13,12 +13,11 @@ use App\Model\Advert;
 @endsection
 
 @section('next-search')
-    
 @endsection
 
 @section('content')
-
-
+<link rel="stylesheet" href="/build/css/intTelInput.css">
+<link rel="stylesheet" href="/build/css/demo.css">
 <div class="listings background-body">
     <div class="container-fluid">
         <div class="row">
