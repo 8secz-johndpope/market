@@ -40,7 +40,6 @@
                 <div class="row">
                     <div class="col">
                         <input type="submit" class="btn btn-primary" value="Send">
-
                     </div>
                     <div class="col">
                     </div>
