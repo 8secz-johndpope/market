@@ -26,7 +26,7 @@
         </thead>
         <tbody>
         @foreach($user->contacts as $contact)
-            <tr><td>{{$contact->first}}, {{$contact->last}}</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/transfer/balance/{{$contact->uid()}}">Share Balance</a> @else  @endif</td></tr>
+            <tr><td>{{$contact->first}}, {{$contact->last}}</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/transfer/balance/{{$contact->uid()}}">Send Money</a> @else  @endif</td></tr>
         @endforeach
         </tbody>
     </table>
