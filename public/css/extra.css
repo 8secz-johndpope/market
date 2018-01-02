@@ -1816,6 +1816,7 @@ nav.navbar.navbar-inverse {
     width: 68px;
     position: relative !important;
     display: table-cell !important;
+    padding: 0;
 }
 
 .intl-tel-input.allow-dropdown input, .intl-tel-input.allow-dropdown input[type=text], .intl-tel-input.allow-dropdown input[type=tel], .intl-tel-input.separate-dial-code input, .intl-tel-input.separate-dial-code input[type=text], .intl-tel-input.separate-dial-code input[type=tel]{
