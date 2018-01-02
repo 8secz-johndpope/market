@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use App\Model\Transaction;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -33,7 +34,6 @@ class BankController extends BaseController
         $other = User::find($request->id);
 
         $amount = (int)($request->amount*100);
-
         if($user->balance()>$amount){
             $transaction = new Transaction();
             $transaction->amount = $amount;
