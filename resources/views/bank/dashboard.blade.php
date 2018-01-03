@@ -55,7 +55,7 @@
                             <td>{{date('d/m/Y',strtotime($money_request->created_at))}}</td>
                             <td>
                                 @if($money_request->status===0)
-                                <a href="/wallet/pay/request/{{$money_request->id}}" class="btn btn-primary">Pay</a>
+                                <a href="/wallet/pay/request/{{$money_request->id}}" class="btn btn-primary">Pay Now</a>
                                 @else
                                     <button type="button" class="btn btn-outline-success">Paid</button>
                                 @endif
