@@ -29,6 +29,10 @@ class BankController extends BaseController
         $user=Auth::user();
         return view('bank.send',['user'=>$user]);
     }
+    public function request(Request $request){
+        $user=Auth::user();
+        return view('bank.request',['user'=>$user]);
+    }
     public function withdraw(Request $request){
         $user=Auth::user();
         try{
