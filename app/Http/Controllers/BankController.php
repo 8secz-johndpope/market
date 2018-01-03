@@ -143,6 +143,8 @@ class BankController extends BaseController
             $transaction->description = "Transfer from ".$money_request->other->name;
             $transaction->direction = 1;
             $transaction->save();
+            $money_request->status=1;
+            $money_request->save();
         }
         return redirect('/wallet/dashboard');
     }
