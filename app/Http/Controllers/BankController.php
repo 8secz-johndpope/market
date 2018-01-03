@@ -31,7 +31,14 @@ class BankController extends BaseController
     }
     public function withdraw(Request $request){
         $user=Auth::user();
-        return view('bank.withdraw',['user'=>$user]);
+        try{
+            $accounts = \Stripe\Account::retrieve($user->stripe_account)->external_accounts->all(array(
+                'limit'=>3, 'object' => 'bank_account'));
+            $accounts=$accounts['data'];
+        }catch (\Exception $exception){
+            $accounts = [];
+        }
+        return view('bank.withdraw',['user'=>$user,'accounts'=>$accounts]);
     }
     public function send_money(Request $request){
         $user=Auth::user();
