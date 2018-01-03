@@ -126,7 +126,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Invoice');
     }
-
+    public function transactions()
+    {
+        return $this->hasMany('App\Model\Transaction')->orderBy('id','desc');
+    }
     public function has_applied($id){
        $application = Application::where('advert_id',$id)->where('user_id',$this->id)->first();
        if($application===null)
@@ -230,5 +233,8 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Model\Contract')->where('status','active');
     }
-
+    public function balance()
+    {
+        return  $this->transactions()->where('direction',1)->sum('amount')-$this->transactions()->where('direction',0)->sum('amount');
+    }
 }

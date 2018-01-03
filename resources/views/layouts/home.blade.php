@@ -197,6 +197,9 @@
                                             <a class="nav-link nav-color" href="/business/manage/support"><span class="fa fa-envelope"></span> &nbsp;&nbsp; Support</a>
                                         </li>
                                         <li>
+                                            <a class="nav-link nav-color" href="/wallet/dashboard"><i class="fa fa-google-wallet"></i>&nbsp;&nbsp;Wallet</a>
+                                        </li>
+                                        <li>
                                             <a class="nav-link nav-color" href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">

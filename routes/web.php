@@ -57,6 +57,8 @@ Route::get('/user/new/message', 'HomeController@new_message');
 
 Route::get('/user/transfer/balance/{id}', 'HomeController@transfer_balance');
 Route::post('/user/share/balance', 'HomeController@share_balance');
+Route::get('/wallet/transfer/{id}', 'BankController@transfer_balance');
+Route::post('/wallet/send/money', 'BankController@send_money');
 
 
 Route::post('/user/save/profile', 'HomeController@save_pro');
@@ -75,6 +77,9 @@ Route::post('/user/upload/csv', 'BusinessController@csv');
 
 Route::post('/user/advert/category/change', 'HomeController@change_category');
 Route::post('/user/advert/location/change', 'HomeController@change_location');
+
+Route::get('/wallet/dashboard', 'BankController@dashboard');
+Route::get('/wallet/send', 'BankController@send');
 
 
 Route::get('/user/ad/create', 'HomeController@create');
