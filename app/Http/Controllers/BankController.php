@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use App\Model\MoneyRequest;
 use App\Model\Transaction;
 use App\User;
 use Illuminate\Support\Facades\Auth;
@@ -98,6 +99,21 @@ class BankController extends BaseController
             $transaction->direction = 1;
             $transaction->save();
         }
+        return redirect('/wallet/dashboard');
+    }
+    public function request_money(Request $request){
+        $user=Auth::user();
+        $other = User::find($request->id);
+
+        $amount = (int)($request->amount*100);
+        $money_request = new MoneyRequest();
+        $money_request->amount = $amount;
+        $money_request->user_id = $user->id;
+        $money_request->other_id = $other->id;
+        $money_request->save();
+        $money_request->users()->save($user);
+        $money_request->users()->save($other);
+
         return redirect('/wallet/dashboard');
     }
     public function transfer_balance(Request $request,$id){
