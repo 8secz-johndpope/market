@@ -59,6 +59,7 @@ Route::get('/user/transfer/balance/{id}', 'HomeController@transfer_balance');
 Route::post('/user/share/balance', 'HomeController@share_balance');
 Route::get('/wallet/transfer/{id}', 'BankController@transfer_balance');
 Route::post('/wallet/send/money', 'BankController@send_money');
+Route::post('/wallet/request/money', 'BankController@request_money');
 Route::post('/wallet/withdraw/money', 'BankController@withdraw_money');
 Route::get('/wallet/request/{id}', 'BankController@request_balance');
 
