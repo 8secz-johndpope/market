@@ -21,6 +21,7 @@ use App\Model\Room;
 use App\Model\Sale;
 use App\Model\SearchAlert;
 use App\Model\Shipping;
+use App\Model\Transaction;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use PDF;
@@ -1515,17 +1516,22 @@ class HomeController extends BaseController
 
     }
     public function mark_received(Request $request,$id){
+        $user = Auth::user();
         $sale=Sale::find($id);
         $sale->status=2;
-        \Stripe\Transfer::create(array(
-            "amount" => (int)(90*$sale->advert->price()),
-            "currency" => "gbp",
-            "destination" => $sale->advert->user->stripe_account
-        ));
+
+        $transaction = new Transaction();
+        $transaction->amount = (int)(90*$sale->advert->price());
+        $transaction->user_id = $sale->advert->user_id;
+        $transaction->description = "Funds for Order ID ".$sale->id;
+        $transaction->direction = 1;
+        $transaction->save();
+
         $sale->save();
         return redirect('/user/manage/orders');
     }
     public function mark_shipped(Request $request,$id){
+        $user = Auth::user();
 
         $sale=Sale::find($id);
         if($sale->advert->shipping->tracking==='Yes')
@@ -1533,11 +1539,12 @@ class HomeController extends BaseController
             return redirect('/user/order/provide/tracking/'.$sale->id);
         }
         $sale->status=2;
-        \Stripe\Transfer::create(array(
-            "amount" => (int)(90*$sale->advert->price()),
-            "currency" => "gbp",
-            "destination" => $sale->advert->user->stripe_account
-        ));
+        $transaction = new Transaction();
+        $transaction->amount = (int)(90*$sale->advert->price());
+        $transaction->user_id = $user->id;
+        $transaction->description = "Funds for Order ID ".$sale->id;
+        $transaction->direction = 1;
+        $transaction->save();
         $sale->save();
         return redirect('/user/manage/orders');
     }
@@ -1560,11 +1567,12 @@ class HomeController extends BaseController
         $sale=Sale::find($request->id);
         $sale->tracking = $request->tracking;
         $sale->status=2;
-        \Stripe\Transfer::create(array(
-            "amount" => (int)(90*$sale->advert->price()),
-            "currency" => "gbp",
-            "destination" => $sale->advert->user->stripe_account
-        ));
+        $transaction = new Transaction();
+        $transaction->amount = (int)(90*$sale->advert->price());
+        $transaction->user_id = $user->id;
+        $transaction->description = "Funds for Order ID ".$sale->id;
+        $transaction->direction = 1;
+        $transaction->save();
         $sale->save();
         return redirect('/user/manage/orders');
     }
@@ -1601,11 +1609,12 @@ class HomeController extends BaseController
             $sale->advert->update_fields(['sold'=>1]);
 
             if($sale->type===2){
-                \Stripe\Transfer::create(array(
-                    "amount" => (int)(90*$sale->amount()),
-                    "currency" => "gbp",
-                    "destination" => $sale->advert->user->stripe_account
-                ));
+                $transaction = new Transaction();
+                $transaction->amount = (int)(90*$sale->advert->price());
+                $transaction->user_id = $sale->advert->user_id;
+                $transaction->description = "Funds for Order ID ".$sale->id;
+                $transaction->direction = 1;
+                $transaction->save();
 
             }
             $this->notify_sale($sale);
@@ -1646,12 +1655,12 @@ class HomeController extends BaseController
             }
 
             if($invoice->type===0){
-                \Stripe\Transfer::create(array(
-                    "amount" => (int)(90*$invoice->amount()),
-                    "currency" => "gbp",
-                    "destination" => $invoice->message->user->stripe_account
-                ));
-
+                $transaction = new Transaction();
+                $transaction->amount = (int)(90*$invoice->amount());
+                $transaction->user_id = $invoice->user_id;
+                $transaction->description = "Funds for Invoice ID ".$invoice->id;
+                $transaction->direction = 1;
+                $transaction->save();
             }
             $invoice->status=1;
 
@@ -1702,11 +1711,13 @@ class HomeController extends BaseController
             }
 
             if($invoice->type===0){
-                \Stripe\Transfer::create(array(
-                    "amount" => (int)(90*$invoice->amount()),
-                    "currency" => "gbp",
-                    "destination" => $invoice->message->user->stripe_account
-                ));
+                $transaction = new Transaction();
+                $transaction->amount = (int)(90*$invoice->amount());
+                $transaction->user_id = $invoice->user_id;
+                $transaction->description = "Funds for Invoice ID ".$invoice->id;
+                $transaction->direction = 1;
+                $transaction->save();
+
 
             }
             $invoice->status=1;
@@ -1766,11 +1777,12 @@ class HomeController extends BaseController
             $sale->advert->update_fields(['sold'=>1]);
 
             if($sale->type===2){
-                \Stripe\Transfer::create(array(
-                    "amount" => (int)(90*$sale->price()),
-                    "currency" => "gbp",
-                    "destination" => $sale->advert->user->stripe_account
-                ));
+                $transaction = new Transaction();
+                $transaction->amount = (int)(90*$sale->advert->price());
+                $transaction->user_id = $sale->advert->user_id;
+                $transaction->description = "Funds for Order ID ".$sale->id;
+                $transaction->direction = 1;
+                $transaction->save();
 
             }
             $this->notify_sale($sale);
