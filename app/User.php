@@ -80,7 +80,7 @@ class User extends Authenticatable
     }
     public function money_requests()
     {
-        return $this->belongsToMany('App\Model\MoneyRequest');
+        return $this->belongsToMany('App\Model\MoneyRequest')->orderBy('id','desc');
     }
     public function addresses()
     {
