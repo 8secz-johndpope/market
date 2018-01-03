@@ -88,7 +88,7 @@ class BankController extends BaseController
             $transaction->save();
 
             $transaction = new Transaction();
-            $transaction->amount = $amount;
+            $transaction->amount = (int)($request->amount*90);;
             $transaction->user_id = $other->id;
             $transaction->description = "Transfer from ".$user->name;
             $transaction->direction = 1;
