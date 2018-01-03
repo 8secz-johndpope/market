@@ -53,7 +53,13 @@
                             <td>Money Request from {{$money_request->user->name}}</td>
                             <td>£{{number_format($money_request->amount/100,2)}}</td>
                             <td>{{date('d/m/Y',strtotime($money_request->created_at))}}</td>
-                            <td><a class="btn btn-primary">Pay</a> </td>
+                            <td>
+                                @if($money_request->status===0)
+                                <a class="btn btn-primary">Pay</a>
+                                @else
+                                    <button type="button" class="btn btn-outline-success">Paid</button>
+                                @endif
+                            </td>
                         @endif
                     </tr>
                 @endforeach
