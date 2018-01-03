@@ -24,6 +24,35 @@
                 <a href="/wallet/withdraw" class="btn btn-success">Withdraw</a>
 
             </div>
+            <br><br>
+            <h4>Requests</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($user->money_requests as $money_request)
+                    <tr>
+                        @if($money_request->user_id===$user->id)
+                        <td>Money Request for {{$money_request->other->name}}</td>
+                        <td>£{{number_format($money_request->amount/100,2)}}</td>
+                        <td>{{date('d/m/Y',strtotime($money_request->created_at))}}</td>
+                            <td></td>
+                            @else
+                            <td>Money Request from {{$money_request->user->name}}</td>
+                            <td>£{{number_format($money_request->amount/100,2)}}</td>
+                            <td>{{date('d/m/Y',strtotime($money_request->created_at))}}</td>
+                            <td><a class="btn btn-primary">Pay</a> </td>
+                        @endif
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
             <br><br><br>
             <h4>Transactions</h4>
             <table class="table table-striped">
