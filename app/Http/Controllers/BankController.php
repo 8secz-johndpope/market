@@ -40,6 +40,40 @@ class BankController extends BaseController
         }
         return view('bank.withdraw',['user'=>$user,'accounts'=>$accounts]);
     }
+    public function withdraw_money(Request $request){
+        $user=Auth::user();
+        $bank = $request->account;
+        $amount = (int)($request->amount * 90);
+        $transaction = new Transaction();
+        $transaction->amount = $request->amount*100;
+        $transaction->user_id = $user->id;
+        $transaction->description = "Bank Account Withdrawal";
+        $transaction->direction = 0;
+        $transaction->save();
+        \Stripe\Transfer::create(array(
+            "amount" => $amount,
+            "currency" => "gbp",
+            "destination" => $user->stripe_account
+        ));
+
+        \Stripe\Stripe::setApiKey($user->sk_key);
+        try {
+            \Stripe\Payout::create(array(
+                "amount" => $amount,
+                "currency" => "gbp",
+                "destination" => $bank
+            ));
+
+
+        } catch (\Exception $e) {
+            return [
+                'success' => false,
+                'res'=>$e,
+                'result' => 'error withdrawing'
+            ];
+        }
+        return redirect('/wallet/dashboard');
+    }
     public function send_money(Request $request){
         $user=Auth::user();
         $other = User::find($request->id);
@@ -60,8 +94,6 @@ class BankController extends BaseController
             $transaction->direction = 1;
             $transaction->save();
         }
-
-
         return redirect('/wallet/dashboard');
     }
     public function transfer_balance(Request $request,$id){

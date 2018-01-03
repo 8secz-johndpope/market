@@ -17,7 +17,7 @@
         </div>
         <div class="col-sm-6">
             <br><br><br>
-            <form method="post" action="/wallet/send/money">
+            <form method="post" action="/wallet/withdraw/money">
                 <div class="form-group row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Amount</label>
                     <div class="col-sm-10">
