@@ -21,7 +21,7 @@
             <div style="margin: auto;    width: 400px;">
                 <a href="/wallet/send" class="btn btn-primary">Send Money</a>
                 <a class="btn btn-secondary">Receive Money</a>
-                <a class="btn btn-success">Withdraw</a>
+                <a href="/wallet/withdraw" class="btn btn-success">Withdraw</a>
 
             </div>
             <br><br><br>
