@@ -1582,6 +1582,7 @@ class HomeController extends BaseController
         $stripe_id = $user->stripe_id;
         $card = $request->card;
         $sale->type=$request->type;
+        $sale->save();
         $description = 'Payment towards to Order id '.$sale->id;
         try {
             if($sale->amount_in_pence()>0){
@@ -1748,7 +1749,8 @@ class HomeController extends BaseController
     public function sale_paypal(Request $request,$id){
         $user = Auth::user();
         $sale=Sale::find($id);
-
+        $sale->type=$request->type;
+        $sale->save();
         $gateway = new \Braintree\Gateway(array(
             'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
         ));
@@ -1767,7 +1769,6 @@ class HomeController extends BaseController
                 ]);
             }
             $sale->status=1;
-            $sale->type=$request->type;
 
             if($request->has('delivery_address'))
                 $sale->address_id=$request->delivery_address;
