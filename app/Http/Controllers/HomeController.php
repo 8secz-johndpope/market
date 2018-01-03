@@ -1609,6 +1609,8 @@ class HomeController extends BaseController
                      $sale->save();
             $sale->advert->update_fields(['sold'=>1]);
 
+            return $sale->type;
+
             if($sale->type===2){
                 $transaction = new Transaction();
                 $transaction->amount = (int)(90*$sale->advert->price());
