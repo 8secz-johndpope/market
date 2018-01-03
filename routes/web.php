@@ -62,6 +62,7 @@ Route::post('/wallet/send/money', 'BankController@send_money');
 Route::post('/wallet/request/money', 'BankController@request_money');
 Route::post('/wallet/withdraw/money', 'BankController@withdraw_money');
 Route::get('/wallet/request/{id}', 'BankController@request_balance');
+Route::get('/wallet/pay/request/{id}', 'BankController@pay_request');
 
 Route::get('/wallet/withdraw', 'BankController@withdraw');
 
