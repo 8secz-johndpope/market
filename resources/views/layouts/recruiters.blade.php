@@ -381,6 +381,16 @@
                                 </div>
                                 <div class="list-menu-common">
                                     <div class="title-list">
+                                        <span class="nav-link nav-color">sWallet</span>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="nav-link nav-color" href="#">Balance</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="list-menu-common">
+                                    <div class="title-list">
                                         <span class="nav-link nav-color">Our Offers</span>
                                     </div>
                                     <ul>
