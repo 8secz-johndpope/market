@@ -78,6 +78,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Model\Room')->orderBy('updated_at','desc');
     }
+    public function money_requests()
+    {
+        return $this->belongsToMany('App\Model\MoneyRequest');
+    }
     public function addresses()
     {
         return $this->hasMany('App\Model\Address')->orderBy('id','desc');
