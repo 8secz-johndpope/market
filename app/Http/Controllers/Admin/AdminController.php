@@ -9,6 +9,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\BaseController;
 use App\Model\Category;
+use App\Model\Commission;
 use App\Model\Location;
 use App\Model\Price;
 use App\Model\Role;
@@ -30,6 +31,12 @@ class AdminController extends BaseController
         $prices = Price::all();
 
         return view('admin.packs',['prices'=>$prices]);
+    }
+    public function commissions(Request $request){
+        $commissions = Commission::all();
+
+        return view('admin.commissions',['commissions'=>$commissions]);
+
     }
     public function pricegroup(Request $request){
         $prices = Price::all();

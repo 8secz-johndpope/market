@@ -302,4 +302,7 @@ Route::namespace('Admin')->group(function () {
     Route::get('/admin/manage/packs', 'AdminController@packs')->middleware('admin');
     Route::get('/admin/manage/pricegroup', 'AdminController@pricegroup')->middleware('admin');
     Route::get('/admin/manage/role', 'AdminController@iam')->middleware('admin');
+
+    Route::get('/admin/manage/commissions', 'AdminController@commissions')->middleware('admin');
+
 });
