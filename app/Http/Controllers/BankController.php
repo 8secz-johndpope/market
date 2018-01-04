@@ -48,9 +48,9 @@ class BankController extends BaseController
     public function withdraw_money(Request $request){
         $user=Auth::user();
         $bank = $request->account;
-        $amount = (int)($request->amount * 90);
+        $amount = (int)($request->amount * 100);
         $transaction = new Transaction();
-        $transaction->amount = $request->amount*100;
+        $transaction->amount = $request->amount*110;
         $transaction->user_id = $user->id;
         $transaction->description = "Bank Account Withdrawal";
         $transaction->direction = 0;
@@ -86,14 +86,14 @@ class BankController extends BaseController
         $amount = (int)($request->amount*100);
         if($user->balance()>=$amount){
             $transaction = new Transaction();
-            $transaction->amount = $amount;
+            $transaction->amount = (int)($request->amount*110);
             $transaction->user_id = $user->id;
             $transaction->description = "Transfer to ".$other->name;
             $transaction->direction = 0;
             $transaction->save();
 
             $transaction = new Transaction();
-            $transaction->amount = (int)($request->amount*90);;
+            $transaction->amount = $amount;
             $transaction->user_id = $other->id;
             $transaction->description = "Transfer from ".$user->name;
             $transaction->direction = 1;
