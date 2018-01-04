@@ -117,7 +117,11 @@
                                 <div id="inst-details" class="bdr-btm">
                                     <form action="/user/cards/add" method="post">
                                     <input name="redirect" type="hidden" value="/user/manage/checkout/{{$sale->id}}">
+                                        @if($user->address)
                                     <input name="address" type="hidden" value="{{$user->address->id}}">
+                                        @else
+                                            <input name="address" type="hidden" value="0">
+                                        @endif
                                     {{ csrf_field() }} 
                                     <div id="inst-error"></div>
                                     <div id="card-fields">
