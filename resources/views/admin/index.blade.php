@@ -16,7 +16,9 @@
         </div>
         <div class="col-sm-6">
             <br><br><br>
-            <a href="/admin/manage/commissions" class="btn btn-primary">Commissions</a>
+            <a href="/admin/manage/commissions" class="btn btn-primary">Commissions</a>             <a href="/admin" class="btn btn-primary">Users</a>
+            <a href="/admin" class="btn btn-primary">Contracts</a>
+
         </div>
     </div>
 
