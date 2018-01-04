@@ -5,6 +5,7 @@ use App\Mail\AccountCreated;
 use App\Model\Address;
 use App\Model\Application;
 use App\Model\Business;
+use App\Model\Commission;
 use App\Model\Contact;
 use App\Model\Cover;
 use App\Model\Cv;
@@ -1527,6 +1528,11 @@ class HomeController extends BaseController
         $transaction->direction = 1;
         $transaction->save();
 
+        $commission = new Commission();
+        $commission->description = 'Commission from Sale with ID '.$transaction->id;
+        $commission->amount = (int)(10*$sale->advert->price());
+        $commission->save();
+
         $sale->save();
         return redirect('/user/manage/orders');
     }
@@ -1545,6 +1551,12 @@ class HomeController extends BaseController
         $transaction->description = "Funds for Order ID ".$sale->id;
         $transaction->direction = 1;
         $transaction->save();
+
+        $commission = new Commission();
+        $commission->description = 'Commission from Sale with ID '.$transaction->id;
+        $commission->amount = (int)(10*$sale->advert->price());
+        $commission->save();
+
         $sale->save();
         return redirect('/user/manage/orders');
     }
@@ -1573,6 +1585,12 @@ class HomeController extends BaseController
         $transaction->description = "Funds for Order ID ".$sale->id;
         $transaction->direction = 1;
         $transaction->save();
+
+        $commission = new Commission();
+        $commission->description = 'Commission from Sale with ID '.$transaction->id;
+        $commission->amount = (int)(10*$sale->advert->price());
+        $commission->save();
+
         $sale->save();
         return redirect('/user/manage/orders');
     }
@@ -1684,6 +1702,11 @@ class HomeController extends BaseController
                 $transaction->description = "Funds for Invoice ID ".$invoice->id;
                 $transaction->direction = 1;
                 $transaction->save();
+
+                $commission = new Commission();
+                $commission->description = 'Commission from Invoice with ID '.$transaction->id;
+                $commission->amount = (int)(90*$invoice->amount());
+                $commission->save();
             }
             $invoice->status=1;
 
@@ -1743,7 +1766,10 @@ class HomeController extends BaseController
                 $transaction->direction = 1;
                 $transaction->save();
 
-
+                $commission = new Commission();
+                $commission->description = 'Commission from Invoice with ID '.$transaction->id;
+                $commission->amount = (int)(90*$invoice->amount());
+                $commission->save();
             }
             $invoice->status=1;
 
@@ -1811,6 +1837,10 @@ class HomeController extends BaseController
                 $transaction->direction = 1;
                 $transaction->save();
 
+                $commission = new Commission();
+                $commission->description = 'Commission from Sale with ID '.$transaction->id;
+                $commission->amount = (int)(10*$sale->advert->price());
+                $commission->save();
             }
             $this->notify_sale($sale);
 
