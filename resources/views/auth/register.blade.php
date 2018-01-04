@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="/build/css/intlTelInput.css">
+<script src="/build/js/intlTelInput.js"></script>
 <div class="body">
     <div class="container">
         <div class="row">
@@ -135,7 +137,7 @@
                                 <label for="code" class="col-md-4 control-label">Referral Code (Optional)</label>
 
                                 <div class="col-md-6">
-                                    <input id="code" type="text" placeholder="mike-h43043kfd" class="form-control" name="code" value="{{ old('code') }}"  autofocus>
+                                    <input id="code" type="tel" placeholder="mike-h43043kfd" class="form-control" name="code" value="{{ old('code') }}"  autofocus>
 
                                     @if ($errors->has('code'))
                                         <span class="help-block">
@@ -167,5 +169,7 @@
 
 
     }
+    $("#phone").intlTelInput();
+
 </script>
 @endsection
