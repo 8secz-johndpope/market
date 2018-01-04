@@ -34,8 +34,8 @@ class AdminController extends BaseController
     }
     public function commissions(Request $request){
         $commissions = Commission::all();
-
-        return view('admin.commissions',['commissions'=>$commissions]);
+        $total = Commission::sum('amount');
+        return view('admin.commissions',['commissions'=>$commissions,'total'=>$total]);
 
     }
     public function pricegroup(Request $request){

@@ -15,7 +15,8 @@
         <div class="col-sm-3">
         </div>
         <div class="col-sm-6">
-
+            <br><br><br>
+            <h4 style="text-align: center">Total: £{{number_format($total/100,2)}}</h4>
             <br><br><br>
             <h4>Commissions</h4>
             <table class="table table-striped">
