@@ -1576,6 +1576,19 @@ class HomeController extends BaseController
         $sale->save();
         return redirect('/user/manage/orders');
     }
+    public function update_offer($user){
+        if($user->offered===0&&$user->refferred_code!==''){
+            $other = User::where('referral_code',$user->refferred_code)->first();
+            $transaction = new Transaction();
+            $transaction->amount = 300;
+            $transaction->user_id = $other->id;
+            $transaction->description = "Referral Credit from ".$other->name;
+            $transaction->direction = 1;
+            $transaction->save();
+            $user->offered=1;
+            $user->save();
+        }
+    }
     public function sale_stripe(Request $request,$id){
         $user = Auth::user();
         $sale=Sale::find($id);
@@ -1593,6 +1606,7 @@ class HomeController extends BaseController
                     "source" => $card, // obtained with Stripe.js
                     "description" => $description
                 ));
+               $this->update_offer($user);
             }
             $sale->status=1;
             /*if($sale->type == 0){
@@ -1654,6 +1668,8 @@ class HomeController extends BaseController
                     "source" => $card, // obtained with Stripe.js
                     "description" => $description
                 ));
+                $this->update_offer($user);
+
             }
 
             if($invoice->type===0){
@@ -1710,6 +1726,8 @@ class HomeController extends BaseController
                         'submitForSettlement' => True
                     ]
                 ]);
+                $this->update_offer($user);
+
             }
 
             if($invoice->type===0){
@@ -1768,6 +1786,8 @@ class HomeController extends BaseController
                         'submitForSettlement' => True
                     ]
                 ]);
+                $this->update_offer($user);
+
             }
             $sale->status=1;
 
@@ -1817,6 +1837,8 @@ class HomeController extends BaseController
                         'submitForSettlement' => True
                     ]
                 ]);
+                $this->update_offer($user);
+
             }
 
             if($order->type==='contract'){
