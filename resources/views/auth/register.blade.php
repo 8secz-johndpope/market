@@ -130,7 +130,19 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group{{ $errors->has('code') ? ' has-error' : '' }}">
+                            <label for="code" class="col-md-4 control-label">Referral Code (Optional)</label>
 
+                            <div class="col-md-6">
+                                <input id="code" type="text" placeholder="mike-h43043kfd" class="form-control" name="code" value="{{ old('code') }}"  autofocus>
+
+                                @if ($errors->has('code'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('code') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary g-recaptcha"   data-callback="onSubmit"    data-sitekey="6Le7jzMUAAAAAERoH4JkYtt4pE8KASg0qTY7MwRt">
