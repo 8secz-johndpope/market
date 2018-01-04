@@ -1632,6 +1632,11 @@ class HomeController extends BaseController
                 $transaction->direction = 1;
                 $transaction->save();
 
+                $commission = new Commission();
+                $commission->description = 'Commission from Sale with ID '.$transaction->id;
+                $commission->amount = (int)(10*$sale->advert->price());
+                $commission->save();
+
             }
             $this->notify_sale($sale);
 

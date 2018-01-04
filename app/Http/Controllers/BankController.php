@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use App\Model\Commission;
 use App\Model\MoneyRequest;
 use App\Model\Transaction;
 use App\User;
@@ -55,6 +56,12 @@ class BankController extends BaseController
         $transaction->description = "Bank Account Withdrawal";
         $transaction->direction = 0;
         $transaction->save();
+
+        $commission = new Commission();
+        $commission->description = 'Commission from Bank Withdrawal with ID '.$transaction->id;
+        $commission->amount = $request->amount * 10;
+        $commission->save();
+
         \Stripe\Transfer::create(array(
             "amount" => $amount,
             "currency" => "gbp",
@@ -98,6 +105,12 @@ class BankController extends BaseController
             $transaction->description = "Transfer from ".$user->name;
             $transaction->direction = 1;
             $transaction->save();
+
+            $commission = new Commission();
+            $commission->description = 'Commission from Sending Money with ID '.$transaction->id;
+            $commission->amount = $request->amount * 10;
+            $commission->save();
+
         }
         return redirect('/wallet/dashboard');
     }
@@ -145,6 +158,12 @@ class BankController extends BaseController
             $transaction->save();
             $money_request->status=1;
             $money_request->save();
+
+            $commission = new Commission();
+            $commission->description = 'Commission from Payment Request with ID '.$transaction->id;
+            $commission->amount = (int)($money_request->amount*0.1) ;
+            $commission->save();
+
         }
         return redirect('/wallet/dashboard');
     }
