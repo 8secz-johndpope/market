@@ -17,7 +17,7 @@
         <div class="col-sm-6">
 
             <br><br><br>
-            <h4>Transactions</h4>
+            <h4>Commissions</h4>
             <table class="table table-striped">
                 <thead>
                 <tr>
