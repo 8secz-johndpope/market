@@ -2,6 +2,7 @@
 
 @section('content')
 <link rel="stylesheet" href="/build/css/intlTelInput.css">
+<link rel="stylesheet" href="/css/register.css">
 <script src="/build/js/intlTelInput.js"></script>
 <div class="body">
     <div class="container">

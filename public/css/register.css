@@ -1,0 +1,6 @@
+.intl-tel-input.allow-dropdown input[type=text] {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding-left: 10px;
+    border-left: 0;
+}
