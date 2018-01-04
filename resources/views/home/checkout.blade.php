@@ -199,12 +199,14 @@
                     <div class="postage-address">
                         <div class="main-pa">
                             <div class="main-pa-inf col-l-p">
+                                @if($user->address)
                                 <div>
                                     <div>{{$user->name}}</div>
                                     <div>{{$user->address->line1}}</div>
                                     <div>{{$user->address->city}} {{$user->address->postcode}}</div>
                                     <div>United Kingdom</div>
                                 </div>
+                                @endif
                                 <div id="sa-change-link">
                                     <a href="javascript:;">Change</a>
                                 </div>
