@@ -32,6 +32,12 @@ class AdminController extends BaseController
 
         return view('admin.packs',['prices'=>$prices]);
     }
+    public function index(Request $request){
+        $user = Auth::user();
+
+
+        return view('admin.index',[]);
+    }
     public function commissions(Request $request){
         $commissions = Commission::all();
         $total = Commission::sum('amount');
