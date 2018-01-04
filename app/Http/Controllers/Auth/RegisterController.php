@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\BaseController;
 use App\Mail\AccountCreated;
 use App\Model\EmailCode;
+use App\Model\Transaction;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
@@ -89,6 +90,12 @@ class RegisterController extends BaseController
             $user->refferred_code = $data['code'];
         }
         $user->save();
+        $transaction = new Transaction();
+        $transaction->amount = 500;
+        $transaction->user_id = $user->id;
+        $transaction->description = "Registration Credit";
+        $transaction->direction = 1;
+        $transaction->save();
         $acc = new AccountCreated();
         $verify = new EmailCode;
         $verify->user_id = $user->id;
