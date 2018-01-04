@@ -17,7 +17,9 @@
         <div class="col-sm-6">
             <br><br><br>
             <h4 style="text-align: center">Your Balance: £{{number_format($user->balance()/100,2)}}</h4>
-            <br><br><br>
+            <br>
+            <p style="text-align: center"><strong>Need some cash? Your referral code is <span style="color: green">{{$user->referral_code}}</span> Share with your friends, you get £3 for each friend you introduce </strong></p>
+            <br>
             <div style="margin: auto;    width: 400px;">
                 <a href="/wallet/send" class="btn btn-primary">Send Money</a>
                 <a href="/wallet/request" class="btn btn-secondary">Receive Money</a>
