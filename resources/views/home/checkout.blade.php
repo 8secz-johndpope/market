@@ -382,8 +382,13 @@
                             {{ csrf_field() }}
                             <input name="nonce" value="xyz" type="hidden" id="nonce">
                             <input type="hidden" name="type" id="type" value="2">
+                            @if($user->address)
                             <input type="hidden" name="shipping_address" id="shipping_address" value="{{$user->address->id}}">
                             <input type="hidden" name="billing_address" id="billing_address" value="{{$user->address->id}}">
+                                @else
+                                <input type="hidden" name="shipping_address" id="shipping_address" value="0">
+                                <input type="hidden" name="billing_address" id="billing_address" value="0">
+                            @endif
                             @if($def)
                             <input type="hidden" name="card" id="card" value="{{$def->id}}">
                             @else
