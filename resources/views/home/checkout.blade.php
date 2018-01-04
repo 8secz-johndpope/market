@@ -384,7 +384,11 @@
                             <input type="hidden" name="type" id="type" value="2">
                             <input type="hidden" name="shipping_address" id="shipping_address" value="{{$user->address->id}}">
                             <input type="hidden" name="billing_address" id="billing_address" value="{{$user->address->id}}">
+                            @if($def)
                             <input type="hidden" name="card" id="card" value="{{$def->id}}">
+                            @else
+                                <input type="hidden" name="card" id="card" value="0">
+                            @endif
                             <button type="submit" class="btn btn-submit">Confirm and pay</button>
                         </form>
                     </div>
