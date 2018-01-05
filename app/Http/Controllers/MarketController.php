@@ -28,6 +28,7 @@ use Illuminate\View\View;
 use App\Model\Categories;
 use App\Model\Invoice;
 use App\Model\InvoiceItem;
+use Illuminate\Support\Facades\Mail;
 
 class MarketController extends BaseController
 {
