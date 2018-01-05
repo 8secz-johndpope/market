@@ -104,6 +104,7 @@ Route::get('/user/manage/messages/{rid}', 'MessageController@gmessages');
 Route::get('/user/manage/rooms/{id}/{ch}', 'MessageController@rooms');
 Route::get('/user/manage/msgs/{id}', 'MessageController@msgs');
 
+Route::get('/invite/all', 'MessageController@invite_all');
 Route::get('/invite/contact/{id}', 'MessageController@invite_contact');
 
 Route::get('/user/message/push','MessageController@push');

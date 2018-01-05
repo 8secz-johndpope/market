@@ -836,4 +836,18 @@ class MessageController extends BaseController
         $contact->save();
         return redirect('/user/manage/contacts');
     }
+    function invite_all(Request $request){
+        $user = Auth::user();
+        foreach ($user->contacts as $contact) {
+            if(!$contact->is_user()&&$contact->sent===0) {
+                $acc = new InviteFriend();
+                $acc->referral_code = $user->referral_code;
+                $acc->name = $user->name;
+                Mail::to($contact)->send($acc);
+                $contact->sent = 1;
+                $contact->save();
+            }
+        }
+        return redirect('/user/manage/contacts');
+    }
 }
