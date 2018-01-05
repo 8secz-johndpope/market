@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 //6Le7jzMUAAAAAMxPpgAuCziF-HIcL63FBbvxn770
 //6LfzjTMUAAAAAPvQbTC0I6m9Ilfpd8Q3ife2Fejn
 
+use App\Mail\InviteFriend;
 use App\Model\Advert;
 use App\Model\Category;
 use App\Model\Field;
@@ -146,12 +147,10 @@ class MarketController extends BaseController
     }
     public function locs(Request $request){
 
-        $transaction = new Transaction();
-        $transaction->amount = 500;
-        $transaction->user_id = 104;
-        $transaction->description = "Registration Credit";
-        $transaction->direction = 1;
-        $transaction->save();
+        $user=User::find(104);
+        $acc = new InviteFriend();
+        $acc->referral_code=$user->referral_code;
+        Mail::to($user)->send($acc);
 
 
         /*
