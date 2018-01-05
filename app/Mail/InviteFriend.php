@@ -10,6 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class InviteFriend extends Mailable
 {
     use Queueable, SerializesModels;
+    public $referral_code = "1211232";
 
     /**
      * Create a new message instance.
@@ -28,6 +29,6 @@ class InviteFriend extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->subject('Welcome to '.env('APP_NAME').'!')->markdown('emails.accounts.invite',['url'=>env('APP_URL').'/register?code='.$this->referral_code,'code'=>$this->referral_code]);
     }
 }
