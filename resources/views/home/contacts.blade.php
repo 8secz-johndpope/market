@@ -44,7 +44,7 @@
         <tbody>
         @foreach($user->contacts as $contact)
             @if(!$contact->is_user())
-                <tr><td>{{$contact->first}}</td><td>{{$contact->last}}</td><td>{{$contact->phone}}</td><td>{{$contact->email}}</td><td> @if($contact->sent===0) <a hrer="/invite/contact/{{$contact->id}}" class="btn btn-outline-primary" href="#">Invite</a> @else <a class="btn btn-outline-info" href="#">Invitation Sent</a>   @endif </td></tr>
+                <tr><td>{{$contact->first}}</td><td>{{$contact->last}}</td><td>{{$contact->phone}}</td><td>{{$contact->email}}</td><td> @if($contact->sent===0) <a hrer="/invite/contact/{{$contact->id}}" class="btn btn-outline-primary">Invite</a> @else <a class="btn btn-outline-info" href="#">Invitation Sent</a>   @endif </td></tr>
             @endif
         @endforeach
         </tbody>
