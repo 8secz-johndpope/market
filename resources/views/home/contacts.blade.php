@@ -15,6 +15,7 @@
         <div class="col-sm-1">
         </div>
         <div class="col-sm-10">
+            <br><br>
     <a class="btn btn-primary" href="/user/contacts/add">Add Contact</a>
     <a class="btn btn-success" href="/user/groups/create">New Group</a>
 
