@@ -30,6 +30,6 @@ class InviteFriend extends Mailable
      */
     public function build()
     {
-        return $this->subject('Invitation to join '.env('APP_NAME').'! from'.$this->name)->markdown('emails.accounts.invite',['url'=>env('APP_URL').'/register?code='.$this->referral_code,'code'=>$this->referral_code]);
+        return $this->subject('Invitation to join '.env('APP_NAME').'! from '.$this->name)->markdown('emails.accounts.invite',['url'=>env('APP_URL').'/register?code='.$this->referral_code,'code'=>$this->referral_code]);
     }
 }
