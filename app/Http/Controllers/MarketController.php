@@ -151,6 +151,7 @@ class MarketController extends BaseController
         $user=User::find(104);
         $acc = new InviteFriend();
         $acc->referral_code=$user->referral_code;
+        $acc->name = $user->name;
         Mail::to($user)->send($acc);
 
 
