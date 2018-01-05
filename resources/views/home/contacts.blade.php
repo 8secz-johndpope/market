@@ -30,8 +30,9 @@
             @if($contact->is_user())
             <tr><td>{{$contact->first}}</td><td>{{$contact->last}}</td><td>{{$contact->phone}}</td><td>{{$contact->email}}</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/direct/message/{{$contact->uid()}}">Send Message</a> @else <a class="btn btn-outline-primary" href="#">Invite</a> @endif</td><td>@if($contact->is_user())<a class="btn btn-primary" href="/user/direct/invoice/{{$contact->uid()}}">Send Invoice</a> @else  @endif</td></tr>
             @endif
-        </tbody>
                 @endforeach
+        </tbody>
+
     </table>
 
 
