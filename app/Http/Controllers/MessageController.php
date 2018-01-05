@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use App\Mail\InviteFriend;
 use App\Model\Advert;
 use App\Model\Application;
 use App\Model\Contact;
