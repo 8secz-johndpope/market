@@ -2,7 +2,7 @@
 
 @extends('layouts.next')
 
-@section('title', 'Page Title')
+@section('title', 'Contacts')
 
 @section('sidebar')
     @parent
