@@ -18,29 +18,33 @@ class Contact extends Model
         return $this->belongsTo('App\User');
     }
     public function is_user(){
+        if($this->uid>0)
+            return true;
         $user = User::where('email',$this->email)->first();
-        if($user!==null)
+        if($user!==null){
+
+            $this->uid = $user->id;
+            $this->save();
             return true;
+        }
         $user = User::where('phone',$this->phone)->first();
-        if($user!==null)
+        if($user!==null) {
+            $this->uid = $user->id;
+            $this->save();
             return true;
+        }
 
         return false;
     }
     public function uid(){
-        $user = User::where('email',$this->email)->first();
+        $user = User::find($this->uid);
         if($user!==null)
             return $user->id;
-        $user = User::where('phone',$this->phone)->first();
-        if($user!==null)
-            return $user->id;
+
         return 0;
     }
     public function u(){
-        $user = User::where('email',$this->email)->first();
-        if($user!==null)
-            return $user;
-        $user = User::where('phone',$this->phone)->first();
+        $user = User::find($this->uid);
         if($user!==null)
             return $user;
         return 0;
