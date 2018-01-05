@@ -36,7 +36,7 @@
     </table>
 
 
-    <h4>Invite</h4>
+    <h4>Invite</h4>  <a href="/invite/all" class="btn btn-outline-primary">Invite All</a>
     <table class="table table-striped">
         <thead>
         <tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Email</th><th>Invite</th></tr>
