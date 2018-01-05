@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 use App\Model\Advert;
 use App\Model\Application;
+use App\Model\Contact;
 use App\Model\Direct;
 use App\Model\Message;
 use App\Model\Room;
@@ -821,5 +822,16 @@ class MessageController extends BaseController
         $user->notifications = $request->notify;
         $user->save();
         return ['msg'=>'done'];
+    }
+    function invite_contact(Request $request,$id){
+        $contact=Contact::find($id);
+        $user = Auth::user();
+        $acc = new InviteFriend();
+        $acc->referral_code=$user->referral_code;
+        $acc->name = $user->name;
+        Mail::to($contact)->send($acc);
+        $contact->sent=1;
+        $contact->save();
+        return redirect('/user/manage/contacts');
     }
 }
