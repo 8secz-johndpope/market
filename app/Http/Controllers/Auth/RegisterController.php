@@ -85,7 +85,9 @@ class RegisterController extends BaseController
         $token = $user->createToken('Token Name')->accessToken;
         $user->access_token = $token;
         $user->save();
-        $user->referral_code = uniqid(strtolower($user->name).'-');
+        $letter = chr(rand(97,122));
+        $sixd = rand(100000,999999);
+        $user->referral_code = $user->name.'-'.$sixd.$letter;
         if(isset($data['code'])&&!empty($data['code'])){
             $user->refferred_code = $data['code'];
         }
