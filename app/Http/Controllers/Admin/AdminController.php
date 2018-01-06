@@ -57,7 +57,11 @@ class AdminController extends BaseController
         $ptotal = Transaction::where('user_id',0)->where('type',0)->orderBy('id','desc')->sum('amount');
 
 
-        return view('admin.dashboard',['dtransactions'=>$dtransactions,'etransactions'=>$etransactions,'stransactions'=>$stransactions,'itransactions'=>$itransactions,'ttransactions'=>$ttransactions,'wtransactions'=>$wtransactions,'ptransactions'=>$ptransactions,'dtotal'=>$dtotal,'etotal'=>$etotal,'stotal'=>$stotal,'itotal'=>$itotal,'ttotal'=>$ttotal,'wtotal'=>$wtotal,'ptotal'=>$ptotal]);
+        $income = Transaction::where('user_id',0)->where('direction',0)->orderBy('id','desc')->sum('amount');
+        $expenditure = Transaction::where('user_id',0)->where('direction',1)->orderBy('id','desc')->sum('amount');
+
+
+        return view('admin.dashboard',['income'=>$income,'expenditure'=>$expenditure,'dtransactions'=>$dtransactions,'etransactions'=>$etransactions,'stransactions'=>$stransactions,'itransactions'=>$itransactions,'ttransactions'=>$ttransactions,'wtransactions'=>$wtransactions,'ptransactions'=>$ptransactions,'dtotal'=>$dtotal,'etotal'=>$etotal,'stotal'=>$stotal,'itotal'=>$itotal,'ttotal'=>$ttotal,'wtotal'=>$wtotal,'ptotal'=>$ptotal]);
 
     }
     public function pricegroup(Request $request){
