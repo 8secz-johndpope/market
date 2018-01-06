@@ -1659,10 +1659,15 @@ class HomeController extends BaseController
                 $transaction->direction = 1;
                 $transaction->save();
 
-                $commission = new Commission();
-                $commission->description = 'Commission from Sale with ID '.$transaction->id;
-                $commission->amount = (int)(10*$sale->advert->price());
-                $commission->save();
+
+                $transaction = new Transaction();
+                $transaction->amount = (int)(10*$sale->advert->price());
+                $transaction->user_id = 0;
+                $transaction->description = 'Commission from Sale with ID '.$sale->id;
+                $transaction->type=1;
+                $transaction->direction = 0;
+                $transaction->save();
+
 
             }
             $this->notify_sale($sale);
@@ -1712,10 +1717,14 @@ class HomeController extends BaseController
                 $transaction->direction = 1;
                 $transaction->save();
 
-                $commission = new Commission();
-                $commission->description = 'Commission from Invoice with ID '.$transaction->id;
-                $commission->amount = (int)(90*$invoice->amount());
-                $commission->save();
+                $transaction = new Transaction();
+                $transaction->amount = (int)(10*$invoice->amount());
+                $transaction->user_id = 0;
+                $transaction->description = "Commission from Invoice ID ".$invoice->id;
+                $transaction->type=2;
+                $transaction->direction = 0;
+                $transaction->save();
+
             }
             $invoice->status=1;
 
@@ -1775,10 +1784,13 @@ class HomeController extends BaseController
                 $transaction->direction = 1;
                 $transaction->save();
 
-                $commission = new Commission();
-                $commission->description = 'Commission from Invoice with ID '.$transaction->id;
-                $commission->amount = (int)(90*$invoice->amount());
-                $commission->save();
+                $transaction = new Transaction();
+                $transaction->amount = (int)(10*$invoice->amount());
+                $transaction->user_id = 0;
+                $transaction->description = "Commission from Invoice ID ".$invoice->id;
+                $transaction->type=2;
+                $transaction->direction = 0;
+                $transaction->save();
             }
             $invoice->status=1;
 
@@ -1842,14 +1854,17 @@ class HomeController extends BaseController
                 $transaction = new Transaction();
                 $transaction->amount = (int)(90*$sale->advert->price());
                 $transaction->user_id = $sale->advert->user_id;
-                $transaction->description = "Funds for Order ID ".$sale->id;
+                $transaction->description = "Funds for Sale ID ".$sale->id;
                 $transaction->direction = 1;
                 $transaction->save();
 
-                $commission = new Commission();
-                $commission->description = 'Commission from Sale with ID '.$transaction->id;
-                $commission->amount = (int)(10*$sale->advert->price());
-                $commission->save();
+                $transaction = new Transaction();
+                $transaction->amount = (int)(10*$sale->advert->price());
+                $transaction->user_id = 0;
+                $transaction->description = "Commission from Sale ID ".$sale->id;
+                $transaction->type=1;
+                $transaction->direction = 0;
+                $transaction->save();
             }
             $this->notify_sale($sale);
 
