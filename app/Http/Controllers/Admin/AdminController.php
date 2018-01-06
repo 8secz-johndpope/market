@@ -104,7 +104,7 @@ class AdminController extends BaseController
 
     }
     public function users(Request $request){
-        $users = User::paginate(20);
+        $users = User::orderBy('id','desc')->paginate(20);
         $total = User::count();
         return view('admin.users',['users'=>$users,'total'=>$total]);
     }
