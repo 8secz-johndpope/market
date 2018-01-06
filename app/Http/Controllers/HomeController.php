@@ -1553,10 +1553,13 @@ class HomeController extends BaseController
         $transaction->direction = 1;
         $transaction->save();
 
-        $commission = new Commission();
-        $commission->description = 'Commission from Sale with ID '.$transaction->id;
-        $commission->amount = (int)(10*$sale->advert->price());
-        $commission->save();
+        $transaction = new Transaction();
+        $transaction->amount = (int)(10*$sale->advert->price());
+        $transaction->user_id = 0;
+        $transaction->description = 'Commission from Sale with ID '.$sale->id;
+        $transaction->type=1;
+        $transaction->direction = 0;
+        $transaction->save();
 
         $sale->save();
         return redirect('/user/manage/orders');
@@ -1577,10 +1580,13 @@ class HomeController extends BaseController
         $transaction->direction = 1;
         $transaction->save();
 
-        $commission = new Commission();
-        $commission->description = 'Commission from Sale with ID '.$transaction->id;
-        $commission->amount = (int)(10*$sale->advert->price());
-        $commission->save();
+        $transaction = new Transaction();
+        $transaction->amount = (int)(10*$sale->advert->price());
+        $transaction->user_id = 0;
+        $transaction->description = 'Commission from Sale with ID '.$sale->id;
+        $transaction->type=1;
+        $transaction->direction = 0;
+        $transaction->save();
 
         $sale->save();
         return redirect('/user/manage/orders');
@@ -1611,10 +1617,13 @@ class HomeController extends BaseController
         $transaction->direction = 1;
         $transaction->save();
 
-        $commission = new Commission();
-        $commission->description = 'Commission from Sale with ID '.$transaction->id;
-        $commission->amount = (int)(10*$sale->advert->price());
-        $commission->save();
+        $transaction = new Transaction();
+        $transaction->amount = (int)(10*$sale->advert->price());
+        $transaction->user_id = 0;
+        $transaction->description = 'Commission from Sale with ID '.$sale->id;
+        $transaction->type=1;
+        $transaction->direction = 0;
+        $transaction->save();
 
         $sale->save();
         return redirect('/user/manage/orders');

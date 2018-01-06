@@ -51,14 +51,14 @@ class BankController extends BaseController
         $bank = $request->account;
         $amount = (int)($request->amount * 100);
         $transaction = new Transaction();
-        $transaction->amount = $request->amount*110;
+        $transaction->amount = $amount + 500;
         $transaction->user_id = $user->id;
         $transaction->description = "Bank Account Withdrawal";
         $transaction->direction = 0;
         $transaction->save();
 
         $transaction = new Transaction();
-        $transaction->amount = (int)($request->amount*10);
+        $transaction->amount = 500;
         $transaction->user_id = 0;
         $transaction->type = 4;
         $transaction->description = 'Commission from Bank Withdrawal with ID '.$transaction->id;
@@ -96,7 +96,7 @@ class BankController extends BaseController
         $amount = (int)($request->amount*100);
         if($user->balance()>=$amount){
             $transaction = new Transaction();
-            $transaction->amount = (int)($request->amount*110);
+            $transaction->amount = $amount + 500;
             $transaction->user_id = $user->id;
             $transaction->description = "Transfer to ".$other->name;
             $transaction->direction = 0;
@@ -111,7 +111,7 @@ class BankController extends BaseController
 
 
             $transaction = new Transaction();
-            $transaction->amount = (int)($request->amount*10);
+            $transaction->amount = 500;
             $transaction->user_id = 0;
             $transaction->type = 3;
             $transaction->description = 'Commission from Sending Money with ID '.$transaction->id;
@@ -153,7 +153,7 @@ class BankController extends BaseController
         $money_request = MoneyRequest::find($id);
         if($user->balance()>=$money_request->amount*1.1){
             $transaction = new Transaction();
-            $transaction->amount = (int)($money_request->amount*1.1) ;
+            $transaction->amount = (int)($money_request->amount) + 500 ;
             $transaction->user_id = $user->id;
             $transaction->description = "Transfer to ".$money_request->user->name;
             $transaction->direction = 0;
@@ -170,7 +170,7 @@ class BankController extends BaseController
 
 
             $transaction = new Transaction();
-            $transaction->amount = (int)($money_request->amount*0.1) ;
+            $transaction->amount = 500;
             $transaction->user_id = 0;
             $transaction->type = 3;
             $transaction->description = 'Commission from Sending Money with ID '.$transaction->id;
