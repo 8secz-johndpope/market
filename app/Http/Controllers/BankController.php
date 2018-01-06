@@ -57,10 +57,13 @@ class BankController extends BaseController
         $transaction->direction = 0;
         $transaction->save();
 
-        $commission = new Commission();
-        $commission->description = 'Commission from Bank Withdrawal with ID '.$transaction->id;
-        $commission->amount = $request->amount * 10;
-        $commission->save();
+        $transaction = new Transaction();
+        $transaction->amount = (int)($request->amount*10);
+        $transaction->user_id = 0;
+        $transaction->type = 4;
+        $transaction->description = 'Commission from Bank Withdrawal with ID '.$transaction->id;
+        $transaction->direction = 0;
+        $transaction->save();
 
         \Stripe\Transfer::create(array(
             "amount" => $amount,
@@ -106,10 +109,16 @@ class BankController extends BaseController
             $transaction->direction = 1;
             $transaction->save();
 
-            $commission = new Commission();
-            $commission->description = 'Commission from Sending Money with ID '.$transaction->id;
-            $commission->amount = $request->amount * 10;
-            $commission->save();
+
+            $transaction = new Transaction();
+            $transaction->amount = (int)($request->amount*10);
+            $transaction->user_id = 0;
+            $transaction->type = 3;
+            $transaction->description = 'Commission from Sending Money with ID '.$transaction->id;
+            $transaction->direction = 0;
+            $transaction->save();
+
+
 
         }
         return redirect('/wallet/dashboard');
@@ -158,11 +167,15 @@ class BankController extends BaseController
             $transaction->save();
             $money_request->status=1;
             $money_request->save();
+            
 
-            $commission = new Commission();
-            $commission->description = 'Commission from Payment Request with ID '.$transaction->id;
-            $commission->amount = (int)($money_request->amount*0.1) ;
-            $commission->save();
+            $transaction = new Transaction();
+            $transaction->amount = (int)($money_request->amount*0.1) ;
+            $transaction->user_id = 0;
+            $transaction->type = 3;
+            $transaction->description = 'Commission from Sending Money with ID '.$transaction->id;
+            $transaction->direction = 0;
+            $transaction->save();
 
         }
         return redirect('/wallet/dashboard');
