@@ -45,7 +45,7 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->phone}}</td>
-                        <td><a class="btn btn-danger">Disable</a> </td>
+                        <td><a href="/admin" class="btn btn-danger">Disable</a> </td>
                     </tr>
                 @endforeach
                 </tbody>
