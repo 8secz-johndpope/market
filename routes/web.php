@@ -300,6 +300,7 @@ Route::namespace('Admin')->group(function () {
     Route::get('/admin/manage/pricegroup', 'AdminController@pricegroup')->middleware('admin');
     Route::get('/admin/manage/role', 'AdminController@iam')->middleware('admin');
     Route::get('/admin', 'AdminController@index')->middleware('admin');
+    Route::get('/admin/manage/users', 'AdminController@users')->middleware('admin');
 
     Route::get('/admin/manage/finances', 'AdminController@finances')->middleware('admin');
 

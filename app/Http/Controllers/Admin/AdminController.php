@@ -100,6 +100,11 @@ class AdminController extends BaseController
         return redirect('/admin/manage/packs');
 
     }
+    public function users(Request $request){
+        $users = User::paginate(20);
+        $total = User::count();
+        return view('admin.users',['users'=>$users,'total'=>$total]);
+    }
     public function iam(Request $request){
         $user = User::find(104);
         $role = Role::find(1);
