@@ -40,13 +40,16 @@ class AdminController extends BaseController
         return view('admin.index',[]);
     }
     public function finances(Request $request){
+        $dtransactions = Transaction::where('user_id',0)->where('type',5)->orderBy('id','desc')->get();
+        $etransactions = Transaction::where('user_id',0)->where('type',6)->orderBy('id','desc')->get();
         $stransactions = Transaction::where('user_id',0)->where('type',1)->orderBy('id','desc')->get();
         $itransactions = Transaction::where('user_id',0)->where('type',2)->orderBy('id','desc')->get();
         $ttransactions = Transaction::where('user_id',0)->where('type',3)->orderBy('id','desc')->get();
         $wtransactions = Transaction::where('user_id',0)->where('type',4)->orderBy('id','desc')->get();
         $ptransactions = Transaction::where('user_id',0)->where('type',0)->orderBy('id','desc')->get();
 
-
+        $dtotal = Transaction::where('user_id',0)->where('type',5)->orderBy('id','desc')->sum('amount');
+        $etotal = Transaction::where('user_id',0)->where('type',6)->orderBy('id','desc')->sum('amount');
         $stotal = Transaction::where('user_id',0)->where('type',1)->orderBy('id','desc')->sum('amount');
         $itotal = Transaction::where('user_id',0)->where('type',2)->orderBy('id','desc')->sum('amount');
         $ttotal = Transaction::where('user_id',0)->where('type',3)->orderBy('id','desc')->sum('amount');
@@ -54,7 +57,7 @@ class AdminController extends BaseController
         $ptotal = Transaction::where('user_id',0)->where('type',0)->orderBy('id','desc')->sum('amount');
 
 
-        return view('admin.dashboard',['stransactions'=>$stransactions,'itransactions'=>$itransactions,'ttransactions'=>$ttransactions,'wtransactions'=>$wtransactions,'ptransactions'=>$ptransactions,'stotal'=>$stotal,'itotal'=>$itotal,'ttotal'=>$ttotal,'wtotal'=>$wtotal,'ptotal'=>$ptotal]);
+        return view('admin.dashboard',['dtransactions'=>$dtransactions,'etransactions'=>$etransactions,'stransactions'=>$stransactions,'itransactions'=>$itransactions,'ttransactions'=>$ttransactions,'wtransactions'=>$wtransactions,'ptransactions'=>$ptransactions,'dtotal'=>$dtotal,'etotal'=>$etotal,'stotal'=>$stotal,'itotal'=>$itotal,'ttotal'=>$ttotal,'wtotal'=>$wtotal,'ptotal'=>$ptotal]);
 
     }
     public function pricegroup(Request $request){
