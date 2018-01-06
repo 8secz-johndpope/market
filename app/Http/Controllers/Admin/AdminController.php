@@ -108,8 +108,8 @@ class AdminController extends BaseController
         return view('admin.users',['users'=>$users,'total'=>$total]);
     }
     public function contracts(Request $request){
-        $contracts = Contract::where('user_id','>',0)->paginate(20);
-        $total = Contact::where('user_id','>',0)->count();
+        $contracts = Contract::where('status','active')->where('user_id','>',0)->paginate(20);
+        $total = Contact::where('status','active')->where('user_id','>',0)->count();
         return view('admin.contracts',['contracts'=>$contracts,'total'=>$total]);
     }
     public function iam(Request $request){
