@@ -40,11 +40,21 @@ class AdminController extends BaseController
         return view('admin.index',[]);
     }
     public function finances(Request $request){
-        $commissions = Commission::orderBy('id','desc')->get();
-        $promotions = Transaction::where('user_id',0)->where('type',0)->get();
-        $ptotal = Transaction::where('user_id',0)->where('type',0)->sum('amount');
-        $total = Commission::sum('amount');
-        return view('admin.dashboard',['commissions'=>$commissions,'total'=>$total,'promotions'=>$promotions,'ptotal'=>$ptotal]);
+        $stransactions = Transaction::where('user_id',0)->where('type',1)->orderBy('id','desc')->get();
+        $itransactions = Transaction::where('user_id',0)->where('type',2)->orderBy('id','desc')->get();
+        $ttransactions = Transaction::where('user_id',0)->where('type',3)->orderBy('id','desc')->get();
+        $wtransactions = Transaction::where('user_id',0)->where('type',4)->orderBy('id','desc')->get();
+        $ptransactions = Transaction::where('user_id',0)->where('type',0)->orderBy('id','desc')->get();
+
+
+        $stotal = Transaction::where('user_id',0)->where('type',1)->orderBy('id','desc')->sum('amount');
+        $itotal = Transaction::where('user_id',0)->where('type',2)->orderBy('id','desc')->sum('amount');
+        $ttotal = Transaction::where('user_id',0)->where('type',3)->orderBy('id','desc')->sum('amount');
+        $wtotal = Transaction::where('user_id',0)->where('type',4)->orderBy('id','desc')->sum('amount');
+        $ptotal = Transaction::where('user_id',0)->where('type',0)->orderBy('id','desc')->sum('amount');
+
+
+        return view('admin.dashboard',['stransactions'=>$stransactions,'itransactions'=>$itransactions,'ttransactions'=>$ttransactions,'wtransactions'=>$wtransactions,'ptransactions'=>$ptransactions,'stotal'=>$stotal,'itotal'=>$itotal,'ttotal'=>$ttotal,'wtotal'=>$wtotal,'ptotal'=>$ptotal]);
 
     }
     public function pricegroup(Request $request){

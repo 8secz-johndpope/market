@@ -12,13 +12,12 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-3">
-        </div>
-        <div class="col-sm-6">
+
+        <div class="col-sm-4">
             <br><br><br>
-            <h4 style="text-align: center">Total Commissions: £{{number_format($total/100,2)}}</h4>
+            <h4 style="text-align: center">Total Commissions from Sales: £{{number_format($stotal/100,2)}}</h4>
             <br><br><br>
-            <h4>Commissions</h4>
+            <h4>Commissions from Sales</h4>
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -28,15 +27,89 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($commissions as $commission)
+                @foreach($stransactions as $transaction)
                     <tr>
-                        <td>{{$commission->description}}</td>
-                        <td>£{{number_format($commission->amount/100,2)}}</td>
-                        <td>{{date('d/m/Y',strtotime($commission->created_at))}}</td>
+                        <td>{{$transaction->description}}</td>
+                        <td>£{{number_format($transaction->amount/100,2)}}</td>
+                        <td>{{date('d/m/Y',strtotime($transaction->created_at))}}</td>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
+        </div>
+        <div class="col-sm-4">
+            <br><br><br>
+            <h4 style="text-align: center">Total Commissions from Invoices: £{{number_format($itotal/100,2)}}</h4>
+            <br><br><br>
+            <h4>Commissions from Invoices</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($itransactions as $transaction)
+                    <tr>
+                        <td>{{$transaction->description}}</td>
+                        <td>£{{number_format($transaction->amount/100,2)}}</td>
+                        <td>{{date('d/m/Y',strtotime($transaction->created_at))}}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <br><br><br>
+            <h4 style="text-align: center">Total Commissions from Transfers: £{{number_format($ttotal/100,2)}}</h4>
+            <br><br><br>
+            <h4>Commissions from Sales</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($ttransactions as $transaction)
+                    <tr>
+                        <td>{{$transaction->description}}</td>
+                        <td>£{{number_format($transaction->amount/100,2)}}</td>
+                        <td>{{date('d/m/Y',strtotime($transaction->created_at))}}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <br><br><br>
+            <h4 style="text-align: center">Total Commissions from Withdrawals: £{{number_format($wtotal/100,2)}}</h4>
+            <br><br><br>
+            <h4>Commissions from Withdrawals</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($wtransactions as $transaction)
+                    <tr>
+                        <td>{{$transaction->description}}</td>
+                        <td>£{{number_format($transaction->amount/100,2)}}</td>
+                        <td>{{date('d/m/Y',strtotime($transaction->created_at))}}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
+            <div class="col-sm-4">
 
             <br><br><br>
             <h4 style="text-align: center">Total Promotions: £{{number_format($ptotal/100,2)}}</h4>
@@ -51,7 +124,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($promotions as $promotion)
+                @foreach($ptransactions as $promotion)
                     <tr>
                         <td>{{$promotion->description}}</td>
                         <td>£{{number_format($promotion->amount/100,2)}}</td>

@@ -167,7 +167,7 @@ class BankController extends BaseController
             $transaction->save();
             $money_request->status=1;
             $money_request->save();
-            
+
 
             $transaction = new Transaction();
             $transaction->amount = (int)($money_request->amount*0.1) ;
