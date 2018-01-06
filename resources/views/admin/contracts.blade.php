@@ -42,6 +42,7 @@
                 </thead>
                 <tbody>
                 @foreach($contracts as $contract)
+                    @if($contract->user->business)
                     <tr>
                         <td>{{$contract->user->business->name}}</td>
                         <td>{{$contract->user->email}}</td>
@@ -49,6 +50,7 @@
                         <td>{{$contract->total_before_discount()}}</td>
                         <td><a href="/admin" class="btn btn-danger">Pause</a> </td>
                     </tr>
+                    @endif
                 @endforeach
                 </tbody>
             </table>
