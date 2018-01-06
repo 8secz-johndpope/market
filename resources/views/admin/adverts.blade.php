@@ -19,6 +19,7 @@
             <br><br><br>
 
             <h4 style="text-align: center">Total Adverts: {{$total}}</h4>
+            <h4 style="text-align: center">Total Reports: {{count($reports)}}</h4>
 
 
         </div>
@@ -47,6 +48,29 @@
                             <td>{{$advert->user->name}}</td>
                             <td><a href="/admin" class="btn btn-danger">Delete</a> </td>
                         </tr>
+                @endforeach
+                </tbody>
+            </table>
+
+            <br><br><br>
+            <h4>Reports</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($reports as $report)
+                    <tr>
+                        <td>{{$report->advert->param('title')}}</td>
+                        <td>{{$report->advert->category->title}}</td>
+                        <td>{{$report->user->name}}</td>
+                        <td>{{$report->info}}</td>
+                    </tr>
                 @endforeach
                 </tbody>
             </table>

@@ -15,6 +15,7 @@ use App\Model\Contact;
 use App\Model\Contract;
 use App\Model\Location;
 use App\Model\Price;
+use App\Model\Report;
 use App\Model\Role;
 use App\Model\Transaction;
 use App\User;
@@ -114,9 +115,10 @@ class AdminController extends BaseController
         return view('admin.contracts',['contracts'=>$contracts,'total'=>$total]);
     }
     public function adverts(Request $request){
+        $reports = Report::all();
         $adverts = Advert::where('status',1)->where('user_id','>',0)->orderBy('id','desc')->paginate(20);
         $total =  Advert::where('status',1)->where('user_id','>',0)->count();
-        return view('admin.adverts',['adverts'=>$adverts,'total'=>$total]);
+        return view('admin.adverts',['adverts'=>$adverts,'total'=>$total,'reports'=>$reports]);
     }
     public function iam(Request $request){
         $user = User::find(104);

@@ -12,5 +12,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Report extends Model
 {
-
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+    public function advert()
+    {
+        return $this->belongsTo('App\Model\Advert');
+    }
 }
