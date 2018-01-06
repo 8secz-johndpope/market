@@ -104,7 +104,7 @@ class RegisterController extends BaseController
         $transaction->amount = 500;
         $transaction->user_id = 0;
         $transaction->description = "Registration Credit for ".$user->name;
-        $transaction->direction = 0;
+        $transaction->direction = 1;
         $transaction->save();
 
 
