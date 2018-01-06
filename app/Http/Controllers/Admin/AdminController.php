@@ -38,7 +38,7 @@ class AdminController extends BaseController
 
         return view('admin.index',[]);
     }
-    public function commissions(Request $request){
+    public function finances(Request $request){
         $commissions = Commission::orderBy('id','desc')->get();
         $total = Commission::sum('amount');
         return view('admin.dashboard',['commissions'=>$commissions,'total'=>$total]);

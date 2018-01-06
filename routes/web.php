@@ -301,7 +301,7 @@ Route::namespace('Admin')->group(function () {
     Route::get('/admin/manage/role', 'AdminController@iam')->middleware('admin');
     Route::get('/admin', 'AdminController@index')->middleware('admin');
 
-    Route::get('/admin/manage/commissions', 'AdminController@commissions')->middleware('admin');
+    Route::get('/admin/manage/finances', 'AdminController@finances')->middleware('admin');
 
 });
 
