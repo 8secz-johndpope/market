@@ -37,6 +37,29 @@
                 @endforeach
                 </tbody>
             </table>
+
+            <br><br><br>
+            <h4 style="text-align: center">Total Promotions: £{{number_format($ptotal/100,2)}}</h4>
+            <br><br><br>
+            <h4>Promotions</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($promotions as $promotion)
+                    <tr>
+                        <td>{{$promotion->description}}</td>
+                        <td>£{{number_format($promotion->amount/100,2)}}</td>
+                        <td>{{date('d/m/Y',strtotime($promotion->created_at))}}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 

@@ -13,6 +13,7 @@ use App\Model\Commission;
 use App\Model\Location;
 use App\Model\Price;
 use App\Model\Role;
+use App\Model\Transaction;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -40,8 +41,10 @@ class AdminController extends BaseController
     }
     public function finances(Request $request){
         $commissions = Commission::orderBy('id','desc')->get();
+        $promotions = Transaction::where('user_id',0)->where('type',0)->get();
+        $ptotal = Transaction::where('user_id',0)->where('type',0)->sum('amount');
         $total = Commission::sum('amount');
-        return view('admin.dashboard',['commissions'=>$commissions,'total'=>$total]);
+        return view('admin.dashboard',['commissions'=>$commissions,'total'=>$total,'promotions'=>$promotions,'ptotal'=>$ptotal]);
 
     }
     public function pricegroup(Request $request){
