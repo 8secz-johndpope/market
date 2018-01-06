@@ -65,12 +65,14 @@
                 </thead>
                 <tbody>
                 @foreach($reports as $report)
+                    @if($report->user)
                     <tr>
                         <td>{{$report->advert->param('title')}}</td>
                         <td>{{$report->advert->category->title}}</td>
                         <td>{{$report->user->name}}</td>
                         <td>{{$report->info}}</td>
                     </tr>
+                    @endif
                 @endforeach
                 </tbody>
             </table>
