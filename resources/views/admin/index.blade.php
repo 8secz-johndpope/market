@@ -18,7 +18,7 @@
             <br><br><br>
             <a href="/admin/manage/finances" class="btn btn-primary">Finances</a>             <a href="/admin/manage/users" class="btn btn-primary">Users</a>
             <a href="/admin/manage/contracts" class="btn btn-primary">Contracts</a>
-            <a href="/admin" class="btn btn-primary">Adverts</a>
+            <a href="/admin/manage/adverts" class="btn btn-primary">Adverts</a>
         </div>
     </div>
 

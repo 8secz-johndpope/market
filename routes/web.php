@@ -302,7 +302,7 @@ Route::namespace('Admin')->group(function () {
     Route::get('/admin', 'AdminController@index')->middleware('admin');
     Route::get('/admin/manage/users', 'AdminController@users')->middleware('admin');
     Route::get('/admin/manage/contracts', 'AdminController@contracts')->middleware('admin');
-
+    Route::get('/admin/manage/adverts', 'AdminController@adverts')->middleware('admin');
     Route::get('/admin/manage/finances', 'AdminController@finances')->middleware('admin');
 
 });

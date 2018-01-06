@@ -8,6 +8,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\BaseController;
+use App\Model\Advert;
 use App\Model\Category;
 use App\Model\Commission;
 use App\Model\Contact;
@@ -111,6 +112,11 @@ class AdminController extends BaseController
         $contracts = Contract::where('status','active')->where('user_id','>',0)->paginate(20);
         $total = Contract::where('status','active')->where('user_id','>',0)->count();
         return view('admin.contracts',['contracts'=>$contracts,'total'=>$total]);
+    }
+    public function adverts(Request $request){
+        $adverts = Advert::where('status',1)->paginate(20);
+        $total =  Advert::where('status',1)->count();
+        return view('admin.adverts',['adverts'=>$adverts,'total'=>$total]);
     }
     public function iam(Request $request){
         $user = User::find(104);
