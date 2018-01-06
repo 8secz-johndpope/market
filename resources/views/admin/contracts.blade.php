@@ -47,7 +47,7 @@
                         <td>{{$contract->user->business->name}}</td>
                         <td>{{$contract->user->email}}</td>
                         <td>{{$contract->user->phone}}</td>
-                        <td>{{$contract->total_before_discount()}}</td>
+                        <td>£{{$contract->total_before_discount()}}</td>
                         <td><a href="/admin" class="btn btn-danger">Pause</a> </td>
                     </tr>
                     @endif
