@@ -28,7 +28,31 @@
         <div class="col-sm-2">
         </div>
         <div class="col-sm-8">
-
+            <br><br><br>
+            <h4>Reports</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($reports as $report)
+                    @if($report->user)
+                        <tr>
+                            <td>{{$report->advert->param('title')}}</td>
+                            <td>{{$report->advert->category->title}}</td>
+                            <td>{{$report->user->name}}</td>
+                            <td>{{$report->info}}</td>
+                        </tr>
+                    @endif
+                @endforeach
+                </tbody>
+            </table>
+            
             <br><br><br>
             <h4>Adverts</h4>
             <table class="table table-striped">
@@ -52,30 +76,7 @@
                 </tbody>
             </table>
 
-            <br><br><br>
-            <h4>Reports</h4>
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">User</th>
-                    <th scope="col">Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($reports as $report)
-                    @if($report->user)
-                    <tr>
-                        <td>{{$report->advert->param('title')}}</td>
-                        <td>{{$report->advert->category->title}}</td>
-                        <td>{{$report->user->name}}</td>
-                        <td>{{$report->info}}</td>
-                    </tr>
-                    @endif
-                @endforeach
-                </tbody>
-            </table>
+
         </div>
 
     </div>
