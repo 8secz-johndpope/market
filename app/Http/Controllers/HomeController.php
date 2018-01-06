@@ -1493,16 +1493,41 @@ class HomeController extends BaseController
             if($order->type==='contract'){
                $this->complete_contract($order);
                // $request->session()->forget('order_id');
+                $transaction = new Transaction();
+                $transaction->amount = $order->amount_in_pence();
+                $transaction->user_id = 0;
+                $transaction->description = "Funds from Invoice ".$order->id;
+                $transaction->type=5;
+                $transaction->direction = 0;
+                $transaction->save();
                 return redirect('/user/contract/sign');
             }
             if($order->type==='bump') {
                 $this->complete_bump($order);
                 $request->session()->forget('order_id');
+
+                $transaction = new Transaction();
+                $transaction->amount = $order->amount_in_pence();
+                $transaction->user_id = 0;
+                $transaction->description = "Funds from Enhancement ".$order->id;
+                $transaction->type=6;
+                $transaction->direction = 0;
+                $transaction->save();
+
                 return redirect('/user/manage/ads');
             }
            if($order->type==='invoice') {
                $this->complete_invoice($order);
                $request->session()->forget('order_id');
+
+               $transaction = new Transaction();
+               $transaction->amount = $order->amount_in_pence();
+               $transaction->user_id = 0;
+               $transaction->description = "Funds from Invoice ".$order->id;
+               $transaction->type=5;
+               $transaction->direction = 0;
+               $transaction->save();
+
                return redirect('/business/manage/finance');
            }
 
@@ -1903,16 +1928,43 @@ class HomeController extends BaseController
             if($order->type==='contract'){
                 $this->complete_contract($order);
                 // $request->session()->forget('order_id');
+
+                $transaction = new Transaction();
+                $transaction->amount = $order->amount_in_pence();
+                $transaction->user_id = 0;
+                $transaction->description = "Funds from Invoice ".$order->id;
+                $transaction->type=5;
+                $transaction->direction = 0;
+                $transaction->save();
+
                 return redirect('/user/contract/sign');
             }
             if($order->type==='bump') {
                 $this->complete_bump($order);
                 $request->session()->forget('order_id');
+
+                $transaction = new Transaction();
+                $transaction->amount = $order->amount_in_pence();
+                $transaction->user_id = 0;
+                $transaction->description = "Funds from Enhancement ".$order->id;
+                $transaction->type=6;
+                $transaction->direction = 0;
+                $transaction->save();
+
                 return redirect('/user/manage/ads');
             }
             if($order->type==='invoice') {
                 $this->complete_invoice($order);
                 $request->session()->forget('order_id');
+
+                $transaction = new Transaction();
+                $transaction->amount = $order->amount_in_pence();
+                $transaction->user_id = 0;
+                $transaction->description = "Funds from Invoice ".$order->id;
+                $transaction->type=5;
+                $transaction->direction = 0;
+                $transaction->save();
+
                 return redirect('/business/manage/finance');
             }
 
