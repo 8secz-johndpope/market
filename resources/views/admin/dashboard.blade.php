@@ -16,9 +16,9 @@
         <div class="col-sm-4">
         </div>
             <div class="col-sm-4">
-                <h4 style="text-align: center">Total Income: £{{number_format($dtotal/100,2)}}</h4>
+                <h4 style="text-align: center">Total Income: £{{number_format($income/100,2)}}</h4>
 
-                <h4 style="text-align: center">Total Expenditures: £{{number_format($dtotal/100,2)}}</h4>
+                <h4 style="text-align: center">Total Expenditures: £{{number_format($expenditure/100,2)}}</h4>
 
             </div>
         <div class="col-sm-4">
