@@ -114,7 +114,7 @@ class AdminController extends BaseController
         return view('admin.contracts',['contracts'=>$contracts,'total'=>$total]);
     }
     public function adverts(Request $request){
-        $adverts = Advert::where('status',1)->where('user_id','>',0)->paginate(20);
+        $adverts = Advert::where('status',1)->where('user_id','>',0)->orderBy('id','desc')->paginate(20);
         $total =  Advert::where('status',1)->where('user_id','>',0)->count();
         return view('admin.adverts',['adverts'=>$adverts,'total'=>$total]);
     }
