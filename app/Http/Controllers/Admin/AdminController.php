@@ -10,6 +10,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\BaseController;
 use App\Model\Category;
 use App\Model\Commission;
+use App\Model\Contact;
+use App\Model\Contract;
 use App\Model\Location;
 use App\Model\Price;
 use App\Model\Role;
@@ -104,6 +106,11 @@ class AdminController extends BaseController
         $users = User::paginate(20);
         $total = User::count();
         return view('admin.users',['users'=>$users,'total'=>$total]);
+    }
+    public function contracts(Request $request){
+        $contracts = Contract::where('user_id','>',0)->paginate(20);
+        $total = Contact::where('user_id','>',0)->count();
+        return view('admin.contracts',['contracts'=>$contracts,'total'=>$total]);
     }
     public function iam(Request $request){
         $user = User::find(104);
