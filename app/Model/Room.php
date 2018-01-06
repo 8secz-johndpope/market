@@ -31,6 +31,9 @@ class Room extends Model
     public function is_visible(){
         $user = Auth::user();
         $room_user = RoomUser::where('room_id',$this->id)->where('user_id',$user->id)->first();
+        if(!$this->last_message()){
+            return true;
+        }
         if($room_user->last_message_id<$this->last_message()->id){
             return true;
         }else{
