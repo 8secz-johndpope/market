@@ -42,7 +42,7 @@
                 </thead>
                 <tbody>
                 @foreach($contracts as $contract)
-                    @if($contract->user->business)
+                    @if($contract->user&&$contract->user->business)
                     <tr>
                         <td>{{$contract->user->business->name}}</td>
                         <td>{{$contract->user->email}}</td>
