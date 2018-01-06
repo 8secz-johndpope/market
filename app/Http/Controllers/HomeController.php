@@ -1603,6 +1603,15 @@ class HomeController extends BaseController
             $transaction->description = "Referral Credit from ".$user->name;
             $transaction->direction = 1;
             $transaction->save();
+
+
+            $transaction = new Transaction();
+            $transaction->amount = 300;
+            $transaction->user_id = 0;
+            $transaction->description = "Referral Credit to ".$other->name;
+            $transaction->direction = 0;
+            $transaction->save();
+
             $user->offered=1;
             $user->save();
         }

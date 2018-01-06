@@ -90,12 +90,23 @@ class RegisterController extends BaseController
             $user->refferred_code = $data['code'];
         }
         $user->save();
+
         $transaction = new Transaction();
         $transaction->amount = 500;
         $transaction->user_id = $user->id;
         $transaction->description = "Registration Credit";
         $transaction->direction = 1;
         $transaction->save();
+
+        $transaction = new Transaction();
+        $transaction->amount = 500;
+        $transaction->user_id = 0;
+        $transaction->description = "Registration Credit for ".$user->name;
+        $transaction->direction = 0;
+        $transaction->save();
+
+
+
         $acc = new AccountCreated();
         $verify = new EmailCode;
         $verify->user_id = $user->id;
