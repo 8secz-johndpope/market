@@ -45,7 +45,11 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->phone}}</td>
+                        @if($user->enabled===1)
                         <td><a href="/admin" class="btn btn-danger">Disable</a> </td>
+                        @else
+                            <td><a href="/admin" class="btn btn-primary">Enable</a> </td>
+                        @endif
                     </tr>
                 @endforeach
                 </tbody>
