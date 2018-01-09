@@ -38,7 +38,7 @@
 
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
-                            <li><em>20%</em> Discount</li>
+                            <li><em>20%</em> Discount on Enhancements</li>
                             <li><em>Unlimited</em> free ads</li>
                             <li><em>1</em> Website</li>
                             <li><em>Online</em></li>
@@ -95,7 +95,7 @@
 
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
-                            <li><em>30%</em> Discount</li>
+                            <li><em>30%</em> Discount on Enhancements</li>
                             <li><em>Unlimited</em> free ads</li>
                             <li><em>5</em> Websites</li>
                             <li><em>Dedicated</em> Account Manager</li>
@@ -153,7 +153,7 @@
 
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
-                            <li><em>40%</em> Discount</li>
+                            <li><em>40%</em> Discount on Enhancements</li>
                             <li><em>Unlimited</em> free ads</li>
                             <li><em>10</em> Websites</li>
                             <li><em>Dedicated</em> Account Manager</li>
