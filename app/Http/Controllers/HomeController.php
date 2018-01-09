@@ -2173,11 +2173,11 @@ class HomeController extends BaseController
             $contract = new Contract;
             $contract->type = $id;
             if((int)$id===2){
-                $contract->discount = 35;
+                $contract->discount = 30;
                 $contract->minimum = 2500000;
             }
             else if((int)$id===3){
-                $contract->discount = 45;
+                $contract->discount = 40;
                 $contract->minimum = 10000000;
             }
             $contract->save();
@@ -2193,15 +2193,15 @@ class HomeController extends BaseController
             $order = Order::find($order_id);
             $contract = $order->contract;
             if((int)$id===1){
-                $contract->discount = 25;
+                $contract->discount = 20;
                 $contract->minimum = 500000;
             }
             else if((int)$id===2){
-                $contract->discount = 35;
+                $contract->discount = 30;
                 $contract->minimum = 2500000;
             }
             else if((int)$id===3){
-                $contract->discount = 45;
+                $contract->discount = 40;
                 $contract->minimum = 10000000;
             }
             $contract->save();

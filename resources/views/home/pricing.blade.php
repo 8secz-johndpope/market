@@ -38,7 +38,7 @@
 
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
-                            <li><em>25%</em> Discount</li>
+                            <li><em>20%</em> Discount</li>
                             <li><em>1</em> User</li>
                             <li><em>1</em> Website</li>
                             <li><em>1</em> Domain</li>
@@ -95,7 +95,7 @@
 
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
-                            <li><em>35%</em> Discount</li>
+                            <li><em>30%</em> Discount</li>
                             <li><em>3</em> Users</li>
                             <li><em>5</em> Websites</li>
                             <li><em>7</em> Domains</li>
@@ -153,7 +153,7 @@
 
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
-                            <li><em>45%</em> Discount</li>
+                            <li><em>40%</em> Discount</li>
                             <li><em>5</em> Users</li>
                             <li><em>10</em> Websites</li>
                             <li><em>10</em> Domains</li>
