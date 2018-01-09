@@ -153,7 +153,7 @@ class AdminController extends BaseController
     public function enable_contract(Request $request,$id)
     {
         $contract = Contract::find($id);
-        $contract->enabled = 0;
+        $contract->enabled = 1;
         $contract->save();
 
 
