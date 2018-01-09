@@ -316,6 +316,8 @@ Route::namespace('Admin')->group(function () {
     Route::get('/admin/disable/user/{id}', 'AdminController@disable_user')->middleware('admin');
     Route::get('/admin/enable/user/{id}', 'AdminController@enable_user')->middleware('admin');
 
+    Route::get('/admin/disable/contract/{id}', 'AdminController@disable_contract')->middleware('admin');
+    Route::get('/admin/enable/contract/{id}', 'AdminController@enable_contract')->middleware('admin');
 
 });
 

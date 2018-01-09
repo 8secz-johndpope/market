@@ -142,5 +142,21 @@ class AdminController extends BaseController
 
         return redirect('/admin/manage/users');
     }
+    public function disable_contract(Request $request,$id)
+    {
+        $contract = Contract::find($id);
+        $contract->enabled = 0;
+        $contract->save();
 
+        return redirect('/admin/manage/contracts');
+    }
+    public function enable_contract(Request $request,$id)
+    {
+        $contract = Contract::find($id);
+        $contract->enabled = 0;
+        $contract->save();
+
+
+        return redirect('/admin/manage/contracts');
+    }
 }

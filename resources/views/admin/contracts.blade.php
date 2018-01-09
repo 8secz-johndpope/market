@@ -37,7 +37,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Amount</th>
-                    <th scope="col">Pause/Resume</th>
+                    <th scope="col">Enable/Disable</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -48,8 +48,11 @@
                         <td>{{$contract->user->email}}</td>
                         <td>{{$contract->user->phone}}</td>
                         <td>£{{$contract->total_before_discount()}}</td>
-                        <td><a href="/admin" class="btn btn-danger">Pause</a> </td>
-                    </tr>
+                        @if($contract->enabled===1)
+                            <td><a href="/admin/disable/contract/{{$contract->id}}" class="btn btn-danger">Disable</a> </td>
+                        @else
+                            <td><a href="/admin/enable/contract/{{$contract->id}}" class="btn btn-primary">Enable</a> </td>
+                        @endif                    </tr>
                     @endif
                 @endforeach
                 </tbody>
