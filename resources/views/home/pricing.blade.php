@@ -40,7 +40,7 @@
                         <ul class="cd-pricing-features">
                             <li><em>20%</em> Discount on Enhancements</li>
                             <li><em>Unlimited</em> free ads</li>
-                            <li><em>1</em> Website</li>
+                            <li><em>90</em> days credit</li>
                             <li><em>Online</em> Management</li>
                             <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
@@ -66,7 +66,7 @@
                         <ul class="cd-pricing-features">
                             <li><em>256MB</em> Memory</li>
                             <li><em>Unlimited</em> free ads</li>
-                            <li><em>1</em> Website</li>
+                            <li><em>90</em> days credit</li>
                             <li><em>1</em> Domain</li>
                             <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
@@ -97,7 +97,7 @@
                         <ul class="cd-pricing-features">
                             <li><em>30%</em> Discount on Enhancements</li>
                             <li><em>Unlimited</em> free ads</li>
-                            <li><em>5</em> Websites</li>
+                            <li><em>90</em> days credit</li>
                             <li><em>Dedicated</em> Account Manager</li>
                             <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
@@ -124,7 +124,7 @@
                         <ul class="cd-pricing-features">
                             <li><em>512MB</em> Memory</li>
                             <li><em>Unlimited</em> free ads</li>
-                            <li><em>5</em> Websites</li>
+                            <li><em>90</em> days credit</li>
                             <li><em>Dedicated</em> Account Manager</li>
                             <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
@@ -155,7 +155,7 @@
                         <ul class="cd-pricing-features">
                             <li><em>40%</em> Discount on Enhancements</li>
                             <li><em>Unlimited</em> free ads</li>
-                            <li><em>10</em> Websites</li>
+                            <li><em>90</em> days credit</li>
                             <li><em>Dedicated</em> Account Manager</li>
                             <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
@@ -181,7 +181,7 @@
                         <ul class="cd-pricing-features">
                             <li><em>1024MB</em> Memory</li>
                             <li><em>Unlimited</em> free ads</li>
-                            <li><em>10</em> Websites</li>
+                            <li><em>90</em> days credit</li>
                             <li><em>Dedicated</em> Account Manager</li>
                             <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
