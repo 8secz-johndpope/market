@@ -41,7 +41,7 @@
                             <li><em>20%</em> Discount</li>
                             <li><em>Unlimited</em> free ads</li>
                             <li><em>1</em> Website</li>
-                            <li><em>1</em> Domain</li>
+                            <li><em>Online</em></li>
                             <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
                         </ul>
