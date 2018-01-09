@@ -44,6 +44,8 @@ class LoginController extends BaseController
         if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1])) {
             // Authentication passed...
             return redirect()->intended('/');
+        }else{
+            return Redirect::back()->withErrors(['msg', 'The Message']);
         }
     }
 
