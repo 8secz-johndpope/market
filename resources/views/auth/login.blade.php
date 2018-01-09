@@ -11,6 +11,12 @@
                     <form class="form-horizontal" id="login-form" method="POST" action="/login/check">
                         {{ csrf_field() }}
 
+                        @if ($errors->has('msg'))
+                            <span class="help-block">
+                                        <strong>{{ $errors->first('msg') }}</strong>
+                                    </span>
+                        @endif
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
