@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\BaseController;
-use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends BaseController
 {
@@ -36,6 +36,14 @@ class LoginController extends BaseController
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function authenticate(Request $request)
+    {
+        if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1])) {
+            // Authentication passed...
+            return redirect()->intended('dashboard');
+        }
     }
 
 

@@ -32,6 +32,9 @@ Route::get('/ast/{p}/{q}', 'MarketController@ast');
 
 Route::post('/hellosign', 'MarketController@hellosign');
 
+Route::post('/login/check', 'LoginController@authenticate');
+
+
 Route::get('/update', 'MarketController@update');
 Route::get('/updates', 'MarketController@updates');
 
