@@ -305,6 +305,10 @@ Route::namespace('Admin')->group(function () {
     Route::get('/admin/manage/adverts', 'AdminController@adverts')->middleware('admin');
     Route::get('/admin/manage/finances', 'AdminController@finances')->middleware('admin');
 
+    Route::get('/admin/disable/user/{id}', 'AdminController@disable_user')->middleware('admin');
+    Route::get('/admin/enable/user/{id}', 'AdminController@enable_user')->middleware('admin');
+
+
 });
 
 //end templates

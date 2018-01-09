@@ -126,4 +126,21 @@ class AdminController extends BaseController
         $user->roles()->save($role);
         return ['msg'=>'done'];
     }
+    public function disable_user(Request $request,$id)
+    {
+        $user = User::find($id);
+        $user->enabled = 0;
+        $user->save();
+
+        return redirect('/admin/manage/users');
+    }
+    public function enable_user(Request $request,$id)
+    {
+        $user = User::find($id);
+        $user->enabled = 1;
+        $user->save();
+
+        return redirect('/admin/manage/users');
+    }
+
 }
