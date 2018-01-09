@@ -12,7 +12,7 @@
                         {{ csrf_field() }}
 
                         @if (session('msg'))
-                            <span class="help-block">
+                            <span style="color: red">
                                         <strong>{{ session('msg') }}</strong>
                                     </span>
                         @endif
