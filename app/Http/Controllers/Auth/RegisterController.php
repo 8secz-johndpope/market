@@ -89,7 +89,7 @@ class RegisterController extends BaseController
         $sixd = rand(100000,999999);
         $user->referral_code = $user->name.'-'.$sixd.$letter;
         if(isset($data['code'])&&!empty($data['code'])){
-            $user->refferred_code = $data['code'];
+            $user->referred_code = $data['code'];
         }
         $user->save();
 

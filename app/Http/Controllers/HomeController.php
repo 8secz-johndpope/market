@@ -1629,8 +1629,8 @@ class HomeController extends BaseController
         return redirect('/user/manage/orders');
     }
     public function update_offer($user){
-        if($user->offered===0&&$user->refferred_code!==''){
-            $other = User::where('referral_code',$user->refferred_code)->first();
+        if($user->offered===0&&$user->referred_code!==''){
+            $other = User::where('referral_code',$user->referred_code)->first();
             $transaction = new Transaction();
             $transaction->amount = 300;
             $transaction->user_id = $other->id;
