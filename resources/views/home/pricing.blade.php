@@ -12,10 +12,8 @@
 
 @section('content')
 <div class="cd-pricing-container">
-    <div class="cd-pricing-switcher">
-        <p class="fieldset">
-            Annual Contracts for Business Accounts
-        </p>
+    <div style="width: 100%">
+        <h1 style="text-align: center">Annual Contracts for Business Accounts</h1>
     </div> <!-- .cd-pricing-switcher -->
 
     <ul class="cd-pricing-list cd-bounce-invert">
