@@ -39,10 +39,10 @@
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
                             <li><em>20%</em> Discount</li>
-                            <li><em>1</em> User</li>
+                            <li><em>Unlimited</em> free ads</li>
                             <li><em>1</em> Website</li>
                             <li><em>1</em> Domain</li>
-                            <li><em>Unlimited</em> Bandwidth</li>
+                            <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
                         </ul>
                     </div> <!-- .cd-pricing-body -->
@@ -65,10 +65,10 @@
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
                             <li><em>256MB</em> Memory</li>
-                            <li><em>1</em> User</li>
+                            <li><em>Unlimited</em> free ads</li>
                             <li><em>1</em> Website</li>
                             <li><em>1</em> Domain</li>
-                            <li><em>Unlimited</em> Bandwidth</li>
+                            <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
                         </ul>
                     </div> <!-- .cd-pricing-body -->
@@ -96,10 +96,10 @@
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
                             <li><em>30%</em> Discount</li>
-                            <li><em>3</em> Users</li>
+                            <li><em>Unlimited</em> free ads</li>
                             <li><em>5</em> Websites</li>
-                            <li><em>7</em> Domains</li>
-                            <li><em>Unlimited</em> Bandwidth</li>
+                            <li><em>Dedicated</em> Account Manager</li>
+                            <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
                         </ul>
                     </div> <!-- .cd-pricing-body -->
@@ -123,10 +123,10 @@
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
                             <li><em>512MB</em> Memory</li>
-                            <li><em>3</em> Users</li>
+                            <li><em>Unlimited</em> free ads</li>
                             <li><em>5</em> Websites</li>
-                            <li><em>7</em> Domains</li>
-                            <li><em>Unlimited</em> Bandwidth</li>
+                            <li><em>Dedicated</em> Account Manager</li>
+                            <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
                         </ul>
                     </div> <!-- .cd-pricing-body -->
@@ -154,10 +154,10 @@
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
                             <li><em>40%</em> Discount</li>
-                            <li><em>5</em> Users</li>
+                            <li><em>Unlimited</em> free ads</li>
                             <li><em>10</em> Websites</li>
-                            <li><em>10</em> Domains</li>
-                            <li><em>Unlimited</em> Bandwidth</li>
+                            <li><em>Dedicated</em> Account Manager</li>
+                            <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
                         </ul>
                     </div> <!-- .cd-pricing-body -->
@@ -180,10 +180,10 @@
                     <div class="cd-pricing-body">
                         <ul class="cd-pricing-features">
                             <li><em>1024MB</em> Memory</li>
-                            <li><em>5</em> Users</li>
+                            <li><em>Unlimited</em> free ads</li>
                             <li><em>10</em> Websites</li>
-                            <li><em>10</em> Domains</li>
-                            <li><em>Unlimited</em> Bandwidth</li>
+                            <li><em>Dedicated</em> Account Manager</li>
+                            <li><em>Access to </em> Company Showcase Board</li>
                             <li><em>24/7</em> Support</li>
                         </ul>
                     </div> <!-- .cd-pricing-body -->
