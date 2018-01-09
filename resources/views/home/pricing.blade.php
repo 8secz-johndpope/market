@@ -12,13 +12,9 @@
 
 @section('content')
 <div class="cd-pricing-container">
-    <div class="cd-pricing-switcher" style="display: none">
+    <div class="cd-pricing-switcher">
         <p class="fieldset">
-            <input type="radio" name="duration-1" value="monthly" id="monthly-1" checked="">
-            <label for="monthly-1">Monthly</label>
-            <input type="radio" name="duration-1" value="yearly" id="yearly-1">
-            <label for="yearly-1">Yearly</label>
-            <span class="cd-switch"></span>
+            Annual Contracts for Business Accounts
         </p>
     </div> <!-- .cd-pricing-switcher -->
 
