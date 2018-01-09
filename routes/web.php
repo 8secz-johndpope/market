@@ -32,7 +32,12 @@ Route::get('/ast/{p}/{q}', 'MarketController@ast');
 
 Route::post('/hellosign', 'MarketController@hellosign');
 
-Route::post('/login/check', 'LoginController@authenticate');
+Route::namespace('Auth')->group(function () {
+    // Controllers Within The "App\Http\Controllers\Admin" Namespace
+    Route::post('/login/check', 'LoginController@authenticate');
+
+});
+
 
 
 Route::get('/update', 'MarketController@update');
