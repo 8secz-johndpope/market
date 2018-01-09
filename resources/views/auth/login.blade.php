@@ -13,7 +13,7 @@
 
                         @if ($errors->has('msg'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('msg') }}</strong>
+                                        <strong>{{ Session::get('msg') }}</strong>
                                     </span>
                         @endif
 
