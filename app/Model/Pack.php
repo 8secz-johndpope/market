@@ -15,6 +15,10 @@ class Pack extends Model
 {
     public static function has_packs($type,$category,$location){
         $user = Auth::user();
+        if(!$user->contract||$user->contract->enabled===0)
+        {
+            return false;
+        }
         $cat = Category::find($category);
         $sloc = Location::find($location);
 
