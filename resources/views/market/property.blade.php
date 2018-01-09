@@ -118,7 +118,7 @@
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-floorplan">Floorplan</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
-                        @if($advert->isPropertyForSale())
+                        @if($advert->category->is_property_for_sale())
                             <li><a data-toggle="tab" href="#tap-marketinfo">Market Info</a></li>
                         @endif
                     </ul>
@@ -163,7 +163,7 @@
                                     @endif
                                     <div class="description">
                                         <h3>Full Description</h3>
-                                        @if($advert->isPropertyForSale() && $advert->has_meta('property_tenure'))
+                                        @if($advert->category->is_property_for_sale() && $advert->has_meta('property_tenure'))
                                         <div class="sec">
                                             <p><strong>Tenure: </strong>{{$advert->meta('property_tenure')}}</p>
                                         </div>
@@ -266,7 +266,7 @@
                                 </div>
                             </div>
                         </div>
-                        @if($advert->isPropertyForSale())
+                        @if($advert->category->is_property_for_sale())
                         <div id="tap-marketinfo" class="tab-pane fade">
                             <div class="row history-sale">           
                                 <div class="col-sm-12  marketinfo">

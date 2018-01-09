@@ -48,6 +48,9 @@ class Category extends  BaseModel
         else
             return false;
     }
+    public function is_property_for_sale(){
+        return $this->id===3060000000;
+    }
     public function can_apply(){
 
         $jobs = Category::find(4000000000);
