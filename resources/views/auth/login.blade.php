@@ -11,9 +11,9 @@
                     <form class="form-horizontal" id="login-form" method="POST" action="/login/check">
                         {{ csrf_field() }}
 
-                        @if ($errors->has('msg'))
+                        @if (session('msg'))
                             <span class="help-block">
-                                        <strong>{{ Session::get('msg') }}</strong>
+                                        <strong>{{ session('msg') }}</strong>
                                     </span>
                         @endif
 

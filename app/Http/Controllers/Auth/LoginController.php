@@ -46,7 +46,7 @@ class LoginController extends BaseController
             // Authentication passed...
             return redirect()->intended('/');
         }else{
-            return redirect()->back()->with('msg', ['your message,here']);
+            return redirect()->back()->with('msg', 'your message,here');
         }
     }
 
