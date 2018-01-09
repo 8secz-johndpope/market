@@ -97,9 +97,7 @@
                                 <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
                                 @if($advert->featured_expires())
-                                    <span class="ribbon-featured">
-<strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-</span>
+                                    
                                 @endif
 
                                 <div class="listing-meta txt-sub">
