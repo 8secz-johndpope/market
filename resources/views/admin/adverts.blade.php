@@ -52,7 +52,7 @@
                 @endforeach
                 </tbody>
             </table>
-            
+
             <br><br><br>
             <h4>Adverts</h4>
             <table class="table table-striped">
