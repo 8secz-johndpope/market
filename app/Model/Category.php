@@ -139,5 +139,12 @@ class Category extends  BaseModel
         $total= $response['hits']['total'];
         return $total;
     }
+    public function is_property() {
+        $property = Category::find(3000000000);
 
+        if($this->id>=$property->id&&$this->id<=$property->ends)
+            return true;
+        else
+            return false;
+    }
 }

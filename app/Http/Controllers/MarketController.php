@@ -1015,7 +1015,7 @@ class MarketController extends BaseController
         if($request->has('srn'))
             $srn=true;
 
-        if($advert->isPropertyToRent() || $advert->isPropertyForSale()){
+        if($advert->category->is_property()){
             $view = 'market.property'; 
         }
         elseif($advert->category->can_apply()){
