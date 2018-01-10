@@ -184,7 +184,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Advert')->where('status',1)->orderby('id','desc');
     }
-
+    public function aadverts()
+    {
+        return $this->hasMany('App\Model\Advert')->where('status',3)->orderby('id','desc');
+    }
     public function jobs()
     {
         $jobs = Category::find(4000000000);
