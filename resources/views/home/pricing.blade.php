@@ -23,7 +23,7 @@
             <ul class="cd-pricing-wrapper">
                 <li data-type="monthly" class="is-ended is-visible">
                     <header class="cd-pricing-header">
-                        <h4>Small Business</h4>
+                        <h4>Small Businesses</h4>
 
                         <div class="cd-price">
                             <span class="cd-currency">£</span>
@@ -80,7 +80,7 @@
             <ul class="cd-pricing-wrapper">
                 <li data-type="monthly" class="is-ended is-visible">
                     <header class="cd-pricing-header">
-                        <h4>Medium Sized Business</h4>
+                        <h4>Medium Sized Businesses</h4>
 
                         <div class="cd-price">
                             <span class="cd-currency">£</span>
@@ -138,7 +138,7 @@
             <ul class="cd-pricing-wrapper">
                 <li data-type="monthly" class="is-ended is-visible">
                     <header class="cd-pricing-header">
-                        <h4>Large Sized Business</h4>
+                        <h4>Large Sized Businesses</h4>
 
                         <div class="cd-price">
                             <span class="cd-currency">£</span>
