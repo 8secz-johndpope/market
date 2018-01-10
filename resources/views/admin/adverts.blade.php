@@ -61,7 +61,7 @@
                     <th scope="col">Title</th>
                     <th scope="col">Category</th>
                     <th scope="col">User</th>
-                    <th scope="col">Delete</th>
+                    <th scope="col">Disable/Enable</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -70,8 +70,11 @@
                             <td>{{$advert->param('title')}}</td>
                             <td>{{$advert->category->title}}</td>
                             <td>{{$advert->user->name}}</td>
-                            <td><a href="/admin" class="btn btn-danger">Delete</a> </td>
-                        </tr>
+                            @if($advert->status===1)
+                                <td><a href="/admin/disable/advert/{{$advert->id}}" class="btn btn-danger">Disable</a> </td>
+                            @else
+                                <td><a href="/admin/enable/advert/{{$advert->id}}" class="btn btn-primary">Enable</a> </td>
+                            @endif                        </tr>
                 @endforeach
                 </tbody>
             </table>
