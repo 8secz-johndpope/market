@@ -18,7 +18,7 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 });
 
 AWS.config.credentials.get(function(err) {
-    if (err) alert(err);
+   // if (err) alert(err);
     console.log(AWS.config.credentials);
 });
 
