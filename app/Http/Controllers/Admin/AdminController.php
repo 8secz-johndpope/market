@@ -116,8 +116,8 @@ class AdminController extends BaseController
     }
     public function adverts(Request $request){
         $reports = Report::all();
-        $adverts = Advert::where('status',1)->where('user_id','>',0)->orderBy('id','desc')->paginate(20);
-        $total =  Advert::where('status',1)->where('user_id','>',0)->count();
+        $adverts = Advert::where('status','>',0)->where('user_id','>',0)->orderBy('id','desc')->paginate(20);
+        $total =  Advert::where('status','>',0)->where('user_id','>',0)->count();
         return view('admin.adverts',['adverts'=>$adverts,'total'=>$total,'reports'=>$reports]);
     }
     public function iam(Request $request){
@@ -166,5 +166,25 @@ class AdminController extends BaseController
 
 
         return redirect('/admin/manage/contracts');
+    }
+
+    public function disable_advert(Request $request,$id)
+    {
+        $advert = Advert::find($id);
+        $advert->make_inactive();
+        $advert->status = 3;
+        $advert->save();
+
+        return redirect('/admin/manage/adverts');
+    }
+    public function enable_advert(Request $request,$id)
+    {
+        $advert = Advert::find($id);
+        $advert->make_active();
+        $advert->status = 1;
+        $advert->save();
+
+
+        return redirect('/admin/manage/adverts');
     }
 }

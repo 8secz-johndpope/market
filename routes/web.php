@@ -319,6 +319,8 @@ Route::namespace('Admin')->group(function () {
     Route::get('/admin/disable/contract/{id}', 'AdminController@disable_contract')->middleware('admin');
     Route::get('/admin/enable/contract/{id}', 'AdminController@enable_contract')->middleware('admin');
 
+    Route::get('/admin/disable/advert/{id}', 'AdminController@disable_advert')->middleware('admin');
+    Route::get('/admin/enable/advert/{id}', 'AdminController@enable_advert')->middleware('admin');
 });
 
 //end templates
