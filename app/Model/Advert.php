@@ -295,7 +295,8 @@ class Advert extends  BaseModel
         $response = $this->client->update($params);
 
         $this->deleted=0;
-        $this->save();
+            $this->status=1;
+            $this->save();
     }
     public function publish(){
         $milliseconds = round(microtime(true) * 1000);

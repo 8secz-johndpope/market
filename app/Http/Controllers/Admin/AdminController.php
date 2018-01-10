@@ -131,6 +131,9 @@ class AdminController extends BaseController
         $user = User::find($id);
         $user->enabled = 0;
         $user->save();
+        foreach ($user->adverts as $advert){
+            $advert->make_inactive();
+        }
 
         return redirect('/admin/manage/users');
     }
@@ -139,6 +142,9 @@ class AdminController extends BaseController
         $user = User::find($id);
         $user->enabled = 1;
         $user->save();
+        foreach ($user->adverts as $advert){
+            $advert->make_active();
+        }
 
         return redirect('/admin/manage/users');
     }
