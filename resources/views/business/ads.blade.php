@@ -97,7 +97,7 @@
                                 <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($advert->param('images'))>0?$advert->param('images')[0]:"noimage.png"}}" class="lazyload" alt="">
 
                                 @if($advert->featured_expires())
-                                    
+
                                 @endif
 
                                 <div class="listing-meta txt-sub">
