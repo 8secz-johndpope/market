@@ -843,6 +843,27 @@
                         </li>
                         @endif
                         <li class="list-group-item">
+                            <div class="container-contact-seller">
+                                <div class="form-group">
+                                    <span>Hi, my name is</span>
+                                    <input type="text" name="name" placeholder="First Name">
+                                    <input type="text" name="last-name" placeholder="Last Name">
+                                    <span> and
+                                    <select>
+                                        <option>I am interested in your</option>
+                                        <option>I'd like to now your best price for you</option>
+                                        <option>I'd like to test drive your</option>
+                                        <option>I'd like the CARFAX report for you</option>
+                                    </select>
+                                    <span>{{$product['title']}}. I am in the </span>
+                                    <input type="text" name="postcode" placeholder="Postcode">
+                                    <span>area.</span>
+                                    <span>You can reach me by email  at</span>
+                                    <input type="text" name="email">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
                             <span class="@if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) heart @else heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save
                         </li>
                         <!-- <li class="list-group-item">
