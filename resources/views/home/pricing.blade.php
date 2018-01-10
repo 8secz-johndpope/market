@@ -13,7 +13,9 @@
 @section('content')
 <div class="cd-pricing-container">
     <div style="width: 100%">
-        <h1 style="text-align: center">Annual Contracts for Business Accounts</h1>
+        <h1 style="text-align: center">Minimum Single Contract Value For Business Accounts</h1>
+        <h4 style="text-align: center">Spread over 12 payments </h4>
+
     </div> <!-- .cd-pricing-switcher -->
 
     <ul class="cd-pricing-list cd-bounce-invert">
@@ -21,7 +23,7 @@
             <ul class="cd-pricing-wrapper">
                 <li data-type="monthly" class="is-ended is-visible">
                     <header class="cd-pricing-header">
-                        <h2>SBA</h2>
+                        <h4>Small Business</h4>
 
                         <div class="cd-price">
                             <span class="cd-currency">£</span>
@@ -78,7 +80,7 @@
             <ul class="cd-pricing-wrapper">
                 <li data-type="monthly" class="is-ended is-visible">
                     <header class="cd-pricing-header">
-                        <h2>MBA</h2>
+                        <h4>Medium Sized Business</h4>
 
                         <div class="cd-price">
                             <span class="cd-currency">£</span>
@@ -136,7 +138,7 @@
             <ul class="cd-pricing-wrapper">
                 <li data-type="monthly" class="is-ended is-visible">
                     <header class="cd-pricing-header">
-                        <h2>BBA</h2>
+                        <h4>Large Sized Business</h4>
 
                         <div class="cd-price">
                             <span class="cd-currency">£</span>
