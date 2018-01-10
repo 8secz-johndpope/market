@@ -47,6 +47,7 @@ class User extends Authenticatable
         $this->email=$attributes['email'];
         $this->password=$attributes['password'];
         $this->name=$attributes['name'];
+        $this->display_name=$attributes['name'];
         $this->phone=$attributes['phone'];
         $customer = \Stripe\Customer::create(array(
             'email' => $attributes['email']
