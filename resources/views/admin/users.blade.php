@@ -37,6 +37,8 @@
                     <th scope="col">Email</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Disable/Enable</th>
+                    <th scope="col">Adverts</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -50,6 +52,8 @@
                         @else
                             <td><a href="/admin/enable/user/{{$user->id}}" class="btn btn-primary">Enable</a> </td>
                         @endif
+                        <td><a>{{$user->adverts()->count()}}</a></td>
+
                     </tr>
                 @endforeach
                 </tbody>
