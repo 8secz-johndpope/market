@@ -45,8 +45,13 @@ class LoginController extends BaseController
         if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1])) {
             // Authentication passed...
             return redirect()->intended('/');
-        }else{
+        }
+        else if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>0])) {
             return redirect()->back()->with('msg', 'Your account is disabled, please contact customer support');
+
+        }
+        else{
+            return redirect()->back()->with('msg', 'Incorrect login details, please check your email and password');
         }
     }
 
