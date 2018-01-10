@@ -291,6 +291,18 @@
                         </div>
                     </div>
                     </div>
+                    <div class="container-drop-price">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3 class="drop-title">Email me price drops and new listing for these search results</h3>
+                                <div class="form-group">
+                                    <input type="text"  class="form-control" name="email" placeholder="email">
+                                    <button class="btn" type="submit">Subscribe</button>
+                                </div>
+                                <small>By click "Subcribe" you agree to our <a>Privacy Policy</a> and <a>Term of Use</a></small>
+                            </div>
+                        </div>
+                    </div>
                     <div class="reviews-ratings">
                         <div class="row click-title">
                             <div class="col-sm-offset-6 col-sm-6">
