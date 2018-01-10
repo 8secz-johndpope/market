@@ -61,7 +61,7 @@
                     <th scope="col">Title</th>
                     <th scope="col">Category</th>
                     <th scope="col">User</th>
-                    <th scope="col">Disable/Enable</th>
+                    <th scope="col">Disable/Enable </th>
                 </tr>
                 </thead>
                 <tbody>
