@@ -926,8 +926,6 @@
                 </div>
                 <div class="buttons">
                     <ul class="list-group">
-                        <li class="list-group-item item-contact-seller">
-                            
                         @if($advert->has_param('phone'))
                         <li class="list-group-item">
                             <span class="glyphicon glyphicon-earphone"></span>

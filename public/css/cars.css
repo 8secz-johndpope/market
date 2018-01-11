@@ -47,6 +47,10 @@
 .buttons:not(:last-child) {
     margin-bottom: 15px;
 }
+.container-contact-seller {
+    padding: 15px;
+    background: #e2e2e2;
+}
 .contact{
 	border: none;
 }
