@@ -410,9 +410,6 @@ a.advert-user {
     /* background: url(icons/email.svg); */
     background-position: center;
     background-size: cover;
-    height: 30px;
-    width: 30px;
-    padding-right: 3px;
 }
 .report a.btn-default {
     width: 80%;
