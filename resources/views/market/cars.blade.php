@@ -866,19 +866,29 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <p>And</p>
-                                    <select class="form-group" name="wanted">
-                                        <option>I am interested in your</option>
-                                        <option>I'd like to now your best price for you</option>
-                                        <option>I'd like to test drive your</option>
-                                        <option>I'd like the CARFAX report for you</option>
-                                    </select>
-                                    <p>{{$product['title']}}. I am in the </p>
-                                    <input type="text" name="postcode" placeholder="Postcode">
-                                    <span>area.</span>
-                                    <span>You can reach me by email  at</span>
-                                    <input type="text" name="email">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <p>And</p>
+                                            <select class="form-group" name="wanted">
+                                                <option>I am interested in your</option>
+                                                <option>I'd like to now your best price for you</option>
+                                                <option>I'd like to test drive your</option>
+                                                <option>I'd like the CARFAX report for you</option>
+                                            </select>
+                                            <p>{{$product['title']}}. I am in the </p>
+                                            <input type="text" name="postcode" placeholder="Postcode">
+                                            <span>area.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label for="email">You can reach me by email at</label>
+                                        <div class="form-group">
+                                            <input type="text" name="email">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </li>
