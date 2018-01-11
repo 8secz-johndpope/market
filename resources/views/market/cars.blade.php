@@ -184,7 +184,7 @@
                                                 <div class="item-key-facts">
                                                     <img class="item-key-img img-responsive" src="/css/icons/transmission.svg">
                                                     <p class="item-key-value">
-                                                        {{$meta->value}}cc
+                                                        {{$meta->value}}
                                                     </p>
                                                 </div>
                                             </div>
