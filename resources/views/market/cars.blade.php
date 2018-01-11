@@ -935,7 +935,7 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="email-icon"><img src="/css/icons/sms.svg"></span></span>
                             Send to Phone
                         </li>
                         <li class="list-group-item">
