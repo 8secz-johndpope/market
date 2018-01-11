@@ -853,6 +853,8 @@
                         <p>Or</p>
                         <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
                     </div>
+                </div>
+                <div class="buttons">
                     <ul class="list-group">
                         <li class="list-group-item item-contact-seller">
                             <div class="container-contact-seller">
