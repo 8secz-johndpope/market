@@ -924,6 +924,11 @@
                                         <button type="submit" class="btn btn-submit">Send Message</button>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-12 text-right">
+                                        <small>By selecting "Send" I agree to the <a href="">Terms of Use</a> and <a href="">Privacy Policy</a> and consent to receive auto-dialed calls and/or text messages about this or other vehicles from the dealer selling this car at the number provided above. I understand that consent isn't a condition of purchase for any product or service and that I can opt out at any time. Standard message and data rates may apply.</small>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li class="list-group-item">
