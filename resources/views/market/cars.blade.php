@@ -1023,6 +1023,13 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="similar-adverts">
+                    <h3>Interested in this car?</h3>
+                    <div class="clearfix container-interested">
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
