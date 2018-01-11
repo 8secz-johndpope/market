@@ -1057,7 +1057,7 @@
       </div>
       <div class="modal-footer">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 text-left">
                 <small><a href="#">Terms of Use</a> | <a href="#">Privacy</a></small>
             </div>
             <div class="col-sm-6">
