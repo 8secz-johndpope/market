@@ -296,6 +296,8 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <h3 class="drop-title">Email me price drops and new listing for these search results</h3>
+                            </div>
+                            <div class="col-offset-2 col-sm-8">
                                 <div class="form-group">
                                     <input type="text"  class="form-control" name="email" placeholder="email">
                                     <button class="btn" type="submit">Subscribe</button>
