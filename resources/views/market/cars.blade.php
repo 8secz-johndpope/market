@@ -116,11 +116,12 @@
                     <div id="tabs"> 
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
-                        <li><a data-toggle="tab" href="#tap-pay">Payment</a></li>
-                        <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
                         @if($advert->has_meta('features'))
                             <li><a data-toggle="tab" href="#tap-other-info">Other Information</a></li>
                         @endif
+                        <li><a data-toggle="tab" href="#tap-pay">Payment</a></li>
+                        <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
+                        
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="clearfix tab-pane fade in active">
