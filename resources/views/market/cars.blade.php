@@ -154,7 +154,10 @@
                                             <div class="col-sm-2">
                                                 <div class="item-key-facts">
                                                     <img class="item-key-img img-responsive" src="/css/icons/calendar.svg">
-                                                    <p class="item-key-value">{{$metas['vehicle_mileage']}}
+                                                    <p class="item-key-value">
+                                                        @php
+                                                            var_dump($meta);
+                                                        @endphp
                                                     </p>
                                                 </div>
                                             </div>
