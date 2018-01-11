@@ -294,14 +294,14 @@
                     </div>
                     <div class="container-drop-price">
                         <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-offset-2 col-sm-8">
                                 <h3 class="drop-title">Email me price drops and new listing for these search results</h3>
                             </div>
                             <div class="col-sm-offset-2 col-sm-8">
                                 <div class="form-group">
                                     <div class="input-group">
                                         <span class="input-group-addon">Email</span>
-                                        <input type="text"  class="form-control" name="email"   placeholder="email">
+                                        <input type="text"  class="form-control" name="email"   placeholder="example@email.com">
                                     </div>
                                 </div>
                                 <div class="form-group">
