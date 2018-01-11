@@ -175,7 +175,7 @@
                                                 <div class="item-key-facts">
                                                     <img class="item-key-img img-responsive" src="/css/icons/engine.svg">
                                                     <p class="item-key-value">
-                                                        {{$meta->value}}
+                                                        {{$meta->value}}cc
                                                     </p>
                                                 </div>
                                             </div>
