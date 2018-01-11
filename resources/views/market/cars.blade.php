@@ -854,19 +854,6 @@
                         <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
                     </div>
                     <ul class="list-group">
-                        @if($advert->has_param('phone'))
-                        <li class="list-group-item">
-                            <span class="glyphicon glyphicon-earphone"></span>
-                            @if($srn)
-                                {{$advert->param('phone')}}
-                            @else
-                                {{substr($advert->param('phone'),0,5)}}XXXXXX
-                                <span class="reveal-phone">
-                                    <a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a>
-                                </span>
-                            @endif
-                        </li>
-                        @endif
                         <li class="list-group-item item-contact-seller">
                             <div class="container-contact-seller">
                                 <h3>Contact Seller | Get a Quote</h3>
@@ -936,6 +923,19 @@
                                 </div>
                             </div>
                         </li>
+                        @if($advert->has_param('phone'))
+                        <li class="list-group-item">
+                            <span class="glyphicon glyphicon-earphone"></span>
+                            @if($srn)
+                                {{$advert->param('phone')}}
+                            @else
+                                {{substr($advert->param('phone'),0,5)}}XXXXXX
+                                <span class="reveal-phone">
+                                    <a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a>
+                                </span>
+                            @endif
+                        </li>
+                        @endif
                         <li class="list-group-item">
                             <span class="sms-icon"><img src="/css/icons/sms.svg"></span></span>
                             Send to Phone

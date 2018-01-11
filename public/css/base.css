@@ -1014,6 +1014,11 @@ section.row-color.white {
 .list-style-square li {
     padding: 0 8px 8px 20px;
 }
+.email-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
