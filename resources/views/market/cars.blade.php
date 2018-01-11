@@ -11,6 +11,7 @@
 @section('styles')
 <link href="{{ asset('/css/for-sale.css?q=874') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('/css/cars.css?q=874') }}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/build/css/intlTelInput.css">
 @endsection
 
 @section('content')
@@ -1068,6 +1069,7 @@
     </div>
   </div>
 </div>
+<script src="/build/js/intlTelInput.js"></script>
 <script>
     var timer = null;
     $("#phone-number").intlTelInput();
