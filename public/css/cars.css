@@ -21,3 +21,10 @@
 .container-terms{
 	padding-top: 15px;
 }
+.container-contact-seller h3 {
+    font-size: 15px;
+    /* padding-bottom: 1.3rem; */
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: normal;
+    text-align: left;
+}

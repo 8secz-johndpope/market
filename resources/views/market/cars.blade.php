@@ -293,13 +293,13 @@
                                     <h3>Other Features</h3>
                                     <div class="terms-info">
                                         @if($advert->has_meta('features'))
-                                            <div class="row key-features">
-                                                <ul class="list-two-col list-style-square">
+                                            <ul class="list-two-col list-style-square">
+                                                <div class="row key-features">
                                                 @foreach($advert->meta('features') as $key)
                                                     <li class="col-sm-6">{{$key}}</li>
                                                 @endforeach
-                                                </ul>
-                                            </div>
+                                                </div>
+                                            </ul>
                                         @endif
                                     </div>
                                 </div>
@@ -933,6 +933,10 @@
                                     </div>
                                 </div>
                             </div>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            Send to Phone
                         </li>
                         <li class="list-group-item">
                             <span class="@if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) heart @else heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save
