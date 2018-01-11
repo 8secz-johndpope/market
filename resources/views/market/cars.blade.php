@@ -299,7 +299,10 @@
                             </div>
                             <div class="col-sm-offset-2 col-sm-8">
                                 <div class="form-group">
-                                    <input type="text"  class="form-control" name="email" placeholder="email">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Email</span>
+                                        <input type="text"  class="form-control" name="email"   placeholder="email">
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-submit" type="submit">Subscribe</button>
