@@ -940,7 +940,7 @@
                         </li>
                         @endif
                         <li class="list-group-item">
-                            <a href="#" class="action-sms">
+                            <a href="#" class="action-sms" data-toggle="modal" data-target="#smsModal">
                                 <span class="sms-icon"><img src="/css/icons/sms.svg"></span></span>
                                 Send to Phone
                             </a>
@@ -1026,6 +1026,27 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="smsModal" tabindex="-1" role="dialog" aria-labelledby="smsModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Send Listing to Phone</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
 </div>
 <script>
     var timer = null;

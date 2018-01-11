@@ -1077,7 +1077,7 @@
                         <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
                     </div>
                     <ul class="list-group">
-                        <li class="list-group-item">
+                        <li class="list-group-item" data-toggle="modal" data-target="#smsModal">
                             <a href="#" class="action-sms">
                                 <span class="sms-icon"><img src="/css/icons/sms.svg"></span></span>
                                 Send to Phone
