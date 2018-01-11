@@ -876,9 +876,15 @@
                                                 <option>I'd like to test drive your</option>
                                                 <option>I'd like the CARFAX report for you</option>
                                             </select>
-                                            <p>{{$product['title']}}. I am in the </p>
+                                            <p>{{$product['title']}}.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label for="postcode">I am in the</label>
+                                        <div class="form-group">
                                             <input type="text" name="postcode" placeholder="Postcode">
-                                            <span>area.</span>
                                         </div>
                                     </div>
                                 </div>
