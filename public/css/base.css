@@ -995,6 +995,22 @@ section.row-color.white {
     border-style: dashed;
     border-color: #dfdfe1;
 }
+.list-two-col li:after {
+    border-width: 0;
+    border-top-width: 1px;
+    content: "";
+    height: 0;
+    position: absolute;
+    top: -9px;
+    left: 0;
+}
+.list-two-col li:after {
+    width: 200%;
+}
+.list-two-col li:nth-child(odd):after {
+    border-style: dashed;
+    border-color: #dfdfe1;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
