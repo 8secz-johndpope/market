@@ -974,6 +974,17 @@ section.row-color.white {
 .icon-dlr {
     background-image: url(icon-dlr.svg);
 } 
+.list-style-square li:before {
+    border-top: 8px solid #ff9d2c;
+    border-top-width: .8rem;
+    content: "";
+    position: absolute;
+    top: 5px;
+    top: .5rem;
+    left: 0;
+    width: 8px;
+    width: .8rem;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
