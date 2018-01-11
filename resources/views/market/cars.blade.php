@@ -300,6 +300,8 @@
                             <div class="col-sm-offset-2 col-sm-8">
                                 <div class="form-group">
                                     <input type="text"  class="form-control" name="email" placeholder="email">
+                                </div>
+                                <div class="form-group">
                                     <button class="btn btn-submit" type="submit">Subscribe</button>
                                 </div>
                                 <small>By click "Subcribe" you agree to our <a>Privacy Policy</a> and <a>Term of Use</a></small>
