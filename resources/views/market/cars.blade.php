@@ -1033,13 +1033,27 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-dialog-centered">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Send Listing to Phone</h5>
+        <h5 class="modal-title" id="smsModalLabel">Send Listing to Phone</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <div class="row">
+            <div class="col-sm-12">
+                <label for="phone-number">Mobile Phone Number</label>
+                <div class="form-group">
+                    <input type="tel" name="phone-number" id="phone-number">
+                </div>
+                <div class="form-group">
+                    <label for="save-listing-checkbox">
+                        <input type="checkbox" name="save-listing-checkbox" id="save-listing-checkbox">
+                        Save this listing
+                    </label>
+                </div>
+                <p>We will send our app download link</p>
+            </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
