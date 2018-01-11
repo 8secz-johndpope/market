@@ -28,3 +28,12 @@
     font-weight: normal;
     text-align: left;
 }
+.key-features {
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-style-square li{
+	flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+}

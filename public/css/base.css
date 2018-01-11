@@ -1013,8 +1013,6 @@ section.row-color.white {
 }
 .list-style-square li {
     padding: 0 8px 8px 20px;
-    display: inline-block;
-    
 }
 @media screen and (max-width: 767px){
   .top {
