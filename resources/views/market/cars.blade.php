@@ -867,6 +867,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <p>And</p>
                                     <select>
                                         <option>I am interested in your</option>
                                         <option>I'd like to now your best price for you</option>
