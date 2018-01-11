@@ -11,6 +11,7 @@
 @endsection
 @section('styles')
 <link href="{{ asset('/css/for-sale.css?q=874') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('/css/cars.css?q=874') }}" rel="stylesheet" type="text/css">
 @endsection
 
 @section('content')
