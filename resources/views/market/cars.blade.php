@@ -852,11 +852,21 @@
                         @endif
                         <li class="list-group-item">
                             <div class="container-contact-seller">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="name">First Name</label>
+                                        <div class="form-group">
+                                            <input type="text" name="name" id="name" placeholder="First Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="last-name">Last Name</label>
+                                        <div class="form-group">
+                                            <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-group">
-                                    <span>Hi, my name is</span>
-                                    <input type="text" name="name" placeholder="First Name">
-                                    <input type="text" name="last-name" placeholder="Last Name">
-                                    <span> and
                                     <select>
                                         <option>I am interested in your</option>
                                         <option>I'd like to now your best price for you</option>
