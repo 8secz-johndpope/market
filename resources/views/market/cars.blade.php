@@ -296,7 +296,9 @@
                                             <ul class="list-two-col list-style-square">
                                                 <div class="row key-features">
                                                 @foreach($advert->meta('features') as $key)
-                                                    <li class="col-sm-6">{{$key}}</li>
+                                                    @if($key !== null)
+                                                        <li class="col-sm-6">{{$key}}</li>
+                                                    @endif
                                                 @endforeach
                                                 </div>
                                             </ul>
@@ -935,7 +937,7 @@
                             </div>
                         </li>
                         <li class="list-group-item">
-                            <span class="email-icon"><img src="/css/icons/sms.svg"></span></span>
+                            <span class="sms-icon"><img src="/css/icons/sms.svg"></span></span>
                             Send to Phone
                         </li>
                         <li class="list-group-item">
