@@ -310,7 +310,7 @@
                     <div class="container-drop-price">
                         <div class="row">
                             <div class="col-sm-offset-2 col-sm-8">
-                                <h3 class="drop-title">Email me price drops and new listing for these search results</h3>
+                                <h3 class="drop-title">Email me price drops and new listing for my  search</h3>
                             </div>
                             <div class="col-sm-offset-2 col-sm-8">
                                 <div class="form-group">
