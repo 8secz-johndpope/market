@@ -856,76 +856,78 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <ul class="list-group">
-                        <li class="list-group-item item-contact-seller">
-                            <div class="container-contact-seller">
-                                <h3>Contact Seller | Get a Quote</h3>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label for="name">First Name</label>
-                                        <div class="form-group">
-                                            <input type="text" name="name" id="name" placeholder="First Name" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="last-name">Last Name</label>
-                                        <div class="form-group">
-                                            <input type="text" id="last-name" name="last-name" placeholder="Last Name" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <p>And</p>
-                                            <select class="form-control" name="wanted">
-                                                <option>I am interested in your</option>
-                                                <option>I'd like to now your best price for your</option>
-                                                <option>I'd like to test drive your</option>
-                                                <option>I'd like the vehicle report for your</option>
-                                            </select>
-                                            <p>{{$product['title']}}.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <label for="postcode">I am in the</label>
-                                        <div class="form-group">
-                                            <input type="text" name="postcode" placeholder="Postcode" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <label for="email">You can reach me by email at</label>
-                                        <div class="form-group">
-                                            <input type="text" name="email" placeholder="example@email.com" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <label for="phone">Or phone at</label>
-                                        <div class="form-group">
-                                            <input type="tel" name="phone" id="phone" placeholder="" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 text-right">
-                                        <button type="submit" class="btn btn-submit">Send Message</button>
-                                    </div>
-                                </div>
-                                <div class="container-terms">
-                                    <div class="row">
-                                        <div class="col-sm-12 text-center">
-                                            <small>By selecting "Send" I agree to the <a href="">Terms of Use</a> and <a href="">Privacy Policy</a> and consent to receive auto-dialed calls and/or text messages about this or other vehicles from the dealer selling this car at the number provided above. I understand that consent isn't a condition of purchase for any product or service and that I can opt out at any time. Standard message and data rates may apply.</small>
-                                        </div>
-                                    </div>
+                    <div class="container-contact-seller">    
+                        <h3>Contact Seller | Get a Quote</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="name">First Name</label>
+                                <div class="form-group">
+                                    <input type="text" name="name" id="name" placeholder="First Name" class="form-control">
                                 </div>
                             </div>
-                        </li>
+                            <div class="col-sm-6">
+                                <label for="last-name">Last Name</label>
+                                <div class="form-group">
+                                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <p>And</p>
+                                    <select class="form-control" name="wanted">
+                                        <option>I am interested in your</option>
+                                        <option>I'd like to now your best price for your</option>
+                                        <option>I'd like to test drive your</option>
+                                        <option>I'd like the vehicle report for your</option>
+                                    </select>
+                                    <p>{{$product['title']}}.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="postcode">I am in the</label>
+                                <div class="form-group">
+                                    <input type="text" name="postcode" placeholder="Postcode" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="email">You can reach me by email at</label>
+                                <div class="form-group">
+                                    <input type="text" name="email" placeholder="example@email.com" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="phone">Or phone at</label>
+                                <div class="form-group">
+                                    <input type="tel" name="phone" id="phone" placeholder="" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 text-right">
+                                <button type="submit" class="btn btn-submit">Send Message</button>
+                            </div>
+                        </div>
+                        <div class="container-terms">
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    <small>By selecting "Send" I agree to the <a href="">Terms of Use</a> and <a href="">Privacy Policy</a> and consent to receive auto-dialed calls and/or text messages about this or other vehicles from the dealer selling this car at the number provided above. I understand that consent isn't a condition of purchase for any product or service and that I can opt out at any time. Standard message and data rates may apply.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <ul class="list-group">
+                        <li class="list-group-item item-contact-seller">
+                            
                         @if($advert->has_param('phone'))
                         <li class="list-group-item">
                             <span class="glyphicon glyphicon-earphone"></span>
