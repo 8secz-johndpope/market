@@ -940,8 +940,10 @@
                         </li>
                         @endif
                         <li class="list-group-item">
-                            <span class="sms-icon"><img src="/css/icons/sms.svg"></span></span>
-                            Send to Phone
+                            <a href="#" class="action-sms">
+                                <span class="sms-icon"><img src="/css/icons/sms.svg"></span></span>
+                                Send to Phone
+                            </a>
                         </li>
                         <li class="list-group-item">
                             <span class="@if(!Auth::guest()&&Auth::user()->is_favorite($advert->id)) heart @else heart-empty @endif favroite-icon" data-id="{{$advert->id}}"></span>Save
