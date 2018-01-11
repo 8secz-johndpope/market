@@ -151,16 +151,18 @@
                                     </div>
                                         <div class="row key-facts">
                                             <h3>Key Facts</h3> 
+                                            @foreach($metas as $meta)
+                                            @if($meta->slug === 'vehicle_mileage')
                                             <div class="col-sm-2">
                                                 <div class="item-key-facts">
                                                     <img class="item-key-img img-responsive" src="/css/icons/calendar.svg">
                                                     <p class="item-key-value">
-                                                        @php
-                                                            var_dump($metas);
-                                                        @endphp
+                                                        {{$meta->value}}
                                                     </p>
                                                 </div>
                                             </div>
+                                            @endif 
+                                            @endforeach
                                         </div>
                                     <div class="description">
                                         <h3>Full Description</h3>
