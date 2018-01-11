@@ -152,10 +152,19 @@
                                         <div class="row key-facts">
                                             <h3>Key Facts</h3> 
                                             @foreach($metas as $meta)
-                                            @if($meta->slug === 'vehicle_mileage')
-                                            <div class="col-sm-2">
+                                            @if($meta->slug === 'vehicle_registration_year')
+                                            <div class="col-sm-2 text-center">
                                                 <div class="item-key-facts">
                                                     <img class="item-key-img img-responsive" src="/css/icons/calendar.svg">
+                                                    <p class="item-key-value">
+                                                        {{$meta->value}}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            @elseif($meta->slug === 'vehicle_mileage')
+                                            <div class="col-sm-2 text-center">
+                                                <div class="item-key-facts">
+                                                    <img class="item-key-img img-responsive" src="/css/icons/mileage.svg">
                                                     <p class="item-key-value">
                                                         {{$meta->value}}
                                                     </p>
