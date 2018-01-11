@@ -1043,7 +1043,7 @@
             <div class="col-sm-12">
                 <label for="phone-number">Mobile Phone Number</label>
                 <div class="form-group">
-                    <input type="tel" name="phone-number" id="phone-number">
+                    <input type="tel" name="phone-number" id="phone-number" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="save-listing-checkbox">
