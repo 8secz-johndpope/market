@@ -285,9 +285,15 @@
                                 <div class="col-sm-12">
                                     <h3>Other Features</h3>
                                     <div class="terms-info">
-                                        <p>Your shipping address must match your PayPal address. Please note once you complete the checkout process, we will not be able to amend or cancel your order.<br>
-                                        If you want change shipping address,please change it before you make payment as we can not change the address later.  We can not check your messsages on order notes regarding address change or other information.
-                                        </p>
+                                        @if($advert->has_meta('features'))
+                                            <div class="row key-features">
+                                                <ul class="list-two-col list-style-square">
+                                                @foreach($advert->meta('features') as $key)
+                                                    <li class="col-sm-6">{{$key}}</li>
+                                                @endforeach
+                                                </ul>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
