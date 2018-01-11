@@ -1070,7 +1070,8 @@
 </div>
 <script>
     var timer = null;
-
+    $("#phone-number").intlTelInput();
+    $("#phone").intlTelInput();
     $("#check-button").click(function () {
         var id =$('#id').val();
         var postcode=$('#postcode').val();
