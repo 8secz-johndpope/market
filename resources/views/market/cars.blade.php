@@ -896,6 +896,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label for="phone">Or phone at</label>
+                                        <div class="form-group">
+                                            <input type="tel" name="phone" id="phone" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li class="list-group-item">
