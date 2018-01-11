@@ -856,13 +856,13 @@
                                     <div class="col-sm-6">
                                         <label for="name">First Name</label>
                                         <div class="form-group">
-                                            <input type="text" name="name" id="name" placeholder="First Name">
+                                            <input type="text" name="name" id="name" placeholder="First Name" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="last-name">Last Name</label>
                                         <div class="form-group">
-                                            <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+                                            <input type="text" id="last-name" name="last-name" placeholder="Last Name" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -884,7 +884,7 @@
                                     <div class="col-sm-12">
                                         <label for="postcode">I am in the</label>
                                         <div class="form-group">
-                                            <input type="text" name="postcode" placeholder="Postcode">
+                                            <input type="text" name="postcode" placeholder="Postcode" class="form-controls">
                                         </div>
                                     </div>
                                 </div>
@@ -892,7 +892,7 @@
                                     <div class="col-sm-12">
                                         <label for="email">You can reach me by email at</label>
                                         <div class="form-group">
-                                            <input type="text" name="email" placeholder="example@email.com">
+                                            <input type="text" name="email" placeholder="example@email.com" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -900,7 +900,7 @@
                                     <div class="col-sm-12">
                                         <label for="phone">Or phone at</label>
                                         <div class="form-group">
-                                            <input type="tel" name="phone" id="phone" placeholder="">
+                                            <input type="tel" name="phone" id="phone" placeholder="" class="form-control">
                                         </div>
                                     </div>
                                 </div>
