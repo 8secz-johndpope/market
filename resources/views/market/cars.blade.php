@@ -297,10 +297,10 @@
                             <div class="col-sm-12">
                                 <h3 class="drop-title">Email me price drops and new listing for these search results</h3>
                             </div>
-                            <div class="col-offset-2 col-sm-8">
+                            <div class="col-sm-offset-2 col-sm-8">
                                 <div class="form-group">
                                     <input type="text"  class="form-control" name="email" placeholder="email">
-                                    <button class="btn" type="submit">Subscribe</button>
+                                    <button class="btn btn-submit" type="submit">Subscribe</button>
                                 </div>
                                 <small>By click "Subcribe" you agree to our <a>Privacy Policy</a> and <a>Term of Use</a></small>
                             </div>
