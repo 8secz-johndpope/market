@@ -904,6 +904,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-12 text-right">
+                                        <button type="submit" class="btn btn-submit">Send Message</button>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li class="list-group-item">
