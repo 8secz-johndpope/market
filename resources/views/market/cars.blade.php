@@ -118,7 +118,9 @@
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         <li><a data-toggle="tab" href="#tap-pay">Payment</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
-                        <!-- <li><a data-toggle="tab" href="#tap-terms">Terms of Seller</a></li> -->
+                        @if($advert->has_meta('features'))
+                            <li><a data-toggle="tab" href="#tap-other-info">Other Information</a></li>
+                        @endif
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="clearfix tab-pane fade in active">
@@ -278,10 +280,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="tap-terms" class="tab-pane fade">
+                        <div id="tap-other-info" class="tab-pane fade">
                             <div class="row">           
                                 <div class="col-sm-12">
-                                    <h3>Terms and conditions of the sale</h3>
+                                    <h3>Other Features</h3>
                                     <div class="terms-info">
                                         <p>Your shipping address must match your PayPal address. Please note once you complete the checkout process, we will not be able to amend or cancel your order.<br>
                                         If you want change shipping address,please change it before you make payment as we can not change the address later.  We can not check your messsages on order notes regarding address change or other information.
