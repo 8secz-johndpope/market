@@ -1019,6 +1019,10 @@ section.row-color.white {
     height: 20px;
     margin-right: 8px;
 }
+.sms-icon img {
+    width: 18px;
+    margin-right: 10px;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
