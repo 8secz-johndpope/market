@@ -867,6 +867,7 @@
                         @endif
                         <li class="list-group-item">
                             <div class="container-contact-seller">
+                                <h3>Contact Seller / Get A Quote</h3>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <label for="name">First Name</label>
