@@ -128,20 +128,20 @@
                                 <div class="col-sm-12 left-content">
                                     <div class="row meta">
                                         @foreach($metas as $meta)
-                                            <div class="col-sm-6 meta-bold">
+                                            <div class="col-sm-4 meta-bold">
                                                 {{$meta->title}}:
                                             </div>
                                             <div class="col-sm-6 meta-info">
                                                 {{$meta->value}}
                                             </div>
                                         @endforeach
-                                            <div class="col-sm-6 meta-bold">
+                                            <div class="col-sm-4 meta-bold">
                                                 Added on {{env('APP_NAME')}}:
                                             </div>
                                             <div class="col-sm-6 meta-info">
                                                 {{$advert->created_at->format('d F Y')}}
                                             </div>
-                                            <div class="col-sm-6 meta-bold">
+                                            <div class="col-sm-4 meta-bold">
                                                 Payments:
                                             </div>
                                             <div class="col-sm-6 meta-info">
