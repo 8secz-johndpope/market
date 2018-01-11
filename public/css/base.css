@@ -1011,6 +1011,9 @@ section.row-color.white {
     border-style: dashed;
     border-color: #dfdfe1;
 }
+.list-style-square li {
+    padding: 0 8px 8px 20px;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
