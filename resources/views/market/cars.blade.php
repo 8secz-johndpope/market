@@ -1056,8 +1056,15 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send</button>
+        <div class="row">
+            <div class="col-sm-6">
+                <small><a href="#">Terms of Use</a> | <a href="#">Privacy</a></small>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send</button>
+            </div>
+        </div>
       </div>
     </div>
   </div>
