@@ -868,13 +868,13 @@
                                 </div>
                                 <div class="form-group">
                                     <p>And</p>
-                                    <select>
+                                    <select class="form-group" name="wanted">
                                         <option>I am interested in your</option>
                                         <option>I'd like to now your best price for you</option>
                                         <option>I'd like to test drive your</option>
                                         <option>I'd like the CARFAX report for you</option>
                                     </select>
-                                    <span>{{$product['title']}}. I am in the </span>
+                                    <p>{{$product['title']}}. I am in the </p>
                                     <input type="text" name="postcode" placeholder="Postcode">
                                     <span>area.</span>
                                     <span>You can reach me by email  at</span>
