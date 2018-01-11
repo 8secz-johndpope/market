@@ -128,14 +128,14 @@
                             <div class="content">
                                 <div class="col-sm-12 left-content">
                                     <div class="row meta">
-                                        @foreach($metas as $meta)
+                                        <!-- @foreach($metas as $meta)
                                             <div class="col-sm-4 meta-bold">
                                                 {{$meta->title}}:
                                             </div>
                                             <div class="col-sm-6 meta-info">
                                                 {{$meta->value}}
                                             </div>
-                                        @endforeach
+                                        @endforeach -->
                                             <div class="col-sm-4 meta-bold">
                                                 Added on {{env('APP_NAME')}}:
                                             </div>
@@ -149,17 +149,16 @@
                                                 <a href="/download-mobile-apps/"> <img class="payments-methods" src="/css/payments.png"></a>
                                             </div>
                                     </div>
-
-                                    @if($advert->has_meta('key_features'))
-                                        <div class="row key-features">
-                                            <h3>Key features</h3> 
-                                            <ul class="list-two-col list-style-square">
-                                            @foreach($advert->meta('key_features') as $key)
-                                                <li class="col-sm-6">{{$key}}</li>
-                                            @endforeach
-                                            </ul>
+                                        <div class="row key-facts">
+                                            <h3>Key Facts</h3> 
+                                            <div class="col-sm-2">
+                                                <div class="item-key-facts">
+                                                    <img class="item-key-img img-responsive" src="/css/icons/calendar.svg">
+                                                    <p class="item-key-value">{{$metas['vehicle_mileage']}}
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    @endif
                                     <div class="description">
                                         <h3>Full Description</h3>
                                         {!! $product['description'] !!}
