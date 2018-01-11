@@ -1031,7 +1031,7 @@
 <!-- Modal -->
 <div class="modal fade" id="smsModal" tabindex="-1" role="dialog" aria-labelledby="smsModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content modal-dialog-centered">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Send Listing to Phone</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
