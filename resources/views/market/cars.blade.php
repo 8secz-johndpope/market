@@ -867,7 +867,7 @@
                             @endif
                         </li>
                         @endif
-                        <li class="list-group-item">
+                        <li class="list-group-item item-contact-seller">
                             <div class="container-contact-seller">
                                 <h3>Contact Seller | Get a Quote</h3>
                                 <div class="row">
