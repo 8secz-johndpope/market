@@ -985,6 +985,16 @@ section.row-color.white {
     width: 8px;
     width: .8rem;
 }
+.list-two-col {
+    border-width: 0;
+    border-bottom-width: 1px;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    border-style: dashed;
+    border-color: #dfdfe1;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
