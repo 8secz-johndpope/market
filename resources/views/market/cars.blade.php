@@ -170,10 +170,19 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            @elseif($meta->slug === 'vehicle_registration_year')
+                                            @elseif($meta->slug === 'vehicle_engine_size')
                                             <div class="col-sm-2 text-center">
                                                 <div class="item-key-facts">
                                                     <img class="item-key-img img-responsive" src="/css/icons/engine.svg">
+                                                    <p class="item-key-value">
+                                                        {{$meta->value}}cc
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            @elseif($meta->slug === 'vehicle_transmission')
+                                            <div class="col-sm-2 text-center">
+                                                <div class="item-key-facts">
+                                                    <img class="item-key-img img-responsive" src="/css/icons/transmission.svg">
                                                     <p class="item-key-value">
                                                         {{$meta->value}}cc
                                                     </p>
