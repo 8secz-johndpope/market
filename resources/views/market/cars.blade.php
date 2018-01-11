@@ -156,7 +156,7 @@
                                                     <img class="item-key-img img-responsive" src="/css/icons/calendar.svg">
                                                     <p class="item-key-value">
                                                         @php
-                                                            var_dump($meta);
+                                                            var_dump($metas);
                                                         @endphp
                                                     </p>
                                                 </div>
