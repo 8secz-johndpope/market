@@ -154,7 +154,7 @@
                                                 <div class="card">
                                                     <div class="card-header" role="tab" id="heading-key-facts">
                                                         <h3 class="mb-0">
-                                                            <a data-toggle="collapse" href="#key-facts" role="button" aria-controls="key-facts">Key Facts</a>
+                                                            <a data-toggle="collapse" href="#key-facts" role="button" aria-controls="key-facts" aria-expanded="true">Key Facts</a>
                                                         </h3>
                                                     </div>
                                                     <div id="key-facts" class="collapse clearfix" role="tabpanel" arial-labelledby="heading-key-facts" data-parent="#accordion">
@@ -214,7 +214,7 @@
                                                 <div class="card">
                                                     <div class="card-header" role="tab" id="headingRunningPerformance">
                                                         <h3 class="mb-0">
-                                                            <a data-toggle="collapse" href="#runningPerformance" role="button" aria-controls="runningPerformance">
+                                                            <a data-toggle="collapse" href="#runningPerformance" role="button" aria-controls="runningPerformance" aria-expanded="false">
                                                                 Running costs & Performance
                                                             </a>
                                                         </h3>
