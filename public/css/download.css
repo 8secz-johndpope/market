@@ -238,7 +238,7 @@
 	    transition: opacity 0.3s ease, transform 0.8s ease;
 	    transition: opacity 0.3s ease, transform 0.8s ease, -webkit-transform 0.8s ease;
 	}
-	.loaded .app-page .mobile-devices {
+	.app-page .mobile-devices {
 	    opacity: 1;
 	    -webkit-transform: translateX(50%);
 	    -ms-transform: translateX(50%);
