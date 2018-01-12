@@ -940,12 +940,14 @@
                                 <div class="container-phone">
                                     <div class="wrapper-phone">
                                         <strong>Contact number</strong>
-                                        <div class="content-phone-number">
-                                        <span class="glyphicon glyphicon-earphone"></span>
                                         @if($srn)
+                                        <div class="content-phone-number 100wp">
+                                        <span class="glyphicon glyphicon-earphone"></span>
                                             {{$advert->param('phone')}}
                                         </div>
                                         @else
+                                        <div class="content-phone-number">
+                                            <span class="glyphicon glyphicon-earphone"></span>
                                             {{substr($advert->param('phone'),0,5)}}XXXXXX
                                         </div>
                                         <div class="wrapper-reveal">
