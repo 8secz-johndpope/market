@@ -96,3 +96,6 @@
     border: 1px solid #ddd;
     padding: 15px;
 }
+.container-insures {
+    border-bottom: 1px solid #ddd;
+}
