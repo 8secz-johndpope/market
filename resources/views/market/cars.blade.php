@@ -145,12 +145,6 @@
                                             <div class="col-sm-6 meta-info">
                                                 {{$advert->created_at->format('d F Y')}}
                                             </div>
-                                            <div class="col-sm-4 meta-bold">
-                                                Payments:
-                                            </div>
-                                            <div class="col-sm-6 meta-info">
-                                                <a href="/download-mobile-apps/"> <img class="payments-methods" src="/css/payments.png"></a>
-                                            </div>
                                     </div>
                                     <div class="row key-facts">
                                         <div class="col-sm-12">
