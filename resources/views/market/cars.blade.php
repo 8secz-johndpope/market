@@ -1127,7 +1127,7 @@
                             <div class="wrapper-insure-content">
                                 <p>Compare insurance quotes for this car through comparethemarket.com</p>
                             </div>
-                            <div class="icon-insure">
+                            <div class="icon-interested icon-insure">
                             </div>
                         </div>
                         <div class="col-sm-12 container-full-history">
@@ -1135,7 +1135,7 @@
                             <div class="wrapper-full-history">
                                 <p>Get peace of mind before you buy</p>
                             </div>
-                            <div class="icon-insure">
+                            <div class="icon-interested icon-full-history">
                             </div>
                         </div>
                     </div>

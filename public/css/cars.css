@@ -102,3 +102,18 @@
 .container-insures {
     border-bottom: 1px solid #ddd;
 }
+.icon-interested {
+    position: absolute;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 77px;
+    height: 57px;
+    float: right;
+}
+.icon-interested.icon-insure{
+	background: url(https://www.autotrader.co.uk/static/55c5d4ea4013/images/fpa/logo_md_ctm_@1x.png);
+}
+.icon-interested.icon-full-history{
+	background: url(https://www.autotrader.co.uk/static/ebc729b8ec47/images/fpa/experian.svg);
+}
