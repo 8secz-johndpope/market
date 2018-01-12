@@ -215,7 +215,7 @@
                                                     </div>
                                                     <div class="col-sm-2 text-center">
                                                         <div class="item-key-facts">
-                                                            <img class="item-key-img img-responsive" src="/css/icons/bhp.svg">
+                                                            <img class="item-key-img img-responsive" src="/css/icons/bodies-car.svg">
                                                             <p class="item-key-value">
                                                                 @if($advert->has_meta('vehicle_body_type'))
                                                                     {{$advert->meta('vehicle_body_type')}}
