@@ -88,3 +88,6 @@
 .container-insures, .container-full-history{
 	position: relative;
 }
+.wrapper-insure-content, .wrapper-full-history{
+	width: calc(100% - 80px);
+}

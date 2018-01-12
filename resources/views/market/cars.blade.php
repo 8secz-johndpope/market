@@ -1132,7 +1132,7 @@
                         </div>
                         <div class="col-sm-12 container-full-history">
                             <h3>Check its full history</h3>
-                            <div class="wrapper-insure-content">
+                            <div class="wrapper-full-history">
                                 <p>Get peace of mind before you buy</p>
                             </div>
                             <div class="icon-insure">
