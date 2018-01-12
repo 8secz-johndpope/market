@@ -369,7 +369,7 @@
                                                 <div class="key-features">
                                                 @foreach($advert->meta('features') as $key)
                                                     @if($key !== null)
-                                                        <li class="col-sm-6">{{$key}}</li>
+                                                        <li class="">{{$key}}</li>
                                                     @endif
                                                 @endforeach
                                                 </div>
