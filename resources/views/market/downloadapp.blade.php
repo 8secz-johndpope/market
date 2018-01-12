@@ -21,6 +21,10 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<h1>Connect, search, find, buy - get it on the go</h1>
+							<div class="app-store-badges">
+								<a href="#" class="appstore-link" target="_blank">Download</a>
+								<a href="#" class="google-play-link" target="_blank">Download</a>
+							</div>
 							<div class="instructions">
 								<p class=instructions-sms active>Enter your number and we'll text you a link to download the app!</p>
 							</div>
