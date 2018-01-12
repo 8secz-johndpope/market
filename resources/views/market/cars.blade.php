@@ -936,6 +936,21 @@
                                 <address>
                                     {{$product['location_name']}}  
                                 </address>
+                                @if($advert->has_param('phone'))
+                                <div class="container-phone">
+                                    <div class="wrapper-phone">
+                                        <span class="glyphicon glyphicon-earphone"></span>
+                                        @if($srn)
+                                            {{$advert->param('phone')}}
+                                        @else
+                                            {{substr($advert->param('phone'),0,5)}}XXXXXX
+                                            <span class="reveal-phone">
+                                                <a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                @endif
                                 @if(isset($advert->user->business))
                                 <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
                                 @endif
@@ -943,21 +958,6 @@
                                     <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                                 @endif
                             </div>
-                            @if($advert->has_param('phone'))
-                            <div class="container-phone">
-                                <div class="wrapper-phone">
-                                    <span class="glyphicon glyphicon-earphone"></span>
-                                    @if($srn)
-                                        {{$advert->param('phone')}}
-                                    @else
-                                        {{substr($advert->param('phone'),0,5)}}XXXXXX
-                                        <span class="reveal-phone">
-                                            <a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a>
-                                        </span>
-                                    @endif
-                                </div>
-                            </div>
-                            @endif
                     </div>
                     <div class="contact">
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
