@@ -332,7 +332,7 @@
                         <div id="tap-other-info" class="tab-pane fade">
                             <div class="row">           
                                 <div class="col-sm-12">
-                                    <h3>Other Features</h3>
+                                    <h3>Features</h3>
                                     <div class="terms-info">
                                         @if($advert->has_meta('features'))
                                             <ul class="list-two-col list-style-square">
