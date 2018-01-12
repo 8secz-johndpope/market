@@ -197,6 +197,7 @@
                                                     </div>
                                                 </div>
                                                 @endif
+                                                @endforeach
                                                 @if($advert->has_meta('key_facts'))
                                                 <div class="col-sm-2 text-center">
                                                     <div class="item-key-facts">
@@ -207,7 +208,6 @@
                                                     </div>
                                                 </div>    
                                                 @endif
-                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
