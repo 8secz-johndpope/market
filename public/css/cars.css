@@ -53,3 +53,7 @@
 .cell-content{
 	text-align: center;
 }
+.item-key-img {
+    width: 40px;
+    margin: auto;
+}
