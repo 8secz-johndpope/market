@@ -85,3 +85,6 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.container-insures, .container-full-history{
+	position: relative;
+}

@@ -1122,6 +1122,22 @@
                 <div class="similar-adverts">
                     <h3>Interested in this car?</h3>
                     <div class="clearfix container-interested">
+                        <div class="col-sm-12 container-insures">
+                            <h3>How much is it to insure?</h3>
+                            <div class="wrapper-insure-content">
+                                <p>Compare insurance quotes for this car through comparethemarket.com</p>
+                            </div>
+                            <div class="icon-insure">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 container-full-history">
+                            <h3>Check its full history</h3>
+                            <div class="wrapper-insure-content">
+                                <p>Get peace of mind before you buy</p>
+                            </div>
+                            <div class="icon-insure">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
