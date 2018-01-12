@@ -300,7 +300,7 @@
                             </div>
                         </div>
                         <div id="tap-pay" class="tab-pane fade">
-                            <div class="row">
+                            <div class="row tabcontent">
                                  <div class="col-sm-12">
                                     <h3>Payments</h3>
                                     <div class="row">
@@ -340,7 +340,7 @@
                             </div>
                         </div>
                         <div id="tap-other-info" class="tab-pane fade">
-                            <div class="row">           
+                            <div class="row tabcontent">           
                                 <div class="col-sm-12">
                                     <h3>Features</h3>
                                     <div class="terms-info">
@@ -361,7 +361,7 @@
                         </div>
                         @if($advert->has_meta('key_facts'))
                         <div id="tap-key-facts" class="tab-pane fade">
-                            <div class="row">           
+                            <div class="row tabcontent">           
                                 <div class="col-sm-12">
                                     <h3>Running costs & Performance</h3>
                                     <div class="container-key-facts">
