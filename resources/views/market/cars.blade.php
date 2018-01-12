@@ -359,6 +359,7 @@
                                 </div>
                             </div>
                         </div>
+                        @if($advert->has_meta('key_facts'))
                         <div id="tap-key-facts" class="tab-pane fade">
                             <div class="row">           
                                 <div class="col-sm-12">
@@ -378,6 +379,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
                     </div>
                     </div>
                     <div class="container-drop-price">
