@@ -225,7 +225,6 @@
                                                                 @foreach($advert->meta('key_facts') as $titleKeyFact => $keyFact)
                                                                     <li> {{$titleKeyFact}} : {{$keyFact}}</li>
                                                                     @php
-                                                                        <
                                                                         var_dump($titleKeyFact);
                                                                     @endphp
                                                                 @endforeach
