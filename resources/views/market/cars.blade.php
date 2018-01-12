@@ -197,7 +197,7 @@
                                                     </div>
                                                 </div>
                                                 @endif
-                                                @if($advert->has_meta('key_facts') && in_array("Engine power", $advert->meta('key_facts')))
+                                                @if($advert->has_meta('key_facts'))
                                                 <div class="col-sm-2 text-center">
                                                     <div class="item-key-facts">
                                                         <img class="item-key-img img-responsive" src="/css/icons/fuel-station-pump.svg">
