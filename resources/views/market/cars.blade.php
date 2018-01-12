@@ -225,7 +225,8 @@
                                                                 <div class="key-features">
                                                                 @foreach($advert->meta('key_facts') as $titleKeyFact => $keyFact)
                                                                     <li class="col-sm-6"> 
-                                                                        {{$titleKeyFact}} : {{$keyFact}}
+                                                                        {{$titleKeyFact}} : 
+                                                                        <span class="text-right">{{$keyFact}}</span>
                                                                     </li>
                                                                 @endforeach
                                                                 </div>
