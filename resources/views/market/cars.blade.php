@@ -211,8 +211,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h3>Key Facts</h3> 
-                                            
                                         </div>
                                     <div class="description">
                                         <h3>Full Description</h3>
