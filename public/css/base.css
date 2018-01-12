@@ -1031,6 +1031,9 @@ section.row-color.white {
   border-bottom-left-radius: 0 !important;
   border-top-left-radius: 0 !important;
 }
+strong{
+  font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;

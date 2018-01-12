@@ -141,6 +141,9 @@
 address{
 	margin-bottom: 5px;
 }
+strong{
+	font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
 span.reveal-phone {
     margin-top: -6px;
 }
