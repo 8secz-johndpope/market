@@ -366,7 +366,7 @@
                                     <div class="terms-info">
                                         @if($advert->has_meta('features'))
                                             <ul class="list-two-col list-style-square">
-                                                <div class="row key-features">
+                                                <div class="key-features">
                                                 @foreach($advert->meta('features') as $key)
                                                     @if($key !== null)
                                                         <li class="col-sm-6">{{$key}}</li>
