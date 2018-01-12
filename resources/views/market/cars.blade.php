@@ -150,6 +150,7 @@
                                             </div>
                                     </div>
                                         <div class="row key-facts">
+                                            <div class="col-sm-12">
                                             <div id="accordion" role="tablist">
                                                 <div class="card">
                                                     <div class="card-header" role="tab" id="heading-key-facts">
@@ -236,6 +237,7 @@
                                                 </div>
                                                 @endif
                                             </div>
+                                        </div>
                                         </div>
                                     <div class="description">
                                         <h3>Full Description</h3>
