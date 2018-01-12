@@ -142,7 +142,7 @@
 	background: #fff;
 	padding: 6px 12px;
 	display: inline-block;
-	width: calc(100% - 80px)
+	width: calc(100% - 80px);
 }
 address{
 	margin-bottom: 5px;
