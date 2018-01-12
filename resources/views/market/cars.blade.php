@@ -222,9 +222,11 @@
                                                     <div id="runningPerformance" class="collapse clearfix" role="tabpanel" aria-labelledby="headingRunningPerformance" data-parent="#accordion">
                                                         <div class="card-body">
                                                             <ul>
-                                                                @foreach($advert->meta('key_facts') as $keyFact)
+                                                                @foreach($advert->meta('key_facts') as $titleKeyFact => $keyFact)
+                                                                    <li> {{$titleKeyFact}} : {{$keyFact}}</li>
                                                                     @php
-                                                                        var_dump($advert->meta('key_facts'));
+                                                                        <
+                                                                        var_dump($titleKeyFact);
                                                                     @endphp
                                                                 @endforeach
                                                             </ul>
