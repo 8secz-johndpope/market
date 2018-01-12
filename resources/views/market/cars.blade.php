@@ -223,10 +223,9 @@
                                                         <div class="card-body">
                                                             <ul>
                                                                 @foreach($advert->meta('key_facts') as $titleKeyFact => $keyFact)
-                                                                    <li> {{$titleKeyFact}} : {{$keyFact}}</li>
-                                                                    @php
-                                                                        var_dump($titleKeyFact);
-                                                                    @endphp
+                                                                    <li> 
+                                                                        {{$titleKeyFact}} : {{$keyFact}}
+                                                                    </li>
                                                                 @endforeach
                                                             </ul>
                                                         </div>
