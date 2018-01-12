@@ -166,7 +166,7 @@
                                                         <div class="item-key-facts">
                                                             <img class="item-key-img img-responsive" src="/css/icons/mileage.svg">
                                                             <p class="item-key-value">
-                                                                {{$meta->value}} miles
+                                                                {{number_format($meta->value)}} miles
                                                             </p>
                                                         </div>
                                                     </div>
