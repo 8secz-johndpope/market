@@ -308,7 +308,6 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-12 meta-info">
-                                            @if($advert->user!==null)
                                             <div class="col-sm-4 border-left">
                                                 <div class="cell-content">
                                                     <a href="/download-mobile-apps/">
@@ -316,7 +315,6 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            @endif
                                             <div class="col-sm-4 border-left">
                                                 <div class="cell-content">
                                                     Cash in Person
