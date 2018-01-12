@@ -149,7 +149,7 @@
                                     <div class="row key-facts">
                                         <div class="col-sm-12">
                                             <h3 class="mb-0">Key Facts</h3>
-                                            <div class="card-body">
+                                            <div class="row card-body">
                                                 @foreach($metas as $meta)
                                                 @if($meta->slug === 'vehicle_registration_year')
                                                 <div class="col-sm-2 text-center">
