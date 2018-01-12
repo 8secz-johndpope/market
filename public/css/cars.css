@@ -91,3 +91,8 @@
 .wrapper-insure-content, .wrapper-full-history{
 	width: calc(100% - 80px);
 }
+.container-interested {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
