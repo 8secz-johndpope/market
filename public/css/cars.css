@@ -74,6 +74,8 @@
 }
 #tab-description .col-sm-2{
 	width: 14%;
+	padding-left: 10px;
+    padding-right: 10px;
 }
 .icon.icon-body-car:before {
     content: '';
