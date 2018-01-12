@@ -117,7 +117,10 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         @if($advert->has_meta('features'))
-                            <li><a data-toggle="tab" href="#tap-other-info">Other Information</a></li>
+                            <li><a data-toggle="tab" href="#tap-other-info">Features</a></li>
+                        @endif
+                        @if($advert->has_meta('key_facts'))
+                            <li><a data-toggle="tab" href="#tap-key-facts">Performance</a></li>
                         @endif
                         <li><a data-toggle="tab" href="#tap-pay">Payment</a></li>
                         <li><a data-toggle="tab" href="#tap-map">Map & Street View</a></li>
@@ -149,96 +152,61 @@
                                                 <a href="/download-mobile-apps/"> <img class="payments-methods" src="/css/payments.png"></a>
                                             </div>
                                     </div>
-                                        <div class="row key-facts">
-                                            <div class="col-sm-12">
-                                            <div id="accordion" role="tablist">
-                                                <div class="card">
-                                                    <div class="card-header" role="tab" id="heading-key-facts">
-                                                        <h3 class="mb-0">
-                                                            <a data-toggle="collapse" href="#key-facts" role="button" aria-controls="key-facts" aria-expanded="true">Key Facts</a>
-                                                        </h3>
-                                                    </div>
-                                                    <div id="key-facts" class="collapse clearfix" role="tabpanel" arial-labelledby="heading-key-facts" data-parent="#accordion">
-                                                        <div class="card-body">
-                                                            @foreach($metas as $meta)
-                                                            @if($meta->slug === 'vehicle_registration_year')
-                                                            <div class="col-sm-2 text-center">
-                                                                <div class="item-key-facts">
-                                                                    <img class="item-key-img img-responsive" src="/css/icons/calendar.svg">
-                                                                    <p class="item-key-value">
-                                                                        {{$meta->value}}
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            @elseif($meta->slug === 'vehicle_mileage')
-                                                            <div class="col-sm-2 text-center">
-                                                                <div class="item-key-facts">
-                                                                    <img class="item-key-img img-responsive" src="/css/icons/mileage.svg">
-                                                                    <p class="item-key-value">
-                                                                        {{$meta->value}}
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            @elseif($meta->slug === 'vehicle_engine_size')
-                                                            <div class="col-sm-2 text-center">
-                                                                <div class="item-key-facts">
-                                                                    <img class="item-key-img img-responsive" src="/css/icons/engine.svg">
-                                                                    <p class="item-key-value">
-                                                                        {{$meta->value}}cc
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            @elseif($meta->slug === 'vehicle_transmission')
-                                                            <div class="col-sm-2 text-center">
-                                                                <div class="item-key-facts">
-                                                                    <img class="item-key-img img-responsive" src="/css/icons/transmission.svg">
-                                                                    <p class="item-key-value">
-                                                                        {{$meta->value}}
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            @elseif($meta->slug === 'vehicle_fuel_type')
-                                                            <div class="col-sm-2 text-center">
-                                                                <div class="item-key-facts">
-                                                                    <img class="item-key-img img-responsive" src="/css/icons/fuel-station-pump.svg">
-                                                                    <p class="item-key-value">
-                                                                        {{$meta->value}}
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            @endif 
-                                                            @endforeach
-                                                        </div>
+                                    <div class="row key-facts">
+                                        <div class="col-sm-12">
+                                            <h3 class="mb-0">Key Facts</h3>
+                                            <div class="card-body">
+                                                @foreach($metas as $meta)
+                                                @if($meta->slug === 'vehicle_registration_year')
+                                                <div class="col-sm-2 text-center">
+                                                    <div class="item-key-facts">
+                                                        <img class="item-key-img img-responsive" src="/css/icons/calendar.svg">
+                                                        <p class="item-key-value">
+                                                            {{$meta->value}}
+                                                        </p>
                                                     </div>
                                                 </div>
-                                                @if($advert->has_meta('key_facts'))
-                                                <div class="card">
-                                                    <div class="card-header" role="tab" id="headingRunningPerformance">
-                                                        <h3 class="mb-0">
-                                                            <a data-toggle="collapse" href="#runningPerformance" role="button" aria-controls="runningPerformance" aria-expanded="false">
-                                                                Running costs & Performance
-                                                            </a>
-                                                        </h3>
-                                                    </div>
-                                                    <div id="runningPerformance" class="collapse clearfix" role="tabpanel" arial-labelledby="headingRunningPerformance" data-parent="#accordion" >
-                                                        <div class="card-body">
-                                                            <ul class="list-two-col list-style-square">
-                                                                <div class="key-features">
-                                                                @foreach($advert->meta('key_facts') as $titleKeyFact => $keyFact)
-                                                                    <li class="col-sm-6"> 
-                                                                        {{$titleKeyFact}} : 
-                                                                        <span class="text-right">{{$keyFact}}</span>
-                                                                    </li>
-                                                                @endforeach
-                                                                </div>
-                                                            </ul>
-                                                        </div>
+                                                @elseif($meta->slug === 'vehicle_mileage')
+                                                <div class="col-sm-2 text-center">
+                                                    <div class="item-key-facts">
+                                                        <img class="item-key-img img-responsive" src="/css/icons/mileage.svg">
+                                                        <p class="item-key-value">
+                                                            {{$meta->value}}
+                                                        </p>
                                                     </div>
                                                 </div>
-                                                @endif
+                                                @elseif($meta->slug === 'vehicle_engine_size')
+                                                <div class="col-sm-2 text-center">
+                                                    <div class="item-key-facts">
+                                                        <img class="item-key-img img-responsive" src="/css/icons/engine.svg">
+                                                        <p class="item-key-value">
+                                                            {{$meta->value}}cc
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                @elseif($meta->slug === 'vehicle_transmission')
+                                                <div class="col-sm-2 text-center">
+                                                    <div class="item-key-facts">
+                                                        <img class="item-key-img img-responsive" src="/css/icons/transmission.svg">
+                                                        <p class="item-key-value">
+                                                            {{$meta->value}}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                @elseif($meta->slug === 'vehicle_fuel_type')
+                                                <div class="col-sm-2 text-center">
+                                                    <div class="item-key-facts">
+                                                        <img class="item-key-img img-responsive" src="/css/icons/fuel-station-pump.svg">
+                                                        <p class="item-key-value">
+                                                            {{$meta->value}}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                @endif 
+                                                @endforeach
                                             </div>
                                         </div>
-                                        </div>
+                                    </div>
                                     <div class="description">
                                         <h3>Full Description</h3>
                                         {!! $product['description'] !!}
@@ -383,6 +351,25 @@
                                                 </div>
                                             </ul>
                                         @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tap-key-facts" class="tab-pane fade">
+                            <div class="row">           
+                                <div class="col-sm-12">
+                                    <h3>Running costs & Performance</h3>
+                                    <div class="container-key-facts">
+                                        <ul class="list-two-col list-style-square">
+                                            <div class="key-features">
+                                            @foreach($advert->meta('key_facts') as $titleKeyFact => $keyFact)
+                                                <li class="col-sm-6"> 
+                                                    {{$titleKeyFact}} : 
+                                                    <span class="text-right">{{$keyFact}}</span>
+                                                </li>
+                                            @endforeach
+                                            </div>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
