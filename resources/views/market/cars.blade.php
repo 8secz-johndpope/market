@@ -214,7 +214,7 @@
                                                 <div class="card">
                                                     <div class="card-header" role="tab" id="headingRunningPerformance">
                                                         <h3 class="mb-0">
-                                                            <a class="collapsed" data-toggle="collapse" aria-labelledby="headingRunningPerformance" role="button" aria-expanded="false" aria-controls="runningPerformance">
+                                                            <a data-toggle="collapse" href="#runningPerformance" role="button" aria-controls="runningPerformance">
                                                                 Running costs & Performance
                                                             </a>
                                                         </h3>
