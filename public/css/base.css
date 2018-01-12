@@ -1023,6 +1023,9 @@ section.row-color.white {
     width: 18px;
     margin-right: 10px;
 }
+.uppercase{
+  text-transform: uppercase;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
