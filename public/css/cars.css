@@ -144,13 +144,14 @@
 	display: inline-block;
 	width: calc(100% - 80px);
 }
+.wrapper-reveal {
+    display: inline-block;
+    vertical-align: bottom;
+}
 address{
 	margin-bottom: 5px;
 }
 strong{
 	font-family: Effra-Medium,arial,helvetica,sans-serif;
-}
-span.reveal-phone {
-    margin-top: -6px;
 }
 .wrapper-reveal
