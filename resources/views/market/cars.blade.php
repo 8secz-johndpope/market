@@ -175,7 +175,7 @@
                                                         <div class="item-key-facts">
                                                             <img class="item-key-img img-responsive" src="/css/icons/engine.svg">
                                                             <p class="item-key-value">
-                                                                {{$meta->value}}cc
+                                                                {{number_format($meta->value / 1000,2, '.', ',')}}L
                                                             </p>
                                                         </div>
                                                     </div>
