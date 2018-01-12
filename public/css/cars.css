@@ -96,6 +96,9 @@
     border: 1px solid #ddd;
     padding: 15px;
 }
+.container-interested h3{
+	margin-top: 0;
+}
 .container-insures {
     border-bottom: 1px solid #ddd;
 }
