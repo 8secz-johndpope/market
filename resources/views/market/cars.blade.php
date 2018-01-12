@@ -207,7 +207,7 @@
                                                                 @if($advert->has_meta('key_facts'))
                                                                     {{$advert->meta('key_facts')['Engine power']}}
                                                                 @else
-                                                                    *N/A
+                                                                    N/A
                                                                 @endif
 
                                                             </p>
