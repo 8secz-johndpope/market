@@ -937,14 +937,17 @@
                                     {{$product['location_name']}}  
                                 </address>
                                 @if($advert->has_param('phone'))
-                                <strong>Contact number</strong>
                                 <div class="container-phone">
+                                    <strong>Contact number</strong>
                                     <div class="wrapper-phone">
+                                        <div class="content-phone-number">
                                         <span class="glyphicon glyphicon-earphone"></span>
                                         @if($srn)
                                             {{$advert->param('phone')}}
+                                        </div>
                                         @else
                                             {{substr($advert->param('phone'),0,5)}}XXXXXX
+                                        </div>
                                             <span class="reveal-phone">
                                                 <a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a>
                                             </span>
