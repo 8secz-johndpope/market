@@ -138,6 +138,9 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+address{
+	margin-bottom: 5px;
+}
 span.reveal-phone {
     margin-top: -6px;
 }
