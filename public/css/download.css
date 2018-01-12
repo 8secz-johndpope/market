@@ -121,6 +121,24 @@
 .instructions p {
     display: none;
 }
+.clause p {
+    margin: 0;
+    display: none;
+}
+.app-page .mobile-devices {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1047px;
+    height: 850px;
+    pointer-events: none;
+    z-index: 2;
+    background-image: url(https://about.canva.com/wp-content/themes/canvaabout/img/retina-mixin/apps-page-bg.png);
+    background-repeat: no-repeat;
+    background-size: auto 850px;
+    background-position: right top;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
@@ -208,5 +226,22 @@
 	    -ms-flex-align: center;
 	    align-items: center;
 	    min-height: calc(70vh - 84px);
+	}
+	.app-page .mobile-devices {
+	    top: -10%;
+	    right: 0;
+	    opacity: 0;
+	    -webkit-transform: translateX(120%);
+	    -ms-transform: translateX(120%);
+	    transform: translateX(120%);
+	    transition: opacity 0.3s ease, -webkit-transform 0.8s ease;
+	    transition: opacity 0.3s ease, transform 0.8s ease;
+	    transition: opacity 0.3s ease, transform 0.8s ease, -webkit-transform 0.8s ease;
+	}
+	.loaded .app-page .mobile-devices {
+	    opacity: 1;
+	    -webkit-transform: translateX(50%);
+	    -ms-transform: translateX(50%);
+	    transform: translateX(50%);
 	}
 }
