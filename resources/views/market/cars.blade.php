@@ -945,15 +945,17 @@
                             </div>
                             @if($advert->has_param('phone'))
                             <div class="container-phone">
-                                <span class="glyphicon glyphicon-earphone"></span>
-                                @if($srn)
-                                    {{$advert->param('phone')}}
-                                @else
-                                    {{substr($advert->param('phone'),0,5)}}XXXXXX
-                                    <span class="reveal-phone">
-                                        <a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a>
-                                    </span>
-                                @endif
+                                <div class="wrapper-phone">
+                                    <span class="glyphicon glyphicon-earphone"></span>
+                                    @if($srn)
+                                        {{$advert->param('phone')}}
+                                    @else
+                                        {{substr($advert->param('phone'),0,5)}}XXXXXX
+                                        <span class="reveal-phone">
+                                            <a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a>
+                                        </span>
+                                    @endif
+                                </div>
                             </div>
                             @endif
                     </div>
