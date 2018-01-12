@@ -944,6 +944,19 @@
                                 @endif
                             </div>
                     </div>
+                    @if($advert->has_param('phone'))
+                    <div class="container-phone">
+                        <span class="glyphicon glyphicon-earphone"></span>
+                        @if($srn)
+                            {{$advert->param('phone')}}
+                        @else
+                            {{substr($advert->param('phone'),0,5)}}XXXXXX
+                            <span class="reveal-phone">
+                                <a class="btn btn-default" href="/p/r/{{$advert->category_id}}/{{$advert->id}}">Reveal</a>
+                            </span>
+                        @endif
+                    </div>
+                    @endif
                     <div class="contact">
                         <a href="/user/reply/{{$product['source_id']}}" class="btn btn-default">Send Message</a>
                         <p>Or</p>
