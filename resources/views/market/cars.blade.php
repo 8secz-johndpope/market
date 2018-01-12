@@ -196,7 +196,17 @@
                                                         </p>
                                                     </div>
                                                 </div>
-                                                @endif 
+                                                @endif
+                                                @if($advert->has_meta('key_facts') && in_array("Engine power", $advert->meta('key_facts')))
+                                                <div class="col-sm-2 text-center">
+                                                    <div class="item-key-facts">
+                                                        <img class="item-key-img img-responsive" src="/css/icons/fuel-station-pump.svg">
+                                                        <p class="item-key-value">
+                                                            {{$advert->meta('key_facts')['Engine power']}}
+                                                        </p>
+                                                    </div>
+                                                </div>    
+                                                @endif
                                                 @endforeach
                                             </div>
                                         </div>
