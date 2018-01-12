@@ -219,7 +219,7 @@
                                                             </a>
                                                         </h3>
                                                     </div>
-                                                    <div id="runningPerformance" class="collapse clearfix" role="tabpanel" aria-labelledby="headingRunningPerformance" data-parent="#accordion">
+                                                    <div id="runningPerformance" class="collapse clearfix" role="tabpanel" arial-labelledby="headingRunningPerformance" data-parent="#accordion" >
                                                         <div class="card-body">
                                                             <ul>
                                                                 @foreach($advert->meta('key_facts') as $titleKeyFact => $keyFact)
