@@ -212,7 +212,20 @@
 
                                                             </p>
                                                         </div>
-                                                    </div>    
+                                                    </div>
+                                                    <div class="col-sm-2 text-center">
+                                                        <div class="item-key-facts">
+                                                            <img class="item-key-img img-responsive" src="/css/icons/bhp.svg">
+                                                            <p class="item-key-value">
+                                                                @if($advert->has_meta('vehicle_body_type'))
+                                                                    {{$advert->meta('vehicle_body_type')}}
+                                                                @else
+                                                                    *N/A
+                                                                @endif
+
+                                                            </p>
+                                                        </div>
+                                                    </div>      
                                                     
                                                 </div>
                                             </div>
