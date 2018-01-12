@@ -150,55 +150,69 @@
                                             </div>
                                     </div>
                                         <div class="row key-facts">
+                                            <div id="accordion" role="tablist">
+                                                <div class="card">
+                                                    <div class="card-header" role="tab" id="heading-key-facts">
+                                                        <h3 class="mb-0">
+                                                            <a data-toggle="collapse" href="#key-facts" role="button" aria-controls="collapse">Key Facts</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div id="key-facts" class="collapse" role="tabpanel" arial-labelledby="heading-key-facts" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            @foreach($metas as $meta)
+                                                            @if($meta->slug === 'vehicle_registration_year')
+                                                            <div class="col-sm-2 text-center">
+                                                                <div class="item-key-facts">
+                                                                    <img class="item-key-img img-responsive" src="/css/icons/calendar.svg">
+                                                                    <p class="item-key-value">
+                                                                        {{$meta->value}}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            @elseif($meta->slug === 'vehicle_mileage')
+                                                            <div class="col-sm-2 text-center">
+                                                                <div class="item-key-facts">
+                                                                    <img class="item-key-img img-responsive" src="/css/icons/mileage.svg">
+                                                                    <p class="item-key-value">
+                                                                        {{$meta->value}}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            @elseif($meta->slug === 'vehicle_engine_size')
+                                                            <div class="col-sm-2 text-center">
+                                                                <div class="item-key-facts">
+                                                                    <img class="item-key-img img-responsive" src="/css/icons/engine.svg">
+                                                                    <p class="item-key-value">
+                                                                        {{$meta->value}}cc
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            @elseif($meta->slug === 'vehicle_transmission')
+                                                            <div class="col-sm-2 text-center">
+                                                                <div class="item-key-facts">
+                                                                    <img class="item-key-img img-responsive" src="/css/icons/transmission.svg">
+                                                                    <p class="item-key-value">
+                                                                        {{$meta->value}}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            @elseif($meta->slug === 'vehicle_fuel_type')
+                                                            <div class="col-sm-2 text-center">
+                                                                <div class="item-key-facts">
+                                                                    <img class="item-key-img img-responsive" src="/css/icons/fuel-station-pump.svg">
+                                                                    <p class="item-key-value">
+                                                                        {{$meta->value}}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            @endif 
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <h3>Key Facts</h3> 
-                                            @foreach($metas as $meta)
-                                            @if($meta->slug === 'vehicle_registration_year')
-                                            <div class="col-sm-2 text-center">
-                                                <div class="item-key-facts">
-                                                    <img class="item-key-img img-responsive" src="/css/icons/calendar.svg">
-                                                    <p class="item-key-value">
-                                                        {{$meta->value}}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            @elseif($meta->slug === 'vehicle_mileage')
-                                            <div class="col-sm-2 text-center">
-                                                <div class="item-key-facts">
-                                                    <img class="item-key-img img-responsive" src="/css/icons/mileage.svg">
-                                                    <p class="item-key-value">
-                                                        {{$meta->value}}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            @elseif($meta->slug === 'vehicle_engine_size')
-                                            <div class="col-sm-2 text-center">
-                                                <div class="item-key-facts">
-                                                    <img class="item-key-img img-responsive" src="/css/icons/engine.svg">
-                                                    <p class="item-key-value">
-                                                        {{$meta->value}}cc
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            @elseif($meta->slug === 'vehicle_transmission')
-                                            <div class="col-sm-2 text-center">
-                                                <div class="item-key-facts">
-                                                    <img class="item-key-img img-responsive" src="/css/icons/transmission.svg">
-                                                    <p class="item-key-value">
-                                                        {{$meta->value}}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            @elseif($meta->slug === 'vehicle_fuel_type')
-                                            <div class="col-sm-2 text-center">
-                                                <div class="item-key-facts">
-                                                    <img class="item-key-img img-responsive" src="/css/icons/fuel-station-pump.svg">
-                                                    <p class="item-key-value">
-                                                        {{$meta->value}}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            @endif 
-                                            @endforeach
+                                            
                                         </div>
                                     <div class="description">
                                         <h3>Full Description</h3>
