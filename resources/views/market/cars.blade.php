@@ -201,7 +201,7 @@
                                                 @if($advert->has_meta('key_facts'))
                                                 <div class="col-sm-2 text-center">
                                                     <div class="item-key-facts">
-                                                        <img class="item-key-img img-responsive" src="/css/icons/mpg.svg">
+                                                        <img class="item-key-img img-responsive" src="/css/icons/bhp.svg">
                                                         <p class="item-key-value">
                                                             {{$advert->meta('key_facts')['Engine power']}}
                                                         </p>
