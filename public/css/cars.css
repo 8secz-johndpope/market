@@ -57,3 +57,11 @@
     width: 40px;
     margin: auto;
 }
+.item-key-facts p{
+	margin-top: 10px;
+}
+.card-body {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #ddd;
+}
