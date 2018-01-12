@@ -157,7 +157,7 @@
                                                             <a data-toggle="collapse" href="#key-facts" role="button" aria-controls="collapse">Key Facts</a>
                                                         </h3>
                                                     </div>
-                                                    <div id="key-facts" class="collapse" role="tabpanel" arial-labelledby="heading-key-facts" data-parent="#accordion">
+                                                    <div id="key-facts" class="collapse clearfix" role="tabpanel" arial-labelledby="heading-key-facts" data-parent="#accordion">
                                                         <div class="card-body">
                                                             @foreach($metas as $meta)
                                                             @if($meta->slug === 'vehicle_registration_year')
@@ -218,9 +218,9 @@
                                                             </a>
                                                         </h3>
                                                     </div>
-                                                    <div id="runningPerformance" class="collapse" role="tabpanel" aria-labelledby="headingRunningPerformance" data-parent="#accordion">
+                                                    <div id="runningPerformance" class="collapse clearfix" role="tabpanel" aria-labelledby="headingRunningPerformance" data-parent="#accordion">
                                                         <div class="card-body">
-                                                            
+
                                                         </div>
                                                     </div>
                                                 </div>
