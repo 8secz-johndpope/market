@@ -210,6 +210,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                @if($advert->has_meta('key_facts'))
                                                 <div class="card">
                                                     <div class="card-header" role="tab" id="headingRunningPerformance">
                                                         <h3 class="mb-0">
@@ -224,6 +225,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                @endif
                                             </div>
                                         </div>
                                     <div class="description">
