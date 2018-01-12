@@ -224,7 +224,7 @@
                                                             <ul>
                                                                 @foreach($advert->meta('key_facts') as $keyFact)
                                                                     @php
-                                                                        var_dump($keyFact);
+                                                                        var_dump($advert->meta('key_facts'));
                                                                     @endphp
                                                                 @endforeach
                                                             </ul>
