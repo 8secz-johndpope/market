@@ -130,3 +130,9 @@
 	    max-width: 675px;
 	}
 }
+@media only screen and (max-width: 1279px) and (min-width: 1000px){
+	.app-curve {
+	    margin-top: -0.125em;
+	    margin-bottom: 37.5em;
+	}
+}
