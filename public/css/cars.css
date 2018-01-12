@@ -59,6 +59,7 @@
 }
 .item-key-facts p{
 	margin-top: 10px;
+	margin-bottom: 0;
 }
 .card-body {
     padding-top: 15px;
