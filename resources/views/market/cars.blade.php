@@ -222,11 +222,13 @@
                                                     <div id="runningPerformance" class="collapse clearfix" role="tabpanel" arial-labelledby="headingRunningPerformance" data-parent="#accordion" >
                                                         <div class="card-body">
                                                             <ul class="list-two-col list-style-square">
+                                                                <div class="key-features">
                                                                 @foreach($advert->meta('key_facts') as $titleKeyFact => $keyFact)
-                                                                    <li> 
+                                                                    <li class="col-sm-6"> 
                                                                         {{$titleKeyFact}} : {{$keyFact}}
                                                                     </li>
                                                                 @endforeach
+                                                                </div>
                                                             </ul>
                                                         </div>
                                                     </div>
