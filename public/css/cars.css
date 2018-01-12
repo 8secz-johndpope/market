@@ -136,3 +136,6 @@
 .wrapper-phone {
     padding: .8rem 0 1.6rem;
 }
+span.reveal-phone {
+    margin-top: -2px;
+}
