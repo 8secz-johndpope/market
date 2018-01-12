@@ -941,7 +941,7 @@
                                     <div class="wrapper-phone">
                                         <strong>Contact number</strong>
                                         @if($srn)
-                                        <div class="content-phone-number col-sm-12">
+                                        <div class="content-phone-number full-width">
                                         <span class="glyphicon glyphicon-earphone"></span>
                                             {{$advert->param('phone')}}
                                         </div>
