@@ -1024,7 +1024,7 @@ section.row-color.white {
     margin-right: 10px;
 }
 .uppercase{
-  text-transform: uppercase;
+  text-transform: uppercase!important;
 }
 @media screen and (max-width: 767px){
   .top {
