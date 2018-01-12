@@ -938,8 +938,8 @@
                                 </address>
                                 @if($advert->has_param('phone'))
                                 <div class="container-phone">
-                                    <strong>Contact number</strong>
                                     <div class="wrapper-phone">
+                                        <strong>Contact number</strong>
                                         <div class="content-phone-number">
                                         <span class="glyphicon glyphicon-earphone"></span>
                                         @if($srn)
