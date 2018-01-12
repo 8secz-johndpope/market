@@ -220,9 +220,6 @@
                                                             </div>
                                                             <p class="item-key-value">
                                                                 @if($advert->has_meta('vehicle_body_type'))
-                                                                    @php
-                                                                    var_dump($advert->meta('vehicle_body_type'));
-                                                                    @endphp
                                                                     {{$advert->meta('vehicle_body_type')}}
                                                                 @else
                                                                     *N/A
