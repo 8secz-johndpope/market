@@ -1026,6 +1026,11 @@ section.row-color.white {
 .uppercase{
   text-transform: uppercase!important;
 }
+.intl-tel-input.allow-dropdown input[type=tel], .intl-tel-input.allow-dropdown input{
+  padding-left: 10px!important;
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
