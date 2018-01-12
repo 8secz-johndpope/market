@@ -937,6 +937,7 @@
                                     {{$product['location_name']}}  
                                 </address>
                                 @if($advert->has_param('phone'))
+                                <strong>Contact number</strong>
                                 <div class="container-phone">
                                     <div class="wrapper-phone">
                                         <span class="glyphicon glyphicon-earphone"></span>
