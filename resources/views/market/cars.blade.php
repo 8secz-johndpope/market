@@ -916,6 +916,9 @@
                                 <address>
                                     {{$product['location_name']}}  
                                 </address>
+                                @if(isset($advert->user->business))
+                                <p class="link-about"><a class="btn btn-default" href="/agent/{{$advert->user->id}}">Learn more about the Advertiser</a></p>
+                                @endif
                                 @if($advert->user!==null)
                                     <p><a class="advert-user" href="/userads/{{$advert->user->id}}">View other adverts from this Advertiser</a></p>
                                 @endif
