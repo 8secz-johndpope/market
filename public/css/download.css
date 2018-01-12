@@ -118,6 +118,9 @@
     width: 161px;
     height: 48px;
 }
+.instructions p {
+    display: none;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
