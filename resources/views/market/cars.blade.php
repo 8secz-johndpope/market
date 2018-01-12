@@ -309,7 +309,7 @@
                                                         Payments Accepted:
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 meta-info">
+                                        <div class="col-sm-12 text-center">
                                             <div class="col-sm-4 border-left">
                                                 <div class="cell-content">
                                                     <a href="/download-mobile-apps/">
