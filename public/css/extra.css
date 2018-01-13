@@ -884,7 +884,7 @@ a.search-alert {
     display: inline-block;
 }
 .list-key-facts>li:not(:first-child){
-    content: '|'
+    content: '|';
     padding: 0 5px;
     color: #ccc;
 }
