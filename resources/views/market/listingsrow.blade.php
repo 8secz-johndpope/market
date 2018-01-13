@@ -192,7 +192,19 @@ use App\Model\Advert;
                     </header>
                     <div class="sf-flyout-scrollable-options">
                         <div class="sf-flyout-options">
-
+                            <div class="col-sm-4">
+                                @foreach($filter->vals as $val)
+                                    <div class="value-button">
+                                        <span class="term"><a href="{!! $val->url !!}">{{$val->title}}></a></span>
+                                        &nbsp;
+                                        <span class="count">({{$val->count}})</span>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="col-sm-4">
+                            </div>
+                            <div class="col-sm-4">
+                            </div>
                         </div>
                         <div class="sf-flyout-clear-button">Clear</div>
                     </div>
