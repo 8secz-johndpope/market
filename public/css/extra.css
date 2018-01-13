@@ -487,6 +487,19 @@ a.post-advert {
     padding-right: 10px;
     border-right: 1px solid #5d7199;
 }
+.tooltip-arrow-upRight:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    top: -12px;
+    border-width: 0 9px 10px;
+    border-color: transparent transparent #267ec8;
+    left: 100%;
+    margin-left: -32px;
+    border-color: transparent transparent #313c53;
+}
 .ribbon-price-good:hover + .tooltip{
     display: block;
     opacity: 1;
