@@ -299,17 +299,10 @@ use App\Model\Advert;
                                 <li>{{$product['meta']['vehicle_transmission']}}</li>
                                 <li>{{number_format($product['meta']['vehicle_engine_size'] / 1000, 2, ".", ",")}} L</li> 
                                 @if(array_key_exists("key_facts",$product['meta']) && array_key_exists("Engine power",$product['meta']['key_facts']))
-                                <li>{{$product['meta']['key_facts']["Engine power"]}}</li>
+                                    <li class="uppercase">{{$product['meta']['key_facts']["Engine power"]}}</li>
                                 @endif
                                 <li>{{$product['meta']['vehicle_fuel_type']}}</li>
                             </ul>
-                            <div style="display: none">
-                                @php
-                                if(array_key_exists("key_facts",$product['meta']) && array_key_exists("Engine power",$product['meta']['key_facts'])){
-                                    var_dump($product['meta']['key_facts']);
-                                }
-                                @endphp
-                            </div>
                         </div>
                     @endif
                     @else
