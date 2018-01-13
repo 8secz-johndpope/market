@@ -365,6 +365,11 @@ use App\Model\Advert;
                                 Price Reduced
                             </span>
                         </span>
+                        <span class="ribbon ribbon-price-good">
+                            <span class="ribbon-text">
+                                Good Price
+                            </span>
+                        </span>
                     @endif
                 </div>
                 <div class="extra-options">

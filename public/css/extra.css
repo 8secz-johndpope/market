@@ -448,6 +448,12 @@ a.post-advert {
     padding: 9px;
     line-height: 14px;
 }
+.ribbon.ribbon-price-good{
+    background: #AFD388;
+    margin: 0;
+    padding: 9px;
+    line-height: 14px;
+}
 .extra-info .link-details {
     /* float: right; */
     position: relative;
@@ -805,6 +811,7 @@ strong.ribbon {
     background: red;
     color: white;
 }
+
 span.hide-visually {
     border: 0;
     clip: rect(0 0 0 0);
