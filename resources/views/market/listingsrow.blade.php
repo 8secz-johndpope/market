@@ -271,6 +271,14 @@ use App\Model\Advert;
                             <h4 class="product-title">{{$product['title']}}</h4>
                         </a>
                     </div>
+                    @if($product['category'] < 1050000000 && $product['category'] > 1059999999)
+                    <div class="wrapper-price-product">
+                        @if($product['meta']['price']>=0)
+                            <span class="product-price">£ {{number_format($product['meta']['price']/100)}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                            </span>
+                        @endif
+                    </div>
+                    @endif
                     <div class="wrapper-location-product">
                         <span class="listing-location">
                             {{$product['location_name']}}
