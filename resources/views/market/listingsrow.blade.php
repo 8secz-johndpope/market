@@ -281,7 +281,7 @@ use App\Model\Advert;
                     <div class="listing-key-facts">
                         <ul>
                             <li>{{$product['meta']['vehicle_registration_year']}}</li>
-                            <li></li>
+                            <li>{{$product['meta']['vehicle_body_type']}}</li>
                             <li></li>
                             <li></li>
                             <li></li>
