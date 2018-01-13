@@ -880,6 +880,14 @@ a.search-alert {
     padding-left: 0;
     list-style: none;
 }
+.list-key-facts li{
+    display: inline-block;
+}
+.list-key-facts li+li:before{
+    content: '|'
+    padding: 0 5px;
+    color: #ccc;
+}
 @media screen and (min-width: 768px) {
     .modal:before {
         display: inline-block;
