@@ -284,14 +284,14 @@ use App\Model\Advert;
                                 <li>{{$product['meta']['vehicle_mileage']}}</li>
                                 <li>{{$product['meta']['vehicle_transmission']}}</li>
                                 <li>{{$product['meta']['vehicle_engine_size']}}</li> 
-                                @if(array_key_exists("key_facts",$product['meta'], true))
+                                @if(array_key_exists("key_facts",$product['meta']))
                                 <li></li>
                                 @endif
                                 <li>{{$product['meta']['vehicle_fuel_type']}}</li>
                             </ul>
                             <div style="display: none">
                                 @php
-                                if(array_key_exists("key_facts",$product['meta'], true)){
+                                if(array_key_exists("key_facts",$product['meta'])){
                                     var_dump($product['meta']);
                                 }
                                 @endphp
