@@ -291,9 +291,7 @@ use App\Model\Advert;
                             </ul>
                             <div style="display: none">
                                 @php
-                                    if(in_array("key_facts",$product['meta'],true)){
                                         var_dump($product['meta']);
-                                    }
                                 @endphp
                             </div>
                         </div>
