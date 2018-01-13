@@ -888,6 +888,9 @@ a.search-alert {
     padding: 0 5px;
     color: #ccc;
 }
+.wrapper-title-product {
+    width: calc(100% - 200px);
+}
 @media screen and (min-width: 768px) {
     .modal:before {
         display: inline-block;
