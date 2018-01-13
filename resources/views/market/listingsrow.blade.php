@@ -197,6 +197,15 @@ use App\Model\Advert;
                                 var_dump($totalCol);
                             @endphp
                             <div class="col-sm-4">
+                                @for($i = 0; $i < $totalCol; $i++)
+                                    <div class="value-button">
+                                        <span class="term"><a href="{!! $filter->vals[$i]->url !!}">{{$filter->vals[$i]->title}}</a></span>
+                                        &nbsp;
+                                        <span class="count">({{$filter->vals[$i]->count}})</span>
+                                    </div>
+                                @endfor
+                            </div>
+                            <div class="col-sm-4">
                                 @foreach($filter->vals as $val)
                                     <div class="value-button">
                                         <span class="term"><a href="{!! $val->url !!}">{{$val->title}}</a></span>
@@ -204,8 +213,6 @@ use App\Model\Advert;
                                         <span class="count">({{$val->count}})</span>
                                     </div>
                                 @endforeach
-                            </div>
-                            <div class="col-sm-4">
                             </div>
                             <div class="col-sm-4">
                             </div>
