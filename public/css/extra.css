@@ -456,7 +456,8 @@ a.post-advert {
     background: #AFD388;
 }
 .ribbon.ribbon-price-great{
-    background: #8CC059;
+    /*background: #8CC059;*/
+    background: #024F17;
 }
 .tooltip {
     position: absolute;
