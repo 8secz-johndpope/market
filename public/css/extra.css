@@ -2267,6 +2267,8 @@ nav.navbar.navbar-inverse {
     }
     .wrapper-price-product{
         display: block;
+        border:0;
+        text-align: left;
     }
     .wrapper-title-product{
         width: 100%;
