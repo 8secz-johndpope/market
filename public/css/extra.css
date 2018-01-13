@@ -497,7 +497,7 @@ a.post-advert {
     border-width: 0 9px 10px;
     border-color: transparent transparent #267ec8;
     left: 100%;
-    margin-left: -32px;
+    margin-left: -72px;
     border-color: transparent transparent #313c53;
 }
 .ribbon-price-good:hover + .tooltip{
