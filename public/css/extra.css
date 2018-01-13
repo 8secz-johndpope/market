@@ -2001,6 +2001,25 @@ nav.navbar.navbar-inverse {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+.flyout-list {
+    position: relative;
+    height: 30px;
+}
+.flyout-list .options-button {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 30px;
+    cursor: pointer;
+    text-align: left;
+    color: #5d7199;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
