@@ -444,13 +444,11 @@ a.post-advert {
 }
 .ribbon-price-reduced {
     background: #FF495B;
-    margin: 0;
     padding: 9px;
     line-height: 14px;
 }
 .ribbon.ribbon-price-good{
     background: #AFD388;
-    margin: 0;
     padding: 9px;
     line-height: 14px;
 }
