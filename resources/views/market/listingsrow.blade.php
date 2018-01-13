@@ -277,7 +277,7 @@ use App\Model\Advert;
                         {!! $product['description'] !!}
                     </div>
                     @endif
-                    @if($product['category'] => 1000000000 && $product['category'] <= 1999999999)
+                    @if($product['category'] >= 1000000000 && $product['category'] <= 1999999999)
                     <div class="listing-key-facts">
                         <div style="display: none">
                             @php
