@@ -205,7 +205,7 @@ use App\Model\Advert;
                                 @endfor
                             </div>
                             <div class="col-sm-4">
-                                @for($i = $totalCol; $i < $totalCol * 2; $i++)
+                                @for($i; $i < $totalCol * 2; $i++)
                                     <div class="value-button">
                                         <span class="term"><a href="{!! $filter->vals[$i]->url !!}">{{$filter->vals[$i]->title}}</a></span>
                                         &nbsp;
