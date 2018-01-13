@@ -2041,6 +2041,22 @@ nav.navbar.navbar-inverse {
     height: 30px;
     padding: 0 8px;
 }
+.options-button-name{
+    display: block;
+    -ms-flex-order: 0;
+    -webkit-box-ordinal-group: 1;
+    order: 0;
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 5px 0 0;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
