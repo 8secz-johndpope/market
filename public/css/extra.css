@@ -2129,6 +2129,35 @@ nav.navbar.navbar-inverse {
     line-height: 14px;
     color: #5d7199;
 }
+.sf-flyout-close i {
+    vertical-align: top;
+    font-style: normal;
+}
+.sf-flyout-scrollable-options.is-scrollable {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.sf-flyout-options {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.sf-flyout-options .value-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0 7px;
+    line-height: 22px;
+    font-size: 14px;
+    background: none;
+    border: none;
+    color: #9a9a9a;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
