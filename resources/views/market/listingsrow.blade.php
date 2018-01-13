@@ -276,10 +276,12 @@ use App\Model\Advert;
                         <div class="listing-description">
                             {!! $product['description'] !!}
                         </div>
-                        @if($product['category'] >= 1000000000 && $product['category'] <= 1999999999)
+                        @if($product['category'] >= 1050000000 && $product['category'] <= 1059999999)
                         <div class="listing-key-facts">
                             <ul class="list-key-facts">
+                                @if(array_key_exists("vehicle_registration_year",$product['meta']))
                                 <li>{{$product['meta']['vehicle_registration_year']}}</li>
+                                @endif
                                 <li>{{$product['meta']['vehicle_body_type']}}</li>
                                 <li>{{$product['meta']['vehicle_mileage']}}</li>
                                 <li>{{$product['meta']['vehicle_transmission']}}</li>
