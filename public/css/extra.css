@@ -484,6 +484,25 @@ a.post-advert {
     padding-right: 10px;
     border-right: 1px solid #5d7199;
 }
+.search-result-valueIndicatorTitle {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 5px;
+}
+.tooltip>.tooltip-close {
+    position: absolute;
+    right: 5px;
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+    background: url(https://www.autotrader.co.uk/static/f13ae812aef7/images/modules/tooltip/tooltip-close.png) no-repeat 0 0;
+    background-position: -2px;
+    background-size: 50px 40px;
+    cursor: pointer;
+    top: 0;
+}
 .extra-info .link-details {
     /* float: right; */
     position: relative;
