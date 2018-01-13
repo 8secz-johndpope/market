@@ -273,29 +273,29 @@ use App\Model\Advert;
                             {{$product['location_name']}}
                         </span>
                     @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
-                    <div class="listing-description">
-                        {!! $product['description'] !!}
-                    </div>
-                    @endif
-                    @if($product['category'] >= 1000000000 && $product['category'] <= 1999999999)
-                    <div class="listing-key-facts">
-                        <ul class="list-key-facts">
-                            <li>{{$product['meta']['vehicle_registration_year']}}</li>
-                            <li>{{$product['meta']['vehicle_body_type']}}</li>
-                            <li>{{$product['meta']['vehicle_mileage']}}</li>
-                            <li>{{$product['meta']['vehicle_transmission']}}</li>
-                            <li>{{$product['meta']['vehicle_engine_size']}}</li> 
-                            @if(in_array('key_facts',$product['meta']))
-                            <li></li>
-                            @endif
-                            <li>{{$product['meta']['vehicle_fuel_type']}}</li>
-                        </ul>
-                        <div style="display: none">
-                            @php
-                                var_dump($product['meta']['key_facts']);
-                            @endphp
+                        <div class="listing-description">
+                            {!! $product['description'] !!}
                         </div>
-                    </div>
+                        @if($product['category'] >= 1000000000 && $product['category'] <= 1999999999)
+                        <div class="listing-key-facts">
+                            <ul class="list-key-facts">
+                                <li>{{$product['meta']['vehicle_registration_year']}}</li>
+                                <li>{{$product['meta']['vehicle_body_type']}}</li>
+                                <li>{{$product['meta']['vehicle_mileage']}}</li>
+                                <li>{{$product['meta']['vehicle_transmission']}}</li>
+                                <li>{{$product['meta']['vehicle_engine_size']}}</li> 
+                                @if(in_array('key_facts',$product['meta']))
+                                <li></li>
+                                @endif
+                                <li>{{$product['meta']['vehicle_fuel_type']}}</li>
+                            </ul>
+                            <div style="display: none">
+                                @php
+                                    var_dump($product['meta']['key_facts']);
+                                @endphp
+                            </div>
+                        </div>
+                    @endif
                     @else
                         <div class="link-details">
                             <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
