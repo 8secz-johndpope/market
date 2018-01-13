@@ -1978,6 +1978,29 @@ nav.navbar.navbar-inverse {
     top: -1px !important;
     left: 0 !important;
 }
+.flyout {
+    position: absolute;
+    left: 230px;
+    min-height: 200px;
+    padding: 10px 17px;
+    width: 700px;
+    background-color: #fff;
+    border: 1px solid #e8e8e3;
+    border-radius: 5px;
+    display: none;
+    z-index: 4;
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    opacity: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-transition-property: opacity,-webkit-transform;
+    transition-property: opacity,-webkit-transform;
+    transition-property: opacity,transform;
+    transition-property: opacity,transform,-webkit-transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;

@@ -160,6 +160,45 @@ use App\Model\Advert;
                 var_dump($filter);
             @endphp
             </div>
+            @if($filter->type === 'list')
+            <div class="flyout-list">
+                <button type="button" class="options-button">
+                    <span class="options-button-inner">
+                        <span class="options-button-name">
+                            {{$filter->title}}
+                        </span>
+                        <span class="options-button-value">
+                            @foreach($filter->vals as $val)
+                                @if($val->selected===1)
+                                    {{$val->title}}
+                                @endif
+                            @endforeach
+                        </span>
+                        <span class="options-button-icon">
+                            <i class="glyphicon glyphicon-menu-right"></i>
+                        </span>
+                    </span>
+                </button>
+                <div class="flyout">
+                    <span class="flyout-arrow"></span>
+                    <header class="flyout-header">
+                        <h2 class="flyout-title">Select {{$filter->title}}</h2>
+                        <div class="right">
+                            <button type="button" class="sf-flyout-close"> 
+                                Close
+                                <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                        </div>
+                    </header>
+                    <div class="sf-flyout-scrollable-options">
+                        <div class="sf-flyout-options">
+
+                        </div>
+                        <div class="sf-flyout-clear-button">Clear</div>
+                    </div>
+                </div>
+            </div>
+            @else
             <div class="l-visible-large">
                 @if($filter->title === 'Salary Period')
                     <h4>Salary Bands</h4>
@@ -176,6 +215,7 @@ use App\Model\Advert;
                     @endforeach
                 </ul>
             </div>
+            @endif
         @endforeach
         </div>
     </div>
