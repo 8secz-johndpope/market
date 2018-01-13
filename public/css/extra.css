@@ -2020,6 +2020,27 @@ nav.navbar.navbar-inverse {
     text-align: left;
     color: #5d7199;
 }
+.options-button-inner {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    height: 30px;
+    padding: 0 8px;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
