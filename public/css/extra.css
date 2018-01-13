@@ -435,9 +435,18 @@ a.post-advert {
     display: inline-block;
     min-height: 55px;
 }
+.ribbon-text{
+    color:#fff;
+}
 .ribbon.ribbon-spotlight {
     background: #000;
     color: #fff;
+}
+.ribbon-price-reduced {
+    background: #FF495B;
+    margin: 0;
+    padding: 9px;
+    line-height: 14px;
 }
 .extra-info .link-details {
     /* float: right; */
@@ -445,6 +454,7 @@ a.post-advert {
     display: block;
     text-align: right;
 }
+
 .text-offer span {
     /* padding-top: 32px; */
     position: relative;
@@ -900,9 +910,6 @@ a.search-alert {
     border-right: 1px solid #ccc;
     border-left: 1px solid #ccc;
     text-align: center;
-}
-.ribbon-price-reduced{
-    background: #FF495B;
 }
 @media screen and (min-width: 768px) {
     .modal:before {
