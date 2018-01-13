@@ -2020,6 +2020,7 @@ nav.navbar.navbar-inverse {
     cursor: pointer;
     text-align: left;
     color: #5d7199;
+    outline: 0;
 }
 .options-button-inner {
     display: -ms-flexbox;
