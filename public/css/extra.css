@@ -415,7 +415,7 @@ a.post-advert {
 
 .ribbon {
     display: inline-block;
-    padding: 12px 3px;
+    padding: 0 3px;
     text-align: center;
     vertical-align: middle;
     width: 108px;
@@ -437,6 +437,10 @@ a.post-advert {
 }
 .ribbon-text{
     color:#fff;
+    height: 32px;
+    display: inline-block;
+    margin: 6px auto;
+    line-height: 16px;
 }
 .ribbon.ribbon-spotlight {
     background: #000;
@@ -444,18 +448,12 @@ a.post-advert {
 }
 .ribbon-price-reduced {
     background: #FF495B;
-    padding: 9px;
-    line-height: 14px;
 }
 .ribbon.ribbon-price-good{
     background: #AFD388;
-    padding: 9px;
-    line-height: 14px;
 }
 .ribbon.ribbon-price-great{
     background: #8CC059;
-    padding: 9px;
-    line-height: 14px;
 }
 .extra-info .link-details {
     /* float: right; */
