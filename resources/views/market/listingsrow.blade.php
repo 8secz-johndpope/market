@@ -155,6 +155,11 @@ use App\Model\Advert;
             @endif
         </div>
         @foreach($filters as $filter)
+            <div style="display: none">
+            @php
+                var_dump($filter)
+            @endphp
+            </div>
             <div class="l-visible-large">
                 @if($filter->title === 'Salary Period')
                     <h4>Salary Bands</h4>
