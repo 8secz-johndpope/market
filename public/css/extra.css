@@ -500,7 +500,7 @@ a.post-advert {
     margin-left: -72px;
     border-color: transparent transparent #313c53;
 }
-.ribbon-price-good:hover + .tooltip, .ribbon-price-reduced:hover + .tooltip{
+.ribbon-price-good:hover + .tooltip, .ribbon-price-reduced:hover + .tooltip.tooltip-price-reduce{
     display: block;
     opacity: 1;
 }

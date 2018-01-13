@@ -365,7 +365,7 @@ use App\Model\Advert;
                                 Price Reduced
                             </span>
                         </span>
-                        <div class="tooltip  tooltip-arrow-upRight js-tooltip-window">
+                        <div class="tooltip tooltip-price-reduce  tooltip-arrow-upRight js-tooltip-window">
                             <div class="tooltip-content">
                                 <h3 class="search-result-valueIndicatorTitle">Why is this car priced low?</h3>
                                 <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as priced low.</span>
