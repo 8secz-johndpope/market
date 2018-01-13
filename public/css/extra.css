@@ -883,7 +883,7 @@ a.search-alert {
 .list-key-facts>li{
     display: inline-block;
 }
-.list-key-facts>li+li:before{
+.list-key-facts>li:not(:first-child){
     content: '|'
     padding: 0 5px;
     color: #ccc;
