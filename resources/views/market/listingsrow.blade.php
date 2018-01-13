@@ -367,7 +367,7 @@ use App\Model\Advert;
                         </span>
                         <div class="tooltip tooltip-price-reduce  tooltip-arrow-upRight js-tooltip-window">
                             <div class="tooltip-content">
-                                <h3 class="search-result-valueIndicatorTitle">Why is this car priced low?</h3>
+                                <h3 class="search-result-valueIndicatorTitle">Why is this car price reduced?</h3>
                                 <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as priced low.</span>
                             </div>
                             <div class="tooltip-close js-close"></div>
@@ -389,6 +389,13 @@ use App\Model\Advert;
                                 Great Price
                             </span>
                         </span>
+                        <div class="tooltip tooltip-price-great  tooltip-arrow-upRight js-tooltip-window">
+                            <div class="tooltip-content">
+                                <h3 class="search-result-valueIndicatorTitle">Why is this car a great price?</h3>
+                                <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a great price.</span>
+                            </div>
+                            <div class="tooltip-close js-close"></div>
+                        </div>
                     @endif
                 </div>
                 <div class="extra-options">
