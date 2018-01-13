@@ -479,11 +479,17 @@ a.post-advert {
     background-color: #313c53;
     padding: 8px;
     margin-left: -160px;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
 .tooltip .tooltip-content {
     margin-right: 35px;
     padding-right: 10px;
     border-right: 1px solid #5d7199;
+}
+.ribbon-price-good:hover + .tooltip{
+    display: block;
+    opacity: 1;
 }
 .search-result-valueIndicatorTitle {
     font-size: 16px;
