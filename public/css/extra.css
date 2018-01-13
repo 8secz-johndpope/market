@@ -477,10 +477,10 @@ a.post-advert {
     color: #fff;
     border-color: #313c53;
     background-color: #313c53;
-    padding: 8px;
-    margin-left: -160px;
+    margin-left: -50px;
     -webkit-transition: .4s;
     transition: .4s;
+    width: 300px;
 }
 .tooltip .tooltip-content {
     margin-right: 35px;
