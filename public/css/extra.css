@@ -504,6 +504,9 @@ a.post-advert {
 .tooltip.tooltip-price-reduce{
     margin-left: -192px;
 }
+.tooltip.tooltip-price-great{
+    margin-left: -10px;
+}
 .ribbon-price-good:hover + .tooltip, .ribbon-price-reduced:hover + .tooltip.tooltip-price-reduce{
     display: block;
     opacity: 1;
