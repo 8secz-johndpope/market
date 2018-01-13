@@ -2217,6 +2217,28 @@ nav.navbar.navbar-inverse {
     display: inline;
     top: 125px;
 }
+.flyout-arrow:after, .flyout-arrow:before {
+    right: 100%;
+    top: 0;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.flyout__arrow:before {
+    border-color: rgba(194,225,245,0);
+    border-right-color: #e8e8e3;
+    border-width: 22px;
+    margin-top: -22px;
+}
+.flyout__arrow:after {
+    border-color: rgba(136,183,213,0);
+    border-right-color: #fff;
+    border-width: 20px;
+    margin-top: -20px;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
