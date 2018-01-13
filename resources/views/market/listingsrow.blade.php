@@ -279,7 +279,7 @@ use App\Model\Advert;
                     @endif
                     @if($product['category'] >= 1000000000 && $product['category'] <= 1999999999)
                     <div class="listing-key-facts">
-                        <ul>
+                        <ul class="list-key-facts">
                             <li>{{$product['meta']['vehicle_registration_year']}}</li>
                             <li>{{$product['meta']['vehicle_body_type']}}</li>
                             <li>{{$product['meta']['vehicle_mileage']}}</li>
