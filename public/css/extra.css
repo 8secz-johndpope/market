@@ -897,6 +897,9 @@ a.search-alert {
     width: 100px;
     display: inline-block;
     vertical-align: middle;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    text-align: center;
 }
 @media screen and (min-width: 768px) {
     .modal:before {
