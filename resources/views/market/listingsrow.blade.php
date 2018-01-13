@@ -276,6 +276,11 @@ use App\Model\Advert;
                     <div class="listing-description">
                         {!! $product['description'] !!}
                     </div>
+                    @endif
+                    @if($product['category'] => 1000000000 && $product['category'] <= 1999999999)
+                    <div class="listing-key-facts">
+
+                    </div>
                     @else
                         <div class="link-details">
                             <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
