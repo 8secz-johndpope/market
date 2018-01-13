@@ -309,9 +309,11 @@ use App\Model\Advert;
                             <a href="/p/{{$product['category']}}/{{$product['source_id']}}">> VIEW FULL POSTING</a>
                         </div>
                     @endif
-                    @if($product['meta']['price']>=0)
-                        <span class="product-price">£ {{number_format($product['meta']['price']/100)}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
-                        </span>
+                    @if($product['category'] < 1050000000 && $product['category'] > 1059999999)
+                        @if($product['meta']['price']>=0)
+                            <span class="product-price">£ {{number_format($product['meta']['price']/100)}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                            </span>
+                        @endif
                     @endif
                 @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
                 @else
