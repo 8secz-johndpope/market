@@ -566,8 +566,7 @@ use App\Model\Advert;
     $("#phone-number-2").intlTelInput();
     $("#phone-number-1").intlTelInput();
     $('.flyout-list .options-button').click(function(){
-        $(this).next().toggleClass('is-in');
-    $(this).next().toggleClass('is-visible');
+        $(this).next().toggleClass('is-in is-visible');
     });
 </script>
 @endsection
