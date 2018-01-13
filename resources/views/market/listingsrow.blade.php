@@ -291,8 +291,8 @@ use App\Model\Advert;
                             </ul>
                             <div style="display: none">
                                 @php
-                                if(array_key_exists("key_facts",$product['meta'])){
-                                    var_dump($product['meta']);
+                                if(array_key_exists("key_facts",$product['meta']) && array_key_exists("Engine power",$product['meta']['key_facts'])){
+                                    var_dump($product['meta']['key_facts']);
                                 }
                                 @endphp
                             </div>
