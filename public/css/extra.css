@@ -1979,6 +1979,7 @@ nav.navbar.navbar-inverse {
     left: 0 !important;
 }
 .flyout {
+    max-height: 80vh;
     position: absolute;
     left: 230px;
     min-height: 200px;
@@ -2001,7 +2002,7 @@ nav.navbar.navbar-inverse {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-.flyout-list {
+.flyout-list {  
     position: relative;
     height: 30px;
     background: #fff;
@@ -2020,7 +2021,7 @@ nav.navbar.navbar-inverse {
     cursor: pointer;
     text-align: left;
     color: #5d7199;
-    outline: 0;
+    outline: 0; 
 }
 .options-button-inner {
     display: -ms-flexbox;
