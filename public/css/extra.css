@@ -2209,6 +2209,10 @@ nav.navbar.navbar-inverse {
     -webkit-transform: translate3d(30px,0,0);
     transform: translate3d(30px,0,0);
 }
+.sf-flyout-scrollable-options {
+    height: 100%;
+    overflow-y: scroll;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
