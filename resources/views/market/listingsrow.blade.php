@@ -205,13 +205,13 @@ use App\Model\Advert;
                                 @endfor
                             </div>
                             <div class="col-sm-4">
-                                @foreach($filter->vals as $val)
+                                @for($i = $totalCol; $i < $totalCol * 2; $i++)
                                     <div class="value-button">
-                                        <span class="term"><a href="{!! $val->url !!}">{{$val->title}}</a></span>
+                                        <span class="term"><a href="{!! $filter->vals[$i]->url !!}">{{$filter->vals[$i]->title}}</a></span>
                                         &nbsp;
-                                        <span class="count">({{$val->count}})</span>
+                                        <span class="count">({{$filter->vals[$i]->count}})</span>
                                     </div>
-                                @endforeach
+                                @endfor
                             </div>
                             <div class="col-sm-4">
                                 @for($i = $totalCol * 3 ; $i < count($filter->vals); $i++)
