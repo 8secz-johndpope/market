@@ -369,7 +369,15 @@ use App\Model\Advert;
                             <span class="ribbon-text">
                                 Good Price
                             </span>
+                            <div class="tooltip  tooltip-arrow-upRight js-tooltip-window">
+                                <div class="tooltip-content">
+                                    <h3 class="search-result__valueIndicatorTitle">Why is this car a good price?</h3>
+                                    <span>{{ }}has price-checked this car against the market value for similar cars and identified it as a good price.</span>
+                                </div>
+                                <div class="tooltip-close js-close"></div>
+                            </div>
                         </span>
+                        
                         <span class="ribbon ribbon-price-great">
                             <span class="ribbon-text">
                                 Great Price

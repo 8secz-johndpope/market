@@ -458,6 +458,32 @@ a.post-advert {
 .ribbon.ribbon-price-great{
     background: #8CC059;
 }
+.tooltip {
+    position: absolute;
+    z-index: 80;
+    display: none;
+    border: 2px solid #267ec8;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-shadow: 0 6px 6px 0 rgba(0,0,0,.12);
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,.12);
+}
+.tooltip {
+    margin-top: 8px;
+    border-radius: 4px;
+    color: #fff;
+    border-color: #313c53;
+    background-color: #313c53;
+    padding: 8px;
+}
+.tooltip .tooltip-content {
+    margin-right: 35px;
+    padding-right: 10px;
+    border-right: 1px solid #5d7199;
+}
 .extra-info .link-details {
     /* float: right; */
     position: relative;
