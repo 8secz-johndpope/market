@@ -478,6 +478,7 @@ a.post-advert {
     border-color: #313c53;
     background-color: #313c53;
     padding: 8px;
+    margin-left: -160px;
 }
 .tooltip .tooltip-content {
     margin-right: 35px;
