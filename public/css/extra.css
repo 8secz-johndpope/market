@@ -505,9 +505,9 @@ a.post-advert {
     margin-left: -192px;
 }
 .tooltip.tooltip-price-great{
-    margin-left: -10px;
+    margin-left: 50px;
 }
-.ribbon-price-good:hover + .tooltip, .ribbon-price-reduced:hover + .tooltip.tooltip-price-reduce, .ribbon-price-great:hover + .tooltip{
+.ribbon-price-good:hover + .tooltip, .ribbon-price-reduced:hover + .tooltip, .ribbon-price-great:hover + .tooltip{
     display: block;
     opacity: 1;
 }
