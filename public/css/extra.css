@@ -436,11 +436,14 @@ a.post-advert {
     min-height: 55px;
 }
 .ribbon-text{
-    color:#fff;
-    height: 32px;
-    display: inline-block;
-    margin: 6px auto;
+    color: #fff;
+    height: 43px;
+    width: 100%;
+    display: table-cell;
+    /* margin: auto; */
     line-height: 16px;
+    vertical-align: middle;
+    position: relative;
 }
 .ribbon.ribbon-spotlight {
     background: #000;
