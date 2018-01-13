@@ -279,6 +279,15 @@ use App\Model\Advert;
                     @endif
                     @if($product['category'] >= 1000000000 && $product['category'] <= 1999999999)
                     <div class="listing-key-facts">
+                        <ul>
+                            <li>{{$product['meta']['vehicle_registration_year']}}</li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
                         <div style="display: none">
                             @php
                                 var_dump($product);
