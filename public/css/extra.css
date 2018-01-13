@@ -2096,6 +2096,39 @@ nav.navbar.navbar-inverse {
     text-align: right;
     color: #5d7199;
 }
+.flyout-header {
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    margin-bottom: 5px;
+    height: 37px;
+}
+.flyout-arrow {
+    top: 25px;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+.flyout-title {
+    float: left;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0 4px;
+    font-weight: 700;
+    color: #313c53;
+}
+.sf-flyout-close {
+    position: absolute;
+    right: 12px;
+    padding: 7px 5px;
+    margin: 0;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 14px;
+    color: #5d7199;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
