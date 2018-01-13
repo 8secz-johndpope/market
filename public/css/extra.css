@@ -483,6 +483,7 @@ a.post-advert {
     transition: .4s;
     width: 300px;
 }
+
 .tooltip .tooltip-content {
     margin-right: 35px;
     padding-right: 10px;
@@ -2233,10 +2234,14 @@ nav.navbar.navbar-inverse {
     }
     .ribbon {
         font-size: 9px;
-        padding: 8px 3px;
+        /*padding: 8px 3px;*/
         height: 30px;
         width: 70px;
         margin: 5px 5px 5px 0;
+    }
+    .ribbon-text{
+        height: 30px;
+        line-height: 10px;
     }
     .ribbons{
         min-height: 45px;
