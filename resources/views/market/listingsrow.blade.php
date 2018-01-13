@@ -192,6 +192,10 @@ use App\Model\Advert;
                     </header>
                     <div class="sf-flyout-scrollable-options">
                         <div class="sf-flyout-options">
+                            @php
+                                $totalCol = count($filter->vals) / 3;
+                                var_dump($totalCol);
+                            @endphp
                             <div class="col-sm-4">
                                 @foreach($filter->vals as $val)
                                     <div class="value-button">
