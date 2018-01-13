@@ -368,9 +368,15 @@ use App\Model\Advert;
                                 @if(array_key_exists("vehicle_registration_year",$product['meta']))
                                 <li>{{$product['meta']['vehicle_registration_year']}}</li>
                                 @endif
+                                @if(array_key_exists("vehicle_body_type",$product['meta']))
                                 <li>{{$product['meta']['vehicle_body_type']}}</li>
+                                @endif
+                                @if(array_key_exists("vehicle_mileage",$product['meta']))
                                 <li>{{number_format($product['meta']['vehicle_mileage'])}} miles</li>
+                                @endif
+                                @if(array_key_exists("vehicle_transmission",$product['meta']))
                                 <li>{{$product['meta']['vehicle_transmission']}}</li>
+                                @endif
                                 @if(array_key_exists("vehicle_engine_size",$product['meta']))
                                 <li>{{number_format($product['meta']['vehicle_engine_size'] / 1000, 2, ".", ",")}} L</li>
                                 @endif 
@@ -585,5 +591,8 @@ use App\Model\Advert;
     $('.flyout-list .options-button').click(function(){
         $(this).next().toggleClass('is-in is-visible');
     });
+    $('.sf-flyout-close').click(function(){
+
+    })
 </script>
 @endsection
