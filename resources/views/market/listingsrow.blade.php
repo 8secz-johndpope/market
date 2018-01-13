@@ -286,13 +286,13 @@ use App\Model\Advert;
                             <li>{{$product['meta']['vehicle_transmission']}}</li>
                             <li>{{$product['meta']['vehicle_engine_size']}}</li> 
                             @if(in_array('key_facts',$product['meta']))
-                            <li>{{$product['meta']['key_facts']['Engine power']}}</li>
+                            <li></li>
                             @endif
                             <li>{{$product['meta']['vehicle_fuel_type']}}</li>
                         </ul>
                         <div style="display: none">
                             @php
-                                var_dump($product);
+                                var_dump($product['meta']['key_facts']);
                             @endphp
                         </div>
                     </div>
