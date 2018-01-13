@@ -266,12 +266,16 @@ use App\Model\Advert;
 
                         @endif
                     </div>
-                    <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
-                        <h4 class="product-title">{{$product['title']}}</h4>
-                    </a>
-                    <span class="listing-location">
+                    <div class="wrapper-title-product">
+                        <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
+                            <h4 class="product-title">{{$product['title']}}</h4>
+                        </a>
+                    </div>
+                    <div class="wrapper-location-product">
+                        <span class="listing-location">
                             {{$product['location_name']}}
                         </span>
+                    </div>
                     @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
                         <div class="listing-description">
                             {!! $product['description'] !!}
