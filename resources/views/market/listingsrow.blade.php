@@ -282,11 +282,13 @@ use App\Model\Advert;
                         <ul>
                             <li>{{$product['meta']['vehicle_registration_year']}}</li>
                             <li>{{$product['meta']['vehicle_body_type']}}</li>
+                            <li>{{$product['meta']['vehicle_mileage']}}</li>
+                            <li>{{$product['meta']['vehicle_transmission']}}</li>
+                            <li>{{$product['meta']['vehicle_engine_size']}}</li> 
+                            @if(in_array('key_facts',$product['meta']))
                             <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            @endif
+                            <li>{{$product['meta']['vehicle_fuel_type']}}</li>
                         </ul>
                         <div style="display: none">
                             @php
