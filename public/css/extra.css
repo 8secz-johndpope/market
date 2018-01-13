@@ -2088,6 +2088,13 @@ nav.navbar.navbar-inverse {
     height: 30px;
     margin: 0 0 0 5px;
 }
+.options-button-icon i {
+    line-height: 30px;
+    height: 30px;
+    width: 12px;
+    text-align: right;
+    color: #5d7199;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
