@@ -452,6 +452,11 @@ a.post-advert {
     padding: 9px;
     line-height: 14px;
 }
+.ribbon.ribbon-price-great{
+    background: #8CC059;
+    padding: 9px;
+    line-height: 14px;
+}
 .extra-info .link-details {
     /* float: right; */
     position: relative;

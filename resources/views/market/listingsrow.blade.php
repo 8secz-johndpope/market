@@ -370,6 +370,11 @@ use App\Model\Advert;
                                 Good Price
                             </span>
                         </span>
+                        <span class="ribbon ribbon-great-good">
+                            <span class="ribbon-text">
+                                Great Price
+                            </span>
+                        </span>
                     @endif
                 </div>
                 <div class="extra-options">
