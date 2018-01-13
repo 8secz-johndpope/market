@@ -366,6 +366,13 @@ use App\Model\Advert;
                             </span>
                         @endif
                     @endif
+                    @if($product['category'] < 1050000000 && $product['category'] > 1059999999)
+                        <span class="ribbon ribbon-price-reduced">
+                            <span class="ribbon-text">
+                                Price Reduced
+                            </span>
+                        </span>
+                    @endif
                 </div>
                 <div class="extra-options">
                     <div class="make-offer">
