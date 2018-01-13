@@ -223,8 +223,8 @@ use App\Model\Advert;
                                 @endfor
                             </div>
                         </div>
-                        <div class="sf-flyout-clear-button">Clear</div>
                     </div>
+                    <div class="sf-flyout-clear-button">Clear</div>
                 </div>
             </div>
             @else
