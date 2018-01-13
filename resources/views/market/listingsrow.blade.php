@@ -195,7 +195,7 @@ use App\Model\Advert;
                             <div class="col-sm-4">
                                 @foreach($filter->vals as $val)
                                     <div class="value-button">
-                                        <span class="term"><a href="{!! $val->url !!}">{{$val->title}}></a></span>
+                                        <span class="term"><a href="{!! $val->url !!}">{{$val->title}}</a></span>
                                         &nbsp;
                                         <span class="count">({{$val->count}})</span>
                                     </div>
