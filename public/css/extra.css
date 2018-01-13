@@ -876,6 +876,10 @@ a.search-alert {
     text-align: center;
     vertical-align: middle;
 }
+.list-key-facts {
+    padding-left: 0;
+    list-style: none;
+}
 @media screen and (min-width: 768px) {
     .modal:before {
         display: inline-block;
