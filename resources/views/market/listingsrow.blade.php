@@ -295,7 +295,7 @@ use App\Model\Advert;
                                 <li>{{$product['meta']['vehicle_registration_year']}}</li>
                                 @endif
                                 <li>{{$product['meta']['vehicle_body_type']}}</li>
-                                <li>{{$product['meta']['vehicle_mileage']}}</li>
+                                <li>{{number_format($product['meta']['vehicle_mileage'])}} miles</li>
                                 <li>{{$product['meta']['vehicle_transmission']}}</li>
                                 <li>{{$product['meta']['vehicle_engine_size']}}</li> 
                                 @if(array_key_exists("key_facts",$product['meta']) && array_key_exists("Engine power",$product['meta']['key_facts']))
