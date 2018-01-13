@@ -2265,6 +2265,9 @@ nav.navbar.navbar-inverse {
     .open>.dropdown-menu.options-user:after {
         display: none;
     }
+    .wrapper-price-product{
+        display: block;
+    }
 }
 @media (max-width: 400px) {
     h4.product-title {
