@@ -279,7 +279,11 @@ use App\Model\Advert;
                     @endif
                     @if($product['category'] => 1000000000 && $product['category'] <= 1999999999)
                     <div class="listing-key-facts">
-
+                        <div style="display: none">
+                            @php
+                                var_dump($product);
+                            @endphp
+                        </div>
                     </div>
                     @else
                         <div class="link-details">
