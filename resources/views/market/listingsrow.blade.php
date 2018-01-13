@@ -194,7 +194,6 @@ use App\Model\Advert;
                         <div class="sf-flyout-options">
                             @php
                                 $totalCol = count($filter->vals) / 3;
-                                var_dump($totalCol);
                             @endphp
                             <div class="col-sm-4">
                                 @for($i = 0; $i < $totalCol; $i++)
@@ -215,6 +214,13 @@ use App\Model\Advert;
                                 @endforeach
                             </div>
                             <div class="col-sm-4">
+                                @for($i = $totalCol * 3 ; $i < count($filter->vals); $i++)
+                                    <div class="value-button">
+                                        <span class="term"><a href="{!! $filter->vals[$i]->url !!}">{{$filter->vals[$i]->title}}</a></span>
+                                        &nbsp;
+                                        <span class="count">({{$filter->vals[$i]->count}})</span>
+                                    </div>
+                                @endfor
                             </div>
                         </div>
                         <div class="sf-flyout-clear-button">Clear</div>
