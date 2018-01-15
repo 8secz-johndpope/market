@@ -38,9 +38,11 @@
                     <div class="col-sm-10">
                         <div class="container-info-advertiser">
                             <p class="advertiser-name"><strong>{{$advertiser->name}}</strong></p>
+                            @if($advertiser->address)
                             <address>
                                 {{$advertiser->address->city}}
                             </address>
+                            @endif
                             <span>
                                 <span class="glyphicon glyphicon-earphone"></span>
                                 {{substr($advertiser->phone,0,5)}}XXXXXX
