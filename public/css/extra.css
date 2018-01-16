@@ -991,9 +991,10 @@ a.search-alert {
     width: 100px;
     display: inline-block;
     vertical-align: middle;
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
     text-align: center;
+}
+.product-car .info {
+    border-right: 1px solid #ddd;
 }
 @media screen and (min-width: 768px) {
     .modal:before {
@@ -1223,12 +1224,13 @@ span.favor-text {
     /*padding-bottom: 15px;*/
 }
 .product-car{
-    width: calc(100% - 150px);
+    width: calc(100% - 127px);
     display: inline-block;
 }
 .wrapper-price-brand{
     display: inline-block;
-    width: 148px;
+    width: 124px;
+    vertical-align: top;
 }
 .product-car .wrapper-title-product{
     width: 100%;
