@@ -39,13 +39,39 @@ use App\Model\Advert;
                 @endforeach
             </ul>
         </div> -->
-        <div class="l-visible-large">
+        <!-- <div class="l-visible-large">
             <h4>{{$location->title}}</h4>
             <ul class="list-group">
-                @foreach($locs as $cat)
+                @foreach($locs as $loc)
                     <li class="list-group-item"><a href="/{{$category->slug}}/{{$cat->slug}}">{{$cat->title}}</a>&nbsp{{$cat->count}}</li>
                 @endforeach
             </ul>
+        </div> -->
+        <div class="flyout-accordion accordion-container">
+            <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-location">
+                <span class="options-button-inner">
+                    <span class="options-button-name">
+                        Location
+                    </span>
+                    <span class="options-button-value">
+                        {{$location->title}}
+                    </span>
+                    <span class="options-button-icon">
+                        <i class="glyphicon glyphicon-menu-down"></i>
+                    </span>
+                </span>
+            </button>
+            <div class="collapse in" id="acco-price">
+                <div class="sf-accordion-select-container location-option">
+                    @foreach($locs as $cat)
+                    <div class="value-button">
+                        <span class="term"><a href="/{{$category->slug}}/{{$loc->slug}}">{{$loc->title}}</a></span>
+                        &nbsp;
+                        <span class="count">({{$loc->count}})</span>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
         @if(count($parents) > 0)
         <div class="l-visible-large">
@@ -119,6 +145,7 @@ use App\Model\Advert;
                         @endforeach
                     </select>
                     <div class="js-selectbox-label">
+
                     </div>
                 </form>
             </div>
