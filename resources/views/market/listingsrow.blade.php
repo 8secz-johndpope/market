@@ -780,7 +780,7 @@ use App\Model\Advert;
         $(this).closest('.flyout').toggleClass('is-in is-visible');
     });
     $('.sf-flyout-clear-button').click(function(){
-        var currentFilter = $(this).closest('.flyout').find('.current-filter').val();
+        var currentFilter = $(this).closest('.options-button').find('.current-filter').val();
         console.log(currentFilter);
         var currentUrl = window.location.href;
         var cleanUrl = currentUrl.replace(currentFilter, '');
