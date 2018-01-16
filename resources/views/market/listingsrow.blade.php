@@ -805,11 +805,13 @@ use App\Model\Advert;
     $("#phone-number-2").intlTelInput();
     $("#phone-number-1").intlTelInput();
     $('.flyout-list .options-button').click(function(){
-        if(!(this).hasClass('accordion-options-button'))
+        if(!(this).hasClass('accordion-options-button')){
             if(!$(this).next().hasClass('is-in')){
                 $('.flyout').removeClass('is-in is-visible');
             }
             $(this).next().toggleClass('is-in is-visible');
+        }else{
+           $(this).next().collapse(); 
         }
     });
     $('.sf-flyout-close').click(function(){
