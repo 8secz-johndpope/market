@@ -2349,6 +2349,7 @@ nav.navbar.navbar-inverse {
     -webkit-appearance: none;
     -moz-appearance: none;
     background-color: #fff;
+    width: 100%;
 }
 .ribbons-price .ratings{
     margin-top: 8px;
