@@ -43,7 +43,7 @@ use App\Model\Advert;
             <h4>{{$location->title}}</h4>
             <ul class="list-group">
                 @foreach($locs as $loc)
-                    <li class="list-group-item"><a href="/{{$category->slug}}/{{$cat->slug}}">{{$cat->title}}</a>&nbsp{{$cat->count}}</li>
+                    <li class="list-group-item"><a href="/{{$category->slug}}/{{$loc->slug}}">{{$loc->title}}</a>&nbsp{{$loc->count}}</li>
                 @endforeach
             </ul>
         </div> -->
@@ -63,7 +63,7 @@ use App\Model\Advert;
             </button>
             <div class="collapse in" id="acco-price">
                 <div class="sf-accordion-select-container location-option">
-                    @foreach($locs as $cat)
+                    @foreach($locs as $loc)
                     <div class="value-button">
                         <span class="term"><a href="/{{$category->slug}}/{{$loc->slug}}">{{$loc->title}}</a></span>
                         &nbsp;
