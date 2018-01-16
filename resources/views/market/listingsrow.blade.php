@@ -225,6 +225,7 @@ use App\Model\Advert;
                         </div>
                     </div>
                     <div class="sf-flyout-clear-button">Clear</div>
+                    <input type="hidden" name="vehicle_make">
                 </div>
             </div>
             @else
