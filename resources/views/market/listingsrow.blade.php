@@ -223,6 +223,27 @@ use App\Model\Advert;
                     <div class="sf-flyout-clear-button">Clear</div>
                 </div>
             </div>
+            @elseif($filter->type === 'integer')
+            <div class="flyout-list">
+                <button type="button" class="options-button accordion-options-button">
+                    <span class="options-button-inner">
+                        <span class="options-button-name">
+                            {{$filter->title}}
+                        </span>
+                        <span class="options-button-value">
+                            @foreach($filter->vals as $val)
+                                @if($val->selected===1)
+                                    {{$val->title}}
+                                    <input type="hidden" class="current-filter" name="{{$filter->key}}" value="{{$val->slug}}">
+                                @endif
+                            @endforeach
+                        </span>
+                        <span class="options-button-icon">
+                            <i class="glyphicon glyphicon-menu-down"></i>
+                        </span>
+                    </span>
+                </button>
+            </div>
             @else
             <div style="display: none">
             @php
