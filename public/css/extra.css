@@ -2257,13 +2257,13 @@ nav.navbar.navbar-inverse {
     position: absolute;
     pointer-events: none;
 }
-.flyout__arrow:before {
+.flyout-arrow:before {
     border-color: rgba(194,225,245,0);
     border-right-color: #e8e8e3;
     border-width: 22px;
     margin-top: -22px;
 }
-.flyout__arrow:after {
+.flyout-arrow:after {
     border-color: rgba(136,183,213,0);
     border-right-color: #fff;
     border-width: 20px;
