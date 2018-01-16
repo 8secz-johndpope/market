@@ -448,7 +448,7 @@ use App\Model\Advert;
                     </div>
                     </a>
                 </div>
-                <div class="favor">
+                <div class="favor favor-car">
                     @if (in_array($product['source_id'],$sids))
                         <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
                         <span  class="favor-text" style="display: none">SAVE</span>

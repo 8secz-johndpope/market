@@ -1154,6 +1154,9 @@ li.list-group-item a {
     border: 1px solid #c0c0c0;
     text-align: center;
 }
+.favor-car{
+    display: inline-block;
+}
 span.favor-text {
     font-size: 11px;
     position: relative;
