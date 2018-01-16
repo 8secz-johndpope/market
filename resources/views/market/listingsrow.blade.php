@@ -206,7 +206,7 @@ use App\Model\Advert;
                             </div>
                             <div class="col-sm-4">
                                 @for($i; $i < $totalCol * 2; $i++)
-                                    <div class="value-button">
+                                    <div class="value-button  @if($filter->vals[$i]->selected===1) selected @endif"">
                                         <span class="term"><a href="{!! $filter->vals[$i]->url !!}">{{$filter->vals[$i]->title}}</a></span>
                                         &nbsp;
                                         <span class="count">({{$filter->vals[$i]->count}})</span>
@@ -215,7 +215,7 @@ use App\Model\Advert;
                             </div>
                             <div class="col-sm-4">
                                 @for($i; $i < count($filter->vals); $i++)
-                                    <div class="value-button">
+                                    <div class="value-button  @if($filter->vals[$i]->selected===1) selected @endif">
                                         <span class="term"><a href="{!! $filter->vals[$i]->url !!}">{{$filter->vals[$i]->title}}</a></span>
                                         &nbsp;
                                         <span class="count">({{$filter->vals[$i]->count}})</span>
