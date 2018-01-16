@@ -2292,6 +2292,15 @@ nav.navbar.navbar-inverse {
     margin-top: 4px;
     margin-right: 7px;
 }
+.accordion-container {
+    max-height: 30px;
+    overflow: hidden;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.accordion-container.expanded {
+    max-height: 160px;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
