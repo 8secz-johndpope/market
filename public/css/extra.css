@@ -1222,6 +1222,10 @@ span.favor-text {
     width: 100%;
     /*padding-bottom: 15px;*/
 }
+.product-car{
+    width: calc(100% - 150px);
+    display: inline-block;
+}
 .filter-container{
     position: relative;
     width: 100%;

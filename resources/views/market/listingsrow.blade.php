@@ -307,7 +307,7 @@ use App\Model\Advert;
         <!--- This is for cars adverts -->
         @if($product['category'] >= 1050000000 && $product['category'] <= 1059999999)
         <div class="listing-max-pro">
-            <div class="product">
+            <div class="product product-car">
                 <div class="listing-side">
                     <div class="listing-thumbnail">
                         <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
@@ -321,12 +321,6 @@ use App\Model\Advert;
                         <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
                             <h4 class="product-title">{{$product['title']}}</h4>
                         </a>
-                    </div>
-                    <div class="wrapper-price-product">
-                        @if($product['meta']['price']>=0)
-                            <span class="product-price">£ {{number_format($product['meta']['price']/100)}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
-                            </span>
-                        @endif
                     </div>
                     <div class="wrapper-location-product">
                         <span class="listing-location">
@@ -362,6 +356,14 @@ use App\Model\Advert;
                 @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
                 @else
                     <span class="posted-text">{{$product['posted']}}</span>
+                @endif
+            </div>
+        </div>
+        <div class="wrapper-price-brand">
+             <div class="wrapper-price-product">
+                @if($product['meta']['price']>=0)
+                    <span class="product-price">£ {{number_format($product['meta']['price']/100)}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                    </span>
                 @endif
             </div>
         </div>
