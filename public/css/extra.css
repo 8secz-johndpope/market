@@ -2324,7 +2324,7 @@ nav.navbar.navbar-inverse {
     width: 24.5%;
     display: inline-block;
 }
-.sf-accordion-select-options input{
+.sf-accordion-select-options input, .sf-accordion-select-container select{
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
@@ -2337,6 +2337,14 @@ nav.navbar.navbar-inverse {
     vertical-align: middle;
     display: inline-block;
     border: 1px solid #ccc;
+    text-indent: 10px;
+}
+.sf-accordion-select-container select{
+    background: url(https://www.autotrader.co.uk/static/3e694ed698eb/images/formElements/arrow-down-red.svg) 50% no-repeat;
+    background-position-x: calc(100% - 16px);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 95%;
     text-indent: 10px;
 }
 .ribbons-price .ratings{
