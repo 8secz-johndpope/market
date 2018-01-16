@@ -360,13 +360,12 @@ use App\Model\Advert;
             </div>
         </div>
         <div class="wrapper-price-brand">
+             @if($product['meta']['price']>=0)
              <div class="wrapper-price-product">
-                @if($product['meta']['price']>=0)
-                    <span class="product-price">£ {{number_format($product['meta']['price']/100)}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
-                    </span>
-                @endif
+                <span class="product-price">£ {{number_format($product['meta']['price']/100)}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                </span>
             </div>
-            <div class="">
+            <div class="ribbons-price">
                 <span class="ribbon ribbon-price-great">
                     <div class="wrapper-ribbon">
                         <span class="ribbon-text">
@@ -406,6 +405,7 @@ use App\Model\Advert;
                         <div class="tooltip-close js-close"></div>
                     </div> -->
             </div>
+            @endif
         </div>
         <div class="clearfix extra-info">
             <hr>

@@ -2270,6 +2270,10 @@ nav.navbar.navbar-inverse {
     border-width: 20px;
     margin-top: -20px;
 }
+.ribbons-price{
+    width: 100%;
+}
+
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
