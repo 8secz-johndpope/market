@@ -156,6 +156,11 @@ use App\Model\Advert;
         </div>
         @foreach($filters as $filter)
             @if($filter->type === 'list')
+            <div style="display: none">
+            @php
+                var_dump($filter);
+            @endphp
+            </div>
             <div class="flyout-list">
                 <button type="button" class="options-button">
                     <span class="options-button-inner">
@@ -245,11 +250,7 @@ use App\Model\Advert;
                 </button>
             </div>
             @else
-            <div style="display: none">
-            @php
-                var_dump($filter);
-            @endphp
-            </div>
+            
             <div class="l-visible-large">
                 @if($filter->title === 'Salary Period')
                     <h4>Salary Bands</h4>
