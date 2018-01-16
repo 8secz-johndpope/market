@@ -2328,10 +2328,16 @@ nav.navbar.navbar-inverse {
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
-    color: #666
-    background: url(https://www.autotrader.co.uk/static/3e694ed698eb/images/formElements/arrow-down-red.svg) 50% no-repeat;
-    background-size: 10px 6px;
-    background-position-x: calc(100% - 16px);
+    color: #666;
+    text-align: left;
+    background-color: #fff;
+    width: 73%;
+    height: 30px;
+    border-radius: 3px;
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid #ccc;
+    text-indent: 10px;
 }
 @media (max-width: 1500px) {
     h4.product-title {
