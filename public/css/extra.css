@@ -1226,6 +1226,10 @@ span.favor-text {
     width: calc(100% - 150px);
     display: inline-block;
 }
+.wrapper-price-brand{
+    display: inline-block;
+    width: 150px;
+}
 .filter-container{
     position: relative;
     width: 100%;
