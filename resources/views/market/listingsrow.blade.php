@@ -171,7 +171,7 @@ use App\Model\Advert;
                             @foreach($filter->vals as $val)
                                 @if($val->selected===1)
                                     {{$val->title}}
-                                    <input type="hidden" class="current-filter" name="{{{{$val->slug}}}}">
+                                    <input type="hidden" class="current-filter" name="{{$val->slug}}">
                                 @endif
                             @endforeach
                         </span>
