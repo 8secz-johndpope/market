@@ -2324,6 +2324,15 @@ nav.navbar.navbar-inverse {
     width: 24.5%;
     display: inline-block;
 }
+.sf-accordion-select-options input{
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #666
+    background: url(https://www.autotrader.co.uk/static/3e694ed698eb/images/formElements/arrow-down-red.svg) 50% no-repeat;
+    background-size: 10px 6px;
+    background-position-x: calc(100% - 16px);
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
