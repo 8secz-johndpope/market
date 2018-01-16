@@ -230,7 +230,7 @@ use App\Model\Advert;
             </div>
             @elseif($filter->type === 'integer')
             <div class="flyout-list">
-                <button type="button" class="options-button accordion-options-button">
+                <button type="button" class="options-button accordion-options-button" data-toggle="collapse">
                     <span class="options-button-inner">
                         <span class="options-button-name">
                             {{$filter->title}}
@@ -248,9 +248,11 @@ use App\Model\Advert;
                         </span>
                     </span>
                 </button>
+                <div class="collapse" id="acco-{{$filter->slug}}">
+                    
+                </div>
             </div>
             @else
-            
             <div class="l-visible-large">
                 @if($filter->title === 'Salary Period')
                     <h4>Salary Bands</h4>
