@@ -190,7 +190,7 @@ use App\Model\Advert;
                         </div>
                         <div class="form-group clearfix">
                             <div class="col-sm-offset-6 col-sm-6">
-                                <button type="submit" class="btn btn-default">Submit</button>
+                                <button type="submit" class="form-control btn btn-default">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -481,6 +481,17 @@ use App\Model\Advert;
                         <div class="tooltip-close js-close"></div>
                     </div> -->
                     <span class="price-based-on">Based on similar cars</span>
+                    <div class="ratings">
+                        <div class="stars">
+                            <span>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                                <i class="fullstar"></i>
+                            </span>
+                        </div>
+                    </div>
             </div>
             @endif
         </div>
@@ -541,17 +552,6 @@ use App\Model\Advert;
                             </span>
                             <span  class="favor-text">SAVE</span>
                         @endif
-                    </div>
-                </div>
-                <div class="ratings">
-                    <div class="stars">
-                        <span>
-                            <i class="fullstar"></i>
-                            <i class="fullstar"></i>
-                            <i class="fullstar"></i>
-                            <i class="fullstar"></i>
-                            <i class="fullstar"></i>
-                        </span>
                     </div>
                 </div>
             </div>
