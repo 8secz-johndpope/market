@@ -161,13 +161,19 @@ use App\Model\Advert;
                         Prices
                     </span>
                     <span class="options-button-value">
-                        @if(isset($input['max_price']))
-                            {{$input['min_price']}}
-                        @endif
-                         to
-                        @if(isset($input['max_price']))
-                            {{$input['max_price']}}
-                        @endif  
+                        @if(isset($input['min_price']) && isset($input['max_price']))
+                            Any
+                        @else
+                            @if(isset($input['min_price']))
+                                {{$input['min_price']}}
+                            @else
+                                Any
+                            @endif
+                             to
+                            @if(isset($input['max_price']))
+                                {{$input['max_price']}}
+                            @endif 
+                        @endif 
                     </span>
                     <span class="options-button-icon">
                         <i class="glyphicon glyphicon-menu-down"></i>
