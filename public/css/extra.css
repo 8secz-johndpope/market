@@ -2348,6 +2348,10 @@ nav.navbar.navbar-inverse {
     text-align: center;
     margin-left: 5px;
 }
+.brand-logo-container {
+    display: inline-block;
+    width: 100px;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
