@@ -304,6 +304,182 @@ use App\Model\Advert;
             </div>
         </div>
         @endif
+        <!--- This is for cars adverts -->
+        @if($product['category'] >= 1050000000 && $product['category'] <= 1059999999)
+        <div class="listing-max-pro">
+            <div class="product">
+                <div class="listing-side">
+                    <div class="listing-thumbnail">
+                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
+
+                        <!-- @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
+                            <span class="ribbon-featured">
+                                <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
+                            </span>
+                        @endif -->
+                        <div class="listing-meta txt-sub">
+                            <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($product['images'])}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="favor">
+                        @if (in_array($product['source_id'],$sids))
+                            <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                            <span  class="favor-text" style="display: none">SAVE</span>
+                        @else
+                            <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
+                            </span>
+                            <span  class="favor-text">SAVE</span>
+                        @endif
+                    </div>
+                    <div class="wrapper-title-product">
+                        <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
+                            <h4 class="product-title">{{$product['title']}}</h4>
+                        </a>
+                    </div>
+                    <div class="wrapper-price-product">
+                        @if($product['meta']['price']>=0)
+                            <span class="product-price">£ {{number_format($product['meta']['price']/100)}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                            </span>
+                        @endif
+                    </div>
+                    <div class="wrapper-location-product">
+                        <span class="listing-location">
+                            {{$product['location_name']}}
+                        </span>
+                    </div>
+                    <div class="listing-description">
+                        {!! $product['description'] !!}
+                    </div>
+                    <div class="listing-key-facts">
+                        <ul class="list-key-facts">
+                            @if(array_key_exists("vehicle_registration_year",$product['meta']))
+                            <li>{{$product['meta']['vehicle_registration_year']}}</li>
+                            @endif
+                            @if(array_key_exists("vehicle_body_type",$product['meta']))
+                            <li>{{$product['meta']['vehicle_body_type']}}</li>
+                            @endif
+                            @if(array_key_exists("vehicle_mileage",$product['meta']))
+                            <li>{{number_format($product['meta']['vehicle_mileage'])}} miles</li>
+                            @endif
+                            @if(array_key_exists("vehicle_transmission",$product['meta']))
+                            <li>{{$product['meta']['vehicle_transmission']}}</li>
+                            @endif
+                            @if(array_key_exists("vehicle_engine_size",$product['meta']))
+                            <li>{{number_format($product['meta']['vehicle_engine_size'] / 1000, 2, ".", ",")}} L</li>
+                            @endif 
+                            @if(array_key_exists("key_facts",$product['meta']) && array_key_exists("Engine power",$product['meta']['key_facts']))
+                                <li class="uppercase">{{$product['meta']['key_facts']["Engine power"]}}</li>
+                            @endif
+                            <li>{{$product['meta']['vehicle_fuel_type']}}</li>
+                        </ul>
+                    </div>
+                @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
+                @else
+                    <span class="posted-text">{{$product['posted']}}</span>
+                @endif
+            </div>
+        </div>
+        <div class="clearfix extra-info">
+            <hr>
+            <div class="ribbons">
+                @if(isset($product['sold']) && $product['sold'] == 1)
+                    <span class="ribbon sold">
+                       Sold
+                    </span>
+                @else
+                    @if(isset($product['spotlight'])&&$product['spotlight']===1&&$product['spotlight_expires']>$milli)
+                    <span class="ribbon ribbon-spotlight">
+                        <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Spotlight</strong> 
+                    </span>
+                    @endif
+                    @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
+                        <span class="ribbon ribbon-featured">
+                            <strong class="" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong> 
+                        </span>
+                    @endif
+                    @if(isset($product['urgent'])&&$product['urgent']===1&&$product['urgent_expires']>$milli)
+                        <span class="ribbon urgent-span">
+                            <span class="ribbon-text">
+                            Urgent
+                            </span>
+                        </span>
+                    @endif
+                    @if(isset($product['canship'])&&$product['canship']===1)
+                        <span class="ribbon ribbon-shipping">
+                            <strong class="ship-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Can Ship</strong>
+                        </span>
+                    @endif
+                    @if(isset($product['candeliver'])&&$product['candeliver']===1)
+                        <span class="ribbon ribbon-delivery">
+                            <strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Local Delivery</strong>
+                        </span>
+                    @endif
+                    <span class="ribbon ribbon-price-reduced">
+                        <span class="ribbon-text">
+                            Price Reduced
+                        </span>
+                    </span>
+                    <div class="tooltip tooltip-price-reduce  tooltip-arrow-upRight js-tooltip-window">
+                        <div class="tooltip-content">
+                            <h3 class="search-result-valueIndicatorTitle">Why is this car price reduced?</h3>
+                            <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as priced low.</span>
+                        </div>
+                        <div class="tooltip-close js-close"></div>
+                    </div>
+                    <span class="ribbon ribbon-price-good">
+                        <span class="ribbon-text">
+                            Good Price
+                        </span>
+                    </span>
+                    <div class="tooltip  tooltip-arrow-upRight js-tooltip-window">
+                        <div class="tooltip-content">
+                            <h3 class="search-result-valueIndicatorTitle">Why is this car a good price?</h3>
+                            <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a good price.</span>
+                        </div>
+                        <div class="tooltip-close js-close"></div>
+                    </div>
+                    <span class="ribbon ribbon-price-great">
+                        <span class="ribbon-text">
+                            Great Price
+                        </span>
+                    </span>
+                    <div class="tooltip tooltip-price-great  tooltip-arrow-upRight js-tooltip-window">
+                        <div class="tooltip-content">
+                            <h3 class="search-result-valueIndicatorTitle">Why is this car a great price?</h3>
+                            <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a great price.</span>
+                        </div>
+                        <div class="tooltip-close js-close"></div>
+                    </div>
+                @endif
+            </div>
+            <div class="extra-options">
+                <div class="make-offer">
+                    <a href="#">
+                    <div class="circle">
+                        <div class="text-offer">
+                            <span>Make an offer</span>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="ratings">
+                    <div class="stars">
+                        <span>
+                            <i class="fullstar"></i>
+                            <i class="fullstar"></i>
+                            <i class="fullstar"></i>
+                            <i class="fullstar"></i>
+                            <i class="fullstar"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @else
+        <!-- -->
         <div class="listing-max-pro">
             <div class="product">
                 @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
@@ -509,6 +685,7 @@ use App\Model\Advert;
             @endif
         </div>
     </div>
+    @endif
     @php
         $i = $i + 1;
     @endphp
