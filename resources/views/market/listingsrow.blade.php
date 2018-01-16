@@ -239,7 +239,7 @@ use App\Model\Advert;
                     </span>
                     <span class="options-button-value">
                         @foreach($distances as $key=>$value)
-                            @if(isset($input['distance'])&&$input['distance']==$key))
+                            @if(isset($input['distance']) &&$input['distance']==$key)
                                 {{$value}}
                                 @php
                                     $isChecked = true;
