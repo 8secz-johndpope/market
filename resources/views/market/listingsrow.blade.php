@@ -164,7 +164,7 @@ use App\Model\Advert;
                 </div>
             </form>
         </div>
-        <div class="l-visible-large">
+        <!-- <div class="l-visible-large">
             <form action="{{$url}}" >
                 <div class="form-group">
                     <label for="sort"> Sort By:</label>
@@ -180,6 +180,41 @@ use App\Model\Advert;
                 </select>
                 </div>
             </form>
+        </div> -->
+        <div class="flyout-accordion accordion-container">
+            <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-category">
+                <span class="options-button-inner">
+                    <span class="options-button-name">
+                        Sort By
+                    </span>
+                    <span class="options-button-value">
+                        @foreach($sorts as $st)
+                            @if(isset($input['sort']) && $input['sort']===$st->key))
+                                {{$st->key}}
+                            @endif
+                        @endforeach
+                    </span>
+                    <span class="options-button-icon">
+                        <i class="glyphicon glyphicon-menu-down"></i>
+                    </span>
+                </span>
+            </button>
+            <div class="collapse in" id="acco-category">
+                <div class="sf-accordion-select-container parents-option">
+                    <form action="{{$url}}" >
+                        @foreach($input as $key=>$value)
+                            @if($key!=='sort')
+                                <input type="hidden" name="{{$key}}" value="{{$value}}">
+                            @endif
+                        @endforeach
+                        <select class="form-control" name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
+                        @foreach($sorts as $st)
+                            <option value="{{$st->key}}" @if(isset($input['sort'])&&$input['sort']===$st->key)) selected @endif>{{$st->title}}</option>
+                        @endforeach
+                        </select>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="search-form-location-field">
             <div class="select-box">
