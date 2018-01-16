@@ -191,8 +191,6 @@ use App\Model\Advert;
                         @foreach($sorts as $st)
                             @if(isset($input['sort']) && $input['sort']===$st->key))
                                 {{$st->title}}
-                            @else
-                                Most recent first
                             @endif
                         @endforeach
                     </span>
@@ -228,8 +226,6 @@ use App\Model\Advert;
                         @foreach($distances as $key=>$value)
                             @if(isset($input['distance'])&&$input['distance']==$key))
                                 {{$value}}
-                            @else
-                                Distance (national)
                             @endif
                         @endforeach
                     </span>
