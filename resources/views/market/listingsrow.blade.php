@@ -805,10 +805,12 @@ use App\Model\Advert;
     $("#phone-number-2").intlTelInput();
     $("#phone-number-1").intlTelInput();
     $('.flyout-list .options-button').click(function(){
-        if(!$(this).next().hasClass('is-in')){
-            $('.flyout').removeClass('is-in is-visible');
+        if(!(this).hasClass('accordion-options-button'))
+            if(!$(this).next().hasClass('is-in')){
+                $('.flyout').removeClass('is-in is-visible');
+            }
+            $(this).next().toggleClass('is-in is-visible');
         }
-        $(this).next().toggleClass('is-in is-visible');
     });
     $('.sf-flyout-close').click(function(){
         $(this).closest('.flyout').toggleClass('is-in is-visible');
@@ -819,9 +821,9 @@ use App\Model\Advert;
         var cleanUrl = currentUrl.replace(currentFilter, '');
         window.location.href = cleanUrl; 
     });
-    $('.flyout-list .options-button.accordion-options-button').click(function(e){
+    /*$('.flyout-list .options-button.accordion-options-button').click(function(e){
         e.preventDefault();
         $('.collapse').collapse();
-    });
+    });*/
 </script>
 @endsection
