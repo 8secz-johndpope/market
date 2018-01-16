@@ -427,17 +427,19 @@ use App\Model\Advert;
                         <div class="tooltip-close js-close"></div>
                     </div> -->
                     <span class="ribbon ribbon-price-great">
-                        <span class="ribbon-text">
-                            Great Price
-                        </span>
-                    </span>
-                    <div class="tooltip tooltip-price-great  tooltip-arrow-upRight js-tooltip-window">
-                        <div class="tooltip-content">
-                            <h3 class="search-result-valueIndicatorTitle">Why is this car a great price?</h3>
-                            <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a great price.</span>
+                        <div class="wrapper-ribbon">
+                            <span class="ribbon-text">
+                                Great Price
+                            </span>
+                            <div class="tooltip tooltip-price-great  tooltip-arrow-upRight js-tooltip-window">
+                                <div class="tooltip-content">
+                                    <h3 class="search-result-valueIndicatorTitle">Why is this car a great price?</h3>
+                                    <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a great price.</span>
+                                </div>
+                                <div class="tooltip-close js-close"></div>
+                            </div>
                         </div>
-                        <div class="tooltip-close js-close"></div>
-                    </div>
+                    </span>
                 @endif
             </div>
             <div class="extra-options">
