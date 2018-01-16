@@ -2036,6 +2036,7 @@ nav.navbar.navbar-inverse {
     position: relative;
     height: 30px;
     background: #fff;
+    border-bottom: 1px solid #e8e8e3;
 }
 .flyout-list .options-button {
     position: relative;
