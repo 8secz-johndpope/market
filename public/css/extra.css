@@ -2181,7 +2181,7 @@ nav.navbar.navbar-inverse {
     padding: 0;
     overflow: hidden;
 }
-.sf-flyout-options .value-button {
+.sf-flyout-options .value-button, .flyout-accordion .value-button {
     position: relative;
     display: block;
     width: 100%;
