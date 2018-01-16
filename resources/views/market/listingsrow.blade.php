@@ -378,7 +378,6 @@ use App\Model\Advert;
                             </div>
                             <div class="tooltip-close js-close"></div>
                         </div>
-                        <span class="price-based-on">Based on similar cars</span>
                     </div>
                 </span>
                 <!-- <span class="ribbon ribbon-price-reduced">
@@ -405,6 +404,7 @@ use App\Model\Advert;
                         </div>
                         <div class="tooltip-close js-close"></div>
                     </div> -->
+                    <span class="price-based-on">Based on similar cars</span>
             </div>
             @endif
         </div>
