@@ -2032,7 +2032,7 @@ nav.navbar.navbar-inverse {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-.flyout-list {  
+.flyout-list, .flyout-accordion {  
     position: relative;
     height: 30px;
     background: #fff;
