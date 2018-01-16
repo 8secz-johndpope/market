@@ -818,7 +818,7 @@ use App\Model\Advert;
     $('.sf-flyout-clear-button').click(function(){
         var element = $(this).closest('.flyout-list').find('.current-filter');
         var currentFilter = element.val();
-        var filter =. element.attr('name');
+        var filter = element.attr('name');
         currentFilter = filter + '=' + currentFilter;
         var currentUrl = window.location.href;
         var cleanUrl = currentUrl.replace(currentFilter, '');
