@@ -2038,7 +2038,7 @@ nav.navbar.navbar-inverse {
     background: #fff;
     border-bottom: 1px solid #e8e8e3;
 }
-.flyout-list .options-button {
+.flyout-list .options-button, .flyout-accordion .options-button{
     position: relative;
     width: 100%;
     padding: 0;
