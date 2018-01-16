@@ -161,7 +161,7 @@ use App\Model\Advert;
                         Prices
                     </span>
                     <span class="options-button-value">
-                        @if(isset($input['min_price']) && isset($input['max_price']))
+                        @if(!isset($input['min_price']) && !isset($input['max_price']))
                             Any
                         @else
                             @if(isset($input['min_price']))
