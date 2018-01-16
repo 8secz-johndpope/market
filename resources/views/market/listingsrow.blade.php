@@ -74,13 +74,36 @@ use App\Model\Advert;
             </div>
         </div>
         @if(count($parents) > 0)
-        <div class="l-visible-large">
+        <div class="flyout-accordion accordion-container">
+            <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-location">
+                <span class="options-button-inner">
+                    <span class="options-button-name">
+                        Other Categories
+                    </span>
+                    <span class="options-button-value">
+                    </span>
+                    <span class="options-button-icon">
+                        <i class="glyphicon glyphicon-menu-down"></i>
+                    </span>
+                </span>
+            </button>
+            <div class="collapse" id="acco-price">
+                <div class="sf-accordion-select-container parents-option">
+                    @foreach($parents as $parent)
+                    <div class="value-button">
+                        <span class="term"><a href="/{{$parent->slug}}/{{$location->slug}}">{{$parent->title}}</a></span>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        <!-- <div class="l-visible-large">
             <ul class="list-group">
                 @foreach($parents as $parent)
                     <li class="list-group-item"><a href="/{{$parent->slug}}/{{$location->slug}}">{{$parent->title}}</a>&nbsp;&nbsp;</li>
                 @endforeach
             </ul>
-        </div>
+        </div> -->
         @endif
         
         <div class="l-visible-large">
