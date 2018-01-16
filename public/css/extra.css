@@ -2010,8 +2010,8 @@ nav.navbar.navbar-inverse {
 .flyout {
     max-height: 80vh;
     position: absolute;
-    left: 230px;
-    top: -100px;
+    left: 94%;
+    top: -110px;
     min-height: 200px;
     padding: 10px 17px;
     width: 700px;
