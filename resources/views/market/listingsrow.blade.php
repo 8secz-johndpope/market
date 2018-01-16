@@ -448,15 +448,17 @@ use App\Model\Advert;
                     </div>
                     </a>
                 </div>
-                <div class="favor favor-car">
-                    @if (in_array($product['source_id'],$sids))
-                        <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
-                        <span  class="favor-text" style="display: none">SAVE</span>
-                    @else
-                        <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
-                        </span>
-                        <span  class="favor-text">SAVE</span>
-                    @endif
+                <div class="favor-car">
+                    <div class="favor">
+                        @if (in_array($product['source_id'],$sids))
+                            <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                            <span  class="favor-text" style="display: none">SAVE</span>
+                        @else
+                            <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
+                            </span>
+                            <span  class="favor-text">SAVE</span>
+                        @endif
+                    </div>
                 </div>
                 <div class="ratings">
                     <div class="stars">
