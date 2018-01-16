@@ -229,7 +229,7 @@ use App\Model\Advert;
                 </div>
             </div>
             @elseif($filter->type === 'integer')
-            <div class="flyout-list">
+            <div class="flyout-list accordion-container">
                 <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-{{$filter->slug}}">
                     <span class="options-button-inner">
                         <span class="options-button-name">
@@ -811,7 +811,8 @@ use App\Model\Advert;
             }
             $(this).next().toggleClass('is-in is-visible');
         }else{
-           $(this).next().collapse(); 
+            $(this).closest('flyout-list').toggleClass('expanded');
+            $(this).next().collapse('toggle'); 
         }
     });
     $('.sf-flyout-close').click(function(){
