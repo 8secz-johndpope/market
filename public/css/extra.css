@@ -2273,6 +2273,9 @@ nav.navbar.navbar-inverse {
 .ribbons-price{
     width: 100%;
 }
+.ribbons-price .ribbon{
+    margin: 0 0 0 14px;
+}
 
 @media (max-width: 1500px) {
     h4.product-title {
