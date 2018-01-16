@@ -1230,6 +1230,9 @@ span.favor-text {
     display: inline-block;
     width: 150px;
 }
+.product-car .product-title{
+    width: 100%;
+}
 .filter-container{
     position: relative;
     width: 100%;
