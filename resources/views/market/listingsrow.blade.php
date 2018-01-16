@@ -103,8 +103,8 @@ use App\Model\Advert;
                 </div>
             </form>
         </div>
+        @if($category->id >= 4000000000 && $category->id <= 4999999999)
         <div class="l-visible-large">
-            @if($category->id >= 4000000000 && $category->id <= 4999999999)
             <form action="{{$url}}">
                 <label for="distance">Salary</label>
                 @foreach($input as $key=>$value)
@@ -128,32 +128,8 @@ use App\Model\Advert;
                             </div>
                         </div>
             </form>
-            @else
-            <form action="{{$url}}">
-                <label for="distance">Price</label>
-                @foreach($input as $key=>$value)
-                    <input type="hidden" name="{{$key}}" value="{{$value}}">
-                @endforeach
-                    <div class="form-group">
-                        <label class="control-label" for="min_price">Minimum Price:</label>
-                        <div class="">
-                        <input class="form-control" placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price'])){{$input['min_price']}}@endif" aria-invalid="false">
-                    </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label" for="max_price">Maximum Price:</label>
-                        <div class=""><input class="form-control" placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false">
-                        </div>
-                        </div>
-                    <div class="form-group clearfix">
-                            <div class="col-sm-offset-6 col-sm-6">
-                                <button type="submit" class="btn btn-default">Submit</button>
-                            </div>
-                        </div>
-            </form>
-            @endif
         </div>
+        @else
         <div class="flyout-accordion accordion-container">
             <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-price">
                 <span class="options-button-inner">
@@ -205,6 +181,7 @@ use App\Model\Advert;
                 </div>
             </div>
         </div>
+        @endif
         @foreach($filters as $filter)
             @if($filter->type === 'list')
             <div style="display: none">

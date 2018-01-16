@@ -2339,6 +2339,9 @@ nav.navbar.navbar-inverse {
     border: 1px solid #ccc;
     text-indent: 10px;
 }
+.ribbons-price .ratings{
+    margin-top: 8px;
+}
 .ribbons-price .stars{
     width: 100%;
     display:block;
