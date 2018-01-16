@@ -2032,11 +2032,16 @@ nav.navbar.navbar-inverse {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-.flyout-list, .flyout-accordion {  
+.flyout-list {  
     position: relative;
     height: 30px;
     background: #fff;
     border-bottom: 1px solid #e8e8e3;
+}
+.flyout-accordion{
+    background: #fff;
+    border-bottom: 1px solid #e8e8e3;
+    position: relative;
 }
 .flyout-list .options-button, .flyout-accordion .options-button{
     position: relative;
