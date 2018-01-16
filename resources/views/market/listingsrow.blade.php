@@ -171,7 +171,7 @@ use App\Model\Advert;
                             @foreach($filter->vals as $val)
                                 @if($val->selected===1)
                                     {{$val->title}}
-                                    <input type="hidden" class="" name="{{{{$val->slug}}}}">
+                                    <input type="hidden" class="current-filter" name="{{{{$val->slug}}}}">
                                 @endif
                             @endforeach
                         </span>
@@ -226,7 +226,6 @@ use App\Model\Advert;
                         </div>
                     </div>
                     <div class="sf-flyout-clear-button">Clear</div>
-                    
                 </div>
             </div>
             @else
@@ -780,6 +779,11 @@ use App\Model\Advert;
     $('.sf-flyout-close').click(function(){
         $(this).closest('.flyout').toggleClass('is-in is-visible');
     });
-    $('.sf-flyout-clear-button').click({});
+    $('.sf-flyout-clear-button').click(function{
+        var currentFilter = $(this).closest('.flyout').find('.current-filter').val();
+        var currentUrl = window.location.href;
+        var cleanUrl = currentUrl.replace(currentFilter, '');
+        window.location.href = cleanUrl; 
+    });
 </script>
 @endsection
