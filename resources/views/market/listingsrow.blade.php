@@ -770,7 +770,6 @@ use App\Model\Advert;
         $(this).next().toggleClass('is-in is-visible');
     });
     $('.sf-flyout-close').click(function(){
-        console.log('click');
         $(this).closest('.flyout').removeClass('is-visible');
     })
 </script>
