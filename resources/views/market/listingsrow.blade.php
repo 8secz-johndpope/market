@@ -190,7 +190,7 @@ use App\Model\Advert;
                     <span class="options-button-value">
                         @foreach($sorts as $st)
                             @if(isset($input['sort']) && $input['sort']===$st->key))
-                                {{$st->key}}
+                                {{$st->title}}
                             @endif
                         @endforeach
                     </span>
@@ -199,7 +199,7 @@ use App\Model\Advert;
                     </span>
                 </span>
             </button>
-            <div class="collapse in" id="acco-category">
+            <div class="collapse" id="acco-category">
                 <div class="sf-accordion-select-container parents-option">
                     <form action="{{$url}}" >
                         @foreach($input as $key=>$value)
