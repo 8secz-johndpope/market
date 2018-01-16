@@ -162,7 +162,7 @@ use App\Model\Advert;
                     </span>
                     <span class="options-button-value">
                         @if(isset($input['max_price']))
-                            {{$input['max_price']}}
+                            {{$input['min_price']}}
                         @endif
                          to
                         @if(isset($input['max_price']))
