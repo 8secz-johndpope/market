@@ -2313,6 +2313,17 @@ nav.navbar.navbar-inverse {
 .sf-accordion-select-container{
     padding: 8px;
 }
+.sf-accordion-select-options {
+    font-size: 13px;
+    line-height: 18px;
+    color: #666;
+    padding: 8px;
+    text-align: left;
+}
+.sf-accordion-select-options .sf-accordion-label {
+    width: 24.5%;
+    display: inline-block;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;

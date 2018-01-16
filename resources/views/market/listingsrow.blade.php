@@ -154,6 +154,49 @@ use App\Model\Advert;
             </form>
             @endif
         </div>
+        <div class="flyout-accordion accordion-container">
+            <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-price">
+                <span class="options-button-inner">
+                    <span class="options-button-name">
+                        Prices
+                    </span>
+                    <span class="options-button-value">
+                        @if(isset($input['max_price']))
+                            {{$input['max_price']}}
+                        @endif
+                         to
+                        @if(isset($input['max_price']))
+                            {{$input['max_price']}}
+                        @endif  
+                    </span>
+                    <span class="options-button-icon">
+                        <i class="glyphicon glyphicon-menu-down"></i>
+                    </span>
+                </span>
+            </button>
+            <div class="collapse in" id="acco-price">
+                <div class="sf-accordion-select-container price-option">
+                    <form action="{{$url}}">
+                        @foreach($input as $key=>$value)
+                            <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endforeach
+                        <div class="sf-accodion-select-options">
+                            <label class="sf-accordion-label" for="min_price">From:</label>
+                            <input class="js-min-input" placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price'])){{$input['min_price']}}@endif" aria-invalid="false">
+                        </div>
+                        <div class="sf-accodion-select-options">
+                             <label class="sf-accordion-label" for="max_price">To:</label>
+                            <input class="js-max-input" placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price'])){{$input['max_price']}}@endif" aria-invalid="false">
+                        </div>
+                        <div class="form-group clearfix">
+                            <div class="col-sm-offset-6 col-sm-6">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         @foreach($filters as $filter)
             @if($filter->type === 'list')
             <div style="display: none">
