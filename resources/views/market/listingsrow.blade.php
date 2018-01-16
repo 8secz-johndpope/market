@@ -819,5 +819,8 @@ use App\Model\Advert;
         var cleanUrl = currentUrl.replace(currentFilter, '');
         window.location.href = cleanUrl; 
     });
+    $('.flyout-list .options-button.accordion-options-button').click(function(){
+        $('.collapse').collapse();
+    });
 </script>
 @endsection
