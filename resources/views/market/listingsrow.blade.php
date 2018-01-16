@@ -106,7 +106,7 @@ use App\Model\Advert;
         </div> -->
         @endif
         
-        <div class="l-visible-large">
+        <!--<div class="l-visible-large">
             <h4>{{$category->title}}</h4>
             @if(count($categories) > 0)
             <ul class="list-group">
@@ -115,6 +115,35 @@ use App\Model\Advert;
                 @endforeach
             </ul>
             @endif
+        </div> -->
+
+        <div class="flyout-accordion accordion-container">
+            <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-category">
+                <span class="options-button-inner">
+                    <span class="options-button-name">
+                        Category
+                    </span>
+                    <span class="options-button-value">
+                        {{$category->title}}
+                    </span>
+                    <span class="options-button-icon">
+                        <i class="glyphicon glyphicon-menu-down"></i>
+                    </span>
+                </span>
+            </button>
+            <div class="collapse in" id="acco-category">
+                @if(count($categories) > 0)
+                <div class="sf-accordion-select-container parents-option">
+                    @foreach($categories as $cat)
+                    <div class="value-button">
+                        <span class="term"><a href="/{{$cat->slug}}/{{$location->slug}}">{{$cat->title}}</a></span>
+                         &nbsp;
+                        <span class="count">({{$cat->count}})</span>
+                    </div>
+                    @endforeach
+                </div>
+                @endif
+            </div>
         </div>
         <div class="l-visible-large">
             <form action="{{$url}}" >
