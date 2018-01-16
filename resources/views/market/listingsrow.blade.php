@@ -191,6 +191,8 @@ use App\Model\Advert;
                         @foreach($sorts as $st)
                             @if(isset($input['sort']) && $input['sort']===$st->key))
                                 {{$st->title}}
+                            @else
+                                Most recent first
                             @endif
                         @endforeach
                     </span>
