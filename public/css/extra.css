@@ -2299,13 +2299,13 @@ nav.navbar.navbar-inverse {
     margin-right: 7px;
 }
 .accordion-container {
-    max-height: 30px;
+    /*max-height: 30px;*/
     overflow: hidden;
     -webkit-transition: .3s;
     transition: .3s;
 }
 .accordion-container.expanded {
-    max-height: 160px;
+    /*max-height: 160px;*/
 }
 .ribbons-price .ribbon-text {
     height: 33px;
