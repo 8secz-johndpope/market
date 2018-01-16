@@ -218,7 +218,46 @@ use App\Model\Advert;
                 </div>
             </div>
         </div>
-        <div class="search-form-location-field">
+        <div class="flyout-accordion accordion-container">
+            <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-distance">
+                <span class="options-button-inner">
+                    <span class="options-button-name">
+                        Distance
+                    </span>
+                    <span class="options-button-value">
+                        @foreach($distances as $key=>$value)
+                            @if(isset($input['distance'])&&$input['distance']==$key))
+                                {{$value}}
+                            @else
+                                Distance (national)
+                            @endif
+                        @endforeach
+                    </span>
+                    <span class="options-button-icon">
+                        <i class="glyphicon glyphicon-menu-down"></i>
+                    </span>
+                </span>
+            </button>
+            <div class="collapse" id="acco-distance">
+                <div class="sf-accordion-select-container parents-option">
+                    <form action="{{$url}}" >
+                        @foreach($input as $key=>$value)
+                            @if($key!=='distance')
+                                <input type="hidden" name="{{$key}}" value="{{$value}}">
+                            @endif
+                        @endforeach
+                        <select class="form-control" data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
+                        @foreach($distances as $key=>$value)
+                            <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']==$key)) selected @endif>
+                                {{$value}}
+                            </option>
+                        @endforeach
+                    </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="search-form-location-field">
             <div class="select-box">
                 <form action="{{$url}}">
                     @foreach($input as $key=>$value)
@@ -238,7 +277,7 @@ use App\Model\Advert;
                     </div>
                 </form>
             </div>
-        </div>
+        </div> -->
         @if($category->id >= 4000000000 && $category->id <= 4999999999)
         <div class="l-visible-large">
             <form action="{{$url}}">
