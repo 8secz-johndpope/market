@@ -197,7 +197,7 @@ use App\Model\Advert;
                             @endphp
                             <div class="col-sm-4">
                                 @for($i = 0; $i < $totalCol; $i++)
-                                    <div class="value-button">
+                                    <div class="value-button @if($filter->vals[$i]->selected===1) selected @endif">
                                         <span class="term"><a href="{!! $filter->vals[$i]->url !!}">{{$filter->vals[$i]->title}}</a></span>
                                         &nbsp;
                                         <span class="count">({{$filter->vals[$i]->count}})</span>
@@ -778,5 +778,8 @@ use App\Model\Advert;
     $('.sf-flyout-close').click(function(){
         $(this).closest('.flyout').toggleClass('is-in is-visible');
     })
+    $('.sf-flyout-clear-button').click(){
+
+    }
 </script>
 @endsection
