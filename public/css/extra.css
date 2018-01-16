@@ -918,6 +918,10 @@ span.posted-text {
     float: right;
     margin-top: 5px;
 }
+.product-car .posted-text{
+    margin-top: 0;
+    padding-right: 10px;
+}
 .favroite-icon {
     cursor: pointer;
     display: block;
