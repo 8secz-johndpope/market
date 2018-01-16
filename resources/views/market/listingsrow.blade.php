@@ -157,7 +157,7 @@ use App\Model\Advert;
         @foreach($filters as $filter)
             <div style="display: none">
             @php
-                //var_dump($filter);
+                var_dump($filter);
             @endphp
             </div>
             @if($filter->type === 'list')
@@ -778,9 +778,7 @@ use App\Model\Advert;
     });
     $('.sf-flyout-close').click(function(){
         $(this).closest('.flyout').toggleClass('is-in is-visible');
-    })
-    $('.sf-flyout-clear-button').click(){
-
-    }
+    });
+    $('.sf-flyout-clear-button').click({});
 </script>
 @endsection
