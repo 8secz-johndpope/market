@@ -539,6 +539,9 @@ use App\Model\Advert;
                         @endif
                     </div>
                 </div>
+                <div class="brand-logo-container">
+                    
+                </div>
             </div>
         </div>
     </div>
