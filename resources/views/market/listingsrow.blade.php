@@ -103,6 +103,26 @@ use App\Model\Advert;
                 </div>
             </form>
         </div>
+        <div class="search-form-location-field">
+            <div class="select-box">
+                <form action="{{$url}}">
+                    @foreach($input as $key=>$value)
+                        @if($key!=='distance')
+                            <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endif
+                    @endforeach
+                    <select class="form-control" data-autosubmit="" name="distance" id="distanceRefine" aria-invalid="false"  onchange="this.form.submit()">
+                        @foreach($distances as $key=>$value)
+                            <option value="{{$key}}" @if(isset($input['distance'])&&$input['distance']==$key)) selected @endif>
+                                {{$value}}
+                            </option>
+                        @endforeach
+                    </select>
+                    <div class="js-selectbox-label">
+                    </div>
+                </form>
+            </div>
+        </div>
         @if($category->id >= 4000000000 && $category->id <= 4999999999)
         <div class="l-visible-large">
             <form action="{{$url}}">
@@ -540,7 +560,7 @@ use App\Model\Advert;
                     </div>
                 </div>
                 <div class="brand-logo-container">
-                    
+
                 </div>
             </div>
         </div>
