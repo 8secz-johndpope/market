@@ -781,6 +781,7 @@ use App\Model\Advert;
     });
     $('.sf-flyout-clear-button').click(function(){
         var currentFilter = $(this).closest('.flyout').find('.current-filter').val();
+        console.log(currentFilter);
         var currentUrl = window.location.href;
         var cleanUrl = currentUrl.replace(currentFilter, '');
         console.log(cleanUrl);
