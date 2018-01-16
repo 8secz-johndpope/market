@@ -771,7 +771,7 @@ use App\Model\Advert;
     });
     $('.sf-flyout-close').click(function(){
         console.log('click');
-        $(this).closest('flyout').removeClass('is-visible');
+        $(this).closest('.flyout').removeClass('is-visible');
     })
 </script>
 @endsection
