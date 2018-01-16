@@ -811,7 +811,7 @@ use App\Model\Advert;
             }
             $(this).next().toggleClass('is-in is-visible');
         }else{
-            $(this).closest('flyout-list').toggleClass('expanded');
+            $(this).closest('.flyout-list').toggleClass('expanded');
             $(this).next().collapse('toggle'); 
         }
     });
