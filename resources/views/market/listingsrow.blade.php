@@ -805,15 +805,14 @@ use App\Model\Advert;
     $("#phone-number-2").intlTelInput();
     $("#phone-number-1").intlTelInput();
     $('.flyout-list .options-button').click(function(){
-        if(!$(this).hasClass('accordion-options-button')){
-            if(!$(this).next().hasClass('is-in')){
-                $('.flyout').removeClass('is-in is-visible');
-            }
-            $(this).next().toggleClass('is-in is-visible');
-        }else{
-            $(this).closest('.flyout-accordion').toggleClass('expanded');
-            $(this).next().collapse('toggle'); 
+        if(!$(this).next().hasClass('is-in')){
+            $('.flyout').removeClass('is-in is-visible');
         }
+        $(this).next().toggleClass('is-in is-visible');
+    });
+    $('.flyout-accordion .options-button').click(function(){
+        $(this).closest('.flyout-accordion').toggleClass('expanded');
+        $(this).next().collapse('toggle'); 
     });
     $('.sf-flyout-close').click(function(){
         $(this).closest('.flyout').toggleClass('is-in is-visible');
