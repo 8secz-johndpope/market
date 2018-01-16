@@ -2285,6 +2285,7 @@ nav.navbar.navbar-inverse {
 }
 .ribbons-price .ribbon{
     margin: 0 0 0 14px;
+    height: 33px;
 }
 
 .price-based-on{
@@ -2305,6 +2306,9 @@ nav.navbar.navbar-inverse {
 }
 .accordion-container.expanded {
     max-height: 160px;
+}
+.ribbons-price .ribbon-text {
+    height: 33px;
 }
 @media (max-width: 1500px) {
     h4.product-title {
