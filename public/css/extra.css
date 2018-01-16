@@ -2346,6 +2346,7 @@ nav.navbar.navbar-inverse {
     width: 100%;
     display:block;
     text-align: center;
+    margin-left: 5px;
 }
 @media (max-width: 1500px) {
     h4.product-title {
