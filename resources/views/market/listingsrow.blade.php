@@ -172,6 +172,8 @@ use App\Model\Advert;
                              to
                             @if(isset($input['max_price']))
                                 {{$input['max_price']}}
+                            @else
+                                Any
                             @endif 
                         @endif 
                     </span>
