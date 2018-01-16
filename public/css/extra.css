@@ -997,6 +997,7 @@ a.search-alert {
 .wrapper-price-product {
     vertical-align: middle;
     text-align: center;
+    margin: 8px 0;
 }
 .product-car .info {
     border-right: 1px solid #ddd;
