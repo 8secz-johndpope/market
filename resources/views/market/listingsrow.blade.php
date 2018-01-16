@@ -158,7 +158,7 @@ use App\Model\Advert;
             @if($filter->type === 'list')
             <div style="display: none">
             @php
-                var_dump($filter);
+                //var_dump($filter);
             @endphp
             </div>
             <div class="flyout-list">
