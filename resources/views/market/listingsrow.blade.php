@@ -366,6 +366,22 @@ use App\Model\Advert;
                     </span>
                 @endif
             </div>
+            <div class="">
+                <span class="ribbon ribbon-price-great">
+                    <div class="wrapper-ribbon">
+                        <span class="ribbon-text">
+                            Great Price
+                        </span>
+                        <div class="tooltip tooltip-price-great  tooltip-arrow-upRight js-tooltip-window">
+                            <div class="tooltip-content">
+                                <h3 class="search-result-valueIndicatorTitle">Why is this car a great price?</h3>
+                                <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a great price.</span>
+                            </div>
+                            <div class="tooltip-close js-close"></div>
+                        </div>
+                    </div>
+                </span>
+            </div>
         </div>
         <div class="clearfix extra-info">
             <hr>
@@ -767,6 +783,7 @@ use App\Model\Advert;
     $("#phone-number-2").intlTelInput();
     $("#phone-number-1").intlTelInput();
     $('.flyout-list .options-button').click(function(){
+        $('.flyout').removeClass('is-in is-visible');
         $(this).next().toggleClass('is-in is-visible');
     });
     $('.sf-flyout-close').click(function(){
