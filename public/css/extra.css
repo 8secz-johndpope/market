@@ -2352,10 +2352,6 @@ nav.navbar.navbar-inverse {
     display: inline-block;
     width: 100px;
 }
-.search-form-location-field{
-    display: block;
-    margin-bottom: 8px;
-}
 .search-form-location-field {
     display: block;
     /* margin-bottom: 8px; */
