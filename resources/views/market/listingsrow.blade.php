@@ -317,16 +317,6 @@ use App\Model\Advert;
                     </div>
                 </div>
                 <div class="info">
-                    <div class="favor">
-                        @if (in_array($product['source_id'],$sids))
-                            <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
-                            <span  class="favor-text" style="display: none">SAVE</span>
-                        @else
-                            <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
-                            </span>
-                            <span  class="favor-text">SAVE</span>
-                        @endif
-                    </div>
                     <div class="wrapper-title-product">
                         <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
                             <h4 class="product-title">{{$product['title']}}</h4>
@@ -457,6 +447,16 @@ use App\Model\Advert;
                         </div>
                     </div>
                     </a>
+                </div>
+                <div class="favor">
+                    @if (in_array($product['source_id'],$sids))
+                        <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
+                        <span  class="favor-text" style="display: none">SAVE</span>
+                    @else
+                        <span class="heart-empty favroite-icon" data-id="{{$product['source_id']}}">
+                        </span>
+                        <span  class="favor-text">SAVE</span>
+                    @endif
                 </div>
                 <div class="ratings">
                     <div class="stars">
