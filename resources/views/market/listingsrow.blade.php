@@ -334,13 +334,13 @@ use App\Model\Advert;
                             Any
                         @else
                             @if(isset($input['min_price']))
-                                {{$input['min_price']}}
+                                £{{$input['min_price']}}
                             @else
                                 Any
                             @endif
                              to
                             @if(isset($input['max_price']))
-                                {{$input['max_price']}}
+                                £{{$input['max_price']}}
                             @else
                                 Any
                             @endif 
