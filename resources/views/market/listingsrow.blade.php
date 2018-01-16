@@ -171,6 +171,7 @@ use App\Model\Advert;
                             @foreach($filter->vals as $val)
                                 @if($val->selected===1)
                                     {{$val->title}}
+                                    <input type="hidden" class="" name="{{{{$val->slug}}}}">
                                 @endif
                             @endforeach
                         </span>
@@ -225,7 +226,7 @@ use App\Model\Advert;
                         </div>
                     </div>
                     <div class="sf-flyout-clear-button">Clear</div>
-                    <input type="hidden" name="vehicle_make">
+                    
                 </div>
             </div>
             @else
