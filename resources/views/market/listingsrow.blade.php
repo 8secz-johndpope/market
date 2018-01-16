@@ -250,15 +250,13 @@ use App\Model\Advert;
                 </button>
                 <div class="collapse" id="acco-{{$filter->slug}}">
                     <div class="sf-accordion-select-container">
-                        <ul class="list-group">
-                            @foreach($filter->vals as $val)
-                                @if($val->selected===1)
-                                    <li class="list-group-item">{{$val->title}}</li>
-                                @else
-                                    <li class="list-group-item"><a href="{!! $val->url !!}">{{$val->title}}</a>&nbsp;&nbsp;{{$val->count}}</li>
-                                @endif
-                            @endforeach
-                        </ul>
+                        @foreach($filter->vals as $val)
+                            <div class="value-button  @if($val->selected===1) selected @endif"">
+                                <span class="term"><a href="{!! $filter->vals[$i]->url !!}">{{$filter->vals[$i]->title}}</a></span>
+                                &nbsp;
+                                <span class="count">({{$filter->vals[$i]->count}})</span>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
