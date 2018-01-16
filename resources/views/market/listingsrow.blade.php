@@ -61,7 +61,7 @@ use App\Model\Advert;
                     </span>
                 </span>
             </button>
-            <div class="collapse in" id="acco-price">
+            <div class="collapse" id="acco-price">
                 <div class="sf-accordion-select-container location-option">
                     @foreach($locs as $loc)
                     <div class="value-button">
