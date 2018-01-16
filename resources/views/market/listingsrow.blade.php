@@ -181,11 +181,11 @@ use App\Model\Advert;
                             <input type="hidden" name="{{$key}}" value="{{$value}}">
                         @endforeach
                         <div class="sf-accordion-select-options">
-                            <label class="sf-accordion-label" for="min_price">From:</label>
+                            <label class="sf-accordion-label" for="min_price">From</label>
                             <input class="js-min-input" placeholder="Min" type="number" id="min_price" name="min_price" value="@if(isset($input['min_price']))£{{$input['min_price']}}@endif" aria-invalid="false">
                         </div>
                         <div class="sf-accordion-select-options">
-                             <label class="sf-accordion-label" for="max_price">To:</label>
+                             <label class="sf-accordion-label" for="max_price">To</label>
                             <input class="js-max-input" placeholder="Max" type="number" name="max_price" value="@if(isset($input['max_price']))£{{$input['max_price']}}@endif" aria-invalid="false">
                         </div>
                         <div class="form-group clearfix">
