@@ -770,7 +770,9 @@ use App\Model\Advert;
     $("#phone-number-2").intlTelInput();
     $("#phone-number-1").intlTelInput();
     $('.flyout-list .options-button').click(function(){
-        $('.flyout').removeClass('is-in is-visible');
+        if(!$(this).closest('.flyout').hasClass('is-in')){
+            $('.flyout').removeClass('is-in is-visible');
+        }
         $(this).next().toggleClass('is-in is-visible');
     });
     $('.sf-flyout-close').click(function(){
