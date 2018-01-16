@@ -922,6 +922,9 @@ span.posted-text {
     margin-top: 0;
     padding-right: 10px;
 }
+.product-car .listing-description{
+    width: 100%;
+}
 .favroite-icon {
     cursor: pointer;
     display: block;
