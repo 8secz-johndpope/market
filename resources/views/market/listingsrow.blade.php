@@ -155,11 +155,6 @@ use App\Model\Advert;
             @endif
         </div>
         @foreach($filters as $filter)
-            <div style="display: none">
-            @php
-                //var_dump($filter);
-            @endphp
-            </div>
             @if($filter->type === 'list')
             <div class="flyout-list">
                 <button type="button" class="options-button">
@@ -229,6 +224,11 @@ use App\Model\Advert;
                 </div>
             </div>
             @else
+            <div style="display: none">
+            @php
+                var_dump($filter);
+            @endphp
+            </div>
             <div class="l-visible-large">
                 @if($filter->title === 'Salary Period')
                     <h4>Salary Bands</h4>
@@ -781,10 +781,8 @@ use App\Model\Advert;
     });
     $('.sf-flyout-clear-button').click(function(){
         var currentFilter = $(this).closest('.flyout-list').find('.current-filter').val();
-        console.log(currentFilter);
         var currentUrl = window.location.href;
         var cleanUrl = currentUrl.replace(currentFilter, '');
-        console.log(cleanUrl);
         window.location.href = cleanUrl; 
     });
 </script>
