@@ -400,7 +400,7 @@ use App\Model\Advert;
                             <strong class="deliver-ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Local Delivery</strong>
                         </span>
                     @endif
-                    <span class="ribbon ribbon-price-reduced">
+                    <!-- <span class="ribbon ribbon-price-reduced">
                         <span class="ribbon-text">
                             Price Reduced
                         </span>
@@ -423,7 +423,7 @@ use App\Model\Advert;
                             <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a good price.</span>
                         </div>
                         <div class="tooltip-close js-close"></div>
-                    </div>
+                    </div> -->
                     <span class="ribbon ribbon-price-great">
                         <span class="ribbon-text">
                             Great Price
