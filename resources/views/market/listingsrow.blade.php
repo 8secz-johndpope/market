@@ -229,7 +229,7 @@ use App\Model\Advert;
                 </div>
             </div>
             @elseif($filter->type === 'integer')
-            <div class="flyout-list accordion-container">
+            <div class="flyout-accordion accordion-container">
                 <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-{{$filter->slug}}">
                     <span class="options-button-inner">
                         <span class="options-button-name">
