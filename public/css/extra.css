@@ -1156,6 +1156,8 @@ li.list-group-item a {
 }
 .favor-car{
     display: inline-block;
+    position: relative;
+    width: 100px;
 }
 span.favor-text {
     font-size: 11px;
