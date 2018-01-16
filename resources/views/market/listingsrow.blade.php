@@ -252,9 +252,9 @@ use App\Model\Advert;
                     <div class="sf-accordion-select-container">
                         @foreach($filter->vals as $val)
                             <div class="value-button  @if($val->selected===1) selected @endif"">
-                                <span class="term"><a href="{!! $filter->vals[$i]->url !!}">{{$filter->vals[$i]->title}}</a></span>
+                                <span class="term"><a href="{!! $val->url !!}">{{$val->title}}</a></span>
                                 &nbsp;
-                                <span class="count">({{$filter->vals[$i]->count}})</span>
+                                <span class="count">({{$val->count}})</span>
                             </div>
                         @endforeach
                     </div>
