@@ -311,12 +311,6 @@ use App\Model\Advert;
                 <div class="listing-side">
                     <div class="listing-thumbnail">
                         <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
-
-                        <!-- @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
-                            <span class="ribbon-featured">
-                                <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-                            </span>
-                        @endif -->
                         <div class="listing-meta txt-sub">
                             <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($product['images'])}}</span>
                         </div>
@@ -478,8 +472,9 @@ use App\Model\Advert;
             </div>
         </div>
     </div>
+    <!-- End cars adverts -->
     @else
-        <!-- -->
+        
         <div class="listing-max-pro">
             <div class="product">
                 @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
