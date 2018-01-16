@@ -249,7 +249,7 @@ use App\Model\Advert;
                     </span>
                 </button>
                 <div class="collapse" id="acco-{{$filter->slug}}">
-                    <div clas="sf-accordion-select-container">
+                    <div class="sf-accordion-select-container">
                         <ul class="list-group">
                             @foreach($filter->vals as $val)
                                 @if($val->selected===1)
