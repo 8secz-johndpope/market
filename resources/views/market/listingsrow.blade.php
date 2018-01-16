@@ -181,6 +181,9 @@ use App\Model\Advert;
                 </div>
             </form>
         </div> -->
+        @php
+            $isChecked = false;
+        @endphp
         <div class="flyout-accordion accordion-container">
             <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-category">
                 <span class="options-button-inner">
@@ -191,8 +194,15 @@ use App\Model\Advert;
                         @foreach($sorts as $st)
                             @if(isset($input['sort']) && $input['sort']===$st->key))
                                 {{$st->title}}
+                                @php
+                                    $isChecked = true;
+                                @endphp
+                                @break
                             @endif
                         @endforeach
+                        @if(!$isChecked)
+                            Most recent first
+                        @endif
                     </span>
                     <span class="options-button-icon">
                         <i class="glyphicon glyphicon-menu-down"></i>
@@ -205,6 +215,8 @@ use App\Model\Advert;
                         @foreach($input as $key=>$value)
                             @if($key!=='sort')
                                 <input type="hidden" name="{{$key}}" value="{{$value}}">
+
+                                @break
                             @endif
                         @endforeach
                         <select class="form-control" name="sort" data-autosubmit="" data-analytics="gaEvent:SRP-sortlistings,defer:true" aria-invalid="false" onchange="this.form.submit()">
@@ -216,6 +228,9 @@ use App\Model\Advert;
                 </div>
             </div>
         </div>
+        @php
+            $isChecked = false;
+        @endphp
         <div class="flyout-accordion accordion-container">
             <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-distance">
                 <span class="options-button-inner">
@@ -226,8 +241,15 @@ use App\Model\Advert;
                         @foreach($distances as $key=>$value)
                             @if(isset($input['distance'])&&$input['distance']==$key))
                                 {{$value}}
+                                @php
+                                    $isChecked = true;
+                                @endphp
+                                @break
                             @endif
                         @endforeach
+                        @if(!$isChecked)
+                            Distance (national)
+                        @endif
                     </span>
                     <span class="options-button-icon">
                         <i class="glyphicon glyphicon-menu-down"></i>
