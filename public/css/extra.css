@@ -2310,6 +2310,9 @@ nav.navbar.navbar-inverse {
 .ribbons-price .ribbon-text {
     height: 33px;
 }
+.sf-accordion-select-container{
+    padding: 0 8px;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
