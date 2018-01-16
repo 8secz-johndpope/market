@@ -157,7 +157,7 @@ use App\Model\Advert;
         @foreach($filters as $filter)
             <div style="display: none">
             @php
-                var_dump($filter);
+                //var_dump($filter);
             @endphp
             </div>
             @if($filter->type === 'list')
