@@ -145,7 +145,7 @@ use App\Model\Advert;
                 @endif
             </div>
         </div>
-        <div class="l-visible-large">
+        <!-- <div class="l-visible-large">
             <form action="{{$url}}" >
                 <div class="form-group">
                     <label for="distance">Distance:</label>
@@ -163,7 +163,7 @@ use App\Model\Advert;
                     </select>
                 </div>
             </form>
-        </div>
+        </div>-->
         <!-- <div class="l-visible-large">
             <form action="{{$url}}" >
                 <div class="form-group">
@@ -234,7 +234,7 @@ use App\Model\Advert;
                     </span>
                 </span>
             </button>
-            <div class="collapse" id="acco-distance">
+            <div class="collapse in" id="acco-distance">
                 <div class="sf-accordion-select-container parents-option">
                     <form action="{{$url}}" >
                         @foreach($input as $key=>$value)
