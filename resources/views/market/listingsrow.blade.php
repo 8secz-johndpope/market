@@ -171,7 +171,7 @@ use App\Model\Advert;
                             @foreach($filter->vals as $val)
                                 @if($val->selected===1)
                                     {{$val->title}}
-                                    <input type="hidden" class="current-filter" name="{{$filter->key}}" value="{{$val->slug}}">
+                                    <input type="hidden" class="current-filter" name="{{$filter->slug}}" value="{{$val->slug}}">
                                 @endif
                             @endforeach
                         </span>
@@ -239,7 +239,7 @@ use App\Model\Advert;
                             @foreach($filter->vals as $val)
                                 @if($val->selected===1)
                                     {{$val->title}}
-                                    <input type="hidden" class="current-filter" name="{{$filter->key}}" value="{{$val->slug}}">
+                                    <input type="hidden" class="current-filter" name="{{$filter->slug}}" value="{{$val->slug}}">
                                 @endif
                             @endforeach
                         </span>
