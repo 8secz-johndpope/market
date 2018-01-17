@@ -678,7 +678,7 @@
                                                             <i class="fullstar"></i>
                                                         </span>
                                                     </div>
-                                                    <span>3</span>
+                                                    <span>{{((int)($advert->user->ratings()->sum('fees_rating')/$advert->user->ratings()->count()))/10}}</span>
                                                 </div>
                                             </div>
                                         </li>
@@ -698,7 +698,7 @@
                                                             <i class="fullstar"></i>
                                                         </span>
                                                     </div>
-                                                    <span>3</span>
+                                                    <span>{{((int)($advert->user->ratings()->sum('professional_rating')/$advert->user->ratings()->count()))/10}}</span>
                                                 </div>
                                             </div>
                                         </li>
@@ -718,7 +718,7 @@
                                                             <i class="fullstar"></i>
                                                         </span>
                                                     </div>
-                                                    <span>3</span>
+                                                    <span>{{((int)($advert->user->ratings()->sum('speed_rating')/$advert->user->ratings()->count()))/10}}</span>
                                                 </div>
                                             </div>
                                         </li>
@@ -738,7 +738,7 @@
                                                             <i class="fullstar"></i>
                                                         </span>
                                                     </div>
-                                                    <span>3</span>
+                                                    <span>{{((int)($advert->user->ratings()->sum('knowledge_rating')/$advert->user->ratings()->count()))/10}}</span>
                                                 </div>
                                             </div>
                                         </li>
