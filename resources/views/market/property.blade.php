@@ -881,38 +881,6 @@
                                 <span class="review-item-date">{{date('d/m/Y',strtotime($review->created_at))}}</span>
                             </div>
                                 @endforeach
-                            <div class="col-md-4 review">
-                                <h4>Excellent Agency</h4>
-                                <p>Good services and communication</p>
-                                <div class="stars">
-                                    <span>
-                                        <i class="fullstar"></i>
-                                        <i class="fullstar"></i>
-                                        <i class="fullstar"></i>
-                                        <i class="fullstar"></i>
-                                        <i class="fullstar"></i>
-                                    </span>
-                                </div>
-                                <span class="author-by">by</span>
-                                <a href="#" class="reviews-item-author">Anthony</a>
-                                <span class="review-item-date">08 Jun, 2017</span>
-                            </div>
-                            <div class="col-md-4 review">
-                                <h4>Excellent Agency</h4>
-                                <p>Good services and communication</p>
-                                <div class="stars">
-                                    <span>
-                                        <i class="fullstar"></i>
-                                        <i class="fullstar"></i>
-                                        <i class="fullstar"></i>
-                                        <i class="fullstar"></i>
-                                        <i class="fullstar"></i>
-                                    </span>
-                                </div>
-                                <span class="author-by">by</span>
-                                <a href="#" class="reviews-item-author">Sophie</a>
-                                <span class="review-item-date">08 Sep, 2017</span>
-                            </div>
                             <div class="col-md-12 read-more-reviews">
                                 <h3>Read more<span class="glyphicon glyphicon-chevron-down"></span></h3>
                             </div>
