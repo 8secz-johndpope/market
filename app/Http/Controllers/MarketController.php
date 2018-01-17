@@ -2226,7 +2226,7 @@ class MarketController extends BaseController
                 'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
             ]
         ];*/
-        $musts['match']= ['meta.vehicle_model' => $product['meta']['vehicle_model'];
+        $musts['match']= ['meta.vehicle_model' => $product['meta']['vehicle_model']];
         $musts['meta.price']= [
             'range' => [
                 'meta.price' => [
