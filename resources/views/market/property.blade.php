@@ -655,31 +655,11 @@
                                         </span>
                                     </div>
                                     <span class="reviews-count">
-                                        Reviews ratings
+                                        Overall Rating
                                     </span>
                                 </div>
                                 <div class="col-lg-8 col-md-12 col-sm-7 col-ratings histogram">
                                     <ul class="reviews-list">
-                                        <li>
-                                            <div class="reviews-item">
-                                                <!-- <i class="empty-star"></i> -->
-                                                <div class="reviews-item-l">
-                                                    <p>Overall Rating</p>
-                                                </div>
-                                                <div class="reviews-item-r">
-                                                    <div class="stars">
-                                                        <span>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                        </span>
-                                                    </div>
-                                                    <span>3</span>
-                                                </div>
-                                            </div>
-                                        </li>
                                         <li>
                                             <div class="reviews-item">
                                                 <!-- <i class="empty-star"></i> -->
