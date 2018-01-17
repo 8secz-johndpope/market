@@ -1601,7 +1601,9 @@ class MarketController extends BaseController
                 $aggretations[$a]=$b;}
         $milliseconds = round(microtime(true) * 1000);
         $products = array_map(function ($a) use ($milliseconds) {
-
+            if($a['_source']['category'] == 1050000000){
+                var_dump($this->priceType($a['_source']));
+            }
            $diff = $milliseconds-$a['_source']['created_at'];
            if($diff<60*1000){
                $a['_source']['posted'] = 'Just Now';
@@ -2211,5 +2213,42 @@ class MarketController extends BaseController
         }
         
         return view($view);
+    }
+    public function priceType($product){
+        $musts=array();
+        $musts['meta.vehicle_model']= [
+            'match' => [
+                'meta.vehicle_model' => $product['meta']['vehicle_model']
+            ]
+        ];
+        $musts['meta.vehicle_registration_year']= [
+            'match' => [
+                'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
+            ]
+        ];
+        $musts['meta.price']= [
+            'range' => [
+                'meta.price' => [
+                    'lte'=>$prodct['meta']['price'];
+                ]
+            ]
+        ];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'query' => [
+                    'bool' => [
+                        'must' => $musts,
+                        /*'must_not' => $mustnot*/
+                   /*     'filter' => $filte */
+                    ]
+                ]/*,
+                "sort"=> $sort*/
+            ]
+        ];
+        $response = $this->client->search($params);
+        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+        return $products;
     }
 }
