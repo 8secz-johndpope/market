@@ -1069,26 +1069,32 @@
                     </ul>
                 </div>
             </div>
+            @if($advert->user->business() !== null)
             <div class="row">
                 <div class="payments-r">
-                    <h3>Payments</h3>
+                    <h3>More from this dealer</h3>
                     <div class="payment-options">
-                        @if($advert->user!==null)
-                        <div class="payment-option cards">
-                            <img class="payments-methods" src="/css/payments.png">
+                        <div class="link-option cards">
+                            <a href="#">Car Search</a>
                         </div>
                         <hr>
-                        @endif
-                        <div class="payment-option hands">
-                            <h4>Cash in Person</h4>
+                        <div class="link-option hands">
+                            <a href="#">About {{$advert->user->business()->name}}</a>
                         </div>
                         <hr>
-                        <div class="payment-option invoice">
-                            <h4>Send <em class="send-me">Me</em> a Bill</h4>
+                        <div class="link-option invoice">
+                            <a href="#">Find Us</a>
+                        </div>
+                        <div class="link-option invoice">
+                            <a href="#">Website</a>
+                        </div>
+                        <div class="link-option invoice">
+                            <a href="#">Finance</a>
                         </div>
                     </div>
                 </div>
             </div>
+            @endif
             <div class="row">
                 <div class="share">
                     <h3>Share this advert</h3>
