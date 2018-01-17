@@ -860,7 +860,10 @@ use App\Model\Advert;
                                 @if(array_key_exists("key_facts",$product['meta']) && array_key_exists("Engine power",$product['meta']['key_facts']))
                                     <li class="uppercase">{{$product['meta']['key_facts']["Engine power"]}}</li>
                                 @endif
-                                <li>{{$product['meta']['vehicle_fuel_type']}}</li>
+                                    @if(array_key_exists("vehicle_fuel_type",$product['meta']))
+
+                                    <li>{{$product['meta']['vehicle_fuel_type']}}</li>
+                                        @endif
                             </ul>
                         </div>
                     @endif
