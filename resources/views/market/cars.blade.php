@@ -1079,7 +1079,7 @@
                         </div>
                         <hr>
                         <div class="link-option hands">
-                            <a href="#">About {{$advert->user->business()->name}}</a>
+                            <a href="#">About {{$advert->user->business->name}}</a>
                         </div>
                         <hr>
                         <div class="link-option invoice">
