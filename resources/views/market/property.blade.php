@@ -763,7 +763,7 @@
                                         </p>
                                     </div>
                                     <div class="per-wrpr">
-                                        <div class="per" data-percent="0%">
+                                        <div class="per" data-percent="{{100*$advert->user->ratings()->where('feedback',2)->count()/$advert->user->ratings()->count()}}%">
                                             <div class="left">
                                                 <span style="transform: rotateZ(-180deg);"></span>
                                             </div>
@@ -776,7 +776,7 @@
                                         </p>
                                     </div>
                                     <div class="per-wrpr">
-                                        <div class="per" data-percent="0%">
+                                        <div class="per" data-percent="{{100*$advert->user->ratings()->where('feedback',3)->count()/$advert->user->ratings()->count()}}%">
                                             <div class="left">
                                                 <span style="transform: rotateZ(-180deg);"></span>
                                             </div>
