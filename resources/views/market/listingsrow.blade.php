@@ -500,6 +500,27 @@ use App\Model\Advert;
             </div>
             @endif
         @endforeach
+        @if($category->id >= 1050000000 && $category->id <= 1059999999)
+        <div class="flyout-accordion accordion-container">
+                <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-mpg">
+                    <span class="options-button-inner">
+                        <span class="options-button-name">
+                            Fuel consumption
+                        </span>
+                        <span class="options-button-value">
+                            Any
+                        </span>
+                        <span class="options-button-icon">
+                            <i class="glyphicon glyphicon-menu-down"></i>
+                        </span>
+                    </span>
+                </button>
+                <div class="collapse" id="acco-mpg">
+                    <div class="sf-accordion-select-container">
+                    </div>
+                </div>
+            </div>
+        @endif
         </div>
     </div>
 </div>
