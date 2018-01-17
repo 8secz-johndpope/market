@@ -604,7 +604,7 @@
                                 <div  class="row">
                                     <div class="col-sm-12 submit">
                                         <a href="#" class="cancel-review">Cancel</a>
-                                        <button class="btn btn-default btn-submit">
+                                        <button class="btn btn-default btn-submit" type="submit">
                                             Submit
                                         </button>
                                     </div>
