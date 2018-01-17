@@ -2372,7 +2372,7 @@ class HomeController extends BaseController
         $user=Auth::user();
         $review = new Rating();
         $review->author_id = $user->id;
-        $review->feedback = $request->feedback*10;
+        $review->feedback = $request->feedback;
         $review->fees_rating = $request->fees_rating*10;
         $review->professional_rating = $request->professional_rating*10;
         $review->speed_rating = $request->speed_rating*10;

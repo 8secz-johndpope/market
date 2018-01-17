@@ -642,9 +642,11 @@
                             </div>
                             <div class="ratings">
                             <div class="row content-reviews border-top-transparent">
+                                @if($advert->user_id>0)
+
                                 <div class="col-md-6 col-sm-6 col-xs-12 rating-stars">
                                 <div class="col-lg-4 col-md-12 col-sm-5 col-ratings rating-avg">
-                                    <h1>5.0</h1>
+                                    <h1>{{$advert->user->ratings()->sum('overall_rating')/$advert->user->ratings()->count()}}</h1>
                                     <div class="stars">
                                         <span>
                                             <i class="fullstar"></i>
@@ -743,6 +745,9 @@
                                     </ul>
                                 </div>
                                 </div>
+                                @else
+                                    <p>No Ratings</p>
+                                    @endif
                                 <div class="col-md-6 col-sm-6 col-ratings all-ratings">
                                     <div class="per-wrpr">
                                         <div class="per" data-percent="100%">

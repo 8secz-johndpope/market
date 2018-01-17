@@ -130,6 +130,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Review');
     }
+    public function ratings()
+    {
+        return $this->hasMany('App\Model\Rating');
+    }
     public function invoices()
     {
         return $this->hasMany('App\Model\Invoice');
