@@ -916,6 +916,8 @@
                             <div class="col-md-12 read-more-reviews">
                                 <h3>Read more<span class="glyphicon glyphicon-chevron-down"></span></h3>
                             </div>
+                                @else
+                                <p>No Reviews</p>
                                 @endif
                         </div>
                     </div>
