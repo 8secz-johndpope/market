@@ -1074,23 +1074,23 @@
                 <div class="payments-r">
                     <h3>More from this dealer</h3>
                     <div class="payment-options">
-                        <div class="link-option cards">
+                        <div class="link-option-brand">
                             <a href="#">Car Search</a>
                         </div>
                         <hr>
-                        <div class="link-option hands">
+                        <div class="link-option-brand">
                             <a href="#">About {{$advert->user->business->name}}</a>
                         </div>
                         <hr>
-                        <div class="link-option invoice">
+                        <div class="link-option-brand">
                             <a href="#">Find Us</a>
                         </div>
                          <hr>
-                        <div class="link-option invoice">
+                        <div class="link-option-brand">
                             <a href="#">Website</a>
                         </div>
                          <hr>
-                        <div class="link-option invoice">
+                        <div class="link-option-brand">
                             <a href="#">Finance</a>
                         </div>
                     </div>
