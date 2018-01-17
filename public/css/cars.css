@@ -168,3 +168,9 @@ strong{
     margin-bottom: 10px;
     background: #eaf4fd;
 }
+.links-options hr{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 0;
+    border-top: 1px dashed #ff9d2c;
+}
