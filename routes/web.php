@@ -226,6 +226,7 @@ Route::get('/user/contract/packs', 'HomeController@packs');
 
 Route::post('/user/write/review', 'HomeController@write_review');
 
+Route::post('/user/rate/ad', 'HomeController@rate_ad');
 
 Route::post('/user/payment/stripe', 'HomeController@stripe');
 Route::post('/user/payment/sale/stripe/{id}', 'HomeController@sale_stripe');

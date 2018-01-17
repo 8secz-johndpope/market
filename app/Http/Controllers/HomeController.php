@@ -18,6 +18,7 @@ use App\Model\Message;
 use App\Model\Pack;
 use App\Model\Payment;
 use App\Model\Postcode;
+use App\Model\Rating;
 use App\Model\Review;
 use App\Model\Room;
 use App\Model\Sale;
@@ -2361,6 +2362,22 @@ class HomeController extends BaseController
         $review->author_id = $user->id;
         $review->title = $request->title;
         $review->review = $request->review;
+        $review->user_id = $request->id;
+        $review->save();
+
+        return redirect()->back();
+
+    }
+    public function rate_ad(Request $request){
+        $user=Auth::user();
+        $review = new Rating();
+        $review->author_id = $user->id;
+        $review->feedback = $request->feedback;
+        $review->fees_rating = $request->fees_rating;
+        $review->professional_rating = $request->professional_rating;
+        $review->speed_rating = $request->speed_rating;
+        $review->knowledge_rating = $request->knowledge_rating;
+
         $review->user_id = $request->id;
         $review->save();
 
