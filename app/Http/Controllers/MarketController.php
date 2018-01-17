@@ -2229,7 +2229,7 @@ class MarketController extends BaseController
         $musts['meta.price']= [
             'range' => [
                 'meta.price' => [
-                    'lte'=>$prodct['meta']['price']
+                    'lte'=>$product['meta']['price']
                 ]
             ]
         ];
