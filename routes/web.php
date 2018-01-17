@@ -224,6 +224,8 @@ Route::get('/user/contract/pack/delete/{id}', 'HomeController@delete_pack');
 Route::get('/user/contract/pack/{category}/{location}', 'HomeController@pack');
 Route::get('/user/contract/packs', 'HomeController@packs');
 
+Route::post('/user/write/review', 'HomeController@write_review');
+
 
 Route::post('/user/payment/stripe', 'HomeController@stripe');
 Route::post('/user/payment/sale/stripe/{id}', 'HomeController@sale_stripe');

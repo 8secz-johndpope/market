@@ -670,18 +670,20 @@
                                 </div>
                             </div>
                             <div id="make-review">
-                                <form>
-                                <div class="row">
+                                <form action="/user/write/review" method="post">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="id" value="{{$advert->user_id}}">
+                                    <div class="row">
                                     <div class="col-md-12">
                                         <h2>Write your review</h2>
                                         <div class="review-content-section">
                                             <div class="input-elem-textbox">
                                                 <span class="title-counter">150</span>
-                                                <input name="wr-title" type="text" maxlength="150" size="150" placeholder="Title your review" title="Title your review">
+                                                <input name="title" type="text" maxlength="150" size="150" placeholder="Title your review" title="Title your review">
                                             </div>
                                             <div class="input-elem-textbox">
                                                 <span class="content-counter">500</span>
-                                                <textarea name="wr-content" contenteditable="true" tabindex="0" spellcheck="true" maxlength="5000" placeholder="Write your review" title="Write your review" ></textarea>
+                                                <textarea name="review" contenteditable="true" tabindex="0" spellcheck="true" maxlength="5000" placeholder="Write your review" title="Write your review" ></textarea>
                                             </div>
                                         </div>
                                     </div>

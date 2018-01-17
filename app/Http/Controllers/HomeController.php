@@ -18,6 +18,7 @@ use App\Model\Message;
 use App\Model\Pack;
 use App\Model\Payment;
 use App\Model\Postcode;
+use App\Model\Review;
 use App\Model\Room;
 use App\Model\Sale;
 use App\Model\SearchAlert;
@@ -2353,5 +2354,17 @@ class HomeController extends BaseController
     public function stats(Request $request,$id){
         $advert = Advert::find($id);
         return view('business.stats',['advert'=>$advert]);
+    }
+    public function write_review(Request $request){
+        $user=Auth::user();
+        $review = new Review();
+        $review->author_id = $user->id;
+        $review->title = $request->title;
+        $review->review = $request->review;
+        $review->user_id = $request->id;
+        $review->save();
+
+        return redirect()->back();
+
     }
 }
