@@ -599,7 +599,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </form>
                                 </div>
                                 <div  class="row">
                                     <div class="col-sm-12 submit">
@@ -609,6 +608,8 @@
                                         </button>
                                     </div>
                                 </div>
+                                </form>
+
                             </div>
                             <div id="make-review">
                                 <form action="/user/write/review" method="post">
