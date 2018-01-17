@@ -936,7 +936,11 @@
                             </div>
                         @endif
                             <div class="user-details">
-                                <p><strong>{{$product['username']}}</strong></p>
+                                @if($advert->user!==null && $advert->user->business !==null)
+                                    <p><strong>{{$advert->user->business->name}}</strong></p>
+                                @else
+                                    <p><strong>{{$product['username']}}</strong></p>
+                                @endif
                                 <address>
                                     {{$product['location_name']}}  
                                 </address>
