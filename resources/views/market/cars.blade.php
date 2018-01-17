@@ -1085,9 +1085,11 @@
                         <div class="link-option invoice">
                             <a href="#">Find Us</a>
                         </div>
+                         <hr>
                         <div class="link-option invoice">
                             <a href="#">Website</a>
                         </div>
+                         <hr>
                         <div class="link-option invoice">
                             <a href="#">Finance</a>
                         </div>
