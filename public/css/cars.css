@@ -162,3 +162,9 @@ strong{
 .link-option-brand a {
     color: #5d7199;
 }
+.links-options{
+    border: 1px solid #ff9d2c;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #eaf4fd;
+}

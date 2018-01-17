@@ -1081,7 +1081,7 @@
             <div class="row">
                 <div class="payments-r">
                     <h3>More from this dealer</h3>
-                    <div class="payment-options clearfix">
+                    <div class="links-options clearfix">
                         <div class="link-option-brand col-sm-6">
                             <a href="#">Car Search</a>
                         </div>
