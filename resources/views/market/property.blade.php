@@ -750,7 +750,7 @@
                                     @endif
                                 <div class="col-md-6 col-sm-6 col-ratings all-ratings">
                                     <div class="per-wrpr">
-                                        <div class="per" data-percent="100%">
+                                        <div class="per" data-percent="{{100*$user->ratings()->where('feedback',1)->count()/$user->ratings()->count()}}%">
                                             <div class="left">
                                                 <span style="transform: rotateZ(0deg);"></span>
                                             </div>
