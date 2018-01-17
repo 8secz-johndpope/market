@@ -1069,7 +1069,7 @@
                     </ul>
                 </div>
             </div>
-            @if($advert->user->business() !== null)
+            @if($advert->user !== null && $advert->user->business !== null)
             <div class="row">
                 <div class="payments-r">
                     <h3>More from this dealer</h3>
