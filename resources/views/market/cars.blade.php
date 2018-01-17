@@ -926,9 +926,13 @@
                 <div class="buttons">
                     <div class="details">
                         <h3>This advert is by</h3>
-                        @if($advert->user!==null)
+                        @if($advert->user!==null && $advert->user->business==null)
                             <div class="profile-picutre">
                                 <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->image}}">
+                            </div>
+                        @elseif($advert->user!==null && $advert->user->business !==null)
+                            <div class="profile-picutre">
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$advert->user->business->logo}}">
                             </div>
                         @endif
                             <div class="user-details">
