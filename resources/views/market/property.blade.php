@@ -641,8 +641,9 @@
                                 </form>
                             </div>
                             <div class="ratings">
-                            <div class="row content-reviews border-top-transparent">
-                                @if($advert->user_id>0)
+                                @if($advert->user_id>0&&$advert->user->ratings()->count()>0)
+
+                                <div class="row content-reviews border-top-transparent">
 
                                 <div class="col-md-6 col-sm-6 col-xs-12 rating-stars">
                                 <div class="col-lg-4 col-md-12 col-sm-5 col-ratings rating-avg">
@@ -745,9 +746,7 @@
                                     </ul>
                                 </div>
                                 </div>
-                                @else
-                                    <p>No Ratings</p>
-                                    @endif
+
                                 <div class="col-md-6 col-sm-6 col-ratings all-ratings">
                                     <div class="per-wrpr">
                                         <div class="per" data-percent="{{100*$advert->user->ratings()->where('feedback',1)->count()/$advert->user->ratings()->count()}}%">
@@ -790,6 +789,9 @@
                                     </div>
                                 </div>
                             </div>
+                                @else
+                                    <p>No Ratings</p>
+                                @endif
                         </div>
                         <div class="reviews">    
                         <div class="row">
