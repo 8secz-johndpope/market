@@ -1183,7 +1183,7 @@
                 </div>
                 <div class="form-group">
                     <label for="save-listing-checkbox">
-                        <input type="checkbox" name="save-listing-checkbox" id="save-listing-checkbox">
+                        <input type="checkbox" name="save-listing-checkbox" id="save-listing-checkbox" checked="true">
                         Save this listing
                     </label>
                 </div>
