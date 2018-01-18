@@ -2246,6 +2246,7 @@ class MarketController extends BaseController
                 "sort"=> $sort*/
             ]
         ];
+        var_dump($params);
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         return $products;
