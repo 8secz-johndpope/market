@@ -767,6 +767,7 @@
                                             else{
                                                 $degLeft = -180;
                                                 $degRight = ($per * 180) / 50;
+                                                $degRight = $degRight - 180;
                                             }
                                         @endphp
                                         <div class="per" data-percent="{{$per}}%">
