@@ -505,7 +505,7 @@ a.post-advert {
     margin-left: -72px;
     border-color: transparent transparent #313c53;
 }
-.tooltip.tooltip-price-great{
+.tooltip.tooltip-price-great, .tooltip.tooltip-price-reduce{
     margin-left: 0;
     right: 0;
 }
