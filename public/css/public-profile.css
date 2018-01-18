@@ -3,3 +3,6 @@
     background: url(/css/public-title-bg.jpg);
     background-size: contain;
 }
+.wrapper-title-profile {
+    padding: 120px 0;
+}
