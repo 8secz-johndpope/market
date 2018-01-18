@@ -2225,6 +2225,13 @@ class MarketController extends BaseController
                 'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
             ]
         ];
+        $musts['meta.price']= [
+            'range' => [
+                'meta.price' => [
+                    'lte'=> $product['meta']['price']
+                ]
+            ]
+        ];
         $params = [
             'index' => 'adverts',
             'type' => 'advert',
@@ -2242,5 +2249,15 @@ class MarketController extends BaseController
         $response = $this->client->search($params);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         return $products;
+    }
+    public function testPrices(){
+        $product = array();
+        $meta = array();
+        $meta['vehicle_model'] = 'clio';
+        $meta['vehicle_registration_year'] = '2016';
+        $meta['price'] = 500000;
+        $product['meta'] = $meta;
+        return $this->priceType($product);
+
     }
 }

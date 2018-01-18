@@ -302,7 +302,7 @@ Route::get('/companies/{id}/office/{office_id}', 'MarketController@office');
 Route::get('/companies/{id}/people/{people_id}', 'MarketController@people');
 Route::get('/company-jobs/{id}', 'MarketController@companyJobs');
 Route::get('/jobs/uber/{id}', 'MarketController@templateJob');
-
+//end templates
 Route::namespace('Admin')->group(function () {
     Route::post('/admin/manage/pricegroup/add', 'AdminController@add_pricegroup')->middleware('admin');
     Route::get('/admin/manage/pricegroup/edit/{id}', 'AdminController@edit_pricegroup')->middleware('admin');
@@ -326,10 +326,10 @@ Route::namespace('Admin')->group(function () {
     Route::get('/admin/enable/advert/{id}', 'AdminController@enable_advert')->middleware('admin');
 });
 
-//end templates
 Route::get('/p/r/{cat}/{id}', 'HomeController@product_url');
 
 Route::get('/p/{cat}/{id}', 'MarketController@product');
 
 Route::get('/{any}', 'MarketController@search');
 Route::get('/{any}/{loc}', 'MarketController@lsearch');
+Route::get('/test-prices', 'MarketController@testPrices');
