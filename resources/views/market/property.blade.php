@@ -647,7 +647,7 @@
 
                                 <div class="col-md-6 col-sm-6 col-xs-12 rating-stars">
                                 <div class="col-lg-4 col-md-12 col-sm-5 col-ratings rating-avg">
-                                    <h1>{{((int)($advert->user->ratings()->sum('overall_rating')/$advert->user->ratings()->count()))/10}}</h1>
+                                    <h1>{{number_format(((int)($advert->user->ratings()->sum('overall_rating')/$advert->user->ratings()->count()))/10, 1)}}</h1>
                                     <div class="stars">
                                         <span>
                                             <i class="fullstar"></i>
