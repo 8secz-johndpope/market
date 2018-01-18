@@ -2382,6 +2382,8 @@ class HomeController extends BaseController
         $review->save();
 
         return redirect()->back();
-
+    }
+    public function createPublicProfile(Request $request){
+        return view('home.public-profile');
     }
 }
