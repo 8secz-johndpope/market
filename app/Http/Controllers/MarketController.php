@@ -2275,11 +2275,19 @@ class MarketController extends BaseController
             ];
             $response = $this->client->search($params);
             $totalLow = $response['hits']['total'];
-            var_dump($totalLow);
+            if($totalLow == 0)
+                return 'price_reduce';
+            elseif($totalLow < 50)
+                return 'great_price'
+            elseif($totalLow < 100)
+                return 'good_price'
+            else
+                return 'normal-price'
+            /*var_dump($totalLow);
             $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-            return $products;
+            return $products;*/
         }
-        return 'normal';
+        return 'normal-price';
     }
     public function testPrices(){
         $product = array();
