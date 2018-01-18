@@ -2278,11 +2278,11 @@ class MarketController extends BaseController
             if($totalLow == 0)
                 return 'price_reduce';
             elseif($totalLow < 50)
-                return 'great_price'
+                return 'great_price';
             elseif($totalLow < 100)
-                return 'good_price'
+                return 'good_price';
             else
-                return 'normal-price'
+                return 'normal-price';
             /*var_dump($totalLow);
             $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
             return $products;*/
