@@ -2216,7 +2216,7 @@ class MarketController extends BaseController
     public function priceType($product){
         if(array_key_exists('vehicle_model',$product['meta'])){
             $musts=array();
-            $noMusts = arra();
+            $noMusts = array();
             $musts['meta.vehicle_model']= [
                 'match' => [
                     'meta.vehicle_model' => $product['meta']['vehicle_model']
