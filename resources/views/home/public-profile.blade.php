@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+<link href="{{ asset('/css/public-profile.css?q=874') }}" rel="stylesheet">
 <div class="body background-body">
     <section class="container-title-profile">
         <div class="container">
