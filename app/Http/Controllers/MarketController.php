@@ -2241,43 +2241,45 @@ class MarketController extends BaseController
         ];
         $response = $this->client->search($params);
         $totalModel = $response['hits']['total'];
-        var_dump($totalModel);
-        $musts['meta.vehicle_model']= [
-            'match' => [
-                'meta.vehicle_model' => $product['meta']['vehicle_model']
-            ]
-        ];
-        $musts['meta.vehicle_registration_year']= [
-            'match' => [
-                'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
-            ]
-        ];
-        $musts['meta.price']= [
-            'range' => [
-                'meta.price' => [
-                    'lte'=> $product['meta']['price']
+        if($totalModel > 10){
+            $musts['meta.vehicle_model']= [
+                'match' => [
+                    'meta.vehicle_model' => $product['meta']['vehicle_model']
                 ]
-            ]
-        ];
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => [
-                'query' => [
-                    'bool' => [
-                        'must' => array_values($musts),
-                        /*'must_not' => $mustnot*/
-                   /*     'filter' => $filte */
+            ];
+            $musts['meta.vehicle_registration_year']= [
+                'match' => [
+                    'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
+                ]
+            ];
+            $musts['meta.price']= [
+                'range' => [
+                    'meta.price' => [
+                        'lte'=> $product['meta']['price'] + 50000
                     ]
-                ]/*,
-                "sort"=> $sort*/
-            ]
-        ];
-        $response = $this->client->search($params);
-        $totalLow = $response['hits']['total'];
-        var_dump($totalLow);
-        $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-        return $products;
+                ]
+            ];
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'query' => [
+                        'bool' => [
+                            'must' => array_values($musts),
+                            /*'must_not' => $mustnot*/
+                       /*     'filter' => $filte */
+                        ]
+                    ]/*,
+                    "sort"=> $sort*/
+                ]
+            ];
+            $response = $this->client->search($params);
+            $totalLow = $response['hits']['total'];
+            var_dump($totalLow);
+            $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+            return $products;
+        }
+        return 'normal';
     }
     public function testPrices(){
         $product = array();
