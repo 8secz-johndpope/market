@@ -650,7 +650,7 @@
                                     <h1>{{number_format(((int)($advert->user->ratings()->sum('overall_rating')/$advert->user->ratings()->count()))/10, 1)}}</h1>
                                     <div class="stars">
                                         <span>
-                                            @for($i=0; $i < ($advert->user->ratings()->sum('overall_rating')/$advert->user->ratings()->count())/10; $i++)
+                                            @for($i=0; $i < ((int)($advert->user->ratings()->sum('overall_rating')/$advert->user->ratings()->count()))/10; $i++)
                                                 <i class="fullstar"></i>
                                             @endfor
                                             @for($i; $i < 5; $i++)
