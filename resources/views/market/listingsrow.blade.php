@@ -663,6 +663,7 @@ use App\Model\Advert;
                 </span>
             </div>
             <div class="ribbons-price">
+                @if($product['price_type'] == 'great_price')
                 <span class="ribbon ribbon-price-great">
                     <div class="wrapper-ribbon">
                         <span class="ribbon-text">
@@ -677,6 +678,7 @@ use App\Model\Advert;
                         </div>
                     </div>
                 </span>
+
                 <!-- <span class="ribbon ribbon-price-reduced">
                         <span class="ribbon-text">
                             Price Reduced
@@ -702,6 +704,7 @@ use App\Model\Advert;
                         <div class="tooltip-close js-close"></div>
                     </div> -->
                     <span class="price-based-on">Based on similar cars</span>
+                    @endif
                     <div class="ratings">
                         <div class="stars">
                             <span>
