@@ -16,3 +16,9 @@ section.container-title-profile:before {
 .wrapper-title-profile {
     padding: 120px 0;
 }
+.wrapper-title-profile h3 {
+    letter-spacing: 2px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-size: 26px;
+    color: #000;
+}
