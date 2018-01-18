@@ -2237,7 +2237,7 @@ class MarketController extends BaseController
                     'query' => [
                         'bool' => [
                             'must' => array_values($musts),
-                            'must_not' => array_values($mustnot)
+                            'must_not' => array_values($noMusts)
                        /*     'filter' => $filte */
                         ]
                     ]/*,
