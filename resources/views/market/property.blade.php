@@ -843,7 +843,7 @@
                             @if($advert->user_id>0)
 
                             <div class="col-md-12 title">
-                                <h3>Most relevant reviews</h3> 
+                                <h3>Most recent reviews</h3> 
                             </div>
                             @foreach($advert->user->reviews as $review)
                             <div class="col-md-4 review">
