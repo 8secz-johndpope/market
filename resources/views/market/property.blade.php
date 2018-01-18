@@ -758,9 +758,13 @@
 
                                 <div class="col-md-6 col-sm-6 col-ratings all-ratings">
                                     <div class="per-wrpr">
-                                        <div class="per" data-percent="{{100*$advert->user->ratings()->where('feedback',1)->count()/$advert->user->ratings()->count()}}%">
+                                        @php
+                                            $per = 100*$advert->user->ratings()->where('feedback',1)->count()/$advert->user->ratings()->count();
+                                            $deg = ($per * 360) / 100;
+                                        @endphp
+                                        <div class="per" data-percent="{{$per}}%">
                                             <div class="left">
-                                                <span style="transform: rotateZ(0deg);"></span>
+                                                <span style="transform: rotateZ({{$deg}}deg);"></span>
                                             </div>
                                             <div class="right">
                                                 <span></span>
