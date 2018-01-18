@@ -719,11 +719,12 @@
                                                 <div class="reviews-item-r">
                                                     <div class="stars">
                                                         <span>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
+                                                            @for($i=0; $i < ((int)($advert->user->ratings()->sum('speed_rating')/$advert->user->ratings()->count()))/10; $i++)
+                                                                <i class="fullstar"></i>
+                                                            @endfor
+                                                            @for($i; $i < 5; $i++)
+                                                                <i class="fullstar"></i>
+                                                            @endfor
                                                         </span>
                                                     </div>
                                                     <span>{{((int)($advert->user->ratings()->sum('speed_rating')/$advert->user->ratings()->count()))/10}}</span>
@@ -739,11 +740,12 @@
                                                 <div class="reviews-item-r">
                                                     <div class="stars">
                                                         <span>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
-                                                            <i class="fullstar"></i>
+                                                            @for($i = 0; $i < ((int)($advert->user->ratings()->sum('knowledge_rating')/$advert->user->ratings()->count()))/10; $i++)
+                                                                <i class="fullstar"></i>
+                                                            @endfor
+                                                            @for($i; $i < 5; $i++)
+                                                                <i class="emptystar"></i>
+                                                            @endfor
                                                         </span>
                                                     </div>
                                                     <span>{{((int)($advert->user->ratings()->sum('knowledge_rating')/$advert->user->ratings()->count()))/10}}</span>
