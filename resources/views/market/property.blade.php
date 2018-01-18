@@ -759,7 +759,7 @@
                                 <div class="col-md-6 col-sm-6 col-ratings all-ratings">
                                     <div class="per-wrpr">
                                         @php
-                                            $per = 100*$advert->user->ratings()->where('feedback',2)->count()/$advert->user->ratings()->count();
+                                            $per = 100*$advert->user->ratings()->where('feedback',1)->count()/$advert->user->ratings()->count();
                                             if($per > 49){
                                                 $degRight = 360;
                                                 $degLeft = ($per * 360) / 100;
