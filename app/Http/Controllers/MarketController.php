@@ -2216,6 +2216,7 @@ class MarketController extends BaseController
     public function priceType($product){
         if(array_key_exists('vehicle_model',$product['meta'])){
             $musts=array();
+            $noMusts = arra();
             $musts['meta.vehicle_model']= [
                 'match' => [
                     'meta.vehicle_model' => $product['meta']['vehicle_model']
@@ -2226,6 +2227,9 @@ class MarketController extends BaseController
                     'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
                 ]
             ];
+            $noMusts['description'] =[
+                'match' => ['description' => 'finance']
+            ];
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
@@ -2233,7 +2237,7 @@ class MarketController extends BaseController
                     'query' => [
                         'bool' => [
                             'must' => array_values($musts),
-                            /*'must_not' => $mustnot*/
+                            'must_not' => array_values($mustnot)
                        /*     'filter' => $filte */
                         ]
                     ]/*,
@@ -2243,16 +2247,6 @@ class MarketController extends BaseController
             $response = $this->client->search($params);
             $totalModel = $response['hits']['total'];
             if($totalModel > 10){
-                $musts['meta.vehicle_model']= [
-                    'match' => [
-                        'meta.vehicle_model' => $product['meta']['vehicle_model']
-                    ]
-                ];
-                $musts['meta.vehicle_registration_year']= [
-                    'match' => [
-                        'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
-                    ]
-                ];
                 $musts['meta.price']= [
                     'range' => [
                         'meta.price' => [
