@@ -777,7 +777,14 @@
                                     <div class="per-wrpr">
                                         @php
                                             $per = 100*$advert->user->ratings()->where('feedback',2)->count()/$advert->user->ratings()->count();
-                                            $deg = ($per * 360) / 100;
+                                            if($per > 49){
+                                                $degRight = 360;
+                                                $degLeft = ($per * 360) / 100;
+                                            }
+                                            else{
+                                                $degLeft = -180;
+                                                $degRight = ($per * 360) / 50;
+                                            }
                                         @endphp
                                         <div class="per" data-percent="{{$per}}%">
                                             <div class="left">
