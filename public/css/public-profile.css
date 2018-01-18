@@ -1,3 +1,5 @@
 .container-title-profile {
     height: 300px;
+    background: url(/css/public-title-bg.jpg);
+    background-size: contain;
 }
