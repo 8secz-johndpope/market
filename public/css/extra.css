@@ -459,6 +459,9 @@ a.post-advert {
     /*background: #8CC059;*/
     background: #024F17;
 }
+.ribbon-price-reduced .ribbon-price .ribbon-text{
+    line-height: 12px;
+}
 .tooltip {
     position: absolute;
     z-index: 80;
