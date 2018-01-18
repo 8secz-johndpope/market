@@ -678,7 +678,36 @@ use App\Model\Advert;
                         </div>
                     </div>
                 </span>
-
+                @elseif($product['price_type'] == 'good_price')
+                <span class="ribbon ribbon-price-great">
+                    <div class="wrapper-ribbon">
+                        <span class="ribbon-text">
+                            Good Price
+                        </span>
+                        <div class="tooltip  tooltip-arrow-upRight js-tooltip-window">
+                            <div class="tooltip-content">
+                                <h3 class="search-result-valueIndicatorTitle">Why is this car a good price?</h3>
+                                <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a good price.</span>
+                            </div>
+                            <div class="tooltip-close js-close"></div>
+                        </div>
+                    </div>
+                </span>
+                @elseif($product['price_type'] == 'price_reduced')
+                <span class="ribbon ribbon-price-great">
+                    <div class="wrapper-ribbon">
+                        <span class="ribbon-text">
+                            Price Reduced
+                        </span>
+                        <div class="tooltip tooltip-price-reduce  tooltip-arrow-upRight js-tooltip-window">
+                            <div class="tooltip-content">
+                                <h3 class="search-result-valueIndicatorTitle">Why is this car price reduced?</h3>
+                                <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as priced low.</span>
+                            </div>
+                            <div class="tooltip-close js-close"></div>
+                        </div>
+                    </div>
+                </span>
                 <!-- <span class="ribbon ribbon-price-reduced">
                         <span class="ribbon-text">
                             Price Reduced
