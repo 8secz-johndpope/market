@@ -1,7 +1,17 @@
 .container-title-profile {
     height: 300px;
-    background: url(/css/public-title-bg.jpg);
-    background-size: contain;
+    background: url(/css/london-bg-white.jpg);
+    background-size: cover;
+    background-position: center 40%;
+    position: relative;
+}
+section.container-title-profile:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255,255,255,0.3);
 }
 .wrapper-title-profile {
     padding: 120px 0;
