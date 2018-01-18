@@ -1034,6 +1034,9 @@ section.row-color.white {
 strong{
   font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.rating-avg .stars i.emptystar {
+    background-position: -27px -163px;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
