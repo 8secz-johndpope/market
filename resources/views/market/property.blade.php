@@ -767,7 +767,7 @@
                                                 <span style="transform: rotateZ({{$deg}}deg);"></span>
                                             </div>
                                             <div class="right">
-                                                <span></span>
+                                                <span style="transform: rotateZ(-180deg);"></span>
                                             </div>
                                         </div>
                                         <p class="per-title">
@@ -775,9 +775,13 @@
                                         </p>
                                     </div>
                                     <div class="per-wrpr">
-                                        <div class="per" data-percent="{{100*$advert->user->ratings()->where('feedback',2)->count()/$advert->user->ratings()->count()}}%">
+                                        @php
+                                            $per = 100*$advert->user->ratings()->where('feedback',2)->count()/$advert->user->ratings()->count();
+                                            $deg = ($per * 360) / 100;
+                                        @endphp
+                                        <div class="per" data-percent="{{$per}}%">
                                             <div class="left">
-                                                <span style="transform: rotateZ(-180deg);"></span>
+                                                <span style="transform: rotateZ({{$deg}});"></span>
                                             </div>
                                             <div class="right">
                                                 <span style="transform: rotateZ(-180deg);"></span>
