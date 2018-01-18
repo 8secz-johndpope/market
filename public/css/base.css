@@ -1037,6 +1037,9 @@ strong{
 .rating-avg .stars i.emptystar {
     background-position: -49px -163px;
 }
+.reviews-item-r .stars i.emptystar {
+    background-position: -37px -122px;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
