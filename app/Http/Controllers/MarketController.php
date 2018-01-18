@@ -2270,7 +2270,7 @@ class MarketController extends BaseController
                 ];
                 $response = $this->client->search($params);
                 $totalLow = $response['hits']['total'];
-                if($totalLow == 0)
+                if($totalLow == 1)
                     return 'price_reduced';
                 elseif($totalLow < 50)
                     return 'great_price';
