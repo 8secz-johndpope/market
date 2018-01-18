@@ -2290,7 +2290,7 @@ class MarketController extends BaseController
         $meta = array();
         $meta['vehicle_model'] = 'clio';
         $meta['vehicle_registration_year'] = '2015';
-        $meta['price'] = 500000;
+        $meta['price'] = 115000;
         $product['meta'] = $meta;
         return $this->priceType($product);
 
