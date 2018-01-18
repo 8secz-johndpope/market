@@ -759,15 +759,22 @@
                                 <div class="col-md-6 col-sm-6 col-ratings all-ratings">
                                     <div class="per-wrpr">
                                         @php
-                                            $per = 100*$advert->user->ratings()->where('feedback',1)->count()/$advert->user->ratings()->count();
-                                            $deg = ($per * 360) / 100;
+                                            $per = 100*$advert->user->ratings()->where('feedback',2)->count()/$advert->user->ratings()->count();
+                                            if($per > 49){
+                                                $degRight = 360;
+                                                $degLeft = ($per * 360) / 100;
+                                            }
+                                            else{
+                                                $degLeft = -180;
+                                                $degRight = ($per * 360) / 50;
+                                            }
                                         @endphp
                                         <div class="per" data-percent="{{$per}}%">
                                             <div class="left">
-                                                <span style="transform: rotateZ({{$deg}}deg);"></span>
+                                                <span style="transform: rotateZ({{$degLeft}}deg);"></span>
                                             </div>
                                             <div class="right">
-                                                <span style="transform: rotateZ(-180deg);"></span>
+                                                <span style="transform: rotateZ({{$degRight}}deg);"></span>
                                             </div>
                                         </div>
                                         <p class="per-title">
@@ -788,10 +795,10 @@
                                         @endphp
                                         <div class="per" data-percent="{{$per}}%">
                                             <div class="left">
-                                                <span style="transform: rotateZ({{$deg}});"></span>
+                                                <span style="transform: rotateZ({{$degLeft}}deg);"></span>
                                             </div>
                                             <div class="right">
-                                                <span style="transform: rotateZ(-180deg);"></span>
+                                                <span style="transform: rotateZ({{$degRight}}deg);"></span>
                                             </div>
                                         </div>
                                         <p class="per-title">
