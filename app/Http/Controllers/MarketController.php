@@ -2215,7 +2215,7 @@ class MarketController extends BaseController
     }
     public function priceType($product){
         $musts=array();
-        /*$musts['meta.vehicle_model']= [
+        $musts['meta.vehicle_model']= [
             'match' => [
                 'meta.vehicle_model' => $product['meta']['vehicle_model']
             ]
@@ -2224,14 +2224,6 @@ class MarketController extends BaseController
             'match' => [
                 'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
             ]
-        ];*/
-        $musts['match']= ['meta.vehicle_model' => $product['meta']['vehicle_model']];
-        $musts['meta.price']= [
-            'range' => [
-                'meta.price' => [
-                    'lte'=>$product['meta']['price']
-                ]
-            ]
         ];
         $params = [
             'index' => 'adverts',
@@ -2239,7 +2231,7 @@ class MarketController extends BaseController
             'body' => [
                 'query' => [
                     'bool' => [
-                        'must' => $musts,
+                        'must' => array_values($musts),
                         /*'must_not' => $mustnot*/
                    /*     'filter' => $filte */
                     ]
