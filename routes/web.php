@@ -329,7 +329,6 @@ Route::namespace('Admin')->group(function () {
 Route::get('/p/r/{cat}/{id}', 'HomeController@product_url');
 
 Route::get('/p/{cat}/{id}', 'MarketController@product');
-
+Route::get('/test-prices', 'MarketController@testPrices');
 Route::get('/{any}', 'MarketController@search');
 Route::get('/{any}/{loc}', 'MarketController@lsearch');
-Route::get('/test-prices', 'MarketController@testPrices');
