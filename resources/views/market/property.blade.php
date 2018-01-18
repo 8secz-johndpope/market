@@ -654,7 +654,7 @@
                                                 <i class="fullstar"></i>
                                             @endfor
                                             @for($i; $i < 5; $i++)
-                                                <i class="fullstar"></i>
+                                                <i class="emptystar"></i>
                                             @endif
                                             <!-- <i class="fullstar"></i>
                                             <i class="fullstar"></i>
