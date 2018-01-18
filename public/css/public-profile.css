@@ -22,3 +22,6 @@ section.container-title-profile:before {
     font-size: 26px;
     color: #000;
 }
+.container-details-profile {
+    padding: 40px 0;
+}
