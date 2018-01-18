@@ -2214,34 +2214,8 @@ class MarketController extends BaseController
         return view($view);
     }
     public function priceType($product){
-        $musts=array();
-        $musts['meta.vehicle_model']= [
-            'match' => [
-                'meta.vehicle_model' => $product['meta']['vehicle_model']
-            ]
-        ];
-        $musts['meta.vehicle_registration_year']= [
-            'match' => [
-                'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
-            ]
-        ];
-        $params = [
-            'index' => 'adverts',
-            'type' => 'advert',
-            'body' => [
-                'query' => [
-                    'bool' => [
-                        'must' => array_values($musts),
-                        /*'must_not' => $mustnot*/
-                   /*     'filter' => $filte */
-                    ]
-                ]/*,
-                "sort"=> $sort*/
-            ]
-        ];
-        $response = $this->client->search($params);
-        $totalModel = $response['hits']['total'];
-        if($totalModel > 10){
+        if(array_key_exists('vehicle_model',$product['meta'])){
+            $musts=array();
             $musts['meta.vehicle_model']= [
                 'match' => [
                     'meta.vehicle_model' => $product['meta']['vehicle_model']
@@ -2250,13 +2224,6 @@ class MarketController extends BaseController
             $musts['meta.vehicle_registration_year']= [
                 'match' => [
                     'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
-                ]
-            ];
-            $musts['meta.price']= [
-                'range' => [
-                    'meta.price' => [
-                        'lte'=> $product['meta']['price'] + 50000
-                    ]
                 ]
             ];
             $params = [
@@ -2274,18 +2241,53 @@ class MarketController extends BaseController
                 ]
             ];
             $response = $this->client->search($params);
-            $totalLow = $response['hits']['total'];
-            if($totalLow == 0)
-                return 'price_reduce';
-            elseif($totalLow < 50)
-                return 'great_price';
-            elseif($totalLow < 100)
-                return 'good_price';
-            else
-                return 'normal-price';
-            /*var_dump($totalLow);
-            $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
-            return $products;*/
+            $totalModel = $response['hits']['total'];
+            if($totalModel > 10){
+                $musts['meta.vehicle_model']= [
+                    'match' => [
+                        'meta.vehicle_model' => $product['meta']['vehicle_model']
+                    ]
+                ];
+                $musts['meta.vehicle_registration_year']= [
+                    'match' => [
+                        'meta.vehicle_registration_year' => $product['meta']['vehicle_registration_year']
+                    ]
+                ];
+                $musts['meta.price']= [
+                    'range' => [
+                        'meta.price' => [
+                            'lte'=> $product['meta']['price'] + 50000
+                        ]
+                    ]
+                ];
+                $params = [
+                    'index' => 'adverts',
+                    'type' => 'advert',
+                    'body' => [
+                        'query' => [
+                            'bool' => [
+                                'must' => array_values($musts),
+                                /*'must_not' => $mustnot*/
+                           /*     'filter' => $filte */
+                            ]
+                        ]/*,
+                        "sort"=> $sort*/
+                    ]
+                ];
+                $response = $this->client->search($params);
+                $totalLow = $response['hits']['total'];
+                if($totalLow == 0)
+                    return 'price_reduce';
+                elseif($totalLow < 50)
+                    return 'great_price';
+                elseif($totalLow < 100)
+                    return 'good_price';
+                else
+                    return 'normal-price';
+                /*var_dump($totalLow);
+                $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
+                return $products;*/
+            }
         }
         return 'normal-price';
     }
