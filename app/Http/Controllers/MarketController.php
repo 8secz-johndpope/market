@@ -1601,7 +1601,7 @@ class MarketController extends BaseController
         $milliseconds = round(microtime(true) * 1000);
         $products = array_map(function ($a) use ($milliseconds) {
             if($a['_source']['category'] == 1050000000){
-                //var_dump($this->priceType($a['_source']));
+                $a['_source']['price_type'] = $this->priceType($a['_source']);
             }
            $diff = $milliseconds-$a['_source']['created_at'];
            if($diff<60*1000){
