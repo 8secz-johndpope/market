@@ -2384,6 +2384,7 @@ class HomeController extends BaseController
         return redirect()->back();
     }
     public function createPublicProfile(Request $request){
-        return view('home.public-profile');
+        $user = Auth::user();
+        return view('home.public-profile', ['user' => $user]);
     }
 }
