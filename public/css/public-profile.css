@@ -11,13 +11,13 @@ section.container-title-profile:before {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.6);
 }
 .wrapper-title-profile {
     padding: 120px 0;
 }
 .wrapper-title-profile h3 {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-size: 26px;
     color: #000;
