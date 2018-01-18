@@ -2247,7 +2247,8 @@ class MarketController extends BaseController
             ]
         ];
         $response = $this->client->search($params);
-        var_dump($response);
+        $totalLow = $response['hits']['total'];
+        var_dump($totalLow);
         $products = array_map(function ($a) { return $a['_source']; },$response['hits']['hits']);
         return $products;
     }
