@@ -2288,7 +2288,7 @@ class MarketController extends BaseController
     public function testPrices(){
         $product = array();
         $meta = array();
-        $meta['vehicle_model'] = 'clio';
+        $meta['vehicle_model'] = 'focus';
         $meta['vehicle_registration_year'] = '2015';
         $meta['price'] = 115000;
         $product['meta'] = $meta;

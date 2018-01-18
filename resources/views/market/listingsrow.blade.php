@@ -679,7 +679,7 @@ use App\Model\Advert;
                     </div>
                 </span>
                 @elseif($product['price_type'] == 'good_price')
-                <span class="ribbon ribbon-price-great">
+                <span class="ribbon ribbon-price-good">
                     <div class="wrapper-ribbon">
                         <span class="ribbon-text">
                             Good Price
@@ -694,7 +694,7 @@ use App\Model\Advert;
                     </div>
                 </span>
                 @elseif($product['price_type'] == 'price_reduced')
-                <span class="ribbon ribbon-price-great">
+                <span class="ribbon ribbon-price-reduced">
                     <div class="wrapper-ribbon">
                         <span class="ribbon-text">
                             Price Reduced
