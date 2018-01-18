@@ -281,7 +281,7 @@ Route::get('/company/{id}', 'MarketController@company');
 Route::get('/job/profile/edit', 'HomeController@profile');
 Route::post('/job/profile/save', 'HomeController@save_profile');
 Route::get('/job/profile/view/{id}', 'HomeController@view_profile');
-
+Route::get('/job/profile/create-public', 'HomeController@createPublicProfile');
 Route::get('/profile/{id}', 'MarketController@profile');
 Route::get('/download-mobile-apps/', 'MarketController@downloadApps');
 
@@ -329,7 +329,7 @@ Route::namespace('Admin')->group(function () {
 Route::get('/p/r/{cat}/{id}', 'HomeController@product_url');
 
 Route::get('/p/{cat}/{id}', 'MarketController@product');
-Route::get('/profile/create-public', 'HomeController@createPublicProfile');
+
 Route::get('/test-prices', 'MarketController@testPrices');
 Route::get('/{any}', 'MarketController@search');
 Route::get('/{any}/{loc}', 'MarketController@lsearch');
