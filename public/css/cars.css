@@ -212,3 +212,10 @@ strong{
     opacity: 0.5;
     text-shadow: 0 1px 0 #ff9d2c;
 }
+.price-type-header h2 {
+    margin: 0 0 16px;
+    color: #313c53;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
