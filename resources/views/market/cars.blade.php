@@ -21,7 +21,7 @@
     elseif($advert->priceType === 'great_price')
         $priceTypeTitle = "Great Price";
     elseif($advert->priceType === 'price_reduced')
-        $priceTypeTitle = "Reduced Price";
+        $priceTypeTitle = "Price Reduced";
 @endphp
 <script src="/js/imageviewer.min.js"></script>
 <script src="/js/carousel.js"></script>
