@@ -852,7 +852,7 @@
                                     <a href="#" class="reviews-item-author">{{$review->author->name}}</a>
                                     <span class="review-item-date">{{date('d/m/Y',strtotime($review->created_at))}}</span>
                                 </div>
-                                @endif
+                                @endfor
                                 <div class="col-md-12 read-more-reviews">
                                     <h3>Read more<span class="glyphicon glyphicon-chevron-down"></span></h3>
                                 </div>
