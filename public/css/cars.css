@@ -257,6 +257,7 @@ strong{
     margin-bottom: 16px;
     color: #313c53;
     font-size: 20px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 .price-type-explained {
     margin: 24px 0 0;
@@ -273,6 +274,7 @@ strong{
 .price-type-explained-medium-copy{
     margin: 16px 0 8px;
     color: #313c53;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 .price-type-explained-diagram {
     width: 553px;
