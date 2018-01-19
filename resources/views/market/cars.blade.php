@@ -1282,7 +1282,7 @@
                             A car is priced below the market average guide price
                         </p>
                         <p class="price-type-explained-medium-copy">
-                            <span class="lightbox-pi-label price_reduced-value">Reduced Price</span>
+                            <span class="lightbox-pi-label price_reduced-value">Price Reduced</span>
                             A car is priced significantly below the market average guide price
                         </p>
                         <h5 class="price-type-explained-medium-copy">
