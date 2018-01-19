@@ -191,3 +191,6 @@ strong{
     width: 100%;
     text-align: center;
 }
+.ribbons-price .ribbon{
+    margin-left: 0;
+}
