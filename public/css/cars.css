@@ -174,3 +174,8 @@ strong{
     border: 0;
     border-top: 1px dashed #ff9d2c;
 }
+.items-box-price.font-5{
+    line-height: 1.1;
+    font-size: 23px;
+    text-align: center;
+}
