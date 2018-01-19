@@ -844,15 +844,15 @@
                                 <div class="col-md-12 title">
                                     <h3>Most recent reviews</h3> 
                                 </div>
-                                @for($i=0; ($i < count($advert->user->reviews)) || ($i < 3); $i++)
+                                @foreach($advert->user->reviews as $review)
                                 <div class="col-md-4 review">
-                                    <h4>{{$advert->user->reviews[$i]->title}}</h4>
-                                    <p>{{$$advert->user->reviews[$i]->review}}</p>
+                                    <h4>{{$review->title}}</h4>
+                                    <p>{{$review->review}}</p>
                                     <span class="author-by">by</span>
-                                    <a href="#" class="reviews-item-author">{{$advert->user->reviews[$i]->author->name}}</a>
-                                    <span class="review-item-date">{{date('d/m/Y',strtotime($advert->user->reviews[$i]->created_at))}}</span>
+                                    <a href="#" class="reviews-item-author">{{$review->author->name}}</a>
+                                    <span class="review-item-date">{{date('d/m/Y',strtotime($review->created_at))}}</span>
                                 </div>
-                                @endfor
+                                @endforeach
                                 <div class="col-md-12 read-more-reviews">
                                     <a data-toggle="collapse" href="#more-reviews" role="button"><h3>Read more<span class="glyphicon glyphicon-chevron-down"></span></h3></a>
                                 </div>
