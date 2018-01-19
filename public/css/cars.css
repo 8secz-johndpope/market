@@ -184,3 +184,10 @@ strong{
     text-align: center;
     margin-bottom:0;
 }
+.ribbons-price {
+    width: 108px;
+}
+.price-based-on{
+    width: 100%;
+    text-align: center;
+}
