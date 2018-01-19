@@ -846,11 +846,11 @@
                                 </div>
                                 @for($i=0; ($i < count($advert->user->reviews)) || ($i < 3); $i++)
                                 <div class="col-md-4 review">
-                                    <h4>{{$review->title}}</h4>
-                                    <p>{{$review->review}}</p>
+                                    <h4>{{$advert->user->reviews[$i]->title}}</h4>
+                                    <p>{{$$advert->user->reviews[$i]->review}}</p>
                                     <span class="author-by">by</span>
-                                    <a href="#" class="reviews-item-author">{{$review->author->name}}</a>
-                                    <span class="review-item-date">{{date('d/m/Y',strtotime($review->created_at))}}</span>
+                                    <a href="#" class="reviews-item-author">{{$advert->user->reviews[$i]->author->name}}</a>
+                                    <span class="review-item-date">{{date('d/m/Y',strtotime($advert->user->reviews[$i]->created_at))}}</span>
                                 </div>
                                 @endfor
                                 <div class="col-md-12 read-more-reviews">
