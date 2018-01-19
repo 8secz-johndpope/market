@@ -1040,6 +1040,32 @@ strong{
 .reviews-item-r .stars i.emptystar {
     background-position: -37px -122px;
 }
+.review-section-l {
+    width: 19%;
+    position: relative;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+}
+.review-section-r {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    width: 78%;
+}
+.review-item-title {
+    color: #4a4a4a;
+    font-size: 20px;
+    line-height: 120%;
+    margin: 0 0 8px !important;
+}
+.wrap-spaces {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
