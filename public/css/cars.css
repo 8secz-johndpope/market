@@ -219,7 +219,7 @@ strong{
     line-height: 26px;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
-.lightbox-title-pi-label{
+.lightbox-title-pi-label, .lightbox-pi-label{
     font-weight: 700;
     border-radius: 2px;
     color: #fff;
@@ -232,7 +232,7 @@ strong{
     line-height: 18px;
     font-size: 11px;
 }
-.lightbox-title-pi-label.price_reduced-value{
+.lightbox-title-pi-label.price_reduced-value, .lightbox-pi-label.price_reduced-value{
     background: #FF495B;
 }
 .price-type-header-description {
