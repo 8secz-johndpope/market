@@ -866,6 +866,10 @@
                                     <a data-toggle="collapse" href="#more-reviews" role="button"><h3>Read more<span class="glyphicon glyphicon-chevron-down"></span></h3></a>
                                 </div>
                                 <div class="col-md-12 collapse" id="more-reviews">
+                                    @for($i; $i < count($advert->user->reviews); $i++)
+                                    <section>
+                                    </section>
+                                    @endfor
                                 </div>
                             @else
                                 <p>No Reviews</p>
