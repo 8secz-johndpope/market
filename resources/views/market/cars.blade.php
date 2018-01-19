@@ -15,6 +15,14 @@
 @endsection
 
 @section('content')
+@php
+    if($advert->priceType === 'good_price')
+        $priceTypeTitle = "Good Price";
+    elseif($advert->priceType === 'great_price')
+        $priceTypeTitle = "Great Price";
+    elseif($advert->priceType === 'price_reduced')
+        $priceTypeTitle = "Reduced Price";
+@endphp
 <script src="/js/imageviewer.min.js"></script>
 <script src="/js/carousel.js"></script>
 <div class=" body background-body">
@@ -56,35 +64,11 @@
                     @endif
                 </div>
                 <div class="ribbons-price">
-                    @if($advert->priceType == 'great_price')
-                    <span class="ribbon ribbon-price-great" data-toggle="modal" data-target="#modalPrice">
+                    @if($advert->priceType !== 'normal-price')
+                    <span class="ribbon ribbon-{{$advert->priceType}}" data-toggle="modal" data-target="#modalPrice">
                         <div class="wrapper-ribbon">
                             <span class="ribbon-text">
-                                Great Price
-                            </span>
-                            <div class="wrapper-info-icon">
-                                <i class="glyphicon glyphicon-info-sign"></i>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="price-based-on">Based on similar cars</span>
-                    @elseif($advert->priceType == 'good_price')
-                    <span class="ribbon ribbon-price-good" data-toggle="modal" data-target="#modalPrice">
-                        <div class="wrapper-ribbon">
-                            <span class="ribbon-text">
-                                Good Price
-                            </span>
-                            <div class="wrapper-info-icon">
-                                <i class="glyphicon glyphicon-info-sign"></i>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="price-based-on">Based on similar cars</span>
-                    @elseif($advert->priceType == 'price_reduced')
-                    <span class="ribbon ribbon-price-reduced" data-toggle="modal" data-target="#modalPrice">
-                        <div class="wrapper-ribbon">
-                            <span class="ribbon-text">
-                                Price Reduced
+                                {{$priceTypeTitle}}
                             </span>
                             <div class="wrapper-info-icon">
                                 <i class="glyphicon glyphicon-info-sign"></i>
@@ -1260,14 +1244,7 @@
 </div>
 @if($advert->priceType != 'normal-price')
 <!-- modal price -->
-@php
-    if($advert->priceType === 'good_price')
-        $priceTypeTitle = "Good Price";
-    elseif($advert->priceType === 'great_price')
-        $priceTypeTitle = "Great Price";
-    elseif($advert->priceType === 'price_reduced')
-        $priceTypeTitle = "Reduced Price";
-@endphp
+
 <div class="modal fade" id="modalPrice" tabindex="-1" role="dialog" aria-labelledby="modalPrice" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-dialog-centered">

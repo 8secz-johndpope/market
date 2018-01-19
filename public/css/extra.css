@@ -449,13 +449,13 @@ a.post-advert {
     background: #000;
     color: #fff;
 }
-.ribbon-price-reduced {
+.ribbon-price-reduced, .ribbon-price_reduced {
     background: #FF495B;
 }
-.ribbon.ribbon-price-good{
+.ribbon.ribbon-price-good, .ribbon.ribbon-good_price{
     background: #AFD388;
 }
-.ribbon.ribbon-price-great{
+.ribbon.ribbon-price-great, .ribbon.ribbon-great_price{
     /*background: #8CC059;*/
     background: #024F17;
 }
