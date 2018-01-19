@@ -74,6 +74,9 @@
                             <span class="ribbon-text">
                                 Good Price
                             </span>
+                            <div class="wrapper-info-icon">
+                                <i class="glyphicon glyphicon-info-sign"></i>
+                            </div>
                         </div>
                     </span>
                     <span class="price-based-on">Based on similar cars</span>
@@ -83,6 +86,9 @@
                             <span class="ribbon-text">
                                 Price Reduced
                             </span>
+                            <div class="wrapper-info-icon">
+                                <i class="glyphicon glyphicon-info-sign"></i>
+                            </div>
                         </div>
                     </span>
                     <span class="price-based-on">Based on similar cars</span>
