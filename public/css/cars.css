@@ -235,3 +235,10 @@ strong{
 .lightbox-title-pi-label.price_reduced-value{
     background: #FF495B;
 }
+.price-type-header-description {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #666;
+    margin: 0;
+}

@@ -1275,7 +1275,7 @@
                     {{env('APP_NAME')}} has flagged this car as
                 <span class="lightbox-title-pi-label {{$advert->priceType}}-value">good Price</span>
                 </h2>
-                <p class="price-type-header-description">  
+                <p class="price-type-header-description text-center">  
                     We have price checked this car against our market guide prices for similar cars.
                 </p>
                 </header>
