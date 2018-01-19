@@ -854,7 +854,9 @@
                                 </div>
                                 @endfor
                                 <div class="col-md-12 read-more-reviews">
-                                    <h3>Read more<span class="glyphicon glyphicon-chevron-down"></span></h3>
+                                    <a data-toggle="collapse" href="#more-reviews" role="button"><h3>Read more<span class="glyphicon glyphicon-chevron-down"></span></h3></a>
+                                </div>
+                                <div class="col-md-12 collapse" id="more-reviews">
                                 </div>
                             @else
                                 <p>No Reviews</p>
