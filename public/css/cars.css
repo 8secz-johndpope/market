@@ -261,12 +261,18 @@ strong{
 .price-type-explained {
     margin: 24px 0 0;
 }
-.plain-text{
+.plain-text, .price-type-explained-medium-copy{
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
     color: #666;
+}
+.plain-text{
     margin-bottom: 16px;
+}
+.price-type-explained-medium-copy{
+    margin: 16px 0 8px;
+    color: #313c53;
 }
 .price-type-explained-diagram {
     width: 553px;
