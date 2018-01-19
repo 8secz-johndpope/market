@@ -176,7 +176,7 @@ strong{
 }
 .box-price{
     margin-left:0;
-    width: 108px;
+    min-width: 108px;
 }
 .items-box-price.font-5{
     line-height: 1.1;
@@ -187,6 +187,7 @@ strong{
 .ribbons-price {
     width: 108px;
     margin-left: auto;
+    margin-bottom: 8px;
 }
 .price-based-on{
     width: 100%;
