@@ -2358,7 +2358,7 @@ class HomeController extends BaseController
     }
     public function write_review(Request $request){
         $user=Auth::user();
-        if($user != null){
+        //if($user != null){
             $review = new Review();
             $review->author_id = $user->id;
             $review->title = $request->title;
@@ -2366,8 +2366,8 @@ class HomeController extends BaseController
             $review->user_id = $request->id;
             $review->save();
             return redirect()->back();
-        }
-        return redirect('/login');
+        //}
+        //return redirect('/login');
     }
     public function rate_ad(Request $request){
         $user=Auth::user();
