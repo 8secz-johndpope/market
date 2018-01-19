@@ -1060,10 +1060,6 @@ strong{
     margin: 0 0 8px !important;
 }
 .wrap-spaces {
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
     word-wrap: break-word;
 }
 .review-item-content {

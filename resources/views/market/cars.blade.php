@@ -65,7 +65,7 @@
                 </div>
                 <div class="ribbons-price">
                     @if($advert->priceType !== 'normal-price')
-                    <span class="ribbon ribbon-{{$advert->priceType}}" data-toggle="modal" data-target="#modalPrice">
+                    <span class="ribbon ribbon-{{$advert->priceType}}" data-toggle="modal" data-target="#modalPrice" role="button">
                         <div class="wrapper-ribbon">
                             <span class="ribbon-text">
                                 {{$priceTypeTitle}}
