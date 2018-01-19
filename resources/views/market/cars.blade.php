@@ -41,13 +41,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-10">
                 <h2 class="item-name header">{{$product['title']}}</h2>
                 <div class="location-name">
                     <p>{{$product['location_name']}}</p>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-2">
                 <div class="box-price">
                     @if($product['meta']['price']>=0)
                     <div class="items-box-price font-5">
