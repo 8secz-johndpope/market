@@ -1273,7 +1273,7 @@
                 <header class="price-type-header">
                 <h2 class="text-center" class="price-type-title">
                     {{env('APP_NAME')}} has flagged this car as
-                <span class="lightbox__title-pi-label good-great-value">good Price</span>
+                <span class="lightbox-title-pi-label {{$advert->priceType}}-value">good Price</span>
                 </h2>
                 <p class="price-type-header-description">  
                     We have price checked this car against our market guide prices for similar cars.
