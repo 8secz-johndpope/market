@@ -212,6 +212,9 @@ strong{
     opacity: 0.5;
     text-shadow: 0 1px 0 #ff9d2c;
 }
+#modalPrice .modal-footer{
+    text-align: left;
+}
 .price-type-header h2 {
     margin: 0 0 16px;
     color: #313c53;
@@ -281,4 +284,19 @@ strong{
     height: 135px;
     margin: 32px auto;
     background-image: url(/css/price-indicator-curve1x.png);
+}
+.explained-small-print {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #666;
+    margin: 8px 0;
+}
+.price-type-explained-disclaimer {
+    text-align: left;
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 400;
+    margin: 0;
+    color: #5d7199;
 }
