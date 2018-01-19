@@ -1302,13 +1302,11 @@
                         </h5>
                         <p class="price-type-explained-small-print">
                             This does not necessarily mean the dealer is not offering a good deal. It could be that some cars
-                            analysed by Auto Trader are considered to be priced above market, or we simply cannot generate a
+                            analysed by {{env('APP_NAME')}} are considered to be priced above market, or we simply cannot generate a
                             guide price for certain vehicles.
                         </p>
                         <p class="price-type-explained-small-print">
-                            We exclude certain cars from our price analysis, including cars: listed by private sellers; priced
-                            below £1,500 and over £50,000; over 15 years old; imports; new and nearly new cars;
-                            written-off cars (category C, D, S or N vehicle); non-cars.
+                            We exclude certain cars from our price analysis, including cars: listed by private sellers.
                         </p>
                     </div>
                 </section>
@@ -1318,7 +1316,7 @@
       <div class="modal-footer">
         <div class="row">
             <div class="col-sm-12">
-                <small class="price-type-explained-disclaimer">We combine and analyse data from over 500,000 trade used car listings every day on {{env('APP_NAME')}} and dealer websites nationally. Our valuations and therefore the good price, great price and priced low indicators give you a good idea, but prices of cars can be influenced by many different factors. <a>More about {{env('APP_NAME')}} valuations</a></small>
+                <small class="price-type-explained-disclaimer">We combine and analyse data from over 500,000 trade used car listings every day on {{env('APP_NAME')}} and dealer websites nationally. Our valuations and therefore the good price, great price and priced low indicators give you a good idea, but prices of cars can be influenced by many different factors.</small>
         </div>
       </div>
     </div>
