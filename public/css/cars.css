@@ -200,8 +200,9 @@ strong{
 }
 .wrapper-info-icon{
     position: absolute;
-    top:0;
-    right: 0;
+    top: 8px;
+    right: 5px;
+    color: #fff;
 }
 #modalPrice .modal-header{
     background: #000;
