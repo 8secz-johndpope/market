@@ -242,3 +242,16 @@ strong{
     color: #666;
     margin: 0;
 }
+.price-type-header {
+    text-align: center;
+    border-bottom: 1px solid #e8e8e3;
+    padding: 0 0 32px;
+}
+.price-type-explained-title {
+    margin-bottom: 16px;
+    color: #313c53;
+    font-size: 20px;
+}
+.price-type-explained {
+    margin: 24px 0 0;
+}
