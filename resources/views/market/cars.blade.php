@@ -1282,7 +1282,7 @@
                 <section class="price-type-explained">
                     <h4 class="price-type-explained-title">How it works</h4>
                     <div class="price-type-explained-text">
-                        <p class="text-center">
+                        <p class="plain-text">
                             {{env('APP_NAME')}} compares the advertised price of the car to similar cars in the market - taking into account the mileage and optional extras, assuming good condition.
                         </p>
                         <div class="price-type-explained-diagram">

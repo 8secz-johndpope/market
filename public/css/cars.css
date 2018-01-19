@@ -255,3 +255,10 @@ strong{
 .price-type-explained {
     margin: 24px 0 0;
 }
+.plain-text{
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 16px;
+}
