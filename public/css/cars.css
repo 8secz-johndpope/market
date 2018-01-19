@@ -203,3 +203,9 @@ strong{
     top:0;
     right: 0;
 }
+#modalPrice .modal-header{
+    background: #000;
+}
+#modalPrice .modal-header .close{
+    color: #ff9d2c;
+}
