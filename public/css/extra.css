@@ -459,7 +459,7 @@ a.post-advert {
     /*background: #8CC059;*/
     background: #024F17;
 }
-.ribbons-price .ribbon-price-reduced .ribbon-text{
+.ribbons-price .ribbon-price-reduced .ribbon-text, .ribbons-price .ribbon-great_price .ribbon-text{
     line-height: 12px;
 }
 .tooltip {
