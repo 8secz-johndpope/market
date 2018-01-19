@@ -57,18 +57,11 @@
                 </div>
                 <div class="ribbons-price">
                     @if($advert->priceType == 'great_price')
-                    <span class="ribbon ribbon-price-great">
+                    <span class="ribbon ribbon-price-great" data-toggle="modal" data-target="#modalPrice">
                         <div class="wrapper-ribbon">
                             <span class="ribbon-text">
                                 Great Price
                             </span>
-                            <div class="tooltip tooltip-price-great  tooltip-arrow-upRight js-tooltip-window">
-                                <div class="tooltip-content">
-                                    <h3 class="search-result-valueIndicatorTitle">Why is this car a great price?</h3>
-                                    <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a great price.</span>
-                                </div>
-                                <div class="tooltip-close js-close"></div>
-                            </div>
                             <div class="wrapper-info-icon">
                                 <i class="glyphicon glyphicon-info-sign"></i>
                             </div>
@@ -76,34 +69,20 @@
                     </span>
                     <span class="price-based-on">Based on similar cars</span>
                     @elseif($advert->priceType == 'good_price')
-                    <span class="ribbon ribbon-price-good">
+                    <span class="ribbon ribbon-price-good" data-toggle="modal" data-target="#modalPrice">
                         <div class="wrapper-ribbon">
                             <span class="ribbon-text">
                                 Good Price
                             </span>
-                            <div class="tooltip  tooltip-arrow-upRight js-tooltip-window">
-                                <div class="tooltip-content">
-                                    <h3 class="search-result-valueIndicatorTitle">Why is this car a good price?</h3>
-                                    <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a good price.</span>
-                                </div>
-                                <div class="tooltip-close js-close"></div>
-                            </div>
                         </div>
                     </span>
                     <span class="price-based-on">Based on similar cars</span>
                     @elseif($advert->priceType == 'price_reduced')
-                    <span class="ribbon ribbon-price-reduced">
+                    <span class="ribbon ribbon-price-reduced" data-toggle="modal" data-target="#modalPrice">
                         <div class="wrapper-ribbon">
                             <span class="ribbon-text">
                                 Price Reduced
                             </span>
-                            <div class="tooltip tooltip-price-reduce  tooltip-arrow-upRight js-tooltip-window">
-                                <div class="tooltip-content">
-                                    <h3 class="search-result-valueIndicatorTitle">Why is this car price reduced?</h3>
-                                    <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as priced low.</span>
-                                </div>
-                                <div class="tooltip-close js-close"></div>
-                            </div>
                         </div>
                     </span>
                     <span class="price-based-on">Based on similar cars</span>
@@ -1232,7 +1211,7 @@
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal phone-->
 <div class="modal fade" id="smsModal" tabindex="-1" role="dialog" aria-labelledby="smsModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-dialog-centered">
@@ -1268,6 +1247,86 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Send</button>
             </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal price -->
+<div class="modal fade" id="modalPrice" tabindex="-1" role="dialog" aria-labelledby="modalPrice" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-dialog-centered">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <header class="price-type-header">
+                <h2 class="text-center" class="price-type-title">
+                    {{env('APP_NAME')}} has flagged this car as
+                <span class="lightbox__title-pi-label good-great-value">good Price</span>
+                </h2>
+                <p class="price-type-header-description">  
+                    We have price checked this car against our market guide prices for similar cars.
+                </p>
+                </header>
+                <section class="price-type-explained">
+                    <h4 class="price-type-explained-title">How it works</h4>
+                    <div class="price-type-explained-text">
+                        <p class="text-center">
+                            {{env('APP_NAME')}} compares the advertised price of the car to similar cars in the market - taking into account the mileage and optional extras, assuming good condition.
+                        </p>
+                        <div class="price-type-explained-diagram">
+                        </div>
+                        <p class="price-type-explained-medium-copy">
+                            <span class="lightbox__pi-label good-great-value">Good Price</span>
+                            A car is priced around the market average guide price
+                        </p>
+                        <p class="price-type-explained-medium-copy">
+                            <span class="lightbox__pi-label good-great-value">Great Price</span>
+                            A car is priced below the market average guide price
+                        </p>
+                        <p class="price-type-explained-medium-copy">
+                            <span class="lightbox__pi-label no-analysis">Priced Low</span>
+                            A car is priced significantly below the market average guide price
+                        </p>
+                        <h5 class="price-type-explained-medium-copy">
+                            What's the market average guide price?
+                        </h5>
+                        <p class="price-type-explained-small-print">
+                            This is based on cars of the same make and model, including things like engine size, body style,
+                            standard specification and age. We then adjust it for things like mileage and optional extras.
+                        </p>
+                        <p class="price-type-explained-small-print">
+                            Our analysis assumes the car is retail-ready, meaning it's in good condition and is mechanically
+                            sound. Our guide prices are based purely on advertised prices. We do not take into account any
+                            additional fees, including admin fees and finance deals.
+                        </p>
+                        <h5 class="price-type-explained-medium-copy">
+                            Why are some cars not flagged?
+                        </h5>
+                        <p class="price-type-explained-small-print">
+                            This does not necessarily mean the dealer is not offering a good deal. It could be that some cars
+                            analysed by Auto Trader are considered to be priced above market, or we simply cannot generate a
+                            guide price for certain vehicles.
+                        </p>
+                        <p class="price-type-explained-small-print">
+                            We exclude certain cars from our price analysis, including cars: listed by private sellers; priced
+                            below £1,500 and over £50,000; over 15 years old; imports; new and nearly new cars;
+                            written-off cars (category C, D, S or N vehicle); non-cars.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+            <div class="col-sm-12">
+                <small class="price-type-explained-disclaimer">We combine and analyse data from over 500,000 trade used car listings every day on {{env('APP_NAME')}} and dealer websites nationally. Our valuations and therefore the good price, great price and priced low indicators give you a good idea, but prices of cars can be influenced by many different factors. <a>More about {{env('APP_NAME')}} valuations</a></small>
         </div>
       </div>
     </div>
