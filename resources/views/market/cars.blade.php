@@ -1258,6 +1258,7 @@
     </div>
   </div>
 </div>
+@if($advert->priceType != 'normal-price')
 <!-- modal price -->
 <div class="modal fade" id="modalPrice" tabindex="-1" role="dialog" aria-labelledby="modalPrice" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -1338,6 +1339,7 @@
     </div>
   </div>
 </div>
+@endif
 <script src="/build/js/intlTelInput.js"></script>
 <script>
     var timer = null;
