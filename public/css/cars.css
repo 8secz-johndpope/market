@@ -198,3 +198,8 @@ strong{
 .ribbons-price .ribbon{
     margin-left: 0;
 }
+.wrapper-info-icon{
+    position: absolute;
+    top:0;
+    right: 0;
+}

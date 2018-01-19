@@ -69,6 +69,9 @@
                                 </div>
                                 <div class="tooltip-close js-close"></div>
                             </div>
+                            <div class="wrapper-info-icon">
+                                <i class="glyphicon glyphicon-info-sign"></i>
+                            </div>
                         </div>
                     </span>
                     <span class="price-based-on">Based on similar cars</span>
