@@ -848,16 +848,19 @@
                                     $i=0;
                                 @endphp
                                 @foreach($advert->user->reviews as $review)
-                                <div class="col-md-4 review">
-                                    <h4>{{$advert->user->reviews[$i]->title}}</h4>
-                                    <p>{{$review->review}}</p>
-                                    <span class="author-by">by</span>
-                                    <a href="#" class="reviews-item-author">{{$review->author->name}}</a>
-                                    <span class="review-item-date">{{date('d/m/Y',strtotime($review->created_at))}}</span>
-                                </div>
-                                @php
-                                    $i++;
-                                @endphp
+                                    @if($i==3)
+                                        @break
+                                    @endif 
+                                    <div class="col-md-4 review">
+                                        <h4>{{$advert->user->reviews[$i]->title}}</h4>
+                                        <p>{{$review->review}}</p>
+                                        <span class="author-by">by</span>
+                                        <a href="#" class="reviews-item-author">{{$review->author->name}}</a>
+                                        <span class="review-item-date">{{date('d/m/Y',strtotime($review->created_at))}}</span>
+                                    </div>
+                                    @php
+                                        $i++;
+                                    @endphp
                                 @endforeach
                                 <div class="col-md-12 read-more-reviews">
                                     <a data-toggle="collapse" href="#more-reviews" role="button"><h3>Read more<span class="glyphicon glyphicon-chevron-down"></span></h3></a>
