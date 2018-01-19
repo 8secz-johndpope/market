@@ -873,6 +873,12 @@
                                             <a href="#" class="reviews-item-author">{{$advert->user->reviews[$i]->author->name}}</a>
                                             <span class="review-item-date">{{date('d/m/Y',strtotime($advert->user->reviews[$i]->created_at))}}</span>
                                         </div>
+                                        <div class="review-section-r">
+                                            <p class="review-item-title wrap-spaces">{{$advert->user->reviews[$i]->title}}</p>
+                                            <p class="review-item-content wrap-spaces">
+                                                {{$advert->user->reviews[$i]->review}}
+                                            </p>
+                                        </div>
                                     </section>
                                     @endfor
                                 </div>
