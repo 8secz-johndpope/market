@@ -47,7 +47,7 @@
                     <p>{{$product['location_name']}}</p>
                 </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 text-right">
                 <div class="box-price">
                     @if($product['meta']['price']>=0)
                     <div class="items-box-price font-5">
