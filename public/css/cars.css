@@ -209,4 +209,6 @@ strong{
 }
 #modalPrice .modal-header .close{
     color: #ff9d2c;
+    opacity: 0.5;
+    text-shadow: 0 1px 0 #ff9d2c;
 }
