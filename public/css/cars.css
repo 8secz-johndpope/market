@@ -186,6 +186,7 @@ strong{
 }
 .ribbons-price {
     width: 108px;
+    margin-left: auto;
 }
 .price-based-on{
     width: 100%;
