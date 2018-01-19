@@ -41,14 +41,69 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-sm-12">
+            <div class="col-sm-8">
                 <h2 class="item-name header">{{$product['title']}}</h2>
                 <div class="location-name">
                     <p>{{$product['location_name']}}</p>
                 </div>
+            </div>
+            <div class="col-sm-4">
                 <div class="box-price">
                     @if($product['meta']['price']>=0)
-                    <div class="items-box-price font-5">£ {{number_format($product['meta']['price'] / 100, 0, '.', ',')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
+                    <div class="items-box-price font-5">
+                        £ {{number_format($product['meta']['price'] / 100, 0, '.', ',')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}
+                    </div>
+                    @endif
+                </div>
+                <div class="ribbons-price">
+                    @if($advert->priceType == 'great_price')
+                    <span class="ribbon ribbon-price-great">
+                        <div class="wrapper-ribbon">
+                            <span class="ribbon-text">
+                                Great Price
+                            </span>
+                            <div class="tooltip tooltip-price-great  tooltip-arrow-upRight js-tooltip-window">
+                                <div class="tooltip-content">
+                                    <h3 class="search-result-valueIndicatorTitle">Why is this car a great price?</h3>
+                                    <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a great price.</span>
+                                </div>
+                                <div class="tooltip-close js-close"></div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="price-based-on">Based on similar cars</span>
+                    @elseif($advert->priceType == 'good_price')
+                    <span class="ribbon ribbon-price-good">
+                        <div class="wrapper-ribbon">
+                            <span class="ribbon-text">
+                                Good Price
+                            </span>
+                            <div class="tooltip  tooltip-arrow-upRight js-tooltip-window">
+                                <div class="tooltip-content">
+                                    <h3 class="search-result-valueIndicatorTitle">Why is this car a good price?</h3>
+                                    <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as a good price.</span>
+                                </div>
+                                <div class="tooltip-close js-close"></div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="price-based-on">Based on similar cars</span>
+                    @elseif($advert->priceType == 'price_reduced')
+                    <span class="ribbon ribbon-price-reduced">
+                        <div class="wrapper-ribbon">
+                            <span class="ribbon-text">
+                                Price Reduced
+                            </span>
+                            <div class="tooltip tooltip-price-reduce  tooltip-arrow-upRight js-tooltip-window">
+                                <div class="tooltip-content">
+                                    <h3 class="search-result-valueIndicatorTitle">Why is this car price reduced?</h3>
+                                    <span>{{env('APP_NAME')}} has price-checked this car against the market value for similar cars and identified it as priced low.</span>
+                                </div>
+                                <div class="tooltip-close js-close"></div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="price-based-on">Based on similar cars</span>
                     @endif
                 </div>
             </div>

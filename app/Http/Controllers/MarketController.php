@@ -1032,6 +1032,7 @@ class MarketController extends BaseController
             $view = 'market.community';
         }
         elseif($advert->category_id >= 1050000000 && $advert->category_id <= 1059999999){
+            $advert->priceType = $this->priceType($product);
             $view = 'market.cars';
         }
         return View($view, ['srn'=>$srn,'advert'=>$advert,'product'=>$product,'products'=>$products,'image'=>$image,'images'=>$images,'counts'=>range(1,count($images)),'metas'=>$metas,'parents'=>$parents,'category'=>$category,'lat'=>$latlng[0],'lng'=>$latlng[1], 'similar' => $similar, 'similarUnder' => $similarUnder]);
