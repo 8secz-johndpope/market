@@ -211,9 +211,9 @@ strong{
     background: #ddd;
 }
 #modalPrice .modal-header .close{
-    color: #ff9d2c;
+    color: #000;
     opacity: 0.5;
-    text-shadow: 0 1px 0 #ff9d2c;
+    text-shadow: 0 1px 0 #000;
 }
 #modalPrice .modal-footer{
     text-align: left;
