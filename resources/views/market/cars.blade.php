@@ -1260,6 +1260,14 @@
 </div>
 @if($advert->priceType != 'normal-price')
 <!-- modal price -->
+@php
+    if($advert->priceType === 'good_price')
+        $priceTypeTitle = "Good Price";
+    elseif($advert->priceType === 'great_price')
+        $priceTypeTitle = "Great Price";
+    elseif($advert->priceType === 'price_reduced')
+        $priceTypeTitle = "Reduced Price";
+@endphp
 <div class="modal fade" id="modalPrice" tabindex="-1" role="dialog" aria-labelledby="modalPrice" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-dialog-centered">
@@ -1274,7 +1282,7 @@
                 <header class="price-type-header">
                 <h2 class="text-center" class="price-type-title">
                     {{env('APP_NAME')}} has flagged this car as
-                <span class="lightbox-title-pi-label {{$advert->priceType}}-value">good Price</span>
+                <span class="lightbox-title-pi-label {{$advert->priceType}}-value">{{$priceTypeTitle}}</span>
                 </h2>
                 <p class="price-type-header-description text-center">  
                     We have price checked this car against our market guide prices for similar cars.
