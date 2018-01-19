@@ -855,7 +855,7 @@
                                         <h4>{{$advert->user->reviews[$i]->title}}</h4>
                                         <p>{{$advert->user->reviews[$i]->review}}</p>
                                         <span class="author-by">by</span>
-                                        <a href="#" class="reviews-item-author">{{$review->author->name}}</a>
+                                        <a href="#" class="reviews-item-author">{{$advert->user->reviews[$i]->author->name}}</a>
                                         <span class="review-item-date">{{date('d/m/Y',strtotime($review->created_at))}}</span>
                                     </div>
                                     @php
