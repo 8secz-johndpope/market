@@ -300,3 +300,10 @@ strong{
     margin: 0;
     color: #5d7199;
 }
+.price-type-explained-small-print {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #666;
+    margin: 8px 0;
+}
