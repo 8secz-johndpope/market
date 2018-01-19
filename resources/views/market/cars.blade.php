@@ -1288,15 +1288,15 @@
                         <div class="price-type-explained-diagram">
                         </div>
                         <p class="price-type-explained-medium-copy">
-                            <span class="lightbox__pi-label good-great-value">Good Price</span>
+                            <span class="lightbox-pi-label good_price-value">Good Price</span>
                             A car is priced around the market average guide price
                         </p>
                         <p class="price-type-explained-medium-copy">
-                            <span class="lightbox__pi-label good-great-value">Great Price</span>
+                            <span class="lightbox-pi-label great_price-value">Great Price</span>
                             A car is priced below the market average guide price
                         </p>
                         <p class="price-type-explained-medium-copy">
-                            <span class="lightbox__pi-label no-analysis">Priced Low</span>
+                            <span class="lightbox-pi-label price_reduced-value">Reduced Price</span>
                             A car is priced significantly below the market average guide price
                         </p>
                         <h5 class="price-type-explained-medium-copy">

@@ -205,7 +205,7 @@ strong{
     color: #fff;
 }
 #modalPrice .modal-header{
-    background: #000;
+    background: #ddd;
 }
 #modalPrice .modal-header .close{
     color: #ff9d2c;
@@ -261,4 +261,10 @@ strong{
     font-weight: 400;
     color: #666;
     margin-bottom: 16px;
+}
+.price-type-explained-diagram {
+    width: 553px;
+    height: 135px;
+    margin: 32px auto;
+    background-image: url(/static/753f4fbbca86/images/at3/fpa-valuations/price-indicator-curve1x.png);
 }
