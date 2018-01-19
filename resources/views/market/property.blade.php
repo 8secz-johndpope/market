@@ -856,7 +856,7 @@
                                         <p>{{$advert->user->reviews[$i]->review}}</p>
                                         <span class="author-by">by</span>
                                         <a href="#" class="reviews-item-author">{{$advert->user->reviews[$i]->author->name}}</a>
-                                        <span class="review-item-date">{{date('d/m/Y',strtotime($review->created_at))}}</span>
+                                        <span class="review-item-date">{{date('d/m/Y',strtotime($advert->user->reviews[$i]->created_at))}}</span>
                                     </div>
                                     @php
                                         $i++;
@@ -867,7 +867,12 @@
                                 </div>
                                 <div class="col-md-12 collapse" id="more-reviews">
                                     @for($i; $i < count($advert->user->reviews); $i++)
-                                    <section>
+                                    <section class="review-section">
+                                        <div class="review-section-l">
+                                            <span class="author-by">by</span>
+                                            <a href="#" class="reviews-item-author">{{$advert->user->reviews[$i]->author->name}}</a>
+                                            <span class="review-item-date">{{date('d/m/Y',strtotime($advert->user->reviews[$i]->created_at))}}</span>
+                                        </div>
                                     </section>
                                     @endfor
                                 </div>
