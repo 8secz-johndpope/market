@@ -31,7 +31,7 @@
     <section class="container-details-profile mb-10">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 text-center">
+                <div class="col-sm-12">
                     <h3 class="details-profile-title">Private Profile</h3>
                     <p class="details-profile-subtitle">Complete your deatils</p>
                 </div>
