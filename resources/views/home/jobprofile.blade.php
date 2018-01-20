@@ -38,6 +38,8 @@
                 <div class="col-sm-2">
                     <a class="btn update-details">Edit</a>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-sm-2">
                     <div class="wrapper-img-profile">
                         <figure>
