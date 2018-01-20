@@ -157,6 +157,10 @@
     margin: 0 auto;
     display: block;
 }
+.section-header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
