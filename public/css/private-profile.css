@@ -47,3 +47,12 @@
     font-weight: normal;
     word-spacing: 8px;
 }
+.details-profile-title {
+    margin-top: 0;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+.details-profile-subtitle {
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
