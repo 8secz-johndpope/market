@@ -110,19 +110,24 @@
     margin-top: 5px;
     right: 0;
     top: 0;
+    font-size: 15px;
 }
 .content {
     padding: 15px;
 }
 .content .title {
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     margin-top: 0;
 }
 .content ul {
     list-style: none;
     padding-left: 0;
+    margin-bottom: 0;
+}
+.alerts {
+    padding: 0 15px;
 }
 @media screen and (min-width: 768px){
 	.content .col-sm-6:first-child {
@@ -130,5 +135,8 @@
 	    margin-bottom: 0;
 	    border-bottom: none;
 	    border-right: 1px solid #d6d6d6;
+	}
+	.alerts{
+		padding-top: 15px;
 	}
 }
