@@ -128,7 +128,7 @@
             </div>
         </div>
     </section>
-    <section class="container-cvs">
+    <section class="container-cvs mb-10">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -136,7 +136,7 @@
                         <h2 class="title">CV</h2>
                     </header>
                     <div class="row">
-                        
+
                     </div>
                 </div>
             </div>
