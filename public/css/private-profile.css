@@ -160,6 +160,9 @@
     border-bottom: 1px solid #ccc;
     padding-bottom: 15px;
 }
+.change-avatar {
+    color: #fff;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
