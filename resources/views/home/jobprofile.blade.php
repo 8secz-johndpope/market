@@ -176,7 +176,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <div class="employment-status">
                                 <h3 class="title">Employment status</h3>
-                                <p class="data"></p>
+                                <p class="data">Unemployed</p>
                             </div>
                         </div>
                     </div>
