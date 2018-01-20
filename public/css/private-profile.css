@@ -5,10 +5,10 @@
     background-size: cover;
     background-position: center;
 }
-.container-details-profile, .container-looking-for-options {
+.container-details-profile, .container-looking-for-options, .container-status-availability {
     background: #EBEBEB;
 }
-.container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs{
+.container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability{
 	padding: 30px 0;
 }
 .template-content {
