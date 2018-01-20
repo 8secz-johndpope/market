@@ -163,6 +163,10 @@
 .change-avatar {
     color: #fff;
 }
+.sub-contractor {
+    background: url(/img/sub-contractor.png);
+    background-size: 100% 100%;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
