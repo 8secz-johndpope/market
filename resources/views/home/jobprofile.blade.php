@@ -19,8 +19,11 @@
     <section class="container-profile-header mb-10">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-9">
                     <h2 class="header-profile-title">Your {{env('APP_NAME')}} Private Profile</h2>
+                </div>
+                <div class="col-sm-3">
+                    <a class="btn btn-info" href="#">Recommended Jobs</a>
                 </div>
             </div>
         </div>
@@ -31,7 +34,7 @@
                 <div class="col-sm-2">
                     <div class="wrapper-img-profile">
                         <figure>
-                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
+                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="img-responsive img-profile">
                         </figure>
                     </div>
                 </div>
@@ -40,9 +43,9 @@
                         <h3 class="details-profile-title">Private Profile</h3>
                         <p class="details-profile-subtitle">Complete your deatils</p>
                         <div class="wrapper-details-content">
-                            <p class="details-item">{{$user->name}}}</p>
-                            <p class="details-item">{{$user->email}}}</p>
-                            <p class="details-item">{{$user->phone}}}</p>
+                            <p class="details-item">{{$user->name}}</p>
+                            <p class="details-item">{{$user->email}}</p>
+                            <p class="details-item">{{$user->phone}}</p>
                         </div>
                     </div>
                 </div>           
