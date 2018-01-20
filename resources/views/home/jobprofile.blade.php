@@ -252,7 +252,7 @@
     </script>
 -->
 <script>
-    $('.change-avatar').click(function (e) {
+    $('.edit-avatar').click(function (e) {
         $("#upload-profile").click();
     });
 </script>
