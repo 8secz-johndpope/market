@@ -221,7 +221,7 @@
             </div>
         </div>
     </section>
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-md-3">
 
         </div>
@@ -237,7 +237,9 @@
             </form>
         </div>
     </div>
+    -->
 </div>
+<!--
     <script>
         ClassicEditor
             .create( document.querySelector( '#editor' ) )
@@ -245,4 +247,5 @@
             console.error( error );
         } );
     </script>
+-->
 @endsection
