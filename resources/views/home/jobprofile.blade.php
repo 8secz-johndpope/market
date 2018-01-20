@@ -143,6 +143,12 @@
                             </div>
                         </div>
                         <div class="col-sm-12">
+                            <p>Upload a new CV, or use our CV builder to build one for you.</p>
+                            <div class="btns row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <a class="btn btn-submit">Upload CV</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
