@@ -45,7 +45,7 @@
                 <div class="col-sm-10">
                     <div class="wrapper-details-profile">
                         <div class="wrapper-details-content">
-                            <p class="details-item">{{$user->name}}</p>
+                            <p class="details-item name">{{$user->name}}</p>
                             <p class="details-item">{{$user->email}}</p>
                             <p class="details-item">{{$user->phone}}</p>
                         </div>
