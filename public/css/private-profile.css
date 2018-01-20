@@ -16,10 +16,10 @@
     left: 0;
     background: rgba(255,255,255,0.5);
 }
-.container-details-profile, .container-looking-for-options, .container-status-availability {
+.container-details-profile, .container-looking-for-options, .container-status-availability, .container-work-experience {
     background: #EBEBEB;
 }
-.container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability, .container-cover-letter{
+.container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability, .container-cover-letter, .container-work-experience{
 	padding: 60px 0;
 }
 .template-content {
