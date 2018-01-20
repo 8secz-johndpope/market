@@ -67,9 +67,9 @@
                     <h2 class="template-options-title">Select & Create Your Profile</h2>
                 </div>
                 <div class="col-sm-4">
-                    <div class="template-item selected">
+                    <div class="template-item">
                         <h3 class="template-item-title">General</h3>
-                        <div class="template-content">
+                        <div class="template-content selected">
                         </div>
                     </div>
                 </div>
