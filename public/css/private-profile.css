@@ -56,6 +56,9 @@
 .details-profile-subtitle {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.details-item {
+    font-size: 13px;
+}
 .details-item.name {
 	font-family: Effra-Medium,arial,helvetica,sans-serif;
     color: #000;
