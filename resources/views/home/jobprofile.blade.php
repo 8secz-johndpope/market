@@ -155,6 +155,32 @@
             </div>
         </div>
     </section>
+    <section class="container-status-availability mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="section-header">
+                        <h2 class="title">Status & availability</h2>
+                        <a class="action edit" href="">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
+                    </header>
+                    <div class="content row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="employment-status">
+                                <h3 class="title">Employment status</h3>
+                                <p class="data"></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="work-eligibility">
+                                <h3 class="title">Work eligibility</h3>
+                                <p class="data">Eligible to work in the UK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="row">
         <div class="col-md-3">
 
