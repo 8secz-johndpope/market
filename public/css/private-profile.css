@@ -5,11 +5,10 @@
     background-size: cover;
     background-position: center;
 }
-.container-details-profile {
-    padding: 15px;
+.container-details-profile, .container-looking-for-options {
     background: #EBEBEB;
 }
-.container-templates-options, .container-details-profile{
+.container-templates-options, .container-details-profile, .container-looking-for-options{
 	padding: 30px 0;
 }
 .template-content {
