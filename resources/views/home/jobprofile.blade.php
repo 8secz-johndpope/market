@@ -86,8 +86,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <header class="looking-for-header">
-                        <h2 class="looking-for-title">Looking for</h2>
+                    <header class="section-header">
+                        <h2 class="title">Looking for</h2>
                         <a class="action edit" href="">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                     </header>
                     <div class="content row">
@@ -124,7 +124,21 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-cvs">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="section-header">
+                        <h2 class="title">CV</h2>
+                    </header>
+                    <div class="row">
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </section>
