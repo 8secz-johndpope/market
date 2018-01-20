@@ -204,6 +204,23 @@
             </div>
         </div>
     </section>
+    <section class="container-work-experience mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="section-header">
+                        <h2 class="title">Work experience</h2>
+                    </header>
+                    <div class="content">
+                        <a class="add-first">
+                            <i class="glyphicon glyphicon-plus-sign"></i>
+                            Add work experience
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="row">
         <div class="col-md-3">
 
