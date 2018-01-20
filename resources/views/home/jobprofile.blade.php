@@ -147,7 +147,7 @@
                     <header class="section-header">
                         <h2 class="title">Your CV's</h2>
                     </header>
-                    <div class="row">
+                    <div class="content row">
                         <div class="alerts">
                             <div class="alert alert-danger">
                                 <strong>You haven't uploaded a CV yet.</strong>
