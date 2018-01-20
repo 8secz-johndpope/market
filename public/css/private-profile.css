@@ -103,3 +103,11 @@
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     display: inline-block;
 }
+.section-header .action {
+    position: static;
+    float: right;
+    opacity: 1;
+    margin-top: 5px;
+    right: 0;
+    top: 0;
+}
