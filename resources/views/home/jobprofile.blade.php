@@ -67,7 +67,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="template-item">
-                        <h3 class="template-item-title">Social Care</h3>
+                        <h3 class="template-item-title">Social Care & Childcare</h3>
                         <div class="template-content">
                         </div>
                     </div>
