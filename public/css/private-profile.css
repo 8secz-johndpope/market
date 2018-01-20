@@ -143,6 +143,7 @@
 	right: 0;
 	background: #2866f6;
 	padding: 8px;
+	border-radius: 50%;
 }
 .edit-avatar a{
 	color: #fff;
