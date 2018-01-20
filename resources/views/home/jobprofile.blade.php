@@ -115,6 +115,7 @@
                                     Add salary
                                     <i class="glyphicon glyphicon-plus-sign"></i>
                                 </a>
+                                <p></p>
                             </div>
                             <div class="location">
                                 <h3 class="title">Location</h3>
