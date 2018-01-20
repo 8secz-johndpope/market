@@ -52,7 +52,7 @@
             </div>
         </div>
     </section>
-    <section class="container-templates-options">
+    <section class="container-templates-options mb-10">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
