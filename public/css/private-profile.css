@@ -69,3 +69,6 @@
     margin: 0;
     letter-spacing: initial;
 }
+.details-item.title-job{
+	margin-bottom: 10px;
+}

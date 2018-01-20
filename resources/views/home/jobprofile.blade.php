@@ -31,9 +31,12 @@
     <section class="container-details-profile mb-10">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-10">
                     <h3 class="details-profile-title">Private Profile</h3>
                     <p class="details-profile-subtitle">Complete your deatils</p>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn update-details">Edit</a>
                 </div>
                 <div class="col-sm-2">
                     <div class="wrapper-img-profile">
@@ -46,6 +49,7 @@
                     <div class="wrapper-details-profile">
                         <div class="wrapper-details-content">
                             <p class="details-item name">{{$user->name}}</p>
+                            <p class="details-item title-job">Engineer</p>
                             <p class="details-item">{{$user->email}}</p>
                             <p class="details-item">{{$user->phone}}</p>
                         </div>
