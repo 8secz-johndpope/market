@@ -142,6 +142,10 @@
 	background: 
 	bottom: 0;
 	right: 0;
+	background: #2866f6;
+}
+.edit-avatar a{
+	color: #fff;
 }
 @media screen and (min-width: 768px){
 	.content .col-sm-6:first-child {
