@@ -195,7 +195,7 @@
                         <h2 class="title">Cover letter</h2>
                     </header>
                     <div class="content">
-                        <a href="add-first">
+                        <a class="add-first">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add cover letter
                         </a>
