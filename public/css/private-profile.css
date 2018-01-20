@@ -58,6 +58,7 @@
 }
 .details-item {
     font-size: 13px;
+    margin:0;
 }
 .details-item.name {
 	font-family: Effra-Medium,arial,helvetica,sans-serif;
