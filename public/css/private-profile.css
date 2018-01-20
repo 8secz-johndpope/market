@@ -111,3 +111,14 @@
     right: 0;
     top: 0;
 }
+.content {
+    padding: 15px;
+}
+@media screen and (min-width: 768px){
+	.content .col-sm-6:first-child {
+	    padding-left: 0!important;
+	    margin-bottom: 0;
+	    border-bottom: none;
+	    border-right: 1px solid #d6d6d6;
+	}
+}
