@@ -2,7 +2,7 @@
 
 @extends('layouts.next')
 
-@section('title', env('APP_NAME'). ' | Private Profile')
+@section('title', env('APP_NAME'). ' | Profile')
 
 @section('sidebar')
     @parent
@@ -14,41 +14,7 @@
     $dateMs = $date->getTimestamp();
 @endphp
 @section('content')
-<link href="{{ asset("/css/private-profile.css?q=$dateMs") }}" rel="stylesheet" type="text/css">
 <div class="body background-color">
-    <section class="container-profile-header mb-10">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="header-profile-title">Your {{env('APP_NAME')}} Private Profile</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="container-details-profile mb-10">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="wrapper-img-profile">
-                        <figure>
-                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-sm-10">
-                    <div class="wrapper-details-profile">
-                        <h3 class="details-profile-title">Private Profile</h3>
-                        <p class="details-profile-subtitle">Complete your deatils</p>
-                        <div class="wrapper-details-content">
-                            <p class="details-item">{{$user->name}}}</p>
-                            <p class="details-item">{{$user->email}}}</p>
-                            <p class="details-item">{{$user->phone}}}</p>
-                        </div>
-                    </div>
-                </div>           
-            </div>
-        </div>
-    </section>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">

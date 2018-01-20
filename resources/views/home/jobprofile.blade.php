@@ -2,58 +2,53 @@
 
 @extends('layouts.business')
 
-@section('title', 'Page Title')
+@section('title', env('APP_NAME'). ' | Private Profile')
 
 @section('sidebar')
     @parent
 
     <p>This is appended to the master sidebar.</p>
 @endsection
-
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
 @section('content')
-    <div class="row">
-        <div class="col-sm-12">
-
-            <ul class="nav nav-tabs">
-
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span> &nbsp;&nbsp; Manage  ads</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/images"><span class="glyphicon glyphicon-camera"></span>&nbsp;&nbsp;Images</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/orders"><span class="glyphicon glyphicon-credit-card"></span> &nbsp;&nbsp; Orders</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/messages"><span class="glyphicon glyphicon-envelope"></span> &nbsp;&nbsp; Messages</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp; My Details</a>
-                </li>
-                @if($user->contract!==null)
-                    <li class="nav-item">
-                        <a class="nav-link nav-color" href="/business/manage/company"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp; Company</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-color" href="/business/manage/finance"><span class="glyphicon glyphicon-gbp"></span> &nbsp;&nbsp; Financials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-color" href="/business/manage/metrics"><span class="glyphicon glyphicon-stats"></span> &nbsp;&nbsp; Metrics</a>
-                    </li>
-                @endif
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/favorites"><span class="glyphicon glyphicon-heart"></span> &nbsp;&nbsp; Favorites</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/user/manage/alerts"><span class="glyphicon glyphicon-bell"></span> &nbsp;&nbsp; Search Alerts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp; Support</a>
-                </li>
-            </ul>
+<link href="{{ asset("/css/private-profile.css?q=$dateMs") }}" rel="stylesheet" type="text/css">
+<div class="body background-color">
+    <section class="container-profile-header mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="header-profile-title">Your {{env('APP_NAME')}} Private Profile</h2>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+    <section class="container-details-profile mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="wrapper-img-profile">
+                        <figure>
+                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="wrapper-details-profile">
+                        <h3 class="details-profile-title">Private Profile</h3>
+                        <p class="details-profile-subtitle">Complete your deatils</p>
+                        <div class="wrapper-details-content">
+                            <p class="details-item">{{$user->name}}}</p>
+                            <p class="details-item">{{$user->email}}}</p>
+                            <p class="details-item">{{$user->phone}}}</p>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </section>    
     <div class="row">
         <div class="col-md-3">
 
@@ -70,6 +65,7 @@
             </form>
         </div>
     </div>
+</div>
     <script>
         ClassicEditor
             .create( document.querySelector( '#editor' ) )
