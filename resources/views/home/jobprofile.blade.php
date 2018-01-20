@@ -133,10 +133,17 @@
             <div class="row">
                 <div class="col-sm-12">
                     <header class="section-header">
-                        <h2 class="title">CV</h2>
+                        <h2 class="title">Your CV's</h2>
                     </header>
                     <div class="row">
-
+                        <div class="alerts">
+                            <div class="alert alert-danger">
+                                <strong>You haven't uploaded a CV yet.</strong>
+                                 To apply for jobs, you'll need a CV.
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                        </div>
                     </div>
                 </div>
             </div>
