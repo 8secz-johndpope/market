@@ -22,8 +22,8 @@
 .container-templates-options {
     background-color: #f5f5f5;
 }
-.btn-info {
+.btn-info, .btn-info:hover {
     background: #2866f6;
     border-color: #2866f6;
     font-size: 20px;
-}
+} 
