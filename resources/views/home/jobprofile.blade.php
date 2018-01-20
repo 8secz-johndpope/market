@@ -81,6 +81,52 @@
                 </div>
             </div>
         </div>
+    </section> 
+    <section class="container-looking-for-options">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="looking-for-header">
+                        <h2 class="looking-for-title">Looking for</h2>
+                        <a class="action edit" href="">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
+                    </header>
+                    <div class="content row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="desired-job-title">
+                                <h3 class="title">Desired job title</h3>
+                                <p class="data">Engineer</p>
+                            </div>
+                            <div class="salary">
+                                <h3 class="title">Salary</h3>
+                                <p class="data"></p>
+                                <ul>
+                                    <li>£ per annum</li>
+                                    <li>£ per hour</li>
+                                </ul>
+                                <a href="#">
+                                    Add salary
+                                    <i class="glyphicon glyphicon-plus-sign"></i>
+                                </a>
+                            </div>
+                            <div class="location">
+                                <h3 class="title">Location</h3>
+                                <p class="data">London, South East England</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="job-type">
+                                <h3 class="title">Job Type</h3>
+                                <p class="data">Full-time & part-time permanent & contract work</p>
+                            </div>
+                            <div class="specialisms">
+                                <h3 class="title">Sectors / Industries</h3>
+                                <p class="data">IT & Telecoms</p>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
     </section>
     <div class="row">
         <div class="col-md-3">
