@@ -1,3 +1,14 @@
+@font-face {
+    font-family: Effra-Regular;
+    src: url('fonts/Effra_W_Rg.eot');
+    src: url('fonts/Effra_W_Rg.eot?#iefix') format('embedded-opentype'), url('fonts/Effra_W_Rg.woff') format('woff'), url('fonts/Effra_Md.ttf') format('truetype');
+    font-style: normal
+}
+@font-face {
+    font-family: Effra-Medium;
+    src: url('fonts/Effra_Std_Md.ttf');
+}
+
 body{
     font-family: Effra-Regular,arial,helvetica,sans-serif;
 

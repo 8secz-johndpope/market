@@ -27,3 +27,9 @@
     border-color: #2866f6;
     font-size: 20px;
 } 
+.header-profile-title {
+    margin: 0;
+    text-transform: uppercase;
+    color: #000;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
