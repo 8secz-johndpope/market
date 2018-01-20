@@ -19,7 +19,7 @@
 .container-details-profile, .container-looking-for-options, .container-status-availability {
     background: #EBEBEB;
 }
-.container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability{
+.container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability, .container-cover-letter{
 	padding: 60px 0;
 }
 .template-content {
@@ -32,7 +32,7 @@
 	-webkit-box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
     box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
 }
-.container-templates-options, .container-cvs {
+.container-templates-options, .container-cvs, .container-cover-letter {
     background-color: #f5f5f5;
 }
 .btn-info, .btn-info:hover {
