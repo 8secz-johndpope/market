@@ -52,6 +52,8 @@
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     font-weight: normal;
     margin-bottom: 0;
+    letter-spacing: 3px;
+    color: #000;
 }
 .details-profile-subtitle {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
