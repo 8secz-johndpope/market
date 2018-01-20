@@ -2,7 +2,7 @@
 
 @extends('layouts.next')
 
-@section('title', 'Page Title')
+@section('title', env('APP_NAME'). ' | Private Profile')
 
 @section('sidebar')
     @parent
@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="header-profile-title">Your Sumra Private Profile</h2>
+                    <h2 class="header-profile-title">Your {{env('APP_NAME')}} Private Profile</h2>
                 </div>
             </div>
         </div>
@@ -28,8 +28,24 @@
     <section class="container-details-profile mb-10">
         <div class="container">
             <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-10"></div>           
+                <div class="col-sm-2">
+                    <div class="wrapper-img-profile">
+                        <figure>
+                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}">
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="wrapper-details-profile">
+                        <h3 class="details-profile-title">Private Profile</h3>
+                        <p class="details-profile-subtitle">Complete your deatils</p>
+                        <div class="wrapper-details-content">
+                            <p class="details-item">{{$user->name}}}</p>
+                            <p class="details-item">{{$user->email}}}</p>
+                            <p class="details-item">{{$user->phone}}}</p>
+                        </div>
+                    </div>
+                </div>           
             </div>
         </div>
     </section>
