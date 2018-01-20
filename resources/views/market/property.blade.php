@@ -434,7 +434,13 @@
                                 <h3>Ratings and reviews</h3>
                             </div>
                             <div class="col-md-3 col-sm-3 tab-buttons">
-                                <a class="btn btn-default btn-review" href="#make-review">
+                                <a class="btn btn-default btn-review" href="
+                                    @if (Auth::guest())
+                                        /login
+                                    @else
+                                        #make-review
+                                    @endif
+                                    ">
                                     Write a review
                                 </a>
                             </div>
