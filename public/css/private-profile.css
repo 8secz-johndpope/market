@@ -20,7 +20,7 @@
     background: #EBEBEB;
 }
 .container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability{
-	padding: 30px 0;
+	padding: 60px 0;
 }
 .template-content {
     height: 300px;
@@ -72,4 +72,13 @@
 }
 .details-item.title-job{
 	margin-bottom: 10px;
+}
+.template-options-title {
+    margin-top: 0;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: normal;
+    margin-bottom: 0;
+    font-size: 26px;
+    color: #000;
+    letter-spacing: 2px;
 }
