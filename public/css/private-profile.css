@@ -139,10 +139,10 @@
 	position: absolute;
 	height: 30px;
 	width: 30px;
-	background: 
 	bottom: 0;
 	right: 0;
 	background: #2866f6;
+	padding: 8px;
 }
 .edit-avatar a{
 	color: #fff;
