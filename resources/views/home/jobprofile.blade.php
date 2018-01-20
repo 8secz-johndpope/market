@@ -45,6 +45,9 @@
                         <figure>
                             <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="img-responsive img-profile">
                         </figure>
+                        <div class="edit-avatar">
+                            <a href="#"><i class="glyphicon glyphicon-edit"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-10">
