@@ -170,12 +170,6 @@
                                 <p class="data"></p>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="work-eligibility">
-                                <h3 class="title">Work eligibility</h3>
-                                <p class="data">Eligible to work in the UK</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
