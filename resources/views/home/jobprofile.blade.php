@@ -51,7 +51,37 @@
                 </div>           
             </div>
         </div>
-    </section>    
+    </section>
+    <section class="container-templates-options">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="template-options-title">Select & Create Your Profile</h2>
+                </div>
+                <div clas="col-sm-4">
+                    <div class="template-item">
+                        <h3 class="template-item-title">General</h3>
+                        <div class="template-content">
+                        </div>
+                    </div>
+                </div>
+                <div clas="col-sm-4">
+                    <div class="template-item">
+                        <h3 class="template-item-title">Social Care</h3>
+                        <div class="template-content">
+                        </div>
+                    </div>
+                </div>
+                <div clas="col-sm-4">
+                    <div class="template-item">
+                        <h3 class="template-item-title">Sub Contractor</h3>
+                        <div class="template-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="row">
         <div class="col-md-3">
 
