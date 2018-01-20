@@ -135,6 +135,14 @@
 .wrapper-img-profile {
     position: relative;
 }
+.edit-avatar{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	background: 
+	bottom: 0;
+	right: 0;
+}
 @media screen and (min-width: 768px){
 	.content .col-sm-6:first-child {
 	    padding-left: 0!important;
