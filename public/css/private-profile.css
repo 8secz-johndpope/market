@@ -103,6 +103,7 @@
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     display: inline-block;
     margin-top: 0;
+    margin-bottom: 0;
 }
 .section-header .action {
     position: static;
