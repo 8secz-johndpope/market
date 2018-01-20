@@ -102,6 +102,7 @@
     text-transform: uppercase;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     display: inline-block;
+    margin-top: 0;
 }
 .section-header .action {
     position: static;
