@@ -51,7 +51,7 @@
                     <div class="wrapper-details-profile">
                         <div class="wrapper-details-content">
                             <p class="details-item name">{{$user->name}}</p>
-                            <p class="details-item title-job">Engineer</p>
+                            <p class="details-item title-job">Engineer Computer</p>
                             <p class="details-item">{{$user->email}}</p>
                             <p class="details-item">{{$user->phone}}</p>
                         </div>
@@ -67,7 +67,7 @@
                     <h2 class="template-options-title">Select & Create Your Profile</h2>
                 </div>
                 <div class="col-sm-4">
-                    <div class="template-item">
+                    <div class="template-item selected">
                         <h3 class="template-item-title">General</h3>
                         <div class="template-content">
                         </div>
