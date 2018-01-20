@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('title', 'Josh E. |' . env('APP_NAME'))
-
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
 @section('styles')
-<link href="{{ asset('/css/profile.css?q=874') }}" rel="stylesheet">
+<link href="{{ asset("/css/profile.css?q=$dateMs") }}" rel="stylesheet">
 @endsection
 
 @section('sidebar')
@@ -13,7 +16,7 @@
 @endsection
 
 @section('content')   
-<div class="background-body">
+<div class="background-body body">
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-xs-12">
