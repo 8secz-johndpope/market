@@ -45,10 +45,12 @@
                         <figure>
                             <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="img-responsive img-profile">
                         </figure>
-                        <div class="edit-avatar" role="button">
-                            <input type="file" id="upload-profile"  style="display: none">
-                            <a href="#"><i class="glyphicon glyphicon-edit"></i></a>
-                        </div>
+                        <a href="#" class="change-avatar">
+                            <div class="edit-avatar" role="button">
+                                <input type="file" id="upload-profile"  style="display: none">
+                                <i class="glyphicon glyphicon-edit"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-10">
@@ -250,8 +252,9 @@
     </script>
 -->
 <script>
-    $(".edit-avatar").click(function () {
-            $("#upload-profile").click();
-        });
+    $(".change-avatar").click(function (e) {
+        e.preventDefault();
+        $("#upload-profile").click();
+    });
 </script>
 @endsection
