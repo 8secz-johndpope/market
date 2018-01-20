@@ -32,4 +32,6 @@
     text-transform: uppercase;
     color: #000;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: normal;
+    word-spacing: 8px;
 }
