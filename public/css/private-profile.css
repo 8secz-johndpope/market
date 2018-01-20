@@ -9,3 +9,10 @@
     padding: 15px;
     background: #EBEBEB;
 }
+.template-content {
+    height: 300px;
+    width: 250px;
+    margin: auto;
+    -webkit-box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
+    box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
+}
