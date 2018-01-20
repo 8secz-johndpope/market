@@ -1245,14 +1245,16 @@
     });
     $('.tab-buttons .btn-default').click(function(e){
         var div = $(this).attr('href');
-        e.preventDefault();
-        $('.tab-buttons .btn-default.active').removeClass('active');
-        $(this).addClass('active');
-        $('.active-make').removeClass('active-make');   
-        $('.row.content-reviews').removeClass('border-top-transparent');
-        
-        //Is best add class active, need change
-        $(div).addClass('active-make');
+        if(div != '/login'){
+            e.preventDefault();
+            $('.tab-buttons .btn-default.active').removeClass('active');
+            $(this).addClass('active');
+            $('.active-make').removeClass('active-make');   
+            $('.row.content-reviews').removeClass('border-top-transparent');
+            
+            //Is best add class active, need change
+            $(div).addClass('active-make');
+        }
     });
     $('.cancel-review').click(function(e){
         e.preventDefault();
