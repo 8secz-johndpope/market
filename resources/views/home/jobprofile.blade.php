@@ -36,7 +36,7 @@
                     <p class="details-profile-subtitle">Complete your deatils</p>
                 </div>
                 <div class="col-sm-2">
-                    <a class="btn update-details">Edit</a>
+                    <a class="btn update-details" href="/user/manage/details">Edit</a>
                 </div>
             </div>
             <div class="row">
@@ -45,7 +45,8 @@
                         <figure>
                             <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="img-responsive img-profile">
                         </figure>
-                        <div class="edit-avatar">
+                        <div class="edit-avatar" role="button">
+                            <input type="file" id="upload-profile"  style="display: none">
                             <a href="#"><i class="glyphicon glyphicon-edit"></i></a>
                         </div>
                     </div>
@@ -248,4 +249,9 @@
         } );
     </script>
 -->
+<script>
+    $(".edit-avatar").click(function () {
+            $("#upload-profile").click();
+        });
+</script>
 @endsection
