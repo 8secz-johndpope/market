@@ -56,3 +56,13 @@
 .details-profile-subtitle {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.details-item.name {
+	font-family: Effra-Medium,arial,helvetica,sans-serif;
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: inherit;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: initial;
+}
