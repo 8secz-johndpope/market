@@ -106,7 +106,7 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Looking for</h2>
-                        <a class="action edit" href="">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
+                        <a class="action edit" href="/user/jobs/looking-for">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                     </header>
                     <div class="content row">
                         <div class="col-xs-12 col-sm-6">

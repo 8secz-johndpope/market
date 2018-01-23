@@ -2399,4 +2399,8 @@ class HomeController extends BaseController
         $user = Auth::user();
         return view('home.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves()]);   
     }
+    public function looking_for(Request $request){
+        $user = Auth::user();
+        return view('home.looking_for_edit', ['user' => $user]);
+    }
 }

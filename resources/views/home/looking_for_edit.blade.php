@@ -112,11 +112,26 @@
                 </div>
                 <div class="section-content col-xs-12 col-sm-6">
                   <fieldset class="form-field">
-                    <div class="checkbox"></div>
-                    <div class="checkbox"></div>
+                    <div class="checkbox">
+                      <input type="checkbox" name="perm-work" id="perm-work">
+                      <label for="perm-work">Permanent</label>
+                    </div>
+                    <div class="checkbox">
+                      <input type="checkbox" name="temp-work" id="temp-work">
+                      <label for="temp-work">Temporary</label>
+                    </div>
+                    <div class="checkbox">
+                      <input type="checkbox" name="contract-work" id="contract-work">
+                      <label for="contract-work">Contract</label>
+                    </div>
                     <div class="checkbox"></div>
                   </fieldset>
-                  <fieldset class="form-field graduate-jobs"></fieldset>
+                  <fieldset class="form-field graduate-jobs">
+                    <div class="checkbox">
+                      <input type="checkbox" name="is-graduate" id="is-graduate">
+                      <label for="is-graduate">Graduate Jobs (Select if you are a recent graduate)</label>
+                    </div>
+                  </fieldset>
                 </div>
               </section>
               <div class="action-container">
