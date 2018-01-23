@@ -417,6 +417,20 @@
 .specialism-selector .edit-specialism-actions .edit {
     color: #0079d6;
 }
+.looking-for-edit .section-locations .add-location {
+    margin-bottom: 0;
+}
+.looking-for-edit .inline-input {
+    position: relative;
+    vertical-align: top;
+    margin-top: 1px;
+    width: auto;
+    display: inline-block;
+}
+.looking-for-edit .section-locations .location-container .inline-input {
+    max-width: 181px;
+    margin-right: 15px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -496,5 +510,8 @@
 	}
 	.specialism-selector .edit-specialism-actions .edit, .specialism-selector .edit-specialism-actions .remove {
 	    padding: 0 7.5px;
+	}
+	.looking-for-edit .section-locations .location-container .inline-input {
+	    max-width: 100%;
 	}
 }
