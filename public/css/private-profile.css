@@ -180,6 +180,17 @@
 .back-link a>i {
     margin-right: 7.5px;
 }
+.section {
+    background: #fff;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    border-left: none;
+    border-right: none;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 15px;
+    height: 100%;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -192,5 +203,10 @@
 	}
 	.back-link {
     	padding: 30px 15px 7.5px 15px;
+	}
+	.section {
+	    border-radius: 4px;
+	    border: 1px solid #d6d6d6;
+	    padding: 30px;
 	}
 }
