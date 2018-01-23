@@ -74,11 +74,11 @@
                           @endfor
                         </select>
                       </div>
-                      <div class="current-role form-group col-sm-4 col-xs-12">
-                        <input type="checkbox" name="is-current-role" id="is-current-role">
-                        <label for="is-current-role">I currently work here</label>
-                      </div>
                     </div>
+                  </div>
+                  <div class="current-role form-group col-sm-4 col-xs-12">
+                    <input type="checkbox" name="is-current-role" id="is-current-role">
+                    <label for="is-current-role">I currently work here</label>
                   </div>
                   <div class="date-to form-group col-sm-8 col-xs-12">
                     <label class="legend" for="date-to-month">To</label>
@@ -117,7 +117,9 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="responsabilities" rows="15"></textarea>
                     <small><strong>2000</strong> characters remaining</small>
                 </div>
-                <button type="submit" class="btn btn-submit" id="upload-cv-link">Save</button>
+                <div class="form-group col-xs-12">
+                  <button type="submit" class="btn btn-submit" id="upload-cv-link">Save</button>
+                </div>
               </div>
             </form>
           </div>
