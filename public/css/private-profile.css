@@ -210,6 +210,14 @@
 .upload-options>ul li:first-child {
     margin-top: 0!important;
 }
+.upload-option {
+    display: block;
+    text-align: left;
+    padding: 10px 0;
+    color: #0079d6;
+    cursor: pointer;
+    border-radius: 4px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -247,5 +255,10 @@
 	    clear: both;
 	    padding-left: 0!important;
 	    padding-right: 7.5px!important;
+	}
+	.upload-option {
+	    border: 1px solid #d6d6d6;
+	    color: #333;
+	    margin-bottom: 15px;
 	}
 }
