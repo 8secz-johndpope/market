@@ -437,6 +437,13 @@
     right: 30px;
     top: 50%;
 }
+.location-container .location-link {
+    margin-top: -8px;
+}
+.looking-for-edit .section-locations .location-link {
+    right: 15px;
+    top: 18px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -519,5 +526,25 @@
 	}
 	.looking-for-edit .section-locations .location-container .inline-input {
 	    max-width: 100%;
+	}
+	.location-container .location-link {
+	    right: 15px;
+	}
+	.location-container .location-link {
+	    margin-top: 3px;
+	}
+	.looking-for-edit .section-locations .location-link {
+	    top: 7.5px;
+	}
+}
+@media screen and (min-width: 1025px){
+	.location-container .location-link {
+	    right: 30px;
+	}
+	.location-container .location-link {
+	    width: 22px;
+	    height: 28px;
+	    background-position: -660px -990px;
+	    margin-top: 0;
 	}
 }
