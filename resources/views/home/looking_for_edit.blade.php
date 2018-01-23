@@ -154,7 +154,7 @@
               <section class="section-specialisms row">
                 <div class="header col-xs-12 col-sm-3">
                   <h3 class="title">Sectors</h3>
-                  <small class="info">You may add up to 10 sectors</small>
+                  <small>You may add up to 10 sectors</small>
                 </div>
                 <div class="section-content col-xs-12 col-sm-9">
                   <div class="specialism-sector">
