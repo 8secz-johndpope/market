@@ -364,6 +364,16 @@
     left: 28px;
     font-weight: 700;
 }
+.specialism-selector .more-specialism-actions {
+    margin-top: 15px;
+}
+.specialism-selector .selected-specialisms .specialism-details {
+    margin: 0 0 7.5px 0;
+    background: #f5f7fa;
+    color: #0079d6;
+    padding: 7.5px 15px;
+    border-radius: 4px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
