@@ -314,7 +314,7 @@
 .cv-searchable>.checkbox>input+label {
     padding-left: 32px;
 }
-input[type=checkbox]{
+.checkbox input[type=checkbox]{
     margin: 8px;
     overflow: hidden;
     padding: 0;
