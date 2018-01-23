@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <div class="wrapper-img-profile">
                         <figure>
                             <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="img-responsive img-profile">
@@ -53,7 +53,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-9">
                     <div class="wrapper-details-profile">
                         <div class="wrapper-details-content">
                             <p class="details-item name">{{$user->name}}</p>
