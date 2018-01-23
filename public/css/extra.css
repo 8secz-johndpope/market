@@ -1014,6 +1014,15 @@ a.search-alert {
 .product-car .info {
     border-right: 1px solid #ddd;
 }
+.btn-inverse {
+    color: #ff9d2c;
+    background: #000;
+    width: 200px;
+    padding: 10px 40px;
+    border: 1px solid #ff9d2c;
+    /* margin: 0 auto 20px; */
+    margin-right: 10px;
+}
 @media screen and (min-width: 768px) {
     .modal:before {
         display: inline-block;
