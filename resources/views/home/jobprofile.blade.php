@@ -71,6 +71,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h2 class="template-options-title">Select & Create Your Profile</h2>
+                    <p class="details-profile-subtitle">After selecting a profile, you should provide revelant information for each section in order to complete the profile</p>
                 </div>
                 <div class="col-sm-4">
                     <div class="template-item">

@@ -37,9 +37,13 @@
               <div class="small-container col-xs-12 col-sm-9">
                 <div class="form-group">
                     <label for="title">Job title</label> 
-                    <span class="red-text" id="no-title" style="display: none">Please add a title to your Cover</span>
+                    <span class="red-text" id="no-title" style="display: none">Please add a job title</span>
                     <input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="Cover for Part Time Job" required>
-                    <small id="emailHelp" class="form-text text-muted">With title you can easily locate Cover if you have many Covers </small>
+                </div>
+                <div class="form-group">
+                  <label for="title">Job title</label> 
+                  <span class="red-text" id="no-company" style="display: none">Please add the company name</span>
+                  <input type="text" class="form-control" name="company" aria-describedby="emailHelp" placeholder="" required>
                 </div>
                 <div class="form-group">
                     <label for="category">Select Category</label> <span class="red-text" id="no-category" style="display: none">Please choose a category to your CV</span>
@@ -49,11 +53,79 @@
                         @endforeach
                     </select>
                 </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Cover Letter</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" name="cover" rows="15"></textarea>
+                <div class="row">
+                  <div class="date-from form-group col-sm-8 col-xs-12">
+                    <label class="legend" for="date-from-month">From</label>
+                    <div class="row">
+                      <div class="month col-sm-6 col-xs-12">
+                        <select class="form-control" id="date-from-month" name="date-from-month">
+                          <option value="">Month</option>
+                          <option value="1">January</option>
+                          <option value="2">February</option>
+                          <option value="3">March</option>
+                          <option value="4">April</option>
+                          <option value="5">May</option>
+                          <option value="6">June</option>
+                          <option value="7">July</option>
+                          <option value="8">August</option>
+                          <option value="9">September</option>
+                          <option value="10">October</option>
+                          <option value="11">November</option>
+                          <option value="12">December</option>
+                        </select>
+                      </div>
+                      <div class="year col-sm-6 col-xs-12">
+                        <select class="form-control" id="date-from-year" name="date-from-year">
+                          <option value="">Year</option>
+                          @for($i = 2018; $i > 1993; $i--)
+                            <option value="{{$i}}">{{$i}}</option>
+                          @endfor
+                        </select>
+                      </div>
+                      <div class="current-role form-group col-sm-4 col-xs-12">
+                        <input type="checkbox" name="is-current-role" id="is-current-role">
+                        <label for="is-current-role">I currently work here</label>
+                      </div>
                     </div>
-                <button type="submit" class="btn btn-submit" id="upload-cv-link">Add Cover</button>
+                  </div>
+                  <div class="date-to form-group col-sm-8 col-xs-12">
+                    <label class="legend" for="date-to-month">To</label>
+                    <div class="row">
+                      <div class="month col-sm-6 col-xs-12">
+                        <select class="form-control" id="date-to-month" name="date-to-month">
+                          <option value="">Month</option>
+                          <option value="1">January</option>
+                          <option value="2">February</option>
+                          <option value="3">March</option>
+                          <option value="4">April</option>
+                          <option value="5">May</option>
+                          <option value="6">June</option>
+                          <option value="7">July</option>
+                          <option value="8">August</option>
+                          <option value="9">September</option>
+                          <option value="10">October</option>
+                          <option value="11">November</option>
+                          <option value="12">December</option>
+                        </select>
+                      </div>
+                      <div class="year col-sm-6 col-xs-12">
+                        <select class="form-control" id="date-to-year" name="date-to-year">
+                          <option value="">Year</option>
+                          @for($i = 2018; $i > 1993; $i--)
+                            <option value="{{$i}}">{{$i}}</option>
+                          @endfor
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="col-sm-12 form-group">
+                    <label for="exampleFormControlTextarea1">What did you do there?</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="responsabilities" rows="15"></textarea>
+                    <small><strong>2000</strong> characters remaining</small>
+                </div>
+                <button type="submit" class="btn btn-submit" id="upload-cv-link">Save</button>
               </div>
             </form>
           </div>
