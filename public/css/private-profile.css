@@ -360,8 +360,8 @@
 .looking-for-edit .pound-sign {
     position: absolute;
     z-index: 1;
-    top: 9px;
-    left: 15px;
+    top: 8px;
+    left: 28px;
     font-weight: 700;
 }
 @media screen and (min-width: 768px){
