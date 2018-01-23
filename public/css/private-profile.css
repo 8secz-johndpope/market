@@ -171,6 +171,9 @@
 .img-profile {
     margin-left: auto;
 }
+.back-link{
+	padding: 7.5px 15px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -180,5 +183,8 @@
 	}
 	.alerts{
 		padding-top: 15px;
+	}
+	.back-link {
+    	padding: 30px 15px 7.5px 15px;
 	}
 }
