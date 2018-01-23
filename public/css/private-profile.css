@@ -239,6 +239,14 @@
     right: -1px;
     top: -1px;
 }
+.upload-option:before {
+    content: '';
+    text-indent: -999em;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    margin-right: 15px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
