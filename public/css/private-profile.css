@@ -258,6 +258,16 @@
     height: 44px;
     background-position: -360px -720px;
 }
+.upload-option.onedrive:before {
+    width: 44px;
+    height: 44px;
+    background-position: -720px -90px;
+}
+.upload-option.dropbox:before {
+    width: 44px;
+    height: 44px;
+    background-position: -540px -810px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
