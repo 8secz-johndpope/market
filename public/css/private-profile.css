@@ -292,6 +292,25 @@
     background-repeat: no-repeat;
     background-image: url(/css/icon-sprite.svg);
 }
+.cv-searchable {
+    font-size: 90%;
+    background: #f5f7fa;
+    border-top: 1px solid #d6d6d6;
+    margin: 0 -15px;
+    padding: 15px;
+}
+.cv-searchable {
+    background: 0 0;
+}
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cv-searchable .checkbox {
+    margin: 0;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -340,5 +359,14 @@
 	}
 	.upload-option:before {
 	    margin: 0 30px 0 15px;
+	}
+	.cv-searchable {
+	    background: 0 0;
+	    margin: 0;
+	    padding: 0;
+	    padding-top: 15px;
+	}
+	.cv-searchable .checkbox {
+	    margin-bottom: 0;
 	}
 }

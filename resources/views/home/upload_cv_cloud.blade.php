@@ -26,12 +26,12 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
+        <form action="" method="post">
         <div class="section">
           <header class="section-header">
             <h2 class="title">Select a file to upload</h2>
           </header>
           <div class="content row">
-            <form action="" method="post">
               <div class="upload-options">
                 <ul>
                   <li class="col-xs-12 col-sm-6 cv-upload-option">
@@ -57,7 +57,16 @@
                   </li>
                 </ul>
               </div>
-            </form>
+              <div class="cv-searchable">
+                <div class="checkbox">
+                  <input type="checkbox" id="searchable-checkbox" checked="checked" name="searchable-checkbox">
+                  <label for="searchable-checkbox">
+                    <b>Let recruiters find your CV</b>
+                    <br>
+                    You can modify this at any time in your profile
+                  </label>
+                </div>
+              </div>
           </div>
           <div class="row">
             <div class="col-sm-12">
@@ -77,6 +86,7 @@
               </div>
             </div>
           </div>
+          </form>
         </div>
       </div>
     </div>
