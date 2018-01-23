@@ -133,6 +133,7 @@ Route::post('/user/add/message','MessageController@add_message');
 Route::get('/user/manage/settings', 'HomeController@settings');
 Route::get('/user/create/covers', 'HomeController@create_cover');
 Route::get('/user/create/work-experience', 'HomeController@create_work_experience');
+Route::get('/user/upload/cvs', 'HomeController@upload_cv');
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::get('/user/manage/alerts', 'HomeController@alerts');
 Route::get('/user/manage/applications', 'HomeController@applications');

@@ -2395,4 +2395,8 @@ class HomeController extends BaseController
         $user = Auth::user();
         return view('home.create_work_experience', ['user' => $user]);
     }
+    public function upload_cv(Request $request){
+        $user = Auth::user();
+        return view('home.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves()]);   
+    }
 }
