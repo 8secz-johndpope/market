@@ -45,14 +45,6 @@
                   <span class="red-text" id="no-company" style="display: none">Please add the company name</span>
                   <input type="text" class="form-control" name="company" aria-describedby="emailHelp" placeholder="" required>
                 </div>
-                <div class="form-group">
-                    <label for="category">Select Category</label> <span class="red-text" id="no-category" style="display: none">Please choose a category to your CV</span>
-                    <select class="form-control" name="category" required>
-                        @foreach($jobs as $job)
-                            <option value="{{$job->id}}">{{$job->title}}</option>
-                        @endforeach
-                    </select>
-                </div>
                 <div class="row">
                   <div class="date-from form-group col-sm-8 col-xs-12">
                     <label class="legend" for="date-from-month">From</label>
