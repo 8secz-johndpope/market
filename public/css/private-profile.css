@@ -374,6 +374,21 @@
     padding: 7.5px 15px;
     border-radius: 4px;
 }
+.looking-for-edit .section-locations .locations {
+    list-style: none;
+    margin: 0 0 15px 0;
+    position: relative;
+}
+.looking-for-edit .section-locations .locations li {
+    padding-bottom: 7.5px;
+    padding-right: 60px;
+}
+.looking-for-edit .section-locations .location-remove {
+    color: #0079d6;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
