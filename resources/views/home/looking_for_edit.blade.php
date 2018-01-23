@@ -158,37 +158,39 @@
                 </div>
                 <div class="section-content col-xs-12 col-sm-9">
                   <div class="specialism-sector">
-                    <div>
-                      <div class="specialism">
-                        <div class="specialism-details row">
-                          <div class="data col-xs-6 col-sm-8">
-                            <span class="name">IT & Telecoms</span>
-                            <span>4 roles</span>
-                          </div>
-                          <div class="edit-specialism-actions small col-xs-6 col-sm-4">
-                            <span class="edit">
-                              <i class="glyphicon glyphicon-pencil visible-xs-block"></i>
-                              <span class="hidden-xs">Edit roles</span>
-                            </span>
-                            <span class="remove">
-                              <i class="glyphicon glyphicon-trash"></i>
-                            </span>
-                          </div>
-                          <div class="edit-roles" style="display: none"></div>
-                          <div class="more-specialism-actions">
-                            <button class="add-more-specialism btn btn-inverse">
-                              <i class="glyphicon glyphicon-plus-sign"></i>
-                              <span>Add another sector</span>
-                            </button>
-                          </div>
-                          <div class="add-specialism-container" style="display: none">
-                            <select class="form-control specialisms-list">
-                              <option value>Choose your sector...</option>
-                            </select>
-                            <div style="display: none">
-                              <p class="info">
-                                Select up to 5 roles
-                              </p>
+                    <div class="selected-specialisms">
+                      <div>
+                        <div class="specialism">
+                          <div class="specialism-details row">
+                            <div class="data col-xs-6 col-sm-8">
+                              <span class="name">IT & Telecoms</span>
+                              <span>4 roles</span>
+                            </div>
+                            <div class="edit-specialism-actions small col-xs-6 col-sm-4">
+                              <span class="edit">
+                                <i class="glyphicon glyphicon-pencil visible-xs-block"></i>
+                                <span class="hidden-xs">Edit roles</span>
+                              </span>
+                              <span class="remove">
+                                <i class="glyphicon glyphicon-trash"></i>
+                              </span>
+                            </div>
+                            <div class="edit-roles" style="display: none"></div>
+                            <div class="more-specialism-actions">
+                              <button class="add-more-specialism btn btn-inverse">
+                                <i class="glyphicon glyphicon-plus-sign"></i>
+                                <span>Add another sector</span>
+                              </button>
+                            </div>
+                            <div class="add-specialism-container" style="display: none">
+                              <select class="form-control specialisms-list">
+                                <option value>Choose your sector...</option>
+                              </select>
+                              <div style="display: none">
+                                <p class="info">
+                                  Select up to 5 roles
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
