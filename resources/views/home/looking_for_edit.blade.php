@@ -177,22 +177,20 @@
                             </div>
                             <div class="edit-roles" style="display: none"></div>
                           </div>
-                            
-                            <div class="more-specialism-actions">
-                              <button class="add-more-specialism btn btn-inverse">
-                                <i class="glyphicon glyphicon-plus-sign"></i>
-                                <span>Add another sector</span>
-                              </button>
-                            </div>
-                            <div class="add-specialism-container" style="display: none">
-                              <select class="form-control specialisms-list">
-                                <option value>Choose your sector...</option>
-                              </select>
-                              <div style="display: none">
-                                <p class="info">
-                                  Select up to 5 roles
-                                </p>
-                              </div>
+                          <div class="more-specialism-actions">
+                            <button class="add-more-specialism btn btn-inverse">
+                              <i class="glyphicon glyphicon-plus-sign"></i>
+                              <span>Add another sector</span>
+                            </button>
+                          </div>
+                          <div class="add-specialism-container" style="display: none">
+                            <select class="form-control specialisms-list">
+                              <option value>Choose your sector...</option>
+                            </select>
+                            <div style="display: none">
+                              <p class="info">
+                                Select up to 5 roles
+                              </p>
                             </div>
                           </div>
                         </div>
