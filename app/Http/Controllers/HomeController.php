@@ -2392,6 +2392,6 @@ class HomeController extends BaseController
         return view('home.create_covers', ['user' => $user, 'jobs' => Category::job_leaves()]);   
     }
     public function create_work_experience(Request $request){
-        
+        return view('home.create_work_experience');
     }
 }
