@@ -253,6 +253,11 @@
     height: 44px;
     background-position: -810px -810px;
 }
+.upload-option.googledrive:before {
+    width: 44px;
+    height: 44px;
+    background-position: -360px -720px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
