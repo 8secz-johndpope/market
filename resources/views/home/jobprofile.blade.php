@@ -262,5 +262,9 @@
         console.log('click');
         $("#upload-profile").click();
     });
+    $("#upload-profile").change(function () {
+        console.log("did change");
+        upload_profile();
+    });
 </script>
 @endsection
