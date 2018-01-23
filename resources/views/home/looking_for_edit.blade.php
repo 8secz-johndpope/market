@@ -34,7 +34,7 @@
             <form action="" method="post">
               <input name="redirect" type="hidden" value="/job/profile/edit">
               {{ csrf_field() }}
-              <section class="section-job-title">
+              <section class="section-job-title row">
                 <div class="header col-xs-12 col-sm-3">
                   <h3 class="title">Desired Job</h3>
                 </div>
@@ -55,7 +55,7 @@
                   </fieldset>
                 </div>
               </section>
-              <section class="section-salary">
+              <section class="section-salary row">
                 <div class="header col-xs-12 col-sm-3">
                   <h3 class="title">Salary</h3>
                 </div>
@@ -77,7 +77,7 @@
                   </fieldset>
                 </div>
               </section>
-              <section class="section-locations">
+              <section class="section-locations row">
                 <div class="header col-xs-12 col-sm-3">
                   <h3 class="title">Preferred work location</h3>
                 </div>
@@ -106,7 +106,7 @@
                   </div>
                 </div>
               </section>
-              <section class="section-job-type">
+              <section class="section-job-type row">
                 <div class="header col-xs-12 col-sm-3">
                   <h3 class="title">Job type</h3>
                 </div>
@@ -134,7 +134,7 @@
                   </fieldset>
                 </div>
               </section>
-              <section class="section-hours">
+              <section class="section-hours row">
                 <div class="header col-xs-12 col-sm-3">
                   <h3 class="title">Hours</h3>
                 </div>
@@ -151,7 +151,7 @@
                   </fieldset>
                 </div>
               </section>
-              <section class="section-specialisms">
+              <section class="section-specialisms row">
                 <div class="header col-xs-12 col-sm-3">
                   <h3 class="title">Sectors</h3>
                   <small class="info">You may add up to 10 sectors</small>
