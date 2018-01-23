@@ -227,6 +227,18 @@
     margin-top: 10px!important;
     margin-bottom: 0!important;
 }
+.upload-options input[type=file] {
+    position: absolute;
+    border: solid transparent;
+    opacity: 0;
+    direction: ltr;
+    cursor: pointer;
+    margin: 0;
+    font-size: 50px;
+    border-width: 0;
+    right: -1px;
+    top: -1px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
