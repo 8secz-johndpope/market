@@ -431,6 +431,12 @@
     max-width: 181px;
     margin-right: 15px;
 }
+.location-container .location-link {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
