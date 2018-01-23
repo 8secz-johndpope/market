@@ -236,8 +236,9 @@
     margin: 0;
     font-size: 50px;
     border-width: 0;
-    right: -1px;
+    right: 7px;
     top: -1px;
+    height: 85%;
 }
 .upload-option:before {
     content: '';
