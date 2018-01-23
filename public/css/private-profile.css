@@ -311,6 +311,15 @@
 .cv-searchable .checkbox {
     margin: 0;
 }
+.cv-searchable>.checkbox>input+label {
+    padding-left: 32px;
+}
+input[type=checkbox]{
+    margin: 8px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
