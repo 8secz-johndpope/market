@@ -389,6 +389,12 @@
     position: absolute;
     right: 0;
 }
+.specialism-selector .selected-specialisms .data {
+    padding: 15px 15px 15px 0;
+}
+.specialism-selector .selected-specialisms .name {
+    font-weight: 600;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -457,5 +463,8 @@
 	}
 	.looking-for-edit .salary {
     	max-width: 150px;
+	}
+	.specialism-selector .selected-specialisms .data {
+	    padding: 0;
 	}
 }
