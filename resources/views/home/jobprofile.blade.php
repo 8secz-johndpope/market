@@ -216,7 +216,7 @@
                         <h2 class="title">Work experience</h2>
                     </header>
                     <div class="content">
-                        <a class="add-first">
+                        <a class="add-first" href="/user/create/work-experience">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add work experience
                         </a>
