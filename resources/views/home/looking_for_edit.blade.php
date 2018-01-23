@@ -249,6 +249,7 @@
           console.log(results);
           $.each(arrAddress, function(i, address_component){
             if(address_component.types[0] == 'locality'){
+              $('#location').val(address_component.address_components[0].long_name);
               console.log("City: " + address_component.address_components[0].long_name);
             }
           })
