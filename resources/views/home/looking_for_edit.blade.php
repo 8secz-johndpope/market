@@ -81,7 +81,7 @@
                 <div class="header col-xs-12 col-sm-3">
                   <h3 class="title">Preferred work location</h3>
                 </div>
-                <div class="section-content col-xs-12 col-sm-6">
+                <div class="section-content col-xs-12 col-sm-9">
                   <div class="locations-selector">
                     <ul class="locations">
                       <li>
@@ -132,6 +132,52 @@
                       <label for="is-graduate">Graduate Jobs (Select if you are a recent graduate)</label>
                     </div>
                   </fieldset>
+                </div>
+              </section>
+              <section class="section-hours">
+                <div class="header col-xs-12 col-sm-3">
+                  <h3 class="title">Hours</h3>
+                </div>
+                <div class="section-content col-xs-12 col-sm-9">
+                  <fieldset class="form-field">
+                    <div class="checkbox">
+                      <input type="checkbox" name="is-full-time" id="is-full-time">
+                      <label for="is-full-time">Full-time</label>
+                    </div>
+                    <div class="checkbox">
+                      <input type="checkbox" name="is-part-time" id="is-part-time">
+                      <label for="is-part-time">Part-time</label>
+                    </div>
+                  </fieldset>
+                </div>
+              </section>
+              <section class="section-specialisms">
+                <div class="header col-xs-12 col-sm-3">
+                  <h3 class="title">Sectors</h3>
+                  <small class="info">You may add up to 10 sectors</small>
+                </div>
+                <div class="section-content col-xs-12 col-sm-9">
+                  <div class="specialism-sector">
+                    <div>
+                      <div class="specialism">
+                        <div class="specialism-details row">
+                          <div class="data col-xs-6 col-sm-8">
+                            <span class="name">IT & Telecoms</span>
+                            <span>4 roles</span>
+                          </div>
+                          <div class="edit-specialism-actions small col-xs-6 col-sm-4">
+                            <span class="edit">
+                              <i class="glyphicon glyphicon-pencil visible-xs-block"></i>
+                              <span class="hidden-xs">Edit roles</span>
+                            </span>
+                            <span class="remove">
+                              <i class="glyphicon glyphicon-trash"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </section>
               <div class="action-container">
