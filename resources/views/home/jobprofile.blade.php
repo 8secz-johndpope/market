@@ -48,6 +48,7 @@
                         <a href="#" id="change-avatar">
                             <div class="edit-avatar">
                                 <input type="file" id="upload-profile"  style="display: none">
+                                <input type="hidden" name="image" value="{{$user->image}}" id="image">
                                 <i class="glyphicon glyphicon-edit"></i>
                             </div>
                         </a>
