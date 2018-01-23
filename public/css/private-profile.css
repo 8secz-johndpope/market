@@ -339,6 +339,18 @@
 .looking-for-edit .header {
     padding: 0;
 }
+.twitter-typeahead {
+    display: block!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 2.8rem;
+    margin: 0;
+    background: #fff;
+}
+.looking-for-edit .form-field .validation {
+    display: none;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
