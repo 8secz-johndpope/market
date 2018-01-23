@@ -194,6 +194,22 @@
 .current-role {
     margin-top: 30px;
 }
+.upload-options li {
+    background-color: transparent;
+    color: #4990c7;
+    border: 1px solid #4990c7;
+    -webkit-transition: border-color .3s ease-in,color .2s ease-in;
+    transition: border-color .3s ease-in,color .2s ease-in;
+    border: 1px solid;
+    border-radius: 4px;
+    margin: 15px 0;
+    position: relative;
+    cursor: pointer;
+    line-height: 0;
+}
+.upload-options>ul li:first-child {
+    margin-top: 0!important;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -211,5 +227,25 @@
 	    border-radius: 4px;
 	    border: 1px solid #d6d6d6;
 	    padding: 30px;
+	}
+	.upload-options li {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    overflow: hidden;
+	    -webkit-tap-highlight-color: transparent;
+	    margin: 0;
+	    padding-left: 0!important;
+	    padding-right: 0!important;
+	    background: 0 0!important;
+	    position: relative;
+	    border: none;
+	    -webkit-transition: none!important;
+	    transition: none!important;
+	}
+	.upload-options li:nth-child(odd) {
+	    clear: both;
+	    padding-left: 0!important;
+	    padding-right: 7.5px!important;
 	}
 }
