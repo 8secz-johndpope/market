@@ -257,6 +257,7 @@
 -->
 <script>
     $('#edit-avatar').click(function (e) {
+        e.preventDefault();
         $("#upload-profile").click();
     });
 </script>
