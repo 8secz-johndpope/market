@@ -41,18 +41,20 @@
             </div>
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="wrapper-img-profile">
-                        <figure>
-                            <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="img-responsive img-profile">
-                        </figure>
-                        <a href="#" id="change-avatar">
-                            <div class="edit-avatar">
-                                <input type="file" id="upload-profile"  style="display: none">
-                                <input type="hidden" name="image" value="{{$user->image}}" id="image">
-                                <i class="glyphicon glyphicon-edit"></i>
-                            </div>
-                        </a>
-                    </div>
+                    <form>
+                        <div class="wrapper-img-profile">
+                            <figure>
+                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="img-responsive img-profile">
+                            </figure>
+                            <a href="#" id="change-avatar">
+                                <div class="edit-avatar">
+                                    <input type="file" id="upload-profile"  style="display: none">
+                                    <input type="hidden" name="image" value="{{$user->image}}" id="image">
+                                    <i class="glyphicon glyphicon-edit"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </form>
                 </div>
                 <div class="col-sm-9">
                     <div class="wrapper-details-profile">
