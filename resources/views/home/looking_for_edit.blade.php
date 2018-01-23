@@ -87,7 +87,7 @@
                       <li>
                         <span class="location-name">London, South East England</span>
                         <input type="hidden" name="prefferedlocation" id="prefferedlocation">
-                        <span class="locations-remove small">Remove</span>
+                        <span class="location-remove small">Remove</span>
                       </li>
                     </ul>
                     <div class="add-button">
