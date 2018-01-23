@@ -38,7 +38,7 @@
                     <span class="upload-option device">
                       From your device
                     </span>
-                    <input type="file" name="cv" class="file-input">
+                    <input type="file" name="cv" class="file-input" id="upload-cv">
                   </li>
                   <li class="col-xs-12 col-sm-6 cv-upload-option">
                     <span class="upload-option googledrive">
@@ -84,6 +84,9 @@
                       @endforeach
                   </select>
               </div>
+            </div>
+            <div class="col-sm-12">
+              <a class="btn btn-submit" id="upload-cv-link">Upload CV</a>
             </div>
           </div>
           </form>
