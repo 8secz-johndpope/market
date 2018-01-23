@@ -33,7 +33,7 @@
           </header>
           <div class="content">
               <form action="/user/covers/add" method="post">
-                  <input name="redirect" type="hidden" value="/user/manage/details">
+                  <input name="redirect" type="hidden" value="/job/profile/edit">
                   {{ csrf_field() }}
               <div class="form-group">
                   <label for="title">Title</label> 
@@ -51,7 +51,7 @@
               </div>
                   <div class="form-group">
                       <label for="exampleFormControlTextarea1">Cover Letter</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" name="cover" rows="3"></textarea>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name="cover" rows="15"></textarea>
                   </div>
               <button type="submit" class="btn btn-submit" id="upload-cv-link">Add Cover</button>
               </form>
