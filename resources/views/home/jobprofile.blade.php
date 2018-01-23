@@ -254,6 +254,7 @@
 -->
 <script>
     $('.edit-avatar').click(function (e) {
+        console.log('make click');
         $("#upload-profile").click();
     });
 </script>
