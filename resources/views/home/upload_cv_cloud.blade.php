@@ -51,7 +51,7 @@
                     </span>
                   </li>
                   <li class="col-xs-12 col-sm-6 cv-upload-option">
-                    <span class="upload-option Dropbox">
+                    <span class="upload-option dropbox">
                       Dropbox
                     </span>
                   </li>
