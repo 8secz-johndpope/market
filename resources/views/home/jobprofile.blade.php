@@ -45,7 +45,7 @@
                         <figure>
                             <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="img-responsive img-profile">
                         </figure>
-                        <a href="#" class="change-avatar">
+                        <a href="#" id="change-avatar">
                             <div class="edit-avatar">
                                 <input type="file" id="upload-profile"  style="display: none">
                                 <i class="glyphicon glyphicon-edit"></i>
@@ -253,8 +253,7 @@
     </script>
 -->
 <script>
-    $('.edit-avatar').click(function (e) {
-        console.log('make click');
+    $('#edit-avatar').click(function (e) {
         $("#upload-profile").click();
     });
 </script>
