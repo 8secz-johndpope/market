@@ -336,6 +336,9 @@
     margin-bottom: 0;
     font-size: 2rem;
 }
+.looking-for-edit .header {
+    padding: 0;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -397,5 +400,9 @@
 	.looking-for-edit .header {
 	    text-align: right;
 	    padding-right: 15px;
+	}
+	.looking-for-edit .header {
+    	text-align: right;
+    	padding-right: 15px;
 	}
 }
