@@ -38,7 +38,7 @@
                 <div class="form-group">
                     <label for="title">Job title</label> 
                     <span class="red-text" id="no-title" style="display: none">Please add a job title</span>
-                    <input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="Cover for Part Time Job" required>
+                    <input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="" required>
                 </div>
                 <div class="form-group">
                   <label for="title">Company</label> 
@@ -114,7 +114,7 @@
               </div>
                 <div class="col-sm-12 form-group">
                     <label for="exampleFormControlTextarea1">What did you do there?</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" name="responsabilities" rows="15"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="responsabilities" rows="5"></textarea>
                     <small><strong>2000</strong> characters remaining</small>
                 </div>
                 <div class="form-group col-xs-12">
