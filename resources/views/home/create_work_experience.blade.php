@@ -41,7 +41,7 @@
                     <input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="Cover for Part Time Job" required>
                 </div>
                 <div class="form-group">
-                  <label for="title">Job title</label> 
+                  <label for="title">Company</label> 
                   <span class="red-text" id="no-company" style="display: none">Please add the company name</span>
                   <input type="text" class="form-control" name="company" aria-describedby="emailHelp" placeholder="" required>
                 </div>
