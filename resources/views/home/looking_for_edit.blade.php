@@ -60,7 +60,7 @@
                   <h3 class="title">Salary</h3>
                 </div>
                 <div class="section-content col-xs-12 col-sm-6">
-                  <small class="info">Minimum salary (please enter at least one type of salary)</small>
+                  <p class="small">Minimum salary (please enter at least one type of salary)</p>
                   <fieldset class="form-field col-xs-12 col-sm-6">
                     <span class="pound-sign">£</span>
                     <input class="form-control salary" type="text" name="minimum-salary" id="minimum-salary" placeholder="per annum">
