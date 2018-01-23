@@ -136,13 +136,14 @@
 }
 .edit-avatar{
 	position: absolute;
-	height: 30px;
-	width: 30px;
-	bottom: -8px;
-    right: -8px;
-	background: #2866f6;
-	padding: 6px 9px;
-	border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    bottom: -11px;
+    right: -12px;
+    background: #2866f6;
+    padding: 9px 12px;
+    border-radius: 50%;
+    font-size: 18px;
 }
 .edit-avatar a{
 	color: #fff;
