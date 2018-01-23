@@ -102,7 +102,9 @@
                           <span class="twitter-typehead inline">
                             <input type="text" name="location" id="location" class="form-control tt-input">
                           </span>
-                          <a href="#" class="location-link glyphicon glyphicon-map-marker"></a>
+                          <a href="#" class="location-link">
+                            <i class="glyphicon glyphicon-map-marker"></i>
+                          </a>
                         </div>
                         <button btn btn-secondary btn-inline>Add</button>
                       </div>
