@@ -408,6 +408,15 @@
 .looking-for-edit .checkbox input[type=checkbox] {
     margin: 3px;
 }
+.specialism-selector .edit-specialism-actions .edit, .specialism-selector .edit-specialism-actions .remove {
+    display: inline-block;
+    cursor: pointer;
+    padding: 15px;
+    vertical-align: middle;
+}
+.specialism-selector .edit-specialism-actions .edit {
+    color: #0079d6;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -484,5 +493,8 @@
 	    display: inline-block;
 	    width: auto;
 	    min-width: 170px;
+	}
+	.specialism-selector .edit-specialism-actions .edit, .specialism-selector .edit-specialism-actions .remove {
+	    padding: 0 7.5px;
 	}
 }
