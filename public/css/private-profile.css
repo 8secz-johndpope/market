@@ -278,19 +278,19 @@
     background-size: 1230px 1230px;
     -webkit-background-size: 1230px 1230px;
     background-repeat: no-repeat;
-    background-image: url(/resources/images/reedstrap/icon-sprite-1516016798551.svg);
+    background-image: url(/css/icon-sprite.svg);
 }
 .upload-option.onedrive:before {
     background-size: 1230px 1230px;
     -webkit-background-size: 1230px 1230px;
     background-repeat: no-repeat;
-    background-image: url(/resources/images/reedstrap/icon-sprite-1516016798551.svg);
+    background-image: url(/css/icon-sprite.svg);
 }
 .upload-option.dropbox:before {
     background-size: 1230px 1230px;
     -webkit-background-size: 1230px 1230px;
     background-repeat: no-repeat;
-    background-image: url(/resources/images/reedstrap/icon-sprite-1516016798551.svg);
+    background-image: url(/css/icon-sprite.svg);
 }
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
