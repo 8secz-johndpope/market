@@ -257,7 +257,7 @@
     </script>
 -->
 <script>
-    $('#edit-avatar').click(function (e) {
+    $('.edit-avatar').click(function (e) {
         e.preventDefault();
         console.log('click');
         $("#upload-profile").click();
