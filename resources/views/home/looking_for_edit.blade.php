@@ -106,7 +106,7 @@
                             <i class="glyphicon glyphicon-map-marker"></i>
                           </a>
                         </div>
-                        <button btn btn-secondary btn-inline>Add</button>
+                        <button class="btn btn-secondary btn-inline">Add</button>
                       </div>
                       <div class="validation">
                         <span class="field-validation-error">Sorry, we didn't recognise that town, please try again.</span>
