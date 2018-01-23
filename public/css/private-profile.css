@@ -20,7 +20,7 @@
     background: #EBEBEB;
 }
 .container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability, .container-cover-letter, .container-work-experience{
-	padding: 60px 0;
+	padding: 70px 0;
 }
 .template-content {
     height: 300px;
