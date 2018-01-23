@@ -441,7 +441,7 @@
     margin-top: -8px;
 }
 .looking-for-edit .section-locations .location-link {
-    right: 15px;
+    right: 3px;
     top: 18px;
 }
 @media screen and (min-width: 768px){
@@ -534,7 +534,7 @@
 	    margin-top: 3px;
 	}
 	.looking-for-edit .section-locations .location-link {
-	    top: 7.5px;
+	    top: 3.5px;
 	}
 }
 @media screen and (min-width: 1025px){

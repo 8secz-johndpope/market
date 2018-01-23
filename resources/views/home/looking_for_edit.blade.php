@@ -219,10 +219,46 @@
   </div>
 </div>
 <script>
+  var geocoder;
   $('.add-button button').click(function(e){
     e.preventDefault();
     $(this).parent().hide();
     $('.add-location').show();
   });
+  $('.location-link').click(function(e){
+    e.preventDefault();
+    if(navigator.geolocation)}{
+      navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+    }
+  });
+  function errorFunction(){
+    console.log("Geocoder Failed");
+  }
+  function successFunction(position){
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    codeLatLng(lat, lng);
+  }
+  function codeLatLng(lat, lng){
+    geocoder = new google.maps.Geocoder();
+    geocoder.geocode({latLng: latlng}, function(results, status){
+      if(status == google.maps.GeocoderStatus.OK){
+        if(results[1]){
+          var arrAddress = results;
+          console.log(results);
+          $.each(arrAddress, function(i, address_component){
+            if(address_component.types[0] == 'locality'){
+              console.log("City: " + address_component.address_components[0].long_name);
+            }
+          })
+        }
+        else{
+          console.log('no results found');
+        }
+      }else{
+        console.log('Geocoder failed due to:' + status);
+      }
+    });
+  }
 </script>
 @endsection
