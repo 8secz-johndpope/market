@@ -2387,4 +2387,7 @@ class HomeController extends BaseController
         $user = Auth::user();
         return view('home.public-profile', ['user' => $user]);
     }
+    public function create_cover(Request $request){
+        $user = Auth::user();   
+    }
 }

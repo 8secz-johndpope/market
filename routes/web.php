@@ -131,7 +131,7 @@ Route::post('/user/message/bsend','MessageController@bsend');
 Route::post('/user/message/rsend','MessageController@rsend');
 Route::post('/user/add/message','MessageController@add_message');
 Route::get('/user/manage/settings', 'HomeController@settings');
-
+Route::get('/user/create/covers', 'HomeController@create_cover');
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::get('/user/manage/alerts', 'HomeController@alerts');
 Route::get('/user/manage/applications', 'HomeController@applications');
@@ -155,7 +155,6 @@ Route::post('/user/cards/add', 'HomeController@addcard');
 Route::post('/user/accounts/add', 'HomeController@add_bank_account');
 Route::post('/user/addresses/add', 'HomeController@add_address');
 Route::post('/user/covers/add', 'HomeController@add_cover');
-
 Route::post('/user/jobs/apply', 'HomeController@apply');
 
 Route::get('/user/manage/order', 'HomeController@order');
