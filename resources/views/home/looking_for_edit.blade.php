@@ -98,6 +98,13 @@
                     </div>
                     <div class="form-field add-location" style="display: none">
                       <div class="location-container">
+                        <div class="inline-input inline">
+                          <span class="twitter-typehead inline">
+                            <input type="text" name="location" id="location" class="form-control tt-input">
+                          </span>
+                          <a href="#" class="location-link glyphicon glyphicon-map-marker">
+                        </div>
+                        <button btn btn-secondary btn-inline>Add</button>
                       </div>
                       <div class="validation">
                         <span class="field-validation-error">Sorry, we didn't recognise that town, please try again.</span>
@@ -209,4 +216,11 @@
     </div>
   </div>
 </div>
+<script>
+  $('.add-button button').click(function(e){
+    e.preventDefault();
+    $(this).parent().hide();
+    $('.add-location').show();
+  });
+</script>
 @endsection
