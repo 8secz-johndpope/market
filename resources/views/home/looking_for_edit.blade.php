@@ -227,7 +227,7 @@
   });
   $('.location-link').click(function(e){
     e.preventDefault();
-    if(navigator.geolocation)}{
+    if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
     }
   });
