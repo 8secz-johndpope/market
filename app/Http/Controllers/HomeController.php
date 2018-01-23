@@ -2389,6 +2389,6 @@ class HomeController extends BaseController
     }
     public function create_cover(Request $request){
         $user = Auth::user();
-        return view('home.create_covers', ['user' => $user]);   
+        return view('home.create_covers', ['user' => $user, 'jobs' => Category::job_leaves()]);   
     }
 }
