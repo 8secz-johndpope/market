@@ -293,4 +293,7 @@
 	.upload-options ul {
 	    margin: 30px auto!important;
 	}
+	.upload-option:before {
+	    margin: 0 30px 0 15px;
+	}
 }
