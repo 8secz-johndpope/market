@@ -334,7 +334,7 @@
 }
 .looking-for-edit section[class^=section-] .title {
     margin-bottom: 0;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
