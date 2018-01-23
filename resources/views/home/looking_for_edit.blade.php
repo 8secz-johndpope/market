@@ -157,7 +157,7 @@
                   <small>You may add up to 10 sectors</small>
                 </div>
                 <div class="section-content col-xs-12 col-sm-9">
-                  <div class="specialism-sector">
+                  <div class="specialism-selector">
                     <div class="selected-specialisms">
                       <div>
                         <div class="specialism">
@@ -176,6 +176,8 @@
                               </span>
                             </div>
                             <div class="edit-roles" style="display: none"></div>
+                          </div>
+                            
                             <div class="more-specialism-actions">
                               <button class="add-more-specialism btn btn-inverse">
                                 <i class="glyphicon glyphicon-plus-sign"></i>
