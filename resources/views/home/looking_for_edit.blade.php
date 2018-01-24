@@ -195,7 +195,7 @@
                             <ul class="role row">
                               @foreach($sectorPreferred->children as $subSector)
                                 <li class="form-field checkbox col-sm-6 col-xs-12">
-                                  <input type="checkbox" name="edit-subsector-{{$subSector->id}}"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" checked="{{in_array($subSector->id, $idsSubSectorPreferred) ? 'true': 'false'}}">
+                                  <input type="checkbox" name="edit-subsector-{{$subSector->id}}"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $idsSubSectorPreferred) ? 'checked': ''}}>
                                   <label for="edit-subsector-{{$subSector->id}}">
                                     {{$subSector->title}}
                                   </label>
