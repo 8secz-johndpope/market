@@ -204,6 +204,11 @@
                                 Select up to 5 roles
                               </p>
                             </div>
+                            <div>
+                              <div class="add-specialism-actions">
+                                <button class="cancel btn btn-link btn-inline">Cancel</button>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
