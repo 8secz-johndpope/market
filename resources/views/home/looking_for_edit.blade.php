@@ -334,8 +334,9 @@
   $(document).on('click', '.remove', function(){
     $(this).closest('.specialism').remove();
   });
-  $('.add-specialism-container cancel').click(function(e){
+  $('.add-specialism-container .cancel').click(function(e){
     $('.add-specialism-container').hide();
+    $('.specialisms-list').next().next().show();
   });
   function loadSubSectors(){
     sectors = [];
