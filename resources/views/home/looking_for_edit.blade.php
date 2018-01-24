@@ -197,7 +197,7 @@
                               <option value>Choose your sector...</option>
                               @foreach($jobChildren as $job)
                                 <option value={{$job->id}}>{{$job->title}}</option>
-                              @endfor
+                              @endforeach
                             </select>
                             <div style="display: none">
                               <p class="info">
