@@ -445,6 +445,10 @@
     top: 18px;
     font-size: 20px;
 }
+.btn-secondary {
+    background: #ff9d2c;
+    color: #fff;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
