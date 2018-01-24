@@ -336,7 +336,6 @@
   });
   $('.add-specialism-container cancel').click(function(e){
     $('.add-specialism-container').hide();
-    $('.specialisms-list').next().next().show();
   });
   function loadSubSectors(){
     sectors = [];
