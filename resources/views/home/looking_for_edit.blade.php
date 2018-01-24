@@ -339,7 +339,7 @@
     $('.add-specialism-container').hide();
     $('.specialisms-list').next().next().show();
     $('.more-specialism-actions').show();
-    $('.specialisms-list').next().show();
+    $('.specialisms-list').next().hide();
   });
   function loadSubSectors(){
     sectors = [];
