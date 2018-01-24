@@ -173,7 +173,9 @@
                           <div class="specialism-details row">
                             <div class="data col-xs-6 col-sm-8">
                               <span class="name">{{$sectorPreferred->title}}</span>
+                              (
                               <span>{{count($idsSubSectorPreferred)}} roles</span>
+                              )
                             </div>
                             <div class="edit-specialism-actions small col-xs-6 col-sm-4">
                               <span class="edit">
