@@ -338,6 +338,7 @@
     e.preventDefault();
     $('.add-specialism-container').hide();
     $('.specialisms-list').next().next().show();
+    $('.more-specialism-actions').show();
   });
   function loadSubSectors(){
     sectors = [];
