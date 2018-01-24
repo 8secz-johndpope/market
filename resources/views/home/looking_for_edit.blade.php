@@ -228,6 +228,7 @@
 </div>
 <script>
   var geocoder;
+  var sectors;
   $('.add-button button').click(function(e){
     e.preventDefault();
     $(this).parent().hide();
@@ -244,7 +245,17 @@
     var parent = $(this).parent();
     parent.hide();
     parent.next().show();
-  })
+  });
+  function loadSubSectors(){
+    sectors = [];
+    @foreach($jobChildren as $job)
+      sectors[{{$job->id}}] =[
+      @foreach($job->children as $subSector)
+        { id: {{$subSector->id}}, title : {{$subSector->title}} },
+      @endforeach
+      ]                       
+    @endforeach
+  }
   function errorFunction(){
     console.log("Geocoder Failed");
   }
