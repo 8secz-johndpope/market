@@ -311,7 +311,7 @@
     e.preventDefault();
     $(this).parent().remove();
   })
-  $('.location-container button').click(function(e){
+  $('.add-location button').click(function(e){
     e.preventDefault();
     var location = $("#pac-input").val();
     var text = '<li>\n' +
@@ -320,6 +320,9 @@
                     + '<span class="location-remove small">Remove</span>\n'
                   +'</li>';
     $('.locations').append(text);
+    $("#pac-input").val('');
+    $(this).closest('.add-location').hide();
+    $('.add-button').show();
   });
 
   function loadSubSectors(){
