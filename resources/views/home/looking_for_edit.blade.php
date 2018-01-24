@@ -305,6 +305,18 @@
     $('.more-specialism-actions').show();
     $('.edit-specialism-actions').show();
   });
+  $("#pac-input").autocomplete({
+      paramName :'q',
+      serviceUrl: '/api/lsuggest',
+      onSelect: function (suggestion) {
+          $("#location_slug").val(suggestion.slug);
+      }
+  });
+  $('.location-container button').click(function(e){
+    var location = $("#pac-input").val();
+    console.log(location);
+  });
+
   function loadSubSectors(){
     sectors = [];
     @foreach($jobChildren as $job)
