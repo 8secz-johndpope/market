@@ -314,7 +314,12 @@
   $('.location-container button').click(function(e){
     e.preventDefault();
     var location = $("#pac-input").val();
-    console.log(location);
+    var text = '<li>\n' +
+                    '<span class="location-name">' + location + '</span>\n' 
+                    + '<input type="hidden" name="prefferedlocation" id="prefferedlocation">\n'
+                    + '<span class="location-remove small">Remove</span>\n'
+                  +'</li>';
+    $('.locations').append(text);
   });
 
   function loadSubSectors(){
