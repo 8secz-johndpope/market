@@ -238,7 +238,7 @@
                             <div class="add-specialism-actions">
                               <p class="warning full" style="display: none">You have selected a maximum number of roles.</p>
                               <p class="warning minimum">You haven't selected enough roles, yet.</p>
-                              <button class="add btn btn-inverse btn-inline disabled">Save roles</button>
+                              <button class="add btn btn-inverse btn-inline disabled" type="button">Save roles</button>
                               <button class="cancel btn btn-link btn-inline">Cancel</button>
                             </div>
                           </div>
@@ -335,6 +335,7 @@
     $(this).closest('.specialism').remove();
   });
   $('.add-specialism-container .cancel').click(function(e){
+    e.preventDefault();
     $('.add-specialism-container').hide();
     $('.specialisms-list').next().next().show();
   });
