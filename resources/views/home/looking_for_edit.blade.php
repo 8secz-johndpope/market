@@ -289,6 +289,7 @@
       console.log(sectorId);
       if(sectorId != ""){
         $('.specialisms-list').next().show();
+        $('.specialisms-list').next().next().hide();
         loadSubSectors();
         var sectorChildren = sectors[sectorId];
         var text = "";
