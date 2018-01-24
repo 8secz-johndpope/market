@@ -261,7 +261,7 @@
         +"<label for=\"add-subsector-"+ sectorChildren[i].id +"\">" + sectorChildren[i].title + "</label>\n"
         +"</li>";
       }
-      $('.roles').text(text);
+      $('.roles').html(text);
     })
   });
   function loadSubSectors(){
