@@ -234,7 +234,7 @@
       navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
     }
   });
-  $('more-specialism-actions').click(function(e){
+  $('.more-specialism-actions button').click(function(e){
     e.preventDefault();
     var parent = $(this).parent();
     parent.hide();
