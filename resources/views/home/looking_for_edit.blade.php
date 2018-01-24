@@ -195,6 +195,9 @@
                           <div class="add-specialism-container" style="display: none">
                             <select class="form-control specialisms-list">
                               <option value>Choose your sector...</option>
+                              @foreach($jobChildren as $job)
+                                <option value={{$job->id}}>{{$job->title}}</option>
+                              @endfor
                             </select>
                             <div style="display: none">
                               <p class="info">
@@ -231,6 +234,12 @@
       navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
     }
   });
+  $('more-specialism-actions').click(function(e){
+    e.preventDefault();
+    var parent = $(this).parent();
+    parent.hide();
+    parent.next().show();
+  })
   function errorFunction(){
     console.log("Geocoder Failed");
   }
