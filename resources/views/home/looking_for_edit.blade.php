@@ -200,7 +200,7 @@
                                     {{$subSector->title}}
                                   </label>
                                 </li>
-                              @endfor
+                              @endforeach
                             </ul>
                             <span class="role-action">
                               <button class="update btn btn-inverse btn-inline">
