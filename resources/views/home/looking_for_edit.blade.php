@@ -233,7 +233,7 @@
                             <p class="info-sector">
                               Select up to 5 roles
                             </p>
-                            <ul class="roles list-unstyled">
+                            <ul class="roles list-unstyled row">
                             </ul>
                             <div class="add-specialism-actions">
                               <p class="warning full" style="display: none">You have selected a maximum number of roles.</p>
@@ -333,6 +333,10 @@
   });
   $(document).on('click', '.remove', function(){
     $(this).closest('.specialism').remove();
+  });
+  $('.add-specialism-container cancel').click(function(e){
+    $('.add-specialism-container').hide();
+    $('.specialisms-list').next().next().show();
   });
   function loadSubSectors(){
     sectors = [];
