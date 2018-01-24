@@ -312,7 +312,12 @@
           $("#location_slug").val(suggestion.slug);
       }
   });
+  $('.location-remove').click(function(e){
+    e.preventDefault();
+    $(this).parent().remove();
+  })
   $('.location-container button').click(function(e){
+    e.preventDefault();
     var location = $("#pac-input").val();
     console.log(location);
   });
