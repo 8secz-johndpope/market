@@ -305,13 +305,6 @@
     $('.more-specialism-actions').show();
     $('.edit-specialism-actions').show();
   });
-  $("#pac-input").autocomplete({
-      paramName :'q',
-      serviceUrl: '/api/lsuggest',
-      onSelect: function (suggestion) {
-          $("#location_slug").val(suggestion.slug);
-      }
-  });
   $('.location-remove').click(function(e){
     e.preventDefault();
     $(this).parent().remove();
