@@ -192,16 +192,24 @@
                             <p class="warning minimum">
                               You haven't selected enough roles, yet.
                             </p>
-                            <ul class="role">
-                              <span class="role-action">
-                                <button class="update btn btn-inverse btn-inline">
-                                  Update
-                                </button>
-                                <button class="cancel btn btn-link btn-inline">
-                                  Cancel
-                                </button>
-                              </span>
-                            </ul
+                            <ul class="role row">
+                              @foreach($sectorPreferred->children as $subSector)
+                                <li class="form-field checkbox col-sm-6 col-xs-12">
+                                  <input type="checkbox" name="edit-subsector-{{$subSector->id}}"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" checked="{{in_array($subSector->id, $idsSubSectorPreferred) ? 'true': ''}}">
+                                  <label for="edit-subsector-{{$subSector->id}}">
+                                    {{$subSector->title}}
+                                  </label>
+                                </li>
+                              @endfor
+                            </ul>
+                            <span class="role-action">
+                              <button class="update btn btn-inverse btn-inline">
+                                Update
+                              </button>
+                              <button class="cancel btn btn-link btn-inline">
+                                Cancel
+                              </button>
+                            </span>
                           </div>
                         </div>
                         <div class="more-specialism-actions">
