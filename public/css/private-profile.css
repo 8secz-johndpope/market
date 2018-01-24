@@ -449,6 +449,10 @@
     background: #ff9d2c;
     color: #fff;
 }
+.specialism-selector .add-specialism-container .info-sector {
+    margin: 15px 0;
+    font-weight: 600;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;

@@ -230,7 +230,7 @@
                             @endforeach
                           </select>
                           <div style="display: none">
-                            <p class="info">
+                            <p class="info-sector">
                               Select up to 5 roles
                             </p>
                             <ul class="roles list-unstyled">
