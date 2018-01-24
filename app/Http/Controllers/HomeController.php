@@ -2401,7 +2401,7 @@ class HomeController extends BaseController
     }
     public function looking_for(Request $request){
         $user = Auth::user();
-        $jobChildren = Category::find(4000000000)->children();
+        $jobChildren = Category::find(4000000000)->children;
         var_dump($jobChildren);
         return view('home.looking_for_edit', ['user' => $user, 'jobChildren' => $jobChildren]);
     }
