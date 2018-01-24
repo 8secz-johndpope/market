@@ -296,7 +296,7 @@
       }
     })
   });
-  $('.edit').click(function(e){
+  $(document).on('click', '.edit', function(e){
     $('.edit-roles').show();
     $(this).parent().hide();
     $('.more-specialism-actions').hide();
@@ -324,7 +324,9 @@
     $(this).closest('.add-location').hide();
     $('.add-button').show();
   });
-
+  $(document).on('click', '.remove', function(){
+    $(this).closest('.specialism').remove();
+  });
   function loadSubSectors(){
     sectors = [];
     @foreach($jobChildren as $job)
