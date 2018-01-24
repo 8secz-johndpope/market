@@ -2402,6 +2402,8 @@ class HomeController extends BaseController
     public function looking_for(Request $request){
         $user = Auth::user();
         $jobChildren = Category::find(4000000000)->children;
-        return view('home.looking_for_edit', ['user' => $user, 'jobChildren' => $jobChildren]);
+        $sectorPreferred = Category::find(4140000000);
+        $idsSubSectorPreferred = [4140800000, 4141700000, 4140500000];
+        return view('home.looking_for_edit', ['user' => $user, 'jobChildren' => $jobChildren, 'idsSubSectorPreferred' => $idsSubSectorPreferred, 'sectorPreferred' => $sectorPreferred]);
     }
 }
