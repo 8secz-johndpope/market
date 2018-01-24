@@ -238,6 +238,9 @@
                           </div>
                           <div>
                             <div class="add-specialism-actions">
+                              <p class="warning full" style="display: none">You have selected a maximum number of roles.</p>
+                              <p class="warning minimum">You haven't selected enough roles, yet.</p>
+                              <button class="add btn btn-inverse btn-inline disabled">Save roles</button>
                               <button class="cancel btn btn-link btn-inline">Cancel</button>
                             </div>
                           </div>
