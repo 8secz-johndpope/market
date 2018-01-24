@@ -203,6 +203,8 @@
                               <p class="info">
                                 Select up to 5 roles
                               </p>
+                              <ul class="roles list-unstyled">
+                              </ul>
                             </div>
                             <div>
                               <div class="add-specialism-actions">
@@ -245,6 +247,14 @@
     var parent = $(this).parent();
     parent.hide();
     parent.next().show();
+  });
+  $('.specialisms-list').change(function(){
+    $('.specialisms-list option:selected').each(function(){
+      var sectorId = $(this).val();
+      console.log(sectorId);
+      loadSubSectors();
+      var sectorChildren = sectors[sectorId];
+    })
   });
   function loadSubSectors(){
     sectors = [];
