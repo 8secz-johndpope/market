@@ -100,7 +100,7 @@
                       <div class="location-container">
                         <div class="inline-input inline">
                           <span class="twitter-typehead inline">
-                            <input type="text" name="location" id="location" class="form-control tt-input">
+                            <input type="text" name="location" id="pac-input" class="form-control tt-input">
                           </span>
                           <a href="#" class="location-link">
                             <i class="glyphicon glyphicon-map-marker"></i>
@@ -173,7 +173,7 @@
                           <div class="specialism-details row">
                             <div class="data col-xs-6 col-sm-8">
                               <span class="name">{{$sectorPreferred->title}}</span>
-                              (
+                               (
                               <span>{{count($idsSubSectorPreferred)}} roles</span>
                               )
                             </div>
