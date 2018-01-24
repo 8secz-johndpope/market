@@ -252,16 +252,19 @@
     $('.specialisms-list option:selected').each(function(){
       var sectorId = $(this).val();
       console.log(sectorId);
-      loadSubSectors();
-      var sectorChildren = sectors[sectorId];
-      var text = "";
-      for(var i=0; i < sectorChildren.length; i++){
-        text += "<li class=\"role form-field checkbox col-xs-12 col-sm-6\">"
-        + "<input type=\"checkbox\" id=\"add-subsector-" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
-        +"<label for=\"add-subsector-"+ sectorChildren[i].id +"\">" + sectorChildren[i].title + "</label>\n"
-        +"</li>";
+      if(sectorId != ""){
+        $('.specialisms-list').next().show();
+        loadSubSectors();
+        var sectorChildren = sectors[sectorId];
+        var text = "";
+        for(var i=0; i < sectorChildren.length; i++){
+          text += "<li class=\"role form-field checkbox col-xs-12 col-sm-6\">"
+          + "<input type=\"checkbox\" id=\"add-subsector-" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
+          +"<label for=\"add-subsector-"+ sectorChildren[i].id +"\">" + sectorChildren[i].title + "</label>\n"
+          +"</li>";
+        }
+        $('.roles').html(text);
       }
-      $('.roles').html(text);
     })
   });
   function loadSubSectors(){
