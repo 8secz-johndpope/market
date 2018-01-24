@@ -292,6 +292,10 @@
       }
     })
   });
+  $('.edit').click(function(e){
+    $('edit-roles').show();
+    $(this).parent().hide();
+  });
   function loadSubSectors(){
     sectors = [];
     @foreach($jobChildren as $job)
