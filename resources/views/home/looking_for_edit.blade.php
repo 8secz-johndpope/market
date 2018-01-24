@@ -184,32 +184,49 @@
                                 <i class="glyphicon glyphicon-trash"></i>
                               </span>
                             </div>
-                            <div class="edit-roles" style="display: none"></div>
                           </div>
-                          <div class="more-specialism-actions">
-                            <button class="add-more-specialism btn btn-inverse">
-                              <i class="glyphicon glyphicon-plus-sign"></i>
-                              <span>Add another sector</span>
-                            </button>
-                          </div>
-                          <div class="add-specialism-container" style="display: none">
-                            <select class="form-control specialisms-list">
-                              <option value>Choose your sector...</option>
-                              @foreach($jobChildren as $job)
-                                <option value={{$job->id}}>{{$job->title}}</option>
-                              @endforeach
-                            </select>
-                            <div style="display: none">
-                              <p class="info">
-                                Select up to 5 roles
-                              </p>
-                              <ul class="roles list-unstyled">
-                              </ul>
+                          <div class="edit-roles" style="display: none">
+                            <div class="warning" style="display: none">
+                              You have selected a maximum number of roles.
                             </div>
-                            <div>
-                              <div class="add-specialism-actions">
-                                <button class="cancel btn btn-link btn-inline">Cancel</button>
-                              </div>
+                            <p class="warning minimum">
+                              You haven't selected enough roles, yet.
+                            </p>
+                            <ul class="role">
+                              <span class="role-action">
+                                <button class="update btn btn-inverse btn-inline">
+                                  Update
+                                </button>
+                                <button class="cancel btn btn-link btn-inline">
+                                  Cancel
+                                </button>
+                              </span>
+                            </ul
+                          </div>
+                        </div>
+                        <div class="more-specialism-actions">
+                          <button class="add-more-specialism btn btn-inverse">
+                            <i class="glyphicon glyphicon-plus-sign"></i>
+                            <span>Add another sector</span>
+                          </button>
+                        </div>
+                        <div class="add-specialism-container" style="display: none">
+                          <select class="form-control specialisms-list">
+                            <option value>Choose your sector...</option>
+                            @foreach($jobChildren as $job)
+                              <option value={{$job->id}}>{{$job->title}}</option>
+                            @endforeach
+                          </select>
+                          <div style="display: none">
+                            <p class="info">
+                              Select up to 5 roles
+                            </p>
+                            <ul class="roles list-unstyled">
+                            </ul>
+                          </div>
+                          <div>
+                            <div class="add-specialism-actions">
+                              <button class="cancel btn btn-link btn-inline">Cancel</button>
                             </div>
                           </div>
                         </div>
