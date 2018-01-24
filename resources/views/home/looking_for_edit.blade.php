@@ -293,8 +293,9 @@
     })
   });
   $('.edit').click(function(e){
-    $('edit-roles').show();
+    $('.edit-roles').show();
     $(this).parent().hide();
+    $('.more-specialism-actions').hide();
   });
   function loadSubSectors(){
     sectors = [];
