@@ -307,10 +307,10 @@
     $('.more-specialism-actions').show();
     $('.edit-specialism-actions').show();
   });
-  $('.location-remove').click(function(e){
+  $(document).on('click', '.location-remove', function(e){
     e.preventDefault();
     $(this).parent().remove();
-  })
+  });
   $('.add-location button').click(function(e){
     e.preventDefault();
     var location = $("#pac-input").val();
