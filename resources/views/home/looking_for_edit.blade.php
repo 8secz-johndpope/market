@@ -101,6 +101,8 @@
                         <div class="inline-input inline">
                           <span class="twitter-typehead inline">
                             <input type="text" name="location" id="pac-input" class="form-control tt-input">
+                            <input type="hidden" name="lat" id="lat">
+                            <input type="hidden" name="lng" id="lng">
                           </span>
                           <a href="#" class="location-link">
                             <i class="glyphicon glyphicon-map-marker"></i>
