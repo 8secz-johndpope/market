@@ -269,7 +269,7 @@
     @foreach($jobChildren as $job)
       sectors[{{$job->id}}] =[
       @foreach($job->children as $subSector)
-        { id: {{$subSector->id}}, title : {{$subSector->title}} },
+        { id: {{$subSector->id}}, title : "{{$subSector->title}}" },
       @endforeach
       ]                       
     @endforeach
