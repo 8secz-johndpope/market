@@ -299,7 +299,6 @@
   });
   $('.edit-roles .cancel').click(function(e){
     e.preventDefault();
-    $(this).parent().hide();
     $('.edit-roles').hide();
     $('.more-specialism-actions').show();
     $('.edit-specialism-actions').show();
