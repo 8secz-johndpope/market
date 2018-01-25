@@ -254,7 +254,7 @@
                 </div>
               </section>
               <div class="action-container">
-                <button type="submit" class="btn btn-submit" id="upload-cv-link">Save changes</button>
+                <button type="button" class="btn btn-submit" id="upload-cv-link">Save changes</button>
               </div>
             </form>
           </div>
