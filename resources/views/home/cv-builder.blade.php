@@ -369,7 +369,7 @@
       $('.work-experience-details').hide();
       $('#no-work-experience').parent().hide();
       $('.work-experience-container').append(text);
-      $('add-button-container').show();
+      $('.add-button-container').show();
   });
   $(document).on('click', '.action.delete', function(){
     $(this).parent().remove();

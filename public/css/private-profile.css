@@ -653,10 +653,20 @@ input[type=checkbox]+label:before, .canvas input[type=checkbox]~label:before{
     height: 18px;
     cursor: pointer;
     position: absolute;
-    top: 3px;
+    top: 2px;
     left: 0;
 }
 input[type=checkbox]~label:before {
+    background-size: 1230px 1230px;
+    -webkit-background-size: 1230px 1230px;
+    background-repeat: no-repeat;
+    background-image: url(/css/icon-sprite.svg);
+    background-position: -1170px -1080px;
+}
+input[type=checkbox]:checked~label:before {
+    width: 16px;
+    height: 16px;
+    background-position: -900px -990px;
     background-size: 1230px 1230px;
     -webkit-background-size: 1230px 1230px;
     background-repeat: no-repeat;
