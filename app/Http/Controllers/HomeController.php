@@ -1279,7 +1279,9 @@ class HomeController extends BaseController
 
     }
     public function add_template(Request $request){
+        $user=Auth::user();
 
+        return view('home.template',['user'=>$user]);
     }
     public function identity(Request $request)
     {
