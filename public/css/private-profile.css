@@ -619,6 +619,10 @@
 .cvbuilder-work-experience .visual-container {
     padding: 30px 90px;
 }
+.work-experience {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
