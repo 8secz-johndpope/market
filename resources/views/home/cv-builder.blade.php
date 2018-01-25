@@ -178,6 +178,24 @@
               </div>
               <div class="work-experience">
                 <div class="work-experience-container">
+                  <div class="work row">
+                    <div class="action delete">
+                      <i class=""></i>
+                    </div>
+                    <div class="action edit">
+                      <i class=""></i>
+                    </div>
+                    <div class="when col-xs-12 col-sm-3 col-md-2">
+                      10/2015 - 01/2017
+                    </div>
+                    <div class="what col-xs-12 col-sm-9 col-md-10">
+                      <div class="title">Engineer</div>
+                      <div class="company">Prosur</div>
+                      <div class="description hidden-xs">
+                        IT support and Software development
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="add-button-container text-right">
                   <button type="button" class="btn btn-secondary add-work-experience">Add work experience</button>
@@ -321,6 +339,32 @@
     else{
       dateTo.show();
     }
+  });
+  $('.confirm-work-experience-button').click(function(){
+      var jobTitle = $('#job-title').val();
+      var company = $('#company').val();
+      var dateFrom = $('#date-from-month').val() + '/' + $('#date-from-year').val();
+      var dateTo = $('#date-to-month').val() + '/' + $('#date-to-year').val();
+      var responsabilities = $('#responsabilities').val();
+      var text = '<div class="work row">\n'
+                    + '<div class="action delete">\n'
+                    +  '<i class=""></i>\n'
+                    + '</div>\n'
+                    + '<div class="action edit">\n'
+                    +  '<i class=""></i>\n'
+                    + '</div>\n'
+                    + '<div class="when col-xs-12 col-sm-3 col-md-2">\n'
+                    + dateFrom ' - ' + dateTo + '\n'
+                    + '</div>\n'
+                    + '<div class="what col-xs-12 col-sm-9 col-md-10">\n'
+                    + '<div class="title">' + jobTitle + '</div>\n'
+                    + '<div class="company">' + company + '</div>\n'
+                    + '<div class="description hidden-xs">\n'
+                    +  responsabilities +'\n'
+                    + '</div>'
+                    + '</div>'
+                  + '</div>';
+      console.log(text);
   });
   
 </script>
