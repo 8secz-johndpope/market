@@ -338,7 +338,13 @@
       var dateFrom = $('#date-from-month').val() + '/' + $('#date-from-year').val();
       $('#date-from-month').val('');
       $('#date-from-year').val('');
-      var dateTo = $('#date-to-month').val() + '/' + $('#date-to-year').val();
+      var dateTo = "";
+      if($('#is-current-role').prop('checked')){
+        dateTo = "Present";
+      }
+      else{
+        dateTo = $('#date-to-month').val() + '/' + $('#date-to-year').val();
+      }
       var responsabilities = $('#responsabilities').val();
       $('#responsabilities').val('');
       var text = '<div class="work row">\n'
@@ -380,9 +386,13 @@
     var when = $(this).siblings('.when').text().split('-');
     var dateFrom = when[0].split('/');
     console.log(dateFrom);
-    var dateTo = null;
-    if(when.length > 1){
-      dateTo = when[1].split('/');
+    var dateTo = dateTo = when[1].split('/');
+    if(dateTo.length > 1){
+      $('#date-to-month').val(dateTo[0].trim());
+      $('#date-to-year').val(dateTo[1].trim());
+    }
+    else{
+      $('#is-current-role').prop('checked', true);
     }
     $('#date-from-month').val(dateFrom[0].trim());
     $('#date-from-year').val(dateFrom[1].trim());
