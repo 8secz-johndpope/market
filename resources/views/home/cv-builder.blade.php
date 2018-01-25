@@ -194,10 +194,6 @@
                         <div class="specialism">
                           <div class="specialism-details row">
                             <div class="data col-xs-6 col-sm-8">
-                              <span class="name">{{$sectorPreferred->title}}</span>
-                               (
-                              <span>{{count($idsSubSectorPreferred)}} roles</span>
-                              )
                             </div>
                             <div class="edit-specialism-actions small col-xs-6 col-sm-4">
                               <span class="edit">
@@ -217,14 +213,6 @@
                               You haven't selected enough roles, yet.
                             </p>
                             <ul class="role row">
-                              @foreach($sectorPreferred->children as $subSector)
-                                <li class="form-field checkbox col-sm-6 col-xs-12">
-                                  <input type="checkbox" name="edit-subsector-{{$subSector->id}}"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $idsSubSectorPreferred) ? 'checked': ''}}>
-                                  <label for="edit-subsector-{{$subSector->id}}">
-                                    {{$subSector->title}}
-                                  </label>
-                                </li>
-                              @endforeach
                             </ul>
                             <span class="role-action">
                               <button class="update btn btn-inverse btn-inline">
@@ -245,9 +233,6 @@
                         <div class="add-specialism-container" style="display: none">
                           <select class="form-control specialisms-list">
                             <option value>Choose your sector...</option>
-                            @foreach($jobChildren as $job)
-                              <option value={{$job->id}}>{{$job->title}}</option>
-                            @endforeach
                           </select>
                           <div style="display: none">
                             <p class="info-sector">
@@ -363,13 +348,6 @@
   });
   function loadSubSectors(){
     sectors = [];
-    @foreach($jobChildren as $job)
-      sectors[{{$job->id}}] =[
-      @foreach($job->children as $subSector)
-        { id: {{$subSector->id}}, title : "{{$subSector->title}}" },
-      @endforeach
-      ]                       
-    @endforeach
   }
   function errorFunction(){
     console.log("Geocoder Failed");
