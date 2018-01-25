@@ -367,13 +367,17 @@
                     + '</div>'
                   + '</div>';
       $('.work-experience-details').hide();
-      $('#no-work-experience').hide();
+      $('#no-work-experience').parent().hide();
       $('.work-experience-container').append(text);
   });
   $(document).on('click', '.action.delete', function(){
     $(this).parent().remove();
+    if($('.work').length == 0){
+      $('#no-work-experience').parent().show();
+    }
   })
   $(document).on('click', '.action.edit', function(){
+
   })
 </script>
 @endsection
