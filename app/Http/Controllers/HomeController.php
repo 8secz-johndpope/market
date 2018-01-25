@@ -1295,7 +1295,7 @@ class HomeController extends BaseController
         $template->title = $request->title;
         $template->message = $request->message;
         $template->user_id = $user->id;
-        $request->save();
+        $template->save();
         return redirect('/user/manage/templates');
     }
     public function identity(Request $request)
