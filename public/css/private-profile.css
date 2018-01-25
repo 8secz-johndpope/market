@@ -458,6 +458,23 @@
     font-weight: 600;
     padding-bottom: 15px;
 }
+.steps-container {
+    max-width: 638px;
+    margin: 0 auto;
+}
+.steps {
+    box-sizing: border-box;
+    list-style: none;
+    position: relative;
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: 0 0;
+}
+.steps:after, .steps:before {
+    content: " ";
+    display: table;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
