@@ -598,6 +598,12 @@
 .work-experience-form-title {
     font-weight: 700;
 }
+.actions-btns-cv-builder{
+    margin-top: 20px;
+}
+.work-experience-details{
+    border-bottom: 1px solid #ccc;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
