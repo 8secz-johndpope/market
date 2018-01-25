@@ -86,7 +86,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <tr><td><input type="checkbox" class="select-all"> Select All</td></tr>
+                    <tr><td><input type="checkbox" class="select-all" id="select-all"> Select All</td></tr>
                     @foreach($job->applications as $application)
                         <tr>
                             <td><input type="checkbox" name="ids[]" value="{{$application->id}}" class="select-application"></td>
@@ -121,4 +121,15 @@
         </div>
     </div>
 </div>
+    <script>
+        $('#select-all').change(function() {
+            if(this.checked) {
+                $('.select-application').prop('checked', false);
+
+            }else{
+                $('.select-application').prop('checked', true);
+
+            }
+        });
+    </script>
 @endsection
