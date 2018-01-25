@@ -276,7 +276,7 @@
                   </div>
                   <div class="text-right">
                     <button type="button" class=" cancel btn btn-inline btn-link">Cancel</button>
-                    <button type="button" class="btn btn-inline btn-submit confirm-work-experience-button" disabled>Confirm</button>
+                    <button type="button" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
                   </div>
                 </div>
               
