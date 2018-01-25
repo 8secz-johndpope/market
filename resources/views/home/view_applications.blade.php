@@ -124,10 +124,10 @@
     <script>
         $('#select-all').change(function() {
             if(this.checked) {
-                $('.select-application').prop('checked', false);
+                $('.select-application').prop('checked', true);
 
             }else{
-                $('.select-application').prop('checked', true);
+                $('.select-application').prop('checked', false);
 
             }
         });
