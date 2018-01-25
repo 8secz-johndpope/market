@@ -370,6 +370,10 @@
       $('#no-work-experience').hide();
       $('.work-experience-container').append(text);
   });
-  
+  $(document).on('click', '.action.delete', function(){
+    $(this).parent().remove();
+  })
+  $(document).on('click', '.action.edit', function(){
+  })
 </script>
 @endsection
