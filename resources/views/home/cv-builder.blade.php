@@ -316,12 +316,20 @@
     var dateTo = $('.date-to');
     if(this.checked){
       dateTo.hide();
-      $('.continue button').removeAttr('disabled');
     }
     else{
       dateTo.show();
     }
   });
+  $('#no-work-experience').change(function(){
+    var button = $('.continue button');
+    if(this.checked){
+      button.removeAttr('disabled');
+    }
+    else{
+
+    }
+  })
   $('.confirm-work-experience-button').click(function(){
       var jobTitle = $('#job-title').val();
       $('#job-title').val('');
