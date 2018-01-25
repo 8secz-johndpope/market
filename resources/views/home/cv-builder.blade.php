@@ -379,6 +379,7 @@
     var what = $(this).siblings('.what');
     var when = $(this).siblings('.when').text().split('-');
     var dateFrom = when[0].split('/');
+    console.log(dateFrom);
     var dateTo = null;
     if(when.length > 1){
       dateTo = when[1].split('/');
