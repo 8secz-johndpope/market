@@ -139,10 +139,10 @@
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-5 col-sm-offset-2">
-              <button class="btn btn-submit" type="submit">Continue</button>
+              <button class="btn btn-inverse" type="button">Save and continue later</button>
             </div>
             <div class="col-xs-12 col-sm-5">
-              <button class="btn btn-inverse" type="button">Save and continue later</button>
+              <button class="btn btn-submit" type="submit">Continue</button>
             </div>
           </div>
           </form>
