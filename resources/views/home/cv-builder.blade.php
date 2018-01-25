@@ -186,7 +186,41 @@
                     <input type="text" name="company" id="company" class="form-control tt-input">
                     <div class="validation"></div>
                   </div>
-
+                  <div class="date-from group form-group date-group">
+                    <label class="legend" for="date-from-month">From</label>
+                    <div class="row">
+                      <div class="month col-sm-6 col-xs-12">
+                        <select class="form-control" id="date-from-month" name="date-from-month">
+                          <option value="">Month</option>
+                          <option value="1">January</option>
+                          <option value="2">February</option>
+                          <option value="3">March</option>
+                          <option value="4">April</option>
+                          <option value="5">May</option>
+                          <option value="6">June</option>
+                          <option value="7">July</option>
+                          <option value="8">August</option>
+                          <option value="9">September</option>
+                          <option value="10">October</option>
+                          <option value="11">November</option>
+                          <option value="12">December</option>
+                        </select>
+                      </div>
+                      <div class="year col-sm-6 col-xs-12">
+                        <select class="form-control" id="date-from-year" name="date-from-year">
+                          <option value="">Year</option>
+                          @for($i = 2018; $i > 1943; $i--)
+                            <option value="{{$i}}">{{$i}}</option>
+                          @endfor
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="current-role form-group checkbox">
+                    <input type="checkbox" name="is-current-role" id="is-current-role" value="true">
+                    <label for="is-current-role">I currently work here</label>
+                    <div class="validation"></div>
+                  </div>
                 </div>
               </div>
             </form>
