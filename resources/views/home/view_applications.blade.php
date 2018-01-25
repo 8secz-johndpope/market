@@ -104,10 +104,11 @@
                 </table>
                     <div class="row">
                         <div class="col-sm-4"></div>
-                        <div class="col-sm-4"><select class="form-control" id="inlineFormCustomSelect">
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                        <div class="col-sm-4"><select class="form-control" id="inlineFormCustomSelect" name="template">
+                                @foreach($user->templates as $template)
+
+                                <option value="{{$template->id}}">{{$template->title}}</option>
+                                @endforeach
                             </select></div>
                         <div class="col-sm-4">
                             <button type="submit" class="btn btn-primary">Reply Selected</button>
