@@ -1279,7 +1279,7 @@ class HomeController extends BaseController
 
     }
     public function add_template(Request $request){
-        
+
     }
     public function identity(Request $request)
     {
