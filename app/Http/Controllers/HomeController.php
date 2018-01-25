@@ -1259,6 +1259,26 @@ class HomeController extends BaseController
         return redirect($advert->url());
 
     }
+    public function apply_all(Request $request)
+    {
+
+        // Get the currently authenticated user...
+        $user = Auth::user();
+        $ids = $request->ids;
+        foreach ($ids as $id) {
+            $advert = Advert::find($id);
+
+            $application = new Application;
+            $application->advert_id = $advert->id;
+            $application->user_id = $user->id;
+
+            $application->save();
+
+
+        }
+        return redirect($request->url);
+
+    }
     public function identity(Request $request)
     {
         $user = Auth::user();
