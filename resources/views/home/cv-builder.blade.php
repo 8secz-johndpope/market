@@ -277,7 +277,7 @@
                 <div class="text-right">
                   <button type="button" class="btn btn-inline btn-link">Cancel</button>
                   <button type="button" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
-                  
+
                 </div>
               </div>
               <div class="row">
@@ -301,7 +301,7 @@
     e.preventDefault();
     window.location.href = '/user/cv-builder/work-experience';
   })
-  $('.add-work-experience').click(function()}{
+  $('.add-work-experience').click(function(){
     $(this).parent().hide();
     $('#no-work-experience').parent().hide();
     $('work-experience-details').show();
