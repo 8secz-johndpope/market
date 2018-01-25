@@ -1017,7 +1017,7 @@ a.search-alert {
 .btn-inverse {
     color: #000;
     background: #fff;
-    width: 200px;
+    min-width: 200px;
     padding: 10px 40px;
     border: 1px solid #ff9d2c;
     /* margin: 0 auto 20px; */
