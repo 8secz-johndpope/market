@@ -616,6 +616,10 @@
 .work-experience .description{
     margin-top: 0;
 }
+.cvbuilder-work-experience .visual-container {
+    margin: 40px auto;
+    padding: 30px 90px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -724,6 +728,10 @@
     .work-experience .work .what {
         border-left: 1px solid #d6d6d6;
         padding-left: 30px;
+    }
+    .cvbuilder-work-experience .visual-container {
+        margin: 40px auto;
+        padding: 30px 90px;
     }
 }
 @media screen and (min-width: 1025px){
