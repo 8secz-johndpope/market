@@ -18,25 +18,28 @@
 <div class="body background-body">
   <div class="container">
     <div class="row">
-      <div class="steps-container">
-        <ul class="steps" id="cvbuilder-steps" data-total-steps="4">
-          <li class="step step-current" data-step="1">
-            <span class="sign"></span>
-            <span class="name">Details</span>
-          </li>
-          <li class="step" data-step="2">
-            <span class="sign"></span>
-            <span class="name">Work experience</span>
-          </li>
-          <li class="step" data-step="3">
-            <span class="sign"></span>
-            <span class="name">Qualifications</span>
-          </li>
-          <li class="step" data-step="4">
-            <span class="sign"></span>
-            <span class="name">Personal statement</span>
-          </li>
-        </ul>
+      <div class="col-sm-12">
+        <h1 class="cvbuilder-personal-details-title">Build your CV</h1>
+        <div class="steps-container">
+          <ul class="steps" id="cvbuilder-steps" data-total-steps="4">
+            <li class="step step-current" data-step="1">
+              <span class="sign"></span>
+              <span class="name">Details</span>
+            </li>
+            <li class="step" data-step="2">
+              <span class="sign"></span>
+              <span class="name">Work experience</span>
+            </li>
+            <li class="step" data-step="3">
+              <span class="sign"></span>
+              <span class="name">Qualifications</span>
+            </li>
+            <li class="step" data-step="4">
+              <span class="sign"></span>
+              <span class="name">Personal statement</span>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="col-sm-12">
         <div class="back-link">
@@ -47,9 +50,14 @@
     <div class="row cvbuilder-personal-details">
       <div class="col-sm-12">
         <div class="section">
-          <header class="section-header">
-            <h2 class="title">Build your CV</h2>
-          </header>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="alert alert-info text-center">
+                <h4>Allow companies to contact you when you apply to their jobs.</h4>
+                <p>Please fill in all the blank fields.</p>
+              </div>
+            </div>
+          </div>
           <div class="content row">
             <form action="" method="post">
               <input name="redirect" type="hidden" value="/job/profile/edit">
