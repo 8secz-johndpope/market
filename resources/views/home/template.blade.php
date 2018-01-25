@@ -22,7 +22,7 @@
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Title</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Template for Salesmen">
+                    <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Template for Salesmen">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Message</label>
