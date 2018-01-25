@@ -304,7 +304,8 @@
   $('.add-work-experience').click(function(){
     $(this).parent().hide();
     $('#no-work-experience').parent().hide();
-    $('work-experience-details').show();
+    $('.work-experience-details').show();
+    
   })
   
 </script>
