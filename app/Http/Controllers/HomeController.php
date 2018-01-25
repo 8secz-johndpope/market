@@ -1298,6 +1298,14 @@ class HomeController extends BaseController
         $template->save();
         return redirect('/user/manage/templates');
     }
+    public function delete_template(Request $request,$id){
+        $template = ReplyTemplate::find($id);
+        $template->delete();
+
+        return redirect('/user/manage/templates');
+
+    }
+
     public function identity(Request $request)
     {
         $user = Auth::user();
