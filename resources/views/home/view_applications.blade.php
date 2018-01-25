@@ -62,12 +62,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-4">
                 <div class="btns-actions">
                     <a href="#" class="btn btn-disable">Change Status</a>
                 </div>
             </div>
-        </div>
+            <div class="col-sm-4">
+                @if (session('msg'))
+                    <span style="color: red">
+                                        <strong>{{ session('msg') }}</strong>
+                                    </span>
+                @endif
+            </div>
+            </div>
         <div class="row">
             <div class="col-sm-12">
                 <form method="post" action="/user/reply/all">
