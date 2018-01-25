@@ -162,6 +162,7 @@ Route::post('/user/covers/add', 'HomeController@add_cover');
 Route::post('/user/jobs/apply', 'HomeController@apply');
 Route::post('/user/jobs/apply/all', 'HomeController@apply_all');
 Route::post('/user/templates/save', 'HomeController@save_template');
+Route::post('/user/reply/all', 'HomeController@reply_all');
 
 Route::get('/user/templates/add', 'HomeController@add_template');
 Route::get('/user/manage/templates', 'HomeController@templates');

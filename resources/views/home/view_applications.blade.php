@@ -70,8 +70,9 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <form>
-                <table class="table table-striped table-hover">
+                <form method="post" action="/user/reply/all">
+                    {{ csrf_field() }}
+                    <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th></th>

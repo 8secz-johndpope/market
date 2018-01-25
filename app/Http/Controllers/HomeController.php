@@ -1284,6 +1284,7 @@ class HomeController extends BaseController
 
         return view('home.template',['user'=>$user]);
     }
+
     public function templates(Request $request){
         $user=Auth::user();
 
@@ -1303,6 +1304,54 @@ class HomeController extends BaseController
         $template->delete();
 
         return redirect('/user/manage/templates');
+
+    }
+
+    public function reply_all(Request $request){
+        $user=Auth::user();
+
+        $template = ReplyTemplate::find($request->template);
+        foreach ($request->ids as $id) {
+
+
+            $application = Application::find($id);
+            $advert = $application->advert;
+
+
+            $room = Room::where('advert_id', $application->advert_id)->where('sender_id', $application->user_id)->first();
+            if ($room === null) {
+                $room = new Room;
+                $room->advert_id = $application->advert->id;
+                $room->image = $application->advert->first_image();
+                $room->title = $application->advert->param('title');
+                $room->sender_id = $application->user->id;
+                $room->save();
+                $room->users()->save($application->user);
+                if ($user->id !== $application->user->id) {
+                    $room->users()->save($user);
+
+
+                }
+
+                $advert->replies++;
+                $advert->save();
+            }
+
+
+            $message = new Message;
+            $message->message = $template->message;
+            $message->from_msg = $user->id;
+            $message->to_msg = $application->user_id;
+            $message->room_id = $room->id;
+            $message->url = '';
+            $message->save();
+
+
+            $room->modify();
+
+            $this->notify($room, $message);
+        }
+        return redirect()->back()->with('msg', 'Replies successfully sent');
 
     }
 
