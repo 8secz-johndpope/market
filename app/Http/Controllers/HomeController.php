@@ -19,6 +19,7 @@ use App\Model\Pack;
 use App\Model\Payment;
 use App\Model\Postcode;
 use App\Model\Rating;
+use App\Model\ReplyTemplate;
 use App\Model\Review;
 use App\Model\Room;
 use App\Model\Sale;
@@ -1290,7 +1291,11 @@ class HomeController extends BaseController
     }
     public function save_template(Request $request){
         $user=Auth::user();
-
+        $template = new ReplyTemplate();
+        $template->title = $request->title;
+        $template->message = $request->message;
+        $template->user_id = $user->id;
+        $request->save();
         return redirect('/user/manage/templates');
     }
     public function identity(Request $request)
