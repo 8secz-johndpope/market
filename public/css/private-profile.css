@@ -601,7 +601,7 @@
 .actions-btns-cv-builder{
     margin-top: 20px;
 }
-.work-experience-details{
+.work-experience-details .content{
     border-bottom: 1px solid #ccc;
 }
 @media screen and (min-width: 768px){
