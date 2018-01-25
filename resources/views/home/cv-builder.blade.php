@@ -169,12 +169,28 @@
               </div>
             </div>
           </div>
-          <form action="" method="post">
-            <input name="redirect" type="hidden" value="/job/profile/edit">
-            {{ csrf_field() }}
-            <div class="content row">
-            </div>
-          </form>
+          <div class="work-experience-details">
+            <form action="" method="post" id="work-experience-form">
+              <input name="redirect" type="hidden" value="/job/profile/edit">
+              {{ csrf_field() }}
+              <div class="content row">
+                <div class="col-sm-12">
+                  <h5 class="work-experience-form-title"><span>Add</span> work experience</h5>
+                  <div class="job-title form-group">
+                    <label for="job-title">Job title</label>
+                    <input class="form-control tt-input" id="job-title" name="job-title" type="text">
+                    <div class="validation"></div>
+                  </div>
+                  <div class="company form-group">
+                    <label for="company">Company</label>
+                    <input type="text" name="company" id="company" class="form-control tt-input">
+                    <div class="validation"></div>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+          </div>
     @endif
   </div>
 </div>
