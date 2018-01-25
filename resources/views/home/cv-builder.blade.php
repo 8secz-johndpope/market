@@ -178,24 +178,6 @@
               </div>
               <div class="work-experience">
                 <div class="work-experience-container">
-                  <div class="work row">
-                    <div class="action delete">
-                      <i class="glyphicon glyphicon-trash"></i>
-                    </div>
-                    <div class="action edit">
-                      <i class="glyphicon glyphicon-edit"></i>
-                    </div>
-                    <div class="when col-xs-12 col-sm-3 col-md-2 text-right">
-                      10/2015 - 01/2017
-                    </div>
-                    <div class="what col-xs-12 col-sm-9 col-md-10">
-                      <div class="title">Engineer</div>
-                      <div class="company">Prosur</div>
-                      <div class="description hidden-xs">
-                        IT support and Software development
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <div class="add-button-container text-right">
                   <button type="button" class="btn btn-secondary add-work-experience">Add work experience</button>
@@ -294,8 +276,7 @@
                   </div>
                   <div class="text-right">
                     <button type="button" class=" cancel btn btn-inline btn-link">Cancel</button>
-                    <button type="button" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
-
+                    <button type="button" class="btn btn-inline btn-submit confirm-work-experience-button" disabled>Confirm</button>
                   </div>
                 </div>
               
@@ -370,11 +351,13 @@
       $('#no-work-experience').parent().hide();
       $('.work-experience-container').append(text);
       $('.add-button-container').show();
+      $('.confirm-work-experience-button').removeAttr('disabled');
   });
   $(document).on('click', '.action.delete', function(){
     $(this).parent().remove();
     if($('.work').length == 0){
       $('#no-work-experience').parent().show();
+      $('.confirm-work-experience-button').attr('disabled', '');
     }
   })
   $(document).on('click', '.action.edit', function(){
