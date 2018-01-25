@@ -61,6 +61,7 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="section-title">
+                <h2>Details about you</h2>
               </div>
             </div>
           </div>
@@ -101,6 +102,41 @@
                 </div>
               </div>
             </div>
+            <div class="row">
+            <div class="col-xs-12">
+              <div class="section-title">
+                <h2>Your address</h2>
+              </div>
+            </div>
+          </div>
+          <div class="content row">
+            <div class="col-xs-12">
+              <div class="address-area">
+                <div class="form-group">
+                  <label class="pre-filled" for="address">Address</label>
+                  <input class="form-control" type="address" name="address" value="">
+                  <div class="validation">
+                </div>
+                <div class="form-group">
+                  <label class="pre-filled" for="town">Town</label>
+                  <input class="form-control" type="town" name="town" value="">
+                  <div class="validation">
+                </div>
+                <div class="form-group">
+                  <label class="pre-filled" for="country">Country</label>
+                  <select name="country" id="country" disabled>
+                    <option value="uk">United Kingdom</option>
+                  </select>
+                  <div class="validation">
+                </div>
+                <div class="form-group">
+                  <label class="pre-filled" for="postcode">Postcode</label>
+                  <input class="form-control" type="postcode" name="postcode">
+                  <div class="validation">
+                </div>
+              </div>
+            </div>
+          </div>
           </form>
         </div>
       </div>
