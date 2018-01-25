@@ -185,7 +185,7 @@
                     <div class="action edit">
                       <i class=""></i>
                     </div>
-                    <div class="when col-xs-12 col-sm-3 col-md-2">
+                    <div class="when col-xs-12 col-sm-3 col-md-2 text-right">
                       10/2015 - 01/2017
                     </div>
                     <div class="what col-xs-12 col-sm-9 col-md-10">
@@ -353,7 +353,7 @@
                     + '<div class="action edit">\n'
                     +  '<i class=""></i>\n'
                     + '</div>\n'
-                    + '<div class="when col-xs-12 col-sm-3 col-md-2">\n'
+                    + '<div class="when col-xs-12 col-sm-3 col-md-2 text-right">\n'
                     + dateFrom + ' - ' + dateTo + '\n'
                     + '</div>\n'
                     + '<div class="what col-xs-12 col-sm-9 col-md-10">\n'
@@ -364,7 +364,7 @@
                     + '</div>'
                     + '</div>'
                   + '</div>';
-      console.log(text);
+      $('.work-experience-container').append(text);
   });
   
 </script>
