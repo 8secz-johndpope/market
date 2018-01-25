@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-sm-10">
                     <h3 class="details-profile-title">Private Profile</h3>
-                    <p class="details-profile-subtitle">Complete your deatils</p>
+                    <p class="details-profile-subtitle">Complete your details</p>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn update-details" href="/user/manage/details">Edit</a>

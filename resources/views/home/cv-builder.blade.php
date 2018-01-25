@@ -285,7 +285,7 @@
               <div class="col-xs-12 col-sm-5 col-sm-offset-2">
                 <button class="btn btn-inverse" type="button">Save and continue later</button>
               </div>
-              <div class="col-xs-12 col-sm-5">
+              <div class="continue col-xs-12 col-sm-5">
                 <button class="btn btn-submit" type="submit">Continue</button>
               </div>
             </div>
@@ -316,6 +316,7 @@
     var dateTo = $('.date-to');
     if(this.checked){
       dateTo.hide();
+      $('.continue button').removeAttr('disabled');
     }
     else{
       dateTo.show();
@@ -351,13 +352,13 @@
       $('#no-work-experience').parent().hide();
       $('.work-experience-container').append(text);
       $('.add-button-container').show();
-      $('.confirm-work-experience-button').removeAttr('disabled');
+      $('.continue button').removeAttr('disabled');
   });
   $(document).on('click', '.action.delete', function(){
     $(this).parent().remove();
     if($('.work').length == 0){
       $('#no-work-experience').parent().show();
-      $('.confirm-work-experience-button').attr('disabled', '');
+      $('.continue button').attr('disabled', '');
     }
   })
   $(document).on('click', '.action.edit', function(){
