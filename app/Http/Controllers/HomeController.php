@@ -1283,6 +1283,16 @@ class HomeController extends BaseController
 
         return view('home.template',['user'=>$user]);
     }
+    public function templates(Request $request){
+        $user=Auth::user();
+
+        return view('home.templates',['user'=>$user]);
+    }
+    public function save_template(Request $request){
+        $user=Auth::user();
+
+        return redirect('/user/manage/templates');
+    }
     public function identity(Request $request)
     {
         $user = Auth::user();
