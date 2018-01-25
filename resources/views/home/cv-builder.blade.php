@@ -19,7 +19,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="cvbuilder-personal-details-title">Build your CV</h1>
+        <h2 class="cvbuilder-personal-details-title">Build your CV</h2>
         <div class="steps-container">
           <ul class="steps" id="cvbuilder-steps" data-total-steps="4">
             <li class="step step-current" data-step="1">
