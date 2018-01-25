@@ -315,10 +315,14 @@
     padding-left: 32px;
 }
 .checkbox input[type=checkbox]{
+    border: 0 none;
+    clip: rect(0,0,0,0);
+    height: 1px;
     margin: 8px;
     overflow: hidden;
     padding: 0;
     position: absolute;
+    width: 1px;
 }
 .edit-avatar i {
     color: #fff;
