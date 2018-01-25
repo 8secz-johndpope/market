@@ -27,6 +27,8 @@
                     <label for="exampleFormControlTextarea1">Message</label>
                     <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
+                <button type="submit" class="btn btn-primary">Add Template</button>
+
             </form>
         </div>
         <div class="col-sm-2">
