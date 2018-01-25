@@ -43,10 +43,11 @@
       </div>
       <div class="col-sm-12">
         <div class="back-link">
-          <a href="{{ URL::previous() }}"><i class="glyphicon glyphicon-menu-left"></i>Your profile</a>
+          <a href="{{ URL::previous() }}"><i class="glyphicon glyphicon-menu-left"></i>Back</a>
         </div>
       </div>
     </div>
+    @if($slug === 'personal-details')
     <div class="row cvbuilder-personal-details">
       <div class="col-sm-12">
         <div class="section">
@@ -149,11 +150,41 @@
         </div>
       </div>
     </div>
+    @elseif($slug === 'work-experience')
+    <div class="row cvbuilder-work-experience">
+      <div class="col-sm-12">
+        <div class="section">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="alert alert-info text-center">
+                <h4>Let companies know where you’ve worked and when.</h4>
+                <p>Please fill in all the blank fields.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="section-title">
+                <h2>Your work experience</h2>
+              </div>
+            </div>
+          </div>
+          <form action="" method="post">
+            <input name="redirect" type="hidden" value="/job/profile/edit">
+            {{ csrf_field() }}
+            <div class="content row">
+            </div>
+          </form>
+    @endif
   </div>
 </div>
 <script>
   var geocoder;
   var sectors;
+  $('.cvbuilder-personal-details btn-submit').click(function(e){
+    e.preventDefault();
+    window.location.href = '/user/cv-builder/work-experience';
+  })
   $('.add-button button').click(function(e){
     e.preventDefault();
     $(this).parent().hide();
