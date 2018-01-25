@@ -18,7 +18,7 @@
         <div class="col-sm-8">
             <br><br><br>
             <a class="btn btn-primary" href="/user/templates/add">Add Template</a>
-            <br>
+            <br><br>
             <h4>Templates</h4>
             <table class="table table-striped">
                 <thead>
