@@ -301,7 +301,7 @@ use App\Model\Advert;
                     <form action="">
                         <div class="form-group clearfix">
                             <div class="col-sm-offset-6 col-sm-6">
-                                <button type="submit" class="btn btn-default xyz">Apply All</button>
+                                <button type="submit" class="btn btn-default">Apply All</button>
                             </div>
                         </div>
                     </form>
