@@ -283,7 +283,7 @@
                     <div class="responsabilities form-group">
                       <label for="exampleFormControlTextarea1">What did you do there?</label>
                       <div class="value">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" name="responsabilities" rows="5"></textarea>
+                        <textarea class="form-control" id="responsabilities" name="responsabilities" rows="5"></textarea>
                       </div>
                       <div class="character-count">
                         <small><strong>2000</strong> characters remaining</small>

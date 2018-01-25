@@ -489,8 +489,8 @@
     transition: all 1s ease-in-out;
 }
 .steps .step-current {
-    border-color: #00a961;
-    background: #00a961;
+    border-color: #ff9d2c;
+    background: #ff9d2c;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
 }
@@ -523,7 +523,7 @@
     display: block;
     content: '';
     border-radius: 50%;
-    border: 4px solid #00a961;
+    border: 4px solid #ff9d2c;
     background: #fff;
     width: 16px;
     height: 16px;
