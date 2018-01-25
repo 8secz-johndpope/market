@@ -366,11 +366,15 @@
     $(this).parent().remove();
     if($('.work').length == 0){
       $('#no-work-experience').parent().show();
-      $('.continue button').attr('disabled', '');
+      $('.continue button').prop("disabled", true);
     }
   })
   $(document).on('click', '.action.edit', function(){
-
+    $('.work-experience-details').show();
+    $('.add-work-experience').parent().hide();
+    $('#no-work-experience').parent().hide();
+    var what = $(this).siblings('.what');
+    $('#job-title').val(what.find('title').text());
   })
 </script>
 @endsection
