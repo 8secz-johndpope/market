@@ -14,7 +14,6 @@
     <div class="body">
         <form action="/user/templates/save" method="post" id="login-form">
             {{ csrf_field() }}
-            <input type="hidden" name="id" value="{{$advert->id}}">
             <div class="row">
                 <div class="col-sm-11 col-sm-offset-1">
                     <div class="well">
