@@ -275,7 +275,7 @@
                   </div>
                 </div>
                 <div class="text-right">
-                  <button type="button" class="btn btn-inline btn-link">Cancel</button>
+                  <button type="button" class=" cancel btn btn-inline btn-link">Cancel</button>
                   <button type="button" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
 
                 </div>
@@ -305,8 +305,13 @@
     $(this).parent().hide();
     $('#no-work-experience').parent().hide();
     $('.work-experience-details').show();
-    
-  })
+
+  });
+  $('.cancel').click(function(){
+    $('.work-experience-details').hide();
+    $('#no-work-experience').parent().show();
+    $('.add-work-experience').parent().show();
+  });
   
 </script>
 @endsection
