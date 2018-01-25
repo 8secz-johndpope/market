@@ -69,7 +69,7 @@
             </div>
             <div class="col-sm-4">
                 @if (session('msg'))
-                    <span style="color: red">
+                    <span style="color: green">
                                         <strong>{{ session('msg') }}</strong>
                                     </span>
                 @endif
