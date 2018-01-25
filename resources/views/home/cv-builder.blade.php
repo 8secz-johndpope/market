@@ -354,7 +354,7 @@
                     +  '<i class=""></i>\n'
                     + '</div>\n'
                     + '<div class="when col-xs-12 col-sm-3 col-md-2">\n'
-                    + dateFrom ' - ' + dateTo + '\n'
+                    + dateFrom + ' - ' + dateTo + '\n'
                     + '</div>\n'
                     + '<div class="what col-xs-12 col-sm-9 col-md-10">\n'
                     + '<div class="title">' + jobTitle + '</div>\n'
