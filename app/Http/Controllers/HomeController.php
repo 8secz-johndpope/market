@@ -1275,7 +1275,7 @@ class HomeController extends BaseController
                 $application->save();
             }
         }
-        return redirect($request->url);
+        return redirect()->back()->with('msg', 'Applications successfully sent');
 
     }
     public function identity(Request $request)
