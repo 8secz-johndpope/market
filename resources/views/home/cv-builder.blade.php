@@ -169,7 +169,18 @@
               </div>
             </div>
           </div>
-          <div class="work-experience-details">
+          <div class="form-field checkbox">
+            <input type="checkbox" name="no-work-experience" id="no-work-experience">
+            <label for="no-work-experience">I have no work experience</label>
+          </div>
+          <div class="work-experience">
+            <div class="work-experience-container">
+            </div>
+            <div class="add-button-container text-right">
+              <button type="button" class="btn add-work-experience">Add work experience</button>
+            </div>
+          </div>
+          <div class="work-experience-details" style="display: none">
             <form action="" method="post" id="work-experience-form">
               <input name="redirect" type="hidden" value="/job/profile/edit">
               {{ csrf_field() }}
@@ -285,120 +296,15 @@
   </div>
 </div>
 <script>
-  var geocoder;
-  var sectors;
   $('.cvbuilder-personal-details .btn-submit').click(function(e){
     e.preventDefault();
     window.location.href = '/user/cv-builder/work-experience';
   })
-  $('.add-button button').click(function(e){
-    e.preventDefault();
+  $('.add-work-experience').click(function()}{
     $(this).parent().hide();
-    $('.add-location').show();
-  });
-  $('.location-link').click(function(e){
-    e.preventDefault();
-    if(navigator.geolocation){
-      navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
-    }
-  });
-  $('.more-specialism-actions button').click(function(e){
-    e.preventDefault();
-    var parent = $(this).parent();
-    parent.hide();
-    parent.next().show();
-  });
-  $('.specialisms-list').change(function(){
-    $('.specialisms-list option:selected').each(function(){
-      var sectorId = $(this).val();
-      console.log(sectorId);
-      if(sectorId != ""){
-        $('.specialisms-list').next().show();
-        $('.specialisms-list').next().next().hide();
-        loadSubSectors();
-        var sectorChildren = sectors[sectorId];
-        var text = "";
-        for(var i=0; i < sectorChildren.length; i++){
-          text += "<li class=\"role form-field checkbox col-xs-12 col-sm-6\">"
-          + "<input type=\"checkbox\" id=\"add-subsector-" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
-          +"<label for=\"add-subsector-"+ sectorChildren[i].id +"\">" + sectorChildren[i].title + "</label>\n"
-          +"</li>";
-        }
-        $('.roles').html(text);
-      }
-    })
-  });
-  $(document).on('click', '.edit', function(e){
-    $('.edit-roles').show();
-    $(this).parent().hide();
-    $('.more-specialism-actions').hide();
-  });
-  $('.edit-roles .cancel').click(function(e){
-    e.preventDefault();
-    $('.edit-roles').hide();
-    $('.more-specialism-actions').show();
-    $('.edit-specialism-actions').show();
-  });
-  $(document).on('click', '.location-remove', function(e){
-    e.preventDefault();
-    $(this).parent().remove();
-  });
-  $('.add-location button').click(function(e){
-    e.preventDefault();
-    var location = $("#pac-input").val();
-    var text = '<li>\n' +
-                    '<span class="location-name">' + location + '</span>\n' 
-                    + '<input type="hidden" name="prefferedlocation" id="prefferedlocation">\n'
-                    + '<span class="location-remove small">Remove</span>\n'
-                  +'</li>';
-    $('.locations').append(text);
-    $("#pac-input").val('');
-    $(this).closest('.add-location').hide();
-    $('.add-button').show();
-  });
-  $(document).on('click', '.remove', function(){
-    $(this).closest('.specialism').remove();
-  });
-  $('.add-specialism-container .cancel').click(function(e){
-    e.preventDefault();
-    $('.add-specialism-container').hide();
-    $('.specialisms-list').next().next().show();
-    $('.more-specialism-actions').show();
-    $('.specialisms-list').next().hide();
-  });
-  function loadSubSectors(){
-    sectors = [];
-  }
-  function errorFunction(){
-    console.log("Geocoder Failed");
-  }
-  function successFunction(position){
-    var lat = position.coords.latitude;
-    var lng = position.coords.longitude;
-    codeLatLng(lat, lng);
-  }
-  function codeLatLng(lat, lng){
-    geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(lat, lng);
-    geocoder.geocode({latLng: latlng}, function(results, status){
-      if(status == google.maps.GeocoderStatus.OK){
-        if(results[1]){
-          var arrAddress = results;
-          console.log(results);
-          $.each(arrAddress, function(i, address_component){
-            if(address_component.types[0] == 'locality'){
-              $('#location').val(address_component.address_components[0].long_name);
-              console.log("City: " + address_component.address_components[0].long_name);
-            }
-          })
-        }
-        else{
-          console.log('no results found');
-        }
-      }else{
-        console.log('Geocoder failed due to:' + status);
-      }
-    });
-  }
+    $('#no-work-experience').parent().hide();
+    $('work-experience-details').show();
+  })
+  
 </script>
 @endsection
