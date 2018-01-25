@@ -158,7 +158,6 @@
                         <div class="alerts">
                             <div class="alert alert-danger">
                                 <strong>You haven't uploaded a CV yet.</strong>
-                                 To apply for jobs, you'll need a CV.
                             </div>
                         </div>
                         <div class="col-sm-12">
