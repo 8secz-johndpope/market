@@ -302,7 +302,9 @@ use App\Model\Advert;
                         <div class="form-group clearfix">
                             <div class="col-sm-offset-6 col-sm-6">
                                 <input type="hidden" name="url" value="{{$url}}">
-                                @foreach($products as $product)
+                                {{ csrf_field() }}
+
+                            @foreach($products as $product)
                                     <input type="hidden" name="ids[]" value="{{$product['source_id']}}">
                                     @endforeach
                                 <button type="submit" class="btn btn-default">Apply All</button>
