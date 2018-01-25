@@ -115,26 +115,34 @@
                 <div class="form-group">
                   <label class="pre-filled" for="address">Address</label>
                   <input class="form-control" type="address" name="address" value="">
-                  <div class="validation">
+                  <div class="validation"></div>
                 </div>
                 <div class="form-group">
                   <label class="pre-filled" for="town">Town</label>
                   <input class="form-control" type="town" name="town" value="">
-                  <div class="validation">
+                  <div class="validation"></div>
                 </div>
                 <div class="form-group">
                   <label class="pre-filled" for="country">Country</label>
                   <select name="country" id="country" disabled>
                     <option value="uk">United Kingdom</option>
                   </select>
-                  <div class="validation">
+                  <div class="validation"></div>
                 </div>
                 <div class="form-group">
                   <label class="pre-filled" for="postcode">Postcode</label>
                   <input class="form-control" type="postcode" name="postcode">
-                  <div class="validation">
+                  <div class="validation"></div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 col-sm-offset-2">
+              <button class="btn btn-submit" type="submit">Continue</button>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <button class="btn btn-inverse" type="button">Save and continue later</button>
             </div>
           </div>
           </form>
