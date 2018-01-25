@@ -221,10 +221,53 @@
                     <label for="is-current-role">I currently work here</label>
                     <div class="validation"></div>
                   </div>
+                  <div class="date-to form-group date-group">
+                    <label class="legend" for="date-to-month">To</label>
+                    <div class="row">
+                      <div class="month col-sm-6 col-xs-12">
+                        <select class="form-control" id="date-to-month" name="date-to-month">
+                          <option value="">Month</option>
+                          <option value="1">January</option>
+                          <option value="2">February</option>
+                          <option value="3">March</option>
+                          <option value="4">April</option>
+                          <option value="5">May</option>
+                          <option value="6">June</option>
+                          <option value="7">July</option>
+                          <option value="8">August</option>
+                          <option value="9">September</option>
+                          <option value="10">October</option>
+                          <option value="11">November</option>
+                          <option value="12">December</option>
+                        </select>
+                      </div>
+                      <div class="year col-sm-6 col-xs-12">
+                        <select class="form-control" id="date-to-year" name="date-to-year">
+                          <option value="">Year</option>
+                          @for($i = 2018; $i > 1943; $i--)
+                            <option value="{{$i}}">{{$i}}</option>
+                          @endfor
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="responsabilities form-group">
+                    <label for="exampleFormControlTextarea1">What did you do there?</label>
+                    <div class="value">
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name="responsabilities" rows="5"></textarea>
+                    </div>
+                    <div class="character-count">
+                      <small><strong>2000</strong> characters remaining</small>
+                    </div>
+                    <div class="validation"></div>
+                  </div>
                 </div>
               </div>
             </form>
           </div>
+        </div>
+      </div>
+    </div>
     @endif
   </div>
 </div>
