@@ -153,7 +153,7 @@
     @elseif($slug === 'work-experience')
     <div class="row cvbuilder-work-experience">
       <div class="col-sm-12">
-        <div class="section">
+        <div class="section visual-container">
           <form action="" method="post" id="work-experience-form">
               <input name="redirect" type="hidden" value="/job/profile/edit">
               {{ csrf_field() }}
