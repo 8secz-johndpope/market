@@ -604,6 +604,18 @@
 .work-experience-details .content{
     border-bottom: 1px solid #ccc;
 }
+.work-experience .work .what {
+    padding: 0;
+}
+.work-experience .work .title {
+    font-weight: 700;
+}
+.work-experience .company, .work-experience .description, .work-experience .title {
+    word-wrap: break-word;
+}
+.work-experience .description{
+    margin-top: 0;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -708,6 +720,10 @@
         border-top: 1px solid #d6d6d6;
         width: 100%;
         z-index: 0;
+    }
+    .work-experience .work .what {
+        border-left: 1px solid #d6d6d6;
+        padding-left: 30px;
     }
 }
 @media screen and (min-width: 1025px){
