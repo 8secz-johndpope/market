@@ -384,8 +384,8 @@
     if(when.length > 1){
       dateTo = when[1].split('/');
     }
-    $('#date-from-month').val(dateFrom[0]);
-    $('#date-from-year').val(dateFrom[1]);
+    $('#date-from-month').val(dateFrom[0].trim());
+    $('#date-from-year').val(dateFrom[1].trim());
     $('#job-title').val(what.find('.title').text());
     $('#company').val(what.find('.company').text())
     $('#responsabilities').val(what.find('.description').text());
