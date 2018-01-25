@@ -338,6 +338,7 @@
       var dateFrom = $('#date-from-month').val() + '/' + $('#date-from-year').val();
       var dateTo = $('#date-to-month').val() + '/' + $('#date-to-year').val();
       var responsabilities = $('#responsabilities').val();
+      $('#responsabilities').val('');
       var text = '<div class="work row">\n'
                     + '<div class="action delete">\n'
                     +  '<i class="glyphicon glyphicon-trash"></i>\n'
@@ -374,7 +375,9 @@
     $('.add-work-experience').parent().hide();
     $('#no-work-experience').parent().hide();
     var what = $(this).siblings('.what');
-    $('#job-title').val(what.find('title').text());
+    $('#job-title').val(what.find('.title').text());
+    $('#company').val(what.find('.company').text())
+    $('#responsabilities').val(what.find('.description').text());
   })
 </script>
 @endsection
