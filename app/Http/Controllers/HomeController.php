@@ -1244,18 +1244,18 @@ class HomeController extends BaseController
         }
 
 
+        if($application->cover) {
 
+            $message = new Message;
+            $message->message = $application->cover->cover;
+            $message->from_msg = $user->id;
+            $message->to_msg = $advert->user_id;
+            $message->room_id = $room->id;
+            $message->url = '';
+            $message->save();
 
-        $message = new Message;
-        $message->message=$application->cover->cover;
-        $message->from_msg=$user->id;
-        $message->to_msg=$advert->user_id;
-        $message->room_id=$room->id;
-        $message->url='';
-        $message->save();
-
-        $this->notify($room,$message);
-
+            $this->notify($room, $message);
+        }
         return redirect($advert->url());
 
     }
