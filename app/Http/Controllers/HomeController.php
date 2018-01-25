@@ -1267,14 +1267,13 @@ class HomeController extends BaseController
         $ids = $request->ids;
         foreach ($ids as $id) {
             $advert = Advert::find($id);
-
-            $application = new Application;
-            $application->advert_id = $advert->id;
-            $application->user_id = $user->id;
-
-            $application->save();
-
-
+            $application = Application::where('advert_id',$advert->id)->where('user_id',$user->id)->first();
+            if($application===null){
+                $application = new Application;
+                $application->advert_id = $advert->id;
+                $application->user_id = $user->id;
+                $application->save();
+            }
         }
         return redirect($request->url);
 
