@@ -16,6 +16,7 @@
 
         </div>
         <div class="col-sm-8">
+            <br><br><br>
             <h4>Add a Reply Template</h4>
             <form action="/user/templates/save" method="post" id="login-form">
                 {{ csrf_field() }}
