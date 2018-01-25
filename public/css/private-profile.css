@@ -577,12 +577,12 @@
     background-repeat: no-repeat;
     background-image: url(/css/icon-sprite.svg);
 }
-.cvbuilder-personal-details .section-title {
+.cvbuilder-personal-details .section-title, .cvbuilder-work-experience .section-title{
     position: relative;
     text-align: center;
     margin-bottom: 20px;
 }
-.cvbuilder-personal-details .section-title h2 {
+.cvbuilder-personal-details .section-title h2, .cvbuilder-work-experience .section-title h2 {
     position: relative;
     z-index: 1;
     font-size: 1.4em;
@@ -591,6 +591,9 @@
     background: #fff;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     text-transform: uppercase;
+}
+.confirm-work-experience-button {
+    margin-left: 10px;
 }
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
@@ -687,7 +690,7 @@
     .cvbuilder-personal-details .section-title h2 {
         padding: 0 30px;
     }
-    .cvbuilder-personal-details .section-title:before{
+    .cvbuilder-personal-details .section-title:before, .cvbuilder-work-experience .section-title:before{
         content: '';
         position: absolute;
         top: 32px;
