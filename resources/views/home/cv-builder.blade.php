@@ -184,6 +184,8 @@
                 </div>
               </div>
             <div class="work-experience-details" style="display: none">
+                <input type="hidden" value="false" name="is-edit-experience" id="is-edit-experience">
+                <input type="hidden" value="0" name="index-work-experience" id="index-work-experience">
                 <div class="content row">
                   <div class="col-sm-12">
                     <h5 class="work-experience-form-title"><span>Add</span> work experience</h5>
@@ -382,6 +384,7 @@
     $('.work-experience-details').show();
     $('.add-work-experience').parent().hide();
     $('#no-work-experience').parent().hide();
+    $('#index-work-experience').val($('.work').index($(this).parent()));
     var what = $(this).siblings('.what');
     var when = $(this).siblings('.when').text().split('-');
     var dateFrom = when[0].split('/');
