@@ -629,6 +629,16 @@
     margin: 0 0 15px 0!important;
     border-bottom: 1px solid #d6d6d6;
 }
+.work-experience .work .delete, .work-experience .work .edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+.work-experience .work .delete {
+    right: 30px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;

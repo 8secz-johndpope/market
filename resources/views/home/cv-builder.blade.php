@@ -180,10 +180,10 @@
                 <div class="work-experience-container">
                   <div class="work row">
                     <div class="action delete">
-                      <i class=""></i>
+                      <i class="glyphicon glyphicon-trash"></i>
                     </div>
                     <div class="action edit">
-                      <i class=""></i>
+                      <i class="glyphicon glyphicon-edit"></i>
                     </div>
                     <div class="when col-xs-12 col-sm-3 col-md-2 text-right">
                       10/2015 - 01/2017
@@ -342,7 +342,9 @@
   });
   $('.confirm-work-experience-button').click(function(){
       var jobTitle = $('#job-title').val();
+      $('#job-title').val('');
       var company = $('#company').val();
+      $('#company').val('');
       var dateFrom = $('#date-from-month').val() + '/' + $('#date-from-year').val();
       var dateTo = $('#date-to-month').val() + '/' + $('#date-to-year').val();
       var responsabilities = $('#responsabilities').val();
@@ -364,6 +366,8 @@
                     + '</div>'
                     + '</div>'
                   + '</div>';
+      $('.work-experience-details').hide();
+      $('#no-work-experience').hide();
       $('.work-experience-container').append(text);
   });
   
