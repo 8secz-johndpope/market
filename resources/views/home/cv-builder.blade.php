@@ -327,7 +327,7 @@
       button.removeAttr('disabled');
     }
     else{
-
+      button.attr('disabled', 'true');
     }
   })
   $('.confirm-work-experience-button').click(function(){
