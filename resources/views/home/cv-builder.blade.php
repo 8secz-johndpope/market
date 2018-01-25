@@ -348,10 +348,10 @@
       var responsabilities = $('#responsabilities').val();
       var text = '<div class="work row">\n'
                     + '<div class="action delete">\n'
-                    +  '<i class=""></i>\n'
+                    +  '<i class="glyphicon glyphicon-trash"></i>\n'
                     + '</div>\n'
                     + '<div class="action edit">\n'
-                    +  '<i class=""></i>\n'
+                    +  '<i class="glyphicon glyphicon-edit"></i>\n'
                     + '</div>\n'
                     + '<div class="when col-xs-12 col-sm-3 col-md-2 text-right">\n'
                     + dateFrom + ' - ' + dateTo + '\n'
