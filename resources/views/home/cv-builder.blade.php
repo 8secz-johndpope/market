@@ -336,6 +336,8 @@
       var company = $('#company').val();
       $('#company').val('');
       var dateFrom = $('#date-from-month').val() + '/' + $('#date-from-year').val();
+      $('#date-from-month').val('');
+      $('#date-from-year').val('');
       var dateTo = $('#date-to-month').val() + '/' + $('#date-to-year').val();
       var responsabilities = $('#responsabilities').val();
       $('#responsabilities').val('');
@@ -375,6 +377,14 @@
     $('.add-work-experience').parent().hide();
     $('#no-work-experience').parent().hide();
     var what = $(this).siblings('.what');
+    var when = $(this).siblings('.when').text().split('-');
+    var dateFrom = when[0].split('/');
+    var dateTo = null;
+    if(when.length > 1){
+      dateTo = when[1].split('/');
+    }
+    $('#date-from-month').val(dateFrom[0]);
+    $('#date-from-year').val(dateFrom[1]);
     $('#job-title').val(what.find('.title').text());
     $('#company').val(what.find('.company').text())
     $('#responsabilities').val(what.find('.description').text());
