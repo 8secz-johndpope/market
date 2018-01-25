@@ -70,6 +70,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
+                <form>
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
@@ -85,9 +86,10 @@
                         </tr>
                     </thead>
                     <tbody>
+                    <tr><td><input type="checkbox" class="select-all"> Select All</td></tr>
                     @foreach($job->applications as $application)
                         <tr>
-                            <td><input type="checkbox" name="row-select"></td>
+                            <td><input type="checkbox" name="ids[]" value="{{$application->id}}" class="select-application"></td>
                             <td>{{$application->user->name}}</td>
                             <td>{{$application->user->phone}}</td>
                             <td>New</td>
@@ -100,6 +102,20 @@
                     @endforeach
                     </tbody>
                 </table>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4"><select class="form-control" id="inlineFormCustomSelect">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn btn-primary">Reply Selected</button>
+
+                        </div>
+
+                    </div>
+                </form>
             </div>
         </div>
     </div>
