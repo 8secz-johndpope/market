@@ -165,6 +165,7 @@ Route::post('/user/templates/save', 'HomeController@save_template');
 
 Route::get('/user/templates/add', 'HomeController@add_template');
 Route::get('/user/manage/templates', 'HomeController@templates');
+Route::get('/user/delete/template/{id}', 'HomeController@delete_template');
 
 
 Route::get('/user/manage/order', 'HomeController@order');
