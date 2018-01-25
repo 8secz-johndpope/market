@@ -2425,8 +2425,8 @@ class HomeController extends BaseController
         $idsSubSectorPreferred = [4140800000, 4141700000, 4140500000];
         return view('home.looking_for_edit', ['user' => $user, 'jobChildren' => $jobChildren, 'idsSubSectorPreferred' => $idsSubSectorPreferred, 'sectorPreferred' => $sectorPreferred]);
     }
-    public function cv_builder(Request $request){
+    public function cv_builder(Request $request, $slug){
         $user = Auth::user();
-        return view('home.cv-builder', ['user' => $user]);
+        return view('home.cv-builder', ['user' => $user, 'slug' => $slug]);
     }
 }
