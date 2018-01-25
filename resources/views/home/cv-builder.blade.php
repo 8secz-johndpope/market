@@ -177,7 +177,7 @@
             <div class="work-experience-container">
             </div>
             <div class="add-button-container text-right">
-              <button type="button" class="btn add-work-experience">Add work experience</button>
+              <button type="button" class="btn btn-secondary add-work-experience">Add work experience</button>
             </div>
           </div>
           <div class="work-experience-details" style="display: none">
