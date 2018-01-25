@@ -124,7 +124,7 @@
                 </div>
                 <div class="form-group">
                   <label class="pre-filled" for="country">Country</label>
-                  <select name="country" id="country" disabled>
+                  <select name="country" id="country" disabled class="form-control">
                     <option value="uk">United Kingdom</option>
                   </select>
                   <div class="validation"></div>
