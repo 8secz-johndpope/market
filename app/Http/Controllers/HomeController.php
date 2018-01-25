@@ -1278,6 +1278,9 @@ class HomeController extends BaseController
         return redirect()->back()->with('msg', 'Applications successfully sent');
 
     }
+    public function add_template(Request $request){
+        
+    }
     public function identity(Request $request)
     {
         $user = Auth::user();
