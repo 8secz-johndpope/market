@@ -639,6 +639,9 @@
 .work-experience .work .delete {
     right: 30px;
 }
+input[type=checkbox]~label {
+    position: relative;
+}
 input[type=checkbox]+label:before, .canvas input[type=checkbox]~label:before{
     content: '';
     display: block;
