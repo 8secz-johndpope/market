@@ -302,7 +302,7 @@ use App\Model\Advert;
                         <div class="form-group clearfix">
                             <div class="col-sm-offset-6 col-sm-6">
                                 @foreach($products as $product)
-                                    <input type="hidden" name="ids[]" value="{{$product['id']}}">
+                                    <input type="hidden" name="ids[]" value="{{$product['source_id']}}">
                                     @endforeach
                                 <button type="submit" class="btn btn-default">Apply All</button>
                             </div>
