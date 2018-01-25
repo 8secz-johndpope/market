@@ -165,7 +165,7 @@
                             <p>Upload a new CV, or use our CV builder to build one for you.</p>
                             <div class="btns row">
                                 <div class="col-xs-12 col-sm-6">
-                                    <a class="btn btn-inverse" href="/user/cv-buider">CV Builder by {{env('APP_NAME')}}</a>
+                                    <a class="btn btn-inverse" href="/user/cv-builder">CV Builder by {{env('APP_NAME')}}</a>
                                     <a class="btn btn-submit" href="/user/upload/cvs">Upload CV</a>
                                 </div>
                             </div>
