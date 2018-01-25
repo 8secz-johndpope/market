@@ -297,7 +297,17 @@ use App\Model\Advert;
             </div>
         </div> -->
         @if($category->id >= 4000000000 && $category->id <= 4999999999)
-        <div class="l-visible-large">
+                <div class="l-visible-large">
+                    <form action="">
+                        <div class="form-group clearfix">
+                            <div class="col-sm-offset-6 col-sm-6">
+                                <button type="submit" class="btn btn-default">Apply All</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="l-visible-large">
             <form action="{{$url}}">
                 <label for="distance">Salary</label>
                 @foreach($input as $key=>$value)
