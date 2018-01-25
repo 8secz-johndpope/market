@@ -197,7 +197,7 @@
 <script>
   var geocoder;
   var sectors;
-  $('.cvbuilder-personal-details btn-submit').click(function(e){
+  $('.cvbuilder-personal-details .btn-submit').click(function(e){
     e.preventDefault();
     window.location.href = '/user/cv-builder/work-experience';
   })
