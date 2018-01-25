@@ -555,6 +555,12 @@
     width: 0;
     height: 0;
 }
+.steps .step .name {
+    font-size: .8666666667rem;
+    top: auto;
+    bottom: -28px;
+    color: #a4a4a4;
+}
 .steps .step .sign:before {
     content: '';
     text-indent: -999em;
