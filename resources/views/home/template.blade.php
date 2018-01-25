@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.next')
 
 @section('title', 'Page Title')
 
@@ -11,19 +11,28 @@
 @endsection
 
 @section('content')
-    <div class="body">
-        <form action="/user/templates/save" method="post" id="login-form">
-            {{ csrf_field() }}
-            <div class="row">
-                <div class="col-sm-11 col-sm-offset-1">
-                    <div class="well">
-                        <input type="text" name="title" class="form-control">
-                        <textarea cols="50" rows="5" name="message">Can you attend interview next week and join immediately?</textarea>
-                        <button class="btn btn-primary" type="submit">Add Template</button>
-                    </div>
+    <div class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-8">
+            <h4>Add a Reply Template</h4>
+            <form action="/user/templates/save" method="post" id="login-form">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Title</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Template for Salesmen">
                 </div>
-            </div>
-        </form>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
     </div>
 
 @endsection
