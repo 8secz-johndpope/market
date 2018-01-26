@@ -302,7 +302,7 @@
 <script>
   $('.continue .btn-submit').click(function(e){
     e.preventDefault();
-    @if($index < count($cvSections) - 1)
+    @if($indexSector < count($cvSections) - 1)
       window.location.href = '/user/cv-builder/{{array_keys($cvSections)[$indexSector + 1]}}';
     @else
       window.location.href = '/job/profile/edit';
