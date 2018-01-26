@@ -593,7 +593,10 @@ use App\Model\Advert;
 
             <div> <input type="checkbox" class="select-all" id="select-all"> Select All</div>
 @endif
-        @foreach($products as $product)
+            <form action="/user/jobs/apply/all" method="post">
+                {{ csrf_field() }}
+
+            @foreach($products as $product)
         @if($i == 10)
         <div class="listing-max-pro container-emailme">
             <div class="container-emailme-header text-center">
@@ -1064,7 +1067,7 @@ use App\Model\Advert;
             <small>By clicking Submit, you accept our <a>Terms & Conditions</a>, <a>Privacy policy</a> and consent to messages</small>
         </div>
     </div>
-
+            </form>
 
         <nav aria-label="Page navigation">
             <div class="text-center">
