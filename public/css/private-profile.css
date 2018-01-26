@@ -629,8 +629,9 @@
 .confirm-work-experience-button {
     margin-left: 10px;
 }
-.work-experience-form-title {
+.work-experience-form-title, [class*=-form-title]{
     font-weight: 700;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 .actions-btns-cv-builder{
     margin-top: 20px;
@@ -701,9 +702,6 @@ input[type=checkbox]:checked~label:before {
     -webkit-background-size: 1230px 1230px;
     background-repeat: no-repeat;
     background-image: url(/css/icon-sprite.svg);
-}
-.qualification-edit .content{
-    padding: 0;
 }
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
