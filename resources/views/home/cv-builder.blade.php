@@ -330,7 +330,7 @@
                     <div class="action delete">
                       <i class="glyphicon glyphicon-trash"></i>
                     </div>
-                    <div class="when col-xs-12 col-sm-3">
+                    <div class="when col-xs-12 col-sm-3 text-right">
                       2012 - 2016
                     </div>
                     <div class="what col-xs-12 col-sm-9">
@@ -387,7 +387,7 @@
                           <div class="small-container col-xs-12">
                             <div class="institution form-group">
                               <label for="institution-name">Name of university or college</label>
-                              <input type="text" name="institution-name" class="form-control tt-input">
+                              <input type="text" name="institution-name" id="institution-name" class="form-control tt-input">
                               <div class="validation">
                               </div>
                             </div>
@@ -636,10 +636,54 @@
     $('#company').val(what.find('.company').text())
     $('#responsabilities').val(what.find('.description').text());
   })
-  $('#qualification-form-bulk').submit(function(e)}{
+  $('#qualification-form-bulk').submit(function(e){
     e.preventDefault();
-
-  })
+    var type = $('#qualification-type').val();
+    var institution = $('#institution-name').val();
+    var startedOn = $('#started-on').val();
+    var endedOn = $('#ended-on').val();
+    var subjectName = $('#subject-name').val();
+    if(type == '32'){
+      var gradeDescription = $('#grade-description').val();
+    }else{
+      var gradeSelector = $('#grade-selector').val();
+    }
+    var text = '<div class="qualification row">'
+                    +'<div class="action edit">'
+                    +' <i class="glyphicon glyphicon-edit"></i>'
+                    +'</div>'
+                    +'<div class="action delete">'
+                    + '<i class="glyphicon glyphicon-trash"></i>'
+                    +'</div>'
+                    +'<div class="when col-xs-12 col-sm-3 text-right">'
+                    + startedOn + ' - ' + endedOn
+                    +'</div>'
+                    +'<div class="what col-xs-12 col-sm-9">'
+                    +  '<div class="type-name">'
+                    +    '<b>' + type + '</b>'
+                    +  '</div>'
+                    + '<div class="institution">'
+                    + institution 
+                    +  '</div>'
+                    +  '<div class="qualification-list">'
+                    +    '<div class="qualification-item">'
+                    +      '<div>'
+                    +        '<span class="subject-name">Software Engineering</span>'
+                    +        '<span class="grade-value">'
+                    +          '<span>(Grade: ' + gradeSelector +')</span>'
+                    +        '</span>'
+                    +      '</div>'
+                    +      '<div style="display: none;">'
+                    +        '<div class="grade-uni">'
+                    +          '<span class="grade-value-uni">' + gradeSelector + '</span>'
+                    +        '</div>'
+                    +      '</div>'
+                    +    '</div>'
+                    +  '</div>'
+                    +'</div>'
+                  +'</div>';
+    $('.qualifications-container').append(text);
+  });
   function isEditExperience(){
     return ($('#is-edit-experience').val() === 'true');
   }
