@@ -27,7 +27,7 @@
                 <span class="sign"></span>
                 <span class="name">{{$section}}</span>
               </li>
-            @endfor
+            @endforeach
           </ul>
         </div>
       </div>
