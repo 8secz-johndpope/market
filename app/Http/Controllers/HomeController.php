@@ -1266,6 +1266,9 @@ class HomeController extends BaseController
         // Get the currently authenticated user...
         $user = Auth::user();
         $ids = $request->ids;
+        if($ids===null) {
+            return redirect('/');
+        }
         foreach ($ids as $id) {
             $advert = Advert::find($id);
             $application = Application::where('advert_id',$advert->id)->where('user_id',$user->id)->first();
