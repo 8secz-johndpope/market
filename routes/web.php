@@ -160,6 +160,8 @@ Route::post('/user/accounts/add', 'HomeController@add_bank_account');
 Route::post('/user/addresses/add', 'HomeController@add_address');
 Route::post('/user/covers/add', 'HomeController@add_cover');
 Route::post('/user/jobs/apply', 'HomeController@apply');
+Route::post('/user/jobs/apply/show', 'HomeController@apply_show');
+
 Route::post('/user/jobs/apply/all', 'HomeController@apply_all');
 Route::post('/user/templates/save', 'HomeController@save_template');
 Route::post('/user/reply/all', 'HomeController@reply_all');

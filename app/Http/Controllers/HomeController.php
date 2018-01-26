@@ -1279,6 +1279,18 @@ class HomeController extends BaseController
         return redirect()->back()->with('msg', 'Applications successfully sent');
 
     }
+    public function apply_show(Request $request)
+    {
+        $user=Auth::user();
+        $ids = $request->ids;
+        $ads = [];
+        foreach ($ids as $id) {
+            $advert = Advert::find($id);
+            $ads[] = $advert;
+        }
+        return view('home.bulk',['user'=>$user,'adverts'=> $ads]);
+
+    }
     public function add_template(Request $request){
         $user=Auth::user();
 

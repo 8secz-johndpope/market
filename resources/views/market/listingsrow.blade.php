@@ -298,7 +298,7 @@ use App\Model\Advert;
         </div> -->
         @if($category->id >= 4000000000 && $category->id <= 4999999999)
                 <div class="l-visible-large">
-                    <form action="/user/jobs/apply/all" method="post">
+                    <form action="/user/jobs/apply/show" method="post">
                         <div class="form-group clearfix">
                             <div class="col-sm-offset-6 col-sm-6">
                                 <input type="hidden" name="url" value="{{$url}}">
@@ -593,7 +593,7 @@ use App\Model\Advert;
 
             <div> <input type="checkbox" class="select-all" id="select-all"> Select All</div>
 @endif
-            <form action="/user/jobs/apply/all" method="post">
+            <form id="bulk-apply-form" action="/user/jobs/apply/show" method="post">
                 {{ csrf_field() }}
 
             @foreach($products as $product)
