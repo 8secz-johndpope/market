@@ -31,7 +31,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($user->applications as $application)
+                    @foreach($applications as $application)
                         <tr>
                             <td><a href="{{$application->advert->url()}}"> {{$application->advert->param('title')}}</a>
                             </td>
