@@ -405,12 +405,12 @@
                           </div>
                           <div class="other col-sm-9 col-xs-12" style="display: none">
                             <label for="grade-description">Grade (Optional)</label>
-                            <input type="text" name="grade-description" id="grade-description">
+                            <input type="text" name="grade-description" id="grade-description" class="form-control">
                             <div class="validation"></div>
                           </div>
                         </form>
                       </div>
-                      <div class="text-right">
+                      <div class="col-xs-12 text-right">
                         <button type="button" class=" cancel btn btn-inline btn-link">Cancel</button>
                         <button type="button" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
                       </div>
@@ -599,6 +599,11 @@
     $('[for="subjet-name"]').text('Qualification');
     $('.subject-grade').hide();
     $('.other').show();
+  }
+  function setAGradeForm(){
+    $('[for="subjet-name"]').text('Subject');
+    var text = '<option value="">Select</option>\n<option value="9">A*</option>\n<option value="10">A</option>\n<option value="11">B</option>\n<option value="12">C</option>\n<option value="13">D</option>\n<option value="14">E</option>';
+    $('#grade-selector').html(text);
   }
 </script>
 @endsection
