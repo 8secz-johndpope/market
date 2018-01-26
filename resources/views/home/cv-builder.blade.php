@@ -386,11 +386,11 @@
                             <div class="subject row">
                               <div class="subject-name form-group col-xs-12 col-sm-8">
                                 <label for="subject-name">Degree</label>
-                                <input type="text" name="subject-name" id="subject-name">
+                                <input type="text" name="subject-name" id="subject-name" class="form-control">
                                 <div class="validation">
                                 </div>
                               </div>
-                              <div class="subject-grade form-group col-xs-12 col-sm-8">
+                              <div class="subject-grade form-group col-xs-12 col-sm-4">
                                 <label for="grade-selector">Grade</label>
                                 <select class="form-control" name="grade-selector" id="grade-selector">
                                   <option value="">Select</option>
