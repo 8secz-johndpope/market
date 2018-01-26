@@ -24,6 +24,9 @@
                     <thead>
                     <tr>
                         <th scope="col">Title</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Cover</th>
+                        <th scope="col">CV</th>
 
                     </tr>
                     </thead>
@@ -32,6 +35,9 @@
                         <tr>
                             <td><a href="{{$application->advert->url()}}"> {{$application->advert->param('title')}}</a>
                             </td>
+                            <td>{{$application->created_at->format('d M Y')}}</td>
+                            <td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td>
+                            <td>              @if($application->cv)                      <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">View/Download</a> @else <span>No Cv</span> @endif</td>
 
                         </tr>
                     @endforeach
