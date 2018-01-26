@@ -611,12 +611,12 @@
     background-repeat: no-repeat;
     background-image: url(/css/icon-sprite.svg);
 }
-[class^="cvbuilder-"] .section-title, .cvbuilder-work-experience .section-title, .cvbuilder-qualifications .section-title{
+[class*="cvbuilder-"] .section-title, .cvbuilder-work-experience .section-title, .cvbuilder-qualifications .section-title{
     position: relative;
     text-align: center;
     margin-bottom: 20px;
 }
-[class^="cvbuilder-"] .section-title h2, .cvbuilder-work-experience .section-title h2, .cvbuilder-qualifications .section-title h2{
+[class*="cvbuilder-"] .section-title h2, .cvbuilder-work-experience .section-title h2, .cvbuilder-qualifications .section-title h2{
     position: relative;
     z-index: 1;
     font-size: 1.4em;
