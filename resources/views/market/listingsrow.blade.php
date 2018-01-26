@@ -563,7 +563,8 @@ use App\Model\Advert;
         @endphp
         <div class="listing-max-pro container-set-alarm clearfix">
             <div class="search-alert-div text-center">
-                <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>
+                <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a>                                 <button class="btn btn-primary" onclick="$('#bulk-apply-form').submit();">Bulk Apply</button>
+
             </div>
         </div>
         @if($category->can_apply())
