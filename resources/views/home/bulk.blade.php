@@ -29,7 +29,7 @@
                 <tbody>
                 @foreach($adverts as $advert)
                     <tr>
-                        <td><a href="{{$advert->url()}}"></a> {{$advert->param('title')}}</td>
+                        <td><a href="{{$advert->url()}}"> {{$advert->param('title')}}</a></td>
 
                     </tr>
                 @endforeach
