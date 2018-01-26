@@ -1276,7 +1276,7 @@ class HomeController extends BaseController
                 $application->save();
             }
         }
-        return redirect()->back()->with('msg', 'Applications successfully sent');
+        return redirect('/user/manage/my/applications');
 
     }
     public function apply_show(Request $request)
