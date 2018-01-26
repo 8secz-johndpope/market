@@ -52,21 +52,21 @@
                 <div class="list-menu-common">
                     <div class="title-list">
                         <span class="nav-link nav-color">Jobs/Profile</span>
-                        <ul>
-                            <li>
-                                <a class="nav-link nav-color" href="/job/profile/edit"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Private Profile</a>
-                            </li>
-                            <li>
-                                <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Public Profile</a>
-                            </li>
-                            <li>
-                                <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Candidate Portal</a>
-                            </li>
-                            <li>
-                                <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Recommended Jobs</a>
-                            </li>
-                        </ul>
                     </div>
+                    <ul>
+                        <li>
+                            <a class="nav-link nav-color" href="/job/profile/edit"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Private Profile</a>
+                        </li>
+                        <li>
+                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Public Profile</a>
+                        </li>
+                        <li>
+                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Candidate Portal</a>
+                        </li>
+                        <li>
+                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Recommended Jobs</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="list-menu-common">
                     <div class="title-list">
