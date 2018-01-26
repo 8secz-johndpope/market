@@ -611,12 +611,12 @@
     background-repeat: no-repeat;
     background-image: url(/css/icon-sprite.svg);
 }
-.cvbuilder-personal-details .section-title, .cvbuilder-work-experience .section-title, .cvbuilder-qualifications .section-title{
+[class^=".cvbuilder-"] .section-title, .cvbuilder-work-experience .section-title, .cvbuilder-qualifications .section-title{
     position: relative;
     text-align: center;
     margin-bottom: 20px;
 }
-.cvbuilder-personal-details .section-title h2, .cvbuilder-work-experience .section-title h2 {
+[class^=".cvbuilder-"] .section-title h2, .cvbuilder-work-experience .section-title h2, .cvbuilder-qualifications .section-title h2{
     position: relative;
     z-index: 1;
     font-size: 1.4em;
@@ -797,7 +797,7 @@ input[type=checkbox]:checked~label:before {
     .cvbuilder-personal-details .section-title h2 {
         padding: 0 30px;
     }
-    .cvbuilder-personal-details .section-title:before, .cvbuilder-work-experience .section-title:before{
+    .cvbuilder-personal-details .section-title:before, .cvbuilder-work-experience .section-title:before, .cvbuilder-qualifications .visual-container .section-title:before{
         content: '';
         position: absolute;
         top: 32px;
