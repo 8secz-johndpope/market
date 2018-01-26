@@ -247,7 +247,8 @@
 
             </div>
             <div class="business-drop collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                @include('market.dropdown-nav')
+                <!-- <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Store</a></li>
                     @if (Auth::guest())
@@ -434,7 +435,7 @@
                     @endif
                     <li><a class="post-advert" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Post an Ad</a> </li>
 
-                </ul>
+                </ul> -->
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>

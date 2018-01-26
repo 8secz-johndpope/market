@@ -295,7 +295,7 @@
         </div>
       </div>
     </div>
-    @elseif($slug === '')
+    @elseif($slug === 'qualifications')
     @endif
   </div>
 </div>
