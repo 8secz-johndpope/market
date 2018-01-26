@@ -360,6 +360,9 @@
                 </div>
               </div>
               <div class="qualification-edit" style="display: none">
+                <form id="qualification-form-bulk" action="">
+                  {{ csrf_field() }}
+                  <input name="redirect" type="hidden" value="/job/profile/edit">
                   <input type="hidden" value="false" name="is-edit-qualification" id="is-edit-qualification">
                   <input type="hidden" value="0" name="index-edit-qualification" id="index-edit-qualification">
                   <div class="section">
@@ -379,9 +382,7 @@
                         <div class="validation"></div>
                       </div>
                       <div class="qualification-details" style="display: none">
-                        <form id="qualification-form-bulk" action="">
-                          {{ csrf_field() }}
-                          <input name="redirect" type="hidden" value="/job/profile/edit">
+                        
                           <div class="small-container col-xs-12">
                             <div class="institution form-group">
                               <label for="institution-name">Name of university or college</label>
@@ -444,9 +445,11 @@
                             <button type="button" class=" cancel btn btn-inline btn-link">Cancel</button>
                             <button type="submit" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
                         </div>
+                      
                       </div>
                     </div>
                   </div>
+                  </form>
               </div>
               <div class="row actions-btns-cv-builder">
                 <div class="col-xs-12 col-sm-5 col-sm-offset-2">
@@ -456,7 +459,6 @@
                   <button class="btn btn-submit" type="submit" disabled>Continue</button>
                 </div>
               </div>
-            </form>
           </div>
         </div>
       </div>
@@ -641,9 +643,9 @@
     var endedOn = $('#ended-on').val();
     var subjectName = $('#subject-name').val();
     if(type == '32'){
-      var gradeDescription = $('#grade-description option:selected').text();
+      var gradeDescription = $('#grade-description').text();
     }else{
-      var gradeSelector = $('#grade-selector').val();
+      var gradeSelector = $('#grade-selector option:selected').val();
     }
     if(!isEditQualification()){
       var text = '<div class="qualification row">'
@@ -720,6 +722,7 @@
       setEditQualification('false');
     }
     $('.qualification-edit').hide();
+    $(this)[0].reset();
   });
   function isEditExperience(){
     return ($('#is-edit-experience').val() === 'true');
