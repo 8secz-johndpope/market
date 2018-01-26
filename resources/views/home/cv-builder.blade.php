@@ -42,7 +42,7 @@
           @if($indexSector == 0)
           <a href="/job/profile/edit"><i class="glyphicon glyphicon-menu-left"></i>Back</a>
           @else
-          <a href="/user/cv-builder/{{array_keys($cvSections)[$indexSector]}}"><i class="glyphicon glyphicon-menu-left"></i>Back</a>
+          <a href="/user/cv-builder/{{array_keys($cvSections)[$indexSector - 1]}}"><i class="glyphicon glyphicon-menu-left"></i>Back</a>
           @endif
         </div>
       </div>
