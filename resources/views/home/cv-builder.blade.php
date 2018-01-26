@@ -442,11 +442,11 @@
                             <input type="text" name="grade-description" id="grade-description" class="form-control">
                             <div class="validation"></div>
                           </div>
+                          <div class="col-xs-12 text-right">
+                            <button type="button" class=" cancel btn btn-inline btn-link">Cancel</button>
+                            <button type="submit" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
+                        </div>
                         </form>
-                      </div>
-                      <div class="col-xs-12 text-right">
-                        <button type="button" class=" cancel btn btn-inline btn-link">Cancel</button>
-                        <button type="submit" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
                       </div>
                     </div>
                   </div>
