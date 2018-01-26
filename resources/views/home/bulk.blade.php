@@ -26,6 +26,7 @@
                 <thead>
                 <tr>
                     <th scope="col">Title</th>
+                    <th scope="col">Delete</th>
 
                 </tr>
                 </thead>
@@ -36,6 +37,7 @@
                             <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$advert->id}}">
 
                         </td>
+                        <td><button class="btn btn-danger" onclick="$(this).parent().parent().remove();">Delete</button> </td>
 
                     </tr>
                 @endforeach
