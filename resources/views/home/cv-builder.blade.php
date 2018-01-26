@@ -222,7 +222,7 @@
                         <div class="year col-sm-6 col-xs-12">
                           <select class="form-control" id="date-from-year" name="date-from-year">
                             <option value="">Year</option>
-                            @for($i = intval(date('y')); $i > 1943; $i--)
+                            @for($i = idate('y'); $i > 1943; $i--)
                               <option value="{{$i}}">{{$i}}</option>
                             @endfor
                           </select>
@@ -257,7 +257,7 @@
                         <div class="year col-sm-6 col-xs-12">
                           <select class="form-control" id="date-to-year" name="date-to-year">
                             <option value="">Year</option>
-                            @for($i = intval(date('y')); $i > 1943; $i--)
+                            @for($i = idate('y'); $i > 1943; $i--)
                               <option value="{{$i}}">{{$i}}</option>
                             @endfor
                           </select>
