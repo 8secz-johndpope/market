@@ -349,8 +349,31 @@
       }
       var responsabilities = $('#responsabilities').val();
       $('#responsabilities').val('');
-      var text = '<div class="work row">\n'
-                    + '<div class="action delete">\n'
+      if(!isEditExperience){
+        var text = '<div class="work row">\n'
+                      + '<div class="action delete">\n'
+                      +  '<i class="glyphicon glyphicon-trash"></i>\n'
+                      + '</div>\n'
+                      + '<div class="action edit">\n'
+                      +  '<i class="glyphicon glyphicon-edit"></i>\n'
+                      + '</div>\n'
+                      + '<div class="when col-xs-12 col-sm-3 col-md-2 text-right">\n'
+                      + dateFrom + ' - ' + dateTo + '\n'
+                      + '</div>\n'
+                      + '<div class="what col-xs-12 col-sm-9 col-md-10">\n'
+                      + '<div class="title">' + jobTitle + '</div>\n'
+                      + '<div class="company">' + company + '</div>\n'
+                      + '<div class="description hidden-xs">\n'
+                      +  responsabilities +'\n'
+                      + '</div>'
+                      + '</div>'
+                    + '</div>';
+        $('.work-experience-container').append(text);
+     }
+     else{
+      setEditExperience('false');
+      var index = $('#index-work-experience').val() - 1;
+      var text = '<div class="action delete">\n'
                     +  '<i class="glyphicon glyphicon-trash"></i>\n'
                     + '</div>\n'
                     + '<div class="action edit">\n'
@@ -365,11 +388,13 @@
                     + '<div class="description hidden-xs">\n'
                     +  responsabilities +'\n'
                     + '</div>'
-                    + '</div>'
-                  + '</div>';
+                    + '</div>';
+      $('#index-work-experience').val('0');
+      $('.work-experience-container .work').eq(index).html(text); 
+     } 
       $('.work-experience-details').hide();
       $('#no-work-experience').parent().hide();
-      $('.work-experience-container').append(text);
+      
       $('.add-button-container').show();
       $('.continue button').removeAttr('disabled');
   });
@@ -385,6 +410,7 @@
     $('.add-work-experience').parent().hide();
     $('#no-work-experience').parent().hide();
     $('#index-work-experience').val($('.work').index($(this).parent()));
+    $('#is-edit-experience').val('true');
     var what = $(this).siblings('.what');
     var when = $(this).siblings('.when').text().split('-');
     var dateFrom = when[0].split('/');
@@ -403,5 +429,11 @@
     $('#company').val(what.find('.company').text())
     $('#responsabilities').val(what.find('.description').text());
   })
+  function isEditExperience(){
+    return ($('#is-edit-experience').val() === 'true');
+  }
+  function setEditExperience(value){
+    $('#is-edit-experience').val(value);
+  }
 </script>
 @endsection
