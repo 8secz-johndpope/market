@@ -490,7 +490,7 @@
     //qualifications
     $('.qualification-edit').hide();
     $('#no-qualifications').parent().show();
-    $('#qualification-form-bulk').reset();
+    $('#qualification-form-bulk')[0].reset();
   });
   $('#is-current-role').change(function(){
     var dateTo = $('.date-to');
@@ -646,44 +646,90 @@
     }else{
       var gradeSelector = $('#grade-selector').val();
     }
-    var text = '<div class="qualification row">'
-                    +'<div class="action edit">'
-                    +' <i class="glyphicon glyphicon-edit"></i>'
-                    +'</div>'
-                    +'<div class="action delete">'
-                    + '<i class="glyphicon glyphicon-trash"></i>'
-                    +'</div>'
-                    +'<div class="when col-xs-12 col-sm-3 text-right">'
-                    + startedOn + ' - ' + endedOn
-                    +'</div>'
-                    +'<div class="what col-xs-12 col-sm-9">'
-                    +  '<div class="type-name">'
-                    +    '<b>' + type + '</b>'
-                    +  '</div>'
-                    + '<div class="institution">'
-                    + institution 
-                    +  '</div>'
-                    +  '<div class="qualification-list">'
-                    +    '<div class="qualification-item">'
-                    +      '<div>'
-                    +        '<span class="subject-name">Software Engineering</span>'
-                    +        '<span class="grade-value">'
-                    +          '<span>(Grade: ' + gradeSelector +')</span>'
-                    +        '</span>'
-                    +      '</div>'
-                    +      '<div style="display: none;">'
-                    +        '<div class="grade-uni">'
-                    +          '<span class="grade-value-uni">' + gradeSelector + '</span>'
-                    +        '</div>'
-                    +      '</div>'
-                    +    '</div>'
-                    +  '</div>'
-                    +'</div>'
-                  +'</div>';
-    $('.qualifications-container').append(text);
+    if(!isEditQualification()){
+      var text = '<div class="qualification row">'
+                      +'<div class="action edit">'
+                      +' <i class="glyphicon glyphicon-edit"></i>'
+                      +'</div>'
+                      +'<div class="action delete">'
+                      + '<i class="glyphicon glyphicon-trash"></i>'
+                      +'</div>'
+                      +'<div class="when col-xs-12 col-sm-3 text-right">'
+                      + startedOn + ' - ' + endedOn
+                      +'</div>'
+                      +'<div class="what col-xs-12 col-sm-9">'
+                      +  '<div class="type-name">'
+                      +    '<b>' + type + '</b>'
+                      +  '</div>'
+                      + '<div class="institution">'
+                      + institution 
+                      +  '</div>'
+                      +  '<div class="qualification-list">'
+                      +    '<div class="qualification-item">'
+                      +      '<div>'
+                      +        '<span class="subject-name">Software Engineering</span>'
+                      +        '<span class="grade-value">'
+                      +          '<span>(Grade: ' + gradeSelector +')</span>'
+                      +        '</span>'
+                      +      '</div>'
+                      +      '<div style="display: none;">'
+                      +        '<div class="grade-uni">'
+                      +          '<span class="grade-value-uni">' + gradeSelector + '</span>'
+                      +        '</div>'
+                      +      '</div>'
+                      +    '</div>'
+                      +  '</div>'
+                      +'</div>'
+                    +'</div>';
+      $('.qualifications-container').append(text);
+    }else{
+      var index = $('#index-edit-qualification').val();
+      $('#index-edit-qualification').val('0');
+      var text = '<div class="action edit">'
+                      +' <i class="glyphicon glyphicon-edit"></i>'
+                      +'</div>'
+                      +'<div class="action delete">'
+                      + '<i class="glyphicon glyphicon-trash"></i>'
+                      +'</div>'
+                      +'<div class="when col-xs-12 col-sm-3 text-right">'
+                      + startedOn + ' - ' + endedOn
+                      +'</div>'
+                      +'<div class="what col-xs-12 col-sm-9">'
+                      +  '<div class="type-name">'
+                      +    '<b>' + type + '</b>'
+                      +  '</div>'
+                      + '<div class="institution">'
+                      + institution 
+                      +  '</div>'
+                      +  '<div class="qualification-list">'
+                      +    '<div class="qualification-item">'
+                      +      '<div>'
+                      +        '<span class="subject-name">Software Engineering</span>'
+                      +        '<span class="grade-value">'
+                      +          '<span>(Grade: ' + gradeSelector +')</span>'
+                      +        '</span>'
+                      +      '</div>'
+                      +      '<div style="display: none;">'
+                      +        '<div class="grade-uni">'
+                      +          '<span class="grade-value-uni">' + gradeSelector + '</span>'
+                      +        '</div>'
+                      +      '</div>'
+                      +    '</div>'
+                      +  '</div>'
+                      +'</div>';
+      $('.qualifications-container qualification').eq(index).html(text);
+      setEditQualification('false');
+    }
+    $('.qualification-edit').hide();
   });
   function isEditExperience(){
     return ($('#is-edit-experience').val() === 'true');
+  }
+  function isEditQualification(){
+    return ($('#is-edit-qualification').val() === 'true'); 
+  }
+  function setEditQualification(value){
+    $('#is-edit-qualification').val(value);
   }
   function setEditExperience(value){
     $('#is-edit-experience').val(value);
