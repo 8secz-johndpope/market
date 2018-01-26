@@ -403,6 +403,11 @@
                               </div>
                             </div>
                           </div>
+                          <div class="other col-sm-9 col-xs-12" style="display: none">
+                            <label for="grade-description">Grade (Optional)</label>
+                            <input type="text" name="grade-description" id="grade-description">
+                            <div class="validation"></div>
+                          </div>
                         </form>
                       </div>
                       <div class="text-right">
@@ -469,6 +474,9 @@
       var val = $(this).val();
       var container = $('.qualification-details');
       if(val != ''){
+        if(val == '32'){
+          setOtherGradeForm();
+        }
         container.show();
       }else{
         container.hide();
@@ -586,6 +594,11 @@
   }
   function setEditExperience(value){
     $('#is-edit-experience').val(value);
+  }
+  function setOtherGradeForm(){
+    $('[for="subjet-name"]').text('Qualification');
+    $('.subject-grade').hide();
+    $('.other').show();
   }
 </script>
 @endsection
