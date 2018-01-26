@@ -43,6 +43,8 @@
                     @endforeach
                     </tbody>
                 </table>
+            {{ $applications->links() }}
+
         </div>
         <div class="col-sm-2">
 
