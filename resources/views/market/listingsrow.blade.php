@@ -551,7 +551,7 @@ use App\Model\Advert;
 <div class="col-lg-7 col-sm-9 col-xs-12">
     <div class="products">
         @if (session('msg'))
-            <span style="color: green">
+            <span style="color: red">
                                         <strong>{{ session('msg') }}</strong>
                                     </span>
         @endif
