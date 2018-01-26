@@ -823,7 +823,7 @@ input[type=checkbox]:checked~label:before {
     .cvbuilder-work-experience .visual-container, .cvbuilder-qualifications .visual-container {
         padding: 30px 90px;
     }
-    .work-experience .work, .qualification .what {
+    .work-experience .work, .qualification {
         border-bottom: none;
     }
 }
