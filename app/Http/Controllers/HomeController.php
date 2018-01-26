@@ -1282,7 +1282,7 @@ class HomeController extends BaseController
     public function my_applications(Request $request)
     {
         $user = Auth::user();
-        $applications = $user->applications()->order_by('id','desc')->paginate(10);
+        $applications = $user->applications()->orderBy('id','desc')->paginate(10);
 
         return view('home.my_applications',['user'=>$user,'applications'=>$applications]);
 
