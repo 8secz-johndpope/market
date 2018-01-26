@@ -323,6 +323,40 @@
               </div>
               <div class="qualifications">
                 <div class="qualifications-container">
+                  <div class="qualification row">
+                    <div class="action edit">
+                      <i class="glyphicon glyphicon-edit"></i>
+                    </div>
+                    <div class="action delete">
+                      <i class="glyphicon glyphicon-trash"></i>
+                    </div>
+                    <div class="when col-xs-12 col-sm-3">
+                      2012 - 2016
+                    </div>
+                    <div class="what col-xs-12 col-sm-9">
+                      <div class="type-name">
+                        <b>University degree</b>
+                      </div>
+                      <div class="institution">
+                        University of Murcia
+                      </div>
+                      <div class="qualification-list">
+                        <div class="qualification-item">
+                          <div>
+                            <span class="subject-name">Software Engineering</span>
+                            <span class="grade-value">
+                              <span>(Grade: 2:2)</span>
+                            </span>
+                          </div>
+                          <div style="display: none;">
+                            <div class="grade-uni">
+                              <span class="grade-value-uni"> 2:2 </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="add-button-container text-right">
                   <button type="button" class="btn btn-secondary">Add qualification</button>
@@ -412,7 +446,7 @@
                       </div>
                       <div class="col-xs-12 text-right">
                         <button type="button" class=" cancel btn btn-inline btn-link">Cancel</button>
-                        <button type="button" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
+                        <button type="submit" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
                       </div>
                     </div>
                   </div>
@@ -601,6 +635,10 @@
     $('#job-title').val(what.find('.title').text());
     $('#company').val(what.find('.company').text())
     $('#responsabilities').val(what.find('.description').text());
+  })
+  $('#qualification-form-bulk').submit(function(e)}{
+    e.preventDefault();
+
   })
   function isEditExperience(){
     return ($('#is-edit-experience').val() === 'true');
