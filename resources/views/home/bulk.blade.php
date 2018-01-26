@@ -33,7 +33,7 @@
                 @foreach($adverts as $advert)
                     <tr>
                         <td><a href="{{$advert->url()}}"> {{$advert->param('title')}}</a>
-                            <input required="Please select at least one appplication" class="select-application" type="checkbox" name="ids[]" value="{{$advert->id}}">
+                            <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$advert->id}}">
 
                         </td>
 
