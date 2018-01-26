@@ -222,7 +222,7 @@
                         <div class="year col-sm-6 col-xs-12">
                           <select class="form-control" id="date-from-year" name="date-from-year">
                             <option value="">Year</option>
-                            @for($i = 2018; $i > 1943; $i--)
+                            @for($i = date('y'); $i > 1943; $i--)
                               <option value="{{$i}}">{{$i}}</option>
                             @endfor
                           </select>
@@ -257,7 +257,7 @@
                         <div class="year col-sm-6 col-xs-12">
                           <select class="form-control" id="date-to-year" name="date-to-year">
                             <option value="">Year</option>
-                            @for($i = 2018; $i > 1943; $i--)
+                            @for($i = date('y'); $i > 1943; $i--)
                               <option value="{{$i}}">{{$i}}</option>
                             @endfor
                           </select>
@@ -328,14 +328,6 @@
                   <button type="button" class="btn btn-secondary add-work-experience">Add qualification</button>
                 </div>
               </div>
-              <div class="row actions-btns-cv-builder">
-                <div class="col-xs-12 col-sm-5 col-sm-offset-2">
-                  <button class="btn btn-inverse" type="button">Save and continue later</button>
-                </div>
-                <div class="continue col-xs-12 col-sm-5">
-                  <button class="btn btn-submit" type="submit" disabled>Continue</button>
-                </div>
-              </div>
               <div class="qualification-edit" style="display: none">
                   <input type="hidden" value="false" name="is-edit-qualification" id="is-edit-qualification">
                   <input type="hidden" value="0" name="index-edit-qualification" id="index-edit-qualification">
@@ -365,15 +357,49 @@
                               <div class="validation">
                               </div>
                             </div>
+                            <div class="dates form-group col-xs-12">
+                              <div class="row">
+                                <div class="date-from col-xs-6">
+                                  <label for="started-on">From</label>
+                                  <select class="control-form" id="started-on" name="started-on">
+                                    <option value="">Start</option>
+                                    @for($i=date('y'); $i > 1967; $i--)
+                                      <option value="{{$i}}">{{$i}}</option>
+                                    @endfor
+                                  </select>
+                                </div>
+                                <div class="date-to col-xs-6">
+                                  <label for="ended-on">From</label>
+                                  <select class="control-form" id="ended-on" name="ended-on">
+                                    <option value="">to</option>
+                                    @for($i=date('y'); $i > 1967; $i--)
+                                      <option value="{{$i}}">{{$i}}</option>
+                                    @endfor
+                                  </select>
+                                </div>
+                                <div class="validation col-xs-12">
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="dates form-group col-xs-12">
-                            <div class="row">
-                              <div class="date-from col-xs-6">
-                                <label for="started-on">From</label>
+                          <div class="subjects col-xs-12">
+                            <div class="subject row">
+                              <div class="subject-name form-group col-xs-12 col-sm-8">
+                                <label for="subject-name">Degree</label>
+                                <input type="text" name="subject-name" id="subject-name">
+                                <div class="validation">
+                                </div>
                               </div>
-                              <div class="date-to col-xs-6">
-                              </div>
-                              <div class="validation col-xs-12">
+                              <div class="subject-grade form-group col-xs-12 col-sm-8">
+                                <label for="grade-selector"></label>
+                                <select class="control-form" name="grade-selector" id="grade-selector">
+                                  <option value="">Select</option>
+                                  <option value="1">First</option>
+                                  <option value="2">2:1</option>
+                                  <option value="3">2:2</option>
+                                  <option value="4">Third</option>
+                                  <option value="5">Pass</option>
+                                </select>
                               </div>
                             </div>
                           </div>
@@ -385,6 +411,14 @@
                       </div>
                     </div>
                   </div>
+              </div>
+              <div class="row actions-btns-cv-builder">
+                <div class="col-xs-12 col-sm-5 col-sm-offset-2">
+                  <button class="btn btn-inverse" type="button">Save and continue later</button>
+                </div>
+                <div class="continue col-xs-12 col-sm-5">
+                  <button class="btn btn-submit" type="submit" disabled>Continue</button>
+                </div>
               </div>
             </form>
           </div>
