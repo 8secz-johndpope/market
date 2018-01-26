@@ -664,14 +664,14 @@
     margin: 0 0 15px 0!important;
     border-bottom: 1px solid #d6d6d6;
 }
-.work-experience .work .delete, .work-experience .work .edit {
+.work-experience .work .delete, .work-experience .work .edit, .qualification .delete, .qualification .edit {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 2;
     cursor: pointer;
 }
-.work-experience .work .delete {
+.work-experience .work .delete, .qualification .delete {
     right: 30px;
 }
 input[type=checkbox]~label {
@@ -816,7 +816,7 @@ input[type=checkbox]:checked~label:before {
         width: 100%;
         z-index: 0;
     }
-    .work-experience .work .what {
+    .work-experience .work .what, .qualification .what {
         border-left: 1px solid #d6d6d6;
         padding-left: 30px;
     }
