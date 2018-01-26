@@ -247,8 +247,7 @@
 
             </div>
             <div class="business-drop collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                @include('market.dropdown-nav')
-                <!-- <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Store</a></li>
                     @if (Auth::guest())
@@ -259,7 +258,8 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 Hello, {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu options-user" role="menu">
+                            @include('market.dropdown-nav')
+                            <!-- <div class="dropdown-menu options-user" role="menu">
                                 <div class="list-menu-common">
                                     <div class="title-list">
                                         <span class="nav-link nav-color">Your account</span>
@@ -405,7 +405,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div>-->
                         </li>
 
                     @endif
@@ -434,8 +434,7 @@
                         </li>
                     @endif
                     <li><a class="post-advert" href="/user/ad/create"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Post an Ad</a> </li>
-
-                </ul> -->
+                </ul>
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
