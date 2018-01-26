@@ -850,7 +850,7 @@ use App\Model\Advert;
                     </div>
                     <div class="wrapper-title-product">
                         @if($category->id >= 4000000000 && $category->id <= 4999999999)
-                            <input class="select-application" type="checkbox" name="ids[]" value="{{$product['source_id']}}">
+                            <input required="Please select at least one appplication" class="select-application" type="checkbox" name="ids[]" value="{{$product['source_id']}}">
                         @endif
                         <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
                             <h4 class="product-title">{{$product['title']}}</h4>
