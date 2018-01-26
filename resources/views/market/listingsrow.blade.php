@@ -589,6 +589,10 @@ use App\Model\Advert;
             </div>
         </div>
         @endif
+            @if($category->id >= 4000000000 && $category->id <= 4999999999)
+
+            <div> <input type="checkbox" class="select-all" id="select-all"> Select All</div>
+@endif
         @foreach($products as $product)
         @if($i == 10)
         <div class="listing-max-pro container-emailme">
@@ -854,7 +858,7 @@ use App\Model\Advert;
                     </div>
                     <div class="wrapper-title-product">
                         @if($category->id >= 4000000000 && $category->id <= 4999999999)
-                            <input type="checkbox" name="ids[]" value="{{$product['source_id']}}">
+                            <input class="select-application" type="checkbox" name="ids[]" value="{{$product['source_id']}}">
                         @endif
                         <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
                             <h4 class="product-title">{{$product['title']}}</h4>
@@ -1133,5 +1137,16 @@ use App\Model\Advert;
         e.preventDefault();
         $('.collapse').collapse();
     });*/
+</script>
+<script>
+    $('#select-all').change(function() {
+        if(this.checked) {
+            $('.select-application').prop('checked', true);
+
+        }else{
+            $('.select-application').prop('checked', false);
+
+        }
+    });
 </script>
 @endsection
