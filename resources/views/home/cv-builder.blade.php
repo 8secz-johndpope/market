@@ -397,7 +397,7 @@
                                   <label for="started-on">From</label>
                                   <select class="form-control" id="started-on" name="started-on">
                                     <option value="">Start</option>
-                                    @for($i=intval(date('y')); $i > 1967; $i--)
+                                    @for($i=idate('y'); $i > 1967; $i--)
                                       <option value="{{$i}}">{{$i}}</option>
                                     @endfor
                                   </select>
@@ -406,7 +406,7 @@
                                   <label for="ended-on">From</label>
                                   <select class="form-control" id="ended-on" name="ended-on">
                                     <option value="">to</option>
-                                    @for($i=intval(date('y')); $i > 1967; $i--)
+                                    @for($i=idate('y'); $i > 1967; $i--)
                                       <option value="{{$i}}">{{$i}}</option>
                                     @endfor
                                   </select>
