@@ -298,19 +298,8 @@ use App\Model\Advert;
         </div> -->
         @if($category->id >= 4000000000 && $category->id <= 4999999999)
                 <div class="l-visible-large">
-                    <form action="/user/jobs/apply/show" method="post">
-                        <div class="form-group clearfix">
-                            <div class="col-sm-offset-6 col-sm-6">
-                                <input type="hidden" name="url" value="{{$url}}">
-                                {{ csrf_field() }}
 
-                            @foreach($products as $product)
-                                    <input type="hidden" name="ids[]" value="{{$product['source_id']}}">
-                                    @endforeach
-                                <button type="submit" class="btn btn-default">Apply All</button>
-                            </div>
-                        </div>
-                    </form>
+                                <button class="btn btn-default" onclick="$('#bulk-apply-form').submit();">Apply All</button>
 
                 </div>
                 <div class="l-visible-large">
