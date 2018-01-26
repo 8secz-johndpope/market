@@ -51,7 +51,7 @@
                 </div>
                 <div class="list-menu-common">
                     <div class="title-list">
-                        <span class="nav-link nav-color">My Ad Portal</span>
+                        <span class="nav-link nav-color">My Ads Portal</span>
                     </div>
                     <ul>
                         <li>
