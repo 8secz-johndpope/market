@@ -559,6 +559,7 @@
     left: calc(50% - 8px);
     margin-top: -8px;
 }
+
 .cvbuilder-personal-details-title {
     color: #333;
     margin-bottom: 0;
@@ -580,6 +581,13 @@
     opacity: 0;
     width: 0;
     height: 0;
+}
+.steps .step-done .sign {
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    opacity: 1;
+    height: 16px;
+    width: 100%;
 }
 .steps .step .name {
     font-size: .8666666667rem;
