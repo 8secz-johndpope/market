@@ -53,7 +53,9 @@
                                 <div class="col-sm-9 container-overview">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <h4>Unread Candidates</h4>
+                                            <h4>Unread Candidates
+
+                                            </h4>
                                             <hr>
                                             <div class="container-candidates">
                                                 <ul class="list-group">
