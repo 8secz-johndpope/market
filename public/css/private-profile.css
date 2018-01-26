@@ -611,7 +611,7 @@
     background-repeat: no-repeat;
     background-image: url(/css/icon-sprite.svg);
 }
-.cvbuilder-personal-details .section-title, .cvbuilder-work-experience .section-title{
+.cvbuilder-personal-details .section-title, .cvbuilder-work-experience .section-title, .cvbuilder-qualifications .section-title{
     position: relative;
     text-align: center;
     margin-bottom: 20px;
@@ -650,10 +650,10 @@
 .work-experience .description{
     margin-top: 0;
 }
-.cvbuilder-work-experience .visual-container {
+.cvbuilder-work-experience .visual-container, .cvbuilder-qualifications .visual-container{
     padding: 30px 90px;
 }
-.work-experience {
+.work-experience, .qualifications {
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
@@ -811,7 +811,7 @@ input[type=checkbox]:checked~label:before {
         border-left: 1px solid #d6d6d6;
         padding-left: 30px;
     }
-    .cvbuilder-work-experience .visual-container {
+    .cvbuilder-work-experience .visual-container, .cvbuilder-qualifications .visual-container {
         padding: 30px 90px;
     }
     .work-experience .work {
