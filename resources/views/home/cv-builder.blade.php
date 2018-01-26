@@ -142,7 +142,7 @@
             <div class="col-xs-12 col-sm-5 col-sm-offset-2">
               <button class="btn btn-inverse" type="button">Save and continue later</button>
             </div>
-            <div class="col-xs-12 col-sm-5">
+            <div class="col-xs-12 col-sm-5 continue">
               <button class="btn btn-submit" type="submit">Continue</button>
             </div>
           </div>
@@ -300,9 +300,14 @@
   </div>
 </div>
 <script>
-  $('.cvbuilder-personal-details .btn-submit').click(function(e){
+  $('.continue .btn-submit').click(function(e){
     e.preventDefault();
-    window.location.href = '/user/cv-builder/work-experience';
+    if($index < count($cvSectors) - 1){
+      window.location.href = '/user/cv-builder/{{array_keys($cvSectors)[$index + 1]}}';
+    }
+    else{
+      window.location.href = '/job/profile/edit';
+    }
   })
   $('.add-work-experience').click(function(){
     $(this).parent().hide();
