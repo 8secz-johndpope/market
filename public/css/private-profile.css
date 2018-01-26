@@ -658,7 +658,7 @@
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
-.work-experience .work {
+.work-experience .work, .qualification {
     position: relative;
     padding-bottom: 15px;
     margin: 0 0 15px 0!important;
