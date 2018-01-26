@@ -51,6 +51,25 @@
                 </div>
                 <div class="list-menu-common">
                     <div class="title-list">
+                        <span class="nav-link nav-color">Jobs/Profile</span>
+                        <ul>
+                            <li>
+                                <a class="nav-link nav-color" href="/job/profile/edit"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Private Profile</a>
+                            </li>
+                            <li>
+                                <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Public Profile</a>
+                            </li>
+                            <li>
+                                <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Candidate Portal</a>
+                            </li>
+                            <li>
+                                <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Recommended Jobs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list-menu-common">
+                    <div class="title-list">
                         <span class="nav-link nav-color">Invoices</span>
                     </div>
                     <ul>
@@ -98,9 +117,22 @@
                         <li>
                             <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-tag"></span> &nbsp;&nbsp;For Sales Portal</a>
                         </li>
+                        <li>
+                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-tag"></span> &nbsp;&nbsp;Services Portal</a>
+                        </li>
                     </ul>
                 </div>
                 @endif
+                <div class="list-menu-common">
+                    <div class="title-list">
+                        <span class="nav-link nav-color">sWallet</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="nav-link nav-color" href="#">Balance</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="list-menu-common">
                     <div class="title-list">
                         <span class="nav-link nav-color">Chat Centre</span>
@@ -135,17 +167,6 @@
                         </li>
                     </ul>
                 </div>
-                <div class="list-menu-common">
-                    <div class="title-list">
-                        <span class="nav-link nav-color">sWallet</span>
-                    </div>
-                    <ul>
-                        <li>
-                            <a class="nav-link nav-color" href="#">Balance</a>
-                        </li>
-                    </ul>
-                </div>
-
                 <div class="list-menu-common">
                     <div class="title-list">
                         <span class="nav-link nav-color">Our Offers</span>
