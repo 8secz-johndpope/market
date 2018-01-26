@@ -13,7 +13,7 @@
             <div class="dropdown-menu options-user" role="menu">
                 <div class="list-menu-common">
                     <div class="title-list">
-                        <span class="nav-link nav-color">Your account</span>
+                        <span class="nav-link nav-color">My account</span>
                     </div>
                     <ul>
                         <li><a class="nav-link nav-color" href="/user/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage My Ads</a> </li>
@@ -51,6 +51,16 @@
                 </div>
                 <div class="list-menu-common">
                     <div class="title-list">
+                        <span class="nav-link nav-color">My Ad Portal</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Portal</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-menu-common">
+                    <div class="title-list">
                         <span class="nav-link nav-color">Jobs/Profile</span>
                     </div>
                     <ul>
@@ -65,28 +75,6 @@
                         </li>
                         <li>
                             <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Recommended Jobs</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="list-menu-common">
-                    <div class="title-list">
-                        <span class="nav-link nav-color">Invoices</span>
-                    </div>
-                    <ul>
-                        <li>
-                            <a class="nav-link nav-color" href="/user/manage/contacts"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Send Invoice</a>
-                        </li>
-                        <li>
-                            <a class="nav-link nav-color" href="/user/manage/invoices"><span class="glyphicon glyphicon-alert"></span>&nbsp;&nbsp;Unpaid Invoice</a>
-                        </li>
-                        <li>
-                            <a class="nav-link nav-color" href="/user/manage/invoices"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Paid Invoice</a>
-                        </li>
-                        <li>
-                            <a class="nav-link nav-color" href="/user/manage/invoices"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Pending Invoices</a>
-                        </li>
-                        <li>
-                            <a class="nav-link nav-color" href="#"><span class="fa fa-cloud-download"></span>&nbsp;&nbsp;Download Invoice CSV/Excel</a>
                         </li>
                     </ul>
                 </div>
@@ -123,6 +111,28 @@
                     </ul>
                 </div>
                 @endif
+                <div class="list-menu-common">
+                    <div class="title-list">
+                        <span class="nav-link nav-color">Invoices</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="nav-link nav-color" href="/user/manage/contacts"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Send Invoice</a>
+                        </li>
+                        <li>
+                            <a class="nav-link nav-color" href="/user/manage/invoices"><span class="glyphicon glyphicon-alert"></span>&nbsp;&nbsp;Unpaid Invoice</a>
+                        </li>
+                        <li>
+                            <a class="nav-link nav-color" href="/user/manage/invoices"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Paid Invoice</a>
+                        </li>
+                        <li>
+                            <a class="nav-link nav-color" href="/user/manage/invoices"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Pending Invoices</a>
+                        </li>
+                        <li>
+                            <a class="nav-link nav-color" href="#"><span class="fa fa-cloud-download"></span>&nbsp;&nbsp;Download Invoice CSV/Excel</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="list-menu-common">
                     <div class="title-list">
                         <span class="nav-link nav-color">sWallet</span>
