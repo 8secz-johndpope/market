@@ -361,7 +361,7 @@
                               <div class="row">
                                 <div class="date-from col-xs-6">
                                   <label for="started-on">From</label>
-                                  <select class="control-form" id="started-on" name="started-on">
+                                  <select class="form-control" id="started-on" name="started-on">
                                     <option value="">Start</option>
                                     @for($i=date('y'); $i > 1967; $i--)
                                       <option value="{{$i}}">{{$i}}</option>
@@ -370,7 +370,7 @@
                                 </div>
                                 <div class="date-to col-xs-6">
                                   <label for="ended-on">From</label>
-                                  <select class="control-form" id="ended-on" name="ended-on">
+                                  <select class="form-control" id="ended-on" name="ended-on">
                                     <option value="">to</option>
                                     @for($i=date('y'); $i > 1967; $i--)
                                       <option value="{{$i}}">{{$i}}</option>
@@ -391,8 +391,8 @@
                                 </div>
                               </div>
                               <div class="subject-grade form-group col-xs-12 col-sm-8">
-                                <label for="grade-selector"></label>
-                                <select class="control-form" name="grade-selector" id="grade-selector">
+                                <label for="grade-selector">Grade</label>
+                                <select class="form-control" name="grade-selector" id="grade-selector">
                                   <option value="">Select</option>
                                   <option value="1">First</option>
                                   <option value="2">2:1</option>
