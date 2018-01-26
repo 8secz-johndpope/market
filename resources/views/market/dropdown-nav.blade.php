@@ -135,7 +135,7 @@
                 </div>
                 <div class="list-menu-common">
                     <div class="title-list">
-                        <span class="nav-link nav-color">Chat Centre</span>
+                        <span class="nav-link nav-color">Chat Centrium</span>
                     </div>
                     <ul>
                         <li>
