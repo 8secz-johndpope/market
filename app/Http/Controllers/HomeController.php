@@ -1279,6 +1279,14 @@ class HomeController extends BaseController
         return redirect('/user/manage/my/applications');
 
     }
+    public function my_applications(Request $request)
+    {
+        $user = Auth::user();
+
+
+        return view('home.my_applications',['user'=>$user]);
+
+    }
     public function apply_show(Request $request)
     {
         $user=Auth::user();

@@ -166,6 +166,8 @@ Route::post('/user/jobs/apply/all', 'HomeController@apply_all');
 Route::post('/user/templates/save', 'HomeController@save_template');
 Route::post('/user/reply/all', 'HomeController@reply_all');
 
+Route::get('/user/manage/my/applications', 'HomeController@my_applications');
+
 Route::get('/user/templates/add', 'HomeController@add_template');
 Route::get('/user/manage/templates', 'HomeController@templates');
 Route::get('/user/delete/template/{id}', 'HomeController@delete_template');
