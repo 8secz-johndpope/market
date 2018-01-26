@@ -615,7 +615,10 @@
     var what = $(this).siblings('.what');
     var when = $(this).siblings('.when').text().split('-');
     if($(this).closest('.qualification')){
-      setQualificationForm(what, when);
+      populateQualificationForm(what, when);
+      $('.qualification-edit').show();
+      setEditQualification('true');
+      //TODO add index
     }
     else{
       $('.work-experience-details').show();
@@ -781,9 +784,12 @@
     $('.subject-grade').show();
     $('.other').hide();
   }
-  function setQualificationForm(what, when){
+  function populateQualificationForm(what, when){
     $('#institution-name').val(what.find('.institution').text());
     $('#started-on').val(when[0].strim());
+    $('#ended-on').val(when[1].strim());
+    $('#subject-name').val(what.find('.subject-name').text());
+    $('#grade-selector').val(what.find('.grade-value-uni').text());
   }
   
 </script>
