@@ -27,7 +27,7 @@
               <span class="name">Details</span>
             </li>
             <li class="step" data-step="2">
-              <span class="sign"></span>
+              <span class="sign {{ ($slug === 'work-experience') ? 'step-current' : ''}}"></span>
               <span class="name">Work experience</span>
             </li>
             <li class="step" data-step="3">
