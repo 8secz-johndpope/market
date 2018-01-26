@@ -318,14 +318,14 @@
                 </div>
               </div>
               <div class="form-field checkbox">
-                <input type="checkbox" name="no-work-experience" id="no-work-experience">
-                <label for="no-work-experience">I have no qualifications</label>
+                <input type="checkbox" name="no-qualifications" id="no-qualifications">
+                <label for="no-qualifications">I have no qualifications</label>
               </div>
               <div class="qualifications">
                 <div class="qualifications-container">
                 </div>
                 <div class="add-button-container text-right">
-                  <button type="button" class="btn btn-secondary add-work-experience">Add qualification</button>
+                  <button type="button" class="btn btn-secondary">Add qualification</button>
                 </div>
               </div>
               <div class="qualification-edit" style="display: none">
@@ -440,7 +440,11 @@
     $(this).parent().hide();
     $('#no-work-experience').parent().hide();
     $('.work-experience-details').show();
-
+  });
+  $('.add-button-container button').click(function(){
+    $(this).parent().hide();
+    $('.qualification-edit').show();
+    $('#no-qualifications').hide();
   });
   $('.cancel').click(function(){
     $('.work-experience-details').hide();
