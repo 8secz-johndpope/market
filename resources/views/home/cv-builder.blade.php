@@ -459,6 +459,7 @@
     //qualifications
     $('.qualification-edit').hide();
     $('#no-qualifications').parent().show();
+    $('#qualification-form-bulk').reset();
   });
   $('#is-current-role').change(function(){
     var dateTo = $('.date-to');
