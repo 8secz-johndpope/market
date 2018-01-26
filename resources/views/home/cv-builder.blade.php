@@ -453,7 +453,7 @@
     $('#no-work-experience').parent().show();
     //qualifications
     $('.qualification-edit').hide();
-    $('#no-qualifications').parent().hide();
+    $('#no-qualifications').parent().show();
   });
   $('#is-current-role').change(function(){
     var dateTo = $('.date-to');
