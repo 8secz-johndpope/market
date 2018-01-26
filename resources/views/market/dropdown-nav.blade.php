@@ -69,7 +69,7 @@
     @if(Auth::user()->contract!==null)
     <div class="list-menu-common">
         <div class="title-list">
-            <span>Your business</span>
+            <span>My business</span>
         </div>
         <ul>
             <li>
