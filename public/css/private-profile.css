@@ -498,6 +498,12 @@
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
 }
+.steps .step-done {
+    border-color: #ff9d2c;
+    background: #ff9d2c;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
 .steps .step:first-child {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -522,6 +528,22 @@
     margin-top: -8px;
 }
 .steps .step-current:before {
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    display: block;
+    content: '';
+    border-radius: 50%;
+    border: 4px solid #ff9d2c;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: -webkit-calc(50% - 8px);
+    left: calc(50% - 8px);
+    margin-top: -8px;
+}
+.steps .step-done:before {
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
     display: block;
