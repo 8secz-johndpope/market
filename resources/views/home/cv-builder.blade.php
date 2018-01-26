@@ -296,6 +296,42 @@
       </div>
     </div>
     @elseif($slug === 'qualifications')
+    <div class="row cvbuilder-qualifications">
+      <div class="col-sm-12">
+        <div class="section visual-container">
+          <form action="" method="post" id="qualifications-form">
+              <input name="redirect" type="hidden" value="/job/profile/edit">
+              {{ csrf_field() }}
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="alert alert-info text-center">
+                    <h4>Your qualifications let companies know more about you.</h4>
+                    <p>Please enter at least one qualification.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="section-title">
+                    <h2>Your qualifications</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="form-field checkbox">
+                <input type="checkbox" name="no-work-experience" id="no-work-experience">
+                <label for="no-work-experience">I have no qualifications</label>
+              </div>
+              <div class="work-experience">
+                <div class="work-experience-container">
+                </div>
+                <div class="add-button-container text-right">
+                  <button type="button" class="btn btn-secondary add-work-experience">Add qualification</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     @endif
   </div>
 </div>
