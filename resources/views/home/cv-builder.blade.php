@@ -634,15 +634,14 @@
     $('#responsabilities').val(what.find('.description').text());
   })
   $('#qualification-form-bulk').submit(function(e){
-    console.log('adding qualification');
     e.preventDefault();
-    var type = $('#qualification-type').val();
+    var type = $('#qualification-type option:select').text();
     var institution = $('#institution-name').val();
     var startedOn = $('#started-on').val();
     var endedOn = $('#ended-on').val();
     var subjectName = $('#subject-name').val();
     if(type == '32'){
-      var gradeDescription = $('#grade-description').val();
+      var gradeDescription = $('#grade-description option:select').text();
     }else{
       var gradeSelector = $('#grade-selector').val();
     }
