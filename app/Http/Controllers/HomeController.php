@@ -1267,7 +1267,7 @@ class HomeController extends BaseController
         $user = Auth::user();
         $ids = $request->ids;
         if($ids===null) {
-            return redirect('/');
+            return redirect('/user/manage/my/applications');
         }
         foreach ($ids as $id) {
             $advert = Advert::find($id);
