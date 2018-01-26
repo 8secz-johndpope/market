@@ -23,7 +23,13 @@
         <div class="steps-container">
           <ul class="steps" id="cvbuilder-steps" data-total-steps="{{count($cvSections)}}">
             @foreach($cvSections as $key => $section)
-              <li class="step step-current" data-step="{{$loop->index}}">
+              @if($loop->index < $indexSector)
+                <li class="step step-done" data-step="{{$loop->index}}">
+              @elseif($loop->index == $indexSector)
+                <li class="step step-current" data-step="{{$loop->index}}">
+              @else
+                <li class="step" data-step="{{$loop->index}}">
+              @endif
                 <span class="sign"></span>
                 <span class="name">{{$section}}</span>
               </li>

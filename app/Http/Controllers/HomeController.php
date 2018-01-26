@@ -2508,7 +2508,14 @@ class HomeController extends BaseController
         $cvSections['personal-details'] = 'Details';
         $cvSections['work-experience'] = 'Work experience';
         $cvSections['qualifications'] = 'Qualifications';
-        $cvSections['personal-statement'] = 'Personal statement';  
-        return view('home.cv-builder', ['user' => $user, 'slug' => $slug, 'cvSections' => $cvSections]);
+        $cvSections['personal-statement'] = 'Personal statement';
+        $indexSector = 0;
+        foreach($cvSections as $key => $section){
+            if($key === $slug){
+                break;
+            }
+            $indexSector += 1;
+        }  
+        return view('home.cv-builder', ['user' => $user, 'slug' => $slug, 'cvSections' => $cvSections, 'indexSector' => $indexSector]);
     }
 }
