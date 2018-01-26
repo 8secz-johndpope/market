@@ -703,6 +703,9 @@ input[type=checkbox]:checked~label:before {
     background-repeat: no-repeat;
     background-image: url(/css/icon-sprite.svg);
 }
+.qualification-edit .section{
+    border: 0;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
