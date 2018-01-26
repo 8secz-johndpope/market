@@ -635,13 +635,13 @@
   })
   $('#qualification-form-bulk').submit(function(e){
     e.preventDefault();
-    var type = $('#qualification-type option:select').text();
+    var type = $('#qualification-type option:selected').text();
     var institution = $('#institution-name').val();
     var startedOn = $('#started-on').val();
     var endedOn = $('#ended-on').val();
     var subjectName = $('#subject-name').val();
     if(type == '32'){
-      var gradeDescription = $('#grade-description option:select').text();
+      var gradeDescription = $('#grade-description option:selected').text();
     }else{
       var gradeSelector = $('#grade-selector').val();
     }
