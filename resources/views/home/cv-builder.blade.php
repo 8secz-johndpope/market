@@ -483,8 +483,11 @@
         else if(val == '16'){
           setOtherGCSEForm();
         }
-        else if(val == '2'){
+        else if(val == '2' || val == '4'){
           setOtherMasterForm();
+        }
+        else{
+          setDegreeGradeForm();
         }
         container.show();
       }else{
@@ -615,6 +618,7 @@
     $('[for="institution-name"]').text('School or college');
     var text = '<option value="">Select</option>\n<option value="9">A*</option>\n<option value="10">A</option>\n<option value="11">B</option>\n<option value="12">C</option>\n<option value="13">D</option>\n<option value="14">E</option>\n<option value="16">F</option>\n<option value="17">G</option>\n<option value="19">9</option>\n<option value="20">8</option>\n<option value="21">7</option>\n<option value="22">6</option>\n<option value="23">5</option>\n<option value="24">4</option>\n<option value="25">3</option>\n<option value="26">2</option>\n<option value="27">1</option>';
     $('#grade-selector').html(text);
+    $('.subject-grade').show();
     $('.other').hide();
   }
   function setAGradeForm(){
@@ -622,6 +626,7 @@
     $('[for="institution-name"]').text('School or college');
     var text = '<option value="">Select</option>\n<option value="9">A*</option>\n<option value="10">A</option>\n<option value="11">B</option>\n<option value="12">C</option>\n<option value="13">D</option>\n<option value="14">E</option>';
     $('#grade-selector').html(text);
+    $('.subject-grade').show();
     $('.other').hide();
   }
   function setMasterGradeForm(){
@@ -629,6 +634,15 @@
     $('[for="institution-name"]').text('Name of university or college');
     var text = '<option value="">Select</option><option value="6">Distinction</option><option value="7">Merit</option><option value="5">Pass</option>';
     $('#grade-selector').html(text);
+    $('.subject-grade').show();
+    $('.other').hide();
+  }
+  function setDegreeGradeForm(){
+    $('[for="subjet-name"]').text('Degree');
+    $('[for="institution-name"]').text('Name of university or college');
+    var text = '<option value="">Select</option><option value="1">First</option><option value="2">2:1</option><option value="3">2:2</option><option value="4">Third</option><option value="5">Pass</option>';
+    $('#grade-selector').html(text);
+    $('.subject-grade').show();
     $('.other').hide();
   }
   
