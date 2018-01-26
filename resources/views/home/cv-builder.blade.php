@@ -444,12 +444,16 @@
   $('.add-button-container button').click(function(){
     $(this).parent().hide();
     $('.qualification-edit').show();
-    $('#no-qualifications').hide();
+    $('#no-qualifications').parent().hide();
   });
   $('.cancel').click(function(){
+    $('.add-button-container').show();
+    //work
     $('.work-experience-details').hide();
     $('#no-work-experience').parent().show();
-    $('.add-work-experience').parent().show();
+    //qualifications
+    $('.qualification-edit').hide();
+    $('#no-qualifications').parent().hide();
   });
   $('#is-current-role').change(function(){
     var dateTo = $('.date-to');
