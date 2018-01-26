@@ -612,29 +612,35 @@
     }
   })
   $(document).on('click', '.action.edit', function(){
-    $('.work-experience-details').show();
-    $('.add-work-experience').parent().hide();
-    $('#no-work-experience').parent().hide();
-    $('#index-work-experience').val($('.work').index($(this).parent()));
-    $('#is-edit-experience').val('true');
     var what = $(this).siblings('.what');
     var when = $(this).siblings('.when').text().split('-');
-    var dateFrom = when[0].split('/');
-    console.log(dateFrom);
-    var dateTo = dateTo = when[1].split('/');
-    if(dateTo.length > 1){
-      $('#date-to-month').val(dateTo[0].trim());
-      $('#date-to-year').val(dateTo[1].trim());
+    if($(this).closest('.qualification')){
+      setQualificationForm(what, when);
     }
     else{
-      $('#is-current-role').prop('checked', true);
+      $('.work-experience-details').show();
+      $('.add-work-experience').parent().hide();
+      $('#no-work-experience').parent().hide();
+      $('#index-work-experience').val($('.work').index($(this).parent()));
+      $('#is-edit-experience').val('true');
+      
+      var dateFrom = when[0].split('/');
+      console.log(dateFrom);
+      var dateTo = dateTo = when[1].split('/');
+      if(dateTo.length > 1){
+        $('#date-to-month').val(dateTo[0].trim());
+        $('#date-to-year').val(dateTo[1].trim());
+      }
+      else{
+        $('#is-current-role').prop('checked', true);
+      }
+      $('#date-from-month').val(dateFrom[0].trim());
+      $('#date-from-year').val(dateFrom[1].trim());
+      $('#job-title').val(what.find('.title').text());
+      $('#company').val(what.find('.company').text())
+      $('#responsabilities').val(what.find('.description').text());
     }
-    $('#date-from-month').val(dateFrom[0].trim());
-    $('#date-from-year').val(dateFrom[1].trim());
-    $('#job-title').val(what.find('.title').text());
-    $('#company').val(what.find('.company').text())
-    $('#responsabilities').val(what.find('.description').text());
-  })
+  });
   $('#qualification-form-bulk').submit(function(e){
     e.preventDefault();
     var type = $('#qualification-type option:selected').text();
@@ -645,7 +651,8 @@
     if(type == '32'){
       var gradeDescription = $('#grade-description').text();
     }else{
-      var gradeSelector = $('#grade-selector option:selected').val();
+      var gradeSelector = $('#grade-selector option:selected').text();
+      var idGradeSelector = $ $('#grade-selector').val();
     }
     if(!isEditQualification()){
       var text = '<div class="qualification row">'
@@ -675,7 +682,7 @@
                       +      '</div>'
                       +      '<div style="display: none;">'
                       +        '<div class="grade-uni">'
-                      +          '<span class="grade-value-uni">' + gradeSelector + '</span>'
+                      +          '<span class="grade-value-uni">' + idGradeSelector + '</span>'
                       +        '</div>'
                       +      '</div>'
                       +    '</div>'
@@ -773,6 +780,10 @@
     $('#grade-selector').html(text);
     $('.subject-grade').show();
     $('.other').hide();
+  }
+  function setQualificationForm(what, when){
+    $('#institution-name').val(what.find('.institution').text());
+    $('#started-on').val(when[0].strim());
   }
   
 </script>
