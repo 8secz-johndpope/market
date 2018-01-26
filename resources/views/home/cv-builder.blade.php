@@ -477,6 +477,9 @@
         if(val == '32'){
           setOtherGradeForm();
         }
+        else if(val == '8'){
+          setAGradeForm()
+        }
         container.show();
       }else{
         container.hide();
@@ -597,13 +600,23 @@
   }
   function setOtherGradeForm(){
     $('[for="subjet-name"]').text('Qualification');
+    $('[for="institution-name"]').text('Name of awarding body');
     $('.subject-grade').hide();
     $('.other').show();
   }
+  function setOtherGradeForm(){
+    $('[for="subjet-name"]').text('Subject');
+    $('[for="institution-name"]').text('School or college');
+    var text = '<option value="">Select</option>\n<option value="9">A*</option>\n<option value="10">A</option>\n<option value="11">B</option>\n<option value="12">C</option>\n<option value="13">D</option>\n<option value="14">E</option>\n<option value="16">F</option>\n<option value="17">G</option>\n<option value="19">9</option>\n<option value="20">8</option>\n<option value="21">7</option>\n<option value="22">6</option>\n<option value="23">5</option>\n<option value="24">4</option>\n<option value="25">3</option>\n<option value="26">2</option>\n<option value="27">1</option>';
+    $('#grade-selector').html(text);
+    $('.other').hide();
+  }
   function setAGradeForm(){
     $('[for="subjet-name"]').text('Subject');
+    $('[for="institution-name"]').text('School or college');
     var text = '<option value="">Select</option>\n<option value="9">A*</option>\n<option value="10">A</option>\n<option value="11">B</option>\n<option value="12">C</option>\n<option value="13">D</option>\n<option value="14">E</option>';
     $('#grade-selector').html(text);
+    $('.other').hide();
   }
 </script>
 @endsection
