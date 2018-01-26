@@ -321,12 +321,70 @@
                 <input type="checkbox" name="no-work-experience" id="no-work-experience">
                 <label for="no-work-experience">I have no qualifications</label>
               </div>
-              <div class="work-experience">
-                <div class="work-experience-container">
+              <div class="qualifications">
+                <div class="qualifications-container">
                 </div>
                 <div class="add-button-container text-right">
                   <button type="button" class="btn btn-secondary add-work-experience">Add qualification</button>
                 </div>
+              </div>
+              <div class="row actions-btns-cv-builder">
+                <div class="col-xs-12 col-sm-5 col-sm-offset-2">
+                  <button class="btn btn-inverse" type="button">Save and continue later</button>
+                </div>
+                <div class="continue col-xs-12 col-sm-5">
+                  <button class="btn btn-submit" type="submit" disabled>Continue</button>
+                </div>
+              </div>
+              <div class="qualification-edit" style="display: none">
+                  <input type="hidden" value="false" name="is-edit-qualification" id="is-edit-qualification">
+                  <input type="hidden" value="0" name="index-edit-qualification" id="index-edit-qualification">
+                  <div class="section">
+                    <h5 class="qualification-form-title"><span>Add</span> qualifications</h5>
+                    <div class="content row">
+                      <div class="qualification-type form-group col-sx-12">
+                        <label for=qualification-type>Type</label>
+                        <select class="form-control" id="qualification-type" name="qualification-type">
+                          <option value="">Select type</option>
+                          <option value="8">A-level</option>
+                          <option value="16">GCSE</option>
+                          <option value="2">Master's degree</option>
+                          <option value="32">Other</option>
+                          <option value="4">PhD</option>
+                          <option value="1">University degree</option>
+                        </select>
+                        <div class="validation"></div>
+                      </div>
+                      <div class="qualification-details">
+                        <form id="qualification-form-bulk">
+                          {{ csrf_field() }}
+                          <div class="small-container col-xs-12">
+                            <div class="institution form-group">
+                              <label for="institution-name">Name of university or college</label>
+                              <input type="text" name="institution-name" class="form-control tt-input">
+                              <div class="validation">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="dates form-group col-xs-12">
+                            <div class="row">
+                              <div class="date-from col-xs-6">
+                                <label for="started-on">From</label>
+                              </div>
+                              <div class="date-to col-xs-6">
+                              </div>
+                              <div class="validation col-xs-12">
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="text-right">
+                        <button type="button" class=" cancel btn btn-inline btn-link">Cancel</button>
+                        <button type="button" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </form>
           </div>
