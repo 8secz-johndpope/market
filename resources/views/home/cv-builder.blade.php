@@ -347,7 +347,7 @@
                         </select>
                         <div class="validation"></div>
                       </div>
-                      <div class="qualification-details">
+                      <div class="qualification-details" style="display: none">
                         <form id="qualification-form-bulk">
                           {{ csrf_field() }}
                           <div class="small-container col-xs-12">
@@ -463,6 +463,17 @@
     else{
       dateTo.show();
     }
+  });
+  $('#qualification-type').change(function(){
+    $('#qualification-type option:selected').each(function()}{
+      var val = $(this).val();
+      var container = $('.qualification-details');
+      if(val != ''){
+        container.show();
+      }else{
+        container.hide();
+      }
+    });
   });
   $('#no-work-experience').change(function(){
     var button = $('.continue button');

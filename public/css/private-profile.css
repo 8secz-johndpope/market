@@ -708,6 +708,9 @@ input[type=checkbox]:checked~label:before {
     margin: 0;
     padding: 0;
 }
+.qualification-edit{
+    border-bottom: 1px solid #ccc;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
