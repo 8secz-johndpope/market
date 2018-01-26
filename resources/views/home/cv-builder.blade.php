@@ -637,6 +637,7 @@
     $('#responsabilities').val(what.find('.description').text());
   })
   $('#qualification-form-bulk').submit(function(e){
+    console.log('adding qualification');
     e.preventDefault();
     var type = $('#qualification-type').val();
     var institution = $('#institution-name').val();
