@@ -21,23 +21,13 @@
       <div class="col-sm-12">
         <h2 class="cvbuilder-personal-details-title">Build your CV</h2>
         <div class="steps-container">
-          <ul class="steps" id="cvbuilder-steps" data-total-steps="4">
-            <li class="step step-current" data-step="1">
-              <span class="sign"></span>
-              <span class="name">Details</span>
-            </li>
-            <li class="step" data-step="2">
-              <span class="sign {{ ($slug === 'work-experience') ? 'step-current' : ''}}"></span>
-              <span class="name">Work experience</span>
-            </li>
-            <li class="step" data-step="3">
-              <span class="sign"></span>
-              <span class="name">Qualifications</span>
-            </li>
-            <li class="step" data-step="4">
-              <span class="sign"></span>
-              <span class="name">Personal statement</span>
-            </li>
+          <ul class="steps" id="cvbuilder-steps" data-total-steps="{{count($cvSections)}}">
+            @foreach($cvSections as $key => $section)
+              <li class="step step-current" data-step="{{$loop->index}}">
+                <span class="sign"></span>
+                <span class="name">{{$section}}</span>
+              </li>
+            @endfor
           </ul>
         </div>
       </div>

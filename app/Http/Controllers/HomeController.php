@@ -2504,6 +2504,11 @@ class HomeController extends BaseController
     }
     public function cv_builder(Request $request, $slug){
         $user = Auth::user();
-        return view('home.cv-builder', ['user' => $user, 'slug' => $slug]);
+        $cvSections = [];
+        $cvSections['personal-details'] = 'Details';
+        $cvSections['work-experience'] = 'Work experience';
+        $cvSections['qualifications'] = 'Qualifications';
+        $cvSections['personal-statement'] = 'Personal statement';  
+        return view('home.cv-builder', ['user' => $user, 'slug' => $slug, 'cvSections' => $cvSections]);
     }
 }
