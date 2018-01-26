@@ -655,7 +655,7 @@
       var gradeDescription = $('#grade-description').text();
     }else{
       var gradeSelector = $('#grade-selector option:selected').text();
-      var idGradeSelector = $ $('#grade-selector').val();
+      var idGradeSelector = $('#grade-selector').val();
     }
     if(!isEditQualification()){
       var text = '<div class="qualification row">'
