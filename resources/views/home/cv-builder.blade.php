@@ -465,7 +465,7 @@
     }
   });
   $('#qualification-type').change(function(){
-    $('#qualification-type option:selected').each(function()}{
+    $('#qualification-type option:selected').each(function(){
       var val = $(this).val();
       var container = $('.qualification-details');
       if(val != ''){
