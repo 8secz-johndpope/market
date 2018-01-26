@@ -295,6 +295,7 @@
         </div>
       </div>
     </div>
+    @elseif($slug === '')
     @endif
   </div>
 </div>
@@ -349,7 +350,7 @@
       }
       var responsabilities = $('#responsabilities').val();
       $('#responsabilities').val('');
-      if(!isEditExperience){
+      if(!isEditExperience()){
         var text = '<div class="work row">\n'
                       + '<div class="action delete">\n'
                       +  '<i class="glyphicon glyphicon-trash"></i>\n'
