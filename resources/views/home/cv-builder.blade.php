@@ -222,7 +222,7 @@
                         <div class="year col-sm-6 col-xs-12">
                           <select class="form-control" id="date-from-year" name="date-from-year">
                             <option value="">Year</option>
-                            @for($i = idate('y'); $i > 1943; $i--)
+                            @for($i = idate('Y'); $i > 1943; $i--)
                               <option value="{{$i}}">{{$i}}</option>
                             @endfor
                           </select>
@@ -257,7 +257,7 @@
                         <div class="year col-sm-6 col-xs-12">
                           <select class="form-control" id="date-to-year" name="date-to-year">
                             <option value="">Year</option>
-                            @for($i = idate('y'); $i > 1943; $i--)
+                            @for($i = idate('Y'); $i > 1943; $i--)
                               <option value="{{$i}}">{{$i}}</option>
                             @endfor
                           </select>
@@ -397,7 +397,7 @@
                                   <label for="started-on">From</label>
                                   <select class="form-control" id="started-on" name="started-on">
                                     <option value="">Start</option>
-                                    @for($i=idate('y'); $i > 1967; $i--)
+                                    @for($i=idate('Y'); $i > 1967; $i--)
                                       <option value="{{$i}}">{{$i}}</option>
                                     @endfor
                                   </select>
@@ -406,7 +406,7 @@
                                   <label for="ended-on">From</label>
                                   <select class="form-control" id="ended-on" name="ended-on">
                                     <option value="">to</option>
-                                    @for($i=idate('y'); $i > 1967; $i--)
+                                    @for($i=idate('Y'); $i > 1967; $i--)
                                       <option value="{{$i}}">{{$i}}</option>
                                     @endfor
                                   </select>
