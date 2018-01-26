@@ -299,9 +299,6 @@
     <div class="row cvbuilder-qualifications">
       <div class="col-sm-12">
         <div class="section visual-container">
-          <form action="" method="post" id="qualifications-form">
-              <input name="redirect" type="hidden" value="/job/profile/edit">
-              {{ csrf_field() }}
               <div class="row">
                 <div class="col-xs-12">
                   <div class="alert alert-info text-center">
@@ -382,8 +379,9 @@
                         <div class="validation"></div>
                       </div>
                       <div class="qualification-details" style="display: none">
-                        <form id="qualification-form-bulk">
+                        <form id="qualification-form-bulk" action="">
                           {{ csrf_field() }}
+                          <input name="redirect" type="hidden" value="/job/profile/edit">
                           <div class="small-container col-xs-12">
                             <div class="institution form-group">
                               <label for="institution-name">Name of university or college</label>
@@ -446,7 +444,6 @@
                             <button type="button" class=" cancel btn btn-inline btn-link">Cancel</button>
                             <button type="submit" class="btn btn-inline btn-submit confirm-work-experience-button">Confirm</button>
                         </div>
-                        </form>
                       </div>
                     </div>
                   </div>
