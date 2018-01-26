@@ -19,6 +19,9 @@
             <br>
             <br><br>
             <h4>Bulk Apply</h4>
+            <form action="/user/jobs/apply/all" method="post">
+                {{ csrf_field() }}
+
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -33,8 +36,14 @@
 
                     </tr>
                 @endforeach
+                <tr>
+                    <td>                                <button type="submit" class="btn btn-primary">Apply All</button>
+                    </td>
+
+                </tr>
                 </tbody>
             </table>
+            </form>
         </div>
         <div class="col-sm-2">
 
