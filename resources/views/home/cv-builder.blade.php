@@ -484,7 +484,7 @@
           setOtherGCSEForm();
         }
         else if(val == '2' || val == '4'){
-          setOtherMasterForm();
+          setMasterGradeForm();
         }
         else{
           setDegreeGradeForm();
