@@ -1283,6 +1283,10 @@ class HomeController extends BaseController
     {
         $user=Auth::user();
         $ids = $request->ids;
+        if($ids===null){
+            return redirect()->back()->with('msg', 'Please select at least one application');
+
+        }
         $ads = [];
         foreach ($ids as $id) {
             $advert = Advert::find($id);
