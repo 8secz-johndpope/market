@@ -134,6 +134,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Rating');
     }
+    public function applications()
+    {
+        return $this->hasMany('App\Model\Application');
+    }
     public function templates()
     {
         return $this->hasMany('App\Model\ReplyTemplate');
