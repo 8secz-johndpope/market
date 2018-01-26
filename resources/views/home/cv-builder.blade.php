@@ -334,7 +334,7 @@
                   <div class="section">
                     <h5 class="qualification-form-title"><span>Add</span> qualifications</h5>
                     <div class="content row">
-                      <div class="qualification-type form-group col-sx-12">
+                      <div class="qualification-type form-group col-xs-12">
                         <label for=qualification-type>Type</label>
                         <select class="form-control" id="qualification-type" name="qualification-type">
                           <option value="">Select type</option>
@@ -357,7 +357,7 @@
                               <div class="validation">
                               </div>
                             </div>
-                            <div class="dates form-group col-xs-12">
+                            <div class="dates form-group">
                               <div class="row">
                                 <div class="date-from col-xs-6">
                                   <label for="started-on">From</label>
