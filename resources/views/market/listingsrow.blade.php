@@ -299,7 +299,7 @@ use App\Model\Advert;
         @if($category->id >= 4000000000 && $category->id <= 4999999999)
                 <div class="l-visible-large">
 
-                                <button class="btn btn-default" onclick="$('#bulk-apply-form').submit();">Apply All</button>
+                                <button class="btn btn-primary" onclick="$('#bulk-apply-form').submit();">Bulk Apply</button>
 
                 </div>
                 <div class="l-visible-large">
