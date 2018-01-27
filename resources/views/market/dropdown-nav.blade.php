@@ -53,7 +53,7 @@
         </div>
         <ul>
             <li>
-                <a class="nav-link nav-color" href="/job/profile/edit"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Private Profile</a>
+                <a class="nav-link nav-color" href="/job/profile/edit/general"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Private Profile</a>
             </li>
             <li>
                 <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Public Profile</a>

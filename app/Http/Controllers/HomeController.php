@@ -889,14 +889,14 @@ class HomeController extends BaseController
     }
     public function profile(Request $request,$type)
     {
+        $profileTypes = ['general', 'social-childcare', 'sub-contractor'];
         $user = Auth::user();
         if($user->profile===null){
             $profile = new Profile();
             $profile->user_id=$user->id;
             $profile->save();
-
         }
-        return view('home.jobprofile',['profile'=>$user->profile,'user'=>$user]);
+        return view('home.jobprofile',['profile'=>$user->profile,'user'=>$user, 'type' => $type, 'profileType', $profileType]);
     }
 
     public function view_profile(Request $request,$id)
