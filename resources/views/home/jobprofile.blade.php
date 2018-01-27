@@ -203,6 +203,9 @@
                         <a class="action edit" href="/user/create/covers">Edit<i class="glyphicon glyphicon-menu-right" {{isset($user->covers)? '' : 'style="display:none;"'}}></i></a>
                     </header>
                     <div class="content">
+                        <p class="escaped-statement">
+                            {{$user->covers[0]->cover}}
+                        </p>
                         <a class="add-first" href="/user/create/covers" {{isset($user->covers) ? "style=\"display:none;\"" : ''}}>
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add cover letter
