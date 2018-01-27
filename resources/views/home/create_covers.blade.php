@@ -51,7 +51,7 @@
               </div>
                   <div class="form-group">
                       <label for="exampleFormControlTextarea1">Cover Letter</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" name="cover" rows="15" value="{{$cover != null ? $cover->cover: ""}}"></textarea>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name="cover" rows="15">{{$cover != null ? $cover->cover: ""}}</textarea>
                   </div>
               <button type="submit" class="btn btn-submit" id="upload-cv-link">Add Cover</button>
               </form>
