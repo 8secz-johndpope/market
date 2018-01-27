@@ -786,14 +786,14 @@
     $('.other').hide();
   }
   function populateQualificationForm(what, when){
-    var typeGrade = $('.type-name b').text().replace(/[\n\t]/g, '');
+    var typeGrade = $('.type-name b').text().replace(/([\ \t]+(?=[\ \t])|^\s+|\s+$)/g, '');
     console.log(typeGrade);
     $('#qualification-type option').each(function(){
       if($(this).text() == typeGrade){
         $(this).prop('selected', true);
       }
     });
-    $('#institution-name').val(what.find('.institution').text().replace(/[\n\t]/g, ''));
+    $('#institution-name').val(what.find('.institution').text().replace(/([\ \t]+(?=[\ \t])|^\s+|\s+$)/g, ''));
     $('#started-on').val(when[0].trim());
     $('#ended-on').val(when[1].trim());
     $('#subject-name').val(what.find('.subject-name').text());
