@@ -896,7 +896,7 @@ class HomeController extends BaseController
             $profile->user_id=$user->id;
             $profile->save();
         }
-        return view('home.jobprofile',['profile'=>$user->profile,'user'=>$user, 'type' => $type, 'profileType', $profileType]);
+        return view('home.jobprofile',['profile'=>$user->profile,'user'=>$user, 'type' => $type, 'profileTypes', $profileTypes]);
     }
 
     public function view_profile(Request $request,$id)
