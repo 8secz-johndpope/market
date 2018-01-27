@@ -23,36 +23,35 @@
                             <div class="legal-document">
                                 @if($account->legal_entity->verification->status==='pending')
                                     <h4>Identity Document</h4>
-
                                     <p class="yellow-text">Pending Verification </p>
-
                                 @else
                                     @if($account->legal_entity->verification->document&&$account->legal_entity->verification->status==='unverified')
                                         <p class="yellow-text">The Document provided couldn't be verified,please try again </p>
-                                        @endif
-                                <h4>Add Identity Document</h4>
-                                <form class="form-inline" method="post" action="/user/documents/identity" enctype="multipart/form-data">
-                                    {{ csrf_field() }}
-                                    <label class="sr-only" for="inlineFormInputName2">Choose File</label>
-                                    <input type="file" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" name="identity" required >
-
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
                                     @endif
+                                    <h4>Add Identity Document</h4>
+                                    <form class="form-inline" method="post" action="/user/documents/identity" enctype="multipart/form-data">
+                                        {{ csrf_field() }}
+                                        <label class="sr-only" for="inlineFormInputName2">Choose File</label>
+                                        <input type="file" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" name="identity" required >
+
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                @endif
                             </div>
                             <div class="terms">
                                 @if($account->tos_acceptance->ip)
 
-                                    @else
+                                @else
                                 <h4>Accept Terms of Conditions</h4>
-                                <form class="form-inline" method="post" action="/user/terms/accept">
-                                    {{ csrf_field() }}
-                                    <input type="checkbox" class="checkbox" name="terms" required> I accept <a>Terms of Service</a>
-                                    <br>
-                                    <button type="submit" class="btn btn-primary">Accept</button>
-                                </form>
-                                    @endif
+                                    <form class="form-inline" method="post" action="/user/terms/accept">
+                                        {{ csrf_field() }}
+                                        <input type="checkbox" class="checkbox" name="terms" required> I accept <a>Terms of Service</a>
+                                        <br>
+                                        <button type="submit" class="btn btn-primary">Accept</button>
+                                    </form>
+                                @endif
                             </div>
+                        @endif
                         @if(count($accounts)===0)
                             <h4>Add Bank Account</h4>
                             <a class="btn btn-primary add-bank-link-btn" >Add Bank Account</a>
