@@ -805,6 +805,11 @@ input[type=checkbox]:checked~label:before {
 .profile-jobs {
     border-right: 1px solid #dfdfdf;
 }
+.profile-apps span, .profile-jobs span {
+    display: block;
+    color: #333;
+    font: 600 24px/22px Effra-Medium,arial,helvetica,sans-serif;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
