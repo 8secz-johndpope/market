@@ -95,4 +95,23 @@
     </div>
   </div>
 </div>
+<script>
+  $('#upload-cv-link').click(function () {
+        var title = $('#title').val();
+        var category = $('#category').val();
+        if(!title){
+            $('#no-title').show();
+            return;
+        }else{
+            $('#no-title').hide();
+        }
+        if(category=='0'){
+            $('#no-category').show();
+            return;
+        }else{
+            $('#no-category').hide();
+        }
+       upload_cv();
+    });
+</script>
 @endsection
