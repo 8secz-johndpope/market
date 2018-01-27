@@ -142,6 +142,7 @@
   $('.upload-new-cv').click(function(){
     $('.upload-options').show();
     $('.cv-confirmation-area').hide();
+    $('#upload-cv').val('');
   });
 </script>
 @endsection
