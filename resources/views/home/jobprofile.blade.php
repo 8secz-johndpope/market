@@ -79,21 +79,21 @@
                 <div class="col-sm-4">
                     <div class="template-item">
                         <h3 class="template-item-title">General</h3>
-                        <div class="template-content {{$type === $profileTypes[0] ? 'selected' : ''}}">
+                        <div class="template-content {{$type === $types[0] ? 'selected' : ''}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="template-item">
                         <h3 class="template-item-title">Social Care & Childcare</h3>
-                        <div class="template-content {{$type === $profileTypes[1] ? 'selected' : ''}}">
+                        <div class="template-content {{$type === $types[1] ? 'selected' : ''}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="template-item">
                         <h3 class="template-item-title">Sub Contractor</h3>
-                        <div class="template-content {{$type === $profileTypes[2] ? 'selected' : ''}}">
+                        <div class="template-content {{$type === $types[2] ? 'selected' : ''}}">
                         </div>
                     </div>
                 </div>
