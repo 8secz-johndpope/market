@@ -117,7 +117,7 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="responsabilities" rows="5"></textarea>
                     <small><strong>2000</strong> characters remaining</small>
                 </div>
-                <div class="update-form-group col-xs-12">
+                <div class="update-form-group col-xs-12 text-right">
                   <button type="button" class="cancel btn btn-link">Cancel</button>
                   <button type="button" class="save-and-other btn btn-inverse">Save & add other</button>
                   <button type="button" class="save btn btn-submit" id="upload-cv-link">Save</button>
