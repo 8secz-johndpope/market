@@ -274,7 +274,7 @@
     <section class="container-action-profile">
         <div class="container">
             <div class="row">
-                <div class="save col-xs-6 col-sm-3 col-sm-offset-3">
+                <div class="save col-xs-6 col-sm-3 col-sm-offset-6">
                     <button class="btn btn-inverse">Save Profile</button>
                 </div>
                 <div class="publish col-xs-6 col-sm-3">
