@@ -69,7 +69,7 @@
                       <div class="year col-sm-6 col-xs-12">
                         <select class="form-control" id="date-from-year" name="date-from-year">
                           <option value="">Year</option>
-                          @for($i = 2018; $i > 1943; $i--)
+                          @for($i = idate('Y'); $i > 1943; $i--)
                             <option value="{{$i}}">{{$i}}</option>
                           @endfor
                         </select>
@@ -103,7 +103,7 @@
                       <div class="year col-sm-6 col-xs-12">
                         <select class="form-control" id="date-to-year" name="date-to-year">
                           <option value="">Year</option>
-                          @for($i = 2018; $i > 1943; $i--)
+                          @for($i = idate('Y'); $i > 1943; $i--)
                             <option value="{{$i}}">{{$i}}</option>
                           @endfor
                         </select>
@@ -117,8 +117,10 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="responsabilities" rows="5"></textarea>
                     <small><strong>2000</strong> characters remaining</small>
                 </div>
-                <div class="form-group col-xs-12">
-                  <button type="submit" class="btn btn-submit" id="upload-cv-link">Save</button>
+                <div class="update-form-group col-xs-12">
+                  <button type="button" class="cancel btn btn-link">Cancel</button>
+                  <button type="button" class="save-and-other btn btn-inverse">Save & add other</button>
+                  <button type="button" class="save btn btn-submit" id="upload-cv-link">Save</button>
                 </div>
               </div>
             </form>
