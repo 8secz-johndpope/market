@@ -79,37 +79,8 @@ class BusinessController extends BaseController
 
     }
     public function details(Request $request){
-
         $user = Auth::user();
-        /*$balance = \Stripe\Balance::retrieve( array("stripe_account" => $user->stripe_account));
-        $stripe_id = $user->stripe_id;
-
-        try{
-            $cards = \Stripe\Customer::retrieve($stripe_id)->sources->all(array(
-                'limit' => 10, 'object' => 'card'));
-            $cards = $cards['data'];
-
-        }catch (\Exception $exception){
-            $cards = [];
-        }
-        try{
-            $accounts = \Stripe\Account::retrieve($user->stripe_account)->external_accounts->all(array(
-                'limit'=>3, 'object' => 'bank_account'));
-            $accounts=$accounts['data'];
-        }catch (\Exception $exception){
-            $accounts = [];
-        }
-        if(count($user->addresses)>0&&$user->default_address===0){
-            $address = $user->addresses[0];
-            $user->default_address=$address->id;
-            $user->save();
-        }
-        $account=\Stripe\Account::retrieve($user->stripe_account);*/
-
-
         return view('business.details',['user'=>$user, 'jobs'=>Category::job_leaves()]);
-        //return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts,'jobs'=>Category::job_leaves(),'balance'=>$balance,'account'=>$account]);
-
     }
     public function swallet(Request $request){
         $user = Auth::user();
