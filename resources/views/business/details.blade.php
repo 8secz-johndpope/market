@@ -103,10 +103,11 @@
                             <a><span class="glyphicon glyphicon-edit"></span>Edit </a>
                         </div>
                     </div>
+                    <!--
                     <h4>Job Profile</h4>
                         <a class="btn btn-primary" href="/job/profile/edit">Edit Job Profile</a>
 
-                    @if($account->legal_entity->verification->status==='verified')
+                     @if($account->legal_entity->verification->status==='verified')
                         @else
                     <h3>Steps Required to Withdraw Balance</h3>
                     <div class="legal-document">
@@ -233,7 +234,7 @@
 
 
                     </div>
-
+                    -->
                     <div class="user-addresses">
                         <h4 class="bold-text">Addresses</h4>
                         @if($user->default_address>0)
