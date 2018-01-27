@@ -139,5 +139,13 @@
     $('#work-experience-form')[0].reset();
     //$('#work-experience-form').submit();
   });
+  $('#is-current-role').change(function(){
+    var dateTo = $('.date-to');
+    if(this.checked){
+      dateTo.hide();
+    }else{
+      dateTo.show();
+    }
+  });
 </script>
 @endsection
