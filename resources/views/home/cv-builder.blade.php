@@ -499,7 +499,7 @@
               <button class="btn btn-inverse" type="button">Preview</button>
             </div>
             <div class="continue col-xs-12 col-sm-5">
-              <button class="btn btn-submit" type="submit" disabled>Save and finish</button>
+              <button class="btn btn-submit" type="submit">Save and finish</button>
             </div>
           </div>
         </div>
