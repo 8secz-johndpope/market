@@ -162,8 +162,17 @@
                                     <h3 class="title">Your current CV</h3>
                                     <p class="data">
                                         <span class="cv-name">{{$user->cvs[0]->title}}</span>
-                                        <span class="cv-uploaded"></span>
-                                        <span class="actions"></span>
+                                        <span class="cv-uploaded">Added {{$user->cvs[0]->created_at->format('d F Y')}}</span>
+                                        <span class="actions">
+                                            <a class="download-cv" href="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->cvs[0]->file_name}}">
+                                                <i class="glyphicon glyphicon-download-alt"></i>
+                                                Download
+                                            </a>
+                                            <a class="delete-cv" href="/user/delete/cv/{{$user->cvs[0]->id}}">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                Delete
+                                            </a>
+                                        </span>
                                     </p>
                                 </div>
                                 <div class="manage-cv col-xs-12 col-sm-8">
