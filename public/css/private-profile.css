@@ -813,7 +813,6 @@ input[type=checkbox]:checked~label:before {
 }
 .card .profile {
     width: 100%;
-    float: left;
     padding: 15px;
     box-sizing: border-box;
     text-align: center;
