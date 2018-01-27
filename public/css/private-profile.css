@@ -796,6 +796,7 @@ input[type=checkbox]:checked~label:before {
     width: 100%;
     background-color: #fdfdfd;
     border-bottom: 1px solid #dfdfdf;
+    margin: 0;
 }
 .profile-apps, .profile-jobs {
     padding: 12px 0;
