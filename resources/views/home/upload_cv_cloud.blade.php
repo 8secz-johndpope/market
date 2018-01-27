@@ -136,6 +136,7 @@
     });
   $('#upload-cv').change(function(){
     $('.cv-confirmation-area').show();
+    $('.filename').text($('#upload-cv').val());
     $('.upload-options').hide();
   });
   $('.upload-new-cv').click(function(){
