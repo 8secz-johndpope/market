@@ -38,7 +38,7 @@
               <div class="form-group">
                   <label for="title">Title</label> 
                   <span class="red-text" id="no-title" style="display: none">Please add a title to your Cover</span>
-                  <input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="Cover for Part Time Job" required>
+                  <input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="Cover for Part Time Job" required {{isset($covers) ?'value='.$cover->title : ""}}>
                   <small id="emailHelp" class="form-text text-muted">With title you can easily locate Cover if you have many Covers </small>
               </div>
               <div class="form-group">
@@ -51,7 +51,7 @@
               </div>
                   <div class="form-group">
                       <label for="exampleFormControlTextarea1">Cover Letter</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" name="cover" rows="15"></textarea>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name="cover" rows="15" {{isset($covers) ?'value='.$cover->cover: ""}}></textarea>
                   </div>
               <button type="submit" class="btn btn-submit" id="upload-cv-link">Add Cover</button>
               </form>

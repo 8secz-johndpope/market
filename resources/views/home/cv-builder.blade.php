@@ -477,7 +477,7 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="section-title">
-                <h2>This section is optional.</h2>
+                <h2>Personal statement</h2>
               </div>
               <div class="form-group">
                 <p>Try and answer the following questions: who you are, what you can offer, and what you’re aiming for in your career.</p>
