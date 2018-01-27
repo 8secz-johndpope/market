@@ -797,6 +797,14 @@ input[type=checkbox]:checked~label:before {
     background-color: #fdfdfd;
     border-bottom: 1px solid #dfdfdf;
 }
+.profile-apps, .profile-jobs {
+    padding: 12px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+.profile-jobs {
+    border-right: 1px solid #dfdfdf;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
