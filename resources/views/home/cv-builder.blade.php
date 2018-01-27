@@ -798,7 +798,7 @@
     $('#ended-on').val(when[1].trim());
     $('#subject-name').val(what.find('.subject-name').text().replace(/([\ \t]+(?=[\ \t])|^\s+|\s+$)/g, ''));
     var gradeSelector = what.find('.grade-value-uni').text().replace(/([\ \t]+(?=[\ \t])|^\s+|\s+$)/g, '');
-    $('#grade-selector').each(function(){
+    $('#grade-selector option').each(function(){
       if($(this).text() == gradeSelector){
         $(this).prop('selected', true);
       }
