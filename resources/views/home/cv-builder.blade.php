@@ -785,6 +785,7 @@
     $('.other').hide();
   }
   function populateQualificationForm(what, when){
+    console.log(when);
     $('#institution-name').val(what.find('.institution').text());
     $('#started-on').val(when[0].strim());
     $('#ended-on').val(when[1].strim());
