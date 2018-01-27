@@ -206,7 +206,7 @@
                         <p class="escaped-statement">
                             {{$user->covers[0]->cover}}
                         </p>
-                        <a class="add-first" href="/user/create/covers" {{isset($user->covers) ? "style=\"display:none;\"" : ''}}>
+                        <a class="add-first" href="/user/create/covers" {{isset($user->covers) ? "style=display:none;" : ''}}>
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add cover letter
                         </a>
