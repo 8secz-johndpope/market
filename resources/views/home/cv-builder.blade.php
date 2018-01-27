@@ -619,6 +619,7 @@
       $('.qualification-edit').show();
       $('.qualification-details').show();
       setEditQualification('true');
+      setQualificationIndex($('.qualification').index($(this).parent()));
       //TODO add index
     }
     else{
@@ -658,46 +659,7 @@
       var gradeSelector = $('#grade-selector option:selected').text();
       var idGradeSelector = $('#grade-selector').val();
     }
-    if(!isEditQualification()){
-      var text = '<div class="qualification row">'
-                      +'<div class="action edit">'
-                      +' <i class="glyphicon glyphicon-edit"></i>'
-                      +'</div>'
-                      +'<div class="action delete">'
-                      + '<i class="glyphicon glyphicon-trash"></i>'
-                      +'</div>'
-                      +'<div class="when col-xs-12 col-sm-3 text-right">'
-                      + startedOn + ' - ' + endedOn
-                      +'</div>'
-                      +'<div class="what col-xs-12 col-sm-9">'
-                      +  '<div class="type-name">'
-                      +    '<b>' + type + '</b>'
-                      +  '</div>'
-                      + '<div class="institution">'
-                      + institution 
-                      +  '</div>'
-                      +  '<div class="qualification-list">'
-                      +    '<div class="qualification-item">'
-                      +      '<div>'
-                      +        '<span class="subject-name">Software Engineering</span>'
-                      +        '<span class="grade-value">'
-                      +          '<span>(Grade: ' + gradeSelector +')</span>'
-                      +        '</span>'
-                      +      '</div>'
-                      +      '<div style="display: none;">'
-                      +        '<div class="grade-uni">'
-                      +          '<span class="grade-value-uni">' + idGradeSelector + '</span>'
-                      +        '</div>'
-                      +      '</div>'
-                      +    '</div>'
-                      +  '</div>'
-                      +'</div>'
-                    +'</div>';
-      $('.qualifications-container').append(text);
-    }else{
-      var index = $('#index-edit-qualification').val();
-      $('#index-edit-qualification').val('0');
-      var text = '<div class="action edit">'
+    var text = '<div class="action edit">'
                       +' <i class="glyphicon glyphicon-edit"></i>'
                       +'</div>'
                       +'<div class="action delete">'
@@ -728,9 +690,16 @@
                       +      '</div>'
                       +    '</div>'
                       +  '</div>'
-                      +'</div>';
+                      +'</div>\n';
+    if(!isEditQualification()){
+      var text = '<div class="qualification row">\n'+ text +'</div>\n';
+      $('.qualifications-container').append(text);
+    }else{
+      var index = $('#index-edit-qualification').val();
+      $('#index-edit-qualification').val('0');
       $('.qualifications-container qualification').eq(index).html(text);
       setEditQualification('false');
+      setQualificationIndex('0');
     }
     $('.qualification-edit').hide();
     $(this)[0].reset();
@@ -746,6 +715,9 @@
   }
   function setEditExperience(value){
     $('#is-edit-experience').val(value);
+  }
+  function setQualificationIndex(value){
+    $('#index-edit-qualification').val(value);
   }
   function setOtherGradeForm(){
     $('[for="subjet-name"]').text('Qualification');
