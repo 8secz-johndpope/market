@@ -57,14 +57,14 @@
                   </li>
                 </ul>
               </div>
-              <div class="cv-confirmation-area col-xs-12" style="display: none">
+              <div class="cv-confirmation-area col-xs-8 col-xs-offset-2" style="display: none">
                 <div class="row">
                   <div class="col-xs-12 col-sm-8">
                     <div class="row cv-information">
-                      <div class="col-xs-3">
+                      <div class="col-xs-2">
                         <i class="icon icon-cv"></i>
                       </div>
-                      <div class="col-xs-9">
+                      <div class="col-xs-10">
                         <b class="filename"></b>
                       </div>
                     </div>
