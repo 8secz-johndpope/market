@@ -155,7 +155,7 @@
                         <h2 class="title">Your CV's</h2>
                     </header>
                     <div class="content row">
-                        @if(isset($user->cvs))
+                        @if(count($user->cvs) > 0)
                         <div class="cv-details col-sm-12">
                             <div class="row">
                                 <div class="current-cv col-sm-4">
