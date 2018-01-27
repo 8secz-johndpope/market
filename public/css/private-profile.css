@@ -811,6 +811,14 @@ input[type=checkbox]:checked~label:before {
     color: #333;
     font: 600 24px/22px Effra-Medium,arial,helvetica,sans-serif;
 }
+.card .profile {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
