@@ -727,6 +727,14 @@ input[type=checkbox]:checked~label:before {
     word-wrap: break-word;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.cv-details .actions {
+    margin-top: 20px;
+    font-size: 0;
+}
+.cv-details .actions a i {
+    vertical-align: bottom;
+    margin-right: 7.5px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
