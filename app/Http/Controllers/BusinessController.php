@@ -80,6 +80,11 @@ class BusinessController extends BaseController
     }
     public function details(Request $request){
         $user = Auth::user();
+        if(count($user->addresses)>0&&$user->default_address===0){
+            $address = $user->addresses[0];
+            $user->default_address=$address->id;
+            $user->save();
+        }
         return view('business.details',['user'=>$user, 'jobs'=>Category::job_leaves()]);
     }
     public function swallet(Request $request){
@@ -101,11 +106,6 @@ class BusinessController extends BaseController
             $accounts=$accounts['data'];
         }catch (\Exception $exception){
             $accounts = [];
-        }
-        if(count($user->addresses)>0&&$user->default_address===0){
-            $address = $user->addresses[0];
-            $user->default_address=$address->id;
-            $user->save();
         }
         $account=\Stripe\Account::retrieve($user->stripe_account);
        return view('business.swallet',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts,'balance'=>$balance,'account'=>$account]);

@@ -271,6 +271,18 @@
             </div>
         </div>
     </section>
+    <section class="container-action-profile">
+        <div class="container">
+            <div class="row">
+                <div class="save col-xs-6 col-sm-3 col-sm-offset-3">
+                    <button class="btn btn-inverse">Save</button>
+                </div>
+                <div class="publish col-xs-6 col-sm-3">
+                    <div class="btn btn-submit">Publish</div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- <div class="row">
         <div class="col-md-3">
 
