@@ -462,6 +462,48 @@
           </div>
         </div>
       </div>
+    @elseif($slug === 'personal-statement')
+    <div class="row cvbuilder-qualifications">
+      <div class="col-sm-12">
+        <div class="section visual-container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="alert alert-info text-center">
+                <h4>Adding a personal statement can strengthen your CV.</h4>
+                <p>This section is optional.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="section-title">
+                <h2>This section is optional.</h2>
+              </div>
+              <div class="form-group">
+                <p>Try and answer the following questions: who you are, what you can offer, and what you’re aiming for in your career.</p>
+                <textarea class="form-control" rows="15" id="statement" name="statement"></textarea>
+                <div class="validation">
+                </div>
+              </div>
+              <div class="update-foem-control row">
+                <p class="limit col-xs-12 col-sm-6">
+                  <strong>2000</strong>
+                  <span>characters</span>
+                  remaining
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row actions-btns-cv-builder">
+            <div class="col-xs-12 col-sm-5 col-sm-offset-2">
+              <button class="btn btn-inverse" type="button">Preview</button>
+            </div>
+            <div class="continue col-xs-12 col-sm-5">
+              <button class="btn btn-submit" type="submit" disabled>Save and finish</button>
+            </div>
+          </div>
+        </div>
+      </div>
     @endif
   </div>
 </div>
@@ -555,30 +597,6 @@
       }
       var responsabilities = $('#responsabilities').val();
       $('#responsabilities').val('');
-      if(!isEditExperience()){
-        var text = '<div class="work row">\n'
-                      + '<div class="action delete">\n'
-                      +  '<i class="glyphicon glyphicon-trash"></i>\n'
-                      + '</div>\n'
-                      + '<div class="action edit">\n'
-                      +  '<i class="glyphicon glyphicon-edit"></i>\n'
-                      + '</div>\n'
-                      + '<div class="when col-xs-12 col-sm-3 col-md-2 text-right">\n'
-                      + dateFrom + ' - ' + dateTo + '\n'
-                      + '</div>\n'
-                      + '<div class="what col-xs-12 col-sm-9 col-md-10">\n'
-                      + '<div class="title">' + jobTitle + '</div>\n'
-                      + '<div class="company">' + company + '</div>\n'
-                      + '<div class="description hidden-xs">\n'
-                      +  responsabilities +'\n'
-                      + '</div>'
-                      + '</div>'
-                    + '</div>';
-        $('.work-experience-container').append(text);
-     }
-     else{
-      setEditExperience('false');
-      var index = $('#index-work-experience').val() - 1;
       var text = '<div class="action delete">\n'
                     +  '<i class="glyphicon glyphicon-trash"></i>\n'
                     + '</div>\n'
@@ -594,7 +612,14 @@
                     + '<div class="description hidden-xs">\n'
                     +  responsabilities +'\n'
                     + '</div>'
-                    + '</div>';
+                    + '</div>\n';
+      if(!isEditExperience()){
+        text = '<div class="work row">\n' + text + '</div>';
+        $('.work-experience-container').append(text);
+     }
+     else{
+      setEditExperience('false');
+      var index = $('#index-work-experience').val() - 1;
       $('#index-work-experience').val('0');
       $('.work-experience-container .work').eq(index).html(text); 
      } 
@@ -628,7 +653,6 @@
       $('#no-work-experience').parent().hide();
       $('#index-work-experience').val($('.work').index($(this).parent()));
       $('#is-edit-experience').val('true');
-      
       var dateFrom = when[0].split('/');
       console.log(dateFrom);
       var dateTo = dateTo = when[1].split('/');
@@ -692,7 +716,7 @@
                       +  '</div>'
                       +'</div>\n';
     if(!isEditQualification()){
-      var text = '<div class="qualification row">\n'+ text +'</div>\n';
+      text = '<div class="qualification row">\n'+ text +'</div>\n';
       $('.qualifications-container').append(text);
     }else{
       var index = $('#index-edit-qualification').val();
