@@ -718,6 +718,15 @@ input[type=checkbox]:checked~label:before {
     border-bottom: 1px solid #d6d6d6;
     margin-bottom: 20px;
 }
+.cv-details .actions, .cv-details .cv-name, .cv-details .cv-uploaded {
+    display: block;
+}
+.cv-details .cv-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    word-wrap: break-word;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -834,6 +843,7 @@ input[type=checkbox]:checked~label:before {
         border-bottom: none;
     }
     .current-cv {
+
         padding-left: 0!important;
         margin-bottom: 0;
         border-bottom: none;
