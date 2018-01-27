@@ -107,8 +107,8 @@ class BusinessController extends BaseController
         $account=\Stripe\Account::retrieve($user->stripe_account);
 
 
-
-        return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts,'jobs'=>Category::job_leaves(),'balance'=>$balance,'account'=>$account]);
+        return view('business.details',['user'=>$user, 'jobs'=>Category::job_leaves()]);
+        //return view('business.details',['user'=>$user,'cards'=>$cards,'accounts'=>$accounts,'jobs'=>Category::job_leaves(),'balance'=>$balance,'account'=>$account]);
 
     }
     public function swallet(Request $request){
