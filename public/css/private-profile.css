@@ -746,6 +746,10 @@ input[type=checkbox]:checked~label:before {
     border-radius: 4px;
     margin-bottom: 20px;
     text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -765,6 +769,10 @@ input[type=checkbox]:checked~label:before {
     -webkit-background-size: 1230px 1230px;
     background-repeat: no-repeat;
     background-image: url(/css/icon-sprite.svg);
+    background-position: -300px -90px;
+    -webkit-transform: scale(.5);
+    -ms-transform: scale(.5);
+    transform: scale(.5);
 }
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
@@ -890,6 +898,18 @@ input[type=checkbox]:checked~label:before {
     }
     .cv-confirmation-area {
         text-align: left;
+    }
+    .cv-confirmation-area>.row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
     }
 }
 @media screen and (min-width: 1025px){
