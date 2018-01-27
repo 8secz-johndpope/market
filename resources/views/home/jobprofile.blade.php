@@ -41,6 +41,34 @@
                             <a class="action edit" href="/user/manage/details">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <form>
+                                <div class="wrapper-img-profile">
+                                    <figure>
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="img-responsive img-profile">
+                                    </figure>
+                                    <a href="#" id="change-avatar">
+                                        <div class="edit-avatar">
+                                            <i class="glyphicon glyphicon-edit"></i>
+                                        </div>
+                                    </a>
+                                    <input type="file" id="upload-profile"  style="display: none">
+                                    <input type="hidden" name="image" value="{{$user->image}}" id="image">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="wrapper-details-profile">
+                                <div class="wrapper-details-content">
+                                    <p class="details-item name">{{$user->name}}</p>
+                                    <p class="details-item title-job">Engineer Computer</p>
+                                    <p class="details-item">{{$user->email}}</p>
+                                    <p class="details-item">{{$user->phone}}</p>
+                                </div>
+                            </div>
+                        </div>           
+                    </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="card profile-card">
@@ -64,34 +92,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3">
-                    <form>
-                        <div class="wrapper-img-profile">
-                            <figure>
-                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="img-responsive img-profile">
-                            </figure>
-                            <a href="#" id="change-avatar">
-                                <div class="edit-avatar">
-                                    <i class="glyphicon glyphicon-edit"></i>
-                                </div>
-                            </a>
-                            <input type="file" id="upload-profile"  style="display: none">
-                            <input type="hidden" name="image" value="{{$user->image}}" id="image">
-                        </div>
-                    </form>
-                </div>
-                <div class="col-sm-9">
-                    <div class="wrapper-details-profile">
-                        <div class="wrapper-details-content">
-                            <p class="details-item name">{{$user->name}}</p>
-                            <p class="details-item title-job">Engineer Computer</p>
-                            <p class="details-item">{{$user->email}}</p>
-                            <p class="details-item">{{$user->phone}}</p>
-                        </div>
-                    </div>
-                </div>           
             </div>
         </div>
     </section>
