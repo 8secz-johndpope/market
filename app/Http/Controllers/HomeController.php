@@ -2512,7 +2512,11 @@ class HomeController extends BaseController
     }
     public function create_cover(Request $request){
         $user = Auth::user();
-        $cover = $user->covers[0];
+        if(isset($user->covers))
+            $cover = $user->covers[0];
+        else{
+            $cover = null;
+        }
         return view('home.create_covers', ['user' => $user, 'jobs' => Category::job_leaves(), 'cover' => $cover]);   
     }
     public function create_work_experience(Request $request){
