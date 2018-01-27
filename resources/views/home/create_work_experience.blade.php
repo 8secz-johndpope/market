@@ -76,7 +76,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="current-role form-group col-sm-4 col-xs-12">
+                  <div class="current-role form-group checkbox col-sm-4 col-xs-12">
                     <input type="checkbox" name="is-current-role" id="is-current-role">
                     <label for="is-current-role">I currently work here</label>
                   </div>
