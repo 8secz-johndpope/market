@@ -785,6 +785,18 @@ input[type=checkbox]:checked~label:before {
     -ms-flex-align: center;
     align-items: center;
 }
+.card {
+    width: 100%;
+    background-color: #fff;
+    border-top: 3px solid #ff9d2c;
+    box-shadow: 0 0 4px 0 rgba(56,56,56,0.2);
+    box-sizing: border-box;
+}
+.profile-apps-jobs {
+    width: 100%;
+    background-color: #fdfdfd;
+    border-bottom: 1px solid #dfdfdf;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
