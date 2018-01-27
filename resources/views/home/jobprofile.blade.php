@@ -36,7 +36,7 @@
                     <p class="details-profile-subtitle">Complete your details</p>
                 </div>
                 <div class="col-sm-2">
-                    <a class="btn update-details" href="/user/manage/details">Edit</a>
+                    <a class="action edit" href="/user/manage/details">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                 </div>
             </div>
             <div class="row">
