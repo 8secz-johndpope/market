@@ -796,9 +796,13 @@
     $('#institution-name').val(what.find('.institution').text().replace(/([\ \t]+(?=[\ \t])|^\s+|\s+$)/g, ''));
     $('#started-on').val(when[0].trim());
     $('#ended-on').val(when[1].trim());
-    $('#subject-name').val(what.find('.subject-name').text());
-    console.log(what.find('.grade-value-uni').text());
-    $('#grade-selector').val(what.find('.grade-value-uni').text());
+    $('#subject-name').val(what.find('.subject-name').text().replace(/([\ \t]+(?=[\ \t])|^\s+|\s+$)/g, ''));
+    var gradeSelector = what.find('.grade-value-uni').text().replace(/([\ \t]+(?=[\ \t])|^\s+|\s+$)/g, '');
+    $('#grade-selector').each(function(){
+      if($(this).text() == gradeSelector){
+        $(this).prop('selected', true);
+      }
+    });
   }
   
 </script>
