@@ -31,12 +31,38 @@
     <section class="container-details-profile mb-10">
         <div class="container">
             <div class="row">
-                <div class="col-sm-10">
-                    <h3 class="details-profile-title">Private Profile</h3>
-                    <p class="details-profile-subtitle">Complete your details</p>
+                <div class="col-sm-10 col-xs-12">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <h3 class="details-profile-title">Private Profile</h3>
+                            <p class="details-profile-subtitle">Complete your details</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="action edit" href="/user/manage/details">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                    <a class="action edit" href="/user/manage/details">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
+                <div class="col-sm-2 col-xs-12">
+                    <div class="card profile-card">
+                        <div class="profile-apps-jobs row">
+                            <a class="col-xs-6 profile-jobs">
+                                <span>1</span>
+                                Applications
+                            </a>
+                            <a class="col-xs-6 profile-apps">
+                                <span>0</span>
+                                Saved jobs
+                            </a>
+                        </div>
+                        <div class="profile progress-row">
+                            <div class="profile-progress">
+                                <p>Your profile is 50% complete</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
