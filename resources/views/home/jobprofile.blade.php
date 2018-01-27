@@ -275,10 +275,10 @@
         <div class="container">
             <div class="row">
                 <div class="save col-xs-6 col-sm-3 col-sm-offset-3">
-                    <button class="btn btn-inverse">Save</button>
+                    <button class="btn btn-inverse">Save Profile</button>
                 </div>
                 <div class="publish col-xs-6 col-sm-3">
-                    <div class="btn btn-submit">Publish</div>
+                    <div class="btn btn-submit">Publish Profile</div>
                 </div>
             </div>
         </div>
