@@ -135,7 +135,7 @@
     window.location.href = $('#redirect').val();
   });
   $('.save-and-other').click(function(){
-    $('#redirect').val(window.location.href);
+    $('#redirect').val('/user/create/work-experience');
     $('#work-experience-form')[0].reset();
     //$('#work-experience-form').submit();
   });
