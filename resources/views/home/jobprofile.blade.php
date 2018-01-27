@@ -31,7 +31,7 @@
     <section class="container-details-profile mb-10">
         <div class="container">
             <div class="row">
-                <div class="col-sm-10 col-xs-12">
+                <div class="col-sm-9 col-xs-12">
                     <div class="row">
                         <div class="col-sm-10">
                             <h3 class="details-profile-title">Private Profile</h3>
@@ -70,7 +70,7 @@
                         </div>           
                     </div>
                 </div>
-                <div class="col-sm-2 col-xs-12">
+                <div class="col-sm-3 col-xs-12">
                     <div class="card profile-card">
                         <div class="profile-apps-jobs row">
                             <a class="col-xs-6 profile-jobs">
