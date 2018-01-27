@@ -37,7 +37,7 @@
                             <h3 class="details-profile-title">Private Profile</h3>
                             <p class="details-profile-subtitle">Complete your details</p>
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 text-right">
                             <a class="action edit" href="/user/manage/details">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                         </div>
                     </div>
