@@ -14,7 +14,7 @@
     <div class="row all-divs">
         <div class="col-sm-12">
 
-            <ul class="nav nav-tabs top-main-nav">
+            <!-- <ul class="nav nav-tabs top-main-nav">
 
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/ads"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Manage  ads</a>
@@ -49,7 +49,7 @@
                 <li class="nav-item">
                     <a class="nav-link nav-color" href="/business/manage/support"><span class="glyphicon glyphicon-earphone"></span> &nbsp;&nbsp;Support</a>
                 </li>
-            </ul>
+            </ul>-->
             <div class="row" style="margin-bottom: 30px">
                 <div class="col-md-6 col-md-offset-3">
                     <h2 class="bold-text">{{$user->name}}</h2>

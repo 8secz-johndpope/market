@@ -127,7 +127,7 @@
         </div>
         <ul>
             <li>
-                <a class="nav-link nav-color" href="#">Balance</a>
+                <a class="nav-link nav-color" href="/business/manage/balance">Balance</a>
             </li>
         </ul>
     </div>
