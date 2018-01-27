@@ -79,21 +79,21 @@
                 <div class="col-sm-4">
                     <div class="template-item">
                         <h3 class="template-item-title">General</h3>
-                        <div class="template-content {{$type === $types[0] ? 'selected' : ''}}">
+                        <div class="template-content {{$type === $types[0] ? 'selected' : ''}}" data-href="{{$types[0]}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="template-item">
                         <h3 class="template-item-title">Social Care & Childcare</h3>
-                        <div class="template-content {{$type === $types[1] ? 'selected' : ''}}">
+                        <div class="template-content {{$type === $types[1] ? 'selected' : ''}}" data-href="{{$types[1]}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="template-item">
                         <h3 class="template-item-title">Sub Contractor</h3>
-                        <div class="template-content {{$type === $types[2] ? 'selected' : ''}}">
+                        <div class="template-content {{$type === $types[2] ? 'selected' : ''}}" data-href="{{$types[2]}}">
                         </div>
                     </div>
                 </div>
@@ -320,5 +320,9 @@
         console.log("did change");
         upload_profile();
     });
+    $('.template-content').click(function(){
+        var template = $(this).attr('data-href');
+        window.location.href = '/job/profile/edit/' + template;
+    })
 </script>
 @endsection
