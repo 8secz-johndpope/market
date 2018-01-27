@@ -62,7 +62,7 @@
                   <div class="col-xs-12 col-sm-8">
                     <div class="row cv-information">
                       <div class="col-xs-3">
-                        <i class=""></i>
+                        <i class="icon icon-cv"></i>
                       </div>
                       <div class="col-xs-9">
                         <b class="filename"></b>
@@ -78,7 +78,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cv-searchable">
+              <div class="cv-searchable col-xs-12">
                 <div class="checkbox">
                   <input type="checkbox" id="searchable-checkbox" checked="checked" name="searchable-checkbox">
                   <label for="searchable-checkbox">
