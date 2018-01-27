@@ -1532,6 +1532,11 @@ class HomeController extends BaseController
             $user->contract->status='settled';
             $user->contract->save();
         }
+        $token = $user->createToken('Contract Token')->accessToken;
+
+        $user->contract->api_token=$token;
+        $user->contract->save();
+        
         $order->contract->user_id = $user->id;
         $order->contract->save();
     }
