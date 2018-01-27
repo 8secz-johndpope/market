@@ -57,6 +57,27 @@
                   </li>
                 </ul>
               </div>
+              <div class="cv-confirmation-area col-xs-12" style="display: none">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-8">
+                    <div class="row cv-information">
+                      <div class="col-xs-3">
+                        <i class=""></i>
+                      </div>
+                      <div class="col-xs-9">
+                        <b class="filename"></b>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 incorrect-file">
+                    <p>
+                      Not the right file?
+                      <br>
+                      <a class="upload-new-cv" href="#">Upload a new CV</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
               <div class="cv-searchable">
                 <div class="checkbox">
                   <input type="checkbox" id="searchable-checkbox" checked="checked" name="searchable-checkbox">
@@ -113,5 +134,13 @@
         }
        upload_cv();
     });
+  $('#upload-cv').change(function(){
+    $('.cv-confirmation-area').show();
+    $('.upload-options').hide();
+  });
+  $('.upload-new-cv').click(function(){
+    $('.upload-options').show();
+    $('.cv-confirmation-area').hide();
+  });
 </script>
 @endsection
