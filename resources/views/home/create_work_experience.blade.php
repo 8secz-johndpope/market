@@ -31,8 +31,8 @@
             <h2 class="title">Work experience</h2>
           </header>
           <div class="content row">
-            <form action="" method="post">
-                <input name="redirect" type="hidden" value="/job/profile/edit">
+            <form action="" method="post" id="work-experience-form" method="post">
+                <input name="redirect" id="redirect" type="hidden" value="/job/profile/edit">
                 {{ csrf_field() }}
               <div class="small-container col-xs-12 col-sm-9">
                 <div class="form-group">
@@ -130,4 +130,14 @@
     </div>
   </div>
 </div>
+<script>
+  $('.cancel').click(function(){
+    window.location.href = $('#redirect').val();
+  });
+  $('.save-and-other').click(function(){
+    $('#redirect').val(window.location.href);
+    $('#work-experience-form')[0].reset();
+    //$('#work-experience-form').submit();
+  });
+</script>
 @endsection
