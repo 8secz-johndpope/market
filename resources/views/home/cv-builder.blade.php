@@ -787,8 +787,8 @@
   function populateQualificationForm(what, when){
     console.log(when);
     $('#institution-name').val(what.find('.institution').text());
-    $('#started-on').val(when[0].strim());
-    $('#ended-on').val(when[1].strim());
+    $('#started-on').val(when[0].trim());
+    $('#ended-on').val(when[1].trim());
     $('#subject-name').val(what.find('.subject-name').text());
     $('#grade-selector').val(what.find('.grade-value-uni').text());
   }
