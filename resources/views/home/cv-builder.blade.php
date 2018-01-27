@@ -697,7 +697,7 @@
     }else{
       var index = $('#index-edit-qualification').val();
       $('#index-edit-qualification').val('0');
-      $('.qualifications-container qualification').eq(index).html(text);
+      $('.qualifications-container .qualification').eq(index).html(text);
       setEditQualification('false');
       setQualificationIndex('0');
     }
