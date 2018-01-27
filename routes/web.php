@@ -212,6 +212,7 @@ Route::get('/business/manage/metrics', 'BusinessController@metrics');
 Route::get('/business/manage/support', 'BusinessController@support');
 
 Route::post('/business/manage/bump', 'BusinessController@bump');
+Route::get('/business/manage/swallet', 'BusinessController@swallet');
 Route::get('/pay/invoice/{id}', 'HomeController@pay');
 Route::get('/pay-logout/invoice/{id}', 'MarketController@payLogout');
 
@@ -293,7 +294,7 @@ Route::get('/id/{id}', 'MarketController@id');
 Route::get('/agent/{id}', 'MarketController@agent');
 Route::get('/company/{id}', 'MarketController@company');
 
-Route::get('/job/profile/edit', 'HomeController@profile');
+Route::get('/job/profile/edit/{type}', 'HomeController@profile');
 Route::post('/job/profile/save', 'HomeController@save_profile');
 Route::get('/job/profile/view/{id}', 'HomeController@view_profile');
 Route::get('/job/profile/create-public', 'HomeController@createPublicProfile');

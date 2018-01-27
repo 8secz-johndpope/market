@@ -36,7 +36,7 @@
                     <p class="details-profile-subtitle">Complete your details</p>
                 </div>
                 <div class="col-sm-2">
-                    <a class="btn update-details" href="/user/manage/details">Edit</a>
+                    <a class="action edit" href="/user/manage/details">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                 </div>
             </div>
             <div class="row">
@@ -267,6 +267,18 @@
                             Add work experience
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-action-profile mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="save col-xs-6 col-sm-3 col-sm-offset-6 text-right">
+                    <button class="btn btn-inverse">Save Profile</button>
+                </div>
+                <div class="publish col-xs-6 col-sm-3">
+                    <div class="btn btn-submit">Publish Profile</div>
                 </div>
             </div>
         </div>

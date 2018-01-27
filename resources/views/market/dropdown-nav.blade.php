@@ -127,7 +127,16 @@
         </div>
         <ul>
             <li>
-                <a class="nav-link nav-color" href="#">Balance</a>
+                <a class="nav-link nav-color" href="/business/manage/swallet">My sWallet</a>
+            </li>
+            <li>
+                <a class="nav-link nav-color" href="#">My Statement</a>
+            </li>
+            <li>
+                <a class="nav-link nav-color" href="#">Share Balance</a>
+            </li>
+            <li>
+                <a class="nav-link nav-color" href="#">Share Referral Code</a>
             </li>
         </ul>
     </div>

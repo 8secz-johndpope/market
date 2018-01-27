@@ -887,10 +887,9 @@ class HomeController extends BaseController
         $advert = Advert::find($id);
         return redirect($advert->url().'?srn=true');
     }
-    public function profile(Request $request)
+    public function profile(Request $request,$type)
     {
         $user = Auth::user();
-
         if($user->profile===null){
             $profile = new Profile();
             $profile->user_id=$user->id;
