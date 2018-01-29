@@ -647,6 +647,7 @@ use App\Model\Advert;
 
         @foreach($products as $product)
         @if($i == 10)
+        <!-- form for let me help -->
         <div class="listing-max-pro container-emailme">
             <div class="container-emailme-header text-center">
                 <h3>Let Us Help With Your Search</h3>
@@ -871,19 +872,12 @@ use App\Model\Advert;
     </div>
     <!-- End cars adverts -->
     @else
-        
         <div class="listing-max-pro">
             <div class="product">
                 @if($product['category'] < 4000000000 || $product['category'] > 4999999999)
                 <div class="listing-side">
                     <div class="listing-thumbnail">
                         <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" data-src="{{env('AWS_WEB_IMAGE_URL')}}/{{ count($product['images'])>0?$product['images'][0]:"noimage.png"}}" class="lazyload" alt="">
-
-                        <!-- @if(isset($product['featured'])&&$product['featured']===1&&$product['featured_expires']>$milli&&isset($product['featured_x']))
-                            <span class="ribbon-featured">
-                                <strong class="ribbon" data-q="featuredProduct"><span class="hide-visually">This ad is</span>Featured</strong>
-                            </span>
-                        @endif -->
                         <div class="listing-meta txt-sub">
                             <span class="glyphicon glyphicon-camera"> </span> <span class="image-number"> {{count($product['images'])}}</span>
                         </div>
@@ -897,6 +891,12 @@ use App\Model\Advert;
                     @endif
                 @endif
                 <div class="info{{($product['category'] >= 4000000000 && $product['category'] <= 4999999999) ? ' margin-left' :''}}">
+                    @if($product['category'] >= 4000000000 && $product['category'] <= 4999999999)
+                        <div class="checkbox">
+                            <input required="Please select at least one appplication" class="select-application" type="checkbox" name="ids[]" value="{{$product['source_id']}}">
+                            <label>Select</label>
+                        </div>
+                    @endif
                     <div class="favor">
                         @if (in_array($product['source_id'],$sids))
                             <span class="heart favroite-icon" data-id="{{$product['source_id']}}"></span>
@@ -909,9 +909,6 @@ use App\Model\Advert;
                         @endif
                     </div>
                     <div class="wrapper-title-product">
-                        @if($category->id >= 4000000000 && $category->id <= 4999999999)
-                            <input required="Please select at least one appplication" class="select-application" type="checkbox" name="ids[]" value="{{$product['source_id']}}">
-                        @endif
                         <a class="listing-product" href="/p/{{$product['category']}}/{{$product['source_id']}}"> 
                             <h4 class="product-title">{{$product['title']}}</h4>
                         </a>
