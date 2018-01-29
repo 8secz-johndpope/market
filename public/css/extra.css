@@ -2408,6 +2408,23 @@ nav.navbar.navbar-inverse {
 .mb-10 {
     margin-bottom: 10px;
 }
+.info .checkbox label {
+    display: block;
+    padding-left: 0;
+    font-size: 10px;
+}
+.info .checkbox {
+    position: absolute;
+    left: -46px;
+    width: 40px;
+    text-align: center;
+}
+.info .checkbox input[type=checkbox] {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
