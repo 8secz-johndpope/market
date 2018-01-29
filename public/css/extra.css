@@ -2478,6 +2478,19 @@ nav.navbar.navbar-inverse {
     opacity: 1;
     display: block;
 }
+.tooltip-arrow-upLeft:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    top: -12px;
+    border-width: 0 9px 10px;
+    border-color: transparent transparent #267ec8;
+    left: 10px;
+    margin-left: -72px;
+    border-color: transparent transparent #313c53;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;

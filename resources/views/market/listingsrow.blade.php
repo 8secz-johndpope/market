@@ -639,7 +639,7 @@ use App\Model\Advert;
         <div class="bulk-apply-container"> 
             <input type="checkbox" class="select-all" id="select-all"> 
             <label for="select-all">Select All for <span class="bulk-apply-tm">Bulk Apply<sup>TM</sup></span></label>
-            <div class="tooltip tooltip-bulk tooltip-arrow-uptop">
+            <div class="tooltip tooltip-bulk tooltip-arrow-upLeft">
                 <div class="tooltip-content">
                     <h3 class="search-result-valueIndicatorTitle">Bulk Apply?</h3>
                     <span>Select as many jobs as you want and apply in one-click</span>
