@@ -895,6 +895,12 @@ use App\Model\Advert;
                         <div class="checkbox">
                             <input required="Please select at least one appplication" class="select-application" type="checkbox" name="ids[]" value="{{$product['source_id']}}" id="bulk-{{$product['source_id']}}">
                             <label for="bulk-{{$product['source_id']}}">Select</label>
+                            <div class="tooltip tooltip-bulk tooltip-arrow-uptop">
+                                <div class="tooltip-content">
+                                    <span>Select as many jobs as you want and apply in one-click</span>
+                                </div>
+                                <div class="tooltip-close js-close"></div>
+                            </div>
                         </div>
                     @endif
                     <div class="favor">
