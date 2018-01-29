@@ -2457,14 +2457,14 @@ nav.navbar.navbar-inverse {
     background-repeat: no-repeat;
     background-image: url(/css/checkbox-bulk.svg);
     background-position: 4px 4px;
-    background-size: 170%;
+    background-size: 55px;
 }
 
 .info .checkbox input[type=checkbox]:checked~label:before{
     background-repeat: no-repeat;
     background-image: url(/css/checkbox-bulk.svg);
-    background-position: 125% 4px;
-    background-size: 170%;
+    background-position: -29px 4px;
+    background-size: 55px;
 }
 @media (max-width: 1500px) {
     h4.product-title {
