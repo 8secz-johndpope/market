@@ -639,6 +639,12 @@ use App\Model\Advert;
         <div> 
             <input type="checkbox" class="select-all" id="select-all"> 
             <label for="select-all">Select All for <span class="bulk-apply-tm">Bulk Apply<sup>TM</sup></span></label>
+            <div class="tooltip tooltip-bulk tooltip-arrow-uptop">
+                <div class="tooltip-content">
+                    <span>Select as many jobs as you want and apply in one-click</span>
+                </div>
+                <div class="tooltip-close js-close"></div>
+            </div>
         </div>
         <form id="bulk-apply-form" action="/user/jobs/apply/show" method="post">
             {{ csrf_field() }}
@@ -895,12 +901,6 @@ use App\Model\Advert;
                         <div class="checkbox">
                             <input required="Please select at least one appplication" class="select-application" type="checkbox" name="ids[]" value="{{$product['source_id']}}" id="bulk-{{$product['source_id']}}">
                             <label for="bulk-{{$product['source_id']}}">Select</label>
-                            <div class="tooltip tooltip-bulk tooltip-arrow-uptop">
-                                <div class="tooltip-content">
-                                    <span>Select as many jobs as you want and apply in one-click</span>
-                                </div>
-                                <div class="tooltip-close js-close"></div>
-                            </div>
                         </div>
                     @endif
                     <div class="favor">
