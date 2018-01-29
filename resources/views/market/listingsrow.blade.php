@@ -297,12 +297,64 @@ use App\Model\Advert;
             </div>
         </div> -->
         @if($category->id >= 4000000000 && $category->id <= 4999999999)
+
                 <div class="l-visible-large">
 
                                 <button class="btn btn-primary" onclick="$('#bulk-apply-form').submit();">Bulk Apply</button>
 
                 </div>
-                <div class="l-visible-large">
+            <div class="flyout-accordion accordion-container">
+                <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-price">
+                    <span class="options-button-inner">
+                        <span class="options-button-name">
+                            Salary
+                        </span>
+                        <span class="options-button-value">
+                            @if(!isset($input['sal_minimum']) && !isset($input['sal_maximum']))
+                                Any
+                            @else
+                                @if(isset($input['sal_minimum']))
+                                    £{{$input['sal_minimum']}}
+                                @else
+                                    Any
+                                @endif
+                                 to
+                                @if(isset($input['sal_maximum']))
+                                    £{{$input['sal_maximum']}}
+                                @else
+                                    Any
+                                @endif 
+                            @endif 
+                        </span>
+                        <span class="options-button-icon">
+                            <i class="glyphicon glyphicon-menu-down"></i>
+                        </span>
+                    </span>
+                </button>
+                <div class="collapse in" id="acco-price">
+                <div class="sf-accordion-select-container price-option">
+                    <form action="{{$url}}">
+                        @foreach($input as $key=>$value)
+                            <input type="hidden" name="{{$key}}" value="{{$value}}">
+                        @endforeach
+                        <div class="sf-accordion-select-options">
+                            <label class="control-label" for="sal_minimum">Salary min:</label>
+                            <input class="form-control" placeholder="Any" type="number" id="sal_minimum" name="sal_minimum" value="@if(isset($input['sal_minimum'])){{$input['sal_minimun']}}@endif" aria-invalid="false">
+                        </div>
+                        <div class="sf-accordion-select-options">
+                            <label class="control-label" for="salary_max">Salary max:</label>
+                            <input class="form-control" placeholder="Any" type="number" name="sal_maximum" value="@if(isset($input['sal_maximum'])){{$input['sal_maximum']}}@endif" aria-invalid="false">
+                        </div>
+                        <div class="form-group clearfix">
+                            <div class="col-sm-offset-6 col-sm-6">
+                                <button type="submit" class="form-control btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+                <!-- <div class="l-visible-large">
             <form action="{{$url}}">
                 <label for="distance">Salary</label>
                 @foreach($input as $key=>$value)
@@ -311,7 +363,7 @@ use App\Model\Advert;
                     <div class="form-group">
                         <label class="control-label" for="sal_minimum">Salary min:</label>
                         <div class="">
-                        <input class="form-control" placeholder="Any" type="number" id="sal_minimum" name="sal_minimum" value="@if(isset($input['sal_minimum'])){{$input['sal_minimun']}}@endif" aria-invalid="false">
+                        
                     </div>
                     </div>
 
@@ -326,7 +378,7 @@ use App\Model\Advert;
                             </div>
                         </div>
             </form>
-        </div>
+        </div>-->
         @else
         <div class="flyout-accordion accordion-container">
             <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-price">
