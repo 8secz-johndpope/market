@@ -893,8 +893,8 @@ use App\Model\Advert;
                 <div class="info{{($product['category'] >= 4000000000 && $product['category'] <= 4999999999) ? ' margin-left' :''}}">
                     @if($product['category'] >= 4000000000 && $product['category'] <= 4999999999)
                         <div class="checkbox">
-                            <input required="Please select at least one appplication" class="select-application" type="checkbox" name="ids[]" value="{{$product['source_id']}}">
-                            <label>Select</label>
+                            <input required="Please select at least one appplication" class="select-application" type="checkbox" name="ids[]" value="{{$product['source_id']}}" id="bulk-{{$product['source_id']}}">
+                            <label for="bulk-{{$product['source_id']}}">Select</label>
                         </div>
                     @endif
                     <div class="favor">
