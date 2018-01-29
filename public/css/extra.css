@@ -2471,7 +2471,7 @@ nav.navbar.navbar-inverse {
 }
 .tooltip-bulk {
     margin: 0;
-    top: 22px;
+    top: 27px;
     left: 82px;
 }
 [for=select-all]:hover + .tooltip-bulk{
@@ -2487,7 +2487,7 @@ nav.navbar.navbar-inverse {
     top: -12px;
     border-width: 0 9px 10px;
     border-color: transparent transparent #267ec8;
-    left: 10px;
+    left: 92px;
     margin-left: -72px;
     border-color: transparent transparent #313c53;
 }
