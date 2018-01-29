@@ -2418,12 +2418,18 @@ nav.navbar.navbar-inverse {
     left: -46px;
     width: 40px;
     text-align: center;
+    border: 1px solid #ccc;
+    height: 55px;
+    top: 0;
+    margin: 0;
 }
 .info .checkbox input[type=checkbox] {
     position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 @media (max-width: 1500px) {
     h4.product-title {
