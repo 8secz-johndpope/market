@@ -2474,6 +2474,10 @@ nav.navbar.navbar-inverse {
     top: 22px;
     left: 82px;
 }
+[for=select-all]:hover + .tooltip-bulk{
+    opacity: 1;
+    display: block;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
