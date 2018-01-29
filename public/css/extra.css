@@ -2466,6 +2466,9 @@ nav.navbar.navbar-inverse {
     background-position: -30px 4px;
     background-size: 55px;
 }
+.bulk-apply-container{
+    position: relative;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
