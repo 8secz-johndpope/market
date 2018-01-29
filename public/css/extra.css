@@ -2469,6 +2469,11 @@ nav.navbar.navbar-inverse {
 .bulk-apply-container{
     position: relative;
 }
+.tooltip-bulk {
+    margin: 0;
+    top: 22px;
+    left: 82px;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
