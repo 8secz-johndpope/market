@@ -1026,6 +1026,14 @@ a.search-alert {
 .btn-bulk{
     min-width: 200px;
 }
+.bulk-apply-tm {
+    color: #ff9d2c;
+    letter-spacing: 1px;
+}
+.bulk-apply-tm sup {
+    font-size: 8px;
+    margin-left: 2px;
+}
 @media screen and (min-width: 768px) {
     .modal:before {
         display: inline-block;
