@@ -620,7 +620,7 @@ use App\Model\Advert;
                         <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a> 
                     </div>
                     <div class="col-xs-6">                                
-                        <button class="btn btn-primary" onclick="$('#bulk-apply-form').submit();">Bulk Apply</button>
+                        <button class="btn btn-primary btn-bulk" onclick="$('#bulk-apply-form').submit();">Bulk Apply</button>
                     </div>
                 </div>
             </div>

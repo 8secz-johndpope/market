@@ -1023,6 +1023,9 @@ a.search-alert {
     /* margin: 0 auto 20px; */
     margin-right: 10px;
 }
+.btn-bulk{
+    min-width: 200px;
+}
 @media screen and (min-width: 768px) {
     .modal:before {
         display: inline-block;
