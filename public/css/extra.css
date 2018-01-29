@@ -1183,7 +1183,8 @@ li.list-group-item a {
 .info.margin-left {
     margin-left: 0;
     margin-top: 5px;
-    width: 100%;
+    width: calc(100% - 40px);
+    margin-left: 40px;
 }
 .favor {
     position: absolute;
