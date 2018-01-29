@@ -73,8 +73,8 @@
                 <div class="col-sm-3 col-xs-12">
                     <div class="card profile-card">
                         <div class="profile-apps-jobs row">
-                            <a class="col-xs-6 profile-jobs">
-                                <span>1</span>
+                            <a class="col-xs-6 profile-jobs" href="/user/manage/my/applications">
+                                <span>{{$totalApplication}}</span>
                                 Applications
                             </a>
                             <a class="col-xs-6 profile-apps">
