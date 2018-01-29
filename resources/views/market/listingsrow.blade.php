@@ -636,15 +636,16 @@ use App\Model\Advert;
                 </div>
             </div>
         </div>
+        <div> 
+            <input type="checkbox" class="select-all" id="select-all"> 
+            <label for="select-all">Select All for <span class="bulk-apply-tm">Bulk Apply<sup>TM</sup></span></label>
+        </div>
+        <form id="bulk-apply-form" action="/user/jobs/apply/show" method="post">
+            {{ csrf_field() }}
         @endif
-            @if($category->id >= 4000000000 && $category->id <= 4999999999)
+            
 
-            <div> <input type="checkbox" class="select-all" id="select-all"> Select All</div>
-@endif
-            <form id="bulk-apply-form" action="/user/jobs/apply/show" method="post">
-                {{ csrf_field() }}
-
-            @foreach($products as $product)
+        @foreach($products as $product)
         @if($i == 10)
         <div class="listing-max-pro container-emailme">
             <div class="container-emailme-header text-center">
@@ -1115,8 +1116,9 @@ use App\Model\Advert;
             <small>By clicking Submit, you accept our <a>Terms & Conditions</a>, <a>Privacy policy</a> and consent to messages</small>
         </div>
     </div>
-            </form>
-
+    @if($category->can_apply())
+    </form>
+    @endif
         <nav aria-label="Page navigation">
             <div class="text-center">
             <ul class="pagination">
