@@ -641,6 +641,7 @@ use App\Model\Advert;
             <label for="select-all">Select All for <span class="bulk-apply-tm">Bulk Apply<sup>TM</sup></span></label>
             <div class="tooltip tooltip-bulk tooltip-arrow-uptop">
                 <div class="tooltip-content">
+                    <h3 class="search-result-valueIndicatorTitle">Bulk Apply?</h3>
                     <span>Select as many jobs as you want and apply in one-click</span>
                 </div>
                 <div class="tooltip-close js-close"></div>
