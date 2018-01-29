@@ -2463,7 +2463,7 @@ nav.navbar.navbar-inverse {
 .info .checkbox input[type=checkbox]:checked~label:before{
     background-repeat: no-repeat;
     background-image: url(/css/checkbox-bulk.svg);
-    background-position: 50% 4px;
+    background-position: 125% 4px;
     background-size: 170%;
 }
 @media (max-width: 1500px) {
