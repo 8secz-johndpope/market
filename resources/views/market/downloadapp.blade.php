@@ -21,7 +21,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6">
-							<h1>Connect, search, find, buy - get it on the go</h1>
+							<h1>Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited - Get the App on the go. FREE</h1>
 							<div class="app-store-badges">
 								<a href="#" class="appstore-link" target="_blank">Download</a>
 								<a href="#" class="google-play-link" target="_blank">Download</a>
