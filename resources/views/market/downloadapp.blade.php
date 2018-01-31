@@ -45,7 +45,7 @@
 									Something went wrong. Please check your phone number and try again.
 								</div>
 							</div>
-							<div class="available-devices">
+							<div class="available-devices clearfix">
 								<p>Available for</p>
 								<ul>
 									<li>
