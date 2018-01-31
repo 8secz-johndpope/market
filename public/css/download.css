@@ -156,6 +156,14 @@ form .fields-container {
     padding-right: 0.75em;
     float: left;
 }
+.field-error {
+    display: none;
+    float: left;
+    width: 100%;
+    font-size: 0.875em;
+    color: #e34633;
+    margin-bottom: 1.875em;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
