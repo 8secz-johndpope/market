@@ -79,7 +79,7 @@
 			<div class="container">
 				<div class="container-key-features">
 					<div class="row">
-						<div class="col-sm-6 col-sm-offset-6">
+						<div class="col-sm-6 col-sm-offset-6 text-center">
 							<h2 class="donwload-subtitle">Key features</h2>
 							<a href="#" class="btn btn-below">Download below</a>
 						</div>

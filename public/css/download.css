@@ -348,6 +348,10 @@ footer{
 .container-key-features{
     position: relative;
 }
+.features .donwload-subtitle {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
