@@ -228,6 +228,13 @@ form .field-action-wrapper {
     margin: 0;
     display: none;
 }
+.app-curve img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
@@ -333,4 +340,8 @@ form .field-action-wrapper {
 	    -ms-transform: translateX(50%);
 	    transform: translateX(50%);
 	}
+    .app-curve {
+        margin-top: -0.125em;
+        margin-bottom: 9em;
+    }
 }
