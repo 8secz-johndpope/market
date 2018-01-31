@@ -80,7 +80,8 @@
 				<div class="container-key-features">
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-6 text-center">
-							<h2 class="donwload-subtitle">Key features</h2>
+							<h2 class="donwload-subtitle">Unique Integrated Tools</h2>
+							<p class="content-integrated">Our app and platform includes propertary software products that provides a safe environment for search, communication and transactions</p>
 							<a href="#" class="btn btn-below">Download below</a>
 						</div>
 					</div>
