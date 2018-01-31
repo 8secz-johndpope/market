@@ -9,6 +9,7 @@
 @endsection
 @section('styles')
 <link href="{{ asset('/css/download.css?q=874') }}" rel="stylesheet">
+<link rel="stylesheet" href="/build/css/intlTelInput.css">
 @endsection
 
 @section('content')
@@ -67,4 +68,5 @@
 		</div>
 	</div>
 </div>
+<script src="/build/js/intlTelInput.js"></script>
 @endsection
