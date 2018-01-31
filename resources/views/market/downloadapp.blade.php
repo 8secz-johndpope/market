@@ -21,7 +21,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6">
-							<h1>Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited - Get the App on the go. FREE</h1>
+							<h2>Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited</h2> 
+							<h1>Get the App on the go. FREE</h1>
 							<div class="app-store-badges">
 								<a href="#" class="appstore-link" target="_blank">Download</a>
 								<a href="#" class="google-play-link" target="_blank">Download</a>
@@ -31,7 +32,7 @@
 							</div>
 							<div class="form-wrapper">
 								<form id="form-sms" action="" class="active">
-									<div class="fields-container">
+									<div class="fields-container clearfix">
 										<div class="field-wrapper phone-number-wrapper">
 											<input type="tel" name="phone-number" id="phone-number" class="form-control">
 										</div>
