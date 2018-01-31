@@ -148,13 +148,13 @@
     position: absolute;
     top: 0;
     /* right: 0; */
-    width: 600px;
-    height: 850px;
+    width: 500px;
+    height: 600px;
     pointer-events: none;
     z-index: 2;
     background-image: url(/css/download-ipad.png);
     background-repeat: no-repeat;
-    background-size: auto 800px;
+    background-size: auto 600px;
     background-position: left top;
 }
 .form-wrapper {
@@ -281,11 +281,13 @@ footer{
     opacity: 1;
 }
 .download-subtitle{
-    /*text-transform: uppercase;*/
-    font-family: Effra-Medium,arial,helvetica,sans-serif;
-    font-size: 1.5em;
+        /* text-transform: uppercase; */
+    font-family: sans-serif;
+    font-size: 3em;
     color: #000;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .download-title{
     margin-top: 10px;
