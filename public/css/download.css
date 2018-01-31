@@ -234,6 +234,11 @@ form .field-action-wrapper {
     -ms-user-select: none;
     user-select: none;
     pointer-events: none;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    max-width: 100%;
+    height: auto !important;
+    width: auto;
 }
 @media (max-width: 47.99em){
 	.main-header, .main-body {
