@@ -208,6 +208,26 @@ form .field-action-wrapper {
     font-size: 0.875em;
     margin-bottom: 0.71429em;
 }
+#phone-number {
+    height: 49px;
+}
+#form-sms .selected-flag {
+    height: 49px;
+}
+.clause {
+    color: rgba(14, 19, 24, 0.3);
+    font-size: 0.75em;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transition-delay: 0.8s;
+}
+.loaded .clause {
+    opacity: 1;
+}
+.clause p {
+    margin: 0;
+    display: none;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;

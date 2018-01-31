@@ -14,7 +14,7 @@
 
 @section('content')
  
-<div class="body">
+<div class="body loaded">
 	<div id="wrapper-inner">
 		<div class="main">
 			<section id="banner-page" class="app-page">
