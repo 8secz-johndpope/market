@@ -49,12 +49,15 @@
 								<ul>
 									<li>
 										<img src="/css/icon-iphone-x.png" alt="iphone">
+										<p>iPhone</p>
 									</li>
 									<li>
 										<img src="/css/icon-ipad.png" alt="ipad">
+										<p>iPad</p>
 									</li>
 									<li>
 										<img src="/css/icon-phone-android.png" alt="android">
+										<p>Android</p>
 									</li>
 								</ul>
 							</div>
