@@ -363,6 +363,11 @@ footer{
     color: #fff;
     margin-bottom: 20px;
 }
+.feature-title {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
@@ -479,7 +484,7 @@ footer{
         /*margin-bottom: 9em;*/
     }
     .app-page .mobile-devices {
-        top: -20px;
-        right: -500px;
+        top: 20px;
+        right: 100px;
     }
 }
