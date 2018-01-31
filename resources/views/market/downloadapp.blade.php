@@ -66,6 +66,11 @@
 		<div class="app-curve">
 			<img src="https://about.canva.com/wp-content/themes/canvaabout/img/canva-app/app-curve.svg" alt="">
 		</div>
+		<div class="content-info features">
+			<div class="features-navigation">
+			</div>
+		</div>
+
 	</div>
 </div>
 <script src="/build/js/intlTelInput.js"></script>
