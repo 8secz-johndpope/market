@@ -341,6 +341,12 @@ footer{
     padding-right: 30px;
     color: #fff;
 }
+.features{
+    position: relative;
+}
+.container-key-features{
+    position: relative;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
