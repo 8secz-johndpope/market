@@ -262,6 +262,13 @@ footer{
 .loaded .available-devices {
     opacity: 1;
 }
+.download-subtitle{
+    text-transform: uppercase;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-size: 24px;
+    color: #000;
+    letter-spacing: 2px;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
