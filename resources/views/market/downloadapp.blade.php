@@ -68,6 +68,14 @@
 		</div>
 		<div class="content-info features">
 			<div class="features-navigation">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-6 col-xs-12">
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
