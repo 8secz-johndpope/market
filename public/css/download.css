@@ -134,10 +134,10 @@
     height: 850px;
     pointer-events: none;
     z-index: 2;
-    background-image: url(https://about.canva.com/wp-content/themes/canvaabout/img/retina-mixin/apps-page-bg.png);
+    background-image: url(/img/download.png);
     background-repeat: no-repeat;
-    background-size: auto 850px;
-    background-position: right top;
+    background-size: auto 700px;
+    background-position: left top;
 }
 .form-wrapper {
     zoom: 1;
