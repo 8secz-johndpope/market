@@ -33,7 +33,7 @@
 								<form id="form-sms" action="" class="active">
 									<div class="fields-container">
 										<div class="field-wrapper phone-number-wrapper">
-											<input type="tel" name="phone-number" id="phone-number">
+											<input type="tel" name="phone-number" id="phone-number" class="form-control">
 										</div>
 										<div class="field-action-wrapper">
 											<button type="submit" class="btn btn-submit">Text me the link</button>
