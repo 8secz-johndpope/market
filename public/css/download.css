@@ -201,6 +201,13 @@ form .field-action-wrapper {
     transition: opacity 0.5s ease;
     transition-delay: 0.8s;
 }
+.active{
+    display: block !important;
+}
+.available-devices > p {
+    font-size: 0.875em;
+    margin-bottom: 0.71429em;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
