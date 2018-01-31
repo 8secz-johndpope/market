@@ -243,6 +243,9 @@ form .field-action-wrapper {
 footer{
     margin-top: 0;
 }
+.available-devices ul li img {
+    height: 1.875em !important;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;

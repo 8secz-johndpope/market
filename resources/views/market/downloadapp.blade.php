@@ -48,8 +48,13 @@
 								<p>Available for</p>
 								<ul>
 									<li>
+										<img src="/css/icon-iphone-x.png" alt="iphone">
 									</li>
 									<li>
+										<img src="/css/icon-ipad.png" alt="ipad">
+									</li>
+									<li>
+										<img src="/css/icon-phone-android.png" alt="android">
 									</li>
 								</ul>
 							</div>
