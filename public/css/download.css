@@ -146,14 +146,14 @@
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    width: 1047px;
+    /* right: 0; */
+    width: 600px;
     height: 850px;
     pointer-events: none;
     z-index: 2;
     background-image: url(/css/download-ipad.png);
     background-repeat: no-repeat;
-    background-size: auto 700px;
+    background-size: auto 800px;
     background-position: left top;
 }
 .form-wrapper {
@@ -343,6 +343,7 @@ footer{
 }
 .features{
     position: relative;
+    margin-top: -100px;
 }
 .container-key-features{
     position: relative;
@@ -421,8 +422,8 @@ footer{
 }
 @media only screen and (min-width: 1024px){
     .app-page .mobile-devices {
-        top: -35px;
-        right: -455px;
+        top: -20px;
+        right: -500px;
     }
 }
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
