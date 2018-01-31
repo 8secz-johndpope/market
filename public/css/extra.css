@@ -2491,6 +2491,26 @@ nav.navbar.navbar-inverse {
     margin-left: -72px;
     border-color: transparent transparent #313c53;
 }
+.bulk-apply-container input[type=checkbox]~label {
+    position: relative;
+}
+.bulk-apply-container input[type=checkbox]+label:before, .canvas input[type=checkbox]~label:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+.bulk-apply-container input[type=checkbox]~label:before {
+    background-size: 1230px 1230px;
+    -webkit-background-size: 1230px 1230px;
+    background-repeat: no-repeat;
+    background-image: url(/css/icon-sprite.svg);
+    background-position: -1170px -1080px;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
