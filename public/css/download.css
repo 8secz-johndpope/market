@@ -139,6 +139,23 @@
     background-size: auto 850px;
     background-position: right top;
 }
+.form-wrapper {
+    zoom: 1;
+    transition-delay: 0.2s;
+    position: relative;
+    z-index: 2;
+}
+form .fields-container {
+    position: relative;
+    margin-bottom: 1.875em;
+    zoom: 1;
+}
+.field-wrapper {
+    position: relative;
+    width: 100%;
+    padding-right: 0.75em;
+    float: left;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;

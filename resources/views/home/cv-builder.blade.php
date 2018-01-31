@@ -80,7 +80,7 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label class="pre-filled" for="last-name">Last name</label>
+                  <label class="pre-filled" for="last-name">Last name (optional)</label>
                   <input class="form-control" type="text" name="last-name" id="last-name">
                   <div class="validation">
                   </div>
@@ -114,12 +114,12 @@
             <div class="col-xs-12">
               <div class="address-area">
                 <div class="form-group">
-                  <label class="pre-filled" for="address">Address</label>
+                  <label class="pre-filled" for="address">Address (Optional)</label>
                   <input class="form-control" type="address" name="address" value="">
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <label class="pre-filled" for="town">Town</label>
+                  <label class="pre-filled" for="town">Town (Optional)</label>
                   <input class="form-control" type="town" name="town" value="">
                   <div class="validation"></div>
                 </div>
