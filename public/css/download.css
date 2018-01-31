@@ -37,6 +37,9 @@
 .main-header {
     background: #f0f0f0;
 }
+.main {
+    overflow: hidden;
+}
 .main-header, .main-body{
     display: table-cell;
     width: 50%;
@@ -273,6 +276,24 @@ footer{
     margin-top: 10px;
     margin-bottom: 20px;
 }
+.app-store-badges {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 2.25em;
+    display: block;
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+    transition: all 0.4s ease;
+    transition-delay: 0.1s;
+}
+.loaded .app-store-badges {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
@@ -345,6 +366,12 @@ footer{
 	    max-width: 675px;
 	}
 }
+@media only screen and (min-width: 1024px){
+    .app-page .mobile-devices {
+        top: -70px;
+        right: -540px;
+    }
+}
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
 	.app-curve {
 	    margin-top: -0.125em;
@@ -381,5 +408,9 @@ footer{
     .app-curve {
         margin-top: -0.125em;
         margin-bottom: 9em;
+    }
+    .app-page .mobile-devices {
+        top: 0px;
+        right: 0px;
     }
 }
