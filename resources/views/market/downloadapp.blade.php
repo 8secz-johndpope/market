@@ -166,15 +166,6 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="wrapper-feature">
-										<div class="feature-icon">
-										</div>
-										<div class="feature-content">
-											<h4 class="feature-title"></h4>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
