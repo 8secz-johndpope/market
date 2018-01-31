@@ -69,4 +69,7 @@
 	</div>
 </div>
 <script src="/build/js/intlTelInput.js"></script>
+<script>
+	$("#phone-number").intlTelInput();
+</script>
 @endsection

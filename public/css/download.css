@@ -182,6 +182,25 @@ form .field-action-wrapper {
     margin-bottom: 0.625em;
     float: left;
 }
+#form-sms {
+    max-width: 15em;
+}
+
+#form-sms .btn-submit{
+    position: absolute;
+    width: auto;
+    max-width: 400px;
+    top: 0;
+    left: 100%;
+    line-height: 1.96429em;
+}
+.available-devices {
+    color: rgba(14, 19, 24, 0.5);
+    margin-bottom: 3em;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transition-delay: 0.8s;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
