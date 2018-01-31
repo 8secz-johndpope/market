@@ -69,6 +69,12 @@
 						</div>
 						<div class="mobile-devices"></div>
 					</div>
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-6">
+							<h2 class="donwload-subtitle">Key features</h2>
+							<a href="#" class="btn btn-below">Download below</a>
+						</div>
+					</div>
 				</div>
 			</section>
 		</div>
