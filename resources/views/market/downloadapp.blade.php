@@ -73,7 +73,7 @@
 			</section>
 		</div>
 		<div class="app-curve">
-			<img src="https://about.canva.com/wp-content/themes/canvaabout/img/canva-app/app-curve.svg" alt="">
+			<img src="/img/download.png" alt="">
 		</div>
 		<div class="content-info features">
 			<div class="features-navigation">
