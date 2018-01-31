@@ -107,6 +107,7 @@
     text-indent: -9999px;
     width: 161px;
     height: 48px;
+    margin-right: 10px;
 }
 .app-store-badges .google-play-link {
     background: url(https://about.canva.com/wp-content/themes/canvaabout/img/canva-app/google-play-badges/google-play-badge.png) no-repeat center center;
