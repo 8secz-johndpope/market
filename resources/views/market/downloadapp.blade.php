@@ -92,12 +92,89 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-3 col-xs-12">
-							<ul class="row">
-								<li class="col-sm-4"></li>
-								<li class="col-sm-4"></li>
-								<li class="col-sm-4"></li>
-								<li class="col-sm-4"></li>
-							</ul>
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="wrapper-feature">
+										<div class="feature-icon">
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title">Shop & ship safely</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="wrapper-feature">
+										<div class="feature-icon">
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title">Sell fast</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="wrapper-feature">
+										<div class="feature-icon">
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title">Buy easily</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="wrapper-feature">
+										<div class="feature-icon">
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title">Pay securely</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="wrapper-feature">
+										<div class="feature-icon">
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title">Connect socially</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="wrapper-feature">
+										<div class="feature-icon">
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title">Chat, call & videocall</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="wrapper-feature">
+										<div class="feature-icon">
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title">Refer & earn unlimited</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="wrapper-feature">
+										<div class="feature-icon">
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title">Trusted support</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="wrapper-feature">
+										<div class="feature-icon">
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title"></h3>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
