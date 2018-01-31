@@ -354,7 +354,13 @@ footer{
     position: relative;
 }
 .features .donwload-subtitle {
-    margin-top: 40px;
+    margin-top: 60px;
+    margin-bottom: 22px;
+    font-size: 3em;
+    color: #fff;
+}
+.content-integrated {
+    color: #fff;
     margin-bottom: 20px;
 }
 @media (max-width: 47.99em){

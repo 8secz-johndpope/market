@@ -92,14 +92,14 @@
 			<div class="features-navigation">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-6 col-sm-offset-3 col-xs-12">
+						<div class="col-sm-8 col-sm-offset-2 col-xs-12">
 							<div class="row">
 								<div class="col-sm-3">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
 										</div>
 										<div class="feature-content">
-											<h3 class="feature-title">Shop & ship safely</h3>
+											<h4 class="feature-title">Shop & ship safely</h4>
 										</div>
 									</div>
 								</div>
@@ -108,7 +108,7 @@
 										<div class="feature-icon">
 										</div>
 										<div class="feature-content">
-											<h3 class="feature-title">Sell fast</h3>
+											<h4 class="feature-title">Sell fast</h4>
 										</div>
 									</div>
 								</div>
@@ -117,7 +117,7 @@
 										<div class="feature-icon">
 										</div>
 										<div class="feature-content">
-											<h3 class="feature-title">Buy easily</h3>
+											<h4 class="feature-title">Buy easily</h4>
 										</div>
 									</div>
 								</div>
@@ -126,7 +126,7 @@
 										<div class="feature-icon">
 										</div>
 										<div class="feature-content">
-											<h3 class="feature-title">Pay securely</h3>
+											<h4 class="feature-title">Pay securely</h4>
 										</div>
 									</div>
 								</div>
@@ -135,7 +135,7 @@
 										<div class="feature-icon">
 										</div>
 										<div class="feature-content">
-											<h3 class="feature-title">Connect socially</h3>
+											<h4 class="feature-title">Connect socially</h4>
 										</div>
 									</div>
 								</div>
@@ -144,7 +144,7 @@
 										<div class="feature-icon">
 										</div>
 										<div class="feature-content">
-											<h3 class="feature-title">Chat, call & videocall</h3>
+											<h4 class="feature-title">Chat, call & videocall</h4>
 										</div>
 									</div>
 								</div>
@@ -153,7 +153,7 @@
 										<div class="feature-icon">
 										</div>
 										<div class="feature-content">
-											<h3 class="feature-title">Refer & earn unlimited</h3>
+											<h4 class="feature-title">Refer & earn unlimited</h4>
 										</div>
 									</div>
 								</div>
@@ -162,7 +162,7 @@
 										<div class="feature-icon">
 										</div>
 										<div class="feature-content">
-											<h3 class="feature-title">Trusted support</h3>
+											<h4 class="feature-title">Trusted support</h4>
 										</div>
 									</div>
 								</div>
@@ -171,7 +171,7 @@
 										<div class="feature-icon">
 										</div>
 										<div class="feature-content">
-											<h3 class="feature-title"></h3>
+											<h4 class="feature-title"></h4>
 										</div>
 									</div>
 								</div>
