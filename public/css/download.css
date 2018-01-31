@@ -436,7 +436,7 @@ footer{
         margin-bottom: 9em;
     }
     .app-page .mobile-devices {
-        top: 0px;
-        right: 0px;
+        top: -50px;
+        right: 50px;
     }
 }
