@@ -246,6 +246,19 @@ footer{
 .available-devices ul li img {
     height: 1.875em !important;
 }
+.available-devices ul li:not(:last-child) {
+    margin-right: 4.5em;
+}
+.available-devices ul li {
+    position: relative;
+    float: left;
+    text-align: center;
+}
+.available-devices ul {
+    list-style: none;
+    padding: 1.875em 0 0;
+    margin: 0;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
