@@ -79,8 +79,11 @@
 			<div class="features-navigation">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-6 col-sm-offset-6 col-xs-12">
-							<ul>
+						<div class="col-sm-6 col-sm-offset-3 col-xs-12">
+							<ul class="row">
+								<li class="col-sm-4">Call</li>
+								<li class="col-sm-4">Chat</li>
+								<li class="col-sm-4">Buy</li>
 							</ul>
 						</div>
 					</div>
