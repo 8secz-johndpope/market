@@ -26,7 +26,7 @@
 								<a href="#" class="google-play-link" target="_blank">Download</a>
 							</div>
 							<div class="instructions">
-								<p class=instructions-sms active>Enter your number and we'll text you a link to download the app!</p>
+								<p class="instructions-sms active">Enter your number and we'll text you a link to download the app!</p>
 							</div>
 							<div class="form-wrapper">
 								<form id="form-sms" action="" class="active">
