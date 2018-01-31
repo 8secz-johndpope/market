@@ -22,7 +22,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<h2 class="download-subtitle">Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited</h2> 
-							<h1>Get the App on the go. FREE</h1>
+							<h1 class="donwload-title">Get the App on the go. <span>FREE</span></h1>
 							<div class="app-store-badges">
 								<a href="#" class="appstore-link" target="_blank">Download</a>
 								<a href="#" class="google-play-link" target="_blank">Download</a>
