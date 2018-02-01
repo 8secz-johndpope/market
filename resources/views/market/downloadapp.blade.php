@@ -94,7 +94,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 col-xs-12">
 							<div class="row">
-								<div class="col-sm-3">
+								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
 										</div>
@@ -103,7 +103,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
+								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
 											<i class="icon icon-sell-fast"></i>
@@ -113,7 +113,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
+								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
 											<i class="icon icon-sell-fast"></i>
@@ -123,7 +123,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
+								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
 											<i class="icon icon-sell-fast"></i>
@@ -133,7 +133,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
+								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
 											<i class="icon icon-sell-fast"></i>
@@ -143,7 +143,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
+								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
 											<i class="icon icon-sell-fast"></i>
@@ -153,7 +153,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
+								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
 											<i class="icon icon-sell-fast"></i>
@@ -163,7 +163,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
+								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
 											<i class="icon icon-sell-fast"></i>
