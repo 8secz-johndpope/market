@@ -505,8 +505,9 @@ footer{
 
 @media only screen and (min-width: 1024px){
     .app-page .mobile-devices {
-        top: 30px;
-        right: -432px;
+        top: 45px;
+        right: 0vw;
+        width: 60vw;
     }
     .download-subtitle, .download-title{
         text-align:left;
@@ -544,6 +545,9 @@ footer{
     }
     .features .donwload-subtitle {
         margin-top: 60px;
+    }
+    .features .row {
+        padding-top: 120px;
     }
 }
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
