@@ -491,6 +491,15 @@ footer{
     .features .row {
         padding-top: 10px;
     }
+    .container-key-features {
+        margin-bottom: 30em;
+    }
+    .ipad-devices {
+        width: 90vw;
+        height: 450px;
+        background-size: auto 450px;
+        top: 90%;
+    }
 }
 @media only screen and (min-width: 768px){
     .download-subtitle, .download-title{
