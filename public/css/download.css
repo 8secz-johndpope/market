@@ -709,4 +709,8 @@ footer{
         right: 25vw;
         width: 50vw;
     }
+    h1.download-subtitle {
+        max-width: none;
+        text-align: left;
+    }
 }
