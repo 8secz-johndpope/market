@@ -526,6 +526,9 @@ footer{
     }
 }
 @media only screen and (min-width: 768px){
+    .app-page {
+        padding-bottom: 10.5em;
+    }
     .download-subtitle, .download-title{
         text-align:center;
     }
@@ -567,7 +570,7 @@ footer{
         left: 0;
     }
     form .fields-container {
-        margin-bottom: 5.875em;
+        margin-bottom: 2.875em;
     }
     h2.download-subtitle {
         font-size: 1.3em;
@@ -610,6 +613,9 @@ footer{
     }
 }
 @media only screen and (min-width: 1024px){
+    .app-page {
+        padding-bottom: 1em;
+    }
     .app-page .mobile-devices {
         top: 120px;
         right: 0vw;
