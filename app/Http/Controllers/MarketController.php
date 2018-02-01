@@ -2083,7 +2083,7 @@ class MarketController extends BaseController
         return view('market.downloadapp');
     }
     public function profile(Request $request, $id){
-        return view('market.profilecv');
+        return view('templates-profile.profilecv');
     }
     public function payLogout(Request $request,$id){
         //$user = Auth::user();
