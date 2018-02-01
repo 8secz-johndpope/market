@@ -276,6 +276,7 @@ footer{
     list-style: none;
     padding: 1.875em 0 0;
     margin: 0;
+    display: inline-block;
 }
 .loaded .available-devices {
     opacity: 1;
@@ -470,6 +471,12 @@ footer{
     .features .row {
         padding-top: 0;
     }
+    .available-devices{
+        text-align: center;
+    }
+    .form-wrapper{
+        margin:auto;
+    }
 }
 
 @media only screen and (min-width: 1024px){
@@ -482,6 +489,12 @@ footer{
     }
     .app-curve {
         margin-bottom: 0;
+    }
+    .available-devices{
+        text-align: left;
+    }
+    .form-wrapper{
+        margin:0;
     }
 }
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
