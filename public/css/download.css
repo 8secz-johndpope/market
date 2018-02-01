@@ -380,12 +380,7 @@ footer{
     margin-bottom: 50px;
 }
 .feature-icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    margin: auto;
-    margin-bottom: 20px;
+    text-align: center;
 }
 .box-green {
     background: #99c432;
@@ -393,6 +388,14 @@ footer{
     padding: 15px;
     border-radius: 8px;
     width: 52%;
+}
+.feature-icon i {
+    color: #fff;
+    font-size: 32px;
+    min-width: 30px;
+    padding: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
 }
 @media (max-width: 47.99em){
 	.main-header, .main-body {

@@ -112,7 +112,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
-											<i class="icon icon-sell-fast"></i>
+											<i class="fas fa-tag"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Sell fast</h4>
@@ -122,7 +122,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
-											<i class="icon icon-sell-fast"></i>
+											<i class="fas fa-shopping-cart"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Buy easily</h4>
@@ -132,7 +132,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
-											<i class="icon icon-sell-fast"></i>
+											<i class="fab fa-expeditedssl"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Pay securely</h4>
@@ -152,7 +152,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
-											<i class="icon icon-sell-fast"></i>
+											<i class="fas fa-video"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Chat, call & videocall</h4>
@@ -172,7 +172,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
-											<i class="fas fa-envelope-open"></i>
+											<i class="fas fa-shield-alt"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Trusted support</h4>
