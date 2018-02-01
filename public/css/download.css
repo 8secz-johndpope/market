@@ -623,6 +623,9 @@ footer{
     .app-page {
         padding-bottom: 1em;
     }
+    .box-green{
+        width: 62%;
+    }
     .app-page .mobile-devices {
         top: 120px;
         right: 0vw;
@@ -734,6 +737,9 @@ footer{
         max-width: none;
         text-align: left;
         margin-bottom: 0.5em;
+    }
+    .box-green{
+        width: 52%;
     }
 
 }
