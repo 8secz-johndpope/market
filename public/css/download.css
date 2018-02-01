@@ -661,8 +661,9 @@ footer{
         line-height: 1.16667em;
         margin-bottom: 2em;
         margin-top: 0;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        max-width: 11.04167em;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
