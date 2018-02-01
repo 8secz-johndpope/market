@@ -24,8 +24,9 @@
             <div class="row">
                 <div class="col-md-7 col-xs-12 main">
                     <div class="col-md-3 col-xs-12">
-                        <figure class="ad-applicant-picture"></figure>
-                        <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams."></span>
+                        <figure class="ad-applicant-picture">
+                            <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams."></span>
+                        </figure>
                     </div>
                     <div class="col-md-9 ad-applicant-profil-infos col-xs-12">
                         <div class="person">
