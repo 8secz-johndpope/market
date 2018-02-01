@@ -388,6 +388,7 @@ footer{
     padding: 15px;
     border-radius: 8px;
     width: 52%;
+    display: block;
 }
 .feature-icon i {
     color: #fff;
