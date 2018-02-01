@@ -34,6 +34,16 @@
                     <div class="tooltip fade top in" role="tooltip">
                 </div>
                 <div class="col-md-10 ad-applicant-profil-infos col-xs-12">
+                    <div class="person">
+                        <h1>
+                            <span class="ad-applicant-name">Anna T.</span>
+                            <span class="ad-applicant-job-title">Nanny</span>
+                            <span>in</span>
+                            <span class="ad-applicant-address">
+                                <span class="address-location">London</span>
+                            </span>
+                        </h1>
+                    </div>
                 </div>
             </div>
             <div class="col-md-5 hidden-xs">
