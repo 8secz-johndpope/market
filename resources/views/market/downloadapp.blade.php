@@ -112,7 +112,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
-											<i class="fas fa-tag"></i>
+											<i class="far fa-money-bill-alt"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Sell fast</h4>
