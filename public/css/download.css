@@ -479,6 +479,10 @@ footer{
         text-align: center;
         margin-top: 74px;
     }
+    .app-curve {
+        margin-top: -0.125em;
+        margin-bottom: 25.5em;
+    }
 }
 @media only screen and (min-width: 768px){
     .download-subtitle, .download-title{
