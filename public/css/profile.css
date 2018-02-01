@@ -331,4 +331,6 @@ footer{
 }
 .background-image {
     height: 200px;
+    background-image: url(/css/sitter-header-img.png)!important;
+    background-size: cover;
 }

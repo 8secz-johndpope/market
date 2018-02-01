@@ -78,6 +78,16 @@
                 </div>
             </div>
             <div class="row hidden-xs">
+                <div class="col-xs-12 no-padding">
+                    <div class="part">
+                        <ul class="list-unstyle">
+                            <li class="row no-margin">
+                                <h4>Verification Status</h4>
+                                <div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
