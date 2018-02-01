@@ -27,7 +27,7 @@
 					<div class="row">
 						<div class="col-md-6 col-xs-12">
 							<h2 class="download-subtitle">Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited</h2> 
-							<h1 class="download-title box-green">Get the App on the go. <span>FREE</span></h1>
+							<span class="box-green">Get the App on the go. <span>FREE</span></span>
 							<div class="app-store-badges">
 								<a href="#" class="appstore-link" target="_blank">Download</a>
 								<a href="#" class="google-play-link" target="_blank">Download</a>
@@ -97,7 +97,7 @@
 			<div class="features-navigation">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-8 col-md-offset-2 col-xs-12">
+						<div class="col-md-10 col-md-offset-1 col-xs-12">
 							<div class="row">
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
