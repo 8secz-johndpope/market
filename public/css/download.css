@@ -463,6 +463,18 @@ footer{
     .download-subtitle, .download-title{
         text-align: center;
     }
+    #form-sms {
+        max-width: none;
+    }
+    #form-sms .btn-submit {
+        width: 100%;
+        left: 0;
+        top: 4em;
+    }
+    .col-xs-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 @media only screen and (min-width: 768px){
     .download-subtitle, .download-title{
