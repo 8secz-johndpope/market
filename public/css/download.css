@@ -561,7 +561,7 @@ footer{
     }
     #form-sms .btn-submit {
         width: 14.3em;
-        top: 120%;
+        top: 1em;
         left: 0;
     }
     form .fields-container {
