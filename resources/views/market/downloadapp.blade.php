@@ -142,7 +142,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
-											<i class="fab fa-connectdevelop"></i>
+											<i class="fas fa-globe"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Connect socially</h4>
