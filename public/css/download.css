@@ -481,11 +481,12 @@ footer{
     }
     .app-curve {
         margin-top: -0.125em;
-        margin-bottom: 25.5em;
+        margin-bottom: 21.5em;
     }
     .app-page .mobile-devices {
         width: 120vw;
-        top: 70%;
+        height: 400px;
+        top: 90%;
         background-position: center center;
     }
     .features .row {
