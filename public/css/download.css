@@ -523,6 +523,7 @@ footer{
     .field-wrapper {
         padding-right: 0;
     }
+
 }
 @media only screen and (min-width: 768px){
     .download-subtitle, .download-title{
@@ -572,7 +573,25 @@ footer{
     }
 
 }
-
+@media only screen and (max-width: 1023px){
+    form .field-action-wrapper {
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+    #form-sms .btn-submit {
+        position: relative;
+        max-width: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        display: inline-block;
+        left: 0;
+        width: 100%;
+    }
+}
 @media only screen and (min-width: 1024px){
     .app-page .mobile-devices {
         top: 45px;
@@ -620,6 +639,7 @@ footer{
         padding-top: 120px;
     }
 }
+
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
 	.app-curve {
 	    margin-top: -0.125em;
