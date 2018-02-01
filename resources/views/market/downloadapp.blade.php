@@ -102,6 +102,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
+											<i class="fas fa-truck"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Shop & ship safely</h4>
@@ -141,7 +142,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
-											<i class="icon icon-sell-fast"></i>
+											<i class="fab fa-connectdevelop"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Connect socially</h4>
@@ -161,7 +162,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
-											<i class="icon icon-sell-fast"></i>
+											<i class="fas fa-retweet"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Refer & earn unlimited</h4>
@@ -171,7 +172,7 @@
 								<div class="col-sm-3 col-xs-6">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
-											<i class="icon icon-sell-fast"></i>
+											<i class="fas fa-envelope-open"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Trusted support</h4>
