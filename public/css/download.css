@@ -515,7 +515,10 @@ footer{
     .clause{
         text-align: center;
     }
-    .download-subtitle {
+    h2.download-subtitle {
+        font-size: 1.3em;
+    }
+    h1.download-subtitle {
         font-size: 2em;
     }
     .features .donwload-subtitle {
@@ -569,6 +572,12 @@ footer{
     .features .donwload-subtitle {
         margin-top: 3em;
     }
+    h2.download-subtitle {
+        font-size: 1.3em;
+    }
+    h1.download-subtitle {
+        font-size: 2em;
+    } 
 }
 @media only screen and (max-width: 1023px){
     form .field-action-wrapper {
