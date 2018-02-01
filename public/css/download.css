@@ -576,7 +576,10 @@ footer{
         font-size: 1.3em;
     }
     h1.download-subtitle {
-        font-size: 2em;
+        font-size: 2.25em;
+        max-width: 13.88889em;
+        margin-left: auto;
+        margin-right: auto;
     } 
 }
 @media only screen and (max-width: 1023px){
