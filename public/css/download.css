@@ -517,6 +517,9 @@ footer{
     .download-subtitle {
         font-size: 2em;
     }
+    .features .donwload-subtitle {
+        font-size: 2em;
+    }
 }
 @media only screen and (min-width: 768px){
     .download-subtitle, .download-title{
