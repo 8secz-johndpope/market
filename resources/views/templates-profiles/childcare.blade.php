@@ -44,6 +44,21 @@
                             </span>
                         </h1>
                     </div>
+                    <ul class="list-inline list-unstyle ad-applicant-experiences row">
+                        <li>41 years old</li>
+                        <li>7 years of experience</li>
+                    </ul>
+                    <ul class="list-inline list-unstyle ad-applicant-services">
+                        <li class="available">
+                            Occasional
+                        </li>
+                        <li class="available">
+                            Part time / After School
+                        </li>
+                        <li class="available">
+                            Full time
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-5 hidden-xs">
