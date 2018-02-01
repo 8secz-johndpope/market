@@ -454,10 +454,34 @@ footer{
 	    max-width: 675px;
 	}
 }
+@media only screen and (min-width: 768px){
+    .download-subtitle, .download-title{
+        text-align:center;
+    }
+    .app-page .mobile-devices{
+        top: 95%;
+        right: 12%;
+        width: 80vw;
+        height: 500px;
+    }
+    .app-curve {
+        margin-bottom: 30em;
+    }
+    .features .row {
+        padding-top: 120px;
+    }
+}
+
 @media only screen and (min-width: 1024px){
     .app-page .mobile-devices {
         top: 30px;
         right: -432px;
+    }
+    .download-subtitle, .download-title{
+        text-align:left;
+    }
+    .app-curve {
+        margin-bottom: 0;
     }
 }
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
