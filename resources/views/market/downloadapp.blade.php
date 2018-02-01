@@ -20,7 +20,7 @@
 			<section id="banner-page" class="app-page">
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-12">
+						<div class="col-lg-6 col-xs-12">
 							<h1 class="download-subtitle text-center">Search or apply or chat or buy & sell securely</h1>
 						</div>
 					</div>
