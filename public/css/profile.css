@@ -349,3 +349,14 @@ footer{
     background-color: #fff;
     background-image: url(/css/childcare-picture.jpg);
 }
+.ad-applicant-picture > span{
+    font-size: 20px;
+    color: pink;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 90px;
+}
