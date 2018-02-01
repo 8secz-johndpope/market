@@ -486,6 +486,9 @@ footer{
     .ipad-devices{
         top:100px;
     }
+    .container-key-features {
+        margin-bottom: 20em;
+    }
 }
 
 @media only screen and (min-width: 1024px){
@@ -513,6 +516,9 @@ footer{
     } 
     .ipad-devices{
         top:0px;
+    }
+    .container-key-features {
+        margin-bottom: 0;
     }
 }
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
