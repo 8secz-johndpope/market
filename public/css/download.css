@@ -86,7 +86,7 @@
     color: #0E1318;
 }
 .app-store-badges {
-    text-align: center;
+    /*text-align: center;*/
     margin-top: 1.5em;
     margin-bottom: 2.25em;
     display: none;
@@ -301,7 +301,7 @@ footer{
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 .app-store-badges {
-    text-align: center;
+    /*text-align: center;*/
     margin-top: 1.5em;
     margin-bottom: 2.25em;
     display: block;
@@ -386,6 +386,12 @@ footer{
     border: 2px solid #fff;
     margin: auto;
     margin-bottom: 20px;
+}
+.box-green {
+    background: #99c432;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
 }
 @media (max-width: 47.99em){
 	.main-header, .main-body {
