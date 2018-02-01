@@ -199,6 +199,7 @@ form .fields-container {
 form .field-action-wrapper {
     margin-bottom: 0.625em;
     float: left;
+    position: relative;
 }
 #form-sms {
     max-width: 15em;
@@ -469,7 +470,8 @@ footer{
     #form-sms .btn-submit {
         width: 100%;
         left: 0;
-        top: 4em;
+        top: 1em;
+        max-width: none;
     }
     .col-xs-12 {
         padding-left: 15px;
