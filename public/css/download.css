@@ -474,8 +474,17 @@ footer{
     .available-devices{
         text-align: center;
     }
-    .form-wrapper{
-        margin:auto;
+    #form-sms {
+        margin: auto;
+    }
+    .clause{
+        text-align: center;
+    }
+    .instructions{
+        text-align: center;
+    }
+    .ipad-devices{
+        top:100px;
     }
 }
 
@@ -493,8 +502,17 @@ footer{
     .available-devices{
         text-align: left;
     }
-    .form-wrapper{
-        margin:0;
+    #form-sms {
+        margin: 0;
+    }
+    .clause{
+        text-align: left;
+    }
+    .instructions{
+        text-align: left;
+    } 
+    .ipad-devices{
+        top:0px;
     }
 }
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
