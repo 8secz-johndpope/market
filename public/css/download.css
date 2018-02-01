@@ -483,6 +483,14 @@ footer{
         margin-top: -0.125em;
         margin-bottom: 25.5em;
     }
+    .app-page .mobile-devices {
+        width: 120vw;
+        top: 70%;
+        background-position: center center;
+    }
+    .features .row {
+        padding-top: 10px;
+    }
 }
 @media only screen and (min-width: 768px){
     .download-subtitle, .download-title{
