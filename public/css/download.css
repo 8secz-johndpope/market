@@ -392,6 +392,7 @@ footer{
     color: #fff;
     padding: 15px;
     border-radius: 8px;
+    width: 52%;
 }
 @media (max-width: 47.99em){
 	.main-header, .main-body {
