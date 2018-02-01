@@ -2218,10 +2218,10 @@ class MarketController extends BaseController
         $profileTypes = ['general', 'social-childcare', 'sub-contractor'];
         $view = "";
         if($profileTypes[1] == $type){
-            $view = 'template-profiles.childcare'; 
+            $view = 'templates-profiles.childcare'; 
         }
         else if($profileTypes[2] == $type){
-            $view = 'template-profiles.profilecv';
+            $view = 'templates-profiles.profilecv';
         }
         return view($view);
     }
