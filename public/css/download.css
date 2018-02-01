@@ -387,8 +387,8 @@ footer{
     color: #fff;
     padding: 15px;
     border-radius: 8px;
-    width: 52%;
-    display: block;
+    display: inline-block;
+    width: 255px;
 }
 .feature-icon i {
     color: #fff;
