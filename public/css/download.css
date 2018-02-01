@@ -475,6 +475,10 @@ footer{
         padding-left: 15px;
         padding-right: 15px;
     }
+    .available-devices {
+        text-align: center;
+        margin-top: 74px;
+    }
 }
 @media only screen and (min-width: 768px){
     .download-subtitle, .download-title{
