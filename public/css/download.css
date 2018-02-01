@@ -38,7 +38,7 @@
     background: #f0f0f0;
 }
 .main {
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .main-header, .main-body{
     display: table-cell;
@@ -468,7 +468,7 @@ footer{
         margin-bottom: 30em;
     }
     .features .row {
-        padding-top: 120px;
+        padding-top: 0;
     }
 }
 
