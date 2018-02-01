@@ -500,6 +500,12 @@ footer{
         background-size: auto 450px;
         top: 90%;
     }
+    .app-page#banner-page {
+        padding-bottom: 7.5em;
+    }
+    .clause{
+        text-align: center;
+    }
 }
 @media only screen and (min-width: 768px){
     .download-subtitle, .download-title{
