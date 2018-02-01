@@ -455,6 +455,12 @@ footer{
 	    max-width: 675px;
 	}
 }
+@media only screen and (max-width: 767px){
+    .ipad-devices {
+        width: 90vw;
+        height: 600px;
+    }
+}
 @media only screen and (min-width: 768px){
     .download-subtitle, .download-title{
         text-align:center;
@@ -488,7 +494,7 @@ footer{
     }
     .container-key-features {
         margin-bottom: 20em;
-        margin-top: 5em;
+        margin-top: 3em;
     }
     #form-sms .btn-submit {
         width: 14.3em;
