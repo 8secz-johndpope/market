@@ -83,7 +83,23 @@
                         <ul class="list-unstyle">
                             <li class="row no-margin">
                                 <h4>Verification Status</h4>
-                                <div></div>
+                                <div>
+                                    <div class="badge-container badge-container-profile">
+                                        <div>
+                                            <div class="badge-container-badge">
+                                                DBS
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </div>
+                                        </div>
+                                        <span>This Applicant has a DBS document, checked by the {{env('APP_NAME')}} Team</span>
+                                    </div>
+                                </div>
+                                <p>
+                                    The address, phone number, ID and diplomas of this profile have been manually reviewed by our team. 
+                                </p>
+                            </li>
+                            <li class="row">
+                                
                             </li>
                         </ul>
                     </div>
