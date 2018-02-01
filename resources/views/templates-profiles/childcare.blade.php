@@ -99,7 +99,19 @@
                                 </p>
                             </li>
                             <li class="row">
-                                
+                                <div class="col-md-4 col-xs-7">Languages spoken:</div>
+                                <div class="col-md-8 col-xs-5 no-padding">
+                                    <span class="border">Armenian</span>
+                                    (Native Language)
+                                    <span class="border">Russia</span>
+                                    (Fluently)
+                                    <span class="border">English</span>
+                                    (Fluently)
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-md-4 col-xs-7">Nationality:</div>
+                                <div class="col-md-8 col-xs-5 no-padding"></div>
                             </li>
                         </ul>
                     </div>

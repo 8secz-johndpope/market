@@ -84,6 +84,7 @@
 .app-page#banner-page {
     height: auto;
     color: #0E1318;
+    text-align: center;
 }
 .app-store-badges {
     /*text-align: center;*/
@@ -636,6 +637,9 @@ footer{
         right: 0vw;
         width: 60vw;
     }
+    .app-page#banner-page {
+        text-align: center;
+    }
     h2.download-subtitle, .download-title{
         text-align:left;
     }
@@ -693,6 +697,9 @@ footer{
     }
     .features .donwload-subtitle {
         font-size: 3em;
+    }
+    .app-store-badges{
+        text-align: left;
     }
 }
 
