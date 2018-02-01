@@ -23,12 +23,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-xs-12 main">
-                    <div class="col-md-2 col-xs-12">
+                    <div class="col-md-3 col-xs-12">
                         <figure class="ad-applicant-picture"></figure>
                         <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams."></span>
-                        <div class="tooltip fade top in" role="tooltip">
                     </div>
-                    <div class="col-md-10 ad-applicant-profil-infos col-xs-12">
+                    <div class="col-md-9 ad-applicant-profil-infos col-xs-12">
                         <div class="person">
                             <h1>
                                 <span class="ad-applicant-name">Anna T.</span>
