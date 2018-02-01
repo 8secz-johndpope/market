@@ -92,7 +92,7 @@
 			<div class="features-navigation">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-8 col-sm-offset-2 col-xs-12">
+						<div class="col-md-8 col-md-offset-2 col-xs-12">
 							<div class="row">
 								<div class="col-sm-3">
 									<div class="wrapper-feature">
