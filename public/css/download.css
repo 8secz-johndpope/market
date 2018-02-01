@@ -600,6 +600,11 @@ footer{
     .download-subtitle, .download-title{
         text-align:left;
     }
+    h2.download-subtitle{
+        text-align: left;
+        font-size: 1.5em;
+        line-height: 1.16667em;
+    }
     .app-curve {
         margin-bottom: 0;
     }
