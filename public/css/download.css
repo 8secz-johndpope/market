@@ -637,6 +637,9 @@ footer{
     .features .row {
         padding-top: 120px;
     }
+    h1.download-subtitle {
+        margin-bottom: 2em;
+    }
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
