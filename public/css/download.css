@@ -502,6 +502,7 @@ footer{
         width: 90vw;
         height: 450px;
         background-size: auto 450px;
+        background-position: center;
         top: 90%;
     }
     .app-page#banner-page {
