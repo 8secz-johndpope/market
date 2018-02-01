@@ -74,7 +74,7 @@
 }
 .app-page {
     position: relative;
-    padding-top: 6em;
+    padding-top: 4em;
 }
 #banner-page {
     height: 30.25em;
@@ -598,7 +598,7 @@ footer{
         right: 0vw;
         width: 60vw;
     }
-    .download-subtitle, h2.download-title{
+    h2.download-subtitle, .download-title{
         text-align:left;
     }
     h2.download-subtitle{
@@ -647,7 +647,7 @@ footer{
         margin-bottom: 1em;
         font-size: 3em;
         line-height: 1.16667em;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
         margin-top: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
