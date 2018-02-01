@@ -598,7 +598,7 @@ footer{
         right: 0vw;
         width: 60vw;
     }
-    .download-subtitle, .download-title{
+    .download-subtitle, h2.download-title{
         text-align:left;
     }
     h2.download-subtitle{
