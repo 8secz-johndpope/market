@@ -21,6 +21,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6 col-xs-12">
+							<h1 class="download-subtitle">Search or apply or chat or buy & sell securely</h1>
 							<h2 class="download-subtitle">Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited</h2> 
 							<h1 class="download-title">Get the App on the go. <span>FREE</span></h1>
 							<div class="app-store-badges">
