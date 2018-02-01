@@ -638,7 +638,13 @@ footer{
         padding-top: 120px;
     }
     h1.download-subtitle {
-        margin-bottom: 2em;
+        margin-bottom: 1em;
+        font-size: 3em;
+        line-height: 1.16667em;
+        margin-bottom: 1em;
+        margin-top: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }
 
