@@ -292,6 +292,7 @@ footer{
     /* letter-spacing: 2px; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-weight: 300;
 }
 .download-title{
     margin-top: 10px;
