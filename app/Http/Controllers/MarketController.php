@@ -2220,6 +2220,9 @@ class MarketController extends BaseController
         if($profileTypes[1] == $type){
             $view = 'template-profiles.childcare'; 
         }
+        else if($profileTypes[2] == $type){
+            $view = 'template-profiles.profilecv';
+        }
         return view($view);
     }
     public function priceType($product){
