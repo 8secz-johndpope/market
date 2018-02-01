@@ -349,7 +349,7 @@ footer{
 }
 .features{
     position: relative;
-    margin-top: -100px;
+    margin-top: -60px;
 }
 .container-key-features{
     position: relative;
@@ -589,6 +589,7 @@ footer{
     }
     .app-page .mobile-devices {
         top: 20px;
-        right: 100px;
+        right: 25vw;
+        width: 50vw;
     }
 }
