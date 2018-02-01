@@ -106,6 +106,7 @@
 								<div class="col-sm-3">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
+											<i class="icon icon-sell-fast"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Sell fast</h4>
@@ -115,6 +116,7 @@
 								<div class="col-sm-3">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
+											<i class="icon icon-sell-fast"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Buy easily</h4>
@@ -124,6 +126,7 @@
 								<div class="col-sm-3">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
+											<i class="icon icon-sell-fast"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Pay securely</h4>
@@ -133,6 +136,7 @@
 								<div class="col-sm-3">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
+											<i class="icon icon-sell-fast"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Connect socially</h4>
@@ -142,6 +146,7 @@
 								<div class="col-sm-3">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
+											<i class="icon icon-sell-fast"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Chat, call & videocall</h4>
@@ -151,6 +156,7 @@
 								<div class="col-sm-3">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
+											<i class="icon icon-sell-fast"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Refer & earn unlimited</h4>
@@ -160,6 +166,7 @@
 								<div class="col-sm-3">
 									<div class="wrapper-feature">
 										<div class="feature-icon">
+											<i class="icon icon-sell-fast"></i>
 										</div>
 										<div class="feature-content">
 											<h4 class="feature-title">Trusted support</h4>
