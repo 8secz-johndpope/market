@@ -488,9 +488,10 @@ footer{
     }
     .container-key-features {
         margin-bottom: 20em;
+        margin-top: 5em;
     }
     #form-sms .btn-submit {
-        max-width: 15em;
+        width: 14.3em;
         top: 120%;
         left: 0;
     }
@@ -527,9 +528,16 @@ footer{
     }
     .container-key-features {
         margin-bottom: 0;
+        margin-top: 0;
     }
     form .fields-container {
         margin-bottom: 1.875em;
+    }
+    #form-sms .btn-submit {
+        width: auto;
+        max-width: 400px;
+        top: 0;
+        left: 100%
     }
 }
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
