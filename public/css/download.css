@@ -533,13 +533,13 @@ footer{
         text-align:center;
     }
     .app-page .mobile-devices{
-        top: 95%;
+        top: 77%;
         right: 12%;
         width: 80vw;
         height: 500px;
     }
     .app-curve {
-        margin-bottom: 30em;
+        margin-bottom: 20em;
         margin-top: -0.125em;
     }
     .features .row {
