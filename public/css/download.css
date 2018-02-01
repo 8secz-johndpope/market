@@ -638,7 +638,7 @@ footer{
         width: 60vw;
     }
     .app-page#banner-page {
-        text-align: center;
+        text-align: left;
     }
     h2.download-subtitle, .download-title{
         text-align:left;
