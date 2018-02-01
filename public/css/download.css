@@ -460,6 +460,9 @@ footer{
         width: 90vw;
         height: 600px;
     }
+    .download-subtitle, .download-title{
+        text-align: center;
+    }
 }
 @media only screen and (min-width: 768px){
     .download-subtitle, .download-title{
