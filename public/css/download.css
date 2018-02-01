@@ -393,10 +393,11 @@ footer{
     width: 255px;
 }
 .feature-icon i {
-    color: #fff;
+    color: #0095DF;
     font-size: 32px;
     min-width: 30px;
     padding: 40px;
+    background: #fff;
     border: 2px solid #fff;
     border-radius: 50%;
 }
