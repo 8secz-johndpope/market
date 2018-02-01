@@ -490,6 +490,7 @@ footer{
         width: 120vw;
         height: 400px;
         top: 90%;
+        left: -10vw;
         background-position: center center;
     }
     .features .row {
