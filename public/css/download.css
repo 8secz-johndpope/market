@@ -726,6 +726,7 @@ footer{
     h1.download-subtitle {
         max-width: none;
         text-align: left;
+        margin-bottom: 0.5em;
     }
 
 }
