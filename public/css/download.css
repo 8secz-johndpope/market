@@ -594,7 +594,7 @@ footer{
 }
 @media only screen and (min-width: 1024px){
     .app-page .mobile-devices {
-        top: 45px;
+        top: 70px;
         right: 0vw;
         width: 60vw;
     }
