@@ -498,6 +498,9 @@ footer{
     form .fields-container {
         margin-bottom: 5.875em;
     }
+    .features .donwload-subtitle {
+        margin-top: 3em;
+    }
 }
 
 @media only screen and (min-width: 1024px){
@@ -538,6 +541,9 @@ footer{
         max-width: 400px;
         top: 0;
         left: 100%
+    }
+    .features .donwload-subtitle {
+        margin-top: 60px;
     }
 }
 @media only screen and (max-width: 1279px) and (min-width: 1000px){
