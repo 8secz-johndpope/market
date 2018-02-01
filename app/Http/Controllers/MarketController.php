@@ -2214,6 +2214,14 @@ class MarketController extends BaseController
         
         return view($view);
     }
+    public function profileTemplate(Request $request, $type){
+        $profileTypes = ['general', 'social-childcare', 'sub-contractor'];
+        $view = "";
+        if($profileTypes[1] == $type){
+            $view = 'template-profiles.childcare'; 
+        }
+        return view($view);
+    }
     public function priceType($product){
         if(array_key_exists('vehicle_model',$product['meta'])){
             $musts=array();

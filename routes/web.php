@@ -294,6 +294,7 @@ Route::get('/id/{id}', 'MarketController@id');
 Route::get('/agent/{id}', 'MarketController@agent');
 Route::get('/company/{id}', 'MarketController@company');
 
+Route::get('/job/profile/template/{type}', 'MarketController@profileTemplate');
 Route::get('/job/profile/edit/{type}', 'HomeController@profile');
 Route::post('/job/profile/save', 'HomeController@save_profile');
 Route::get('/job/profile/view/{id}', 'HomeController@view_profile');
