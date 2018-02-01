@@ -532,6 +532,7 @@ footer{
     }
     .app-curve {
         margin-bottom: 30em;
+        margin-top: -0.125em;
     }
     .features .row {
         padding-top: 0;
@@ -565,9 +566,6 @@ footer{
     }
     .features .donwload-subtitle {
         margin-top: 3em;
-    }
-    .app-curve {
-        margin-top: -0.125em;
     }
 }
 @media only screen and (max-width: 1023px){
