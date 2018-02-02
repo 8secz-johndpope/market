@@ -1084,6 +1084,9 @@ strong{
     padding-left: 5px;
     padding-right: 5px;
 }
+.break-word {
+    word-wrap: break-word;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
