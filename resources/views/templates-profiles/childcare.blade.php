@@ -122,7 +122,7 @@
                                                             </div>
                                                             <div class="col-md-5 col-md-offset-1 col-xs-12">
                                                                 <div class="row">
-                                                                    <span class="col-md-6 no-padding col-xs-9">First Aid certificate
+                                                                    <span class="col-md-9 no-padding col-xs-6">First Aid certificate
                                                                     </span>
                                                                     <span class="col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                                                 </div>
