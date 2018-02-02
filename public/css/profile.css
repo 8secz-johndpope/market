@@ -629,4 +629,7 @@ footer{
         padding-left: 15px;
         padding-right: 15px;
     }
+    .description.container-ad-applicant .part .table-horaire-profile tbody>tr> td .glyphicon{
+        font-size: 14px;
+    }
 }
