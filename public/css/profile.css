@@ -366,6 +366,9 @@ footer{
 .container-ad-applicant:nth-child(odd){
     background-color: #fff;
 }
+.container-ad-applicant:nth-child(2n){
+    background-color: transparent;
+}
 .header.container-ad-applicant{
     background-color: #fff;
 }
@@ -460,7 +463,7 @@ footer{
     border-radius: 5px;
     margin-right: 10px;
 }
-.content.container-ad-applicant .part .services .service-active{
+.content.container-ad-applicant .part .services .service.active{
     padding: 6px 10px;
     background-color: transparent;
     border: 1px solid #ddd;
