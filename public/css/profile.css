@@ -435,6 +435,24 @@ footer{
 .content.container-ad-applicant .part .border{
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.content.container-ad-applicant .part .span-no{
+    background-color: #4fb8a3;
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    opacity: .4;
+    padding: 0 6px;
+}
+.content.container-ad-applicant .part .span-yes{
+    background-color: #4fb8a3;
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
 .badge-container {
     margin: 12px 0 10px;
     display: flex;
