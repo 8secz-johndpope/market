@@ -686,4 +686,10 @@ footer{
         text-align: center;
         width: 45px;
     }
+    .xs-no-padding{
+        padding: 0;
+    }
+    #about-applicant-info ul.user-options>li div.row{
+        margin-bottom: 15px;
+    }
 }
