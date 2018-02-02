@@ -638,4 +638,14 @@ footer{
     #profile-map-canvas {
         height: 200px;
     }
+    .container-ad-applicant .row{
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    #about-applicant-info{
+        margin: 0 -10px;
+        padding: 20px 0 0;
+        background-color: #eee;
+        border-radius: 2px;
+    }
 }
