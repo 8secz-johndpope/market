@@ -242,8 +242,8 @@
                                 </p>
                             </li>
                             <li class="row">
-                                <div class="col-md-2 col-xs-7">Languages spoken:</div>
-                                <div class="col-md-10 col-xs-5 no-padding">
+                                <div class="col-md-2 col-sm-3 col-xs-7">Languages spoken:</div>
+                                <div class="col-md-10 col-sm-9 col-xs-5 no-padding">
                                     <span class="border">Armenian</span>
                                     (Native Language), 
                                     <span class="border">Russia</span>
@@ -253,14 +253,14 @@
                                 </div>
                             </li>
                             <li class="row">
-                                <div class="col-md-2 col-xs-7">Nationality:</div>
-                                <div class="col-md-10 col-xs-5 no-padding">
+                                <div class="col-md-2 col-sm-3 col-xs-7">Nationality:</div>
+                                <div class="col-md-10 col-sm-9 col-xs-5 no-padding">
                                     <span class="border">British</span>
                                 </div>
                             </li>
                             <li class="row">
-                                <div class="col-md-2 col-xs-7">Experience:</div>
-                                <div class="col-md-10 col-xs-5 no-padding">
+                                <div class="col-md-2 col-sm-3 col-xs-7">Experience:</div>
+                                <div class="col-md-10 col-sm-9 col-xs-5 no-padding">
                                     <span class="border">7 years of experience</span>
                                 </div>
                             </li>
