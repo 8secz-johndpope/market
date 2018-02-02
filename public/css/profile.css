@@ -612,4 +612,8 @@ footer{
         text-align: center;
         padding: 0;
     }
+    .description.container-ad-applicant .block-availability .availability-tab{
+        margin-top: 30px;
+        padding-top: 10px;
+    }
 }
