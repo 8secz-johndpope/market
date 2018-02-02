@@ -540,6 +540,8 @@ footer{
 }
 .description.container-ad-applicant .part .table-horaire-profile tbody>tr> td .glyphicon{
     color: #fff;
+    font-size: 20px;
+    padding: 0;
 }
 .table-responsive {
     overflow-x: auto;
