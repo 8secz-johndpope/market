@@ -23,37 +23,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-xs-12 main">
-                    <div class="col-md-3 col-xs-12">
-                        <figure class="ad-applicant-picture">
-                            <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams."></span>
-                        </figure>
-                    </div>
-                    <div class="col-md-9 ad-applicant-profil-infos col-xs-12">
-                        <div class="person">
-                            <h1>
-                                <span class="ad-applicant-name">Anna T.</span>
-                                <span class="ad-applicant-job-title">Nanny</span>
-                                <span>in</span>
-                                <span class="ad-applicant-address">
-                                    <span class="address-location">London</span>
-                                </span>
-                            </h1>
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12">
+                            <figure class="ad-applicant-picture">
+                                <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams."></span>
+                            </figure>
                         </div>
-                        <ul class="list-inline list-unstyled ad-applicant-experiences row">
-                            <li>41 years old</li>
-                            <li>7 years of experience</li>
-                        </ul>
-                        <ul class="list-inline list-unstyled ad-applicant-services">
-                            <li class="available">
-                                Occasional
-                            </li>
-                            <li class="available">
-                                Part time / After School
-                            </li>
-                            <li class="available">
-                                Full time
-                            </li>
-                        </ul>
+                        <div class="col-md-9 ad-applicant-profil-infos col-xs-12">
+                            <div class="person">
+                                <h1>
+                                    <span class="ad-applicant-name">Anna T.</span>
+                                    <span class="ad-applicant-job-title">Nanny</span>
+                                    <span>in</span>
+                                    <span class="ad-applicant-address">
+                                        <span class="address-location">London</span>
+                                    </span>
+                                </h1>
+                            </div>
+                            <ul class="list-inline list-unstyled ad-applicant-experiences row">
+                                <li>41 years old</li>
+                                <li>7 years of experience</li>
+                            </ul>
+                            <ul class="list-inline list-unstyled ad-applicant-services">
+                                <li class="available">
+                                    Occasional
+                                </li>
+                                <li class="available">
+                                    Part time / After School
+                                </li>
+                                <li class="available">
+                                    Full time
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-5 hidden-xs">
