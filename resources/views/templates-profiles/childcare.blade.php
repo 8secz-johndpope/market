@@ -739,4 +739,23 @@
         </div>
     </div>
 </div>
+<script>
+    var map;
+    var panorama;
+    var service;
+    function initMap() {
+        var uluru = {lat: 51.5073509, lng: -0.1277583};
+         map = new google.maps.Map(document.getElementById('profile-map-canvas'), {
+            zoom: 18,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+    $(document).ready(function() {
+        initMap();
+    });
+</script>
 @endsection
