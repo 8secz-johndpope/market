@@ -65,7 +65,7 @@
     <div class="content container-ad-applicant">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 clearfix col-xs-12">
+                <div class="col-md-8 clearfix col-xs-12">
                     <div class="row no-margin">
                         <div class="col-xs-12 content">
                             <h4 class="info-title dimgrey">Available upon your request, thank you.</h4>
