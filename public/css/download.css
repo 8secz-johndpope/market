@@ -408,6 +408,9 @@ footer{
     padding-top: 60px;
     padding-bottom: 0px;
 }
+.container-key-features .app-store-badges {
+    text-align: center;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;
