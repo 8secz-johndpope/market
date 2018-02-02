@@ -788,11 +788,11 @@
                             <div class="col-md-11 col-md-offset-1 col-xs-12">
                                 <ul class="list-unstyled">
                                     <li class="row">
-                                        <div class="col-md-2 col-xs-12 left">
+                                        <div class="col-sm-2 col-md-2 col-xs-12 left">
                                             <span class="date-text">From 07-1990</span>
                                             <span class="date-text">Until 08-2002</span>
                                         </div>
-                                        <div class="col-md-10 col-xs-12 right">
+                                        <div class="col-sm-10 col-md-10 col-xs-12 right">
                                             <p class="littlep">I have looked after her son since she gave birth as was unwell and unfit,  I was living with her, doing all the housekeeping and cooking and looking after new born baby till he was 13 years old. Then I got married and moved away to live with my husband in 2002.</p>
                                         </div>
                                     </li>
