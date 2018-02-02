@@ -362,11 +362,9 @@ footer{
 }
 .container-ad-applicant {
     margin-bottom: 20px;
-}
-.container-ad-applicant:nth-child(odd){
     background-color: #fff;
 }
-.container-ad-applicant:nth-child(2n){
+.container-ad-applicant:nth-child(2n+1){
     background-color: transparent;
 }
 .header.container-ad-applicant{
