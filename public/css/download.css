@@ -141,7 +141,7 @@
     height: 850px;
     pointer-events: none;
     z-index: 2;
-    background-image: url(/css/download1.png);
+    background-image: url(/css/download1.png?111);
     background-repeat: no-repeat;
     background-size: auto 500px;
     background-position: left top;
