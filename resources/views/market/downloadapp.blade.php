@@ -31,7 +31,6 @@
 								<a href="#" class="appstore-link" target="_blank">Download</a>
 								<a href="#" class="google-play-link" target="_blank">Download</a>
 							</div>
-							<h2 class="download-subtitle">Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited</h2> 
 							<div class="instructions">
 								<p class="instructions-sms active">Enter your number and we'll text you a link to download the app!</p>
 							</div>
@@ -73,6 +72,9 @@
 							</div>
 						</div>
 						<div class="mobile-devices"></div>
+						<div class="text-title">
+							<h2 class="download-subtitle">Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited</h2> 
+						</div>
 					</div>
 				</div>
 			</section>
