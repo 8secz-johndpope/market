@@ -666,4 +666,23 @@ footer{
         padding: 0 10px;
         color: #323524;
     }
+    #about-applicant-info ul.user-options>li .span-no{
+        background-color: #4fb8a3;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 14px;
+        text-align: center;
+        width: 45px;
+        opacity: .4;
+        padding: 0 10px;
+    }
+    #about-applicant-info ul.user-options>li .span-yes{
+        background-color: #4fb8a3;
+        color: #fff;
+        padding: 0 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        text-align: center;
+        width: 45px;
+    }
 }
