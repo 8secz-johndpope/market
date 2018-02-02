@@ -511,12 +511,13 @@ footer{
     background-color: #397b9d;
 }
 .title-icon {
-    padding: 10px;
+    padding: 12px;
     background-color: #4fb8a3;
     border-radius: 50%;
     text-align: center;
     height: 44px;
     width: 44px;
+    color: #fff;
 }
 .info-title .title {
     padding: 12px 10px;
