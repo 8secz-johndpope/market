@@ -534,6 +534,7 @@ footer{
     background: transparent;
     margin-bottom: 0;
     text-align: center;
+    color: #999;
 }
 .description.container-ad-applicant .part .table-horaire-profile tbody>tr> td.selected{
     padding: 5px;
