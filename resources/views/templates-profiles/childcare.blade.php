@@ -133,14 +133,14 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Drivers License
                                         </span>
-                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-no">No</span>
+                                        <span class="col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
                                     </div>
                                 </div>
                                 <div class="col-md-5 col-md-offset-1 col-xs-12">
                                     <div class="row">
                                         <span class="col-md-9 no-padding col-xs-9">First Aid certificate
                                         </span>
-                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-yes">Yes</span>
+                                        <span class="col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                     </div>
                                 </div>
                             </li>
@@ -149,14 +149,14 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Access to a vehicle
                                         </span>
-                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-no">No</span>
+                                        <span class="col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
                                     </div>
                                 </div>
                                 <div class="col-md-5 col-md-offset-1 col-xs-12">
                                     <div class="row">
                                         <span class="col-md-9 no-padding col-xs-9">Has children
                                         </span>
-                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-no">No</span>
+                                        <span class="col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
                                     </div>
                                 </div>
                             </li>
@@ -165,7 +165,7 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Non smoker
                                         </span>
-                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-yes">Yes</span>
+                                        <span class="col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                     </div>
                                 </div>
                             </li>
