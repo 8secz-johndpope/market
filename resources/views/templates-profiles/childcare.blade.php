@@ -105,11 +105,11 @@
                                 <div class="col-md-2 col-xs-7">Languages spoken:</div>
                                 <div class="col-md-10 col-xs-5 no-padding">
                                     <span class="border">Armenian</span>
-                                    (Native Language)
+                                    (Native Language), 
                                     <span class="border">Russia</span>
-                                    (Fluently)
+                                    (Fluently), 
                                     <span class="border">English</span>
-                                    (Fluently)
+                                    (Fluently), 
                                 </div>
                             </li>
                             <li class="row">
