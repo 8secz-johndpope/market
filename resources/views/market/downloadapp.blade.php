@@ -49,33 +49,43 @@
 									Something went wrong. Please check your phone number and try again.
 								</div>
 							</div>
-							<div class="available-devices clearfix">
-								<p>Available for</p>
-								<ul>
-									<li>
-										<img src="/css/icon-iphone-x.png" alt="iphone">
-										<p>iPhone</p>
-									</li>
-									<li>
-										<img src="/css/icon-ipad.png" alt="ipad">
-										<p>iPad</p>
-									</li>
-									<li>
-										<img src="/css/icon-phone-android.png" alt="android">
-										<p>Android</p>
-									</li>
-								</ul>
-							</div>
+							
 							<div class="clause">
 								<p class="clause-sms active">Standard messaging and data fees may apply.</p>
 								<p class="clause-email">Your email address will not be stored or used for any other purposes.</p>
 							</div>
 						</div>
 						<div class="mobile-devices"></div>
-						<div class="text-title">
-							<h2 class="download-subtitle">Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited</h2> 
+					</div>
+					
+				</div>
+			</section>
+		</div>
+		<div class="try-container">
+			<section>
+				<div class="row text-title">
+					<div class="col-sm-6">
+						<div class="available-devices clearfix">
+							<p>Available for</p>
+							<ul>
+								<li>
+									<img src="/css/icon-iphone-x.png" alt="iphone">
+									<p>iPhone</p>
+								</li>
+								<li>
+									<img src="/css/icon-ipad.png" alt="ipad">
+									<p>iPad</p>
+								</li>
+								<li>
+									<img src="/css/icon-phone-android.png" alt="android">
+									<p>Android</p>
+								</li>
+							</ul>
 						</div>
 					</div>
+					<div class="col-sm-6">
+						<h2 class="download-subtitle">Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited</h2>
+					</div> 
 				</div>
 			</section>
 		</div>
