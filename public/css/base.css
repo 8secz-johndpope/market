@@ -1090,6 +1090,10 @@ strong{
 .no-margin {
     margin: 0!important;
 }
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
