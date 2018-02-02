@@ -1072,6 +1072,10 @@ strong{
     margin-bottom: 10px;
 }
 
+.list-inline, .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
