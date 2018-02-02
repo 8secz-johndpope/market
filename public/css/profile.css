@@ -363,13 +363,12 @@ footer{
 .container-ad-applicant {
     margin-bottom: 20px;
 }
-.container-ad-applicant:nth-child(2n){
-    background-color: transparent;
-}
 .container-ad-applicant:nth-child(odd){
     background-color: #fff;
 }
-
+.container-ad-applicant:nth-child(2n){
+    background-color: transparent;
+}
 .header.container-ad-applicant{
     background-color: #fff;
 }
@@ -567,4 +566,13 @@ footer{
 .table-responsive {
     overflow-x: auto;
     min-height: .01%;
+}
+.experience.container-ad-applicant{
+    background: transparent;
+}
+.experience.container-ad-applicant ul>li .left{
+    color: #4fb8a3;
+}
+.experience.container-ad-applicant .date-text{
+    display: block;
 }
