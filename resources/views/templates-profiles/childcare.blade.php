@@ -224,7 +224,7 @@
                     </h4>
                     <div class="block block-calendar block-availability">
                         <div class="row">
-                            <div class="col-md-11 col-xs-12">
+                            <div class="col-md-11 col-md-offset-1 col-xs-12">
                                 <div class="table-responsive availability-tab">
                                     <table id="zone-horaire" class="table table-striped table-bordered table-horaire-profile">
                                         <thead>
@@ -489,7 +489,7 @@
                         </div>
                     </h4>
                     <div class="row no-margin">
-                        <div class="col-md-11 col-xs-12">
+                        <div class="col-md-11 col-md-offset-1 col-xs-12">
                             <ul class="list-unstyled">
                                 <li class="task-block row no-margin">
                                     <div class="col-md-6 no-padding col-xs-12">
@@ -633,7 +633,7 @@
         <div class="experience container-ad-applicant">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 clearfix col-xs-16">
+                    <div class="col-md-10 col-md-offset-1 clearfix col-xs-16">
                         <h4 class="info-title dimgrey">
                             <div class="row no-margin">
                                 <div class="col-md-1 title-icon bg-blue col-xs-2">
@@ -666,7 +666,7 @@
         <div class="hobbies container-ad-applicant">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 clearfix col-xs-12">
+                    <div class="col-md-10 col-md-offset-1 clearfix col-xs-12">
                         <h4 class="info-title dimgrey">
                             <div class="row no-margin">
                                 <div class="col-md-1 title-icon bg-blue col-xs-2">
@@ -697,7 +697,7 @@
         <div class="profile-map container-ad-applicant">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 clearfix col-xs-12">
+                    <div class="col-md-10 col-md-offset-1 clearfix col-xs-12">
                         <h4 class="info-title dimgrey">
                             <div class="row no-margin">
                                 <div class="col-md-1 title-icon bg-blue col-xs-2">
