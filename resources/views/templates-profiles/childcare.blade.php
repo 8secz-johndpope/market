@@ -716,7 +716,7 @@
                             </div>
                             <div class="col-md-3 side pull-right hidden-xs">
                                 <div class="row">
-                                    <div class="col-xs-12 bg-withe">
+                                    <div class="col-xs-12 bg-white">
                                         <header>
                                             <h4>Childcare near London</h4>
                                             <span>
