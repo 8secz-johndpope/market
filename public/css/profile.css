@@ -506,3 +506,14 @@ footer{
     margin-left: 10px;
     padding-top: 4px;
 }
+.info-title .bg-blue {
+    background-color: #397b9d;
+}
+.title-icon {
+    padding: 10px;
+    background-color: #4fb8a3;
+    border-radius: 50%;
+    text-align: center;
+    height: 44px;
+    width: 44px;
+}
