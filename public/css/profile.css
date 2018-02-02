@@ -440,3 +440,16 @@ footer{
 .badge-container-profile:last-child {
     margin-bottom: 20px;
 }
+.badge-container-badge {
+    display: inline-block;
+    width: 52px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #9a9a9a;
+    text-align: center;
+    border: 1px solid #6dc45f;
+    border-radius: 2px;
+    margin-right: 6px;
+}
