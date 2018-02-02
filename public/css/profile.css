@@ -632,4 +632,7 @@ footer{
     .description.container-ad-applicant .part .table-horaire-profile tbody>tr> td .glyphicon{
         font-size: 14px;
     }
+    .experience.container-ad-applicant .date-text{
+        display: inline-block;
+    }
 }
