@@ -39,11 +39,11 @@
                                 </span>
                             </h1>
                         </div>
-                        <ul class="list-inline list-unstyle ad-applicant-experiences row">
+                        <ul class="list-inline list-unstyled ad-applicant-experiences row">
                             <li>41 years old</li>
                             <li>7 years of experience</li>
                         </ul>
-                        <ul class="list-inline list-unstyle ad-applicant-services">
+                        <ul class="list-inline list-unstyled ad-applicant-services">
                             <li class="available">
                                 Occasional
                             </li>
@@ -80,7 +80,7 @@
             <div class="row hidden-xs">
                 <div class="col-xs-12 no-padding">
                     <div class="part">
-                        <ul class="list-unstyle">
+                        <ul class="list-unstyled">
                             <li class="row no-margin">
                                 <h4>Verification Status</h4>
                                 <div>
@@ -124,7 +124,7 @@
                         </ul>
                     </div>
                     <div class="part">
-                        <ul class="list-unstyle user-options">
+                        <ul class="list-unstyled user-options">
                             <li class="row">
                                 <div class="col-md-5 col-xs-12 xs-no-padding">
                                     <div class="row">
@@ -486,8 +486,8 @@
                         </div>
                     </h4>
                     <div class="row no-margin">
-                        <div class="col-md-1 col-xs-12">
-                            <ul class="list-unstyle">
+                        <div class="col-md-11 col-xs-12">
+                            <ul class="list-unstyled">
                                 <li class="task-block row no-margin">
                                     <div class="col-md-6 no-padding col-xs-12">
                                         <div class="row no-margin">
@@ -621,6 +621,70 @@
                                         </div>
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="experience container-ad-applicant">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 clearfix col-xs-16">
+                        <h4 class="info-title dimgrey">
+                            <div class="row no-margin">
+                                <div class="col-md-1 title-icon bg-blue col-xs-2">
+                                    <i></i>
+                                </div>
+                                <div class="col-md-11 title col-xs-10">
+                                    Professional Experience:7 years of experience
+                                </div>
+                            </div>
+                        </h4>
+                        <div class="row no-margin">
+                            <div class="col-md-11 col-xs-12">
+                                <ul class="list-unstyled">
+                                    <li class="row">
+                                        <div class="col-md-3 col-xs-12 left">
+                                            <span class="date-text">From 07-1990</span>
+                                            <span class="date-text">Until 08-2002</span>
+                                        </div>
+                                        <div class="col-md-9 col-xs-12 right">
+                                            <p class="littlep">I have looked after her son since she gave birth as was unwell and unfit,  I was living with her, doing all the housekeeping and cooking and looking after new born baby till he was 13 years old. Then I got married and moved away to live with my husband in 2002.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hobbies container-ad-applicant">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 clearfix col-xs-12">
+                        <h4 class="info-title dimgrey">
+                            <div class="row no-margin">
+                                <div class="col-md-1 title-icon bg-blue col-xs-2">
+                                    <i></i>
+                                </div>
+                                <div class="col-md-11 title col-xs-10">
+                                    More about Anna
+                                </div>
+                            </div>
+                        </h4>
+                        <div class="row no-margin">
+                            <div class="col-md-11 col-xs-12 pl0">
+                                <p>
+                                    I have a postgraduate degree in Medicine, years of experience in clinical as well as academic settings at the Universities and hospitals in the UK as well as overseas. Multiple and numerous skills and expertise:
+                                    I play piano, compose music, paint and had 10 personal art exhibitions, I act and was featured in many TV programmes and films.
+                                    I love gardening, cooking, baking, sawing , knitting, reading, using media, watching cartoons/animations, comedies, movies, I taught drama and acting at the college and love entertaining, playing and  teaching children science, biology, reading, maths, drawing, painting, making things/ crafts and helping with homework and etc.
+                                    I am experienced first Aider, have CRB/DBS checks. I don't drive and do not own a car and can not swim.
+                                    No allergies and easy going.
+                                    I aim to find parents who need my help and they instead make my experience pleasant and joyful and happy.
+                                    Many thanks, Anna
+                                </p>
                             </div>
                         </div>
                     </div>
