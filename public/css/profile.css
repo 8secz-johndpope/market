@@ -522,6 +522,8 @@ footer{
     padding: 12px 10px;
     line-height: 22px;
     vertical-align: middle;
+    background: transparent;
+    border:none;
 }
 .block {
     padding-left: 0;
