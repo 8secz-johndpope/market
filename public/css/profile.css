@@ -402,3 +402,13 @@ footer{
     padding: 10px 0;
     background-color: transparent;
 }
+.content.container-ad-applicant .content{
+    background: #fff;
+    border-left: 4px solid #ddd;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+.info-title{
+    margin-bottom: 20px;
+    color: #397b9d;
+}
