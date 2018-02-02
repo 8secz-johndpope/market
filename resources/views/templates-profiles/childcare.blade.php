@@ -149,7 +149,7 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Access to a vehicle
                                         </span>
-                                        <span class="col-md-9 col-md-offset-1 col-xs-3 span-no">No</span>
+                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-no">No</span>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-md-offset-1 col-xs-12">
