@@ -594,6 +594,11 @@ footer{
     margin-bottom: 10px;
     border: 1px solid #ddd;
 }
+.profile-map.container-ad-applicant .side .content ul>li a {
+    color: #323524;
+    text-decoration: none;
+    font-size: 16px;
+}
 .profile-map.container-ad-applicant .bg-white{
     padding-top: 10px;
 }
