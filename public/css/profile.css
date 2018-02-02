@@ -651,6 +651,7 @@ footer{
         padding: 20px 0 0;
         background-color: #eee;
         border-radius: 2px;
+        text-align: left;
     }
     .header.container-ad-applicant .ad-applicant-profil-infos h1{
         color: #397b9d;
