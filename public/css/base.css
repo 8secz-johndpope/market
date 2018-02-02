@@ -1097,6 +1097,9 @@ strong{
 .bg-white{
   background: #fff;
 }
+.mb-20{
+  margin-bottom: 20px!important;
+}
 @media screen and (max-width: 767px){
   .body {
     padding-top: 50px;
