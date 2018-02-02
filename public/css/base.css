@@ -1094,6 +1094,9 @@ strong{
     padding-left: 0;
     padding-right: 0;
 }
+.bg-white{
+  background: #fff;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;

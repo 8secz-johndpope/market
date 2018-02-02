@@ -709,7 +709,7 @@
                             </div>
                         </h4>
                         <div class="row no-margin">
-                            <div class="col-md-9 col-md-offset-1 main col-xs-12">
+                            <div class="col-md-8 col-md-offset-1 main col-xs-12">
                                 <div class="map">
                                     <div id="profile-map-canvas"></div>
                                 </div>

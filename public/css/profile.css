@@ -578,3 +578,22 @@ footer{
     height: 420px;
     width: 100%;
 }
+.profile-map.container-ad-applicant .side {
+    padding: 0 10px;
+    text-align: center;
+}
+.profile-map.container-ad-applicant .side header{
+    margin-bottom: 20px;
+}
+.profile-map.container-ad-applicant .side header h4{
+    font-size: 20px;
+    color: #323524;
+}
+.profile-map.container-ad-applicant .side .content ul>li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+.profile-map.container-ad-applicant .bg-white{
+    padding-top: 10px;
+}
