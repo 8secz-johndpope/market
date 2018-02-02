@@ -692,4 +692,18 @@ footer{
     #about-applicant-info ul.user-options>li div.row{
         margin-bottom: 15px;
     }
+    #about-applicant-info .services .service{
+        padding: 5px 10px;
+        background-color: transparent;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    #about-applicant-info .services .service.active{
+        padding: 5px 10px;
+        background-color: transparent;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #4fb8a3;
+        border-color: #4fb8a3;
+    }
 }
