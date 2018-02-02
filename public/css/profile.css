@@ -603,3 +603,13 @@ footer{
     padding-top: 14px;
     padding-bottom: 14px;
 }
+@media (max-width: 767px){
+    .ad-applicant-picture{
+        position: relative;
+        margin: -80px auto 0;
+    }
+    .header.container-ad-applicant .ad-applicant-profil-infos{
+        text-align: center;
+        padding: 0;
+    }
+}
