@@ -429,3 +429,14 @@ footer{
     color: #323524;
     margin-bottom: 15px;
 }
+.badge-container {
+    margin: 12px 0 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.badge-container-profile {
+    justify-content: flex-start;
+}
+.badge-container-profile:last-child {
+    margin-bottom: 20px;
+}
