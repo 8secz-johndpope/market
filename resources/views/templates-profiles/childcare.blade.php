@@ -464,6 +464,9 @@
                                     </table>
                                 </div>
                                 <div class="zone-horaire-details">
+                                    <span class="availability">
+                                        Will accept last minute babysitting
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -471,6 +474,34 @@
                 </div>
             </div>
             <div class="row part">
+                <div class="col-md-10 clearfix col-xs-12">
+                    <h4 class="info-title dimgrey">
+                        <div class="row no-margin">
+                            <div class="col-md-1 title-icon bg-blue col-xs-2">
+                                <i></i>
+                            </div>
+                            <div class="col-md-11 title col-xs-10">
+                                Tasks that Anna can help with
+                            </div>
+                        </div>
+                    </h4>
+                    <div class="row no-margin">
+                        <div class="col-md-1 col-xs-12">
+                            <ul class="list-unstyle">
+                                <li class="task-block row no-margin">
+                                    <div class="col-md-6 no-padding col-xs-12">
+                                        <div class="row no-margin">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 no-padding col-xs-12">
+                                        <div class="row no-margin">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
