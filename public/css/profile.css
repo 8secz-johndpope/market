@@ -475,6 +475,9 @@ footer{
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     text-decoration: none;
 }
+.content.container-ad-applicant .part .services .service.active a{
+    color: #fff;
+}
 .badge-container {
     margin: 12px 0 10px;
     display: flex;
