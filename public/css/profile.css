@@ -376,3 +376,6 @@ footer{
     font-size: 18px;
     color: #323524;
 }
+.header.container-ad-applicant .ad-applicant-head .list-unstyled{
+    margin-left: 0;
+}

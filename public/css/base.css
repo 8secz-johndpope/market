@@ -1076,6 +1076,9 @@ strong{
     padding-left: 0;
     list-style: none;
 }
+.list-inline {
+    margin-left: -5px;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;
