@@ -128,17 +128,104 @@
                             <li class="row">
                                 <div class="col-md-5 col-xs-12 xs-no-padding">
                                     <div class="row">
-                                        <span class="col-md-10 col-xs-9">
+                                        <span class="col-md-10 col-xs-9">Drivers License
                                         </span>
-                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-no"></span>
+                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-no">No</span>
                                     </div>
                                 </div>
                                 <div class="col-md-5 col-md-offset-1 col-xs-12">
+                                    <div class="row">
+                                        <span class="col-md-10 no-padding col-xs-9">First Aid certificate
+                                        </span>
+                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-yes">Yes</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-md-5 col-xs-12 xs-no-padding">
+                                    <div class="row">
+                                        <span class="col-md-10 col-xs-9">Access to a vehicle
+                                        </span>
+                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-no">No</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-md-offset-1 col-xs-12">
+                                    <div class="row">
+                                        <span class="col-md-10 no-padding col-xs-9">Has children
+                                        </span>
+                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-yes">No</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-md-5 col-xs-12 xs-no-padding">
+                                    <div class="row">
+                                        <span class="col-md-10 col-xs-9">Non smoker
+                                        </span>
+                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-no">Yes</span>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
+                    <div class="part">
+                        <h4>Services offered by Anna</h4>
+                        <ul class="services list-inline">
+                            <li class="service">
+                                <a>
+                                    <span>
+                                        Tutoring
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="service">
+                                <a>
+                                    <span>
+                                        Pet sitting
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="service">
+                                <a>
+                                    <span>
+                                        Housekeeping
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="service">
+                                <a>
+                                    <span>
+                                        Childcare
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="description container-ad-applicant">
+        <div class="container">
+            <div class="row part">
+                <div class="col-md-10 clearfix col-xs-12">
+                    <h4 class="info-title dimgrey">
+                        <div class="row no-margin">
+                            <div class="col-md-1 title-icon bg-blue col-xs-2">
+                                <i></i>
+                            </div>
+                            <div class="col-md-11 title col-xs-10">
+                                Availability  Anna
+                            </div>
+                        </div>
+                    </h4>
+                    <div class="block block-calendar block-availability">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row part">
             </div>
         </div>
     </div>
