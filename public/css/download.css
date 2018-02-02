@@ -557,7 +557,7 @@ footer{
         text-align:center;
     }
     .app-page .mobile-devices{
-        top: 77%;
+        top: 64%;
         right: 12%;
         width: 80vw;
         height: 500px;
@@ -612,6 +612,9 @@ footer{
         line-height: 1.166667em;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+    }
+    .try-container{
+        padding-top: 180px;
     }
 }
 @media only screen and (max-width: 1023px){
@@ -710,6 +713,9 @@ footer{
     }
     .app-store-badges{
         text-align: left;
+    }
+    .try-container{
+        padding-top: 50px;
     }
 }
 
