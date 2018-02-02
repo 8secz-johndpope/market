@@ -379,3 +379,7 @@ footer{
 .header.container-ad-applicant .list-unstyled{
     margin-left: 0;
 }
+.header.container-ad-applicant .ad-applicant-experiences{
+    padding: 0;
+    color: #323524;
+}
