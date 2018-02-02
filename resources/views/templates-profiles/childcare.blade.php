@@ -62,7 +62,6 @@
             </div>
         </div>
     </div>
-    </div>
     <div class="content container-ad-applicant">
         <div class="container">
             <div class="row">
