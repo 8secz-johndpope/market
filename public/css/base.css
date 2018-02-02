@@ -1098,6 +1098,9 @@ strong{
   background: #fff;
 }
 @media screen and (max-width: 767px){
+  .body {
+    padding-top: 50px;
+  }
   .top {
     padding-bottom: 0;
   }
