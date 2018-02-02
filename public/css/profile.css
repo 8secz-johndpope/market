@@ -453,3 +453,8 @@ footer{
     border-radius: 2px;
     margin-right: 6px;
 }
+.badge-container-profile>span {
+    font-size: 12px;
+    margin-left: 10px;
+    padding-top: 4px;
+}
