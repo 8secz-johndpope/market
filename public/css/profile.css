@@ -656,4 +656,14 @@ footer{
         color: #397b9d;
         font-family: Effra-Medium,arial,helvetica,sans-serif;
     }
+    #about-applicant {
+        background-color: #eee;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    #about-applicant-info h4{
+        text-align: center;
+        padding: 0 10px;
+        color: #323524;
+    }
 }
