@@ -21,17 +21,17 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 col-xs-12">
-							<h1 class="download-subtitle text-center">Search or apply or chat or buy & sell securely</h1>
+							<h1 class="download-subtitle text-center">Search, apply, chat, post, buy & sell securely</h1>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 col-xs-12">
-							<h2 class="download-subtitle">Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited</h2> 
 							<span class="box-green">Get the App on the go. <span>FREE</span></span>
 							<div class="app-store-badges">
 								<a href="#" class="appstore-link" target="_blank">Download</a>
 								<a href="#" class="google-play-link" target="_blank">Download</a>
 							</div>
+							<h2 class="download-subtitle">Connect, call & videocall, list & sell, browse & buy, refer & earn unlimited</h2> 
 							<div class="instructions">
 								<p class="instructions-sms active">Enter your number and we'll text you a link to download the app!</p>
 							</div>
