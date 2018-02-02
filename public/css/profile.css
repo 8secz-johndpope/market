@@ -530,6 +530,13 @@ footer{
 .description.container-ad-applicant .block-availability .availability-tab{
     margin: 30px 0 40px;
 }
+.description.container-ad-applicant .part .table-horaire-profile tbody>tr> td.selected{
+    padding: 5px;
+    background-color: #4fb8a3;
+}
+.description.container-ad-applicant .part .table-horaire-profile tbody>tr> td .glyphicon}{
+    color: #fff;
+}
 .table-responsive {
     overflow-x: auto;
     min-height: .01%;
