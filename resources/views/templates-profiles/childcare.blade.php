@@ -55,6 +55,144 @@
                                     Full time
                                 </li>
                             </ul>
+                            <div class="visible-xs">
+                                <div class="row mb-20">
+                                    <div class="col-xs-12">
+                                        <div class="row">
+                                            <button id="about-applicant" type="button" class="btn btn-expandeble col-xs-4 col-xs-offset-4">
+                                                About Us
+                                                <span class="caret"></span>
+                                            </button>
+                                        </div>
+                                        <div class="row" id="about-applicant-info">
+                                            <div class="col-xs-12">
+                                                <div class="part">
+                                                    <ul class="list-unstyled">
+                                                        <li class="row no-margin">
+                                                            <h4>Verification Status</h4>
+                                                            <div>
+                                                                <div class="badge-container badge-container-profile">
+                                                                    <div>
+                                                                        <div class="badge-container-badge">
+                                                                            DBS
+                                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <span>This Applicant has a DBS document, checked by the {{env('APP_NAME')}} Team</span>
+                                                                </div>
+                                                            </div>
+                                                            <p>
+                                                                The address, phone number, ID and diplomas of this profile have been manually reviewed by our team. 
+                                                            </p>
+                                                        </li>
+                                                        <li class="row">
+                                                            <div class="col-md-2 col-xs-6">Languages spoken:</div>
+                                                            <div class="col-md-10 col-xs-6 no-padding">
+                                                                <span class="border">Armenian</span>
+                                                                (Native Language), 
+                                                                <span class="border">Russia</span>
+                                                                (Fluently), 
+                                                                <span class="border">English</span>
+                                                                (Fluently), 
+                                                            </div>
+                                                        </li>
+                                                        <li class="row">
+                                                            <div class="col-md-2 col-xs-6">Nationality:</div>
+                                                            <div class="col-md-10 col-xs-6 no-padding">
+                                                                <span class="border">British</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="row">
+                                                            <div class="col-md-2 col-xs-6">Experience:</div>
+                                                            <div class="col-md-10 col-xs-6 no-padding">
+                                                                <span class="border">7 years of experience</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="part">
+                                                    <ul class="list-unstyled user-options">
+                                                        <li class="row">
+                                                            <div class="col-md-5 col-xs-12 xs-no-padding">
+                                                                <div class="row">
+                                                                    <span class="col-md-9 col-xs-6">Drivers License
+                                                                    </span>
+                                                                    <span class="col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-5 col-md-offset-1 col-xs-12">
+                                                                <div class="row">
+                                                                    <span class="col-md-6 no-padding col-xs-9">First Aid certificate
+                                                                    </span>
+                                                                    <span class="col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="row">
+                                                            <div class="col-md-5 col-xs-12 xs-no-padding">
+                                                                <div class="row">
+                                                                    <span class="col-md-9 col-xs-6">Access to a vehicle
+                                                                    </span>
+                                                                    <span class="col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-5 col-md-offset-1 col-xs-12">
+                                                                <div class="row">
+                                                                    <span class="col-md-9 no-padding col-xs-6">Has children
+                                                                    </span>
+                                                                    <span class="col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="row">
+                                                            <div class="col-md-5 col-xs-12 xs-no-padding">
+                                                                <div class="row">
+                                                                    <span class="col-md-9 col-xs-6">Non smoker
+                                                                    </span>
+                                                                    <span class="col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="part">
+                                                    <h4>Services offered by Anna</h4>
+                                                    <ul class="services list-inline">
+                                                        <li class="service">
+                                                            <a>
+                                                                <span>
+                                                                    Tutoring
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="service">
+                                                            <a>
+                                                                <span>
+                                                                    Pet sitting
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="service">
+                                                            <a>
+                                                                <span>
+                                                                    Housekeeping
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="service active">
+                                                            <a>
+                                                                <span>
+                                                                    Childcare
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
