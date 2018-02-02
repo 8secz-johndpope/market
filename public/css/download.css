@@ -403,6 +403,11 @@ footer{
     border-radius: 50%;
     margin-bottom: 35px;
 }
+.try-container {
+    background: #fff;
+    padding-top: 60px;
+    padding-bottom: 0px;
+}
 @media (max-width: 47.99em){
 	.main-header, .main-body {
 	    display: block;

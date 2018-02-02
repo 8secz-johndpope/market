@@ -62,7 +62,7 @@
 			</section>
 		</div>
 		<div class="try-container">
-			<section>
+			<section class="container">
 				<div class="row text-title">
 					<div class="col-sm-6">
 						<div class="available-devices clearfix">
