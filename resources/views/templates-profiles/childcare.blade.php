@@ -129,43 +129,43 @@
                     <div class="part">
                         <ul class="list-unstyled user-options">
                             <li class="row">
-                                <div class="col-md-5 col-xs-12 xs-no-padding">
+                                <div class="col-md-4 col-xs-12 xs-no-padding">
                                     <div class="row">
-                                        <span class="col-md-10 col-xs-9">Drivers License
+                                        <span class="col-md-9 col-xs-9">Drivers License
                                         </span>
                                         <span class="col-md-1 col-md-offset-1 col-xs-3 span-no">No</span>
                                     </div>
                                 </div>
-                                <div class="col-md-5 col-md-offset-1 col-xs-12">
+                                <div class="col-md-4 col-md-offset-1 col-xs-12">
                                     <div class="row">
-                                        <span class="col-md-10 no-padding col-xs-9">First Aid certificate
+                                        <span class="col-md-9 no-padding col-xs-9">First Aid certificate
                                         </span>
                                         <span class="col-md-1 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                     </div>
                                 </div>
                             </li>
                             <li class="row">
-                                <div class="col-md-5 col-xs-12 xs-no-padding">
+                                <div class="col-md-4 col-xs-12 xs-no-padding">
                                     <div class="row">
-                                        <span class="col-md-10 col-xs-9">Access to a vehicle
+                                        <span class="col-md-9 col-xs-9">Access to a vehicle
+                                        </span>
+                                        <span class="col-md-9 col-md-offset-1 col-xs-3 span-no">No</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-md-offset-1 col-xs-12">
+                                    <div class="row">
+                                        <span class="col-md-9 no-padding col-xs-9">Has children
                                         </span>
                                         <span class="col-md-1 col-md-offset-1 col-xs-3 span-no">No</span>
                                     </div>
                                 </div>
-                                <div class="col-md-5 col-md-offset-1 col-xs-12">
-                                    <div class="row">
-                                        <span class="col-md-10 no-padding col-xs-9">Has children
-                                        </span>
-                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-yes">No</span>
-                                    </div>
-                                </div>
                             </li>
                             <li class="row">
-                                <div class="col-md-5 col-xs-12 xs-no-padding">
+                                <div class="col-md-4 col-xs-12 xs-no-padding">
                                     <div class="row">
-                                        <span class="col-md-10 col-xs-9">Non smoker
+                                        <span class="col-md-9 col-xs-9">Non smoker
                                         </span>
-                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-no">Yes</span>
+                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                     </div>
                                 </div>
                             </li>
