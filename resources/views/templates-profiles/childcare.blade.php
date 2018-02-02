@@ -777,7 +777,7 @@
                         <h4 class="info-title dimgrey">
                             <div class="row no-margin">
                                 <div class="col-md-1 title-icon bg-blue col-xs-2">
-                                    <i></i>
+                                    <i class="fas fa-briefcase"></i>
                                 </div>
                                 <div class="col-md-11 title col-xs-10">
                                     Professional Experience:7 years of experience
@@ -810,7 +810,7 @@
                         <h4 class="info-title dimgrey">
                             <div class="row no-margin">
                                 <div class="col-md-1 title-icon bg-blue col-xs-2">
-                                    <i></i>
+                                    <i class="fas fa-info"></i>
                                 </div>
                                 <div class="col-md-11 title col-xs-10">
                                     More about Anna
@@ -841,7 +841,7 @@
                         <h4 class="info-title dimgrey">
                             <div class="row no-margin">
                                 <div class="col-md-1 title-icon bg-blue col-xs-2">
-                                    <i></i>
+                                    <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="col-md-11 title col-xs-10">
                                     Location
