@@ -429,6 +429,9 @@ footer{
     color: #323524;
     margin-bottom: 15px;
 }
+.content.container-ad-applicant .part .border{
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+}
 .badge-container {
     margin: 12px 0 10px;
     display: flex;
