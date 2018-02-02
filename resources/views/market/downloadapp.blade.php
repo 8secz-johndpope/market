@@ -100,6 +100,10 @@
 							<h2 class="donwload-subtitle">Unique Integrated Tools</h2>
 							<p class="content-integrated">Our app and platform includes propertary software products that provides a safe environment for search, communication and transactions</p>
 							<a href="#" class="btn btn-below">Download below</a>
+							<div class="app-store-badges">
+								<a href="#" class="appstore-link" target="_blank">Download</a>
+								<a href="#" class="google-play-link" target="_blank">Download</a>
+							</div>
 						</div>
 					</div>
 					<div class="ipad-devices">
