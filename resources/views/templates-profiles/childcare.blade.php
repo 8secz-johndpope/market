@@ -477,7 +477,7 @@
                 </div>
             </div>
             <div class="row part">
-                <div class="col-md-10 clearfix col-xs-12">
+                <div class="col-md-10 col-xs-12">
                     <h4 class="info-title dimgrey">
                         <div class="row no-margin">
                             <div class="col-md-1 title-icon bg-blue col-xs-2">
@@ -633,7 +633,7 @@
         <div class="experience container-ad-applicant">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1 clearfix col-xs-16">
+                    <div class="col-md-10  clearfix col-xs-16">
                         <h4 class="info-title dimgrey">
                             <div class="row no-margin">
                                 <div class="col-md-1 title-icon bg-blue col-xs-2">
@@ -645,7 +645,7 @@
                             </div>
                         </h4>
                         <div class="row no-margin">
-                            <div class="col-md-11 col-xs-12">
+                            <div class="col-md-11 col-md-offset-1 col-xs-12">
                                 <ul class="list-unstyled">
                                     <li class="row">
                                         <div class="col-md-2 col-xs-12 left">
@@ -666,7 +666,7 @@
         <div class="hobbies container-ad-applicant">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1 clearfix col-xs-12">
+                    <div class="col-md-10 clearfix col-xs-12">
                         <h4 class="info-title dimgrey">
                             <div class="row no-margin">
                                 <div class="col-md-1 title-icon bg-blue col-xs-2">
@@ -678,7 +678,7 @@
                             </div>
                         </h4>
                         <div class="row no-margin">
-                            <div class="col-md-11 col-xs-12 pl0">
+                            <div class="col-md-11 col-md-offset-1 col-xs-12 pl0">
                                 <p>
                                     I have a postgraduate degree in Medicine, years of experience in clinical as well as academic settings at the Universities and hospitals in the UK as well as overseas. Multiple and numerous skills and expertise:
                                     I play piano, compose music, paint and had 10 personal art exhibitions, I act and was featured in many TV programmes and films.
@@ -697,7 +697,7 @@
         <div class="profile-map container-ad-applicant">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1 clearfix col-xs-12">
+                    <div class="col-md-10 clearfix col-xs-12">
                         <h4 class="info-title dimgrey">
                             <div class="row no-margin">
                                 <div class="col-md-1 title-icon bg-blue col-xs-2">
@@ -709,7 +709,7 @@
                             </div>
                         </h4>
                         <div class="row no-margin">
-                            <div class="col-md-9 main col-xs-12">
+                            <div class="col-md-9 col-md-offset-1 main col-xs-12">
                                 <div class="map">
                                     <div id="profile-map-canvas"></div>
                                 </div>
