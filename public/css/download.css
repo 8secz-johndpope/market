@@ -512,7 +512,7 @@ footer{
     .app-page .mobile-devices {
         width: 120vw;
         height: 400px;
-        top: 90%;
+        top: 73%;
         left: -10vw;
         background-position: center center;
     }
@@ -544,6 +544,9 @@ footer{
     }
     .features .donwload-subtitle {
         font-size: 2em;
+    }
+    .try-container{
+        padding-top: 140px;
     }
 }
 @media only screen and (min-width: 768px){
