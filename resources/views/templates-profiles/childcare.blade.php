@@ -111,7 +111,30 @@
                             </li>
                             <li class="row">
                                 <div class="col-md-4 col-xs-7">Nationality:</div>
-                                <div class="col-md-8 col-xs-5 no-padding"></div>
+                                <div class="col-md-8 col-xs-5 no-padding">
+                                    <span class="border">British</span>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-md-4 col-xs-7">Experience:</div>
+                                <div class="col-md-8 col-xs-5 no-padding">
+                                    <span class="border">7 years of experience</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="part">
+                        <ul class="list-unstyle user-options">
+                            <li class="row">
+                                <div class="col-md-5 col-xs-12 xs-no-padding">
+                                    <div class="row">
+                                        <span class="col-md-10 col-xs-9">
+                                        </span>
+                                        <span class="col-md-1 col-md-offset-1 col-xs-3 span-no"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-md-offset-1 col-xs-12">
+                                </div>
                             </li>
                         </ul>
                     </div>
