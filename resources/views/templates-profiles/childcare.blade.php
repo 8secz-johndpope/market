@@ -691,6 +691,52 @@
                 </div>
             </div>
         </div>
+        <div class="profile-map container-ad-applicant">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 clearfix col-xs-12">
+                        <h4 class="info-title dimgrey">
+                            <div class="row no-margin">
+                                <div class="col-md-1 title-icon bg-blue col-xs-2">
+                                    <i></i>
+                                </div>
+                                <div class="col-md-11 title col-xs-10">
+                                    Location
+                                </div>
+                            </div>
+                        </h4>
+                        <div class="row no-margin">
+                            <div class="col-md-9 main col-xs-12">
+                                <div class="map">
+                                    <div id="profile-map-canvas"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 side pull-right hidden-xs">
+                                <div class="row">
+                                    <div class="col-xs-12 bg-withe">
+                                        <header>
+                                            <h4>Childcare near London</h4>
+                                            <span>
+                                                <img src="https://static.yoopies.com/bundles/yoopiescore/img/profile-v4/icon-location.png?1322" height="60px">
+                                            </span>
+                                        </header>
+                                        <div class="content">
+                                            <ul class="list-unstyled">
+                                                <li><a>Watford</a></li>
+                                                <li><a>Orpington</a></li>
+                                                <li><a>Epsom</a></li>
+                                                <li><a>Walton-on-Thames</a></li>
+                                                <li><a>Hatfield</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
