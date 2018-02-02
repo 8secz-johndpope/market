@@ -661,6 +661,10 @@ footer{
         background-color: #eee;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        margin-bottom: -5px;
+        color: #333;
+        padding: 10px;
+        border: none;
     }
     #about-applicant-info h4{
         text-align: center;
