@@ -234,7 +234,7 @@
                                                 <span class="glyphicon glyphicon-ok"></span>
                                             </div>
                                         </div>
-                                        <span>This Applicant has a DBS document, checked by the {{env('APP_NAME')}} Team</span>
+                                        <span>This Applicant has a DBS document, supply by the {{env('APP_NAME')}} Team</span>
                                     </div>
                                 </div>
                                 <p>
@@ -269,14 +269,14 @@
                     <div class="part">
                         <ul class="list-unstyled user-options">
                             <li class="row">
-                                <div class="col-md-5 col-xs-12 xs-no-padding">
+                                <div class="col-md-5 col-sm-5 col-xs-12 xs-no-padding">
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Drivers License
                                         </span>
                                         <span class="col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
                                     </div>
                                 </div>
-                                <div class="col-md-5 col-md-offset-1 col-xs-12">
+                                <div class="col-md-5 col-sm-5 col-md-offset-1 col-xs-12">
                                     <div class="row">
                                         <span class="col-md-9 no-padding col-xs-9">First Aid certificate
                                         </span>
@@ -285,14 +285,14 @@
                                 </div>
                             </li>
                             <li class="row">
-                                <div class="col-md-5 col-xs-12 xs-no-padding">
+                                <div class="col-md-5 col-sm-5 col-xs-12 xs-no-padding">
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Access to a vehicle
                                         </span>
                                         <span class="col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
                                     </div>
                                 </div>
-                                <div class="col-md-5 col-md-offset-1 col-xs-12">
+                                <div class="col-md-5 col-sm-5 col-md-offset-1 col-xs-12">
                                     <div class="row">
                                         <span class="col-md-9 no-padding col-xs-9">Has children
                                         </span>
@@ -301,7 +301,7 @@
                                 </div>
                             </li>
                             <li class="row">
-                                <div class="col-md-5 col-xs-12 xs-no-padding">
+                                <div class="col-md-5 col-sm-5 col-xs-12 xs-no-padding">
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Non smoker
                                         </span>
