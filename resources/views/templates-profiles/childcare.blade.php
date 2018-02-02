@@ -59,12 +59,12 @@
                                 <div class="row mb-20">
                                     <div class="col-xs-12">
                                         <div class="row">
-                                            <button id="about-applicant" type="button" class="btn btn-expandeble col-xs-4 col-xs-offset-4">
+                                            <button id="about-applicant" type="button" class="btn btn-expandeble col-xs-4 col-xs-offset-4" data-toggle="collapse" data-target="#about-applicant-info">
                                                 About Us
                                                 <span class="caret"></span>
                                             </button>
                                         </div>
-                                        <div class="row" id="about-applicant-info">
+                                        <div class="row collapse" id="about-applicant-info">
                                             <div class="col-xs-12">
                                                 <div class="part">
                                                     <ul class="list-unstyled">
