@@ -640,12 +640,16 @@ footer{
     }
     .container-ad-applicant .row{
         margin-left: 0;
-        margin-bottom: 0;
+        margin-right: 0;
     }
     #about-applicant-info{
         margin: 0 -10px;
         padding: 20px 0 0;
         background-color: #eee;
         border-radius: 2px;
+    }
+    .header.container-ad-applicant .ad-applicant-profil-infos h1{
+        color: #397b9d;
+        font-family: Effra-Medium,arial,helvetica,sans-serif;
     }
 }
