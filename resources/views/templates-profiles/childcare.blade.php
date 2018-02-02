@@ -849,12 +849,12 @@
                             </div>
                         </h4>
                         <div class="row no-margin">
-                            <div class="col-md-8 col-md-offset-1 main col-xs-12">
+                            <div class="col-md-8 col-sm-8 col-md-offset-1 main col-xs-12">
                                 <div class="map">
                                     <div id="profile-map-canvas"></div>
                                 </div>
                             </div>
-                            <div class="col-md-3 side pull-right hidden-xs">
+                            <div class="col-md-3 col-sm-4 side pull-right hidden-xs">
                                 <div class="row">
                                     <div class="col-xs-12 bg-white">
                                         <header>
