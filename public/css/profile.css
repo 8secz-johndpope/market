@@ -360,3 +360,19 @@ footer{
     right: 0;
     top: 90px;
 }
+.container-ad-applicant {
+    margin-bottom: 20px;
+}
+.container-ad-applicant:nth-child(odd){
+    background-color: #fff;
+}
+.header.container-ad-applicant{
+    background-color: #fff;
+}
+.header.container-ad-applicant .main{
+    padding: 10px;
+}
+.header.container-ad-applicant .ad-applicant-head .ad-applicant-profil-infos h1{
+    font-size: 18px;
+    color: #323524;
+}
