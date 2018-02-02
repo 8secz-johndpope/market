@@ -697,7 +697,7 @@
         <div class="profile-map container-ad-applicant">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 clearfix col-xs-12">
+                    <div class="clearfix col-xs-12">
                         <h4 class="info-title dimgrey">
                             <div class="row no-margin">
                                 <div class="col-md-1 title-icon bg-blue col-xs-2">
