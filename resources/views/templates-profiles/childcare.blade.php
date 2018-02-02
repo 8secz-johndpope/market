@@ -355,7 +355,7 @@
                     <h4 class="info-title dimgrey">
                         <div class="row no-margin">
                             <div class="col-md-1 title-icon bg-blue col-xs-2">
-                                <i></i>
+                                <i class="fas fa-calendar-alt"></i>
                             </div>
                             <div class="col-md-11 title col-xs-10">
                                 Availability  Anna
@@ -621,7 +621,7 @@
                     <h4 class="info-title dimgrey">
                         <div class="row no-margin">
                             <div class="col-md-1 title-icon bg-blue col-xs-2">
-                                <i></i>
+                                <i class="far fa-check-square"></i>
                             </div>
                             <div class="col-md-11 title col-xs-10">
                                 Tasks that Anna can help with
