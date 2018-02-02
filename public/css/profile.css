@@ -635,4 +635,7 @@ footer{
     .experience.container-ad-applicant .date-text{
         display: inline-block;
     }
+    #profile-map-canvas {
+        height: 200px;
+    }
 }
