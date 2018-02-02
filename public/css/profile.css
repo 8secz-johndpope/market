@@ -517,3 +517,8 @@ footer{
     height: 44px;
     width: 44px;
 }
+.info-title .title {
+    padding: 12px 10px;
+    line-height: 22px;
+    vertical-align: middle;
+}
