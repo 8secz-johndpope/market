@@ -539,6 +539,9 @@ footer{
     text-align: center;
     color: #999;
 }
+.description.container-ad-applicant .part .table-horaire-profile th{
+    text-align: center;
+}
 .description.container-ad-applicant .part .table-horaire-profile tbody>tr> td.selected{
     padding: 5px;
     background-color: #4fb8a3;
