@@ -280,7 +280,186 @@
                                                     <span class="glyphicon glyphicon-ok green"></span>
                                                 </td>
                                                 <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td></tr> <tr><td class="align-left active">10am - 12pm</td> <td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td></tr> <tr><td class="align-left active">12pm - 2pm</td> <td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td></tr> <tr><td class="align-left active">2pm - 4pm</td> <td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td></tr> <tr><td class="align-left active">4pm - 6pm</td> <td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td></tr> <tr><td class="align-left active">6pm - 8pm</td> <td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td></tr> <tr><td class="align-left active">20h / 24h</td> <td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td></tr> <tr><td class="align-left active">Night</td> <td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td><td class="selected"><span class="glyphicon glyphicon-ok green"></span></td></tr>
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="align-left active">10am - 12pm</td> 
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="align-left active">12pm - 2pm</td> 
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="align-left active">2pm - 4pm</td> 
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="align-left active">4pm - 6pm</td> 
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="align-left active">6pm - 8pm</td> 
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="align-left active">20h / 24h</td> 
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="align-left active">Night</td> 
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                                <td class="selected">
+                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
