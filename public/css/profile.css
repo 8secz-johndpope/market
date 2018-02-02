@@ -424,6 +424,9 @@ footer{
 .content.container-ad-applicant .part>ul{
     margin-bottom: 0;
 }
+.content.container-ad-applicant .part>ul li{
+    margin-bottom: 5px;
+}
 .content.container-ad-applicant .part h4{
     margin-top: 0;
     color: #323524;
