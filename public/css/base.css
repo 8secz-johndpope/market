@@ -1087,6 +1087,9 @@ strong{
 .break-word {
     word-wrap: break-word;
 }
+.no-margin {
+    margin: 0!important;
+}
 @media screen and (max-width: 767px){
   .top {
     padding-bottom: 0;

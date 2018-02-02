@@ -66,14 +66,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 clearfix col-xs-12">
-                    <h4 class="info-title dimgrey">Available upon your request, thank you.</h4>
-                    <p class="break-word">Hello and hope my message finds you well.<br> <br>
-                        I am 40 years old West London (Chiswick) based full time available (previously experienced and qualified  medical professional) looking for vacancies to look after children and support parents with essential child minding tasks.<br>
-                        I have number of skills, experiences and knowledge that may be beneficial for tutoring and teaching children too.<br> <br>
-                        I am available upon your request and feel free to contact me directly by email or phone as well.<br> <br>
-                        Many thanks and yours faithfully,<br>
-                        Anna Tilbury
-                    </p>
+                    <div class="row no-margin">
+                        <div class="col-xs-12 content">
+                            <h4 class="info-title dimgrey">Available upon your request, thank you.</h4>
+                            <p class="break-word">Hello and hope my message finds you well.<br> <br>
+                                I am 40 years old West London (Chiswick) based full time available (previously experienced and qualified  medical professional) looking for vacancies to look after children and support parents with essential child minding tasks.<br>
+                                I have number of skills, experiences and knowledge that may be beneficial for tutoring and teaching children too.<br> <br>
+                                I am available upon your request and feel free to contact me directly by email or phone as well.<br> <br>
+                                Many thanks and yours faithfully,<br>
+                                Anna Tilbury
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row hidden-xs">
