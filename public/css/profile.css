@@ -351,7 +351,7 @@ footer{
 }
 .ad-applicant-picture > span{
     font-size: 20px;
-    color: #0095DF;
+    color: #6001d2;
     padding: 10px;
     border: 1px solid #ddd;
     background: #fff;
@@ -396,7 +396,7 @@ footer{
     opacity: .4;
 }
 .header.container-ad-applicant .ad-applicant-services li.available{
-    background-color: #A16BF8;
+    background-color: #6001d2;
     opacity: 1;
 }
 .content.container-ad-applicant{
@@ -438,7 +438,7 @@ footer{
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 .content.container-ad-applicant .part .span-no{
-    background-color: #A16BF8;
+    background-color: #6001d2;
     color: #fff;
     padding: 0 8px;
     border-radius: 5px;
@@ -448,7 +448,7 @@ footer{
     padding: 0 6px;
 }
 .content.container-ad-applicant .part .span-yes{
-    background-color: #A16BF8;
+    background-color: #6001d2;
     color: #fff;
     padding: 0 8px;
     border-radius: 5px;
@@ -468,8 +468,8 @@ footer{
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 10px;
-    background-color: #A16BF8;
-    border-color: #A16BF8;
+    background-color: #6001d2;
+    border-color: #6001d2;
 }
 .content.container-ad-applicant .part .services .service a{
     color: #323524;
@@ -548,7 +548,7 @@ footer{
 }
 .description.container-ad-applicant .part .table-horaire-profile tbody>tr> td.selected{
     padding: 5px;
-    background-color: #4fb8a3;
+    background-color: #6001d2;
 }
 .description.container-ad-applicant .part .table-horaire-profile tbody>tr> td .glyphicon{
     color: #fff;

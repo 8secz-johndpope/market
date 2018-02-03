@@ -191,7 +191,7 @@
                                     <li class="tablinks">
                                         <a href="#tab-driving-license">
                                             <span class="bullet branded"></span>
-                                            Car & Driving :icense
+                                            Car & Driving License
                                         </a>
                                     </li>
                                 </ul>
