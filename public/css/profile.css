@@ -396,7 +396,7 @@ footer{
     opacity: .4;
 }
 .header.container-ad-applicant .ad-applicant-services li.available{
-    background-color: #0095DF;
+    background-color: #A16BF8;
     opacity: 1;
 }
 .content.container-ad-applicant{
@@ -438,7 +438,7 @@ footer{
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 .content.container-ad-applicant .part .span-no{
-    background-color: #0095DF;
+    background-color: #A16BF8;
     color: #fff;
     padding: 0 8px;
     border-radius: 5px;
@@ -448,7 +448,7 @@ footer{
     padding: 0 6px;
 }
 .content.container-ad-applicant .part .span-yes{
-    background-color: #0095DF;
+    background-color: #A16BF8;
     color: #fff;
     padding: 0 8px;
     border-radius: 5px;
@@ -468,8 +468,8 @@ footer{
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 10px;
-    background-color: #0095DF;
-    border-color: #0095DF;
+    background-color: #A16BF8;
+    border-color: #A16BF8;
 }
 .content.container-ad-applicant .part .services .service a{
     color: #323524;
