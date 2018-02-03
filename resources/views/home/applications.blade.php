@@ -40,10 +40,10 @@
                                                 <a class="btn btn-action form-control">Unread Candidates</a>
                                             </div>
                                             <div class="col-sm-4">
-                                                <a class="btn btn-action form-control">Activity</a>
+                                                <a class="btn btn-action form-control" href="/user/manage/templates">Manage Reply Templates</a>
                                             </div>
                                             <div class="col-sm-4">
-                                                <a class="btn btn-action form-control" href="/user/manage/templates">Manage Reply Templates</a>
+                                                <a class="btn btn-action form-control">CV & Profile access</a>
                                             </div>
                                         </div>
                                     </div>
