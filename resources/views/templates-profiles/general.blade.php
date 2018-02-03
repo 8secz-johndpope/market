@@ -201,13 +201,13 @@
                                 <div id="tab-languages" class="tabcontent">
                                     <div class="container-languages">
                                         <div class="row">
-                                            <div class="language-block col-xs-12 col-sm-3">
+                                            <div class="language-block col-xs-12 col-sm-4">
                                                 <strong class="language-name">English</strong>
                                                 ( 
                                                 <span class="language-fluency">Basic</span>
                                                 )
                                             </div>
-                                            <div class="language-block col-xs-12 col-sm-3">
+                                            <div class="language-block col-xs-12 col-sm-4">
                                                 <strong class="language-name">Spanish</strong>
                                                 ( 
                                                 <span class="language-fluency">Fluent</span>
@@ -262,7 +262,24 @@
                                     </li>
                                 </ul>
                                 <div id="tab-job-history" class="tabcontent active-tab">
-                                    
+                                    <div class="experience-container">
+                                        <div class="row work">
+                                            <div class="when col-xs-12 col-sm-3">
+                                                06/2017 - Present
+                                            </div>
+                                            <div class="what col-xs-12 col-sm-9">
+                                                <div class="title">
+                                                    Recruitment Consultant
+                                                </div>
+                                                <div class="company">
+                                                    Explore Group
+                                                </div>
+                                                <div class="description">
+                                                    Recruiter
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div id="tab-skills" class="tab-pane fade">

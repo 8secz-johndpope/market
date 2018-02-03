@@ -737,7 +737,8 @@ footer{
         border-left: 1px solid #d6d6d6;
         padding-left: 30px;
     }
-    .container-qualifications{
-        padding-top: 20px;
-    } 
+    .general-profile .experience-container .work .what {
+        border-left: 1px solid #d6d6d6;
+        padding-left: 30px;
+    }
 }
