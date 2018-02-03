@@ -61,9 +61,10 @@
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#tab-overview">Summary</a></li>
                             <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
-                            <li><a data-toggle="tab" href="#tab-work">Education</a></li>
-                            <li><a data-toggle="tab" href="#tab-contact">Experience</a></li>
-                            <li><a data-toggle="tab" href="#tab-approval">Training & Skills</a></li>
+                            <li><a data-toggle="tab" href="#tab-education">Education</a></li>
+                            <li><a data-toggle="tab" href="#tab-work">Experience</a></li>
+                            <li><a data-toggle="tab" href="#tab-skills">Training & Skills</a></li>
+                            <li><a data-toggle="tab" href="#tab-approval">Approval</a></li>
                             <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
                         </ul>
                         <div class="tab-content">
@@ -201,7 +202,7 @@
                                     <li class="tablinks">
                                         <a href="#tab-what-i-do">
                                             <span class="bullet branded"></span>
-                                            What i do
+                                            Types of Work
                                         </a>
                                     </li>
                                     <li class="tablinks">
@@ -227,7 +228,69 @@
                                     
                                 </div>
                             </div>
+                            <div id="tab-education" class="tab-pane fade">
+                                <ul class="tab-vert">
+                                    <li class="tablinks selected">
+                                        <a href="#tab-portfolio">
+                                            <span class="bullet branded"></span>
+                                            Portfolio
+                                        </a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a href="#tab-publications">
+                                            <span class="bullet branded"></span>
+                                            Publications
+                                        </a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a href="#tab-pictures">
+                                            <span class="bullet branded"></span>
+                                            Pictures
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div id="tab-portfolio" class="tabcontent active-tab">
+                                    
+                                </div>
+                                <div id="tab-publications" class="tabcontent">
+                                    
+                                </div>
+                                <div id="tab-pictures" class="tabcontent">
+                                    
+                                </div>
+                            </div>
                             <div id="tab-work" class="tab-pane fade">
+                                <ul class="tab-vert">
+                                    <li class="tablinks selected">
+                                        <a href="#tab-portfolio">
+                                            <span class="bullet branded"></span>
+                                            Job History
+                                        </a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a href="#tab-publications">
+                                            <span class="bullet branded"></span>
+                                            Resume
+                                        </a>
+                                    </li>
+                                    <li class="tablinks">
+                                        <a href="#tab-pictures">
+                                            <span class="bullet branded"></span>
+                                            Key Skill Set
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div id="tab-portfolio" class="tabcontent active-tab">
+                                    
+                                </div>
+                                <div id="tab-publications" class="tabcontent">
+                                    
+                                </div>
+                                <div id="tab-pictures" class="tabcontent">
+                                    
+                                </div>
+                            </div>
+                            <div id="tab-skills" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
                                         <a href="#tab-portfolio">
@@ -447,7 +510,7 @@
             <div class="row border-outside">
                 <div class="col-sm-12 details-agent website">
                     <a target="_black" href="#">
-                        <h3>Website Link</h3>
+                        <h3>Linkedin Link</h3>
                     </a>
                 </div>
             </div>
