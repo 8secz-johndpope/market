@@ -819,7 +819,7 @@ input[type=checkbox]:checked~label:before {
     position: relative;
 }
 .select-profile{
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 20px;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     color: #000;
