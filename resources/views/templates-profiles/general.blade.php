@@ -59,10 +59,11 @@
                 <div class="col-sm-12">
                     <div id="tabs">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
+                            <li class="active"><a data-toggle="tab" href="#tab-overview">Summary</a></li>
                             <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
-                            <li><a data-toggle="tab" href="#tab-work">Works</a></li>
-                            <li><a data-toggle="tab" href="#tab-approval">Approval</a></li>
+                            <li><a data-toggle="tab" href="#tab-work">Education</a></li>
+                            <li><a data-toggle="tab" href="#tab-contact">Experience</a></li>
+                            <li><a data-toggle="tab" href="#tab-approval">Training & Skills</a></li>
                             <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
                         </ul>
                         <div class="tab-content">
