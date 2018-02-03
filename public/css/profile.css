@@ -621,6 +621,22 @@ footer{
     background-color: hsla(0,0%,50%,.92);
     padding: 0 5px;
 }
+.ad-sidebar-right header h1 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    height: 45px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 400;
+}
+.ad-sidebar-right .ad-sidebar-right-container {
+    padding: 20px 10px 10px;
+    background: #fff;
+    border: 1px solid #dce0e0;
+    border-top: none;
+    margin-bottom: 10px;
+}
 @media (max-width: 767px){
     .ad-applicant-picture{
         position: relative;

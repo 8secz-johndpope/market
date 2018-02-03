@@ -196,7 +196,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5 sidebar hidden-xs">
+                <div class="col-md-4 sidebar hidden-xs">
                     <div class="row">
                         <section id="profile-sidebar" class="ad-sidebar-right col-md-12 affix-top">
                             <header>
