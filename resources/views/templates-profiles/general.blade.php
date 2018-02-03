@@ -16,7 +16,7 @@
 @endsection
 
 @section('content')   
-<div class="background-body body">
+<div class="background-body body general-profile">
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-xs-12">
@@ -214,10 +214,10 @@
                                 <div id="tab-qualification" class="tabcontent active-tab">
                                     <div class="container-qualifications">
                                         <div class="row qualification">
-                                            <div class="when col-sm-3 col-md-2">
+                                            <div class="when col-sm-3">
                                                 2012 - 2016
                                             </div>
-                                            <div class="what col-sm-9 col-md-10">
+                                            <div class="what col-sm-9">
                                                 <div class="typename">
                                                     University degree
                                                 </div>
