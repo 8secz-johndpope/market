@@ -510,7 +510,7 @@
             <div class="row border-outside">
                 <div class="col-sm-12 details-agent website">
                     <a target="_black" href="#">
-                        <h3>Linkedin Link</h3>
+                        <h3>LinkedIn Link</h3>
                     </a>
                 </div>
             </div>
