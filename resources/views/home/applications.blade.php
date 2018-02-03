@@ -36,13 +36,16 @@
                                 <div class="btns-actions-over clearfix">
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <div class="row">
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
+                                                <a class="btn btn-action form-control">Invitations an Application</a>
+                                            </div>
+                                            <div class="col-sm-3">
                                                 <a class="btn btn-action form-control">Unread Candidates</a>
                                             </div>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <a class="btn btn-action form-control" href="/user/manage/templates">Manage Reply Templates</a>
                                             </div>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <a class="btn btn-action form-control">CV & Profile Access</a>
                                             </div>
                                         </div>

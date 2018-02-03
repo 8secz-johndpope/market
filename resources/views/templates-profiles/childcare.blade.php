@@ -22,7 +22,7 @@
     <div class="header container-ad-applicant">
         <div class="container">
             <div class="row">
-                <div class="col-md-7 col-xs-12 main">
+                <div class="col-md-8 col-xs-12 main">
                     <div class="row">
                         <div class="col-sm-3 col-xs-12">
                             <figure class="ad-applicant-picture">
