@@ -183,9 +183,9 @@
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="#tab-resume">
+                                        <a href="#tab-languages">
                                             <span class="bullet branded"></span>
-                                            Resume
+                                            Languages
                                         </a>
                                     </li>
                                 </ul>
@@ -198,10 +198,7 @@
                                         Excellent interpersonal and communication skills.<br>
                                     </p>
                                 </div>
-                                <div id="tab-what-i-do" class="tabcontent">
-                                    
-                                </div>
-                                <div id="tab-resume" class="tabcontent">
+                                <div id="tab-languages" class="tabcontent">
                                     
                                 </div>
                             </div>
@@ -215,7 +212,29 @@
                                     </li>
                                 </ul>
                                 <div id="tab-qualification" class="tabcontent active-tab">
-                                    
+                                    <div class="container-qualifications">
+                                        <div class="row qualification">
+                                            <div class="when col-sm-3 col-md-2">
+                                                2012 - 2016
+                                            </div>
+                                            <div class="what col-sm-9 col-md-10">
+                                                <div class="typename">
+                                                    University degree
+                                                </div>
+                                                <div class="institution">
+                                                    University College London
+                                                </div>
+                                                <div class="qualification-list">
+                                                    <div>
+                                                        <span class="subject-name">Software Engineering</span>
+                                                        <span class="grade-value">
+                                                            <span>(Grade 2:2)</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div id="tab-work" class="tab-pane fade">
