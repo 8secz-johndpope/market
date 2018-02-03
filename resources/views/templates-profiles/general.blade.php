@@ -188,6 +188,12 @@
                                             Languages
                                         </a>
                                     </li>
+                                    <li class="tablinks">
+                                        <a href="#tab-driving-license">
+                                            <span class="bullet branded"></span>
+                                            Car & Driving :icense
+                                        </a>
+                                    </li>
                                 </ul>
                                 <div id="tab-why-me" class="tabcontent active-tab">
                                     <p>
@@ -213,6 +219,22 @@
                                                 <span class="language-fluency">Fluent</span>
                                                 )
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-driving-license" class="tabcontent">
+                                    <div class="driving-row row">
+                                        <div class="license-col col-xs-12 col-md-6">
+                                            <strong>License</strong>
+                                            <p>
+                                                I have a full licence and am eligible to drive in the UK
+                                            </p>
+                                        </div>
+                                        <div class="car-col col-xs-12 col-md-6">
+                                            <strong>Car</strong>
+                                            <p>
+                                                I have a car
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -264,10 +286,10 @@
                                 <div id="tab-job-history" class="tabcontent active-tab">
                                     <div class="experience-container">
                                         <div class="row work">
-                                            <div class="when col-xs-12 col-sm-3">
+                                            <div class="when col-xs-12 col-sm-4">
                                                 06/2017 - Present
                                             </div>
-                                            <div class="what col-xs-12 col-sm-9">
+                                            <div class="what col-xs-12 col-sm-8">
                                                 <div class="title">
                                                     Recruitment Consultant
                                                 </div>
