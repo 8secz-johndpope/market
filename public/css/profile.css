@@ -411,7 +411,8 @@ footer{
 }
 .info-title{
     margin-bottom: 20px;
-    color: #397b9d;
+    /*color: #397b9d;*/
+    color: #000;
 }
 .content.container-ad-applicant .part{
     padding: 20px 0;
