@@ -196,8 +196,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5 hidden-xs">
-
+                <div class="col-md-5 sidebar hidden-xs">
+                    <div class="row">
+                        <section id="profile-sidebar" class="ad-sidebar-right col-md-12 affix-top">
+                            <header>
+                                <h1>Your Profile</h1>
+                            </header>
+                            <div class="ad-sidebar-right-container clearfix">
+                                <a class="btn btn-lg btn-primary" href="/job/profile/edit/social-childcare">Modify your profile</a>
+                                <a class="btn btn-success" href="#">Publish</a>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>

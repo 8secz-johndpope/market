@@ -608,6 +608,19 @@ footer{
     padding-top: 14px;
     padding-bottom: 14px;
 }
+#profile-sidebar{
+    position: absolute;
+}
+.ad-sidebar-right {
+    top: -45px;
+    width: 100%;
+}
+.ad-sidebar-right header {
+    color: #fff;
+    font-size: 15px;
+    background-color: hsla(0,0%,50%,.92);
+    padding: 0 5px;
+}
 @media (max-width: 767px){
     .ad-applicant-picture{
         position: relative;
