@@ -2217,7 +2217,10 @@ class MarketController extends BaseController
     public function profileTemplate(Request $request, $type){
         $profileTypes = ['general', 'social-childcare', 'sub-contractor'];
         $view = "";
-        if($profileTypes[1] == $type){
+        if($profileTypes[0] == $type){
+            $view = 'templates-profiles.general'; 
+        }
+        else if($profileTypes[1] == $type){
             $view = 'templates-profiles.childcare'; 
         }
         else if($profileTypes[2] == $type){
