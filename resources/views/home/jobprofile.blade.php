@@ -124,6 +124,11 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <p>To procced </p>
+                </div>
+            </div>
         </div>
     </section> 
     <section class="container-looking-for-options mb-10">
