@@ -126,7 +126,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <p>To procced </p>
+                    <p>To procced, you must select a profile</p>
                 </div>
             </div>
         </div>
