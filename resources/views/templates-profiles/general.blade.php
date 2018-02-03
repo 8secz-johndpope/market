@@ -199,7 +199,22 @@
                                     </p>
                                 </div>
                                 <div id="tab-languages" class="tabcontent">
-                                    
+                                    <div class="container-languages">
+                                        <div class="row">
+                                            <div class="language-block col-xs-12 col-sm-3">
+                                                <strong class="language-name">English</strong>
+                                                ( 
+                                                <span class="language-fluency">Basic</span>
+                                                )
+                                            </div>
+                                            <div class="language-block col-xs-12 col-sm-3">
+                                                <strong class="language-name">Spanish</strong>
+                                                ( 
+                                                <span class="language-fluency">Fluent</span>
+                                                )
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div id="tab-education" class="tab-pane fade">

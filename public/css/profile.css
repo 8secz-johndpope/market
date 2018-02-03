@@ -731,13 +731,13 @@ footer{
     #about-applicant-info .services {
         text-align: center;
     }
-    .container-qualifications{
-        padding-top: 20px;
-    }
 }
 @media (min-width: 1024px){
     .general-profile .container-qualifications .qualification .what{
         border-left: 1px solid #d6d6d6;
         padding-left: 30px;
+    }
+    .container-qualifications{
+        padding-top: 20px;
     } 
 }
