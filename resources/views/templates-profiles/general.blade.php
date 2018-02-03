@@ -83,12 +83,6 @@
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="#tab-area">
-                                            <span class="bullet branded"></span>
-                                            Areas I cover
-                                        </a>
-                                    </li>
-                                    <li class="tablinks">
                                         <a href="#tab-availibity">
                                             <span class="bullet branded"></span>
                                             My Availability
@@ -168,17 +162,6 @@
                                 </div>
                             </div>
                                 </div>
-                                <div id="tab-area" class="tabcontent">
-                                    <p>
-                                    I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
-                                    <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
-                                    My recent work includes: SaaS & API development in Python, machine learning, systems integration for legacy systems, mobile app and game development, PLC programming with Lua, Twilio, Twitter, Stripe and other API dev, and much more.
-                                    <br>
-                                    My past work includes being technical lead at an academic social network startup, engaging in a broad array of web development with backends in Python, PHP, and C, providing ecommerce solutions, web interfaces for proprietary hardware, desktop software for OSX and Windows, among others.
-                                    <br>
-                                    I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
-                                   </p> 
-                                </div>
                                 <div id="tab-availibity" class="tabcontent">
                                     <p>
                                         Available
@@ -197,12 +180,6 @@
                                         <a href="#tab-why-me">
                                             <span class="bullet branded"></span>
                                             Why me
-                                        </a>
-                                    </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-what-i-do">
-                                            <span class="bullet branded"></span>
-                                            Types of Work
                                         </a>
                                     </li>
                                     <li class="tablinks">
@@ -231,93 +208,48 @@
                             <div id="tab-education" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
-                                        <a href="#tab-portfolio">
+                                        <a href="#tab-qualification">
                                             <span class="bullet branded"></span>
-                                            Portfolio
-                                        </a>
-                                    </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-publications">
-                                            <span class="bullet branded"></span>
-                                            Publications
-                                        </a>
-                                    </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-pictures">
-                                            <span class="bullet branded"></span>
-                                            Pictures
+                                            Qualifications
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="tab-portfolio" class="tabcontent active-tab">
-                                    
-                                </div>
-                                <div id="tab-publications" class="tabcontent">
-                                    
-                                </div>
-                                <div id="tab-pictures" class="tabcontent">
+                                <div id="tab-qualification" class="tabcontent active-tab">
                                     
                                 </div>
                             </div>
                             <div id="tab-work" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
-                                        <a href="#tab-portfolio">
+                                        <a href="#tab-job-history">
                                             <span class="bullet branded"></span>
                                             Job History
                                         </a>
                                     </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-publications">
-                                            <span class="bullet branded"></span>
-                                            Resume
-                                        </a>
-                                    </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-pictures">
-                                            <span class="bullet branded"></span>
-                                            Key Skill Set
-                                        </a>
-                                    </li>
                                 </ul>
-                                <div id="tab-portfolio" class="tabcontent active-tab">
-                                    
-                                </div>
-                                <div id="tab-publications" class="tabcontent">
-                                    
-                                </div>
-                                <div id="tab-pictures" class="tabcontent">
+                                <div id="tab-job-history" class="tabcontent active-tab">
                                     
                                 </div>
                             </div>
                             <div id="tab-skills" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
-                                        <a href="#tab-portfolio">
+                                        <a href="#tab-skills-set">
                                             <span class="bullet branded"></span>
-                                            Portfolio
+                                            Skills
                                         </a>
                                     </li>
                                     <li class="tablinks">
-                                        <a href="#tab-publications">
+                                        <a href="#tab-training">
                                             <span class="bullet branded"></span>
-                                            Publications
-                                        </a>
-                                    </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-pictures">
-                                            <span class="bullet branded"></span>
-                                            Pictures
+                                            Training
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="tab-portfolio" class="tabcontent active-tab">
+                                <div id="tab-skills-set" class="tabcontent active-tab">
                                     
                                 </div>
-                                <div id="tab-publications" class="tabcontent">
-                                    
-                                </div>
-                                <div id="tab-pictures" class="tabcontent">
+                                <div id="tab-training" class="tabcontent">
                                     
                                 </div>
                             </div>
@@ -328,24 +260,8 @@
                                             <span class="bullet branded"></span>Verified by {{env('APP_NAME')}}
                                         </a>
                                     </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-reviews">
-                                            <span class="bullet branded"></span>Reviews & Ratings
-                                        </a>
-                                    </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-recommendations">
-                                            <span class="bullet branded"></span>Recommendations
-                                        </a>
-                                    </li>
                                 </ul>
                                 <div id="tab-verified" class="tabcontent active-tab">
-                                    
-                                </div>
-                                <div id="tab-reviews" class="tabcontent">
-                                    
-                                </div>
-                                <div id="tab-recommendations" class="tabcontent">
                                     
                                 </div>
                             </div>
@@ -359,11 +275,6 @@
                                      <li class="tablinks">
                                         <a href="#tab-req-application">
                                             <span class="bullet branded"></span>Request my application
-                                        </a>
-                                    </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-charge">
-                                            <span class="bullet branded"></span>Charges
                                         </a>
                                     </li>
                                     <li class="tablinks">
@@ -453,31 +364,6 @@
                                             </div>
                                             <a class="btn submit-offer" href="#" data-url="">Review offer</a>
                                         </form>
-                                    </div>
-                                </div>
-                                <div id="tab-charge" class="tabcontent">
-                                    <h3>Charges</h3>
-                                    <div>
-                                        <ul>
-                                            <li>
-                                                <div class="charge-item">
-                                                    <h4>Website design</h4>
-                                                    <span class="price-charge">£25.00 /hr</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="charge-item">
-                                                    <h4> </h4>
-                                                    <span class="price-charge"></span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="charge-item">
-                                                    <h4></h4>
-                                                    <span class="price-charge"></span>
-                                                </div>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                                 <div id="tab-req-application" class="tabcontent">
