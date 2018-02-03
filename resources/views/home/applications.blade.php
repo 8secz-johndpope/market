@@ -43,7 +43,7 @@
                                                 <a class="btn btn-action form-control" href="/user/manage/templates">Manage Reply Templates</a>
                                             </div>
                                             <div class="col-sm-4">
-                                                <a class="btn btn-action form-control">CV & Profile access</a>
+                                                <a class="btn btn-action form-control">CV & Profile Access</a>
                                             </div>
                                         </div>
                                     </div>
