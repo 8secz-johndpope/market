@@ -437,7 +437,7 @@ footer{
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
 .content.container-ad-applicant .part .span-no{
-    background-color: #4fb8a3;
+    background-color: #0095DF;
     color: #fff;
     padding: 0 8px;
     border-radius: 5px;
@@ -447,7 +447,7 @@ footer{
     padding: 0 6px;
 }
 .content.container-ad-applicant .part .span-yes{
-    background-color: #4fb8a3;
+    background-color: #0095DF;
     color: #fff;
     padding: 0 8px;
     border-radius: 5px;
@@ -467,8 +467,8 @@ footer{
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 10px;
-    background-color: #4fb8a3;
-    border-color: #4fb8a3;
+    background-color: #0095DF;
+    border-color: #0095DF;
 }
 .content.container-ad-applicant .part .services .service a{
     color: #323524;
