@@ -666,6 +666,10 @@ span.email-icon img {
     .job-container-bg .ctas{
         padding: 0 15px;
     }
+    .col-xs-12{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
