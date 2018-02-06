@@ -43,6 +43,10 @@ h2.item-name, .jobs-apply h2, .field h2 {
 .job-container-bg .btn-success{
     width: 250px!important;
     margin: 0 15px;
+    font-size: 11px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 .field {
     margin-bottom: 12px;
@@ -647,6 +651,9 @@ span.email-icon img {
 	}
     .job-container-bg h1{
         font-size: 20px;
+    }
+    .job-container-bg .ctas{
+        padding: 0 15px;
     }
 }
 @media screen and (min-width: 768px){

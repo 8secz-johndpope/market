@@ -41,7 +41,7 @@
                     @endif
                 </div>
             </div>
-            <div class="row hidden-xs">
+            <div class="row">
                 <div class="col-xs-12">
                     <div class="bg-image" id="bg-image">
                         <h1>{{$product['title']}}</h1>
