@@ -380,16 +380,16 @@
                                 @else
                                 <div class="col-xs-12">
                                     <div class="row apply-buttons">
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-cv" data-parent="#tab-apply">Apply with CV</a>
                                         </div>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-scv" data-parent="#tab-apply">Apply with {{env('APP_NAME')}} CV</a>
                                         </div>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-profile" data-parent="#tab-apply">Apply with {{env('APP_NAME')}} Profile</a>
                                         </div>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-6">
                                             <a class="btn btn-apply" data-parent="#tab-apply">Apply with LinkedIn</a>
                                         </div>
                                     </div>
