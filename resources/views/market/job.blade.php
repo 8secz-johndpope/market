@@ -103,6 +103,40 @@
     </div>
     <div class="row">
         <div class="col-md-2">
+            <div class="metadata-location">
+                <h3 class="hidden-xs">About This Job</h3>
+                <div class="metadata metadata-list">
+                    <h4 class="metadata-list-header">Location</h4>
+                    <ul class="metadata-list-items">
+                        <li>
+                            <a href="/jobs/{{$product['location_name']}}">{{$product['location_name']}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden-xs">
+                <div class="job-side-section sidebar-content">
+                    <h3>Usefull Links</h3>
+                    <ul class="useful-link">
+                        <li>
+                            <a href="/{{$category->slug}}">Back to All Jobs</a>
+                        </li>
+                        <li>
+                            <a href="/jobs">See All Lastest Jobs</a>
+                        </li>
+                        <li>
+                            @if(isset($advert->user->business))
+                            <a>See all {{$advert->user->business->name}} Jobs</a>
+                            @else
+                            <a>See all {{$advert->user->name}} Jobs</a>
+                            @endif
+                        </li>
+                        <li>
+                            <a href="/{{$product['location_name']}}">See all Jobs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="col-md-7 col-sm-12">
                 @if(count($product['images']) > 0)
