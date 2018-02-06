@@ -646,9 +646,9 @@
                                         <div class="row no-margin">
                                             <div class="col-md-2 no-padding col-xs-3">
                                                 <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star-full rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star-full rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star-full rating-star-empty"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
                                                 </div>
                                             </div>
                                             <div class="service-text col-md-10 col-xs-9">
