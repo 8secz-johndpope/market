@@ -659,7 +659,11 @@
                                     <div class="col-md-6 no-padding col-xs-12">
                                         <div class="row no-margin">
                                             <div class="col-md-2 no-padding col-xs-3">
-                                                
+                                                <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                             </div>
                                             <div class="service-text col-md-10 col-xs-9">
                                                 <p class="littlep">Ironing</p>
@@ -671,7 +675,11 @@
                                     <div class="col-md-6 no-padding col-xs-12">
                                         <div class="row no-margin">
                                             <div class="col-md-2 no-padding col-xs-3">
-                                                
+                                                <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                             </div>
                                             <div class="service-text col-md-10 col-xs-9">
                                                 <p class="littlep">Help with homework</p>
@@ -681,7 +689,11 @@
                                     <div class="col-md-6 no-padding col-xs-12">
                                         <div class="row no-margin">
                                             <div class="col-md-2 no-padding col-xs-3">
-                                                
+                                                <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                             </div>
                                             <div class="service-text col-md-10 col-xs-9">
                                                 <p class="littlep">Housework</p>
@@ -693,7 +705,11 @@
                                         <div class="col-md-6 no-padding col-xs-12">
                                             <div class="row no-margin">
                                                 <div class="col-md-2 no-padding col-xs-3">
-                                                    
+                                                    <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                                 </div>
                                                 <div class="service-text col-md-10 col-xs-9">
                                                     <p class="littlep">Wedding Day supervision</p>
@@ -703,7 +719,11 @@
                                         <div class="col-md-6 no-padding col-xs-12">
                                             <div class="row no-margin">
                                                 <div class="col-md-2 no-padding col-xs-3">
-                                                    
+                                                    <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                                 </div>
                                                 <div class="service-text col-md-10 col-xs-9">
                                                     <p class="littlep">Newborn (under  6 months)</p>
@@ -715,7 +735,11 @@
                                         <div class="col-md-6 no-padding col-xs-12">
                                             <div class="row no-margin">
                                                 <div class="col-md-2 no-padding col-xs-3">
-                                                    
+                                                    <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                                 </div>
                                                 <div class="service-text col-md-10 col-xs-9">
                                                     <p class="littlep">Infant (6 months to 2 years)</p>
@@ -725,7 +749,11 @@
                                         <div class="col-md-6 no-padding col-xs-12">
                                             <div class="row no-margin">
                                                 <div class="col-md-2 no-padding col-xs-3">
-                                                    
+                                                    <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                                 </div>
                                                 <div class="service-text col-md-10 col-xs-9">
                                                     <p class="littlep">Toddlers (2 to 6 years)</p>
@@ -737,7 +765,11 @@
                                         <div class="col-md-6 no-padding col-xs-12">
                                             <div class="row no-margin">
                                                 <div class="col-md-2 no-padding col-xs-3">
-                                                    
+                                                    <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                                 </div>
                                                 <div class="service-text col-md-10 col-xs-9">
                                                     <p class="littlep">School Aged Children (6 years and up)</p>
@@ -747,7 +779,11 @@
                                         <div class="col-md-6 no-padding col-xs-12">
                                             <div class="row no-margin">
                                                 <div class="col-md-2 no-padding col-xs-3">
-                                                    
+                                                    <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                                 </div>
                                                 <div class="service-text col-md-10 col-xs-9">
                                                     <p class="littlep">Pet help</p>
@@ -759,7 +795,11 @@
                                         <div class="col-md-6 no-padding col-xs-12">
                                             <div class="row no-margin">
                                                 <div class="col-md-2 no-padding col-xs-3">
-                                                    
+                                                    <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                                 </div>
                                                 <div class="service-text col-md-10 col-xs-9">
                                                     <p class="littlep">Children with disabilities</p>
@@ -769,7 +809,11 @@
                                         <div class="col-md-6 no-padding col-xs-12">
                                             <div class="row no-margin">
                                                 <div class="col-md-2 no-padding col-xs-3">
-                                                    
+                                                    <div class="ui-rating">
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                </div>
                                                 </div>
                                                 <div class="service-text col-md-10 col-xs-9">
                                                     <p class="littlep">Sick children</p>
