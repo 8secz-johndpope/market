@@ -674,6 +674,12 @@ span.email-icon img {
         padding-left: 15px;
         padding-right: 15px;
     }
+    .btn-apply{
+        height: auto;
+    }
+    .col-sm-3:not(:last-child) a {
+        margin-bottom: 15px;
+    }
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
