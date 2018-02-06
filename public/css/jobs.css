@@ -687,6 +687,9 @@ span.email-icon img {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
+    .job-container-bg h1{
+        font-size: 20px;
+    }
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
