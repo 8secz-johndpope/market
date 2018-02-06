@@ -464,10 +464,9 @@ span.email-icon img {
     font-size: 15px;
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-    border-top: 2px solid #ff9d2c;
+    border-left: 2px solid #ff9d2c;
     background: #fff;
     color: #ff9d2c;
-
 }
 .btn-default, .btn-advertiser{
   color: #fff;
