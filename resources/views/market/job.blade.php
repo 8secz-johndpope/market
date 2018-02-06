@@ -102,7 +102,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 col-sm-12">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6 col-sm-12">
                 @if(count($product['images']) > 0)
                 <div id="current-image">
                     <img id="image-active" data-index="1" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" class="gallery-items">
@@ -164,18 +166,12 @@
                         <a href="/download-mobile-apps/" class="btn btn-default">VideoCall</a>
                     </div>
                 </div>
-                @else
-                <div class="map-main">
-                    <div id="map"></div>
-                </div>
                 @endif
                 <div class="">
                     <div id="tabs">
                     <ul class="nav nav-tabs hidden-xs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
-                        @if(count($product['images']) > 0)
-                            <li><a data-toggle="tab" href="#tab-map">Map & Street View</a></li>
-                        @endif
+                        <li><a data-toggle="tab" href="#tab-map">Map & Street View</a></li>
                         <li><a data-toggle="tab" href="#tab-apply">Apply</a></li>
                     </ul>
                     <ul class="nav nav-pills nav-stacked visible-xs">
@@ -483,7 +479,7 @@
                     </p>
                 </div>
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-3 col-sm-12">
             <!-- search -->
             <div class="row">
                 @if($advert->user!==null)
