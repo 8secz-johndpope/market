@@ -654,6 +654,11 @@ footer{
 .ui-rating .rating-star-empty {
     background-image: url('/css/empty-star.png');
 }
+.ui-rating {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 0;
+}
 @media (max-width: 767px){
     .ad-applicant-picture{
         position: relative;
