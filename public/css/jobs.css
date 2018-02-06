@@ -621,7 +621,7 @@ span.email-icon img {
     	margin-left: 0;
     	margin-right: 0;
     }
-    .bottom-buttons a:not(:last-child){
+    .bottom-buttons .col-md-3:not(:last-child) a{
     	margin-bottom: 15px;
     }
     .border-bottom{
