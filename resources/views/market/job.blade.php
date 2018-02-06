@@ -153,7 +153,7 @@
                         </li>
                         @if(isset($advert->user))
                         <li>
-                            <a href="/userads/{{$avert->user->id}}">
+                            <a href="/userads/{{$advert->user->id}}">
                                 <i class="fa fa-chevron-left"></i>
                                 @if(isset($advert->user->business))
                                 See all {{$advert->user->business->name}} Jobs
