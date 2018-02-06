@@ -9,9 +9,12 @@
 
     <p>This is appended to the master sidebar.</p>
 @endsection
-
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
 @section('content')
-<link href="{{ asset('/css/jobs.css?q=874') }}" rel="stylesheet">
+<link href="{{ asset("/css/jobs.css?q=$dateMs") }}" rel="stylesheet">
 <script src="/js/imageviewer.min.js"></script>
 <script src="/js/carousel.js"></script>
 <div class="background-body">

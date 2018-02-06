@@ -7,8 +7,12 @@
 
     <p>This is appended to the master sidebar.</p>
 @endsection
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
 @section('styles')
-<link href="{{ asset('/css/download.css?q=874') }}" rel="stylesheet">
+<link href="{{ asset("/css/download.css?q=$dateMs") }}" rel="stylesheet">
 <link rel="stylesheet" href="/build/css/intlTelInput.css">
 @endsection
 
