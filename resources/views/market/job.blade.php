@@ -938,66 +938,6 @@
                 </div>
             </div>
         </div>
-        <div class="visible-xs visible-sm">
-            <div class="col-sm-8 col-xs-12">
-                <div class="hidden-xs hidden-sm">
-                    <div class="job-side-section sidebar-content">
-                        <h3>Get Alerts</h3>
-                        <ul class="useful-links">
-                            <li>
-                                <a href="/user/create/alert/{{$category->id}}?id=0">
-                                    <i class="fa fa-chevron-left"></i>
-                                    Email Alert
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/download-mobile-apps/">
-                                    <i class="fa fa-chevron-left"></i>
-                                    Mobile Alert
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="hidden-xs hidden-sm">
-                    <div class="job-side-section sidebar-content">
-                        <h3>Usefull Links</h3>
-                        <ul class="useful-links">
-                            <li>
-                                <a href="/{{$category->slug}}">
-                                    <i class="fa fa-chevron-left"></i>
-                                    Back to All Jobs
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/jobs">
-                                    <i class="fa fa-chevron-left"></i>
-                                    See All Lastest Jobs
-                                </a>
-                            </li>
-                            @if(isset($advert->user))
-                            <li>
-                                <a href="/userads/{{$advert->user->id}}">
-                                    <i class="fa fa-chevron-left"></i>
-                                    @if(isset($advert->user->business))
-                                    See all {{$advert->user->business->name}} Jobs
-                                    @else
-                                    See all {{$advert->user->name}} Jobs
-                                    @endif
-                                </a>
-                            </li>
-                            @endif
-                            <li>
-                                <a href="/jobs/{{$product['location_name']}}">
-                                    <i class="fa fa-chevron-left"></i>
-                                    See all {{$product['location_name']}} Jobs
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 </div>
