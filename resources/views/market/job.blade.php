@@ -391,12 +391,19 @@
                                         <div class="col-sm-6">
                                             <a class="btn btn-apply" data-parent="#tab-apply">Apply with your LinkedIn</a>
                                         </div>
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-6">
                                             <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-profile" data-parent="#tab-apply">Apply with your {{env('APP_NAME')}} Profile</a>
                                         </div>
-                                        <!-- <div class="col-sm-6">
+                                        <div class="col-sm-6">
                                             <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-scv" data-parent="#tab-apply">Apply with your {{env('APP_NAME')}} CV</a>
-                                        </div> -->
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <span class="h3">
+                                                No CV ? - Create New CV - CV Builder by {{env('APP_NAME')}}
+                                            </span>
+                                            <br>
+                                            <a class="btn btn-build-cv" data-toggle="collapse" href="#apply-with-scv" data-parent="#tab-apply">CV Builder by {{env('APP_NAME')}}</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 background-color collapse" id="apply-with-cv">
@@ -462,7 +469,7 @@
                                         <div class="row">
                                             <div class="col-xs-12">
                                                 <span class="h3">Create New CV - CV Builder by {{env('APP_NAME')}}</span>
-                                                <a href="/user/cv-builder/personal-details" class="btn btn-apply">CV Builder by Sumra</a>
+                                                <a href="/user/cv-builder/personal-details" class="btn btn-apply">CV Builder by {{env('APP_NAME')}}</a>
                                             </div>
                                         </div>
                                         <div class="row">
