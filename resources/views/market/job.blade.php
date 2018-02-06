@@ -399,10 +399,10 @@
                                         </div>
                                         <div class="col-sm-12">
                                             <span class="h3">
-                                                No CV ? - Create New CV - CV Builder by {{env('APP_NAME')}}
+                                                No CV ?
                                             </span>
                                             <br>
-                                            <a class="btn btn-build-cv" data-toggle="collapse" href="#apply-with-scv" data-parent="#tab-apply">CV Builder by {{env('APP_NAME')}}</a>
+                                            <a class="btn btn-build-cv" data-toggle="collapse" href="#apply-with-scv" data-parent="#tab-apply"> Create New CV - CV Builder by {{env('APP_NAME')}}</a>
                                         </div>
                                     </div>
                                 </div>
