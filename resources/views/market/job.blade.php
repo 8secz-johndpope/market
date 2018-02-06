@@ -1015,6 +1015,9 @@
         $('.collapse').collapse('hide');
         //$(this).collapse('toggle');
     });
+    $('.btn-apply').click(function(){
+        $('.nav-tabs a[href="#tab-apply"]').tab('show');
+    });
     $('a[href="#tab-map"]').on('shown.bs.tab', function () {
         x = map.getZoom();
         c = map.getCenter();
