@@ -523,6 +523,11 @@ span.email-icon img {
 .sidebar-content .useful-links {
     margin: 20px 0 30px;
 }
+.sidebar-content .useful-links li {
+    margin: 10px 0;
+    padding: 0;
+    list-style-type: none;
+}
 @media screen and (max-width: 767px){
 	.form-group {
     	padding: 15px 0;

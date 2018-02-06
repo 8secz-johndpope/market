@@ -119,7 +119,10 @@
                     <h3>Usefull Links</h3>
                     <ul class="useful-link">
                         <li>
-                            <a href="/{{$category->slug}}">Back to All Jobs</a>
+                            <a href="/{{$category->slug}}">
+                                <i class="fa fa-chevron-left"></i>
+                                Back to All Jobs
+                            </a>
                         </li>
                         <li>
                             <a href="/jobs">See All Lastest Jobs</a>
