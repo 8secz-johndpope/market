@@ -396,7 +396,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-sm-12 background-color" style="display: none;" id="apply-with-cv">
+                                <div class="col-md-12 col-sm-12 background-color collapse" id="apply-with-cv">
                                     <form action="/user/jobs/apply" method="post">
                                     <input name="redirect" type="hidden" value="{{$advert->url()}}">
                                     <input name="id" type="hidden" value="{{$advert->id}}">
