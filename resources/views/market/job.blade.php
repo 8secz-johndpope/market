@@ -557,64 +557,6 @@
                         <small>Remember: You should never send cash or cheques to a prospective employer, or provide your bank details or any other financial information. We pay great attention to vetting all jobs that appear on our site, but please get in touch if you see any roles asking for such payments or financial details from you.</small>
                     </p>
                 </div>
-                <div class="col-sm-12">
-                    <div class="hidden-xs hidden-sm">
-                        <div class="job-side-section sidebar-content">
-                            <h3>Get Alerts</h3>
-                            <ul class="useful-links">
-                                <li>
-                                    <a href="/user/create/alert/{{$category->id}}?id=0">
-                                        <i class="fa fa-chevron-left"></i>
-                                        Email Alert
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/download-mobile-apps/">
-                                        <i class="fa fa-chevron-left"></i>
-                                        Mobile Alert
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="hidden-xs hidden-sm">
-                        <div class="job-side-section sidebar-content">
-                            <h3>Usefull Links</h3>
-                            <ul class="useful-links">
-                                <li>
-                                    <a href="/{{$category->slug}}">
-                                        <i class="fa fa-chevron-left"></i>
-                                        Back to All Jobs
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/jobs">
-                                        <i class="fa fa-chevron-left"></i>
-                                        See All Lastest Jobs
-                                    </a>
-                                </li>
-                                @if(isset($advert->user))
-                                <li>
-                                    <a href="/userads/{{$advert->user->id}}">
-                                        <i class="fa fa-chevron-left"></i>
-                                        @if(isset($advert->user->business))
-                                        See all {{$advert->user->business->name}} Jobs
-                                        @else
-                                        See all {{$advert->user->name}} Jobs
-                                        @endif
-                                    </a>
-                                </li>
-                                @endif
-                                <li>
-                                    <a href="/jobs/{{$product['location_name']}}">
-                                        <i class="fa fa-chevron-left"></i>
-                                        See all {{$product['location_name']}} Jobs
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
         </div>
         <div class="col-md-3 col-sm-4 col-sm-12">
             <!-- search -->
@@ -743,6 +685,66 @@
                             </div>
                         </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="visible-xs visible-sm">
+            <div class="col-sm-8 col-xs-12">
+                <div class="hidden-xs hidden-sm">
+                    <div class="job-side-section sidebar-content">
+                        <h3>Get Alerts</h3>
+                        <ul class="useful-links">
+                            <li>
+                                <a href="/user/create/alert/{{$category->id}}?id=0">
+                                    <i class="fa fa-chevron-left"></i>
+                                    Email Alert
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/download-mobile-apps/">
+                                    <i class="fa fa-chevron-left"></i>
+                                    Mobile Alert
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm">
+                    <div class="job-side-section sidebar-content">
+                        <h3>Usefull Links</h3>
+                        <ul class="useful-links">
+                            <li>
+                                <a href="/{{$category->slug}}">
+                                    <i class="fa fa-chevron-left"></i>
+                                    Back to All Jobs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/jobs">
+                                    <i class="fa fa-chevron-left"></i>
+                                    See All Lastest Jobs
+                                </a>
+                            </li>
+                            @if(isset($advert->user))
+                            <li>
+                                <a href="/userads/{{$advert->user->id}}">
+                                    <i class="fa fa-chevron-left"></i>
+                                    @if(isset($advert->user->business))
+                                    See all {{$advert->user->business->name}} Jobs
+                                    @else
+                                    See all {{$advert->user->name}} Jobs
+                                    @endif
+                                </a>
+                            </li>
+                            @endif
+                            <li>
+                                <a href="/jobs/{{$product['location_name']}}">
+                                    <i class="fa fa-chevron-left"></i>
+                                    See all {{$product['location_name']}} Jobs
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
