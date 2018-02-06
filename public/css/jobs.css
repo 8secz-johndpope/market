@@ -638,6 +638,9 @@ span.email-icon img {
     color: #fff;
     background-color: #f87964;
 }
+.job-container-bg .btn-apply{
+    width: auto;
+}
 @media (max-width: 991px){
     .job-container-bg h1{
         margin: 30px auto;
