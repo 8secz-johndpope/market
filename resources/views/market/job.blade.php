@@ -1004,7 +1004,7 @@
 <script>
     $('.collapse').on('show.bs.collapse', function(){
         $('.collapse').collapse('hide');
-        $(this).collapse('toggle');
+        //$(this).collapse('toggle');
     });
     $('a[href="#tab-map"]').on('shown.bs.tab', function () {
         x = map.getZoom();
