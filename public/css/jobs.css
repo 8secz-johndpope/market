@@ -37,6 +37,9 @@ h2.item-name, .jobs-apply h2, .field h2 {
     color: #fff;
     text-shadow: 2px 2px 10px #333;
 }
+.job-container-bg a{
+    color: #fff;
+}
 .field {
     margin-bottom: 12px;
 }
