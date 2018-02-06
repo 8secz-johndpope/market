@@ -16,30 +16,31 @@
 <script src="/js/carousel.js"></script>
 <div class="background-body">
     <div class="container">
-        <div class="row">
-            <div class="col-md-2 col-sm-3 col-xs-6 back">
-                <a class="" href="/{{$category->slug}}">< Back to search</a>
-            </div>
-            <div class="col-md-8 col-sm-6 hidden-xs">
-                <ol class="breadcrumb">
-                    @foreach($parents as $parent)
-                    <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
-                    @endforeach
-                    <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
-                </ol>
-            </div>
-            <div class="col-md-2 col-sm-3 col-xs-6 prev-next">
-                @if(isset($prevAdvert))
-                    <a href="/p/{{$category->id}}/{{$prevAdvert->id}}"> < Prev</a>
-                @endif
-                @if(isset($nextAdvert))
-                    <a href="/p/{{$category->id}}/{{$nextAdvert->id}}"> Next > </a>
-                @endif
-            </div>
-        </div>
+        
     </div>
     <div class="job-container-bg">
         <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-6 back">
+                    <a class="" href="/{{$category->slug}}">< Back to search</a>
+                </div>
+                <div class="col-md-8 col-sm-6 hidden-xs">
+                    <ol class="breadcrumb">
+                        @foreach($parents as $parent)
+                        <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
+                        @endforeach
+                        <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
+                    </ol>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6 prev-next">
+                    @if(isset($prevAdvert))
+                        <a href="/p/{{$category->id}}/{{$prevAdvert->id}}"> < Prev</a>
+                    @endif
+                    @if(isset($nextAdvert))
+                        <a href="/p/{{$category->id}}/{{$nextAdvert->id}}"> Next > </a>
+                    @endif
+                </div>
+            </div>
             <div class="row hidden-xs">
                 <div class="col-xs-12">
                     <div class="bg-image" id="bg-image">

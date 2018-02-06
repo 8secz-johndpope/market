@@ -17,7 +17,10 @@ h2.item-name, .jobs-apply h2, .field h2 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 50px 0;
+    padding: 0 0 50px 0;
+}
+.bg-image{
+    margin-top: 50px;
 }
 .job-container-bg h1{
     max-width: 800px;
