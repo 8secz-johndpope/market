@@ -734,7 +734,7 @@
                                             </div>
                                         </div>
                                         @endif
-                                        @if(count(Auth::user()->profile)>0)
+                                        @if(isset(Auth::user()->profile) && count(Auth::user()->profile)>0)
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="field">
