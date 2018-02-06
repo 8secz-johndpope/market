@@ -389,10 +389,10 @@
                                             <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-scv">Apply with {{env('APP_NAME')}} CV</a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a class="btn btn-apply">Apply with {{env('APP_NAME')}} Profile</a>
+                                            <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-profile">Apply with {{env('APP_NAME')}} Profile</a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-profile">Apply with LinkedIn</a>
+                                            <a class="btn btn-apply" >Apply with LinkedIn</a>
                                         </div>
                                     </div>
                                 </div>
@@ -744,6 +744,9 @@
                                                     <select class="form-control" name="cv" required id="selected-cv">
                                                         <option value="0">Select</option>
                                                         @foreach(Auth::user()->profile as $profile)
+                                                            @php
+                                                            var_dump($profile)
+                                                            @endphp
                                                             <option value="1">1</option>
                                                         @endforeach
                                                     </select> 
