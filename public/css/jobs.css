@@ -680,6 +680,13 @@ span.email-icon img {
     .col-sm-3:not(:last-child) a {
         margin-bottom: 15px;
     }
+    .nav-pills>li:not(:first-child)>a {
+        border-radius: 0;
+    }
+    .nav-pills>li:first-child{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 @media screen and (min-width: 768px){
 	.job-criteria {
