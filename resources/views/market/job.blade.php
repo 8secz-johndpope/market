@@ -380,7 +380,23 @@
                                     </div>
                                 </div>
                                 @else
-                                <div class="col-md-12 col-sm-12 background-color">
+                                <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <a class="btn">Apply with CV</a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a class="btn">Apply with {{env('APP_NAME')}} CV</a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a class="btn">Apply with {{env('APP_NAME')}} Profile</a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a class="btn">Apply with LinkedIn</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 background-color" style="display: none;">
                                     <form action="/user/jobs/apply" method="post">
                                     <input name="redirect" type="hidden" value="{{$advert->url()}}">
                                     <input name="id" type="hidden" value="{{$advert->id}}">
