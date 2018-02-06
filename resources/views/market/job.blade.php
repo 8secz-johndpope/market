@@ -24,7 +24,7 @@
                 <div class="col-md-2 col-sm-3 col-xs-6 back">
                     <a class="" href="/{{$category->slug}}">< Back to search</a>
                 </div>
-                <div class="col-md-8 col-sm-6 hidden-xs">
+                <div class="col-md-8 col-sm-6 hidden-sm hidden-xs">
                     <ol class="breadcrumb">
                         @foreach($parents as $parent)
                         <li class="breadcrumb-item"><a href="/{{$parent->slug}}">{{$parent->title}}</a></li>
