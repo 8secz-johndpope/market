@@ -481,9 +481,10 @@ span.email-icon img {
   color:#fff;
   background-color: #000;
   border-color: #000;
-  padding-left: 35px;
-  padding-right: 35px;
   font-size: 13px;
+  display: block;
+  text-align: center;
+  padding: 0;
 }
 .favroite-icon:before {
     width: 20px;
