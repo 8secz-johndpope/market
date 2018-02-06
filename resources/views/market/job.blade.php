@@ -744,7 +744,7 @@
                                                     <select class="form-control" name="cv" required id="selected-cv">
                                                         <option value="0">Select</option>
                                                         @foreach(Auth::user()->profile as $profile)
-                                                            <option value="{{$profile->id}}">{{$profile->id}}</option>
+                                                            <option value="1">1</option>
                                                         @endforeach
                                                     </select> 
                                                 </div>     
