@@ -383,7 +383,7 @@
                                 <div class="col-xs-12">
                                     <div class="row apply-buttons">
                                         <div class="col-sm-3">
-                                            <a class="btn btn-apply">Apply with CV</a>
+                                            <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-cv">Apply with CV</a>
                                         </div>
                                         <div class="col-sm-3">
                                             <a class="btn btn-apply">Apply with {{env('APP_NAME')}} CV</a>
@@ -396,7 +396,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-sm-12 background-color" style="display: none;">
+                                <div class="col-md-12 col-sm-12 background-color" style="display: none;" id="apply-with-cv">
                                     <form action="/user/jobs/apply" method="post">
                                     <input name="redirect" type="hidden" value="{{$advert->url()}}">
                                     <input name="id" type="hidden" value="{{$advert->id}}">
