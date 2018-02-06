@@ -10,7 +10,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     margin: 0;
 }
 .job-container-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(https://assets.themuse.com/uploaded/companies/1452/module_offices/145/6edf5974-c686-42c9-b06e-d23a4c3acd60.jpg?v=None);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(/css/job1-bg.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
