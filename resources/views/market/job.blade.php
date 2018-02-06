@@ -125,17 +125,26 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/jobs">See All Lastest Jobs</a>
+                            <a href="/jobs">
+                                <i class="fa fa-chevron-left"></i>
+                                See All Lastest Jobs
+                            </a>
                         </li>
                         <li>
-                            @if(isset($advert->user->business))
-                            <a>See all {{$advert->user->business->name}} Jobs</a>
-                            @else
-                            <a>See all {{$advert->user->name}} Jobs</a>
-                            @endif
+                            <a>
+                                <i class="fa fa-chevron-left"></i>
+                                @if(isset($advert->user->business))
+                                See all {{$advert->user->business->name}} Jobs
+                                @else
+                                See all {{$advert->user->name}} Jobs
+                                @endif
+                            </a>
                         </li>
                         <li>
-                            <a href="/jobs/{{$product['location_name']}}">See all {{$product['location_name']}} Jobs</a>
+                            <a href="/jobs/{{$product['location_name']}}">
+                                <i class="fa fa-chevron-left"></i>
+                                See all {{$product['location_name']}} Jobs
+                            </a>
                         </li>
                     </ul>
                 </div>

@@ -495,7 +495,7 @@ span.email-icon img {
 }
 .sidebar-content {
     position: relative;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     font-weight: 400;
     font-style: normal;
     text-rendering: optimizeLegibility;
@@ -527,6 +527,29 @@ span.email-icon img {
     margin: 10px 0;
     padding: 0;
     list-style-type: none;
+}
+.sidebar-content .useful-links i {
+    width: 20px;
+}
+.sidebar-content .useful-links a {
+    display: block;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 14px;
+    color: #666;
+}
+.metadata-list .metadata-list-header {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    margin: 15px 0 0;
+    padding: 0;
+    display: None;
 }
 @media screen and (max-width: 767px){
 	.form-group {
@@ -627,6 +650,9 @@ span.email-icon img {
 	}
     .sidebar-content:first-child {
         margin-top: 20px;
+    }
+    .metadata-list .metadata-list_header {
+        display: block;
     }
 }
 @media (max-width: 991px){
