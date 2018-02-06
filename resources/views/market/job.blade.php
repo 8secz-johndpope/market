@@ -455,6 +455,12 @@
                                         </div>
                                         @endif
                                         <div class="row">
+                                            <div class="col-xs-12">
+                                                <span class="h3"></span>
+                                                <a href="/user/cv-builder/personal-details" class="btn btn-apply">CV Builder by Sumra</a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-md-12">
                                                 <div class="field">
                                                     <label for="upload-cv" class="h3">
