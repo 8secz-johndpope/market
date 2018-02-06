@@ -135,7 +135,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="hidden-xs">
+            <div class="hidden-xs hidden-sm">
                 <div class="job-side-section sidebar-content">
                     <h3>Usefull Links</h3>
                     <ul class="useful-links">
@@ -173,7 +173,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-7 col-sm-12">
+        <div class="col-md-7 col-sm-9 col-xs-12">
                 @if(count($product['images']) > 0)
                 <div id="current-image">
                     <img id="image-active" data-index="1" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" alt="Los Angeles" data-high-res-src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image}}?1500586448" class="gallery-items">
@@ -537,16 +537,16 @@
                 @if(count($product['images']) == 0)
                 <div class="col-md-12 col-sm-12 bottom-buttons">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <a class="btn btn-default">Save</a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <a href="/download-mobile-apps/" class="btn btn-default">Call</a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <a href="/download-mobile-apps/" class="btn btn-default">VideoCall</a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <a href="/download-mobile-apps/" class="btn btn-default">Email</a>
                         </div>
                     </div>
@@ -558,7 +558,7 @@
                     </p>
                 </div>
         </div>
-        <div class="col-md-3 col-sm-12">
+        <div class="col-md-3 col-sm-3 col-sm-12">
             <!-- search -->
             <div class="row">
                 @if($advert->user!==null)
