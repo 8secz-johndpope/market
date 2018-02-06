@@ -630,13 +630,13 @@ span.email-icon img {
     .buttons-cloud .btn-form {
     	width: 100%;
 	}
-	.buttons-cloud .btn-form:not(last-child){
+	.buttons-cloud .btn-form:not(:last-child){
 		margin-bottom: 15px;
 	}
 	.field .buttons-option-cover .btn-form {
 		width: 100%;
 	}
-	.field .buttons-option-cover .btn-form:not(last-child) {
+	.field .buttons-option-cover .btn-form:not(:last-child) {
 		margin-bottom: 15px;
 	}
 	.buttons-alerts span, .alerts a {
@@ -666,7 +666,7 @@ span.email-icon img {
 	    margin-left: 10px;
 	    margin-right: 10px;
 	}
-	.request-details a:not(last-child){
+	.request-details a:not(:last-child){
 		margin-bottom: 15px;
 	}
 	.btn-advertiser{
