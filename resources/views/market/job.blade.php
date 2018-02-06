@@ -283,14 +283,16 @@
                                             <h3>Full Description</h3>
                                             {!! $product['description'] !!}
                                         </div>
-                                        <!--- @if(count($product['images']) == 0)
-                                        <div class="col-md-12 col-sm-12 bottom-buttons">
-                                            <a class="btn">Save</a>
-                                            <a class="btn">Call</a>
-                                            <a class="btn">VideoCall</a>
-                                            <a class="btn">Email</a>
+                                        <div class="container-actions hidden-xs">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <a class="btn btn-apply">Apply Now</a>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <a class="btn btn-send-friend">Send to a friend</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        @endif -->
                                     </div>  
                                 </div>
                             </div>
