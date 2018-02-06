@@ -286,10 +286,10 @@
                                         <div class="container-actions hidden-xs">
                                             <div class="row">
                                                 <div class="col-sm-6">
-                                                    <a class="btn btn-apply">Apply Now</a>
+                                                    <a class="btn btn-send-friend">Send to a friend</a>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <a class="btn btn-send-friend">Send to a friend</a>
+                                                    <a class="btn btn-apply">Apply Now</a>
                                                 </div>
                                             </div>
                                         </div>

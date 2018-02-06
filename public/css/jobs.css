@@ -601,11 +601,41 @@ span.email-icon img {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    padding: 10px 30px;
 }
 .arrow-right {
     position: absolute;
     right: 10px;
     top: 15px;
+}
+.btn-send-friend {
+    width: 100%;
+    -webkit-transition: background 200ms ease-out;
+    -moz-transition: background 200ms ease-out;
+    -ms-transition: background 200ms ease-out;
+    -o-transition: background 200ms ease-out;
+    transition: background 200ms ease-out;
+    padding: 10px 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f87964;
+    display: inline-block;
+    background-color: transparent;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f87964;
+    font-family: proximasemibold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 11px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+}
+.btn-send-friend:hover{
+    color: #fff;
+    background-color: #f87964;
 }
 @media (max-width: 991px){
     .job-container-bg h1{
