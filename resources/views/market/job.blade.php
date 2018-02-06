@@ -121,7 +121,7 @@
                     <h3>Get Alerts</h3>
                     <ul class="useful-links">
                         <li>
-                            <a>
+                            <a href="/user/create/alert/{{$category->id}}?id=0">
                                 <i class="fa fa-chevron-left"></i>
                                 Email Alert
                             </a>
