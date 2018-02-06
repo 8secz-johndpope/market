@@ -289,7 +289,7 @@
                                                     <a class="btn btn-send-friend">Send to a friend</a>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <a class="btn btn-apply">Apply Now</a>
+                                                    <a class="btn btn-apply">Apply Now <i class="fa fa-long-arrow-right"></i></a>
                                                 </div>
                                             </div>
                                         </div>
