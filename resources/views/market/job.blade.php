@@ -76,7 +76,7 @@
         </div>
     </div>
     <div class="container">
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-md-12">
             <div class="alerts">
                 <p>Set your jobs search alerts, click below to:</p>
@@ -87,10 +87,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="row top-space">
         <div class="col-md-8 col-sm-12">
-            <h2 class="item-name">{{$product['title']}}</h2>
+            <!-- <h2 class="item-name">{{$product['title']}}</h2>
             <div class="col-sm-9 location-name">
                 <p>{{$product['location_name']}}</p>
             </div>
@@ -98,7 +98,7 @@
                 @if($product['meta']['price']>=0)
                 <div class="items-box-price font-5">£ {{number_format($product['meta']['price'] / 100, 0, '.', ',')}}{{isset($product['meta']['price_frequency']) ? $product['meta']['price_frequency']:''}}</div>
                 @endif
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="row">
