@@ -456,7 +456,7 @@
                                         @endif
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <span class="h3"></span>
+                                                <span class="h3">Use our CV Builder to build one for you</span>
                                                 <a href="/user/cv-builder/personal-details" class="btn btn-apply">CV Builder by Sumra</a>
                                             </div>
                                         </div>
