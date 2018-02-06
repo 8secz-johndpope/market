@@ -392,7 +392,7 @@
                                             <a class="btn btn-apply">Apply with {{env('APP_NAME')}} Profile</a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a class="btn btn-apply">Apply with LinkedIn</a>
+                                            <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-profile">Apply with LinkedIn</a>
                                         </div>
                                     </div>
                                 </div>
@@ -665,6 +665,92 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="field">
+                                                     <div class="checkbox">
+                                                          <input type="checkbox" name="email-me" id="email-me" value="true" checked="checked">
+                                                          <label for="email-me">Email me jobs like this one when they become available</label>  
+                                                     </div>
+                                                </div>
+                                                <p>
+                                                    <small>
+                                                        By applying for a job listed on {{ env('APP_NAME')  }} Jobs you agree to our <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>. You should never be to provide bank account details. If you are, please <a href="#">email us</a>.
+                                                    </small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="field button-submit">
+                                                     <input class="btn-form" type="submit" name="submit-cv" id="submit-cv" value="Send application">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                </div>
+                                <div class="col-md-12 col-sm-12 background-color collapse" id="apply-with-profile">
+                                    <form action="/user/jobs/apply" method="post">
+                                    <input name="redirect" type="hidden" value="{{$advert->url()}}">
+                                    <input name="id" type="hidden" value="{{$advert->id}}">
+                                    {{ csrf_field() }}
+                                    <div class="form-group">
+                                        @if (Auth::guest())
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="field">
+                                                    <label for="first-name">
+                                                        First name
+                                                        <span class="field-indicator-required">
+                                                            <i data-icon="*" class="icon-required"></i>
+                                                        </span>
+                                                    </label>
+                                                    <input type="text" name="first-name" id="first-name" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="field">
+                                                    <label for="last-name">
+                                                        Last name
+                                                        <span class="field-indicator-required">
+                                                            <i data-icon="*" class="icon-required"></i>
+                                                        </span>
+                                                    </label>
+                                                    <input type="text" name="last-name" id="last-name" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="field">
+                                                    <label for="email">
+                                                        Email address
+                                                        <span class="field-indicator-required">
+                                                            <i data-icon="*" class="icon-required"></i>
+                                                        </span>
+                                                    </label>
+                                                    <input type="text" name="email" id="email" required>
+                                                </div>
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        @endif
+                                        @if(count(Auth::user()->profile)>0)
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="field">
+                                                    <label for="selected-cv" class="h3">
+                                                        Select a Profile
+                                                    </label>
+                                                    <select class="form-control" name="cv" required id="selected-cv">
+                                                        <option value="0">Select</option>
+                                                        @foreach(Auth::user()->profile as $profile)
+                                                            <option value="{{$profile->id}}">{{$profile->title}}</option>
+                                                        @endforeach
+                                                    </select> 
+                                                </div>     
+                                            </div>
+                                        </div>
+                                        @endif
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="field">
