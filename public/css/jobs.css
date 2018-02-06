@@ -587,10 +587,6 @@ span.email-icon img {
 	.job-title>.job-criteria {
     	padding-top: 4px;
 	}
-	.bottom-buttons a {
-		margin-bottom: 10px;
-		width: 48%;
-	}
 	.buttons-border a:last-child {
     	border: none;
 	}
@@ -609,14 +605,10 @@ span.email-icon img {
 	}
 	.bottom-buttons a {
 		margin-bottom: 0;
-		width: calc(90% / 4);
 	}
 }
 @media screen and (min-width: 1200px){
 	.request-details .btn-default {
     	width: 200px;
-	}
-	.bottom-buttons a {
-		width: calc(93% / 4);
 	}
 }
