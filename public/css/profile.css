@@ -654,7 +654,7 @@ footer{
 .ui-rating .rating-star-empty {
     background-image: url('/css/empty-star.png');
 }
-.ui-rating .rating-star-fullstar {
+.ui-rating .rating-star-full {
     background-image: url('/css/star.png');
 }
 .ui-rating {
