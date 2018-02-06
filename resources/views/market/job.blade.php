@@ -744,6 +744,9 @@
                                                     <select class="form-control" name="cv" required id="selected-cv">
                                                         <option value="0">Select</option>
                                                         @foreach(Auth::user()->profile as $profile)
+                                                            @php
+                                                            var_dump($profile);
+                                                            @endphp
                                                             <option value="{{$profile->id}}">{{$profile->about_me}}</option>
                                                         @endforeach
                                                     </select> 
