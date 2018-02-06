@@ -597,6 +597,11 @@ span.email-icon img {
     color: #fff;
     vertical-align: ;
 }
+.arrow-right {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
 @media screen and (max-width: 767px){
 	.form-group {
     	padding: 15px 0;

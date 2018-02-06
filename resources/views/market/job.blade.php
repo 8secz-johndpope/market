@@ -244,11 +244,9 @@
                         <li><a data-toggle="tab" href="#tab-apply">Apply</a></li>
                     </ul>
                     <ul class="nav nav-pills nav-stacked visible-xs">
-                      <li class="active"><a data-toggle="pill" href="#tab-description">Description<i class="arrow-left glyphicon glyphicon-menu-right"></i></a></li>
-                      @if(count($product['images']) > 0)
-                        <li><a data-toggle="pill" href="#tab-map">Map & Street View</a></li>
-                      @endif
-                      <li><a data-toggle="pill" href="#tab-apply">Apply</a></li>
+                      <li class="active"><a data-toggle="pill" href="#tab-description">Description<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                        <li><a data-toggle="pill" href="#tab-map">Map & Street View<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                      <li><a data-toggle="pill" href="#tab-apply">Apply<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-description" class="tab-pane fade in active">
