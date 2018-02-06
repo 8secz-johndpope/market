@@ -19,6 +19,21 @@ h2.item-name, .jobs-apply h2, .field h2 {
     background-position: center center;
     padding: 50px 0;
 }
+.job-container-bg h1{
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 50px;
+    text-align: center;
+    margin: 70px auto 60px auto;
+    color: #fff;
+    text-shadow: 2px 2px 10px #333;
+}
 .field {
     margin-bottom: 12px;
 }
@@ -572,6 +587,12 @@ span.email-icon img {
 	.buttons-border a:last-child {
     	border: none;
 	}
+}
+@media (max-width: 991px){
+    .job-container-bg h1{
+        margin: 30px auto;
+        font-size: 30px;
+    }
 }
 @media screen and (min-width: 992px){
 	.request-details .btn-default {
