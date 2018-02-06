@@ -32,7 +32,7 @@
                         <li class="breadcrumb-item"><a href="/{{$category->slug}}">{{$category->title}}</a></li>
                     </ol>
                 </div>
-                <div class="col-md-2 col-sm-3 col-xs-6 prev-next">
+                <div class="col-md-2 col-sm-3 col-sm-offset-6 col-xs-6 prev-next">
                     @if(isset($prevAdvert))
                         <a href="/p/{{$category->id}}/{{$prevAdvert->id}}"> < Prev</a>
                     @endif
