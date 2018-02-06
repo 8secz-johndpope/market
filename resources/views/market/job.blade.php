@@ -46,7 +46,7 @@
                     <div class="bg-image" id="bg-image">
                         <h1>{{$product['title']}}</h1>
                         <div class="cta text-center">
-                            <a class="btn btn-info">
+                            <a class="btn btn-success">
                                 Apply Now
                                 <i class="fa fa-long-arrow-right"></i>
                             </a>
@@ -153,7 +153,7 @@
                         </li>
                         @if(isset($advert->user))
                         <li>
-                            <a>
+                            <a href="/userads/{{$avert->user->id}}">
                                 <i class="fa fa-chevron-left"></i>
                                 @if(isset($advert->user->business))
                                 See all {{$advert->user->business->name}} Jobs
