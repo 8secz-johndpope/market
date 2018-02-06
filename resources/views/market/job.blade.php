@@ -117,7 +117,7 @@
             <div class="hidden-xs">
                 <div class="job-side-section sidebar-content">
                     <h3>Usefull Links</h3>
-                    <ul class="useful-link">
+                    <ul class="useful-links">
                         <li>
                             <a href="/{{$category->slug}}">
                                 <i class="fa fa-chevron-left"></i>
