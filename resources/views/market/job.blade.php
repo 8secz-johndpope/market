@@ -42,6 +42,15 @@
         <div class="container">
             <div class="row hidden-xs">
                 <div class="col-xs-12">
+                    <div class="bg-image" id="bg-image">
+                        <h1>{{$product['title']}}</h1>
+                        <div class="cta text-center">
+                            <a class="btn btn-info">
+                                Apply Now
+                                <i class="fa fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <!-- <div class="col-md-12">
                     <div class="buttons-border">
