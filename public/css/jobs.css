@@ -683,7 +683,7 @@ span.email-icon img {
     .nav-pills>li:not(:first-child)>a {
         border-radius: 0;
     }
-    .nav-pills>li:first-child{
+    .nav-pills>li:first-child > a{
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
