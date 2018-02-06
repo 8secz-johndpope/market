@@ -381,7 +381,7 @@
                                 </div>
                                 @else
                                 <div class="col-xs-12">
-                                    <div class="row">
+                                    <div class="row apply-buttons">
                                         <div class="col-sm-3">
                                             <a class="btn">Apply with CV</a>
                                         </div>
