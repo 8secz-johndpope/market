@@ -49,6 +49,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
     text-transform: uppercase;
     background: #366ffb;
     border-color: #366ffb;
+    padding: 10px 30px;
 }
 .field {
     margin-bottom: 12px;
