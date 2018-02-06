@@ -22,7 +22,7 @@
     <div class="header container-ad-applicant">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-xs-12 main">
+                <div class="col-sm-8 col-xs-12 main">
                     <div class="row">
                         <div class="col-sm-3 col-xs-12">
                             <figure class="ad-applicant-picture">
@@ -196,7 +196,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 sidebar hidden-xs">
+                <div class="col-sm-4 sidebar hidden-xs">
                     <div class="row">
                         <section id="profile-sidebar" class="ad-sidebar-right col-md-12 affix-top">
                             <header>
