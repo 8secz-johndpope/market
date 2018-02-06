@@ -493,6 +493,36 @@ span.email-icon img {
 .favroite-icon {
     margin: 0;
 }
+.sidebar-content {
+    position: relative;
+    padding: 0 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+}
+.sidebar-content:first-child {
+    margin-top: 10px;
+}
+.sidebar-content h3 {
+    font-size: 16px;
+    margin: 15px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+.sidebar-content h3 {
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+}
+.sidebar-content .useful-links {
+    margin: 20px 0 30px;
+}
 @media screen and (max-width: 767px){
 	.form-group {
     	padding: 15px 0;
@@ -590,6 +620,9 @@ span.email-icon img {
 	.buttons-border a:last-child {
     	border: none;
 	}
+    .sidebar-content:first-child {
+        margin-top: 20px;
+    }
 }
 @media (max-width: 991px){
     .job-container-bg h1{
