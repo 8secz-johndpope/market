@@ -132,7 +132,7 @@
                             @endif
                         </li>
                         <li>
-                            <a href="/{{$product['location_name']}}">See all Jobs</a>
+                            <a href="/jobs/{{$product['location_name']}}">See all {{$product['location_name']}} Jobs</a>
                         </li>
                     </ul>
                 </div>
