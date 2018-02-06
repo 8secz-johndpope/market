@@ -154,7 +154,7 @@
                         <li>
                             <a>
                                 <i class="fa fa-chevron-left"></i>
-                                @if(isset($advert->user->business))
+                                @if(isset($advert->user) && isset($advert->user->business))
                                 See all {{$advert->user->business->name}} Jobs
                                 @else
                                 See all {{$advert->user->name}} Jobs
