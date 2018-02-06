@@ -643,12 +643,14 @@ span.email-icon img {
 }
 .btn-build-cv {
     width: 100%;
-    padding: 6px 12px;
+    padding: 10px 12px;
     background: #f87964;
     color: #fff;
     border-radius: 25px;
     margin-top: 10px;
     text-transform: uppercase;
+    font-size: 11px;
+
 }
 @media (max-width: 991px){
     .job-container-bg h1{
