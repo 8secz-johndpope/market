@@ -103,15 +103,17 @@
     </div>
     <div class="row">
         <div class="col-md-2">
-            <div class="metadata-location">
-                <h3 class="hidden-xs">About This Job</h3>
-                <div class="metadata metadata-list">
-                    <h4 class="metadata-list-header">Location</h4>
-                    <ul class="metadata-list-items">
-                        <li>
-                            <a href="/jobs/{{$product['location_name']}}">{{$product['location_name']}}</a>
-                        </li>
-                    </ul>
+            <div class="job-side-section sidebar-content">
+                <div class="metadata-location">
+                    <h3 class="hidden-xs">About This Job</h3>
+                    <div class="metadata metadata-list">
+                        <h4 class="metadata-list-header">Location</h4>
+                        <ul class="metadata-list-items">
+                            <li>
+                                <a href="/jobs/{{$product['location_name']}}">{{$product['location_name']}}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="hidden-xs">
