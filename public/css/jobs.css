@@ -187,7 +187,7 @@ h2.item-name, .jobs-apply h2, .field h2 {
 }
 
 .field .buttons-option-cover .btn-form {
-    width: calc(98% / 3);
+    width: calc(98% / 2);
 }
 .buttons-filters a:last-child, .bottom-buttons a:last-child{
 	border:none;
