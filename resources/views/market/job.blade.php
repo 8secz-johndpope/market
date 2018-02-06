@@ -808,7 +808,7 @@
                 </div>
                 <div class="visible-xs visible-sm">
                     <div class="col-sm-8 col-xs-12">
-                        <div class="hidden-xs hidden-sm">
+                        <div class="">
                             <div class="job-side-section sidebar-content">
                                 <h3>Get Alerts</h3>
                                 <ul class="useful-links">
@@ -827,7 +827,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="hidden-xs hidden-sm">
+                        <div class="">
                             <div class="job-side-section sidebar-content">
                                 <h3>Usefull Links</h3>
                                 <ul class="useful-links">
