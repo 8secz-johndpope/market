@@ -552,6 +552,29 @@ span.email-icon img {
     padding: 0;
     display: None;
 }
+.metadata-list {
+    font-size: 15px;
+    padding-left: 15px;
+}
+.sidebar-content .metadata-list {
+    margin: 25px 0 20px;
+}
+.metadata-list .metadata-list-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.metadata-list .metadata-list-items>li {
+    margin: 4px 0;
+    padding: 0;
+}
+.metadata-list .metadata-list-items a {
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 14px;
+    color: #333;
+}
 @media screen and (max-width: 767px){
 	.form-group {
     	padding: 15px 0;
@@ -652,8 +675,12 @@ span.email-icon img {
     .sidebar-content:first-child {
         margin-top: 20px;
     }
-    .metadata-list .metadata-list_header {
+    .metadata-list .metadata-list-header {
         display: block;
+    }
+    .metadata-list .metadata-list-items a {
+        color: #666;
+        font-size: 14px;
     }
 }
 @media (max-width: 991px){
