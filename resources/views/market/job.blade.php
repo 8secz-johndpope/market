@@ -49,7 +49,7 @@
                     <div class="bg-image" id="bg-image">
                         <h1>{{$product['title']}}</h1>
                         <div class="cta text-center">
-                            <a class="btn btn-success">
+                            <a class="btn btn-apply">
                                 Apply Now
                                 <i class="fa fa-long-arrow-right"></i>
                             </a>
@@ -1015,7 +1015,7 @@
         $('.collapse').collapse('hide');
         //$(this).collapse('toggle');
     });
-    $('.btn-apply').click(function(){
+    $('.btn-apply, bg-image .btn-apply').click(function(){
         $('.nav-tabs a[href="#tab-apply"]').tab('show');
     });
     $('a[href="#tab-map"]').on('shown.bs.tab', function () {
