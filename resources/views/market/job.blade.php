@@ -1002,6 +1002,9 @@
 </div>
 </div>
 <script>
+    $('.collapse').on('shown.bs.collapse', function(){
+        $('.collapse').collapse('hide');
+    });
     $('a[href="#tab-map"]').on('shown.bs.tab', function () {
         x = map.getZoom();
         c = map.getCenter();
