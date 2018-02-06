@@ -586,6 +586,13 @@ span.email-icon img {
 .metadata-list .metadata-list-header::before{
     color: #ff9d2c;
 }
+.apply-buttons {
+    padding: 40px 0;
+}
+.btn-apply {
+    white-space: normal;
+    width: 100%;
+}
 @media screen and (max-width: 767px){
 	.form-group {
     	padding: 15px 0;

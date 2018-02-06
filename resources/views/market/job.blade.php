@@ -383,16 +383,16 @@
                                 <div class="col-xs-12">
                                     <div class="row apply-buttons">
                                         <div class="col-sm-3">
-                                            <a class="btn">Apply with CV</a>
+                                            <a class="btn btn-apply">Apply with CV</a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a class="btn">Apply with {{env('APP_NAME')}} CV</a>
+                                            <a class="btn btn-apply">Apply with {{env('APP_NAME')}} CV</a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a class="btn">Apply with {{env('APP_NAME')}} Profile</a>
+                                            <a class="btn btn-apply">Apply with {{env('APP_NAME')}} Profile</a>
                                         </div>
                                         <div class="col-sm-3">
-                                            <a class="btn">Apply with LinkedIn</a>
+                                            <a class="btn btn-apply">Apply with LinkedIn</a>
                                         </div>
                                     </div>
                                 </div>
