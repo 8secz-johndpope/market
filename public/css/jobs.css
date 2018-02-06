@@ -522,6 +522,7 @@ span.email-icon img {
 }
 .sidebar-content .useful-links {
     margin: 20px 0 30px;
+    padding: 0;
 }
 .sidebar-content .useful-links li {
     margin: 10px 0;
