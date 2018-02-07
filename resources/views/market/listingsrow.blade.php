@@ -1183,7 +1183,7 @@ use App\Model\Advert;
         @else
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="form-control">
+                    <div class="form-group">
                         <label class="radio-inline"><input type="radio" name="optradio">CV</label>
                         <label class="radio-inline"><input type="radio" name="optradio">Profile</label>
                         <label class="radio-inline"><input type="radio" name="optradio">CV & Cover Letter</label>
