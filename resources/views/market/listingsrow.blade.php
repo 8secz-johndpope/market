@@ -1272,6 +1272,9 @@ use App\Model\Advert;
     $('input:radio').change(function(){
         var target = $(this).attr('data-target');
         $('.option-apply').hide();
+        if(target == '#cover-container'){
+            $('#cv-container').show();
+        }
         $(target).show();
     });
     $('#select-all').change(function() {
