@@ -22,4 +22,12 @@
 	.notification-title {
 	    margin: 20px 0 10px 0;
 	}
+	.notificationTitle h2 {
+	    color: #FFFFFF;
+	    margin-left: 40px;
+	    font: 600 18px 'Open Sans', Arial, Helvetica, sans-serif;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	}
 }
