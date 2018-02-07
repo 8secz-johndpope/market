@@ -1286,11 +1286,20 @@ use App\Model\Advert;
     $('#select-all').change(function() {
         if(this.checked) {
             $('.select-application').prop('checked', true);
+            $('.modal-footer .btn-submit').prop('disabled', false);
 
         }else{
             $('.select-application').prop('checked', false);
-
+            $('.modal-footer .btn-submit').prop('disabled', true);
         }
     });
+    function jobsIsSelect(){
+        if($('.select-application:checked').length > 0){
+            $('.modal-footer .btn-submit').prop('disabled', false); 
+        }
+        else{
+            $('.modal-footer .btn-submit').prop('disabled', true);
+        }
+    }
 </script>
 @endsection
