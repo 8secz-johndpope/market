@@ -46,13 +46,13 @@
                             <div class="col-sm-7">
                               <div class="field-location">
                                 <label for="location">Location</label>
-                                <input type="text" name="location" id="location">
+                                <input type="text" name="location" id="location" class="form-control">
                               </div>
                             </div>
                             <div class="col-sm-5">
                               <div class="field-distance">
                                 <label for="distance">Within</label>
-                                <select name="distance" id="distance">
+                                <select name="distance" id="distance" class="form-control">
                                   <option value="1" id="distance.0">1 mile</option>
                                   <option value="2" id="distance.1">2 miles</option>
                                   <option value="5" id="distance.2">5 miles</option>
@@ -71,6 +71,43 @@
                                 </select>
                               </div>
                             </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <div class="field-min-salary">
+                                <label for="min-salary">Salary Min</label>
+                                <input type="text" name="min-salary" id="min-salary" class="form-control">
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="field-max-salary">
+                                <label for="max-salary">Salary Min</label>
+                                <input type="text" name="max-salary" id="max-salary" class="form-control">
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div id="field-salary-period">
+                                <label for="salary-period">Salary Type</label>
+                                <select name="salary-period" id="salary-period">
+                                  <option value="annum" id="salary-period.0">annum</option>
+                                  <option value="month" id="salary-period.1">month</option>
+                                  <option value="week" id="salary-period.2">week</option>
+                                  <option value="day" id="salary-period.3">day</option>
+                                  <option value="hour" id="salary-period.4">hour</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12">
+                          <div class="fiel-type">
+                            <label for="type">Job Type</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
+                            <label class="checkbox-inline"><input type="checkbox" name=""></label>
+                            <label class="checkbox-inline"><input type="checkbox" name=""></label>
+                            <label class="checkbox-inline"><input type="checkbox" name=""></label>
+                            <label class="checkbox-inline"><input type="checkbox" name=""></label>
+                            <label class="checkbox-inline"><input type="checkbox" name=""></label>
                           </div>
                         </div>
                       </div>
