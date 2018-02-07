@@ -397,7 +397,7 @@
                                         <div class="col-sm-6">
                                             <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-scv" data-parent="#tab-apply">Apply with {{env('APP_NAME')}} CV</a>
                                         </div>
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-12 create-profile-container">
                                             <span class="h3">
                                                 No Profile ? Create a New Profile in Seconds
                                             </span>

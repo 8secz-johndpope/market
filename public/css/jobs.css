@@ -652,6 +652,12 @@ span.email-icon img {
     font-size: 11px;
 
 }
+.create-profile-container{
+    margin: 15px 0;
+}
+.create-profile-container .btn-success{
+    width: 100%;
+}
 @media (max-width: 991px){
     .job-container-bg h1{
         margin: 30px auto;
