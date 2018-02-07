@@ -1270,7 +1270,7 @@ use App\Model\Advert;
 </script>
 <script>
     $('input:radio').change(function(){
-        var target = $(this).val();
+        var target = $(this).attr('data-target');
         $('.option-apply').hide();
         $(target).show();
     });
