@@ -28,8 +28,27 @@
                     <div class="notification-modify-form">
                       <div class="row">
                         <div class="col-sm-6">
+                          <div class="field-reference">
+                            <label for="reference">
+                              Alert Name <span>(For your reference)</span>
+                            </label>
+                            <input type="text" name="reference" id="reference" class="form-control">
+                          </div>
+                          <div class="field-keywords">
+                            <label for="keywords">
+                              Keywords <span>(e.g. receptionist)</span>
+                            </label>
+                            <input type="text" name="keywords" id="keywords" class="form-control">
+                          </div>
                         </div>
                         <div class="col-sm-6">
+                          <div class="field-location">
+                            <label for="location">Location</label>
+                            <input type="text" name="location" id="location">
+                          </div>
+                          <div class="field-distance">
+                            
+                          </div>
                         </div>
                       </div>
                     </div>
