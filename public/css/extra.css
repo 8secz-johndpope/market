@@ -2493,6 +2493,14 @@ nav.navbar.navbar-inverse {
 }
 .bulk-apply-container input[type=checkbox]~label {
     position: relative;
+    display: inline-block;
+    padding-top: 0;
+    vertical-align: middle;
+    padding-left: 40px;
+    padding-top: 14px;
+}
+.bulk-apply-container input[type=checkbox] {
+    display: inline-block;
 }
 .canvas input[type=checkbox]~label:before {
     content: '';
