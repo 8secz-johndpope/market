@@ -33,7 +33,7 @@
                     </div>
                     <div class="notification-modify-form">
                       <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 modify-left">
                           <div class="field-reference">
                             <label for="reference">
                               Alert Name <span>(For your reference)</span>
@@ -47,7 +47,7 @@
                             <input type="text" name="keywords" id="keywords" class="form-control">
                           </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 modify-right">
                           <div class="row">
                             <div class="col-sm-7">
                               <div class="field-location">
