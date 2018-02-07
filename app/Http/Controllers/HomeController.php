@@ -728,7 +728,8 @@ class HomeController extends BaseController
     }
     public function createAlert(Request $request){
         $user = Auth::user();
-        return view('home.alert',[ 'user' => $user]);
+        $sectors = Category::find(4000000000)->children;
+        return view('home.alert',[ 'user' => $user, '$sector' => $sectors]);
     }
     public function alert(Request $request,$id){
         $category=Category::find($id);

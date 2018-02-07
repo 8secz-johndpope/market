@@ -88,7 +88,7 @@
                             <div class="col-sm-4">
                               <div id="field-salary-period">
                                 <label for="salary-period">Salary Type</label>
-                                <select name="salary-period" id="salary-period">
+                                <select name="salary-period" id="salary-period" class="form-control">
                                   <option value="annum" id="salary-period.0">annum</option>
                                   <option value="month" id="salary-period.1">month</option>
                                   <option value="week" id="salary-period.2">week</option>
@@ -101,13 +101,23 @@
                         </div>
                         <div class="col-xs-12">
                           <div class="fiel-type">
-                            <h3>Job Type</h3>
+                            <h5>Job Type</h5>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.1">Permanent</label>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.2">Contract</label>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.3">Temporary</label>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.4">Part time</label>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.5">Apprenticeship</label>
+                          </div>
+                        </div>
+                        <div class="col-xs-12">
+                          <div class="fiel-type">
+                            <h5>Industry</h5>
+                            @endforeach
+                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
+                            @foreach($sectors as $sector)
+                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.{{$sector->id}}" value="{{$sector->id}}">$sector->title</label>
+                            @endforeach
                           </div>
                         </div>
                       </div>
