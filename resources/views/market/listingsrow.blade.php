@@ -1234,7 +1234,7 @@ use App\Model\Advert;
       </div>
       <div class="modal-footer">
         <button type="button" class="btn" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-submit"  onclick="$('#bulk-apply-form').submit();">Apply</button>
+        <button type="button" class="btn btn-submit" @if(Auth::guest()) disabled @endif  onclick="$('#bulk-apply-form').submit();">Apply</button>
       </div>
     </div>
   </div>

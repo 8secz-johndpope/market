@@ -1292,7 +1292,6 @@ class HomeController extends BaseController
     }
     public function apply_show(Request $request)
     {
-        var_dump($request->ids);die;
         $user=Auth::user();
         $ids = $request->ids;
         if($ids===null){
