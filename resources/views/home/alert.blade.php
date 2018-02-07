@@ -9,12 +9,18 @@
 
     <p>This is appended to the master sidebar.</p>
 @endsection
-
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
+@section('styles')
+<link href="{{ asset("/css/alert.css?q=$dateMs") }}" rel="stylesheet" type="text/css">
+@endsection
 @section('content')
 <div class="body background-color">
   <div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-8 col-md-offset-2">
             <div class="notification-pages">
               <div class="notification-page selected">
                 <form id="add_notifications" action="" name="add_notifications">
@@ -114,7 +120,7 @@
                           <div class="row">
                             <div class="fiel-type">
                               <h5>Industry</h5>
-                              <ul>
+                              <ul class="sectors">
                                 <li class="col-sm-6">
                                   <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
                                 </li>
