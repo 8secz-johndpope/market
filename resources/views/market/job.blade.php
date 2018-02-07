@@ -389,13 +389,20 @@
                                             <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-cv" data-parent="#tab-apply">Apply with your CV</a>
                                         </div>
                                         <div class="col-sm-6">
-                                            <a class="btn btn-apply" data-parent="#tab-apply">Apply with your LinkedIn</a>
+                                            <a class="btn btn-apply" data-parent="#tab-apply">Apply using LinkedIn</a>
                                         </div>
                                         <div class="col-sm-6">
-                                            <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-profile" data-parent="#tab-apply">Apply with your {{env('APP_NAME')}} Profile</a>
+                                            <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-profile" data-parent="#tab-apply">Apply with {{env('APP_NAME')}} Profile</a>
                                         </div>
                                         <div class="col-sm-6">
-                                            <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-scv" data-parent="#tab-apply">Apply with your {{env('APP_NAME')}} CV</a>
+                                            <a class="btn btn-apply" data-toggle="collapse" href="#apply-with-scv" data-parent="#tab-apply">Apply with {{env('APP_NAME')}} CV</a>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <span class="h3">
+                                                No Profile ? Create a New Profile in Seconds
+                                            </span>
+                                            <br>
+                                            <a class="btn btn-success" data-toggle="collapse" href="/user/cv-builder/personal-details"> Create New Profile by {{env('APP_NAME')}}</a>
                                         </div>
                                         <div class="col-sm-12">
                                             <span class="h3">
