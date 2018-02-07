@@ -619,24 +619,34 @@ use App\Model\Advert;
         @php
             $i=0;
         @endphp
+        @if($category->can_apply())
+        <div class="listing-max-pro container-btns-recruiter text-center">
+            <div class="row">
+                <div class="col-sm-4 container-btn-recruiter">
+                    <a href="/jobs/uk" class="btn-recruiter">Latest Jobs</a>
+                </div>
+                <div class="col-sm-4 container-btn-recruiter border-left">
+                    <a href="#" class="btn-recruiter">Explore Companies</a>
+                </div>
+                <div class="col-sm-4 container-btn-recruiter border-left">
+                    <a href="#" class="btn-recruiter">Search Recruiter</a>
+                </div>
+            </div>
+        </div>
+        @endif
         <div class="listing-max-pro container-set-alarm clearfix">
             <div class="search-alert-div text-center">
                 <div class="row">
                     @if($category->can_apply())
                     <div class="col-xs-6">
-                        <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a> 
+                        <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Job Alert </a> 
                     </div>
                     <div class="col-xs-6">                                
                         <button class="btn btn-primary btn-bulk" data-toggle="modal" data-target="#bulkModal">Bulk Apply</button>
                     </div>
                     @else
                     <div class="col-xs-12">
-                        <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;
-                        @if($category->can_apply())
-                            Set Job Alert 
-                        @else
-                            Set Search Alert 
-                        @endif
+                        <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert 
                         </a> 
                     </div>
                     @endif
@@ -653,19 +663,6 @@ use App\Model\Advert;
                     <span>Select as many jobs as you want and apply in one-click</span>
                 </div>
                 <div class="tooltip-close js-close"></div>
-            </div>
-        </div>
-        <div class="listing-max-pro container-btns-recruiter text-center">
-            <div class="row">
-                <div class="col-sm-4 container-btn-recruiter">
-                    <a href="/jobs/uk" class="btn-recruiter">Latest Jobs</a>
-                </div>
-                <div class="col-sm-4 container-btn-recruiter border-left">
-                    <a href="#" class="btn-recruiter">Explore Companies</a>
-                </div>
-                <div class="col-sm-4 container-btn-recruiter border-left">
-                    <a href="#" class="btn-recruiter">Search Recruiter</a>
-                </div>
             </div>
         </div>
         <form id="bulk-apply-form" action="/user/jobs/apply/show" method="post">
