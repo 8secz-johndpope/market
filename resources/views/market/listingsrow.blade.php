@@ -602,11 +602,11 @@ use App\Model\Advert;
 </div>
 <div class="col-lg-7 col-sm-9 col-xs-12">
     <div class="products">
-        @if (isset(session('msg')) && session('msg') === 'Please select at least one application')
+        @if (session('msg') === 'Please select at least one application')
             <div class="alert alert-danger">
                 <strong>{{ session('msg') }}</strong>
             </div>
-        @elseif(isset(session('msg')))
+        @elseif(session('msg'))
             <div class="alert alert-success">
                 <strong>{{ session('msg') }}</strong>
             </div>
