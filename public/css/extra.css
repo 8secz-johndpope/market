@@ -2494,7 +2494,7 @@ nav.navbar.navbar-inverse {
 .bulk-apply-container input[type=checkbox]~label {
     position: relative;
 }
-.bulk-apply-container input[type=checkbox]+label:before, .canvas input[type=checkbox]~label:before {
+.canvas input[type=checkbox]~label:before {
     content: '';
     display: block;
     width: 18px;
