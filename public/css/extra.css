@@ -2409,7 +2409,7 @@ nav.navbar.navbar-inverse {
 .mb-10 {
     margin-bottom: 10px;
 }
-.info .checkbox label {
+.bulk-apply-container label, .info .checkbox label {
     display: block;
     padding-left: 0;
     font-size: 10px;
