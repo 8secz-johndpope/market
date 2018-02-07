@@ -33,4 +33,22 @@
 	    margin-left: 20px;
     	padding: 0;
 	}
+	.modify-left{
+		padding: 0 0px 20px 40px;
+    	margin: 8px 0 0 0;
+	}
+	#add-notifications label, #add-notifications input, #add-notifications select {
+	    width: 300px;
+	    float: left;
+	    padding: 5px;
+	    font: normal 13px 'Open Sans', Arial, Helvetica, sans-serif;
+	    border: 1px solid #003777;
+	}
+	#add-notifications label {
+	    color: #fff;
+	    margin: 0 0 2px 0;
+	    padding: 0;
+	    border: 0;
+	    font-weight: 600;
+	}
 }
