@@ -2426,7 +2426,7 @@ nav.navbar.navbar-inverse {
     top: 0;
     margin: 0;
 }
-.info .checkbox input[type=checkbox] {
+.bulk-apply-container input[type=checkbox], .info .checkbox input[type=checkbox] {
     position: relative;
     display: block;
     margin-left: auto;
@@ -2443,7 +2443,7 @@ nav.navbar.navbar-inverse {
     width: 1px;
 }
 
-.info .checkbox label:before {
+.bulk-apply-container label:before, .info .checkbox label:before {
     content: '';
     display: block;
     content: '';
