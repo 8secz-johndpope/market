@@ -638,6 +638,17 @@ use App\Model\Advert;
             </div>
         </div>
         @if($category->can_apply())
+        <div class="bulk-apply-container"> 
+            <input type="checkbox" class="select-all" id="select-all"> 
+            <label for="select-all">Select All for <span class="bulk-apply-tm">BulkApply<sup>TM</sup></span></label>
+            <div class="tooltip tooltip-bulk tooltip-arrow-upLeft">
+                <div class="tooltip-content">
+                    <h3 class="search-result-valueIndicatorTitle">Bulk Apply?</h3>
+                    <span>Select as many jobs as you want and apply in one-click</span>
+                </div>
+                <div class="tooltip-close js-close"></div>
+            </div>
+        </div>
         <div class="listing-max-pro container-btns-recruiter text-center">
             <div class="row">
                 <div class="col-sm-4 container-btn-recruiter">
@@ -649,17 +660,6 @@ use App\Model\Advert;
                 <div class="col-sm-4 container-btn-recruiter border-left">
                     <a href="#" class="btn-recruiter">Search Recruiter</a>
                 </div>
-            </div>
-        </div>
-        <div class="bulk-apply-container"> 
-            <input type="checkbox" class="select-all" id="select-all"> 
-            <label for="select-all">Select All for <span class="bulk-apply-tm">BulkApply<sup>TM</sup></span></label>
-            <div class="tooltip tooltip-bulk tooltip-arrow-upLeft">
-                <div class="tooltip-content">
-                    <h3 class="search-result-valueIndicatorTitle">Bulk Apply?</h3>
-                    <span>Select as many jobs as you want and apply in one-click</span>
-                </div>
-                <div class="tooltip-close js-close"></div>
             </div>
         </div>
         <form id="bulk-apply-form" action="/user/jobs/apply/show" method="post">
