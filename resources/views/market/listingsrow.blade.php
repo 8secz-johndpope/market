@@ -1185,7 +1185,7 @@ use App\Model\Advert;
                     <div class="form-group">
                         <label>CV</label>
                         <select>
-                        @foreach($user->cvs as $cv)
+                        @foreach(Auth::user()->cvs as $cv)
                             <option value="{{$cv->id}}">{{$cv->title}}</option>
                         @endforeach
                         </select>
