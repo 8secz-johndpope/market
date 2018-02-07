@@ -1183,17 +1183,17 @@ use App\Model\Advert;
         @else
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="form-group">
-                        <label class="radio-inline"><input type="radio" name="optradio">CV</label>
-                        <label class="radio-inline"><input type="radio" name="optradio">Profile</label>
-                        <label class="radio-inline"><input type="radio" name="optradio">CV & Cover Letter</label>
+                    <div class="form-group option">
+                        <label class="radio-inline"><input type="radio" name="optradio" data-target="#cv-container">CV</label>
+                        <label class="radio-inline"><input type="radio" name="optradio" data-target="#profile-container">Profile</label>
+                        <label class="radio-inline"><input type="radio" name="optradio" data-target="#cover-container">CV & Cover Letter</label>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
                     @if(count(Auth::user()->cvs))
-                    <div class="form-group">
+                    <div class="form-group option-apply" id="cv-container">
                         <label for="select-cv">CV</label>
                         <select class="form-control" id="select-cv">
                         @foreach(Auth::user()->cvs as $cv)
@@ -1203,7 +1203,7 @@ use App\Model\Advert;
                     </div>
                     @endif
                     @if(count(Auth::user()->profile) > 0)
-                    <div class="form-group">
+                    <div class="form-group option-apply" id="profile-container">
                         <label for="select-profile">Profile</label>
                         <select class="form-control" id="select-profile">
                         @foreach(Auth::user()->profile as $profile)
@@ -1213,7 +1213,7 @@ use App\Model\Advert;
                     </div>
                     @endif
                     @if(count(Auth::user()->covers) > 0)
-                    <div class="form-group">
+                    <div class="form-group option-apply" id="cover-container">
                         <label for="select-cover">Cover Letter</label>
                         <select class="form-control" id="select-cover">
                         @foreach(Auth::user()->covers as $cover)
@@ -1269,6 +1269,11 @@ use App\Model\Advert;
     });*/
 </script>
 <script>
+    $('input:radio').change(function(){
+        var target = $(this).val();
+        $('.option-apply').hide();
+        $(target).show();
+    });
     $('#select-all').change(function() {
         if(this.checked) {
             $('.select-application').prop('checked', true);
