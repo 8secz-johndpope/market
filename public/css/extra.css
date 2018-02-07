@@ -2460,7 +2460,7 @@ nav.navbar.navbar-inverse {
     background-size: 55px;
 }
 
-.info .checkbox input[type=checkbox]:checked~label:before{
+.bulk-apply-container input[type=checkbox]:checked~label:before, .info .checkbox input[type=checkbox]:checked~label:before{
     background-repeat: no-repeat;
     background-image: url(/css/checkbox-bulk.svg);
     background-position: -30px 4px;
@@ -2468,6 +2468,7 @@ nav.navbar.navbar-inverse {
 }
 .bulk-apply-container{
     position: relative;
+    margin-bottom: 10px;
 }
 .tooltip-bulk {
     margin: 0;
