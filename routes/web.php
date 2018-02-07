@@ -138,6 +138,7 @@ Route::get('/user/upload/cvs', 'HomeController@upload_cv');
 Route::get('/user/jobs/looking-for', 'HomeController@looking_for');
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::get('/user/manage/alerts', 'HomeController@alerts');
+Route::get('/user/create/alert', 'HomeController@createAlert');
 Route::get('/user/manage/applications', 'HomeController@applications');
 Route::get('/user/manage/motors', 'HomeController@motors');
 Route::get('/user/manage/sales', 'HomeController@motors');
@@ -294,6 +295,7 @@ Route::get('/id/{id}', 'MarketController@id');
 Route::get('/agent/{id}', 'MarketController@agent');
 Route::get('/company/{id}', 'MarketController@company');
 
+Route::get('/jobs/employers', 'MarketController@employers');
 Route::get('/job/profile/template/{type}', 'MarketController@profileTemplate');
 Route::get('/job/profile/edit/{type}', 'HomeController@profile');
 Route::post('/job/profile/save', 'HomeController@save_profile');

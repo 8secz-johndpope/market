@@ -56,6 +56,7 @@
     </div>
   <div class="row">
       <div class="col-md-6 col-md-offset-3">
+        <a href="/user/create/alert" class="btn btn-info"> Create a new alert</a>
           <ul class="list-group">
               @foreach($user->alerts as $alert)
                   <li class="list-group-item">

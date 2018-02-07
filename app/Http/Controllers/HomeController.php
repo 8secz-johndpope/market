@@ -726,6 +726,10 @@ class HomeController extends BaseController
         return view('home.alerts',[ 'user' => $user]);
 
     }
+    public function createAlert(Request $request){
+        $user = Auth::user();
+        return view('home.alert',[ 'user' => $user]);
+    }
     public function alert(Request $request,$id){
         $category=Category::find($id);
         $location=Location::find($request->id);
