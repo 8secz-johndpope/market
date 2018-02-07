@@ -2514,7 +2514,9 @@ nav.navbar.navbar-inverse {
     top: 2px;
     left: 0;
 }
-
+.modal-header {
+    background: #ddd;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
