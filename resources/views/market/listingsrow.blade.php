@@ -634,10 +634,13 @@ use App\Model\Advert;
         @if($category->can_apply())
         <div class="listing-max-pro container-btns-recruiter text-center">
             <div class="row">
-                <div class="col-sm-6 container-btn-recruiter">
+                <div class="col-sm-4 container-btn-recruiter">
+                    <a href="/jobs/uk" class="btn-recruiter">Latest Jobs</a>
+                </div>
+                <div class="col-sm-4 container-btn-recruiter">
                     <a href="#" class="btn-recruiter">Explore Companies</a>
                 </div>
-                <div class="col-sm-6 container-btn-recruiter border-left">
+                <div class="col-sm-4 container-btn-recruiter border-left">
                     <a href="#" class="btn-recruiter">Search Recruiter</a>
                 </div>
             </div>
