@@ -402,14 +402,14 @@
                                                 No Profile ? Create a New Profile in Seconds
                                             </span>
                                             <br>
-                                            <a class="btn btn-success" data-toggle="collapse" href="/job/profile/edit/general"> Create New Profile by {{env('APP_NAME')}}</a>
+                                            <a class="btn btn-success" href="/job/profile/edit/general"> Create New Profile by {{env('APP_NAME')}}</a>
                                         </div>
                                         <div class="col-sm-12">
                                             <span class="h3">
                                                 No CV ? Create a New CV Easily
                                             </span>
                                             <br>
-                                            <a class="btn btn-build-cv" data-toggle="collapse" href="/user/cv-builder/personal-details"> Create New CV - CV Builder by {{env('APP_NAME')}}</a>
+                                            <a class="btn btn-build-cv" href="/user/cv-builder/personal-details"> Create New CV - CV Builder by {{env('APP_NAME')}}</a>
                                         </div>
                                     </div>
                                 </div>
