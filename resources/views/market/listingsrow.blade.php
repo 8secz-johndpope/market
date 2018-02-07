@@ -1178,15 +1178,32 @@ use App\Model\Advert;
       <div class="modal-body">
         <span>Select as many jobs as you want and apply in one-click</span>
         @if(Auth::guest())
+            <br>
             <a href="/login">Login</a> | <a href="/register">Sign Up</a>
         @else
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
                         <label>CV</label>
-                        <select>
+                        <select class="form-control">
                         @foreach(Auth::user()->cvs as $cv)
                             <option value="{{$cv->id}}">{{$cv->title}}</option>
+                        @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Profile</label>
+                        <select class="form-control">
+                        @foreach(Auth::user()->profile as $profile)
+                            <option value="{{$profile->id}}">{{$profile->id}}</option>
+                        @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Cover Letter</label>
+                        <select class="form-control">
+                        @foreach(Auth::user()->covers as $cover)
+                            <option value="{{$cover->id}}">{{$cover->title}}</option>
                         @endforeach
                         </select>
                     </div>
@@ -1195,8 +1212,8 @@ use App\Model\Advert;
         @endif
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-submit" onclick="$('#bulk-apply-form').submit();">BulkApply</button>
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-submit" onclick="$('#bulk-apply-form').submit();">Apply</button>
       </div>
     </div>
   </div>
