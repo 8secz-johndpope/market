@@ -1176,11 +1176,20 @@ use App\Model\Advert;
         <h4 class="modal-title" id="myModalLabel">BulkApply</h4>
       </div>
       <div class="modal-body">
-        <span>Select as many jobs as you want and apply in one-click</span>
         @if(Auth::guest())
+            <span>Select as many jobs as you want and apply in one-click</span>
             <br>
             <a href="/login">Login</a> | <a href="/register">Sign Up</a>
         @else
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-control">
+                        <label class="radio-inline"><input type="radio" name="optradio">CV</label>
+                        <label class="radio-inline"><input type="radio" name="optradio">Profile</label>
+                        <label class="radio-inline"><input type="radio" name="optradio">CV & Cover Letter</label>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-xs-12">
                     @if(count(Auth::user()->cvs))
