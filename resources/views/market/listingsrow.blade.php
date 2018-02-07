@@ -1190,8 +1190,8 @@ use App\Model\Advert;
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group option">
-                        <label class="radio-inline"><input type="radio" name="optradio" data-target="#cv-container" checked>CV</label>
-                        <label class="radio-inline"><input type="radio" name="optradio" data-target="#profile-container">Profile</label>
+                        <label class="radio-inline"><input type="radio" name="optradio" data-target="#cv-container">CV</label>
+                        <label class="radio-inline"><input type="radio" name="optradio" data-target="#profile-container" checked>Profile</label>
                         <label class="radio-inline"><input type="radio" name="optradio" data-target="#cover-container">CV & Cover Letter</label>
                     </div>
                 </div>
@@ -1199,7 +1199,7 @@ use App\Model\Advert;
             <div class="row">
                 <div class="col-xs-12">
                     @if(count(Auth::user()->cvs))
-                    <div class="form-group option-apply" id="cv-container">
+                    <div class="form-group option-apply" id="cv-container" style="display: none;">
                         <label for="select-cv">CV</label>
                         <select class="form-control" id="select-cv">
                         @foreach(Auth::user()->cvs as $cv)
@@ -1209,7 +1209,7 @@ use App\Model\Advert;
                     </div>
                     @endif
                     @if(count(Auth::user()->profile) > 0)
-                    <div class="form-group option-apply" id="profile-container" style="display: none;">
+                    <div class="form-group option-apply" id="profile-container">
                         <label for="select-profile">Profile</label>
                         <select class="form-control" id="select-profile">
                         @foreach(Auth::user()->profile as $profile)
