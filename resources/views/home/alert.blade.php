@@ -42,12 +42,35 @@
                           </div>
                         </div>
                         <div class="col-sm-6">
-                          <div class="field-location">
-                            <label for="location">Location</label>
-                            <input type="text" name="location" id="location">
-                          </div>
-                          <div class="field-distance">
-                            
+                          <div class="row">
+                            <div class="col-sm-7">
+                              <div class="field-location">
+                                <label for="location">Location</label>
+                                <input type="text" name="location" id="location">
+                              </div>
+                            </div>
+                            <div class="col-sm-5">
+                              <div class="field-distance">
+                                <label for="distance">Within</label>
+                                <select name="distance" id="distance">
+                                  <option value="1" id="distance.0">1 mile</option>
+                                  <option value="2" id="distance.1">2 miles</option>
+                                  <option value="5" id="distance.2">5 miles</option>
+                                  <option value="7" id="distance.3">7 miles</option>
+                                  <option value="10" id="distance.4">10 miles</option>
+                                  <option value="15" id="distance.5">15 miles</option>
+                                  <option value="20" id="distance.6" selected="selected">20 miles</option>
+                                  <option value="25" id="distance.7">25 miles</option>
+                                  <option value="35" id="distance.8">35 miles</option>
+                                  <option value="50" id="distance.9">50 miles</option>
+                                  <option value="75" id="distance.10">75 miles</option>
+                                  <option value="100" id="distance.11">100 miles</option>
+                                  <option value="250" id="distance.12">250 miles</option>
+                                  <option value="500" id="distance.13">500 miles</option>
+                                  <option value="750" id="distance.14">750 miles</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
