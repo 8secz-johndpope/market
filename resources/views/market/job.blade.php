@@ -151,7 +151,7 @@
                         <li>
                             <a href="/jobs">
                                 <i class="fa fa-chevron-left"></i>
-                                See All Lastest Jobs
+                                See All Latest Jobs
                             </a>
                         </li>
                         @if(isset($advert->user))
@@ -863,7 +863,7 @@
                                     <li>
                                         <a href="/jobs">
                                             <i class="fa fa-chevron-left"></i>
-                                            See All Lastest Jobs
+                                            See All Latest Jobs
                                         </a>
                                     </li>
                                     @if(isset($advert->user))
