@@ -115,7 +115,7 @@
                             <h5>Industry</h5>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
                             @foreach($sectors as $sector)
-                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.{{$sector->id}}" value="{{$sector->id}}">$sector->title</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.{{$sector->id}}" value="{{$sector->id}}">{{$sector->title}}</label>
                             @endforeach
                           </div>
                         </div>
