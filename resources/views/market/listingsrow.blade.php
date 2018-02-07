@@ -1183,30 +1183,36 @@ use App\Model\Advert;
         @else
             <div class="row">
                 <div class="col-xs-12">
+                    @if(count(Auth::user()->cvs))
                     <div class="form-group">
-                        <label>CV</label>
-                        <select class="form-control">
+                        <label for="select-cv">CV</label>
+                        <select class="form-control" id="select-cv">
                         @foreach(Auth::user()->cvs as $cv)
                             <option value="{{$cv->id}}">{{$cv->title}}</option>
                         @endforeach
                         </select>
                     </div>
+                    @endif
+                    @if(count(Auth::user()->profile) > 0)
                     <div class="form-group">
-                        <label>Profile</label>
-                        <select class="form-control">
+                        <label for="select-profile">Profile</label>
+                        <select class="form-control" id="select-profile">
                         @foreach(Auth::user()->profile as $profile)
                             <option value="{{$profile->id}}">{{$profile->id}}</option>
                         @endforeach
                         </select>
                     </div>
+                    @endif
+                    @if(count(Auth::user()->covers) > 0)
                     <div class="form-group">
-                        <label>Cover Letter</label>
-                        <select class="form-control">
+                        <label for="select-cover">Cover Letter</label>
+                        <select class="form-control" id="select-cover">
                         @foreach(Auth::user()->covers as $cover)
                             <option value="{{$cover->id}}">{{$cover->title}}</option>
                         @endforeach
                         </select>
                     </div>
+                    @endif
                 </div>
             </div> 
         @endif
