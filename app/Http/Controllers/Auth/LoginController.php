@@ -44,6 +44,7 @@ class LoginController extends BaseController
     {
         if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1])) {
             // Authentication passed...
+            var_dump(session('params'));die;
             return redirect()->intended('/');
         }
         else if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>0])) {
