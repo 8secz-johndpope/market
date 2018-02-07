@@ -1177,6 +1177,22 @@ use App\Model\Advert;
       </div>
       <div class="modal-body">
         <span>Select as many jobs as you want and apply in one-click</span>
+        @if(Auth::guest())
+            <a href="/login">Login</a> | <a href="/register">Sign Up</a>
+        @else
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label>CV</label>
+                        <select>
+                        @foreach($user->cvs as $cv)
+                            <option value="{{$cv->id}}">{{$cv->title}}</option>
+                        @endforeach
+                        </select>
+                    </div>
+                </div>
+            </div> 
+        @endif
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
