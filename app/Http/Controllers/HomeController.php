@@ -735,7 +735,7 @@ class HomeController extends BaseController
         $alert->category_id=$category->id;
         $alert->location_id=$location->id;
         $alert->save();
-        return redirect('/'.$category->slug.'/'.$location->slug);
+        return redirect('/'.$category->slug.'/'.$location->slug)->with('msg', 'Your alert was created correctly');
     }
     public function delete_alert(Request $request,$id){
         $alert=SearchAlert::find($id);

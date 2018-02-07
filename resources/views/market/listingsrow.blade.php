@@ -602,10 +602,14 @@ use App\Model\Advert;
 </div>
 <div class="col-lg-7 col-sm-9 col-xs-12">
     <div class="products">
-        @if (session('msg'))
-            <span style="color: red">
-                                        <strong>{{ session('msg') }}</strong>
-                                    </span>
+        @if (isset(session('msg')) && session('msg') === 'Please select at least one application')
+            <div class="alert alert-danger">
+                <strong>{{ session('msg') }}</strong>
+            </div>
+        @elseif(isset(session('msg')))
+            <div class="alert alert-success">
+                <strong>{{ session('msg') }}</strong>
+            </div>
         @endif
         <h4 class="items-box-head">
             List of items for {{$category->title}}, {{number_format($total)}}
