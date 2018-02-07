@@ -603,11 +603,13 @@ use App\Model\Advert;
 <div class="col-lg-7 col-sm-9 col-xs-12">
     <div class="products">
         @if (session('msg') === 'Please select at least one application')
-            <div class="alert alert-danger">
+            <div class="alert alert-danger alert-dismissable fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <strong>{{ session('msg') }}</strong>
             </div>
         @elseif(session('msg'))
-            <div class="alert alert-success">
+            <div class="alert alert-success alert-dismissable fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <strong>{{ session('msg') }}</strong>
             </div>
         @endif
