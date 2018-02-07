@@ -621,7 +621,7 @@ use App\Model\Advert;
                         <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a> 
                     </div>
                     <div class="col-xs-6">                                
-                        <button class="btn btn-primary btn-bulk" onclick="$('#bulk-apply-form').submit();">Bulk Apply</button>
+                        <button class="btn btn-primary btn-bulk" data-toggle="modal" data-target="bulkModal">Bulk Apply</button>
                     </div>
                     @else
                     <div class="col-xs-12">
@@ -1168,7 +1168,22 @@ use App\Model\Advert;
     </div>
 </div>
 </div>
-
+<div class="modal fade" id="bulkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">BulkApply</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-submit" onclick="$('#bulk-apply-form').submit();">BulkApply</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 @endsection
 
