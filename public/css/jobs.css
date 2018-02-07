@@ -657,6 +657,9 @@ span.email-icon img {
 }
 .create-profile-container .btn-success{
     width: 100%;
+    font-size: 11px;
+    text-transform: uppercase;
+    border-radius: 25px;
 }
 @media (max-width: 991px){
     .job-container-bg h1{
