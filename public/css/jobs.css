@@ -661,6 +661,7 @@ span.email-icon img {
     text-transform: uppercase;
     border-radius: 25px;
     padding: 10px 12px;
+    margin-top: 10px;
 }
 @media (max-width: 991px){
     .job-container-bg h1{
