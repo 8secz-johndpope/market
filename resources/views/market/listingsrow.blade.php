@@ -621,7 +621,7 @@ use App\Model\Advert;
                         <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert </a> 
                     </div>
                     <div class="col-xs-6">                                
-                        <button class="btn btn-primary btn-bulk" data-toggle="modal" data-target="bulkModal">Bulk Apply</button>
+                        <button class="btn btn-primary btn-bulk" data-toggle="modal" data-target="#bulkModal">Bulk Apply</button>
                     </div>
                     @else
                     <div class="col-xs-12">
@@ -1176,6 +1176,7 @@ use App\Model\Advert;
         <h4 class="modal-title" id="myModalLabel">BulkApply</h4>
       </div>
       <div class="modal-body">
+        <span>Select as many jobs as you want and apply in one-click</span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
