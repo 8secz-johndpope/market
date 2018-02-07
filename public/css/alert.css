@@ -51,4 +51,8 @@
 	    border: 0;
 	    font-weight: 600;
 	}
+	.modify-left > div, .modify-right > div {
+	    clear: both;
+	    margin-top: 14px;
+	}
 }
