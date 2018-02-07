@@ -111,12 +111,20 @@
                           </div>
                         </div>
                         <div class="col-xs-12">
-                          <div class="fiel-type">
-                            <h5>Industry</h5>
-                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
-                            @foreach($sectors as $sector)
-                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.{{$sector->id}}" value="{{$sector->id}}">{{$sector->title}}</label>
-                            @endforeach
+                          <div class="row">
+                            <div class="fiel-type">
+                              <h5>Industry</h5>
+                              <ul>
+                                <li class="col-sm-6">
+                                  <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
+                                </li>
+                                @foreach($sectors as $sector)
+                                <li class="col-sm-6">
+                                  <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.{{$sector->id}}" value="{{$sector->id}}">{{$sector->title}}</label>
+                                </li>
+                                @endforeach
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
