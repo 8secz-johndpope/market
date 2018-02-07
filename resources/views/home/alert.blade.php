@@ -101,7 +101,7 @@
                         </div>
                         <div class="col-xs-12">
                           <div class="fiel-type">
-                            <label for="type">Job Type</label>
+                            <h3>Job Type</h3>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.1">Permanent</label>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.2">Contract</label>
