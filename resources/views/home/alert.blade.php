@@ -103,11 +103,11 @@
                           <div class="fiel-type">
                             <label for="type">Job Type</label>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
-                            <label class="checkbox-inline"><input type="checkbox" name=""></label>
-                            <label class="checkbox-inline"><input type="checkbox" name=""></label>
-                            <label class="checkbox-inline"><input type="checkbox" name=""></label>
-                            <label class="checkbox-inline"><input type="checkbox" name=""></label>
-                            <label class="checkbox-inline"><input type="checkbox" name=""></label>
+                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.1">Permanent</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.2">Contract</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.3">Temporary</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.4">Part time</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.5">Apprenticeship</label>
                           </div>
                         </div>
                       </div>
