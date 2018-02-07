@@ -2499,6 +2499,7 @@ nav.navbar.navbar-inverse {
     vertical-align: middle;
     padding-left: 40px;
     padding-top: 14px;
+    color: #1E9476;
 }
 .bulk-apply-container input[type=checkbox] {
     display: inline-block;
