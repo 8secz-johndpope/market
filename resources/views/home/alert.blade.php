@@ -127,7 +127,7 @@
                                   </label>
                                 </li>
                                 @foreach($sectors as $sector)
-                                <li class="col-sm-6">
+                                <li class="col-sm-6 checkbox">
                                   <label>
                                     <input type="checkbox" name="types[]" id="type.{{$sector->id}}" value="{{$sector->id}}">{{$sector->title}}
                                   </label>
