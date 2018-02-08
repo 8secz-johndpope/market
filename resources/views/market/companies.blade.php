@@ -50,7 +50,7 @@
 		            	<div class="col-sm-3 text-align profile">
 		            		<div class="profile-tumb">
 		            			<a href="#" class="profile-link">
-		            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')/$company->logo}}">
+		            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
 		            			</a>
 		            		</div>
 		            		<div class="subtitle">
