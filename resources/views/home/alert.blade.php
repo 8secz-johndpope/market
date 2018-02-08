@@ -22,11 +22,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a data-toggle="tab" href="#create-job-alarm">Job Alert</a></li>
+            <li role="presentation" class="active"><a data-toggle="tab" href="#create-job-alert">Job Alert</a></li>
             <li role="presentation"><a data-toggle="tab" href="#create-company-alert">Company Alerts</a></li>
           </ul>
           <div class="tab-content">
-            <div class="notification-pages" id="create-job-alarm">
+            <div class="notification-pages" id="create-job-alert">
               <div class="notification-page selected">
                 <form id="add_notifications" action="" name="add_notifications">
                   <div class="field-id">
@@ -183,6 +183,10 @@
                     </div>
                   </div>
                 </form>
+              </div>
+            </div>
+            <div class="notification-pages" id="create-company-alert">
+              <div class="notification-page selected">
               </div>
             </div>
           </div>
