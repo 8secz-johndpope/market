@@ -59,6 +59,19 @@
 .tab-content {
     min-height: calc(80vh - 43px);
 }
+[class*=field] span {
+    font-size: 11px;
+    color: #000;
+}
+.create-alert-home label {
+    color: #000;
+    font: normal 13px 'Open Sans', Arial, Helvetica, sans-serif;
+    border: 1px solid #003777;
+    margin: 0 0 2px 0;
+    padding: 0;
+    border: 0;
+    font-weight: 600;
+}
 @media(min-width: 768px){
 	.notification-title {
 	    margin: 20px 0 10px 0;

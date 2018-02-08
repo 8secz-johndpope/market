@@ -20,7 +20,7 @@
 <div class="body background-color">
   <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-xs-12">
           <ul class="nav nav-tabs">
             <li role="presentation" class="active"><a data-toggle="tab" href="#create-job-alert">Job Alert</a></li>
             <li role="presentation"><a data-toggle="tab" href="#create-company-alert">Company Alerts</a></li>
