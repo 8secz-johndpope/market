@@ -76,3 +76,14 @@
     display: block;
     margin: 0 auto;
 }
+.subtitle {
+    min-height: 70px;
+    border-bottom: 3px solid #7de5ce;
+}
+.subtitle a {
+    font-size: 18px;
+    margin: 20px 15px 10px;
+    display: block;
+    color: #333;
+    display: block;
+}
