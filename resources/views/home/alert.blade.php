@@ -177,6 +177,13 @@
                           </div>
                         </div>
                         <div class="col-xs-12">
+                          <div class="field-recruiter-type">
+                            <h5>Recuiter Type</h5>
+                            <label class="checkbox-inline"><input type="checkbox" name="recruiter-types[]" id="">Direct Employer</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="recruiter-types[]" id="">Recruitment Consultant</label>
+                          </div>
+                        </div>
+                        <div class="col-xs-12">
                           <div class="field-save">
                             <button type="submit" class="btn btn-submit">Create new alert</button>
                           </div>
