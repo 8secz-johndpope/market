@@ -117,7 +117,7 @@
                           </div>
                         </div>
                         <div class="col-xs-12">
-                          <h5>Industry</h5>
+                          <h5 class="label">Industry</h5>
                           <div class="row">
                             <div class="field-type">
                               <ul class="sectors clearfix">
@@ -133,6 +133,45 @@
                                   </label>
                                 </li>
                                 @endforeach
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12">
+                          <h5 class="label">Contract Type</h5>
+                          <div class="field-contract-types">
+                            <div class="row">
+                              <ul class="contract-types clearfix">
+                                <li class="col-sm-6 checkbox">
+                                  <label>
+                                    <input type="checkbox" name="contract-types[]" id="">Cash in Hand
+                                  </label>
+                                </li>
+                                <li class="col-sm-6 checkbox">
+                                  <label>
+                                    <input type="checkbox" name="contract-types[]" id="" value="4010000000">Contract
+                                  </label>
+                                </li>
+                                <li class="col-sm-6 checkbox">
+                                  <label>
+                                    <input type="checkbox" name="contract-types[]" id="" value="4020000000">Freelance
+                                  </label>
+                                </li>
+                                <li class="col-sm-6 checkbox">
+                                  <label>
+                                    <input type="checkbox" name="contract-types[]" id="" value="4030000000">Permanent
+                                  </label>
+                                </li>
+                                <li class="col-sm-6 checkbox">
+                                  <label>
+                                    <input type="checkbox" name="contract-types[]" id="" value="4040000000">Self Employed
+                                  </label>
+                                </li>
+                                <li class="col-sm-6 checkbox">
+                                  <label>
+                                    <input type="checkbox" name="contract-types[]" id="" value="4050000000">Sub Contrator
+                                  </label>
+                                </li>
                               </ul>
                             </div>
                           </div>
