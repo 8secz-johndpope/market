@@ -734,7 +734,7 @@ class HomeController extends BaseController
         foreach ($jobCategory->fields as $field) {
             $fields[$field->id] = $field;
         }
-        $sectors = $jobCategory->children->put($childcareServices);
+        $sectors = $jobCategory->children->put($childcareServices->id, $childcareServices);
         return view('home.alert',[ 'user' => $user, 'sectors' => $sectors, 'fields' => $fields]);
     }
     public function alert(Request $request,$id){
