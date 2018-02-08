@@ -137,4 +137,15 @@
 	.search-companies-az li:first-child {
 	    margin: 0;
 	}
+	.search-companies-az li a {
+	    display: block;
+	    font: 15px/15px 'Open Sans', Arial, Helvetica, sans-serif;
+	    padding: 5px 7px;
+	    text-decoration: none;
+	    text-align: center;
+	    background: #fff;
+	    color: #003777;
+	    -webkit-transition: background 0.2s linear, color 0.2s linear;
+	    transition: background 0.2s linear, color 0.2s linear;
+	}
 }
