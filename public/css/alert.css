@@ -27,6 +27,13 @@
 .sectors .checkbox:first-child{
 	margin-top: 0;
 }
+.field-save{
+	margin-top: 14px;
+}
+.field-save .btn-submit{
+	clear: both;
+	float: right;
+}
 @media(min-width: 768px){
 	.notification-title {
 	    margin: 20px 0 10px 0;
