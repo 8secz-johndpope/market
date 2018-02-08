@@ -29,7 +29,7 @@
                   </div>
                   <div class="create-alert-home">
                     <div class="notification-title">
-                      <h2>Create new Job Alert</h2>
+                      <h2>Create New Job Alert</h2>
                     </div>
                     <div class="notification-modify-form">
                       <div class="row">
@@ -92,7 +92,7 @@
                               </div>
                             </div>
                             <div class="col-sm-4">
-                              <div id="field-salary-period">
+                              <div class="field-salary-period">
                                 <label for="salary-period">Salary Type</label>
                                 <select name="salary-period" id="salary-period" class="form-control">
                                   <option value="annum" id="salary-period.0">annum</option>
@@ -106,7 +106,7 @@
                           </div>
                         </div>
                         <div class="col-xs-12">
-                          <div class="fiel-type">
+                          <div class="field-type">
                             <h5>Job Type</h5>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
                             <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.1">Permanent</label>
@@ -117,9 +117,9 @@
                           </div>
                         </div>
                         <div class="col-xs-12">
+                          <h5>Industry</h5>
                           <div class="row">
-                            <div class="fiel-type">
-                              <h5>Industry</h5>
+                            <div class="field-type">
                               <ul class="sectors">
                                 <li class="col-sm-6">
                                   <label class="checkbox-inline"><input type="checkbox" name="types[]" id="type.0">Any</label>
