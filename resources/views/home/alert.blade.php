@@ -51,11 +51,6 @@
                             </label>
                             <input type="text" name="keywords" id="keywords" class="form-control">
                           </div>
-                          <div class="field-homeworking">
-                            <div class="checkbox">
-                              <label><input type="checkbox" name="js-additional-location-input">Homeworking</label>
-                            </div>
-                          </div>
                         </div>
                         <div class="col-sm-6 modify-right">
                           <div class="row">
@@ -112,6 +107,13 @@
                                   <option value="hour" id="salary-period.4">hour</option>
                                 </select>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12">
+                          <div class="field-homeworking">
+                            <div class="checkbox">
+                              <label><input type="checkbox" name="js-additional-location-input">Homeworking</label>
                             </div>
                           </div>
                         </div>
