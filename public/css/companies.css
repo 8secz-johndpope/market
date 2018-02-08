@@ -1,0 +1,25 @@
+.recruiter-dirtectory-posted-by {
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px #d6d6d6 solid;
+    border-top: 3px #d6d6d6 solid!important;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.title-aside-content {
+    color: #333;
+    height: 44px;
+    line-height: 32px;
+    vertical-align: middle;
+    padding-left: 15px;
+    margin-bottom: 0;
+}
+.list-aside-content {
+    padding: 0;
+    margin-left: 15px;
+    list-style: none;
+    margin-top: -20px/2;
+}
+.list-aside-content li {
+    margin-bottom: 10px;
+}
