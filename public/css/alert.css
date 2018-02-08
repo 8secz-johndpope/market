@@ -63,7 +63,7 @@
     font-size: 11px;
     color: #000;
 }
-.create-alert-home label {
+.create-alert-home .modify-right label, .create-alert-home .modify-left label {
     color: #000;
     font: normal 13px 'Open Sans', Arial, Helvetica, sans-serif;
     border: 1px solid #003777;
