@@ -46,11 +46,16 @@
     border-radius: 4px;
     background-color: #fff;
 }
-.recruiter-dirtectory-main-content-title {
+.recruiter-directory-main-content-title {
     border-bottom: 3px solid #eaeaea;
     color: #e25b89;
     padding-bottom: 7.5px;
     margin: 30px 15px 15px 15px;
+}
+.recruiter-directory-main-content-title .main-title {
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 .recruiter-dirtectory-main-content-logos {
     border-bottom: 2px solid #eaeaea;

@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="recruiter-directory-main-content col-sm-9">
-				<div class="recruiter-dirtectory-main-content-title">
+				<div class="recruiter-directory-main-content-title">
 		            <h1 class="main-title">All hiring now</h1>
 		            <div class="recruiter-directory-main-content-logos row">
 		            	@foreach($companies as $company)
