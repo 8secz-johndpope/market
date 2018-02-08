@@ -137,6 +137,11 @@
                             </div>
                           </div>
                         </div>
+                        <div class="col-xs-12">
+                          <div class="field-save">
+                            <button type="submit" class="btn btn-submit">Create new alert</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
