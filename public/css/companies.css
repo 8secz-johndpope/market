@@ -110,3 +110,20 @@
 .pagination-new {
     text-align: center;
 }
+.container-search-section-title {
+    margin-top: 20px;
+    padding: 40px 0;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 20px;
+}
+@media(min-width: 768px){
+	.search-companies-az {
+	    display: block !important;
+	    width: 730px;
+	    text-align: center;
+	    list-style: none;
+	    margin: 0 auto;
+	    padding: 0;
+	}
+}
