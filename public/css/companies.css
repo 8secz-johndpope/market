@@ -61,6 +61,9 @@
     border-bottom: 2px solid #eaeaea;
     margin: 20px 0 0 0;
 }
+.profile{
+	margin-bottom: 20px;
+}
 .profile-thumb {
     border: 1px solid #d6d6d6;
     border-radius: 3px;
@@ -82,7 +85,6 @@
 .subtitle {
     min-height: 85px;
     border-bottom: 3px solid #7de5ce;
-    margin-bottom: 20px;
 }
 .subtitle a {
     font-size: 18px;

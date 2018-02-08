@@ -48,15 +48,17 @@
 		        </div>
 	            <div class="recruiter-directory-main-content-logos row">
 	            	@foreach($companies as $company)
-	            	<div class="col-sm-4 text-center profile">
-	            		<div class="profile-thumb">
-	            			<a href="#" class="profile-link">
-	            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
-	            			</a>
-	            		</div>
-	            		<div class="subtitle">
-	            			<a href="#">{{$company->name}}</a>
-	            			<span class="count-jobs-company">(0)</span>
+	            	<div class="col-sm-4 text-center">
+	            		<div class="profile">
+		            		<div class="profile-thumb">
+		            			<a href="#" class="profile-link">
+		            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
+		            			</a>
+		            		</div>
+		            		<div class="subtitle">
+		            			<a href="#">{{$company->name}}</a>
+		            			<span class="count-jobs-company">(0)</span>
+		            		</div>
 	            		</div>
 	            	</div>
 	            	@endforeach
