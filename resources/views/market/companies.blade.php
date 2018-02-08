@@ -48,7 +48,7 @@
 		        </div>
 	            <div class="recruiter-directory-main-content-logos row">
 	            	@foreach($companies as $company)
-	            	<div class="col-sm-4 text-align profile">
+	            	<div class="col-sm-4 text-center profile">
 	            		<div class="profile-thumb">
 	            			<a href="#" class="profile-link">
 	            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
