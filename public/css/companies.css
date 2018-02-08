@@ -126,4 +126,15 @@
 	    margin: 0 auto;
 	    padding: 0;
 	}
+	.search-companies-az li:first-child {
+	    margin: 0;
+	}
+	.search-companies-az li {
+	    float: left;
+	    margin: 0 0 0 3px;
+	    border-radius: 1px;
+	}
+	.search-companies-az li:first-child {
+	    margin: 0;
+	}
 }
