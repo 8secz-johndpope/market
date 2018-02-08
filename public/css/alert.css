@@ -24,9 +24,6 @@
     padding-left: 0;
     list-style: none;
 }
-.sectors .checkbox:first-child{
-	margin-top: 0;
-}
 .field-save{
 	margin-top: 14px;
 	margin-bottom: 15px;
@@ -71,6 +68,9 @@
     padding: 0;
     border: 0;
     font-weight: 600;
+}
+.field-type {
+    margin-bottom: 15px;
 }
 @media(min-width: 768px){
 	.notification-title {
