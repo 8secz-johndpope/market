@@ -736,7 +736,7 @@ class HomeController extends BaseController
             $fields[$field->id] = $field;
         }
         $sectors = $jobCategory->children->put($childcareServices->id, $childcareServices);
-        $sectors = $sectors->put($healtBeauty->id, $healtBeauty);
+        $sectors = $sectors->put($healtBeauty->id, $healtBeauty)->sortBy('title');
         return view('home.alert',[ 'user' => $user, 'sectors' => $sectors, 'fields' => $fields]);
     }
     public function alert(Request $request,$id){
