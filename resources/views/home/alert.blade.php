@@ -120,7 +120,7 @@
                           <h5>Industry</h5>
                           <div class="row">
                             <div class="field-type">
-                              <ul class="sectors">
+                              <ul class="sectors clearfix">
                                 <li class="col-sm-6 checkbox">
                                   <label>
                                     <input type="checkbox" name="types[]" id="type.0">Any
