@@ -21,7 +21,12 @@
   <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="notification-pages">
+          <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a data-toggle="tab" href="#create-job-alarm">Job Alert</a></li>
+            <li role="presentation"><a data-toggle="tab" href="#create-company-alert">Company Alerts</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="notification-pages" id="create-job-alarm">
               <div class="notification-page selected">
                 <form id="add_notifications" action="" name="add_notifications">
                   <div class="field-id">
@@ -180,6 +185,7 @@
                 </form>
               </div>
             </div>
+          </div>
         </div>
     </div>
   </div>
