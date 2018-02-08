@@ -34,17 +34,15 @@
 				<div class="recruiter-dirtectory-specialism">
 					<h4 class="title-aside-content">Filter by Specialism</h4>
 					<ul class="list-aside-content">
+						@foreach($sectors as $sector)
+						<li>
+			                <a href="#" class="selected">{{$sector->title}}</a>
+			            </li>
+						@endforeach
 					</ul>
 				</div>
 			</div>
 			<div class="col-sm-9">
-				<ul class="list-aside-content">
-					@foreach($sectors as $sector)
-					<li>
-		                <a href="#" class="selected">{{$sector->title}}</a>
-		            </li>
-					@endforeach
-				</ul>
 			</div>
 		</div>
 	</div>
