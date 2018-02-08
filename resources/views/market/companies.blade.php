@@ -81,7 +81,29 @@
 			<div class="col-xs-12">
 				<div class="search-companies">
 					<div class="search-companies-center">
-						<div class="search-companies-wrap"></div>
+						<div class="search-companies-wrap">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a href="#search-companies" data-toggle="tab">Employers</a>
+								</li>
+								<li>
+									<a href="#search-companies" data-toggle="tab">Recruitment Agencies</a>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="search-companies-search fade in">
+									<h2>Search Employers</h2>
+									<form action="">
+										<input type="text" name="q" value="" placeholder="Employer Name">
+										<input type="submit" value="Search Employers">
+									</form>
+									<h3>Employers Directory A-Z</h3>
+									<ul class="search-companies-az">
+										<li></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
