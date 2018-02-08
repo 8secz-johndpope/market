@@ -148,10 +148,12 @@
                               <ul class="contract-types clearfix">
                                 @foreach($fields[15]->values as $value)
                                   @if($value->slug !== 'locum' && $value->slug !== 'voluntary')
-                                    <li class="col-sm-6 checkbox">
-                                      <label>
-                                        <input type="checkbox" name="contract-types[]" id="" value="{{$value->slug}}">{{$value->title}}
-                                      </label>
+                                    <li class="col-sm-6">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input type="checkbox" name="contract-types[]" id="" value="{{$value->slug}}">{{$value->title}}
+                                        </label>
+                                      </div>
                                     </li>
                                   @endif
                                 @endforeach
