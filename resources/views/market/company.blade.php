@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
- <link href="{{asset('/css/agent.css?q=874')}} | {{ isset($user->business) ? $user->business->name : 'Company'}}" rel="stylesheet">
+ <link href="{{asset('/css/agent.css?q=874')}}" rel="stylesheet">
  <div class="body">
 <div class="container">
 	<div class="row">
