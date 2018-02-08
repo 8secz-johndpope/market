@@ -158,8 +158,9 @@
                         <div class="col-xs-12">
                           <div class="field-recruiter-type">
                             <h5>Recuiter Type</h5>
-                            <label class="checkbox-inline"><input type="checkbox" name="recruiter-types[]" id="">Direct Employer</label>
-                            <label class="checkbox-inline"><input type="checkbox" name="recruiter-types[]" id="">Recruitment Consultant</label>
+                            @foreach($fields[16]->values as $value)
+                              <label class="checkbox-inline"><input type="checkbox" name="recruiter-types[]" id="" value="{{$value->slug}}">{{$value->title}}</label>
+                            @endforeach
                           </div>
                         </div>
                         <div class="col-xs-12">
