@@ -1226,10 +1226,11 @@ span.favor-text {
 .all-filters .l-visible-large {
     background-color: #fff;
     padding: 15px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #e8e8e3;
     position: relative;
-    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.16), -1px 0px 1px rgba(0,0,0,.08);
-    margin-bottom: 30px;
+    /* box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.16), -1px 0px 1px rgba(0,0,0,.08); */
+    /* margin-bottom: 30px; */
+    text-align: center;
 }
 
 .favroite-icon:before{
