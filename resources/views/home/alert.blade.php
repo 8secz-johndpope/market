@@ -58,6 +58,9 @@
                               <div class="field-location">
                                 <label for="location">Location</label>
                                 <input type="text" name="location" id="location" class="form-control">
+                                <div class="checkbox">
+                                  <label><input type="checkbox" name="js-additional-location-input">Homeworking</label>
+                                </div>
                               </div>
                             </div>
                             <div class="col-sm-5">
