@@ -142,20 +142,15 @@
                           <div class="field-contract-types">
                             <div class="row">
                               <ul class="contract-types clearfix">
-                                @foreach($fields as $field)
-                                  @if($field->id == 10)
-                                    @foreach($field->values as $value)
-                                      @if($value->slug !== 'locum' && $value->slug !== 'voluntary')
-                                        <li class="col-sm-6 checkbox">
-                                          <label>
-                                            <input type="checkbox" name="contract-types[]" id="" value="{{$value->slug}}">{{$value->title}}
-                                          </label>
-                                        </li>
-                                      @endif
-                                    @endforeach
-                                    @break
-                                  @endif
-                                @endforeach
+                                  @foreach($fields[10]->values as $value)
+                                    @if($value->slug !== 'locum' && $value->slug !== 'voluntary')
+                                      <li class="col-sm-6 checkbox">
+                                        <label>
+                                          <input type="checkbox" name="contract-types[]" id="" value="{{$value->slug}}">{{$value->title}}
+                                        </label>
+                                      </li>
+                                    @endif
+                                  @endforeach
                                 <li class="col-sm-6 checkbox">
                                   <label>
                                     <input type="checkbox" name="contract-types[]" id="" value="4010000000">Contract
