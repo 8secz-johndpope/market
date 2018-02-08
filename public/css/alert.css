@@ -20,6 +20,13 @@
 .notification-modify-form > .row {
 	margin: 0;
 }
+.sectors {
+    padding-left: 0;
+    list-style: none;
+}
+.sectors .checkbox:first-child{
+	margin-top: 0;
+}
 @media(min-width: 768px){
 	.notification-title {
 	    margin: 20px 0 10px 0;
