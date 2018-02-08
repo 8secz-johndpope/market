@@ -26,7 +26,7 @@
             <li role="presentation"><a data-toggle="tab" href="#create-company-alert">Company Alerts</a></li>
           </ul>
           <div class="tab-content">
-            <div class="notification-pages" id="create-job-alert">
+            <div class="notification-pages tab-pane fade in active" id="create-job-alert">
               <div class="notification-page selected">
                 <form id="add_notifications" action="" name="add_notifications">
                   <div class="field-id">
@@ -185,7 +185,7 @@
                 </form>
               </div>
             </div>
-            <div class="notification-pages" id="create-company-alert">
+            <div class="notification-pages tab-pane fade" id="create-company-alert">
               <div class="notification-page selected">
               </div>
             </div>
