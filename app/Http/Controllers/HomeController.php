@@ -729,7 +729,10 @@ class HomeController extends BaseController
     public function createAlert(Request $request){
         $user = Auth::user();
         $jobCategory = Category::find(4000000000);
-        $fields = $jobCategory->fields;
+        $fields = array();
+        foreach ($jobCategory->fields as $field) {
+            $fields[$field->id] = $field;
+        }
         return $fields;
         $sectors = $jobCategory->children;
         return view('home.alert',[ 'user' => $user, 'sectors' => $sectors, 'fields' => $fields]);
