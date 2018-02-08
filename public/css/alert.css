@@ -20,7 +20,7 @@
 .notification-modify-form > .row {
 	margin: 0;
 }
-.sectors {
+.sectors, .contract-types {
     padding-left: 0;
     list-style: none;
 }
