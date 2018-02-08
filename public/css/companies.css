@@ -102,3 +102,10 @@
     font-weight: 600;
     font-family: Effra-Medium,arial,helvetica,sans-serif;
 }
+.pagination-container {
+    width: 95%;
+    margin: 30px auto;
+}
+.pagination-new {
+    text-align: center;
+}
