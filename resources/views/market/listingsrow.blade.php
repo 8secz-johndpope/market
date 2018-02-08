@@ -298,11 +298,9 @@ use App\Model\Advert;
         </div> -->
         @if($category->id >= 4000000000 && $category->id <= 4999999999)
 
-                <div class="l-visible-large">
-
-                                <button class="btn btn-primary" onclick="$('#bulk-apply-form').submit();">Bulk Apply</button>
-
-                </div>
+            <div class="l-visible-large">
+                <button class="btn btn-primary" onclick="$('#bulk-apply-form').submit();">BulkApply</button>
+            </div>
             <div class="flyout-accordion accordion-container">
                 <button type="button" class="options-button accordion-options-button" data-toggle="collapse" data-target="acco-price">
                     <span class="options-button-inner">
@@ -642,7 +640,7 @@ use App\Model\Advert;
                         <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Job Alert </a> 
                     </div>
                     <div class="col-xs-6">                                
-                        <button class="btn btn-primary btn-bulk" data-toggle="modal" data-target="#bulkModal">Bulk Apply</button>
+                        <button class="btn btn-primary btn-bulk" data-toggle="modal" data-target="#bulkModal">BulkApply</button>
                     </div>
                     @else
                     <div class="col-xs-12">
