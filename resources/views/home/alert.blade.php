@@ -121,16 +121,20 @@
                           <div class="row">
                             <div class="field-type">
                               <ul class="sectors clearfix">
-                                <li class="col-sm-6 checkbox">
-                                  <label>
-                                    <input type="checkbox" name="types[]" id="type.0">Any
-                                  </label>
+                                <li class="col-sm-6">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" name="types[]" id="type.0">Any
+                                    </label>
+                                  </div>
                                 </li>
                                 @foreach($sectors as $sector)
-                                <li class="col-sm-6 checkbox">
-                                  <label>
-                                    <input type="checkbox" name="types[]" id="type.{{$sector->id}}" value="{{$sector->id}}">{{$sector->title}}
-                                  </label>
+                                <li class="col-sm-6">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" name="types[]" id="type.{{$sector->id}}" value="{{$sector->id}}">{{$sector->title}}
+                                    </label>
+                                  </div>
                                 </li>
                                 @endforeach
                               </ul>
