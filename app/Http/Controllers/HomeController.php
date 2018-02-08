@@ -731,11 +731,13 @@ class HomeController extends BaseController
         $jobCategory = Category::find(4000000000);
         $childcareServices = Category::find(5070000000);
         $healtBeauty = Category::find(4252000000);
+        $housekeeping = Category::find(4120706000);
         $fields = array();
         foreach ($jobCategory->fields as $field) {
             $fields[$field->id] = $field;
         }
         $sectors = $jobCategory->children->put($childcareServices->id, $childcareServices);
+        $sectors = $sectors->put($housekeeping->id, $housekeeping);
         $sectors = $sectors->put($healtBeauty->id, $healtBeauty)->sortBy('title');
         return view('home.alert',[ 'user' => $user, 'sectors' => $sectors, 'fields' => $fields]);
     }
