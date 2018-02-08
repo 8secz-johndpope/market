@@ -730,6 +730,7 @@ class HomeController extends BaseController
         $user = Auth::user();
         $jobCategory = Category::find(4000000000);
         $fields = $jobCategory->fields;
+        return $fields;
         $sectors = $jobCategory->children;
         return view('home.alert',[ 'user' => $user, 'sectors' => $sectors, 'fields' => $fields]);
     }
