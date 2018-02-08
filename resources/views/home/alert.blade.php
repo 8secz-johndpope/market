@@ -142,7 +142,7 @@
                           <div class="field-contract-types">
                             <div class="row">
                               <ul class="contract-types clearfix">
-                                  @foreach($fields[10]->values as $value)
+                                  @foreach($fields['10']->values as $value)
                                     @if($value->slug !== 'locum' && $value->slug !== 'voluntary')
                                       <li class="col-sm-6 checkbox">
                                         <label>
