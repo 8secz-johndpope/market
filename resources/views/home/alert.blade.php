@@ -187,6 +187,15 @@
             </div>
             <div class="notification-pages tab-pane fade" id="create-company-alert">
               <div class="notification-page selected">
+                <a href="#" class="btn btn-submit">Create new alert</a>
+                <div class="no-company-alerts">
+                  <p class="alert-title">You currently have no Company Alerts set up.</p>
+                  <p>With Company Alerts, you will get daily jobs from specific companies straight to your inbox.</p>
+                  <p class="alert-title mt-20 hidden-xs">Add {{env('APP_NAME')}} to Your Email Safe List</p>
+                  <p class="hidden-xs">
+                    Ensure you receive all Company Alerts from {{env('APP_NAME')}} by adding us to your safe senders list. Check your email settings if you're unsure how to do this.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
