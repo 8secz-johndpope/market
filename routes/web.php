@@ -316,7 +316,7 @@ Route::get('/leaves','MarketController@lleaves');
 Route::get('/make-contact/{id}', 'MarketController@makeContact');
 Route::get('/template-contact', 'MarketController@templateContact');
 //This routes are for templates
-Route::get('/companies/{id}', 'MarketController@companies');
+Route::get('/companies/{id}', 'MarketController@companiesTemplate');
 Route::get('/companies/{id}/office/{office_id}', 'MarketController@office');
 Route::get('/companies/{id}/people/{people_id}', 'MarketController@people');
 Route::get('/company-jobs/{id}', 'MarketController@companyJobs');

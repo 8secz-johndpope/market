@@ -2115,7 +2115,7 @@ class MarketController extends BaseController
         $user = User::find($id);
         return view('market.make-contact', ['user' => $user]);
     }
-    public function companies(Request $request, $id){
+    public function companiesTemplate(Request $request, $id){
         $view = 'market.companies-template1';
         if($id === 'uber')
             $view = 'market.companies-template2';
@@ -2311,6 +2311,8 @@ class MarketController extends BaseController
 
     }
     public function companies(){
-        return view('market.companies', []);
+        $companies = Business::paginate(12);
+        $sectors = Category::find(4000000000)->children;
+        return view('market.companies', ['companies' => $companies, 'sectors' => $sectors]);
     }
 }
