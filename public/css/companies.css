@@ -1,3 +1,6 @@
+.body{
+	padding-top: 90px;
+}
 .recruiter-dirtectory-posted-by {
     padding: 15px;
     margin-bottom: 30px;
@@ -22,4 +25,18 @@
 }
 .list-aside-content li {
     margin-bottom: 10px;
+}
+.recruiter-dirtectory-specialism {
+    -webkit-transition: max-height 2s ease;
+    transition: max-height 2s ease;
+    border: 1px #d6d6d6 solid;
+    border-top: 3px #d6d6d6 solid!important;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 15px;
+}
+.recruiter-dirtectory-specialism .list-aside-content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 882px;
 }
