@@ -1989,6 +1989,7 @@ nav.navbar.navbar-inverse {
 .container-btns-recruiter {
     padding: 0;
     margin-bottom: 10px;
+    border-top: 2px solid #f87964;
 }
 .container-btn-recruiter{
     padding: 15px;
