@@ -74,12 +74,10 @@
 	<div class="container-search-section-title">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12">
-					
-						<h1 class="search-section-title">
-							Search Recruiters
-						</h1>
-					</div>
+				<div class="col-xs-12">	
+					<h1 class="search-section-title">
+						Search Recruiters
+					</h1>
 				</div>
 			</div>
 		</div>
