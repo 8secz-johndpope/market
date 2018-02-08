@@ -117,7 +117,7 @@
                           </div>
                         </div>
                         <div class="col-xs-12">
-                          <h5 class="label">Industry</h5>
+                          <h5>Industry</h5>
                           <div class="row">
                             <div class="field-type">
                               <ul class="sectors clearfix">
@@ -138,7 +138,7 @@
                           </div>
                         </div>
                         <div class="col-xs-12">
-                          <h5 class="label">Contract Type</h5>
+                          <h5>Contract Type</h5>
                           <div class="field-contract-types">
                             <div class="row">
                               <ul class="contract-types clearfix">
