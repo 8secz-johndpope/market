@@ -624,7 +624,7 @@ use App\Model\Advert;
                     <a href="/jobs/uk" class="btn-recruiter">Latest Jobs</a>
                 </div>
                 <div class="col-sm-4 container-btn-recruiter border-left">
-                    <a href="#" class="btn-recruiter">Explore Companies</a>
+                    <a href="/companies" class="btn-recruiter">Explore Companies</a>
                 </div>
                 <div class="col-sm-4 container-btn-recruiter border-left">
                     <a href="#" class="btn-recruiter">Search Recruiter</a>

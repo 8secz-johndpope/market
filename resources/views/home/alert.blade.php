@@ -194,7 +194,7 @@
             </div>
             <div class="notification-pages tab-pane fade" id="create-company-alert">
               <div class="notification-page selected">
-                <a href="#" class="btn btn-submit">Create new alert</a>
+                <a href="/companies" class="btn btn-submit">Create new alert</a>
                 <div class="no-company-alerts">
                   <p class="alert-title">You currently have no Company Alerts set up.</p>
                   <p>With Company Alerts, you will get daily jobs from specific companies straight to your inbox.</p>

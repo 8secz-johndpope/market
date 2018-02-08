@@ -2310,4 +2310,7 @@ class MarketController extends BaseController
         return $this->priceType($product);
 
     }
+    public function companies(){
+        return view('market.companies', []);
+    }
 }
