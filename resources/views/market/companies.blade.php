@@ -70,14 +70,22 @@
 	            </div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="container-search-section-title">
-					<h1 class="search-section-title">
-						Search Recruiters
-					</h1>
+	</div>
+	<div class="container-search-section-title">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					
+						<h1 class="search-section-title">
+							Search Recruiters
+						</h1>
+					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2 col-xs-12">
 				<div class="search-companies">
 					<div class="search-companies-center">
