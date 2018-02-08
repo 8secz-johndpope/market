@@ -84,6 +84,10 @@
     margin: auto;
     max-height: 100%;
     width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .subtitle {
     min-height: 85px;
