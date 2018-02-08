@@ -78,7 +78,7 @@
 					</h1>
 				</div>
 			</div>
-			<div class="col-xs-12">
+			<div class="col-sm-8 col-sm-offset-2 col-xs-12">
 				<div class="search-companies">
 					<div class="search-companies-center">
 						<div class="search-companies-wrap">
