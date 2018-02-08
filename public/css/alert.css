@@ -35,6 +35,27 @@
 	clear: both;
 	float: right;
 }
+.no-company-alerts {
+    background-color: #f1f8ff;
+    border-color: #aaccee;
+    position: relative;
+    float: none;
+    width: 100% !important;
+    min-height: auto;
+    padding: 10px;
+    margin-top: 0 !important;
+    margin: 0 0 20px;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+}
+#create-company-alert .btn-submit {
+    margin: 0 5px 20px 0;
+}
+.no-company-alerts p, .no-job-alerts p {
+    font: 400 13px Arial, Helvetica, sans-serif;
+}
 @media(min-width: 768px){
 	.notification-title {
 	    margin: 20px 0 10px 0;
