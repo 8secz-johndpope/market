@@ -61,3 +61,18 @@
     border-bottom: 2px solid #eaeaea;
     margin: 20px 0 0 0;
 }
+.profile-thumb {
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+}
+.profile-thumb .profile-link {
+    display: block;
+    height: 100%;
+    padding: 7.5px;
+    position: relative;
+}
+.profile-thumb .profile-img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
