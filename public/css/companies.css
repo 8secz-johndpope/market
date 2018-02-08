@@ -40,3 +40,19 @@
     overflow-x: hidden;
     max-height: 882px;
 }
+.recruiter-dirtectory-main-content {
+    border: 1px #d6d6d6 solid;
+    border-top: 3px #d6d6d6 solid!important;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.recruiter-dirtectory-main-content-title {
+    border-bottom: 3px solid #eaeaea;
+    color: #e25b89;
+    padding-bottom: 7.5px;
+    margin: 30px 15px 15px 15px;
+}
+.recruiter-dirtectory-main-content-logos {
+    border-bottom: 2px solid #eaeaea;
+    margin: 20px 0 0 0;
+}
