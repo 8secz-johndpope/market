@@ -82,7 +82,7 @@
     border-bottom: 2px solid #eaeaea;
     /*margin: 20px 0 0 0;*/
    	padding-top: 30px;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(/css/explore-bg.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(/css/explore-bg.jpg);
     background-size: 250%;
     background-position: center;
 }
@@ -202,6 +202,30 @@
     padding: 20px 0;
     background: #fff;
     margin-bottom: 30px;
+}
+.btn-see-jobs {
+    width: 100%;
+    -webkit-transition: background 200ms ease-out;
+    -moz-transition: background 200ms ease-out;
+    -ms-transition: background 200ms ease-out;
+    -o-transition: background 200ms ease-out;
+    transition: background 200ms ease-out;
+    padding: 10px 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f87964;
+    display: inline-block;
+    background-color: transparent;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f87964;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 11px;
+    border-radius: 25px;
+    letter-spacing: 1px;
 }
 @media(min-width: 768px){
 	.search-companies-az {

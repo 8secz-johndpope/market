@@ -63,8 +63,10 @@
 				            		<h2 class="immediate-title">
 				            			IMMEDIATE STARTS JOBS
 				            		</h2>
-				            		<div class="container-actions-immediate">
-				            			<a href="#" class="btn btn-see-jobs">SEE JOBS</a>
+				            		<div class="row">
+					            		<div class="col-sm-8 col-sm-offset-2 container-actions-immediate">
+					            			<a href="#" class="btn btn-see-jobs">SEE JOBS</a>
+					            		</div>
 				            		</div>
 			            		</div>
 			            	@endif
