@@ -58,13 +58,15 @@
 	            	<div class="col-sm-10 col-sm-offset-1">
 	            		<div class="row">
 			            	@foreach($companies as $company)
-			            	@if($loop->index == 5)
+			            	@if($loop->index == 6)
 			            	<div class="container-immediate">
-			            		<h2 class="immediate-title">
-			            			IMMEDIATE STARTS JOBS
-			            		</h2>
-			            		<div class="container-actions-immediate">
-			            			<a href="#" class="btn btn-see-jobs">SEE JOBS</a>
+			            		<div class="col-sm-12">
+				            		<h2 class="immediate-title">
+				            			IMMEDIATE STARTS JOBS
+				            		</h2>
+				            		<div class="container-actions-immediate">
+				            			<a href="#" class="btn btn-see-jobs">SEE JOBS</a>
+				            		</div>
 			            		</div>
 			            	</div>
 			            	@endif
