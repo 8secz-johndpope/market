@@ -39,7 +39,7 @@
 									</div>
 									<a href="#" class="tm-brighter-blue-square-button filter-search-button">Search</a>
 									<a class="show-all-jobs" href="#">
-										<p>Show Me All Jobs</p>
+										<p>Show Me All Rectruiters</p>
 									</a>
 								</div>
 							</div>
