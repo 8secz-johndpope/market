@@ -173,9 +173,17 @@
     transition: color 200ms ease-out;
     box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
 }
-.favroite-icon:before {
+.favroite-icon:before, .icon-bell:before {
     height: 20px;
     width: 20px;
+}
+.icon-bell:before {
+	position: relative;
+}
+.icon-bell{
+	cursor: pointer;
+    display: block;
+    margin: 4px;
 }
 @media(min-width: 768px){
 	.search-companies-az {
