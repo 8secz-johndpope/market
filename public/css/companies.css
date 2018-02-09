@@ -240,6 +240,28 @@
     color: #fff;
     background-color: #1E9476;
 }
+.top-hero-section {
+    height: 420px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.top-hero-section .bg-image {
+    min-height: 100px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    height: 420px;
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.3),transparent),url(/css/search-recruiter-bg.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
