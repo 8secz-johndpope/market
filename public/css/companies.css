@@ -308,7 +308,7 @@
     float: left;
 }
 .filters-jobs .filter-wrapper .keyword-wrapper {
-    width: 40%;
+    width: 60%;
 }
 .filters-jobs .filter-wrapper .landing-location-filter, .filters-jobs .filter-wrapper .keyword-input {
     width: 100%;
@@ -352,7 +352,7 @@ input[type=search] {
     padding: 12px 30px;
 }
 .filters-jobs .filter-search-button {
-    width: 17%;
+    width: 30%;
     float: left;
     padding-top: 15px;
     font-size: 18px;
