@@ -50,7 +50,7 @@
 					        <h2>Learn more about job advertisers.</h2>
 				    	</div>
 				    	<div class="col-sm-4">
-				    		<p>We think company culture is pretty important. We show you inside offices before you apply to make sure you'll love working there.</p>
+				    		<p>Get peek inside a company to make sure you'll love working before you apply</p>
 				    	</div>
 				    </div>
 		    	</div>
