@@ -72,6 +72,13 @@
     margin: 0;
     font-weight: 200;
 }
+.recruiter-directory-main-content p {
+    font-family: proximalight,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 13px;
+}
 .recruiter-directory-main-content-logos {
     border-bottom: 2px solid #eaeaea;
     margin: 20px 0 0 0;
