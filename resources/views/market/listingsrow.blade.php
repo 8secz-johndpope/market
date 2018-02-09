@@ -644,7 +644,7 @@ use App\Model\Advert;
                     </div>
                     @else
                     <div class="col-xs-12">
-                        <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Search Alert 
+                        <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="icon icon-bell"></span>&nbsp;&nbsp;Set Search Alert 
                         </a> 
                     </div>
                     @endif
