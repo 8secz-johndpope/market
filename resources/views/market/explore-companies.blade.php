@@ -61,11 +61,11 @@
 			            	@if($loop->index == 6)
 			            		<div class="col-sm-12 container-immediate text-center">
 				            		<h2 class="immediate-title">
-				            			SOME IMMEDIATE START JOBS YOU MIGHT LIKE
+				            			SOME LATEST JOBS YOU MIGHT LIKE
 				            		</h2>
 				            		<div class="row">
 					            		<div class="col-sm-4 col-sm-offset-4 container-actions-immediate">
-					            			<a href="#" class="btn btn-see-jobs">SEE JOBS</a>
+					            			<a href="/jobs/uk" class="btn btn-see-jobs">SEE JOBS</a>
 					            		</div>
 				            		</div>
 			            		</div>
