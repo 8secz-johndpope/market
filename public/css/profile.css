@@ -662,6 +662,10 @@ footer{
     vertical-align: middle;
     padding-left: 0;
 }
+.btn-verification{
+    background: #6001d2;
+    color: #fff;
+}
 @media (max-width: 767px){
     .ad-applicant-picture{
         position: relative;

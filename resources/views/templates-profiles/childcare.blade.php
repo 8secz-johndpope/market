@@ -205,6 +205,7 @@
                             <div class="ad-sidebar-right-container clearfix">
                                 <a class="btn btn-lg btn-primary" href="/job/profile/edit/social-childcare">Modify your profile</a>
                                 <a class="btn btn-success" href="#">Publish</a>
+                                <a class="btn btn-verification">Verification</a>
                             </div>
                         </section>
                     </div>
