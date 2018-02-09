@@ -135,6 +135,14 @@
                                 Mobile Alert
                             </a>
                         </li>
+                        @if(isset($advert->user->company))
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-chevron-left"></i>
+                                Company Alert
+                            </a>
+                        </li>
+                        @endif
                     </ul>
                 </div>
             </div>
