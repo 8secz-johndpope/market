@@ -262,6 +262,9 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+.page-companies{
+	background: 70px;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;

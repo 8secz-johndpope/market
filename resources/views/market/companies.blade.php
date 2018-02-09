@@ -13,7 +13,7 @@
 @endphp
 @section('content')
  <link href="{{asset("/css/companies.css?q=$dateMs")}}" rel="stylesheet">
- <div class="body background-body">
+ <div class="body background-body page-companies">
 	<div class="top-hero-section">
 		<div class="bg-image">
 			<div class="container">
