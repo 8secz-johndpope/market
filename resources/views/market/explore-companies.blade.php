@@ -61,14 +61,14 @@
 		            		<div class="profile-thumb">
 		            			<a href="#" class="profile-link">
 		            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
-		            				<div class="favorite-container">
-										<div>
-											<a aria-label="favorite" href="#" class="favorite">
-												<i aria-hidden="true" class="heart-empty favroite-icon"></i>
-											</a>
-										</div>
-		            				</div>
 		            			</a>
+		            			<div class="favorite-container">
+									<div>
+										<a aria-label="favorite" href="#" class="favorite">
+											<i aria-hidden="true" class="heart-empty favroite-icon"></i>
+										</a>
+									</div>
+	            				</div>
 		            		</div>
 		            		<div class="subtitle">
 		            			<a href="#">{{$company->name}}</a>
