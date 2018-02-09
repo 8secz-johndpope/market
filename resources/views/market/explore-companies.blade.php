@@ -58,6 +58,16 @@
 	            	<div class="col-sm-10 col-sm-offset-1">
 	            		<div class="row">
 			            	@foreach($companies as $company)
+			            	@if($loop == 12)
+			            	<div class="container-immediate">
+			            		<h2 class="immediate-title">
+			            			IMMEDIATE STARTS JOBS
+			            		</h2>
+			            		<div class="container-actions-immediate">
+			            			<a href="#" class="btn btn-see-jobs">SEE JOBS</a>
+			            		</div>
+			            	</div>
+			            	@endif
 			            	<div class="col-sm-4 text-center">
 			            		<div class="profile">
 				            		<div class="profile-thumb">
@@ -92,6 +102,7 @@
 		            				</div>
 			            		</div>
 			            	</div>
+
 			            	@endforeach
 		            	</div>
 	            	</div>
