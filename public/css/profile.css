@@ -666,6 +666,13 @@ footer{
     background: #6001d2;
     color: #fff;
 }
+.verification-level {
+    position: absolute;
+    font-size: 12px;
+    right: 10px;
+    top: 21px;
+    font-weight: 600;
+}
 @media (max-width: 767px){
     .ad-applicant-picture{
         position: relative;
