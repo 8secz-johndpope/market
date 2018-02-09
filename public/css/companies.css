@@ -227,6 +227,10 @@
     border-radius: 25px;
     letter-spacing: 1px;
 }
+.btn-see-jobs:hover {
+    color: #fff;
+    background-color: #f87964;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
