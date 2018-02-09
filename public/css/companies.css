@@ -179,6 +179,9 @@
 }
 .icon-bell:before {
 	position: relative;
+	width: 25px;
+	left: 0;
+	top: 0;
 }
 .icon{
 	height: auto;
