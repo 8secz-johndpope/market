@@ -263,7 +263,18 @@
     background-position: center center;
 }
 .page-companies{
-	background: 70px;
+	padding-top: 70px;
+}
+.top-hero-section .sub-heading {
+    margin-top: 160px;
+}
+.top-hero-section .sub-heading h1 {
+    text-transform: uppercase;
+    font-size: 55px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
 }
 @media(min-width: 768px){
 	.search-companies-az {
