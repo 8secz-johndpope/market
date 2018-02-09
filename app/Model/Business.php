@@ -15,5 +15,7 @@ class Business extends Model
     public function address(){
         return $this->belongsTo('App\Model\Address');
     }
-
+    public function user(){
+    	return $this->belongsTo('App\Model\User');
+    }
 }
