@@ -2520,6 +2520,21 @@ nav.navbar.navbar-inverse {
 .modal-header {
     background: #ddd;
 }
+.icon-bell:before {
+    content: '';
+    display: block;
+    background: url(/css/icons/bell-icon.svg);
+    width: 17px;
+    height: 13px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    left: -14px;
+    top: 2px;
+}
+.icon-bell {
+    position: relative;
+}
 @media (max-width: 1500px) {
     h4.product-title {
         font-size: 18px;
