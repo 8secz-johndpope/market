@@ -173,6 +173,9 @@
     transition: color 200ms ease-out;
     box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
 }
+.alert-container .company-alert {
+    padding: 7px 5px;
+}
 .favroite-icon:before, .icon-bell:before {
     height: 20px;
     width: 20px;
