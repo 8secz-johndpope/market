@@ -47,7 +47,7 @@
 					<div class="row">
 						<div class="col-sm-8">
 							<h1 class="main-title">Explore Companies</h1>
-					        <h2>Browse offices before you apply.</h2>
+					        <h2>Learn more about job advertiser</h2>
 				    	</div>
 				    	<div class="col-sm-4">
 				    		<p>We think company culture is pretty important. We show you inside offices before you apply to make sure you'll love working there.</p>
