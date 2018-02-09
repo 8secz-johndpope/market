@@ -37,16 +37,7 @@
 											</form>
 										</div>
 									</div>
-									<div>
-										<div class="location-wrapper">
-											<form class="landing-location-filter">
-												<input type="search" placeholder="Location" id="job_locationautocomplete" autocomplete="off" tabindex="2" aria-label="location input">
-												<div aria-hidden="true" class="autocomplete-wrapper">
-												</div>
-											</form>
-										</div>
-									</div>
-									<a href="#">Search</a>
+									<a href="#" class="tm-brighter-blue-square-button filter-search-button">Search</a>
 									<a class="show-all-jobs" href="#">
 										<p>Show Me All Jobs</p>
 									</a>

@@ -330,6 +330,48 @@ input[type=search] {
     border-radius: 0;
     outline-width: 1px;
 }
+.tm-brighter-blue-square-button {
+    -webkit-transition: background 200ms ease-out;
+    -moz-transition: background 200ms ease-out;
+    -ms-transition: background 200ms ease-out;
+    -o-transition: background 200ms ease-out;
+    transition: background 200ms ease-out;
+    display: inline-block;
+    background-color: #3852d4;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: proximasemibold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-size: 11px;
+    border-radius: 0;
+    letter-spacing: 1px;
+    padding: 12px 30px;
+}
+.filters-jobs .filter-search-button {
+    width: 17%;
+    float: left;
+    padding-top: 15px;
+    font-size: 18px;
+    height: 50px;
+}
+.filters-jobs .show-all-jobs {
+    margin: 20px 20px 0;
+    color: #b5b5b5;
+    text-transform: uppercase;
+    font-family: proximabold,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    opacity: .7;
+    position: absolute;
+    bottom: 17px;
+    right: -120px;
+    width: 150px;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
