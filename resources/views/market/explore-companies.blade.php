@@ -64,14 +64,6 @@
 				            			<a href="#" class="profile-link">
 				            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
 				            			</a>
-				            			<div class="favorite-container">
-											<div>
-												<div class="favor">
-													<i aria-hidden="true" class="heart-empty favroite-icon"></i>
-													<span class="favor-text">SAVE</span>
-												</div>
-											</div>
-			            				</div>
 				            		</div>
 				            		<div class="subtitle">
 				            			<a href="#">{{$company->name}}</a>
@@ -90,6 +82,14 @@
 											</a>
 										</div>
 				            		</div>
+				            		<div class="favorite-container">
+										<div>
+											<div class="favor">
+												<i aria-hidden="true" class="heart-empty favroite-icon"></i>
+												<span class="favor-text">SAVE</span>
+											</div>
+										</div>
+		            				</div>
 			            		</div>
 			            	</div>
 			            	@endforeach
