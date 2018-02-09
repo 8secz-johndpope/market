@@ -55,34 +55,38 @@
 				    </div>
 		    	</div>
 	            <div class="recruiter-directory-main-content-logos row">
-	            	@foreach($companies as $company)
-	            	<div class="col-sm-4 text-center">
-	            		<div class="profile">
-		            		<div class="profile-thumb">
-		            			<a href="#" class="profile-link">
-		            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
-		            			</a>
-		            			<div class="favorite-container">
-									<div>
-										<a aria-label="favorite" href="#" class="favorite">
-											<i aria-hidden="true" class="heart-empty favroite-icon"></i>
-										</a>
-									</div>
-	            				</div>
-		            		</div>
-		            		<div class="subtitle">
-		            			<a href="#">{{$company->name}}</a>
-		            			<span class="count-jobs-company">
-		            				@if(isset($company->user))
-		            					({{count($company->user->adverts)}})
-		            				@else
-		            					(0)
-		            				@endif
-		            			</span>
-		            		</div>
-	            		</div>
+	            	<div class="col-sm-10 col-sm-offset-1">
+	            		<div class="row">
+			            	@foreach($companies as $company)
+			            	<div class="col-sm-4 text-center">
+			            		<div class="profile">
+				            		<div class="profile-thumb">
+				            			<a href="#" class="profile-link">
+				            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
+				            			</a>
+				            			<div class="favorite-container">
+											<div>
+												<a aria-label="favorite" href="#" class="favorite">
+													<i aria-hidden="true" class="heart-empty favroite-icon"></i>
+												</a>
+											</div>
+			            				</div>
+				            		</div>
+				            		<div class="subtitle">
+				            			<a href="#">{{$company->name}}</a>
+				            			<span class="count-jobs-company">
+				            				@if(isset($company->user))
+				            					({{count($company->user->adverts)}})
+				            				@else
+				            					(0)
+				            				@endif
+				            			</span>
+				            		</div>
+			            		</div>
+			            	</div>
+			            	@endforeach
+		            	</div>
 	            	</div>
-	            	@endforeach
 	            </div>
 	            <div class="pagination-container">
 	            	<div class="pagination-new">
