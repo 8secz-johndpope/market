@@ -436,9 +436,16 @@ section.spotligth{
   padding: 0;
   margin: 0;
 }*/
+.construction-wrapper {
+    background: #f5f5f5;
+}
 .constrution-container h1 {
     font-size: 24px;
-    margin-top: 0;
+    margin-bottom: 0;
+    /* margin-top: 0; */
+}
+.constrution-container .alert{
+  margin:0;
 }
 .categories ul {
     list-style: none;
