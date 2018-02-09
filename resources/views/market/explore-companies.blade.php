@@ -43,9 +43,17 @@
 				</div>
 			</div>
 			<div class="recruiter-directory-main-content col-sm-9">
-				<div class="recruiter-directory-main-content-title">
-		            <h1 class="main-title">All hiring now</h1>
-		        </div>
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="recruiter-directory-main-content-title">
+				            <h1 class="main-title">Explore Companies</h1>
+				            <h2>Browse offices before you apply.</h2>
+				        </div>
+			    	</div>
+			    	<div class="col-sm-4">
+			    		<p>We think company culture is pretty important. We show you inside offices before you apply to make sure you'll love working there.</p>
+			    	</div>
+		    	</div>
 	            <div class="recruiter-directory-main-content-logos row">
 	            	@foreach($companies as $company)
 	            	<div class="col-sm-3 text-center">
