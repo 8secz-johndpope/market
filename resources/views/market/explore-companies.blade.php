@@ -58,7 +58,7 @@
 	            	<div class="col-sm-10 col-sm-offset-1">
 	            		<div class="row">
 			            	@foreach($companies as $company)
-			            	@if($loop == 12)
+			            	@if($loop->index == 12)
 			            	<div class="container-immediate">
 			            		<h2 class="immediate-title">
 			            			IMMEDIATE STARTS JOBS
