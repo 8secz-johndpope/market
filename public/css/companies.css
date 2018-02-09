@@ -276,6 +276,14 @@
     font-style: normal;
     text-rendering: optimizeLegibility;
 }
+.top-hero-section .sub-heading h2 {
+    margin: 10px 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
