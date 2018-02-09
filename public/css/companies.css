@@ -299,6 +299,17 @@
     padding: 10px 15px 10px 70px;
     position: relative;
 }
+.filters-jobs .filter-wrapper>div {
+    display: inline;
+}
+.filters-jobs .filter-wrapper .location-wrapper, .filters-jobs .filter-wrapper .keyword-wrapper {
+    margin-right: 5px;
+    margin-bottom: 0;
+    float: left;
+}
+.filters-jobs .filter-wrapper .keyword-wrapper {
+    width: 40%;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
