@@ -144,7 +144,7 @@
     background: #fff;
     margin-bottom: 20px;
 }
-.profile .favorite-container {
+.profile .favorite-container, .profile .alert-container {
     z-index: 20;
     position: absolute;
     right: 5px;
