@@ -13,7 +13,7 @@
 @section('content')
 		<section class="categories background-body">
     			<div class="container">
-    				<div class="row">
+    				<div class="row construction-wrapper">
     					<div class="col-xs-12 text-center">
 				 			<div class="constrution-container">
 				 				<h1>Sorry! This sites is still under construction</h1>
