@@ -411,7 +411,7 @@
             </div>
             <div class="col-xs-12 text-center">
                 <div class="constrution-container">
-                    <h1>Sorry! This website is still under construction</h1>
+                    <h1>Sorry. This website is still under construction</h1>
                     <h2 class="alert">No payments or transactions are permitted</h2>
                 </div>
             </div>
