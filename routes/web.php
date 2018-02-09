@@ -145,6 +145,8 @@ Route::get('/user/manage/sales', 'HomeController@motors');
 Route::get('/job/manage/applications/{id}', 'HomeController@view_applications');
 
 Route::get('/user/create/alert/{id}', 'HomeController@alert');
+Route::get('/user/create/company-alert/{id}', 'HomeController@createCompanyAlert');
+
 Route::get('/user/delete/alert/{id}', 'HomeController@delete_alert');
 Route::get('/user/toggle/alert/{id}', 'HomeController@toggle_alert');
 

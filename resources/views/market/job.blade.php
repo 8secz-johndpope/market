@@ -137,7 +137,7 @@
                         </li>
                         @if(isset($advert->user->business))
                         <li>
-                            <a href="#">
+                            <a href="/user/create/company-alert/{{$advert->user->business->id}}">
                                 <i class="fa fa-chevron-left"></i>
                                 Company Alert
                             </a>

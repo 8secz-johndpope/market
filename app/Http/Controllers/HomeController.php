@@ -5,6 +5,7 @@ use App\Mail\AccountCreated;
 use App\Model\Address;
 use App\Model\Application;
 use App\Model\Business;
+use App\Model\CompanyAlert;
 use App\Model\Commission;
 use App\Model\Contact;
 use App\Model\Cover;
@@ -751,6 +752,16 @@ class HomeController extends BaseController
         $alert->location_id=$location->id;
         $alert->save();
         return redirect('/'.$category->slug.'/'.$location->slug)->with('msg', 'Your alert was created correctly');
+    }
+    public function createCompanyAlert(Request $request, $id){
+        $company = Business::find($id);
+        $user = Auth::user();
+        $companyAlert = new CompanyAlert();
+        $companyAlert->user_id = $user->id;
+        $companyAlert->title = $company->name;
+        $companyAlert->business_id = $company->id;
+        $companyAlert->save();
+        return redirect('/companies')->with('msg', 'Your alert was create correctly');
     }
     public function delete_alert(Request $request,$id){
         $alert=SearchAlert::find($id);
