@@ -38,6 +38,12 @@
 						 </div>
 					 </div>
 			 		@endforeach -->
+			 		<div class="col-xs-12">
+			 			<div class="constrution-container">
+			 				<h1>Sorry! This sites is still under construction</h1>
+			 				<h2 class="alert">No transactions are permitted</h2>
+			 			</div>
+			 		</div>
 			 		<div class="col-xs-6 col-sm-3 col-lg-2">
 				 		<div class="panel panel-primary category-0">
 				 			<div class="panel-heading">
