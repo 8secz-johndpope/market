@@ -14,70 +14,46 @@
 @section('content')
  <link href="{{asset("/css/companies.css?q=$dateMs")}}" rel="stylesheet">
  <div class="body background-body">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="recruiter-dirtectory-posted-by">
-					<h4 class="title-aside-content">Post by</h4>
-					<ul class="list-aside-content">
-						<li>
-		                    <a href="#" class="selected">All</a>
-		                </li>
-		                <li>
-		                    <a href="#" class="">Direct Employers</a>
-		                </li>
-		                <li>
-		                    <a href="#" class="">Recruitment Agencies</a>
-		                </li>
-					</ul>
-				</div>
-				<div class="recruiter-dirtectory-specialism">
-					<h4 class="title-aside-content">Filter by Specialism</h4>
-					<ul class="list-aside-content">
-						@foreach($sectors as $sector)
-						<li>
-			                <a href="#" class="selected">{{$sector->title}}</a>
-			            </li>
-						@endforeach
-					</ul>
-				</div>
-			</div>
-			<div class="recruiter-directory-main-content col-sm-9">
-				<div class="recruiter-directory-main-content-title">
-		            <h1 class="main-title">All hiring now</h1>
-		        </div>
-	            <div class="recruiter-directory-main-content-logos row">
-	            	@foreach($companies as $company)
-	            	<div class="col-sm-4 text-center">
-	            		<div class="profile">
-		            		<div class="profile-thumb">
-		            			<a href="#" class="profile-link">
-		            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
-		            			</a>
-		            		</div>
-		            		<div class="subtitle">
-		            			<a href="#">{{$company->name}}</a>
-		            			<span class="count-jobs-company">(0)</span>
-		            		</div>
-	            		</div>
-	            	</div>
-	            	@endforeach
-	            </div>
-	            <div class="pagination-container">
-	            	<div class="pagination-new">
-	            		{{ $companies->links()}}
-	            	</div>
-	            </div>
-			</div>
-		</div>
-	</div>
 	<div class="container-search-section-title">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">	
-					<h1 class="search-section-title">
-						Search Recruiters
-					</h1>
+		<div class="bg-image">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="sub-heading">	
+							<h1>
+								Search Recruiters
+							</h1>
+							<h2>Over 1,000 the best companies. Find yours.</h2>
+							<div class="filters-jobs">
+								<div class="filter-wrapper clearfix">
+									<div class="keyword-wrapper">
+										<div>
+											<form>
+												<div class="keyword-input">
+													<input aria-label="keyword input" type="search" placeholder="Keywords or Company Name">
+													<div aria-hidden="true" class="autocomplete-wrapper">
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div>
+										<div class="location-wrapper">
+											<form class="landing-location-filter">
+												<input type="search" placeholder="Location" id="job_locationautocomplete" autocomplete="off" tabindex="2" aria-label="location input">
+												<div aria-hidden="true" class="autocomplete-wrapper">
+												</div>
+											</form>
+										</div>
+									</div>
+									<a href="#">Search</a>
+									<a class="show-all-jobs" href="#">
+										<p>Show Me All Jobs</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
