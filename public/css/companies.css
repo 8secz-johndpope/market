@@ -53,9 +53,24 @@
     margin: 30px 15px 15px 15px;
 }
 .recruiter-directory-main-content-title .main-title {
-    display: inline;
+    font-size: 30px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
     margin: 0;
-    padding: 0;
+    line-height: 1.2em;
+    font-weight: 400;
+}
+.recruiter-directory-main-content-title h2 {
+    font-size: 24px;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    font-weight: 200;
 }
 .recruiter-directory-main-content-logos {
     border-bottom: 2px solid #eaeaea;
