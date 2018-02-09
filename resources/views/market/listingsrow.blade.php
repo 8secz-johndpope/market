@@ -637,7 +637,7 @@ use App\Model\Advert;
                 <div class="row">
                     @if($category->can_apply())
                     <div class="col-xs-6">
-                        <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;Set Job Alert </a> 
+                        <a class="btn search-alert" href="/user/create/alert/{{$category->id}}?id={{$location->id}}"><span class="icon icon-bell"></span>&nbsp;&nbsp;Set Job Alert </a> 
                     </div>
                     <div class="col-xs-6">                                
                         <button class="btn btn-primary btn-bulk" data-toggle="modal" data-target="#bulkModal">BulkApply</button>
