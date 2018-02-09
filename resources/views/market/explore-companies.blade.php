@@ -61,7 +61,7 @@
 			            	@if($loop->index == 6)
 			            		<div class="col-sm-12 container-immediate text-center">
 				            		<h2 class="immediate-title">
-				            			IMMEDIATE STARTS JOBS
+				            			SOME IMMEDIATE STARTS JOBS
 				            		</h2>
 				            		<div class="row">
 					            		<div class="col-sm-4 col-sm-offset-4 container-actions-immediate">
