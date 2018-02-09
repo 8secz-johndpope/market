@@ -81,12 +81,16 @@
 .recruiter-directory-main-content-logos {
     border-bottom: 2px solid #eaeaea;
     margin: 20px 0 0 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(/css/explore-bg.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .profile{
 	margin-bottom: 30px;
 	-moz-box-shadow: 0 10px 20px 0 #eee;
     -webkit-box-shadow: 0 10px 20px 0 #eee;
     box-shadow: 0 10px 20px 0 #eee;
+    background: #fff;
 }
 .profile-thumb {
     border-bottom: 1px solid #d6d6d6;
