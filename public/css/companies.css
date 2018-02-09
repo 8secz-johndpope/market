@@ -144,13 +144,19 @@
     background: #fff;
     margin-bottom: 20px;
 }
-.profile .favorite-container, .profile .alert-container {
+.profile .favorite-container {
     z-index: 20;
     position: absolute;
     right: 5px;
     top: 5px;
 }
-.favorite-container .favorite, .favorite-container .unfavorite {
+.profile .alert-container{
+	right: 5px;
+	bottom: 5px;
+	z-index: 20;
+    position: absolute;
+}
+.favorite-container .favorite, .favorite-container .unfavorite, .alert-container .company-alert {
     display: inline-block;
     line-height: 1em;
     color: #fd745a;
