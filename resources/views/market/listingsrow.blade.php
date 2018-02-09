@@ -673,7 +673,11 @@ use App\Model\Advert;
         <!-- form for let me help -->
         <div class="listing-max-pro container-emailme">
             <div class="container-emailme-header text-center">
-                <h3>Let Us Help With Your Search</h3>
+                @if($category->can_apply())
+                    <h3>Let Us Help With Your Jobs Search</h3>
+                @else
+                    <h3>Let Us Help With Your Search</h3>
+                @endif
             </div>
             <div class="container-emailme-form text-center">
                 <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search stress free.</p>
