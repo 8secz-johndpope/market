@@ -48,7 +48,7 @@
 		        </div>
 	            <div class="recruiter-directory-main-content-logos row">
 	            	@foreach($companies as $company)
-	            	<div class="col-sm-4 text-center">
+	            	<div class="col-sm-3 text-center">
 	            		<div class="profile">
 		            		<div class="profile-thumb">
 		            			<a href="#" class="profile-link">
