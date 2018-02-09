@@ -23,7 +23,7 @@
 							<h1>
 								Search Recruiters
 							</h1>
-							<h2>Over 1,000 the best companies. Find yours.</h2>
+							<h2>Over 10,000 of the best recruiters. Find yours.</h2>
 							<div class="filters-jobs">
 								<div class="filter-wrapper clearfix">
 									<div class="keyword-wrapper">
