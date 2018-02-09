@@ -229,9 +229,10 @@
 }
 .immediate-title {
     margin: 0;
+    font-size: 24px;
 }
 .container-actions-immediate {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .btn-see-jobs:hover {
     color: #fff;
