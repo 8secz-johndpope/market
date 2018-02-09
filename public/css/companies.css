@@ -214,6 +214,7 @@
     border-style: solid;
     border-width: 2px;
     border-color: #1E9476;
+    background: #fff;
     display: inline-block;
     background-color: transparent;
     line-height: 1.2em;
@@ -238,7 +239,7 @@
 }
 .btn-see-jobs:hover {
     color: #fff;
-    background-color: #f87964;
+    background-color: #1E9476;
 }
 @media(min-width: 768px){
 	.search-companies-az {
