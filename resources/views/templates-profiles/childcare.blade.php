@@ -27,6 +27,8 @@
                         <div class="col-sm-3 col-xs-12">
                             <figure class="ad-applicant-picture">
                                 <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams."></span>
+                                <span class="verification-level">3
+                                </span>
                             </figure>
                         </div>
                         <div class="col-sm-9 ad-applicant-profil-infos col-xs-12">
