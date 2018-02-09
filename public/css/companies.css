@@ -146,8 +146,8 @@
 .profile .favorite-container {
     z-index: 20;
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    right: 19px;
+    top: -29px;
 }
 .favorite-container .favorite, .favorite-container .unfavorite {
     display: inline-block;
