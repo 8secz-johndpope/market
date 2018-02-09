@@ -164,6 +164,7 @@
     -ms-transition: color 200ms ease-out;
     -o-transition: color 200ms ease-out;
     transition: color 200ms ease-out;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
 }
 .favroite-icon:before {
     height: 20px;
