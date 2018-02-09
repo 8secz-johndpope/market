@@ -2311,7 +2311,12 @@ class MarketController extends BaseController
         return $this->priceType($product);
 
     }
-    public function companies(){
+    public function exploreCompanies(Request $request){
+        $companies = Business::paginate(12);
+        $sectors = Category::find(4000000000)->children;
+        return view('market.explore-companies', ['companies' => $companies, 'sectors' => $sectors]);
+    }
+    public function companies(Request $request){
         $companies = Business::paginate(12);
         $sectors = Category::find(4000000000)->children;
         return view('market.companies', ['companies' => $companies, 'sectors' => $sectors]);

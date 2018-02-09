@@ -296,6 +296,7 @@ Route::get('/filters/{any}', 'MarketController@filters');
 Route::get('/id/{id}', 'MarketController@id');
 Route::get('/agent/{id}', 'MarketController@agent');
 Route::get('/company/{id}', 'MarketController@company');
+Route::get('/explore-companies', 'MarketController@exploreCompanies');
 Route::get('/companies', 'MarketController@companies');
 Route::get('/jobs/employers', 'MarketController@employers');
 Route::get('/job/profile/template/{type}', 'MarketController@profileTemplate');
