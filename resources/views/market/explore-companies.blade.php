@@ -85,7 +85,7 @@
 				            		<div class="favorite-container">
 										<div>
 											<div class="favor">
-												<i aria-hidden="true" class="heart-empty favroite-icon"></i>
+												<i aria-hidden="true" class="heart-empty favroite-icon" data-id="{{$company->id}}"></i>
 												<span class="favor-text">SAVE</span>
 											</div>
 										</div>
