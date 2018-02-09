@@ -120,6 +120,7 @@
 .subtitle {
     min-height: 85px;
     border-bottom: 3px solid #7de5ce;
+    position: relative;
 }
 .subtitle a {
     font-size: 14px;

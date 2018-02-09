@@ -81,13 +81,13 @@
 				            					(0)
 				            				@endif
 				            			</span>
-				            		</div>
-				            		<div class="alert-container">
-				            			<div>
-											<a aria-label="company-alert" href="#" class="company-alert">
-												<i aria-hidden="true" class="icon icon-bell"></i>
-											</a>
-										</div>
+				            			<div class="alert-container">
+					            			<div>
+												<a aria-label="company-alert" href="#" class="company-alert">
+													<i aria-hidden="true" class="icon icon-bell"></i>
+												</a>
+											</div>
+					            		</div>
 				            		</div>
 			            		</div>
 			            	</div>
