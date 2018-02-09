@@ -456,7 +456,9 @@ section.spotligth{
   color: #263249;
   font-size: 12px;
 }
-
+footer .constrution-container h1, footer .constrution-container h2 {
+    color: #fff;
+}
 .categories li a{
   color: #263249;
 }
