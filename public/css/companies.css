@@ -180,6 +180,9 @@
 .icon-bell:before {
 	position: relative;
 }
+.icon{
+	height: auto;
+}
 .icon-bell{
 	cursor: pointer;
     display: block;
