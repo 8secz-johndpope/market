@@ -284,6 +284,21 @@
     font-style: normal;
     text-rendering: optimizeLegibility;
 }
+.filters-jobs {
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+    top: 330px;
+    left: 0;
+    background: rgba(0,0,0,.6);
+    padding: 10px;
+}
+.filters-jobs .filter-wrapper {
+    max-width: 1e3px;
+    margin: 0 auto;
+    padding: 10px 15px 10px 70px;
+    position: relative;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
