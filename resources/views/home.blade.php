@@ -11,16 +11,20 @@
 @endsection
 
 @section('content')
+		<section class="construction-wrapper">
+			<div class="container">
+				<div class="row ">
+					<div class="col-xs-12 text-center">
+			 			<div class="constrution-container">
+			 				<h1>Sorry! This sites is still under construction</h1>
+			 				<h2 class="alert">No transactions are permitted</h2>
+			 			</div>
+			 		</div>
+				</div>
+			</div>
+		</section>
 		<section class="categories background-body">
     			<div class="container">
-    				<div class="row construction-wrapper">
-    					<div class="col-xs-12 text-center">
-				 			<div class="constrution-container">
-				 				<h1>Sorry! This sites is still under construction</h1>
-				 				<h2 class="alert">No transactions are permitted</h2>
-				 			</div>
-				 		</div>
-    				</div>
     				<div class="row box-rose">
 			 	<!-- @foreach($base as $cat)
 			 		<div class="col-xs-6 col-sm-3 col-lg-2">
