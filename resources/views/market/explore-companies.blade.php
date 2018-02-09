@@ -59,8 +59,7 @@
 	            		<div class="row">
 			            	@foreach($companies as $company)
 			            	@if($loop->index == 6)
-			            	<div class="container-immediate">
-			            		<div class="col-sm-12">
+			            		<div class="col-sm-12 container-immediate text-center">
 				            		<h2 class="immediate-title">
 				            			IMMEDIATE STARTS JOBS
 				            		</h2>
@@ -68,7 +67,6 @@
 				            			<a href="#" class="btn btn-see-jobs">SEE JOBS</a>
 				            		</div>
 			            		</div>
-			            	</div>
 			            	@endif
 			            	<div class="col-sm-4 text-center">
 			            		<div class="profile">
