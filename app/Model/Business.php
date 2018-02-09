@@ -7,7 +7,6 @@
  */
 
 namespace App\Model;
-use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 
@@ -17,6 +16,6 @@ class Business extends Model
         return $this->belongsTo('App\Model\Address');
     }
     public function user(){
-    	return $this->belongsTo('App\Model\User');
+    	return $this->belongsTo('App\User');
     }
 }
