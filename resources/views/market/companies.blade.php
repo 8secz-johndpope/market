@@ -16,7 +16,7 @@
  <div class="body background-body page-companies">
 	<div class="top-hero-section">
 		<div class="bg-image">
-			<div class="container">
+			<div class="container-fuild">
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="sub-heading">	
