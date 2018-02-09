@@ -66,9 +66,10 @@
 				            			</a>
 				            			<div class="favorite-container">
 											<div>
-												<a aria-label="favorite" href="#" class="favorite">
+												<div class="favor">
 													<i aria-hidden="true" class="heart-empty favroite-icon"></i>
-												</a>
+													<span class="favor-text">SAVE</span>
+												</div>
 											</div>
 			            				</div>
 				            		</div>
