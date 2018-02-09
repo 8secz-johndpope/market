@@ -148,8 +148,8 @@
 .profile .favorite-container {
     z-index: 20;
     position: absolute;
-    right: 5px;
-    top: 5px;
+    left: 20px;
+    bottom: 40px;
 }
 .profile .alert-container{
 	right: 20px;
@@ -157,6 +157,10 @@
     z-index: 20;
     position: absolute;
 }
+.profile .favor{
+	position: relative;
+}
+
 .favorite-container .favorite, .favorite-container .unfavorite, .alert-container .company-alert {
     display: inline-block;
     line-height: 1em;
