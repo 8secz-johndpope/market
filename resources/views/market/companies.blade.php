@@ -151,7 +151,11 @@
 			<div class="col-xs-12">
 				<div class="search-companies-result-title">
 					<h1>Recruitment starting with {{$letter}}</h1>
-					<p>{{$companies->total()}} Recruiters</p>
+					@if($companies->count() > 0)
+						<p>{{$companies->total()}} Recruiters</p>
+					@else
+						<p>Sorry, there are no recruitment agencies found for {{$letter}}</p>
+					@endif
 				</div>
 			</div>
 			<div class="col-xs-12">
