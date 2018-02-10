@@ -439,6 +439,24 @@ input[type=search] {
     background-repeat: no-repeat;
     background-position: center center;
 }
+.featured .tile-copy {
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    top: 45%;
+    border: 0;
+}
+.featured .tile-copy h3 {
+    color: #fff;
+    font-size: 35px;
+    font-family: oswald,Helvetica,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+    width: 85%;
+    margin: 0 auto;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
