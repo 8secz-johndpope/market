@@ -253,7 +253,7 @@
     width: 100%;
     position: absolute;
     z-index: 10;
-    height: 420px;
+    height: 478px;
     background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.3),transparent),url(/css/search-recruiter-bg.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -291,7 +291,7 @@
     top: 330px;
     left: 0;
     background: rgba(0,0,0,.6);
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
 }
 .filters-jobs .filter-wrapper {
     max-width: 1e3px;
@@ -378,13 +378,20 @@ input[type=search] {
     margin-right: 5px;
     font-size: 12px;
 }
+.directory-companies-wrapper h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
 	    width: 730px;
 	    text-align: center;
 	    list-style: none;
-	    margin: 0 auto;
+	    margin: 10px auto 20px auto;
 	    padding: 0;
 	}
 	.search-companies-az li:first-child {

@@ -43,7 +43,7 @@
 									</a>
 								</div>
 								<div class="directory-companies-wrapper">
-									<h3>Employers Directory A-Z</h3>
+									<h2>Directory A-Z</h2>
 									<ul class="search-companies-az">
 										<li><a href="">0-9</a></li>
 										<li><a href="">A</a></li>
