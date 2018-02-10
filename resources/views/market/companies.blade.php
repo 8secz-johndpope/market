@@ -90,9 +90,10 @@
 											<div class="filter-wrapper clearfix">
 												<div class="keyword-wrapper">
 													<div>
-														<form>
+														<form action="/companies/recruiters" id="form-search-employer" method="POST">
+															{{ csrf_field() }}
 															<div class="keyword-input">
-																<input aria-label="keyword input" type="search" placeholder="Keywords or Recruiters Name">
+																<input aria-label="keyword input" type="search" placeholder="Keywords or Recruiters Name" name="q" value="{{isset($q) ? $q : ''}}">
 																<div aria-hidden="true" class="autocomplete-wrapper">
 																</div>
 															</div>
