@@ -499,6 +499,9 @@ input[type=search] {
     width: 85%;
     margin: 0 auto;
 }
+.block {
+    margin: 30px auto;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
