@@ -541,7 +541,7 @@ input[type=search] {
     margin-bottom: 30px;
 }
 .filters-tab .nav-tabs>li>a {
-    background: #3852d4;
+    background:rgba(58, 86, 209,0.7);
     border-color: #3852d4;
     border-radius: 0;
     color: #fff;
@@ -561,7 +561,8 @@ input[type=search] {
     border-bottom: none;
 }
 .filters-tab .nav-tabs>li.active>a, .filters-tab .nav-tabs>li.active>a:focus, .filters-tab .nav-tabs>li.active>a:hover {
-    border-top: 2px solid #ff9d2c;
+    border-top: none;
+    background: #3852d4;
 }
 .filters-tab .tab-pane{
 	border:none;
@@ -600,4 +601,21 @@ input[type=search] {
 	.main-search-divs-wrap {
 	    background: url(https://static.cv-library.co.uk/images/search-companies-blue-bg.png);
 	}
+}
+@media(min-width: 1024px){
+	.filters-jobs .filter-search-button {
+    	width: 25%;
+    }
+    .filters-jobs .show-all-jobs{
+    	right: -43px;
+    } 
+
+}
+@media(min-width: 1200px){
+	.filters-jobs .filter-search-button {
+    	width: 30%;
+    }
+    .filters-jobs .show-all-jobs{
+    	right: -120px;
+    } 
 }
