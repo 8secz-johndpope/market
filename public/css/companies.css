@@ -609,6 +609,9 @@ input[type=search] {
 	.main-search-divs-wrap {
 	    background: url(https://static.cv-library.co.uk/images/search-companies-blue-bg.png);
 	}
+	.filters-tab .nav{
+		left: 0;
+	}
 }
 @media(min-width: 1024px){
 	.filters-jobs .filter-search-button {

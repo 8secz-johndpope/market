@@ -27,7 +27,7 @@
 									Search <span>Employers</span>
 								@endif
 							</h1>
-							<h2>Over 10,000 of the best recruiters. Find yours.</h2>
+							<h2>Over 10,000 vacancies ready to be filled at the best companies. Find yours.</h2>
 							<div class="filters-jobs">
 								<div class="filters-tab">
 									<ul class="nav nav-tabs">
@@ -54,7 +54,7 @@
 													</div>
 												</div>
 												<a href="#" class="tm-brighter-blue-square-button filter-search-button">Search</a>
-												<a class="show-all-jobs" href="/explore-companies">
+												<a class="show-all-jobs hidden-xs hidden-sm" href="/explore-companies">
 													<p>Show Me All Companies</p>
 												</a>
 											</div>
@@ -105,7 +105,7 @@
 													</div>
 												</div>
 												<a href="#" class="tm-brighter-blue-square-button filter-search-button recruiters">Search</a>
-												<a class="show-all-jobs" href="/explore-companies">
+												<a class="show-all-jobs hidden-xs hidden-sm" href="/explore-companies">
 													<p>Show Me All Companies</p>
 												</a>
 											</div>
