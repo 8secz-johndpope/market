@@ -54,7 +54,7 @@
 												</a>
 											</div>
 											<div class="directory-companies-wrapper">
-												<h2>Directory A-Z</h2>
+												<h2>Employers Directory A-Z</h2>
 												<ul class="search-companies-az clearfix">
 													<li><a href="/companies/employers/0-9">0-9</a></li>
 													<li><a href="/companies/employers/A">A</a></li>
@@ -104,7 +104,7 @@
 												</a>
 											</div>
 											<div class="directory-companies-wrapper">
-												<h2>Directory A-Z</h2>
+												<h2>Recruitment Agencies Directory A-Z</h2>
 												<ul class="search-companies-az clearfix">
 													<li><a href="/companies/recruiters/0-9">0-9</a></li>
 													<li><a href="/companies/recruiters/A">A</a></li>
