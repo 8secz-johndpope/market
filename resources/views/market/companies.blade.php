@@ -21,10 +21,11 @@
 					<div class="col-xs-12">
 						<div class="sub-heading">	
 							<h1>
+								Search
 								@if(isset($title))
 									{{$title}}
 								@else
-									Search <span>Employers</span>
+									<span>Employers</span>
 								@endif
 							</h1>
 							<h2>Over 10,000 vacancies ready to be filled at the best companies. Find yours.</h2>
