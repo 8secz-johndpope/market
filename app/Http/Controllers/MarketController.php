@@ -2322,14 +2322,14 @@ class MarketController extends BaseController
     }
     public function companiesSearch(Request $request, $letter=null){
         $title = 'Employers';
-        $firstCompanies = Business::paginate(12);
+        $firstCompanies = Business::limit(10);
         if($letter != null){
             $companies = Business::where('name', 'REGEXP', '^['.$letter.']')->paginate(16);
         }elseif(isset($request->q)){
             $companies = Business::where('name', 'LIKE', '%'.$request->q.'%')->paginate(16);
         }
         else
-            $companies = $firstCompanies;
+            $companies = Business::paginate(16);
 
         return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'q' => $request->q, 'title' => $title]);
     }
