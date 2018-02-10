@@ -310,7 +310,8 @@
 	<!-- </div> -->
 </div>
 <script>
-	$('filter-search-button').click(function(){
+	$('.filter-search-button').click(function(e){
+		e.preventDefault();
 		$('#form-search-employer').submit();
 	});
 </script>
