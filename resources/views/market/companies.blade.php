@@ -86,7 +86,9 @@
 				<div class="top-searches">
 					<h3>top-searches</h3>
 					<ul>
-						<li></li>
+						@foreach($companies as $company)
+						<li>{{$company->name}}</li>
+						@endforeach
 					</ul>
 				</div>
 			</div>
