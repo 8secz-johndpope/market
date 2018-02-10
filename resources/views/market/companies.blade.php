@@ -161,6 +161,33 @@
 						@if($loop->index == 8)
 							<div class="col-xs-12 let-us-help-wrapper">
 								<div class="let-us-help-content">
+									<div class="container-emailme">
+								        <div class="container-emailme-header text-center">
+								        	<h3>Let Us Help With Your Search</h3>
+								        </div>
+								        <div class="container-emailme-form text-center">
+								            <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search stress free.</p>
+								            <div class="row">
+								                <div class="col-sm-offset-2 col-sm-8">
+								                    <form action="" id="sendme-search">
+								                        <div class="form-group">
+								                            <div class="input-group">
+								                                <span class="input-group-addon" id="email-sendme">Email</span>
+								                                <input type="text" class="form-control" placeholder="example@email.com" aria-describedby="email-sendme">
+								                            </div>
+								                        </div>
+								                        <!-- <div class="form-group">
+								                            <input type="tel" id="phone-number-1" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
+								                        </div>-->
+								                        <div class="form-group">
+								                            <input type="submit" name="submit-sendme" class="btn btn-submit">
+								                        </div>
+								                    </form>
+								                </div>
+								            </div>
+								            <small>By clicking Submit, you accept our <a>Terms & Conditions</a>, <a>Privacy policy</a> and consent to messages</small>
+								        </div>
+								    </div>
 								</div>
 							</div>
 						@endif
@@ -171,7 +198,7 @@
 			            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
 			            			</a>
 			            		</div>
-			            		<div class="subtitle">
+			            		<div class="subtitle text-center">
 			            			<a href="#">{{$company->name}}</a>
 			            			<span class="count-jobs-company">
 			            				@if(isset($company->user))
