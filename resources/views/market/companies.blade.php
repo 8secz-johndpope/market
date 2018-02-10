@@ -45,32 +45,32 @@
 								<div class="directory-companies-wrapper">
 									<h2>Directory A-Z</h2>
 									<ul class="search-companies-az clearfix">
-										<li><a href="">0-9</a></li>
-										<li><a href="">A</a></li>
-										<li><a href="">B</a></li>
-										<li><a href="">C</a></li>
-										<li><a href="">D</a></li>
-										<li><a href="">E</a></li>
-										<li><a href="">F</a></li>
-										<li><a href="">G</a></li>
-										<li><a href="">H</a></li>
-										<li><a href="">I</a></li>
-										<li><a href="">J</a></li>
-										<li><a href="">K</a></li>
-										<li><a href="">L</a></li>
-										<li><a href="">M</a></li>
-										<li><a href="">N</a></li>
-										<li><a href="">O</a></li>
-										<li><a href="">P</a></li>
-										<li><a href="">Q</a></li>
-										<li><a href="">R</a></li>
-										<li><a href="">S</a></li>
-										<li><a href="">T</a></li>
-										<li><a href="">U</a></li>
-										<li><a href="">V</a></li>
-										<li><a href="">W</a></li>
-										<li><a href="">Y</a></li>
-										<li><a href="">Z</a></li>
+										<li><a href="/companies/employers/0-9">0-9</a></li>
+										<li><a href="/companies/employers/A">A</a></li>
+										<li><a href="/companies/employers/B">B</a></li>
+										<li><a href="/companies/employers/C">C</a></li>
+										<li><a href="/companies/employers/D">D</a></li>
+										<li><a href="/companies/employers/E">E</a></li>
+										<li><a href="/companies/employers/F">F</a></li>
+										<li><a href="/companies/employers/G">G</a></li>
+										<li><a href="/companies/employers/H">H</a></li>
+										<li><a href="/companies/employers/I">I</a></li>
+										<li><a href="/companies/employers/J">J</a></li>
+										<li><a href="/companies/employers/K">K</a></li>
+										<li><a href="/companies/employers/L">L</a></li>
+										<li><a href="/companies/employers/M">M</a></li>
+										<li><a href="/companies/employers/N">N</a></li>
+										<li><a href="/companies/employers/O">O</a></li>
+										<li><a href="/companies/employers/P">P</a></li>
+										<li><a href="/companies/employers/Q">Q</a></li>
+										<li><a href="/companies/employers/R">R</a></li>
+										<li><a href="/companies/employers/S">S</a></li>
+										<li><a href="/companies/employers/T">T</a></li>
+										<li><a href="/companies/employers/U">U</a></li>
+										<li><a href="/companies/employers/V">V</a></li>
+										<li><a href="/companies/employers/W">W</a></li>
+										<li><a href="/companies/employers/Y">Y</a></li>
+										<li><a href="/companies/employers/Z">Z</a></li>
 									</ul>
 								</div>
 							</div>
@@ -146,7 +146,21 @@
 		</div>
 	</div>
 	@else
-		<h1>num companies {{count($companies)}}</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="search-companies-result-title">
+					<h1>Recruitment starting with {{$letter}}</h1>
+					<p>Displaying 12 of {{count($companies)}}</p>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="companies-wrapper">
+					
+				</div>
+			</div>
+		</div>
+	</div>
 	@endif
 	<!-- </div> -->
 </div>
