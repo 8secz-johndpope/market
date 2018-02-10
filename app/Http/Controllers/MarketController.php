@@ -1343,7 +1343,7 @@ class MarketController extends BaseController
         $lng = ($location->min_lng+$location->max_lng)/2;
             $any = $category->slug;
         if($category->can_apply()){
-            $fieds = $Category::find(4000000000)->getCanFilterFields();
+            $fieds = Category::find(4000000000)->getCanFilterFields();
         }
         else
             $fields = $category->getCanFilterFields();
