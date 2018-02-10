@@ -96,18 +96,48 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-6">
-					
+					<a href="#">
+						<div class="recruiter-feature-box featured">
+							<div class="bg-image">
+								<div class="title-copy">
+									<h3>Featured Recruiters</h3>
+								</div>
+							</div>
+						</div>
+					</a>
 				</div>
 				<div class="col-sm-6">
-					
+					<a href="#">
+						<div class="recruiter-feature-box">
+							<div class="bg-image">
+								<div class="title-copy">
+									<h3>Immediate Start Vacancies</h3>
+								</div>
+							</div>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-6">
-					<div class=""></div>
+					<div class="recruiter-feature-box">
+						<div class="bg-image">
+							<div class="title-copy">
+								<div class="title-copy">
+									<h3>Recruiters With Most Jobs</h3>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="col-sm-6">
-					
+					<div class="recruiter-feature-box">
+						<div class="bg-image">
+							<div class="title-copy">
+								<h3>Showcased Companies</h3>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
