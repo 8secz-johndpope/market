@@ -323,6 +323,7 @@
 </div>
 <script src="/build/js/intlTelInput.js"></script>
 <script>
+	$("#phone-number-1").intlTelInput();
 	$('.filter-search-button').click(function(e){
 		e.preventDefault();
 		$('#form-search-employer').submit();
