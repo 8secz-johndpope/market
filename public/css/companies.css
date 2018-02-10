@@ -288,7 +288,7 @@
     position: absolute;
     z-index: 200;
     width: 100%;
-    top: 330px;
+    top: 306px;
     left: 0;
     background: rgba(0,0,0,.6);
     padding: 20px 10px 10px 10px;
@@ -376,7 +376,7 @@ input[type=search] {
     border-bottom: 1px solid #b5b5b5;
     display: inline-block;
     margin-right: 5px;
-    font-size: 12px;
+    font-size: 11px;
 }
 .top-hero-section .sub-heading .directory-companies-wrapper h2 {
     margin: 0;
