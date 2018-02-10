@@ -384,8 +384,14 @@ input[type=search] {
     font-style: normal;
     text-rendering: optimizeLegibility;
 }
+.top-searches-wrapper:before,  .top-searches-wrapper:after{
+    content: '';
+    display: block;
+    height: 15px;
+    background: #fff;
+}
 .top-searches {
-    border-bottom: 1px solid #e5e5e5;
+    /*border-bottom: 1px solid #e5e5e5;*/
     padding: 10px 0 20px;
     margin: 0 20px 0 15px;
 }
@@ -410,6 +416,7 @@ input[type=search] {
 .top-searches ul li a {
     color: #333;
     border-bottom: 1px solid #b5b5b5;
+    text-decoration: none;
 }
 @media(min-width: 768px){
 	.search-companies-az {
