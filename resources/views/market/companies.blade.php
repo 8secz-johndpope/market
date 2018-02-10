@@ -27,11 +27,15 @@
 							<div class="filters-jobs">
 								<div class="filters-tab">
 									<ul class="nav nav-tabs">
-										<li class="active"><a href="#tab-employers">Employers</a></li>
-										<li><a>Recruiters</a></li>
+										<li class="active">
+											<a data-toggle="tab" href="#tab-employers">Employers</a>
+										</li>
+										<li>
+											<a data-toggle="tab">Recruiters</a>
+										</li>
 									</ul>
 									<div class="tab-content">
-										<div class="tab fade in" id="tab-employers">
+										<div class="tab-panel fade in active" id="tab-employers">
 											<div class="filter-wrapper clearfix">
 												<div class="keyword-wrapper">
 													<div>
