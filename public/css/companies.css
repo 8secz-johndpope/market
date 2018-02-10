@@ -372,6 +372,11 @@ input[type=search] {
     right: -120px;
     width: 150px;
 }
+.filters-jobs .show-all-jobs p {
+    border-bottom: 1px solid #b5b5b5;
+    display: inline-block;
+    margin-right: 5px;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
