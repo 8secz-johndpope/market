@@ -21,7 +21,11 @@
 					<div class="col-xs-12">
 						<div class="sub-heading">	
 							<h1>
-								Search Recruiters
+								@if(isset($title))
+									{{$title}}
+								@else
+									Search Employers
+								@endif
 							</h1>
 							<h2>Over 10,000 of the best recruiters. Find yours.</h2>
 							<div class="filters-jobs">
