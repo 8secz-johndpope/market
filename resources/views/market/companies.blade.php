@@ -243,7 +243,7 @@
 								<div class="let-us-help-content">
 									<div class="">
 								        <div class="container-emailme-header text-center">
-								        	<h3>Let Us Help With Your Search</h3>
+								        	<h3>Let Us Help With Your Job Search</h3>
 								        </div>
 								        <div class="container-emailme-form text-center">
 								            <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search stress free.</p>
@@ -256,9 +256,9 @@
 								                                <input type="text" class="form-control" placeholder="example@email.com" aria-describedby="email-sendme">
 								                            </div>
 								                        </div>
-								                        <!-- <div class="form-group">
+								                        <div class="form-group">
 								                            <input type="tel" id="phone-number-1" class="form-control" placeholder="00447777777777" aria-describedby="phone-sendme">
-								                        </div>-->
+								                        </div>
 								                        <div class="form-group">
 								                            <input type="submit" name="submit-sendme" class="btn btn-submit">
 								                        </div>
