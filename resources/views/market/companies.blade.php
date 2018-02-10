@@ -39,7 +39,7 @@
 											<div class="filter-wrapper clearfix">
 												<div class="keyword-wrapper">
 													<div>
-														<form action="/companies/employers" id="form-search-employer">
+														<form action="/companies/employers" id="form-search-employer" method="POST">
 															<div class="keyword-input">
 																<input aria-label="keyword input" type="search" placeholder="Keywords or Company Name" name="q">
 																<div aria-hidden="true" class="autocomplete-wrapper">
