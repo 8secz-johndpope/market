@@ -85,7 +85,7 @@
 												</ul>
 											</div>
 										</div>
-										<div class="tab-panel fade in active" id="tab-recruiters">
+										<div class="tab-panel fade" id="tab-recruiters">
 											<div class="filter-wrapper clearfix">
 												<div class="keyword-wrapper">
 													<div>
