@@ -2317,8 +2317,8 @@ class MarketController extends BaseController
         return view('market.explore-companies', ['companies' => $companies, 'sectors' => $sectors]);
     }
     public function companies(Request $request){
-        $companies = Business::paginate(6);
-        return view('market.companies', ['companies' => $companies]);
+        $firstCompanies = Business::paginate(6);
+        return view('market.companies', ['companies' => $firstCompanies]);
     }
     public function companiesSearch(Request $request, $letter){
         $firstCompanies = Business::paginate(12);
