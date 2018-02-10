@@ -16,7 +16,7 @@
  <div class="body background-body page-companies">
 	<div class="top-hero-section">
 		<div class="bg-image">
-			<div class="container-fuild">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="sub-heading">	
@@ -38,7 +38,7 @@
 										</div>
 									</div>
 									<a href="#" class="tm-brighter-blue-square-button filter-search-button">Search</a>
-									<a class="show-all-jobs" href="#">
+									<a class="show-all-jobs" href="/explore-companies">
 										<p>Show Me All Rectruiters</p>
 									</a>
 								</div>
