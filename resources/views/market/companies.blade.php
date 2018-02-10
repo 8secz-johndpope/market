@@ -151,7 +151,7 @@
 			<div class="col-xs-12">
 				<div class="search-companies-result-title">
 					<h1>Recruitment starting with {{$letter}}</h1>
-					<p>{{count($companies)}} Recruiters</p>
+					<p>{{$companies->total()}} Recruiters</p>
 				</div>
 			</div>
 			<div class="col-xs-12">
