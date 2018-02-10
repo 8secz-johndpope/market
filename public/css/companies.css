@@ -578,6 +578,7 @@ input[type=search] {
 }
 .input-group-addon:first-child {
     border: 1px solid #ff9d2c;
+    background: #fff;
 }
 @media(min-width: 768px){
 	.search-companies-az {
