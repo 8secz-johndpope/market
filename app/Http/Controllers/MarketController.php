@@ -1342,7 +1342,11 @@ class MarketController extends BaseController
         $lat = ($location->min_lat+$location->max_lat)/2;
         $lng = ($location->min_lng+$location->max_lng)/2;
             $any = $category->slug;
-        $fields = $category->fields()->where('can_filter',1)->get();
+        if($category->can_apply()){
+            $fieds = $Category::find(4000000000)->getCanFilterFields();
+        }
+        else
+            $fields = $category->getCanFilterFields();
         $input = $request->all();
 
         $aggs=array();
