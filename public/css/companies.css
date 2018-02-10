@@ -398,6 +398,10 @@ input[type=search] {
     text-rendering: optimizeLegibility;
     font-weight: 700;
 }
+.top-searches ul{
+	list-style: none;
+	padding: 0;
+}
 .top-searches ul li {
     display: inline-block;
     font-size: 20px;
