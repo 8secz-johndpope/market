@@ -608,7 +608,11 @@ input[type=search] {
     }
     .filters-jobs .show-all-jobs{
     	right: -43px;
-    } 
+    }
+    .filters-jobs .filter-wrapper .keyword-wrapper {
+	    width: 55%;
+	    margin-left: 50px;
+	} 
 
 }
 @media(min-width: 1200px){
@@ -618,4 +622,8 @@ input[type=search] {
     .filters-jobs .show-all-jobs{
     	right: -120px;
     } 
+    .filters-jobs .filter-wrapper .keyword-wrapper {
+    	width: 60%;
+    	margin-left: auto;
+	}
 }
