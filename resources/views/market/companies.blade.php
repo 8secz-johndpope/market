@@ -80,33 +80,35 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="top-searches">
-					<h3>top-searches</h3>
-					<ul>
-						@foreach($companies as $company)
-						<li>{{$company->name}}</li>
-						@endforeach
-					</ul>
+	<div class="top-searches-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="top-searches">
+						<h3>top-searches</h3>
+						<ul>
+							@foreach($companies as $company)
+							<li><a href="#">{{$company->name}}</a></li>
+							@endforeach
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6">
-				
+			<div class="row">
+				<div class="col-sm-6">
+					
+				</div>
+				<div class="col-sm-6">
+					
+				</div>
 			</div>
-			<div class="col-sm-6">
-				
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6">
-				<div class=""
-			</div>
-			<div class="col-sm-6">
-				
+			<div class="row">
+				<div class="col-sm-6">
+					<div class=""></div>
+				</div>
+				<div class="col-sm-6">
+					
+				</div>
 			</div>
 		</div>
 	</div>
