@@ -50,7 +50,9 @@
                             <p><a href="#">Send Message</a></p>
                             <p><a href="#">VideoCall</a></p>
                             <p><a href="#">Call</a></p>
+                            @if(isset($advertiser->business))
                             <p><a href="/company/{{$advertiser->id}}" class="btn btn-advertiser">Learn more about the Advertiser</a></p> 
+                            @endif
                         </div>
                     </div>
                 </div>
