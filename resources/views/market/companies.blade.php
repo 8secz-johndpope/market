@@ -114,7 +114,7 @@
 						<div class="recruiter-feature-box immediate">
 							<div class="bg-image">
 								<div class="title-copy">
-									<h3>Immediate Start Vacancies</h3>
+									<h3>Latest Vacancies</h3>
 								</div>
 							</div>
 						</div>
