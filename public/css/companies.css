@@ -551,6 +551,9 @@ input[type=search] {
 .filters-tab {
     position: relative;
 }
+.filters-tab .nav-tabs>li:not(:last-child){
+	border-right: 1px solid #fff;
+}
 .filters-tab .nav {
     position: absolute;
     top: -67px;
