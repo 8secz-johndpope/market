@@ -35,7 +35,7 @@
 										</li>
 									</ul>
 									<div class="tab-content">
-										<div class="tab-panel fade in active" id="tab-employers">
+										<div class="tab-pane fade in active" id="tab-employers">
 											<div class="filter-wrapper clearfix">
 												<div class="keyword-wrapper">
 													<div>
@@ -85,7 +85,7 @@
 												</ul>
 											</div>
 										</div>
-										<div class="tab-panel fade" id="tab-recruiters">
+										<div class="tab-pane fade" id="tab-recruiters">
 											<div class="filter-wrapper clearfix">
 												<div class="keyword-wrapper">
 													<div>
