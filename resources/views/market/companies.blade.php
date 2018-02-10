@@ -111,7 +111,7 @@
 				</div>
 				<div class="col-sm-6">
 					<a href="#">
-						<div class="recruiter-feature-box">
+						<div class="recruiter-feature-box immediate">
 							<div class="bg-image">
 								<div class="title-copy">
 									<h3>Immediate Start Vacancies</h3>
