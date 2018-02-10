@@ -110,7 +110,7 @@
 					</a>
 				</div>
 				<div class="col-sm-6">
-					<a href="#">
+					<a href="/jobs/uk">
 						<div class="recruiter-feature-box immediate">
 							<div class="bg-image">
 								<div class="title-copy">
