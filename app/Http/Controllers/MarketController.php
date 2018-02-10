@@ -2320,9 +2320,9 @@ class MarketController extends BaseController
         $firstCompanies = Business::paginate(6);
         return view('market.companies', ['firstCompanies' => $firstCompanies]);
     }
-    public function companiesSearch(Request $request, $letter){
+    public function companiesSearch(Request $request, $letter=null){
         $firstCompanies = Business::paginate(12);
-        if(isset($letter)){
+        if($letter != null){
             $companies = Business::where('name', 'REGEXP', '^['.$letter.']')->paginate(16);
             return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter]);
         }elseif(isset($request->q)){
