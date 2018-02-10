@@ -321,6 +321,7 @@
 	@endif
 	<!-- </div> -->
 </div>
+<script src="/build/js/intlTelInput.js"></script>
 <script>
 	$('.filter-search-button').click(function(e){
 		e.preventDefault();
