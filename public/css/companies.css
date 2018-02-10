@@ -540,6 +540,23 @@ input[type=search] {
     padding: 30px;
     margin-bottom: 30px;
 }
+.filters-tab .nav-tabs>li>a {
+    background: #3852d4;
+    border-color: #3852d4;
+    border-radius: 0;
+    color: #fff;
+    font-size: 18px;
+    margin-right: 0;
+}
+.filters-tab {
+    position: relative;
+}
+.filters-tab .nav {
+    position: absolute;
+    top: -67px;
+    left: 100px;
+    border-bottom: none;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
