@@ -460,7 +460,7 @@ input[type=search] {
     top: 45%;
     border: 0;
 }
-.featured .title-copy h3 {
+.featured .title-copy h3, .immediate .title-copy h3 {
     color: #fff;
     font-size: 35px;
     font-family: oswald,Helvetica,sans-serif;
