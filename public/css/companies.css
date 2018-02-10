@@ -563,7 +563,7 @@ input[type=search] {
     border-bottom: none;
 }
 .filters-tab .nav-tabs>li.active>a, .filters-tab .nav-tabs>li.active>a:focus, .filters-tab .nav-tabs>li.active>a:hover {
-    border: none;
+    border-color: #3852d4;
     background: #3852d4;
     color: #fff;
 }
