@@ -39,7 +39,7 @@
 									</div>
 									<a href="#" class="tm-brighter-blue-square-button filter-search-button">Search</a>
 									<a class="show-all-jobs" href="/explore-companies">
-										<p>Show Me All Rectruiters</p>
+										<p>Show Me All Companies</p>
 									</a>
 								</div>
 							</div>
