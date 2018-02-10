@@ -218,7 +218,7 @@
 					@if($letter != null)
 					<h1>{{$title}} starting with {{$letter}}</h1>
 					@else
-					<h1>{{$title}} matching with {{$letter}}</h1>
+					<h1>{{$title}} matching with {{$q}}</h1>
 					@endif
 					@if($companies->count() > 0)
 						<p>{{$companies->total()}} Recruiters</p>
