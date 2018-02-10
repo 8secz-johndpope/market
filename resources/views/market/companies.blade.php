@@ -87,7 +87,7 @@
 					<div class="top-searches">
 						<h3>top-searches</h3>
 						<ul>
-							@foreach($companies as $company)
+							@foreach($firstCompanies as $company)
 							<li><a href="#">{{$company->name}}</a></li>
 							@endforeach
 						</ul>
@@ -96,54 +96,58 @@
 			</div>
 		</div>
 	</div>
+	@if(!isset($companies))
 	<div class="container">
-			<div class="row block">
-				<div class="col-sm-6">
-					<a href="#">
-						<div class="recruiter-feature-box featured">
-							<div class="bg-image">
-								<div class="title-copy">
-									<h3>Featured Recruiters</h3>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-sm-6">
-					<a href="/jobs/uk">
-						<div class="recruiter-feature-box immediate">
-							<div class="bg-image">
-								<div class="title-copy">
-									<h3>Latest Vacancies</h3>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="row block">
-				<div class="col-sm-6">
-					<div class="recruiter-feature-box most-jobs">
+		<div class="row block">
+			<div class="col-sm-6">
+				<a href="#">
+					<div class="recruiter-feature-box featured">
 						<div class="bg-image">
 							<div class="title-copy">
-								<div class="title-copy">
-									<h3>Recruiters With Most Jobs</h3>
-								</div>
+								<h3>Featured Recruiters</h3>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6">
+				<a href="/jobs/uk">
+					<div class="recruiter-feature-box immediate">
+						<div class="bg-image">
+							<div class="title-copy">
+								<h3>Latest Vacancies</h3>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="row block">
+			<div class="col-sm-6">
+				<div class="recruiter-feature-box most-jobs">
+					<div class="bg-image">
+						<div class="title-copy">
+							<div class="title-copy">
+								<h3>Recruiters With Most Jobs</h3>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-6">
-					<div class="recruiter-feature-box showcased-companies">
-						<div class="bg-image">
-							<div class="title-copy">
-								<h3>Showcased Companies</h3>
-							</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="recruiter-feature-box showcased-companies">
+					<div class="bg-image">
+						<div class="title-copy">
+							<h3>Showcased Companies</h3>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	@else
+		<h1>num companies {{count($companies)}}</h1>
+	@endif
+	<!-- </div> -->
 </div>
 @endsection

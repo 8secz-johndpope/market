@@ -2320,4 +2320,9 @@ class MarketController extends BaseController
         $companies = Business::paginate(6);
         return view('market.companies', ['companies' => $companies]);
     }
+    public function companiesSearch(Request, $letter){
+        $firstCompanies = Business::paginate(12);
+        $companies = Business::where('name', 'LIKE', $letter.'%')->get();
+        return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies]);
+    }
 }
