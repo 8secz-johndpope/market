@@ -90,7 +90,7 @@
 											<div class="filter-wrapper clearfix">
 												<div class="keyword-wrapper">
 													<div>
-														<form action="/companies/recruiters" id="form-search-employer" method="POST">
+														<form action="/companies/recruiters" id="form-search-recruiters" method="POST">
 															{{ csrf_field() }}
 															<div class="keyword-input">
 																<input aria-label="keyword input" type="search" placeholder="Keywords or Recruiters Name" name="q" value="{{isset($q) ? $q : ''}}">
@@ -100,7 +100,7 @@
 														</form>
 													</div>
 												</div>
-												<a href="#" class="tm-brighter-blue-square-button filter-search-button">Search</a>
+												<a href="#" class="tm-brighter-blue-square-button filter-search-button recruiters">Search</a>
 												<a class="show-all-jobs" href="/explore-companies">
 													<p>Show Me All Companies</p>
 												</a>
@@ -320,5 +320,9 @@
 		e.preventDefault();
 		$('#form-search-employer').submit();
 	});
+	$('.filter-search-button.recruiters').click(function(e){
+		e.preventDefault();
+		$('#form-search-recruiters').submit();
+	})
 </script>
 @endsection
