@@ -439,14 +439,14 @@ input[type=search] {
     background-repeat: no-repeat;
     background-position: center center;
 }
-.featured .tile-copy {
+.featured .title-copy {
     text-align: center;
     background-color: transparent;
     position: relative;
     top: 45%;
     border: 0;
 }
-.featured .tile-copy h3 {
+.featured .title-copy h3 {
     color: #fff;
     font-size: 35px;
     font-family: oswald,Helvetica,sans-serif;
