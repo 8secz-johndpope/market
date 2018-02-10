@@ -331,5 +331,8 @@
 	$('a[href="#tab-recruiters"]').on('shown.bs.tab', function(event){
 		$('.sub-heading h1 span').text('Recruiters');
 	});
+	$('a[href="#tab-employers"]').on('shown.bs.tab', function(event){
+		$('.sub-heading h1 span').text('Employers');
+	});
 </script>
 @endsection
