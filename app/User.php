@@ -199,6 +199,13 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Advert')->where('status',1)->orderby('id','desc');
     }
+    /**
+    * This method return the how many adverts has the user
+    **/
+    public function numAdverts()
+    {
+        return $this->hasMany('App\Model\Advert')->where('status',1)->count();
+    }
     public function aadverts()
     {
         return $this->hasMany('App\Model\Advert')->where('status',3)->orderby('id','desc');
