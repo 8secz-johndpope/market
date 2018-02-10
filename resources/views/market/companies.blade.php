@@ -27,56 +27,60 @@
 							<div class="filters-jobs">
 								<div class="filters-tab">
 									<ul class="nav nav-tabs">
-										<li><a>Employers</a></li>
+										<li class="active"><a href="#tab-employers">Employers</a></li>
 										<li><a>Recruiters</a></li>
 									</ul>
-									<div class="filter-wrapper clearfix">
-										<div class="keyword-wrapper">
-											<div>
-												<form>
-													<div class="keyword-input">
-														<input aria-label="keyword input" type="search" placeholder="Keywords or Company Name">
-														<div aria-hidden="true" class="autocomplete-wrapper">
-														</div>
+									<div class="tab-content">
+										<div class="tab fade in" id="tab-employers">
+											<div class="filter-wrapper clearfix">
+												<div class="keyword-wrapper">
+													<div>
+														<form>
+															<div class="keyword-input">
+																<input aria-label="keyword input" type="search" placeholder="Keywords or Company Name">
+																<div aria-hidden="true" class="autocomplete-wrapper">
+																</div>
+															</div>
+														</form>
 													</div>
-												</form>
+												</div>
+												<a href="#" class="tm-brighter-blue-square-button filter-search-button">Search</a>
+												<a class="show-all-jobs" href="/explore-companies">
+													<p>Show Me All Companies</p>
+												</a>
+											</div>
+											<div class="directory-companies-wrapper">
+												<h2>Directory A-Z</h2>
+												<ul class="search-companies-az clearfix">
+													<li><a href="/companies/employers/0-9">0-9</a></li>
+													<li><a href="/companies/employers/A">A</a></li>
+													<li><a href="/companies/employers/B">B</a></li>
+													<li><a href="/companies/employers/C">C</a></li>
+													<li><a href="/companies/employers/D">D</a></li>
+													<li><a href="/companies/employers/E">E</a></li>
+													<li><a href="/companies/employers/F">F</a></li>
+													<li><a href="/companies/employers/G">G</a></li>
+													<li><a href="/companies/employers/H">H</a></li>
+													<li><a href="/companies/employers/I">I</a></li>
+													<li><a href="/companies/employers/J">J</a></li>
+													<li><a href="/companies/employers/K">K</a></li>
+													<li><a href="/companies/employers/L">L</a></li>
+													<li><a href="/companies/employers/M">M</a></li>
+													<li><a href="/companies/employers/N">N</a></li>
+													<li><a href="/companies/employers/O">O</a></li>
+													<li><a href="/companies/employers/P">P</a></li>
+													<li><a href="/companies/employers/Q">Q</a></li>
+													<li><a href="/companies/employers/R">R</a></li>
+													<li><a href="/companies/employers/S">S</a></li>
+													<li><a href="/companies/employers/T">T</a></li>
+													<li><a href="/companies/employers/U">U</a></li>
+													<li><a href="/companies/employers/V">V</a></li>
+													<li><a href="/companies/employers/W">W</a></li>
+													<li><a href="/companies/employers/Y">Y</a></li>
+													<li><a href="/companies/employers/Z">Z</a></li>
+												</ul>
 											</div>
 										</div>
-										<a href="#" class="tm-brighter-blue-square-button filter-search-button">Search</a>
-										<a class="show-all-jobs" href="/explore-companies">
-											<p>Show Me All Companies</p>
-										</a>
-									</div>
-									<div class="directory-companies-wrapper">
-										<h2>Directory A-Z</h2>
-										<ul class="search-companies-az clearfix">
-											<li><a href="/companies/employers/0-9">0-9</a></li>
-											<li><a href="/companies/employers/A">A</a></li>
-											<li><a href="/companies/employers/B">B</a></li>
-											<li><a href="/companies/employers/C">C</a></li>
-											<li><a href="/companies/employers/D">D</a></li>
-											<li><a href="/companies/employers/E">E</a></li>
-											<li><a href="/companies/employers/F">F</a></li>
-											<li><a href="/companies/employers/G">G</a></li>
-											<li><a href="/companies/employers/H">H</a></li>
-											<li><a href="/companies/employers/I">I</a></li>
-											<li><a href="/companies/employers/J">J</a></li>
-											<li><a href="/companies/employers/K">K</a></li>
-											<li><a href="/companies/employers/L">L</a></li>
-											<li><a href="/companies/employers/M">M</a></li>
-											<li><a href="/companies/employers/N">N</a></li>
-											<li><a href="/companies/employers/O">O</a></li>
-											<li><a href="/companies/employers/P">P</a></li>
-											<li><a href="/companies/employers/Q">Q</a></li>
-											<li><a href="/companies/employers/R">R</a></li>
-											<li><a href="/companies/employers/S">S</a></li>
-											<li><a href="/companies/employers/T">T</a></li>
-											<li><a href="/companies/employers/U">U</a></li>
-											<li><a href="/companies/employers/V">V</a></li>
-											<li><a href="/companies/employers/W">W</a></li>
-											<li><a href="/companies/employers/Y">Y</a></li>
-											<li><a href="/companies/employers/Z">Z</a></li>
-										</ul>
 									</div>
 								</div>
 							</div>
