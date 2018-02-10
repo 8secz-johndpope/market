@@ -91,7 +91,7 @@
 													<div>
 														<form>
 															<div class="keyword-input">
-																<input aria-label="keyword input" type="search" placeholder="Keywords or Company Name">
+																<input aria-label="keyword input" type="search" placeholder="Keywords or Recruiters Name">
 																<div aria-hidden="true" class="autocomplete-wrapper">
 																</div>
 															</div>

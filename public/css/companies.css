@@ -266,7 +266,7 @@
 	padding-top: 70px;
 }
 .top-hero-section .sub-heading {
-    margin-top: 150px;
+    margin-top: 120px;
 }
 .top-hero-section .sub-heading h1 {
     text-transform: uppercase;
@@ -288,7 +288,7 @@
     position: absolute;
     z-index: 200;
     width: 100%;
-    top: 306px;
+    top: 274px;
     left: 0;
     background: rgba(0,0,0,.6);
     padding: 20px 10px 10px 10px;
