@@ -2322,7 +2322,7 @@ class MarketController extends BaseController
     }
     public function companiesSearch(Request $request, $letter=null){
         $title = 'Employers';
-        $firstCompanies = Business::limit(10);
+        $firstCompanies = Business::paginate(10);
         if($letter != null){
             $companies = Business::where('name', 'REGEXP', '^['.$letter.']')->paginate(16);
         }elseif(isset($request->q)){
