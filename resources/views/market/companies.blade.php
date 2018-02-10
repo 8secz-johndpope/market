@@ -44,7 +44,7 @@
 								</div>
 								<div class="directory-companies-wrapper">
 									<h2>Directory A-Z</h2>
-									<ul class="search-companies-az">
+									<ul class="search-companies-az clearfix">
 										<li><a href="">0-9</a></li>
 										<li><a href="">A</a></li>
 										<li><a href="">B</a></li>
