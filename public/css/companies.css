@@ -534,6 +534,12 @@ input[type=search] {
 .companies-wrapper .row {
     margin: 0;
 }
+.let-us-help-wrapper {
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;

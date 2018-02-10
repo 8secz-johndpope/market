@@ -159,8 +159,8 @@
 					<div class="row">
 						@foreach($companies as $company)
 						@if($loop->index == 8)
-							<div class="col-xs-12">
-								<div class="let-us-help-wrapper">
+							<div class="col-xs-12 let-us-help-wrapper">
+								<div class="let-us-help-content">
 								</div>
 							</div>
 						@endif
