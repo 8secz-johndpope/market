@@ -121,7 +121,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row block">
 				<div class="col-sm-6">
 					<div class="recruiter-feature-box most-jobs">
 						<div class="bg-image">
@@ -134,7 +134,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<div class="recruiter-feature-box">
+					<div class="recruiter-feature-box showcased-companies">
 						<div class="bg-image">
 							<div class="title-copy">
 								<h3>Showcased Companies</h3>
