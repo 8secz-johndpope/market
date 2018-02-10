@@ -448,15 +448,20 @@
             <div class="col-md-12">
                 <img id="footer_top_logo" class="img-responsive" title="" alt="" src="/css/ggg-text.png">
             </div>
-
-            <div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
+            <div class="col-xs-12 text-center">
+                <div class="constrution-container">
+                    <h1>Sorry. This website is still under construction</h1>
+                    <h2 class="alert">No payments or transactions are permitted</h2>
+                </div>
+            </div>
+            <!--<div class="col-md-3 col-xs-5 col-xs-offset-1 col-md-offset-2">
                 <div class="col">
                     <h4>Company</h4>
                     <ul>
                         <li><a href="/about-us" title="About us">About us</a></li>
                         <li><a href="/history/about" title="Company History">Company History</a></li>
                         <li><a href="/contact-us" title="Contact us">Contact us</a></li>
-                        <!--<li></li>-->
+                        
                     </ul>
                 </div>
             </div>
@@ -511,6 +516,7 @@
                     </ul>
                 </div>
             </div>
+        -->
             <div class="col-xs-12">
                 <div class="col">
                     <img  class="img-responsive  footer_logo" src="/css/ic_launcher2.png" />
