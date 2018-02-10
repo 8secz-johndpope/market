@@ -2338,12 +2338,12 @@ class MarketController extends BaseController
         $title = 'Recruiters';
         if($letter != null){
             $companies = Business::where('name', 'REGEXP', '^['.$letter.']')->paginate(16);
-            return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'title' => $title]);
+            $request->q = null;
         }elseif(isset($request->q)){
-            $companies = Business::where('name', 'LIKE', '%'.$request->q.'%')->paginate(16);
-            return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'q' => $request->q, 'title' => $title]);
+            $companies = Business::where('name', 'LIKE', '%'.$request->q.'%')->paginate(16);  
         }
         else
             return $this->companies();
+        return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'q' => $request->q, 'title' => $title]);
     }
 }
