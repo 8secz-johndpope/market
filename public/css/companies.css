@@ -528,8 +528,10 @@ input[type=search] {
     border-bottom: 1px solid #dfdfdf;
 }
 .companies-wrapper {
-    padding-top: 30px;
-    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.5),transparent),url(/css/companies-bg.jpg);
+     padding-top: 30px;
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.5)),url(/css/companies-bg.jpg);
+    /* background-size: 200%; */
+    background-position: center;
 }
 .companies-wrapper .row {
     margin: 0;
