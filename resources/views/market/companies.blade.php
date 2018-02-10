@@ -159,16 +159,16 @@
 					<div class="row">
 						@foreach($companies as $company)
 						@if($loop->index == 8)
-							<div class="col-xs-12 let-us-help-wrapper">
+							<div class="col-xs-12 let-us-help-wrapper container-emailme">
 								<div class="let-us-help-content">
-									<div class="container-emailme">
+									<div class="">
 								        <div class="container-emailme-header text-center">
 								        	<h3>Let Us Help With Your Search</h3>
 								        </div>
 								        <div class="container-emailme-form text-center">
 								            <p>Submit and sit back. We'll send you opportunities you'll actually love and some helpful advice to help make the search stress free.</p>
 								            <div class="row">
-								                <div class="col-sm-offset-2 col-sm-8">
+								                <div class="col-sm-offset-3 col-sm-6">
 								                    <form action="" id="sendme-search">
 								                        <div class="form-group">
 								                            <div class="input-group">

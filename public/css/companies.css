@@ -536,7 +536,7 @@ input[type=search] {
 }
 .let-us-help-wrapper {
     width: 100%;
-    background: #fff;
+    /*background: #fff;*/
     padding: 30px;
     margin-bottom: 30px;
 }
