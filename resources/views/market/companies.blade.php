@@ -39,9 +39,9 @@
 											<div class="filter-wrapper clearfix">
 												<div class="keyword-wrapper">
 													<div>
-														<form>
+														<form action="/companies/employers" id="form-search-employer">
 															<div class="keyword-input">
-																<input aria-label="keyword input" type="search" placeholder="Keywords or Company Name">
+																<input aria-label="keyword input" type="search" placeholder="Keywords or Company Name" name="q">
 																<div aria-hidden="true" class="autocomplete-wrapper">
 																</div>
 															</div>
@@ -309,4 +309,9 @@
 	@endif
 	<!-- </div> -->
 </div>
+<script>
+	$('filter-search-button').click(function(){
+		$('#form-search-employer').submit();
+	});
+</script>
 @endsection
