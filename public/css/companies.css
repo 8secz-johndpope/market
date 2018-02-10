@@ -545,6 +545,7 @@ input[type=search] {
 .filters-tab .nav-tabs>li>a {
     background:rgba(58, 86, 209,0.7);
     border-color: #3852d4;
+    border-top: none;
     border-radius: 0;
     color: #fff;
     font-size: 18px;
