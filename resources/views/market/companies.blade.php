@@ -158,6 +158,12 @@
 				<div class="companies-wrapper">
 					<div class="row">
 						@foreach($companies as $company)
+						@if($loop->index == 8)
+							<div class="col-xs-12">
+								<div class="let-us-help-wrapper">
+								</div>
+							</div>
+						@endif
 						<div class="col-sm-3">
 							<div class="profile">
 			            		<div class="profile-thumb">
