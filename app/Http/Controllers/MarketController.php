@@ -2325,7 +2325,7 @@ class MarketController extends BaseController
         $firstCompanies = Business::paginate(12);
         if($letter != null){
             $companies = Business::where('name', 'REGEXP', '^['.$letter.']')->paginate(16);
-            return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter]);
+            return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'title' => $title]);
         }elseif(isset($request->q)){
             $companies = Business::where('name', 'LIKE', '%'.$request->q.'%')->paginate(16);
             return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'q' => $request->q, 'title' => $title]);
@@ -2338,7 +2338,7 @@ class MarketController extends BaseController
         $title = 'Recruiters';
         if($letter != null){
             $companies = Business::where('name', 'REGEXP', '^['.$letter.']')->paginate(16);
-            return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter]);
+            return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'title' => $title]);
         }elseif(isset($request->q)){
             $companies = Business::where('name', 'LIKE', '%'.$request->q.'%')->paginate(16);
             return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'q' => $request->q, 'title' => $title]);
