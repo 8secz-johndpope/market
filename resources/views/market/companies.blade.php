@@ -82,7 +82,30 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			
+			<div class="col-xs-12">
+				<div class="top-searches">
+					<h3>top-searches</h3>
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				
+			</div>
+			<div class="col-sm-6">
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class=""
+			</div>
+			<div class="col-sm-6">
+				
+			</div>
 		</div>
 	</div>
 </div>
