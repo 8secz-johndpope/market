@@ -123,7 +123,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-6">
-					<div class="recruiter-feature-box">
+					<div class="recruiter-feature-box most-jobs">
 						<div class="bg-image">
 							<div class="title-copy">
 								<div class="title-copy">

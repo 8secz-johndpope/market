@@ -453,6 +453,34 @@ input[type=search] {
     background-repeat: no-repeat;
     background-position: center center;
 }
+.immediate .bg-image {
+    min-height: 100px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    height: 250px;
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5),transparent),url(/css/immediate-bg.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.most-jobs .bg-image {
+    min-height: 100px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    height: 250px;
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5),transparent),url(/css/most-jobs-bg.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 .featured .title-copy, .immediate .title-copy {
     text-align: center;
     background-color: transparent;
