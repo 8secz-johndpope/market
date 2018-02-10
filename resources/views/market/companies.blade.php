@@ -31,7 +31,7 @@
 											<a data-toggle="tab" href="#tab-employers">Employers</a>
 										</li>
 										<li>
-											<a data-toggle="tab">Recruiters</a>
+											<a data-toggle="tab" href="#tab-recruiters">Recruiters</a>
 										</li>
 									</ul>
 									<div class="tab-content">
@@ -85,7 +85,7 @@
 												</ul>
 											</div>
 										</div>
-										<div class="tab-panel fade in active" id="tab-employers">
+										<div class="tab-panel fade in active" id="tab-recruiters">
 											<div class="filter-wrapper clearfix">
 												<div class="keyword-wrapper">
 													<div>
