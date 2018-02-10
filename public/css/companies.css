@@ -560,6 +560,12 @@ input[type=search] {
     left: 100px;
     border-bottom: none;
 }
+.filters-tab .nav-tabs>li.active>a, .filters-tab .nav-tabs>li.active>a:focus, .filters-tab .nav-tabs>li.active>a:hover {
+    border-top: 2px solid #ff9d2c;
+}
+.filters-tab .tab-pane{
+	border:none;
+}
 @media(min-width: 768px){
 	.search-companies-az {
 	    display: block !important;
