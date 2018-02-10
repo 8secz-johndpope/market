@@ -2325,13 +2325,13 @@ class MarketController extends BaseController
         $firstCompanies = Business::paginate(12);
         if($letter != null){
             $companies = Business::where('name', 'REGEXP', '^['.$letter.']')->paginate(16);
-            return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'title' => $title]);
         }elseif(isset($request->q)){
             $companies = Business::where('name', 'LIKE', '%'.$request->q.'%')->paginate(16);
-            return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'q' => $request->q, 'title' => $title]);
         }
         else
-            return $this->companies();
+            $companies = $firstCompanies;
+
+        return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'q' => $request->q, 'title' => $title]);
     }
     public function recruiterSearch(Request $request, $letter=null){
         $firstCompanies = Business::paginate(12);
@@ -2343,7 +2343,7 @@ class MarketController extends BaseController
             $companies = Business::where('name', 'LIKE', '%'.$request->q.'%')->paginate(16);  
         }
         else
-            return $this->companies();
+            return $this->companies($request);
         return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'q' => $request->q, 'title' => $title]);
     }
 }
