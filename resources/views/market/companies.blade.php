@@ -85,6 +85,56 @@
 												</ul>
 											</div>
 										</div>
+										<div class="tab-panel fade in active" id="tab-employers">
+											<div class="filter-wrapper clearfix">
+												<div class="keyword-wrapper">
+													<div>
+														<form>
+															<div class="keyword-input">
+																<input aria-label="keyword input" type="search" placeholder="Keywords or Company Name">
+																<div aria-hidden="true" class="autocomplete-wrapper">
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+												<a href="#" class="tm-brighter-blue-square-button filter-search-button">Search</a>
+												<a class="show-all-jobs" href="/explore-companies">
+													<p>Show Me All Companies</p>
+												</a>
+											</div>
+											<div class="directory-companies-wrapper">
+												<h2>Directory A-Z</h2>
+												<ul class="search-companies-az clearfix">
+													<li><a href="/companies/recruiters/0-9">0-9</a></li>
+													<li><a href="/companies/recruiters/A">A</a></li>
+													<li><a href="/companies/recruiters/B">B</a></li>
+													<li><a href="/companies/recruiters/C">C</a></li>
+													<li><a href="/companies/recruiters/D">D</a></li>
+													<li><a href="/companies/recruiters/E">E</a></li>
+													<li><a href="/companies/recruiters/F">F</a></li>
+													<li><a href="/companies/recruiters/G">G</a></li>
+													<li><a href="/companies/recruiters/H">H</a></li>
+													<li><a href="/companies/recruiters/I">I</a></li>
+													<li><a href="/companies/recruiters/J">J</a></li>
+													<li><a href="/companies/recruiters/K">K</a></li>
+													<li><a href="/companies/recruiters/L">L</a></li>
+													<li><a href="/companies/recruiters/M">M</a></li>
+													<li><a href="/companies/recruiters/N">N</a></li>
+													<li><a href="/companies/recruiters/O">O</a></li>
+													<li><a href="/companies/recruiters/P">P</a></li>
+													<li><a href="/companies/recruiters/Q">Q</a></li>
+													<li><a href="/companies/recruiters/R">R</a></li>
+													<li><a href="/companies/recruiters/S">S</a></li>
+													<li><a href="/companies/recruiters/T">T</a></li>
+													<li><a href="/companies/recruiters/U">U</a></li>
+													<li><a href="/companies/recruiters/V">V</a></li>
+													<li><a href="/companies/recruiters/W">W</a></li>
+													<li><a href="/companies/recruiters/Y">Y</a></li>
+													<li><a href="/companies/recruiters/Z">Z</a></li>
+												</ul>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
