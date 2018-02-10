@@ -42,7 +42,7 @@
 														<form action="/companies/employers" id="form-search-employer" method="POST">
 															{{ csrf_field() }}
 															<div class="keyword-input">
-																<input aria-label="keyword input" type="search" placeholder="Keywords or Company Name" name="q">
+																<input aria-label="keyword input" type="search" placeholder="Keywords or Company Name" name="q" value="{{isset($q) ? $q : '' }}">
 																<div aria-hidden="true" class="autocomplete-wrapper">
 																</div>
 															</div>
@@ -215,7 +215,11 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="search-companies-result-title">
-					<h1>Recruitment starting with {{$letter}}</h1>
+					@if($letter != null)
+					<h1>{{$title}} starting with {{$letter}}</h1>
+					@else
+					<h1>{{$title}} matching with {{$letter}}</h1>
+					@endif
 					@if($companies->count() > 0)
 						<p>{{$companies->total()}} Recruiters</p>
 					@else
