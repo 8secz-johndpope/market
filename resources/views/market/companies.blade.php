@@ -156,7 +156,44 @@
 			</div>
 			<div class="col-xs-12">
 				<div class="companies-wrapper">
-					
+					<div class="row">
+						@foreach($companies as $company)
+						<div class="col-sm-3">
+							<div class="profile">
+			            		<div class="profile-thumb">
+			            			<a href="#" class="profile-link">
+			            				<img class="profile-img" src="{{env('AWS_WEB_IMAGE_URL')}}/{{$company->logo}}">
+			            			</a>
+			            		</div>
+			            		<div class="subtitle">
+			            			<a href="#">{{$company->name}}</a>
+			            			<span class="count-jobs-company">
+			            				@if(isset($company->user))
+			            					({{$company->user->countAdverts()}})
+			            				@else
+			            					(0)
+			            				@endif
+			            			</span>
+			            		</div>
+			            		<div class="alert-container">
+			            			<div>
+										<a aria-label="company-alert" href="#" class="company-alert">
+											<i aria-hidden="true" class="icon icon-bell"></i>
+										</a>
+									</div>
+			            		</div>
+			            		<div class="favorite-container">
+									<div>
+										<div class="favor">
+											<i aria-hidden="true" class="heart-empty favroite-icon" data-id="{{$company->id}}"></i>
+											<span class="favor-text">SAVE</span>
+										</div>
+									</div>
+	            				</div>
+		            		</div>
+						</div>
+						@endforeach
+					</div>
 				</div>
 			</div>
 		</div>

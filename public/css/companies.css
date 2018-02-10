@@ -523,7 +523,7 @@ input[type=search] {
     position: static;
     padding-bottom: 10px;
     margin: 0 0 5px 0;
-    font: 24px/30px;
+    font: 24px/30px 'Open Sans', Arial, Helvetica, sans-serif;
     color: #003777;
     border-bottom: 1px solid #dfdfdf;
 }
