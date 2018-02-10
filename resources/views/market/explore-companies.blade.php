@@ -81,7 +81,7 @@
 				            			<a href="#">{{$company->name}}</a>
 				            			<span class="count-jobs-company">
 				            				@if(isset($company->user))
-				            					({{$company->user->numAdverts()}})
+				            					({{$company->user->countAdverts()}})
 				            				@else
 				            					(0)
 				            				@endif

@@ -202,7 +202,7 @@ class User extends Authenticatable
     /**
     * This method return the how many adverts has the user
     **/
-    public function numAdverts()
+    public function countAdverts()
     {
         return $this->hasMany('App\Model\Advert')->where('status',1)->count();
     }
