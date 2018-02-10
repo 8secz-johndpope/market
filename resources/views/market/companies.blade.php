@@ -201,6 +201,11 @@
 						@endforeach
 					</div>
 				</div>
+				<div class="pagination-container">
+	            	<div class="pagination-new">
+	            		{{ $companies->links()}}
+	            	</div>
+	            </div>
 			</div>
 		</div>
 	</div>
