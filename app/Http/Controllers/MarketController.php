@@ -2379,7 +2379,7 @@ class MarketController extends BaseController
             $response = $this->client->search($params);
             $total = $response['hits']['total'];
             $adverts = $response['hits']['hits'];
-            var_dump($adverts[0]['_source']);
+            var_dump($adverts[1]['_source']);
             $advert = Advert::find($adverts[0]['_source']['id']);
             $advert->delete();
     }
