@@ -2379,7 +2379,6 @@ class MarketController extends BaseController
             $response = $this->client->search($params);
             $total = $response['hits']['total'];
             $adverts = $response['hits']['hits'];
-            $adverts = $adverts['_source'];
             var_dump($adverts);
     }
 }
