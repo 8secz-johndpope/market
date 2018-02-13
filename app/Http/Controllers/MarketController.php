@@ -2386,13 +2386,13 @@ class MarketController extends BaseController
             for($i = 0; $i < count($adverts); $i++){
                 //var_dump($adverts[$i]['_source']);
                 if(array_key_exists('id', $adverts[$i]['_source'])){
-                    echo $adverts[$i]['_source']['id'].',';
+                    echo $adverts[$i]['_source']['id'].', ';
                     //$advert = Advert::find($adverts[$i]['_source']['id']);
                     //if($advert != null)
                         //$advert->delete();
                 }
                 else 
-                    echo 'sid = '.$adverts[$i]['_source']['source_id'].',';
+                    echo 'sid = '.$adverts[$i]['_source']['source_id'].', ';
             }
     }
 }
