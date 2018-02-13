@@ -2384,8 +2384,8 @@ class MarketController extends BaseController
             var_dump(count($adverts));
             var_dump($adverts[1]['_source']);
             for($i = 0; $i < count($adverts); $i++){
-                var_dump($adverts[$i]['_source']['id']);
-                echo $adverts[$i]['_source']['id'];
+                var_dump($adverts[$i]['_source']);
+                echo '\n'.$adverts[$i]['_source']['id'].'\n';
                 //$advert = Advert::find($adverts[$i]['_source']['id']);
                 //if($advert != null)
                     //$advert->delete();
