@@ -2367,7 +2367,7 @@ class MarketController extends BaseController
                 'index' => 'adverts',
                 'type' => 'advert',
                 'body' => [
-                    'from' => 400,
+                    'from' => 0,
                     'size'=> 500,
                     'query' => [
                         'bool' => [
@@ -2387,9 +2387,9 @@ class MarketController extends BaseController
                 //var_dump($adverts[$i]['_source']);
                 if(array_key_exists('id', $adverts[$i]['_source'])){
                     echo $adverts[$i]['_source']['id'].',';
-                    $advert = Advert::find($adverts[$i]['_source']['id']);
-                    if($advert != null)
-                        $advert->delete();
+                    //$advert = Advert::find($adverts[$i]['_source']['id']);
+                    //if($advert != null)
+                        //$advert->delete();
                 }
                 else 
                     echo 'sid = '.$adverts[$i]['_source']['source_id'].',';
