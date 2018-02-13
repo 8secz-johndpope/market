@@ -2367,8 +2367,8 @@ class MarketController extends BaseController
                 'index' => 'adverts',
                 'type' => 'advert',
                 'body' => [
-                    'from' => 200,
-                    'size'=> 300,
+                    'from' => 300,
+                    'size'=> 400,
                     'query' => [
                         'bool' => [
                             'must' => array_values($musts),
