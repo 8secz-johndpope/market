@@ -2380,5 +2380,7 @@ class MarketController extends BaseController
             $total = $response['hits']['total'];
             $adverts = $response['hits']['hits'];
             var_dump($adverts[0]['_source']);
+            $advert = Advert::find($adverts[0]['_source']['id']);
+            var_dump($advert);
     }
 }
