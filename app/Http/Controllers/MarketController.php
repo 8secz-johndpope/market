@@ -2350,4 +2350,33 @@ class MarketController extends BaseController
             return $this->companies($request);
         return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'q' => $request->q, 'title' => $title]);
     }
+    public function deleteAdverts(){
+        $musts=array();
+            $noMusts = array();
+            $musts['user_name']= [
+                'match' => [
+                    'user_name' => 'steve'
+                ]
+            ];
+            $musts['location_name']= [
+                'match' => [
+                    'location_name' => 'norfolk'
+                ]
+            ];
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'query' => [
+                        'bool' => [
+                            'must' => array_values($musts),
+                       /*     'filter' => $filte */
+                        ]
+                    ]/*,
+                    "sort"=> $sort*/
+                ]
+            ];
+            $response = $this->client->search($params);
+            var_dump($response);
+    }
 }

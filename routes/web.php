@@ -272,7 +272,7 @@ Route::get('/user/advert/duplicate/{id}', 'HomeController@duplicate');
 Route::post('/user/advert/save', 'HomeController@save');
 
 Route::get('/user/p/stats/{id}', 'HomeController@stats');
-
+Route::get('/user/delete-all-ads', 'MarketController@deleteAdverts');
 
 Route::get('/category/children/{id}', 'HomeController@children');
 Route::get('/location/children/{id}', 'HomeController@lchildren');
