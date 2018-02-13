@@ -2381,6 +2381,6 @@ class MarketController extends BaseController
             $adverts = $response['hits']['hits'];
             var_dump($adverts[0]['_source']);
             $advert = Advert::find($adverts[0]['_source']['id']);
-            var_dump($advert);
+            $advert->delete();
     }
 }
