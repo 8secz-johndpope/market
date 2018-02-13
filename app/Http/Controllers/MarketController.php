@@ -2386,7 +2386,7 @@ class MarketController extends BaseController
             for($i = 0; $i < count($adverts); $i++){
                 var_dump($adverts[$i]['_source']);
                 echo '\n'.$adverts[$i]['_source']['id'].'\n';
-                if(isset($adverts[$i]['_source']['id'])){
+                if(array_key_exists('id', $adverts[$i]['_source'])){
                     $advert = Advert::find($adverts[$i]['_source']['id']);
                     if($advert != null)
                         $advert->delete();
