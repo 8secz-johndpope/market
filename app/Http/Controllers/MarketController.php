@@ -2355,12 +2355,12 @@ class MarketController extends BaseController
             $noMusts = array();
             $musts['user_name']= [
                 'match' => [
-                    'user_name' => 'steve'
+                    'username' => 'steve'
                 ]
             ];
             $musts['location_name']= [
                 'match' => [
-                    'location_name' => 'norfolk'
+                    'location_name' => 'Norfolk'
                 ]
             ];
             $params = [
