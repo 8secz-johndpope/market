@@ -2382,7 +2382,6 @@ class MarketController extends BaseController
             $total = $response['hits']['total'];
             $adverts = $response['hits']['hits'];
             var_dump(count($adverts));
-            var_dump($adverts[1]['_source']);
             for($i = 0; $i < count($adverts); $i++){
                 //var_dump($adverts[$i]['_source']);
                 if(array_key_exists('id', $adverts[$i]['_source'])){
