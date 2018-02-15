@@ -924,7 +924,7 @@ class HomeController extends BaseController
             $profile->save();
         }
         $totalApplication = $user->applications()->count();
-        return view('home.jobprofile',['profile'=>$user->profile,'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication]);
+        return view('home.jobprofile',['profile'=>$user->profile($type),'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication]);
     }
 
     public function view_profile(Request $request,$id)
