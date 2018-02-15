@@ -123,11 +123,13 @@
                 </div>
                 <div class="section-content col-xs-12 col-sm-6">
                   <fieldset class="form-field">
+                    @foreach($contractTypes as $contractType)
                     <div class="checkbox">
-                      <input type="checkbox" name="perm-work" id="perm-work">
-                      <label for="perm-work">Permanent</label>
+                      <input type="checkbox" name="contract-type[]" id="{{$contractType->slug}}-work" value="{{$contractType->id}}">
+                      <label for="perm-work">{{$contractType->title}}</label>
                     </div>
-                    <div class="checkbox">
+                    @endforeach
+                    <!-- <div class="checkbox">
                       <input type="checkbox" name="temp-work" id="temp-work">
                       <label for="temp-work">Temporary</label>
                     </div>
@@ -135,7 +137,7 @@
                       <input type="checkbox" name="contract-work" id="contract-work">
                       <label for="contract-work">Contract</label>
                     </div>
-                    <div class="checkbox"></div>
+                    <div class="checkbox"></div>-->
                   </fieldset>
                   <fieldset class="form-field graduate-jobs">
                     <div class="checkbox">

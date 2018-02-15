@@ -2572,9 +2572,11 @@ class HomeController extends BaseController
         }
         $lookingFor = $profile->looking_for;
         $jobChildren = Category::find(4000000000)->children;
+        $field = Field::find(15);
+        $contractTypes = $field->values;
         $sectorPreferred = Category::find(4140000000);
         $idsSubSectorPreferred = [4140800000, 4141700000, 4140500000];
-        return view('home.looking_for_edit', ['user' => $user, 'lookingFor' => $lookingFor, 'jobChildren' => $jobChildren, 'idsSubSectorPreferred' => $idsSubSectorPreferred, 'sectorPreferred' => $sectorPreferred]);
+        return view('home.looking_for_edit', ['user' => $user, 'lookingFor' => $lookingFor, 'contractTypes' => $contractTypes, 'jobChildren' => $jobChildren, 'idsSubSectorPreferred' => $idsSubSectorPreferred, 'sectorPreferred' => $sectorPreferred]);
     }
     public function cv_builder(Request $request, $slug){
         $user = Auth::user();
