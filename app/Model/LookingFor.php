@@ -24,4 +24,7 @@ class LookingFor extends Model
 	{
 		return $this->hasToMany('App\model\Category');
 	}
+	public function profile(){
+        return $this->belongsTo('App\Profile');
+    }
 }
