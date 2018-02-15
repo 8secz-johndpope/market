@@ -33,6 +33,7 @@
           <div class="content row">
             <form action="/user/jobs/save/looking-for" method="post">
               <input name="redirect" type="hidden" value="/job/profile/edit">
+              <input name="looking_for_id" type="hidden" value="{{$lookingFor->id}}">
               {{ csrf_field() }}
               <section class="section-job-title row">
                 <div class="header col-xs-12 col-sm-3">
@@ -41,7 +42,7 @@
                 <div class="section-content col-xs-12 col-sm-6">
                   <fieldset class="form-field valid">
                     <span class="twitter-typehead">
-                      <input class="form-control desired-job-title tt-input" value="{{$lookingFor->job_title}}" name="job-title">
+                      <input class="form-control desired-job-title tt-input" value="{{$lookingFor->job_title}}" name="job_title">
                       <div class="tt-dataset">
                         <span class="tt-suggestions">
                           <div class="tt-suggestion tt-selectable">Engineer</div>
@@ -63,14 +64,14 @@
                   <p class="small">Minimum salary (please enter at least one type of salary)</p>
                   <fieldset class="form-field col-xs-12 col-sm-6">
                     <span class="pound-sign">£</span>
-                    <input class="form-control salary" type="text" name="minimum-salary" id="minimum-salary" placeholder="per annum" value="{{$lookingFor->min_per_annum}}">
+                    <input class="form-control salary" type="text" name="minimum_salary" id="minimum-salary" placeholder="per annum" value="{{$lookingFor->min_per_annum}}">
                     <small class="type-info">Per annum</small>
                     <div class="validation">
                     </div>  
                   </fieldset>
                   <fieldset class="form-field col-xs-12 col-sm-6">
                     <span class="pound-sign">£</span>
-                    <input class="form-control salary" type="text" name="minimum-temp-rate" id="minimum-temp-rate" placeholder="per hour" value="{{$lookingFor->min_per_hour}}">
+                    <input class="form-control salary" type="text" name="minimum_temp_rate" id="minimum-temp-rate" placeholder="per hour" value="{{$lookingFor->min_per_hour}}">
                     <small class="type-info">Per hour</small>
                     <div class="validation">
                     </div>  
@@ -125,7 +126,7 @@
                   <fieldset class="form-field">
                     @foreach($contractTypes as $contractType)
                     <div class="checkbox">
-                      <input type="checkbox" name="contract-type[]" id="{{$contractType->slug}}-work" value="{{$contractType->id}}">
+                      <input type="checkbox" name="contract_type[]" id="{{$contractType->slug}}-work" value="{{$contractType->id}}">
                       <label for="{{$contractType->slug}}-work">{{$contractType->title}}</label>
                     </div>
                     @endforeach
@@ -145,11 +146,11 @@
                 <div class="section-content col-xs-12 col-sm-9">
                   <fieldset class="form-field">
                     <div class="checkbox">
-                      <input type="checkbox" name="is-full-time" id="is-full-time" {{($lookingFor->full_time)? 'checked' : ''}}>
+                      <input type="checkbox" name="is_full_time" id="is-full-time" {{($lookingFor->full_time)? 'checked' : ''}}>
                       <label for="is-full-time">Full-time</label>
                     </div>
                     <div class="checkbox">
-                      <input type="checkbox" name="is-part-time" id="is-part-time" {{($lookingFor->part_time)? 'checked' : ''}}>
+                      <input type="checkbox" name="is_part_time" id="is-part-time" {{($lookingFor->part_time)? 'checked' : ''}}>
                       <label for="is-part-time">Part-time</label>
                     </div>
                   </fieldset>
