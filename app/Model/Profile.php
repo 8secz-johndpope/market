@@ -12,5 +12,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-
+	public function lookinFor()
+	{
+		return $this->hasOne('App\model\LookingFor');
+	}
 }
