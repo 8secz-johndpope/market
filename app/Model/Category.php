@@ -33,7 +33,11 @@ class Category extends  BaseModel
         return $this->belongsToMany('App\Model\Filter');
     }
     public function getCanFilterFields(){
-        return $this->fields()->where('can_filter',1)->get();
+        $parent = $this;
+        if($this->can_apply()){
+            $parent = Category::find(4000000000);    
+        }
+        return $parent->fields()->where('can_filter',1)->get();
     }
     public function has_price(){
         $price = CategoryField::where('category_id',$this->id)->where('field_id',10)->first();

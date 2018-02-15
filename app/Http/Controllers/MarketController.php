@@ -1341,12 +1341,8 @@ class MarketController extends BaseController
     public function filter($request,$category,$location){
         $lat = ($location->min_lat+$location->max_lat)/2;
         $lng = ($location->min_lng+$location->max_lng)/2;
-            $any = $category->slug;
-        if($category->can_apply()){
-            $fields = Category::find(4000000000)->getCanFilterFields();
-        }
-        else
-            $fields = $category->getCanFilterFields();
+        $any = $category->slug;
+        $fields = $category->getCanFilterFields();
         $input = $request->all();
 
         $aggs=array();
