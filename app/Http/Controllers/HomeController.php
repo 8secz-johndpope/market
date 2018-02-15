@@ -918,8 +918,8 @@ class HomeController extends BaseController
     {
         $profileTypes = ['general', 'social-childcare', 'sub-contractor'];
         $user = Auth::user();
-        if($user->profile===null){
-            $profile = new Profile();
+        if($user->profile($type)===null){
+            $profile = new Profile($type);
             $profile->user_id=$user->id;
             $profile->save();
         }
@@ -2567,7 +2567,7 @@ class HomeController extends BaseController
             $lookingFor = new LookingFor();
             $lookingFor->profile_id = $profile->id;
             $profile->looking_for = $lookingFor;
-            $profile->looking_for->save();
+            $profile->looking_for->save(); 
             //$profile->save();
         }
         $jobChildren = Category::find(4000000000)->children;
