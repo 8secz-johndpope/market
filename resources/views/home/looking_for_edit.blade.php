@@ -152,11 +152,11 @@
                 <div class="section-content col-xs-12 col-sm-9">
                   <fieldset class="form-field">
                     <div class="checkbox">
-                      <input type="checkbox" name="is-full-time" id="is-full-time" {{if($lookingFor->full_time)? 'checked' : ''}}>
+                      <input type="checkbox" name="is-full-time" id="is-full-time" {{($lookingFor->full_time)? 'checked' : ''}}>
                       <label for="is-full-time">Full-time</label>
                     </div>
                     <div class="checkbox">
-                      <input type="checkbox" name="is-part-time" id="is-part-time" {{if($lookingFor->part_time)? 'checked' : ''}}>
+                      <input type="checkbox" name="is-part-time" id="is-part-time" {{($lookingFor->part_time)? 'checked' : ''}}>
                       <label for="is-part-time">Part-time</label>
                     </div>
                   </fieldset>
