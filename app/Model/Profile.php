@@ -14,6 +14,6 @@ class Profile extends Model
 {
 	public function looking_for()
 	{
-		return $this->hasOne('App\Model\LookingFor', 'profile_id', 'looking_for_id');
+		return $this->hasOne('App\Model\LookingFor');
 	}
 }

@@ -12,7 +12,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class LookingFor extends Model
 {
-	public $timestamps = false;
 	public function locationsPreferred()
 	{
 		return $this->hasToMany('App\model\Location');
@@ -25,4 +24,7 @@ class LookingFor extends Model
 	{
 		return $this->hasToMany('App\model\Category');
 	}
+	public function profile(){
+        return $this->belongsTo('App\Profile');
+    }
 }
