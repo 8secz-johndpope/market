@@ -2590,7 +2590,7 @@ class HomeController extends BaseController
         if(isset($request->is_part_time))
             $lookingFor->part_time = 1;
         $lookingFor->save();
-        return $lookingFor; 
+        return redirect($request->redirect); 
     }
     public function cv_builder(Request $request, $slug){
         $user = Auth::user();
