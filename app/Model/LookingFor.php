@@ -15,7 +15,7 @@ class LookingFor extends Model
 	public $timestamps = false;
 	public function locationsPreferred()
 	{
-		return $this->hasToMany('App\model\Location');
+		return $this->hasMany('App\model\Location');
 	}
 	public function jobTypes()
 	{
