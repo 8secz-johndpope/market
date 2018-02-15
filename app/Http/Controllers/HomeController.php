@@ -2561,9 +2561,10 @@ class HomeController extends BaseController
     }
     public function looking_for(Request $request){
         $user = Auth::user();
-        if($user->profile('general')->lookingFor == null){
-            $user->profile('general')->lookingFor = new LookingFor();
-            $user->profile->save();
+        $profile = $user->profile('general');
+        if($profile->lookingFor == null){
+            $profile->lookingFor = new LookingFor();
+            $profile->save();
         }
         $jobChildren = Category::find(4000000000)->children;
         $sectorPreferred = Category::find(4140000000);
