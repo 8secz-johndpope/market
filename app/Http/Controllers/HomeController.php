@@ -2570,6 +2570,7 @@ class HomeController extends BaseController
             $profile->looking_for->save(); 
             //$profile->save();
         }
+        $lookingFor = $profile->looking_for;
         $jobChildren = Category::find(4000000000)->children;
         $sectorPreferred = Category::find(4140000000);
         $idsSubSectorPreferred = [4140800000, 4141700000, 4140500000];
