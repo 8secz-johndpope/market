@@ -2565,6 +2565,7 @@ class HomeController extends BaseController
         $profile = $user->profile('general');
         if($profile->looking_for == null){
             $lookingFor = new LookingFor();
+            $lookingFor->profile_id = $profile->id;
             $profile->looking_for = $lookingFor;
             $profile->looking_for->save();
             //$profile->save();
