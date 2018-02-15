@@ -260,7 +260,7 @@ class User extends Authenticatable
         return $this->hasMany('App\Model\Profile');
     }
     public function profile($type){
-        return $this->profiles()->where('type', $type);
+        return $this->profiles()->where('type', $type)->get();
     }
     public function contract()
     {
