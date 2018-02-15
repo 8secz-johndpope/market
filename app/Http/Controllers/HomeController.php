@@ -2572,6 +2572,7 @@ class HomeController extends BaseController
             //$profile->save();
         }
         $lookingFor = $profile->looking_for;
+        return $lookingFor;
         $jobChildren = Category::find(4000000000)->children;
         $field = Field::find(15);
         $contractTypes = $field->values;
