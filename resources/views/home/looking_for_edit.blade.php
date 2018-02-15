@@ -41,7 +41,7 @@
                 <div class="section-content col-xs-12 col-sm-6">
                   <fieldset class="form-field valid">
                     <span class="twitter-typehead">
-                      <input class="form-control desired-job-title tt-input" value="Engineer">
+                      <input class="form-control desired-job-title tt-input" value="{{$lookingFor->job_title}}" name="job-title">
                       <div class="tt-dataset">
                         <span class="tt-suggestions">
                           <div class="tt-suggestion tt-selectable">Engineer</div>
@@ -63,14 +63,14 @@
                   <p class="small">Minimum salary (please enter at least one type of salary)</p>
                   <fieldset class="form-field col-xs-12 col-sm-6">
                     <span class="pound-sign">£</span>
-                    <input class="form-control salary" type="text" name="minimum-salary" id="minimum-salary" placeholder="per annum">
+                    <input class="form-control salary" type="text" name="minimum-salary" id="minimum-salary" placeholder="per annum" value="{{$lookingFor->min_per_annum}}">
                     <small class="type-info">Per annum</small>
                     <div class="validation">
                     </div>  
                   </fieldset>
                   <fieldset class="form-field col-xs-12 col-sm-6">
                     <span class="pound-sign">£</span>
-                    <input class="form-control salary" type="text" name="minimum-temp-rate" id="minimum-temp-rate" placeholder="per hour">
+                    <input class="form-control salary" type="text" name="minimum-temp-rate" id="minimum-temp-rate" placeholder="per hour" value="{{$lookingFor->min_per_hour}}">
                     <small class="type-info">Per hour</small>
                     <div class="validation">
                     </div>  
@@ -152,11 +152,11 @@
                 <div class="section-content col-xs-12 col-sm-9">
                   <fieldset class="form-field">
                     <div class="checkbox">
-                      <input type="checkbox" name="is-full-time" id="is-full-time">
+                      <input type="checkbox" name="is-full-time" id="is-full-time" {{if($lookingFor->full_time)? 'checked' : ''}}>
                       <label for="is-full-time">Full-time</label>
                     </div>
                     <div class="checkbox">
-                      <input type="checkbox" name="is-part-time" id="is-part-time">
+                      <input type="checkbox" name="is-part-time" id="is-part-time" {{if($lookingFor->part_time)? 'checked' : ''}}>
                       <label for="is-part-time">Part-time</label>
                     </div>
                   </fieldset>
