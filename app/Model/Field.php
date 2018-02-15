@@ -21,4 +21,7 @@ class Field extends  Model
     public function filters() {
         return $this->hasMany('App\Model\Filter');
     }
+    public function looking_for{
+    	return $this->belongsToMany('App\Model\LookingFor', 'looking_for_contract_type');
+    }
 }
