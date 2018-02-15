@@ -44,6 +44,7 @@ use App\Model\Price;
 use Illuminate\Http\Request;
 use App\Model\Category;
 use App\Model\Advert;
+use App\Model\LookingFor;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
 use Ramsey\Uuid\Uuid;
