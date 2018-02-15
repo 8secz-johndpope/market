@@ -2584,11 +2584,13 @@ class HomeController extends BaseController
         $lookingFor->job_title = $request->job_title;
         $lookingFor->min_per_annum = $request->minimum_salary;
         $lookingFor->min_per_hour = $request->minimum_temp_rate;
+        $lookingFor->jobTypes()->attach($request->contract_type);
         if(isset($request->is_full_time))
             $lookingFor->full_time = 1;
         if(isset($request->is_part_time))
             $lookingFor->part_time = 1;
-        return $request->contract_type;
+        $lookingFor->save();
+        return $lookingFor; 
     }
     public function cv_builder(Request $request, $slug){
         $user = Auth::user();
