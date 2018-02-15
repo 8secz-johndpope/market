@@ -2561,7 +2561,7 @@ class HomeController extends BaseController
     }
     public function looking_for(Request $request){
         $user = Auth::user();
-        if($user->profile->looking_for == null){
+        if($user->profile->lookingFor == null){
             $user->profile->lookingFor = new LookingFor();
             $user->profile->save();
         }

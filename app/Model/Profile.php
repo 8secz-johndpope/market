@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-	public function looking_for()
+	public function lookingFor()
 	{
 		return $this->hasOne('App\model\LookingFor');
 	}
