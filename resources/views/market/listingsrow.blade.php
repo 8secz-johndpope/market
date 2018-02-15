@@ -1217,11 +1217,11 @@ use App\Model\Advert;
                         </select>
                     </div>
                     @endif
-                    @if(count(Auth::user()->profile) > 0)
+                    @if(count(Auth::user()->profiles) > 0)
                     <div class="form-group option-apply" id="profile-container">
                         <label for="select-profile">Profile</label>
                         <select class="form-control" id="select-profile">
-                        @foreach(Auth::user()->profile as $profile)
+                        @foreach(Auth::user()->profiles as $profile)
                             <option value="{{$profile->id}}">{{$profile->id}}</option>
                         @endforeach
                         </select>
