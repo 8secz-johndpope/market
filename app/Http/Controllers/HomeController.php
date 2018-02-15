@@ -2579,6 +2579,10 @@ class HomeController extends BaseController
         $idsSubSectorPreferred = [4140800000, 4141700000, 4140500000];
         return view('home.looking_for_edit', ['user' => $user, 'lookingFor' => $lookingFor, 'contractTypes' => $contractTypes, 'jobChildren' => $jobChildren, 'idsSubSectorPreferred' => $idsSubSectorPreferred, 'sectorPreferred' => $sectorPreferred]);
     }
+    public function saveLookingFor(Request $request){
+        $lookingFor = LookingFor::Find($request->looking_for_id);
+        return $request;
+    }
     public function cv_builder(Request $request, $slug){
         $user = Auth::user();
         $cvSections = [];

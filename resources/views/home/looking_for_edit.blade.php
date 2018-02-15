@@ -31,7 +31,7 @@
             <h2 class="title">Looking for</h2>
           </header>
           <div class="content row">
-            <form action="" method="post">
+            <form action="/user/jobs/save/looking-for" method="post">
               <input name="redirect" type="hidden" value="/job/profile/edit">
               {{ csrf_field() }}
               <section class="section-job-title row">
@@ -126,18 +126,9 @@
                     @foreach($contractTypes as $contractType)
                     <div class="checkbox">
                       <input type="checkbox" name="contract-type[]" id="{{$contractType->slug}}-work" value="{{$contractType->id}}">
-                      <label for="perm-work">{{$contractType->title}}</label>
+                      <label for="{{$contractType->slug}}-work">{{$contractType->title}}</label>
                     </div>
                     @endforeach
-                    <!-- <div class="checkbox">
-                      <input type="checkbox" name="temp-work" id="temp-work">
-                      <label for="temp-work">Temporary</label>
-                    </div>
-                    <div class="checkbox">
-                      <input type="checkbox" name="contract-work" id="contract-work">
-                      <label for="contract-work">Contract</label>
-                    </div>
-                    <div class="checkbox"></div>-->
                   </fieldset>
                   <fieldset class="form-field graduate-jobs">
                     <div class="checkbox">
@@ -201,7 +192,7 @@
                             <ul class="role row">
                               @foreach($sectorPreferred->children as $subSector)
                                 <li class="form-field checkbox col-sm-6 col-xs-12">
-                                  <input type="checkbox" name="edit-subsector-{{$subSector->id}}"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $idsSubSectorPreferred) ? 'checked': ''}}>
+                                  <input type="checkbox" name="edit-subsector[]"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $idsSubSectorPreferred) ? 'checked': ''}}>
                                   <label for="edit-subsector-{{$subSector->id}}">
                                     {{$subSector->title}}
                                   </label>

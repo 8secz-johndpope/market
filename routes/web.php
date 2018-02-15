@@ -136,6 +136,7 @@ Route::get('/user/create/work-experience', 'HomeController@create_work_experienc
 Route::get('/user/cv-builder/{slug}', 'HomeController@cv_builder');
 Route::get('/user/upload/cvs', 'HomeController@upload_cv');
 Route::get('/user/jobs/looking-for', 'HomeController@looking_for');
+Route::post('/user/jobs/save/looking-for', 'HomeController@saveLookingFor');
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::get('/user/manage/alerts', 'HomeController@alerts');
 Route::get('/user/create/alert', 'HomeController@createAlert');
