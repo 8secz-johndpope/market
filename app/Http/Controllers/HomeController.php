@@ -2616,6 +2616,8 @@ class HomeController extends BaseController
             $workExperience->from = date_create('1/'.$request->date_to_month.'/'.$request->date_to_year);
         }
         $workExperience->profile_id = $request->profile_id;
+        $workExperience->save();
+        return redirect($request->redirect);
     }
     public function cv_builder(Request $request, $slug){
         $user = Auth::user();
