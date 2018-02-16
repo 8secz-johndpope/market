@@ -140,7 +140,7 @@
                         <a class="action edit" href="/user/jobs/looking-for">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                     </header>
                     <div class="content row">
-                        @if(isset($user->profile($type)->looking_for))
+                        @if(isset($profile->looking_for))
                         <div class="col-xs-12 col-sm-6">
                             <div class="desired-job-title">
                                 <h3 class="title">Desired job title</h3>
@@ -150,8 +150,8 @@
                                 <h3 class="title">Salary</h3>
                                 <p class="data"></p>
                                 <ul>
-                                    @if(isset($user->profile($type)->looking_for->min_per_annum))
-                                    <li>£{{$user->profile($type)->looking_for->min_per_annum}} per annum</li>
+                                    @if(isset($profile->looking_for->min_per_annum))
+                                    <li>£{{$profile->looking_for->min_per_annum}} per annum</li>
                                     @endif
                                     @if(isset($user->profile($type)->looking_for->min_per_hour))
                                     <li>£{{$user->profile($type)->looking_for->min_per_hour}} per hour</li>
