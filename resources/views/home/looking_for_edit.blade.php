@@ -304,7 +304,15 @@
     if(countRoles > 1){
       $('.add-specialism-actions button.add').removeClass('disabled');
     }
-    $(this).attr('data-isAdded', 'true');
+    else{
+      $('.add-specialism-actions button.add').addClass('disabled');
+    }
+    if($(this).is(':checked')){
+      $(this).attr('data-isAdded', 'true');
+    }
+    else{
+      $(this).attr('data-isAdded', 'false');
+    }
   });
   $(document).on('click', '.edit', function(e){
     $('.edit-roles').show();
