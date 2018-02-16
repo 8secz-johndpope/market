@@ -19,7 +19,7 @@ class LookingFor extends Model
 	}
 	public function jobTypes()
 	{
-		return $this->belongsToMany('App\Model\Field', 'looking_for_contract_type', 'looking_for_id','field_id');
+		return $this->belongsToMany('App\Model\Field', 'looking_for_contract_type', 'looking_for_id','field_id')->withPivot('id');
 	}
 	public function sectors()
 	{
