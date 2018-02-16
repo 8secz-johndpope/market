@@ -304,7 +304,7 @@
                     <header class="section-header">
                         <h2 class="title">Work experience</h2>
                     </header>
-                    @if($profile->work_experiences == null)
+                    @if($profile->work_experiences->count() == 0)
                     <div class="content">
                         <a class="add-first" href="/user/create/work-experience?type={{$type}}">
                             <i class="glyphicon glyphicon-plus-sign"></i>
