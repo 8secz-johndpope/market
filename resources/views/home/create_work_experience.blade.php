@@ -121,7 +121,7 @@
                 <div class="update-form-group col-xs-12 text-right">
                   <button type="button" class="cancel btn btn-link">Cancel</button>
                   <button type="button" class="save-and-other btn btn-inverse">Save & add other</button>
-                  <button type="button" class="save btn btn-submit" id="upload-cv-link">Save</button>
+                  <button type="submit" class="save btn btn-submit" id="upload-cv-link">Save</button>
                 </div>
               </div>
             </form>
