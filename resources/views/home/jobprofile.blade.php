@@ -151,7 +151,7 @@
                                 <p class="data"></p>
                                 <ul>
                                     @if(isset($user->profile($type)->looking_for->min_per_annum))
-                                    <li>£{{$$user->profile($type)->looking_for->min_per_annum}} per annum</li>
+                                    <li>£{{$user->profile($type)->looking_for->min_per_annum}} per annum</li>
                                     @endif
                                     @if(isset($user->profile($type)->looking_for->min_per_hour))
                                     <li>£{{$user->profile($type)->looking_for->min_per_hour}} per hour</li>
