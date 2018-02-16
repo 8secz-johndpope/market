@@ -279,9 +279,9 @@
     parent.hide();
     parent.next().show();
   });
-  $('.add-specialism-container input:checkbox').change(function(){
+  $('.add-specialism-container input[type=checkbox]').change(function(){
     console.log('is change');
-    var selectedCheckbox = $('.add-specialism-container input:checkbox:checked').length;
+    var selectedCheckbox = $('.add-specialism-container input[type=checkbox]:checked').length;
     if(selectedCheckbox >= 1){
       $('.add-specialism-actions button.add').prop('disabled', false);
     }
