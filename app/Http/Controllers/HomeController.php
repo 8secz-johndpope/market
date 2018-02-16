@@ -2583,7 +2583,7 @@ class HomeController extends BaseController
                 $sectorsPreferred[$sector->parent_id] = $sector->parent;
                 $subSectorsPreferred[$sector->parent_id] = array();
             }
-            $subSectorsPreferred[$sector->parent_id][] = $sector;
+            $subSectorsPreferred[$sector->parent_id][] = $sector->id;
         }
         $contractTypes = $field->values;
         return view('home.looking_for_edit', ['user' => $user, 'lookingFor' => $lookingFor, 'contractTypes' => $contractTypes, 'jobChildren' => $jobChildren, 'subSectorsPreferred' => $subSectorsPreferred, 'sectorsPreferred' => $sectorsPreferred]);
