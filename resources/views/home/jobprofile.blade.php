@@ -304,12 +304,14 @@
                     <header class="section-header">
                         <h2 class="title">Work experience</h2>
                     </header>
+                    @if($profile->workExperiences == null)
                     <div class="content">
                         <a class="add-first" href="/user/create/work-experience">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add work experience
                         </a>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>
