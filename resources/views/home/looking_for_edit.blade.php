@@ -279,7 +279,7 @@
     parent.hide();
     parent.next().show();
   });
-  $('.add-specialism-container input[type="checkbox"]').change(function(){
+  $('input[type="checkbox"]').change(function(){
     console.log('is change');
     var selectedCheckbox = $('.add-specialism-container input[type=checkbox]:checked').length;
     if(selectedCheckbox >= 1){
