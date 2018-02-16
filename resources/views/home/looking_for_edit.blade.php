@@ -315,10 +315,14 @@
     }
   });
   $('.add-specialism-actions button.add').click(function(){
+    var title;
+    $('.specialisms-list option:selected').each(function(){
+      title = $(this).text();
+    });
     var text = '<div class="specialism">' + 
                     '<div class="specialism-details row">'+
                       '<div class="data col-xs-6 col-sm-8">' +
-                        '<span class="name">' + {{$sectorPreferred->title}} + '</span>'+
+                        '<span class="name">' + title + '</span>'+
                          +'('+
                         + '<span>' + $('.roles input[type=checkbox]:checked').length+ ' roles</span>'+
                         ')'+
