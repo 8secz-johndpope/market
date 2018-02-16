@@ -2607,7 +2607,7 @@ class HomeController extends BaseController
         return redirect($request->redirect); 
     }
     public function saveWorkExperience(Request $request){
-        $workExperience = WorkExperience::find($request->work_experience_id);
+        $workExperience = new WorkExperience();
         $workExperience->job_title = $request->title;
         $workExperience->company = $request->company;
         $workExperience->description = $request->resposabilities;
