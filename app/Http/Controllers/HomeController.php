@@ -2586,6 +2586,7 @@ class HomeController extends BaseController
         $lookingFor->min_per_annum = $request->minimum_salary;
         $lookingFor->min_per_hour = $request->minimum_temp_rate;
         $lookingFor->jobTypes()->attach($request->contract_type);
+        $lookingFor->sectors()->attach($request->)
         if(isset($request->is_full_time))
             $lookingFor->full_time = 1;
         if(isset($request->is_part_time))
