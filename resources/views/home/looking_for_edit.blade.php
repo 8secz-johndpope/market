@@ -307,12 +307,6 @@
     else{
       $('.add-specialism-actions button.add').addClass('disabled');
     }
-    if($(this).is(':checked')){
-      $(this).attr('data-isAdded', 'true');
-    }
-    else{
-      $(this).attr('data-isAdded', 'false');
-    }
   });
   $('.add-specialism-actions button.add').click(function(){
     var title;
@@ -362,7 +356,7 @@
     $('.roles input[type=checkbox]:checked').prop('checked', false);
   })
   $(document).on('click', '.edit', function(e){
-    $('.edit-roles').show();
+    $(this).closest('.specialism').find('.edit-roles').show();
     $(this).parent().hide();
     $('.more-specialism-actions').hide();
   });
