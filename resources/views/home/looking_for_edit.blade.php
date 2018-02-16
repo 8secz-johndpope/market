@@ -323,8 +323,8 @@
                     '<div class="specialism-details row">'+
                       '<div class="data col-xs-6 col-sm-8">' +
                         '<span class="name">' + title + '</span>'+
-                         '(<span>' + $('.roles input[type=checkbox]:checked').length + ' roles</span>)'+
-                      '</div>'
+                         ' (<span>' + $('.roles input[type=checkbox]:checked').length + ' roles</span>)'+
+                      '</div>'+
                       '<div class="edit-specialism-actions small col-xs-6 col-sm-4">'+
                         '<span class="edit">'+
                           '<i class="glyphicon glyphicon-pencil visible-xs-block"></i>'+
