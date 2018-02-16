@@ -165,53 +165,55 @@
                   <div class="specialism-selector">
                     <div class="selected-specialisms">
                       <div>
-                        @foreach($sectorsPreferred as $key => $sectorPreferred)
-                        <div class="specialism">
-                          <div class="specialism-details row">
-                            <div class="data col-xs-6 col-sm-8">
-                              <span class="name">{{$sectorPreferred->title}}</span>
-                               (
-                              <span>{{count($subSectorsPreferred[$key])}} roles</span>
-                              )
+                        <div>
+                          @foreach($sectorsPreferred as $key => $sectorPreferred)
+                          <div class="specialism">
+                            <div class="specialism-details row">
+                              <div class="data col-xs-6 col-sm-8">
+                                <span class="name">{{$sectorPreferred->title}}</span>
+                                 (
+                                <span>{{count($subSectorsPreferred[$key])}} roles</span>
+                                )
+                              </div>
+                              <div class="edit-specialism-actions small col-xs-6 col-sm-4">
+                                <span class="edit">
+                                  <i class="glyphicon glyphicon-pencil visible-xs-block"></i>
+                                  <span class="hidden-xs">Edit roles</span>
+                                </span>
+                                <span class="remove">
+                                  <i class="glyphicon glyphicon-trash"></i>
+                                </span>
+                              </div>
                             </div>
-                            <div class="edit-specialism-actions small col-xs-6 col-sm-4">
-                              <span class="edit">
-                                <i class="glyphicon glyphicon-pencil visible-xs-block"></i>
-                                <span class="hidden-xs">Edit roles</span>
-                              </span>
-                              <span class="remove">
-                                <i class="glyphicon glyphicon-trash"></i>
+                            <div class="edit-roles" style="display: none">
+                              <div class="warning" style="display: none">
+                                You have selected a maximum number of roles.
+                              </div>
+                              <p class="warning minimum">
+                                You haven't selected enough roles, yet.
+                              </p>
+                              <ul class="role row">
+                                @foreach($sectorPreferred->children as $subSector)
+                                  <li class="form-field checkbox col-sm-6 col-xs-12">
+                                    <input type="checkbox" name="edit_subsector[]"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $subSectorsPreferred[$key]) ? 'checked': ''}}>
+                                    <label for="edit-subsector-{{$subSector->id}}">
+                                      {{$subSector->title}}
+                                    </label>
+                                  </li>
+                                @endforeach
+                              </ul>
+                              <span class="role-action">
+                                <button class="update btn btn-inverse btn-inline" type="button">
+                                  Update
+                                </button>
+                                <button class="cancel btn btn-link btn-inline">
+                                  Cancel
+                                </button>
                               </span>
                             </div>
                           </div>
-                          <div class="edit-roles" style="display: none">
-                            <div class="warning" style="display: none">
-                              You have selected a maximum number of roles.
-                            </div>
-                            <p class="warning minimum">
-                              You haven't selected enough roles, yet.
-                            </p>
-                            <ul class="role row">
-                              @foreach($sectorPreferred->children as $subSector)
-                                <li class="form-field checkbox col-sm-6 col-xs-12">
-                                  <input type="checkbox" name="edit_subsector[]"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $subSectorsPreferred[$key]) ? 'checked': ''}}>
-                                  <label for="edit-subsector-{{$subSector->id}}">
-                                    {{$subSector->title}}
-                                  </label>
-                                </li>
-                              @endforeach
-                            </ul>
-                            <span class="role-action">
-                              <button class="update btn btn-inverse btn-inline" type="button">
-                                Update
-                              </button>
-                              <button class="cancel btn btn-link btn-inline">
-                                Cancel
-                              </button>
-                            </span>
-                          </div>
+                          @endforeach
                         </div>
-                        @endforeach
                         <div class="more-specialism-actions">
                           <button class="add-more-specialism btn btn-inverse">
                             <i class="glyphicon glyphicon-plus-sign"></i>
@@ -324,7 +326,7 @@
                       '<div class="data col-xs-6 col-sm-8">' +
                         '<span class="name">' + title + '</span>'+
                          +'('+
-                        + '<span>' + $('.roles input[type=checkbox]:checked').length+ ' roles</span>'+
+                        + '<span>' + ('.roles input[type=checkbox]:checked').length+ ' roles</span>'+
                         ')'+
                       '</div>'
                       '<div class="edit-specialism-actions small col-xs-6 col-sm-4">'+
@@ -358,7 +360,7 @@
                       '</span>' +
                     '</div>' +
                   '</div>';
-    $('.selected-specialisms').append(text);
+    $('.selected-specialisms>div>div').append(text);
   })
   $(document).on('click', '.edit', function(e){
     $('.edit-roles').show();
