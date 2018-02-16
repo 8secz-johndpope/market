@@ -199,7 +199,7 @@
                             <ul class="role row">
                               @foreach($sectorPreferred->children as $subSector)
                                 <li class="form-field checkbox col-sm-6 col-xs-12">
-                                  <input type="checkbox" name="edit-subsector[]"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $idsSubSectorPreferred) ? 'checked': ''}}>
+                                  <input type="checkbox" name="edit_subsector[]"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $idsSubSectorPreferred) ? 'checked': ''}}>
                                   <label for="edit-subsector-{{$subSector->id}}">
                                     {{$subSector->title}}
                                   </label>
@@ -295,7 +295,7 @@
         var text = "";
         for(var i=0; i < sectorChildren.length; i++){
           text += "<li class=\"role form-field checkbox col-xs-12 col-sm-6\">"
-          + "<input type=\"checkbox\" name=\"edit-subsector[]" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
+          + "<input type=\"checkbox\" name=\"edit_subsector[]" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
           +"<label for=\"add-subsector-"+ sectorChildren[i].id +"\">" + sectorChildren[i].title + "</label>\n"
           +"</li>";
         }
