@@ -2575,7 +2575,7 @@ class HomeController extends BaseController
         //return $lookingFor->jobTypes;
         $jobChildren = Category::find(4000000000)->children;
         $field = Field::find(15);
-        return $lookingFor->jobTypes;
+        //return $lookingFor->jobTypes;
         $contractTypes = $field->values;
         $sectorPreferred = Category::find(4140000000);
         $idsSubSectorPreferred = [4140800000, 4141700000, 4140500000];
