@@ -2578,7 +2578,7 @@ class HomeController extends BaseController
         $sectorsPreferred = array();
         $idsSubSectorPreferred = $lookingFor->sectors;
         $subSectorsPreferred = array();
-        for($idsSubSectorPreferred as $sector){
+        foreach($idsSubSectorPreferred as $sector){
             if(!array_key_exists($sector->parent_id, $sectorsPreferred)){
                 $sectorsPreferred[$sector->parent_id] = $sector->parent;
                 $subSectorsPreferred[$sector->parent_id] = array();
