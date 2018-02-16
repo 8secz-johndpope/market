@@ -125,13 +125,16 @@
                 <div class="section-content col-xs-12 col-sm-6">
                   <fieldset class="form-field">
                     @php
-                      var_dump($lookingFor->jobTypes);
+                      var_dump($lookingFor->jobTypes->pivot);
                     @endphp
                     @foreach($contractTypes as $contractType)
                     <div class="checkbox">
                       <input type="checkbox" name="contract_type[]" id="{{$contractType->slug}}-work" value="{{$contractType->id}}">
                       <label for="{{$contractType->slug}}-work">{{$contractType->title}}</label>
                     </div>
+                    @php
+                      var_dump($contractType->LookingFor);
+                    @endphp
                     @endforeach
                   </fieldset>
                   <fieldset class="form-field graduate-jobs">
