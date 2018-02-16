@@ -2585,11 +2585,8 @@ class HomeController extends BaseController
             }
             $subSectorsPreferred[$sector->parent_id][] = $sector;
         }
-        return $subSectorsPreferred;
         $contractTypes = $field->values;
-        $sectorPreferred = Category::find(4140000000);
-        $idsSubSectorPreferred = [4140800000, 4141700000, 4140500000];
-        return view('home.looking_for_edit', ['user' => $user, 'lookingFor' => $lookingFor, 'contractTypes' => $contractTypes, 'jobChildren' => $jobChildren, 'idsSubSectorPreferred' => $idsSubSectorPreferred, 'sectorPreferred' => $sectorPreferred]);
+        return view('home.looking_for_edit', ['user' => $user, 'lookingFor' => $lookingFor, 'contractTypes' => $contractTypes, 'jobChildren' => $jobChildren, 'subSectorsPreferred' => $subSectorsPreferred, 'sectorsPreferred' => $sectorsPreferred]);
     }
     public function saveLookingFor(Request $request){
         $lookingFor = LookingFor::Find($request->looking_for_id);

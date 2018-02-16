@@ -165,12 +165,13 @@
                   <div class="specialism-selector">
                     <div class="selected-specialisms">
                       <div>
+                        @foreach($sectorsPreferred as $key => $sectorPreferred)
                         <div class="specialism">
                           <div class="specialism-details row">
                             <div class="data col-xs-6 col-sm-8">
                               <span class="name">{{$sectorPreferred->title}}</span>
                                (
-                              <span>{{count($idsSubSectorPreferred)}} roles</span>
+                              <span>{{count($subSectorsPreferred[$key])}} roles</span>
                               )
                             </div>
                             <div class="edit-specialism-actions small col-xs-6 col-sm-4">
@@ -193,7 +194,7 @@
                             <ul class="role row">
                               @foreach($sectorPreferred->children as $subSector)
                                 <li class="form-field checkbox col-sm-6 col-xs-12">
-                                  <input type="checkbox" name="edit_subsector[]"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $idsSubSectorPreferred) ? 'checked': ''}}>
+                                  <input type="checkbox" name="edit_subsector[]"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $subSectorsPreferred[$key]) ? 'checked': ''}}>
                                   <label for="edit-subsector-{{$subSector->id}}">
                                     {{$subSector->title}}
                                   </label>
@@ -210,6 +211,7 @@
                             </span>
                           </div>
                         </div>
+                        @endforeach
                         <div class="more-specialism-actions">
                           <button class="add-more-specialism btn btn-inverse">
                             <i class="glyphicon glyphicon-plus-sign"></i>
