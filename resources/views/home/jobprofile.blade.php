@@ -153,11 +153,11 @@
                                     @if(isset($profile->looking_for->min_per_annum))
                                     <li>£{{$profile->looking_for->min_per_annum}} per annum</li>
                                     @endif
-                                    @if(isset($user->profile($type)->looking_for->min_per_hour))
-                                    <li>£{{$user->profile($type)->looking_for->min_per_hour}} per hour</li>
+                                    @if(isset($profile->looking_for->min_per_hour))
+                                    <li>£{{$profile->looking_for->min_per_hour}} per hour</li>
                                     @endif
                                 </ul>
-                                @if(!isset($user->profile($type)->looking_for->min_per_annum) && !isset($user->profile($type)->looking_for->min_per_hour))
+                                @if(!isset($profile->looking_for->min_per_annum) && !isset($profile->looking_for->min_per_hour))
                                 <a href="/user/jobs/looking-for">
                                     Add salary
                                     <i class="glyphicon glyphicon-plus-sign"></i>
@@ -177,7 +177,9 @@
                             </div>
                             <div class="specialisms">
                                 <h3 class="title">Sectors / Industries</h3>
-                                <p class="data">IT & Telecoms</p>
+                                @foreach($profile->looking_for->getSectors() as $sector)
+                                    <p class="data">{{$sector->title}}</p>
+                                @endforeach
                             </div>
                         </div>
                         @endif

@@ -28,4 +28,13 @@ class LookingFor extends Model
 	public function profile(){
         return $this->belongsTo('App\Model\Profile');
     }
+    public function getSectors(){
+    	$sectorsPreferred = array();
+        foreach($idsSubSectorPreferred as $sector){
+            if(!array_key_exists($sector->parent_id, $sectorsPreferred)){
+                $sectorsPreferred[$sector->parent_id] = $sector->parent;
+            }
+        }
+        return $sectorsPreferred;
+    }
 }
