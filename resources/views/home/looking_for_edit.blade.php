@@ -279,6 +279,13 @@
     parent.hide();
     parent.next().show();
   });
+  $('.add-specialism-container input:checkbox').change(function(){
+    var selectedCheckbox = $('.add-specialism-container input:checkbox:checked').length;
+    if(selectedCheckbox >= 1){
+      $('.add-specialism-actions button.add').prop('disabled', false);
+    }
+    $(this).attr('data-isAdded', 'true');
+  });
   $('.specialisms-list').change(function(){
     $('.specialisms-list option:selected').each(function(){
       var sectorId = $(this).val();
