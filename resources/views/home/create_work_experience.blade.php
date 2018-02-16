@@ -31,7 +31,7 @@
             <h2 class="title">Work experience</h2>
           </header>
           <div class="content row">
-            <form action="" method="post" id="work-experience-form" method="post">
+            <form action="/user/save/work-experience" method="post" id="work-experience-form" method="post">
                 <input name="redirect" id="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
                 {{ csrf_field() }}
                 <input type="hidden" name="profile_id" value="{{$profile->id}}">
@@ -123,8 +123,8 @@
                   <button type="button" class="save-and-other btn btn-inverse">Save & add other</button>
                   <button type="submit" class="save btn btn-submit" id="upload-cv-link">Save</button>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
