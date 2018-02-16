@@ -299,6 +299,9 @@
       }
     })
   });
+  $('.roles input[type=checkbox]').change(function(){
+    console.log('change');
+  })
   $(document).on('click', '.edit', function(e){
     $('.edit-roles').show();
     $(this).parent().hide();
