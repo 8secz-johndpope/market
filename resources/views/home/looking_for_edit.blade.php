@@ -124,11 +124,11 @@
                 </div>
                 <div class="section-content col-xs-12 col-sm-6">
                   <fieldset class="form-field">
+                    @php
+                      var_dump($lookingFor->jobTypes);
+                    @endphp
                     @foreach($contractTypes as $contractType)
                     <div class="checkbox">
-                      @php
-                        var_dump($lookingFor->jobTypes);
-                      @endphp
                       <input type="checkbox" name="contract_type[]" id="{{$contractType->slug}}-work" value="{{$contractType->id}}">
                       <label for="{{$contractType->slug}}-work">{{$contractType->title}}</label>
                     </div>
