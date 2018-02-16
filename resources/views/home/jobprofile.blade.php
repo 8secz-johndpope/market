@@ -140,6 +140,7 @@
                         <a class="action edit" href="/user/jobs/looking-for">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                     </header>
                     <div class="content row">
+                        @if(isset($user->profile($type)->looking_for))
                         <div class="col-xs-12 col-sm-6">
                             <div class="desired-job-title">
                                 <h3 class="title">Desired job title</h3>
@@ -149,13 +150,19 @@
                                 <h3 class="title">Salary</h3>
                                 <p class="data"></p>
                                 <ul>
-                                    <li>£ per annum</li>
-                                    <li>£ per hour</li>
+                                    @if(isset($user->profile($type)->looking_for->min_per_annum))
+                                    <li>£{{$$user->profile($type)->looking_for->min_per_annum}} per annum</li>
+                                    @endif
+                                    @if(isset($user->profile($type)->looking_for->min_per_hour))
+                                    <li>£{{$user->profile($type)->looking_for->min_per_hour}} per hour</li>
+                                    @endif
                                 </ul>
-                                <a href="#">
+                                @if(!isset($user->profile($type)->looking_for->min_per_annum) && !isset($user->profile($type)->looking_for->min_per_hour))
+                                <a href="/user/jobs/looking-for">
                                     Add salary
                                     <i class="glyphicon glyphicon-plus-sign"></i>
                                 </a>
+                                @endif
                                 <p></p>
                             </div>
                             <div class="location">
@@ -173,6 +180,7 @@
                                 <p class="data">IT & Telecoms</p>
                             </div>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>

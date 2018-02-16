@@ -360,11 +360,11 @@
     $(this).parent().hide();
     $('.more-specialism-actions').hide();
   });
-  $('.edit-roles .cancel').click(function(e){
+  $(document).on('click', '.edit-roles .cancel', function(e){
     e.preventDefault();
-    $('.edit-roles').hide();
+    $(this).closest('.specialism').find('.edit-roles').hide();
     $('.more-specialism-actions').show();
-    $('.edit-specialism-actions').show();
+     $(this).closest('.specialism').find('.edit-specialism-actions').show();
   });
   $(document).on('click', '.location-remove', function(e){
     e.preventDefault();
