@@ -202,7 +202,7 @@
                               @endforeach
                             </ul>
                             <span class="role-action">
-                              <button class="update btn btn-inverse btn-inline">
+                              <button class="update btn btn-inverse btn-inline" type="button">
                                 Update
                               </button>
                               <button class="cancel btn btn-link btn-inline">
