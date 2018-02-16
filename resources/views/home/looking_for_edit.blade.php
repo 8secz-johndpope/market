@@ -165,89 +165,87 @@
                   <div class="specialism-selector">
                     <div class="selected-specialisms">
                       <div>
-                        <div>
-                          @foreach($sectorsPreferred as $key => $sectorPreferred)
-                          <div class="specialism">
-                            <div class="specialism-details row">
-                              <div class="data col-xs-6 col-sm-8">
-                                <span class="name">{{$sectorPreferred->title}}</span>
-                                 (
-                                <span>{{count($subSectorsPreferred[$key])}} roles</span>
-                                )
-                              </div>
-                              <div class="edit-specialism-actions small col-xs-6 col-sm-4">
-                                <span class="edit">
-                                  <i class="glyphicon glyphicon-pencil visible-xs-block"></i>
-                                  <span class="hidden-xs">Edit roles</span>
-                                </span>
-                                <span class="remove">
-                                  <i class="glyphicon glyphicon-trash"></i>
-                                </span>
-                              </div>
+                        @foreach($sectorsPreferred as $key => $sectorPreferred)
+                        <div class="specialism">
+                          <div class="specialism-details row">
+                            <div class="data col-xs-6 col-sm-8">
+                              <span class="name">{{$sectorPreferred->title}}</span>
+                               (
+                              <span>{{count($subSectorsPreferred[$key])}} roles</span>
+                              )
                             </div>
-                            <div class="edit-roles" style="display: none">
-                              <div class="warning" style="display: none">
-                                You have selected a maximum number of roles.
-                              </div>
-                              <p class="warning minimum">
-                                You haven't selected enough roles, yet.
-                              </p>
-                              <ul class="role row">
-                                @foreach($sectorPreferred->children as $subSector)
-                                  <li class="form-field checkbox col-sm-6 col-xs-12">
-                                    <input type="checkbox" name="edit_subsector[]"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $subSectorsPreferred[$key]) ? 'checked': ''}}>
-                                    <label for="edit-subsector-{{$subSector->id}}">
-                                      {{$subSector->title}}
-                                    </label>
-                                  </li>
-                                @endforeach
-                              </ul>
-                              <span class="role-action">
-                                <button class="update btn btn-inverse btn-inline" type="button">
-                                  Update
-                                </button>
-                                <button class="cancel btn btn-link btn-inline">
-                                  Cancel
-                                </button>
+                            <div class="edit-specialism-actions small col-xs-6 col-sm-4">
+                              <span class="edit">
+                                <i class="glyphicon glyphicon-pencil visible-xs-block"></i>
+                                <span class="hidden-xs">Edit roles</span>
+                              </span>
+                              <span class="remove">
+                                <i class="glyphicon glyphicon-trash"></i>
                               </span>
                             </div>
                           </div>
-                          @endforeach
-                        </div>
-                        <div class="more-specialism-actions">
-                          <button class="add-more-specialism btn btn-inverse">
-                            <i class="glyphicon glyphicon-plus-sign"></i>
-                            <span>Add another sector</span>
-                          </button>
-                        </div>
-                        <div class="add-specialism-container" style="display: none">
-                          <select class="form-control specialisms-list">
-                            <option value>Choose your sector...</option>
-                            @foreach($jobChildren as $job)
-                              <option value={{$job->id}}>{{$job->title}}</option>
-                            @endforeach
-                          </select>
-                          <div style="display: none">
-                            <p class="info-sector">
-                              Select up to 5 roles
+                          <div class="edit-roles" style="display: none">
+                            <div class="warning" style="display: none">
+                              You have selected a maximum number of roles.
+                            </div>
+                            <p class="warning minimum">
+                              You haven't selected enough roles, yet.
                             </p>
-                            <ul class="roles list-unstyled row">
+                            <ul class="role row">
+                              @foreach($sectorPreferred->children as $subSector)
+                                <li class="form-field checkbox col-sm-6 col-xs-12">
+                                  <input type="checkbox" name="edit_subsector[]"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $subSectorsPreferred[$key]) ? 'checked': ''}}>
+                                  <label for="edit-subsector-{{$subSector->id}}">
+                                    {{$subSector->title}}
+                                  </label>
+                                </li>
+                              @endforeach
                             </ul>
-                            <div class="add-specialism-actions">
-                              <p class="warning full" style="display: none">You have selected a maximum number of roles.</p>
-                              <p class="warning minimum">You haven't selected enough roles, yet.</p>
-                              <button class="add btn btn-inverse btn-inline disabled" type="button">Save roles</button>
-                              <button class="cancel btn btn-link btn-inline">Cancel</button>
-                            </div>
+                            <span class="role-action">
+                              <button class="update btn btn-inverse btn-inline" type="button">
+                                Update
+                              </button>
+                              <button class="cancel btn btn-link btn-inline">
+                                Cancel
+                              </button>
+                            </span>
                           </div>
-                          <div>
-                            <div class="add-specialism-actions">
-                              <button class="cancel btn btn-link btn-inline">Cancel</button>
-                            </div>
+                        </div>
+                        @endforeach
+                      </div>
+                    </div>
+                      <div class="more-specialism-actions">
+                        <button class="add-more-specialism btn btn-inverse">
+                          <i class="glyphicon glyphicon-plus-sign"></i>
+                          <span>Add another sector</span>
+                        </button>
+                      </div>
+                      <div class="add-specialism-container" style="display: none">
+                        <select class="form-control specialisms-list">
+                          <option value>Choose your sector...</option>
+                          @foreach($jobChildren as $job)
+                            <option value={{$job->id}}>{{$job->title}}</option>
+                          @endforeach
+                        </select>
+                        <div style="display: none">
+                          <p class="info-sector">
+                            Select up to 5 roles
+                          </p>
+                          <ul class="roles list-unstyled row">
+                          </ul>
+                          <div class="add-specialism-actions">
+                            <p class="warning full" style="display: none">You have selected a maximum number of roles.</p>
+                            <p class="warning minimum">You haven't selected enough roles, yet.</p>
+                            <button class="add btn btn-inverse btn-inline disabled" type="button">Save roles</button>
+                            <button class="cancel btn btn-link btn-inline">Cancel</button>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="add-specialism-actions">
+                            <button class="cancel btn btn-link btn-inline">Cancel</button>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
               </section>
@@ -325,8 +323,8 @@
                     '<div class="specialism-details row">'+
                       '<div class="data col-xs-6 col-sm-8">' +
                         '<span class="name">' + title + '</span>'+
-                         +'('+
-                        + '<span>' + ('.roles input[type=checkbox]:checked').length+ ' roles</span>'+
+                         '('+
+                        + '<span>' + $('.roles input[type=checkbox]:checked').length+ ' roles</span>'+
                         ')'+
                       '</div>'
                       '<div class="edit-specialism-actions small col-xs-6 col-sm-4">'+
@@ -360,7 +358,7 @@
                       '</span>' +
                     '</div>' +
                   '</div>';
-    $('.selected-specialisms>div>div').append(text);
+    $('.selected-specialisms').append(text);
   })
   $(document).on('click', '.edit', function(e){
     $('.edit-roles').show();
