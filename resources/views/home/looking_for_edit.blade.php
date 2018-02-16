@@ -32,7 +32,7 @@
           </header>
           <div class="content row">
             <form action="/user/jobs/save/looking-for" method="post">
-              <input name="redirect" type="hidden" value="/job/profile/edit">
+              <input name="redirect" type="hidden" value="/job/profile/edit/{{$lookingFor->profile->type}}">
               <input name="looking_for_id" type="hidden" value="{{$lookingFor->id}}">
               {{ csrf_field() }}
               <section class="section-job-title row">
