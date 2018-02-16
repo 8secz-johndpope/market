@@ -328,7 +328,7 @@
                           '<i class="glyphicon glyphicon-trash"></i>'+
                         '</span>'+
                       '</div>'+
-                    '</div>+'
+                    '</div>'+
                     '<div class="edit-roles" style="display: none">'+
                       '<div class="warning" style="display: none">'+
                         'You have selected a maximum number of roles.'+
