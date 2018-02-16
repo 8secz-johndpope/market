@@ -125,7 +125,7 @@
                 <div class="section-content col-xs-12 col-sm-6">
                   <fieldset class="form-field">
                     @php
-                      var_dump($lookingFor->jobTypes->pivot);
+                      var_dump($lookingFor->jobTypes);
                     @endphp
                     @foreach($contractTypes as $contractType)
                     <div class="checkbox">
