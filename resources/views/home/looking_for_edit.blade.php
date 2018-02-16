@@ -283,7 +283,7 @@
     console.log('is change');
     var selectedCheckbox = $('.add-specialism-container input[type=checkbox]:checked').length;
     if(selectedCheckbox >= 1){
-      $('.add-specialism-actions button.add').prop('disabled', false);
+      $('.add-specialism-actions button.add').removeClass('disabled');
     }
     $(this).attr('data-isAdded', 'true');
   });
