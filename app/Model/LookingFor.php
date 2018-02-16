@@ -23,7 +23,7 @@ class LookingFor extends Model
 	}
 	public function sectors()
 	{
-		return $this->hasMany('App\Model\Category', 'looking_for_sectors');
+		return $this->belongsToMany('App\Model\Category', 'looking_for_sectors');
 	}
 	public function profile(){
         return $this->belongsTo('App\Model\Profile');
