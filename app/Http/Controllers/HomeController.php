@@ -2555,7 +2555,8 @@ class HomeController extends BaseController
     }
     public function create_work_experience(Request $request){
         $user = Auth::user();
-        return view('home.create_work_experience', ['user' => $user]);
+        $profile = $user->profile($request->type);
+        return view('home.create_work_experience', ['user' => $user, 'profile' => $profile]);
     }
     public function upload_cv(Request $request){
         $user = Auth::user();
@@ -2603,6 +2604,17 @@ class HomeController extends BaseController
             $lookingFor->part_time = 1;
         $lookingFor->save();
         return redirect($request->redirect); 
+    }
+    public function saveWorkExperience(Request $request){
+        $workExperience = WorkExperience::find($request->work_experience_id);
+        $workExperience->job_title = $request->title;
+        $workExperience->company = $request->company;
+        $workExperience->description = $request->resposabilities;
+        $workExperience->from = new Datetime('1/'.$request->date_from_month.'/'.$request->date_from_year);
+        if(!isset($request->is_current_role)){
+            $workExperience->from = new Datetime('1/'.$request->date_to_month.'/'.$request->date_to_year);
+        }
+        $workExperience->profile_id = $request->profile_id;
     }
     public function cv_builder(Request $request, $slug){
         $user = Auth::user();

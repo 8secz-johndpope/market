@@ -306,7 +306,7 @@
                     </header>
                     @if($profile->workExperiences == null)
                     <div class="content">
-                        <a class="add-first" href="/user/create/work-experience">
+                        <a class="add-first" href="/user/create/work-experience?type={{$type}}">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add work experience
                         </a>
