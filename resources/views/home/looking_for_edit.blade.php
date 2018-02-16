@@ -279,14 +279,6 @@
     parent.hide();
     parent.next().show();
   });
-  $('input:checkbox').change(function(){
-    console.log('is change');
-    var selectedCheckbox = $('.add-specialism-container input[type=checkbox]:checked').length;
-    if(selectedCheckbox >= 1){
-      $('.add-specialism-actions button.add').removeClass('disabled');
-    }
-    $(this).attr('data-isAdded', 'true');
-  });
   $('.specialisms-list').change(function(){
     $('.specialisms-list option:selected').each(function(){
       var sectorId = $(this).val();
