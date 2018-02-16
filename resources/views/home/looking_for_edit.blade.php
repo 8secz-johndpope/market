@@ -291,7 +291,7 @@
         var text = "";
         for(var i=0; i < sectorChildren.length; i++){
           text += "<li class=\"role form-field checkbox col-xs-12 col-sm-6\">"
-          + "<input type=\"checkbox\" name=\"add_subsector[]" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
+          + "<input type=\"checkbox\" name=\"edit_subsector[]" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
           +"<label for=\"add-subsector-"+ sectorChildren[i].id +"\">" + sectorChildren[i].title + "</label>\n"
           +"</li>";
         }
@@ -357,6 +357,9 @@
                     '</div>' +
                   '</div>';
     $('.selected-specialisms').append(text);
+    $('.add-specialism-container').hide();
+    $('.more-specialism-actions').show();
+    $('.roles input[type=checkbox]:checked').prop('checked', false);
   })
   $(document).on('click', '.edit', function(e){
     $('.edit-roles').show();
