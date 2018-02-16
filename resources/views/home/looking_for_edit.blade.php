@@ -291,7 +291,7 @@
         var text = "";
         for(var i=0; i < sectorChildren.length; i++){
           text += "<li class=\"role form-field checkbox col-xs-12 col-sm-6\">"
-          + "<input type=\"checkbox\" name=\"edit_subsector[]" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
+          + "<input type=\"checkbox\" name=\"add_subsector[]" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
           +"<label for=\"add-subsector-"+ sectorChildren[i].id +"\">" + sectorChildren[i].title + "</label>\n"
           +"</li>";
         }
@@ -301,7 +301,7 @@
   });
   $(document).on('change', '.roles input[type=checkbox]', function(){
     var countRoles = $('.roles input[type=checkbox]:checked').length;
-    if(countRoles > 1){
+    if(countRoles >= 1){
       $('.add-specialism-actions button.add').removeClass('disabled');
     }
     else{
@@ -314,6 +314,48 @@
       $(this).attr('data-isAdded', 'false');
     }
   });
+  $('.add-specialism-actions button.add').click(function(){
+    var text = '<div class="specialism">' + 
+                    '<div class="specialism-details row">'+
+                      '<div class="data col-xs-6 col-sm-8">' +
+                        '<span class="name">' + {{$sectorPreferred->title}} + '</span>'+
+                         +'('+
+                        + '<span>' + $('.roles input[type=checkbox]:checked').length+ ' roles</span>'+
+                        ')'+
+                      '</div>'
+                      '<div class="edit-specialism-actions small col-xs-6 col-sm-4">'+
+                        '<span class="edit">'+
+                          '<i class="glyphicon glyphicon-pencil visible-xs-block"></i>'+
+                          '<span class="hidden-xs">Edit roles</span>'+
+                        '</span>'+
+                        '<span class="remove">'+
+                          '<i class="glyphicon glyphicon-trash"></i>'+
+                        '</span>'+
+                      '</div>'+
+                    '</div>+'
+                    '<div class="edit-roles" style="display: none">'+
+                      '<div class="warning" style="display: none">'+
+                        'You have selected a maximum number of roles.'+
+                      '</div>'+
+                      '<p class="warning minimum">'+
+                        'You haven\'t selected enough roles, yet.'+
+                      '</p>'+
+                      '<ul class="role row">'+
+                        $('.roles').html();
+                       +
+                      '</ul>'+
+                      '<span class="role-action">'+
+                        '<button class="update btn btn-inverse btn-inline" type="button">'+
+                          'Update' +
+                        '</button>' +
+                        '<button class="cancel btn btn-link btn-inline">' +
+                          'Cancel' +
+                        '</button>' +
+                      '</span>' +
+                    '</div>' +
+                  '</div>';
+    $('.selected-specialisms').append(text);
+  })
   $(document).on('click', '.edit', function(e){
     $('.edit-roles').show();
     $(this).parent().hide();
