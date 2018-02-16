@@ -300,7 +300,11 @@
     })
   });
   $(document).on('change', '.roles input[type=checkbox]', function(){
-    console.log('change');
+    var countRoles = $('.roles input[type=checkbox]:checked').length;
+    if(countRoles > 1){
+      $('.add-specialism-actions button.add').removeClass('disabled');
+    }
+    $(this).attr('data-isAdded', 'true');
   });
   $(document).on('click', '.edit', function(e){
     $('.edit-roles').show();
