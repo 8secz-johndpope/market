@@ -323,9 +323,7 @@
                     '<div class="specialism-details row">'+
                       '<div class="data col-xs-6 col-sm-8">' +
                         '<span class="name">' + title + '</span>'+
-                         '('+
-                        + '<span>' + $('.roles input[type=checkbox]:checked').length+ ' roles</span>'+
-                        ')'+
+                         '(<span>' + $('.roles input[type=checkbox]:checked').length + ' roles</span>)'+
                       '</div>'
                       '<div class="edit-specialism-actions small col-xs-6 col-sm-4">'+
                         '<span class="edit">'+
@@ -345,7 +343,7 @@
                         'You haven\'t selected enough roles, yet.'+
                       '</p>'+
                       '<ul class="role row">'+
-                        $('.roles').html();
+                        $('.roles').html()
                        +
                       '</ul>'+
                       '<span class="role-action">'+
