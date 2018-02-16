@@ -2613,7 +2613,7 @@ class HomeController extends BaseController
         $workExperience->description = $request->responsabilities;
         $workExperience->from = date_create('1/'.$request->date_from_month.'/'.$request->date_from_year);
         if(!isset($request->is_current_role)){
-            $workExperience->from = date_create('1/'.$request->date_to_month.'/'.$request->date_to_year);
+            $workExperience->to = date_create('1/'.$request->date_to_month.'/'.$request->date_to_year);
         }
         $workExperience->profile_id = $request->profile_id;
         $workExperience->save();
