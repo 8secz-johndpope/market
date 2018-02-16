@@ -30,7 +30,8 @@ class LookingFor extends Model
     }
     public function getSectors(){
     	$sectorsPreferred = array();
-        foreach($idsSubSectorPreferred as $sector){
+    	$subSectorPreferred = $this->sectors;
+        foreach($subSectorPreferred as $sector){
             if(!array_key_exists($sector->parent_id, $sectorsPreferred)){
                 $sectorsPreferred[$sector->parent_id] = $sector->parent;
             }
