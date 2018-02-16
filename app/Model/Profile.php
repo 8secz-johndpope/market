@@ -16,7 +16,7 @@ class Profile extends Model
 	{
 		return $this->hasOne('App\Model\LookingFor');
 	}
-	public function workExperiences(){
-		return $this->hasMany('App\Model\WorkExperience', 'work_experiences', 'profile_id');
+	public function work_experiences(){
+		return $this->hasMany('App\Model\WorkExperience');
 	}
 }
