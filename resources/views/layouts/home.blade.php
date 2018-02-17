@@ -539,10 +539,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
 <script src="{{env('APP_URL')}}/js/jquery.autocomplete.js"></script>
-<script src="https://images.apple.com/v/apple-tv/c/built/scripts/head.built.js" type="text/javascript" charset="utf-8"></script>
-<script data-src="https://images.apple.com/v/apple-tv/c/built/scripts/webgl-externals.built.js" type="text/javascript" charset="utf-8" async="true" class="webgl-externals"></script>
 <script src="{{env('APP_URL')}}/js/three.js"></script>
-<script src="{{env('APP_URL')}}/js/built.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.2.0/lazyload.min.js"></script>
 <script>
