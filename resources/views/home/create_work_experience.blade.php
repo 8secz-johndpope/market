@@ -31,9 +31,10 @@
             <h2 class="title">Work experience</h2>
           </header>
           <div class="content row">
-            <form action="" method="post" id="work-experience-form" method="post">
-                <input name="redirect" id="redirect" type="hidden" value="/job/profile/edit">
+            <form action="/user/save/work-experience" method="post" id="work-experience-form" method="post">
+                <input name="redirect" id="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
                 {{ csrf_field() }}
+                <input type="hidden" name="profile_id" value="{{$profile->id}}">
               <div class="small-container col-xs-12 col-sm-9">
                 <div class="form-group">
                     <label for="title">Job title</label> 
@@ -50,7 +51,7 @@
                     <label class="legend" for="date-from-month">From</label>
                     <div class="row">
                       <div class="month col-sm-6 col-xs-12">
-                        <select class="form-control" id="date-from-month" name="date-from-month">
+                        <select class="form-control" id="date-from-month" name="date_from_month">
                           <option value="">Month</option>
                           <option value="1">January</option>
                           <option value="2">February</option>
@@ -67,7 +68,7 @@
                         </select>
                       </div>
                       <div class="year col-sm-6 col-xs-12">
-                        <select class="form-control" id="date-from-year" name="date-from-year">
+                        <select class="form-control" id="date-from-year" name="date_from_year">
                           <option value="">Year</option>
                           @for($i = idate('Y'); $i > 1943; $i--)
                             <option value="{{$i}}">{{$i}}</option>
@@ -84,7 +85,7 @@
                     <label class="legend" for="date-to-month">To</label>
                     <div class="row">
                       <div class="month col-sm-6 col-xs-12">
-                        <select class="form-control" id="date-to-month" name="date-to-month">
+                        <select class="form-control" id="date-to-month" name="date_to_month">
                           <option value="">Month</option>
                           <option value="1">January</option>
                           <option value="2">February</option>
@@ -101,7 +102,7 @@
                         </select>
                       </div>
                       <div class="year col-sm-6 col-xs-12">
-                        <select class="form-control" id="date-to-year" name="date-to-year">
+                        <select class="form-control" id="date-to-year" name="date_to_year">
                           <option value="">Year</option>
                           @for($i = idate('Y'); $i > 1943; $i--)
                             <option value="{{$i}}">{{$i}}</option>
@@ -120,10 +121,10 @@
                 <div class="update-form-group col-xs-12 text-right">
                   <button type="button" class="cancel btn btn-link">Cancel</button>
                   <button type="button" class="save-and-other btn btn-inverse">Save & add other</button>
-                  <button type="button" class="save btn btn-submit" id="upload-cv-link">Save</button>
+                  <button type="submit" class="save btn btn-submit" id="upload-cv-link">Save</button>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>

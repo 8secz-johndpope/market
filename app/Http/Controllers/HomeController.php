@@ -44,6 +44,9 @@ use App\Model\Price;
 use Illuminate\Http\Request;
 use App\Model\Category;
 use App\Model\Advert;
+use App\Model\LookingFor;
+use App\Model\WorkExperience;
+use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
 use Ramsey\Uuid\Uuid;
@@ -917,13 +920,14 @@ class HomeController extends BaseController
     {
         $profileTypes = ['general', 'social-childcare', 'sub-contractor'];
         $user = Auth::user();
-        if($user->profile===null){
+        if($user->profile($type)===null){
             $profile = new Profile();
             $profile->user_id=$user->id;
+            $profile->type = $type;
             $profile->save();
         }
         $totalApplication = $user->applications()->count();
-        return view('home.jobprofile',['profile'=>$user->profile,'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication]);
+        return view('home.jobprofile',['profile'=>$user->profile($type),'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication]);
     }
 
     public function view_profile(Request $request,$id)
@@ -2553,7 +2557,8 @@ class HomeController extends BaseController
     }
     public function create_work_experience(Request $request){
         $user = Auth::user();
-        return view('home.create_work_experience', ['user' => $user]);
+        $profile = $user->profile($request->type);
+        return view('home.create_work_experience', ['user' => $user, 'profile' => $profile]);
     }
     public function upload_cv(Request $request){
         $user = Auth::user();
@@ -2561,10 +2566,59 @@ class HomeController extends BaseController
     }
     public function looking_for(Request $request){
         $user = Auth::user();
+        $profile = $user->profile('general');
+        if($profile->looking_for == null){
+            $lookingFor = new LookingFor();
+            $lookingFor->profile_id = $profile->id;
+            $profile->looking_for = $lookingFor;
+            $profile->looking_for->save(); 
+            //$profile->save();
+        }
+        $lookingFor = $profile->looking_for;
+        //return $lookingFor->jobTypes;
         $jobChildren = Category::find(4000000000)->children;
-        $sectorPreferred = Category::find(4140000000);
-        $idsSubSectorPreferred = [4140800000, 4141700000, 4140500000];
-        return view('home.looking_for_edit', ['user' => $user, 'jobChildren' => $jobChildren, 'idsSubSectorPreferred' => $idsSubSectorPreferred, 'sectorPreferred' => $sectorPreferred]);
+        $field = Field::find(15);
+        $sectorsPreferred = array();
+        $idsSubSectorPreferred = $lookingFor->sectors;
+        $subSectorsPreferred = array();
+        foreach($idsSubSectorPreferred as $sector){
+            if(!array_key_exists($sector->parent_id, $sectorsPreferred)){
+                $sectorsPreferred[$sector->parent_id] = $sector->parent;
+                $subSectorsPreferred[$sector->parent_id] = array();
+            }
+            $subSectorsPreferred[$sector->parent_id][] = $sector->id;
+        }
+        $contractTypes = $field->values;
+        return view('home.looking_for_edit', ['user' => $user, 'lookingFor' => $lookingFor, 'contractTypes' => $contractTypes, 'jobChildren' => $jobChildren, 'subSectorsPreferred' => $subSectorsPreferred, 'sectorsPreferred' => $sectorsPreferred]);
+    }
+    public function saveLookingFor(Request $request){
+        $lookingFor = LookingFor::Find($request->looking_for_id);
+        $lookingFor->job_title = $request->job_title;
+        $lookingFor->min_per_annum = $request->minimum_salary;
+        $lookingFor->min_per_hour = $request->minimum_temp_rate;
+        $lookingFor->jobTypes()->detach();
+        $lookingFor->jobTypes()->attach($request->contract_type);
+        $lookingFor->sectors()->detach();
+        $lookingFor->sectors()->attach($request->edit_subsector);
+        if(isset($request->is_full_time))
+            $lookingFor->full_time = 1;
+        if(isset($request->is_part_time))
+            $lookingFor->part_time = 1;
+        $lookingFor->save();
+        return redirect($request->redirect); 
+    }
+    public function saveWorkExperience(Request $request){
+        $workExperience = new WorkExperience();
+        $workExperience->job_title = $request->title;
+        $workExperience->company = $request->company;
+        $workExperience->description = $request->responsabilities;
+        $workExperience->from = date_create('1/'.$request->date_from_month.'/'.$request->date_from_year);
+        if(!isset($request->is_current_role)){
+            $workExperience->to = date_create('1/'.$request->date_to_month.'/'.$request->date_to_year);
+        }
+        $workExperience->profile_id = $request->profile_id;
+        $workExperience->save();
+        return redirect($request->redirect);
     }
     public function cv_builder(Request $request, $slug){
         $user = Auth::user();

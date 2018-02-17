@@ -1341,12 +1341,8 @@ class MarketController extends BaseController
     public function filter($request,$category,$location){
         $lat = ($location->min_lat+$location->max_lat)/2;
         $lng = ($location->min_lng+$location->max_lng)/2;
-            $any = $category->slug;
-        if($category->can_apply()){
-            $fields = Category::find(4000000000)->getCanFilterFields();
-        }
-        else
-            $fields = $category->getCanFilterFields();
+        $any = $category->slug;
+        $fields = $category->getCanFilterFields();
         $input = $request->all();
 
         $aggs=array();
@@ -2349,5 +2345,49 @@ class MarketController extends BaseController
         else
             return $this->companies($request);
         return view('market.companies', ['firstCompanies' => $firstCompanies, 'companies' => $companies, 'letter' => $letter, 'q' => $request->q, 'title' => $title]);
+    }
+    public function deleteAdverts(){
+        $musts=array();
+            $noMusts = array();
+            $musts['user_name']= [
+                'match' => [
+                    'username' => 'steve'
+                ]
+            ];
+            $musts['location_name']= [
+                'match' => [
+                    'location_name' => 'Norfolk'
+                ]
+            ];
+            $params = [
+                'index' => 'adverts',
+                'type' => 'advert',
+                'body' => [
+                    'from' => 0,
+                    'size'=> 500,
+                    'query' => [
+                        'bool' => [
+                            'must' => array_values($musts),
+                       /*     'filter' => $filte */
+                        ]
+                    ]/*,
+                    "sort"=> $sort*/
+                ]
+            ];
+            $response = $this->client->search($params);
+            $total = $response['hits']['total'];
+            $adverts = $response['hits']['hits'];
+            var_dump(count($adverts));
+            for($i = 0; $i < count($adverts); $i++){
+                //var_dump($adverts[$i]['_source']);
+                if(array_key_exists('id', $adverts[$i]['_source'])){
+                    echo $adverts[$i]['_source']['id'].', ';
+                    //$advert = Advert::find($adverts[$i]['_source']['id']);
+                    //if($advert != null)
+                        //$advert->delete();
+                }
+                else 
+                    echo 'sid = '.$adverts[$i]['_source']['source_id'].', ';
+            }
     }
 }

@@ -255,9 +255,12 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Model\Business');
     }
-    public function profile()
+    public function profiles()
     {
         return $this->hasMany('App\Model\Profile');
+    }
+    public function profile($type){
+        return $this->profiles()->where('type', $type)->first();
     }
     public function contract()
     {

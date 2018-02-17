@@ -31,8 +31,9 @@
             <h2 class="title">Looking for</h2>
           </header>
           <div class="content row">
-            <form action="" method="post">
-              <input name="redirect" type="hidden" value="/job/profile/edit">
+            <form action="/user/jobs/save/looking-for" method="post">
+              <input name="redirect" type="hidden" value="/job/profile/edit/{{$lookingFor->profile->type}}">
+              <input name="looking_for_id" type="hidden" value="{{$lookingFor->id}}">
               {{ csrf_field() }}
               <section class="section-job-title row">
                 <div class="header col-xs-12 col-sm-3">
@@ -41,7 +42,7 @@
                 <div class="section-content col-xs-12 col-sm-6">
                   <fieldset class="form-field valid">
                     <span class="twitter-typehead">
-                      <input class="form-control desired-job-title tt-input" value="Engineer">
+                      <input class="form-control desired-job-title tt-input" value="{{$lookingFor->job_title}}" name="job_title">
                       <div class="tt-dataset">
                         <span class="tt-suggestions">
                           <div class="tt-suggestion tt-selectable">Engineer</div>
@@ -63,14 +64,14 @@
                   <p class="small">Minimum salary (please enter at least one type of salary)</p>
                   <fieldset class="form-field col-xs-12 col-sm-6">
                     <span class="pound-sign">£</span>
-                    <input class="form-control salary" type="text" name="minimum-salary" id="minimum-salary" placeholder="per annum">
+                    <input class="form-control salary" type="text" name="minimum_salary" id="minimum-salary" placeholder="per annum" value="{{$lookingFor->min_per_annum}}">
                     <small class="type-info">Per annum</small>
                     <div class="validation">
                     </div>  
                   </fieldset>
                   <fieldset class="form-field col-xs-12 col-sm-6">
                     <span class="pound-sign">£</span>
-                    <input class="form-control salary" type="text" name="minimum-temp-rate" id="minimum-temp-rate" placeholder="per hour">
+                    <input class="form-control salary" type="text" name="minimum_temp_rate" id="minimum-temp-rate" placeholder="per hour" value="{{$lookingFor->min_per_hour}}">
                     <small class="type-info">Per hour</small>
                     <div class="validation">
                     </div>  
@@ -123,19 +124,12 @@
                 </div>
                 <div class="section-content col-xs-12 col-sm-6">
                   <fieldset class="form-field">
+                    @foreach($contractTypes as $contractType)
                     <div class="checkbox">
-                      <input type="checkbox" name="perm-work" id="perm-work">
-                      <label for="perm-work">Permanent</label>
+                      <input type="checkbox" name="contract_type[]" id="{{$contractType->slug}}-work" value="{{$contractType->id}}" {{($lookingFor->jobTypes->contains($contractType->id))? 'checked' : ''}}>
+                      <label for="{{$contractType->slug}}-work">{{$contractType->title}}</label>
                     </div>
-                    <div class="checkbox">
-                      <input type="checkbox" name="temp-work" id="temp-work">
-                      <label for="temp-work">Temporary</label>
-                    </div>
-                    <div class="checkbox">
-                      <input type="checkbox" name="contract-work" id="contract-work">
-                      <label for="contract-work">Contract</label>
-                    </div>
-                    <div class="checkbox"></div>
+                    @endforeach
                   </fieldset>
                   <fieldset class="form-field graduate-jobs">
                     <div class="checkbox">
@@ -152,11 +146,11 @@
                 <div class="section-content col-xs-12 col-sm-9">
                   <fieldset class="form-field">
                     <div class="checkbox">
-                      <input type="checkbox" name="is-full-time" id="is-full-time">
+                      <input type="checkbox" name="is_full_time" id="is-full-time" {{($lookingFor->full_time)? 'checked' : ''}}>
                       <label for="is-full-time">Full-time</label>
                     </div>
                     <div class="checkbox">
-                      <input type="checkbox" name="is-part-time" id="is-part-time">
+                      <input type="checkbox" name="is_part_time" id="is-part-time" {{($lookingFor->part_time)? 'checked' : ''}}>
                       <label for="is-part-time">Part-time</label>
                     </div>
                   </fieldset>
@@ -171,12 +165,13 @@
                   <div class="specialism-selector">
                     <div class="selected-specialisms">
                       <div>
+                        @foreach($sectorsPreferred as $key => $sectorPreferred)
                         <div class="specialism">
                           <div class="specialism-details row">
                             <div class="data col-xs-6 col-sm-8">
                               <span class="name">{{$sectorPreferred->title}}</span>
                                (
-                              <span>{{count($idsSubSectorPreferred)}} roles</span>
+                              <span>{{count($subSectorsPreferred[$key])}} roles</span>
                               )
                             </div>
                             <div class="edit-specialism-actions small col-xs-6 col-sm-4">
@@ -199,7 +194,7 @@
                             <ul class="role row">
                               @foreach($sectorPreferred->children as $subSector)
                                 <li class="form-field checkbox col-sm-6 col-xs-12">
-                                  <input type="checkbox" name="edit-subsector-{{$subSector->id}}"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $idsSubSectorPreferred) ? 'checked': ''}}>
+                                  <input type="checkbox" name="edit_subsector[]"  id="edit-subsector-{{$subSector->id}}" value="{{$subSector->id}}" {{in_array($subSector->id, $subSectorsPreferred[$key]) ? 'checked': ''}}>
                                   <label for="edit-subsector-{{$subSector->id}}">
                                     {{$subSector->title}}
                                   </label>
@@ -207,7 +202,7 @@
                               @endforeach
                             </ul>
                             <span class="role-action">
-                              <button class="update btn btn-inverse btn-inline">
+                              <button class="update btn btn-inverse btn-inline" type="button">
                                 Update
                               </button>
                               <button class="cancel btn btn-link btn-inline">
@@ -216,45 +211,46 @@
                             </span>
                           </div>
                         </div>
-                        <div class="more-specialism-actions">
-                          <button class="add-more-specialism btn btn-inverse">
-                            <i class="glyphicon glyphicon-plus-sign"></i>
-                            <span>Add another sector</span>
-                          </button>
-                        </div>
-                        <div class="add-specialism-container" style="display: none">
-                          <select class="form-control specialisms-list">
-                            <option value>Choose your sector...</option>
-                            @foreach($jobChildren as $job)
-                              <option value={{$job->id}}>{{$job->title}}</option>
-                            @endforeach
-                          </select>
-                          <div style="display: none">
-                            <p class="info-sector">
-                              Select up to 5 roles
-                            </p>
-                            <ul class="roles list-unstyled row">
-                            </ul>
-                            <div class="add-specialism-actions">
-                              <p class="warning full" style="display: none">You have selected a maximum number of roles.</p>
-                              <p class="warning minimum">You haven't selected enough roles, yet.</p>
-                              <button class="add btn btn-inverse btn-inline disabled" type="button">Save roles</button>
-                              <button class="cancel btn btn-link btn-inline">Cancel</button>
-                            </div>
+                        @endforeach
+                      </div>
+                    </div>
+                      <div class="more-specialism-actions">
+                        <button class="add-more-specialism btn btn-inverse">
+                          <i class="glyphicon glyphicon-plus-sign"></i>
+                          <span>Add another sector</span>
+                        </button>
+                      </div>
+                      <div class="add-specialism-container" style="display: none">
+                        <select class="form-control specialisms-list">
+                          <option value>Choose your sector...</option>
+                          @foreach($jobChildren as $job)
+                            <option value={{$job->id}}>{{$job->title}}</option>
+                          @endforeach
+                        </select>
+                        <div style="display: none">
+                          <p class="info-sector">
+                            Select up to 5 roles
+                          </p>
+                          <ul class="roles list-unstyled row">
+                          </ul>
+                          <div class="add-specialism-actions">
+                            <p class="warning full" style="display: none">You have selected a maximum number of roles.</p>
+                            <p class="warning minimum">You haven't selected enough roles, yet.</p>
+                            <button class="add btn btn-inverse btn-inline disabled" type="button">Save roles</button>
+                            <button class="cancel btn btn-link btn-inline">Cancel</button>
                           </div>
-                          <div>
-                            <div class="add-specialism-actions">
-                              <button class="cancel btn btn-link btn-inline">Cancel</button>
-                            </div>
+                        </div>
+                        <div>
+                          <div class="add-specialism-actions">
+                            <button class="cancel btn btn-link btn-inline">Cancel</button>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 </div>
               </section>
               <div class="action-container">
-                <button type="button" class="btn btn-submit" id="upload-cv-link">Save changes</button>
+                <button type="submit" class="btn btn-submit" id="upload-cv-link">Save changes</button>
               </div>
             </form>
           </div>
@@ -295,7 +291,7 @@
         var text = "";
         for(var i=0; i < sectorChildren.length; i++){
           text += "<li class=\"role form-field checkbox col-xs-12 col-sm-6\">"
-          + "<input type=\"checkbox\" id=\"add-subsector-" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
+          + "<input type=\"checkbox\" name=\"edit_subsector[]" + sectorChildren[i].id + "\" id=\"add-subsector-" + sectorChildren[i].id + "\" value=\""+ sectorChildren[i].id +"\">\n"
           +"<label for=\"add-subsector-"+ sectorChildren[i].id +"\">" + sectorChildren[i].title + "</label>\n"
           +"</li>";
         }
@@ -303,16 +299,72 @@
       }
     })
   });
+  $(document).on('change', '.roles input[type=checkbox]', function(){
+    var countRoles = $('.roles input[type=checkbox]:checked').length;
+    if(countRoles >= 1){
+      $('.add-specialism-actions button.add').removeClass('disabled');
+    }
+    else{
+      $('.add-specialism-actions button.add').addClass('disabled');
+    }
+  });
+  $('.add-specialism-actions button.add').click(function(){
+    var title;
+    $('.specialisms-list option:selected').each(function(){
+      title = $(this).text();
+    });
+    var text = '<div class="specialism">' + 
+                    '<div class="specialism-details row">'+
+                      '<div class="data col-xs-6 col-sm-8">' +
+                        '<span class="name">' + title + '</span>'+
+                         ' (<span>' + $('.roles input[type=checkbox]:checked').length + ' roles</span>)'+
+                      '</div>'+
+                      '<div class="edit-specialism-actions small col-xs-6 col-sm-4">'+
+                        '<span class="edit">'+
+                          '<i class="glyphicon glyphicon-pencil visible-xs-block"></i>'+
+                          '<span class="hidden-xs">Edit roles</span>'+
+                        '</span>'+
+                        '<span class="remove">'+
+                          '<i class="glyphicon glyphicon-trash"></i>'+
+                        '</span>'+
+                      '</div>'+
+                    '</div>'+
+                    '<div class="edit-roles" style="display: none">'+
+                      '<div class="warning" style="display: none">'+
+                        'You have selected a maximum number of roles.'+
+                      '</div>'+
+                      '<p class="warning minimum">'+
+                        'You haven\'t selected enough roles, yet.'+
+                      '</p>'+
+                      '<ul class="role row">'+
+                        $('.roles').html()
+                       +
+                      '</ul>'+
+                      '<span class="role-action">'+
+                        '<button class="update btn btn-inverse btn-inline" type="button">'+
+                          'Update' +
+                        '</button>' +
+                        '<button class="cancel btn btn-link btn-inline">' +
+                          'Cancel' +
+                        '</button>' +
+                      '</span>' +
+                    '</div>' +
+                  '</div>';
+    $('.selected-specialisms').append(text);
+    $('.add-specialism-container').hide();
+    $('.more-specialism-actions').show();
+    $('.roles input[type=checkbox]:checked').prop('checked', false);
+  })
   $(document).on('click', '.edit', function(e){
-    $('.edit-roles').show();
+    $(this).closest('.specialism').find('.edit-roles').show();
     $(this).parent().hide();
     $('.more-specialism-actions').hide();
   });
-  $('.edit-roles .cancel').click(function(e){
+  $(document).on('click', '.edit-roles .cancel', function(e){
     e.preventDefault();
-    $('.edit-roles').hide();
+    $(this).closest('.specialism').find('.edit-roles').hide();
     $('.more-specialism-actions').show();
-    $('.edit-specialism-actions').show();
+     $(this).closest('.specialism').find('.edit-specialism-actions').show();
   });
   $(document).on('click', '.location-remove', function(e){
     e.preventDefault();
