@@ -921,8 +921,9 @@ class HomeController extends BaseController
         $profileTypes = ['general', 'social-childcare', 'sub-contractor'];
         $user = Auth::user();
         if($user->profile($type)===null){
-            $profile = new Profile($type);
+            $profile = new Profile();
             $profile->user_id=$user->id;
+            $profile->type = $type;
             $profile->save();
         }
         $totalApplication = $user->applications()->count();
