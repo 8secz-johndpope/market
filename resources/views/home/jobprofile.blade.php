@@ -275,7 +275,7 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Cover letter</h2>
-                        <a class="action edit" href="/user/create/covers">Edit<i class="glyphicon glyphicon-menu-right" {{isset($user->covers)? '' : 'style="display:none;"'}}></i></a>
+                        <a class="action edit" href="/user/create/covers">Edit<i class="glyphicon glyphicon-menu-right" {{($user->covers->count() == 0) ? '' : 'style="display:none;"'}}></i></a>
                     </header>
                     <div class="content">
                         @if($user->covers->count() > 0)
