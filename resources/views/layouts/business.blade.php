@@ -554,7 +554,7 @@
         var exampleSocket;
         reconnect();
         function reconnect() {
-            exampleSocket = new WebSocket("wss://{{env('APP_HOST')}}:8443", "protocolOne");
+            exampleSocket = new WebSocket("wss://{{env('APP_HOST')}}:8443", { keepAlive: 60, protocol: "protocolOne"});
             exampleSocket.onopen = function (event) {
 
 
