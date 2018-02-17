@@ -140,6 +140,7 @@
                         <a class="action edit" href="/user/jobs/looking-for">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                     </header>
                     <div class="content row">
+                        @if(isset($profile->looking_for))
                         <div class="col-xs-12 col-sm-6">
                             <div class="desired-job-title">
                                 <h3 class="title">Desired job title</h3>
@@ -149,13 +150,19 @@
                                 <h3 class="title">Salary</h3>
                                 <p class="data"></p>
                                 <ul>
-                                    <li>£ per annum</li>
-                                    <li>£ per hour</li>
+                                    @if(isset($profile->looking_for->min_per_annum))
+                                    <li>£{{$profile->looking_for->min_per_annum}} per annum</li>
+                                    @endif
+                                    @if(isset($profile->looking_for->min_per_hour))
+                                    <li>£{{$profile->looking_for->min_per_hour}} per hour</li>
+                                    @endif
                                 </ul>
-                                <a href="#">
+                                @if(!isset($profile->looking_for->min_per_annum) && !isset($profile->looking_for->min_per_hour))
+                                <a href="/user/jobs/looking-for">
                                     Add salary
                                     <i class="glyphicon glyphicon-plus-sign"></i>
                                 </a>
+                                @endif
                                 <p></p>
                             </div>
                             <div class="location">
@@ -170,9 +177,12 @@
                             </div>
                             <div class="specialisms">
                                 <h3 class="title">Sectors / Industries</h3>
-                                <p class="data">IT & Telecoms</p>
+                                @foreach($profile->looking_for->getSectors() as $sector)
+                                    <p class="data">{{$sector->title}}</p>
+                                @endforeach
                             </div>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -265,10 +275,10 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Cover letter</h2>
-                        <a class="action edit" href="/user/create/covers">Edit<i class="glyphicon glyphicon-menu-right" {{isset($user->covers)? '' : 'style="display:none;"'}}></i></a>
+                        <a class="action edit" href="/user/create/covers">Edit<i class="glyphicon glyphicon-menu-right" {{($user->covers->count() == 0) ? '' : 'style="display:none;"'}}></i></a>
                     </header>
                     <div class="content">
-                        @if(count($user->covers))
+                        @if($user->covers->count() > 0)
                         <div class="escaped-statement">
                             <div class="title">
                                 {{$user->covers[0]->title}}
@@ -278,7 +288,7 @@
                             </div>
                         </div>
                         @endif
-                        <a class="add-first" href="/user/create/covers" {{isset($user->covers) ? "style=display:none;" : ''}}>
+                        <a class="add-first" href="/user/create/covers" {{($user->covers->count() == 0) ? "style=display:none;" : ''}}>
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add cover letter
                         </a>
@@ -294,12 +304,14 @@
                     <header class="section-header">
                         <h2 class="title">Work experience</h2>
                     </header>
+                    @if($profile->work_experiences->count() == 0)
                     <div class="content">
-                        <a class="add-first" href="/user/create/work-experience">
+                        <a class="add-first" href="/user/create/work-experience?type={{$type}}">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add work experience
                         </a>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>

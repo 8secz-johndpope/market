@@ -12,5 +12,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-
+	public function looking_for()
+	{
+		return $this->hasOne('App\Model\LookingFor');
+	}
+	public function work_experiences(){
+		return $this->hasMany('App\Model\WorkExperience');
+	}
 }
