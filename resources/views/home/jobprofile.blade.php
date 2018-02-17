@@ -278,7 +278,7 @@
                         <a class="action edit" href="/user/create/covers">Edit<i class="glyphicon glyphicon-menu-right" {{isset($user->covers)? '' : 'style="display:none;"'}}></i></a>
                     </header>
                     <div class="content">
-                        @if(count($user->covers))
+                        @if($user->covers->count() > 0)
                         <div class="escaped-statement">
                             <div class="title">
                                 {{$user->covers[0]->title}}
@@ -288,7 +288,7 @@
                             </div>
                         </div>
                         @endif
-                        <a class="add-first" href="/user/create/covers" {{isset($user->covers) ? "style=display:none;" : ''}}>
+                        <a class="add-first" href="/user/create/covers" {{($user->covers->count() == 0) ? "style=display:none;" : ''}}>
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add cover letter
                         </a>
