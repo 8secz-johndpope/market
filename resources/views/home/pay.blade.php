@@ -339,7 +339,7 @@
                                     <div id="inst-details" class="bdr-btm">
                                         <form action="/user/cards/add" method="post">
                                         <input name="redirect" type="hidden" value="/pay/invoice/{{$invoice->id}}">
-                                        <input name="address" type="hidden" value="{{$user->address->id}}">
+                                        <input name="address" type="hidden" value="{{($user->address) ? $user->address->id : ''}}">
                                         {{ csrf_field() }} 
                                         <div id="inst-error"></div>
                                         <div id="card-fields">
