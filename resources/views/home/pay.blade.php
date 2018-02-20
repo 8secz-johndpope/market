@@ -439,7 +439,9 @@
                                 <tr><td>{{$item->title}}</td><td>{{$item->amount/100}}</td></tr>
                             @endforeach
                         </table>
-
+                    @php
+                    var_dump("ok3");die;
+                @endphp
                     <div>
                         @foreach($user->addresses as $address)
                             <div class="form-check">
@@ -452,9 +454,7 @@
                     </div>
 
                 </div>
-                 @php
-                    var_dump("ok3");die;
-                @endphp
+
                 <div class="col-sm-4">
                     <table class="table">
 
