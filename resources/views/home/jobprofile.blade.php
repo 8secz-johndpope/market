@@ -303,6 +303,12 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Work experience</h2>
+                        @if($profile->work_experiences->count() > 0)
+                        <a href="/user/create/work-experience?type={{$type}}" class="action add">
+                            Add
+                            <i class="glyphicon glyphicon-menu-right"></i>
+                        </a>
+                        @endif
                     </header>
                     <div class="content">
                         <div class="experience-container">
