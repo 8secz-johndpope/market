@@ -196,14 +196,14 @@
                         <h2 class="title">Your CV's</h2>
                     </header>
                     <div class="content row">
-                        @if(count($user->cvs) > 0)
+                        @if($profile->cv != null)
                         <div class="cv-details col-sm-12">
                             <div class="row">
                                 <div class="current-cv col-sm-4">
                                     <h3 class="title">Your current CV</h3>
                                     <p class="data">
-                                        <span class="cv-name">{{$user->cvs[0]->title}}</span>
-                                        <span class="cv-uploaded">Added {{$user->cvs[0]->created_at->format('d F Y')}}</span>
+                                        <span class="cv-name">{{$profile->cv->title}}</span>
+                                        <span class="cv-uploaded">Added {{$profile->cv->created_at->format('d F Y')}}</span>
                                         <span class="actions">
                                             <a class="download-cv" href="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->cvs[0]->file_name}}">
                                                 <i class="glyphicon glyphicon-download-alt"></i>
@@ -275,7 +275,7 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Cover letter</h2>
-                        <a class="action edit" href="/user/create/covers">Edit<i class="glyphicon glyphicon-menu-right" {{($user->covers->count() == 0) ? '' : 'style="display:none;"'}}></i></a>
+                        <a class="action edit" href="/user/create/covers">Edit<i class="glyphicon glyphicon-menu-right" {{($user->covers->count() > 0) ? '' : 'style="display:none;"'}}></i></a>
                     </header>
                     <div class="content">
                         @if($user->covers->count() > 0)
