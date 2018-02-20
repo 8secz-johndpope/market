@@ -40,9 +40,6 @@
                             </div>
                         </div>
                     </div>
-                    @php
-                        var_dump("ok2");die;
-                    @endphp
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="seller-info">
@@ -168,7 +165,9 @@
                                 </div>
                             </div>
                         </div>
-
+                        @php
+                            var_dump("ok2");die;
+                        @endphp
                         <div class="col-sm-offset-6 col-sm-6 button-pay">
                             <button class="btn btn-submit" type="submit">Pay Now</button>
                         </div>
