@@ -288,7 +288,7 @@
                             </div>
                         </div>
                         @endif
-                        <a class="add-first" href="/user/create/covers" {{($user->covers->count() == 0) ? "style=display:none;" : ''}}>
+                        <a class="add-first" href="/user/create/covers" {{($user->covers->count() > 0) ? "style=display:none;" : ''}}>
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add cover letter
                         </a>
@@ -314,7 +314,7 @@
                                     <div class="action edit">
                                     </div>
                                     <div class="when col-xs-12 col-sm-3 col-md-2">
-                                        {{$workExperience->from}} - {{$workExperience->to}}
+                                        {{$workExperience->from->format('m / Y')}} - {{$workExperience->to}}
                                     </div>
                                     <div class="what col-xs-12 col-sm-9 col-md-10">
                                         <div class="title">
