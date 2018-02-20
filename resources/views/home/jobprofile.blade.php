@@ -307,7 +307,7 @@
                     <div class="content">
                         <div class="experience-container">
                             <div>
-                                @foreach($profile->work_experiences as workExperience)
+                                @foreach($profile->work_experiences as $workExperience)
                                 <div class="row work">
                                     <div class="action delete">
                                     </div>
