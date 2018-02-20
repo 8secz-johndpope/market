@@ -314,7 +314,7 @@
                                     <div class="action edit">
                                     </div>
                                     <div class="when col-xs-12 col-sm-3 col-md-2">
-                                        {{$workExperience->from->format('m/Y')}} - {{$workExperience->to->format('m/Y')}}
+                                        {{$workExperience->from}} - {{$workExperience->to}}
                                     </div>
                                     <div class="what col-xs-12 col-sm-9 col-md-10">
                                         <div class="title">
