@@ -23,6 +23,6 @@ class Profile extends Model
 		return $this->hasOne('App\Model\Cv');
 	}
 	public function cover(){
-		return $this->hasOne('App\Model\cover');
+		return $this->hasOne('App\Model\Cover');
 	}
 }

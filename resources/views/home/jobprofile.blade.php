@@ -275,7 +275,7 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Cover letter</h2>
-                        <a class="action edit" href="/user/create/covers" {{($profile->cover != null) ? '' : 'style="display:none;"'}}>Edit<i class="glyphicon glyphicon-menu-right"></i></a>
+                        <a class="action edit" href="/user/create/covers" {{($profile->cover == null) ? "style=display:none;" : ''}}>Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                     </header>
                     <div class="content">
                         @if($profile->cover != null)
