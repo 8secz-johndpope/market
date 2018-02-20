@@ -304,14 +304,40 @@
                     <header class="section-header">
                         <h2 class="title">Work experience</h2>
                     </header>
-                    @if($profile->work_experiences->count() == 0)
                     <div class="content">
+                        <div class="experience-container">
+                            <div>
+                                @foreach($profile->work_experiences as workExperience)
+                                <div class="row work">
+                                    <div class="action delete">
+                                    </div>
+                                    <div class="action edit">
+                                    </div>
+                                    <div class="when col-xs-12 col-sm-3 col-md-2">
+                                    </div>
+                                    <div class="what col-xs-12 col-sm-9 col-md-10">
+                                        <div class="title">
+                                            {{$workExperience->job_title}}
+                                        </div>
+                                        <div class="company">
+                                            {{$workExperience->company}}
+                                        </div>
+                                        <div class="description">
+                                            {{$workExperience->description}}
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @if($profile->work_experiences->count() == 0)
                         <a class="add-first" href="/user/create/work-experience?type={{$type}}">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add work experience
                         </a>
+                        @endif
                     </div>
-                    @endif
+                    
                 </div>
             </div>
         </div>
