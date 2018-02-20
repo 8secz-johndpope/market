@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     @php
-                        var_dump("ok2");
+                        var_dump("ok2");die;
                     @endphp
                     <div class="row">
                         <div class="col-sm-6">
