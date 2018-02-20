@@ -234,7 +234,7 @@
                         <div class="pay-container">
                             <form id="payment-form" action="/user/payment/invoice/stripe/{{$invoice->id}}" method="post">
                                 {{ csrf_field() }}
-                                <input type="hidden" name="card" value="{{($def['id'] != null) ? $def['id'] : ''}}" id="card">
+                                <input type="hidden" name="card" value="{{($def != null) ? $def['id'] : ''}}" id="card">
                                 <input type="hidden" name="nonce" id="nonce">
                                 <button class="btn btn-submit" type="submit">Pay Now</button>
                             </form>
