@@ -1476,6 +1476,7 @@ class HomeController extends BaseController
         $cv->file_name=$request->file_name;
         $cv->category_id=$request->category;
         $cv->user_id=$user->id;
+        $cv->profile_id = $request->profile;
         $cv->save();
         return ['msg'=>'done'];
     }
@@ -2548,8 +2549,9 @@ class HomeController extends BaseController
     }
     public function create_cover(Request $request){
         $user = Auth::user();
-        if(isset($user->covers))
-            $cover = $user->covers[0];
+        $profile = $user->profile($request->type);
+        if($profile->cover != null)
+            $cover = $profile->cover;
         else{
             $cover = null;
         }
@@ -2562,7 +2564,8 @@ class HomeController extends BaseController
     }
     public function upload_cv(Request $request){
         $user = Auth::user();
-        return view('home.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves()]);   
+        $profile = $user->profile($request->type);
+        return view('home.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves(), 'profile' => $profile]);   
     }
     public function looking_for(Request $request){
         $user = Auth::user();

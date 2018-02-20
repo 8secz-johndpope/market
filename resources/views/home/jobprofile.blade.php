@@ -239,7 +239,7 @@
                             <div class="btns row">
                                 <div class="col-xs-12 col-sm-6">
                                     <a class="btn btn-inverse" href="/user/cv-builder/personal-details">CV Builder by {{env('APP_NAME')}}</a>
-                                    <a class="btn btn-submit" href="/user/upload/cvs">Upload CV</a>
+                                    <a class="btn btn-submit" href="/user/upload/cvs?type={{$type}}">Upload CV</a>
                                 </div>
                             </div>
                         </div>
@@ -275,20 +275,20 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Cover letter</h2>
-                        <a class="action edit" href="/user/create/covers">Edit<i class="glyphicon glyphicon-menu-right" {{($user->covers->count() > 0) ? '' : 'style="display:none;"'}}></i></a>
+                        <a class="action edit" href="/user/create/covers" {{($profile->cover != null) ? '' : 'style="display:none;"'}}>Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                     </header>
                     <div class="content">
-                        @if($user->covers->count() > 0)
+                        @if($profile->cover != null)
                         <div class="escaped-statement">
                             <div class="title">
-                                {{$user->covers[0]->title}}
+                                {{$profile->cover->title}}
                             </div>
                             <div class="description">
-                                {{$user->covers[0]->cover}}
+                                {{$profile->cover->cover}}
                             </div>
                         </div>
                         @endif
-                        <a class="add-first" href="/user/create/covers" {{($user->covers->count() > 0) ? "style=display:none;" : ''}}>
+                        <a class="add-first" href="/user/create/covers?type={{$type}}" {{($profile->cover != null) ? "style=display:none;" : ''}}>
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add cover letter
                         </a>
