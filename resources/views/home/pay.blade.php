@@ -246,6 +246,9 @@
                                 <legend>
                                     Select a payment option
                                 </legend>
+                                @php
+                                    var_dump("ok");
+                                @endphp
                                 @if(count($cards) > 0)
                                 <div class="pay-method">
                                     <div class="col-l-p cc-logo">
@@ -260,6 +263,9 @@
                                             </label>
                                         </div>
                                     </div>
+                                    @php
+                                        var_dump("ok2");
+                                    @endphp
                                     <div class="col-r-p cc-logo">
                                         <div id="funding-cc">
                                             <div class="fs-summary fade in">
@@ -301,6 +307,9 @@
                                     </div>
                                 </div>
                                 @endif
+                                @php
+                                        var_dump("ok3");
+                                @endphp
                                 <!-- <div class="pay-method" data-mp-id="new-cc">
                                     <div class="col-l-p">
                                         <div class="radio-l">
