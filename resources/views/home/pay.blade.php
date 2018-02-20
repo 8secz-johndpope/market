@@ -435,13 +435,13 @@
 
                         <table class="table">
                             <thead><th>Description</th><th>Amount</th></thead>
+                            @php
+                                var_dump("ok3");die;
+                            @endphp
                             @foreach($invoice->items as $item)
                                 <tr><td>{{$item->title}}</td><td>{{$item->amount/100}}</td></tr>
                             @endforeach
                         </table>
-                    @php
-                    var_dump("ok3");die;
-                @endphp
                     <div>
                         @foreach($user->addresses as $address)
                             <div class="form-check">
