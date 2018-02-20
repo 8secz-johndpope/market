@@ -1023,6 +1023,7 @@ class HomeController extends BaseController
         $gateway = new \Braintree\Gateway(array(
             'accessToken' => env('PAYPAL_ACCESS_TOKEN'),
         ));
+        var_dump($card);
         $clientToken = $gateway->clientToken()->generate();
 
         return view('home.pay',['invoice'=>$invoice, 'seller' => $seller,'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user]);
