@@ -247,8 +247,14 @@
                                 <legend>
                                     Select a payment option
                                 </legend>
+                                @php
+                                    var_dump("ok2");die;
+                                @endphp
                                 @if(count($cards) > 0)
                                 <div class="pay-method">
+                                    @php
+                                        var_dump("ok3");die;
+                                    @endphp
                                     <div class="col-l-p cc-logo">
                                         <div class="radio-l">
                                             <input type="radio" name="pay-meth-radio" id="saved-card" checked="true" value="{{$def['id']}}">
