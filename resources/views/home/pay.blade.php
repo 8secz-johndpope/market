@@ -165,9 +165,7 @@
                                 </div>
                             </div>
                         </div>
-                        @php
-                            var_dump("ok2");die;
-                        @endphp
+
                         <div class="col-sm-offset-6 col-sm-6 button-pay">
                             <button class="btn btn-submit" type="submit">Pay Now</button>
                         </div>
@@ -263,7 +261,9 @@
                                             </label>
                                         </div>
                                     </div>
-                                    
+                                    @php
+                                        var_dump("ok2");die;
+                                    @endphp
                                     <div class="col-r-p cc-logo">
                                         <div id="funding-cc">
                                             <div class="fs-summary fade in">
