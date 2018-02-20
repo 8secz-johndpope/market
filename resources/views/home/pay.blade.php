@@ -165,6 +165,9 @@
                                 </div>
                             </div>
                         </div>
+                        @php
+                                        var_dump("ok2");
+                                    @endphp
                         <div class="col-sm-offset-6 col-sm-6 button-pay">
                             <button class="btn btn-submit" type="submit">Pay Now</button>
                         </div>
@@ -246,9 +249,6 @@
                                 <legend>
                                     Select a payment option
                                 </legend>
-                                @php
-                                    var_dump("ok");
-                                @endphp
                                 @if(count($cards) > 0)
                                 <div class="pay-method">
                                     <div class="col-l-p cc-logo">
@@ -263,9 +263,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    @php
-                                        var_dump("ok2");
-                                    @endphp
+                                    
                                     <div class="col-r-p cc-logo">
                                         <div id="funding-cc">
                                             <div class="fs-summary fade in">
