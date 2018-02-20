@@ -247,6 +247,9 @@
                                 <legend>
                                     Select a payment option
                                 </legend>
+                                @php
+                                    var_dump($cards);
+                                @endphp
                                 @if(count($cards) > 0)
                                 <div class="pay-method">
                                     @php
