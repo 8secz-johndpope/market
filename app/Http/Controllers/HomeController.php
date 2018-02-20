@@ -1217,11 +1217,13 @@ class HomeController extends BaseController
     public function add_cover(Request $request)
     {
         $user = Auth::user();
+        $profile = 
         $cover = new Cover;
         $cover->title=$request->title;
         $cover->category_id=$request->category;
         $cover->cover=$request->cover;
         $cover->user_id=$user->id;
+        $cover->profile_id = $request->profile;
         $cover->save();
         return redirect($request->redirect);
     }
@@ -2555,7 +2557,7 @@ class HomeController extends BaseController
         else{
             $cover = null;
         }
-        return view('home.create_covers', ['user' => $user, 'jobs' => Category::job_leaves(), 'cover' => $cover]);   
+        return view('home.create_covers', ['user' => $user, 'jobs' => Category::job_leaves(), 'cover' => $cover, 'profile' => $profile]);   
     }
     public function create_work_experience(Request $request){
         $user = Auth::user();

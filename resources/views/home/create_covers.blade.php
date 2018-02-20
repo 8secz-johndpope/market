@@ -33,8 +33,9 @@
           </header>
           <div class="content">
               <form action="/user/covers/add" method="post">
-                  <input name="redirect" type="hidden" value="/job/profile/edit">
+                  <input name="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
                   {{ csrf_field() }}
+                  <input name="profile" type="hidden" value="{{$profile->id}}">
               <div class="form-group">
                   <label for="title">Title</label> 
                   <span class="red-text" id="no-title" style="display: none">Please add a title to your Cover</span>
