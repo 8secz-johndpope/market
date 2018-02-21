@@ -255,13 +255,18 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Status & availability</h2>
-                        <a class="action edit" href="">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
+                        <a class="action edit" href="/user/employment-status/create?type={{$type}}">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                     </header>
                     <div class="content row">
                         <div class="col-xs-12 col-sm-6">
                             <div class="employment-status">
+                                @if($profile->employmentStatus == null)
                                 <h3 class="title">Employment status</h3>
                                 <p class="data">Unemployed</p>
+                                @else
+                                <h3 class="title">Employment status</h3>
+                                <p class="data">{{$profile->employmentStatus->status}}</p>
+                                @endif
                             </div>
                         </div>
                     </div>

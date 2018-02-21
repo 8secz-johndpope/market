@@ -106,7 +106,8 @@ class AdminController extends BaseController
     }
     public function users(Request $request){
         $users = User::orderBy('id','desc')->paginate(20);
-        $total = User::count();
+        $total =  $users->total();
+        //$total = User::count();
         return view('admin.users',['users'=>$users,'total'=>$total]);
     }
     public function contracts(Request $request){

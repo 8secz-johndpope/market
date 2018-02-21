@@ -10,6 +10,7 @@ use App\Model\Commission;
 use App\Model\Contact;
 use App\Model\Cover;
 use App\Model\Cv;
+use App\Model\EmploymentStatus;
 use App\Model\Dispatch;
 use App\Model\Distance;
 use App\Model\Invoice;
@@ -2640,5 +2641,20 @@ class HomeController extends BaseController
             $indexSector += 1;
         }  
         return view('home.cv-builder', ['user' => $user, 'slug' => $slug, 'cvSections' => $cvSections, 'indexSector' => $indexSector]);
+    }
+    public function createEmploymentStatus(Request $request){
+        $user = Auth::user();
+        $profile = $user->profile($request->type);
+        return view('home.employment-status', ['user' => $user, 'profile' => $profile]);
+    }
+    public function addEmploymentStatus(Request $request){
+        $user = Auth::user();
+        $employmentStatus = new EmploymentStatus();
+        $employmentStatus->profile_id = $request->profile;
+        $employmentStatus->status = $request->employment_status;
+        if(isset($request->notice_period))
+            $employmentStatus->notice_period = $request->notice_period;
+        $employmentStatus->save();
+        return redirect($request->redirect);
     }
 }

@@ -25,4 +25,7 @@ class Profile extends Model
 	public function cover(){
 		return $this->hasOne('App\Model\Cover');
 	}
+	public function employmentStatus(){
+		return $this->hasOne('App\Model\EmploymentStatus');
+	}
 }

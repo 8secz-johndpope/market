@@ -675,6 +675,9 @@
 .work-experience .work .delete, .qualification .delete {
     right: 30px;
 }
+.body.background-body {
+    min-height: calc(100vh - 72px);
+}
 input[type=checkbox]~label {
     position: relative;
 }
