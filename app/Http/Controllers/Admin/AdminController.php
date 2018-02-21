@@ -105,9 +105,9 @@ class AdminController extends BaseController
 
     }
     public function users(Request $request){
-        $users = User::all();
-        $this->fixedUserIdsElastic($users);
-        $total =  $users->count();
+        $users = User::orderBy('id', 'desc')->paginate(20);
+        //$this->fixedUserIdsElastic($users);
+        $total =  $users->total();
         //$total = User::count();
         return view('admin.users',['users'=>$users,'total'=>$total]);
     }
