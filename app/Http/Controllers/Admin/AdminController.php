@@ -195,7 +195,6 @@ class AdminController extends BaseController
         foreach ($users as $user) {
             $adverts = $user->allAdverts;
             foreach ($adverts as $advert) {
-                var_dump($advert->elastic);
                 $body['user_id'] = $advert->user_id;
                 $params = [
                     'index' => 'adverts',
