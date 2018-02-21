@@ -154,11 +154,10 @@ class HomeController extends BaseController
     }
     public function create(Request $request){
         $user = Auth::user();
-        $advert=new Advert;
+        $advert = new Advert;
         $advert->user_id = $user->id;
         $advert->save();
         $advert->create_draft();
-
         return redirect('/user/manage/ad/'.$advert->id);
     }
     public function change_category(Request $request){

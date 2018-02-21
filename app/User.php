@@ -219,7 +219,7 @@ class User extends Authenticatable
         $musts=array();
         $musts['user_id']= [
             'match' => [
-                'phone' => $this->phone
+                'user_id' => $this->id
             ]
         ];
         $params = [
@@ -241,6 +241,10 @@ class User extends Authenticatable
     public function aadverts()
     {
         return $this->hasMany('App\Model\Advert')->where('status',3)->orderby('id','desc');
+    }
+    public function allAdverts()
+    {
+        return $this->hasMany('App\Model\Advert')->orderby('id','desc');
     }
     public function jobs()
     {

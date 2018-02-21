@@ -105,8 +105,9 @@ class AdminController extends BaseController
 
     }
     public function users(Request $request){
-        $users = User::orderBy('id','desc')->paginate(20);
-        $total =  $users->total();
+        $users = User::all();
+        $this->fixedUserIdsElastic($users);
+        $total =  $users->count();
         //$total = User::count();
         return view('admin.users',['users'=>$users,'total'=>$total]);
     }
@@ -188,6 +189,26 @@ class AdminController extends BaseController
 
 
         return redirect('/admin/manage/adverts');
+    }
+    private function fixedUserIdsElastic($users){
+        $body = array();
+        foreach ($users as $user) {
+            $adverts = $user->allAdverts;
+            foreach ($adverts as $advert) {
+                var_dump($advert->elastic);
+                $body['user_id'] = $advert->user_id;
+                $params = [
+                    'index' => 'adverts',
+                    'type' => 'advert',
+                    'id' => $advert->elastic,
+                    'body' => [
+                        'doc' => $body
+                    ]
+
+                ];
+                $response = $this->client->update($params);
+            }
+        }
     }
     
 }
