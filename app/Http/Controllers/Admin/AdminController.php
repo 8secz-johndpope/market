@@ -118,7 +118,8 @@ class AdminController extends BaseController
     public function adverts(Request $request){
         $reports = Report::all();
         $adverts = Advert::where('status','>',0)->where('user_id','>',0)->orderBy('id','desc')->paginate(20);
-        $total =  Advert::where('status','>',0)->where('user_id','>',0)->count();
+        //$total =  Advert::where('status','>',0)->where('user_id','>',0)->count();
+        $total = $adverts->total();
         return view('admin.adverts',['adverts'=>$adverts,'total'=>$total,'reports'=>$reports]);
     }
     public function iam(Request $request){
@@ -188,4 +189,5 @@ class AdminController extends BaseController
 
         return redirect('/admin/manage/adverts');
     }
+    
 }

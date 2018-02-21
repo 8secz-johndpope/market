@@ -52,7 +52,8 @@
                         @else
                             <td><a href="/admin/enable/user/{{$user->id}}" class="btn btn-primary">Enable</a> </td>
                         @endif
-                        <td><a href="/userads/{{$user->id}}">{{$user->adverts()->count()}}</a></td>
+
+                        <td><a href="/userads/{{$user->id}}">{{$user->countEAdverts()}}</a></td>
 
                     </tr>
                 @endforeach

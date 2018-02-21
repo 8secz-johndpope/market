@@ -153,7 +153,9 @@ class HomeController extends BaseController
         return redirect($advert->url());
     }
     public function create(Request $request){
+        $user = Auth::user();
         $advert=new Advert;
+        $advert->user_id = $user->id;
         $advert->save();
         $advert->create_draft();
 
@@ -305,7 +307,7 @@ class HomeController extends BaseController
         $advert->make_active();
         return redirect('/user/manage/ads');
     }
-        public  function newad(Request $request){
+    public  function newad(Request $request){
 
         $user= Auth::user();
         $category=Category::find($request->category);
@@ -318,8 +320,9 @@ class HomeController extends BaseController
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at'] = $milliseconds;
         $body['username'] = $user->name;
-        $body['user_id'] = $user->id;
         $body['phone'] = $user->phone;
+        $body['user_id'] = $user->id;
+        var_dump($body);die;
         $advert = new Advert;
         $advert->save();
         $advert->sid = $advert->id;

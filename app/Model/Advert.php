@@ -85,11 +85,9 @@ class Advert extends  BaseModel
         $response = $this->client->update($params);
     }
     public function create_draft(){
-        $user = Auth::user();
-
-        if($this->elastic===null){
-
-
+        $user = $this->user;
+        $this->create_dd($user);
+        /*if($this->elastic===null){
             $body['title']='';
             $body['description']='';
             $body['images']=[];
@@ -104,30 +102,26 @@ class Advert extends  BaseModel
             $body['meta']['price']=-1;
             $body['source_id']=$this->id;
             $body['username']=$user->display_name;
+            $body['user_id'] = $user->id;
             $body['created_at']=$milliseconds;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
                 'body' => $body
             ];
-
             $response = $this->client->index($params);
             $this->elastic = $response['_id'];
             $this->sid=$this->id;
             $this->status=0;
             $this->category_id=0;
-
             $this->user_id=$user->id;
             $this->postcode_id=0;
             $this->save();
-        }
-
+        }*/
     }
-    public function create_draft_job($title){
+    public function create_draft_job($userName){
 
         if($this->elastic===null){
-
-
             $body['title']='';
             $body['description']='';
             $body['images']=[];
@@ -141,20 +135,18 @@ class Advert extends  BaseModel
             $body['list_views']=0;
             $body['meta']['price']=-1;
             $body['source_id']=$this->id;
-            $body['username']=$title;
+            $body['username']=$userName;
             $body['created_at']=$milliseconds;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
                 'body' => $body
             ];
-
             $response = $this->client->index($params);
             $this->elastic = $response['_id'];
             $this->sid=$this->id;
             $this->status=0;
             $this->category_id=0;
-
             $this->user_id=0;
             $this->postcode_id=0;
             $this->save();
@@ -162,10 +154,7 @@ class Advert extends  BaseModel
 
     }
     public function create_dd($user){
-
         if($this->elastic===null){
-
-
             $body['title']='';
             $body['description']='';
             $body['images']=[];
@@ -180,19 +169,18 @@ class Advert extends  BaseModel
             $body['meta']['price']=-1;
             $body['source_id']=$this->id;
             $body['username']=$user->display_name;
+            $body['user_id'] = $user->id;
             $body['created_at']=$milliseconds;
             $params = [
                 'index' => 'adverts',
                 'type' => 'advert',
                 'body' => $body
             ];
-
             $response = $this->client->index($params);
             $this->elastic = $response['_id'];
             $this->sid=$this->id;
             $this->status=0;
             $this->category_id=0;
-
             $this->user_id=$user->id;
             $this->postcode_id=0;
             $this->save();
@@ -685,6 +673,4 @@ class Advert extends  BaseModel
     public function prevAdvert(){
         return Advert::where('category_id',$this->category_id)->where('id','<',$this->id)->where('status',1)->first();
     }
-
-
 }
