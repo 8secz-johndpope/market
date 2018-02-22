@@ -196,14 +196,14 @@
                         <h2 class="title">Your CV's</h2>
                     </header>
                     <div class="content row">
-                        @if(count($user->cvs) > 0)
+                        @if($profile->cv != null)
                         <div class="cv-details col-sm-12">
                             <div class="row">
                                 <div class="current-cv col-sm-4">
                                     <h3 class="title">Your current CV</h3>
                                     <p class="data">
-                                        <span class="cv-name">{{$user->cvs[0]->title}}</span>
-                                        <span class="cv-uploaded">Added {{$user->cvs[0]->created_at->format('d F Y')}}</span>
+                                        <span class="cv-name">{{$profile->cv->title}}</span>
+                                        <span class="cv-uploaded">Added {{$profile->cv->created_at->format('d F Y')}}</span>
                                         <span class="actions">
                                             <a class="download-cv" href="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->cvs[0]->file_name}}">
                                                 <i class="glyphicon glyphicon-download-alt"></i>
@@ -239,7 +239,7 @@
                             <div class="btns row">
                                 <div class="col-xs-12 col-sm-6">
                                     <a class="btn btn-inverse" href="/user/cv-builder/personal-details">CV Builder by {{env('APP_NAME')}}</a>
-                                    <a class="btn btn-submit" href="/user/upload/cvs">Upload CV</a>
+                                    <a class="btn btn-submit" href="/user/upload/cvs?type={{$type}}">Upload CV</a>
                                 </div>
                             </div>
                         </div>
@@ -255,13 +255,18 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Status & availability</h2>
-                        <a class="action edit" href="">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
+                        <a class="action edit" href="/user/employment-status/create?type={{$type}}">Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                     </header>
                     <div class="content row">
                         <div class="col-xs-12 col-sm-6">
                             <div class="employment-status">
+                                @if($profile->employmentStatus == null)
                                 <h3 class="title">Employment status</h3>
                                 <p class="data">Unemployed</p>
+                                @else
+                                <h3 class="title">Employment status</h3>
+                                <p class="data">{{$profile->employmentStatus->status}}</p>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -275,20 +280,20 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Cover letter</h2>
-                        <a class="action edit" href="/user/create/covers">Edit<i class="glyphicon glyphicon-menu-right" {{($user->covers->count() == 0) ? '' : 'style="display:none;"'}}></i></a>
+                        <a class="action edit" href="/user/create/covers" {{($profile->cover == null) ? "style=display:none;" : ''}}>Edit<i class="glyphicon glyphicon-menu-right"></i></a>
                     </header>
                     <div class="content">
-                        @if($user->covers->count() > 0)
+                        @if($profile->cover != null)
                         <div class="escaped-statement">
                             <div class="title">
-                                {{$user->covers[0]->title}}
+                                {{$profile->cover->title}}
                             </div>
                             <div class="description">
-                                {{$user->covers[0]->cover}}
+                                {{$profile->cover->cover}}
                             </div>
                         </div>
                         @endif
-                        <a class="add-first" href="/user/create/covers" {{($user->covers->count() == 0) ? "style=display:none;" : ''}}>
+                        <a class="add-first" href="/user/create/covers?type={{$type}}" {{($profile->cover != null) ? "style=display:none;" : ''}}>
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add cover letter
                         </a>
@@ -303,15 +308,48 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Work experience</h2>
+                        @if($profile->work_experiences->count() > 0)
+                        <a href="/user/create/work-experience?type={{$type}}" class="action add">
+                            Add
+                            <i class="glyphicon glyphicon-menu-right"></i>
+                        </a>
+                        @endif
                     </header>
-                    @if($profile->work_experiences->count() == 0)
                     <div class="content">
+                        <div class="experience-container">
+                            <div>
+                                @foreach($profile->work_experiences as $workExperience)
+                                <div class="row work">
+                                    <div class="action delete">
+                                    </div>
+                                    <div class="action edit">
+                                    </div>
+                                    <div class="when col-xs-12 col-sm-3 col-md-2">
+                                        {{date_format(date_create($workExperience->from), 'm/Y')}} - {{date_format(date_create($workExperience->to), 'm/Y')}}
+                                    </div>
+                                    <div class="what col-xs-12 col-sm-9 col-md-10">
+                                        <div class="title">
+                                            {{$workExperience->job_title}}
+                                        </div>
+                                        <div class="company">
+                                            {{$workExperience->company}}
+                                        </div>
+                                        <div class="description">
+                                            {{$workExperience->description}}
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @if($profile->work_experiences->count() == 0)
                         <a class="add-first" href="/user/create/work-experience?type={{$type}}">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add work experience
                         </a>
+                        @endif
                     </div>
-                    @endif
+                    
                 </div>
             </div>
         </div>

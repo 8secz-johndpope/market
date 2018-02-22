@@ -54,6 +54,8 @@ Route::get('/user/ad/multi/create','BusinessController@multiple');
 Route::post('/user/ad/images', 'BusinessController@add_images');
 Route::get('/user/p/deliver/{id}', 'MarketController@can_deliver');
 Route::get('/user/cvs/add', 'HomeController@add_cv');
+Route::get('/user/employment-status/create', 'HomeController@createEmploymentStatus');
+Route::post('/user/employment-status/add', 'HomeController@addEmploymentStatus');
 Route::get('/user/manage/contacts', 'HomeController@contacts');
 Route::get('/user/manage/invoices', 'HomeController@invoices');
 

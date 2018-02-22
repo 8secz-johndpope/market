@@ -113,8 +113,9 @@ function upload_cv() {
                         console.log(data);
                         var title = $('#title').val();
                         var category=$('#category').val();
+                        var profile = $('#profile').val();
                         axios.get('/user/cvs/add', {
-                            params: {file_name: uname,title:title,category:category}
+                            params: {file_name: uname,title:title,category:category, profile:profile}
                         })
                             .then(function (response) {
                                 console.log(response);

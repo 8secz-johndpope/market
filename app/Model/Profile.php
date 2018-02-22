@@ -19,4 +19,13 @@ class Profile extends Model
 	public function work_experiences(){
 		return $this->hasMany('App\Model\WorkExperience');
 	}
+	public function cv(){
+		return $this->hasOne('App\Model\Cv');
+	}
+	public function cover(){
+		return $this->hasOne('App\Model\Cover');
+	}
+	public function employmentStatus(){
+		return $this->hasOne('App\Model\EmploymentStatus');
+	}
 }

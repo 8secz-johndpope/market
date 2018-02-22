@@ -649,7 +649,7 @@
 .work-experience .company, .work-experience .description, .work-experience .title {
     word-wrap: break-word;
 }
-.work-experience .description{
+.work-experience .description, .work .description{
     margin-top: 0;
 }
 .cvbuilder-work-experience .visual-container, .cvbuilder-qualifications .visual-container{
@@ -674,6 +674,9 @@
 }
 .work-experience .work .delete, .qualification .delete {
     right: 30px;
+}
+.body.background-body {
+    min-height: calc(100vh - 72px);
 }
 input[type=checkbox]~label {
     position: relative;

@@ -10,6 +10,7 @@ use App\Model\Commission;
 use App\Model\Contact;
 use App\Model\Cover;
 use App\Model\Cv;
+use App\Model\EmploymentStatus;
 use App\Model\Dispatch;
 use App\Model\Distance;
 use App\Model\Invoice;
@@ -152,10 +153,11 @@ class HomeController extends BaseController
         return redirect($advert->url());
     }
     public function create(Request $request){
-        $advert=new Advert;
+        $user = Auth::user();
+        $advert = new Advert;
+        $advert->user_id = $user->id;
         $advert->save();
         $advert->create_draft();
-
         return redirect('/user/manage/ad/'.$advert->id);
     }
     public function change_category(Request $request){
@@ -304,7 +306,7 @@ class HomeController extends BaseController
         $advert->make_active();
         return redirect('/user/manage/ads');
     }
-        public  function newad(Request $request){
+    public  function newad(Request $request){
 
         $user= Auth::user();
         $category=Category::find($request->category);
@@ -317,8 +319,9 @@ class HomeController extends BaseController
         $milliseconds = round(microtime(true) * 1000);
         $body['created_at'] = $milliseconds;
         $body['username'] = $user->name;
-        $body['user_id'] = $user->id;
         $body['phone'] = $user->phone;
+        $body['user_id'] = $user->id;
+        var_dump($body);die;
         $advert = new Advert;
         $advert->save();
         $advert->sid = $advert->id;
@@ -1217,11 +1220,13 @@ class HomeController extends BaseController
     public function add_cover(Request $request)
     {
         $user = Auth::user();
+        $profile = 
         $cover = new Cover;
         $cover->title=$request->title;
         $cover->category_id=$request->category;
         $cover->cover=$request->cover;
         $cover->user_id=$user->id;
+        $cover->profile_id = $request->profile;
         $cover->save();
         return redirect($request->redirect);
     }
@@ -1476,6 +1481,7 @@ class HomeController extends BaseController
         $cv->file_name=$request->file_name;
         $cv->category_id=$request->category;
         $cv->user_id=$user->id;
+        $cv->profile_id = $request->profile;
         $cv->save();
         return ['msg'=>'done'];
     }
@@ -2548,12 +2554,13 @@ class HomeController extends BaseController
     }
     public function create_cover(Request $request){
         $user = Auth::user();
-        if(isset($user->covers))
-            $cover = $user->covers[0];
+        $profile = $user->profile($request->type);
+        if($profile->cover != null)
+            $cover = $profile->cover;
         else{
             $cover = null;
         }
-        return view('home.create_covers', ['user' => $user, 'jobs' => Category::job_leaves(), 'cover' => $cover]);   
+        return view('home.create_covers', ['user' => $user, 'jobs' => Category::job_leaves(), 'cover' => $cover, 'profile' => $profile]);   
     }
     public function create_work_experience(Request $request){
         $user = Auth::user();
@@ -2562,7 +2569,8 @@ class HomeController extends BaseController
     }
     public function upload_cv(Request $request){
         $user = Auth::user();
-        return view('home.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves()]);   
+        $profile = $user->profile($request->type);
+        return view('home.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves(), 'profile' => $profile]);   
     }
     public function looking_for(Request $request){
         $user = Auth::user();
@@ -2635,5 +2643,20 @@ class HomeController extends BaseController
             $indexSector += 1;
         }  
         return view('home.cv-builder', ['user' => $user, 'slug' => $slug, 'cvSections' => $cvSections, 'indexSector' => $indexSector]);
+    }
+    public function createEmploymentStatus(Request $request){
+        $user = Auth::user();
+        $profile = $user->profile($request->type);
+        return view('home.employment-status', ['user' => $user, 'profile' => $profile]);
+    }
+    public function addEmploymentStatus(Request $request){
+        $user = Auth::user();
+        $employmentStatus = new EmploymentStatus();
+        $employmentStatus->profile_id = $request->profile;
+        $employmentStatus->status = $request->employment_status;
+        if(isset($request->notice_period))
+            $employmentStatus->notice_period = $request->notice_period;
+        $employmentStatus->save();
+        return redirect($request->redirect);
     }
 }

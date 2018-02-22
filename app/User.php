@@ -9,6 +9,7 @@ use App\Model\Category;
 use App\Model\EmailCode;
 use App\Model\Favorite;
 use App\Model\Order;
+use App\Model\Advert;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
@@ -206,9 +207,44 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Advert')->where('status',1)->count();
     }
+    public function countEAdverts()
+    {
+       $hosts = [
+
+            'http://127.0.0.1:9200'        // SSL to localhost
+        ];
+        $client = \Elasticsearch\ClientBuilder::create()// Instantiate a new ClientBuilder
+        ->setHosts($hosts)// Set the hosts
+        ->build();
+        $musts=array();
+        $musts['user_id']= [
+            'match' => [
+                'user_id' => $this->id
+            ]
+        ];
+        $params = [
+            'index' => 'adverts',
+            'type' => 'advert',
+            'body' => [
+                'query' => [
+                    'bool' => [
+                        'must' => array_values($musts),
+                   /*     'filter' => $filte */
+                    ]
+                ]/*,
+                "sort"=> $sort*/
+            ]
+        ];
+        $response = $client->search($params);
+        return $response['hits']['total'];  
+    }
     public function aadverts()
     {
         return $this->hasMany('App\Model\Advert')->where('status',3)->orderby('id','desc');
+    }
+    public function allAdverts()
+    {
+        return $this->hasMany('App\Model\Advert')->orderby('id','desc');
     }
     public function jobs()
     {

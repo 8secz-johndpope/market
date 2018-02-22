@@ -148,7 +148,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-description">Description</a></li>
                         @if($advert->has_meta('features'))
-                            <li><a data-toggle="tab" href="#tap-other-info">Features</a></li>
+                            <li><a data-toggle="tab" href="#tap-other-info">Key Information</a></li>
                         @endif
                         @if($advert->has_meta('key_facts'))
                             <li><a data-toggle="tab" href="#tap-key-facts">Performance</a></li>

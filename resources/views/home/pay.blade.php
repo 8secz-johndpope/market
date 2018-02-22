@@ -165,6 +165,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-sm-offset-6 col-sm-6 button-pay">
                             <button class="btn btn-submit" type="submit">Pay Now</button>
                         </div>
@@ -233,7 +234,7 @@
                         <div class="pay-container">
                             <form id="payment-form" action="/user/payment/invoice/stripe/{{$invoice->id}}" method="post">
                                 {{ csrf_field() }}
-                                <input type="hidden" name="card" value="{{$def['id']}}" id="card">
+                                <input type="hidden" name="card" value="{{($def != null) ? $def['id'] : ''}}" id="card">
                                 <input type="hidden" name="nonce" id="nonce">
                                 <button class="btn btn-submit" type="submit">Pay Now</button>
                             </form>
@@ -301,7 +302,7 @@
                                     </div>
                                 </div>
                                 @endif
-                                <!-- <div class="pay-method" data-mp-id="new-cc">
+                                <div class="pay-method" data-mp-id="new-cc">
                                     <div class="col-l-p">
                                         <div class="radio-l">
                                             <input type="radio" name="pay-meth-radio" id="new-card">
@@ -324,7 +325,7 @@
                                                     <li class="discover"></li>
                                                     <li class="americaexpress"></li>
                                                     <li class="maestro"></li>
-                                                </ul>
+                                                </ul> -->
                                             </div>
                                             <div class="fs-edit">
                                                 <button type="button" class="fs-edit-btn img-btn">
@@ -334,11 +335,12 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--
                                 <div id="cc-new-ctr">
                                     <div id="inst-details" class="bdr-btm">
                                         <form action="/user/cards/add" method="post">
                                         <input name="redirect" type="hidden" value="/pay/invoice/{{$invoice->id}}">
-                                        <input name="address" type="hidden" value="{{$user->address->id}}">
+                                        <input name="address" type="hidden" value="{{($user->address) ? $user->address->id : ''}}">
                                         {{ csrf_field() }} 
                                         <div id="inst-error"></div>
                                         <div id="card-fields">
@@ -438,7 +440,6 @@
                                 <tr><td>{{$item->title}}</td><td>{{$item->amount/100}}</td></tr>
                             @endforeach
                         </table>
-
                     <div>
                         @foreach($user->addresses as $address)
                             <div class="form-check">
@@ -451,6 +452,7 @@
                     </div>
 
                 </div>
+
                 <div class="col-sm-4">
                     <table class="table">
 

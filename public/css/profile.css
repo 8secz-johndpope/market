@@ -673,6 +673,7 @@ footer{
     top: 21px;
     font-weight: 600;
 }
+
 @media (max-width: 767px){
     .ad-applicant-picture{
         position: relative;

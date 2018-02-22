@@ -105,8 +105,10 @@ class AdminController extends BaseController
 
     }
     public function users(Request $request){
-        $users = User::orderBy('id','desc')->paginate(20);
-        $total = User::count();
+        $users = User::orderBy('id', 'desc')->paginate(20);
+        //$this->fixedUserIdsElastic($users);
+        $total =  $users->total();
+        //$total = User::count();
         return view('admin.users',['users'=>$users,'total'=>$total]);
     }
     public function contracts(Request $request){
@@ -117,7 +119,8 @@ class AdminController extends BaseController
     public function adverts(Request $request){
         $reports = Report::all();
         $adverts = Advert::where('status','>',0)->where('user_id','>',0)->orderBy('id','desc')->paginate(20);
-        $total =  Advert::where('status','>',0)->where('user_id','>',0)->count();
+        //$total =  Advert::where('status','>',0)->where('user_id','>',0)->count();
+        $total = $adverts->total();
         return view('admin.adverts',['adverts'=>$adverts,'total'=>$total,'reports'=>$reports]);
     }
     public function iam(Request $request){
@@ -187,4 +190,24 @@ class AdminController extends BaseController
 
         return redirect('/admin/manage/adverts');
     }
+    private function fixedUserIdsElastic($users){
+        $body = array();
+        foreach ($users as $user) {
+            $adverts = $user->allAdverts;
+            foreach ($adverts as $advert) {
+                $body['user_id'] = $advert->user_id;
+                $params = [
+                    'index' => 'adverts',
+                    'type' => 'advert',
+                    'id' => $advert->elastic,
+                    'body' => [
+                        'doc' => $body
+                    ]
+
+                ];
+                $response = $this->client->update($params);
+            }
+        }
+    }
+    
 }
