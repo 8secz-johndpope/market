@@ -125,7 +125,7 @@
                               @for($i = 0; $i < 7; $i++)
                               <td>
                                 <div class="checkbox">
-                                  <input type="checkbox" name="before_school[]" id="before-school-{{$i}}" value="{{$i}}" {{($profile->availibility->availibility_time(0,$i) != null) ? 'checked' : ''}}>
+                                  <input type="checkbox" name="before_school[]" id="before-school-{{$i}}" value="{{$i}}" {{(isset($profile->availibility) && $profile->availibility->availibility_time(0,$i) != null) ? 'checked' : ''}}>
                                   <label for="before-school-{{$i}}"></label>
                                 </div>
                               </td>
@@ -139,7 +139,7 @@
                               @for($i = 0; $i < 7; $i++)
                               <td>
                                 <div class="checkbox">
-                                  <input type="checkbox" name="morning[]" id="morning-{{$i}}" value="{{$i}}" {{($profile->availibility->availibility_time(1,$i) != null) ? 'checked' : ''}}>
+                                  <input type="checkbox" name="morning[]" id="morning-{{$i}}" value="{{$i}}" {{(isset($profile->availibility) && $profile->availibility->availibility_time(1,$i) != null) ? 'checked' : ''}}>
                                    <label for="morning-{{$i}}"></label>
                                 </div>
                               </td>
@@ -152,7 +152,7 @@
                               @for($i = 0; $i < 7; $i++)
                               <td>
                                 <div class="checkbox">
-                                  <input type="checkbox" name="noon[]" id="noon-{{$i}}" value="{{$i}}" {{($profile->availibility->availibility_time(2,$i) != null) ? 'checked' : ''}}>
+                                  <input type="checkbox" name="noon[]" id="noon-{{$i}}" value="{{$i}}" {{(isset($profile->availibility) && $profile->availibility->availibility_time(2,$i) != null) ? 'checked' : ''}}>
                                    <label for="noon-{{$i}}"></label>
                                 </div>
                               </td>
@@ -165,7 +165,7 @@
                               @for($i = 0; $i < 7; $i++)
                               <td>
                                 <div class="checkbox">
-                                  <input type="checkbox" name="afternoon[]" id="afternoon-{{$i}}" value="{{$i}}" {{($profile->availibility->availibility_time(3,$i) != null) ? 'checked' : ''}}>
+                                  <input type="checkbox" name="afternoon[]" id="afternoon-{{$i}}" value="{{$i}}" {{(isset($profile->availibility) && $profile->availibility->availibility_time(3,$i) != null) ? 'checked' : ''}}>
                                   <label for="afternoon-{{$i}}"></label>
                                 </div>
                               </td>
@@ -178,7 +178,7 @@
                               @for($i = 0; $i < 7; $i++)
                               <td>
                                 <div class="checkbox">
-                                  <input type="checkbox" name="after_school[]" id="after-school-{{$i}}" value="{{$i}}" {{($profile->availibility->availibility_time(4,$i) != null) ? 'checked' : ''}}>
+                                  <input type="checkbox" name="after_school[]" id="after-school-{{$i}}" value="{{$i}}" {{(isset($profile->availibility) && $profile->availibility->availibility_time(4,$i) != null) ? 'checked' : ''}}>
                                   <label for="after-school-{{$i}}"></label>
                                 </div>
                               </td>
@@ -191,7 +191,7 @@
                               @for($i = 0; $i < 7; $i++)
                               <td>
                                 <div class="checkbox">
-                                  <input type="checkbox" name="evening[]" id="evening-{{$i}}" value="{{$i}}" {{($profile->availibility->availibility_time(5,$i) != null) ? 'checked' : ''}}>
+                                  <input type="checkbox" name="evening[]" id="evening-{{$i}}" value="{{$i}}" {{(isset($profile->availibility) && $profile->availibility->availibility_time(5,$i) != null) ? 'checked' : ''}}>
                                   <label for="evening-{{$i}}"></label>
                                 </div>
                               </td>
@@ -204,7 +204,7 @@
                               @for($i = 0; $i < 7; $i++)
                               <td>
                                 <div class="checkbox">
-                                  <input type="checkbox" name="night[]" id="night-{{$i}}" value="{{$i}}" {{($profile->availibility->availibility_time(6,$i) != null) ? 'checked' : ''}}>
+                                  <input type="checkbox" name="night[]" id="night-{{$i}}" value="{{$i}}" {{(isset($profile->availibility) && $profile->availibility->availibility_time(6,$i) != null) ? 'checked' : ''}}>
                                   <label for="night-{{$i}}"></label>
                                 </div>
                               </td>
