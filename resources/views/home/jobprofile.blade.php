@@ -260,7 +260,7 @@
                     <div class="content row">
                         <div class="col-xs-12 col-sm-6">
                             <div class="employment-status">
-                                @if($profile->employmentStatus == null)
+                                @if($profile->employmentStatus == null || $profile->employmentStatus->status == null)
                                 <h3 class="title">Employment status</h3>
                                 <p class="data">Unemployed</p>
                                 @else
