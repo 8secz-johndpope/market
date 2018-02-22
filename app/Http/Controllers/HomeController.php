@@ -47,6 +47,8 @@ use App\Model\Category;
 use App\Model\Advert;
 use App\Model\LookingFor;
 use App\Model\WorkExperience;
+use App\Model\Availibility;
+use App\Model\AvailibilityTime;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
@@ -2653,8 +2655,74 @@ class HomeController extends BaseController
     public function addEmploymentStatus(Request $request){
         $user = Auth::user();
         $employmentStatus = new EmploymentStatus();
+        $profile = Profile::find($request->profile);
         $employmentStatus->profile_id = $request->profile;
         $employmentStatus->status = $request->employment_status;
+        if($profile->type == 'social-childcare'){
+            $availibility = $profile->availibility;
+            if($availibility == null){
+                $availibility = new Availibility();
+                $profile->availibity = $availibility;
+            }
+            if(isset($request->holiday_availibility))
+                $availibility->holidays = $request->holiday_availibility;
+            if(isset($request->night_availibility))
+                $availibility->night = $request->night_availibility;
+            if(isset($request->emergency_availibility))
+                $availibility->emergency = $request->emergency_availibility;
+            $availibility->profile_id = $profile->id;
+            $availibility->save();
+            foreach($request->before_school as $beforeSchool){
+                $availibilityTime = new AvailibilityTime();
+                $availibilityTime->availibility_id = $availibility->id;
+                $availibilityTime->day_id = $beforeSchool;
+                $availibilityTime->time_id = 0;
+                $availibility->availibility_times()->save($availibilityTime);
+            }
+            foreach($request->morning as $morning){
+                $availibilityTime = new AvailibilityTime();
+                $availibilityTime->availibility_id = $availibility->id;
+                $availibilityTime->day_id = $morning;
+                $availibilityTime->time_id = 1;
+                $availibility->availibility_times()->save($availibilityTime);
+            }
+            foreach($request->noon as $noon){
+                $availibilityTime = new AvailibilityTime();
+                $availibilityTime->availibility_id = $availibility->id;
+                $availibilityTime->day_id = $noon;
+                $availibilityTime->time_id = 2;
+                $availibility->availibility_times()->save($availibilityTime);
+            }
+            foreach($request->afternoon as $afternoon){
+                $availibilityTime = new AvailibilityTime();
+                $availibilityTime->availibility_id = $availibility->id;
+                $availibilityTime->day_id = $afternoon;
+                $availibilityTime->time_id = 3;
+                $availibilityTime->save();
+            }
+            foreach($request->after_school as $afterSchool){
+                $availibilityTime = new AvailibilityTime();
+                $availibilityTime->availibility_id = $availibility->id;
+                $availibilityTime->day_id = $afterSchool;
+                $availibilityTime->time_id = 4;
+                $availibilityTime->save();
+            }
+            foreach($request->evening as $evening){
+                $availibilityTime = new AvailibilityTime();
+                $availibilityTime->availibility_id = $availibility->id;
+                $availibilityTime->day_id = $evening;
+                $availibilityTime->time_id = 5;
+                $availibilityTime->save();
+            }
+            foreach($request->night as $night){
+                $availibilityTime = new AvailibilityTime();
+                $availibilityTime->availibility_id = $availibility->id;
+                $availibilityTime->day_id = $night;
+                $availibilityTime->time_id = 6;
+                $availibilityTime->save();
+            }
+            
+        }
         if(isset($request->notice_period))
             $employmentStatus->notice_period = $request->notice_period;
         $employmentStatus->save();
