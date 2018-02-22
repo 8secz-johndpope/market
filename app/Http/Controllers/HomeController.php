@@ -2672,56 +2672,125 @@ class HomeController extends BaseController
                 $availibility->emergency = $request->emergency_availibility;
             $availibility->profile_id = $profile->id;
             $availibility->save();
-            foreach($request->before_school as $beforeSchool){
-                $availibilityTime = new AvailibilityTime();
-                $availibilityTime->availibility_id = $availibility->id;
-                $availibilityTime->day_id = $beforeSchool;
-                $availibilityTime->time_id = 0;
-                $availibility->availibility_times()->save($availibilityTime);
+            for($i=0; $i<7; $i++){
+                $availibilityTime = $availibility->availibility_time(0, $i); 
+                if(in_array($i, $request->before_school)){
+                    if($availibilityTime == null){
+                        $availibilityTime = new AvailibilityTime();
+                        $availibilityTime->availibility_id = $availibility->id;
+                        $availibilityTime->day_id = $i;
+                        $availibilityTime->time_id = 0;
+                        $availibility->availibility_times()->save($availibilityTime);
+                    }
+                }
+                else{
+                    if($availibilityTime != null){
+                        $availibilityTime->delete();
+                    }
+                }
             }
-            foreach($request->morning as $morning){
-                $availibilityTime = new AvailibilityTime();
-                $availibilityTime->availibility_id = $availibility->id;
-                $availibilityTime->day_id = $morning;
-                $availibilityTime->time_id = 1;
-                $availibility->availibility_times()->save($availibilityTime);
+            for($i=0; $i<7; $i++){
+                $availibilityTime = $availibility->availibility_time(1, $i); 
+                if(isset($request->morning) && in_array($i, $request->morning)){
+                    if($availibilityTime == null){
+                        $availibilityTime = new AvailibilityTime();
+                        $availibilityTime->availibility_id = $availibility->id;
+                        $availibilityTime->day_id = $i;
+                        $availibilityTime->time_id = 1;
+                        $availibility->availibility_times()->save($availibilityTime);
+                    }
+                }
+                else{
+                    if($availibilityTime != null){
+                        $availibilityTime->delete();
+                    }
+                }
             }
-            foreach($request->noon as $noon){
-                $availibilityTime = new AvailibilityTime();
-                $availibilityTime->availibility_id = $availibility->id;
-                $availibilityTime->day_id = $noon;
-                $availibilityTime->time_id = 2;
-                $availibility->availibility_times()->save($availibilityTime);
+            for($i=0; $i<7; $i++){
+                $availibilityTime = $availibility->availibility_time(2, $i); 
+                if(isset($request->noon) && in_array($i, $request->noon)){
+                    if($availibilityTime == null){
+                        $availibilityTime = new AvailibilityTime();
+                        $availibilityTime->availibility_id = $availibility->id;
+                        $availibilityTime->day_id = $i;
+                        $availibilityTime->time_id = 2;
+                        $availibility->availibility_times()->save($availibilityTime);
+                    }
+                }
+                else{
+                    if($availibilityTime != null){
+                        $availibilityTime->delete();
+                    }
+                }
             }
-            foreach($request->afternoon as $afternoon){
-                $availibilityTime = new AvailibilityTime();
-                $availibilityTime->availibility_id = $availibility->id;
-                $availibilityTime->day_id = $afternoon;
-                $availibilityTime->time_id = 3;
-                $availibilityTime->save();
+            for($i=0; $i<7; $i++){
+                $availibilityTime = $availibility->availibility_time(3, $i); 
+                if(isset($request->afternoon) && in_array($i, $request->afternoon)){
+                    if($availibilityTime == null){
+                        $availibilityTime = new AvailibilityTime();
+                        $availibilityTime->availibility_id = $availibility->id;
+                        $availibilityTime->day_id = $i;
+                        $availibilityTime->time_id = 3;
+                        $availibility->availibility_times()->save($availibilityTime);
+                    }
+                }
+                else{
+                    if($availibilityTime != null){
+                        $availibilityTime->delete();
+                    }
+                }
             }
-            foreach($request->after_school as $afterSchool){
-                $availibilityTime = new AvailibilityTime();
-                $availibilityTime->availibility_id = $availibility->id;
-                $availibilityTime->day_id = $afterSchool;
-                $availibilityTime->time_id = 4;
-                $availibilityTime->save();
+            for($i=0; $i<7; $i++){
+                $availibilityTime = $availibility->availibility_time(4, $i); 
+                if(isset($request->after_school) && in_array($i, $request->after_school)){
+                    if($availibilityTime == null){
+                        $availibilityTime = new AvailibilityTime();
+                        $availibilityTime->availibility_id = $availibility->id;
+                        $availibilityTime->day_id = $i;
+                        $availibilityTime->time_id = 4;
+                        $availibility->availibility_times()->save($availibilityTime);
+                    }
+                }
+                else{
+                    if($availibilityTime != null){
+                        $availibilityTime->delete();
+                    }
+                }
             }
-            foreach($request->evening as $evening){
-                $availibilityTime = new AvailibilityTime();
-                $availibilityTime->availibility_id = $availibility->id;
-                $availibilityTime->day_id = $evening;
-                $availibilityTime->time_id = 5;
-                $availibilityTime->save();
+            for($i=0; $i<7; $i++){
+                $availibilityTime = $availibility->availibility_time(5, $i); 
+                if(isset($request->evening) && in_array($i, $request->evening)){
+                    if($availibilityTime == null){
+                        $availibilityTime = new AvailibilityTime();
+                        $availibilityTime->availibility_id = $availibility->id;
+                        $availibilityTime->day_id = $i;
+                        $availibilityTime->time_id = 5;
+                        $availibility->availibility_times()->save($availibilityTime);
+                    }
+                }
+                else{
+                    if($availibilityTime != null){
+                        $availibilityTime->delete();
+                    }
+                }
             }
-            foreach($request->night as $night){
-                $availibilityTime = new AvailibilityTime();
-                $availibilityTime->availibility_id = $availibility->id;
-                $availibilityTime->day_id = $night;
-                $availibilityTime->time_id = 6;
-                $availibilityTime->save();
+            for($i=0; $i<7; $i++){
+                $availibilityTime = $availibility->availibility_time(6, $i); 
+                if(isset($request->night) && in_array($i, $request->night)){
+                    if($availibilityTime == null){
+                        $availibilityTime = new AvailibilityTime();
+                        $availibilityTime->availibility_id = $availibility->id;
+                        $availibilityTime->day_id = $i;
+                        $availibilityTime->time_id = 6;
+                        $availibility->availibility_times()->save($availibilityTime);
+                    }
+                }
+                else{
+                    if($availibilityTime != null){
+                        $availibilityTime->delete();
+                    }
+                }
             }
-            
         }
         if(isset($request->notice_period))
             $employmentStatus->notice_period = $request->notice_period;
