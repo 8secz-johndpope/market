@@ -922,6 +922,7 @@ class HomeController extends BaseController
     public function profile(Request $request,$type)
     {
         $profileTypes = ['general', 'social-childcare', 'sub-contractor'];
+        $employmentStatus = ['- select -, Employed (full-time)', 'Employed (part-time)', 'Employed (temp/contract)', 'Full-time Education', 'Unemployed'];
         $user = Auth::user();
         if($user->profile($type)===null){
             $profile = new Profile();
@@ -930,7 +931,7 @@ class HomeController extends BaseController
             $profile->save();
         }
         $totalApplication = $user->applications()->count();
-        return view('home.jobprofile',['profile'=>$user->profile($type),'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication]);
+        return view('home.jobprofile',['profile'=>$user->profile($type),'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication, 'employmentStatus' => $employmentStatus]);
     }
 
     public function view_profile(Request $request,$id)

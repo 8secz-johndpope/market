@@ -78,7 +78,7 @@
                 @endforeach
                 </tbody>
             </table>
-
+            {{$adverts->links()}}
 
         </div>
 

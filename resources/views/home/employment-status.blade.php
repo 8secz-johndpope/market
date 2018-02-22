@@ -71,6 +71,13 @@
               <div class="col-xs-12 col-sm-6">
               </div>
             </div>
+            @if($profile->type == 'social-childcare')
+            <div class="row">
+              <div class="col-xs-12 availability-inscription">
+                
+              </div>
+            </div>
+            @endif
             <div class="action-container">
               <button type="button" class="btn-inverse">Cancel</button>
               <button type="submit" class="btn btn-submit">Save changes</button>

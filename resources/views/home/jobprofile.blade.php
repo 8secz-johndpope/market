@@ -62,7 +62,7 @@
                             <div class="wrapper-details-profile">
                                 <div class="wrapper-details-content">
                                     <p class="details-item name">{{$user->name}}</p>
-                                    <p class="details-item title-job">Engineer Computer</p>
+                                    <!--<p class="details-item title-job">Engineer Computer</p> -->
                                     <p class="details-item">{{$user->email}}</p>
                                     <p class="details-item">{{$user->phone}}</p>
                                 </div>
@@ -265,7 +265,7 @@
                                 <p class="data">Unemployed</p>
                                 @else
                                 <h3 class="title">Employment status</h3>
-                                <p class="data">{{$profile->employmentStatus->status}}</p>
+                                <p class="data">{{$employmentStatus[$profile->employmentStatus->status - 1]}}</p>
                                 @endif
                             </div>
                         </div>
