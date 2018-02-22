@@ -301,7 +301,7 @@
                                                 <td class="align-left active">6h / 9h</td> 
                                                 @for($i=0; $i < 7; $i++)
                                                 <td class="selected">
-                                                    @if($profile->availibility->availibility_time(0, $i) != null)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
                                                         <span class="glyphicon glyphicon-ok green"></span>
                                                     @else 
                                                         <span class="glyphicon green"></span>
@@ -313,7 +313,7 @@
                                                 <td class="align-left active">9am - 12am</td> 
                                                  @for($i=0; $i < 7; $i++)
                                                 <td class="selected">
-                                                    @if($profile->availibility->availibility_time(1, $i) != null)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(1, $i) != null)
                                                         <span class="glyphicon glyphicon-ok green"></span>
                                                     @else 
                                                         <span class="glyphicon green"></span>
@@ -326,7 +326,7 @@
                                                 </td>
                                                 @for($i=0; $i < 7; $i++)
                                                 <td class="selected">
-                                                    @if($profile->availibility->availibility_time(2, $i) != null)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(2, $i) != null)
                                                         <span class="glyphicon glyphicon-ok green"></span>
                                                     @else 
                                                         <span class="glyphicon green"></span>
@@ -338,7 +338,7 @@
                                                 <td class="align-left active">2pm - 4pm</td> 
                                                 @for($i=0; $i < 7; $i++)
                                                 <td class="selected">
-                                                    @if($profile->availibility->availibility_time(3, $i) != null)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(3, $i) != null)
                                                         <span class="glyphicon glyphicon-ok green"></span>
                                                     @else 
                                                         <span class="glyphicon green"></span>
@@ -350,7 +350,7 @@
                                                 <td class="align-left active">4pm - 6pm</td> 
                                                 @for($i=0; $i < 7; $i++)
                                                 <td class="selected">
-                                                    @if($profile->availibility->availibility_time(4, $i) != null)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(4, $i) != null)
                                                         <span class="glyphicon glyphicon-ok green"></span>
                                                     @else 
                                                         <span class="glyphicon green"></span>
@@ -362,7 +362,7 @@
                                                 <td class="align-left active">6pm - 8pm</td> 
                                                 @for($i=0; $i < 7; $i++)
                                                 <td class="selected">
-                                                    @if($profile->availibility->availibility_time(5, $i) != null)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(5, $i) != null)
                                                         <span class="glyphicon glyphicon-ok green"></span>
                                                     @else 
                                                         <span class="glyphicon green"></span>
@@ -374,7 +374,7 @@
                                                 <td class="align-left active">Night</td> 
                                                 @for($i=0; $i < 7; $i++)
                                                 <td class="selected">
-                                                    @if($profile->availibility->availibility_time(6, $i) != null)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(6, $i) != null)
                                                         <span class="glyphicon glyphicon-ok green"></span>
                                                     @else 
                                                         <span class="glyphicon green"></span>
