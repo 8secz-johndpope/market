@@ -265,7 +265,7 @@
                                 <p class="data">Unemployed</p>
                                 @else
                                 <h3 class="title">Employment status</h3>
-                                <p class="data">{{$employmentStatus[$profile->employmentStatus->status - 1]}}</p>
+                                <p class="data">{{$employmentStatus[$profile->employmentStatus->status]}}</p>
                                 @endif
                             </div>
                         </div>
