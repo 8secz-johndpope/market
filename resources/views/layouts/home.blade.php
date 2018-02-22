@@ -645,7 +645,7 @@
         var exampleSocket;
         reconnect();
         function reconnect() {
-            exampleSocket = new WebSocket("wss://{{env('APP_HOST')}}:8443", "protocolOne",{ 'handshakeTimeout' : 10000});
+            exampleSocket = new WebSocket("wss://{{env('APP_HOST')}}:8443", "protocolOne",{ 'handshakeTimeout' : 2000});
             exampleSocket.onopen = function (event) {
 
 
