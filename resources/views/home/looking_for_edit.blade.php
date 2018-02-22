@@ -393,6 +393,16 @@
     $('.more-specialism-actions').show();
     $('.specialisms-list').next().hide();
   });
+  $("#pac-input").autocomplete({
+        paramName :'q',
+        serviceUrl: '/api/lsuggest',
+        onSelect: function (suggestion) {
+            $("#location_slug").val(suggestion.slug);
+            $("#submitform").click();
+            //   window.location.href = "{{env('APP_URL')}}/"+suggestion.slug+"?q="+suggestion.value
+            // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+        }
+    });
   function loadSubSectors(){
     sectors = [];
     @foreach($jobChildren as $job)
