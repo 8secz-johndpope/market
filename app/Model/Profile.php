@@ -28,4 +28,7 @@ class Profile extends Model
 	public function employmentStatus(){
 		return $this->hasOne('App\Model\EmploymentStatus');
 	}
+	public function availibities(){
+		return $this->hasMany('App\Model\Availibility');
+	}
 }
