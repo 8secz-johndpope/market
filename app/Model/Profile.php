@@ -31,4 +31,10 @@ class Profile extends Model
 	public function availibility(){
 		return $this->hasOne('App\Model\Availibility');
 	}
+	public function socialcareTasksHelp(){
+		return $this->belongsToMany('App\Model\SocialcareTaskHelp', 'profile_socialcare_task_help')->withPivot('value');
+	}
+	public function socialCareTaskHelp($idTask){
+		return $this->socialcareTasksHelp()->where('socialcare_task_help_id', $idTask)->first();
+	}
 }

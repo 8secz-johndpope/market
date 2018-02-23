@@ -49,6 +49,7 @@ use App\Model\LookingFor;
 use App\Model\WorkExperience;
 use App\Model\Availibility;
 use App\Model\AvailibilityTime;
+use App\Model\SocialcareTaskHelp;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
@@ -926,14 +927,23 @@ class HomeController extends BaseController
         $profileTypes = ['general', 'social-childcare', 'sub-contractor'];
         $employmentStatus = ['- select -, Employed (full-time)', 'Employed (part-time)', 'Employed (temp/contract)', 'Full-time Education', 'Unemployed'];
         $user = Auth::user();
-        if($user->profile($type)===null){
+        $profile = $user->profile($type);
+        if($profile===null){
             $profile = new Profile();
             $profile->user_id=$user->id;
             $profile->type = $type;
             $profile->save();
         }
+        $tasksHelp = SocialcareTaskHelp::all();
+        $tasksHelpValues = array();
+        foreach ($tasksHelp as $taskHelp) {
+            $value = 0;
+            if($profile->socialcareTaskHelp($taskHelp->id) != null)
+                $value = $profile->socialcareTaskHelp($taskHelp->id)->pivot->value;
+            $tasksHelpValues[$taskHelp->id] = $value;
+        }
         $totalApplication = $user->applications()->count();
-        return view('home.jobprofile',['profile'=>$user->profile($type),'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication, 'employmentStatus' => $employmentStatus]);
+        return view('home.jobprofile',['profile'=>$profile,'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication, 'employmentStatus' => $employmentStatus, 'tasksHelp' => $tasksHelp, 'tasksHelpValues' => $tasksHelpValues]);
     }
 
     public function view_profile(Request $request,$id)
