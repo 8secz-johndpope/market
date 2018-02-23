@@ -26,7 +26,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <form action="/user/employment-status/add" method="post">
+        <form action="/user/save/tasks-help-services" method="post">
           <input name="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
           {{ csrf_field() }}
           <input name="profile" type="hidden" value="{{$profile->id}}">
@@ -40,14 +40,18 @@
                   <div class="form-group">
                     <div class="tasks-container">
                       @foreach($tasksHelp as $task)
-                      <div class="task">
-                        <input type="radio" name="{{str_replace("-", "_", $task->slug)}}" id="{{$task->slug}}-3" value="3">
-                        <label for="{{$task->slug}}-3"></label>
-                        <input type="radio" name="{{str_replace("-", "_", $task->slug)}}" id="{{$task->slug}}-2" value="2">
-                        <label for="{{$task->slug}}-2"></label>
-                        <input type="radio" name="{{str_replace("-", "_", $task->slug)}}" id="{{$task->slug}}-1" value="1">
-                        <label for="{{$task->slug}}-1"></label>
-                        <span>{{$task->title}}</span>
+                      <div class="task row">
+                        <div class="col-md-2">
+                          <input type="radio" name="{{str_replace("-", "_", $task->slug)}}" id="{{$task->slug}}-3" value="3">
+                          <label for="{{$task->slug}}-3"></label>
+                          <input type="radio" name="{{str_replace("-", "_", $task->slug)}}" id="{{$task->slug}}-2" value="2">
+                          <label for="{{$task->slug}}-2"></label>
+                          <input type="radio" name="{{str_replace("-", "_", $task->slug)}}" id="{{$task->slug}}-1" value="1">
+                          <label for="{{$task->slug}}-1"></label>
+                        </div>
+                        <div class="col-md-10">
+                          <span>{{$task->title}}</span>
+                        </div>
                       </div>
                       @endforeach
                     </div>
@@ -55,7 +59,6 @@
                 </div>
               </div>
             </div>
-            @if($profile->type == 'social-childcare')
             <div class="row">
               <div class="col-xs-12 availability-inscription">
                 <div class="section">
@@ -93,7 +96,6 @@
               </div>
             </div>
           </div>
-          @endif
           <div class="action-container">
             <button type="button" class="btn-inverse">Cancel</button>
             <button type="submit" class="btn btn-submit">Save changes</button>
