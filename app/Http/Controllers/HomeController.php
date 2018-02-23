@@ -2811,4 +2811,15 @@ class HomeController extends BaseController
         $employmentStatus->save();
         return redirect($request->redirect);
     }
+    public function createTasksCanHelp(Request $request){
+        $user = Auth::user();
+        $tasksHelp = SocialcareTaskHelp::all();
+        $profile = $user->profile($request->type);
+        return view('home.tasks-help-services', ['user' =>$user, 'tasksHelp' => $tasksHelp, 'profile' => $profile]);
+
+    }
+    public function saveTasksCanHelp(Request $request){
+        
+
+    }
 }
