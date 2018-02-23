@@ -547,7 +547,7 @@
 
 
         // Create the search box and link it to the UI element.
-        var input = document.getElementById('pac-input');
+        /*var input = document.getElementById('pac-input');
         if(input) {
             var searchBox = new google.maps.places.Autocomplete(input);
             searchBox.setComponentRestrictions(
@@ -564,24 +564,25 @@
                 lng.value = place.geometry.location.lng();
 
             });
-        }
+        }*/
 
     }
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWhXNJ7VlpNA64oFdUU4pmq3YLZC6Xqd4&libraries=places&callback=initAutocomplete"
         async defer></script>
-<script
+<!-- <script
         src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
+-->
 <script src="{{env('APP_URL')}}/js/jquery.autocomplete.js"></script>
 <script src="{{env('APP_URL')}}/js/aws-sdk.js"></script>
 <script src="{{env('APP_URL')}}/js/load.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
-    $('#sortable').sortable({placeholder: "ui-state-highlight",helper:'clone'});
+    //$('#sortable').sortable({placeholder: "ui-state-highlight",helper:'clone'});
     window.axios.defaults.headers.common = {
         'X-Requested-With': 'XMLHttpRequest',
     };
@@ -798,7 +799,7 @@
     $(".row-images").on('click','.cross-mark',function () {
         $(this).parent().remove();
     });
-    $(function() {
+    /*$(function() {
         var isDragging = false;
         $("a")
             .mousedown(function() {
@@ -816,7 +817,7 @@
             });
 
         $("ul").sortable();
-    });
+    }); */
     axios.get('/user/list/price')
         .then(function (response) {
             console.log(response);
@@ -979,6 +980,7 @@
     });*/
 
 </script>
+@yield('scripts')
 @if (!Auth::guest())
     <script>
         var token = '{{Auth::user()->access_token}}' ;

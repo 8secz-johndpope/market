@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', 'Create your cover letter')
 
@@ -85,14 +85,9 @@
                 <div class="section-content col-xs-12 col-sm-9">
                   <div class="locations-selector">
                     <ul class="locations">
-                      <li>
-                        <span class="location-name">London, South East England</span>
-                        <input type="hidden" name="prefferedlocation" id="prefferedlocation">
-                        <span class="location-remove small">Remove</span>
-                      </li>
                     </ul>
                     <div class="add-button">
-                      <button class="btn btn-inverse">
+                      <button class="btn btn-inverse" type="button">
                         <i class="glyphicon glyphicon-plus-sign"></i>
                         <span>Add another location</span>
                       </button>
@@ -259,9 +254,21 @@
     </div>
   </div>
 </div>
+@endsection
+@section('scripts')
 <script>
   var geocoder;
   var sectors;
+  $("#pac-input").autocomplete({
+        paramName :'q',
+        serviceUrl: '/api/lsuggest',
+        onSelect: function (suggestion) {
+            $(this).val(suggestion.value);
+            $(this).attr('data-ref', suggestion.data);
+            //   window.location.href = "{{env('APP_URL')}}/"+suggestion.slug+"?q="+suggestion.value
+            // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+        }
+    });
   $('.add-button button').click(function(e){
     e.preventDefault();
     $(this).parent().hide();
@@ -373,9 +380,10 @@
   $('.add-location button').click(function(e){
     e.preventDefault();
     var location = $("#pac-input").val();
+    var idLocation = $("#pac-input").attr('data-ref');
     var text = '<li>\n' +
                     '<span class="location-name">' + location + '</span>\n' 
-                    + '<input type="hidden" name="prefferedlocation" id="prefferedlocation">\n'
+                    + '<input type="hidden" name="prefferedlocation[]" id="prefferedlocation" value="' + idLocation + '">\n'
                     + '<span class="location-remove small">Remove</span>\n'
                   +'</li>';
     $('.locations').append(text);
@@ -393,16 +401,6 @@
     $('.more-specialism-actions').show();
     $('.specialisms-list').next().hide();
   });
-  $("#pac-input").autocomplete({
-        paramName :'q',
-        serviceUrl: '/api/lsuggest',
-        onSelect: function (suggestion) {
-            $("#location_slug").val(suggestion.slug);
-            $("#submitform").click();
-            //   window.location.href = "{{env('APP_URL')}}/"+suggestion.slug+"?q="+suggestion.value
-            // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-        }
-    });
   function loadSubSectors(){
     sectors = [];
     @foreach($jobChildren as $job)
