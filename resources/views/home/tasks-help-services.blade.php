@@ -42,11 +42,13 @@
                       @foreach($tasksHelp as $task)
                       <div class="task row">
                         <div class="col-md-2">
-                          <input type="radio" name="{{str_replace("-", "_", $task->slug)}}" id="{{$task->slug}}-3" value="3">
-                          <label for="{{$task->slug}}-3"></label>
-                          <input type="radio" name="{{str_replace("-", "_", $task->slug)}}" id="{{$task->slug}}-2" value="2">
+                          @for($i=1; $i < 4; $i++)
+                          <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-{{$i}}" value="{{$i}}" {{}}>
+                          <label for="{{$task->slug}}-{{$i}}"></label>
+                          @endfor
+                          <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-2" value="2">
                           <label for="{{$task->slug}}-2"></label>
-                          <input type="radio" name="{{str_replace("-", "_", $task->slug)}}" id="{{$task->slug}}-1" value="1">
+                          <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-1" value="1">
                           <label for="{{$task->slug}}-1"></label>
                         </div>
                         <div class="col-md-10">
@@ -67,30 +69,14 @@
                   </header>
                   <div class="content row">
                     <div class="col-xs-12 part">
+                      @foreach($servicesOffered as $service)
                       <div class="form-group">
                         <div class="checkbox checkbox-strar">
-                          <input type="checkbox" name="holiday_availibility" id="holiday_availibility" value="1" {{(isset($profile->availibility) && $profile->availibility->holidays == 1) ? 'checked' : ''}}>
-                          <label for="holiday_availibility">Tutoring</label>
+                          <input type="checkbox" name="services_offered[]" id="{{$service->slug}}" value="{{$service->id}}" {{($profile->socialcareServiceOffered($service->id) != null) ? 'checked' : ''}}>
+                          <label for="{{$service->slug}}">{{$service->title}}</label>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <div class="checkbox checkbox-strar">
-                          <input type="checkbox" name="nigth_availibility" id="night_availibility" value="1" {{(isset($profile->availibility) && $profile->availibility->night == 1) ? 'checked' : ''}}>
-                          <label for="night_availibility">Pet sitting</label>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="checkbox checkbox-strar">
-                          <input type="checkbox" name="emergency_availibility" id="emergency_availibility" value="1" {{(isset($profile->availibility) && $profile->availibility->emergency == 1) ? 'checked' : ''}}>
-                          <label for="emergency_availibility">Housekeeping</label>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="checkbox checkbox-strar">
-                          <input type="checkbox" name="emergency_availibility" id="emergency_availibility" value="1" {{(isset($profile->availibility) && $profile->availibility->emergency == 1) ? 'checked' : ''}}>
-                          <label for="emergency_availibility">Childcare</label>
-                        </div>
-                      </div>
+                      @endforeach
                     </div>
                   </div>
               </div>

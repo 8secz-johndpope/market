@@ -43,6 +43,9 @@
     background-color: #6001d2;
     border-color: #6001d2;
 }
+.services .service.active a{
+    color: #fff;
+}
 .task input[type=radio]{
     opacity: .011;
     -ms-filter: alpha(opacity=0.011);

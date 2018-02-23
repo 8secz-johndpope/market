@@ -37,4 +37,10 @@ class Profile extends Model
 	public function socialCareTaskHelp($idTask){
 		return $this->socialcareTasksHelp()->where('socialcare_task_help_id', $idTask)->first();
 	}
+	public function socialcareServicesOffered(){
+		return $this->belongsToMany('App\Model\SocialcareServiceOffered');
+	}
+	public function socialcareServiceOffered($idServiceOffered){
+		return $this->socialcareServicesOffered()->	where('socialcare_service_offered_id', $idServiceOffered)->first();
+	}
 }

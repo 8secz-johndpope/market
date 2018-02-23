@@ -543,28 +543,44 @@
                         <div class="experience-container">
                             <div>
                                 <ul class="services list-inline">
+                                    @if($profile->socialcareServiceOffered(1) != null)
+                                    <li class="service active">
+                                    @else
                                     <li class="service">
+                                    @endif
                                         <a>
                                             <span>
                                                 Tutoring
                                             </span>
                                         </a>
                                     </li>
+                                   @if($profile->socialcareServiceOffered(2) != null)
+                                    <li class="service active">
+                                    @else
                                     <li class="service">
+                                    @endif
                                         <a>
                                             <span>
                                                 Pet sitting
                                             </span>
                                         </a>
                                     </li>
+                                    @if($profile->socialcareServiceOffered(3) != null)
+                                    <li class="service active">
+                                    @else
                                     <li class="service">
+                                    @endif
                                         <a>
                                             <span>
                                                 Housekeeping
                                             </span>
                                         </a>
                                     </li>
+                                    @if($profile->socialcareServiceOffered(4) != null)
+                                    <li class="service active">
+                                    @else
                                     <li class="service">
+                                    @endif
                                         <a>
                                             <span>
                                                 Childcare
