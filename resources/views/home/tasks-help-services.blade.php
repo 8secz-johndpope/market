@@ -43,7 +43,7 @@
                       <div class="task row">
                         <div class="col-md-2">
                           @for($i=1; $i < 4; $i++)
-                          <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-{{$i}}" value="{{$i}}" {{}}>
+                          <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-{{$i}}" value="{{$i}}">
                           <label for="{{$task->slug}}-{{$i}}"></label>
                           @endfor
                           <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-2" value="2">

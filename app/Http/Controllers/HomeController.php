@@ -50,6 +50,7 @@ use App\Model\WorkExperience;
 use App\Model\Availibility;
 use App\Model\AvailibilityTime;
 use App\Model\SocialcareTaskHelp;
+use App\Model\SocialcareServiceOffered;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
@@ -2814,12 +2815,20 @@ class HomeController extends BaseController
     public function createTasksCanHelp(Request $request){
         $user = Auth::user();
         $tasksHelp = SocialcareTaskHelp::all();
+        $servicesOffered = SocialcareServiceOffered::all();
         $profile = $user->profile($request->type);
-        return view('home.tasks-help-services', ['user' =>$user, 'tasksHelp' => $tasksHelp, 'profile' => $profile]);
+        return view('home.tasks-help-services', ['user' =>$user, 'tasksHelp' => $tasksHelp, 'profile' => $profile, 'servicesOffered' => $servicesOffered]);
 
     }
-    public function saveTasksCanHelp(Request $request){
-        
-
+    public function saveTasksCanHelpServices(Request $request){
+        $servicesOffered = $request->services_offered;
+        $profile = Profile::find($request->profile);
+        $profile->socialcareServicesOffered()->sync($servicesOffered);
+        $arrayTask = array();
+        foreach ($request->task as $id => $task) {
+            $arrayTask[$id] = ['value' => $task];
+        }
+        $profile->socialcareTasksHelp()->sync($arrayTask);
+        return redirect($request->redirect);
     }
 }
