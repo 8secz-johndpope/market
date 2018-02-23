@@ -19,8 +19,29 @@
 .container-details-profile, .container-looking-for-options, .container-status-availability, .container-work-experience {
     background: #EBEBEB;
 }
-.container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability, .container-cover-letter, .container-work-experience{
+.container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability, .container-cover-letter, .container-work-experience, .container-task-can-help{
 	padding: 70px 0;
+}
+.services .service {
+    padding: 6px 10px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.services .service a {
+    color: #323524;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    text-decoration: none;
+}
+.services .service.active {
+    padding: 6px 10px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #6001d2;
+    border-color: #6001d2;
 }
 .template-content {
     height: 300px;
@@ -33,7 +54,7 @@
 	-webkit-box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
     box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
 }
-.container-templates-options, .container-cvs, .container-cover-letter {
+.container-templates-options, .container-cvs, .container-cover-letter, .container-task-can-help {
     background-color: #f5f5f5;
 }
 .btn-info, .btn-info:hover {
@@ -680,6 +701,25 @@
 }
 .availability-tab .table-bordered>tbody>tr>td:not(.active) {
     background: #fff;
+}
+.ui-rating {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 0;
+}
+.ui-rating .rating-star {
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    vertical-align: bottom;
+    text-decoration: none;
+}
+.ui-rating .rating-star-full {
+    background-image: url(/css/star.png);
+}
+.ui-rating .rating-star-empty {
+    background-image: url(/css/empty-star.png);
 }
 input[type=checkbox]~label {
     position: relative;
