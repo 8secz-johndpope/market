@@ -2611,6 +2611,10 @@ class HomeController extends BaseController
         $lookingFor->jobTypes()->attach($request->contract_type);
         $lookingFor->sectors()->detach();
         $lookingFor->sectors()->attach($request->edit_subsector);
+        if(isset($request->prefferedlocation)){
+           $lookingFor->locations()->detach();
+           $lookingFor->locations()->attach($request->prefferedlocation);
+        }
         if(isset($request->is_full_time))
             $lookingFor->full_time = 1;
         if(isset($request->is_part_time))

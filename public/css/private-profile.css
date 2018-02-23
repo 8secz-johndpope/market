@@ -678,6 +678,9 @@
 .body.background-body {
     min-height: calc(100vh - 72px);
 }
+.availability-tab .table-bordered>tbody>tr>td:not(.active) {
+    background: #fff;
+}
 input[type=checkbox]~label {
     position: relative;
 }

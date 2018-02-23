@@ -13,9 +13,9 @@ use Illuminate\Database\Eloquent\Model;
 class LookingFor extends Model
 {
 	public $timestamps = false;
-	public function locationsPreferred()
+	public function locations()
 	{
-		return $this->hasMany('App\Model\Location');
+		return $this->belongsToMany('App\Model\Location', 'looking_for_location');
 	}
 	public function jobTypes()
 	{

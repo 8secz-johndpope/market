@@ -85,6 +85,13 @@
                 <div class="section-content col-xs-12 col-sm-9">
                   <div class="locations-selector">
                     <ul class="locations">
+                      @foreach($lookingFor->locations as $location)
+                      <li>
+                        <span class="location-name">$location->name</span>
+                        <input type="hidden" name="prefferedlocation[]" id="prefferedlocation" value="{{$location->id}}">
+                        <span class="location-remove small">Remove</span>
+                      </li>
+                      @endforeach
                     </ul>
                     <div class="add-button">
                       <button class="btn btn-inverse" type="button">

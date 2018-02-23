@@ -142,10 +142,12 @@
                     <div class="content row">
                         @if(isset($profile->looking_for))
                         <div class="col-xs-12 col-sm-6">
+                            @if($profile->looking_for->job_title != null)
                             <div class="desired-job-title">
                                 <h3 class="title">Desired job title</h3>
                                 <p class="data">Engineer</p>
                             </div>
+                            @endif
                             <div class="salary">
                                 <h3 class="title">Salary</h3>
                                 <p class="data"></p>
@@ -167,7 +169,9 @@
                             </div>
                             <div class="location">
                                 <h3 class="title">Location</h3>
+                                @foreach($profile->looking_for->locations as $location)
                                 <p class="data">London, South East England</p>
+                                @endforeach
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
@@ -272,11 +276,11 @@
                     </div>
                     @if($type == $types[1])
                     <div class="content row">
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12">
                             <div class="employment-availibity">
                                 <h3 class="title">Employment Availability</h3>
                                 <div class="table-responsive availability-tab">
-                                    <table id="zone-horaire" class="table table-striped table-bordered table-horaire-profile">
+                                    <table id="zone-horaire" class="table table-striped table-bordered table-horaire-profile text-center">
                                         <thead>
                                             <tr class="active">
                                                 <th></th> 
