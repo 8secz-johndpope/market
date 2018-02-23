@@ -46,10 +46,6 @@
                           <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-{{$i}}" value="{{$i}}">
                           <label for="{{$task->slug}}-{{$i}}"></label>
                           @endfor
-                          <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-2" value="2">
-                          <label for="{{$task->slug}}-2"></label>
-                          <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-1" value="1">
-                          <label for="{{$task->slug}}-1"></label>
                         </div>
                         <div class="col-md-10">
                           <span>{{$task->title}}</span>
