@@ -477,6 +477,37 @@
             </div>
         </div>
     </section>
+    <section class="container-other-information mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="section-header">
+                        <h2 class="title">Car & driving license</h2>
+                        @if($profile->carAndLicense != null)
+                        <a href="/user/create/car-driving?type={{$type}}" class="action add">
+                            Add
+                            <i class="glyphicon glyphicon-menu-right"></i>
+                        </a>
+                        @endif
+                    </header>
+                    <div class="content">
+                        <div class="car-license-container">
+                            <div>
+                                
+                            </div>
+                        </div>
+                        @if($profile->carAndLicense == null)
+                        <a class="add-first" href="/user/create/car-driving?type={{$type}}">
+                            <i class="glyphicon glyphicon-plus-sign"></i>
+                            Add information
+                        </a>
+                        @endif
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     @if($type == $types[1])
     <section class="container-task-can-help mb-10">
         <div class="container">

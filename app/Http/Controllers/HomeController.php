@@ -2831,4 +2831,10 @@ class HomeController extends BaseController
         $profile->socialcareTasksHelp()->sync($arrayTask);
         return redirect($request->redirect);
     }
+    public function createCarDriving(Request $request){
+        $user = Auth::user();
+        $profile = $user->profile($request->type);
+        return view('home.driving', ['user' =>$user, 'profile' => $profile]);
+
+    }
 }
