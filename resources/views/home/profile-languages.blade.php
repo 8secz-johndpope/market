@@ -104,7 +104,8 @@
 <script type="text/html" id="language-template">
   <div class="language-row row">
     <div class="form-left col-xs-12 col-sm-5">
-      <select class="form-control long" name="language[0]">
+      <select class="form-control long">
+        <option>Choose a language..</option>
         @foreach($languages as $language)
           <option value="{{$language->id}}">{{$language->name}}</option>
         @endforeach
@@ -144,8 +145,10 @@
 </script>
 <script>
   $('.add-language').click(function(){
+    var total = $('.language-row').length;
     var text = $('#language-template').html();
     $('.languages').append(text);
+    $('.language-row:last-child').find('select').attr('name', 'languages['+ total +']');
   })
 </script>
 @endsection

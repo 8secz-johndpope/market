@@ -213,6 +213,7 @@
 .section-header {
     border-bottom: 1px solid #ccc;
     padding-bottom: 15px;
+    margin-bottom: 0.5em;
 }
 .change-avatar {
     color: #fff;
@@ -947,6 +948,20 @@ input[type=checkbox]:checked~label:before {
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     color: #000;
 }
+#languages-edit .language-row {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+.language-row:first-child {
+    margin-top: 10px;
+}
+.add-language {
+    margin-top: 15px;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -1083,6 +1098,9 @@ input[type=checkbox]:checked~label:before {
         align-items: center;
         width: 100%;
         margin: 0;
+    }
+    .language-row {
+        margin-bottom: 15px;
     }
 }
 @media screen and (min-width: 1025px){
