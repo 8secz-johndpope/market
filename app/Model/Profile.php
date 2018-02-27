@@ -47,4 +47,7 @@ class Profile extends Model
 	public function carAndDriving(){
 		return $this->hasOne('App\Model\CarDriving');
 	}
+	public function languages(){
+		return $this->hasMany('App\Model\ProfileLanguage');
+	}
 }

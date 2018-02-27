@@ -477,6 +477,45 @@
             </div>
         </div>
     </section>
+    <section class="container-languages mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="section-header">
+                        <h2 class="title">Languages</h2>
+                        @if($profile->languages->count() > 0)
+                        <a href="/user/create/profile-languages?type={{$type}}" class="action edit">
+                            Edit
+                            <i class="glyphicon glyphicon-menu-right"></i>
+                        </a>
+                        @endif
+                    </header>
+                    <div class="content">
+                        @if($profile->languages->count() > 0)
+                        <div>
+                            <div class="languages-row row">
+                                @foreach($profile->languages as $profileLanguage)
+                                <div class="language-block col-xs-12 col-sm-3">
+                                    <strong>$profileLanguage->language->name</strong>
+                                    (
+                                    <span class="language-fluency">$profileLanguage->level</span>
+                                    )
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @else
+                        <a class="add-first" href="/user/create/profile-languages?type={{$type}}">
+                            <i class="glyphicon glyphicon-plus-sign"></i>
+                            Add languages
+                        </a>
+                        @endif
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="container-other-information mb-10">
         <div class="container">
             <div class="row">

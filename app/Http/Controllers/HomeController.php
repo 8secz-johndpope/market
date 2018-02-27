@@ -52,6 +52,7 @@ use App\Model\AvailibilityTime;
 use App\Model\SocialcareTaskHelp;
 use App\Model\SocialcareServiceOffered;
 use App\Model\CarDriving;
+use App\Model\Language;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
@@ -2849,5 +2850,11 @@ class HomeController extends BaseController
         $carAndDriving->has_licence = ($request->has_licence == "true") ? 1: 0;
         $profile->carAndDriving()->save($carAndDriving);
         return redirect($request->redirect);
+    }
+    public function createProfileLanguages(Request $request){
+        $user = Auth::user();
+        $profile = $user->profile($request->type);
+        $languages = Language::orderby('name');
+        return view('home.profile-languages', ['user' =>$user, 'profile' => $profile, 'languages' => $languages]);
     }
 }

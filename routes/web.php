@@ -137,6 +137,7 @@ Route::get('/user/create/covers', 'HomeController@create_cover');
 Route::get('/user/create/work-experience', 'HomeController@create_work_experience');
 Route::get('/user/create/tasks-help-services', 'HomeController@createTasksCanHelp');
 Route::get('/user/create/car-driving', 'HomeController@createCarDriving');
+Route::get('/user/create/profile-languages', 'HomeController@createProfileLanguages');
 Route::post('/user/save/work-experience', 'HomeController@saveWorkExperience');
 Route::post('/user/save/tasks-help-services', 'HomeController@saveTasksCanHelpServices');
 Route::post('/user/save/car-driving', 'HomeController@saveCarDriving');
