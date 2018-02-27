@@ -523,7 +523,7 @@
                     <header class="section-header">
                         <h2 class="title">Additional Information</h2>
                         @if($profile->additionalInformation != null)
-                        <a href="/user/create/additional-information?type={{$type}}" class="action edit">
+                        <a href="/user/create/profile-additional-info?type={{$type}}" class="action edit">
                             Edit
                             <i class="glyphicon glyphicon-menu-right"></i>
                         </a>
@@ -558,7 +558,7 @@
                             </div>
                         </div>
                         @else
-                        <a class="add-first" href="/user/create/car-driving?type={{$type}}">
+                        <a class="add-first" href="/user/create/profile-additional-info?type={{$type}}">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add information
                         </a>

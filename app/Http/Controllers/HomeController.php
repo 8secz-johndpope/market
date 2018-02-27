@@ -2874,4 +2874,9 @@ class HomeController extends BaseController
         }
         return redirect($request->redirect);
     }
+    public function createProfileAdditionalInfo(Request $request){
+        $user = Auth::user();
+        $profile = $user->profile($request->type);
+        return view('home.profile-additional-info', ['user' => $user, 'profile' => $profile]);
+    }
 }
