@@ -2854,7 +2854,7 @@ class HomeController extends BaseController
     public function createProfileLanguages(Request $request){
         $user = Auth::user();
         $profile = $user->profile($request->type);
-        $languages = Language::orderby('name');
+        $languages = Language::all();
         return view('home.profile-languages', ['user' =>$user, 'profile' => $profile, 'languages' => $languages]);
     }
 }
