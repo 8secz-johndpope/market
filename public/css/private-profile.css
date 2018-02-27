@@ -377,6 +377,52 @@
     position: absolute;
     width: 1px;
 }
+.language-row .form-group{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+.language-row .form-group:first-child{
+    margin-left: 0;
+}
+.language-row .form-group .radio{
+    position: relative;
+}
+.language-row .form-group label:before{
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    background-size: 1230px 1230px;
+    -webkit-background-size: 1230px 1230px;
+    background-repeat: no-repeat;
+    background-image: url(/css/icon-sprite.svg);
+    background-position: -1110px -780px;
+}
+.language-row .form-group input[type=radio]:checked ~ label:before{
+    width: 18px;
+    height: 18px;
+    background-position: -1110px -840px;
+    background-size: 1230px 1230px;
+    -webkit-background-size: 1230px 1230px;
+    background-repeat: no-repeat;
+    background-image: url(/css/icon-sprite.svg);
+}
+.language-row .form-group input[type=radio]{
+    border: 0 none;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: 8px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    top: 5px;
+}
 .edit-avatar i {
     color: #fff;
 }

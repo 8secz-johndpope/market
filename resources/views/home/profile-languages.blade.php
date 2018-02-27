@@ -45,7 +45,7 @@
               <span class="right-heaader small hidden-xs col-sm-7" {{($profile->languages->count() == 0)}}>Fluency</span>
               @endif
             </div>
-            <div>
+            <div class="languages">
               @foreach($profile->languages as $profileLanguage)
               <div class="language-row row">
                 <div class="form-left col-xs-12 col-sm-5">
@@ -115,7 +115,7 @@
       <div class="fluency-label-mobile col-xs-12 visible-xs-block">Fluency</div>
     </div>
     <div class="form-right col-xs-12 col-sm-7">
-      <div class="form-control">
+      <div class="form-group">
         <div class="radio">
           <input type="radio" id="fluency-low-0" name="language_fluency[0]" value="1">
           <label for="fluency-low-0">
@@ -123,7 +123,7 @@
           </label>
         </div>
       </div>
-      <div class="form-control">
+      <div class="form-group">
         <div class="radio">
           <input type="radio" id="fluency-mid-0" name="language_fluency[0]" value="2">
           <label for="fluency-mid-0">
@@ -131,7 +131,7 @@
           </label>
         </div>
       </div>
-      <div class="form-control">
+      <div class="form-group">
         <div class="radio">
           <input type="radio" id="fluency-hig-0" name="language_fluency[0]" value="3">
           <label for="fluency-hig-0">
@@ -141,5 +141,11 @@
       </div>
     </div>
   </div>
+</script>
+<script>
+  $('.add-language').click(function(){
+    var text = $('#language-template').html();
+    $('.languages').append(text);
+  })
 </script>
 @endsection
