@@ -43,10 +43,9 @@
                       <div class="task row">
                         <div class="col-md-2">
                           @for($i=1; $i < 4; $i++)
-                          <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-{{$i}}" value="{{$i}}">
+                          <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-{{$i}}" value="{{$i}}" {{($profile->socialcareTaskHelp($task->id) != null && $profile->socialcareTaskHelp($task->id)->pivot->value == $i) ? 'checked' : ''}}>
                           <label for="{{$task->slug}}-{{$i}}"></label>
                           @endfor
-                          
                         </div>
                         <div class="col-md-10">
                           <span>{{$task->title}}</span>
