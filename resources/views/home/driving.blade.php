@@ -32,13 +32,13 @@
           <input name="profile" type="hidden" value="{{$profile->id}}">
           <div class="section">
             <header class="section-header">
-              <h2 class="title">Car & driving licence</h2>
+              <h2 class="title">Car & driving license</h2>
             </header>
             <div class="content row">
               <fieldset class="licence-option">
                 <div class="form-group">
                   <label class="col-sm-4 control-label">
-                    I have a full licence and am eligible to drive in the UK
+                    I have a full license and am eligible to drive in the UK
                   </label>
                   <div class="col-sm-8">
                     <label class="radio-inline">

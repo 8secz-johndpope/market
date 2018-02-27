@@ -50,4 +50,7 @@ class Profile extends Model
 	public function languages(){
 		return $this->hasMany('App\Model\ProfileLanguage');
 	}
+	public function additionalInfo(){
+		return $this->hasOne('App\Model\ProfileAdditionalInfo');
+	}
 }

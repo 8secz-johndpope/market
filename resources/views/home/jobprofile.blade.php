@@ -522,7 +522,7 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Additional Information</h2>
-                        @if($profile->additionalInformation != null)
+                        @if($profile->additionalInfo != null)
                         <a href="/user/create/profile-additional-info?type={{$type}}" class="action edit">
                             Edit
                             <i class="glyphicon glyphicon-menu-right"></i>
@@ -530,31 +530,31 @@
                         @endif
                     </header>
                     <div class="content row">
-                        @if($profile->additionalInformation != null)
+                        @if($profile->additionalInfo != null)
                         <div class="col-xs-12 col-md-6">
-                            <div class="nationality-title">
+                            <!-- <div class="nationality-title">
                                 <h3 class="title">Nationality</h3>
-                                <p class="data">{{$profile->additionalInformation->nationality}}</p>
-                            </div>
+                                <p class="data">{{$profile->additionalInfoo->nationality}}</p>
+                            </div> -->
                             <div class="smoker-title">
                                 <h3 class="title">Smoker</h3>
-                                <p class="data">{{$profile->additionalInformation->smoker}}</p>
+                                <p class="data">{{$profile->additionalInfo->smoker}}</p>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="firts-aid-title">
                                 <h3 class="title">First Aid certificate</h3>
-                                <p class="data">{{$profile->additionalInformation->firstAid}}</p>
+                                <p class="data">{{$profile->additionalInfo->firstAid}}</p>
                             </div>
                              <div class="has-children-title">
                                 <h3 class="title">Do you have children?</h3>
-                                <p class="data">{{$profile->additionalInformation->hasChildren}}</p>
+                                <p class="data">{{$profile->additionalInfo->hasChildren}}</p>
                             </div>
                         </div>
                         <div class="col-xs-12">
                             <div class="about-title">
                                 <h3 class="title">Tell us a bit about yourself: Your education, work, hobbies, interest, ...</h3>
-                                <p class="data">{{$profile->additionalInformation->about_me}}</p>
+                                <p class="data">{{$profile->additionalInfo->about_me}}</p>
                             </div>
                         </div>
                         @else
@@ -589,7 +589,7 @@
                                 @if($profile->carAndDriving->hasLicence())
                                 <div class="licence-col col-xs-12 col-md-6">
                                     <strong>Licence</strong>
-                                    <p>I have a full licence and am eligible to drive in the UK</p>
+                                    <p>I have a full license and am eligible to drive in the UK</p>
                                 </div>
                                 @endif
                                 @if($profile->carAndDriving->hasCar())
