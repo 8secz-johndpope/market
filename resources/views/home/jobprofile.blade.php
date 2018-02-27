@@ -483,20 +483,32 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Car & driving license</h2>
-                        @if($profile->carAndLicense != null)
-                        <a href="/user/create/car-driving?type={{$type}}" class="action add">
-                            Add
+                        @if($profile->carAndDriving != null)
+                        <a href="/user/create/car-driving?type={{$type}}" class="action edit">
+                            Edit
                             <i class="glyphicon glyphicon-menu-right"></i>
                         </a>
                         @endif
                     </header>
                     <div class="content">
-                        <div class="car-license-container">
+                        @if($profile->carAndDriving != null)
+                        <div class="driving-row row">
                             <div>
-                                
+                                @if($profile->carAndDriving->hasLicence())
+                                <div class="licence-col col-xs-12 col-md-6">
+                                    <strong>Licence</strong>
+                                    <p>I have a full licence and am eligible to drive in the UK</p>
+                                </div>
+                                @endif
+                                @if($profile->carAndDriving->hasCar())
+                                <div class="car-col col-xs-12 col-md-6">
+                                    <strong>Car</strong>
+                                    <p>I have a car</p>
+                                </div>
+                                @endif
                             </div>
                         </div>
-                        @if($profile->carAndLicense == null)
+                        @else
                         <a class="add-first" href="/user/create/car-driving?type={{$type}}">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add information

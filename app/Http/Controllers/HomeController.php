@@ -51,6 +51,7 @@ use App\Model\Availibility;
 use App\Model\AvailibilityTime;
 use App\Model\SocialcareTaskHelp;
 use App\Model\SocialcareServiceOffered;
+use App\Model\CarDriving;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
@@ -2836,5 +2837,17 @@ class HomeController extends BaseController
         $profile = $user->profile($request->type);
         return view('home.driving', ['user' =>$user, 'profile' => $profile]);
 
+    }
+    public function saveCarDriving(Request $request){
+        $user = Auth::user();
+        $profile = Profile::find($request->profile);
+        $carAndDriving = $profile->carAndDriving;
+        if($carAndDriving == null){
+            $carAndDriving = new CarDriving();
+        }
+        $carAndDriving->has_car = ($request->has_car == "true") ? 1 : 0;
+        $carAndDriving->has_licence = ($request->has_licence == "true") ? 1: 0;
+        $profile->carAndDriving()->save($carAndDriving);
+        return redirect($request->redirect);
     }
 }

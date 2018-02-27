@@ -40,7 +40,11 @@ class Profile extends Model
 	public function socialcareServicesOffered(){
 		return $this->belongsToMany('App\Model\SocialcareServiceOffered');
 	}
+
 	public function socialcareServiceOffered($idServiceOffered){
 		return $this->socialcareServicesOffered()->	where('socialcare_service_offered_id', $idServiceOffered)->first();
+	}
+	public function carAndDriving(){
+		return $this->hasOne('App\Model\CarDriving');
 	}
 }
