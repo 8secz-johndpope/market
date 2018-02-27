@@ -42,13 +42,13 @@
                   </label>
                   <div class="col-sm-8">
                     <label class="radio-inline">
-                      <input type="radio" name="has_licence" id="has-licence-true" value="true" {{($profile->carAndDriving != null & $profile->carAndDriving->hasLicence()) ? 'checked' : '' }}>
+                      <input type="radio" name="has_licence" id="has-licence-true" value="true" {{($profile->carAndDriving != null && $profile->carAndDriving->hasLicence()) ? 'checked' : '' }}>
                       Yes
                       <label for="has-licence-true">
                       </label>
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="has_licence" id="has-licence-false" {{($profile->carAndDriving != null & !$profile->carAndDriving->hasLicence()) ? 'checked' : '' }}>
+                      <input type="radio" name="has_licence" id="has-licence-false" {{($profile->carAndDriving != null && !$profile->carAndDriving->hasLicence()) ? 'checked' : '' }}>
                       No
                       <label for="has-licence-false">
                       </label>
@@ -63,13 +63,13 @@
                   </label>
                   <div class="col-sm-8">
                     <label class="radio-inline">
-                      <input type="radio" name="has_car" id="has-car-true" value="true" {{($profile->carAndDriving != null & $profile->carAndDriving->hasCar()) ? 'checked' : '' }}>
+                      <input type="radio" name="has_car" id="has-car-true" value="true" {{($profile->carAndDriving != null && $profile->carAndDriving->hasCar()) ? 'checked' : '' }}>
                       Yes
                       <label for="has-car-true">
                       </label>
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="has_car" id="has-car-false" {{($profile->carAndDriving != null & !$profile->carAndDriving->hasLicence()) ? 'checked' : '' }}>
+                      <input type="radio" name="has_car" id="has-car-false" {{($profile->carAndDriving != null && !$profile->carAndDriving->hasLicence()) ? 'checked' : '' }}>
                       No
                       <label for="has-car-false">
                       </label>
