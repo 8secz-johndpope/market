@@ -46,6 +46,7 @@
                           <input type="radio" name="task[{{$task->id}}]" id="{{$task->slug}}-{{$i}}" value="{{$i}}">
                           <label for="{{$task->slug}}-{{$i}}"></label>
                           @endfor
+                          
                         </div>
                         <div class="col-md-10">
                           <span>{{$task->title}}</span>
