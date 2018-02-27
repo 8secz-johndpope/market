@@ -2879,4 +2879,13 @@ class HomeController extends BaseController
         $profile = $user->profile($request->type);
         return view('home.profile-additional-info', ['user' => $user, 'profile' => $profile]);
     }
+    public function saveProfileAddtionalInfo(Request $request){
+        $user = Auth::user();
+        $profile = Profile::find($request->profile);
+        $additionalInfo = $profile->additionalInfo;
+        if($additionalInfo == null){
+            $additionalInfo = new ProfileAdditionalInfo();
+        }
+        
+    }
 }
