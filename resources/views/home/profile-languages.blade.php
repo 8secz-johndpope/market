@@ -42,16 +42,16 @@
                 Add up to 5 languages
               </span>
               @if($profile->languages->count() > 0)
-              <span class="right-heaader small hidden-xs col-sm-7" {{($profile->languages->count() == 0)}}>Fluency</span>
+              <span class="right-heaader small hidden-xs col-sm-7">Fluency</span>
               @endif
             </div>
             <div class="languages">
               @foreach($profile->languages as $profileLanguage)
               <div class="language-row row">
                 <div class="form-left col-xs-12 col-sm-5">
-                  <select class="form-control long" name="language[0]">
+                  <select class="form-control long" name="languages[0]" value="{{$profileLanguage->language_id}}">
                     @foreach($languages as $language)
-                      <option value="{{$language->id}}">{{$language->name}}</option>
+                      <option value="{{$language->id}}" {{($profileLanguage->language_id == $language->id) ? 'selected' : ''}}>{{$language->name}}</option>
                     @endforeach
                   </select>
                   <div class="remove-language-container visible-xs-block">
@@ -60,25 +60,25 @@
                   <div class="fluency-label-mobile col-xs-12 visible-xs-block">Fluency</div>
                 </div>
                 <div class="form-right col-xs-12 col-sm-7">
-                  <div class="form-control">
+                  <div class="form-group">
                     <div class="radio">
-                      <input type="radio" id="fluency-low-0" name="language_fluency[0]" value="1">
+                      <input type="radio" id="fluency-low-0" name="levels[0]" value="1" {{($profileLanguage->level == 1) ? 'checked' : '' }}>
                       <label for="fluency-low-0">
                         Basic
                       </label>
                     </div>
                   </div>
-                  <div class="form-control">
+                  <div class="form-group">
                     <div class="radio">
-                      <input type="radio" id="fluency-mid-0" name="language_fluency[0]" value="2">
+                      <input type="radio" id="fluency-mid-0" name="levels[0]" value="2" {{($profileLanguage->level == 2) ? 'checked' : '' }}>
                       <label for="fluency-mid-0">
                         Intermediate
                       </label>
                     </div>
                   </div>
-                  <div class="form-control">
+                  <div class="form-group">
                     <div class="radio">
-                      <input type="radio" id="fluency-hig-0" name="language_fluency[0]" value="3">
+                      <input type="radio" id="fluency-hig-0" name="levels[0]" value="3" {{($profileLanguage->level == 3) ? 'checked' : '' }}>
                       <label for="fluency-hig-0">
                         Fluent
                       </label>
@@ -149,6 +149,7 @@
     var text = $('#language-template').html();
     $('.languages').append(text);
     $('.language-row:last-child').find('select').attr('name', 'languages['+ total +']');
+    $('.language-row:last-child').find('input').attr('name', 'levels['+ total +']');
   })
 </script>
 @endsection

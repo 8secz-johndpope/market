@@ -496,9 +496,9 @@
                             <div class="languages-row row">
                                 @foreach($profile->languages as $profileLanguage)
                                 <div class="language-block col-xs-12 col-sm-3">
-                                    <strong>$profileLanguage->language->name</strong>
+                                    <strong>{{$profileLanguage->language->name}}</strong>
                                     (
-                                    <span class="language-fluency">$profileLanguage->level</span>
+                                    <span class="language-fluency">{{$languageLevels[$profileLanguage->level-1]}}</span>
                                     )
                                 </div>
                                 @endforeach

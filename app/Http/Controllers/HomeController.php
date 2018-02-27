@@ -53,6 +53,7 @@ use App\Model\SocialcareTaskHelp;
 use App\Model\SocialcareServiceOffered;
 use App\Model\CarDriving;
 use App\Model\Language;
+use App\Model\ProfileLanguage;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
@@ -931,6 +932,7 @@ class HomeController extends BaseController
         $employmentStatus = ['- select -, Employed (full-time)', 'Employed (part-time)', 'Employed (temp/contract)', 'Full-time Education', 'Unemployed'];
         $user = Auth::user();
         $profile = $user->profile($type);
+        $languageLevels = ['Basic', 'Intermediate', 'Fluent'];
         if($profile===null){
             $profile = new Profile();
             $profile->user_id=$user->id;
@@ -946,7 +948,7 @@ class HomeController extends BaseController
             $tasksHelpValues[$taskHelp->id] = $value;
         }
         $totalApplication = $user->applications()->count();
-        return view('home.jobprofile',['profile'=>$profile,'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication, 'employmentStatus' => $employmentStatus, 'tasksHelp' => $tasksHelp, 'tasksHelpValues' => $tasksHelpValues]);
+        return view('home.jobprofile',['profile'=>$profile,'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication, 'employmentStatus' => $employmentStatus, 'tasksHelp' => $tasksHelp, 'tasksHelpValues' => $tasksHelpValues, 'languageLevels' => $languageLevels]);
     }
 
     public function view_profile(Request $request,$id)
@@ -2856,5 +2858,20 @@ class HomeController extends BaseController
         $profile = $user->profile($request->type);
         $languages = Language::all();
         return view('home.profile-languages', ['user' =>$user, 'profile' => $profile, 'languages' => $languages]);
+    }
+    public function saveProfileLanguages(Request $request){
+        $user = Auth::user();
+        $profile = Profile::find($request->profile);
+        $levels = $request->levels;
+        if($profile->languages->count() > 0 ){
+            $profile->languages()->delete();
+        }
+        foreach ($request->languages as $key => $language) {
+            $profileLanguage = new ProfileLanguage();
+            $profileLanguage->level = $levels[$key];
+            $profileLanguage->language_id = $language;
+            $profile->languages()->save($profileLanguage);
+        }
+        return redirect($request->redirect);
     }
 }
