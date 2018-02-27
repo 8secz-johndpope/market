@@ -516,6 +516,59 @@
             </div>
         </div>
     </section>
+     <section class="container-additional-information mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="section-header">
+                        <h2 class="title">Additional Information</h2>
+                        @if($profile->additionalInformation != null)
+                        <a href="/user/create/additional-information?type={{$type}}" class="action edit">
+                            Edit
+                            <i class="glyphicon glyphicon-menu-right"></i>
+                        </a>
+                        @endif
+                    </header>
+                    <div class="content row">
+                        @if($profile->additionalInformation != null)
+                        <div class="col-xs-12 col-md-6">
+                            <div class="nationality-title">
+                                <h3 class="title">Nationality</h3>
+                                <p class="data">{{$profile->additionalInformation->nationality}}</p>
+                            </div>
+                            <div class="smoker-title">
+                                <h3 class="title">Smoker</h3>
+                                <p class="data">{{$profile->additionalInformation->smoker}}</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="firts-aid-title">
+                                <h3 class="title">First Aid certificate</h3>
+                                <p class="data">{{$profile->additionalInformation->firstAid}}</p>
+                            </div>
+                             <div class="has-children-title">
+                                <h3 class="title">Do you have children?</h3>
+                                <p class="data">{{$profile->additionalInformation->hasChildren}}</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="about-title">
+                                <h3 class="title">Tell us a bit about yourself: Your education, work, hobbies, interest, ...</h3>
+                                <p class="data">{{$profile->additionalInformation->about_me}}</p>
+                            </div>
+                        </div>
+                        @else
+                        <a class="add-first" href="/user/create/car-driving?type={{$type}}">
+                            <i class="glyphicon glyphicon-plus-sign"></i>
+                            Add information
+                        </a>
+                        @endif
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="container-other-information mb-10">
         <div class="container">
             <div class="row">
