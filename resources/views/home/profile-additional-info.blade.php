@@ -26,7 +26,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <form action="/user/save/car-driving" method="post">
+        <form action="/user/save/profile-additional-info" method="post">
           <input name="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
           {{ csrf_field() }}
           <input name="profile" type="hidden" value="{{$profile->id}}">
@@ -80,7 +80,7 @@
               <fieldset class="first-aid-option">
                 <div class="form-group">
                   <label class="col-sm-4 control-label">
-                    Do you have childrean?*
+                    Do you have children?*
                   </label>
                   <div class="col-sm-8">
                     <label class="radio-inline">

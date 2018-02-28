@@ -54,6 +54,7 @@ use App\Model\SocialcareServiceOffered;
 use App\Model\CarDriving;
 use App\Model\Language;
 use App\Model\ProfileLanguage;
+use App\Model\ProfileAdditionalInfo;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
@@ -2885,7 +2886,13 @@ class HomeController extends BaseController
         $additionalInfo = $profile->additionalInfo;
         if($additionalInfo == null){
             $additionalInfo = new ProfileAdditionalInfo();
+            $additionalInfo->is_smoker = (isset($request->is_smoker) && $request->is_smoker == 'true') ? 1 : 0;
+            $additionalInfo->has_first_aid = (isset($request->has_first_aid) && $request->has_first_aid == 'true') ? 1 : 0;
+            $additionalInfo->has_children = (isset($request->has_children) && $request->has_children == 'true') ? 1 : 0;
+            $additionalInfo->about_me = (isset($request->about_me)) ? $request->about_me : ''; 
         }
-        
+        $profile->additionalInfo()->save($additionalInfo);
+        return redirect($request->redirect);
+
     }
 }

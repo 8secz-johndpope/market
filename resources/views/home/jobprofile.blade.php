@@ -531,37 +531,39 @@
                     </header>
                     <div class="content row">
                         @if($profile->additionalInfo != null)
-                        <div class="col-xs-12 col-md-6">
-                            <!-- <div class="nationality-title">
-                                <h3 class="title">Nationality</h3>
-                                <p class="data">{{$profile->additionalInfoo->nationality}}</p>
-                            </div> -->
-                            <div class="smoker-title">
-                                <h3 class="title">Smoker</h3>
-                                <p class="data">{{$profile->additionalInfo->smoker}}</p>
+                            <div class="col-xs-12 col-md-6">
+                                <!-- <div class="nationality-title">
+                                    <h3 class="title">Nationality</h3>
+                                    <p class="data">{{$profile->additionalInfo->nationality}}</p>
+                                </div> -->
+                                <div class="smoker-title">
+                                    <h3 class="title">Smoker</h3>
+                                    <p class="data">{{($profile->additionalInfo != null && $profile->additionalInfo->isSmoker()) ? 'Yes' : 'No' }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <div class="firts-aid-title">
-                                <h3 class="title">First Aid certificate</h3>
-                                <p class="data">{{$profile->additionalInfo->firstAid}}</p>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="firts-aid-title">
+                                    <h3 class="title">First Aid certificate</h3>
+                                    <p class="data">{{($profile->additionalInfo != null && $profile->additionalInfo->hasFirstAid()) ? 'Yes' : 'No'}}</p>
+                                </div>
+                                 <div class="has-children-title">
+                                    <h3 class="title">Do you have children?</h3>
+                                    <p class="data">{{($profile->additionalInfo != null && $profile->additionalInfo->hasChildren()) ? 'Yes' : 'No'}}</p>
+                                </div>
                             </div>
-                             <div class="has-children-title">
-                                <h3 class="title">Do you have children?</h3>
-                                <p class="data">{{$profile->additionalInfo->hasChildren}}</p>
-                            </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <div class="about-title">
-                                <h3 class="title">Tell us a bit about yourself: Your education, work, hobbies, interest, ...</h3>
-                                <p class="data">{{$profile->additionalInfo->about_me}}</p>
-                            </div>
-                        </div>
+                            @if($profile->additionalInfo->about_me != null)
+                                <div class="col-xs-12">
+                                    <div class="about-title">
+                                        <h3 class="title">Tell us a bit about yourself: Your education, work, hobbies, interest, ...</h3>
+                                        <p class="data">{{$profile->additionalInfo->about_me}}</p>
+                                    </div>
+                                </div>
+                            @endif
                         @else
-                        <a class="add-first" href="/user/create/profile-additional-info?type={{$type}}">
-                            <i class="glyphicon glyphicon-plus-sign"></i>
-                            Add information
-                        </a>
+                            <a class="add-first" href="/user/create/profile-additional-info?type={{$type}}">
+                                <i class="glyphicon glyphicon-plus-sign"></i>
+                                Add information
+                            </a>
                         @endif
                     </div>
                     
