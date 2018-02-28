@@ -39,7 +39,6 @@ class Profile extends Model
 	public function socialcareServicesOffered(){
 		return $this->belongsToMany('App\Model\SocialcareServiceOffered');
 	}
-
 	public function socialcareServiceOffered($idServiceOffered){
 		return $this->socialcareServicesOffered()->	where('socialcare_service_offered_id', $idServiceOffered)->first();
 	}
@@ -54,5 +53,8 @@ class Profile extends Model
 	}
 	public function publications(){
 		return $this->hasMany('App\Model\Publication');
+	}
+	public function porfolio(){
+		return $this->hasOne('App\Model\Porfolio');
 	}
 }

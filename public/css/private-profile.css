@@ -16,10 +16,11 @@
     left: 0;
     background: rgba(0,0,0,0.5);
 }
-.container-details-profile, .container-looking-for-options, .container-status-availability, .container-work-experience, .container-task-can-help, .container-additional-information {
+.container-details-profile, .container-looking-for-options, .container-status-availability, .container-work-experience, .container-task-can-help, .container-additional-information, .container-work-publications {
     background: #EBEBEB;
 }
-.container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability, .container-cover-letter, .container-work-experience, .container-task-can-help, .container-other-information, .container-languages, .container-additional-information{
+.container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability, .container-cover-letter, .container-work-experience, .container-task-can-help, .container-other-information, .container-languages, .container-additional-information, 
+.container-work-publications{
 	padding: 70px 0;
 }
 .services .service {

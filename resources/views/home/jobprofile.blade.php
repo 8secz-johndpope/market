@@ -444,8 +444,10 @@
                                 @foreach($profile->work_experiences as $workExperience)
                                 <div class="row work">
                                     <div class="action delete">
+                                        <i class="glyphicon glyphicon-trash"></i>
                                     </div>
                                     <div class="action edit">
+                                        <i class="glyphicon glyphicon-pencil"></i>
                                     </div>
                                     <div class="when col-xs-12 col-sm-3 col-md-2">
                                         {{date_format(date_create($workExperience->from), 'm/Y')}} - {{date_format(date_create($workExperience->to), 'm/Y')}}
@@ -753,11 +755,13 @@
                                 @foreach($profile->publications as $publications)
                                 <div class="row work">
                                     <div class="action delete">
+                                        <i class="glyphicon glyphicon-trash"></i>
                                     </div>
                                     <div class="action edit">
+                                        <i class="glyphicon glyphicon-pencil"></i>
                                     </div>
                                     <div class="when col-xs-12 col-sm-3 col-md-2">
-                                        {{date_format(date_create($publications->from), 'm/Y')}} - {{date_format(date_create($publications->to), 'm/Y')}}
+                                        {{date_format(date_create($publications->date), 'd/m/Y')}}
                                     </div>
                                     <div class="what col-xs-12 col-sm-9 col-md-10">
                                         <div class="title">
@@ -766,6 +770,10 @@
                                         <div class="company">
                                             {{$publications->publisher}}
                                         </div>
+                                        <div class="url">
+                                            {{$publications->url}}
+                                        </div>
+
                                         <div class="description">
                                             {{$publications->description}}
                                         </div>
@@ -782,6 +790,40 @@
                         @endif
                     </div>
                     
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-portfolio mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="section-header">
+                        <h2 class="title">Portfolio</h2>
+                        @if($profile->portfolio != null)
+                        <a href="/user/create/portfolio?type={{$type}}" class="action edit">
+                            Edit
+                            <i class="glyphicon glyphicon-menu-right"></i>
+                        </a>
+                        @endif
+                    </header>
+                    <div class="content">
+                        @if($profile->portfolio != null)
+                        <div class="portfolio-row row">
+                            <div>
+                                <div class="col-xs-12 col-md-6">
+                                    <strong>{{$profile->portfolio->title}}</strong>
+                                    <p>I have a full license and am eligible to drive in the UK</p>
+                                </div>
+                            </div>
+                        </div>
+                        @else
+                        <a class="add-first" href="/user/create/portfolio?type={{$type}}">
+                            <i class="glyphicon glyphicon-plus-sign"></i>
+                            Add information
+                        </a>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
