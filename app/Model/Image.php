@@ -18,4 +18,7 @@ class Image extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public function imagetable(){
+    	return $this->morphTo();
+    }
 }

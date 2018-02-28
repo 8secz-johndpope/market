@@ -12,6 +12,6 @@ class Portfolio extends Model
 	public $timestamps = false;
 
 	public function images(){
-		return $this->hasMany('App\Model\Image');
+		return $this->morphMany('App\Model\Image', 'imagetable');
 	}
 }

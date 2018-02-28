@@ -31,7 +31,7 @@
             <h2 class="title">Add Portfolio</h2>
           </header>
           <div class="content row">
-            <form action="/user/save/portfolio" method="post" id="work-experience-form" method="post">
+            <form action="/user/save/portfolio" method="post" id="portfolio-form" method="post">
                 <input name="redirect" id="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
                 {{ csrf_field() }}
                 <input type="hidden" name="profile" value="{{$profile->id}}">
@@ -48,16 +48,17 @@
                       </div>
                       <input type="file" name="image" id="image">
                   </div>
-                </div>
-                @if($profile->portfolio != null)
-                  @foreach($profile->portfolio->images as $image)
-                    <div class="portfolio-img col-xs-6 col-sm-4 col-md-3">
-                      <div class="image-block">
-                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image->image}}">
+                  @if($profile->portfolio != null)
+                    @foreach($profile->portfolio->images as $image)
+                      <div class="portfolio-img col-xs-6 col-sm-4 col-md-3 image">
+                        <div class="image-block">
+                          <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image->image}}">
+                          <input type="hidden" name="images[]" value="{{$image->image}}">
+                        </div>
                       </div>
-                    </div>
-                  @endforeach
-                @endif
+                    @endforeach
+                  @endif
+                </div>
                 <div class="update-form-group col-xs-12 text-right">
                   <button type="button" class="cancel btn btn-link">Cancel</button>
                   <button type="submit" class="save btn btn-submit">Save</button>
@@ -73,9 +74,9 @@
 @endsection
 @section('scripts')
 <script type="text/html" id="image-template">
-<div class="portfolio-img col-xs-6 col-sm-4 col-md-3">
+<div class="portfolio-img col-xs-6 col-sm-4 col-md-3 image">
   <div class="image-block">
-    <img src="/css/loading.gif">
+    <img src="/css/loading.gif" class="">
     <input type="hidden" name="images[]" value="">
   </div>
 </div> 
@@ -91,6 +92,13 @@
     var image = $('.portfolio-img:last-child').find('img');
     uploadImage(this, image);
     $(this).val('');
+  });
+  $('#portfolio-form').submit(function(e){
+    $('.image').each(function(){
+      var src = $(this).find('img').attr('src');
+      var imgName = src.substring(src.lastIndexOf('/') + 1, src.length);
+      $(this).find('img').next().val(imgName);
+    });
   });
 </script>
 @endsection

@@ -54,7 +54,7 @@ class Profile extends Model
 	public function publications(){
 		return $this->hasMany('App\Model\Publication');
 	}
-	public function porfolio(){
-		return $this->hasOne('App\Model\Porfolio');
+	public function portfolio(){
+		return $this->hasOne('App\Model\Portfolio');
 	}
 }

@@ -56,6 +56,8 @@ use App\Model\Language;
 use App\Model\ProfileLanguage;
 use App\Model\ProfileAdditionalInfo;
 use App\Model\Publication;
+use App\Model\Portfolio;
+use App\Model\Image;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
@@ -2917,5 +2919,23 @@ class HomeController extends BaseController
         $user = Auth::user();
         $profile = $user->profile($request->type);
         return view('home.profile.create_portfolio', ['user' => $user, 'profile' => $profile]);
+    }
+    public function savePortfolio(Request $request){
+        $profile = Profile::find($request->profile);
+        $portfolio = $profile->portfolio;
+        if($portfolio == null){
+            $portfolio = new Portfolio();
+            $portfolio->title = $request->title;
+            $profile->portfolio()->save($portfolio);
+        }
+        $portfolio->images()->delete();
+        if(isset($request->images)){
+            foreach ($request->images as $reqImages) {
+                $image = new Image();
+                $image->image = $reqImages;
+                $portfolio->images()->save($image);
+            }
+        }
+        return redirect($request->redirect);
     }
 }

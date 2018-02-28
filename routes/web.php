@@ -147,6 +147,7 @@ Route::post('/user/save/car-driving', 'HomeController@saveCarDriving');
 Route::post('/user/save/profile-languages', 'HomeController@saveProfileLanguages');
 Route::post('/user/save/profile-additional-info', 'HomeController@saveProfileAddtionalInfo');
 Route::post('/user/save/publication', 'HomeController@savePublication');
+Route::post('/user/save/portfolio', 'HomeController@savePortfolio');
 Route::get('/user/cv-builder/{slug}', 'HomeController@cv_builder');
 Route::get('/user/upload/cvs', 'HomeController@upload_cv');
 Route::get('/user/jobs/looking-for', 'HomeController@looking_for');
