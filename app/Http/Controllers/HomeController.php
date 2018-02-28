@@ -55,6 +55,7 @@ use App\Model\CarDriving;
 use App\Model\Language;
 use App\Model\ProfileLanguage;
 use App\Model\ProfileAdditionalInfo;
+use App\Model\Publication;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
@@ -2899,5 +2900,17 @@ class HomeController extends BaseController
         $user = Auth::user();
         $profile = $user->profile($request->type);
         return view('home.profile.create_publication', ['user' => $user, 'profile' => $profile]);
+    }
+    public function savePublication(Request $request){
+        $user = Auth::user();
+        $profile = Profile::find($request->profile);
+        $publication = new Publication();
+        $publication->title = $request->title;
+        $publication->url = $request->url;
+        $publication->description = $request->description;
+        $publication->publisher = $request->publisher;
+        $publication->date = date_create($request->date_day. '-'.$request->date_month.'-'.$request->date_year);
+        $profile->publications()->save($publication);
+        return redirect($request->redirect);
     }
 }

@@ -31,10 +31,10 @@
             <h2 class="title">Add Publication</h2>
           </header>
           <div class="content row">
-            <form action="/user/save/work-experience" method="post" id="work-experience-form" method="post">
+            <form action="/user/save/publication" method="post" id="work-experience-form" method="post">
                 <input name="redirect" id="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
                 {{ csrf_field() }}
-                <input type="hidden" name="profile_id" value="{{$profile->id}}">
+                <input type="hidden" name="profile" value="{{$profile->id}}">
               <div class="small-container col-xs-12 col-sm-9">
                 <div class="form-group">
                     <label for="title">Title</label> 
@@ -109,7 +109,7 @@
                         </select>
                       </div>
                       <div class="year col-sm-3 col-xs-12">
-                        <select class="form-control" id="date-from-year" name="date_from_year">
+                        <select class="form-control" id="date-from-year" name="date_year">
                           <option value="">Year</option>
                           @for($i = idate('Y'); $i > 1943; $i--)
                             <option value="{{$i}}">{{$i}}</option>
@@ -143,17 +143,9 @@
     window.location.href = $('#redirect').val();
   });
   $('.save-and-other').click(function(){
-    $('#redirect').val('/user/create/work-experience');
-    $('#work-experience-form')[0].reset();
+    $('#redirect').val('/user/create/publication');
+    //$('#work-experience-form')[0].reset();
     //$('#work-experience-form').submit();
-  });
-  $('#is-current-role').change(function(){
-    var dateTo = $('.date-to');
-    if(this.checked){
-      dateTo.hide();
-    }else{
-      dateTo.show();
-    }
   });
 </script>
 @endsection
