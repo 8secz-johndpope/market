@@ -53,4 +53,7 @@ class Profile extends Model
 	public function additionalInfo(){
 		return $this->hasOne('App\Model\ProfileAdditionalInfo');
 	}
+	public function publications(){
+		return $this->hasMany('App\Model\Publication');
+	}
 }

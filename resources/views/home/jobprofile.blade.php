@@ -733,6 +733,60 @@
         </div>
     </section>
     @endif
+    @if($type == $types[2])
+    <section class="container-work-publications mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="section-header">
+                        <h2 class="title">Publications</h2>
+                        @if($profile->publications->count() > 0)
+                        <a href="/user/create/work-experience?type={{$type}}" class="action add">
+                            Add
+                            <i class="glyphicon glyphicon-menu-right"></i>
+                        </a>
+                        @endif
+                    </header>
+                    <div class="content">
+                        <div class="experience-container">
+                            <div>
+                                @foreach($profile->publications as $publications)
+                                <div class="row work">
+                                    <div class="action delete">
+                                    </div>
+                                    <div class="action edit">
+                                    </div>
+                                    <div class="when col-xs-12 col-sm-3 col-md-2">
+                                        {{date_format(date_create($publications->from), 'm/Y')}} - {{date_format(date_create($publications->to), 'm/Y')}}
+                                    </div>
+                                    <div class="what col-xs-12 col-sm-9 col-md-10">
+                                        <div class="title">
+                                            {{$publications->title}}
+                                        </div>
+                                        <div class="company">
+                                            {{$publications->publisher}}
+                                        </div>
+                                        <div class="description">
+                                            {{$publications->description}}
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @if($profile->publications->count() == 0)
+                        <a class="add-first" href="/user/create/work-experience?type={{$type}}">
+                            <i class="glyphicon glyphicon-plus-sign"></i>
+                            Add work experience
+                        </a>
+                        @endif
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
     <section class="container-action-profile mb-10">
         <div class="container">
             <div class="row">
