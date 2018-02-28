@@ -53,7 +53,7 @@
                 </div>
                 <div class="row">
                   <div class="date-from form-group col-sm-8 col-xs-12">
-                    <label class="legend" for="date-from-month">From</label>
+                    <label class="legend" for="date-from-month">Publication date</label>
                     <div class="row">
                       <div class="month col-sm-6 col-xs-12">
                         <select class="form-control" id="date-month" name="date_month">
@@ -108,7 +108,7 @@
                           <option value="31">31</option>
                         </select>
                       </div>
-                      <div class="year col-sm-6 col-xs-12">
+                      <div class="year col-sm-3 col-xs-12">
                         <select class="form-control" id="date-from-year" name="date_from_year">
                           <option value="">Year</option>
                           @for($i = idate('Y'); $i > 1943; $i--)
@@ -121,7 +121,7 @@
                 </div>
               </div>
                 <div class="col-sm-12 form-group">
-                    <label for="exampleFormControlTextarea1">What did you do there?</label>
+                    <label for="exampleFormControlTextarea1">Description</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="5"></textarea>
                     <small><strong>2000</strong> characters remaining</small>
                 </div>

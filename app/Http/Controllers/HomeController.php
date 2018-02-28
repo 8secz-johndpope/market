@@ -2895,4 +2895,9 @@ class HomeController extends BaseController
         return redirect($request->redirect);
 
     }
+    public function createPublications(Request $request){
+        $user = Auth::user();
+        $profile = $user->profile($request->type);
+        return view('home.profile.create_publication', ['user' => $user, 'profile' => $profile]);
+    }
 }

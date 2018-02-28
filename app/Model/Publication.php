@@ -7,7 +7,7 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Publications extends Model
+class Publication extends Model
 {
 	public $timestamps = false;
 }

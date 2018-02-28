@@ -777,7 +777,7 @@
                         @if($profile->publications->count() == 0)
                         <a class="add-first" href="/user/create/publication?type={{$type}}">
                             <i class="glyphicon glyphicon-plus-sign"></i>
-                            Add work experience
+                            Add publication
                         </a>
                         @endif
                     </div>
