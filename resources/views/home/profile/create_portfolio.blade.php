@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', 'Add yours publication')
 
@@ -42,29 +42,25 @@
                     <input type="text" class="form-control" name="title" placeholder="" required>
                 </div>
                 <div class="container-images row">
-                  <div class="col-xs-6 col-sm-4 col-md-3">
-                    <a href="" class="" id="add-image">
-                      <div class="imagen-block">
-                        <span class="circle add">
-                          <i class="glyphicon glyphicon-plus-sign"></i>
-                        </span>
+                  <div class="portfolio-img col-xs-6 col-sm-4 col-md-3">
+                      <div class="image-block add">
+                          <i class="icon icon-add-image"></i>
                       </div>
-                    </a>
+                      <input type="file" name="image" id="image">
                   </div>
                 </div>
-                @foreach($profile->publication->images as $image)
-                <div class="container-images row">
-                  <div class="col-xs-6 col-sm-4 col-md-3">
-                    <div class="imagen-block">
-                      <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image->image}}">
+                @if($profile->portfolio != null)
+                  @foreach($profile->portfolio->images as $image)
+                    <div class="portfolio-img col-xs-6 col-sm-4 col-md-3">
+                      <div class="image-block">
+                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image->image}}">
+                      </div>
                     </div>
-                  </div>
-                </div>
-                @endforeach
+                  @endforeach
+                @endif
                 <div class="update-form-group col-xs-12 text-right">
                   <button type="button" class="cancel btn btn-link">Cancel</button>
-                  <button type="button" class="save-and-other btn btn-inverse">Save & add other</button>
-                  <button type="submit" class="save btn btn-submit" id="upload-cv-link">Save</button>
+                  <button type="submit" class="save btn btn-submit">Save</button>
                 </div>
               </form>
             </div>
@@ -74,14 +70,27 @@
     </div>
   </div>
 </div>
+@endsection
+@section('scripts')
+<script type="text/html" id="image-template">
+<div class="portfolio-img col-xs-6 col-sm-4 col-md-3">
+  <div class="image-block">
+    <img src="/css/loading.gif">
+    <input type="hidden" name="images[]" value="">
+  </div>
+</div> 
+</script>
 <script>
   $('.cancel').click(function(){
     window.location.href = $('#redirect').val();
   });
-  $('.save-and-other').click(function(){
-    $('#redirect').val('/user/create/publication');
-    //$('#work-experience-form')[0].reset();
-    //$('#work-experience-form').submit();
+  $("#image").change(function (){
+    var text = $('#image-template').html();
+    var input = document.getElementById('#image');
+    $('.container-images').append(text);
+    var image = $('.portfolio-img:last-child').find('img');
+    uploadImage(this, image);
+    $(this).val('');
   });
 </script>
 @endsection

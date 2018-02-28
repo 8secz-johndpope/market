@@ -140,6 +140,7 @@ Route::get('/user/create/car-driving', 'HomeController@createCarDriving');
 Route::get('/user/create/profile-languages', 'HomeController@createProfileLanguages');
 Route::get('/user/create/profile-additional-info', 'HomeController@createProfileAdditionalInfo');
 Route::get('/user/create/publication', 'HomeController@createPublications');
+Route::get('/user/create/portfolio', 'HomeController@createPortfolio');
 Route::post('/user/save/work-experience', 'HomeController@saveWorkExperience');
 Route::post('/user/save/tasks-help-services', 'HomeController@saveTasksCanHelpServices');
 Route::post('/user/save/car-driving', 'HomeController@saveCarDriving');

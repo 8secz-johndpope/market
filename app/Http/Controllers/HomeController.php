@@ -2913,4 +2913,9 @@ class HomeController extends BaseController
         $profile->publications()->save($publication);
         return redirect($request->redirect);
     }
+    public function createPortfolio(Request $request){
+        $user = Auth::user();
+        $profile = $user->profile($request->type);
+        return view('home.profile.create_portfolio', ['user' => $user, 'profile' => $profile]);
+    }
 }
