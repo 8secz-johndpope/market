@@ -741,7 +741,7 @@
                     <header class="section-header">
                         <h2 class="title">Publications</h2>
                         @if($profile->publications->count() > 0)
-                        <a href="/user/create/work-experience?type={{$type}}" class="action add">
+                        <a href="/user/create/publication?type={{$type}}" class="action add">
                             Add
                             <i class="glyphicon glyphicon-menu-right"></i>
                         </a>
@@ -775,7 +775,7 @@
                             </div>
                         </div>
                         @if($profile->publications->count() == 0)
-                        <a class="add-first" href="/user/create/work-experience?type={{$type}}">
+                        <a class="add-first" href="/user/create/publication?type={{$type}}">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add work experience
                         </a>
