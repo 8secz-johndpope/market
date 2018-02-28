@@ -811,9 +811,17 @@
                         @if($profile->portfolio != null)
                         <div class="portfolio-row row">
                             <div>
-                                <div class="col-xs-12 col-md-6">
+                                <div class="col-xs-12">
                                     <strong>{{$profile->portfolio->title}}</strong>
-                                    <p>I have a full license and am eligible to drive in the UK</p>
+                                    <div class="container-images row">
+                                        @foreach($profile->portfolio->images as $image)
+                                        <div class="portfolio-img col-xs-6 col-sm-3 col-md-4">
+                                            <div class="image-block">
+                                                <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image->image}}">
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
                         </div>
