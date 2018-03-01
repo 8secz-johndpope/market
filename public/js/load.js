@@ -244,3 +244,30 @@ function uploadImage(selectorInputImage, selectorImage) {
         console.log("nothing to upload");
     }
 }
+function deleteImage(image, deleteDatase){
+    console.log(image);
+    if(image){
+        var params = {
+            Key: image
+        };
+        bucket.deleteObject(params, function(err, data){
+            if(err){
+                console.log(err);
+            }
+            else if(deleteDatase){
+                //TODO delete from database
+                axios.get('/user/delete/image/' + image)
+                .then(function (response) {
+                    console.log(data.msg);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+            }
+        });
+    }
+    else {
+        console.log('nothing to delete')
+    }
+}

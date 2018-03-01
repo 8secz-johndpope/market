@@ -54,6 +54,9 @@
                         <div class="image-block">
                           <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$image->image}}">
                           <input type="hidden" name="images[]" value="{{$image->image}}">
+                          <span class="circle action delete">
+                            <i class="glyphicon glyphicon-trash"></i>
+                          </span>
                         </div>
                       </div>
                     @endforeach
@@ -78,6 +81,9 @@
   <div class="image-block">
     <img src="/css/loading.gif" class="">
     <input type="hidden" name="images[]" value="">
+    <span class="circle action delete">
+      <i class="glyphicon glyphicon-trash"></i>
+    </span>
   </div>
 </div> 
 </script>
@@ -99,6 +105,16 @@
       var imgName = src.substring(src.lastIndexOf('/') + 1, src.length);
       $(this).find('img').next().val(imgName);
     });
+  });
+  $('.action.delete').click(function(){
+    var parent = $(this).parent().parent();
+    var nameImage = parent.find('input').val();
+    if(nameImage == "")
+      deleteImage(nameImage, false);
+    else{
+      deleteImage(nameImage, true);
+    }
+    parent.remove();
   });
 </script>
 @endsection

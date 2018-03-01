@@ -808,6 +808,13 @@ class HomeController extends BaseController
         return redirect('/user/manage/details');
 
     }
+    public function deleteImage(Request $request, $name){
+        $image = Image::where('image', $name);
+        if($image == null)
+            return ['err', 'Not found image'];
+        $image->delete();
+        return ['msg' => 'Image delete successfully'];
+    }   
     public function primary_address(Request $request,$id){
         $user = Auth::user();
 

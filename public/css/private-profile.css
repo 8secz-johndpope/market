@@ -1021,6 +1021,17 @@ input[type=checkbox]:checked~label:before {
 .container-images {
     padding-bottom: 30px;
 }
+.circle.action {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    color: #337ab7;
+    cursor: pointer;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
