@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', env('APP_NAME'). ' | Private Profile')
 
@@ -750,10 +750,10 @@
                         @endif
                     </header>
                     <div class="content">
-                        <div class="experience-container">
+                        <div class="publications-container">
                             <div>
-                                @foreach($profile->publications as $publications)
-                                <div class="row work">
+                                @foreach($profile->publications as $publication)
+                                <div class="row publication">
                                     <div class="action delete">
                                         <i class="glyphicon glyphicon-trash"></i>
                                     </div>
@@ -761,21 +761,21 @@
                                         <i class="glyphicon glyphicon-pencil"></i>
                                     </div>
                                     <div class="when col-xs-12 col-sm-3 col-md-2">
-                                        {{date_format(date_create($publications->date), 'd/m/Y')}}
+                                        {{date_format(date_create($publication->date), 'd/m/Y')}}
                                     </div>
                                     <div class="what col-xs-12 col-sm-9 col-md-10">
-                                        <div class="title">
-                                            {{$publications->title}}
+                                        <div class="typename">
+                                            <b>{{$publication->title}}</b>
                                         </div>
                                         <div class="company">
-                                            {{$publications->publisher}}
+                                            {{$publication->publisher}}
                                         </div>
                                         <div class="url">
-                                            {{$publications->url}}
+                                            {{$publication->url}}
                                         </div>
 
                                         <div class="description">
-                                            {{$publications->description}}
+                                            {{$publication->description}}
                                         </div>
                                     </div>
                                 </div>
@@ -842,18 +842,18 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Qualifications</h2>
-                        @if($profile->work_experiences->count() > 0)
-                        <a href="/user/create/work-experience?type={{$type}}" class="action add">
+                        @if($profile->qualifications->count() > 0)
+                        <a href="/user/create/qualification?type={{$type}}" class="action add">
                             Add
                             <i class="glyphicon glyphicon-menu-right"></i>
                         </a>
                         @endif
                     </header>
                     <div class="content">
-                        <div class="experience-container">
+                        <div class="qualifications-container">
                             <div>
-                                @foreach($profile->work_experiences as $workExperience)
-                                <div class="row work">
+                                @foreach($profile->qualifications as $qualification)
+                                <div class="row qualification">
                                     <div class="action delete">
                                         <i class="glyphicon glyphicon-trash"></i>
                                     </div>
@@ -861,25 +861,31 @@
                                         <i class="glyphicon glyphicon-pencil"></i>
                                     </div>
                                     <div class="when col-xs-12 col-sm-3 col-md-2">
-                                        {{date_format(date_create($workExperience->from), 'm/Y')}} - {{date_format(date_create($workExperience->to), 'm/Y')}}
+                                        {{date_format(date_create($qualification->started_on), 'Y')}} - {{date_format(date_create($qualification->ended_on), 'Y')}}
                                     </div>
                                     <div class="what col-xs-12 col-sm-9 col-md-10">
-                                        <div class="title">
-                                            {{$workExperience->job_title}}
+                                        <div class="typename">
+                                            <b>{{$qualification->type->name}}</b>
                                         </div>
-                                        <div class="company">
-                                            {{$workExperience->company}}
+                                        <div class="institution">
+                                            {{$qualification->school_name}}
                                         </div>
-                                        <div class="description">
-                                            {{$workExperience->description}}
+                                        <div class="qualification-list">
+                                            <div class="qualification-item">
+                                                <span class="subject-name">{{$qualification->degree}}</span>
+                                                <span class="grade-value">
+                                                    <span>(Grade: {{$qualification->grade->name}})</span>
+                                                </span>
+                                            </div> 
+                                            {{$qualification->description}}
                                         </div>
                                     </div>
                                 </div>
                                 @endforeach
                             </div>
                         </div>
-                        @if($profile->work_experiences->count() == 0)
-                        <a class="add-first" href="/user/create/work-experience?type={{$type}}">
+                        @if($profile->qualifications->count() == 0)
+                        <a class="add-first" href="/user/create/qualification?type={{$type}}">
                             <i class="glyphicon glyphicon-plus-sign"></i>
                             Add qualification
                         </a>
@@ -930,6 +936,8 @@
         } );
     </script>
 -->
+@endsection
+@section('scripts')
 <script>
     $('.edit-avatar').click(function (e) {
         e.preventDefault();

@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', 'Create your employment status')
 
@@ -56,6 +56,7 @@
                   </div>                    
                 </div>
               </fieldset>
+              @if($profile->isSocialcare())
               <fieldset class="first-aid-option">
                 <div class="form-group">
                   <label class="col-sm-4 control-label">
@@ -98,10 +99,19 @@
                   </div>                    
                 </div>
               </fieldset>
+              @endif
               <div class="col-xs-12">
-                <label>Tell us about yourself: Your education, work, interests,...</label>
-                <textarea rows="5" class="form-control" name="about_me">
-                </textarea>
+                @if($profile->isSubContractor())
+                <div class="form-group">
+                  <label for="url-linkedin">Your LinkedIn profile</label>
+                  <input type="text" name="url_linkedin" id="url-linkedin" placeholder="Url" class="form-control">
+                </div>
+                @endif
+                <div class="form-group">
+                  <label>Tell us about yourself: Your education, work, interests,...</label>
+                  <textarea rows="5" class="form-control" name="about_me">
+                  </textarea>
+                </div>
               </div>
             </div>
           </div>

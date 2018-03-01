@@ -57,4 +57,16 @@ class Profile extends Model
 	public function portfolio(){
 		return $this->hasOne('App\Model\Portfolio');
 	}
+	public function qualifications(){
+		return $this->morphMany('App\Model\Qualification', 'has_qualification');
+	}
+	public function isSubContractor(){
+		return $this->type == 'sub-contractor';
+	}
+	public function isSocialCare(){
+		return $this->type == 'social-childcare';
+	}
+	public function isGeneral(){
+		return $this->general = 'general';
+	}
 }

@@ -57,6 +57,8 @@ use App\Model\ProfileLanguage;
 use App\Model\ProfileAdditionalInfo;
 use App\Model\Publication;
 use App\Model\Portfolio;
+use App\Model\Qualification;
+use App\Model\QualificationType;
 use App\Model\Image;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
@@ -2899,7 +2901,10 @@ class HomeController extends BaseController
             $additionalInfo->is_smoker = (isset($request->is_smoker) && $request->is_smoker == 'true') ? 1 : 0;
             $additionalInfo->has_first_aid = (isset($request->has_first_aid) && $request->has_first_aid == 'true') ? 1 : 0;
             $additionalInfo->has_children = (isset($request->has_children) && $request->has_children == 'true') ? 1 : 0;
-            $additionalInfo->about_me = (isset($request->about_me)) ? $request->about_me : ''; 
+            $additionalInfo->about_me = (isset($request->about_me)) ? $request->about_me : '';
+            if($profile->isSubContractor()){
+                $additionalInfo->linkedin_url = $request->url_linkedin;
+            } 
         }
         $profile->additionalInfo()->save($additionalInfo);
         return redirect($request->redirect);
@@ -2943,6 +2948,30 @@ class HomeController extends BaseController
                 $portfolio->images()->save($image);
             }
         }
+        return redirect($request->redirect);
+    }
+    public function createQualification(Request $request){
+        $user = Auth::user();
+        $profile = $user->profile($request->type);
+        $qualificationTypes = QualificationType::all();
+        return view('home.profile.create_qualification', ['user' => $user, 'profile' => $profile, 'qualificationTypes' => $qualificationTypes]);
+    }
+    public function saveQualification(Request $request){
+        $profile = Profile::find($request->profile);
+        $qualificationType = QualificationType::find($request->qualification_type);
+        $qualification = new Qualification();
+        $qualification->school_name = $request->institution_name;
+        $qualification->started_on = date_create('1-1-'.$request->started_on);
+        $qualification->ended_on = date_create('1-1-'.$request->ended_on);
+        $qualification->type_id = $qualificationType->id;
+        if($qualificationType->id == 32){
+            $qualification->other_grade = $request->grade_description;
+        }
+        else{
+            $qualification->grade_id = $request->grade_selector;
+        }
+        $qualification->degree = $request->subject_name;
+        $profile->qualifications()->save($qualification);
         return redirect($request->redirect);
     }
 }

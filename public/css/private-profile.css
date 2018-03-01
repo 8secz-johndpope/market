@@ -16,11 +16,11 @@
     left: 0;
     background: rgba(0,0,0,0.5);
 }
-.container-details-profile, .container-looking-for-options, .container-status-availability, .container-work-experience, .container-task-can-help, .container-additional-information, .container-work-publications {
+.container-details-profile, .container-looking-for-options, .container-status-availability, .container-work-experience, .container-task-can-help, .container-additional-information, .container-work-publications, .container-qualifications {
     background: #EBEBEB;
 }
 .container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability, .container-cover-letter, .container-work-experience, .container-task-can-help, .container-other-information, .container-languages, .container-additional-information, 
-.container-work-publications, .container-portfolio{
+.container-work-publications, .container-portfolio, .container-qualifications{
 	padding: 70px 0;
 }
 .services .service {
@@ -58,6 +58,22 @@
     cursor: pointer;
     opacity: 0;
     z-index: 1
+}
+.what .description{
+    margin-top: 0;
+}
+.qualifications-container, .publications-container{
+    position: relative;
+}
+.qualification .delete, .qualification .edit, .publication .edit, .publication .delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+.qualification .delete, .publication .delete {
+    right: 30px;
 }
 .task label{
     background: url(/css/empty-star.png);
@@ -1032,6 +1048,9 @@ input[type=checkbox]:checked~label:before {
     color: #337ab7;
     cursor: pointer;
 }
+.employment-status .title{
+    padding-left: 0;
+}
 @media screen and (min-width: 768px){
 	.container-looking-for-options .content .col-sm-6:first-child {
 	    padding-left: 0!important;
@@ -1137,7 +1156,7 @@ input[type=checkbox]:checked~label:before {
         width: 100%;
         z-index: 0;
     }
-    .work-experience .work .what, .qualification .what {
+    .work-experience .work .what, .qualification .what, .publication .what {
         border-left: 1px solid #d6d6d6;
         padding-left: 30px;
     }
