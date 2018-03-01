@@ -244,7 +244,7 @@ function uploadImage(selectorInputImage, selectorImage) {
         console.log("nothing to upload");
     }
 }
-function deleteImage(image, deleteDatase){
+function deleteImage(image, deleteDatabase){
     console.log(image);
     if(image){
         var params = {
@@ -254,7 +254,7 @@ function deleteImage(image, deleteDatase){
             if(err){
                 console.log(err);
             }
-            else if(deleteDatase){
+            else if(deleteDatabase){
                 //TODO delete from database
                 axios.get('/user/delete/image/' + image)
                 .then(function (response) {
