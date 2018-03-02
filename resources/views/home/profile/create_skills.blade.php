@@ -31,7 +31,7 @@
             <h2 class="title">Skills & expertise</h2>
           </header>
           <div class="content row">
-            <form action="/user/save/portfolio" method="post" id="portfolio-form" method="post">
+            <form action="/user/save/skills" method="post" id="portfolio-form" method="post">
               <input name="redirect" id="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
               {{ csrf_field() }}
               <input type="hidden" name="profile" value="{{$profile->id}}">
@@ -105,6 +105,9 @@
       formGroup.addClass('input-validation-error');
     }
   });
-
+  $(document).on('click', '.skill', function(e){
+    e.preventDefault();
+    $(this).remove();
+  })
 </script>
 @endsection

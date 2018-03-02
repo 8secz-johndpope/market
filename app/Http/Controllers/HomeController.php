@@ -2979,4 +2979,16 @@ class HomeController extends BaseController
         $profile = $user->profile($request->type);
         return view('home.profile.create_skills', ['user' => $user, 'profile' => $profile]);
     }
+    public function saveSkills(Request $request){
+        $profile = Profile::find($request->profile);
+        $profile->skills()->delete();
+        if(isset($request->skills)){
+            foreach ($request->skills as  $requestSkill) {
+                $skill = new Skill();
+                $skill->name = $requestSkill;
+                $profile->skills()->save($skill);
+            }
+        }
+        return redirect($request->redirect);
+    }
 }

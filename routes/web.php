@@ -151,6 +151,7 @@ Route::post('/user/save/profile-additional-info', 'HomeController@saveProfileAdd
 Route::post('/user/save/publication', 'HomeController@savePublication');
 Route::post('/user/save/portfolio', 'HomeController@savePortfolio');
 Route::post('/user/save/qualification', 'HomeController@saveQualification');
+Route::post('/user/save/skills', 'HomeController@saveSkills');
 Route::get('/user/cv-builder/{slug}', 'HomeController@cv_builder');
 Route::get('/user/upload/cvs', 'HomeController@upload_cv');
 Route::get('/user/jobs/looking-for', 'HomeController@looking_for');
