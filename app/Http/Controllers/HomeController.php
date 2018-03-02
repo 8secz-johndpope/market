@@ -2974,4 +2974,9 @@ class HomeController extends BaseController
         $profile->qualifications()->save($qualification);
         return redirect($request->redirect);
     }
+    public function editSkills(Request $request){
+        $user = Auth::user();
+        $profile = $user->profile($request->type);
+        return view('home.profile.create_skills', ['user' => $user, 'profile' => $profile]);
+    }
 }

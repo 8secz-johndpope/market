@@ -165,6 +165,9 @@
     font-family: Effra-Medium,arial,helvetica,sans-serif;
     color: #000;
 }
+.skill-add {
+    border-bottom: 1px solid #d6d6d6;
+}
 .section-header .title {
     font-size: 1.3333333333em;
     font-weight: 700;
@@ -458,6 +461,12 @@ fieldset[class*=-option] {
 }
 .edit-avatar i {
     color: #fff;
+}
+.section-skill {
+    padding: 15px 0;
+}
+.update-form-group {
+    margin-top: 15px;
 }
 .looking-for-edit section[class^=section-] {
     position: relative;
@@ -1121,6 +1130,9 @@ input[type=checkbox]:checked~label:before {
 	    padding: 0;
 	    padding-top: 15px;
 	}
+    .section-skill {
+        padding: 30px 0;
+    }
 	.cv-searchable .checkbox {
 	    margin-bottom: 0;
 	}

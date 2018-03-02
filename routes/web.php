@@ -142,6 +142,7 @@ Route::get('/user/create/profile-additional-info', 'HomeController@createProfile
 Route::get('/user/create/publication', 'HomeController@createPublications');
 Route::get('/user/create/portfolio', 'HomeController@createPortfolio');
 Route::get('/user/create/qualification', 'HomeController@createQualification');
+Route::get('/user/create/skills', 'HomeController@editSkills');
 Route::post('/user/save/work-experience', 'HomeController@saveWorkExperience');
 Route::post('/user/save/tasks-help-services', 'HomeController@saveTasksCanHelpServices');
 Route::post('/user/save/car-driving', 'HomeController@saveCarDriving');
