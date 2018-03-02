@@ -99,7 +99,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="template-options-title">Select & Create Your Profile</h2>
+                    <h2 class="template-options-title">Confirm or Select & Create Your Profile</h2>
                     <p class="details-profile-subtitle">We have automatically allocated you a general profile. However you can confirm the general profile or select a new profile</p>
                     <p class="details-profile-subtitle">After selecting a profile, you should provide revelant information for each section in order to complete the profile</p>
                 </div>
