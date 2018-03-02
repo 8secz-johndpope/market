@@ -41,11 +41,18 @@
                 </div>
                 <div class="section-content col-xs-12 col-sm-10">
                   <div class="existing-skills">
+                    @foreach($profile->skills as $skill)
+                    <a href="#" class="lozenge skill">
+                      <span class="skill-name">{{$skill->title}}</span>
+                      <i class="glyphicon glyphicon-remove"></i>
+                      <input type="hidden" name="skills[]" value="{{$skill->title}}">
+                    </a>
+                    @endforeach
                   </div>
                   <div class="section-value">
                     <div class="add-form-field form-group col-xs-12 col-sm-10">
                       <span class="twitter-typehead inline">
-                        <input type="text" class="form-control inline" placeholder="Add a new skill or expertise" style="position:relative; vertical-align: top;" name="skill">
+                        <input type="text" class="form-control inline" placeholder="Add a new skill or expertise" style="position:relative; vertical-align: top;" name="skill" id="skill">
                       </span>
                       <div class="validation" style="display: none;">
                         <span>Skill cannot be empty</span>
@@ -73,6 +80,24 @@
 </div>
 @endsection
 @section('scripts')
+<script type="text/html" id="template-skill">
+  <a href="#" class="lozenge skill">
+    <span class="skill-name"></span>
+    <i class="glyphicon glyphicon-remove"></i>
+    <input type="hidden" name="skills[]" value="">
+  </a>
+</script>
 <script>
+  $('.btn.add').click(function(e){
+    e.preventDefault();
+    var parent = $('.existing-skills');
+    var textHtml = $('#template-skill').html();
+    var skill = $('#skill').val();
+    $('#skill').val('')
+    parent.append(textHtml);
+    skillSelector = parent.find('.lozenge:last-child');
+    skillSelector.find('.skill-name').text(skill);
+    skillSelector.find('input').val(skill);
+  });
 </script>
 @endsection
