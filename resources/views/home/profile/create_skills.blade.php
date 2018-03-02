@@ -54,7 +54,7 @@
                       <span class="twitter-typehead inline">
                         <input type="text" class="form-control inline" placeholder="Add a new skill or expertise" style="position:relative; vertical-align: top;" name="skill" id="skill">
                       </span>
-                      <div class="validation" style="display: none;">
+                      <div class="validation">
                         <span>Skill cannot be empty</span>
                       </div>
                     </div>
@@ -90,14 +90,21 @@
 <script>
   $('.btn.add').click(function(e){
     e.preventDefault();
-    var parent = $('.existing-skills');
-    var textHtml = $('#template-skill').html();
     var skill = $('#skill').val();
-    $('#skill').val('')
-    parent.append(textHtml);
-    skillSelector = parent.find('.lozenge:last-child');
-    skillSelector.find('.skill-name').text(skill);
-    skillSelector.find('input').val(skill);
+    if(skill != ''){
+      var parent = $('.existing-skills');
+      var textHtml = $('#template-skill').html();
+      $('#skill').val('')
+      parent.append(textHtml);
+      skillSelector = parent.find('.lozenge:last-child');
+      skillSelector.find('.skill-name').text(skill);
+      skillSelector.find('input').val(skill);
+    }
+    else{
+      var formGroup = $('#skill').closest('.form-group');
+      formGroup.addClass('input-validation-error');
+    }
   });
+
 </script>
 @endsection
