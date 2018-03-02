@@ -62,17 +62,17 @@
 .what .description{
     margin-top: 0;
 }
-.qualifications-container, .publications-container{
+.qualifications-container, .publications-container, .experience-container{
     position: relative;
 }
-.qualification .delete, .qualification .edit, .publication .edit, .publication .delete {
+.qualification .delete, .qualification .edit, .publication .edit, .publication .delete, .work .edit, .work .delete {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 2;
     cursor: pointer;
 }
-.qualification .delete, .publication .delete {
+.qualification .delete, .publication .delete, .work .delete {
     right: 30px;
 }
 .task label{

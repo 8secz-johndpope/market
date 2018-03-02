@@ -113,6 +113,9 @@
                         </select>
                       </div>
                     </div>
+                    <div class="validation">
+                      <span>Please enter validate date you ended this position</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -153,6 +156,45 @@
       dateTo.show();
     }
   });
+  $('#date-from-year').change(function(){
+    var date = new Date();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var fromMonth = $('#date-from-month').val();
+    var fromYear = $(this).val();
+    if(year == fromYear){
+      if(fromMonth > month){
+        $('#date-from-month').val('');
+      }
+      for(var i= month+1; i < 13; i++){
+        $('#date-from-month option[value='+ i +']').attr('disabled', 'true');
+      }
+    }
+    checkDates();
+  });
+  $('#date-to-year').change(function(){
+    var date = new Date();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var toMonth = $('#date-to-month').val();
+    var toYear = $(this).val();
+    if(year == toYear){
+      if(toMonth > month){
+        $('#date-to-month').val('');
+      }
+      for(var i= month+1; i < 13; i++){
+        $('#date-to-month option[value='+ i +']').attr('disabled', 'true');
+      }
+    }
+    checkDates();
+  });
+  $('#date-from-month').change(function(){
+    var parent = $(this).closest('.form-group');
+    parent.removeClass('input-validation-error');
+  });
+  $('#date-to-month, #date-from-month').change(function(){
+    checkDates();
+  });
   $('#work-experience-form').submit(function(e){
     var sInputMonth = $('#date-from-month');
     var fromMonth = sInputMonth.val();
@@ -169,5 +211,29 @@
       $('.date-to').hide();
     }
   });
+  function checkDates(){
+    var sFromYear = $('#date-from-year');
+    var sFromMonth = $('#date-from-month');
+    var sToYear = $('#date-to-year');
+    var sToMonth = $('#date-to-month');
+    var date = new Date();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var fromYear = sFromYear.val();
+    var fromMonth = sFromMonth.val();
+    var toYear = sToYear.val();
+    var toMonth = sToMonth.val();
+    if(fromYear != '' && toYear != ''){
+      var dateFrom = new Date(fromYear, fromMonth);
+      var dateTo = new Date(toYear, toMonth);
+      var parent = sToYear.closest('.form-group');
+      if(dateTo < dateFrom){
+        parent.addClass('input-validation-error');
+      }
+      else{
+        parent.removeClass('input-validation-error');
+      }
+    }
+  }
 </script>
 @endsection
