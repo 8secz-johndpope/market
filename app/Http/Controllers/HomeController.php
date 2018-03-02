@@ -2986,7 +2986,7 @@ class HomeController extends BaseController
         if(isset($request->skills)){
             foreach ($request->skills as  $requestSkill) {
                 $skill = new Skill();
-                $skill->name = $requestSkill;
+                $skill->title = $requestSkill;
                 $profile->skills()->save($skill);
             }
         }

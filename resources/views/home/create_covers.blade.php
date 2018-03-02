@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', 'Create your cover letter')
 
@@ -32,7 +32,7 @@
             <p class="summary">A good cover letter can greatly increase your chances of standing out to recruiters.</p>
           </header>
           <div class="content">
-              <form action="/user/covers/add" method="post">
+              <form action="/user/covers/add" method="post" id="add-cover">
                   <input name="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
                   {{ csrf_field() }}
                   <input name="profile" type="hidden" value="{{$profile->id}}">
@@ -51,8 +51,11 @@
                   </select>
               </div>
                   <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Cover Letter</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" name="cover" rows="15">{{$cover != null ? $cover->cover: ""}}</textarea>
+                      <label for="cover">Cover Letter</label>
+                      <textarea class="form-control" id="cover" name="cover" rows="15">{{$cover != null ? $cover->cover: ""}}</textarea>
+                      <div class="validation">
+                         <span>Cover letter cannot be empty</span>
+                      </div>
                   </div>
               <button type="submit" class="btn btn-submit" id="upload-cv-link">Add Cover</button>
               </form>
@@ -62,4 +65,17 @@
     </div>
   </div>
 </div>
+@endsection
+@section('scripts')
+<script>
+  $('#add-cover').submit(function(e){
+    var selectorCover = $('#cover');
+    var cover = selectorCover.val();
+    if(cover == ''){
+      e.preventDefault();
+      var parent = selectorCover.closest('.form-group');
+      parent.addClass('input-validation-error');
+    }
+  });
+</script>
 @endsection
