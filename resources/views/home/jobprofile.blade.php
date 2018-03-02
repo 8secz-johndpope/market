@@ -896,6 +896,39 @@
             </div>
         </div>
     </section>
+    <section class="container-skills mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="section-header">
+                        <h2 class="title">Skills</h2>
+                        @if($profile->qualifications->count() > 0)
+                        <a href="/user/create/qualification?type={{$type}}" class="action add">
+                            edit
+                            <i class="glyphicon glyphicon-menu-right"></i>
+                        </a>
+                        @endif
+                    </header>
+                    <div class="content">
+                        <ul class="skills-list">
+                            <li class="lozenge">
+
+                            </li>
+                        </ul>
+                        @if($profile->qualifications->count() == 0)
+                        <div>
+                            <a class="add-first" href="/user/create/qualification?type={{$type}}">
+                                <i class="glyphicon glyphicon-plus-sign"></i>
+                                Add skills & expertise
+                            </a>
+                        </div>
+                        @endif
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     @endif
     <section class="container-action-profile mb-10">
         <div class="container">
