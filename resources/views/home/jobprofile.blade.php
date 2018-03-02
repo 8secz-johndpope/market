@@ -227,7 +227,7 @@
                                         <p>Upload a new CV, or use our CV builder to build one for you.</p>
                                         <div>
                                             <a class="btn btn-inverse" href="/user/cv-builder/personal-details">CV Builder by {{env('APP_NAME')}}</a>
-                                             <a class="btn btn-submit" href="/user/upload/cvs">Upload CV</a>
+                                             <a class="btn btn-submit" href="/user/upload/cvs?type={{$type}}">Upload CV</a>
                                         </div>
                                     </div>
                                 </div>

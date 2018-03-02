@@ -68,6 +68,7 @@
                 </div>
               </div>
               <div class="update-form-group col-xs-12 text-right">
+                <p class="text-left">You can add various skills</p>
                 <button type="button" class="cancel btn btn-link">Cancel</button>
                 <button type="submit" class="save btn btn-submit">Save</button>
               </div>
