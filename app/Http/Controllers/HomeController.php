@@ -60,6 +60,7 @@ use App\Model\Portfolio;
 use App\Model\Qualification;
 use App\Model\QualificationType;
 use App\Model\Image;
+use App\Model\Skill;
 use App\Model\Field;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
