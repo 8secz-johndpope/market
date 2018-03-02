@@ -1252,14 +1252,15 @@ class HomeController extends BaseController
     public function add_cover(Request $request)
     {
         $user = Auth::user();
-        $profile = 
-        $cover = new Cover;
+        $profile = Profile::find($request->profile);
+        if($profile->cover == null){
+            $cover = new Cover;
+        }
         $cover->title=$request->title;
         $cover->category_id=$request->category;
         $cover->cover=$request->cover;
         $cover->user_id=$user->id;
-        $cover->profile_id = $request->profile;
-        $cover->save();
+        $profile->cover()->save($cover);
         return redirect($request->redirect);
     }
     public function apply(Request $request)

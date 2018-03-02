@@ -46,7 +46,7 @@
                   <label for="category">Select Category</label> <span class="red-text" id="no-category" style="display: none">Please choose a category to your CV</span>
                   <select class="form-control" name="category" required>
                       @foreach($jobs as $job)
-                          <option value="{{$job->id}}">{{$job->title}}</option>
+                          <option value="{{$job->id}}" {{($profile->cover != null && $profile->cover->category->id == $job->id) ? 'selected' : ''}}>{{$job->title}}</option>
                       @endforeach
                   </select>
               </div>
