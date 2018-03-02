@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', 'Create your employment status')
 
@@ -26,7 +26,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <form action="/user/save/profile-languages" method="post">
+        <form action="/user/save/profile-languages" method="post" id="languages-form">
           <input name="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
           {{ csrf_field() }}
           <input name="profile" type="hidden" value="{{$profile->id}}">
@@ -104,12 +104,17 @@
 <script type="text/html" id="language-template">
   <div class="language-row row">
     <div class="form-left col-xs-12 col-sm-5">
+      <div class="form-group">
       <select class="form-control long">
-        <option>Choose a language..</option>
+        <option value="">Choose a language..</option>
         @foreach($languages as $language)
           <option value="{{$language->id}}">{{$language->name}}</option>
         @endforeach
       </select>
+      <div class="validation">
+        <span>Select language</span>
+      </div>
+    </div>
       <div class="remove-language-container visible-xs-block">
         <i class="">Remove</i>
       </div>
@@ -118,7 +123,7 @@
     <div class="form-right col-xs-12 col-sm-7">
       <div class="form-group">
         <div class="radio">
-          <input type="radio" id="fluency-low-0" name="language_fluency[0]" value="1">
+          <input type="radio" id="fluency-low-0" name="language_fluency[0]" value="1" checked="">
           <label for="fluency-low-0">
             Basic
           </label>
@@ -141,8 +146,9 @@
         </div>
       </div>
     </div>
-  </div>
 </script>
+@endsection
+@section('scripts')
 <script>
   $('.add-language').click(function(){
     var total = $('.language-row').length;
@@ -150,6 +156,16 @@
     $('.languages').append(text);
     $('.language-row:last-child').find('select').attr('name', 'languages['+ total +']');
     $('.language-row:last-child').find('input').attr('name', 'levels['+ total +']');
-  })
+  });
+  $('#languages-form').submit(function(e){
+    $('select').each(function(){
+      if($(this).val() == ''){
+        console.log('some');
+        e.preventDefault();
+        var parent = $(this).closest('.form-group');
+        parent.addClass('input-validation-error');
+      }
+    })
+  });
 </script>
 @endsection

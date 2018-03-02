@@ -2881,11 +2881,13 @@ class HomeController extends BaseController
         if($profile->languages->count() > 0 ){
             $profile->languages()->delete();
         }
-        foreach ($request->languages as $key => $language) {
-            $profileLanguage = new ProfileLanguage();
-            $profileLanguage->level = $levels[$key];
-            $profileLanguage->language_id = $language;
-            $profile->languages()->save($profileLanguage);
+        if(isset($request->languages)){
+            foreach ($request->languages as $key => $language) {
+                $profileLanguage = new ProfileLanguage();
+                $profileLanguage->level = $levels[$key];
+                $profileLanguage->language_id = $language;
+                $profile->languages()->save($profileLanguage);
+            }
         }
         return redirect($request->redirect);
     }
@@ -2992,5 +2994,12 @@ class HomeController extends BaseController
             }
         }
         return redirect($request->redirect);
+    }
+    public function publishProfile(Request $request){
+        $user = Auth::user();
+        $profile = $user->profile($request->type);
+        $profile->status = 1;
+        $profile->save();
+        return view('home.profile.template'.$request->type, ['profile' => $profile]);
     }
 }

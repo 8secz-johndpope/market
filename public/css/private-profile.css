@@ -20,7 +20,7 @@
     background: #EBEBEB;
 }
 .container-templates-options, .container-details-profile, .container-looking-for-options, .container-cvs, .container-status-availability, .container-cover-letter, .container-work-experience, .container-task-can-help, .container-other-information, .container-languages, .container-additional-information, 
-.container-work-publications, .container-portfolio, .container-qualifications{
+.container-work-publications, .container-portfolio, .container-qualifications, .container-skills{
 	padding: 70px 0;
 }
 .services .service {
@@ -102,7 +102,7 @@
 	-webkit-box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
     box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
 }
-.container-templates-options, .container-cvs, .container-cover-letter, .container-languages, .container-other-information, .container-portfolio {
+.container-templates-options, .container-cvs, .container-cover-letter, .container-languages, .container-other-information, .container-portfolio, .container-skills {
     background-color: #f5f5f5;
 }
 .btn-info, .btn-info:hover {
@@ -1235,7 +1235,7 @@ input[type=checkbox]:checked~label:before {
         width: 100%;
         z-index: 0;
     }
-    .work-experience .work .what, .qualification .what, .publication .what {
+    .work-experience .work .what, .qualification .what, .publication .what, .work .what {
         border-left: 1px solid #d6d6d6;
         padding-left: 30px;
     }

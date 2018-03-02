@@ -100,25 +100,26 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h2 class="template-options-title">Select & Create Your Profile</h2>
+                    <p class="details-profile-subtitle">We have automatically allocated you a general profile. However you can confirm the general profile or select a new profile</p>
                     <p class="details-profile-subtitle">After selecting a profile, you should provide revelant information for each section in order to complete the profile</p>
                 </div>
                 <div class="col-sm-4">
                     <div class="template-item">
-                        <h3 class="template-item-title">General</h3>
+                        <h3 class="template-item-title">General Profile</h3>
                         <div class="template-content {{$type === $types[0] ? 'selected' : ''}}" data-href="{{$types[0]}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="template-item">
-                        <h3 class="template-item-title">Social Care & Childcare</h3>
+                        <h3 class="template-item-title">Social Care & Childcare Profile</h3>
                         <div class="template-content {{$type === $types[1] ? 'selected' : ''}}" data-href="{{$types[1]}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="template-item">
-                        <h3 class="template-item-title">Sub Contractor</h3>
+                        <h3 class="template-item-title">Sub Contractor Profile</h3>
                         <div class="template-content {{$type === $types[2] ? 'selected' : ''}}" data-href="{{$types[2]}}">
                         </div>
                     </div>
@@ -126,7 +127,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <p class="select-profile">To procced, you must select a profile</p>
+                    <p class="select-profile">To procced, you must confirm or select a profile</p>
                 </div>
             </div>
         </div>
