@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', 'Add your work experience')
 
@@ -31,7 +31,7 @@
             <h2 class="title">Work experience</h2>
           </header>
           <div class="content row">
-            <form action="/user/save/work-experience" method="post" id="work-experience-form" method="post">
+            <form action="/user/save/work-experience" method="post" id="work-experience-form">
                 <input name="redirect" id="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
                 {{ csrf_field() }}
                 <input type="hidden" name="profile_id" value="{{$profile->id}}">
@@ -76,9 +76,12 @@
                         </select>
                       </div>
                     </div>
+                    <div class="validation">
+                      <span>Please enter date you started this position</span>
+                    </div>
                   </div>
                   <div class="current-role form-group checkbox col-sm-4 col-xs-12">
-                    <input type="checkbox" name="is-current-role" id="is-current-role">
+                    <input type="checkbox" name="is_current_role" id="is-current-role">
                     <label for="is-current-role">I currently work here</label>
                   </div>
                   <div class="date-to form-group col-sm-8 col-xs-12">
@@ -131,6 +134,8 @@
     </div>
   </div>
 </div>
+@endsection
+@section('scripts')
 <script>
   $('.cancel').click(function(){
     window.location.href = $('#redirect').val();
@@ -146,6 +151,22 @@
       dateTo.hide();
     }else{
       dateTo.show();
+    }
+  });
+  $('#work-experience-form').submit(function(e){
+    var sInputMonth = $('#date-from-month');
+    var fromMonth = sInputMonth.val();
+    var fromYear = $('#date-from-year').val();
+    var toMonth = $('#date-to-month').val();
+    var toYear = $('#date-to-year').val();
+    if(fromMonth == '' || fromYear == ''){
+      e.preventDefault();
+      var parent = sInputMonth.closest('.form-group');
+      parent.addClass('input-validation-error');
+    }
+    if(toMonth == '' || toYear == ''){
+      $('#is-current-role').prop('checked', true);
+      $('.date-to').hide();
     }
   });
 </script>

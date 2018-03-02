@@ -77,5 +77,11 @@
       parent.addClass('input-validation-error');
     }
   });
+  $('#cover').change(function(){
+    var parent = $(this).closest('.form-group');
+    if(parent.hasClass('input-validation-error')){
+      parent.removeClass('input-validation-error');
+    }
+  })
 </script>
 @endsection

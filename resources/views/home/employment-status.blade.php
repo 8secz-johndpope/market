@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', 'Create your employment status')
 
