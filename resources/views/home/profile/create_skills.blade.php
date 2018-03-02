@@ -49,7 +49,7 @@
                     </a>
                     @endforeach
                   </div>
-                  <div class="section-value">
+                  <div class="section-value row">
                     <div class="add-form-field form-group col-xs-12 col-sm-10">
                       <span class="twitter-typehead inline">
                         <input type="text" class="form-control inline" placeholder="Add a new skill or expertise" style="position:relative; vertical-align: top;" name="skill" id="skill">

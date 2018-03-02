@@ -1068,12 +1068,26 @@ input[type=checkbox]:checked~label:before {
     margin: 0 10px 10px 0;
     background: #eaeaea;
     border-radius: 12px;
-    font-size: .9333333333rem;
 }
 .skills-list {
     margin: 0;
     padding: 0;
     list-style-position: outside;
+}
+.existing-skills {
+    margin: 0 0 15px;
+}
+.existing-skills .skill{
+    color: #333;
+    position: relative;
+    border-radius: 20px;
+}
+.existing-skills .skill:hover{
+    text-decoration: line-through;
+}
+.skill i{
+    padding: 0 0 0 15px;
+    vertical-align: text-top;
 }
 .form-group .validation {
     display: none;
