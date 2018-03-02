@@ -60,6 +60,9 @@ class Profile extends Model
 	public function qualifications(){
 		return $this->morphMany('App\Model\Qualification', 'has_qualification');
 	}
+	public function skills(){
+		return $this->hasMany('App\Model\Skill');
+	}
 	public function isSubContractor(){
 		return $this->type == 'sub-contractor';
 	}
@@ -69,4 +72,5 @@ class Profile extends Model
 	public function isGeneral(){
 		return $this->general = 'general';
 	}
+
 }

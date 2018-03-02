@@ -902,9 +902,9 @@
                 <div class="col-sm-12">
                     <header class="section-header">
                         <h2 class="title">Skills</h2>
-                        @if($profile->qualifications->count() > 0)
-                        <a href="/user/create/qualification?type={{$type}}" class="action add">
-                            edit
+                        @if($profile->skills->count() > 0)
+                        <a href="/user/create/skills?type={{$type}}" class="action add">
+                            Edit
                             <i class="glyphicon glyphicon-menu-right"></i>
                         </a>
                         @endif
@@ -915,9 +915,9 @@
 
                             </li>
                         </ul>
-                        @if($profile->qualifications->count() == 0)
+                        @if($profile->skills->count() == 0)
                         <div>
-                            <a class="add-first" href="/user/create/qualification?type={{$type}}">
+                            <a class="add-first" href="/user/create/skills?type={{$type}}">
                                 <i class="glyphicon glyphicon-plus-sign"></i>
                                 Add skills & expertise
                             </a>

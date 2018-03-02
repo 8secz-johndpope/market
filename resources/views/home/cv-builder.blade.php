@@ -513,7 +513,7 @@
     @if($indexSector < count($cvSections) - 1)
       window.location.href = '/user/cv-builder/{{array_keys($cvSections)[$indexSector + 1]}}';
     @else
-      window.location.href = '/job/profile/edit';
+      window.location.href = '/job/profile/edit/general';
     @endif
   })
   $('.add-work-experience').click(function(){
