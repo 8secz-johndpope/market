@@ -22,7 +22,7 @@
 		this.buttonEl.disabled = true;
 
 		// Load the drive API
-		console.log(gapi.client);
+		console.log(gapi);
 		console.log(this.apiKey);
 		gapi.client.setApiKey(this.apiKey);
 		gapi.client.load('drive', 'v2', this._driveApiLoaded.bind(this));
