@@ -138,6 +138,7 @@
         alert('Selected ' + file.title);
       }
     }); 
+    console.log('created picker');
   }
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
