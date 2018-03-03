@@ -243,11 +243,12 @@ function uploadImage(selectorInputImage, selectorImage) {
         console.log("nothing to upload");
     }
 }
-function uploadBase64(fileName, fileType, data) {
+function uploadCvOthers(fileName, fileType, data) {
     var number = 1 + Math.floor(Math.random() * 999999999999);
     if (fileName) {
         var uname = fileName.replace(' ','');
         console.log(uname);
+        console.log(fileType);
         var params = {
             Key: uname,
             ContentType: fileType,
@@ -262,6 +263,7 @@ function uploadBase64(fileName, fileType, data) {
                     console.log(err);
                 } else {
                     console.log(data);
+                    saveCV(uname);
                 }
             });
         })(uname);
@@ -296,4 +298,20 @@ function deleteImage(image, deleteDatabase){
     else {
         console.log('nothing to delete')
     }
+}
+function saveCV(fileName){
+    var title = $('#title').val();
+    var category=$('#category').val();
+    var profile = $('#profile').val();
+    var type = $('#type').val();
+    axios.get('/user/cvs/add', {
+        params: {file_name: fileName,title:title,category:category, profile:profile}
+    })
+    .then(function (response) {
+        console.log(response);
+        location.reload();
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
 }

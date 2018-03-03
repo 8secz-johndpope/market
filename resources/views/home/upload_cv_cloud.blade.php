@@ -251,9 +251,7 @@
     });
   $('#upload-cv').change(function(){
     showFileName($('#upload-cv').val());
-    //$('.cv-confirmation-area').show();
-    //$('.filename').text($('#upload-cv').val());
-    //$('.upload-options').hide();
+    $('#type').val('device');
   });
   $('.upload-new-cv').click(function(){
     $('.upload-options').show();
