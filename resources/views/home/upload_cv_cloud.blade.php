@@ -207,13 +207,15 @@
         var url = 'nothing';
         var name = '';
         var idDocument = 0;
+        var type = '';
         if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
           var doc = data[google.picker.Response.DOCUMENTS][0];
           console.log(doc);
           url = doc[google.picker.Document.URL];
           name = doc[google.picker.Document.NAME];
           idDocument = doc[google.picker.Document.ID];
-          getFile(idDocument);
+          type = doc[google.picker.Document.MIME_TYPE];
+          getFile(idDocument, type);
         }
         var message = 'You picked: ' + url;
         showFileName(name);
@@ -265,7 +267,7 @@
     $('.filename').text(fileName);
     $('.upload-options').hide();
   }
-  function getFile(file){
+  function getFile(file, type){
     var accessToken = oauthToken;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+file+'?alt=media', true);
@@ -273,7 +275,7 @@
     xhr.responseType = 'arraybuffer'
     xhr.onload = function(){
         //base64ArrayBuffer from https://gist.github.com/jonleighton/958841
-        var base64 = 'data:image/png;base64,' + base64ArrayBuffer(xhr.response);
+        var base64 = 'data:' + type +';base64,' + base64ArrayBuffer(xhr.response);
         console.log(base64);
         //do something with the base64 image here
     }
