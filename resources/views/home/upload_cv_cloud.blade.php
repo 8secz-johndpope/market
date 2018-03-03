@@ -41,7 +41,8 @@
                     <input type="file" name="cv" class="file-input" id="upload-cv">
                   </li>
                   <li class="col-xs-12 col-sm-6 cv-upload-option">
-                    <span class="upload-option googledrive" id="googledrive">
+                    <span class="upload-option googledrive" >
+                      <button type="button" id="googledrive"></button>
                       Google Drive
                     </span>
                   </li>
