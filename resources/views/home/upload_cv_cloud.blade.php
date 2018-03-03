@@ -138,7 +138,7 @@
         /*else{
             $('#no-title').hide();
         }*/
-        if(category=='0'){
+        else if(category=='0'){
           parent = $('#category').closest('.form-group');
             //$('#no-category').show();
             //return;
