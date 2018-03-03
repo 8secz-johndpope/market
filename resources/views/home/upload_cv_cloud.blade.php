@@ -129,6 +129,8 @@
 @endsection
 @section('scripts')
 <script src="/js/filepicker.js"></script>
+<script src="/js/base64ArrayBuffer.js"></script>
+
 <script>
   function initPicker() {
     var picker = new FilePicker({
@@ -211,10 +213,10 @@
           url = doc[google.picker.Document.URL];
           name = doc[google.picker.Document.NAME];
           idDocument = doc[google.picker.Document.ID];
+          getFile(idDocument);
         }
         var message = 'You picked: ' + url;
         showFileName(name);
-        getFile(idDocument);
         $('#other-cv').val(idDocument);
         document.getElementById('result').innerHTML = message;
       }
