@@ -192,6 +192,7 @@
               setOAuthToken(oauthToken).
               setDeveloperKey(developerKey).
               setCallback(pickerCallback).
+              setOrigin(window.location.protocol + '//' + window.location.host).
               build();
           picker.setVisible(true);
         }
@@ -208,7 +209,8 @@
           name = doc[google.picker.Document.Name];
         }
         var message = 'You picked: ' + url;
-        $('#upload-cv').val(name);
+        $('#upload-cv').val(url);
+        showFileName(name);
         document.getElementById('result').innerHTML = message;
       }
     </script>
