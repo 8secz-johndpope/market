@@ -188,7 +188,7 @@
       function createPicker() {
         if (pickerApiLoaded && oauthToken) {
           var picker = new google.picker.PickerBuilder().
-              addView(google.picker.​ViewId.DOCS).
+              addView(google.picker.ViewId.DOCS).
               setOAuthToken(oauthToken).
               setDeveloperKey(developerKey).
               setCallback(pickerCallback).
