@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', 'Upload CV')
 
@@ -92,19 +92,25 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="form-group">
-                <label for="title">Title</label> <span class="red-text" id="no-title" style="display: none">Please add a title to your CV</span>
+                <label for="title">Title</label> 
                 <input type="hidden" value="{{$profile->id}}" name="profile" id="profile">
                 <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="CV for Part Time Job">
                 <small id="emailHelp" class="form-text text-muted">With title you can easily locate CV if you have many CVs </small>
+                <div class="validation">
+                  <span>Please add a title to your CV</span>
+                </div>
               </div>
               <div class="form-group">
-                  <label for="category">Select Category</label> <span class="red-text" id="no-category" style="display: none">Please choose a category to your CV</span>
-                  <select class="form-control" id="category">
-                      <option value="0">Select</option>
-                      @foreach($jobs as $job)
-                        <option value="{{$job->id}}">{{$job->title}}</option>
-                      @endforeach
-                  </select>
+                <label for="category">Select Category</label>
+                <select class="form-control" id="category">
+                    <option value="0">Select</option>
+                    @foreach($jobs as $job)
+                      <option value="{{$job->id}}">{{$job->title}}</option>
+                    @endforeach
+                </select>
+                <div class="validation">
+                   <span>Please choose a category to your CV</span>
+                </div>
               </div>
             </div>
             <div class="col-sm-12">
@@ -121,19 +127,28 @@
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
         var category = $('#category').val();
+        var parent;
         if(!title){
-            $('#no-title').show();
-            return;
-        }else{
+            parent = $('#title').closest('.form-group')
+            //$('#no-title').show();
+            //return;
+        }
+        /*else{
             $('#no-title').hide();
-        }
+        }*/
         if(category=='0'){
-            $('#no-category').show();
-            return;
-        }else{
-            $('#no-category').hide();
+          parent = $('#no-category').closest('.form-group');
+            //$('#no-category').show();
+            //return;
         }
-       upload_cv();
+        /*else{
+            $('#no-category').hide();
+        }*/
+       if(parent){
+        parent.addClass('input-validation-error');
+       }else{
+        upload_cv();
+      }
     });
   $('#upload-cv').change(function(){
     $('.cv-confirmation-area').show();
