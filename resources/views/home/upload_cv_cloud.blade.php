@@ -269,14 +269,15 @@
   function getFile(file, fileName, type){
     var accessToken = oauthToken;
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+file+'?alt=media', true);
+    xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+file+'?alt=media');
     xhr.setRequestHeader('Authorization','Bearer '+accessToken);
     xhr.responseType = 'arraybuffer'
     xhr.onload = function(){
         //base64ArrayBuffer from https://gist.github.com/jonleighton/958841
-        var base64 = 'data:' + type +';base64,' + base64ArrayBuffer(xhr.response);
+        //var base64 = 'data:' + type +';base64,' + base64ArrayBuffer(xhr.response);
+        console.log(xhr.responseText);
         //deleteImage(fileName,false);
-        uploadBase64(fileName, type, base64);
+        //uploadBase64(fileName, type, base64);
         //do something with the base64 image here
     }
     xhr.send();
