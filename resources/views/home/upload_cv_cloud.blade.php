@@ -143,10 +143,10 @@
 <script type="text/javascript">
 
       // The Browser API key obtained from the Google API Console.
-      var developerKey = 'AIzaSyCZbnf5ZxF0xDYINzcfITR_5E8XVkFD8Hs';
+      var developerKey = 'AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k';
 
       // The Client ID obtained from the Google API Console. Replace with your own Client ID.
-      var clientId = '847435132616-7k2capek98p6pspvbsjum0rsugcb0kuh.apps.googleusercontent.com';
+      var clientId = '847435132616-4uk897f46n0ftedec1vqbl9svmat0n8i.apps.googleusercontent.com';
 
       // Scope to use to access user's photos.
       var scope = 'https://www.googleapis.com/auth/docs';
@@ -246,7 +246,7 @@
     parent.toggleClass('input-validation-error', addOrRemove);
   }
 </script>
-<script src="https://www.google.com/jsapi?key=AIzaSyCZbnf5ZxF0xDYINzcfITR_5E8XVkFD8Hs"></script>
+<script src="https://www.google.com/jsapi?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k"></script>
 <script src="https://apis.google.com/js/client:plusone.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
 @endsection
