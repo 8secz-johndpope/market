@@ -158,7 +158,7 @@
 
       var pickerApiLoaded = false;
       var oauthToken;
-
+      var contentFile;
       // Use the API Loader script to load google.picker and gapi.auth.
       function onApiLoad() {
         gapi.load('auth2', onAuthApiLoad);
@@ -221,17 +221,26 @@
         showFileName(name);
         $('#other-cv').val(idDocument);
       }
-    </script>
+</script>
 <script>
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
         var category = $('#category').val();
+        var cv = $('#upload-cv').val();
+        var type = $('#type').val();
+        var otherCv = $('#other-cv').val();
         var input = null;
         if(!title){
             input = $('#title');
         }
         else if(category=='0'){
           input = $('#category');
+        }
+        else if(type == 'device' && cv ==''){
+          input = $('#upload-cv');
+        }
+        else if((type == 'google-drive' || type == 'dropbox' || type == 'one-drive') &&  otherCV ==''){
+          input = $('#other-cv');
         }
        if(input != null){
         console.log(input);
@@ -273,12 +282,8 @@
     xhr.setRequestHeader('Authorization','Bearer '+accessToken);
     xhr.responseType = 'blob';
     xhr.onload = function(){
-        //base64ArrayBuffer from https://gist.github.com/jonleighton/958841
-        //var base64 = 'data:' + type +';base64,' + base64ArrayBuffer(xhr.response);
-        content = xhr.response;
-        deleteImage(fileName,false);
-        uploadBase64(fileName, type, content);
-        //do something with the base64 image here
+        contentFile = xhr.response;
+        $('#other-cv').val(fileName);
     }
     xhr.send();
   }
