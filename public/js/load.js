@@ -246,7 +246,7 @@ function uploadImage(selectorInputImage, selectorImage) {
 function uploadBase64(fileName, fileType, data) {
     var number = 1 + Math.floor(Math.random() * 999999999999);
     if (fileName) {
-        var uname = fileName;
+        var uname = fileName.replace(' ','');
         console.log(uname);
         var params = {
             Key: uname,
