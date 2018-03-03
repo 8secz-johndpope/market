@@ -251,7 +251,7 @@ function uploadBase64(fileName, fileType, data) {
         var params = {
             Key: uname,
             ContentType: fileType,
-            ContentEncoding: 'base64',
+            //ContentEncoding: 'base64',
             Body: data,
             ACL: 'public-read'
         };

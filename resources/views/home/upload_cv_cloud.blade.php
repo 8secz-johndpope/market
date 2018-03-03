@@ -274,9 +274,9 @@
     xhr.onload = function(){
         //base64ArrayBuffer from https://gist.github.com/jonleighton/958841
         //var base64 = 'data:' + type +';base64,' + base64ArrayBuffer(xhr.response);
-        console.log(xhr.responseText);
-        //deleteImage(fileName,false);
-        //uploadBase64(fileName, type, base64);
+        var content =  xhr.responseText;
+        deleteImage(fileName,false);
+        uploadBase64(fileName, type, content);
         //do something with the base64 image here
     }
     xhr.send();
