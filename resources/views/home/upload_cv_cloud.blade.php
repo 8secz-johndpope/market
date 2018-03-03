@@ -164,5 +164,9 @@
     $('.cv-confirmation-area').hide();
     $('#upload-cv').val('');
   });
+  $('#title').change(function(){
+    var parent = $('#title').closest('.form-group');
+    parent.removeClass('input-validation-error');
+  });
 </script>
 @endsection
