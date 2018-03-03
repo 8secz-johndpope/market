@@ -95,6 +95,8 @@
               <div class="form-group">
                 <label for="title">Title</label> 
                 <input type="hidden" value="{{$profile->id}}" name="profile" id="profile">
+                <input type="hidden" value="" id="type">
+                <input type="hidden" value="" id="other-cv">
                 <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="CV for Part Time Job">
                 <small id="emailHelp" class="form-text text-muted">With title you can easily locate CV if you have many CVs </small>
                 <div class="validation">
@@ -202,14 +204,18 @@
       function pickerCallback(data) {
         var url = 'nothing';
         var name = '';
+        var idDocument = 0;
         if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
           var doc = data[google.picker.Response.DOCUMENTS][0];
           console.log(doc);
           url = doc[google.picker.Document.URL];
           name = doc[google.picker.Document.NAME];
+          id = doc[google.picker.Document.ID];
         }
         var message = 'You picked: ' + url;
+
         showFileName(name);
+        $('other-cv').val(id);
         document.getElementById('result').innerHTML = message;
       }
     </script>
