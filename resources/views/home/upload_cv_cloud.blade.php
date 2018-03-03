@@ -295,6 +295,7 @@
     xhr.onload = function(){
         contentFile = xhr.response;
         $('#other-cv').val(fileName);
+        $('#type').val('google-drive');
     }
     xhr.send();
   }
