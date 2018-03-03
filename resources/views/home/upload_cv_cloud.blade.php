@@ -129,7 +129,7 @@
         var category = $('#category').val();
         var parent = null;
         if(!title){
-            parent = $('#title').closest('.form-group')
+            parent = $('#title').closest('.form-group');
             //$('#no-title').show();
             //return;
         }
