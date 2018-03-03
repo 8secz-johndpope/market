@@ -129,9 +129,9 @@
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
         var category = $('#category').val();
-        var parent = null;
+        var input = null;
         if(!title){
-            parent = $('#title').closest('.form-group');
+            input = $('#title');
             //$('#no-title').show();
             //return;
         }
@@ -139,7 +139,7 @@
             $('#no-title').hide();
         }*/
         else if(category=='0'){
-          parent = $('#category').closest('.form-group');
+          input = $('#category');
             //$('#no-category').show();
             //return;
         }
@@ -147,9 +147,9 @@
             $('#no-category').hide();
         }*/
         
-       if(parent != null){
-        console.log(parent);
-        parent.addClass('input-validation-error');
+       if(input != null){
+        console.log(input);
+        toggleValidationError(input);
        }else{
         //upload_cv();
       }
@@ -165,8 +165,14 @@
     $('#upload-cv').val('');
   });
   $('#title').change(function(){
-    var parent = $('#title').closest('.form-group');
-    parent.removeClass('input-validation-error');
+    toggleValidationError($(this));
   });
+  $('#category').change(function(){
+    toggleValidationError($(this));
+  });
+  function toggleValidationError(inputSelector){
+    var parent = inputSelector.closest('.form-group');
+    parent.toggleClass('input-validation-error');
+  }
 </script>
 @endsection

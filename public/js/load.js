@@ -117,15 +117,14 @@ function upload_cv() {
                         axios.get('/user/cvs/add', {
                             params: {file_name: uname,title:title,category:category, profile:profile}
                         })
-                            .then(function (response) {
-                                console.log(response);
-                                location.reload();
+                        .then(function (response) {
+                            console.log(response);
+                            location.reload();
 
-                            })
-                            .catch(function (error) {
-                                console.log(error);
-                            });
-
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
                     }
                 });
             })(uname);
