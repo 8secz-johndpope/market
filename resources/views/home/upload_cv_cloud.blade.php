@@ -149,7 +149,7 @@
         
        if(input != null){
         console.log(input);
-        toggleValidationError(input);
+        toggleValidationError(input, true);
        }else{
         //upload_cv();
       }
@@ -165,14 +165,14 @@
     $('#upload-cv').val('');
   });
   $('#title').change(function(){
-    toggleValidationError($(this));
+    toggleValidationError($(this), false);
   });
   $('#category').change(function(){
     console.log('change');
-    toggleValidationError($(this));
+    toggleValidationError($(this), false);
   });
-  function toggleValidationError(inputSelector){
-    var parent = inputSelector.closest('.form-group');
+  function toggleValidationError(inputSelector, addOrRemove){
+    var parent = inputSelector.closest('.form-group', addOrRemove);
     parent.toggleClass('input-validation-error');
   }
 </script>
