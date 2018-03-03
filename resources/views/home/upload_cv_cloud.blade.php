@@ -210,12 +210,12 @@
           console.log(doc);
           url = doc[google.picker.Document.URL];
           name = doc[google.picker.Document.NAME];
-          id = doc[google.picker.Document.ID];
+          idDocument = doc[google.picker.Document.ID];
         }
         var message = 'You picked: ' + url;
 
         showFileName(name);
-        $('other-cv').val(id);
+        $('other-cv').val(idDocument);
         document.getElementById('result').innerHTML = message;
       }
     </script>
