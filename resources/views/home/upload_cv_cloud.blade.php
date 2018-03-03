@@ -209,7 +209,6 @@
           name = doc[google.picker.Document.Name];
         }
         var message = 'You picked: ' + url;
-        $('#upload-cv').val(url);
         showFileName(name);
         document.getElementById('result').innerHTML = message;
       }
