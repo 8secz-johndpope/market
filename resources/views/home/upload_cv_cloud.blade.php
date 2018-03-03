@@ -220,7 +220,6 @@
         var message = 'You picked: ' + url;
         showFileName(name);
         $('#other-cv').val(idDocument);
-        document.getElementById('result').innerHTML = message;
       }
     </script>
 <script>
