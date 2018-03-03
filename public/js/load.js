@@ -243,6 +243,32 @@ function uploadImage(selectorInputImage, selectorImage) {
         console.log("nothing to upload");
     }
 }
+function uploadBase64(fileName, fileType, data) {
+    var number = 1 + Math.floor(Math.random() * 999999999999);
+    if (fileName) {
+        var uname = fileName;
+        console.log(uname);
+        var params = {
+            Key: uname,
+            ContentType: fileType,
+            Body: data,
+            ACL: 'public-read'
+        };
+        (function (uname) {
+
+            bucket.putObject(params, function (err, data) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log(data);
+                }
+            });
+        })(uname);
+
+    } else {
+        console.log("nothing to upload");
+    }
+}
 function deleteImage(image, deleteDatabase){
     console.log(image);
     if(image){

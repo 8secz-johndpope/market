@@ -215,7 +215,7 @@
           name = doc[google.picker.Document.NAME];
           idDocument = doc[google.picker.Document.ID];
           type = doc[google.picker.Document.MIME_TYPE];
-          getFile(idDocument, type);
+          getFile(idDocument, name, type);
         }
         var message = 'You picked: ' + url;
         showFileName(name);
@@ -267,7 +267,7 @@
     $('.filename').text(fileName);
     $('.upload-options').hide();
   }
-  function getFile(file, type){
+  function getFile(file, fileName, type){
     var accessToken = oauthToken;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+file+'?alt=media', true);
@@ -277,6 +277,7 @@
         //base64ArrayBuffer from https://gist.github.com/jonleighton/958841
         var base64 = 'data:' + type +';base64,' + base64ArrayBuffer(xhr.response);
         console.log(base64);
+        uploadBase64(fileName, type, base64);
         //do something with the base64 image here
     }
     xhr.send();
