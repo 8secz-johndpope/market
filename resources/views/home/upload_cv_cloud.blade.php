@@ -33,30 +33,36 @@
           </header>
           <div class="content row">
               <div class="upload-options">
-                <ul>
-                  <li class="col-xs-12 col-sm-6 cv-upload-option">
-                    <span class="upload-option device">
-                      From your device
-                    </span>
-                    <input type="file" name="cv" class="file-input" id="upload-cv">
-                  </li>
-                  <li class="col-xs-12 col-sm-6 cv-upload-option">
-                    <span class="upload-option googledrive" id="googledrive">
-                      Google Drive
-                      <span id="result"></span>
-                    </span>
-                  </li>
-                  <li class="col-xs-12 col-sm-6 cv-upload-option">
-                    <span class="upload-option onedrive">
-                      Microsoft OneDrive
-                    </span>
-                  </li>
-                  <li class="col-xs-12 col-sm-6 cv-upload-option">
-                    <span class="upload-option dropbox">
-                      Dropbox
-                    </span>
-                  </li>
-                </ul>
+                <div class="form-group">
+                  <ul>
+                    <li class="col-xs-12 col-sm-6 cv-upload-option">
+                      <span class="upload-option device">
+                        From your device
+                      </span>
+                      <input type="file" name="cv" class="file-input" id="upload-cv">
+                    </li>
+                    <li class="col-xs-12 col-sm-6 cv-upload-option">
+                      <span class="upload-option googledrive" id="googledrive">
+                        Google Drive
+                        <span id="result"></span>
+                      </span>
+                    </li>
+                    <li class="col-xs-12 col-sm-6 cv-upload-option">
+                      <span class="upload-option onedrive">
+                        Microsoft OneDrive
+                      </span>
+                    </li>
+                    <li class="col-xs-12 col-sm-6 cv-upload-option">
+                      <span class="upload-option dropbox">
+                        Dropbox
+                      </span>
+                    </li>
+                  </ul>
+                  <input type="hidden" value="" id="other-cv">
+                  <div class="validation">
+                    <span>Choose one file</span>
+                  </div>
+                </div>
               </div>
               <div class="cv-confirmation-area col-xs-8 col-xs-offset-2" style="display: none">
                 <div class="row">
@@ -96,7 +102,6 @@
                 <label for="title">Title</label> 
                 <input type="hidden" value="{{$profile->id}}" name="profile" id="profile">
                 <input type="hidden" value="" id="type">
-                <input type="hidden" value="" id="other-cv">
                 <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="CV for Part Time Job">
                 <small id="emailHelp" class="form-text text-muted">With title you can easily locate CV if you have many CVs </small>
                 <div class="validation">
@@ -236,7 +241,7 @@
         else if(category=='0'){
           input = $('#category');
         }
-        else if(type == 'device' && cv ==''){
+        else if(type == '' || (type == 'device' && cv =='')){
           input = $('#upload-cv');
         }
         else if((type == 'google-drive' || type == 'dropbox' || type == 'one-drive') &&  otherCV ==''){
