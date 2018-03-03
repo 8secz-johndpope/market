@@ -126,20 +126,18 @@
 @endsection
 @section('scripts')
 <script src="/js/filepicker.js"></script>
-<script src="https://www.google.com/jsapi?key=AIzaSyDcXYBzMePDZLq0Fl8CmKA1oeSTlWXsWFY"></script>
-<script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
 <script>
   function initPicker() {
-      var picker = new FilePicker({
-        apiKey: 'AIzaSyDcXYBzMePDZLq0Fl8CmKA1oeSTlWXsWFY',
-        clientId: '847435132616-4uk897f46n0ftedec1vqbl9svmat0n8i.apps.googleusercontent.com',
-        buttonEl: document.getElementById('googledrive'),
-        onSelect: function(file) {
-          console.log(file);
-          alert('Selected ' + file.title);
-        }
-      }); 
-    }
+    var picker = new FilePicker({
+      apiKey: 'AIzaSyDcXYBzMePDZLq0Fl8CmKA1oeSTlWXsWFY',
+      clientId: '847435132616-4uk897f46n0ftedec1vqbl9svmat0n8i.apps.googleusercontent.com',
+      buttonEl: document.getElementById('googledrive'),
+      onSelect: function(file) {
+        console.log(file);
+        alert('Selected ' + file.title);
+      }
+    }); 
+  }
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
         var category = $('#category').val();
@@ -178,4 +176,6 @@
     parent.toggleClass('input-validation-error', addOrRemove);
   }
 </script>
+<script src="https://www.google.com/jsapi?key=AIzaSyDcXYBzMePDZLq0Fl8CmKA1oeSTlWXsWFY"></script>
+<script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
 @endsection
