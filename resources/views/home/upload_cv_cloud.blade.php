@@ -43,6 +43,7 @@
                   <li class="col-xs-12 col-sm-6 cv-upload-option">
                     <span class="upload-option googledrive" id="googledrive">
                       Google Drive
+                      <span id="result"></span>
                     </span>
                   </li>
                   <li class="col-xs-12 col-sm-6 cv-upload-option">
