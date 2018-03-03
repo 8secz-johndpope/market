@@ -41,8 +41,8 @@
                     <input type="file" name="cv" class="file-input" id="upload-cv">
                   </li>
                   <li class="col-xs-12 col-sm-6 cv-upload-option">
-                    <span class="upload-option googledrive" >
-                      <button type="button" id="googledrive"></button>
+                    <span class="upload-option googledrive" id="googledrive">
+                      <button type="button"></button>
                       Google Drive
                     </span>
                   </li>
@@ -188,7 +188,7 @@
       function createPicker() {
         if (pickerApiLoaded && oauthToken) {
           var picker = new google.picker.PickerBuilder().
-              addView(google.picker.ViewId.PHOTOS).
+              addView(google.picker.ViewId.DOCUMENTS).
               setOAuthToken(oauthToken).
               setDeveloperKey(developerKey).
               setCallback(pickerCallback).
