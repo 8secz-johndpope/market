@@ -255,7 +255,7 @@
           upload_cv();
         }
         else{
-          uploadCvOthers(otherCV, type, contentFile);
+          uploadCvOthers(otherCv, type, contentFile);
         }
       }
     });
