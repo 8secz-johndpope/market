@@ -146,7 +146,7 @@
       var developerKey = 'AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k';
 
       // The Client ID obtained from the Google API Console. Replace with your own Client ID.
-      var clientId = '847435132616-4uk897f46n0ftedec1vqbl9svmat0n8i.apps.googleusercontent.com';
+      var clientId = '854626581034-bcu31rltebnc49uqo08c6o4kkm58se0t.apps.googleusercontent.com';
 
       // Scope to use to access user's photos.
       var scope = 'https://www.googleapis.com/auth/docs';
