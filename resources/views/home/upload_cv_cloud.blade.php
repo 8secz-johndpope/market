@@ -228,9 +228,10 @@
       }
     });
   $('#upload-cv').change(function(){
-    $('.cv-confirmation-area').show();
-    $('.filename').text($('#upload-cv').val());
-    $('.upload-options').hide();
+    showFileName($('#upload-cv').val());
+    //$('.cv-confirmation-area').show();
+    //$('.filename').text($('#upload-cv').val());
+    //$('.upload-options').hide();
   });
   $('.upload-new-cv').click(function(){
     $('.upload-options').show();
@@ -246,6 +247,11 @@
   function toggleValidationError(inputSelector, addOrRemove){
     var parent = inputSelector.closest('.form-group');
     parent.toggleClass('input-validation-error', addOrRemove);
+  }
+  function showFileName(fileName){
+    $('.cv-confirmation-area').show();
+    $('.filename').text(fileName);
+    $('.upload-options').hide();
   }
 </script>
 <script src="https://www.google.com/jsapi?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k"></script>
