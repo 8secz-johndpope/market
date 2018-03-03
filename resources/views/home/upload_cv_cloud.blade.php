@@ -164,6 +164,7 @@
       var pickerApiLoaded = false;
       var oauthToken;
       var contentFile;
+      var type;
       // Use the API Loader script to load google.picker and gapi.auth.
       function onApiLoad() {
         gapi.load('auth2', onAuthApiLoad);
@@ -212,7 +213,6 @@
         var url = 'nothing';
         var name = '';
         var idDocument = 0;
-        var type = '';
         if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
           var doc = data[google.picker.Response.DOCUMENTS][0];
           console.log(doc);
@@ -251,17 +251,25 @@
         console.log(input);
         toggleValidationError(input, true);
        }else{
-        //upload_cv();
+        if(type == 'device'){
+          upload_cv();
+        }
+        else{
+          uploadCvOthers(otherCV, type, contentFile);
+        }
       }
     });
   $('#upload-cv').change(function(){
     showFileName($('#upload-cv').val());
+    toggleValidationError($(this), false);
     $('#type').val('device');
   });
   $('.upload-new-cv').click(function(){
     $('.upload-options').show();
     $('.cv-confirmation-area').hide();
     $('#upload-cv').val('');
+    $('#other-cv').val('');
+    $('#type').val('');
   });
   $('#title').focusout(function(){
     toggleValidationError($(this), false);
