@@ -123,6 +123,8 @@
     </div>
   </div>
 </div>
+@endsection
+@section('scripts')
 <script>
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
@@ -144,10 +146,11 @@
         /*else{
             $('#no-category').hide();
         }*/
+        console.log(parent);
        if(parent != null){
         parent.addClass('input-validation-error');
        }else{
-        upload_cv();
+        //upload_cv();
       }
     });
   $('#upload-cv').change(function(){
