@@ -41,7 +41,7 @@
                     <input type="file" name="cv" class="file-input" id="upload-cv">
                   </li>
                   <li class="col-xs-12 col-sm-6 cv-upload-option">
-                    <span class="upload-option googledrive">
+                    <span class="upload-option googledrive" id="googledrive">
                       Google Drive
                     </span>
                   </li>
@@ -125,28 +125,31 @@
 </div>
 @endsection
 @section('scripts')
+<script src="/js/filepicker.js"></script>
+<script src="https://www.google.com/jsapi?key=AIzaSyDcXYBzMePDZLq0Fl8CmKA1oeSTlWXsWFY"></script>
+<script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
 <script>
+  function initPicker() {
+      var picker = new FilePicker({
+        apiKey: 'AIzaSyDcXYBzMePDZLq0Fl8CmKA1oeSTlWXsWFY',
+        clientId: '847435132616-4uk897f46n0ftedec1vqbl9svmat0n8i.apps.googleusercontent.com',
+        buttonEl: document.getElementById('googledrive'),
+        onSelect: function(file) {
+          console.log(file);
+          alert('Selected ' + file.title);
+        }
+      }); 
+    }
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
         var category = $('#category').val();
         var input = null;
         if(!title){
             input = $('#title');
-            //$('#no-title').show();
-            //return;
         }
-        /*else{
-            $('#no-title').hide();
-        }*/
         else if(category=='0'){
           input = $('#category');
-            //$('#no-category').show();
-            //return;
         }
-        /*else{
-            $('#no-category').hide();
-        }*/
-        
        if(input != null){
         console.log(input);
         toggleValidationError(input, true);
@@ -168,7 +171,6 @@
     toggleValidationError($(this), false);
   });
   $('#category').change(function(){
-    console.log('change');
     toggleValidationError($(this), false);
   });
   function toggleValidationError(inputSelector, addOrRemove){
