@@ -42,7 +42,6 @@
                   </li>
                   <li class="col-xs-12 col-sm-6 cv-upload-option">
                     <span class="upload-option googledrive" id="googledrive">
-                      <button type="button"></button>
                       Google Drive
                     </span>
                   </li>
