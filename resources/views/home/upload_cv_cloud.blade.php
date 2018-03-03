@@ -244,7 +244,7 @@
         else if(type == '' || (type == 'device' && cv =='')){
           input = $('#upload-cv');
         }
-        else if((type == 'google-drive' || type == 'dropbox' || type == 'one-drive') &&  otherCV ==''){
+        else if((type == 'google-drive' || type == 'dropbox' || type == 'one-drive') &&  otherCv ==''){
           input = $('#other-cv');
         }
        if(input != null){
