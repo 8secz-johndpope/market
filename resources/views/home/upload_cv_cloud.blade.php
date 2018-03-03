@@ -138,16 +138,17 @@
         /*else{
             $('#no-title').hide();
         }*/
-        if(category=='0'){
-          parent = $('#no-category').closest('.form-group');
+        else if(category=='0'){
+          parent = $('#category').closest('.form-group');
             //$('#no-category').show();
             //return;
         }
         /*else{
             $('#no-category').hide();
         }*/
-        console.log(parent);
+        
        if(parent != null){
+        console.log(parent);
         parent.addClass('input-validation-error');
        }else{
         //upload_cv();
