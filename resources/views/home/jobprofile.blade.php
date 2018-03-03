@@ -210,7 +210,7 @@
                                         <span class="cv-name">{{$profile->cv->title}}</span>
                                         <span class="cv-uploaded">Added {{$profile->cv->created_at->format('d F Y')}}</span>
                                         <span class="actions">
-                                            <a class="download-cv" href="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->cvs[0]->file_name}}">
+                                            <a class="download-cv" href="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->cv->file_name}}">
                                                 <i class="glyphicon glyphicon-download-alt"></i>
                                                 Download
                                             </a>
