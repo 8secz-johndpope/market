@@ -180,6 +180,7 @@
     parent.toggleClass('input-validation-error', addOrRemove);
   }
 </script>
+<script src="https://www.google.com/jsapi?key=AIzaSyCZbnf5ZxF0xDYINzcfITR_5E8XVkFD8Hs"></script>
 <script src="https://apis.google.com/js/client:plusone.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=initPicker"></script>
 @endsection
