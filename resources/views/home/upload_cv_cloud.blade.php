@@ -164,7 +164,7 @@
     $('.cv-confirmation-area').hide();
     $('#upload-cv').val('');
   });
-  $('#title').change(function(){
+  $('#title').focusout(function(){
     toggleValidationError($(this), false);
   });
   $('#category').change(function(){
