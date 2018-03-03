@@ -149,7 +149,7 @@
       var clientId = '847435132616-7k2capek98p6pspvbsjum0rsugcb0kuh.apps.googleusercontent.com';
 
       // Scope to use to access user's photos.
-      var scope = 'https://www.googleapis.com/auth/photos';
+      var scope = 'https://www.googleapis.com/auth/docs';
 
       var pickerApiLoaded = false;
       var oauthToken;
