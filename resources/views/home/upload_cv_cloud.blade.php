@@ -269,7 +269,7 @@
   function getFile(file, fileName, type){
     var accessToken = oauthToken;
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+file+'?alt=media');
+    xhr.open("GET", "https://www.googleapis.com/drive/v2/files/"+file+'?alt=media');
     xhr.setRequestHeader('Authorization','Bearer '+accessToken);
     xhr.onload = function(){
         //base64ArrayBuffer from https://gist.github.com/jonleighton/958841
