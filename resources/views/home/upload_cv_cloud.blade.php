@@ -172,8 +172,8 @@
     toggleValidationError($(this), false);
   });
   function toggleValidationError(inputSelector, addOrRemove){
-    var parent = inputSelector.closest('.form-group', addOrRemove);
-    parent.toggleClass('input-validation-error');
+    var parent = inputSelector.closest('.form-group');
+    parent.toggleClass('input-validation-error', addOrRemove);
   }
 </script>
 @endsection
