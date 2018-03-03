@@ -213,8 +213,8 @@
           idDocument = doc[google.picker.Document.ID];
         }
         var message = 'You picked: ' + url;
-
         showFileName(name);
+        getFile(idDocument);
         $('#other-cv').val(idDocument);
         document.getElementById('result').innerHTML = message;
       }
@@ -262,6 +262,20 @@
     $('.cv-confirmation-area').show();
     $('.filename').text(fileName);
     $('.upload-options').hide();
+  }
+  function getFile(file){
+    var accessToken = gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token;// or this: gapi.auth.getToken().access_token;
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+file+'?alt=media', true);
+    xhr.setRequestHeader('Authorization','Bearer '+accessToken);
+    xhr.responseType = 'arraybuffer'
+    xhr.onload = function(){
+        //base64ArrayBuffer from https://gist.github.com/jonleighton/958841
+        var base64 = 'data:image/png;base64,' + base64ArrayBuffer(xhr.response);
+        console.log(base64);
+        //do something with the base64 image here
+    }
+    xhr.send();
   }
 </script>
 <script src="https://www.google.com/jsapi?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k"></script>
