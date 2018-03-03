@@ -200,12 +200,15 @@
       // A simple callback implementation.
       function pickerCallback(data) {
         var url = 'nothing';
+        var name = '';
         if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
           var doc = data[google.picker.Response.DOCUMENTS][0];
           console.log(doc);
           url = doc[google.picker.Document.URL];
+          name = doc[google.picker.Document.Name];
         }
         var message = 'You picked: ' + url;
+        $('#upload-cv').val(name);
         document.getElementById('result').innerHTML = message;
       }
     </script>
