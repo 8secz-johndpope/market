@@ -127,7 +127,7 @@
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
         var category = $('#category').val();
-        var parent;
+        var parent = null;
         if(!title){
             parent = $('#title').closest('.form-group')
             //$('#no-title').show();
@@ -144,7 +144,7 @@
         /*else{
             $('#no-category').hide();
         }*/
-       if(parent){
+       if(parent != null){
         parent.addClass('input-validation-error');
        }else{
         upload_cv();
