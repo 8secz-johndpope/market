@@ -140,6 +140,8 @@
     }); 
     console.log('created picker');
   }
+</script>
+<script>
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
         var category = $('#category').val();
@@ -179,5 +181,5 @@
   }
 </script>
 <script src="https://www.google.com/jsapi?key=AIzaSyDcXYBzMePDZLq0Fl8CmKA1oeSTlWXsWFY"></script>
-<script src="https://apis.google.com/js/client.js?onload=initPicker"></script>
+<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=initPicker"></script>
 @endsection
