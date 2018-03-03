@@ -264,7 +264,7 @@
     $('.upload-options').hide();
   }
   function getFile(file){
-    var accessToken = gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token;// or this: gapi.auth.getToken().access_token;
+    var accessToken = oauthToken;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+file+'?alt=media', true);
     xhr.setRequestHeader('Authorization','Bearer '+accessToken);
