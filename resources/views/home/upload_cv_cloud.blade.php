@@ -271,6 +271,7 @@
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://www.googleapis.com/drive/v2/files/"+file+'?alt=media');
     xhr.setRequestHeader('Authorization','Bearer '+accessToken);
+    xhr.responseType('blob');
     xhr.onload = function(){
         //base64ArrayBuffer from https://gist.github.com/jonleighton/958841
         //var base64 = 'data:' + type +';base64,' + base64ArrayBuffer(xhr.response);
