@@ -150,7 +150,7 @@
       var clientId = '854626581034-bcu31rltebnc49uqo08c6o4kkm58se0t.apps.googleusercontent.com';
 
       // Scope to use to access user's photos.
-      var scope = 'https://www.googleapis.com/auth/docs';
+      var scope = 'https://www.googleapis.com/auth/drive.readonly';
 
       var pickerApiLoaded = false;
       var oauthToken;
@@ -188,7 +188,7 @@
       function createPicker() {
         if (pickerApiLoaded && oauthToken) {
           var picker = new google.picker.PickerBuilder().
-              addView(google.picker.ViewId.DOCUMENTS).
+              addView(google.picker.​ViewId.DOCS).
               setOAuthToken(oauthToken).
               setDeveloperKey(developerKey).
               setCallback(pickerCallback).
