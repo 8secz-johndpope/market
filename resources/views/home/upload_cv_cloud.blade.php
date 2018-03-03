@@ -206,7 +206,7 @@
           var doc = data[google.picker.Response.DOCUMENTS][0];
           console.log(doc);
           url = doc[google.picker.Document.URL];
-          name = doc[google.picker.Document.Name];
+          name = doc[google.picker.Document.NAME];
         }
         var message = 'You picked: ' + url;
         showFileName(name);
