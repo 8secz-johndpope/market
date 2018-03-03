@@ -131,7 +131,7 @@
   function initPicker() {
     var picker = new FilePicker({
       apiKey: 'AIzaSyCZbnf5ZxF0xDYINzcfITR_5E8XVkFD8Hs',
-      clientId: '847435132616-4uk897f46n0ftedec1vqbl9svmat0n8i',
+      clientId: '847435132616-7k2capek98p6pspvbsjum0rsugcb0kuh',
       buttonEl: document.getElementById('googledrive'),
       onSelect: function(file) {
         console.log(file);
