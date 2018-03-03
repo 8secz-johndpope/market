@@ -168,6 +168,7 @@
     toggleValidationError($(this));
   });
   $('#category').change(function(){
+    console.log('change');
     toggleValidationError($(this));
   });
   function toggleValidationError(inputSelector){
