@@ -270,7 +270,7 @@
     clientId: "a8300674-6c8d-4f8e-ae20-33a12099a75f",
     action: "download",
     multiSelect: false,
-    advanced: { filters: { '.docx' , '.doc', '.pdf' }},
+    advanced: { filter: '.docx,.doc,.pdf'},
     success: function(files) { 
       /* success handler */ 
       console.log(files[0]);
