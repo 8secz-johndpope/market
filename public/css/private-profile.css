@@ -403,7 +403,7 @@
     position: absolute;
     width: 1px;
 }
-.language-row .form-group{
+.language-row .form-right .form-group{
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 0;
