@@ -123,24 +123,24 @@
     <div class="form-right col-xs-12 col-sm-7">
       <div class="form-group">
         <div class="radio">
-          <input type="radio" id="fluency-low-0" name="language_fluency[0]" value="1" checked="">
-          <label for="fluency-low-0">
+          <input type="radio" id="fluency-low" name="language_fluency[0]" value="1" checked="">
+          <label for="fluency-low">
             Basic
           </label>
         </div>
       </div>
       <div class="form-group">
         <div class="radio">
-          <input type="radio" id="fluency-mid-0" name="language_fluency[0]" value="2">
-          <label for="fluency-mid-0">
+          <input type="radio" id="fluency-mid" name="language_fluency[0]" value="2">
+          <label for="fluency-mid">
             Intermediate
           </label>
         </div>
       </div>
       <div class="form-group">
         <div class="radio">
-          <input type="radio" id="fluency-hig-0" name="language_fluency[0]" value="3">
-          <label for="fluency-hig-0">
+          <input type="radio" id="fluency-hig" name="language_fluency[0]" value="3">
+          <label for="fluency-hig">
             Fluent
           </label>
         </div>
@@ -152,10 +152,21 @@
 <script>
   $('.add-language').click(function(){
     var total = $('.language-row').length;
-    var text = $('#language-template').html();
-    $('.languages').append(text);
-    $('.language-row:last-child').find('select').attr('name', 'languages['+ total +']');
-    $('.language-row:last-child').find('input').attr('name', 'levels['+ total +']');
+    if(total < 5){
+      var text = $('#language-template').html();
+      $('.languages').append(text);
+      var newInput = $('.language-row:last-child').find('input');
+      var newSelect = $('.language-row:last-child').find('select');
+      newSelect.attr('name', 'languages['+ total +']');
+      newSelect.attr('id', 'fluency-mid-'+ total);
+      $('#fluency-low').attr('id', 'fluency-low' + total);
+      $('label[for=fluency-low]').attr('for', 'fluency-low' + total);
+      $('#fluency-mid').attr('id', 'fluency-mid' + total);
+      $('label[for=fluency-mid]').attr('for', 'fluency-mid' + total);
+      $('#fluency-hig').attr('id', 'fluency-hig' + total);
+      $('label[for=fluency-hig]').attr('for', 'fluency-hig' + total);
+      newInput.attr('name', 'levels['+ total +']');
+    }
   });
   $('#languages-form').submit(function(e){
     $('select').each(function(){
