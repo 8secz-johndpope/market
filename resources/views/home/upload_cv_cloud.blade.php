@@ -314,7 +314,7 @@
     toggleValidationError($(this), false);
   });
   $('#dropbox').click(function(){
-    $('.dropbox-dropin-btn.dropbox-dropin-default').click();
+    button.click();
   });
   function toggleValidationError(inputSelector, addOrRemove){
     var parent = inputSelector.closest('.form-group');
