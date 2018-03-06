@@ -223,7 +223,6 @@
           type = doc[google.picker.Document.MIME_TYPE];
           getFile(idDocument, name, type);
         }
-        var message = 'You picked: ' + url;
         showFileName(name);
         $('#other-cv').val(idDocument);
       }
@@ -234,7 +233,8 @@
     // Required. Called when a user selects an item in the Chooser.
     success: function(files) {
       console.log(files[0]);
-        alert("Here's the file link: " + files[0].link)
+      var name = files[0].name;
+      showFileName(name);
     },
 
     // Optional. Called when the user closes the dialog without selecting a file
