@@ -95,6 +95,67 @@
             </div>
         </div>
     </section>
+    <section class="container-cvs mb-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <header class="section-header">
+                        <h2 class="title">Your CV's</h2>
+                    </header>
+                    <div class="content row">
+                        @if($profile->cv != null)
+                        <div class="cv-details col-sm-12">
+                            <div class="row">
+                                <div class="current-cv col-sm-4">
+                                    <h3 class="title">Your current CV</h3>
+                                    <p class="data">
+                                        <span class="cv-name">{{$profile->cv->title}}</span>
+                                        <span class="cv-uploaded">Added {{$profile->cv->created_at->format('d F Y')}}</span>
+                                        <span class="actions">
+                                            <a class="download-cv" href="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->cv->file_name}}">
+                                                <i class="glyphicon glyphicon-download-alt"></i>
+                                                Download
+                                            </a>
+                                            <a class="delete-cv" href="/user/delete/cv/{{$user->cvs[0]->id}}">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                Delete
+                                            </a>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="manage-cv col-xs-12 col-sm-8">
+                                    <h3 class="title">Manage your CV</h3>
+                                    <div class="data">
+                                        <p>Upload a new CV, or use our CV builder to build one for you.</p>
+                                        <div>
+                                            <a class="btn btn-inverse" href="/user/cv-builder/personal-details">CV Builder by {{env('APP_NAME')}}</a>
+                                             <a class="btn btn-submit" href="/user/upload/cvs">Upload CV</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @else
+                        <div class="alerts">
+                            <div class="alert alert-danger">
+                                <strong>You haven't uploaded a CV yet.</strong>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <p>Upload a new CV, or use our CV builder to build one for you.</p>
+                            <div class="btns row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <a class="btn btn-inverse" href="/user/cv-builder/personal-details">CV Builder by {{env('APP_NAME')}}</a>
+                                    <a class="btn btn-submit" href="/user/upload/cvs?type={{$type}}">Upload CV</a>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="container-templates-options mb-10">
         <div class="container">
             <div class="row">
@@ -193,67 +254,7 @@
             </div>
         </div>
     </section>
-    <section class="container-cvs mb-10">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <header class="section-header">
-                        <h2 class="title">Your CV's</h2>
-                    </header>
-                    <div class="content row">
-                        @if($profile->cv != null)
-                        <div class="cv-details col-sm-12">
-                            <div class="row">
-                                <div class="current-cv col-sm-4">
-                                    <h3 class="title">Your current CV</h3>
-                                    <p class="data">
-                                        <span class="cv-name">{{$profile->cv->title}}</span>
-                                        <span class="cv-uploaded">Added {{$profile->cv->created_at->format('d F Y')}}</span>
-                                        <span class="actions">
-                                            <a class="download-cv" href="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->cv->file_name}}">
-                                                <i class="glyphicon glyphicon-download-alt"></i>
-                                                Download
-                                            </a>
-                                            <a class="delete-cv" href="/user/delete/cv/{{$user->cvs[0]->id}}">
-                                                <i class="glyphicon glyphicon-trash"></i>
-                                                Delete
-                                            </a>
-                                        </span>
-                                    </p>
-                                </div>
-                                <div class="manage-cv col-xs-12 col-sm-8">
-                                    <h3 class="title">Manage your CV</h3>
-                                    <div class="data">
-                                        <p>Upload a new CV, or use our CV builder to build one for you.</p>
-                                        <div>
-                                            <a class="btn btn-inverse" href="/user/cv-builder/personal-details">CV Builder by {{env('APP_NAME')}}</a>
-                                             <a class="btn btn-submit" href="/user/upload/cvs?type={{$type}}">Upload CV</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        @else
-                        <div class="alerts">
-                            <div class="alert alert-danger">
-                                <strong>You haven't uploaded a CV yet.</strong>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <p>Upload a new CV, or use our CV builder to build one for you.</p>
-                            <div class="btns row">
-                                <div class="col-xs-12 col-sm-6">
-                                    <a class="btn btn-inverse" href="/user/cv-builder/personal-details">CV Builder by {{env('APP_NAME')}}</a>
-                                    <a class="btn btn-submit" href="/user/upload/cvs?type={{$type}}">Upload CV</a>
-                                </div>
-                            </div>
-                        </div>
-                        @endif
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <section class="container-status-availability mb-10">
         <div class="container">
             <div class="row">

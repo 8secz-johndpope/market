@@ -1514,7 +1514,6 @@ class HomeController extends BaseController
         $cv->file_name=$request->file_name;
         $cv->category_id=$request->category;
         $cv->user_id=$user->id;
-        $cv->profile_id = $request->profile;
         $cv->save();
         return ['msg'=>'done'];
     }
@@ -2597,8 +2596,7 @@ class HomeController extends BaseController
     }
     public function create_work_experience(Request $request){
         $user = Auth::user();
-        $profile = $user->profile($request->type);
-        return view('home.create_work_experience', ['user' => $user, 'profile' => $profile]);
+        return view('home.create_work_experience', ['user' => $user]);
     }
     public function upload_cv(Request $request){
         $user = Auth::user();
@@ -3010,6 +3008,7 @@ class HomeController extends BaseController
         return view('home.profile.template'.$request->type, ['profile' => $profile]);
     }
     public function onedriveLogin(Request $request){
-        return $request;
+        //return $request;
+        return view('home.profile.onedrive_sigin');
     }
 }

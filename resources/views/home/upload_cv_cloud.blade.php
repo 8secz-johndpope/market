@@ -100,7 +100,6 @@
             <div class="col-sm-12">
               <div class="form-group">
                 <label for="title">Title</label> 
-                <input type="hidden" value="{{$profile->id}}" name="profile" id="profile">
                 <input type="hidden" value="" id="type">
                 <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="CV for Part Time Job">
                 <small id="emailHelp" class="form-text text-muted">With title you can easily locate CV if you have many CVs </small>
@@ -336,10 +335,13 @@
       clientId: "a8300674-6c8d-4f8e-ae20-33a12099a75f",
       action: "download",
       multiSelect: false,
+      openInNewWindow: true,
       advanced: { filter: '.docx,.doc,.pdf'},
       success: function(files) { 
         /* success handler */ 
-        console.log(files[0]);
+        var name =  files.value[0].name;
+        var id =  files.value[0].id;
+        console.log(files.value[0]);
       },
       cancel: function() { /* cancel handler */ },
       error: function(e) { 
@@ -362,7 +364,7 @@
     }
     xhr.send();
   }
-  function getFileDropbox(url, fileName){
+  function getFileDropboxOnedrive(url, fileName){
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url);
     xhr.responseType = 'blob';
