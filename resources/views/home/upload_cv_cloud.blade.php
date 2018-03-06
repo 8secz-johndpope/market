@@ -266,21 +266,6 @@
     // You cannot specify `linkType: "direct"` when using `folderselect: true`.
     folderselect: false, // or true
   };
-  var odOptions = {
-    clientId: "a8300674-6c8d-4f8e-ae20-33a12099a75f",
-    action: "download",
-    multiSelect: false,
-    advanced: { filter: '.docx,.doc,.pdf'},
-    success: function(files) { 
-      /* success handler */ 
-      console.log(files[0]);
-    },
-    cancel: function() { /* cancel handler */ },
-    error: function(e) { 
-      /* error handler */
-      console.log(e); 
-    }
-  }
   var button = Dropbox.createChooseButton(options);
   document.getElementById("dropbox").appendChild(button);
 
@@ -347,7 +332,21 @@
     $('.upload-options').hide();
   }
   function launchOneDrivePicker(){
-    var odOptions = { /* ... specify the desired options ... */ };
+    var odOptions = {
+      clientId: "a8300674-6c8d-4f8e-ae20-33a12099a75f",
+      action: "download",
+      multiSelect: false,
+      advanced: { filter: '.docx,.doc,.pdf'},
+      success: function(files) { 
+        /* success handler */ 
+        console.log(files[0]);
+      },
+      cancel: function() { /* cancel handler */ },
+      error: function(e) { 
+        /* error handler */
+        console.log(e); 
+      }
+    }
     OneDrive.open(odOptions);
   }
   function getFileDrive(file, fileName, type){
