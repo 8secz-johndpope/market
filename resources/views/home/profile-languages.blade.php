@@ -101,7 +101,7 @@
     </div>
   </div>
 </div>
-<script type="text/html" id="language-template">
+<div id="language-template" style="display: none;">
   <div class="language-row row">
     <div class="form-left col-xs-12 col-sm-5">
       <div class="form-group">

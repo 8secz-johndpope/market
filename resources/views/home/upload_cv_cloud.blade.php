@@ -343,6 +343,7 @@
         var id =  file.id;
         var url = file["@microsoft.graph.downloadUrl"];
         fileUpload = new UploadOnedrive(name, id, url);
+        $('#type').val(fileUpload.type);
         console.log(fileUpload);
         showFileName(name);
         //getFileDropboxOnedrive(url, name);
