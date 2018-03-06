@@ -233,6 +233,7 @@
 
     // Required. Called when a user selects an item in the Chooser.
     success: function(files) {
+      console.log(file[0]);
         alert("Here's the file link: " + files[0].link)
     },
 
@@ -245,7 +246,7 @@
     // Optional. "preview" (default) is a preview link to the document for sharing,
     // "direct" is an expiring link to download the contents of the file. For more
     // information about link types, see Link types below.
-    linkType: "preview", // or "direct"
+    linkType: "direct", // or "direct"
 
     // Optional. A value of false (default) limits selection to a single file, while
     // true enables multiple file selection.
