@@ -315,3 +315,58 @@ function saveCV(fileName){
         console.log(error);
     });
 }
+
+class FileUpload{
+    constructor(fileName, fileId, fileUrl){
+        this.fileName = fileName;
+        this.fileId = fileId;
+        this.fileUrl = fileUrl;
+    }
+    saveDB(title,category, userId){
+        axios.get('/user/cvs/add', {
+        params: {file_name: this.fileName,title:title,category:category, user:userID}
+        })
+        .then(function (response) {
+            console.log(response);
+            location.reload();
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    }
+    upload(load){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", this.fileUrl);
+        xhr.responseType = 'blob';
+        xhr.onload = function(){
+            load();
+        }
+        xhr.send();
+    }
+}
+class UploadDrive extends FileUpload{
+    upload(token, load){
+        var accessToken = token;
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+this.fileId+'?alt=media');
+        xhr.setRequestHeader('Authorization','Bearer '+accessToken);
+        xhr.responseType = 'blob';
+        xhr.onload = function(){
+            load();
+        }
+        xhr.send();
+    }
+    static get type(){
+        return 'google-drive';
+    }
+}
+class UploadOnedrive extends FileUpload{
+    static get type(){
+        return 'one-drive';
+    }
+}
+class UploadDropbox extends FileUpload{
+    static get type(){
+        return 'dropbox';
+    }
+}

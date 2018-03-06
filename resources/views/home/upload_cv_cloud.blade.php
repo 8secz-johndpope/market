@@ -155,17 +155,18 @@
 
       // The Browser API key obtained from the Google API Console.
       var developerKey = 'AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k';
-
       // The Client ID obtained from the Google API Console. Replace with your own Client ID.
       var clientId = '854626581034-bcu31rltebnc49uqo08c6o4kkm58se0t.apps.googleusercontent.com';
-
       // Scope to use to access user's photos.
       var scope = 'https://www.googleapis.com/auth/drive.readonly';
-
       var pickerApiLoaded = false;
       var oauthToken;
       var contentFile;
       var type;
+      var id;
+      var fileName;
+      var fileUrl;
+      var fileUpload;
       // Use the API Loader script to load google.picker and gapi.auth.
       function onApiLoad() {
         gapi.load('auth2', onAuthApiLoad);
@@ -222,9 +223,10 @@
           idDocument = doc[google.picker.Document.ID];
           type = doc[google.picker.Document.MIME_TYPE];
           getFileDrive(idDocument, name, type);
+          showFileName(name);
+          $('#other-cv').val(idDocument);
         }
-        showFileName(name);
-        $('#other-cv').val(idDocument);
+        
       }
 </script>
 <script>
@@ -238,28 +240,23 @@
       showFileName(name);
       getFileDropbox(url, name);
     },
-
     // Optional. Called when the user closes the dialog without selecting a file
     // and does not include any parameters.
     cancel: function() {
 
     },
-
     // Optional. "preview" (default) is a preview link to the document for sharing,
     // "direct" is an expiring link to download the contents of the file. For more
     // information about link types, see Link types below.
     linkType: "direct", // or "direct"
-
     // Optional. A value of false (default) limits selection to a single file, while
     // true enables multiple file selection.
     multiselect: false, // or true
-
     // Optional. This is a list of file extensions. If specified, the user will
     // only be able to select files with these extensions. You may also specify
     // file types, such as "video" or "images" in the list. For more information,
     // see File types below. By default, all extensions are allowed.
     extensions: ['.pdf', '.doc', '.docx'],
-
     // Optional. A value of false (default) limits selection to files,
     // while true allows the user to select both folders and files.
     // You cannot specify `linkType: "direct"` when using `folderselect: true`.
@@ -338,10 +335,15 @@
       openInNewWindow: true,
       advanced: { filter: '.docx,.doc,.pdf'},
       success: function(files) { 
-        /* success handler */ 
-        var name =  files.value[0].name;
-        var id =  files.value[0].id;
-        console.log(files.value[0]);
+        /* success handler */
+        var file =  files.value[0];
+        var name =  file.name;
+        var id =  file.id;
+        var url = file["@microsoft.graph.downloadUrl"];
+        fileUpload = new UploadOnedrive(name, id, url);
+        console.log(fileUpload);
+        showFileName(name);
+        getFileDropboxOnedrive(url, name);
       },
       cancel: function() { /* cancel handler */ },
       error: function(e) { 
@@ -354,7 +356,7 @@
   function getFileDrive(file, fileName, type){
     var accessToken = oauthToken;
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://www.googleapis.com/drive/v2/files/"+file+'?alt=media');
+    xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+file+'?alt=media');
     xhr.setRequestHeader('Authorization','Bearer '+accessToken);
     xhr.responseType = 'blob';
     xhr.onload = function(){
@@ -379,7 +381,7 @@
 </script>
 <script src="https://www.google.com/jsapi?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k"></script>
 <script src="https://apis.google.com/js/client:plusone.js" type="text/javascript"></script>
-<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
+<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=initPicker"></script>
 
 
 @endsection
