@@ -76,7 +76,7 @@
     right: 30px;
 }
 .dropbox-dropin-btn{
-    display: none;
+    display: none !important;
 }
 .task label{
     background: url(/css/empty-star.png);
