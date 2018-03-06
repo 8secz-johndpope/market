@@ -341,7 +341,7 @@
     }
     xhr.send();
   }
-  function getFileDropbox(url, filename){
+  function getFileDropbox(url, fileName){
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url);
     xhr.responseType = 'blob';
