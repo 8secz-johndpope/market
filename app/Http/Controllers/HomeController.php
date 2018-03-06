@@ -2604,7 +2604,7 @@ class HomeController extends BaseController
         $user = Auth::user();
 
         if(isset($request->oauth)){
-            $profile == new Profile();
+            $profile = new Profile();
         }
         else{
             $profile = $user->profile($request->type);
