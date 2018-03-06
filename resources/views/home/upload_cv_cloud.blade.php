@@ -47,7 +47,7 @@
                         <span id="result"></span>
                       </span>
                     </li>
-                    <li class="col-xs-12 col-sm-6 cv-upload-option">
+                    <li class="col-xs-12 col-sm-6 cv-upload-option" id="one-drive">
                       <span class="upload-option onedrive">
                         Microsoft OneDrive
                       </span>
@@ -136,6 +136,7 @@
 <script src="/js/filepicker.js"></script>
 <script src="/js/base64ArrayBuffer.js"></script>
 <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="0u9ya1i2i20ftiz"></script>
+<script type="text/javascript" src="https://js.live.net/v7.2/OneDrive.js"></script>
 
 <script>
   function initPicker() {
@@ -265,8 +266,24 @@
     // You cannot specify `linkType: "direct"` when using `folderselect: true`.
     folderselect: false, // or true
   };
+  var odOptions = {
+    clientId: "a8300674-6c8d-4f8e-ae20-33a12099a75f",
+    action: "download",
+    multiSelect: false,
+    advanced: { filters: { '.docx' , '.doc', '.pdf' }},
+    success: function(files) { 
+      /* success handler */ 
+      console.log(files[0]);
+    },
+    cancel: function() { /* cancel handler */ },
+    error: function(e) { 
+      /* error handler */
+      console.log(e); 
+    }
+  }
   var button = Dropbox.createChooseButton(options);
   document.getElementById("dropbox").appendChild(button);
+
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
         var category = $('#category').val();
@@ -319,6 +336,7 @@
   $('#dropbox').click(function(){
     button.click();
   });
+  $('#one-drive').click(launchOneDrivePicker);
   function toggleValidationError(inputSelector, addOrRemove){
     var parent = inputSelector.closest('.form-group');
     parent.toggleClass('input-validation-error', addOrRemove);
@@ -327,6 +345,10 @@
     $('.cv-confirmation-area').show();
     $('.filename').text(fileName);
     $('.upload-options').hide();
+  }
+  function launchOneDrivePicker(){
+    var odOptions = { /* ... specify the desired options ... */ };
+    OneDrive.open(odOptions);
   }
   function getFileDrive(file, fileName, type){
     var accessToken = oauthToken;
