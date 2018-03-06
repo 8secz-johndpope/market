@@ -221,7 +221,7 @@
           name = doc[google.picker.Document.NAME];
           idDocument = doc[google.picker.Document.ID];
           type = doc[google.picker.Document.MIME_TYPE];
-          getFile(idDocument, name, type);
+          getFileDrive(idDocument, name, type);
         }
         showFileName(name);
         $('#other-cv').val(idDocument);
@@ -234,7 +234,9 @@
     success: function(files) {
       console.log(files[0]);
       var name = files[0].name;
+      var url = files[0].link;
       showFileName(name);
+      getFileDropbox(url, name);
     },
 
     // Optional. Called when the user closes the dialog without selecting a file
@@ -326,7 +328,7 @@
     $('.filename').text(fileName);
     $('.upload-options').hide();
   }
-  function getFile(file, fileName, type){
+  function getFileDrive(file, fileName, type){
     var accessToken = oauthToken;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://www.googleapis.com/drive/v2/files/"+file+'?alt=media');
@@ -336,6 +338,17 @@
         contentFile = xhr.response;
         $('#other-cv').val(fileName);
         $('#type').val('google-drive');
+    }
+    xhr.send();
+  }
+  function getFileDropbox(url, filename){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    xhr.responseType = 'blob';
+    xhr.onload = function(){
+        contentFile = xhr.response;
+        $('#other-cv').val(fileName);
+        $('#type').val('dropbox');
     }
     xhr.send();
   }
