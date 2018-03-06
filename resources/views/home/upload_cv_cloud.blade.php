@@ -313,6 +313,9 @@
   $('#category').change(function(){
     toggleValidationError($(this), false);
   });
+  $('#dropbox').click(function(){
+    $('.dropbox-dropin-btn').click();
+  });
   function toggleValidationError(inputSelector, addOrRemove){
     var parent = inputSelector.closest('.form-group');
     parent.toggleClass('input-validation-error', addOrRemove);

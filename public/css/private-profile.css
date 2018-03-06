@@ -75,6 +75,9 @@
 .qualification .delete, .publication .delete, .work .delete {
     right: 30px;
 }
+.dropbox-dropin-btn{
+    display: none;
+}
 .task label{
     background: url(/css/empty-star.png);
     background-size: cover;
