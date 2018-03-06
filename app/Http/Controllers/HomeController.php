@@ -2602,8 +2602,14 @@ class HomeController extends BaseController
     }
     public function upload_cv(Request $request){
         $user = Auth::user();
-        return $request;
-        $profile = $user->profile($request->type);
+        $profile;
+        if(isset($request->oauth)){
+            
+        }
+        else{
+            $profile = $user->profile($request->type);
+        }
+        
         return view('home.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves(), 'profile' => $profile]);   
     }
     public function looking_for(Request $request){
