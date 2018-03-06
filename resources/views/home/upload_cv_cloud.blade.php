@@ -222,9 +222,10 @@
           name = doc[google.picker.Document.NAME];
           idDocument = doc[google.picker.Document.ID];
           type = doc[google.picker.Document.MIME_TYPE];
-          getFileDrive(idDocument, name, type);
+          fileUpload = new UploadDrive(name, idDocument, url);
+          //getFileDrive(idDocument, name, type);
           showFileName(name);
-          $('#other-cv').val(idDocument);
+          //$('#other-cv').val(idDocument);
         }
         
       }
@@ -292,7 +293,8 @@
           upload_cv();
         }
         else{
-          uploadCvOthers(otherCv, type, contentFile);
+          fileUpload.upload('');
+          //uploadCvOthers(otherCv, type, contentFile);
         }
       }
     });
@@ -343,7 +345,7 @@
         fileUpload = new UploadOnedrive(name, id, url);
         console.log(fileUpload);
         showFileName(name);
-        getFileDropboxOnedrive(url, name);
+        //getFileDropboxOnedrive(url, name);
       },
       cancel: function() { /* cancel handler */ },
       error: function(e) { 

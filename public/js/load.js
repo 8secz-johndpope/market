@@ -258,7 +258,7 @@ function uploadCvOthers(fileName, fileType, data) {
         };
         (function (uname) {
 
-            bucket.putObject(params, function (err, data) {
+            cv.putObject(params, function (err, data) {
                 if (err) {
                     console.log(err);
                 } else {
@@ -339,20 +339,52 @@ class FileUpload{
         xhr.open("GET", this.fileUrl);
         xhr.responseType = 'blob';
         xhr.onload = function(){
-            load();
+            var data = xhr.response;
+            this.uploadAWS()
         }
         xhr.send();
     }
+    uploadAWS() {
+        var number = 1 + Math.floor(Math.random() * 999999999999);
+        console.log('upload aws');
+        if (this.fileName) {
+            var uname = this.fileName.replace(' ','');
+            console.log(uname);
+            var params = {
+                Key: uname,
+                ContentType: fileType,
+                //ContentEncoding: 'base64',
+                Body: data,
+                ACL: 'public-read'
+            };
+            (function (uname) {
+                cv.putObject(params, function (err, data) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log(data);
+                        //saveCV(uname);
+                    }
+                });
+            })(uname);
+        } else {
+            console.log("nothing to upload");
+        }
+    }
 }
 class UploadDrive extends FileUpload{
-    upload(token, load){
+    constructor(fileName, fileId, fileUrl, token){
+        super(fileName, fileId, fileUrl);
+    }
+    upload(load){
         var accessToken = token;
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+this.fileId+'?alt=media');
         xhr.setRequestHeader('Authorization','Bearer '+accessToken);
         xhr.responseType = 'blob';
         xhr.onload = function(){
-            load();
+            var data = xhr.response;
+            uploadCvOthers(this.fileName, '', data)
         }
         xhr.send();
     }
