@@ -3002,4 +3002,7 @@ class HomeController extends BaseController
         $profile->save();
         return view('home.profile.template'.$request->type, ['profile' => $profile]);
     }
+    public function onedriveLogin(Request $request){
+        return $request;
+    }
 }

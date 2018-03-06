@@ -22,7 +22,7 @@ Route::get('/parse', 'CronController@parse_page');
 Route::get('/indeed', 'CronController@indeed');
 Route::get('/gitpull', 'MarketController@gitpull');
 Route::get('/more/{id}', 'MarketController@more');
-
+Route::get('/onedrive/auth/login', 'homeController@onedriveLogin')
 Route::get('/plate', 'HomeController@dvla');
 Route::get('/push', 'HomeController@push');
 
