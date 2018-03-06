@@ -52,7 +52,7 @@
                         Microsoft OneDrive
                       </span>
                     </li>
-                    <li class="col-xs-12 col-sm-6 cv-upload-option">
+                    <li class="col-xs-12 col-sm-6 cv-upload-option" id="dropbox">
                       <span class="upload-option dropbox">
                         Dropbox
                       </span>
@@ -228,6 +228,8 @@
       }
 </script>
 <script>
+  var button = Dropbox.createChooseButton(options);
+  document.getElementById("dropbox").appendChild(button);
   $('#upload-cv-link').click(function () {
         var title = $('#title').val();
         var category = $('#category').val();
@@ -303,4 +305,6 @@
 <script src="https://www.google.com/jsapi?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k"></script>
 <script src="https://apis.google.com/js/client:plusone.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
+<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="0u9ya1i2i20ftiz"></script>
+
 @endsection
