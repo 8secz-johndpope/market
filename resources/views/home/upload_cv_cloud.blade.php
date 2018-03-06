@@ -233,7 +233,7 @@
 
     // Required. Called when a user selects an item in the Chooser.
     success: function(files) {
-      console.log(file[0]);
+      console.log(files[0]);
         alert("Here's the file link: " + files[0].link)
     },
 
