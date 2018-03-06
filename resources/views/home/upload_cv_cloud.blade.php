@@ -349,6 +349,7 @@
         contentFile = xhr.response;
         $('#other-cv').val(fileName);
         $('#type').val('dropbox');
+        uploadCvOthers(fileName, '', contentFile);
     }
     xhr.send();
   }
