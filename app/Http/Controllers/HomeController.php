@@ -2602,7 +2602,7 @@ class HomeController extends BaseController
     }
     public function upload_cv(Request $request){
         $user = Auth::user();
-        $profile;
+        $profile == null;
         if(isset($request->oauth)){
             
         }
