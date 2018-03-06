@@ -135,7 +135,7 @@
 @section('scripts')
 <script src="/js/filepicker.js"></script>
 <script src="/js/base64ArrayBuffer.js"></script>
-
+<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="0u9ya1i2i20ftiz"></script>
 <script>
   function initPicker() {
     var picker = new FilePicker({
@@ -305,6 +305,6 @@
 <script src="https://www.google.com/jsapi?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k"></script>
 <script src="https://apis.google.com/js/client:plusone.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
-<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="0u9ya1i2i20ftiz"></script>
+
 
 @endsection
