@@ -62,24 +62,24 @@
                 <div class="form-right col-xs-12 col-sm-7">
                   <div class="form-group">
                     <div class="radio">
-                      <input type="radio" id="fluency-low-0" name="levels[0]" value="1" {{($profileLanguage->level == 1) ? 'checked' : '' }}>
-                      <label for="fluency-low-0">
+                      <input type="radio" id="fluency-low{{$loop->index}}" name="levels[0]" value="1" {{($profileLanguage->level == 1) ? 'checked' : '' }}>
+                      <label for="fluency-low{{$loop->index}}">
                         Basic
                       </label>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="radio">
-                      <input type="radio" id="fluency-mid-0" name="levels[0]" value="2" {{($profileLanguage->level == 2) ? 'checked' : '' }}>
-                      <label for="fluency-mid-0">
+                      <input type="radio" id="fluency-mid{{$loop->index}}" name="levels[0]" value="2" {{($profileLanguage->level == 2) ? 'checked' : '' }}>
+                      <label for="fluency-mid{{$loop->index}}">
                         Intermediate
                       </label>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="radio">
-                      <input type="radio" id="fluency-hig-0" name="levels[0]" value="3" {{($profileLanguage->level == 3) ? 'checked' : '' }}>
-                      <label for="fluency-hig-0">
+                      <input type="radio" id="fluency-hig{{$loop->index}}" name="levels[0]" value="3" {{($profileLanguage->level == 3) ? 'checked' : '' }}>
+                      <label for="fluency-hig{{$loop->index}}">
                         Fluent
                       </label>
                     </div>

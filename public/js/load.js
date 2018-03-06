@@ -334,17 +334,7 @@ class FileUpload{
             console.log(error);
         });
     }
-    upload(load){
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", this.fileUrl);
-        xhr.responseType = 'blob';
-        xhr.onload = function(){
-            var data = xhr.response;
-            this.uploadAWS()
-        }
-        xhr.send();
-    }
-    uploadAWS() {
+    uploadAWS(data) {
         var number = 1 + Math.floor(Math.random() * 999999999999);
         console.log('upload aws');
         if (this.fileName) {
@@ -352,7 +342,7 @@ class FileUpload{
             console.log(uname);
             var params = {
                 Key: uname,
-                ContentType: fileType,
+                //ContentType: fileType,
                 //ContentEncoding: 'base64',
                 Body: data,
                 ACL: 'public-read'
@@ -371,6 +361,17 @@ class FileUpload{
             console.log("nothing to upload");
         }
     }
+    upload(load){
+        var xhr = new XMLHttpRequest();
+        var upload = this;
+        xhr.open("GET", this.fileUrl);
+        xhr.responseType = 'blob';
+        xhr.onload = function(){
+            var data = xhr.response;
+            upload.uploadAWS(data)
+        }
+        xhr.send();
+    }
 }
 class UploadDrive extends FileUpload{
     constructor(fileName, fileId, fileUrl, token){
@@ -388,17 +389,17 @@ class UploadDrive extends FileUpload{
         }
         xhr.send();
     }
-    static get type(){
+    static type(){
         return 'google-drive';
     }
 }
 class UploadOnedrive extends FileUpload{
-    static get type(){
+    type(){
         return 'one-drive';
     }
 }
 class UploadDropbox extends FileUpload{
-    static get type(){
+    type(){
         return 'dropbox';
     }
 }

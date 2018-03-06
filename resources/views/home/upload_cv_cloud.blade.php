@@ -343,8 +343,9 @@
         var id =  file.id;
         var url = file["@microsoft.graph.downloadUrl"];
         fileUpload = new UploadOnedrive(name, id, url);
-        $('#type').val(fileUpload.type);
-        console.log(fileUpload);
+        $('#type').val(fileUpload.type());
+        $('#other-cv').val(name);
+        console.log(fileUpload.type());
         showFileName(name);
         //getFileDropboxOnedrive(url, name);
       },
