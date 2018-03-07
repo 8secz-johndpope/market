@@ -103,26 +103,28 @@
                         <h2 class="title">Your CV's</h2>
                     </header>
                     <div class="content row">
-                        @if($profile->cv != null)
+                        @if($user->cvs->count() > 0)
                         <div class="cv-details col-sm-12">
                             <div class="row">
+                                @foreach($user->cvs as $cv)
                                 <div class="current-cv col-sm-4">
                                     <h3 class="title">Your current CV</h3>
                                     <p class="data">
-                                        <span class="cv-name">{{$profile->cv->title}}</span>
-                                        <span class="cv-uploaded">Added {{$profile->cv->created_at->format('d F Y')}}</span>
+                                        <span class="cv-name">{{$cv->title}}</span>
+                                        <span class="cv-uploaded">Added {{$cv->created_at->format('d F Y')}}</span>
                                         <span class="actions">
-                                            <a class="download-cv" href="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->cv->file_name}}">
+                                            <a class="download-cv" href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->file_name}}">
                                                 <i class="glyphicon glyphicon-download-alt"></i>
                                                 Download
                                             </a>
-                                            <a class="delete-cv" href="/user/delete/cv/{{$user->cvs[0]->id}}">
+                                            <a class="delete-cv" href="/user/delete/cv/{{$cv->id}}">
                                                 <i class="glyphicon glyphicon-trash"></i>
                                                 Delete
                                             </a>
                                         </span>
                                     </p>
                                 </div>
+                                @endforeach
                                 <div class="manage-cv col-xs-12 col-sm-8">
                                     <h3 class="title">Manage your CV</h3>
                                     <div class="data">
