@@ -969,7 +969,7 @@
                     <button class="btn btn-inverse">Save Profile</button>
                 </div>
                 <div class="publish col-xs-6 col-sm-3">
-                    <div class="btn btn-submit">Publish Profile</div>
+                    <a href="/user/job/publish/profile?type={{$type}}" class="btn btn-submit">Publish Profile</a>
                 </div>
             </div>
         </div>
@@ -1017,5 +1017,6 @@
         var template = $(this).attr('data-href');
         window.location.href = '/job/profile/edit/' + template;
     })
+
 </script>
 @endsection

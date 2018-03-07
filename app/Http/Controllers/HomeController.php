@@ -2708,7 +2708,7 @@ class HomeController extends BaseController
             $availibility->save();
             for($i=0; $i<7; $i++){
                 $availibilityTime = $availibility->availibility_time(0, $i); 
-                if(in_array($i, $request->before_school)){
+                if(isset($request->before_school) && in_array($i, $request->before_school)){
                     if($availibilityTime == null){
                         $availibilityTime = new AvailibilityTime();
                         $availibilityTime->availibility_id = $availibility->id;
@@ -3003,7 +3003,8 @@ class HomeController extends BaseController
         $profile = $user->profile($request->type);
         $profile->status = 1;
         $profile->save();
-        return view('home.profile.template'.$request->type, ['profile' => $profile]);
+        $slug = str_replace('-', '_', $request->type);
+        return view('home.profile.template_'.$slug, ['profile' => $profile]);
     }
     public function onedriveLogin(Request $request){
         //return $request;

@@ -163,7 +163,7 @@ Route::get('/user/manage/applications', 'HomeController@applications');
 Route::get('/user/manage/motors', 'HomeController@motors');
 Route::get('/user/manage/sales', 'HomeController@motors');
 Route::get('/job/manage/applications/{id}', 'HomeController@view_applications');
-
+Route::get('/user/job/publish/profile', 'HomeController@publishProfile');
 Route::get('/user/create/alert/{id}', 'HomeController@alert');
 Route::get('/user/create/company-alert/{id}', 'HomeController@createCompanyAlert');
 

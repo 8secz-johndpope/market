@@ -72,5 +72,8 @@ class Profile extends Model
 	public function isGeneral(){
 		return $this->general = 'general';
 	}
+	public function user(){
+		return $this->belongsTo('App\User');
+	}
 
 }
