@@ -2896,21 +2896,24 @@ class HomeController extends BaseController
     }
     public function saveProfileAddtionalInfo(Request $request){
         $user = Auth::user();
-        $profile = Profile::find($request->profile);
-        $additionalInfo = $profile->additionalInfo;
-        if($additionalInfo == null){
-            $additionalInfo = new ProfileAdditionalInfo();
-            $additionalInfo->is_smoker = (isset($request->is_smoker) && $request->is_smoker == 'true') ? 1 : 0;
-            $additionalInfo->has_first_aid = (isset($request->has_first_aid) && $request->has_first_aid == 'true') ? 1 : 0;
-            $additionalInfo->has_children = (isset($request->has_children) && $request->has_children == 'true') ? 1 : 0;
-            $additionalInfo->about_me = (isset($request->about_me)) ? $request->about_me : '';
-            if($profile->isSubContractor()){
-                $additionalInfo->linkedin_url = $request->url_linkedin;
-            } 
+        if(isset($request->is_smoker) || isset($request->has_first_aid) || isset($request->has_children) || isset($request->about_me))){
+            $profile = Profile::find($request->profile);
+            $additionalInfo = $profile->additionalInfo;
+            if($additionalInfo == null){
+                $additionalInfo = new ProfileAdditionalInfo();
+                $additionalInfo->is_smoker = (isset($request->is_smoker) && $request->is_smoker == 'true') ? 1 : 0;
+                if($profile->isSocialCare()){
+                    $additionalInfo->has_first_aid = (isset($request->has_first_aid) && $request->has_first_aid == 'true') ? 1 : 0;
+                    $additionalInfo->has_children = (isset($request->has_children) && $request->has_children == 'true') ? 1 : 0;
+                }
+                $additionalInfo->about_me = (isset($request->about_me)) ? $request->about_me : '';
+                if($profile->isSubContractor()){
+                    $additionalInfo->linkedin_url = $request->url_linkedin;
+                } 
+            }
+            $profile->additionalInfo()->save($additionalInfo);
         }
-        $profile->additionalInfo()->save($additionalInfo);
         return redirect($request->redirect);
-
     }
     public function createPublications(Request $request){
         $user = Auth::user();

@@ -38,7 +38,7 @@
               <fieldset class="licence-option">
                 <div class="form-group">
                   <label class="col-sm-4 control-label">
-                    Smoker*
+                    Smoker
                   </label>
                   <div class="col-sm-8">
                     <label class="radio-inline">
@@ -124,5 +124,4 @@
     </div>
   </div>
 </div>
-
 @endsection
