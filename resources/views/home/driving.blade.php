@@ -77,6 +77,9 @@
                       <label for="has-car-false">
                       </label>
                     </label>
+                  </div>
+                  <div class="col-xs-12 validation">
+                    <span>Select one option</span>
                   </div>                    
                 </div>
               </fieldset>
@@ -99,9 +102,14 @@
     var hasLicence =  $("input[name='has_licence']:checked"). val();
     if(!hasCar && !hasLicence){
       e.preventDefault();
-      var parentHasCar = $("input[name='has_licence'], input[name='has_car']").closest('.form-group');
+      var parentHasCar = $("input[name='has_car']").closest('.form-group');
+      var parentHasLicence = $("input[name='has_licence']").closest('.form-group');
       parentHasCar.addClass('input-validation-error');
+      parentHasLicence.addClass('input-validation-error');
     }
+  });
+  $('input[type="radio"]').change(function(){
+    $('.input-validation-error').removeClass('input-validation-error');
   });
 </script>
 @endsection
