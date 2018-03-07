@@ -571,6 +571,7 @@
                                     <p class="data">{{($profile->additionalInfo != null && $profile->additionalInfo->isSmoker()) ? 'Yes' : 'No' }}</p>
                                 </div>
                             </div>
+                            @if($profile->isSocialCare())
                             <div class="col-xs-12 col-md-6">
                                 <div class="firts-aid-title">
                                     <h3 class="title">First Aid certificate</h3>
@@ -581,6 +582,7 @@
                                     <p class="data">{{($profile->additionalInfo != null && $profile->additionalInfo->hasChildren()) ? 'Yes' : 'No'}}</p>
                                 </div>
                             </div>
+                            @endif
                             @if($profile->additionalInfo->about_me != null)
                                 <div class="col-xs-12">
                                     <div class="about-title">
