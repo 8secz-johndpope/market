@@ -377,8 +377,8 @@ class FileUpload{
 }
 class UploadDrive extends FileUpload{
     constructor(fileName, fileId, fileUrl, token){
-        this.token;
         super(fileName, fileId, fileUrl);
+        this.token;
     }
     upload(load){
         var accessToken = this.token;
