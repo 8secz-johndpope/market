@@ -322,9 +322,9 @@ class FileUpload{
         this.fileId = fileId;
         this.fileUrl = fileUrl;
     }
-    saveDB(title,category, userId){
+    saveDB(title,category){
         axios.get('/user/cvs/add', {
-        params: {file_name: this.fileName,title:title,category:category, user:userID}
+        params: {file_name: this.fileName,title:title,category:category}
         })
         .then(function (response) {
             console.log(response);
