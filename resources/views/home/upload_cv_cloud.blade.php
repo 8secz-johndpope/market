@@ -224,9 +224,8 @@
           type = doc[google.picker.Document.MIME_TYPE];
           fileUpload = new UploadDrive(name, idDocument, url, oauthToken);
           $('#type').val(fileUpload.type());
-          //getFileDrive(idDocument, name, type);
           showFileName(name);
-          //$('#other-cv').val(idDocument);
+          $('#other-cv').val(name);
         }
         
       }
@@ -327,7 +326,7 @@
     button.click();
   });
   $('#one-drive').click(launchOneDrivePicker);
-  
+
   function toggleValidationError(inputSelector, addOrRemove){
     var parent = inputSelector.closest('.form-group');
     parent.toggleClass('input-validation-error', addOrRemove);
