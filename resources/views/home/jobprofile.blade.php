@@ -84,9 +84,9 @@
                         </div>
                         <div class="profile progress-row">
                             <div class="profile-progress">
-                                <p>Your profile is 50% complete</p>
+                                <p>Your profile is 30% complete</p>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
                                 </div>
                             </div>
                         </div>
@@ -174,6 +174,11 @@
                     <div class="template-item">
                         <h3 class="template-item-title">General Profile</h3>
                         <div class="template-content {{$type === $types[0] ? 'selected' : ''}}" data-href="{{$types[0]}}">
+                            <div class="template-item-ribbon">
+                                <span class="template-item-ribbon-title">
+                                    General Profile
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
