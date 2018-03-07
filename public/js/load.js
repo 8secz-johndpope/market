@@ -391,7 +391,7 @@ class UploadDrive extends FileUpload{
         }
         xhr.send();
     }
-    static type(){
+    type(){
         return 'google-drive';
     }
 }
