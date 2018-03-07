@@ -239,7 +239,7 @@
       console.log(files[0]);
       var name = files[0].name;
       var url = files[0].link;
-      var id = file[0].id;
+      var id = files[0].id;
       showFileName(name);
       fileUpload = new UploadDropbox(name, id, url);
       $('#type').val(fileUpload.type());
