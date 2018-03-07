@@ -2597,7 +2597,8 @@ class HomeController extends BaseController
     }
     public function create_work_experience(Request $request){
         $user = Auth::user();
-        return view('home.create_work_experience', ['user' => $user]);
+        $profile = $user->profile($request->type);
+        return view('home.create_work_experience', ['user' => $user, "profile" => $profile]);
     }
     public function upload_cv(Request $request){
         $user = Auth::user();        
