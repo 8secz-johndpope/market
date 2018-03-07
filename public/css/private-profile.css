@@ -87,7 +87,7 @@
     text-align: center;
     border: 1px solid #ddd;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.4);
 }
 .selected .template-item-ribbon{
     display: block;
@@ -98,6 +98,7 @@
     height: 100%;
     line-height: 36px;
     text-transform: uppercase;
+    color: #fff;
 }
 .task label{
     background: url(/css/empty-star.png);
