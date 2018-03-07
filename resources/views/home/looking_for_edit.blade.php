@@ -127,10 +127,12 @@
                 <div class="section-content col-xs-12 col-sm-6">
                   <fieldset class="form-field">
                     @foreach($contractTypes as $contractType)
-                    <div class="checkbox">
-                      <input type="checkbox" name="contract_type[]" id="{{$contractType->slug}}-work" value="{{$contractType->id}}" {{($lookingFor->jobTypes->contains($contractType->id))? 'checked' : ''}}>
-                      <label for="{{$contractType->slug}}-work">{{$contractType->title}}</label>
-                    </div>
+                      @if($contractType->title != '')
+                      <div class="checkbox">
+                        <input type="checkbox" name="contract_type[]" id="{{$contractType->slug}}-work" value="{{$contractType->id}}" {{($lookingFor->jobTypes->contains($contractType->id))? 'checked' : ''}}>
+                        <label for="{{$contractType->slug}}-work">{{$contractType->title}}</label>
+                      </div>
+                      @endif
                     @endforeach
                   </fieldset>
                   <fieldset class="form-field graduate-jobs">
