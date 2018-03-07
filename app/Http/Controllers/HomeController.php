@@ -1525,7 +1525,6 @@ class HomeController extends BaseController
         $customer = \Stripe\Customer::retrieve($stripe_id);
         $customer->sources->retrieve($request->card)->delete();
         return redirect($request->redirect);
-
     }
     public function text(Request $request) {
         $user=Auth::user();

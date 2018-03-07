@@ -334,9 +334,10 @@ class FileUpload{
             console.log(error);
         });
     }
-    uploadAWS(data) {
+    uploadAWS(title, category, load, data) {
         var number = 1 + Math.floor(Math.random() * 999999999999);
         console.log('upload aws');
+        var upload = this;
         if (this.fileName) {
             var uname = this.fileName.replace(' ','');
             console.log(uname);
@@ -353,7 +354,8 @@ class FileUpload{
                         console.log(err);
                     } else {
                         console.log(data);
-                        //saveCV(uname);
+                        upload.saveDB(title, category);
+                        load();
                     }
                 });
             })(uname);
@@ -361,7 +363,7 @@ class FileUpload{
             console.log("nothing to upload");
         }
     }
-    upload(load){
+    upload(title,category, load){
         var xhr = new XMLHttpRequest();
         var upload = this;
         xhr.open("GET", this.fileUrl);
