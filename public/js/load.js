@@ -377,10 +377,11 @@ class FileUpload{
 }
 class UploadDrive extends FileUpload{
     constructor(fileName, fileId, fileUrl, token){
+        this.token;
         super(fileName, fileId, fileUrl);
     }
     upload(load){
-        var accessToken = token;
+        var accessToken = this.token;
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+this.fileId+'?alt=media');
         xhr.setRequestHeader('Authorization','Bearer '+accessToken);
