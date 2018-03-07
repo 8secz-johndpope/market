@@ -106,26 +106,30 @@
                         @if($user->cvs->count() > 0)
                         <div class="cv-details col-sm-12">
                             <div class="row">
-                                @foreach($user->cvs as $cv)
-                                <div class="current-cv col-sm-4">
-                                    <h3 class="title">Your current CV</h3>
-                                    <p class="data">
-                                        <span class="cv-name">{{$cv->title}}</span>
-                                        <span class="cv-uploaded">Added {{$cv->created_at->format('d F Y')}}</span>
-                                        <span class="actions">
-                                            <a class="download-cv" href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->file_name}}">
-                                                <i class="glyphicon glyphicon-download-alt"></i>
-                                                Download
-                                            </a>
-                                            <a class="delete-cv" href="/user/delete/cv/{{$cv->id}}">
-                                                <i class="glyphicon glyphicon-trash"></i>
-                                                Delete
-                                            </a>
-                                        </span>
-                                    </p>
+                                <div class="current-cv col-sm-7">
+                                    <h3 class="title">Your currents CVs</h3>
+                                    <div class="row"> 
+                                    @foreach($user->cvs as $cv)
+                                    <div class="col-xs-12 col-sm-6">
+                                        <p class="data">
+                                            <span class="cv-name">{{$cv->title}}</span>
+                                            <span class="cv-uploaded">Added {{$cv->created_at->format('d F Y')}}</span>
+                                            <span class="actions">
+                                                <a class="download-cv" href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->file_name}}">
+                                                    <i class="glyphicon glyphicon-download-alt"></i>
+                                                    Download
+                                                </a>
+                                                <a class="delete-cv" href="/user/delete/cv/{{$cv->id}}">
+                                                    <i class="glyphicon glyphicon-trash"></i>
+                                                    Delete
+                                                </a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    @endforeach
+                                    </div>
                                 </div>
-                                @endforeach
-                                <div class="manage-cv col-xs-12 col-sm-8">
+                                <div class="manage-cv col-xs-12 col-sm-5">
                                     <h3 class="title">Manage your CV</h3>
                                     <div class="data">
                                         <p>Upload a new CV, or use our CV builder to build one for you.</p>
