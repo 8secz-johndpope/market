@@ -1513,7 +1513,9 @@ class HomeController extends BaseController
         $cv->title=$request->title;
         $cv->file_name=$request->file_name;
         $cv->category_id=$request->category;
-        $cv->user_id=$user->id;
+        $cv->user_id = $user->id;
+        //TODO Add column in the database
+        //$cv->where = $request->type;
         $cv->save();
         return ['msg'=>'done'];
     }
@@ -2599,16 +2601,8 @@ class HomeController extends BaseController
         return view('home.create_work_experience', ['user' => $user]);
     }
     public function upload_cv(Request $request){
-        $user = Auth::user();
-
-        if(isset($request->oauth)){
-            $profile = new Profile();
-        }
-        else{
-            $profile = $user->profile($request->type);
-        }
-        
-        return view('home.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves(), 'profile' => $profile]);   
+        $user = Auth::user();        
+        return view('home.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves()]);   
     }
     public function looking_for(Request $request){
         $user = Auth::user();
