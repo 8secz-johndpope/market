@@ -129,7 +129,7 @@
     background-size: cover;
 }
 .template-content.general {
-    background: url(/css/general.png);
+    background: url(/css/general-template.png);
     background-size: cover;
 }
 .template-content.selected, .template-content:hover{
