@@ -343,7 +343,7 @@ class FileUpload{
             console.log(uname);
             var params = {
                 Key: uname,
-                //ContentType: fileType,
+                ContentType: 'blob',
                 //ContentEncoding: 'base64',
                 Body: data,
                 ACL: 'public-read'
