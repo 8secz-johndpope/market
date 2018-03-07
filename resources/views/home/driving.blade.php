@@ -99,8 +99,8 @@
     var hasLicence =  $("input[name='has_licence']:checked"). val();
     if(!hasCar && !hasLicence){
       e.preventDefault();
-      var parent = $("input[name='has_licence']").closest('.form-group');
-      parent.addClass('input-validation-error');
+      var parentHasCar = $("input[name='has_licence'], input[name='has_car']").closest('.form-group');
+      parentHasCar.addClass('input-validation-error');
     }
   });
 </script>
