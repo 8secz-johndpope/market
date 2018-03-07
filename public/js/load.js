@@ -380,15 +380,18 @@ class UploadDrive extends FileUpload{
         super(fileName, fileId, fileUrl);
         this.token;
     }
-    upload(load){
+    upload(title, category, load){
         var accessToken = this.token;
+        console.log(accessToken);
         var xhr = new XMLHttpRequest();
+        var upload = this;
         xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+this.fileId+'?alt=media');
         xhr.setRequestHeader('Authorization','Bearer '+accessToken);
         xhr.responseType = 'blob';
         xhr.onload = function(){
             var data = xhr.response;
-            uploadCvOthers(this.fileName, '', data)
+            upload.uploadAWS(title, category, load, data);
+            //uploadCvOthers(this.fileName, '', data)
         }
         xhr.send();
     }
