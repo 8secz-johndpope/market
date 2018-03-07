@@ -2896,7 +2896,7 @@ class HomeController extends BaseController
     }
     public function saveProfileAddtionalInfo(Request $request){
         $user = Auth::user();
-        if(isset($request->is_smoker) || isset($request->has_first_aid) || isset($request->has_children) || isset($request->about_me))){
+        if(isset($request->is_smoker) || isset($request->has_first_aid) || isset($request->has_children) || isset($request->about_me)){
             $profile = Profile::find($request->profile);
             $additionalInfo = $profile->additionalInfo;
             if($additionalInfo == null){
