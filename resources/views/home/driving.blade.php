@@ -97,9 +97,9 @@
   $('#form-driving').submit(function(e){
     var hasCar =  $("input[name='has_car']:checked"). val();
     var hasLicence =  $("input[name='has_licence']:checked"). val();
-    if(!hasCar && ! hasLicence){
+    if(!hasCar && !hasLicence){
       e.preventDefault();
-      var parent = $("input[name='has_car']:checked").closest('.form-group');
+      var parent = $("input[name='has_licence']:checked").closest('.form-group');
       parent.addClass('input-validation-error');
     }
   });
