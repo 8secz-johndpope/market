@@ -223,6 +223,7 @@
           idDocument = doc[google.picker.Document.ID];
           type = doc[google.picker.Document.MIME_TYPE];
           fileUpload = new UploadDrive(name, idDocument, url, oauthToken);
+          $('#type').val(fileUpload.type());
           //getFileDrive(idDocument, name, type);
           showFileName(name);
           //$('#other-cv').val(idDocument);
@@ -241,6 +242,7 @@
       var id = file[0].id;
       showFileName(name);
       fileUpload = new UploadDropbox(name, id, url);
+      $('#type').val(fileUpload.type());
       //getFileDropbox(url, name);
     },
     // Optional. Called when the user closes the dialog without selecting a file
