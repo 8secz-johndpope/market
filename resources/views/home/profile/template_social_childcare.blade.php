@@ -51,15 +51,20 @@
                                 <li>7 years of experience</li>
                             </ul>
                             <ul class="list-inline list-unstyled ad-applicant-services">
-                                <li class="available">
-                                    Occasional
-                                </li>
+                                @if(isset($profile->looking_for))
+                                    @foreach($profile->looking_for->jobTypes as jobType)
+                                    <li class="available">
+                                        Occasional
+                                    </li>
+                                    @endforeach
+                                @endif
                                 <li class="available">
                                     Part time / After School
                                 </li>
                                 <li class="available">
                                     Full time
                                 </li>
+                                @endif
                             </ul>
                             <div class="visible-xs">
                                 <div class="row mb-20">
