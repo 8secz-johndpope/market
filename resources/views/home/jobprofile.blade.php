@@ -173,7 +173,7 @@
                 <div class="col-sm-4">
                     <div class="template-item">
                         <h3 class="template-item-title">General Profile</h3>
-                        <div class="template-content {{$type === $types[0] ? 'selected' : ''}}   {{$types[0}}" data-href="{{$types[0]}}">
+                        <div class="template-content {{$type === $types[0] ? 'selected' : ''}}   {{$types[0]}}" data-href="{{$types[0]}}">
                             <div class="template-item-ribbon">
                                 <span class="template-item-ribbon-title">
                                     General Profile
