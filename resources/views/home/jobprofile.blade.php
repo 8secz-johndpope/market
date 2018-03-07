@@ -134,8 +134,8 @@
                                     <div class="data">
                                         <p>Upload a new CV, or use our CV builder to build one for you.</p>
                                         <div>
-                                            <a class="btn btn-inverse" href="/user/cv-builder/personal-details">CV Builder by {{env('APP_NAME')}}</a>
-                                             <a class="btn btn-submit" href="/user/upload/cvs">Upload CV</a>
+                                            <a class="btn btn-inverse" href="/user/cv-builder/personal-details?type={{$type}}">CV Builder by {{env('APP_NAME')}}</a>
+                                             <a class="btn btn-submit" href="/user/upload/cvs?type={{$type}}">Upload CV</a>
                                         </div>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@
                             <p>Upload a new CV, or use our CV builder to build one for you.</p>
                             <div class="btns row">
                                 <div class="col-xs-12 col-sm-6">
-                                    <a class="btn btn-inverse" href="/user/cv-builder/personal-details">CV Builder by {{env('APP_NAME')}}</a>
+                                    <a class="btn btn-inverse" href="/user/cv-builder/personal-details?type={{$type}}">CV Builder by {{env('APP_NAME')}}</a>
                                     <a class="btn btn-submit" href="/user/upload/cvs?type={{$type}}">Upload CV</a>
                                 </div>
                             </div>

@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', 'Build your CV')
 
@@ -40,7 +40,7 @@
       <div class="col-sm-12">
         <div class="back-link">
           @if($indexSector == 0)
-          <a href="/job/profile/edit"><i class="glyphicon glyphicon-menu-left"></i>Back</a>
+          <a href="/job/profile/edit/{{$profile->type}}"><i class="glyphicon glyphicon-menu-left"></i>Back</a>
           @else
           <a href="/user/cv-builder/{{array_keys($cvSections)[$indexSector - 1]}}"><i class="glyphicon glyphicon-menu-left"></i>Back</a>
           @endif

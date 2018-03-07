@@ -2598,7 +2598,7 @@ class HomeController extends BaseController
     public function create_work_experience(Request $request){
         $user = Auth::user();
         $profile = $user->profile($request->type);
-        return view('home.create_work_experience', ['user' => $user, "profile" => $profile]);
+        return view('home.profile.create_work_experience', ['user' => $user, "profile" => $profile]);
     }
     public function upload_cv(Request $request){
         $user = Auth::user();        
@@ -2666,6 +2666,7 @@ class HomeController extends BaseController
     }
     public function cv_builder(Request $request, $slug){
         $user = Auth::user();
+        $profile = $user->profile($request->type);
         $cvSections = [];
         $cvSections['personal-details'] = 'Details';
         $cvSections['work-experience'] = 'Work experience';
@@ -2678,7 +2679,7 @@ class HomeController extends BaseController
             }
             $indexSector += 1;
         }  
-        return view('home.cv-builder', ['user' => $user, 'slug' => $slug, 'cvSections' => $cvSections, 'indexSector' => $indexSector]);
+        return view('home.profile.cv-builder', ['user' => $user, 'slug' => $slug, 'cvSections' => $cvSections, 'indexSector' => $indexSector, 'profile' => $profile]);
     }
     public function createEmploymentStatus(Request $request){
         $user = Auth::user();
