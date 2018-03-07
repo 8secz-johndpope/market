@@ -185,7 +185,12 @@
                 <div class="col-sm-4">
                     <div class="template-item">
                         <h3 class="template-item-title">Social Care & Childcare Profile</h3>
-                        <div class="template-content {{$type === $types[1] ? 'selected' : ''}}" data-href="{{$types[1]}}">
+                        <div class="template-content {{$type === $types[1] ? 'selected' : ''}} socialcare" data-href="{{$types[1]}}">
+                            <div class="template-item-ribbon">
+                                <span class="template-item-ribbon-title">
+                                   Social Care & Childcare Profile
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

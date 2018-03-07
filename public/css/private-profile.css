@@ -122,6 +122,9 @@
     cursor: pointer;
     position: relative;
 }
+.template-content.socialcare {
+    background: url(/css/socialcare-template.png);
+}
 .template-content.selected, .template-content:hover{
 	-webkit-box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
     box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
