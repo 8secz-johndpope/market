@@ -297,7 +297,9 @@
           upload_cv();
         }
         else{
-          fileUpload.upload('');
+          fileUpload.upload(title, category, function(){
+            alert('upload correctly');
+          });
           //uploadCvOthers(otherCv, type, contentFile);
         }
       }
