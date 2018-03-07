@@ -288,7 +288,7 @@
           input = $('#upload-cv');
         }
         else if((type == 'google-drive' || type == 'dropbox' || type == 'one-drive') &&  otherCv ==''){
-          input = $('#other-cv');
+          input = $('#upload-cv');
         }
        if(input != null){
         console.log(input);
@@ -327,6 +327,7 @@
     button.click();
   });
   $('#one-drive').click(launchOneDrivePicker);
+  
   function toggleValidationError(inputSelector, addOrRemove){
     var parent = inputSelector.closest('.form-group');
     parent.toggleClass('input-validation-error', addOrRemove);
@@ -377,7 +378,7 @@
     }
     xhr.send();
   }
-  function getFileDropboxOnedrive(url, fileName){
+  /*function getFileDropboxOnedrive(url, fileName){
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url);
     xhr.responseType = 'blob';
@@ -388,11 +389,9 @@
         uploadCvOthers(fileName, '', contentFile);
     }
     xhr.send();
-  }
+  }*/
 </script>
 <script src="https://www.google.com/jsapi?key=AIzaSyAyPtUvbJtOE0WwzOT8ZoTTlLu0TlR0x2k"></script>
 <script src="https://apis.google.com/js/client:plusone.js" type="text/javascript"></script>
-<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=initPicker"></script>
-
-
+<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
 @endsection
