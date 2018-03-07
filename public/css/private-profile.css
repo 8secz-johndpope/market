@@ -87,6 +87,7 @@
     text-align: center;
     border: 1px solid #ddd;
     transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
 }
 .selected .template-item-ribbon{
     display: block;
@@ -124,6 +125,7 @@
 }
 .template-content.socialcare {
     background: url(/css/socialcare-template.png);
+    background-size: cover;
 }
 .template-content.selected, .template-content:hover{
 	-webkit-box-shadow: 0 0.26667rem 0.8rem 0 rgba(0, 0, 20, 0.25);
