@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.business')
+@extends('layouts.app')
 
 @section('title', 'Create your employment status')
 
@@ -26,7 +26,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <form action="/user/save/car-driving" method="post">
+        <form action="/user/save/car-driving" method="post" id="form-driving">
           <input name="redirect" type="hidden" value="/job/profile/edit/{{$profile->type}}">
           {{ csrf_field() }}
           <input name="profile" type="hidden" value="{{$profile->id}}">
@@ -53,6 +53,9 @@
                       <label for="has-licence-false">
                       </label>
                     </label>
+                  </div>
+                  <div class="col-xs-12 validation">
+                    <span>Select one option</span>
                   </div>                    
                 </div>
               </fieldset>
@@ -88,5 +91,17 @@
     </div>
   </div>
 </div>
-
+@endsection
+@section('scripts')
+<script type="text/javascript">
+  $('#form-driving').submit(function(e){
+    var hasCar =  $("input[name='has_car']:checked"). val();
+    var hasLicence =  $("input[name='has_licence']:checked"). val();
+    if(!hasCar && ! hasLicence){
+      e.preventDefault();
+      var parent = $("input[name='has_car']:checked").closest('.form-group');
+      parent.addClass('input-validation-error');
+    }
+  });
+</script>
 @endsection

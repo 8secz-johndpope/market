@@ -364,7 +364,7 @@
     }
     OneDrive.open(odOptions);
   }
-  function getFileDrive(file, fileName, type){
+  /*function getFileDrive(file, fileName, type){
     var accessToken = oauthToken;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://www.googleapis.com/drive/v3/files/"+file+'?alt=media');
