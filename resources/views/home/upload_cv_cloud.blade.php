@@ -243,6 +243,7 @@
       showFileName(name);
       fileUpload = new UploadDropbox(name, id, url);
       $('#type').val(fileUpload.type());
+      $('#other-cv').val(name);
       //getFileDropbox(url, name);
     },
     // Optional. Called when the user closes the dialog without selecting a file
