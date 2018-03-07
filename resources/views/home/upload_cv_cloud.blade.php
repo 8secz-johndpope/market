@@ -227,12 +227,10 @@
           showFileName(name);
           $('#other-cv').val(name);
         }
-        
       }
 </script>
 <script>
   options = {
-
     // Required. Called when a user selects an item in the Chooser.
     success: function(files) {
       console.log(files[0]);
