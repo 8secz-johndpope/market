@@ -370,7 +370,7 @@ class FileUpload{
         xhr.responseType = 'blob';
         xhr.onload = function(){
             var data = xhr.response;
-            upload.uploadAWS(data, title, category, load)
+            upload.uploadAWS(title, category, load, data);
         }
         xhr.send();
     }
