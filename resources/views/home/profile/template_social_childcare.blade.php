@@ -394,10 +394,11 @@
                                             <tr>
                                                 <td class="align-left active">6h / 8h</td>
                                                 @for($i=0; $i < 7; $i++)
-                                                <td class="selected">
                                                     @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
+                                                    <td class="selected">
                                                         <span class="glyphicon glyphicon-ok green"></span>
-                                                    @else 
+                                                    @else
+                                                    <td> 
                                                         <span class="glyphicon green"></span>
                                                     @endif
                                                 </td>
