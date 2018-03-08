@@ -42,14 +42,16 @@
                                 </div>
                                 <h2>Blenheim, New Zealand</h2>
                             </div>
+                            @if(isset($profile->looking_for) && $profile->looking_for->sectors->count() > 0)
                             <div class="top-card-buttons">
                                 <p>Looking for:</p>
                                 <ul class="looking-for">
-                                    <li>IT</li>
-                                    <li>Chef</li>
-                                    <li>Driver</li>
+                                    @foreach($profile->looking_for->sectors as $sector)
+                                    <li>$sector->title</li>
+                                    @endforeach
                                 </ul>
                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>
