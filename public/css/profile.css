@@ -6,9 +6,8 @@
 }
 .template-subcontractor .img-bg {
     height: 200px;
-    background-image: url(/css/bg-ocean.jpg);
-    background-position-y: 99%;
-    background-size: 51%;
+    background-image: url(/css/bg3.jpg);
+    background-size: cover;
 }
 .top-card {
     margin: 0;
@@ -42,7 +41,7 @@
     background: #f9f0eb;
 }
 .template-subcontractor .profile-background-container{
-    background: #36648B;
+    background: #0A6DD2;
 }
 .template-general .profile-background-container {
     background-image: url(/css/Embed_Desktop.png);
