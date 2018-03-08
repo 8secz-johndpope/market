@@ -474,12 +474,14 @@
                 <div class="col-sm-12 details-agent">
                     <div class="personal-details">
                         <p>
-                            David H.
+                            {{$profile->user->name}}
                         </p>
+                        @if(isset($profile->user->address))
                         <address>
-                            Blenheim, New Zealand
+                            {{$profile->user->address->city}}, United Kingdom
                         </address>
-                        <p><strong>Tel: </strong>0788998878</p>
+                        @endif
+                        <p><strong>Tel: </strong>{{$profile->user->phone}}</p>
                         <a href="#" class="btn btn-default">Email</a>
                     </div>
                 </div>
