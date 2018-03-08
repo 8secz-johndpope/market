@@ -283,7 +283,7 @@
                             </li>
                         </ul>
                     </div>
-                    @if(isset($profile->additionalInfo))
+                    @if(isset($profile->additionalInfo) || isset($profile->carAndDriving))
                     <div class="part">
                         <ul class="list-unstyled user-options">
                             <li class="row">
