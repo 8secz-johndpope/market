@@ -33,6 +33,9 @@
                                 <div class="profile-photo-wrapper">
                                     <div class="profile-photo">
                                         <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
+                                         <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams.">
+                                            <span class="verification-level">{{str_replace('V', '', $profile->user->vid)}}</span>
+                                        </span>
                                     </div>
                                 </div>
                             </div>

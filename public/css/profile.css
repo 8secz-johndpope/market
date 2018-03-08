@@ -339,7 +339,7 @@ footer{
     background-color: #fff;
     background-image: url(/css/childcare-picture.jpg);
 }
-.ad-applicant-picture > span{
+.ad-applicant-picture > span, .profile-photo > span{
     font-size: 20px;
     color: #6001d2;
     padding: 10px;
