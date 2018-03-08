@@ -485,13 +485,6 @@
                 </div>
             </div>
             <div class="row border-outside">
-                <div class="col-sm-12 details-agent website">
-                    <a target="_black" href="#">
-                        <h3>LinkedIn Link</h3>
-                    </a>
-                </div>
-            </div>
-            <div class="row border-outside">
                 <div class="col-sm-12 details-agent title">
                     <h3>Availibility</h3>
                 </div>
