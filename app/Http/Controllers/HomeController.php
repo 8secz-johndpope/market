@@ -3000,7 +3000,7 @@ class HomeController extends BaseController
     }
     public function publishProfile(Request $request){
         $user = Auth::user();
-        $languageLevels = ['Basic', 'Intermediate', 'Fluent'];
+        $languageLevels = ProfileLanguage::LEVEL_TYPES;
         $profile = $user->profile($request->type);
         $profile->status = 1;
         $profile->save();

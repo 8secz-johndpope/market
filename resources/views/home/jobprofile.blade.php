@@ -712,17 +712,19 @@
                         <div class="experience-container">
                             <div>
                                 <ul class="services list-inline">
-                                    @if($profile->socialcareServiceOffered(1) != null)
+                                    @for($i=1; $i <= count(SocialcareServiceOffered::SERVICES_OFFERED); $i++)
+                                    @if($profile->socialcareServiceOffered($i) != null)
                                     <li class="service active">
                                     @else
                                     <li class="service">
                                     @endif
                                         <a>
                                             <span>
-                                                Tutoring
+                                                {{SocialcareServiceOffered::SERVICES_OFFERED[$i]}}
                                             </span>
                                         </a>
                                     </li>
+                                    @endfor
                                    @if($profile->socialcareServiceOffered(2) != null)
                                     <li class="service active">
                                     @else
