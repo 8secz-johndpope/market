@@ -42,7 +42,7 @@
                             <div class="top-card-body">
                                 <div class="top-card-info">
                                     <div class="align-items-center">
-                                        <h1>{{$profile->user->name}}</h1>
+                                        <h1>David H.</h1>
                                     </div>
                                     @if(isset($profile->user->address))
                                     <h2>{{$profile->user->address->city}}, United Kingdom</h2>
