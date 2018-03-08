@@ -3006,8 +3006,16 @@ class HomeController extends BaseController
         $profile = $user->profile($request->type);
         $profile->status = 1;
         $profile->save();
+        $tasksHelp = SocialcareTaskHelp::all();
+        $tasksHelpValues = array();
+        foreach ($tasksHelp as $taskHelp) {
+            $value = 0;
+            if($profile->socialcareTaskHelp($taskHelp->id) != null)
+                $value = $profile->socialcareTaskHelp($taskHelp->id)->pivot->value;
+            $tasksHelpValues[$taskHelp->id] = $value;
+        }
         $slug = str_replace('-', '_', $request->type);
-        return view('home.profile.template_'.$slug, ['profile' => $profile, 'languageLevels' => $languageLevels, 'servicesOffered' => $servicesOffered]);
+        return view('home.profile.template_'.$slug, ['profile' => $profile, 'languageLevels' => $languageLevels, 'servicesOffered' => $servicesOffered, 'tasksHelp' => $tasksHelp, 'tasksHelpValues' => $tasksHelpValues]);
     }
     public function onedriveLogin(Request $request){
         //return $request;

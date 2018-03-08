@@ -529,13 +529,54 @@
                                 <i class="far fa-check-square"></i>
                             </div>
                             <div class="col-md-11 title col-xs-10">
-                                Tasks that Anna can help with
+                                Tasks that {{$profile->user->name}} can help with
                             </div>
                         </div>
                     </h4>
                     <div class="row no-margin">
                         <div class="col-md-11 col-md-offset-1 col-xs-12">
                             <ul class="list-unstyled">
+                                @for($i=0; $i<$tasksHelp->count(); $i++)
+                                 <li class="task-block row no-margin">
+                                    <div class="col-md-6 no-padding col-xs-12">
+                                        <div class="row no-margin">
+                                            <div class="col-md-2 no-padding col-xs-3">
+                                                <div class="ui-rating">
+                                                    @for($j=0; $j < $tasksHelpValues[$tasksHelp[$i]->id]; $j++)
+                                                        <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    @endfor
+                                                    @for($j; $j < 3; $j++)
+                                                        <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                    @endfor
+                                                </div>
+                                            </div>
+                                            <div class="service-text col-md-10 col-xs-9">
+                                                <p class="littlep">{{$tasksHelp[$i]->title}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @php
+                                        $i++;
+                                    @endphp
+                                    <div class="col-md-6 no-padding col-xs-12">
+                                        <div class="row no-margin">
+                                            <div class="col-md-2 no-padding col-xs-3">
+                                                <div class="ui-rating">
+                                                    @for($j=0; $j < $tasksHelpValues[$tasksHelp[$i]->id]; $j++)
+                                                        <a title="ui rating value 1" class="rating-star rating-star-full"></a>
+                                                    @endfor
+                                                    @for($j; $j < 3; $j++)
+                                                        <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
+                                                    @endfor
+                                                </div>
+                                            </div>
+                                            <div class="service-text col-md-10 col-xs-9">
+                                                <p class="littlep">{{$tasksHelp[$i]->title}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                @endfor    
                                 <li class="task-block row no-margin">
                                     <div class="col-md-6 no-padding col-xs-12">
                                         <div class="row no-margin">
