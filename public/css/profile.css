@@ -45,7 +45,7 @@
     background: #0A6DD2;
 }
 .template-general .profile-background-container {
-    background-color: #000;
+    background-color: hsla(0,0%,50%,.92);
     background-image: url(/css/Embed_Desktop.png);
     background-size: contain;
 }
