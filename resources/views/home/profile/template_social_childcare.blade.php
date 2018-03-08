@@ -261,8 +261,10 @@
                             <li class="row">
                                 <div class="col-md-2 col-sm-3 col-xs-7">Languages spoken:</div>
                                 <div class="col-md-10 col-sm-9 col-xs-5 no-padding">
-                                    <span class="border">Armenian</span>
-                                    (Native Language), 
+                                    @foreach($profile->languages as $profileLanguage)
+                                    <span class="border">{{$profileLanguage->language->name}}</span>
+                                    ({{$profileLanguage->getType()}}),
+                                    @endforeach 
                                     <span class="border">Russia</span>
                                     (Fluently), 
                                     <span class="border">English</span>
