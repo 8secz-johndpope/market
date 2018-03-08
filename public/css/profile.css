@@ -799,6 +799,9 @@ footer{
     #about-applicant-info .services {
         text-align: center;
     }
+    ul.looking-for li{
+        font-size: 11px;
+    }
 }
 @media (min-width: 1024px){
     .general-profile .container-qualifications .qualification .what{
