@@ -392,28 +392,16 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="align-left active">6h / 8h</td> 
+                                                <td class="align-left active">6h / 8h</td>
+                                                @for($i=0; $i < 7; $i++)
                                                 <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
+                                                        <span class="glyphicon glyphicon-ok green"></span>
+                                                    @else 
+                                                        <span class="glyphicon green"></span>
+                                                    @endif
                                                 </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
+                                                @endfor 
                                             </tr> 
                                             <tr>
                                                 <td class="align-left active">8am - 10am</td> 
