@@ -333,8 +333,21 @@
                     </div>
                     @endif
                     <div class="part">
-                        <h4>Services offered by Anna</h4>
+                        <h4>Services offered by {{$profile->user->name}}</h4>
                         <ul class="services list-inline">
+                            @for($i=1; $i <= count($servicesOffered); $i++)
+                                @if($profile->socialcareServiceOffered($i) != null)
+                                <li class="service active">
+                                @else
+                                <li class="service">
+                                @endif
+                                    <a>
+                                        <span>
+                                            {{$servicesOffered[$i - 1]}}
+                                        </span>
+                                    </a>
+                                </li>
+                            @endfor
                             <li class="service">
                                 <a>
                                     <span>
