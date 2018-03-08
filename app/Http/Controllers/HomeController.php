@@ -3000,11 +3000,12 @@ class HomeController extends BaseController
     }
     public function publishProfile(Request $request){
         $user = Auth::user();
+        $languageLevels = ['Basic', 'Intermediate', 'Fluent'];
         $profile = $user->profile($request->type);
         $profile->status = 1;
         $profile->save();
         $slug = str_replace('-', '_', $request->type);
-        return view('home.profile.template_'.$slug, ['profile' => $profile]);
+        return view('home.profile.template_'.$slug, ['profile' => $profile, 'languageLevels' => $languageLevels]);
     }
     public function onedriveLogin(Request $request){
         //return $request;

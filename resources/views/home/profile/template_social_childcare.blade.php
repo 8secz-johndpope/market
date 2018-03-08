@@ -94,7 +94,7 @@
                                                             <div class="col-md-10 col-xs-6 no-padding">
                                                                 @foreach($profile->languages as $profileLanguage)
                                                                 <span class="border">$profileLanguage->language->name</span>
-                                                                (Native Language),
+                                                                ($profileLanguage->getLevel()),
                                                                 @endforeach 
                                                                 <span class="border">Russia</span>
                                                                 (Fluently), 
