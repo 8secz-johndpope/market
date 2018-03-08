@@ -21,39 +21,41 @@
     <div class="row">
         <div class="col-sm-8 col-xs-12">
             <div class="row">
-                <div class="profile-background">
-                    <div class="profile-background-container">
-                        <img src="https://media.licdn.com/media/AAEAAQAAAAAAAArWAAAAJDE4ZTYwOTg3LTI5NTUtNDcwOS05N2E3LWNjNWJkNDRiYTI1OA.jpg">
+                <div class="col-sm-12">
+                    <div class="profile-background">
+                        <div class="profile-background-container">
+                            <img src="https://media.licdn.com/media/AAEAAQAAAAAAAArWAAAAJDE4ZTYwOTg3LTI5NTUtNDcwOS05N2E3LWNjNWJkNDRiYTI1OA.jpg">
+                        </div>
                     </div>
-                </div>
-                <div class="profile-header">
-                    <div class="top-card">
-                        <div class="profile-photo-container">
-                            <div class="profile-photo-wrapper">
-                                <div class="profile-photo">
-                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
+                    <div class="profile-header">
+                        <div class="top-card">
+                            <div class="profile-photo-container">
+                                <div class="profile-photo-wrapper">
+                                    <div class="profile-photo">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="top-card-body">
-                            <div class="top-card-info">
-                                <div class="align-items-center">
-                                    <h1>{{$profile->user->name}}</h1>
+                            <div class="top-card-body">
+                                <div class="top-card-info">
+                                    <div class="align-items-center">
+                                        <h1>{{$profile->user->name}}</h1>
+                                    </div>
+                                    @if(isset($profile->user->address))
+                                    <h2>{{$profile->user->address->city}}, United Kingdom</h2>
+                                    @endif
                                 </div>
-                                @if(isset($profile->user->address))
-                                <h2>{{$profile->user->address->city}}, United Kingdom</h2>
+                                @if(isset($profile->looking_for) && $profile->looking_for->sectors->count() > 0)
+                                <div class="top-card-buttons">
+                                    <p>Looking for:</p>
+                                    <ul class="looking-for">
+                                        @foreach($profile->looking_for->sectors as $sector)
+                                        <li>{{$sector->title}}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                                 @endif
                             </div>
-                            @if(isset($profile->looking_for) && $profile->looking_for->sectors->count() > 0)
-                            <div class="top-card-buttons">
-                                <p>Looking for:</p>
-                                <ul class="looking-for">
-                                    @foreach($profile->looking_for->sectors as $sector)
-                                    <li>{{$sector->title}}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                            @endif
                         </div>
                     </div>
                 </div>
@@ -64,21 +66,21 @@
                     <div id="tabs">
                         <ul class="nav nav-tabs hidden-xs">
                             <li class="active"><a data-toggle="tab" href="#tab-overview">Summary</a></li>
-                            <li><a data-toggle="pill" href="#tab-about">About Me</a></li>
-                            <li><a data-toggle="pill" href="#tab-education">Education</a></li>
-                            <li><a data-toggle="pill" href="#tab-work">Experience</a></li>
-                            <li><a data-toggle="pill" href="#tab-skills">Training & Skills</a></li>
-                            <li><a data-toggle="pill" href="#tab-approval">Approval</a></li>
-                            <li><a data-toggle="pill" href="#tab-contact">Contact</a></li>
-                        </ul>
-                        <ul class="nav nav-pills nav-stacked visible-xs">
-                            <li class="active"><a data-toggle="tab" href="#tab-overview">Summary</a></li>
                             <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
                             <li><a data-toggle="tab" href="#tab-education">Education</a></li>
                             <li><a data-toggle="tab" href="#tab-work">Experience</a></li>
                             <li><a data-toggle="tab" href="#tab-skills">Training & Skills</a></li>
                             <li><a data-toggle="tab" href="#tab-approval">Approval</a></li>
                             <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
+                        </ul>
+                        <ul class="nav nav-pills nav-stacked visible-xs">
+                            <li class="active"><a data-toggle="pill" href="#tab-work">Experience<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <li><a data-toggle="pill" href="#tab-about">About Me<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <li><a data-toggle="pill" href="#tab-education">Education<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <li><a data-toggle="pill" href="#tab-work">Experience<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <li><a data-toggle="pill" href="#tab-skills">Training & Skills<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <li><a data-toggle="pill" href="#tab-approval">Approval<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <li><a data-toggle="pill" href="#tab-contact">Contact<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="tab-overview" class="tab-pane fade in active">
@@ -91,7 +93,7 @@
                                         </a>
                                     </li>
                                     @endif
-                                    <li class="tablinks">
+                                    <li class="tablinks {{(!isset($profile->cover) ? 'selected' : '')}}">
                                         <a href="#tab-location">
                                             <span class="bullet branded"></span>
                                             My Location
@@ -111,7 +113,7 @@
                                    </p> 
                                 </div>
                                 @endif
-                                <div id="tab-location" class="tabcontent">
+                                <div id="tab-location" class="tabcontent {{(!isset($profile->cover) ? 'active-tab' : '')}}">
                                     <div class="row">
                                 <div class="col-md-12">
                                     <div class="btn-group" data-toggle="buttons">
@@ -250,6 +252,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div id="tab-education" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
