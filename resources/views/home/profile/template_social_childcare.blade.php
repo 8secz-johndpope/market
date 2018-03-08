@@ -285,6 +285,7 @@
                             </li>
                         </ul>
                     </div>
+                    @if(isset($profile->additionalInfo))
                     <div class="part">
                         <ul class="list-unstyled user-options">
                             <li class="row">
@@ -330,6 +331,7 @@
                             </li>
                         </ul>
                     </div>
+                    @endif
                     <div class="part">
                         <h4>Services offered by Anna</h4>
                         <ul class="services list-inline">
