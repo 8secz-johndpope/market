@@ -58,12 +58,6 @@
                                     </li>
                                     @endforeach
                                 @endif
-                                <li class="available">
-                                    Part time / After School
-                                </li>
-                                <li class="available">
-                                    Full time
-                                </li>
                             </ul>
                             <div class="visible-xs">
                                 <div class="row mb-20">
@@ -98,8 +92,10 @@
                                                         <li class="row">
                                                             <div class="col-md-2 col-xs-6">Languages spoken:</div>
                                                             <div class="col-md-10 col-xs-6 no-padding">
-                                                                <span class="border">Armenian</span>
-                                                                (Native Language), 
+                                                                @foreach($profile->laguages as $profileLanguage)
+                                                                <span class="border">$profileLanguage->language->name</span>
+                                                                (Native Language),
+                                                                @endforeach 
                                                                 <span class="border">Russia</span>
                                                                 (Fluently), 
                                                                 <span class="border">English</span>
