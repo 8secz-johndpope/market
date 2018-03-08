@@ -54,7 +54,7 @@
                                 @if(isset($profile->looking_for))
                                     @foreach($profile->looking_for->jobTypes as $jobType)
                                     <li class="available">
-                                        {{$jobType}}
+                                        {{$jobType->title}}
                                     </li>
                                     @endforeach
                                 @endif
