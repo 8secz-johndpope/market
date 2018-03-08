@@ -406,195 +406,107 @@
                                             </tr> 
                                             <tr>
                                                 <td class="align-left active">8am - 10am</td> 
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                @for($i=0; $i < 7; $i++)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
+                                                    <td class="selected">
+                                                        <span class="glyphicon glyphicon-ok green"></span>
+                                                    @else
+                                                    <td> 
+                                                        <span class="glyphicon green"></span>
+                                                    @endif
                                                 </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
+                                                @endfor 
                                             </tr> 
                                             <tr>
                                                 <td class="align-left active">10am - 12pm</td> 
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                @for($i=0; $i < 7; $i++)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
+                                                    <td class="selected">
+                                                        <span class="glyphicon glyphicon-ok green"></span>
+                                                    @else
+                                                    <td> 
+                                                        <span class="glyphicon green"></span>
+                                                    @endif
                                                 </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
+                                                @endfor 
                                             </tr> 
                                             <tr>
                                                 <td class="align-left active">12pm - 2pm</td> 
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                @for($i=0; $i < 7; $i++)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
+                                                    <td class="selected">
+                                                        <span class="glyphicon glyphicon-ok green"></span>
+                                                    @else
+                                                    <td> 
+                                                        <span class="glyphicon green"></span>
+                                                    @endif
                                                 </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
+                                                @endfor 
                                             </tr> 
                                             <tr>
                                                 <td class="align-left active">2pm - 4pm</td> 
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                @for($i=0; $i < 7; $i++)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
+                                                    <td class="selected">
+                                                        <span class="glyphicon glyphicon-ok green"></span>
+                                                    @else
+                                                    <td> 
+                                                        <span class="glyphicon green"></span>
+                                                    @endif
                                                 </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
+                                                @endfor 
                                             </tr> 
                                             <tr>
                                                 <td class="align-left active">4pm - 6pm</td> 
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                @for($i=0; $i < 7; $i++)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
+                                                    <td class="selected">
+                                                        <span class="glyphicon glyphicon-ok green"></span>
+                                                    @else
+                                                    <td> 
+                                                        <span class="glyphicon green"></span>
+                                                    @endif
                                                 </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
+                                                @endfor 
                                             </tr> 
                                             <tr>
                                                 <td class="align-left active">6pm - 8pm</td> 
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                @for($i=0; $i < 7; $i++)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
+                                                    <td class="selected">
+                                                        <span class="glyphicon glyphicon-ok green"></span>
+                                                    @else
+                                                    <td> 
+                                                        <span class="glyphicon green"></span>
+                                                    @endif
                                                 </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
+                                                @endfor 
                                             </tr> 
                                             <tr>
                                                 <td class="align-left active">20h / 24h</td> 
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                @for($i=0; $i < 7; $i++)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
+                                                    <td class="selected">
+                                                        <span class="glyphicon glyphicon-ok green"></span>
+                                                    @else
+                                                    <td> 
+                                                        <span class="glyphicon green"></span>
+                                                    @endif
                                                 </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
+                                                @endfor 
                                             </tr> 
                                             <tr>
                                                 <td class="align-left active">Night</td> 
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
+                                                @for($i=0; $i < 7; $i++)
+                                                    @if(isset($profile->availibility) && $profile->availibility->availibility_time(0, $i) != null)
+                                                    <td class="selected">
+                                                        <span class="glyphicon glyphicon-ok green"></span>
+                                                    @else
+                                                    <td> 
+                                                        <span class="glyphicon green"></span>
+                                                    @endif
                                                 </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
-                                                <td class="selected">
-                                                    <span class="glyphicon glyphicon-ok green"></span>
-                                                </td>
+                                                @endfor 
                                             </tr>
                                         </tbody>
                                     </table>
