@@ -32,7 +32,7 @@
                             <div class="profile-photo-container">
                                 <div class="profile-photo-wrapper">
                                     <div class="profile-photo">
-                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/752734721579.jpeg">
                                          <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams.">
                                             <span class="verification-level">{{str_replace('V', '', $profile->user->vid)}}</span>
                                         </span>
@@ -42,10 +42,10 @@
                             <div class="top-card-body">
                                 <div class="top-card-info">
                                     <div class="align-items-center">
-                                        <h1>{{$profile->user->name}}</h1>
+                                        <h1>David H.</h1>
                                     </div>
                                     @if(isset($profile->user->address))
-                                    <h2>{{$profile->user->address->city}}, United Kingdom</h2>
+                                    <h2>London, United Kingdom</h2>
                                     @endif
                                 </div>
                                 @if(isset($profile->looking_for) && $profile->looking_for->sectors->count() > 0)

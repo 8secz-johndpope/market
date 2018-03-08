@@ -163,7 +163,7 @@ li.tablinks.selected span.bullet, li.tablinks.selected span.bullet:hover {
 }
 li.tablinks.selected, li.tablinks:hover{
 	/*background-color: #f5f5f5;*/
-	background-color: #f9f0eb;
+	background-color: #fff;
     margin-left: 0;
     margin-right: -1px;
     padding: 0 10px 0 10px;
@@ -207,7 +207,7 @@ li.tablinks a {
 .tabcontent.active-tab{
 	display: block;
 	/*background-color: #f5f5f5;*/
-	background-color: #f9f0eb;
+	background-color: #fff;
 	opacity: 1;
 }
 .template-subcontractor .tabcontent.active-tab, .template-subcontractor li.tablinks.selected, .template-subcontractor li.tablinks:hover{
