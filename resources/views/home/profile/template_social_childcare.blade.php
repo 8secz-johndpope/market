@@ -291,7 +291,7 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Drivers License
                                         </span>
-                                        @if($profile->additionalInfo->hasLicence())
+                                        @if(isset($profile->carAndDriving) && $profile->carAndDriving->hasLicence())
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                         @else
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
@@ -302,7 +302,7 @@
                                     <div class="row">
                                         <span class="col-md-9 no-padding col-xs-9">First Aid certificate
                                         </span>
-                                        @if($profile->additionalInfo->hasFirstAid())
+                                        @if(isset($profile->additionalInfo) && $profile->additionalInfo->hasFirstAid())
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                         @else
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
@@ -315,7 +315,7 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Access to a vehicle
                                         </span>
-                                        @if($profile->additionalInfo->hasCar())
+                                        @if(isset($profile->carAndDriving) && $profile->additionalInfo->hasCar())
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                         @else
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
@@ -326,7 +326,7 @@
                                     <div class="row">
                                         <span class="col-md-9 no-padding col-xs-9">Has children
                                         </span>
-                                        @if($profile->additionalInfo->hasChildren())
+                                        @if(isset($profile->additionalInfo) && $profile->additionalInfo->hasChildren())
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                         @else
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
@@ -339,7 +339,7 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Non smoker
                                         </span>
-                                        @if($profile->additionalInfo->isSmoker())
+                                        @if(isset($profile->additionalInfo) && $profile->additionalInfo->isSmoker())
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                         @else
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
