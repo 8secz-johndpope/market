@@ -577,193 +577,13 @@
                                     </div>
                                 </li>
                                 @endfor    
-                                <li class="task-block row no-margin">
-                                    <div class="col-md-6 no-padding col-xs-12">
-                                        <div class="row no-margin">
-                                            <div class="col-md-2 no-padding col-xs-3">
-                                                <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                            </div>
-                                            <div class="service-text col-md-10 col-xs-9">
-                                                <p class="littlep">Cooking</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 no-padding col-xs-12">
-                                        <div class="row no-margin">
-                                            <div class="col-md-2 no-padding col-xs-3">
-                                                <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                            </div>
-                                            <div class="service-text col-md-10 col-xs-9">
-                                                <p class="littlep">Ironing</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="task-block row no-margin">
-                                    <div class="col-md-6 no-padding col-xs-12">
-                                        <div class="row no-margin">
-                                            <div class="col-md-2 no-padding col-xs-3">
-                                                <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                            </div>
-                                            <div class="service-text col-md-10 col-xs-9">
-                                                <p class="littlep">Help with homework</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 no-padding col-xs-12">
-                                        <div class="row no-margin">
-                                            <div class="col-md-2 no-padding col-xs-3">
-                                                <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                            </div>
-                                            <div class="service-text col-md-10 col-xs-9">
-                                                <p class="littlep">Housework</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="task-block row no-margin">
-                                        <div class="col-md-6 no-padding col-xs-12">
-                                            <div class="row no-margin">
-                                                <div class="col-md-2 no-padding col-xs-3">
-                                                    <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                                </div>
-                                                <div class="service-text col-md-10 col-xs-9">
-                                                    <p class="littlep">Wedding Day supervision</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 no-padding col-xs-12">
-                                            <div class="row no-margin">
-                                                <div class="col-md-2 no-padding col-xs-3">
-                                                    <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                                </div>
-                                                <div class="service-text col-md-10 col-xs-9">
-                                                    <p class="littlep">Newborn (under  6 months)</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="task-block row no-margin">
-                                        <div class="col-md-6 no-padding col-xs-12">
-                                            <div class="row no-margin">
-                                                <div class="col-md-2 no-padding col-xs-3">
-                                                    <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                                </div>
-                                                <div class="service-text col-md-10 col-xs-9">
-                                                    <p class="littlep">Infant (6 months to 2 years)</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 no-padding col-xs-12">
-                                            <div class="row no-margin">
-                                                <div class="col-md-2 no-padding col-xs-3">
-                                                    <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                                </div>
-                                                <div class="service-text col-md-10 col-xs-9">
-                                                    <p class="littlep">Toddlers (2 to 6 years)</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="task-block row no-margin">
-                                        <div class="col-md-6 no-padding col-xs-12">
-                                            <div class="row no-margin">
-                                                <div class="col-md-2 no-padding col-xs-3">
-                                                    <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                                </div>
-                                                <div class="service-text col-md-10 col-xs-9">
-                                                    <p class="littlep">School Aged Children (6 years and up)</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 no-padding col-xs-12">
-                                            <div class="row no-margin">
-                                                <div class="col-md-2 no-padding col-xs-3">
-                                                    <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                                </div>
-                                                <div class="service-text col-md-10 col-xs-9">
-                                                    <p class="littlep">Pet help</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="task-block row no-margin">
-                                        <div class="col-md-6 no-padding col-xs-12">
-                                            <div class="row no-margin">
-                                                <div class="col-md-2 no-padding col-xs-3">
-                                                    <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                                </div>
-                                                <div class="service-text col-md-10 col-xs-9">
-                                                    <p class="littlep">Children with disabilities</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 no-padding col-xs-12">
-                                            <div class="row no-margin">
-                                                <div class="col-md-2 no-padding col-xs-3">
-                                                    <div class="ui-rating">
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-full"></a>
-                                                    <a title="ui rating value 1" class="rating-star rating-star-empty"></a>
-                                                </div>
-                                                </div>
-                                                <div class="service-text col-md-10 col-xs-9">
-                                                    <p class="littlep">Sick children</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        @if($profile->work_experiences->count() > 0)
         <div class="experience container-ad-applicant">
             <div class="container">
                 <div class="row">
@@ -781,15 +601,19 @@
                         <div class="row no-margin">
                             <div class="col-md-11 col-md-offset-1 col-xs-12">
                                 <ul class="list-unstyled">
+                                    @foreach($profile->work_experiences as $workExperience)
                                     <li class="row">
                                         <div class="col-sm-2 col-md-2 col-xs-12 left">
-                                            <span class="date-text">From 07-1990</span>
-                                            <span class="date-text">Until 08-2002</span>
+                                            <span class="date-text">From {{$workExperience->from->format('m-Y')}}</span>
+                                            <span class="date-text">Until {{$workExperience->to->format('m-Y')}}</span>
                                         </div>
                                         <div class="col-sm-10 col-md-10 col-xs-12 right">
-                                            <p class="littlep">I have looked after her son since she gave birth as was unwell and unfit,  I was living with her, doing all the housekeeping and cooking and looking after new born baby till he was 13 years old. Then I got married and moved away to live with my husband in 2002.</p>
+                                            <p class="littlep">
+                                                {{$workExperience->description}}
+                                            </p>
                                         </div>
                                     </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -797,6 +621,7 @@
                 </div>
             </div>
         </div>
+        @endif
         <div class="hobbies container-ad-applicant">
             <div class="container">
                 <div class="row">
