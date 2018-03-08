@@ -315,7 +315,7 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Access to a vehicle
                                         </span>
-                                        @if(isset($profile->carAndDriving) && $profile->additionalInfo->hasCar())
+                                        @if(isset($profile->carAndDriving) && $profile->carAndDriving->hasCar())
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
                                         @else
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
