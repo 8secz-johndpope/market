@@ -583,6 +583,7 @@
                 </div>
             </div>
         </div>
+    </div>
         @if($profile->work_experiences->count() > 0)
         <div class="experience container-ad-applicant">
             <div class="container">
@@ -632,7 +633,7 @@
                                     <i class="fas fa-info"></i>
                                 </div>
                                 <div class="col-md-11 title col-xs-10">
-                                    More about Anna
+                                    More about {{$profile->user->name}}
                                 </div>
                             </div>
                         </h4>
