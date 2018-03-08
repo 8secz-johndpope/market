@@ -27,7 +27,7 @@
                         <div class="col-sm-3 col-xs-12">
                             <figure class="ad-applicant-picture" style="background: url({{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}); background-size: cover;">
                                 <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams.">
-                                    <span class="verification-level">3</span>
+                                    <span class="verification-level">$profile->user->vid</span>
                                 </span>
                             </figure>
                         </div>
