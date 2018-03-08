@@ -83,12 +83,14 @@
                         <div class="tab-content">
                             <div id="tab-overview" class="tab-pane fade in active">
                                 <ul class="tab-vert">
+                                    @if(isset($profile->cover))
                                     <li class="tablinks selected">
                                         <a href="#tab-over">
                                             <span class="bullet branded"></span>
                                             Overview
                                         </a>
                                     </li>
+                                    @endif
                                     <li class="tablinks">
                                         <a href="#tab-location">
                                             <span class="bullet branded"></span>
@@ -102,17 +104,13 @@
                                         </a>
                                     </li>
                                 </ul>
+                                @if(isset($profile->cover))
                                 <div id="tab-over" class="tabcontent active-tab">
                                    <p>
-                                    I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
-                                    <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
-                                    My recent work includes: SaaS & API development in Python, machine learning, systems integration for legacy systems, mobile app and game development, PLC programming with Lua, Twilio, Twitter, Stripe and other API dev, and much more.
-                                    <br>
-                                    My past work includes being technical lead at an academic social network startup, engaging in a broad array of web development with backends in Python, PHP, and C, providing ecommerce solutions, web interfaces for proprietary hardware, desktop software for OSX and Windows, among others.
-                                    <br>
-                                    I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
+                                    {{$profile->cover->cover}}
                                    </p> 
                                 </div>
+                                @endif
                                 <div id="tab-location" class="tabcontent">
                                     <div class="row">
                                 <div class="col-md-12">
@@ -223,19 +221,14 @@
                                 <div id="tab-languages" class="tabcontent">
                                     <div class="container-languages">
                                         <div class="row">
-
+                                            @foreach($profile->languages as $profileLanguage)
                                             <div class="language-block col-xs-12 col-sm-4">
-                                                <strong class="language-name">English</strong>
+                                                <strong class="language-name">{{$profileLanguage->language->name}}</strong>
                                                 ( 
-                                                <span class="language-fluency">Basic</span>
+                                                <span class="language-fluency">{{$profileLanguage->getLevel()}}</span>
                                                 )
                                             </div>
-                                            <div class="language-block col-xs-12 col-sm-4">
-                                                <strong class="language-name">Spanish</strong>
-                                                ( 
-                                                <span class="language-fluency">Fluent</span>
-                                                )
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
