@@ -47,9 +47,6 @@
                                     <div class="align-items-center">
                                         <h1>David H.</h1>
                                     </div>
-                                    @if(isset($profile->user->address))
-                                    <h2>{{$profile->user->address->city}}, United Kingdom</h2>
-                                    @endif
                                     <h2>London, United Kingdom</h2>
                                 </div>
                                 <div class="top-card-buttons">
@@ -461,13 +458,15 @@
                     </div>
                 </div>
             </div>
+            @if(isset($profile->additionalInfo) && isset($profile->additionalInfo->linkedin_url))
             <div class="row border-outside">
                 <div class="col-sm-12 details-agent website">
-                    <a target="_black" href="#">
+                    <a target="_black" href="{{$profile->additionalInfo->linkedin_url}}">
                         <h3>LinkedIn Link</h3>
                     </a>
                 </div>
             </div>
+            @endif
             <div class="row border-outside">
                 <div class="col-sm-12 details-agent title">
                     <h3>Availibility</h3>
