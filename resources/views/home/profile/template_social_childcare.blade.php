@@ -52,9 +52,9 @@
                             </ul>
                             <ul class="list-inline list-unstyled ad-applicant-services">
                                 @if(isset($profile->looking_for))
-                                    @foreach($profile->looking_for->jobTypes as jobType)
+                                    @foreach($profile->looking_for->jobTypes as $jobType)
                                     <li class="available">
-                                        Occasional
+                                        {{$jobType}}
                                     </li>
                                     @endforeach
                                 @endif
