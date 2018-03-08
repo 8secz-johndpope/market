@@ -4,6 +4,12 @@
     position: relative;
     width: 200px;
 }
+.template-subcontractor .img-bg {
+    height: 200px;
+    background-image: url(/css/bg-ocean.jpg);
+    background-position-y: 99%;
+    background-size: 51%;
+}
 .top-card {
     margin: 0;
     padding: 24px;

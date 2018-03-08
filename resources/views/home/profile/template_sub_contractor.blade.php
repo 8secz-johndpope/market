@@ -17,6 +17,9 @@
 
 @section('content')   
 <div class="background-body body template-subcontractor">
+<section class="img-bg">
+
+</section>
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-xs-12">
