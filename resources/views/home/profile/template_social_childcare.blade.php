@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Anna T. |' . env('APP_NAME'))
+@section('title', $profile->user->name .' | ' . env('APP_NAME'))
 @php
     $date = new Datetime();
     $dateMs = $date->getTimestamp();
@@ -291,14 +291,22 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Drivers License
                                         </span>
+                                        @if($profile->additionalInfo->hasLicence())
+                                        <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
+                                        @else
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-5 col-sm-5 col-md-offset-1 col-xs-12">
                                     <div class="row">
                                         <span class="col-md-9 no-padding col-xs-9">First Aid certificate
                                         </span>
+                                        @if($profile->additionalInfo->hasFirstAid())
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
+                                        @else
+                                        <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -307,14 +315,22 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Access to a vehicle
                                         </span>
+                                        @if($profile->additionalInfo->hasCar())
+                                        <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
+                                        @else
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-5 col-sm-5 col-md-offset-1 col-xs-12">
                                     <div class="row">
                                         <span class="col-md-9 no-padding col-xs-9">Has children
                                         </span>
+                                        @if($profile->additionalInfo->hasChildren())
+                                        <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
+                                        @else
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -323,7 +339,11 @@
                                     <div class="row">
                                         <span class="col-md-9 col-xs-9">Non smoker
                                         </span>
+                                        @if($profile->additionalInfo->isSmoker())
                                         <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-yes">Yes</span>
+                                        @else
+                                        <span class="col-sm-2 col-md-2 col-md-offset-1 col-xs-3 span-no">No</span>
+                                        @endif
                                     </div>
                                 </div>
                             </li>
@@ -362,7 +382,7 @@
                                 <i class="fas fa-calendar-alt"></i>
                             </div>
                             <div class="col-md-11 title col-xs-10">
-                                Availability  Anna
+                                Availability  {{$profile->user->name}}
                             </div>
                         </div>
                     </h4>
@@ -511,11 +531,25 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                @if(isset($profile->availibility))
                                 <div class="zone-horaire-details">
+                                    @if($profile->availibility->lastMinute())
                                     <span class="availability">
                                         Will accept last minute babysitting
                                     </span>
+                                    @endif
+                                    @if($profile->availibility->inNight())
+                                    <span class="availability">
+                                        Available for overnight care
+                                    </span>
+                                    @endif
+                                    @if($profile->availibility->inHolidays())
+                                    <span class="availability">
+                                        Available for babysitting during school holidays
+                                    </span>
+                                    @endif
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>
