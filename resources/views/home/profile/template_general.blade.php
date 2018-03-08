@@ -79,7 +79,7 @@
                         <ul class="nav nav-pills nav-stacked visible-xs">
                             <li class="active"><a data-toggle="pill" href="#tab-work">Experience<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                             <li><a data-toggle="pill" href="#tab-about">About Me<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
-                            <li><a data-toggle="pill" href="#tab-education">Education<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <!-- <li><a data-toggle="pill" href="#tab-education">Education<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li> -->
                             <li><a data-toggle="pill" href="#tab-work">Experience<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                             <!-- <li><a data-toggle="pill" href="#tab-skills">Training & Skills<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li> -->
                             <li><a data-toggle="pill" href="#tab-approval">Approval<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
