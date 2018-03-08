@@ -197,7 +197,7 @@
                 <div class="col-sm-4">
                     <div class="template-item">
                         <h3 class="template-item-title">Sub Contractor Profile</h3>
-                        <div class="template-content {{$type === $types[2] ? 'selected' : ''}}" data-href="{{$types[2]}}">
+                        <div class="template-content {{$type === $types[2] ? 'selected' : ''}} sub-contractor" data-href="{{$types[2]}}">
                             <div class="template-item-ribbon">
                                 <span class="template-item-ribbon-title">
                                    Sub Contractor

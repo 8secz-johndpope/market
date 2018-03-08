@@ -78,6 +78,10 @@
 .dropbox-dropin-btn{
     display: none !important;
 }
+.template-content.sub-contractor{
+    background-image: url(/css/sub-contractor-template.png);
+    background-size: cover;
+}
 .template-item-ribbon{
     display: none;
     position: absolute;

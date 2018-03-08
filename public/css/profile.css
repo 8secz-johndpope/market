@@ -45,6 +45,7 @@
     background: #0A6DD2;
 }
 .template-general .profile-background-container {
+    background-color: #000;
     background-image: url(/css/Embed_Desktop.png);
     background-size: contain;
 }
@@ -125,6 +126,8 @@ ul.looking-for li {
     padding: 10px 0px;
     margin: 0;
     border: 1px solid #ff9d2c;
+    background: #ff9d2c;
+    color: #fff;
 }
 .template-subcontractor ul.looking-for li{
     border: 1px solid #ff9d2c;
