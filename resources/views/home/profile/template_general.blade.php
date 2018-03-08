@@ -485,30 +485,33 @@
                 </section>
             </div>
             <div class="row border-outside">
-                <div class="col-sm-12 details-agent title">
-                    <h3>Contact and Personal Info</h3>
-                </div>
-                <div class="col-sm-12 details-agent">
-                    <div class="personal-details">
-                        <p>
-                            {{$profile->user->name}}
-                        </p>
-                        @if(isset($profile->user->address))
-                        <address>
-                            {{$profile->user->address->city}}, United Kingdom
-                        </address>
-                        @endif
-                        <p><strong>Tel: </strong>{{$profile->user->phone}}</p>
-                        <a href="#" class="btn btn-default">Email</a>
+                <div class="col-sm-12 ad-sidebar-right">
+                    <header>
+                        <h1>Contact and Personal Info</h1>
+                    </header>
+                    <div class="ad-sidebar-right-container clearfix">
+                            <div class="personal-details">
+                            <p>
+                                {{$profile->user->name}}
+                            </p>
+                            @if(isset($profile->user->address))
+                            <address>
+                                {{$profile->user->address->city}}, United Kingdom
+                            </address>
+                            @endif
+                            <p><strong>Tel: </strong>{{$profile->user->phone}}</p>
+                            <a href="#" class="btn btn-default">Email</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row border-outside">
-                <div class="col-sm-12 details-agent title">
-                    <h3>Availibility</h3>
-                </div>
-                <div class="col-sm-12 details-agent">
-                    <div class="personal-details">
+                <div class="col-sm-12 ad-sidebar-right">
+                    <header>
+                        <h1>Availibility</h1>
+                    </header>
+                    <div class="ad-sidebar-right-container clearfix">
+                         <div class="personal-details">
                         <p>
                             Available
                         </p>
@@ -518,6 +521,7 @@
                         <P>
                             < 24 hour response time
                         </P>
+                    </div>
                     </div>
                 </div>
             </div>

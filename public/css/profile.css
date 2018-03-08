@@ -197,11 +197,6 @@ li.tablinks a {
     padding-top: 15px;
 }
 /** try to move and general this is common for other page */
-.title {
-	background: #f4f4f5;
-    padding: .4em .5em;
-    border: 1px solid #f4f4f5;
-}
 
 .title h3, .website h3, .similar-adverts h3 {
     margin-bottom: 0;
@@ -278,11 +273,6 @@ li.tablinks a {
     width: calc(100% - 60px);
     vertical-align: middle;
 }
-.details-similar{
-    margin-left: 15px;
-    padding-left: 0;
-    padding-right: 0;
- }
 .listings-profiles a {
     display: table;
     width: 100%;
@@ -634,6 +624,9 @@ footer{
     line-height: 48px;
     text-align: center;
     font-weight: 400;
+}
+.description {
+    margin-top: 0;
 }
 .ad-sidebar-right .ad-sidebar-right-container {
     padding: 20px 10px 10px;
