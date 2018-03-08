@@ -713,51 +713,18 @@
                             <div>
                                 <ul class="services list-inline">
                                     @for($i=1; $i <= count($servicesOffered); $i++)
-                                    @if($profile->socialcareServiceOffered($i) != null)
-                                    <li class="service active">
-                                    @else
-                                    <li class="service">
-                                    @endif
-                                        <a>
-                                            <span>
-                                                {{$servicesOffered[$i - 1]}}
-                                            </span>
-                                        </a>
-                                    </li>
+                                        @if($profile->socialcareServiceOffered($i) != null)
+                                        <li class="service active">
+                                        @else
+                                        <li class="service">
+                                        @endif
+                                            <a>
+                                                <span>
+                                                    {{$servicesOffered[$i - 1]}}
+                                                </span>
+                                            </a>
+                                        </li>
                                     @endfor
-                                   @if($profile->socialcareServiceOffered(2) != null)
-                                    <li class="service active">
-                                    @else
-                                    <li class="service">
-                                    @endif
-                                        <a>
-                                            <span>
-                                                Pet sitting
-                                            </span>
-                                        </a>
-                                    </li>
-                                    @if($profile->socialcareServiceOffered(3) != null)
-                                    <li class="service active">
-                                    @else
-                                    <li class="service">
-                                    @endif
-                                        <a>
-                                            <span>
-                                                Housekeeping
-                                            </span>
-                                        </a>
-                                    </li>
-                                    @if($profile->socialcareServiceOffered(4) != null)
-                                    <li class="service active">
-                                    @else
-                                    <li class="service">
-                                    @endif
-                                        <a>
-                                            <span>
-                                                Childcare
-                                            </span>
-                                        </a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
