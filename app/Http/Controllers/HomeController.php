@@ -946,7 +946,8 @@ class HomeController extends BaseController
         $employmentStatus = ['- select -, Employed (full-time)', 'Employed (part-time)', 'Employed (temp/contract)', 'Full-time Education', 'Unemployed'];
         $user = Auth::user();
         $profile = $user->profile($type);
-        $languageLevels = ['Basic', 'Intermediate', 'Fluent'];
+        $languageLevels = ProfileLanguage::LEVEL_TYPES;
+        $servicesOffered = SocialcareServiceOffered::SERVICES_OFFERED;
         if($profile===null){
             $profile = new Profile();
             $profile->user_id=$user->id;
@@ -962,7 +963,7 @@ class HomeController extends BaseController
             $tasksHelpValues[$taskHelp->id] = $value;
         }
         $totalApplication = $user->applications()->count();
-        return view('home.jobprofile',['profile'=>$profile,'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication, 'employmentStatus' => $employmentStatus, 'tasksHelp' => $tasksHelp, 'tasksHelpValues' => $tasksHelpValues, 'languageLevels' => $languageLevels]);
+        return view('home.jobprofile',['profile'=>$profile,'user'=>$user,'type'=>$type,'types' => $profileTypes, 'totalApplication' => $totalApplication, 'employmentStatus' => $employmentStatus, 'tasksHelp' => $tasksHelp, 'tasksHelpValues' => $tasksHelpValues, 'languageLevels' => $languageLevels, 'servicesOffered' => $servicesOffered]);
     }
 
     public function view_profile(Request $request,$id)
@@ -3001,11 +3002,12 @@ class HomeController extends BaseController
     public function publishProfile(Request $request){
         $user = Auth::user();
         $languageLevels = ProfileLanguage::LEVEL_TYPES;
+        $servicesOffered = SocialcareServiceOffered::SERVICES_OFFERED;
         $profile = $user->profile($request->type);
         $profile->status = 1;
         $profile->save();
         $slug = str_replace('-', '_', $request->type);
-        return view('home.profile.template_'.$slug, ['profile' => $profile, 'languageLevels' => $languageLevels]);
+        return view('home.profile.template_'.$slug, ['profile' => $profile, 'languageLevels' => $languageLevels, 'servicesOffered' => $servicesOffered]);
     }
     public function onedriveLogin(Request $request){
         //return $request;

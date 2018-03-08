@@ -712,7 +712,7 @@
                         <div class="experience-container">
                             <div>
                                 <ul class="services list-inline">
-                                    @for($i=1; $i <= count(SocialcareServiceOffered::SERVICES_OFFERED); $i++)
+                                    @for($i=1; $i <= count($servicesOffered); $i++)
                                     @if($profile->socialcareServiceOffered($i) != null)
                                     <li class="service active">
                                     @else
@@ -720,7 +720,7 @@
                                     @endif
                                         <a>
                                             <span>
-                                                {{SocialcareServiceOffered::SERVICES_OFFERED[$i]}}
+                                                {{$servicesOffered[$i]}}
                                             </span>
                                         </a>
                                     </li>
