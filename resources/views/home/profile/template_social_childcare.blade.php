@@ -89,6 +89,7 @@
                                                                 The address, phone number, ID and diplomas of this profile are available. 
                                                             </p>
                                                         </li>
+                                                        @if($profile->languages->count() > 0)
                                                         <li class="row">
                                                             <div class="col-md-2 col-xs-6">Languages spoken:</div>
                                                             <div class="col-md-10 col-xs-6 no-padding">
@@ -102,6 +103,7 @@
                                                                 (Fluently), 
                                                             </div>
                                                         </li>
+                                                        @endif
                                                         <li class="row">
                                                             <div class="col-md-2 col-xs-6">Nationality:</div>
                                                             <div class="col-md-10 col-xs-6 no-padding">
@@ -258,6 +260,7 @@
                                     The address, phone number, ID and diplomas of this profile are available. 
                                 </p>
                             </li>
+                            @if($profile->languages->count() > 0)
                             <li class="row">
                                 <div class="col-md-2 col-sm-3 col-xs-7">Languages spoken:</div>
                                 <div class="col-md-10 col-sm-9 col-xs-5 no-padding">
@@ -265,12 +268,9 @@
                                     <span class="border">{{$profileLanguage->language->name}}</span>
                                     ({{$profileLanguage->getType()}}),
                                     @endforeach 
-                                    <span class="border">Russia</span>
-                                    (Fluently), 
-                                    <span class="border">English</span>
-                                    (Fluently), 
                                 </div>
                             </li>
+                            @endif
                             <li class="row">
                                 <div class="col-md-2 col-sm-3 col-xs-7">Nationality:</div>
                                 <div class="col-md-10 col-sm-9 col-xs-5 no-padding">
