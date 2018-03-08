@@ -32,7 +32,7 @@
                             <div class="profile-photo-container">
                                 <div class="profile-photo-wrapper">
                                     <div class="profile-photo">
-                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/752734721579.jpeg">
                                          <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams.">
                                             <span class="verification-level">{{str_replace('V', '', $profile->user->vid)}}</span>
                                         </span>
@@ -102,12 +102,14 @@
                                             My Location
                                         </a>
                                     </li>
+                                    @if(isset($profile->availibility))
                                     <li class="tablinks">
                                         <a href="#tab-availibity">
                                             <span class="bullet branded"></span>
                                             My Availability
                                         </a>
                                     </li>
+                                    @endif
                                 </ul>
                                 @if(isset($profile->cover))
                                 <div id="tab-over" class="tabcontent active-tab">
@@ -495,7 +497,8 @@
                     <div class="ad-sidebar-right-container clearfix">
                             <div class="personal-details">
                             <p>
-                                {{$profile->user->name}}
+                                <!-- {{$profile->user->name}} -->
+                                David H.
                             </p>
                             @if(isset($profile->user->address))
                             <address>
@@ -503,6 +506,7 @@
                             </address>
                             @endif
                             <p><strong>Tel: </strong>{{$profile->user->phone}}</p>
+                            <p><strong>Email: </strong>{{$profile->user->email}}</p>
                             <a href="#" class="btn btn-default">Email</a>
                         </div>
                     </div>
