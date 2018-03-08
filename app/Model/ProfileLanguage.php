@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProfileLanguage extends Model
 {
 	public $timestamps = false;
-	private const LEVEL_TYPES = ['Basic', 'Intermediate', 'Fluent'];
+	private static LEVEL_TYPES = ['Basic', 'Intermediate', 'Fluent'];
 	public function language(){
 		return $this->belongsTo('App\Model\Language');
 	}
