@@ -97,10 +97,6 @@
                                                                 <span class="border">$profileLanguage->language->name</span>
                                                                 ($profileLanguage->getLevel()),
                                                                 @endforeach 
-                                                                <span class="border">Russia</span>
-                                                                (Fluently), 
-                                                                <span class="border">English</span>
-                                                                (Fluently), 
                                                             </div>
                                                         </li>
                                                         @endif
@@ -166,34 +162,19 @@
                                                 <div class="part">
                                                     <h4>Services offered by Anna</h4>
                                                     <ul class="services list-inline">
-                                                        <li class="service">
-                                                            <a>
-                                                                <span>
-                                                                    Tutoring
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="service">
-                                                            <a>
-                                                                <span>
-                                                                    Pet sitting
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="service">
-                                                            <a>
-                                                                <span>
-                                                                    Housekeeping
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="service active">
-                                                            <a>
-                                                                <span>
-                                                                    Childcare
-                                                                </span>
-                                                            </a>
-                                                        </li>
+                                                        @for($i=1; $i <= count($servicesOffered); $i++)
+                                                            @if($profile->socialcareServiceOffered($i) != null)
+                                                            <li class="service active">
+                                                            @else
+                                                            <li class="service">
+                                                            @endif
+                                                                <a>
+                                                                    <span>
+                                                                        {{$servicesOffered[$i - 1]}}
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                        @endfor
                                                     </ul>
                                                 </div>
                                             </div>
