@@ -623,6 +623,7 @@
             </div>
         </div>
         @endif
+        @if(isset($profile->additionalInfo) && isset($profile->additionalInfo->about_me))
         <div class="hobbies container-ad-applicant">
             <div class="container">
                 <div class="row">
@@ -640,13 +641,7 @@
                         <div class="row no-margin">
                             <div class="col-md-11 col-md-offset-1 col-xs-12 pl0">
                                 <p>
-                                    I have a postgraduate degree in Medicine, years of experience in clinical as well as academic settings at the Universities and hospitals in the UK as well as overseas. Multiple and numerous skills and expertise:
-                                    I play piano, compose music, paint and had 10 personal art exhibitions, I act and was featured in many TV programmes and films.
-                                    I love gardening, cooking, baking, sawing , knitting, reading, using media, watching cartoons/animations, comedies, movies, I taught drama and acting at the college and love entertaining, playing and  teaching children science, biology, reading, maths, drawing, painting, making things/ crafts and helping with homework and etc.
-                                    I am experienced first Aider, have CRB/DBS checks. I don't drive and do not own a car and can not swim.
-                                    No allergies and easy going.
-                                    I aim to find parents who need my help and they instead make my experience pleasant and joyful and happy.
-                                    Many thanks, Anna
+                                    {{$profile->additionalInfo->about_me}}
                                 </p>
                             </div>
                         </div>
@@ -654,6 +649,7 @@
                 </div>
             </div>
         </div>
+        @endif
         <div class="profile-map container-ad-applicant">
             <div class="container">
                 <div class="row">
