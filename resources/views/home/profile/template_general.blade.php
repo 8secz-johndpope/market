@@ -16,7 +16,7 @@
 @endsection
 
 @section('content')   
-<div class="background-body body general-profile">
+<div class="background-body body template-general">
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-xs-12">
@@ -70,8 +70,10 @@
                         <ul class="nav nav-tabs hidden-xs">
                             <li class="active"><a data-toggle="tab" href="#tab-overview">Summary</a></li>
                             <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
-                            <li><a data-toggle="tab" href="#tab-education">Education</a></li>
+                            <!-- <li><a data-toggle="tab" href="#tab-education">Education</a></li> -->
+                            @if($profile->work_experiences->count() > 0)
                             <li><a data-toggle="tab" href="#tab-work">Experience</a></li>
+                            @endif
                             <!--<li><a data-toggle="tab" href="#tab-skills">Training & Skills</a></li> -->
                             <li><a data-toggle="tab" href="#tab-approval">Approval</a></li>
                             <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
@@ -79,7 +81,9 @@
                         <ul class="nav nav-pills nav-stacked visible-xs">
                             <li class="active"><a data-toggle="pill" href="#tab-about">About Me<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                             <li><a data-toggle="pill" href="#tab-education">Education<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            @if($profile->work_experiences->count() > 0)
                             <li><a data-toggle="pill" href="#tab-work">Experience<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            @endif
                             <!-- <li><a data-toggle="pill" href="#tab-skills">Training & Skills<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li> -->
                             <li><a data-toggle="pill" href="#tab-approval">Approval<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                             <li><a data-toggle="pill" href="#tab-contact">Contact<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
@@ -510,6 +514,7 @@
                     </div>
                 </div>
             </div>
+            @if(isset($profile->availibility))
             <div class="row border-outside">
                 <div class="col-sm-12 ad-sidebar-right">
                     <header>
@@ -530,6 +535,7 @@
                     </div>
                 </div>
             </div>
+            @endif
             <div class="row">
                 <div class="col-sm-12 details-similar">
                     <div class="similar-adverts">

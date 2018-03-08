@@ -31,6 +31,8 @@
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
     background: #f9f0eb;
+}
+.template-general .profile-background-container {
     background-image: url(/css/Embed_Desktop.png);
     background-size: contain;
 }
