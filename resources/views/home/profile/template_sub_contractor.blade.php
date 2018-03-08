@@ -45,9 +45,11 @@
                             <div class="top-card-body">
                                 <div class="top-card-info">
                                     <div class="align-items-center">
-                                        <h1>David H.</h1>
+                                        <h1>{{$profile->user->name}}</h1>
                                     </div>
-                                    <h2>Blenheim, New Zealand</h2>
+                                    @if(isset($profile->user->address))
+                                    <h2>{{$profile->user->address->city}}, United Kingdom</h2>
+                                    @endif
                                 </div>
                                 <div class="top-card-buttons">
                                     <p>Looking for:</p>
@@ -66,12 +68,19 @@
             <!-- div info-content -->
                 <div class="col-sm-12">
                     <div id="tabs">
-                        <ul class="nav nav-tabs">
+                        <ul class="nav nav-tabs hidden-xs">
                             <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                             <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
                             <li><a data-toggle="tab" href="#tab-work">Works</a></li>
                             <li><a data-toggle="tab" href="#tab-approval">Approval</a></li>
                             <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
+                        </ul>
+                        <ul class="nav nav-pills nav-stacked visible-xs">
+                            <li class="active"><a data-toggle="tab" href="#tab-overview">Overview <i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <li><a data-toggle="pill" href="#tab-about">About Me<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <li><a data-toggle="pill" href="#tab-work">Works<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <li><a data-toggle="pill" href="#tab-approval">Approval<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <li><a data-toggle="pill" href="#tab-contact">Contact<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="tab-overview" class="tab-pane fade in active">
