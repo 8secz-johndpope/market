@@ -206,6 +206,9 @@ li.tablinks a {
 	background-color: #f9f0eb;
 	opacity: 1;
 }
+.template-subcontractor .tabcontent.active-tab, .template-subcontractor li.tablinks.selected, .template-subcontractor li.tablinks:hover{
+    background-color: #fff;
+}
 .tab-content {
     display: grid;
     background-color: #fff;
