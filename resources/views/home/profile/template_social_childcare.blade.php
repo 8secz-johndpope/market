@@ -16,7 +16,7 @@
 @endsection
 
 @section('content')   
-<div class="background-body body">
+<div class="background-body body template-socialcare">
     <div class="header-image background-image">
     </div>
     <div class="header container-ad-applicant">

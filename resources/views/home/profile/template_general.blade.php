@@ -69,7 +69,7 @@
                             <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
                             <li><a data-toggle="tab" href="#tab-education">Education</a></li>
                             <li><a data-toggle="tab" href="#tab-work">Experience</a></li>
-                            <li><a data-toggle="tab" href="#tab-skills">Training & Skills</a></li>
+                            <!--<li><a data-toggle="tab" href="#tab-skills">Training & Skills</a></li> -->
                             <li><a data-toggle="tab" href="#tab-approval">Approval</a></li>
                             <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
                         </ul>
@@ -78,7 +78,7 @@
                             <li><a data-toggle="pill" href="#tab-about">About Me<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                             <li><a data-toggle="pill" href="#tab-education">Education<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                             <li><a data-toggle="pill" href="#tab-work">Experience<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
-                            <li><a data-toggle="pill" href="#tab-skills">Training & Skills<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
+                            <!-- <li><a data-toggle="pill" href="#tab-skills">Training & Skills<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li> -->
                             <li><a data-toggle="pill" href="#tab-approval">Approval<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                             <li><a data-toggle="pill" href="#tab-contact">Contact<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                         </ul>
@@ -189,12 +189,14 @@
                             </div>
                             <div id="tab-about" class="tab-pane fade">
                                 <ul class="tab-vert">
+                                    @if(isset($profile->additionalInfo) && isset($profile->additionalInfo->about_me))
                                     <li class="tablinks selected">
                                         <a href="#tab-why-me">
                                             <span class="bullet branded"></span>
                                             Why me
                                         </a>
                                     </li>
+                                    @endif
                                     @if($profile->languages->count() > 0)
                                     <li class="tablinks">
                                         <a href="#tab-languages">
@@ -203,22 +205,22 @@
                                         </a>
                                     </li>
                                     @endif
+                                    @if(isset($profile->carAndDriving) && ($profile->carAndDriving->hasCar() || $profile->carAndDriving->hasLicence()))
                                     <li class="tablinks">
                                         <a href="#tab-driving-license">
                                             <span class="bullet branded"></span>
                                             Car & Driving License
                                         </a>
                                     </li>
+                                    @endif
                                 </ul>
+                                @if(isset($profile->additionalInfo) && isset($profile->additionalInfo->about_me))
                                 <div id="tab-why-me" class="tabcontent active-tab">
                                     <p>
-                                        Register students for courses, design and manage program software, solve customer problems, enforce department policies, and serve as a contact for students, faculty, and staff.<br>
-                                        Hiring, training, scheduling and management of staff, managing supply inventory, and ordering.<br>
-                                        Minnesota driver's license with NTSA defensive driving certification.<br>
-                                        Extensive experience in collegiate programming and management.<br>
-                                        Excellent interpersonal and communication skills.<br>
+                                        {{$profile->additionalInfo->about_me}}
                                     </p>
                                 </div>
+                                @endif
                                 @if($profile->languages->count() > 0)
                                 <div id="tab-languages" class="tabcontent">
                                     <div class="container-languages">
@@ -235,24 +237,29 @@
                                     </div>
                                 </div>
                                 @endif
+                                @if(isset($profile->carAndDriving) && ($profile->carAndDriving->hasCar() || $profile->carAndDriving->hasLicence()))
                                 <div id="tab-driving-license" class="tabcontent">
                                     <div class="driving-row row">
+                                        @if($profile->carAndDriving->hasLicence())
                                         <div class="license-col col-xs-12 col-md-6">
                                             <strong>License</strong>
                                             <p>
                                                 I have a full licence and am eligible to drive in the UK
                                             </p>
                                         </div>
+                                        @endif
+                                        @if($profile->carAndDriving->hasCar())
                                         <div class="car-col col-xs-12 col-md-6">
                                             <strong>Car</strong>
                                             <p>
                                                 I have a car
                                             </p>
                                         </div>
+                                        @endif
                                     </div>
                                 </div>
+                                @endif
                             </div>
-
                             <div id="tab-education" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
@@ -299,6 +306,7 @@
                                 </ul>
                                 <div id="tab-job-history" class="tabcontent active-tab">
                                     <div class="experience-container">
+                                        @foreach($profile->work_experiences as $workExperience)
                                         <div class="row work">
                                             <div class="when col-xs-12 col-sm-4">
                                                 06/2017 - Present
@@ -315,10 +323,11 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
-                            <div id="tab-skills" class="tab-pane fade">
+                            <!-- <div id="tab-skills" class="tab-pane fade">
                                 <ul class="tab-vert">
                                     <li class="tablinks selected">
                                         <a href="#tab-skills-set">
@@ -339,7 +348,7 @@
                                 <div id="tab-training" class="tabcontent">
                                     
                                 </div>
-                            </div>
+                            </div> -->
                             <div id="tab-approval" class="tab-pane fade">
                                 <ul class="tab-vert">
                                      <li class="tablinks selected">
@@ -463,6 +472,18 @@
             </div>
         </div>
         <div class="col-sm-4 col-xs-12">
+            <div class="row">
+                <section id="profile-sidebar" class="ad-sidebar-right col-md-12 affix-top">
+                    <header>
+                        <h1>Your Profile</h1>
+                    </header>
+                    <div class="ad-sidebar-right-container clearfix">
+                        <a class="btn btn-lg btn-primary" href="/job/profile/edit/general">Modify your profile</a>
+                        <a class="btn btn-verification">Verification</a>
+                        <a class="btn btn-success" href="#">Publish</a>
+                    </div>
+                </section>
+            </div>
             <div class="row border-outside">
                 <div class="col-sm-12 details-agent title">
                     <h3>Contact and Personal Info</h3>

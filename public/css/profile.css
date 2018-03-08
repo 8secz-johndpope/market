@@ -609,12 +609,16 @@ footer{
     padding-top: 14px;
     padding-bottom: 14px;
 }
-#profile-sidebar{
+.template-socialcare #profile-sidebar{
     position: absolute;
 }
 .ad-sidebar-right {
-    top: -45px;
+    margin-top: 15px;
     width: 100%;
+}
+.template-socialcare .ad-sidebar-right{
+     top: -45px;
+     margin-top: 0;
 }
 .ad-sidebar-right header {
     color: #fff;
@@ -801,9 +805,6 @@ footer{
     }
     #about-applicant-info .services {
         text-align: center;
-    }
-    .profile-background{
-        margin-top: 0;
     }
 }
 @media (min-width: 1024px){
