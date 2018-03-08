@@ -40,7 +40,9 @@
                                 <div class="align-items-center">
                                     <h1>{{$profile->user->name}}</h1>
                                 </div>
-                                <h2>Blenheim, New Zealand</h2>
+                                @if(isset($profile->user->address))
+                                <h2>{{$profile->user->address->city}}, United Kingdom</h2>
+                                @endif
                             </div>
                             @if(isset($profile->looking_for) && $profile->looking_for->sectors->count() > 0)
                             <div class="top-card-buttons">
