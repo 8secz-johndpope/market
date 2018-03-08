@@ -47,7 +47,7 @@
                                 <p>Looking for:</p>
                                 <ul class="looking-for">
                                     @foreach($profile->looking_for->sectors as $sector)
-                                    <li>$sector->title</li>
+                                    <li>{{$sector->title}}</li>
                                     @endforeach
                                 </ul>
                             </div>
