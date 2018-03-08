@@ -32,7 +32,7 @@
                             <div class="profile-photo-container">
                                 <div class="profile-photo-wrapper">
                                     <div class="profile-photo">
-                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/752734721579.jpeg">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
                                          <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams.">
                                             <span class="verification-level">{{str_replace('V', '', $profile->user->vid)}}</span>
                                         </span>
@@ -42,7 +42,7 @@
                             <div class="top-card-body">
                                 <div class="top-card-info">
                                     <div class="align-items-center">
-                                        <h1>David H.</h1>
+                                        <h1>{{$profile->user->name}}</h1>
                                     </div>
                                     @if(isset($profile->user->address))
                                     <h2>{{$profile->user->address->city}}, United Kingdom</h2>
@@ -79,7 +79,7 @@
                         <ul class="nav nav-pills nav-stacked visible-xs">
                             <li class="active"><a data-toggle="pill" href="#tab-work">Experience<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                             <li><a data-toggle="pill" href="#tab-about">About Me<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
-                            <!-- <li><a data-toggle="pill" href="#tab-education">Education<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li> -->
+                            <li><a data-toggle="pill" href="#tab-education">Education<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                             <li><a data-toggle="pill" href="#tab-work">Experience<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
                             <!-- <li><a data-toggle="pill" href="#tab-skills">Training & Skills<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li> -->
                             <li><a data-toggle="pill" href="#tab-approval">Approval<i class="arrow-right glyphicon glyphicon-menu-right"></i></a></li>
@@ -497,8 +497,7 @@
                     <div class="ad-sidebar-right-container clearfix">
                             <div class="personal-details">
                             <p>
-                                <!-- {{$profile->user->name}} -->
-                                David H.
+                                {{$profile->user->name}}
                             </p>
                             @if(isset($profile->user->address))
                             <address>
