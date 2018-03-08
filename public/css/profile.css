@@ -41,6 +41,9 @@
     border-top-right-radius: 2px;
     background: #f9f0eb;
 }
+.template-subcontractor .profile-background-container{
+    background: #36648B;
+}
 .template-general .profile-background-container {
     background-image: url(/css/Embed_Desktop.png);
     background-size: contain;
@@ -122,6 +125,11 @@ ul.looking-for li {
     padding: 10px 0px;
     margin: 0;
     border: 1px solid #ff9d2c;
+}
+.template-subcontractor ul.looking-for li{
+    border: 1px solid #ff9d2c;
+    background: #ff9d2c;
+    color: #fff;
 }
 .top-card-buttons p {
     text-align: left;
@@ -254,8 +262,8 @@ li.tablinks a {
     margin-top: 5px;
 }
 .website {
-    background: #2866f6;
-    border-color: #2866f6;
+    background: #ff9d2c;
+    border-color: #ff9d2c;
     /* color: #fff; */
 }
 .listings-profiles {
