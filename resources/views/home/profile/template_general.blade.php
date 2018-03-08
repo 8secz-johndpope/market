@@ -31,14 +31,14 @@
                         <div class="profile-photo-container">
                             <div class="profile-photo-wrapper">
                                 <div class="profile-photo">
-                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/752734721579.jpeg">
+                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
                                 </div>
                             </div>
                         </div>
                         <div class="top-card-body">
                             <div class="top-card-info">
                                 <div class="align-items-center">
-                                    <h1>David H.</h1>
+                                    <h1>{{$profile->user->name}}</h1>
                                 </div>
                                 <h2>Blenheim, New Zealand</h2>
                             </div>
@@ -58,7 +58,16 @@
             <!-- div info-content -->
                 <div class="col-sm-12">
                     <div id="tabs">
-                        <ul class="nav nav-tabs">
+                        <ul class="nav nav-tabs hidden-xs">
+                            <li class="active"><a data-toggle="tab" href="#tab-overview">Summary</a></li>
+                            <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
+                            <li><a data-toggle="tab" href="#tab-education">Education</a></li>
+                            <li><a data-toggle="tab" href="#tab-work">Experience</a></li>
+                            <li><a data-toggle="tab" href="#tab-skills">Training & Skills</a></li>
+                            <li><a data-toggle="tab" href="#tab-approval">Approval</a></li>
+                            <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
+                        </ul>
+                        <ul class="nav nav-pills nav-stacked visible-xs">
                             <li class="active"><a data-toggle="tab" href="#tab-overview">Summary</a></li>
                             <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
                             <li><a data-toggle="tab" href="#tab-education">Education</a></li>
@@ -182,12 +191,14 @@
                                             Why me
                                         </a>
                                     </li>
+                                    @if($profile->languages->count() > 0)
                                     <li class="tablinks">
                                         <a href="#tab-languages">
                                             <span class="bullet branded"></span>
                                             Languages
                                         </a>
                                     </li>
+                                    @endif
                                     <li class="tablinks">
                                         <a href="#tab-driving-license">
                                             <span class="bullet branded"></span>
@@ -204,9 +215,11 @@
                                         Excellent interpersonal and communication skills.<br>
                                     </p>
                                 </div>
+                                @if($profile->languages->count() > 0)
                                 <div id="tab-languages" class="tabcontent">
                                     <div class="container-languages">
                                         <div class="row">
+
                                             <div class="language-block col-xs-12 col-sm-4">
                                                 <strong class="language-name">English</strong>
                                                 ( 
@@ -222,6 +235,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endif
                                 <div id="tab-driving-license" class="tabcontent">
                                     <div class="driving-row row">
                                         <div class="license-col col-xs-12 col-md-6">
