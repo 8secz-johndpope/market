@@ -16,39 +16,44 @@
 @endsection
 
 @section('content')   
-<div class="background-body body">
+<div class="background-body body template-subcontractor">
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-xs-12">
             <div class="row">
-                <div class="profile-background">
-                    <div class="profile-background-container">
-                        <img src="https://media.licdn.com/media/AAEAAQAAAAAAAArWAAAAJDE4ZTYwOTg3LTI5NTUtNDcwOS05N2E3LWNjNWJkNDRiYTI1OA.jpg">
-                    </div>
-                </div>
-                <div class="profile-header">
-                    <div class="top-card">
-                        <div class="profile-photo-container">
-                            <div class="profile-photo-wrapper">
-                                <div class="profile-photo">
-                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/752734721579.jpeg">
-                                </div>
-                            </div>
+                <div class="col-xs-12">
+                    <div class="profile-background">
+                        <div class="profile-background-container">
+                            <img src="https://media.licdn.com/media/AAEAAQAAAAAAAArWAAAAJDE4ZTYwOTg3LTI5NTUtNDcwOS05N2E3LWNjNWJkNDRiYTI1OA.jpg">
                         </div>
-                        <div class="top-card-body">
-                            <div class="top-card-info">
-                                <div class="align-items-center">
-                                    <h1>David H.</h1>
+                    </div>
+                    <div class="profile-header">
+                        <div class="top-card">
+                            <div class="profile-photo-container">
+                                <div class="profile-photo-wrapper">
+                                    <div class="profile-photo">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
+                                        <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams.">
+                                            <span class="verification-level">{{str_replace('V', '', $profile->user->vid)}}</span>
+                                        </span>
+                                    </div>
                                 </div>
-                                <h2>Blenheim, New Zealand</h2>
                             </div>
-                            <div class="top-card-buttons">
-                                <p>Looking for:</p>
-                                <ul class="looking-for">
-                                    <li>IT</li>
-                                    <li>Chef</li>
-                                    <li>Driver</li>
-                                </ul>
+                            <div class="top-card-body">
+                                <div class="top-card-info">
+                                    <div class="align-items-center">
+                                        <h1>David H.</h1>
+                                    </div>
+                                    <h2>Blenheim, New Zealand</h2>
+                                </div>
+                                <div class="top-card-buttons">
+                                    <p>Looking for:</p>
+                                    <ul class="looking-for">
+                                        <li>IT</li>
+                                        <li>Chef</li>
+                                        <li>Driver</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -446,7 +451,7 @@
             <div class="row border-outside">
                 <div class="col-sm-12 details-agent website">
                     <a target="_black" href="#">
-                        <h3>Website Link</h3>
+                        <h3>LinkedIn Link</h3>
                     </a>
                 </div>
             </div>
