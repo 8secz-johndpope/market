@@ -64,7 +64,6 @@
                                 <li class="available">
                                     Full time
                                 </li>
-                                @endif
                             </ul>
                             <div class="visible-xs">
                                 <div class="row mb-20">
