@@ -60,16 +60,16 @@
             </div>
             <div class="row">
             <!-- div info-content -->
-                <div class="col-sm-12">
+                <div class="col-xs-12">
                     <div id="tabs">
                         <ul class="nav nav-tabs hidden-xs">
                             <li class="active"><a data-toggle="tab" href="#tab-overview">Summary</a></li>
-                            <li><a data-toggle="tab" href="#tab-about">About Me</a></li>
-                            <li><a data-toggle="tab" href="#tab-education">Education</a></li>
-                            <li><a data-toggle="tab" href="#tab-work">Experience</a></li>
-                            <li><a data-toggle="tab" href="#tab-skills">Training & Skills</a></li>
-                            <li><a data-toggle="tab" href="#tab-approval">Approval</a></li>
-                            <li><a data-toggle="tab" href="#tab-contact">Contact</a></li>
+                            <li><a data-toggle="pill" href="#tab-about">About Me</a></li>
+                            <li><a data-toggle="pill" href="#tab-education">Education</a></li>
+                            <li><a data-toggle="pill" href="#tab-work">Experience</a></li>
+                            <li><a data-toggle="pill" href="#tab-skills">Training & Skills</a></li>
+                            <li><a data-toggle="pill" href="#tab-approval">Approval</a></li>
+                            <li><a data-toggle="pill" href="#tab-contact">Contact</a></li>
                         </ul>
                         <ul class="nav nav-pills nav-stacked visible-xs">
                             <li class="active"><a data-toggle="tab" href="#tab-overview">Summary</a></li>

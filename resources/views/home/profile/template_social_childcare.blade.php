@@ -245,7 +245,7 @@
                                 <div class="col-md-10 col-sm-9 col-xs-5 no-padding">
                                     @foreach($profile->languages as $profileLanguage)
                                     <span class="border">{{$profileLanguage->language->name}}</span>
-                                    ({{$profileLanguage->getType()}}),
+                                    ({{$profileLanguage->getLevel()}}),
                                     @endforeach 
                                 </div>
                             </li>

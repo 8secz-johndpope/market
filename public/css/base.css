@@ -944,6 +944,28 @@ section.row-color.white {
 }
 /** end tabs **/
 
+.nav-pills>li>a {
+    border: 1px solid #ccc;
+    background-color: #f4f4f5;
+    color: #333;
+    font-family: Effra-Medium,arial,helvetica,sans-serif;
+    font-size: 15px;
+}
+.nav-stacked>li+li {
+    margin-top: 0;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    border-left: 2px solid #ff9d2c;
+    background: #fff;
+    color: #ff9d2c;
+}
+.nav-pills>li:first-child > a {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.nav-pills>li:not(:first-child)>a {
+    border-radius: 0;
+}
 .stations-list {
     list-style: none;
     padding-left: 0;
