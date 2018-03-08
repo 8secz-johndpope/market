@@ -720,7 +720,7 @@
                                     @endif
                                         <a>
                                             <span>
-                                                {{$servicesOffered[$i]}}
+                                                {{$servicesOffered[$i - 1]}}
                                             </span>
                                         </a>
                                     </li>
