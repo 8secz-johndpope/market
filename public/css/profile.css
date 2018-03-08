@@ -798,6 +798,9 @@ footer{
     #about-applicant-info .services {
         text-align: center;
     }
+    .profile-background{
+        margin-top: 0;
+    }
 }
 @media (min-width: 1024px){
     .general-profile .container-qualifications .qualification .what{
