@@ -102,12 +102,14 @@
                                             Areas I cover
                                         </a>
                                     </li>
+                                    @if(isset($profile->availability))
                                     <li class="tablinks">
                                         <a href="#tab-availibity">
                                             <span class="bullet branded"></span>
                                             My Availability
                                         </a>
                                     </li>
+                                    @endif
                                 </ul>
                                 @if(isset($profile->cover))
                                 <div id="tab-over" class="tabcontent active-tab">
@@ -191,6 +193,7 @@
                                     I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
                                    </p> 
                                 </div>
+                                @if(isset($profile->availability))
                                 <div id="tab-availibity" class="tabcontent">
                                     <p>
                                         Available
@@ -202,6 +205,7 @@
                                         < 24 hour response time
                                     </P>
                                 </div>
+                                @endif
                             </div>
                             <div id="tab-about" class="tab-pane fade">
                                 <ul class="tab-vert">
@@ -254,20 +258,11 @@
                                             Publications
                                         </a>
                                     </li>
-                                    <li class="tablinks">
-                                        <a href="#tab-pictures">
-                                            <span class="bullet branded"></span>
-                                            Pictures
-                                        </a>
-                                    </li>
                                 </ul>
                                 <div id="tab-portfolio" class="tabcontent active-tab">
                                     
                                 </div>
                                 <div id="tab-publications" class="tabcontent">
-                                    
-                                </div>
-                                <div id="tab-pictures" class="tabcontent">
                                     
                                 </div>
                             </div>
