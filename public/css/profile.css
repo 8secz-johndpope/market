@@ -763,13 +763,13 @@ footer{
         font-family: Effra-Medium,arial,helvetica,sans-serif;
     }
     #about-applicant {
-        background-color: #eee;
+        background-color: #fff;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         margin-bottom: -5px;
-        color: #333;
+        color: #6001d2;
         padding: 10px;
-        border: none;
+        border: 1px solid #6001d2;
     }
     #about-applicant-info h4{
         text-align: center;
