@@ -35,7 +35,7 @@
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <a class="btn btn-action form-control">Unread Response</a>
+                                                <a class="btn btn-action form-control">Create Profile</a>
                                             </div>
                                             <div class="col-sm-4">
                                                 <a href="/jobs/uk" class="btn btn-action form-control">Latest Jobs</a>
@@ -157,6 +157,7 @@
                                         <ul class="type-filters">
                                             <li><a href="#">Created</a></li>
                                             <li><a href="#">Name</a></li>
+                                            <li><a href="#">Date</a></li>
                                         </ul>
                                 </div>
                             </div>
@@ -201,6 +202,11 @@
                             </table>
                         </div>
                         <div class="tab-pane fade in" id="tab-requests">
+                            <div class="row">
+                                <div class="col-sm-12 container-num-jobs">
+                                    <h4>Your Requests <span class="num-jobs-title">{{count($myRequests)}}</span></h4>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="container-filter clearfix">
                                     <div class="col-md-5">
