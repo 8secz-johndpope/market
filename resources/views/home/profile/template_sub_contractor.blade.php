@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Josh E. |' . env('APP_NAME'))
+@section('title', 'Profile. |' . env('APP_NAME'))
 @php
     $date = new Datetime();
     $dateMs = $date->getTimestamp();
@@ -8,13 +8,6 @@
 @section('styles')
 <link href="{{ asset("/css/profile.css?q=$dateMs") }}" rel="stylesheet">
 @endsection
-
-@section('sidebar')
-    @parent
-
-    <p>This is appended to the master sidebar.</p>
-@endsection
-
 @section('content')   
 <div class="background-body body template-subcontractor">
 <section class="img-bg">
@@ -35,7 +28,7 @@
                             <div class="profile-photo-container">
                                 <div class="profile-photo-wrapper">
                                     <div class="profile-photo">
-                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/752734721579.jpeg">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
                                         <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams.">
                                             <span class="verification-level">{{str_replace('V', '', $profile->user->vid)}}</span>
                                         </span>
@@ -45,9 +38,11 @@
                             <div class="top-card-body">
                                 <div class="top-card-info">
                                     <div class="align-items-center">
-                                        <h1>David H.</h1>
+                                        <h1>{{$profile->user->name}}</h1>
                                     </div>
-                                    <h2>London, United Kingdom</h2>
+                                    @if(isset($profile->user->address))
+                                    <h2>{{$profile->user->address->city}}, United Kingdom</h2>
+                                    @endif
                                 </div>
                                 <div class="top-card-buttons">
                                     <p>Looking for:</p>
