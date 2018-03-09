@@ -44,14 +44,16 @@
                                     <h2>{{$profile->user->address->city}}, United Kingdom</h2>
                                     @endif
                                 </div>
+                                @if(isset($profile->looking_for) && $profile->looking_for->sectors->count() > 0)
                                 <div class="top-card-buttons">
                                     <p>Looking for:</p>
                                     <ul class="looking-for">
-                                        <li>IT</li>
-                                        <li>Chef</li>
-                                        <li>Driver</li>
+                                        @foreach($profile->looking_for->sectors as $sector)
+                                        <li>{{$sector->title}}</li>
+                                        @endforeach
                                     </ul>
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -78,18 +80,22 @@
                         <div class="tab-content">
                             <div id="tab-overview" class="tab-pane fade in active">
                                 <ul class="tab-vert">
+                                    @if(isset($profile->cover))
                                     <li class="tablinks selected">
                                         <a href="#tab-over">
                                             <span class="bullet branded"></span>
                                             Overview
                                         </a>
                                     </li>
+                                    @endif
+                                    @if(isset($profile->user->address))
                                     <li class="tablinks">
                                         <a href="#tab-location">
                                             <span class="bullet branded"></span>
                                             My Location
                                         </a>
                                     </li>
+                                    @endif
                                     <li class="tablinks">
                                         <a href="#tab-area">
                                             <span class="bullet branded"></span>
@@ -103,79 +109,77 @@
                                         </a>
                                     </li>
                                 </ul>
+                                @if(isset($profile->cover))
                                 <div id="tab-over" class="tabcontent active-tab">
                                    <p>
-                                    I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
-                                    <br>I have worked as a software engineer, team lead, and technical director at various points in the past decade and am now fully committed to consulting.<br>
-                                    My recent work includes: SaaS & API development in Python, machine learning, systems integration for legacy systems, mobile app and game development, PLC programming with Lua, Twilio, Twitter, Stripe and other API dev, and much more.
-                                    <br>
-                                    My past work includes being technical lead at an academic social network startup, engaging in a broad array of web development with backends in Python, PHP, and C, providing ecommerce solutions, web interfaces for proprietary hardware, desktop software for OSX and Windows, among others.
-                                    <br>
-                                    I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
+                                    @$profile->cover->cover
                                    </p> 
                                 </div>
+                                @endif
+                                @if(isset($profile->address))
                                 <div id="tab-location" class="tabcontent">
                                     <div class="row">
-                                <div class="col-md-12">
-                                    <div class="btn-group" data-toggle="buttons">
-                                        <label class="btn btn-primary active">
-                                            <input type="radio" name="options" id="option-map" autocomplete="off" checked> map view
-                                        </label>
-                                        <label class="btn btn-primary">
-                                            <input type="radio" name="options" id="option-view" autocomplete="off">
-                                            street view
-                                        </label>
-                                    </div>
-                                    <div class="info-map">
-                                        <div id="map"></div>
-                                        <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
-                                        <!-- <div>
-                                            <h4>Nearest stations</h4>
-                                            <ul class="stations-list">
+                                        <div class="col-md-12">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-primary active">
+                                                    <input type="radio" name="options" id="option-map" autocomplete="off" checked> map view
+                                                </label>
+                                                <label class="btn btn-primary">
+                                                    <input type="radio" name="options" id="option-view" autocomplete="off">
+                                                    street view
+                                                </label>
+                                            </div>
+                                            <div class="info-map">
+                                                <div id="map"></div>
+                                                <small>Note: The pin shows the centre of the property's postcode, and does not pinpoint the exact address</small>
+                                                <!-- <div>
+                                                    <h4>Nearest stations</h4>
+                                                    <ul class="stations-list">
 
-                                            </ul>
-                                            <small>
-                                                Distances are straight line measurements from centre of postcode
-                                            </small>
-                                        </div> -->
-                                    </div>
-                                    <div class="info-pano">
-                                        <div id="pano"></div>
-                                        <small>Note: Start exploring the local area from here.</small>
-                                    </div>
-                                    <script>
-                                    var map;
-                                    var panorama;
-                                    var service;
-                                    function initMap() {
-                                        var uluru = {lat: 51.529068, lng: -0.215875};
-                                         map = new google.maps.Map(document.getElementById('map'), {
-                                            zoom: 18,
-                                            center: uluru
-                                        });
-                                        var marker = new google.maps.Marker({
-                                            position: uluru,
-                                            map: map
-                                        });
-                                        var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
-                                        //getTransport(51.529068,-0.215875);
-                                        panorama = new google.maps.StreetViewPanorama(
-                                            document.getElementById('pano'), {
-                                                position: uluru,
-                                                pov: {heading: 165, pitch: 0},
-                                                motionTrackingControlOptions: {
-                                                position: google.maps.ControlPosition.LEFT_BOTTOM
+                                                    </ul>
+                                                    <small>
+                                                        Distances are straight line measurements from centre of postcode
+                                                    </small>
+                                                </div> -->
+                                            </div>
+                                            <div class="info-pano">
+                                                <div id="pano"></div>
+                                                <small>Note: Start exploring the local area from here.</small>
+                                            </div>
+                                            <script>
+                                            var map;
+                                            var panorama;
+                                            var service;
+                                            function initMap() {
+                                                var uluru = {lat: {{$profile->user->address->zip->lat}}, lng: {{$profile->user->address->zip->lng}}};
+                                                 map = new google.maps.Map(document.getElementById('map'), {
+                                                    zoom: 18,
+                                                    center: uluru
+                                                });
+                                                var marker = new google.maps.Marker({
+                                                    position: uluru,
+                                                    map: map
+                                                });
+                                                var pos = new google.maps.LatLng(uluru.lat, uluru.lng);
+                                                //getTransport(51.529068,-0.215875);
+                                                panorama = new google.maps.StreetViewPanorama(
+                                                    document.getElementById('pano'), {
+                                                        position: uluru,
+                                                        pov: {heading: 165, pitch: 0},
+                                                        motionTrackingControlOptions: {
+                                                        position: google.maps.ControlPosition.LEFT_BOTTOM
+                                                    }
+                                                });
                                             }
-                                        });
-                                    }
-                                    $(document).ready(function() {
-                                        initMap();
-                                        activeFirstItem();
-                                    });
-                                    </script>
+                                            $(document).ready(function() {
+                                                initMap();
+                                                activeFirstItem();
+                                            });
+                                            </script>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                                </div>
+                                @endif
                                 <div id="tab-area" class="tabcontent">
                                     <p>
                                     I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
