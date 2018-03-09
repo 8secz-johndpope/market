@@ -1046,6 +1046,9 @@ a.search-alert {
         padding-left: 25px;
         padding-right: 25px;
     }
+    .manage-cv .btn-submit{
+        width: 170px;
+    }
 }
 
 .modal-dialog {
