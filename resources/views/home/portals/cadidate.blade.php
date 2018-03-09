@@ -223,7 +223,11 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="jobs-selected">
-                                        <a href="#" class="btn btn-disable">Change Status</a>
+                                        <strong>Requests selected: </strong><span class="num-jobs">0</span>
+                                    </div>
+                                    <div class="btns-actions">
+                                        <a class="btn btn-disable">Apply</a>
+                                        <a class="btn btn-disable">Discard</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
