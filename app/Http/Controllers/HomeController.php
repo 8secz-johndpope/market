@@ -3021,4 +3021,8 @@ class HomeController extends BaseController
         //return $request;
         return view('home.profile.onedrive_sigin');
     }
+    public function CandidatePortal(Request $request){
+        $user = Auth::user();
+        return view('home.portals.cadidate', ['user' => $user]);
+    }
 }

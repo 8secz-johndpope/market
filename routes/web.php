@@ -64,7 +64,7 @@ Route::get('/user/groups/create', 'HomeController@create_group');
 Route::get('/user/new/broadcast', 'HomeController@create_broadcast');
 Route::get('/user/edit/profile', 'HomeController@edit_profile');
 Route::get('/user/new/message', 'HomeController@new_message');
-
+Route::get('/user/job/portal', 'HomeController@CandidatePortal');
 Route::get('/user/transfer/balance/{id}', 'HomeController@transfer_balance');
 Route::post('/user/share/balance', 'HomeController@share_balance');
 Route::get('/wallet/transfer/{id}', 'BankController@transfer_balance');
