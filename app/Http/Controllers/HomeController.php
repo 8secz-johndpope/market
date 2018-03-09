@@ -2603,7 +2603,7 @@ class HomeController extends BaseController
     }
     public function upload_cv(Request $request){
         $user = Auth::user();        
-        return view('home.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves()]);   
+        return view('home.profile.upload_cv_cloud', ['user' => $user, 'jobs' => Category::job_leaves()]);   
     }
     public function looking_for(Request $request){
         $user = Auth::user();
@@ -2630,7 +2630,7 @@ class HomeController extends BaseController
             $subSectorsPreferred[$sector->parent_id][] = $sector->id;
         }
         $contractTypes = $field->values;
-        return view('home.looking_for_edit', ['user' => $user, 'lookingFor' => $lookingFor, 'contractTypes' => $contractTypes, 'jobChildren' => $jobChildren, 'subSectorsPreferred' => $subSectorsPreferred, 'sectorsPreferred' => $sectorsPreferred]);
+        return view('home.profile.looking_for_edit', ['user' => $user, 'lookingFor' => $lookingFor, 'contractTypes' => $contractTypes, 'jobChildren' => $jobChildren, 'subSectorsPreferred' => $subSectorsPreferred, 'sectorsPreferred' => $sectorsPreferred]);
     }
     public function saveLookingFor(Request $request){
         $lookingFor = LookingFor::Find($request->looking_for_id);
@@ -2837,7 +2837,7 @@ class HomeController extends BaseController
         $tasksHelp = SocialcareTaskHelp::all();
         $servicesOffered = SocialcareServiceOffered::all();
         $profile = $user->profile($request->type);
-        return view('home.tasks-help-services', ['user' =>$user, 'tasksHelp' => $tasksHelp, 'profile' => $profile, 'servicesOffered' => $servicesOffered]);
+        return view('home.profile.tasks_help_services', ['user' =>$user, 'tasksHelp' => $tasksHelp, 'profile' => $profile, 'servicesOffered' => $servicesOffered]);
 
     }
     public function saveTasksCanHelpServices(Request $request){
@@ -2854,7 +2854,7 @@ class HomeController extends BaseController
     public function createCarDriving(Request $request){
         $user = Auth::user();
         $profile = $user->profile($request->type);
-        return view('home.driving', ['user' =>$user, 'profile' => $profile]);
+        return view('home.profile.driving', ['user' =>$user, 'profile' => $profile]);
 
     }
     public function saveCarDriving(Request $request){
@@ -2873,7 +2873,7 @@ class HomeController extends BaseController
         $user = Auth::user();
         $profile = $user->profile($request->type);
         $languages = Language::all();
-        return view('home.profile-languages', ['user' =>$user, 'profile' => $profile, 'languages' => $languages]);
+        return view('home.profile.languages', ['user' =>$user, 'profile' => $profile, 'languages' => $languages]);
     }
     public function saveProfileLanguages(Request $request){
         $user = Auth::user();
@@ -2895,7 +2895,7 @@ class HomeController extends BaseController
     public function createProfileAdditionalInfo(Request $request){
         $user = Auth::user();
         $profile = $user->profile($request->type);
-        return view('home.profile-additional-info', ['user' => $user, 'profile' => $profile]);
+        return view('home.profile.additional_info', ['user' => $user, 'profile' => $profile]);
     }
     public function saveProfileAddtionalInfo(Request $request){
         $user = Auth::user();
