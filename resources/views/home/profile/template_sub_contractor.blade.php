@@ -217,6 +217,14 @@
                                         </a>
                                     </li>
                                     @endif
+                                    @if($profile->qualifications->count() > 0)
+                                    <li class="tablinks">
+                                        <a href="#tab-qualifications">
+                                            <span class="bullet branded"></span>
+                                            Qualifications
+                                        </a>
+                                    </li>
+                                    @endif
                                     @if($profile->languages->count() > 0)
                                     <li class="tablinks">
                                         <a href="#tab-languages">
@@ -239,6 +247,22 @@
                                     <p>
                                        {{$profile->additionalInfo->about_me}}
                                     </p>
+                                </div>
+                                @endif
+                                @if($profile->qualifications->count() > 0)
+                                <div id="tab-qualifications" class="tabcontent">
+                                    <div class="container-languages">
+                                        <div class="row">
+                                            @foreach($profile->languages as $profileLanguage)
+                                            <div class="language-block col-xs-12 col-sm-4">
+                                                <strong class="language-name">{{$profileLanguage->language->name}}</strong>
+                                                ( 
+                                                <span class="language-fluency">{{$profileLanguage->getLevel()}}</span>
+                                                )
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
                                 </div>
                                 @endif
                                 @if($profile->languages->count() > 0)
@@ -308,7 +332,26 @@
                                     @endif
                                 </ul>
                                 <div id="tab-work-experience" class="tabcontent">
-                                    
+                                    <div class="experience-container">
+                                        @foreach($profile->work_experiences as $workExperience)
+                                        <div class="row work">
+                                            <div class="when col-xs-12 col-sm-4">
+                                                {{$workExperience->from->format('m/Y')}} - {{isset($workExperience->to) ? ($workExperience->to->format('m/Y')) : 'Present'}}
+                                            </div>
+                                            <div class="what col-xs-12 col-sm-8">
+                                                <div class="title">
+                                                    {{$workExperience->job_title}}
+                                                </div>
+                                                <div class="company">
+                                                    {{$workExperience->company}}
+                                                </div>
+                                                <div class="description">
+                                                    {{$workExperience->description}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
                                 </div>
                                 <div id="tab-portfolio" class="tabcontent">
                                     
