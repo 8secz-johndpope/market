@@ -79,5 +79,7 @@ class Profile extends Model
 	public function getType(){
 		return self::TYPES[$this->type];
 	}
-
+	public function isOwen($user){
+		return $this->user->id === $user->id; 
+	}
 }
