@@ -24,9 +24,9 @@
                 <div class="container-applications">
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
-                        <li><a data-toggle="tab" href="#tab-jobs">Adverts</a></li>
-                        <li><a data-toggle="tab" href="#tab-candidates">Reply</a></li>
-                        <li><a data-toggle="tab" href="#tab-share">Share Credit</a></li>
+                        <li><a data-toggle="tab" href="#tab-applications">My Applications</a></li>
+                        <li><a data-toggle="tab" href="#tab-requests">My Requests to apply</a></li>
+                        <li><a data-toggle="tab" href="#tab-reply">Reply</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-overview">
@@ -55,12 +55,12 @@
                                             <hr>
                                             <div class="container-candidates">
                                                 <ul class="list-group">
-                                                    @foreach($motors as $motor)
-                                                    @if(count($motor->applications) > 0)
+                                                    @foreach($myApplications as $application)
+                                                    @if(count($application->applications) > 0)
                                                         <li class="list-group-item">
                                                             <div class="container-job-title">
-                                                                <p><strong>{{$motor->param('title')}}</strong> - <span class="job-location">{{$motor->param('location_name')}}</span></p>
-                                                                <p class="blue-color"><a href="/job/manage/applications/{{$motor->id}}">{{count($motor->applications)}} Unread Candidates</a></p>
+                                                                <p><strong>{{$application->param('title')}}</strong> - <span class="job-location">{{$application->param('location_name')}}</span></p>
+                                                                <p class="blue-color"><a href="/job/manage/applications/{{$application->id}}">{{count($application->applications)}} Unread Candidates</a></p>
                                                             </div>
                                                         </li>
                                                     @endif
@@ -85,7 +85,7 @@
                                             <div class="col-info-jobs">
                                                 <h4>Motors</h4>
                                                 <ul class="list-group">
-                                                    <li class="list-group-item">Live <span class="quantity">{{count($motors)}}</span></li>
+                                                    <li class="list-group-item">Live <span class="quantity">{{count($myRequests)}}</span></li>
                                                     <li class="list-group-item">Inactive <span class="quantity">0</span></li>
                                                 </ul>
                                             </div>
@@ -106,10 +106,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade in" id="tab-jobs">
+                        <div class="tab-pane fade in" id="tab-applications">
                             <div class="row">
                                 <div class="col-sm-12 container-num-jobs">
-                                    <h4>Your motors <span class="num-jobs-title">{{count($motors)}}</span></h4>
+                                    <h4>Your applications <span class="num-jobs-title">{{$applications->count()}}</span></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -175,21 +175,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($motors as $motor)
+                                    @foreach($myApplications as $application)
                                     <tr>
                                         <td><input type="checkbox" name="select-job[]" class="checkboxs-jobs"></td>
-                                        <td><a href="{{$motor->url()}}">{{$motor->param('title')}}</a></td>
-                                        <td>{{$motor->param('location_name')}}</td>
-                                        <td>{{$motor->status == 1 ? 'Live': 'Inactive' }}</td>
-                                        <td>{{$motor->param('views')}}</td>
-                                        <td>{{$motor->replies}}</td>
+                                        <td><a href="{{$application->url()}}">{{$application->param('title')}}</a></td>
+                                        <td>{{$application->param('location_name')}}</td>
+                                        <td>{{$application->status == 1 ? 'Live': 'Inactive' }}</td>
+                                        <td>{{$application->param('views')}}</td>
+                                        <td>{{$application->replies}}</td>
                                         <td><a href="#">Expire</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade in" id="tab-candidates">
+                        <div class="tab-pane fade in" id="tab-requests">
                             <div class="row">
                                 <div class="container-filter clearfix">
                                     <div class="col-md-5">
@@ -237,15 +237,15 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($motors as $motor)
+                                            @foreach($myRequests as $request)
                                                 <tr>
                                                     <td><input type="checkbox" ></td>
-                                                    <td>{{$motor->param('title')}}</td>
-                                                    <td>{{$motor->param('views')}}</td>
-                                                    <td>{{$motor->param('list_views')}}</td>
-                                                    <td>{{$motor->replies}}</td>
-                                                    <td>@if($motor->has_param('bumped'))
-                                                        {{$motor->param('bumped')}}
+                                                    <td>{{$request->param('title')}}</td>
+                                                    <td>{{$request->param('views')}}</td>
+                                                    <td>{{$request->param('list_views')}}</td>
+                                                    <td>{{$request->replies}}</td>
+                                                    <td>@if($request->has_param('bumped'))
+                                                        {{$request->param('bumped')}}
                                                         @else
                                                             0
                                                         @endif
@@ -257,200 +257,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade in" id="tab-share">
+                        <div class="tab-pane fade in" id="tab-reply">
                             <div class="row">
-                                <div class="btns-actions-over clearfix">
-                                    <div class="col-sm-offset-1 col-sm-10">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="image-profile">
-                                                    <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$user->image}}" class="circle">
-                                                </div>
-                                                <div class="container-welcome">
-                                                    <h3 class="welcome-msg">Hi, {{$user->name}}</h3>
-                                                </div>
-                                            </div>
-                                            <div class=" col-sm-offset-4 col-sm-2">
-                                                <div class="action-item">
-                                                    <a class="">
-                                                        <span class="icon icon-send-credit fa fa-money">
-                                                             <span class="icon-action fa fa-share"></span>
-                                                        </span>
-                                                        <span>Send Credit</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <div class="action-item">
-                                                    <a class="">
-                                                        <span class="icon icon-request-credit fa fa-money">
-                                                            <span class="icon-action fa fa-reply"></span>
-                                                        </span>
-                                                        <span>Request Credit</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="container-balance">
-                                                <h4>Your balance</h4>
-                                                <div class="balance-numeral">
-                                                    @foreach($balance['available'] as $item)
-                                                    <span class="balance">
-                                                            {{number_format($item['amount']/100,2)}}
-                                                    </span>
-                                                    <span class="balance-currency">{{$item['currency']}}</span>
-                                                     @endforeach
-                                                </div>
-                                                <p class="currenciesHeader"> Currencies</p>
-                                                <ul class="currencies-list">
-                                                    <li class="currencies-entry">0,00 GBP</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="container-history">
-                                                <h4 class="module-header">
-                                                    <a class="module-header-link">Completed</a>
-                                                </h4>
-                                                <div class="list-history">
-                                                    <ul class="list-group">
-                                                        <li class="transition-row">
-                                                            <div class="transition-item">
-                                                                <div class="row linked-block">
-                                                                    <div class="col-xs-1">
-                                                                        <div class="date-parts">
-                                                                            <span class="date-month">
-                                                                                Nov
-                                                                            </span>
-                                                                            <span class="date-day">
-                                                                                28
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xs-11 transaction-details-container">
-                                                                        <div class="txn-description row">
-                                                                            <span class="transaction-user col-xs-7 col-lg-12">
-                                                                                Anthony
-                                                                            </span>
-                                                                            <span class="transaction-branch col-xs-7">
-                                                                                Company - Hackney
-                                                                            </span>
-                                                                        </div>
-                                                                        <div class="transaction-action">
-                                                                            <span class="glyphicon glyphicon-play-circle"></span>
-                                                                            <a href="#">
-                                                                                Repeat this transaction
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="transaction-amount">
-                                                                            <span class="net-amount">
-                                                                                46,00
-                                                                                <span class="currency">
-                                                                                    GBP
-                                                                                </span>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="transition-row">
-                                                            <div class="transition-item">
-                                                                <div class="row linked-block">
-                                                                    <div class="col-xs-1">
-                                                                        <div class="date-parts">
-                                                                            <span class="date-month">
-                                                                                Oct
-                                                                            </span>
-                                                                            <span class="date-day">
-                                                                                28
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xs-11 transaction-details-container">
-                                                                        <div class="txn-description row">
-                                                                            <span class="transaction-user col-xs-7 col-lg-12">
-                                                                                Smith
-                                                                            </span>
-                                                                            <span class="transaction-branch col-xs-7">
-                                                                                Company - Hackney
-                                                                            </span>
-                                                                        </div>
-                                                                        <div class="transaction-action">
-                                                                            <span class="glyphicon glyphicon-play-circle"></span>
-                                                                            <a href="#">
-                                                                                Repeat this transaction
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="transaction-amount">
-                                                                            <span class="net-amount">
-                                                                                46,00
-                                                                                <span class="currency">
-                                                                                    GBP
-                                                                                </span>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="transition-row">
-                                                            <div class="transition-item">
-                                                                <div class="row linked-block">
-                                                                    <div class="col-xs-1">
-                                                                        <div class="date-parts">
-                                                                            <span class="date-month">
-                                                                                Sep
-                                                                            </span>
-                                                                            <span class="date-day">
-                                                                                18
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xs-11 transaction-details-container">
-                                                                        <div class="txn-description row">
-                                                                            <span class="transaction-user col-xs-7 col-lg-12">
-                                                                                Zara
-                                                                            </span>
-                                                                            <span class="transaction-branch col-xs-7">
-                                                                                Company - Hammersmith
-                                                                            </span>
-                                                                        </div>
-                                                                        <div class="transaction-action">
-                                                                            <span class="glyphicon glyphicon-play-circle"></span>
-                                                                            <a href="#">
-                                                                                Repeat this transaction
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="transaction-amount">
-                                                                            <span class="net-amount">
-                                                                                46,00
-                                                                                <span class="currency">
-                                                                                    GBP
-                                                                                </span>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+        
                             </div>
                         </div>
                     </div>
