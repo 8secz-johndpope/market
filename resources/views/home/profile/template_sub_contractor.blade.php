@@ -209,43 +209,57 @@
                             </div>
                             <div id="tab-about" class="tab-pane fade">
                                 <ul class="tab-vert">
+                                    @if(isset($profile->additionalInfo) && isset($profile->additionalInfo->about_me))
                                     <li class="tablinks selected">
                                         <a href="#tab-why-me">
                                             <span class="bullet branded"></span>
                                             Why me
                                         </a>
                                     </li>
+                                    @endif
+                                    @if($profile->languages-count() > 0)
                                     <li class="tablinks">
-                                        <a href="#tab-what-i-do">
+                                        <a href="#tab-languages">
                                             <span class="bullet branded"></span>
-                                            What i do
+                                            Languages
                                         </a>
                                     </li>
+                                    @endif
+                                    @if($profile->carAndDriving)
                                     <li class="tablinks">
                                         <a href="#tab-resume">
                                             <span class="bullet branded"></span>
-                                            Resume
+                                            Car & License
                                         </a>
                                     </li>
+                                    @endif
                                 </ul>
+                                @if(isset($profile->additionalInfo) && isset($profile->additionalInfo->about_me))
                                 <div id="tab-why-me" class="tabcontent active-tab">
                                     <p>
-                                        Register students for courses, design and manage program software, solve customer problems, enforce department policies, and serve as a contact for students, faculty, and staff.<br>
-                                        Hiring, training, scheduling and management of staff, managing supply inventory, and ordering.<br>
-                                        Minnesota driver's license with NTSA defensive driving certification.<br>
-                                        Extensive experience in collegiate programming and management.<br>
-                                        Excellent interpersonal and communication skills.<br>
+                                       {{$profile->additionalInfo->about_me}}
                                     </p>
                                 </div>
-                                <div id="tab-what-i-do" class="tabcontent">
+                                @endif
+                                @if($profile->languages-count() > 0)
+                                <div id="tab-languages" class="tabcontent">
                                     
                                 </div>
+                                @endif
+                                @if($profile->carAndDriving)
                                 <div id="tab-resume" class="tabcontent">
                                     
                                 </div>
+                                @endif
                             </div>
                             <div id="tab-work" class="tab-pane fade">
                                 <ul class="tab-vert">
+                                    <li class="tablinks selected">
+                                        <a href="#tab-work-experience">
+                                            <span class="bullet branded"></span>
+                                            Work Experience
+                                        </a>
+                                    </li>
                                     <li class="tablinks selected">
                                         <a href="#tab-portfolio">
                                             <span class="bullet branded"></span>
@@ -259,7 +273,10 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <div id="tab-portfolio" class="tabcontent active-tab">
+                                <div id="tab-work-experience" class="tabcontent">
+                                    
+                                </div>
+                                <div id="tab-portfolio" class="tabcontent">
                                     
                                 </div>
                                 <div id="tab-publications" class="tabcontent">
