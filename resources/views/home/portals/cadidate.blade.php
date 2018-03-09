@@ -35,7 +35,7 @@
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <a class="btn btn-action form-control">Create Profile</a>
+                                                <a href="/job/profile/edit/general" class="btn btn-action form-control">Create Profile</a>
                                             </div>
                                             <div class="col-sm-4">
                                                 <a href="/jobs/uk" class="btn btn-action form-control">Latest Jobs</a>
