@@ -127,6 +127,7 @@
     background: #fff;
     cursor: pointer;
     position: relative;
+    border: 1px solid #ddd;
 }
 .template-content.socialcare {
     background: url(/css/socialcare-template.png);
