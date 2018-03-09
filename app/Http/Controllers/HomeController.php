@@ -2685,7 +2685,7 @@ class HomeController extends BaseController
     public function createEmploymentStatus(Request $request){
         $user = Auth::user();
         $profile = $user->profile($request->type);
-        return view('home.employment-status', ['user' => $user, 'profile' => $profile]);
+        return view('home.profile.employment_status', ['user' => $user, 'profile' => $profile]);
     }
     public function addEmploymentStatus(Request $request){
         $user = Auth::user();
