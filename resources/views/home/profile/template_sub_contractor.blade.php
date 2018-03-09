@@ -551,7 +551,7 @@
         </div>
         <div class="col-sm-4 col-xs-12">
             <div class="row">
-                <section id="profile-sidebar" class="ad-sidebar-right col-md-12 affix-top">
+                <section id="profile-sidebar" class="ad-sidebar-right col-md-12">
                     <header>
                         <h1>Your Profile</h1>
                     </header>
@@ -563,10 +563,12 @@
                 </section>
             </div>
             <div class="row">
-                <div class="col-sm-12 details-agent title">
-                    <h3>Contact and Personal Info</h3>
+                <section id="profile-sidebar" class="ad-sidebar-right col-md-12">
+                    <header>
+                        <h1>Contact and Personal Info</h1>
+                    </header>
                 </div>
-                <div class="col-sm-12 details-agent">
+                <div class="ad-sidebar-right-container clearfix">
                     <div class="personal-details">
                         <p>
                             {{$profile->user->name}}
@@ -581,6 +583,7 @@
                         <a href="#" class="btn btn-default">Email</a>
                     </div>
                 </div>
+                </section>
             </div>
             @if(isset($profile->additionalInfo) && isset($profile->additionalInfo->linkedin_url))
             <div class="row border-outside">
@@ -591,6 +594,7 @@
                 </div>
             </div>
             @endif
+            @if(isset($profile->availability))
             <div class="row border-outside">
                 <div class="col-sm-12 details-agent title">
                     <h3>Availibility</h3>
@@ -609,6 +613,7 @@
                     </div>
                 </div>
             </div>
+            @endif
             <div class="row">
                 <div class="col-sm-12 details-similar">
                     <div class="similar-adverts">
