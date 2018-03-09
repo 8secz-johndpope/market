@@ -357,7 +357,28 @@
                                     
                                 </div>
                                 <div id="tab-publications" class="tabcontent">
-                                    
+                                    <div class="publications-container">
+                                        <div>
+                                            @foreach($profile->publications as $publication)
+                                            <div class="row publication">
+                                                <div class="when col-xs-12 col-sm-3 col-md-2">
+                                                    {{date_format(date_create($publication->date), 'd/m/Y')}}
+                                                </div>
+                                                <div class="what col-xs-12 col-sm-9 col-md-10">
+                                                    <div class="typename">
+                                                        <a href="{{$publication->url}}"><b>{{$publication->title}}</b></a>
+                                                    </div>
+                                                    <div class="company">
+                                                        {{$publication->publisher}}
+                                                    </div>
+                                                    <div class="description">
+                                                        {{$publication->description}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div id="tab-approval" class="tab-pane fade">
