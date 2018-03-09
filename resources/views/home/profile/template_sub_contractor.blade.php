@@ -560,7 +560,7 @@
                         <h1>Your Profile</h1>
                     </header>
                     <div class="ad-sidebar-right-container clearfix">
-                        <a class="btn btn-lg btn-primary" href="/job/profile/edit/general">Modify your profile</a>
+                        <a class="btn btn-lg btn-primary" href="/job/profile/edit/sub-contractor">Modify your profile</a>
                         <a class="btn btn-verification">Verification</a>
                         <a class="btn btn-success" href="#">Publish</a>
                     </div>
