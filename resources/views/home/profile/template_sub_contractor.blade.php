@@ -550,6 +550,18 @@
             </div>
         </div>
         <div class="col-sm-4 col-xs-12">
+            <div class="row">
+                <section id="profile-sidebar" class="ad-sidebar-right col-md-12 affix-top">
+                    <header>
+                        <h1>Your Profile</h1>
+                    </header>
+                    <div class="ad-sidebar-right-container clearfix">
+                        <a class="btn btn-lg btn-primary" href="/job/profile/edit/general">Modify your profile</a>
+                        <a class="btn btn-verification">Verification</a>
+                        <a class="btn btn-success" href="#">Publish</a>
+                    </div>
+                </section>
+            </div>
             <div class="row border-outside">
                 <div class="col-sm-12 details-agent title">
                     <h3>Contact and Personal Info</h3>
