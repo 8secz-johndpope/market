@@ -562,7 +562,7 @@
                     </div>
                 </section>
             </div>
-            <div class="row margin-top-60">
+            <div class="row">
                 <div class="col-sm-12 details-agent title">
                     <h3>Contact and Personal Info</h3>
                 </div>

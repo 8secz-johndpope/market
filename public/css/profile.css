@@ -627,6 +627,9 @@ footer{
 .template-socialcare #profile-sidebar{
     position: absolute;
 }
+.template-subcontractor #profile-sidebar{
+    margin-top: margin-top: -45px;
+}
 .ad-sidebar-right {
     margin-top: 15px;
     width: 100%;
@@ -700,6 +703,9 @@ footer{
     position: absolute;
     right: 10px;
     top: 15px;
+}
+.margin-top-60{
+    margin-top: 60px;
 }
 @media (max-width: 767px){
     .ad-applicant-picture{
