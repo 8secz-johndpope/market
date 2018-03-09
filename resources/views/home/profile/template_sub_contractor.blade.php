@@ -298,7 +298,7 @@
                                         </a>
                                     </li>
                                     @endif
-                                    @if(isset($profile->publications > 0))
+                                    @if($profile->publications->count() > 0))
                                     <li class="tablinks">
                                         <a href="#tab-publications">
                                             <span class="bullet branded"></span>
