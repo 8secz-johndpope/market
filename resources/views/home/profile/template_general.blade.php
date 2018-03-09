@@ -99,12 +99,14 @@
                                         </a>
                                     </li>
                                     @endif
+                                    @if(isset($profile->address))
                                     <li class="tablinks {{(!isset($profile->cover) ? 'selected' : '')}}">
                                         <a href="#tab-location">
                                             <span class="bullet branded"></span>
                                             My Location
                                         </a>
                                     </li>
+                                    @endif
                                     @if(isset($profile->availibility))
                                     <li class="tablinks">
                                         <a href="#tab-availibity">
