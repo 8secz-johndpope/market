@@ -241,7 +241,7 @@
                                     </p>
                                 </div>
                                 @endif
-                                @if($profile->languages-count() > 0)
+                                @if($profile->languages->count() > 0)
                                 <div id="tab-languages" class="tabcontent">
                                     
                                 </div>
