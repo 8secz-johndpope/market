@@ -229,6 +229,14 @@
                                         </a>
                                     </li>
                                     @endif
+                                    @if($profile->skills->count() > 0)
+                                    <li class="tablinks">
+                                        <a href="#tab-skills">
+                                            <span class="bullet branded"></span>
+                                            Skills 
+                                        </a>
+                                    </li>
+                                    @endif
                                     @if($profile->languages->count() > 0)
                                     <li class="tablinks">
                                         <a href="#tab-languages">
@@ -265,6 +273,15 @@
                                                 )
                                             </div>
                                             @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
+                                @if($profile->skills->count() > 0)
+                                <div id="tab-skills" class="tabcontent">
+                                    <div class="container-skills">
+                                        <div class="row">
+                                            
                                         </div>
                                     </div>
                                 </div>
