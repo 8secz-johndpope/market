@@ -563,26 +563,25 @@
                 </section>
             </div>
             <div class="row">
-                <section id="profile-sidebar" class="ad-sidebar-right col-md-12">
+                <section class="ad-sidebar-right col-md-12">
                     <header>
                         <h1>Contact and Personal Info</h1>
                     </header>
-                </div>
-                <div class="ad-sidebar-right-container clearfix">
-                    <div class="personal-details">
-                        <p>
-                            {{$profile->user->name}}
-                        </p>
-                        @if(isset($profile->user->address))
-                        <address>
-                            {{$profile->user->address->city}}, United Kingdom
-                        </address>
-                        @endif
-                        <p><strong>Tel: </strong>{{$profile->user->phone}}</p>
-                        <p><strong>Email: </strong>{{$profile->user->email}}</p>
-                        <a href="#" class="btn btn-default">Email</a>
+                    <div class="ad-sidebar-right-container clearfix">
+                        <div class="personal-details">
+                            <p>
+                                {{$profile->user->name}}
+                            </p>
+                            @if(isset($profile->user->address))
+                            <address>
+                                {{$profile->user->address->city}}, United Kingdom
+                            </address>
+                            @endif
+                            <p><strong>Tel: </strong>{{$profile->user->phone}}</p>
+                            <p><strong>Email: </strong>{{$profile->user->email}}</p>
+                            <a href="#" class="btn btn-default">Email</a>
+                        </div>
                     </div>
-                </div>
                 </section>
             </div>
             @if(isset($profile->additionalInfo) && isset($profile->additionalInfo->linkedin_url))
