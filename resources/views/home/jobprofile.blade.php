@@ -129,8 +129,8 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                               @foreach($user->cvs as $cv)
+                                           @foreach($user->cvs as $cv)
+                                           <tr>
                                                <td><input type="checkbox" name="select-cvs[]" class="checkboxs-jobs"></td>
                                                <td>{{$cv->title}}</td>
                                                <td>{{$cv->created_at->format('d F Y')}}</td>
@@ -145,8 +145,9 @@
                                                         Delete
                                                     </a>
                                                </td>
-                                               @endforeach 
-                                            </tr>
+                                           </tr>
+                                           @endforeach 
+                                            
                                         </tbody>
                                     </table>
                                 </div>
