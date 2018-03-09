@@ -217,7 +217,7 @@
                                         </a>
                                     </li>
                                     @endif
-                                    @if($profile->languages-count() > 0)
+                                    @if($profile->languages->count() > 0)
                                     <li class="tablinks">
                                         <a href="#tab-languages">
                                             <span class="bullet branded"></span>
