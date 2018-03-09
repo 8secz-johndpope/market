@@ -257,7 +257,7 @@
                                     </div>
                                 </div>
                                 @endif
-                                @if($profile->carAndDriving)
+                                @if(isset($profile->carAndDriving))
                                 <div id="tab-resume" class="tabcontent">
                                     <div class="driving-row row">
                                         @if($profile->carAndDriving->hasLicence())
