@@ -38,10 +38,10 @@
                                                 <a class="btn btn-action form-control">Unread Response</a>
                                             </div>
                                             <div class="col-sm-4">
-                                                <a class="btn btn-action form-control">Activity</a>
+                                                <a href="/jobs/uk" class="btn btn-action form-control">Latest Jobs</a>
                                             </div>
                                             <div class="col-sm-4">
-                                                <a class="btn btn-action form-control">Appointments</a>
+                                                <a class="btn btn-action form-control">Recommended Jobs</a>
                                             </div>
                                         </div>
                                     </div>
@@ -83,10 +83,10 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="col-info-jobs">
-                                                <h4>Motors</h4>
+                                                <h4>Applications</h4>
                                                 <ul class="list-group">
-                                                    <li class="list-group-item">Live <span class="quantity">{{count($myRequests)}}</span></li>
-                                                    <li class="list-group-item">Inactive <span class="quantity">0</span></li>
+                                                    <li class="list-group-item">Pending <span class="quantity">{{count($myRequests)}}</span></li>
+                                                    <li class="list-group-item">Rejected <span class="quantity">0</span></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -94,7 +94,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="col-info-candidates">
-                                                <h4>Reply</h4>
+                                                <h4>Request to Apply</h4>
                                                 <ul class="list-group">
                                                     <li class="list-group-item">New <span class="quantity">1</span></li>
                                                     <li class="list-group-item">Reviewed <span class="quantity">0</span></li>
@@ -121,8 +121,8 @@
                                     <div class="col-md-5">
                                         <label for="status">Status</label>
                                         <select class="form-control" name="status">
-                                            <option value="1" checked>Live</option>
-                                            <option value="0">Draft</option>
+                                            <option value="1" checked>Pending</option>
+                                            <option value="0">Rejected</option>
                                             <option value="2">Inactive</option>
                                         </select>
                                     </div>
@@ -131,7 +131,7 @@
                                     </div>    
                                 </div>
                             </div>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-sm-12">
                                     <div class="container-filter-by text-right">
                                         <span>Filter by:</span>
@@ -141,15 +141,14 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="jobs-selected">
-                                        <strong>Motors selected: </strong><span class="num-jobs">0</span>
+                                        <strong>Applications selected: </strong><span class="num-jobs">0</span>
                                     </div>
                                     <div class="btns-actions">
-                                        <a class="btn btn-disable">Upgrade</a>
-                                        <a class="btn btn-disable">Expire</a>
+                                        <a class="btn btn-disable">Withdraw Application</a>
                                         <a class="btn btn-disable">Refresh</a>
                                     </div>
                                 </div>
@@ -157,8 +156,7 @@
                                     <span>Sort by:</span>
                                         <ul class="type-filters">
                                             <li><a href="#">Created</a></li>
-                                            <li><a href="#">Expiring</a></li>
-                                            <li><a href="#">Recent Views</a></li>
+                                            <li><a href="#">Name</a></li>
                                         </ul>
                                 </div>
                             </div>
@@ -170,6 +168,7 @@
                                         <th>Date</th>
                                         <th>CV</th>
                                         <th>Profile</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>

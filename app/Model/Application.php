@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Application extends Model
 {
+    const STATUS = array('Pending', 'Rejected', 'Cancel', 'Interview', 'Accepted');
     public function cover(){
         return $this->belongsTo('App\Model\Cover');
     }

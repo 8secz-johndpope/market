@@ -328,7 +328,7 @@ a.module-header-link {
 .container-welcome h3{
     margin-bottom: 0;
 }
-.icon {
+.action-item .icon {
     width: 72px;
     height: 72px;
     position: relative;
