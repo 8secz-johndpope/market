@@ -298,6 +298,9 @@ class User extends Authenticatable
     public function profile($type){
         return $this->profiles()->where('type', $type)->first();
     }
+    public function publishProfiles(){
+        return $this->profiles()->where('status', 1);
+    }
     public function contract()
     {
         return $this->hasOne('App\Model\Contract')->where('status','active');

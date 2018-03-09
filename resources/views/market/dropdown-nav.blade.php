@@ -63,9 +63,11 @@
             <li>
                 <a class="nav-link nav-color" href="/job/profile/edit/general"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Private Profile</a>
             </li>
+            @foreach(Auth::user()->publishProfiles as $profile)
             <li>
-                <a class="nav-link nav-color" href="#"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Public Profile</a>
+                <a class="nav-link nav-color" href="/user/job/publish/profile?type={{$profile->type}}"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;{{$profile->getType()}} Profile</a>
             </li>
+            @endforeach
             <li>
                 <a class="nav-link nav-color" href="/user/job/portal"><span class="glyphicon glyphicon-open-file"></span>&nbsp;&nbsp;Candidate Portal</a>
             </li>
