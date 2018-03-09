@@ -3024,7 +3024,7 @@ class HomeController extends BaseController
     public function CandidatePortal(Request $request){
         $user = Auth::user();
         $myApplications = $user->applications;
-        $myRequests = $user->requestsAppy;
+        $myRequests = $user->requestsApply();
         return view('home.portals.cadidate', ['user' => $user, 'myApplications' => $myApplications, 'myRequest' => $myRequests]);
     }
 }
