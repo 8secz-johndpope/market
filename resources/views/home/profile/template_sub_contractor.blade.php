@@ -243,35 +243,69 @@
                                 @endif
                                 @if($profile->languages->count() > 0)
                                 <div id="tab-languages" class="tabcontent">
-                                    
+                                    <div class="container-languages">
+                                        <div class="row">
+                                            @foreach($profile->languages as $profileLanguage)
+                                            <div class="language-block col-xs-12 col-sm-4">
+                                                <strong class="language-name">{{$profileLanguage->language->name}}</strong>
+                                                ( 
+                                                <span class="language-fluency">{{$profileLanguage->getLevel()}}</span>
+                                                )
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
                                 </div>
                                 @endif
                                 @if($profile->carAndDriving)
                                 <div id="tab-resume" class="tabcontent">
-                                    
+                                    <div class="driving-row row">
+                                        @if($profile->carAndDriving->hasLicence())
+                                        <div class="license-col col-xs-12 col-md-6">
+                                            <strong>License</strong>
+                                            <p>
+                                                I have a full licence and am eligible to drive in the UK
+                                            </p>
+                                        </div>
+                                        @endif
+                                        @if($profile->carAndDriving->hasCar())
+                                        <div class="car-col col-xs-12 col-md-6">
+                                            <strong>Car</strong>
+                                            <p>
+                                                I have a car
+                                            </p>
+                                        </div>
+                                        @endif
+                                    </div>
                                 </div>
                                 @endif
                             </div>
                             <div id="tab-work" class="tab-pane fade">
                                 <ul class="tab-vert">
+                                    @if($profile->work_experiences->count() > 0)
                                     <li class="tablinks selected">
                                         <a href="#tab-work-experience">
                                             <span class="bullet branded"></span>
                                             Work Experience
                                         </a>
                                     </li>
-                                    <li class="tablinks selected">
+                                    @endif
+                                    @if(isset($profile->portfolio))
+                                    <li class="tablinks">
                                         <a href="#tab-portfolio">
                                             <span class="bullet branded"></span>
                                             Portfolio
                                         </a>
                                     </li>
+                                    @endif
+                                    @if(isset($profile->publications > 0))
                                     <li class="tablinks">
                                         <a href="#tab-publications">
                                             <span class="bullet branded"></span>
                                             Publications
                                         </a>
                                     </li>
+                                    @endif
                                 </ul>
                                 <div id="tab-work-experience" class="tabcontent">
                                     
@@ -290,11 +324,11 @@
                                             <span class="bullet branded"></span>Verified by {{env('APP_NAME')}}
                                         </a>
                                     </li>
-                                    <li class="tablinks">
+                                    <!-- <li class="tablinks">
                                         <a href="#tab-reviews">
                                             <span class="bullet branded"></span>Reviews & Ratings
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li class="tablinks">
                                         <a href="#tab-recommendations">
                                             <span class="bullet branded"></span>Recommendations
@@ -304,9 +338,9 @@
                                 <div id="tab-verified" class="tabcontent active-tab">
                                     
                                 </div>
-                                <div id="tab-reviews" class="tabcontent">
+                                <!--<div id="tab-reviews" class="tabcontent">
                                     
-                                </div>
+                                </div>-->
                                 <div id="tab-recommendations" class="tabcontent">
                                     
                                 </div>
