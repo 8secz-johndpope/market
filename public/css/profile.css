@@ -834,6 +834,9 @@ footer{
     .template-subcontractor .img-bg {
         height: 160px;
     }
+    .profile-background {
+        padding-bottom: 40%;
+    }
 }
 @media (min-width: 1024px){
     .general-profile .container-qualifications .qualification .what{

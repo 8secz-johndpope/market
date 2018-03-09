@@ -42,10 +42,10 @@
                             <div class="top-card-body">
                                 <div class="top-card-info">
                                     <div class="align-items-center">
-                                        <h1>David H.</h1>
+                                        <h1>{{$profile->user->name}}</h1>
                                     </div>
                                     @if(isset($profile->user->address))
-                                    <h2>London, United Kingdom</h2>
+                                    <h2>{{$profile->user->address->city}}, United Kingdom</h2>
                                     @endif
                                 </div>
                                 @if(isset($profile->looking_for) && $profile->looking_for->sectors->count() > 0)
