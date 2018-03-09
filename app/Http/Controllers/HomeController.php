@@ -3017,6 +3017,28 @@ class HomeController extends BaseController
         $slug = str_replace('-', '_', $request->type);
         return view('home.profile.template_'.$slug, ['profile' => $profile, 'languageLevels' => $languageLevels, 'servicesOffered' => $servicesOffered, 'tasksHelp' => $tasksHelp, 'tasksHelpValues' => $tasksHelpValues, 'user' => $user]);
     }
+    public function viewPublicProfile(Request $request, $id){
+        $user = Auth::user();
+        $profile = Profile::find();
+        $slug = str_replace('-', '_', $profile->type);
+        $languageLevels = ProfileLanguage::LEVEL_TYPES;
+        $params = ['user' => $user, 'profile' => $profile, 'languageLevels' => $languageLevels];
+        if($profile->isSocialCare()){
+            $servicesOffered = SocialcareServiceOffered::SERVICES_OFFERED;
+            $tasksHelp = SocialcareTaskHelp::all();
+            $tasksHelpValues = array();
+            foreach ($tasksHelp as $taskHelp) {
+                $value = 0;
+                if($profile->socialcareTaskHelp($taskHelp->id) != null)
+                    $value = $profile->socialcareTaskHelp($taskHelp->id)->pivot->value;
+                $tasksHelpValues[$taskHelp->id] = $value;
+            }
+            $params['servicesOffered'] = $servicesOffered;
+            $params['tasksHelp'] = $tasksHelp;
+            $params['tasksHelpValues'] = $tasksHelpValues;
+        }
+        return view('home.profile.template_'.$slug, $params);
+    }
     public function onedriveLogin(Request $request){
         //return $request;
         return view('home.profile.onedrive_sigin');

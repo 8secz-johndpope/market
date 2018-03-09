@@ -584,7 +584,7 @@
                         <a class="btn btn-success" href="#">Publish</a>
                         @else
                         <a class="btn btn-lg btn-primary" href="/job/profile/edit/sub-contractor">Send Request</a>
-                        <a class="btn btn-warning" href="#">Report</a>
+                        <a class="btn btn-danger" href="#">Report</a>
                         @endif
                         <a class="btn btn-verification">Verification</a>
                         

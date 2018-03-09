@@ -80,6 +80,6 @@ class Profile extends Model
 		return self::TYPES[$this->type];
 	}
 	public function isOwen($user){
-		return $this->user->id === $user->id; 
+		return ($user != null) && $this->user->id === $user->id; 
 	}
 }

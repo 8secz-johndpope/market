@@ -29,6 +29,8 @@ use App\Model\Categories;
 use App\Model\Invoice;
 use App\Model\InvoiceItem;
 use App\Model\Business;
+use App\Model\Profile;
+use App\Model\ProfileLanguage;
 use Illuminate\Support\Facades\Mail;
 
 class MarketController extends BaseController
@@ -2389,5 +2391,27 @@ class MarketController extends BaseController
                 else 
                     echo 'sid = '.$adverts[$i]['_source']['source_id'].', ';
             }
+    }
+    public function viewPublicProfile(Request $request, $id){
+        $user = Auth::user();
+        $profile = Profile::find($id);
+        $slug = str_replace('-', '_', $profile->type);
+        $languageLevels = ProfileLanguage::LEVEL_TYPES;
+        $params = ['user' => $user, 'profile' => $profile, 'languageLevels' => $languageLevels];
+        if($profile->isSocialCare()){
+            $servicesOffered = SocialcareServiceOffered::SERVICES_OFFERED;
+            $tasksHelp = SocialcareTaskHelp::all();
+            $tasksHelpValues = array();
+            foreach ($tasksHelp as $taskHelp) {
+                $value = 0;
+                if($profile->socialcareTaskHelp($taskHelp->id) != null)
+                    $value = $profile->socialcareTaskHelp($taskHelp->id)->pivot->value;
+                $tasksHelpValues[$taskHelp->id] = $value;
+            }
+            $params['servicesOffered'] = $servicesOffered;
+            $params['tasksHelp'] = $tasksHelp;
+            $params['tasksHelpValues'] = $tasksHelpValues;
+        }
+        return view('home.profile.template_'.$slug, $params);
     }
 }

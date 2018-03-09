@@ -328,6 +328,7 @@ Route::get('/job/profile/edit/{type}', 'HomeController@profile');
 Route::post('/job/profile/save', 'HomeController@save_profile');
 Route::get('/job/profile/view/{id}', 'HomeController@view_profile');
 Route::get('/job/profile/create-public', 'HomeController@createPublicProfile');
+Route::get('/job/profile/{id}', 'MarketController@viewPublicProfile');
 Route::get('/profile/{id}', 'MarketController@profile');
 Route::get('/download-mobile-apps/', 'MarketController@downloadApps');
 
