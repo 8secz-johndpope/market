@@ -155,7 +155,7 @@
                                     var panorama;
                                     var service;
                                     function initMap() {
-                                        var uluru = {lat: {{$profile->user->address->zip->lat}}, lng: {{$profile->user->address->zip->lat}}};
+                                        var uluru = {lat: {{$profile->user->address->zip->lat}}, lng: {{$profile->user->address->zip->lng}}};
                                          map = new google.maps.Map(document.getElementById('map'), {
                                             zoom: 18,
                                             center: uluru
