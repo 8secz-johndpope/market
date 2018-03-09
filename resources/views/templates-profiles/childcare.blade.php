@@ -62,7 +62,7 @@
                                     <div class="col-xs-12">
                                         <div class="row">
                                             <button id="about-applicant" type="button" class="btn btn-expandeble col-xs-4 col-xs-offset-4" data-toggle="collapse" data-target="#about-applicant-info">
-                                                About Us
+                                                About Me
                                                 <span class="caret"></span>
                                             </button>
                                         </div>
