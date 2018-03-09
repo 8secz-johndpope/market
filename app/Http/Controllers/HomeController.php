@@ -3015,7 +3015,7 @@ class HomeController extends BaseController
             $tasksHelpValues[$taskHelp->id] = $value;
         }
         $slug = str_replace('-', '_', $request->type);
-        return view('home.profile.template_'.$slug, ['profile' => $profile, 'languageLevels' => $languageLevels, 'servicesOffered' => $servicesOffered, 'tasksHelp' => $tasksHelp, 'tasksHelpValues' => $tasksHelpValues]);
+        return view('home.profile.template_'.$slug, ['profile' => $profile, 'languageLevels' => $languageLevels, 'servicesOffered' => $servicesOffered, 'tasksHelp' => $tasksHelp, 'tasksHelpValues' => $tasksHelpValues, 'user' => $user]);
     }
     public function onedriveLogin(Request $request){
         //return $request;

@@ -343,7 +343,7 @@
                                         </a>
                                     </li>
                                     @endif
-                                    @if($profile->publications->count() > 0))
+                                    @if($profile->publications->count() > 0)
                                     <li class="tablinks">
                                         <a href="#tab-publications">
                                             <span class="bullet branded"></span>
@@ -357,7 +357,7 @@
                                         @foreach($profile->work_experiences as $workExperience)
                                         <div class="row work">
                                             <div class="when col-xs-12 col-sm-4">
-                                                {{$workExperience->from->format('m/Y')}} - {{isset($workExperience->to) ? ($workExperience->to->format('m/Y')) : 'Present'}}
+                                                {{date_create($workExperience->from)->format('m/Y')}} - {{isset($workExperience->to) ? ($workExperience->to->format('m/Y')) : 'Present'}}
                                             </div>
                                             <div class="what col-xs-12 col-sm-8">
                                                 <div class="title">
@@ -437,11 +437,13 @@
                                             <span class="bullet branded"></span>Contact me
                                         </a>
                                     </li>
+                                    @if(!$profile->isOwen($user))
                                      <li class="tablinks">
                                         <a href="#tab-req-application">
                                             <span class="bullet branded"></span>Request my application
                                         </a>
                                     </li>
+                                    @endif
                                     <li class="tablinks">
                                         <a href="#tab-charge">
                                             <span class="bullet branded"></span>Charges
@@ -577,9 +579,15 @@
                         <h1>Your Profile</h1>
                     </header>
                     <div class="ad-sidebar-right-container clearfix">
+                        @if($profile->isOwen($user))
                         <a class="btn btn-lg btn-primary" href="/job/profile/edit/sub-contractor">Modify your profile</a>
-                        <a class="btn btn-verification">Verification</a>
                         <a class="btn btn-success" href="#">Publish</a>
+                        @else
+                        <a class="btn btn-lg btn-primary" href="/job/profile/edit/sub-contractor">Send Request</a>
+                        <a class="btn btn-warning" href="#">Report</a>
+                        @endif
+                        <a class="btn btn-verification">Verification</a>
+                        
                     </div>
                 </section>
             </div>
