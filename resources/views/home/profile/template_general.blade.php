@@ -32,7 +32,7 @@
                             <div class="profile-photo-container">
                                 <div class="profile-photo-wrapper">
                                     <div class="profile-photo">
-                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/752734721579.jpeg">
+                                        <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
                                          <span data-toggle="tooltip" data-placement="top" data-trigger="focus hover" class="glyphicon glyphicon-ok" data-title="Details, ID, and diplomas of this profile have been verified manually by our teams.">
                                             <span class="verification-level">{{str_replace('V', '', $profile->user->vid)}}</span>
                                         </span>
@@ -155,7 +155,7 @@
                                     var panorama;
                                     var service;
                                     function initMap() {
-                                        var uluru = {lat: 51.529068, lng: -0.215875};
+                                        var uluru = {lat: {{$profile->user->address->zip->lat}}, lng: {{$profile->user->address->zip->lat}}};
                                          map = new google.maps.Map(document.getElementById('map'), {
                                             zoom: 18,
                                             center: uluru
