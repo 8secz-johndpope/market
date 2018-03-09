@@ -594,23 +594,25 @@
             </div>
             @endif
             @if(isset($profile->availability))
-            <div class="row border-outside">
-                <div class="col-sm-12 details-agent title">
-                    <h3>Availibility</h3>
-                </div>
-                <div class="col-sm-12 details-agent">
-                    <div class="personal-details">
-                        <p>
-                            Available
-                        </p>
-                        <p>
-                            Less than 30 hrs/week
-                        </p>
-                        <P>
-                            < 24 hour response time
-                        </P>
+            <div class="row">
+                <section class="ad-sidebar-right col-md-12">
+                    <header>
+                        <h1>Availibility</h1>
+                    </header>
+                    <div class="ad-sidebar-right-container clearfix">
+                        <div class="personal-details">
+                            <p>
+                                Available
+                            </p>
+                            <p>
+                                Less than 30 hrs/week
+                            </p>
+                            <P>
+                                < 24 hour response time
+                            </P>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
             @endif
             <div class="row">
