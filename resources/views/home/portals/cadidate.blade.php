@@ -56,7 +56,7 @@
                                             <div class="container-candidates">
                                                 <ul class="list-group">
                                                     @foreach($myApplications as $application)
-                                                    @if(count($application->applications) > 0)
+                                                    @if(isset($application->applications) > 0)
                                                         <li class="list-group-item">
                                                             <div class="container-job-title">
                                                                 <p><strong>{{$application->param('title')}}</strong> - <span class="job-location">{{$application->param('location_name')}}</span></p>
@@ -109,7 +109,7 @@
                         <div class="tab-pane fade in" id="tab-applications">
                             <div class="row">
                                 <div class="col-sm-12 container-num-jobs">
-                                    <h4>Your applications <span class="num-jobs-title">{{$applications->count()}}</span></h4>
+                                    <h4>Your applications <span class="num-jobs-title">{{$myApplications->count()}}</span></h4>
                                 </div>
                             </div>
                             <div class="row">
