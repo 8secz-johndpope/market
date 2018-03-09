@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
+	const TYPES = array('general' => 'General', 'social-childcare' => 'Social Care & Childcare', 'sub-contractor' => 'Sub Contractor');
 	public function looking_for()
 	{
 		return $this->hasOne('App\Model\LookingFor');
@@ -74,6 +75,9 @@ class Profile extends Model
 	}
 	public function user(){
 		return $this->belongsTo('App\User');
+	}
+	public function getType(){
+		return self::TYPES[$this->type];
 	}
 
 }

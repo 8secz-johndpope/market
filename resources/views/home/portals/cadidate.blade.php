@@ -168,6 +168,8 @@
                                         <th></th>
                                         <th>Title</th>
                                         <th>Date</th>
+                                        <th>CV</th>
+                                        <th>Profile</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -176,6 +178,24 @@
                                         <td><input type="checkbox" name="select-job[]" class="checkboxs-jobs"></td>
                                         <td><a href="{{$application->advert->url()}}">{{$application->advert->param('title')}}</a></td>
                                         <td>{{$application->created_at->format('d M Y')}}</td>
+                                        <td>
+                                            @if(isset($application->cv))
+                                            <a href="">
+                                                {{$application->cv->title}}
+                                            </a>
+                                            @else
+                                                No
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if(isset($application->profile))
+                                            <a href="/job/profile/edit/{{$application->profile->type}}">
+                                                {{$application->profile->getType()}}
+                                            </a>
+                                            @else
+                                                No
+                                            @endif
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
