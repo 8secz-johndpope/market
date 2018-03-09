@@ -167,23 +167,15 @@
                                     <tr>
                                         <th></th>
                                         <th>Title</th>
-                                        <th>Location</th>
-                                        <th>Status</th>
-                                        <th>Views</th>
-                                        <th>Replies</th>
-                                        <th>Actions</th>
+                                        <th>Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($myApplications as $application)
                                     <tr>
                                         <td><input type="checkbox" name="select-job[]" class="checkboxs-jobs"></td>
-                                        <td><a href="{{$application->url()}}">{{$application->param('title')}}</a></td>
-                                        <td>{{$application->param('location_name')}}</td>
-                                        <td>{{$application->status == 1 ? 'Live': 'Inactive' }}</td>
-                                        <td>{{$application->param('views')}}</td>
-                                        <td>{{$application->replies}}</td>
-                                        <td><a href="#">Expire</td>
+                                        <td><a href="{{$application->advert->url()}}">{{$application->advert->param('title')}}</a></td>
+                                        <td>{{$application->created_at->format('d M Y')}}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
