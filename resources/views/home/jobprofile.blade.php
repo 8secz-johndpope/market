@@ -168,7 +168,7 @@
                 <div class="col-sm-12">
                     <h2 class="template-options-title">Confirm or Select & Complete Your Profile</h2>
                     <p class="details-profile-subtitle">We have automatically allocated you a general profile. However you can confirm the general profile or select a new profile</p>
-                    <p class="details-profile-subtitle">After selecting a profile, you should provide revelant information for each section in order to complete the profile</p>
+                    <p class="details-profile-subtitle">After selecting a profile, you should provide revelant information for each section in order to complete the profile. You can create multiple profiles for different job opportunities, for example, one profile for childcare and another for office administrator.</p>
                 </div>
                 <div class="col-sm-4">
                     <div class="template-item">
