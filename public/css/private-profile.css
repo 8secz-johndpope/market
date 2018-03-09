@@ -125,7 +125,7 @@
 }
 .current-cv .table>thead>tr>th {
     background: #D3D3D3;
-    border: none;
+    border: 1px solid #bababa;
 }
 .current-cv .table-striped>tbody>tr a{
     color: #000;
