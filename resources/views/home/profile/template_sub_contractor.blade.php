@@ -116,7 +116,7 @@
                                    </p> 
                                 </div>
                                 @endif
-                                @if(isset($profile->address))
+                                @if(isset($profile->user->address))
                                 <div id="tab-location" class="tabcontent">
                                     <div class="row">
                                         <div class="col-md-12">
