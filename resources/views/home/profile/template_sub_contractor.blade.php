@@ -96,12 +96,14 @@
                                         </a>
                                     </li>
                                     @endif
+                                    @if(isset($profile->looking_for) && $profile->looking_for->locations->count() > 0)
                                     <li class="tablinks">
                                         <a href="#tab-area">
                                             <span class="bullet branded"></span>
                                             Areas I cover
                                         </a>
                                     </li>
+                                    @endif
                                     @if(isset($profile->availability))
                                     <li class="tablinks">
                                         <a href="#tab-availibity">
@@ -182,6 +184,7 @@
                                     </div>
                                 </div>
                                 @endif
+                                @if(isset($profile->looking_for) && $profile->looking_for->locations->count() > 0)
                                 <div id="tab-area" class="tabcontent">
                                     <p>
                                     I specialize in Python but have worked with Lua, PHP, C, JavaScript, and others, in fields from web development to machine learning to systems integration.
@@ -193,6 +196,7 @@
                                     I have experience both working remotely and managing remote workers across several time zones, and have worked with clients from around the globe
                                    </p> 
                                 </div>
+                                @endif
                                 @if(isset($profile->availability))
                                 <div id="tab-availibity" class="tabcontent">
                                     <p>
