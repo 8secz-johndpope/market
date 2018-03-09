@@ -216,6 +216,7 @@ li.tablinks a {
 .tab-content {
     display: grid;
     background-color: #fff;
+    min-height: 60vh;
 }
 .tab-pane {
     padding: 0;
