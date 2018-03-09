@@ -3025,6 +3025,6 @@ class HomeController extends BaseController
         $user = Auth::user();
         $myApplications = $user->applications;
         $myRequests = $user->requestsApply();
-        return view('home.portals.cadidate', ['user' => $user, 'myApplications' => $myApplications, 'myRequest' => $myRequests]);
+        return view('home.portals.cadidate', ['user' => $user, 'myApplications' => $myApplications, 'myRequests' => $myRequests]);
     }
 }
