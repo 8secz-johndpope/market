@@ -279,7 +279,7 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Model\Role');
     }
     public function is_admin(){
-        return count($this->belongsToMany('App\Model\Role')->where('name','admin')->get()) > 0;
+    return count($this->belongsToMany('App\Model\Role')->where('name','admin')->get()) > 0;
     }
     public function address(){
         if($this->default_address>0)

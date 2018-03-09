@@ -120,6 +120,19 @@
     background: url(/css/star.png);
     background-size: cover;
 }
+.manage-cv {
+    margin-bottom: 40px;
+}
+.current-cv .table>thead>tr>th {
+    background: #D3D3D3;
+    border: none;
+}
+.current-cv .table-striped>tbody>tr a{
+    color: #000;
+}
+.current-cv .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #eaf4fd;
+}
 .template-content {
     height: 300px;
     width: 250px;
@@ -1286,11 +1299,8 @@ input[type=checkbox]:checked~label:before {
         border-bottom: none;
     }
     .current-cv {
-
-        padding-left: 0!important;
         margin-bottom: 0;
         border-bottom: none;
-        border-right: 1px solid #d6d6d6;
     }
     .cv-confirmation-area {
         text-align: left;

@@ -1405,15 +1405,10 @@ class HomeController extends BaseController
 
     public function reply_all(Request $request){
         $user=Auth::user();
-
         $template = ReplyTemplate::find($request->template);
         foreach ($request->ids as $id) {
-
-
             $application = Application::find($id);
             $advert = $application->advert;
-
-
             $room = Room::where('advert_id', $application->advert_id)->where('sender_id', $application->user_id)->first();
             if ($room === null) {
                 $room = new Room;
@@ -1425,15 +1420,10 @@ class HomeController extends BaseController
                 $room->users()->save($application->user);
                 if ($user->id !== $application->user->id) {
                     $room->users()->save($user);
-
-
                 }
-
                 $advert->replies++;
                 $advert->save();
             }
-
-
             $message = new Message;
             $message->message = $template->message;
             $message->from_msg = $user->id;
@@ -1441,14 +1431,10 @@ class HomeController extends BaseController
             $message->room_id = $room->id;
             $message->url = '';
             $message->save();
-
-
             $room->modify();
-
             $this->notify($room, $message);
         }
         return redirect()->back()->with('msg', 'Replies successfully sent');
-
     }
 
     public function identity(Request $request)
@@ -3016,28 +3002,6 @@ class HomeController extends BaseController
         }
         $slug = str_replace('-', '_', $request->type);
         return view('home.profile.template_'.$slug, ['profile' => $profile, 'languageLevels' => $languageLevels, 'servicesOffered' => $servicesOffered, 'tasksHelp' => $tasksHelp, 'tasksHelpValues' => $tasksHelpValues, 'user' => $user]);
-    }
-    public function viewPublicProfile(Request $request, $id){
-        $user = Auth::user();
-        $profile = Profile::find();
-        $slug = str_replace('-', '_', $profile->type);
-        $languageLevels = ProfileLanguage::LEVEL_TYPES;
-        $params = ['user' => $user, 'profile' => $profile, 'languageLevels' => $languageLevels];
-        if($profile->isSocialCare()){
-            $servicesOffered = SocialcareServiceOffered::SERVICES_OFFERED;
-            $tasksHelp = SocialcareTaskHelp::all();
-            $tasksHelpValues = array();
-            foreach ($tasksHelp as $taskHelp) {
-                $value = 0;
-                if($profile->socialcareTaskHelp($taskHelp->id) != null)
-                    $value = $profile->socialcareTaskHelp($taskHelp->id)->pivot->value;
-                $tasksHelpValues[$taskHelp->id] = $value;
-            }
-            $params['servicesOffered'] = $servicesOffered;
-            $params['tasksHelp'] = $tasksHelp;
-            $params['tasksHelpValues'] = $tasksHelpValues;
-        }
-        return view('home.profile.template_'.$slug, $params);
     }
     public function onedriveLogin(Request $request){
         //return $request;
