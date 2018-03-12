@@ -1332,7 +1332,6 @@ class HomeController extends BaseController
     }
     public function apply_all(Request $request)
     {
-
         // Get the currently authenticated user...
         $user = Auth::user();
         $ids = $request->ids;
@@ -1345,11 +1344,12 @@ class HomeController extends BaseController
             if($application===null){
                 $application = new Application;
                 $application->advert_id = $advert->id;
-                $application->user_id = $user->id;
-                $application->save();
+                $application->profile_id = $request->profile;
+                $application->cv_id = $request->cv;
+                $user->applications()->save($application);
             }
         }
-        return redirect('/user/manage/my/applications');
+        return redirect('/user/job/portal');
 
     }
     public function my_applications(Request $request)
