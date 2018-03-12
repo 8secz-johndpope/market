@@ -266,7 +266,11 @@
                                             @foreach($myRequests as $request)
                                                 <tr>
                                                     <td><input type="checkbox" ></td>
-                                                    <td>{{$request->advert->param('title')}}</td>
+                                                    <td>
+                                                        <a href="{{$application->advert->url()}}">
+                                                            {{$request->advert->param('title')}}
+                                                        </a>
+                                                    </td>
                                                     <td>{{$request->message}}</td>
                                                     <td>
                                                         @if(isset($request->user->company))
