@@ -3015,11 +3015,16 @@ class HomeController extends BaseController
         return view('home.portals.cadidate', ['user' => $user, 'myApplications' => $myApplications, 'myRequests' => $myRequests]);
     }
     public function applicationRequest(Request $request){
-        $user = Auth::user();
-        $requestApplication = new applicationRequest();
-        $requestApplication->message = $request->offer_message;
-        $requestApplication->advert_id = $request->offer_job;
-        $requestApplication->candidate_id = $request->user_profile;
-        $user->applicationRequestsSent()->save($requestApplication);
+        try{
+            $user = Auth::user();
+            $requestApplication = new applicationRequest();
+            $requestApplication->message = $request->offer_message;
+            $requestApplication->advert_id = $request->offer_job;
+            $requestApplication->candidate_id = $request->user_profile;
+            $user->applicationRequestsSent()->save($requestApplication);
+            return ['message' => 'The application request was sent correctly'];
+        }catch(Exception $e){
+            return $e;
+        }
     }
 }
