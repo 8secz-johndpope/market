@@ -566,14 +566,16 @@
                                 <div id="tab-req-application" class="tabcontent">
                                   <div class="row">
                                     <div class="col-xs-12">
-                                        <h2>Request My Application</h2>
+                                        <h3>Request My Application</h3>
                                         @if(Auth::guest())
                                             You need to be <a href="/login">Login</a> | <a href="/register">SignUp</a> for make to request.
                                         @else
                                         <div class="form-group">
                                             <label for="offer-job">Job</label>
                                             <select id="offer-job" name="offer_job" class="form-control">
-                                                <option></option>
+                                                @foreach($jobs as $job)
+                                                <option value="{{$jobs->id}}">{{$jobs->param('title')}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div class="form-group">

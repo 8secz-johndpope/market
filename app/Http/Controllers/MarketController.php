@@ -2412,6 +2412,10 @@ class MarketController extends BaseController
             $params['tasksHelp'] = $tasksHelp;
             $params['tasksHelpValues'] = $tasksHelpValues;
         }
+        if(!$profile->isOwen($user)){
+            $jobs = $user->jobs();
+            $params['jobs'] = $jobs;
+        }
         return view('home.profile.template_'.$slug, $params);
     }
 }
