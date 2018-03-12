@@ -3033,7 +3033,8 @@ class HomeController extends BaseController
         $ids = $request->ids;
         $ads = [];
         foreach ($ids as $id) {
-            $advert = Advert::find($id);
+            $requestApplication = ApplicationRequest::find($id);
+            $advert = $requestApplication->advert;
             $ads[] = $advert;
         }
         return view('home.portals.discard',['user'=>$user,'adverts'=> $ads]);
