@@ -287,7 +287,11 @@
                                         <tbody>
                                             @foreach($myRequests as $request)
                                                 <tr>
-                                                    <td><input type="checkbox" ></td>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" name="request[]" class="request-applications">
+                                                        </div>
+                                                    </td>
                                                     <td>
                                                         <a href="{{$request->advert->url()}}">
                                                             {{$request->advert->param('title')}}
@@ -327,17 +331,17 @@
     $('a.btn-disable').click(function(e){
         e.preventDefault();
     });
-    $('.checkboxs-jobs').change(function(){
+    $('.request-applications').change(function(){
         var checkboxs = $(this).parent().parent().parent().find('input:checked');
         console.log(checkboxs.length);
         if(checkboxs.length > 0){
-            $('#tab-jobs a.btn-disable').addClass('btn-action');
-            $('#tab-jobs a.btn-disable').removeClass('btn-disable');
-            $('#tab-jobs .num-jobs').text(checkboxs.length);
+            $('tab-requests a.btn-disable').addClass('btn-action');
+            $('tab-requests a.btn-disable').removeClass('btn-disable');
+            $('tab-requests .num-jobs').text(checkboxs.length);
         }else{
-            $('#tab-jobs .num-jobs').text(0);
-            $('#tab-jobs a.btn-action').addClass('btn-disable');
-            $('#tab-jobs a.btn-action').removeClass('btn-action');
+            $('tab-requests .num-jobs').text(0);
+            $('tab-requests a.btn-action').addClass('btn-disable');
+            $('tab-requests a.btn-action').removeClass('btn-action');
         }   
     })
 </script>
