@@ -27,3 +27,6 @@
     vertical-align: middle;
     position: relative;
 }
+.cv{
+	display: none;
+}

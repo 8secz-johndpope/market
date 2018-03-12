@@ -27,13 +27,12 @@
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="radio-profile">Profile</label>
-                        <input type="radio" name="apply_with" id="radio-profile" value="0">
+                        <input type="radio" name="apply_with" id="radio-profile" value="0" checked>
                         <label for="radio-profile">CV</label>
                         <input type="radio" name="apply_with" id="radio-cv" value="1">
                         <label for="radio-profile">Profile & CV</label>
                         <input type="radio" name="apply_with" id="radio-profile-cv" value="2">
                     </div>
-
                     <div class="form-group profile">
                         <label for="profile">Select Profile</label>
                         <select class="form-control" id="profile" name="profile">
