@@ -572,9 +572,6 @@
                                         @else
                                         <div class="form-group">
                                             @if($jobs->count() > 0)
-                                            @php
-                                                var_dump($jobs);die;
-                                            @endphp
                                             <label for="offer-job">Job</label>
                                             <select id="offer-job" name="offer_job" class="form-control">
                                                 @foreach($jobs as $job)
