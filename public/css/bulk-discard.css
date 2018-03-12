@@ -1,3 +1,10 @@
 .body{
 	min-height: 70vh;
 }
+.table>thead>tr>th {
+    background: #D3D3D3;
+    border: 1px solid #bababa;
+}
+.table tbody>tr {
+    background-color: #eaf4fd;
+}
