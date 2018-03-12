@@ -94,7 +94,7 @@
         }
     })
     $('input[type=radio]').change(function(){
-        var value = $($this).val();
+        var value = $(this).val();
         if(value == 0){
             $('.cv').hide();
             $('.profile').show();
