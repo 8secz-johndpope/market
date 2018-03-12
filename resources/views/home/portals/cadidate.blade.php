@@ -62,7 +62,7 @@
                                                         <li class="list-group-item">
                                                             <div class="container-job-title">
                                                                 <p><strong>{{$request->advert->param('title')}}</strong> - <span class="job-location">{{$request->advert->param('location_name')}}</span></p>
-                                                                <p class="blue-color">Unread Candidates</p>
+                                                                <p class="blue-color">{{$request->message}}</p>
                                                             </div>
                                                         </li>
                                                     @endforeach
