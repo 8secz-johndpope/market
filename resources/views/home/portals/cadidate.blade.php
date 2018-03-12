@@ -363,7 +363,7 @@
     });
     $('#discard').click(function(){
         var form =  $('#bulk-apply-form'); 
-        form = attr('action', '/user/jobs/application-requests/discard');
+        form.attr('action', '/user/jobs/application-requests/discard');
         form.submit();
     });
 </script>
