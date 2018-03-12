@@ -335,13 +335,14 @@
         var checkboxs = $(this).parent().parent().parent().find('input:checked');
         console.log(checkboxs.length);
         if(checkboxs.length > 0){
-            $('tab-requests a.btn-disable').addClass('btn-action');
-            $('tab-requests a.btn-disable').removeClass('btn-disable');
-            $('tab-requests .num-jobs').text(checkboxs.length);
+            var buttons = $('#tab-requests a.btn-disable');
+            buttons.addClass('btn-action');
+            buttons.removeClass('btn-disable');
+            $('#tab-requests .num-jobs').text(checkboxs.length);
         }else{
-            $('tab-requests .num-jobs').text(0);
-            $('tab-requests a.btn-action').addClass('btn-disable');
-            $('tab-requests a.btn-action').removeClass('btn-action');
+            $('#tab-requests .num-jobs').text(0);
+            $('#tab-requests a.btn-action').addClass('btn-disable');
+            $('#tab-requests a.btn-action').removeClass('btn-action');
         }   
     })
 </script>
