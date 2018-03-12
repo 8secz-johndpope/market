@@ -259,7 +259,7 @@
                                         <strong>Requests selected: </strong><span class="num-jobs">0</span>
                                     </div>
                                     <div class="btns-actions">
-                                        <button class="btn btn-disable">Apply</button>
+                                        <button class="btn btn-disable" id="apply">Apply</button>
                                         <button class="btn btn-disable">Discard</button>
                                     </div>
                                 </div>
@@ -273,44 +273,47 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <table class="w100p table table-striped table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th>Title</th>
-                                                <th>Message</th>
-                                                <th>Company</th>
-                                                <th>Location</th>
-                                                <th>Contact</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach($myRequests as $request)
+                                    <form id="bulk-apply-form" action="/user/jobs/apply/show" method="post">
+                                        {{ csrf_field() }}
+                                        <table class="w100p table table-striped table-hover">
+                                            <thead>
                                                 <tr>
-                                                    <td>
-                                                        <div class="checkbox">
-                                                            <input type="checkbox" name="request[]" class="request-applications">
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <a href="{{$request->advert->url()}}">
-                                                            {{$request->advert->param('title')}}
-                                                        </a>
-                                                    </td>
-                                                    <td>{{$request->message}}</td>
-                                                    <td>
-                                                        @if(isset($request->user->company))
-                                                            {{$request->user->company->name}}
-                                                        @else
-                                                            -
-                                                        @endif
-                                                    </td>
-                                                    <td>{{$request->advert->param('location_name')}}</td>
-                                                    <td>{{$request->employer->name}}</td>
+                                                    <th></th>
+                                                    <th>Title</th>
+                                                    <th>Message</th>
+                                                    <th>Company</th>
+                                                    <th>Location</th>
+                                                    <th>Contact</th>
                                                 </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
+                                            </thead>
+                                            <tbody>
+                                                @foreach($myRequests as $request)
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="request[]" class="request-applications">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="{{$request->advert->url()}}">
+                                                                {{$request->advert->param('title')}}
+                                                            </a>
+                                                        </td>
+                                                        <td>{{$request->message}}</td>
+                                                        <td>
+                                                            @if(isset($request->user->company))
+                                                                {{$request->user->company->name}}
+                                                            @else
+                                                                -
+                                                            @endif
+                                                        </td>
+                                                        <td>{{$request->advert->param('location_name')}}</td>
+                                                        <td>{{$request->employer->name}}</td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -355,5 +358,6 @@
             buttons.removeClass('btn-action');
         }  
     }
+    $('#apply').click($('#bulk-apply-form').submit());
 </script>
 @endsection
