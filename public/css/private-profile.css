@@ -130,7 +130,7 @@
 .current-cv .table-striped>tbody>tr a{
     color: #000;
 }
-.current-cv .table-striped>tbody>tr:nth-of-type(odd) {
+.current-cv tbody>tr:nth-of-type(odd) {
     background-color: #eaf4fd;
 }
 .template-content {
