@@ -260,7 +260,7 @@
                                     </div>
                                     <div class="btns-actions">
                                         <button class="btn btn-disable" id="apply">Apply</button>
-                                        <button class="btn btn-disable">Discard</button>
+                                        <button class="btn btn-disable" id="discard">Discard</button>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
