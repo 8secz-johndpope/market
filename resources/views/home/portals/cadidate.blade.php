@@ -295,7 +295,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <a href="{{$request->advert->url()}}">
+                                                            <a href="{{$request->advert->url()}}" target="_black" class="link-job">
                                                                 {{$request->advert->param('title')}}
                                                             </a>
                                                         </td>
@@ -360,6 +360,11 @@
     }
     $('#apply').click(function(){
         $('#bulk-apply-form').submit()
+    });
+    $('#discard').click(function(){
+        var form =  $('#bulk-apply-form'); 
+        form = attr('action', '/user/jobs/application-requests/discard');
+        form.submit();
     });
 </script>
 @endsection

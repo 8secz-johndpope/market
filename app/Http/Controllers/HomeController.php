@@ -3027,4 +3027,16 @@ class HomeController extends BaseController
             return $e;
         }
     }
+    public function discardShow(Request $request)
+    {
+        $user=Auth::user();
+        $ids = $request->ids;
+        $ads = [];
+        foreach ($ids as $id) {
+            $advert = Advert::find($id);
+            $ads[] = $advert;
+        }
+        return view('home.discard',['user'=>$user,'adverts'=> $ads]);
+
+    }
 }
