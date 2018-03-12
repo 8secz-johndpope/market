@@ -82,7 +82,7 @@ Route::get('/wallet/request', 'BankController@request');
 
 
 Route::post('/user/save/profile', 'HomeController@save_pro');
-Route::post('/user/request-application', 'HomeControler@requestApplication');
+Route::post('/user/request-application', 'HomeController@requestApplication');
 Route::post('/user/groups/add', 'MessageController@add_group');
 Route::post('/user/send/broadcast', 'MessageController@send_broadcast');
 
