@@ -170,8 +170,8 @@
                                         <strong>Applications selected: </strong><span class="num-jobs">0</span>
                                     </div>
                                     <div class="btns-actions">
-                                        <a class="btn btn-disable">Withdraw Application</a>
-                                        <a class="btn btn-disable">Refresh</a>
+                                        <button class="btn btn-disable">Withdraw Application</button>
+                                        <button class="btn btn-disable">Refresh</button>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
@@ -259,8 +259,8 @@
                                         <strong>Requests selected: </strong><span class="num-jobs">0</span>
                                     </div>
                                     <div class="btns-actions">
-                                        <a class="btn btn-disable">Apply</a>
-                                        <a class="btn btn-disable">Discard</a>
+                                        <button class="btn btn-disable">Apply</button>
+                                        <button class="btn btn-disable">Discard</button>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
@@ -334,20 +334,26 @@
     $('.request-applications').change(function(){
         var checkboxs = $(this).parent().parent().parent().find('input:checked');
         console.log(checkboxs.length);
+        disableButtons('#tab-requests', checkboxs.length);   
+    });
+    $('.checkboxs-jobs').change(function(){
+        var checkboxs = $(this).closest('tbody').find('input:checked');
+        console.log(checkboxs.length);
+        disableButtons('#tab-applications', checkboxs.length);
+    });
+    function disableButtons(selector, length){
         var buttons;
-        if(checkboxs.length > 0){
-            buttons = $('#tab-requests a.btn-disable');
+        if(length > 0){
+            buttons = $(selector + ' button.btn-disable');
             buttons.addClass('btn-action');
             buttons.removeClass('btn-disable');
-             buttons.prop('disabled'. false);
-            $('#tab-requests .num-jobs').text(checkboxs.length);
+            $(selector + ' .num-jobs').text(length);
         }else{
-            $('#tab-requests .num-jobs').text(0);
-            buttons = $('#tab-requests a.btn-action');
-            buttons.prop('disabled'. true);
+            $(selector + ' .num-jobs').text(0);
+            buttons = $(selector + ' button.btn-action');
             buttons.addClass('btn-disable');
             buttons.removeClass('btn-action');
-        }   
-    })
+        }  
+    }
 </script>
 @endsection
