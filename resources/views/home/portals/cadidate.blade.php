@@ -69,11 +69,24 @@
                                                 </ul>
                                             </div>
                                             <div class="container-activity">
-                                                <h4>Activity</h4>
-                                            
-
-                                            </div>
-                                            
+                                                <h4>My Applications</h4>
+                                                <hr>
+                                                <div class="container-candidates">
+                                                    <ul class="list-group">
+                                                        @foreach($myApplications as $application)
+                                                            @if($loop->index == 4)
+                                                                @break
+                                                            @endif
+                                                            <li class="list-group-item">
+                                                                <div class="container-job-title">
+                                                                    <p><strong>{{$application->advert->param('title')}}</strong> - <span class="job-location">{{$application->advert->param('location_name')}}</span></p>
+                                                                    <p class="blue-color">{{$application->status}}</p>
+                                                                </div>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            </div> 
                                             <div class="container-activity">
                                                 <h4>Appointments</h4>
                                             </div>
