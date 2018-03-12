@@ -15,9 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <br>
-                <br><br>
-                <h4>Bulk Apply</h4>
+                <h3>Discard All Applications Request</h3>
                 <form action="/user/jobs/discard/all" method="post">
                     {{ csrf_field() }}
                     <table class="table table-striped">
