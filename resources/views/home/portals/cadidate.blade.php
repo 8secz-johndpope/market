@@ -358,6 +358,8 @@
             buttons.removeClass('btn-action');
         }  
     }
-    $('#apply').click($('#bulk-apply-form').submit());
+    $('#apply').click(function(){
+        $('#bulk-apply-form').submit()
+    });
 </script>
 @endsection
