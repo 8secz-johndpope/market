@@ -3039,4 +3039,16 @@ class HomeController extends BaseController
         return view('home.portals.discard',['user'=>$user,'adverts'=> $ads]);
 
     }
+    public function discardAll(Request $request)
+    {
+        $ids = $request->ids;
+        foreach ($ids as $id) {
+            $applicationRequest = ApplicationRequest::find($id);
+            $applicationRequest->status = 2;
+            $applicationRequest->save();
+        }
+        return $this->candidatePortal();
+
+    }
+
 }
