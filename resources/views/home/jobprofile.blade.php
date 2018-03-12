@@ -130,12 +130,12 @@
                                         </thead>
                                         <tbody>
                                            @foreach($user->cvs as $cv)
-                                           <tr class="row">
+                                           <tr>
                                                <td><input type="checkbox" name="select-cvs[]" class="checkboxs-jobs"></td>
                                                <td>{{$cv->title}}</td>
                                                <td>{{$cv->created_at->format('d F Y')}}</td>
                                                <td></td>
-                                               <td class="col-xs-4">
+                                               <td class="col-sm-3">
                                                 <div class="row">
                                                    <a class="download-cv col-sm-6" href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->file_name}}">
                                                         <i class="glyphicon glyphicon-download-alt"></i>
