@@ -3050,5 +3050,21 @@ class HomeController extends BaseController
         return $this->candidatePortal();
 
     }
+    public function candidateApplyShow(Request $request)
+    {
+        $user=Auth::user();
+        $ids = $request->ids;
+        if($ids===null){
+            return redirect()->back()->with('msg', 'Please select at least one application');
+        }
+        $ads = [];
+        foreach ($ids as $id) {
+            $requestApplication = ApplicationRequest::find($id);
+            $advert = $requestApplication->advert;
+            $ads[] = $advert;
+        }
+        return view('home.bulk',['user'=>$user,'adverts'=> $ads]);
+
+    }
 
 }
