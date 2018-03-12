@@ -1,6 +1,6 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('layouts.next')
+@extends('layouts.app')
 
 @section('title', 'Page Title')
 
@@ -11,49 +11,47 @@
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-sm-2">
+<div class="body background-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <br>
+                <br><br>
+                <h4>Bulk Apply</h4>
+                <form action="/user/jobs/apply/all" method="post">
+                    {{ csrf_field() }}
 
-        </div>
-        <div class="col-sm-8">
-            <br>
-            <br><br>
-            <h4>Bulk Apply</h4>
-            <form action="/user/jobs/apply/all" method="post">
-                {{ csrf_field() }}
-
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Delete</th>
-
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($adverts as $advert)
+                <table class="table table-striped">
+                    <thead>
                     <tr>
-                        <td><a href="{{$advert->url()}}"> {{$advert->param('title')}}</a>
-                            <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$advert->id}}">
-
-                        </td>
-                        <td><button class="btn btn-danger" onclick="$(this).parent().parent().remove();">Delete</button> </td>
-
+                        <th scope="col">Title</th>
+                        <th scope="col">Delete</th>
                     </tr>
-                @endforeach
-                <tr>
-                    <td>                                <button type="submit" class="btn btn-primary">Apply All</button>
-                    </td>
+                    </thead>
+                    <tbody>
+                        @foreach($adverts as $advert)
+                        <tr>
+                            <td><a href="{{$advert->url()}}"> {{$advert->param('title')}}</a>
+                                <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$advert->id}}">
 
-                </tr>
-                </tbody>
-            </table>
-            </form>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger" onclick="$(this).parent().parent().remove();">Delete</button> 
+                            </td>
+
+                        </tr>
+                        @endforeach
+                        <tr>
+                            <td>
+                                <button type="submit" class="btn btn-primary">Apply All</button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                </form>
+            </div>
         </div>
-        <div class="col-sm-2">
-
-        </div>
-
     </div>
-
+</div>
 @endsection
