@@ -37,7 +37,7 @@
                     <div class="form-group profile">
                         <label for="profile">Select Profile</label>
                         <select class="form-control" id="profile" name="profile">
-                            @foreach($user->publishProfiles() as $profile)
+                            @foreach($user->publishProfiles as $profile)
                                 <option value="{{$profile->id}}">{{$profile->getType()}}</option>
                             @endforeach        
                         </select>
