@@ -26,6 +26,31 @@
                 <form action="/user/jobs/apply/all" method="post" id="form-bulk-apply">
                     {{ csrf_field() }}
                     <div class="form-group">
+                        <label for="radio-profile">Profile</label>
+                        <input type="radio" name="apply_with" id="radio-profile" value="0">
+                        <label for="radio-profile">CV</label>
+                        <input type="radio" name="apply_with" id="radio-cv" value="1">
+                        <label for="radio-profile">Profile & CV</label>
+                        <input type="radio" name="apply_with" id="radio-profile-cv" value="2">
+                    </div>
+
+                    <div class="form-group profile">
+                        <label for="profile">Select Profile</label>
+                        <select class="form-control" id="profile" name="profile">
+                            @foreach($user->publishProfiles() as $profile)
+                                <option value="{{$profile->id}}">{{$profile->getType()}}</option>
+                            @endforeach        
+                        </select>
+                    </div>
+                    <div class="form-group cv">
+                        <label>Select CV</label>
+                        <select class="form-control" id="cv" name="cv">
+                            @foreach($user->cvs as $cv)
+                                <option value="{{$cv->id}}">{{$cv->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <div class="validation">
                             <span>Please select at least one application</span>
                         </div>
