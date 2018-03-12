@@ -334,15 +334,17 @@
     $('.request-applications').change(function(){
         var checkboxs = $(this).parent().parent().parent().find('input:checked');
         console.log(checkboxs.length);
+        var buttons;
         if(checkboxs.length > 0){
-            var buttons = $('#tab-requests a.btn-disable');
+            buttons = $('#tab-requests a.btn-disable');
             buttons.addClass('btn-action');
             buttons.removeClass('btn-disable');
             $('#tab-requests .num-jobs').text(checkboxs.length);
         }else{
             $('#tab-requests .num-jobs').text(0);
-            $('#tab-requests a.btn-action').addClass('btn-disable');
-            $('#tab-requests a.btn-action').removeClass('btn-action');
+            buttons = $('#tab-requests a.btn-action');
+            buttons.addClass('btn-disable');
+            buttons.removeClass('btn-action');
         }   
     })
 </script>
