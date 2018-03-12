@@ -291,7 +291,7 @@
                                                     <tr>
                                                         <td>
                                                             <div class="checkbox">
-                                                                <input type="checkbox" name="ids[]" class="request-applications">
+                                                                <input type="checkbox" name="ids[]" class="request-applications" value="{{$advert->id}}">
                                                             </div>
                                                         </td>
                                                         <td>
