@@ -267,8 +267,16 @@
                                                 <tr>
                                                     <td><input type="checkbox" ></td>
                                                     <td>{{$request->advert->param('title')}}</td>
-                                                    <td>{{$request->advert->param('views')}}</td>
-                                                    <td>{{$request->advert->param('list_views')}}</td>
+                                                    <td>{{$request->message}}</td>
+                                                    <td>
+                                                        @if(isset($request->user->company))
+                                                            {{$request->user->company->name}}
+                                                        @else
+                                                            -
+                                                        @endif
+                                                    </td>
+                                                    <td>{{$request->advert->param('location_name')}}</td>
+                                                    <td>{{$request->employer->name}}</td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
