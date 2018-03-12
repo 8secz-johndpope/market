@@ -266,16 +266,9 @@
                                             @foreach($myRequests as $request)
                                                 <tr>
                                                     <td><input type="checkbox" ></td>
-                                                    <td>{{$request->param('title')}}</td>
-                                                    <td>{{$request->param('views')}}</td>
-                                                    <td>{{$request->param('list_views')}}</td>
-                                                    <td>{{$request->replies}}</td>
-                                                    <td>@if($request->has_param('bumped'))
-                                                        {{$request->param('bumped')}}
-                                                        @else
-                                                            0
-                                                        @endif
-                                                    </td> 
+                                                    <td>{{$request->advert->param('title')}}</td>
+                                                    <td>{{$request->advert->param('views')}}</td>
+                                                    <td>{{$request->advert->param('list_views')}}</td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
