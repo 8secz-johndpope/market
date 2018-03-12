@@ -54,9 +54,10 @@
                                             <h4>My Applications Request</h4>
                                             <hr>
                                             <div class="container-candidates">
+                                                @if($myRequests->count() > 0)
                                                 <ul class="list-group">
                                                     @foreach($myRequests as $request)
-                                                        @if($loop->index == 4)
+                                                        @if(isset($loop->index) && $loop->index == 4)
                                                             @break
                                                         @endif
                                                         <li class="list-group-item">
@@ -67,11 +68,15 @@
                                                         </li>
                                                     @endforeach
                                                 </ul>
+                                                @else
+                                                    <p>You do not have any application request</p>
+                                                @endif
                                             </div>
                                             <div class="container-activity">
                                                 <h4>My Applications</h4>
                                                 <hr>
                                                 <div class="container-candidates">
+                                                    @if($myApplications->count() > 0)
                                                     <ul class="list-group">
                                                         @foreach($myApplications as $application)
                                                             @if($loop->index == 4)
@@ -85,6 +90,9 @@
                                                             </li>
                                                         @endforeach
                                                     </ul>
+                                                    @else
+                                                        <p>You do not have any application</p>
+                                                    @endif
                                                 </div>
                                             </div> 
                                             <div class="container-activity">
