@@ -565,10 +565,21 @@
                                 </div>
                                 <div id="tab-req-application" class="tabcontent">
                                   <div class="row">
-                                    <h2>Request My Application</h2>
                                     <div class="col-xs-12">
+                                        <h2>Request My Application</h2>
                                         @if(Auth::guest())
                                             You need <a href="/login">Login</a> | <a href="/register">SignUp</a> for make to request.
+                                        @else
+                                        <div class="form-group">
+                                            <label for="offer-job">Jobs</label>
+                                            <select id="offer-job" name="offer_job" class="form-control">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="offer-message">Message</label>
+                                            <textarea id="offer-message" name="offer_message" rows="4"></textarea>
+                                        </div>
                                         @endif
                                     </div>
                                   </div>
