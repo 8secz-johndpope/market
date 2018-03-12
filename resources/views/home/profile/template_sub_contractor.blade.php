@@ -571,6 +571,8 @@
                                             You need to be <a href="/login">Login</a> | <a href="/register">SignUp</a> for make to request.
                                         @else
                                         <form action="/user/request-application" id="make-request" method="post">
+                                            {{ csrf_field() }}
+                                            <input type="hidden" name="user_profile">
                                             <div class="form-group">
                                                 @if($jobs->count() > 0)
                                                 <label for="offer-job">Job</label>
