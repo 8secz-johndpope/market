@@ -31,7 +31,7 @@
                             </tr>
                         </thead>
                     <tbody>
-                    @foreach($adverts as $advert)
+                        @foreach($adverts as $advert)
                         <tr>
                             <td><a href="{{$advert->url()}}"> {{$advert->param('title')}}</a>
                                 <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$advert->id}}">
@@ -40,7 +40,7 @@
                             <td><button class="btn btn-danger" onclick="$(this).parent().parent().remove();">Delete</button> </td>
 
                         </tr>
-                    @endforeach
+                        @endforeach
                         <tr>
                             <td>                                
                                 <button type="submit" class="btn btn-primary">Apply All</button>

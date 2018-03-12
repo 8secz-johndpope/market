@@ -17,6 +17,6 @@ class ApplicationRequest extends Model
 	}
 
 	public function getStatus(){
-		return self::STATUS[$this->status]
+		return self::STATUS[$this->status];
 	}
 }
