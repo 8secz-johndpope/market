@@ -10,6 +10,13 @@
     <p>This is appended to the master sidebar.</p>
 @endsection
 
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
+@section('styles')
+<link href="{{ asset("/css/bulk-discard.css?q=$dateMs") }}" rel="stylesheet" type="text/css">
+@endsection
 @section('content')
 <div class="body background-body">
     <div class="container">
