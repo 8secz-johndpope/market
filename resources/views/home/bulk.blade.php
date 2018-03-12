@@ -93,5 +93,20 @@
             $('.form-group').addClass('input-validation-error');
         }
     })
+    $('input[type=radio]').change(function(){
+        var value = $($this).val();
+        if(value == 0){
+            $('.cv').hide();
+            $('.profile').show();
+        }
+        else if(value == 1){
+            $('.cv').show();
+            $('.profile').hide();
+        }
+        else{
+            $('.cv').show();
+            $('.profile').show();
+        }
+    })
 </script>
 @endsection
