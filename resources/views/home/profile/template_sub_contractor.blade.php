@@ -571,12 +571,14 @@
                                             You need to be <a href="/login">Login</a> | <a href="/register">SignUp</a> for make to request.
                                         @else
                                         <div class="form-group">
+                                            @if($jobs->count() > 0)
                                             <label for="offer-job">Job</label>
                                             <select id="offer-job" name="offer_job" class="form-control">
                                                 @foreach($jobs as $job)
                                                 <option value="{{$job->id}}">{{$job->param('title')}}</option>
                                                 @endforeach
                                             </select>
+                                            @endif
                                         </div>
                                         <div class="form-group">
                                             <label for="offer-message">Message</label>
