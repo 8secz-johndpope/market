@@ -2414,6 +2414,7 @@ class MarketController extends BaseController
         }
         if($profile->isOwen($user) == false){
             $jobs = $user->jobs();
+            return $jobs;
             $params['jobs'] = $jobs;
         }
         return view('home.profile.template_'.$slug, $params);
