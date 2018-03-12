@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="current-cv col-sm-12">
                                     <h3 class="title">Your currents CVs</h3>
-                                    <table class="table table-striped table-hover">
+                                    <table class="table table-hover">
                                         <thead>
                                             <tr>
                                                 <th></th>
