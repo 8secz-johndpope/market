@@ -23,8 +23,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <h3>Discard All Applications Request</h3>
-                <form action="/user/jobs/discard/all" method="post">
+                <form action="/user/jobs/discard/all" method="post" id="form-bulk-discard">
                     {{ csrf_field() }}
+                    <div class="validation">
+                        <span>Please select at least one application</span>
+                    </div>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -54,4 +57,15 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+<script type="text/javascript">
+    $('#form-bulk-discard').submit(function(e){
+        var length = $('input:checked').length;
+        if(length == 0){
+            e.preventDefault();
+        }
+    })  
+</script>
+
 @endsection

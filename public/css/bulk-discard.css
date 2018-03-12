@@ -8,3 +8,19 @@
 .table tbody>tr {
     background-color: #eaf4fd;
 }
+form .validation {
+    display: block;
+    font-size: 1rem;
+    color: #d23a34;
+    margin-top: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 42px;
+    min-height: 2.8rem;
+    padding: 7.5px 15px;
+    border: 1px solid #d23a34;
+    background-color: #fcefee;
+    vertical-align: middle;
+    position: relative;
+}
