@@ -25,7 +25,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                         <li><a data-toggle="tab" href="#tab-applications">My Applications</a></li>
-                        <li><a data-toggle="tab" href="#tab-requests">My Requests to apply</a></li>
+                        <li><a data-toggle="tab" href="#tab-requests">My Applications Request</a></li>
                         <li><a data-toggle="tab" href="#tab-reply">Reply</a></li>
                     </ul>
                     <div class="tab-content">
