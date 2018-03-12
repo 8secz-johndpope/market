@@ -310,9 +310,9 @@ class User extends Authenticatable
         return  $this->transactions()->where('direction',1)->sum('amount')-$this->transactions()->where('direction',0)->sum('amount');
     }
     public function applicationRequests(){
-        return $this->hasMany('App\Mode\ApplicationRequest', 'candidate_id');
+        return $this->hasMany('App\Model\ApplicationRequest', 'candidate_id');
     }
     public function applicationRequestsSent(){
-        return $this->hasMany('App\Mode\ApplicationRequest');
+        return $this->hasMany('App\Model\ApplicationRequest');
     }
 }

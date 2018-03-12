@@ -62,6 +62,7 @@ use App\Model\QualificationType;
 use App\Model\Image;
 use App\Model\Skill;
 use App\Model\Field;
+use App\Model\ApplicationRequest;
 use Illuminate\Support\Facades\Auth;
 use Cassandra;
 use Ramsey\Uuid\Uuid;
