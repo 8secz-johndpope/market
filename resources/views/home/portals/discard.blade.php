@@ -66,7 +66,7 @@
         var length = $('input:checked').length;
         if(length == 0){
             e.preventDefault();
-            $('.form-group:first-child').addClass('input-validation-error');
+            $('.form-group').addClass('input-validation-error');
         }
     })  
 </script>
