@@ -3036,7 +3036,7 @@ class HomeController extends BaseController
             $advert = Advert::find($id);
             $ads[] = $advert;
         }
-        return view('home.discard',['user'=>$user,'adverts'=> $ads]);
+        return view('home.portals.discard',['user'=>$user,'adverts'=> $ads]);
 
     }
 }
