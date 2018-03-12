@@ -35,9 +35,8 @@
                         <tbody>
                             @foreach($adverts as $advert)
                             <tr>
-                                <td><a href="{{$advert->url()}}"> {{$advert->param('title')}}</a>
+                                <td><a href="{{$advert->url()}}" target="_black"> {{$advert->param('title')}}</a>
                                     <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$advert->id}}">
-
                                 </td>
                                 <td>
                                     <button class="btn btn-danger" onclick="$(this).parent().parent().remove();">Delete</button> 
