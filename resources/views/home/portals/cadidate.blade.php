@@ -198,6 +198,9 @@
                                                 No
                                             @endif
                                         </td>
+                                        <td>
+                                            {{$application->getStatus()}}
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
