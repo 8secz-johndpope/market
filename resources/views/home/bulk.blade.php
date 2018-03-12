@@ -45,14 +45,11 @@
 
                             </tr>
                             @endforeach
-                            <tr>
-                                <td>
-                                    <button type="submit" class="btn btn-primary">Apply All</button>
-                                </td>
-
-                            </tr>
                         </tbody>
                     </table>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Apply All</button>
+                    </div>
                 </form>
             </div>
         </div>

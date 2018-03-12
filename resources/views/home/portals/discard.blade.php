@@ -25,32 +25,30 @@
                 <h3>Discard All Applications Request</h3>
                 <form action="/user/jobs/discard/all" method="post">
                     {{ csrf_field() }}
-                    <table class="table table-striped">
+                    <table class="table table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">Title</th>
                                 <th scope="col">Delete</th>
                             </tr>
                         </thead>
-                    <tbody>
-                        @foreach($adverts as $advert)
-                        <tr>
-                            <td>
-                                <a href="{{$advert->url()}}"> {{$advert->param('title')}}</a>
-                                <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$advert->id}}">
-                            </td>
-                            <td>
-                                <button class="btn btn-danger" onclick="$(this).parent().parent().remove();">Delete</button> 
-                            </td>
-                        </tr>
-                        @endforeach
-                        <tr>
-                            <td>                                
-                                <button type="submit" class="btn btn-primary">Discard All</button>
-                            </td>
-                        </tr>
-                    </tbody>
+                        <tbody>
+                            @foreach($adverts as $advert)
+                            <tr>
+                                <td>
+                                    <a href="{{$advert->url()}}"> {{$advert->param('title')}}</a>
+                                    <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$advert->id}}">
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger" onclick="$(this).parent().parent().remove();">Delete</button> 
+                                </td>
+                            </tr>
+                            @endforeach                                
+                        </tbody>
                     </table>
+                    <div class="form-group">
+                         <button type="submit" class="btn btn-primary">Discard All</button>
+                    </div>
                 </form>
             </div>
         </div>
