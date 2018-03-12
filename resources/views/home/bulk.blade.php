@@ -21,7 +21,7 @@
 <div class="body background-body">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-10">
                 <h3>Bulk Apply</h3>
                 <form action="/user/jobs/apply/all" method="post">
                     {{ csrf_field() }}

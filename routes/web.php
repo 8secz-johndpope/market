@@ -187,6 +187,7 @@ Route::post('/user/jobs/apply/show', 'HomeController@apply_show');
 Route::post('/user/jobs/application-requests/discard', 'HomeController@discardShow');
 
 Route::post('/user/jobs/apply/all', 'HomeController@apply_all');
+Route::post('/user/jobs/discard/all', 'HomeController@discardAll');
 Route::post('/user/templates/save', 'HomeController@save_template');
 Route::post('/user/reply/all', 'HomeController@reply_all');
 
