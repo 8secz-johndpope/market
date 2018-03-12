@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ApplicationRequest extends Model
 {
 	public function advert(){
-		return $this->hasOne('App\Model\Advert');
+		return $this->belongsTo('App\Model\Advert');
 	}
 }
