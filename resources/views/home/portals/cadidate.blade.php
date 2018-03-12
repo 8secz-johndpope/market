@@ -273,7 +273,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <form id="bulk-apply-form" action="/user/jobs/apply/show" method="post">
+                                    <form id="bulk-apply-form" action="/user/jobs/application-request/apply/" method="post">
                                         {{ csrf_field() }}
                                         <table class="w100p table table-striped table-hover">
                                             <thead>
