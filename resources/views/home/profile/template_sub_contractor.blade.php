@@ -574,7 +574,7 @@
                                             <label for="offer-job">Job</label>
                                             <select id="offer-job" name="offer_job" class="form-control">
                                                 @foreach($jobs as $job)
-                                                <option value="{{$jobs->id}}">{{$jobs->param('title')}}</option>
+                                                <option value="{{$job->id}}">{{$job->param('title')}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
