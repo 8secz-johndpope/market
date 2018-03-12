@@ -339,10 +339,12 @@
             buttons = $('#tab-requests a.btn-disable');
             buttons.addClass('btn-action');
             buttons.removeClass('btn-disable');
+             buttons.prop('disabled'. false);
             $('#tab-requests .num-jobs').text(checkboxs.length);
         }else{
             $('#tab-requests .num-jobs').text(0);
             buttons = $('#tab-requests a.btn-action');
+            buttons.prop('disabled'. true);
             buttons.addClass('btn-disable');
             buttons.removeClass('btn-action');
         }   
