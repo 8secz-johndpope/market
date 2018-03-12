@@ -315,4 +315,7 @@ class User extends Authenticatable
     public function applicationRequestsSent(){
         return $this->hasMany('App\Model\ApplicationRequest');
     }
+    public function isVerifyAccount(){
+        return $this->email_verified == 1;
+    }
 }

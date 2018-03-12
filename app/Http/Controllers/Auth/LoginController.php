@@ -42,9 +42,12 @@ class LoginController extends BaseController
 
     public function authenticate(Request $request)
     {
-        if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1])) {
+        if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1, 'email_verified' =>1])) {
             // Authentication passed...
             return redirect()->intended('/');
+        }
+        else if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1, 'email_verified' => 0])) {
+            return redirect()->back()->with('msg', 'Your account is not active, please check you email and active your account');
         }
         else if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>0])) {
             return redirect()->back()->with('msg', 'Your account is disabled, please contact customer support');
