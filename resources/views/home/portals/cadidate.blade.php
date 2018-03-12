@@ -253,10 +253,10 @@
                                             <tr>
                                                 <th></th>
                                                 <th>Title</th>
-                                                <th>Views</th>
-                                                <th>Listing Views</th>
-                                                <th>Number of replies</th>
-                                                <th>Times bumped up</th>
+                                                <th>Message</th>
+                                                <th>Company</th>
+                                                <th>Location</th>
+                                                <th>Contact</th>
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -564,7 +564,14 @@
                                     </div>
                                 </div>
                                 <div id="tab-req-application" class="tabcontent">
-                                    
+                                  <div class="row">
+                                    <h2>Request My Application</h2>
+                                    <div class="col-xs-12">
+                                        @if(Auth::guest())
+                                            You need <a href="/login">Login</a> | <a href="/register">SignUp</a> for make to request.
+                                        @endif
+                                    </div>
+                                  </div>
                                 </div>
                             </div>
                         </div>
