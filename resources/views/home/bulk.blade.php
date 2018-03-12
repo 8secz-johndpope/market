@@ -23,8 +23,11 @@
         <div class="row">
             <div class="col-sm-10">
                 <h3>Bulk Apply</h3>
-                <form action="/user/jobs/apply/all" method="post">
+                <form action="/user/jobs/apply/all" method="post" id="form-bulk-apply">
                     {{ csrf_field() }}
+                    <div class="validation">
+                        <span>Please select at least one application</span>
+                    </div>
                     <table class="table table-hover">
                         <thead>
                         <tr>
@@ -36,7 +39,7 @@
                             @foreach($adverts as $advert)
                             <tr>
                                 <td><a href="{{$advert->url()}}" target="_black"> {{$advert->param('title')}}</a>
-                                    <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$advert->id}}">
+                                    <input required="Please select at least one appplication" class="select-request" type="hidden" name="ids[]" value="{{$advert->id}}">
                                 </td>
                                 <td>
                                     <button class="btn btn-danger" onclick="$(this).parent().parent().remove();">Delete</button> 
@@ -54,4 +57,14 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+<script type="text/javascript">
+    $('#form-bulk-apply').submit(function(e){
+        var length = $('input:checked').length;
+        if(length == 0){
+            e.preventDefault();
+        }
+    })
+</script>
 @endsection
