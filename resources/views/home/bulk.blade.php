@@ -25,8 +25,10 @@
                 <h3>Bulk Apply</h3>
                 <form action="/user/jobs/apply/all" method="post" id="form-bulk-apply">
                     {{ csrf_field() }}
-                    <div class="validation">
-                        <span>Please select at least one application</span>
+                    <div class="form-group">
+                        <div class="validation">
+                            <span>Please select at least one application</span>
+                        </div>
                     </div>
                     <table class="table table-hover">
                         <thead>
@@ -64,6 +66,7 @@
         var length = $('input:checked').length;
         if(length == 0){
             e.preventDefault();
+            $('.form-group:first-child').addClass('input-validation-error');
         }
     })
 </script>
