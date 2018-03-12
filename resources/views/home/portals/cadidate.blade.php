@@ -51,19 +51,20 @@
                                 <div class="col-sm-9 container-overview">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <h4>Unread Response</h4>
+                                            <h4>My Applications Request</h4>
                                             <hr>
                                             <div class="container-candidates">
                                                 <ul class="list-group">
-                                                    @foreach($myApplications as $application)
-                                                    @if(isset($application->applications) > 0)
+                                                    @foreach($myRequests as $request)
+                                                        @if($loop->index == 4)
+                                                            @break
+                                                        @endif
                                                         <li class="list-group-item">
                                                             <div class="container-job-title">
-                                                                <p><strong>{{$application->param('title')}}</strong> - <span class="job-location">{{$application->param('location_name')}}</span></p>
-                                                                <p class="blue-color"><a href="/job/manage/applications/{{$application->id}}">{{count($application->applications)}} Unread Candidates</a></p>
+                                                                <p><strong>{{$request->advert->param('title')}}</strong> - <span class="job-location">{{$request->advert->param('location_name')}}</span></p>
+                                                                <p class="blue-color">Unread Candidates</p>
                                                             </div>
                                                         </li>
-                                                    @endif
                                                     @endforeach
                                                 </ul>
                                             </div>
@@ -267,7 +268,7 @@
                                                 <tr>
                                                     <td><input type="checkbox" ></td>
                                                     <td>
-                                                        <a href="{{$application->advert->url()}}">
+                                                        <a href="{{$request->advert->url()}}">
                                                             {{$request->advert->param('title')}}
                                                         </a>
                                                     </td>
