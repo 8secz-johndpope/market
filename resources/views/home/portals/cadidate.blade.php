@@ -80,7 +80,7 @@
                                                             <li class="list-group-item">
                                                                 <div class="container-job-title">
                                                                     <p><strong>{{$application->advert->param('title')}}</strong> - <span class="job-location">{{$application->advert->param('location_name')}}</span></p>
-                                                                    <p class="blue-color">{{$application->status}}</p>
+                                                                    <p class="blue-color">{{$application->getStatus()}}</p>
                                                                 </div>
                                                             </li>
                                                         @endforeach
