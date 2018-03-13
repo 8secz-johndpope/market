@@ -47,7 +47,6 @@ class LoginController extends BaseController
             return redirect()->intended('/');
         }
         else if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>0])) {
-            var_dump(auth::user());die;
             auth()->logout();
             return redirect()->back()->with('msg', 'Your account is disabled, please contact customer support');
         }
