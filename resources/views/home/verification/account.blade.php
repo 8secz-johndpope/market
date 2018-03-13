@@ -14,6 +14,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+                @if(session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{session('status')}}
+                </div>
+                @endif
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3>We sent you an activation code. Check your email and click on the link verification. You must verify your address to continue</h3>
