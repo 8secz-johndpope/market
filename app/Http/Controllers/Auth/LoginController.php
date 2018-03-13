@@ -43,7 +43,7 @@ class LoginController extends BaseController
     public function authenticate(Request $request)
     {
         if (Auth::attempt(['email' => $request->email , 'password' => $request->password, 'enabled' => 1])) {
-            if($user->isVerifyAccount()){
+            if(Auth::user()->isVerifyAccount()){
                 return redirect()->intended($this->redirectPath());
             }
             else{
