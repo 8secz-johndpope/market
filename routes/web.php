@@ -86,6 +86,7 @@ Route::post('/user/request-application', 'HomeController@applicationRequest');
 Route::post('/user/groups/add', 'MessageController@add_group');
 Route::post('/user/send/broadcast', 'MessageController@send_broadcast');
 
+Route::get('/user/verify-email', 'HomeController@verifyAccount');
 Route::get('/user/direct/message/{id}', 'MessageController@direct_message');
 Route::get('/user/direct/invoice/{id}', 'MessageController@direct_invoice');
 

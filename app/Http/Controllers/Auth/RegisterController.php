@@ -32,7 +32,7 @@ class RegisterController extends BaseController
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/user/verify-email';
 
     /**
      * Create a new controller instance.
@@ -70,7 +70,7 @@ class RegisterController extends BaseController
     protected function create(array $data)
     {
 
-            $user = new User;
+        $user = new User;
         $user->more([
             'name' => $data['name'],
             'last' => $data['last'],

@@ -3067,5 +3067,9 @@ class HomeController extends BaseController
         return view('home.bulk',['user'=>$user,'adverts'=> $ads]);
 
     }
+    public function verifyAccount(Request $request){
+        $user = Auth::user();
+        return view('home.verification.account', ['user' => $user]);
+    }
 
 }
