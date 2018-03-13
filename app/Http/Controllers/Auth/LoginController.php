@@ -46,16 +46,19 @@ class LoginController extends BaseController
             // Authentication passed...
             return redirect()->intended('/');
         }
-        else if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1, 'email_verified' => 0])) {
-            return redirect()->back()->with('msg', 'Your account is not active, please check you email and active your account');
-        }
         else if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>0])) {
             return redirect()->back()->with('msg', 'Your account is disabled, please contact customer support');
-
         }
         else{
             return redirect()->back()->with('msg', 'Incorrect login details, please check your email and password');
         }
+    }
+    public function authenticated(Request $request, $user){
+        if(!$user->isVerifyAccount()){
+            auth()->logout();
+            return back()->with('msg', 'You need to confirm your account. We have sent you an activation code, please check your email.');
+        }
+        return redirect()->intended($this->redirectPath());
     }
 
 
