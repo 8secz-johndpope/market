@@ -170,8 +170,7 @@
                                         <strong>Applications selected: </strong><span class="num-jobs">0</span>
                                     </div>
                                     <div class="btns-actions">
-                                        <button class="btn btn-disable">Withdraw Application</button>
-                                        <button class="btn btn-disable">Refresh</button>
+                                        <button class="btn btn-disable" id="withdraw-applications">Withdraw Application</button>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
@@ -182,51 +181,59 @@
                                             <li><a href="#">Date</a></li>
                                         </ul>
                                 </div>
+                                <div class="col-xs-12">
+                                    <div class="alert alert-success" role="alert" style="display:none;">
+                                        <span class="message"></span>
+                                    </div>
+                                </div>
                             </div>
-                            <table class="w100p table table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Title</th>
-                                        <th>Location</th>
-                                        <th>Date</th>
-                                        <th>CV</th>
-                                        <th>Profile</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($myApplications as $application)
-                                    <tr>
-                                        <td><input type="checkbox" name="select-job[]" class="checkboxs-jobs"></td>
-                                        <td><a href="{{$application->advert->url()}}">{{$application->advert->param('title')}}</a></td>
-                                        <td>{{$application->advert->param('location_name')}}</td>
-                                        <td>{{$application->created_at->format('d M Y')}}</td>
-                                        <td>
-                                            @if(isset($application->cv))
-                                            <a href="">
-                                                {{$application->cv->title}}
-                                            </a>
-                                            @else
-                                                No
-                                            @endif
-                                        </td>
-                                        <td>
-                                            @if(isset($application->profile))
-                                            <a href="/job/profile/edit/{{$application->profile->type}}">
-                                                {{$application->profile->getType()}}
-                                            </a>
-                                            @else
-                                                No
-                                            @endif
-                                        </td>
-                                        <td>
-                                            {{$application->getStatus()}}
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                            <form action="/user/jobs/withdraw/applications" id="form-withdraw-applications" method="post">
+                                {{ csrf_field() }} 
+                                <table class="w100p table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Title</th>
+                                            <th>Location</th>
+                                            <th>Date</th>
+                                            <th>CV</th>
+                                            <th>Profile</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($myApplications as $application)
+                                        <tr>
+                                            <td><input type="checkbox" name="select_job[]" class="checkboxs-jobs" value="{{$application->id}}"></td>
+                                            <td><a href="{{$application->advert->url()}}">{{$application->advert->param('title')}}</a></td>
+                                            <td>{{$application->advert->param('location_name')}}</td>
+                                            <td>{{$application->created_at->format('d M Y')}}</td>
+                                            <td>
+                                                @if(isset($application->cv))
+                                                <a href="">
+                                                    {{$application->cv->title}}
+                                                </a>
+                                                @else
+                                                    No
+                                                @endif
+                                            </td>
+                                            <td>
+                                                @if(isset($application->profile))
+                                                <a href="/job/profile/edit/{{$application->profile->type}}">
+                                                    {{$application->profile->getType()}}
+                                                </a>
+                                                @else
+                                                    No
+                                                @endif
+                                            </td>
+                                            <td>
+                                                {{$application->getStatus()}}
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </form>
                         </div>
                         <div class="tab-pane fade in" id="tab-requests">
                             <div class="row">
@@ -366,5 +373,32 @@
         form.attr('action', '/user/jobs/application-requests/discard');
         form.submit();
     });
+    $('#withdraw-applications').click(function(){
+        var length = $('.checkboxs-jobs:checked').length;
+        if(length > 0){
+            $('#form-withdraw-applications').submit();
+        }
+    });
+    $('#form-withdraw-applications').submit(function(e){
+        e.preventDefault();
+        var formData = $(this).serialize();
+        console.log(formData);
+        axios.post($(this).attr('action'), formData)
+        .then(function(response){
+            removeApplications();
+            var alertSelector = $('.alert-success');
+            alertSelector.find('.message').text(response.data.status);
+            alertSelector.show();
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    });
+    function removeApplications(){
+        $('.checkboxs-jobs:checked').each(function(){
+            $(this).closest('tr').remove();
+        })
+    }
 </script>
 @endsection

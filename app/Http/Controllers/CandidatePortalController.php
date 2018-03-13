@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Model\Application;
 class CandidatePortalController extends BaseController
 {
    
@@ -19,7 +20,7 @@ class CandidatePortalController extends BaseController
     }
     public function withdrawApplication(Request $request){
         $user = Auth::user();
-        foreach($request->ids as $id){
+        foreach($request->select_job as $id){
             $application = Application::find($id);
             $application->status = 2;
             $user->applications()->save($application);

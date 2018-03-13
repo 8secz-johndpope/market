@@ -29,4 +29,7 @@ class Application extends Model
     public function getStatus(){
         return self::STATUS[$this->status];
     }
+    public function profile(){
+        return $this->belongsTo('App\Model\Profile');
+    }
 }
