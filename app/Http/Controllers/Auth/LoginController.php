@@ -54,6 +54,7 @@ class LoginController extends BaseController
         }
     }
     public function authenticated(Request $request, $user){
+        var_dump($user);die;
         if(!$user->isVerifyAccount()){
             auth()->logout();
             return back()->with('msg', 'You need to confirm your account. We have sent you an activation code, please check your email.');
