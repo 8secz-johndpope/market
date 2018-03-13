@@ -47,6 +47,8 @@ class LoginController extends BaseController
             return redirect()->intended('/');
         }
         else if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>0])) {
+            var_dump($user);die;
+            auth()->logout();
             return redirect()->back()->with('msg', 'Your account is disabled, please contact customer support');
         }
         else{
@@ -54,9 +56,7 @@ class LoginController extends BaseController
         }
     }
     public function authenticated(Request $request, $user){
-        var_dump($user);die;
         if(!$user->isVerifyAccount()){
-            auth()->logout();
             return back()->with('msg', 'You need to confirm your account. We have sent you an activation code, please check your email.');
         }
         return redirect()->intended($this->redirectPath());
