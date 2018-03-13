@@ -87,7 +87,7 @@
 @section('scripts')
 <script type="text/javascript">
     $('#form-bulk-apply').submit(function(e){
-        var length = $('input:checked').length;
+        var length = $('.select-request').length;
         if(length == 0){
             e.preventDefault();
             $('.form-group').addClass('input-validation-error');
