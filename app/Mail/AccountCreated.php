@@ -17,7 +17,7 @@ class AccountCreated extends Mailable
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct($user)
     {
         $this->user = $user;
     }
@@ -29,6 +29,6 @@ class AccountCreated extends Mailable
      */
     public function build()
     {
-        return $this->subject('Welcome to '.env('APP_NAME').'!')->markdown('emails.accounts.created',['url'=>env('APP_URL').'/user/email/verify?code='.$this->user->emailCode->code.'&user_id='$this->user->id]);
+        return $this->subject('Welcome to '.env('APP_NAME').'!')->markdown('emails.accounts.created',['url'=>env('APP_URL').'/user/email/verify?code='.$this->user->emailCode->code.'&user_id='.$this->user->id]);
     }
 }

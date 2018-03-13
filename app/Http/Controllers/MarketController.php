@@ -2449,7 +2449,9 @@ class MarketController extends BaseController
                 $params = ['msg'=>'Your email is successfully verified'];
             }
         }
-        $params = ['msg'=>'Oops! Something went wrong here'];
-        return view('home.verified', $params);
+        else{
+            $params = ['msg'=>'Oops! Something went wrong here'];
+        }
+        return view('home.verification.verified', $params);
     }
 }
