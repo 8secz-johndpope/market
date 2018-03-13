@@ -2421,7 +2421,11 @@ class MarketController extends BaseController
         return view('home.profile.template_'.$slug, $params);
     }
     public function verifyAccount(Request $request){
-        return view('home.verification.account', ['user' => $request->user_id]);
+        $user = User::find($request->user_id);
+        if($user->isVerifyAccount()){
+            return redirect('/');
+        }
+        return view('home.verification.account', ['user' => $user->id]);
     }
     public function sendVerifyCode(Request $request){
         $user = User::find($request->user_id);
@@ -2450,7 +2454,7 @@ class MarketController extends BaseController
             }
         }
         else{
-            $params = ['msg'=>'Oops! Something went wrong here'];
+            $params = ['error'=>'Oops! Something went wrong here', 'user' => $user->id];
         }
         return view('home.verification.verified', $params);
     }

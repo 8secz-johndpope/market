@@ -8,6 +8,14 @@
     <p>This is appended to the master sidebar.</p>
 @endsection
 
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
+@section('styles')
+<link rel="stylesheet" href="{{asset("/css/register.css?q=$dateMs")}}">
+@endsection
+
 @section('content')
 <div class="body background-body">
     <div class="container">
@@ -18,8 +26,13 @@
                         <h3>Verifying email address</h3>
                     </div>
                     <div class="panel-body">
-                        <p>{{$msg}}</p>
-                        <p>Please return to the <a href="/login">login</a> to enjoy of {{env('APP_NAME')}
+                        @if(isset($msg))
+                        <p class="alert alert-success" role="alert">{{$msg}}</p>
+                        <p>Please return to the <a href="/login">login</a> to enjoy of {{env('APP_NAME')}}
+                        @elseif(isset($error))
+                        <p>{{$error}}</p>
+                        <p>Please do click on the link <a href="/user/verify-email?user_id={{$user}}">resend code</a> to enjoy of {{env('APP_NAME')}}
+                        @endif
                     </div>
                 </div>
             </div>
