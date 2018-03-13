@@ -2425,6 +2425,12 @@ class MarketController extends BaseController
     }
     public function sendVerifyCode(Request $request){
         $user = User::find($request->user_id);
+        if($user == null){
+            return back()->with('error', 'User no valid');
+        }
+        if($user->isVerifyAccount())
+            return redirect('/');
+        }
         $acc = new AccountCreated();
         $verify = new EmailCode;
         $verify->code=uniqid();
