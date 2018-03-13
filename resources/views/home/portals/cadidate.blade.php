@@ -76,9 +76,9 @@
                                                 <h4>My Applications</h4>
                                                 <hr>
                                                 <div class="container-candidates">
-                                                    @if($myApplications->count() > 0)
+                                                    @if($latestApplications->count() > 0)
                                                     <ul class="list-group">
-                                                        @foreach($myApplications as $application)
+                                                        @foreach($latestApplications as $application)
                                                             @if($loop->index == 4)
                                                                 @break
                                                             @endif
@@ -136,21 +136,26 @@
                             </div>
                             <div class="row">
                                 <div class="container-filter clearfix">
-                                    <div class="col-md-5">
-                                        <label for="keywords">Keywords</label>
-                                        <input type="text" name="keywords" class="form-control">
-                                    </div>
-                                    <div class="col-md-5">
-                                        <label for="status">Status</label>
-                                        <select class="form-control" name="status">
-                                            <option value="1" checked>Pending</option>
-                                            <option value="0">Rejected</option>
-                                            <option value="2">Inactive</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-2 container-btn">
-                                        <button class="btn btn-filter">Filter</button>
-                                    </div>    
+                                    <form action="/user/job/portal" method="post">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="tab" value="tab-applications"> 
+                                        <div class="col-md-5">
+                                            <label for="keywords">Keywords</label>
+                                            <input type="text" name="keywords" class="form-control" value="{{isset($keywordsFilter) ? $keywordsFilter : ''}}">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label for="status">Status</label>
+                                            <select class="form-control" name="status">
+                                                <option value="">Select Status</option>
+                                                @foreach($applicationStatus as $status)
+                                                <option value="{{$loop->index}}" {{isset($statusFilter) && $loop->index == $statusFilter ? 'selected' : ''}}>{{$status}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2 container-btn">
+                                            <button class="btn btn-filter" type="submit">Filter</button>
+                                        </div>
+                                    </form>    
                                 </div>
                             </div>
                             <!-- <div class="row">
@@ -178,7 +183,6 @@
                                         <ul class="type-filters">
                                             <li><a href="#">Created</a></li>
                                             <li><a href="#">Name</a></li>
-                                            <li><a href="#">Date</a></li>
                                         </ul>
                                 </div>
                                 <div class="col-xs-12">
@@ -210,7 +214,7 @@
                                             <td>{{$application->created_at->format('d M Y')}}</td>
                                             <td>
                                                 @if(isset($application->cv))
-                                                <a href="">
+                                                <a href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">
                                                     {{$application->cv->title}}
                                                 </a>
                                                 @else
@@ -219,7 +223,7 @@
                                             </td>
                                             <td>
                                                 @if(isset($application->profile))
-                                                <a href="/job/profile/edit/{{$application->profile->type}}">
+                                                <a href="/job/profile/edit/{{$application->profile->type}}" target="_black">
                                                     {{$application->profile->getType()}}
                                                 </a>
                                                 @else
@@ -243,21 +247,26 @@
                             </div>
                             <div class="row">
                                 <div class="container-filter clearfix">
-                                    <div class="col-md-5">
-                                        <label for="keywords">Keywords</label>
-                                        <input type="text" name="keywords" class="form-control">
-                                    </div>
-                                    <div class="col-md-5">
-                                        <label for="status">Application Status</label>
-                                        <select class="form-control" name="status">
-                                            <option value="1" checked>New</option>
-                                            <option value="0">Reviewed</option>
-                                            <option value="2">Rejected</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-2 container-btn">
-                                        <button class="btn btn-filter">Filter</button>
-                                    </div>    
+                                    <form action="/user/job/portal" method="post">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="tab" value="tab-requests"> 
+                                        <div class="col-md-5">
+                                            <label for="keywords">Keywords</label>
+                                            <input type="text" name="keywords" class="form-control">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label for="status">Application Status</label>
+                                            <select class="form-control" name="status">
+                                                <option value="">Select Status</option>
+                                                @foreach($requestStatus as $status)
+                                                <option value="{{$loop->index}}">{{$status}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2 container-btn">
+                                            <button class="btn btn-filter" type="submit">Filter</button>
+                                        </div>
+                                    </form>    
                                 </div>
                             </div>
                             <div class="row">
@@ -382,14 +391,13 @@
     $('#form-withdraw-applications').submit(function(e){
         e.preventDefault();
         var formData = $(this).serialize();
-        console.log(formData);
         axios.post($(this).attr('action'), formData)
         .then(function(response){
             removeApplications();
             var alertSelector = $('.alert-success');
             alertSelector.find('.message').text(response.data.status);
             alertSelector.show();
-            console.log(response);
+            alertSelector.delay(3000).fadeOut(300);
         })
         .catch(function (error) {
             console.log(error);
@@ -398,7 +406,10 @@
     function removeApplications(){
         $('.checkboxs-jobs:checked').each(function(){
             $(this).closest('tr').remove();
-        })
+        });
     }
+    @if(isset($tab))
+        $('.nav-tabs a[href="#{{$tab}}"]').tab('show');
+    @endif
 </script>
 @endsection

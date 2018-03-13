@@ -143,6 +143,13 @@ class User extends Authenticatable
     {
         return $this->applications()->where('status','<>',2);
     }
+    public function latestApplications()
+    {
+        return $this->applications()->where('status','<>',2)->limit(4);
+    }
+    public function applicationByStatus($status){
+        return $this->applications()->where('status', $status)->get();
+    }
     public function templates()
     {
         return $this->hasMany('App\Model\ReplyTemplate');
