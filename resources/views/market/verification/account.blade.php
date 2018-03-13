@@ -1,8 +1,17 @@
 @extends('layouts.app')
 
-@section('content')
+
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
+
+@section('styles')
 <link rel="stylesheet" href="/build/css/intlTelInput.css">
-<link rel="stylesheet" href="/css/register.css">
+<link rel="stylesheet" href="{{asset("/css/register.css?q=$dateMs")}}">
+@endsection
+@section('content')
+
 <script src="/build/js/intlTelInput.js"></script>
 <div class="body">
     <div class="container">
@@ -161,14 +170,11 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
 <script>
     function onSubmit(token) {
-
-
         document.getElementById("register-form").submit();
-
-
-
     }
     $("#phone").intlTelInput();
 
