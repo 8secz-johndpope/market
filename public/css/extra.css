@@ -1796,7 +1796,7 @@ span.green-text, span.yellow-text{
 .btn-submit {
     color: #fff;
     background: #ff9d2c;
-    width: 200px;
+    min-width: 200px;
     padding: 10px 40px;
 }
 #email-sendme {
