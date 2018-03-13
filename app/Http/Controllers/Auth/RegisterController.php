@@ -107,15 +107,11 @@ class RegisterController extends BaseController
         $transaction->description = "Registration Credit for ".$user->name;
         $transaction->direction = 1;
         $transaction->save();
-
-
-
-        $acc = new AccountCreated();
         $verify = new EmailCode;
         $verify->user_id = $user->id;
         $verify->code=uniqid();
         $verify->save();
-        $acc->verify_code=$verify->code;
+        $acc = new AccountCreated($user);
         Mail::to($user)->send($acc);
         return $user;
         /*

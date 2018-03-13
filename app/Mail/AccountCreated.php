@@ -11,15 +11,15 @@ class AccountCreated extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $verify_code = "1211232";
+    private $user;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(User $user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -29,7 +29,6 @@ class AccountCreated extends Mailable
      */
     public function build()
     {
-        return $this->subject('Welcome to '.env('APP_NAME').'!')->markdown('emails.accounts.created',['url'=>env('APP_URL').'/user/email/verify?code='.$this->verify_code]);
-
+        return $this->subject('Welcome to '.env('APP_NAME').'!')->markdown('emails.accounts.created',['url'=>env('APP_URL').'/user/email/verify?code='.$this->user->emailCode->code.'&user_id='$this->user->id]);
     }
 }

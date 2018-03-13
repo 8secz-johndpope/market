@@ -2431,12 +2431,25 @@ class MarketController extends BaseController
         if($user->isVerifyAccount()){
             return redirect('/');
         }
-        $acc = new AccountCreated();
         $verify = new EmailCode;
         $verify->code=uniqid();
         $user->emailCode()->save($verify);
-        $acc->verify_code=$verify->code;
+        $acc = new AccountCreated($user);
         Mail::to($user)->send($acc);
         return back()->with('status', 'We sent you an activation code. Check your email and click on the link verification');
+    }
+    public function verify(Request $request){
+        $user = User::find($request->user_id);
+        $email_code = EmailCode::where('code',$request->code)->first();
+        $params = null;
+        if($email_code!==null){
+            if($user->id===$email_code->user->id){
+                $user->email_verified=1;
+                $user->save();
+                $params = ['msg'=>'Your email is successfully verified']);
+            }
+        }
+        $params = ['msg'=>'Oops! Something went wrong here'];
+        return view('home.verified', $params);
     }
 }

@@ -282,7 +282,7 @@ Route::get('/user/payment/invoice/paypal/{id}', 'HomeController@invoice_paypal')
 Route::post('/user/payment/invoice/paypal/{id}', 'HomeController@invoice_paypal');
 Route::get('/user/payment/paypal', 'HomeController@paypal');
 
-Route::get('/user/email/verify', 'HomeController@verify');
+Route::get('/user/email/verify', 'MarketController@verify');
 Route::post('/user/list/favorite','UserController@favorite')->middleware('auth');
 Route::post('/user/list/unfavorite','UserController@unfavorite')->middleware('auth');
 Route::get('/user/list/price','UserController@price')->middleware('auth');
