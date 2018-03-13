@@ -2421,4 +2421,14 @@ class MarketController extends BaseController
     public function verifyAccount(Request $request){
         return view('home.verification.account', ['user' => $request->user_id]);
     }
+    public function sendVerifyCode(Request $request){
+        $user = User::find($request->user);
+        $acc = new AccountCreated();
+        $verify = new EmailCode;
+        $verify->code=uniqid();
+        $user->emailCode()->save($verify);
+        $acc->verify_code=$verify->code;
+        Mail::to($user)->send($acc);
+        return back()->with('status', 'We sent you an activation code. Check your email and click on the link verification');
+    }
 }

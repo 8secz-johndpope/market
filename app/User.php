@@ -318,4 +318,7 @@ class User extends Authenticatable
     public function isVerifyAccount(){
         return $this->email_verified;
     }
+    public function emailCode(){
+        return $this->hasOne('App\Model\EmailCode');
+    }
 }

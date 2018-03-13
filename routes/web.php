@@ -58,6 +58,7 @@ Route::get('/user/employment-status/create', 'HomeController@createEmploymentSta
 Route::post('/user/employment-status/add', 'HomeController@addEmploymentStatus');
 Route::get('/user/manage/contacts', 'HomeController@contacts');
 Route::get('/user/manage/invoices', 'HomeController@invoices');
+Route::get('/user/send/verify-code', 'MarketController@sendVerifyCode');
 
 Route::get('/user/contacts/add', 'HomeController@add_contact');
 Route::get('/user/groups/create', 'HomeController@create_group');
