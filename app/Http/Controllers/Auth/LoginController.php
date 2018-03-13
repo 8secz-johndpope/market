@@ -42,7 +42,7 @@ class LoginController extends BaseController
 
     public function authenticate(Request $request)
     {
-        if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1, 'email_verified' =>1])) {
+        if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1])) {
             // Authentication passed...
             return redirect()->intended('/');
         }
@@ -60,7 +60,4 @@ class LoginController extends BaseController
         }
         return redirect()->intended($this->redirectPath());
     }
-
-
-
 }
