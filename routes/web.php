@@ -65,7 +65,7 @@ Route::get('/user/groups/create', 'HomeController@create_group');
 Route::get('/user/new/broadcast', 'HomeController@create_broadcast');
 Route::get('/user/edit/profile', 'HomeController@edit_profile');
 Route::get('/user/new/message', 'HomeController@new_message');
-Route::get('/user/job/portal', 'HomeController@candidatePortal');
+Route::get('/user/job/portal', 'CandidatePortalController@candidatePortal');
 Route::get('/user/transfer/balance/{id}', 'HomeController@transfer_balance');
 Route::post('/user/share/balance', 'HomeController@share_balance');
 Route::get('/wallet/transfer/{id}', 'BankController@transfer_balance');
@@ -190,6 +190,7 @@ Route::post('/user/jobs/application-request/apply', 'HomeController@candidateApp
 Route::post('/user/jobs/application-requests/discard', 'HomeController@discardShow');
 Route::post('/user/jobs/apply/all', 'HomeController@apply_all');
 Route::post('/user/jobs/discard/all', 'HomeController@discardAll');
+Route::post('/user/jobs/withdraw/applications', 'CadidatePortalController@withdrawApplication');
 Route::post('/user/templates/save', 'HomeController@save_template');
 Route::post('/user/reply/all', 'HomeController@reply_all');
 
