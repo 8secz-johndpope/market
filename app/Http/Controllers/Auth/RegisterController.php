@@ -135,7 +135,7 @@ class RegisterController extends BaseController
      */
     protected function registered(Request $request, $user)
     {
-        $this->guard()->logout();
+        auth()->logout();
         return redirect('/user/verify-email?user_id='.$user->id);
     }
 }
