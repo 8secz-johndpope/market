@@ -2418,4 +2418,7 @@ class MarketController extends BaseController
         }
         return view('home.profile.template_'.$slug, $params);
     }
+    public function verifyAccount(Request $request){
+        return view('home.verification.account', ['user' => $request->user_id]);
+    }
 }
