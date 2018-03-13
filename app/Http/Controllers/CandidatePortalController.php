@@ -28,7 +28,7 @@ class CandidatePortalController extends BaseController
     }
     public function candidatePortal(Request $request){
         $user = Auth::user();
-        $myApplications = $user->applications;
+        $myApplications = $user->liveApplications;
         $myRequests = $user->applicationRequests;
         return view('home.portals.cadidate', ['user' => $user, 'myApplications' => $myApplications, 'myRequests' => $myRequests]);
     }
