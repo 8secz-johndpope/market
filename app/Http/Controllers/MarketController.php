@@ -2446,7 +2446,7 @@ class MarketController extends BaseController
             if($user->id===$email_code->user->id){
                 $user->email_verified=1;
                 $user->save();
-                $params = ['msg'=>'Your email is successfully verified']);
+                $params = ['msg'=>'Your email is successfully verified'];
             }
         }
         $params = ['msg'=>'Oops! Something went wrong here'];
