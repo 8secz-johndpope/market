@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@php
+    $date = new Datetime();
+    $dateMs = $date->getTimestamp();
+@endphp
 @section('styles')
 <link rel="stylesheet" href="/build/css/intlTelInput.css">
 <link rel="stylesheet" href="{{asset("/css/register.css?q=$dateMs")}}">
