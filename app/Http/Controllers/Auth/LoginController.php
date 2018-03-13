@@ -42,7 +42,7 @@ class LoginController extends BaseController
 
     public function authenticate(Request $request)
     {
-        if (Auth::attempt(['email' => $request->email , 'password' => $request->password,'enabled'=>1])) {
+        if (Auth::attempt(['email' => $request->email , 'password' => $request->password, 'enabled' => 1, 'email_verified' => 1])) {
             // Authentication passed...
             return redirect()->intended('/');
         }
@@ -54,7 +54,7 @@ class LoginController extends BaseController
             return redirect()->back()->with('msg', 'Incorrect login details, please check your email and password');
         }
     }
-    public function authenticated(Request $request, $user){
+    protected function authenticated(Request $request, $user){
         if(!$user->isVerifyAccount()){
             return back()->with('msg', 'You need to confirm your account. We have sent you an activation code, please check your email.');
         }

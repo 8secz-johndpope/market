@@ -316,6 +316,6 @@ class User extends Authenticatable
         return $this->hasMany('App\Model\ApplicationRequest');
     }
     public function isVerifyAccount(){
-        return $this->email_verified == 1;
+        return $this->email_verified;
     }
 }
