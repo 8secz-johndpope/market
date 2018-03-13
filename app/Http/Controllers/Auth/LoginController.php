@@ -54,12 +54,14 @@ class LoginController extends BaseController
             return redirect()->back()->with('msg', 'Incorrect login details, please check your email and password');
         }
     }
-    protected function authenticated(Request $request, $user){
-        var_dump($user);die;
-        if(!$user->isVerifyAccount()){
+    protected function authenticated(Request $request, User $user){
+        if($user->isVerifyAccount()){
+            return redirect()->intended($this->redirectPath());
+        }
+        else{
             auth()->logout();
             return back()->with('msg', 'You need to confirm your account. We have sent you an activation code, please check your email.');
         }
-        return redirect()->intended($this->redirectPath());
+        
     }
 }
