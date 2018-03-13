@@ -2428,7 +2428,7 @@ class MarketController extends BaseController
         if($user == null){
             return back()->with('error', 'User no valid');
         }
-        if($user->isVerifyAccount())
+        if($user->isVerifyAccount()){
             return redirect('/');
         }
         $acc = new AccountCreated();
