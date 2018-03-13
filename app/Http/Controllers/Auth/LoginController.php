@@ -43,6 +43,13 @@ class LoginController extends BaseController
     public function authenticate(Request $request)
     {
         if (Auth::attempt(['email' => $request->email , 'password' => $request->password, 'enabled' => 1])) {
+            if($user->isVerifyAccount()){
+                return redirect()->intended($this->redirectPath());
+            }
+            else{
+                auth()->logout();
+                return back()->with('msg', 'You need to confirm your account. We have sent you an activation code, please check your email.');
+            }
             // Authentication passed...
             return redirect()->intended('/');
         }
@@ -55,13 +62,7 @@ class LoginController extends BaseController
         }
     }
     protected function authenticated(Request $request, User $user){
-        if($user->isVerifyAccount()){
-            return redirect()->intended($this->redirectPath());
-        }
-        else{
-            auth()->logout();
-            return back()->with('msg', 'You need to confirm your account. We have sent you an activation code, please check your email.');
-        }
+
         
     }
 }
