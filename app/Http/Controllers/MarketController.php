@@ -33,6 +33,7 @@ use App\Model\Profile;
 use App\Model\ProfileLanguage;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AccountCreated;
+use App\Model\EmailCode;
 
 class MarketController extends BaseController
 {
