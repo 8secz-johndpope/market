@@ -125,4 +125,16 @@ class RegisterController extends BaseController
         ]);
         */
     }
+    /**
+     * The user has been registered.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function registered(Request $request, $user)
+    {
+        $this->guard()->logout();
+        return redirect('/user/verify-email?user_id='.$user->id);
+    }
 }
