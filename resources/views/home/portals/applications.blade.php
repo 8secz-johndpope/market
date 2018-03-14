@@ -27,7 +27,7 @@
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                         <li><a data-toggle="tab" href="#tab-jobs">Jobs</a></li>
                         <li><a data-toggle="tab" href="#tab-candidates">Candidates</a></li>
-                        <li><a data-toggle="tab" href="#tab-invitations">Candidates</a></li>
+                        <li><a data-toggle="tab" href="#tab-invitations">Invitations To Apply</a></li>
                         <li><a data-toggle="tab" href="#tab-share">Share Credit</a></li>
                     </ul>
                     <div class="tab-content">
@@ -486,7 +486,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade in" id="tab-jobs">
+                        <div class="tab-pane fade in" id="tab-invitations">
                             <div class="row">
                                 <div class="container-filter clearfix">
                                     <div class="col-md-5">
@@ -496,9 +496,10 @@
                                     <div class="col-md-5">
                                         <label for="status">Invitation Status</label>
                                         <select class="form-control" name="status">
-                                            <option value="1" checked>New</option>
-                                            <option value="0">Reviewed</option>
-                                            <option value="2">Rejected</option>
+                                            <option value="" checked>Select Status</option>
+                                            @foreach($invitationStatus as $status)
+                                            <option value="{{$loop->index}}" checked>{{$status}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="col-md-2 container-btn">
