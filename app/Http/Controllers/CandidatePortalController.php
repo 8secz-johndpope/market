@@ -59,7 +59,8 @@ class CandidatePortalController extends BaseController
         $query = $query->get();
         if(array_key_exists('keywords', $params)){
            $query = $query->filter(function($value, $key) use($params){
-                return strpos($value->advert->param('title'), $params['keywords']);
+            var_dump($value->advert->param('title'));
+                return stripos($value->advert->param('title'), $params['keywords'],0);
            });
         }
         return $query;
