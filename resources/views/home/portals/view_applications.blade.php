@@ -64,7 +64,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="btns-actions">
-                    <a href="#" class="btn btn-disable">Change Status</a>
+                    <button type="button" class="btn btn-disable">Change Status</button>
                     <button type="button" data-toggle="modal" data-target="#select-template" class="btn btn-disable">Reply Selected</button>
                 </div>
             </div>
@@ -168,12 +168,12 @@
         var parent = $(this).closest('.all-applications');
         var checkboxs = parent.find('tbody input:checked');
         if(checkboxs.length > 0){
-            var buttons = parent.find('a.btn-disable');
+            var buttons = parent.find('button.btn-disable');
             buttons.addClass('btn-action');
             buttons.removeClass('btn-disable');
         }
         else{
-            var buttons = parent.find('a.btn-action');
+            var buttons = parent.find('button.btn-action');
             buttons.removeClass('btn-action');
             buttons.addClass('btn-disable');
         }
