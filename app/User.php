@@ -326,7 +326,7 @@ class User extends Authenticatable
     public function latestApplicationRequests(){
         return $this->applicationRequests()->orderby('created_at', 'desc')->limit(4);
     }
-    public function applicationRequestsSent(){
+    public function applicationInvitations(){
         return $this->hasMany('App\Model\ApplicationRequest');
     }
     public function isVerifyAccount(){

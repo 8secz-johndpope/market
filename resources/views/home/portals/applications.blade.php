@@ -27,6 +27,7 @@
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                         <li><a data-toggle="tab" href="#tab-jobs">Jobs</a></li>
                         <li><a data-toggle="tab" href="#tab-candidates">Candidates</a></li>
+                        <li><a data-toggle="tab" href="#tab-invitations">Candidates</a></li>
                         <li><a data-toggle="tab" href="#tab-share">Share Credit</a></li>
                     </ul>
                     <div class="tab-content">
@@ -212,9 +213,10 @@
                                     <div class="col-md-5">
                                         <label for="status">Application Status</label>
                                         <select class="form-control" name="status">
-                                            <option value="1" checked>New</option>
-                                            <option value="0">Reviewed</option>
-                                            <option value="2">Rejected</option>
+                                            <option value="">Select Status</option>
+                                            @foreach($applicationStatus as $status)
+                                             <option value="{{$loop->index}}">{{$status}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="col-md-2 container-btn">
@@ -481,6 +483,92 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade in" id="tab-jobs">
+                            <div class="row">
+                                <div class="container-filter clearfix">
+                                    <div class="col-md-5">
+                                        <label for="keywords">Keywords</label>
+                                        <input type="text" name="keywords" class="form-control">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="status">Invitation Status</label>
+                                        <select class="form-control" name="status">
+                                            <option value="1" checked>New</option>
+                                            <option value="0">Reviewed</option>
+                                            <option value="2">Rejected</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 container-btn">
+                                        <button class="btn btn-filter">Filter</button>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="jobs-selected">
+                                        <a href="#" class="btn btn-disable">Change Status</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <span>Sort by:</span>
+                                    <ul class="type-filters">
+                                        <li><a href="#">Newest First</a></li>
+                                        <li><a href="#">Last Name</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="w100p table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Job</th>
+                                                <th>Name</th>
+                                                <th>Phone</th>
+                                                <th>Status</th>
+                                                <th>Date Applied</th>
+                                                <th class="cell-cover">Cover Letter</th>
+                                                <th>Cvs</th>
+                                                <th>Profile</th>
+                                                <th>Reply</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach($jobs as $job)
+                                                @foreach($job->applications as $application)
+                                                <tr>
+                                                    <td><input type="checkbox" ></td>
+                                                    <td>{{$job->param('title')}}</td>
+                                                    <td>{{$application->user->name}}</td>
+                                                    <td>{{$application->user->phone}}</td>
+                                                    <td>New</td>
+                                                    <td>{{$application->created_at->format('d M Y')}}</td>
+                                                    <td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td> 
+                                                    <td>
+                                                        @if($application->cv)                      
+                                                        <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">
+                                                            View/Download
+                                                        </a> 
+                                                        @else 
+                                                            <span>No Cv</span> 
+                                                        @endif
+                                                    </td>
+                                                    <td>
+                                                        <a href="/job/profile/view/{{$application->user_id}}">View Profile
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
