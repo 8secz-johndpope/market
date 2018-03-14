@@ -13,6 +13,14 @@
     min-height: calc(100vh - 72px);
     font-family: Effra-Regular;
 }
+.portal-title{
+    padding-left: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Effra-Medium sans-serif;
+}
 .container-applications {
     background: #fff;
     margin-top: 15px;
