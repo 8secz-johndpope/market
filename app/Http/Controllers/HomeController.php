@@ -1064,13 +1064,6 @@ class HomeController extends BaseController
 
         return view('home.pay',['invoice'=>$invoice, 'seller' => $seller,'cards'=>$cards,'token' => $clientToken,'def'=>$card,'user'=>$user]);
     }
-    
-    public function applications(Request $request)
-    {
-        $user = Auth::user();
-        $balance = \Stripe\Balance::retrieve( array("stripe_account" => $user->stripe_account));
-        return view('home.applications',['jobs'=>$user->jobs(),'user'=>$user, 'balance' => $balance]);
-    }
     public function motors(Request $request)
     {
         $user = Auth::user();
