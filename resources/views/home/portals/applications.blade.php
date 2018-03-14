@@ -540,8 +540,8 @@
                                             <tr>
                                                 <td><input type="checkbox" ></td>
                                                 <td>{{$invitation->advert->param('title')}}</td>
-                                                <td>{{$invitation->user->name}}</td>
-                                                <td>{{$invitation->user->phone}}</td>
+                                                <td>{{$invitation->candidate->name}}</td>
+                                                <td>{{$invitation->candidate->phone}}</td>
                                                 <td>{{$invitation->getStatus()}}</td>
                                                 <td>{{$invitation->created_at->format('d M Y')}}</td>
                                             </tr>
