@@ -56,6 +56,7 @@ class CandidatePortalController extends BaseController
             }
             if(count($params) > 0){
                 $myRequests = $this->getRequestApplicationsByQuery($params);
+                return $myRequests;
             }
             else{
                 $myRequests = $user->applicationRequests;
