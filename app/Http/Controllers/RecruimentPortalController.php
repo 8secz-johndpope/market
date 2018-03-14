@@ -36,7 +36,7 @@ class RecruimentPortalController extends BaseController
     }
     public function jobsWithNewCandidates(){
         $user = Auth::user();
-        $myJobs = $user->applicationInvitations;
+        $myJobs = $user->jobs;
         $jobsWithNewCandidates =  $myJobs->filter(function(Advert $value, $key){
             return $value->applications()->where('status_employer', 0)->count() > 0;
         });
