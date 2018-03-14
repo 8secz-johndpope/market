@@ -141,7 +141,7 @@ class User extends Authenticatable
     }
     public function liveApplications()
     {
-        return $this->applications()->where('status','<>',2)->orderby('created_at', 'desc');
+        return $this->applications()->where('status_employee','<>',2)->orderby('created_at', 'desc');
     }
     public function latestApplications()
     {

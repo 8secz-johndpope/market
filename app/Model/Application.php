@@ -28,10 +28,10 @@ class Application extends Model
         return $this->belongsTo('App\User');
     }
     public function getStatusEmployee(){
-        return self::STATUS_EMPLOYEE[$this->status];
+        return self::STATUS_EMPLOYEE[$this->status_employee];
     }
     public function getStatusEmployer(){
-        return self::STATUS_EMPLOYER[$this->status];
+        return self::STATUS_EMPLOYER[$this->status_employer];
     }
     public function profile(){
         return $this->belongsTo('App\Model\Profile');
