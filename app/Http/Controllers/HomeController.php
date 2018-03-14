@@ -3022,46 +3022,6 @@ class HomeController extends BaseController
             return $e;
         }
     }
-    public function discardShow(Request $request)
-    {
-        $user=Auth::user();
-        $ids = $request->ids;
-        $ads = [];
-        foreach ($ids as $id) {
-            $requestApplication = ApplicationRequest::find($id);
-            $advert = $requestApplication->advert;
-            $ads[] = $advert;
-        }
-        return view('home.portals.discard',['user'=>$user,'adverts'=> $ads]);
-
-    }
-    public function discardAll(Request $request)
-    {
-        $ids = $request->ids;
-        foreach ($ids as $id) {
-            $applicationRequest = ApplicationRequest::find($id);
-            $applicationRequest->status = 2;
-            $applicationRequest->save();
-        }
-        return $this->candidatePortal();
-
-    }
-    public function candidateApplyShow(Request $request)
-    {
-        $user=Auth::user();
-        $ids = $request->ids;
-        if($ids===null){
-            return redirect()->back()->with('msg', 'Please select at least one application');
-        }
-        $ads = [];
-        foreach ($ids as $id) {
-            $requestApplication = ApplicationRequest::find($id);
-            $advert = $requestApplication->advert;
-            $ads[] = $advert;
-        }
-        return view('home.bulk',['user'=>$user,'adverts'=> $ads]);
-
-    }
     public function verifyAccount(Request $request){
         $user = Auth::user();
         return view('home.verification.account', ['user' => $user]);

@@ -28,6 +28,45 @@ class CandidatePortalController extends BaseController
         }
         return ['status' => 'Withdraw the applications successfully'];
     }
+    public function candidateApplyShow(Request $request)
+    {
+        $user=Auth::user();
+        $ids = $request->ids;
+        if($ids===null){
+            return redirect()->back()->with('msg', 'Please select at least one application');
+        }
+        $ads = [];
+        foreach ($ids as $id) {
+            $requestApplication = ApplicationRequest::find($id);
+            $advert = $requestApplication->advert;
+            $ads[] = $advert;
+        }
+        return view('home.bulk',['user'=>$user,'adverts'=> $ads]);
+    }
+    public function discardAll(Request $request)
+    {
+        $ids = $request->ids;
+        foreach ($ids as $id) {
+            $applicationRequest = ApplicationRequest::find($id);
+            $applicationRequest->status = 2;
+            $applicationRequest->save();
+        }
+        return $this->candidatePortal();
+
+    }
+    public function discardShow(Request $request)
+    {
+        $user=Auth::user();
+        $ids = $request->ids;
+        $ads = [];
+        foreach ($ids as $id) {
+            $requestApplication = ApplicationRequest::find($id);
+            $advert = $requestApplication->advert;
+            $ads[] = $advert;
+        }
+        return view('home.portals.discard',['user'=>$user,'adverts'=> $ads]);
+
+    }
     public function candidatePortal(Request $request){
         $user = Auth::user();
         $tab = $request->tab;
