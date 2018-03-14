@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Auth;
 
 class Advert extends  BaseModel
 {
-    public $dict=null;
+    const STATUS = array('Draft', 'Live', 'Inactive', 'Expire');
+    private $dict=null;
     public function offers()
     {
         return $this->hasMany('App\Model\Offer');
