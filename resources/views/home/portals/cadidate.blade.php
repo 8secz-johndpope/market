@@ -57,9 +57,6 @@
                                                 @if($latestApplicationRequests->count() > 0)
                                                 <ul class="list-group">
                                                     @foreach($latestApplicationRequests as $request)
-                                                        @if(isset($loop->index) && $loop->index == 4)
-                                                            @break
-                                                        @endif
                                                         <li class="list-group-item">
                                                             <div class="container-job-title">
                                                                 <p><strong>{{$request->advert->param('title')}}</strong> - <span class="job-location">{{$request->advert->param('location_name')}}</span></p>
@@ -79,9 +76,6 @@
                                                     @if($latestApplications->count() > 0)
                                                     <ul class="list-group">
                                                         @foreach($latestApplications as $application)
-                                                            @if($loop->index == 4)
-                                                                @break
-                                                            @endif
                                                             <li class="list-group-item">
                                                                 <div class="container-job-title">
                                                                     <p><strong>{{$application->advert->param('title')}}</strong> - <span class="job-location">{{$application->advert->param('location_name')}}</span></p>

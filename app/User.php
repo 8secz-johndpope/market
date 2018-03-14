@@ -141,11 +141,11 @@ class User extends Authenticatable
     }
     public function liveApplications()
     {
-        return $this->applications()->where('status','<>',2);
+        return $this->applications()->where('status','<>',2)->orderby('created_at', 'asc');
     }
     public function latestApplications()
     {
-        return $this->applications()->where('status','<>',2)->orderby('created_at', 'desc')->limit(4);
+        return $this->liveApplications()->limit(4);
     }
     public function applicationByStatus($status){
         return $this->applications()->where('status', $status)->get();
@@ -324,7 +324,7 @@ class User extends Authenticatable
         return $this->hasMany('App\Model\ApplicationRequest', 'candidate_id');
     }
     public function latestApplicationRequests(){
-        return $this->applicationRequests()->orderby('created_at', 'desc')->limit(4);
+        return $this->applicationRequests()->orderby('created_at', 'asc')->limit(4);
     }
     public function applicationRequestsSent(){
         return $this->hasMany('App\Model\ApplicationRequest');
