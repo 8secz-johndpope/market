@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 class Application extends Model
 {
     const STATUS_EMPLOYEE = array('Pending', 'Rejected', 'Withdrawn', 'Interview', 'Accepted');
-    const STATUS_EMPLOYER = array('New', 'Viewed', 'Withdrawn', 'Interview', 'Accepted');
+    const STATUS_EMPLOYER = array('New', 'Viewed', 'Rejected', 'Withdrawn', 'Interview', 'Accepted');
     public function cover(){
         return $this->belongsTo('App\Model\Cover');
     }
