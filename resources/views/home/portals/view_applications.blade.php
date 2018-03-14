@@ -82,46 +82,33 @@
                     {{ csrf_field() }}
                     <input type="hidden" name="template" id="template">
                     <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th><input type="checkbox" class="select-all" id="select-all"> Select All</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Status</th>
-                            <th>Date Applied</th>
-                            <th>CV</th>
-                            <th>Profile</th>
-                            <th>Reply</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($job->applications as $application)
-                        <tr>
-                            <td><input type="checkbox" name="ids[]" value="{{$application->id}}" class="select-application"></td>
-                            <td>{{$application->user->name}}</td>
-                            <td>{{$application->user->phone}}</td>
-                            <td>{{$application->getStatusEmployer()}}</td>
-                            <td>{{$application->created_at->format('d M Y')}}</td>
-                            <td>              @if($application->cv)                      <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">View/Download</a> @else <span>No Cv</span> @endif</td>
-                            <td><a href="/job/profile/view/{{$application->user_id}}">View Profile</a></td>
-                            <td><a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a></td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-4"><select class="form-control" id="inlineFormCustomSelect" name="template-reply">
-                                @foreach($user->templates as $template)
-                                <option value="{{$template->id}}">{{$template->title}}</option>
-                                @endforeach
-                            </select></div>
-                        <div class="col-sm-4">
-                            <button type="submit" class="btn btn-primary">Reply Selected</button>
-
-                        </div>
-
-                    </div>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" class="select-all" id="select-all"> Select All</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Status</th>
+                                <th>Date Applied</th>
+                                <th>CV</th>
+                                <th>Profile</th>
+                                <th>Reply</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($job->applications as $application)
+                            <tr>
+                                <td><input type="checkbox" name="ids[]" value="{{$application->id}}" class="select-application"></td>
+                                <td>{{$application->user->name}}</td>
+                                <td>{{$application->user->phone}}</td>
+                                <td>{{$application->getStatusEmployer()}}</td>
+                                <td>{{$application->created_at->format('d M Y')}}</td>
+                                <td>              @if($application->cv)                      <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">View/Download</a> @else <span>No Cv</span> @endif</td>
+                                <td><a href="/job/profile/view/{{$application->user_id}}">View Profile</a></td>
+                                <td><a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a></td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </form>
             </div>
         </div>
