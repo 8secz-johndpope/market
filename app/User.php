@@ -150,6 +150,9 @@ class User extends Authenticatable
     public function applicationByStatus($status){
         return $this->applications()->where('status', $status)->get();
     }
+    public function candidates(){
+        return $this->hasManyThrough('App\Model\Application', 'App\Model\Advert');
+    }
     public function templates()
     {
         return $this->hasMany('App\Model\ReplyTemplate');
