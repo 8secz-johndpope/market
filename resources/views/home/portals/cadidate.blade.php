@@ -322,8 +322,9 @@
                                                         <td>{{$request->employer->name}}</td>
                                                         <td>{{$request->getStatus()}}</td>
                                                         <td>
-                                                            <button class="btn">Accept & Apply</button>
-                                                            <button class="btn">Decline</button>
+                                                            <button class="btn" type="button">Accept & Apply</button>
+                                                            <button class="btn" type="button">Decline</button>
+                                                            <button class="btn" type="button">Reply</button>
                                                         </td>
                                                     </tr>
                                                 @endforeach
