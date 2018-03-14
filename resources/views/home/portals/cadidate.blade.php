@@ -303,9 +303,7 @@
                                                 @foreach($myRequests as $request)
                                                     <tr>
                                                         <td>
-                                                            <div class="checkbox">
-                                                                <input type="checkbox" name="ids[]" class="request-applications" value="{{$request->id}}">
-                                                            </div>
+                                                            <input type="checkbox" name="ids[]" class="request-applications" value="{{$request->id}}">
                                                         </td>
                                                         <td>
                                                             <a href="{{$request->advert->url()}}" target="_black" class="link-job">
