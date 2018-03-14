@@ -22,6 +22,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="container-applications">
+                    <h3 class="portal-title">Candidate Portal</h3>
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                         <li><a data-toggle="tab" href="#tab-applications">My Applications</a></li>
