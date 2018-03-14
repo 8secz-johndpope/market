@@ -78,7 +78,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <form method="post" action="/user/reply/all">
+                <form method="post" action="/user/reply/all" id="form-replay-all">
                     {{ csrf_field() }}
                     <input type="hidden" name="template" id="template">
                     <table class="table table-striped table-hover">
@@ -132,7 +132,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Send Message</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -140,7 +140,7 @@
       <div class="modal-body">
         <div class="form-group">
             <label>Select a Template</label>
-            <select class="form-control" id="inlineFormCustomSelect" name="template-reply">
+            <select class="form-control" id="template-reply" name="template-reply">
                 @foreach($user->templates as $template)
                 <option value="{{$template->id}}">{{$template->title}}</option>
                 @endforeach
@@ -148,7 +148,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-submit">Save changes</button>
       </div>
     </div>
@@ -177,7 +177,11 @@
             buttons.removeClass('btn-action');
             buttons.addClass('btn-disable');
         }
-        parent.find('.num-jobs').text(checkbox.length);
-    })
+        parent.find('.num-jobs').text(checkboxs.length);
+    });
+    $('.modal-footer .btn-submit').click(function(){
+        $('#template').val($('#template-reply').val());
+        $('#form-replay-all').submit();
+    });
 </script>
 @endsection
