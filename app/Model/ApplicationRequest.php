@@ -15,8 +15,10 @@ class ApplicationRequest extends Model
 	public function employer(){
 		return $this->belongsTo('App\User', 'user_id');
 	}
-
 	public function getStatus(){
 		return self::STATUS[$this->status];
+	}
+	public function candidate(){
+		return $this->belongsTo('App\User', 'candidate_id');
 	}
 }
