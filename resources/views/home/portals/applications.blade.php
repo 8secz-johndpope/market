@@ -561,19 +561,6 @@
     $('a.btn-disable').click(function(e){
         e.preventDefault();
     });
-    /*$('.checkboxs-jobs').change(function(){
-        var checkboxs = $(this).parent().parent().parent().find('input:checked');
-        console.log(checkboxs.length);
-        if(checkboxs.length > 0){
-            $('#tab-jobs a.btn-disable').addClass('btn-action');
-            $('#tab-jobs a.btn-disable').removeClass('btn-disable');
-            $('#tab-jobs .num-jobs').text(checkboxs.length);
-        }else{
-            $('#tab-jobs .num-jobs').text(0);
-            $('#tab-jobs a.btn-action').addClass('btn-disable');
-            $('#tab-jobs a.btn-action').removeClass('btn-action');
-        }   
-    })*/
     $('input:checkbox').change(function(){
         var tabpanel = $(this).closest('.tab-pane');
         var checkboxs = tabpanel.find('input:checked');
