@@ -260,7 +260,7 @@
                                         <tbody>
                                             @foreach($candidates as $application)
                                             <tr>
-                                                <td><input type="checkbox" ></td>
+                                                <td><input type="checkbox" name="candidates[]" value="{{$application->id}}" class="candidates"></td>
                                                 <td>{{$application->advert->param('title')}}</td>
                                                 <td>{{$application->user->name}}</td>
                                                 <td>{{$application->user->phone}}</td>
@@ -573,6 +573,22 @@
             $('#tab-jobs a.btn-action').addClass('btn-disable');
             $('#tab-jobs a.btn-action').removeClass('btn-action');
         }   
+    })
+    $('.candidates').change(function(){
+        var tabpanel = $(this).closest('.tab-pane');
+        var checkboxs = tabpanel.find('input:checked');
+        if(checkboxs.length > 0){
+            var buttons = tabpanel.find('a.btn-disable');
+            button.addClass('btn-action');
+            button.removeClass('btn-disable');
+        }
+        else{
+            var buttons = tabpanel.find('a.btn-action');
+            button.removeClass('btn-action');
+            button.addClass('btn-disable');
+        }
+        tabpanel.find('.num-jobs').text(checkbox.length);
+
     })
 </script>
 @endsection
