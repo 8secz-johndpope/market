@@ -48,7 +48,11 @@ class RecruimentPortalController extends BaseController
             return $value->unReadApplications->count() > 0;
         });
         return $jobsWithNewCandidates;
-
+    }
+    public function viewApplications(Request $request,$id)
+    {
+        $user = Auth::user();
+        return view('home.portals.view_applications',['job'=>Advert::find($id),'user'=>$user]);
     }
 }
 ?>
