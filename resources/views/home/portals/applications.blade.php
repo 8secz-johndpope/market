@@ -579,13 +579,13 @@
         var checkboxs = tabpanel.find('input:checked');
         if(checkboxs.length > 0){
             var buttons = tabpanel.find('a.btn-disable');
-            button.addClass('btn-action');
-            button.removeClass('btn-disable');
+            buttons.addClass('btn-action');
+            buttons.removeClass('btn-disable');
         }
         else{
             var buttons = tabpanel.find('a.btn-action');
-            button.removeClass('btn-action');
-            button.addClass('btn-disable');
+            buttons.removeClass('btn-action');
+            buttons.addClass('btn-disable');
         }
         tabpanel.find('.num-jobs').text(checkbox.length);
 
