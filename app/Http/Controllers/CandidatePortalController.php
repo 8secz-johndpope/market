@@ -32,16 +32,34 @@ class CandidatePortalController extends BaseController
         $user = Auth::user();
         $tab = $request->tab;
         $params = array();
-        if(isset($request->status)){
-            $params['status'] = $request->status;
-        }
-        if(isset($request->keywords)){
-            $params['keywords'] = $request->keywords;
-        }
-        if(count($params) > 0){
-            $myApplications = $this->getApplicationsByQuery($params);
+        if($tab === 'tab-applications'){
+            if(isset($request->status)){
+                $params['status'] = $request->status;
+            }
+            if(isset($request->keywords)){
+                $params['keywords'] = $request->keywords;
+            }
+            if(count($params) > 0){
+                $myApplications = $this->getApplicationsByQuery($params);
+            }
+            else{
+                $myApplications = $user->liveApplications;
+            }
+            $myRequests = $user->applicationRequests;
         }
         else{
+            if(isset($request->request_status)){
+                $params['status'] = $request->request_status;
+            }
+            if(isset($request->request_keywords)){
+                $params['keywords'] = $request->request_keywords;
+            }
+            if(count($params) > 0){
+                $myRequests = $this->getRequestApplicationsByQuery($params);
+            }
+            else{
+                $myRequests = $user->applicationRequests;
+            }
             $myApplications = $user->liveApplications;
         }
         $latestApplications = $user->latestApplications;
@@ -53,6 +71,20 @@ class CandidatePortalController extends BaseController
     public function getApplicationsByQuery(array $params = []){
         $user = Auth::user();
         $query = $user->applications();
+        if(array_key_exists('status', $params)){
+            $query->where('status', $params['status']);
+        }
+        $query = $query->get();
+        if(array_key_exists('keywords', $params)){
+           $query = $query->filter(function($value, $key) use($params){
+                return stripos($value->advert->param('title'), $params['keywords'],0) !== false;
+           });
+        }
+        return $query;
+    }
+    public function getRequestApplicationsByQuery(array $params = []){
+        $user = Auth::user();
+        $query = $user->applicationRequests();
         if(array_key_exists('status', $params)){
             $query->where('status', $params['status']);
         }
