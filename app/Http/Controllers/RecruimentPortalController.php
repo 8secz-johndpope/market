@@ -20,10 +20,11 @@ class RecruimentPortalController extends BaseController
     {
         $this->middleware('auth');
         parent::__construct();
-        $user = Auth::user();
+        $this->user = Auth::user();
     }
     public function applications(Request $request)
     {
+
         $myInvitations = $this->user->applicationInvitations;
         $invitationStatus = ApplicationRequest::STATUS;
         $applicationStatus = Application::STATUS;
