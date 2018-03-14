@@ -35,7 +35,7 @@ class RecruimentPortalController extends BaseController
         return view('home.portals.applications',['jobs'=>$user->jobs,'user'=>$user, 'balance' => $balance, 'myInvitations' => $myInvitations, 'invitationStatus' => $invitationStatus, 'applicationStatus' => $applicationStatus, 'jobsNewCandidates' => $jobsNewCandidates]);
     }
     public function jobsWithNewCandidates(){
-        $use = Auth::user();
+        $user = Auth::user();
         $myJobs = $user->applicationInvitations;
         $jobsWithNewCandidates =  $myJobs->filter(function($value, $key){
             return $value->applications()->where('status_employer', 0)->count() > 0;
