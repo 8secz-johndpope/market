@@ -152,11 +152,7 @@ class User extends Authenticatable
     }
     public function candidates(){
         return $this->hasManyThrough('App\Model\Application', 
-                                        'App\Model\Advert',
-                                        'user_id',
-                                        'advert_id',
-                                        'id',
-                                        'id'
+                                        'App\Model\Advert'
                                     );
     }
     public function unreadCandidates(){
