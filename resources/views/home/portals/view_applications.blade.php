@@ -131,6 +131,7 @@
         $('#select-all').change(function() {
             if(this.checked) {
                 $('.select-application').prop('checked', true);
+                $('.select-application').change();
 
             }else{
                 $('.select-application').prop('checked', false);
