@@ -29,6 +29,9 @@ class Advert extends  BaseModel
     {
         return $this->hasMany('App\Model\Application');
     }
+    public function unReadApplications(){
+        return $this->applications()->where('status_employer', 0)->orderBy('created_at', 'desc');
+    }
     public function user()
     {
         return $this->belongsTo('App\User');
