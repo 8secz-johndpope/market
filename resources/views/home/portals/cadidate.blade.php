@@ -54,9 +54,9 @@
                                             <h4>My Applications Request</h4>
                                             <hr>
                                             <div class="container-candidates">
-                                                @if($myRequests->count() > 0)
+                                                @if($latestApplicationRequests->count() > 0)
                                                 <ul class="list-group">
-                                                    @foreach($myRequests as $request)
+                                                    @foreach($latestApplicationRequests as $request)
                                                         @if(isset($loop->index) && $loop->index == 4)
                                                             @break
                                                         @endif

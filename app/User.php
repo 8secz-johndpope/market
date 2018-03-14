@@ -145,7 +145,7 @@ class User extends Authenticatable
     }
     public function latestApplications()
     {
-        return $this->applications()->where('status','<>',2)->limit(4);
+        return $this->applications()->where('status','<>',2)->orderby('created_at', 'desc')->limit(4);
     }
     public function applicationByStatus($status){
         return $this->applications()->where('status', $status)->get();
@@ -322,6 +322,9 @@ class User extends Authenticatable
     }
     public function applicationRequests(){
         return $this->hasMany('App\Model\ApplicationRequest', 'candidate_id');
+    }
+    public function latestApplicationRequests(){
+        return $this->applicationRequests()->orderby('created_at', 'desc')->limit(4);
     }
     public function applicationRequestsSent(){
         return $this->hasMany('App\Model\ApplicationRequest');
