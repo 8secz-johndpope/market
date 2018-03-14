@@ -113,7 +113,6 @@
                         <div class="col-sm-4"></div>
                         <div class="col-sm-4"><select class="form-control" id="inlineFormCustomSelect" name="template-reply">
                                 @foreach($user->templates as $template)
-
                                 <option value="{{$template->id}}">{{$template->title}}</option>
                                 @endforeach
                             </select></div>
@@ -138,5 +137,20 @@
 
             }
         });
+        $('.select-application').change(function(){
+            var parent = $(this).closest('.all-applications');
+            var checkboxs = parent.find('tbody input:checked');
+            if(checkboxs.length > 0){
+                var buttons = parent.find('a.btn-disable');
+                buttons.addClass('btn-action');
+                buttons.removeClass('btn-disable');
+            }
+            else{
+                var buttons = parent.find('a.btn-action');
+                buttons.removeClass('btn-action');
+                buttons.addClass('btn-disable');
+            }
+            parent.find('.num-jobs').text(checkbox.length);
+        })
     </script>
 @endsection
