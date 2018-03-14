@@ -151,7 +151,10 @@ class User extends Authenticatable
         return $this->applications()->where('status', $status)->get();
     }
     public function candidates(){
-        return $this->hasManyThrough('App\Model\Application', 'App\Model\Advert')->where('status_employer', 0);
+        return $this->hasManyThrough('App\Model\Application', 'App\Model\Advert');
+    }
+    public function unreadCandidate(){
+        return $this->candidates()->where('status_employer', 0);
     }
     public function templates()
     {

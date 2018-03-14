@@ -67,7 +67,7 @@
                                                         <li class="list-group-item">
                                                             <div class="container-job-title">
                                                                 <p><strong>{{$job->param('title')}}</strong> - <span class="job-location">{{$job->param('location_name')}}</span></p>
-                                                                <p class="blue-color"><a href="/job/manage/applications/{{$job->id}}">{{count($job->applications)}} Unread Candidates</a></p>
+                                                                <p class="blue-color"><a href="/job/manage/applications/{{$job->id}}">{{$job->unReadApplications->count()}} Unread Candidates</a></p>
                                                             </div>
                                                         </li>
                                                     @endif
@@ -103,7 +103,7 @@
                                             <div class="col-info-candidates">
                                                 <h4>Candidates</h4>
                                                 <ul class="list-group">
-                                                    <li class="list-group-item">New <span class="quantity">1</span></li>
+                                                    <li class="list-group-item">New <span class="quantity">$totalUnreadCandidates</span></li>
                                                     <li class="list-group-item">Reviewed <span class="quantity">0</span></li>
                                                     <li class="list-group-item">Rejected <span class="quantity">0</span></li>
                                                 </ul>
@@ -256,34 +256,32 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($jobs as $job)
-                                                @foreach($job->applications as $application)
-                                                <tr>
-                                                    <td><input type="checkbox" ></td>
-                                                    <td>{{$job->param('title')}}</td>
-                                                    <td>{{$application->user->name}}</td>
-                                                    <td>{{$application->user->phone}}</td>
-                                                    <td>New</td>
-                                                    <td>{{$application->created_at->format('d M Y')}}</td>
-                                                    <td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td> 
-                                                    <td>
-                                                        @if($application->cv)                      
-                                                        <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">
-                                                            View/Download
-                                                        </a> 
-                                                        @else 
-                                                            <span>No Cv</span> 
-                                                        @endif
-                                                    </td>
-                                                    <td>
-                                                        <a href="/job/profile/view/{{$application->user_id}}">View Profile
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a>
-                                                    </td>
-                                                </tr>
-                                                @endforeach
+                                            @foreach($candidates as $application)
+                                            <tr>
+                                                <td><input type="checkbox" ></td>
+                                                <td>{{$job->param('title')}}</td>
+                                                <td>{{$application->user->name}}</td>
+                                                <td>{{$application->user->phone}}</td>
+                                                <td>New</td>
+                                                <td>{{$application->created_at->format('d M Y')}}</td>
+                                                <td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td> 
+                                                <td>
+                                                    @if($application->cv)                      
+                                                    <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">
+                                                        View/Download
+                                                    </a> 
+                                                    @else 
+                                                        <span>No Cv</span> 
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    <a href="/job/profile/view/{{$application->user_id}}">View Profile
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a>
+                                                </td>
+                                            </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
