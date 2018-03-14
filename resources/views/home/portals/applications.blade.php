@@ -62,7 +62,7 @@
                                             <hr>
                                             <div class="container-candidates">
                                                 <ul class="list-group">
-                                                    @foreach($jobsWithNewCandidates as $job)
+                                                    @foreach($jobsNewCandidates as $job)
                                                     @if(count($job->applications) > 0)
                                                         <li class="list-group-item">
                                                             <div class="container-job-title">
