@@ -166,8 +166,6 @@ class AdminController extends BaseController
         $contract = Contract::find($id);
         $contract->enabled = 1;
         $contract->save();
-
-
         return redirect('/admin/manage/contracts');
     }
 
@@ -177,7 +175,6 @@ class AdminController extends BaseController
         $advert->make_inactive();
         $advert->status = 3;
         $advert->save();
-
         return redirect('/admin/manage/adverts');
     }
     public function enable_advert(Request $request,$id)
