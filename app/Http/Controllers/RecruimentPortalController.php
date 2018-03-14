@@ -32,7 +32,7 @@ class RecruimentPortalController extends BaseController
         $applicationStatus = Application::STATUS_EMPLOYER;
         $jobStatus = Advert::STATUS;
         $balance = \Stripe\Balance::retrieve( array("stripe_account" => $user->stripe_account));
-        return view('home.portals.applications',['jobs'=>$user->jobs,'user'=>$user, 'balance' => $balance, 'myInvitations' => $myInvitations, 'invitationStatus' => $invitationStatus, 'applicationStatus' => $applicationStatus]);
+        return view('home.portals.applications',['jobs'=>$user->jobs,'user'=>$user, 'balance' => $balance, 'myInvitations' => $myInvitations, 'invitationStatus' => $invitationStatus, 'applicationStatus' => $applicationStatus, 'jobsNewCandidates' => $jobsNewCandidates]);
     }
     public function jobsWithNewCandidates(){
         $use = Auth::user();
