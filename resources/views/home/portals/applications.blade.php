@@ -259,7 +259,7 @@
                                             @foreach($candidates as $application)
                                             <tr>
                                                 <td><input type="checkbox" ></td>
-                                                <td>{{$job->param('title')}}</td>
+                                                <td>{{$application->job->param('title')}}</td>
                                                 <td>{{$application->user->name}}</td>
                                                 <td>{{$application->user->phone}}</td>
                                                 <td>New</td>
