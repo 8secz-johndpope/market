@@ -252,14 +252,14 @@
                                         <input type="hidden" name="tab" value="tab-requests"> 
                                         <div class="col-md-5">
                                             <label for="keywords">Keywords</label>
-                                            <input type="text" name="request_keywords" class="form-control">
+                                            <input type="text" name="request_keywords" class="form-control" value="{{ isset($keywordsRequest) ? $keywordsRequest : ''}}">
                                         </div>
                                         <div class="col-md-5">
                                             <label for="status">Application Status</label>
                                             <select class="form-control" name="request_status">
                                                 <option value="">Select Status</option>
                                                 @foreach($requestStatus as $status)
-                                                <option value="{{$loop->index}}">{{$status}}</option>
+                                                <option value="{{$loop->index}}" {{(isset($statusRequest) && $statusRequest == $loop->index) ? 'selected' : ''}}>{{$status}}</option>
                                                 @endforeach
                                             </select>
                                         </div>

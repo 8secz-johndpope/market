@@ -65,7 +65,7 @@ class CandidatePortalController extends BaseController
         $latestApplications = $user->latestApplications;
         $applicationStatus = Application::STATUS;
         $requestStatus = ApplicationRequest::STATUS;
-        return view('home.portals.cadidate', ['user' => $user, 'myApplications' => $myApplications, 'latestApplications' => $latestApplications, 'myRequests' => $myRequests, 'applicationStatus' => $applicationStatus, 'tab'=>$tab, 'statusFilter' => $request->status, 'keywordsFilter' => $request->keywords, 'requestStatus' => $requestStatus]);
+        return view('home.portals.cadidate', ['user' => $user, 'myApplications' => $myApplications, 'latestApplications' => $latestApplications, 'myRequests' => $myRequests, 'applicationStatus' => $applicationStatus, 'tab'=>$tab, 'statusFilter' => $request->status, 'keywordsFilter' => $request->keywords, 'requestStatus' => $requestStatus, 'keywordsRequest' => $request->request_keywords, 'statusRequest' => $request->request_status]);
     }
     public function getApplicationsByQuery(array $params = []){
         $user = Auth::user();
