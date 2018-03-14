@@ -322,9 +322,9 @@
                                                         <td>{{$request->employer->name}}</td>
                                                         <td>{{$request->getStatus()}}</td>
                                                         <td>
-                                                            <button class="btn" type="button">Accept & Apply</button>
-                                                            <button class="btn" type="button">Decline</button>
-                                                            <button class="btn" type="button">Reply</button>
+                                                            <button class="btn btn-black" type="button" id="accept">Accept & Apply</button>
+                                                            <button class="btn btn-danger" type="button">Decline</button>
+                                                            <button class="btn btn-info" type="button">Reply</button>
                                                         </td>
                                                     </tr>
                                                 @endforeach
@@ -409,6 +409,7 @@
             $(this).closest('tr').remove();
         });
     }
+
     @if(isset($tab))
         $('.nav-tabs a[href="#{{$tab}}"]').tab('show');
     @endif
