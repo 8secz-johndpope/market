@@ -260,7 +260,7 @@ class User extends Authenticatable
     public function jobs()
     {
         $jobs = Category::find(4000000000);
-        return adverts()->where('status',1)->where('category_id','>=',$jobs->id)->where('category_id','<=',$jobs->ends)->orderby('created_at','desc');
+        return $this->adverts()->where('status',1)->where('category_id','>=',$jobs->id)->where('category_id','<=',$jobs->ends)->orderby('created_at','desc');
     }
     public function motors()
     {
