@@ -65,17 +65,17 @@
             <div class="col-sm-4">
                 <div class="btns-actions">
                     <a href="#" class="btn btn-disable">Change Status</a>
-                    <a href="#" class="btn btn-disable">Reply Selected</a>
+                    <button type="button" data-toggle="modal" data-target="#select-template" class="btn btn-disable">Reply Selected</button>
                 </div>
             </div>
             <div class="col-sm-4">
                 @if (session('msg'))
                     <span style="color: green">
-                                        <strong>{{ session('msg') }}</strong>
-                                    </span>
+                        <strong>{{ session('msg') }}</strong>
+                    </span>
                 @endif
             </div>
-            </div>
+        </div>
         <div class="row">
             <div class="col-sm-12">
                 <form method="post" action="/user/reply/all">
@@ -127,30 +127,57 @@
         </div>
     </div>
 </div>
-    <script>
-        $('#select-all').change(function() {
-            var checkboxs = $('.select-application');
-            if(this.checked) {
-                checkboxs.prop('checked', true);
-            }else{
-                checkboxs.prop('checked', false);
-            }
-            checkboxs.change();
-        });
-        $('.select-application').change(function(){
-            var parent = $(this).closest('.all-applications');
-            var checkboxs = parent.find('tbody input:checked');
-            if(checkboxs.length > 0){
-                var buttons = parent.find('a.btn-disable');
-                buttons.addClass('btn-action');
-                buttons.removeClass('btn-disable');
-            }
-            else{
-                var buttons = parent.find('a.btn-action');
-                buttons.removeClass('btn-action');
-                buttons.addClass('btn-disable');
-            }
-            parent.find('.num-jobs').text(checkbox.length);
-        })
-    </script>
+<!-- Modal -->
+<div class="modal fade" id="select-template" tabindex="-1" role="dialog" aria-labelledby="select-template" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label>Select a Template</label>
+            <select class="form-control" id="inlineFormCustomSelect" name="template-reply">
+                @foreach($user->templates as $template)
+                <option value="{{$template->id}}">{{$template->title}}</option>
+                @endforeach
+            </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-submit">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $('#select-all').change(function() {
+        var checkboxs = $('.select-application');
+        if(this.checked) {
+            checkboxs.prop('checked', true);
+        }else{
+            checkboxs.prop('checked', false);
+        }
+        checkboxs.change();
+    });
+    $('.select-application').change(function(){
+        var parent = $(this).closest('.all-applications');
+        var checkboxs = parent.find('tbody input:checked');
+        if(checkboxs.length > 0){
+            var buttons = parent.find('a.btn-disable');
+            buttons.addClass('btn-action');
+            buttons.removeClass('btn-disable');
+        }
+        else{
+            var buttons = parent.find('a.btn-action');
+            buttons.removeClass('btn-action');
+            buttons.addClass('btn-disable');
+        }
+        parent.find('.num-jobs').text(checkbox.length);
+    })
+</script>
 @endsection
