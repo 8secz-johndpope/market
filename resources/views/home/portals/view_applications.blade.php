@@ -129,14 +129,13 @@
 </div>
     <script>
         $('#select-all').change(function() {
+            var checkboxs = $('.select-application');
             if(this.checked) {
-                $('.select-application').prop('checked', true);
-                $('.select-application').change();
-
+                checkboxs.prop('checked', true);
             }else{
-                $('.select-application').prop('checked', false);
-
+                checkboxs.prop('checked', false);
             }
+            checkboxs.change();
         });
         $('.select-application').change(function(){
             var parent = $(this).closest('.all-applications');
