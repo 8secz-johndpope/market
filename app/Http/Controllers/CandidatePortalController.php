@@ -56,7 +56,6 @@ class CandidatePortalController extends BaseController
             }
             if(count($params) > 0){
                 $myRequests = $this->getRequestApplicationsByQuery($params);
-                return $myRequests;
             }
             else{
                 $myRequests = $user->applicationRequests;
@@ -66,7 +65,6 @@ class CandidatePortalController extends BaseController
         $latestApplications = $user->latestApplications;
         $applicationStatus = Application::STATUS;
         $requestStatus = ApplicationRequest::STATUS;
-        $myRequests = $user->applicationRequests;
         return view('home.portals.cadidate', ['user' => $user, 'myApplications' => $myApplications, 'latestApplications' => $latestApplications, 'myRequests' => $myRequests, 'applicationStatus' => $applicationStatus, 'tab'=>$tab, 'statusFilter' => $request->status, 'keywordsFilter' => $request->keywords, 'requestStatus' => $requestStatus]);
     }
     public function getApplicationsByQuery(array $params = []){
