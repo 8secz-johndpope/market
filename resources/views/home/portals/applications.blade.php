@@ -17,13 +17,12 @@
 <link href="{{ asset("/css/applications.css?q=$dateMs") }}" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
-<div class="body background-body">
+<div class="body background-body recruiment-portal">
     <div class="container">
-        
-        
         <div class="row">
             <div class="col-md-12">
                 <div class="container-applications">
+                    <h3 class="portal-title">Recruiment Portal</h3>
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                         <li><a data-toggle="tab" href="#tab-jobs">Jobs</a></li>
