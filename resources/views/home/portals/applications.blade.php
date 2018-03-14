@@ -227,7 +227,10 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="jobs-selected">
-                                        <a href="#" class="btn btn-disable">Change Status</a>
+                                        <a href="#" class="btn btn-disable">Viewed</a>
+                                        <a href="#" class="btn btn-disable">Rejected</a>
+                                        <a href="#" class="btn btn-disable">Interview</a>
+                                        <a href="#" class="btn btn-disable">Accepted</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
@@ -249,7 +252,6 @@
                                                 <th>Phone</th>
                                                 <th>Status</th>
                                                 <th>Date Applied</th>
-                                                <th class="cell-cover">Cover Letter</th>
                                                 <th>Cvs</th>
                                                 <th>Profile</th>
                                                 <th>Reply</th>
@@ -262,9 +264,8 @@
                                                 <td>{{$application->advert->param('title')}}</td>
                                                 <td>{{$application->user->name}}</td>
                                                 <td>{{$application->user->phone}}</td>
-                                                <td>New</td>
-                                                <td>{{$application->created_at->format('d M Y')}}</td>
-                                                <td>@if($application->cover){{$application->cover->cover}} @else <span>No Cover</span> @endif</td> 
+                                                <td>{{$application->getStatusEmployer()}}</td>
+                                                <td>{{$application->created_at->format('d M Y')}}</td> 
                                                 <td>
                                                     @if($application->cv)                      
                                                     <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">
