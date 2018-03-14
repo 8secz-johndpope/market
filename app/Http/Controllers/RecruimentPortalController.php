@@ -32,7 +32,7 @@ class RecruimentPortalController extends BaseController
         $applicationStatus = Application::STATUS_EMPLOYER;
         $jobStatus = Advert::STATUS;
         $aux = $user->candidates;
-        $candidates = collection();
+        $candidates = collect();
         foreach ($aux as $application) {
             $candidate = Application::find($appplication->id);
             $candidates->put($appplication->id, $candidate);
