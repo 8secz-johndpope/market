@@ -109,6 +109,9 @@
 	color: lightgray;
 	background-color: #fff;
 }
+.modal-title{
+    display: inline-block;
+}
 .btn-disable:hover, .btn-disable:visited{
 	color:lightgray;
 }
