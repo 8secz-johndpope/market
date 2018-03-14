@@ -12,7 +12,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Application extends Model
 {
-    const STATUS = array('Pending', 'Rejected', 'Withdrawn', 'Interview', 'Accepted');
+    const STATUS_EMPLOYEE = array('Pending', 'Rejected', 'Withdrawn', 'Interview', 'Accepted');
+    const STATUS_EMPLOYER = array('New', 'Viewed', 'Withdrawn', 'Interview', 'Accepted');
     public function cover(){
         return $this->belongsTo('App\Model\Cover');
     }
@@ -26,8 +27,11 @@ class Application extends Model
     public function user(){
         return $this->belongsTo('App\User');
     }
-    public function getStatus(){
-        return self::STATUS[$this->status];
+    public function getStatusEmployee(){
+        return self::STATUS_EMPLOYEE[$this->status];
+    }
+    public function getStatusEmployer(){
+        return self::STATUS_EMPLOYER[$this->status];
     }
     public function profile(){
         return $this->belongsTo('App\Model\Profile');

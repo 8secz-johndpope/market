@@ -544,6 +544,7 @@
                                                 <td>{{$invitation->candidate->phone}}</td>
                                                 <td>{{$invitation->getStatus()}}</td>
                                                 <td>{{$invitation->created_at->format('d M Y')}}</td>
+                                                <td><a class="btn btn-primary" href="/user/areply/{{$invitation->id}}">Reply</a>
                                             </tr>
                                             @endforeach
                                         </tbody>

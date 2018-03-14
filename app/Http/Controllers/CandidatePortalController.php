@@ -48,7 +48,8 @@ class CandidatePortalController extends BaseController
         $ids = $request->ids;
         foreach ($ids as $id) {
             $applicationRequest = ApplicationRequest::find($id);
-            $applicationRequest->status = 2;
+            $applicationRequest->status_employer = 2;
+            $applicationRequest->status_employee = 2;
             $applicationRequest->save();
         }
         return $this->candidatePortal();
@@ -103,7 +104,7 @@ class CandidatePortalController extends BaseController
         }
         $latestApplications = $user->latestApplications;
         $latestApplicationRequests = $user->latestApplicationRequests;
-        $applicationStatus = Application::STATUS;
+        $applicationStatus = Application::STATUS_EMPLOYEE;
         $requestStatus = ApplicationRequest::STATUS;
         return view('home.portals.cadidate', ['user' => $user, 'myApplications' => $myApplications, 'latestApplications' => $latestApplications, 'myRequests' => $myRequests, 'applicationStatus' => $applicationStatus, 'tab'=>$tab, 'statusFilter' => $request->status, 'keywordsFilter' => $request->keywords, 'requestStatus' => $requestStatus, 'keywordsRequest' => $request->request_keywords, 'statusRequest' => $request->request_status, 'latestApplicationRequests' => $latestApplicationRequests]);
     }
