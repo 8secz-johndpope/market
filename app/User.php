@@ -151,7 +151,13 @@ class User extends Authenticatable
         return $this->applications()->where('status', $status)->get();
     }
     public function candidates(){
-        return $this->hasManyThrough('App\Model\Application', 'App\Model\Advert');
+        return $this->hasManyThrough('App\Model\Application', 
+                                        'App\Model\Advert',
+                                        'user_id',
+                                        'advert_id',
+                                        'id',
+                                        'id'
+                                    );
     }
     public function unreadCandidates(){
         return $this->candidates()->where('status_employer', 0);
