@@ -326,7 +326,7 @@
                                                         </td>
                                                         <td>{{$request->advert->param('location_name')}}</td>
                                                         <td>{{$request->employer->name}}</td>
-                                                        <td>{{$request->status}}</td>
+                                                        <td>{{$request->getStatus()}}</td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
