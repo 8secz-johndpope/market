@@ -34,8 +34,8 @@ class RecruimentPortalController extends BaseController
         $aux = $user->candidates;
         $candidates = collect();
         foreach ($aux as $application) {
-            $candidate = Application::find($appplication->id);
-            $candidates->put($appplication->id, $candidate);
+            $candidate = Application::find($application->id);
+            $candidates->put($application->id, $candidate);
         }
         $totalUnreadCandidates = $user->unreadCandidates->count();
         $balance = \Stripe\Balance::retrieve( array("stripe_account" => $user->stripe_account));
