@@ -270,8 +270,8 @@
                                         <strong>Requests selected: </strong><span class="num-jobs">0</span>
                                     </div>
                                     <div class="btns-actions">
-                                        <button class="btn btn-disable" id="apply">Apply</button>
-                                        <button class="btn btn-disable" id="discard">Discard</button>
+                                        <button class="btn btn-disable" id="apply">Accept & Apply</button>
+                                        <button class="btn btn-disable" id="discard">Decline</button>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
@@ -296,6 +296,7 @@
                                                     <th>Location</th>
                                                     <th>Contact</th>
                                                     <th>Status</th>
+                                                    <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -316,12 +317,16 @@
                                                             @if(isset($request->user->company))
                                                                 {{$request->user->company->name}}
                                                             @else
-                                                                -
+                                                                PI
                                                             @endif
                                                         </td>
                                                         <td>{{$request->advert->param('location_name')}}</td>
                                                         <td>{{$request->employer->name}}</td>
                                                         <td>{{$request->getStatus()}}</td>
+                                                        <td>
+                                                            <button>Accept & Apply</button>
+                                                            <button>Decline</button>
+                                                        </td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>

@@ -76,6 +76,7 @@
                 @endif
             </div>
         </div>
+        
         <div class="row">
             <div class="col-sm-12">
                 <form method="post" action="/user/reply/all" id="form-replay-all">
