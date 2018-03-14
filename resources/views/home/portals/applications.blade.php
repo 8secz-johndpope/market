@@ -103,7 +103,7 @@
                                             <div class="col-info-candidates">
                                                 <h4>Candidates</h4>
                                                 <ul class="list-group">
-                                                    <li class="list-group-item">New <span class="quantity">$totalUnreadCandidates</span></li>
+                                                    <li class="list-group-item">New <span class="quantity">{{$totalUnreadCandidates}}</span></li>
                                                     <li class="list-group-item">Reviewed <span class="quantity">0</span></li>
                                                     <li class="list-group-item">Rejected <span class="quantity">0</span></li>
                                                 </ul>
