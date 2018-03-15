@@ -488,6 +488,12 @@
 
 
     });
+    $('#modalAcceptApply').on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget);
+        var request = button.data('whatever');
+        var modal = $(this);
+        modal.find('#request').val(request);
+    });
     @if(isset($tab))
         $('.nav-tabs a[href="#{{$tab}}"]').tab('show');
     @endif
