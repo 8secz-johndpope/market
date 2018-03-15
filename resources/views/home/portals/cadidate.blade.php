@@ -323,8 +323,8 @@
                                                         <td>{{$request->getStatus()}}</td>
                                                         <td>
                                                             <button class="btn btn-black" type="button" id="accept" data-toggle="modal" data-target="#modalAcceptApply" data-whatever="{{$request->id}}">Accept & Apply</button>
-                                                            <button class="btn btn-danger" type="button">Decline</button>
-                                                            <button class="btn btn-primary" type="button">Reply</button>
+                                                            <a href="/user/jobs/application-request/decline/{{$request->id}}" class="btn btn-danger" type="button">Decline</a>
+                                                            <a href="/user/areply/{{$request->advert->id}}" class="btn btn-primary" type="button">Reply</button>
                                                         </td>
                                                     </tr>
                                                 @endforeach
@@ -357,7 +357,7 @@
       <div class="modal-body">
         <form action="/user/application-request/apply" method="post" id="form-apply">
             {{ csrf_field() }}
-            <input type="hidden" class="form-control" id="request" name="request">
+            <input type="hidden" class="form-control" id="request" name="application_request">
             <div class="row">
                 <div class="col-sm-12">
                     <label class="control-label">Apply with:</label>

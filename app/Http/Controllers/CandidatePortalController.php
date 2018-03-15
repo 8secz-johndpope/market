@@ -47,12 +47,9 @@ class CandidatePortalController extends BaseController
     {
         $ids = $request->ids;
         foreach ($ids as $id) {
-            $applicationRequest = ApplicationRequest::find($id);
-            $applicationRequest->status_employer = 2;
-            $applicationRequest->status_employee = 2;
-            $applicationRequest->save();
+            $this->discard($id);
         }
-        return $this->candidatePortal();
+        return $this->candidatePortal($request);
 
     }
     public function discardShow(Request $request)
@@ -138,7 +135,6 @@ class CandidatePortalController extends BaseController
     }
     public function acceptApply(Request $request){
         $user = Auth::user();
-        return $request->application_request;
         $requestApplication = ApplicationRequest::find($request->application_request);
         $advert = $requestApplication->advert;
         $profile = null;
@@ -153,6 +149,15 @@ class CandidatePortalController extends BaseController
     public function apply($user, $advert, $profile, $cv){
         $application = $advert->apply($profile, $cv);
         $user->applications()->save($application);
+    }
+    public function discardRequest(Request $request){
+        $this->discard($request->application_request);
+        return back()->with('status', 'Your application request successfully decline');
+    }
+    public function discard($idRequest){
+        $applicationRequest = ApplicationRequest::find($idRequest);
+        $applicationRequest->decline();
+        $applicationRequest->save();
     }
 }
 ?>
