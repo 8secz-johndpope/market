@@ -38,11 +38,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($adverts as $advert)
+                            @foreach($applicationRequests as $request)
                             <tr>
                                 <td>
-                                    <a href="{{$advert->url()}}"> {{$advert->param('title')}}</a>
-                                    <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$advert->id}}">
+                                    <a href="{{$advert->url()}}"> {{$request->advert->param('title')}}</a>
+                                    <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$request->id}}">
                                 </td>
                                 <td>
                                     <button class="btn btn-danger" onclick="$(this).parent().parent().remove();">Delete</button> 

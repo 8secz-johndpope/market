@@ -58,13 +58,12 @@ class CandidatePortalController extends BaseController
     {
         $user=Auth::user();
         $ids = $request->ids;
-        $ads = [];
+        $ars = [];
         foreach ($ids as $id) {
             $requestApplication = ApplicationRequest::find($id);
-            $advert = $requestApplication->advert;
-            $ads[] = $advert;
+            $ars[] = $requestApplication;
         }
-        return view('home.portals.discard',['user'=>$user,'adverts'=> $ads]);
+        return view('home.portals.discard',['user'=>$user,'applicationRequests'=> $ars]);
 
     }
     public function candidatePortal(Request $request){
