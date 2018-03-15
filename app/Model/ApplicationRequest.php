@@ -26,6 +26,6 @@ class ApplicationRequest extends Model
 	}
 	public function apply($profile, $cv){
 		$this->status = 2;
-		return $advert->apply($profile, $cv);
+		return $this->advert->apply($profile, $cv);
 	}
 }
