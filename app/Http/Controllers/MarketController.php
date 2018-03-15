@@ -2442,6 +2442,9 @@ class MarketController extends BaseController
         Mail::to($user)->send($acc);
         return back()->with('status', 'We sent you an activation code. Check your email and click on the link verification');
     }
+    public function searchCvPrices(){
+        return view('market.search_cv_price');
+    }
     public function verify(Request $request){
         $user = User::find($request->user_id);
         $email_code = EmailCode::where('code',$request->code)->first();

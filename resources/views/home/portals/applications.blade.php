@@ -46,7 +46,7 @@
                                                 <a class="btn btn-action form-control" href="/user/manage/templates">Manage Reply Templates</a>
                                             </div>
                                             <div class="col-sm-3">
-                                                <a class="btn btn-action form-control">CV & Profile Access</a>
+                                                <a href="/recuiter/cv-search" class="btn btn-action form-control">CV & Profile Access</a>
                                             </div>
                                         </div>
                                     </div>
