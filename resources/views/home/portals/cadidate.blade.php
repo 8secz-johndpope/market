@@ -365,7 +365,7 @@
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label class="radio-inline">Profile
-                            <input  type="radio" name="type" value="0" id="radio-profile">
+                            <input  type="radio" name="type" value="0" id="radio-profile" checked>
                             <label for="radio-profile"></label>
                         </label>
                         <label class="radio-inline">CV
@@ -389,7 +389,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group" id="cvs">
+                    <div class="form-group" id="cvs" style="display: none;">
                         <label for="cv" class="control-label">Select CV</label>
                         <select name="cv" id="cv" class="form-control">
                             @foreach($user->cvs as $cv)
@@ -470,9 +470,16 @@
             $(this).closest('tr').remove();
         });
     }
+    $('.modal input[type=radio]').change(function(){
+        var value = $(this).val();
+        if(value == 0){
+            
+        }
 
+    });
     @if(isset($tab))
         $('.nav-tabs a[href="#{{$tab}}"]').tab('show');
     @endif
+        }
 </script>
 @endsection
