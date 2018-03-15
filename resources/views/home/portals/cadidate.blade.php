@@ -387,6 +387,21 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group" id="profiles">
+                        <label class="form-control"></label>
+                        <select name="profile">
+                            @foreach($user->publishProfile as $profile)
+                            <option value={{$profile->id}}>{{$profile->getType()}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group" id="cvs">
+                        
+                    </div>
+                </div>
+            </div>
             <div class="form-group">
                 <label for="message-text" class="control-label">Message:</label>
                 <textarea class="form-control" id="message-text"></textarea>
