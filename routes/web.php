@@ -195,7 +195,7 @@ Route::post('/user/jobs/discard/all', 'CandidatePortalController@discardAll');
 Route::post('/user/jobs/withdraw/applications', 'CandidatePortalController@withdrawApplication');
 Route::post('/user/templates/save', 'HomeController@save_template');
 Route::post('/user/reply/all', 'HomeController@reply_all');
-Route::get('/user/jobs/application-request/decline/{id}', 'CandidatePortalController@declineRequest');
+Route::get('/user/jobs/application-request/decline/{id}', 'CandidatePortalController@discardRequest');
 Route::get('/user/manage/my/applications', 'HomeController@my_applications');
 
 Route::get('/user/templates/add', 'HomeController@add_template');
