@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Model\Application;
 use App\Model\ApplicationRequest;
+use App\Model\Profile;
 class CandidatePortalController extends BaseController
 {
    
