@@ -402,8 +402,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-link" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-submit">Apply</button>
+        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-submit">Apply</button>
       </div>
     </div>
   </div>
