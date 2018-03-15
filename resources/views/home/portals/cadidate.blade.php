@@ -324,7 +324,7 @@
                                                         <td>
                                                             <button class="btn btn-black" type="button" id="accept" data-toggle="modal" data-target="#modalAcceptApply" data-whatever="{{$request->id}}">Accept & Apply</button>
                                                             <a href="/user/jobs/application-request/decline/{{$request->id}}" class="btn btn-danger" type="button">Decline</a>
-                                                            <a href="/user/areply/{{$request->advert->id}}" class="btn btn-primary" type="button">Reply</button>
+                                                            <a href="/user/reply/{{$request->advert->id}}" class="btn btn-primary" type="button">Reply</button>
                                                         </td>
                                                     </tr>
                                                 @endforeach

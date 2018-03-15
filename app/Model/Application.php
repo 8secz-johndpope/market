@@ -36,4 +36,8 @@ class Application extends Model
     public function profile(){
         return $this->belongsTo('App\Model\Profile');
     }
+    public function withdraw(){
+        $this->status_employer = 3;
+        $this->status_employer = 2;
+    }
 }
