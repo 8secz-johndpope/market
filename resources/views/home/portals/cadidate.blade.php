@@ -357,7 +357,7 @@
       <div class="modal-body">
         <form action="/user/application-request/apply" method="post">
             {{ csrf_field() }}
-            <input type="hidden" class="form-control" id="request">
+            <input type="hidden" class="form-control" id="request" name="request">
             <div class="row">
                 <div class="col-sm-12">
                     <label class="control-label">Apply with:</label>
@@ -403,7 +403,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-submit">Apply</button>
       </div>
     </div>
   </div>
@@ -471,8 +471,8 @@
         });
     }
     $('.modal input[type=radio]').change(function(){
+        console.log($('#request').val());
         var value = $(this).val();
-        console.log(value);
         if(value == 0){
             $('#cvs').hide();
             $('#profiles').show();
