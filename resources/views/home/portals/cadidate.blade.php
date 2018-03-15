@@ -27,7 +27,6 @@
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                         <li><a data-toggle="tab" href="#tab-applications">My Applications</a></li>
                         <li><a data-toggle="tab" href="#tab-requests">My Applications Request</a></li>
-                        <li><a data-toggle="tab" href="#tab-reply">Reply</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-overview">
@@ -332,13 +331,6 @@
                                         </table>
                                     </form>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade in" id="tab-reply">
-                            <div class="row">
-                            </div>
-                            <div class="row">
-        
                             </div>
                         </div>
                     </div>

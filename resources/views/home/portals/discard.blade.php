@@ -63,7 +63,7 @@
 @section('scripts')
 <script type="text/javascript">
     $('#form-bulk-discard').submit(function(e){
-        var length = $('input:checked').length;
+        var length = $('input').length;
         if(length == 0){
             e.preventDefault();
             $('.form-group').addClass('input-validation-error');
