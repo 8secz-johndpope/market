@@ -186,7 +186,7 @@ Route::post('/user/accounts/add', 'HomeController@add_bank_account');
 Route::post('/user/addresses/add', 'HomeController@add_address');
 Route::post('/user/covers/add', 'HomeController@add_cover');
 Route::post('/user/jobs/apply', 'HomeController@apply');
-Route::post('/user/application-request/apply', 'CandidatePortalController@acceptApply');
+Route::post('/user/jobs/application-request/apply', 'CandidatePortalController@acceptApply');
 Route::post('/user/jobs/apply/show', 'HomeController@apply_show');
 Route::post('/user/jobs/application-request/apply/all', 'CandidatePortalController@candidateApplyShow');
 Route::post('/user/jobs/application-requests/discard', 'CandidatePortalController@discardShow');
@@ -195,7 +195,7 @@ Route::post('/user/jobs/discard/all', 'CandidatePortalController@discardAll');
 Route::post('/user/jobs/withdraw/applications', 'CandidatePortalController@withdrawApplication');
 Route::post('/user/templates/save', 'HomeController@save_template');
 Route::post('/user/reply/all', 'HomeController@reply_all');
-
+Route::get('/user/jobs/application-request/decline/{id}', 'CandidatePortalController@declineRequest');
 Route::get('/user/manage/my/applications', 'HomeController@my_applications');
 
 Route::get('/user/templates/add', 'HomeController@add_template');

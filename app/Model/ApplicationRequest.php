@@ -21,4 +21,7 @@ class ApplicationRequest extends Model
 	public function candidate(){
 		return $this->belongsTo('App\User', 'candidate_id');
 	}
+	public function decline(){
+		$this->status = 2;
+	}
 }
