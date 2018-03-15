@@ -473,15 +473,15 @@
     $('.modal input[type=radio]').change(function(){
         var value = $(this).val();
         if(value == 0){
-            $('#cv').hide();
-            $('#profile').show();
+            $('#cvs').hide();
+            $('#profiles').show();
         }
         else if(value == 1){
-            $('#profile').hide();
+            $('#profiles').hide();
             $('#cvs').show();
         }
         else{
-            $('#profile').show();
+            $('#profiles').show();
             $('#cvs').show();
         }
 
