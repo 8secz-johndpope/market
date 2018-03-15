@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Model\Application;
 use App\Model\ApplicationRequest;
 use App\Model\Profile;
+use App\Model\Cv;
 class CandidatePortalController extends BaseController
 {
    
