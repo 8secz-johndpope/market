@@ -31,6 +31,13 @@ class RecruimentPortalController extends BaseController
         $invitationStatus = ApplicationRequest::STATUS;
         $applicationStatus = Application::STATUS_EMPLOYER;
         $jobStatus = Advert::STATUS;
+        $params = array();
+        if($request->has('candidates_status')){
+            $params['status'] = $request->candidates_status;
+        }
+        if($request->has('candidates_keywords')){
+            
+        }
         $aux = $user->candidates;
         $candidates = collect();
         foreach ($aux as $application) {
@@ -53,6 +60,20 @@ class RecruimentPortalController extends BaseController
     {
         $user = Auth::user();
         return view('home.portals.view_applications',['job'=>Advert::find($id),'user'=>$user]);
+    }
+    public function getCandidatesByQuery(array $params = []){
+        $user = Auth::user();
+        $query = $user->candidates();
+        if(array_key_exists('status', $params)){
+            $query->where('status', $params['status']);
+        }
+        $query = $query->get();
+        if(array_key_exists('keywords', $params)){
+           $query = $query->filter(function($value, $key) use($params){
+                return stripos($value->advert->param('title'), $params['keywords'],0) !== false;
+           });
+        }
+        return $query;
     }
 }
 ?>
