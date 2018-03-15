@@ -186,7 +186,7 @@ Route::post('/user/accounts/add', 'HomeController@add_bank_account');
 Route::post('/user/addresses/add', 'HomeController@add_address');
 Route::post('/user/covers/add', 'HomeController@add_cover');
 Route::post('/user/jobs/apply', 'HomeController@apply');
-Route::post('/user/application-request/apply', 'CandidatePortalController@apply');
+Route::post('/user/application-request/apply', 'CandidatePortalController@jobApply');
 Route::post('/user/jobs/apply/show', 'HomeController@apply_show');
 Route::post('/user/jobs/application-request/apply/all', 'CandidatePortalController@candidateApplyShow');
 Route::post('/user/jobs/application-requests/discard', 'CandidatePortalController@discardShow');

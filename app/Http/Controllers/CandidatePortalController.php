@@ -145,9 +145,12 @@ class CandidatePortalController extends BaseController
             $profile = Profile::find($request->profile);
         if($request->has('cv'))
             $cv = Cv::find($request->cv);
+        $this->apply($user, $advert, $profile, $cv);
+        return back()->with('Your application successfully sent')
+    }
+    public function apply($user, $advert, $profile, $cv){
         $application = $advert->apply($profile, $cv);
         $user->applications()->save($application);
-        return back()->with('Your application successfully sent')
     }
 }
 ?>
