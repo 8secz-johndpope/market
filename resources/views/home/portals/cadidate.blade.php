@@ -355,7 +355,7 @@
         <h4 class="modal-title" id="exampleModalLabel">Accept the Application Request</h4>
       </div>
       <div class="modal-body">
-        <form action="/user/application-request/apply" method="post">
+        <form action="/user/application-request/apply" method="post" id="form-apply">
             {{ csrf_field() }}
             <input type="hidden" class="form-control" id="request" name="request">
             <div class="row">
@@ -403,7 +403,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-submit">Apply</button>
+        <button type="button" class="btn btn-submit">Apply</button>
       </div>
     </div>
   </div>
@@ -485,9 +485,10 @@
             $('#profiles').show();
             $('#cvs').show();
         }
-
-
     });
+    $('.modal-footer .btn-submit').click(function(){
+        $('#form-apply').submit();
+    })
     $('#modalAcceptApply').on('show.bs.modal', function(event){
         var button = $(event.relatedTarget);
         var request = button.data('whatever');
