@@ -358,19 +358,33 @@
         <form>
             {{ csrf_field() }}
             <input type="hidden" class="form-control" id="recipient-name" >
-            <div class="form-group">
-                <label class="control-label">Apply with:</label>
-                <div class="radio">
-                    <label for="">Profile</label>
-                    <input  type="radio" name="type" value="0">
+            <div class="row">
+                <div class="col-sm-12">
+                    <label class="control-label">Apply with:</label>
                 </div>
-                <div class="radio">
-                    <label for="">CV</label>
-                    <input  type="radio" name="type" value="1">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <div class="radio">
+                            <label for="">Profile</label>
+                            <input  type="radio" name="type" value="0">
+                        </div>
+                    </div>
                 </div>
-                <div class="radio">
-                    <label for="">Profile & CV</label>
-                    <input  type="radio" name="type" value="2">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <div class="radio">
+                            <label for="">CV</label>
+                            <input  type="radio" name="type" value="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <div class="radio">
+                            <label for="">Profile & CV</label>
+                            <input  type="radio" name="type" value="2">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
