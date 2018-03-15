@@ -472,6 +472,7 @@
     }
     $('.modal input[type=radio]').change(function(){
         var value = $(this).val();
+        console.log(value);
         if(value == 0){
             $('#cvs').hide();
             $('#profiles').show();
