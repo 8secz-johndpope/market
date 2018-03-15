@@ -347,7 +347,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="modalAcceptApply" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade" id="modalAcceptApply" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -356,14 +356,27 @@
       </div>
       <div class="modal-body">
         <form>
-          <div class="form-group">
-            <label for="recipient-name" class="control-label">Recipient:</label>
+            {{ csrf_field() }}
             <input type="hidden" class="form-control" id="recipient-name" >
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="control-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
+            <div class="form-group">
+                <label class="control-label">Apply with:</label>
+                <div class="radio">
+                    <label for="">Profile</label>
+                    <input  type="radio" name="type" value="0">
+                </div>
+                <div class="radio">
+                    <label for="">CV</label>
+                    <input  type="radio" name="type" value="1">
+                </div>
+                <div class="radio">
+                    <label for="">Profile & CV</label>
+                    <input  type="radio" name="type" value="2">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message-text" class="control-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+            </div>
         </form>
       </div>
       <div class="modal-footer">
