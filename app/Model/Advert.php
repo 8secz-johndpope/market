@@ -684,7 +684,7 @@ class Advert extends  BaseModel
             $application->cv_id = $cv->id;
         }
         if(isset($profile)){
-            $applicaction->profile_id = $profile->id;
+            $application->profile_id = $profile->id;
         }
         return $application;
     }
