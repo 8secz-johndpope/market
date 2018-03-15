@@ -491,6 +491,5 @@
     @if(isset($tab))
         $('.nav-tabs a[href="#{{$tab}}"]').tab('show');
     @endif
-        }
 </script>
 @endsection
