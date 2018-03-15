@@ -390,15 +390,20 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group" id="profiles">
-                        <label class="form-control"></label>
-                        <select name="profile">
+                        <label for="profile" class="control-label">Select Profile</label>
+                        <select name="profile" id="profile" class="form-control">
                             @foreach($user->publishProfiles as $profile)
                             <option value={{$profile->id}}>{{$profile->getType()}}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="form-group" id="cvs">
-                        
+                        <label for="cv" class="control-label">Select CV</label>
+                        <select name="cv" id="cv" class="form-control">
+                            @foreach($user->cvs as $cv)
+                            <option value={{$cv->id}}>{{$cv->title}}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
