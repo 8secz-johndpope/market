@@ -364,26 +364,18 @@
                 </div>
                 <div class="col-sm-12">
                     <div class="form-group">
-                        <label class="inline-radio">Profile
+                        <label class="radio-inline">Profile
                             <input  type="radio" name="type" value="0" id="radio-profile">
                             <label for="radio-profile"></label>
                         </label>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <div class="radio">
-                            <label for="">CV</label>
-                            <input  type="radio" name="type" value="1">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <div class="radio">
-                            <label for="">Profile & CV</label>
-                            <input  type="radio" name="type" value="2">
-                        </div>
+                        <label class="radio-inline">CV
+                            <input  type="radio" name="type" value="1" id="radio-cv">
+                            <label for="radio-cv"></label>
+                        </label>
+                        <label class="radio-inline">Profile & CV
+                            <input  type="radio" name="type" value="2" id="radio-profile-cv">
+                            <label for="adio-profile-cv"></label>
+                        </label>
                     </div>
                 </div>
             </div>
