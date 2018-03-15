@@ -473,8 +473,18 @@
     $('.modal input[type=radio]').change(function(){
         var value = $(this).val();
         if(value == 0){
-            
+            $('#cv').hide();
+            $('#profile').show();
         }
+        else if(value == 1){
+            $('#profile').hide();
+            $('#cvs').show();
+        }
+        else{
+            $('#profile').show();
+            $('#cvs').show();
+        }
+
 
     });
     @if(isset($tab))
