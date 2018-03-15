@@ -136,18 +136,17 @@ class CandidatePortalController extends BaseController
     public function acceptApply(Request $request){
         $user = Auth::user();
         $requestApplication = ApplicationRequest::find($request->application_request);
-        $advert = $requestApplication->advert;
         $profile = null;
         $cv = null;
         if($request->has('profile'))
             $profile = Profile::find($request->profile);
         if($request->has('cv'))
             $cv = Cv::find($request->cv);
-        $this->apply($user, $advert, $profile, $cv);
+        $this->apply($user, $requestApplication, $profile, $cv);
         return back()->with('status', 'Your application successfully sent');
     }
-    public function apply($user, $advert, $profile, $cv){
-        $application = $advert->apply($profile, $cv);
+    public function apply($user, $requestApplication, $profile, $cv){
+        $application = $requestApplication->apply($profile, $cv);
         $user->applications()->save($application);
     }
     public function discardRequest(Request $request, $id){

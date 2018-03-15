@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ApplicationRequest extends Model
 {
-	const STATUS = array('New', 'Viewed' ,'Rejected');
+	const STATUS = array('New', 'Viewed', 'Accepted' ,'Rejected');
 
 	public function advert(){
 		return $this->belongsTo('App\Model\Advert');
@@ -22,6 +22,10 @@ class ApplicationRequest extends Model
 		return $this->belongsTo('App\User', 'candidate_id');
 	}
 	public function decline(){
+		$this->status = 3;
+	}
+	public function apply($profile, $cv){
 		$this->status = 2;
+		return $advert->apply($profile, $cv);
 	}
 }
