@@ -25,7 +25,7 @@ class CandidatePortalController extends BaseController
         $user = Auth::user();
         foreach($request->select_job as $id){
             $application = Application::find($id);
-            $application->status = 2;
+            $application->withdraw();
             $user->applications()->save($application);
         }
         return ['status' => 'Withdraw the applications successfully'];
