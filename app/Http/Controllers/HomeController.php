@@ -1260,19 +1260,15 @@ class HomeController extends BaseController
     }
     public function apply(Request $request)
     {
-
         // Get the currently authenticated user...
         $user = Auth::user();
         $id = $request->id;
         $advert = Advert::find($id);
-
-        $application = new Application;
+        $application = new Application();
         $application->advert_id = $advert->id;
         $application->user_id = $user->id;
         if($request->has('cv'))
         $application->cv_id = $request->cv;
-        if($request->has('cover'))
-        $application->cover_id = $request->cover;
         if($request->has('ctext')&&$request->ctext){
             $cover = new Cover;
             $cover->title=$request->ctitle;
@@ -1294,15 +1290,12 @@ class HomeController extends BaseController
             $room->save();
             $room->users()->save($user);
             if($user->id!==$advert->user_id){
-
                 if($advert->user===null){
                     $room->users()->save(User::find(1));
                 }else{
-
                     $room->users()->save($advert->user);
                 }
             }
-
             $advert->replies++;
             $advert->save();
         }

@@ -677,4 +677,15 @@ class Advert extends  BaseModel
     public function prevAdvert(){
         return Advert::where('category_id',$this->category_id)->where('id','<',$this->id)->where('status',1)->first();
     }
+    public function apply($profile, $cv){
+        $application = new Application();
+        $application->advert_id = $this->id;
+        if(isset($cv)){
+            $application->cv_id = $cv->id;
+        }
+        if(isset($profile)){
+            $applicaction->profile_id = $profile->id;
+        }
+        return $application;
+    }
 }
