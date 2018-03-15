@@ -138,7 +138,7 @@ class CandidatePortalController extends BaseController
     }
     public function acceptApply(Request $request){
         $user = Auth::user();
-        return $request->request;
+        return $request->application_request;
         $requestApplication = ApplicationRequest::find($request->application_request);
         $advert = $requestApplication->advert;
         $profile = null;
