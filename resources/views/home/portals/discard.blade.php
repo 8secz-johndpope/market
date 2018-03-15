@@ -41,7 +41,7 @@
                             @foreach($applicationRequests as $request)
                             <tr>
                                 <td>
-                                    <a href="{{$advert->url()}}"> {{$request->advert->param('title')}}</a>
+                                    <a href="{{$request->advert->url()}}"> {{$request->advert->param('title')}}</a>
                                     <input required="Please select at least one appplication" class="select-application" type="hidden" name="ids[]" value="{{$request->id}}">
                                 </td>
                                 <td>
