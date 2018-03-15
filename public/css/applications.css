@@ -17,8 +17,8 @@
 }
 .radio-inline>input~label {
     position: static;
-}
-.form-group label:before, .radio-inline>input~label:before {
+} 
+.radio-inline>input~label:before {
     content: '';
     display: block;
     width: 18px;
@@ -32,6 +32,15 @@
     background-repeat: no-repeat;
     background-image: url(/css/icon-sprite.svg);
     background-position: -1110px -780px;
+}
+.radio-inline>input:checked ~label:before {
+    width: 18px;
+    height: 18px;
+    background-position: -1110px -840px;
+    background-size: 1230px 1230px;
+    -webkit-background-size: 1230px 1230px;
+    background-repeat: no-repeat;
+    background-image: url(/css/icon-sprite.svg);
 }
 .tab-content {
     padding: 15px;
