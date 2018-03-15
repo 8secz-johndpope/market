@@ -150,8 +150,8 @@ class CandidatePortalController extends BaseController
         $application = $advert->apply($profile, $cv);
         $user->applications()->save($application);
     }
-    public function discardRequest(Request $request){
-        $this->discard($request->application_request);
+    public function discardRequest(Request $request, $id){
+        $this->discard($id);
         return back()->with('status', 'Your application request successfully decline');
     }
     public function discard($idRequest){
