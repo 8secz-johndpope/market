@@ -355,9 +355,9 @@
         <h4 class="modal-title" id="exampleModalLabel">Accept the Application Request</h4>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="/user/application-request/apply" method="post">
             {{ csrf_field() }}
-            <input type="hidden" class="form-control" id="recipient-name" >
+            <input type="hidden" class="form-control" id="request">
             <div class="row">
                 <div class="col-sm-12">
                     <label class="control-label">Apply with:</label>
@@ -374,7 +374,7 @@
                         </label>
                         <label class="radio-inline">Profile & CV
                             <input  type="radio" name="type" value="2" id="radio-profile-cv">
-                            <label for="adio-profile-cv"></label>
+                            <label for="radio-profile-cv"></label>
                         </label>
                     </div>
                 </div>
@@ -399,14 +399,10 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="message-text" class="control-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
-            </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Send message</button>
       </div>
     </div>
