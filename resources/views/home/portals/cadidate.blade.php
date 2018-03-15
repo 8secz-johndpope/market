@@ -355,7 +355,7 @@
         <h4 class="modal-title" id="exampleModalLabel">Accept the Application Request</h4>
       </div>
       <div class="modal-body">
-        <form action="/user/application-request/apply" method="post" id="form-apply">
+        <form action="/user/jobs/application-request/apply" method="post" id="form-apply">
             {{ csrf_field() }}
             <input type="hidden" class="form-control" id="request" name="application_request">
             <div class="row">
