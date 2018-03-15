@@ -18,7 +18,7 @@
 .radio-inline>input~label {
     position: static;
 }
-form-group label:before, .radio-inline>input~label:before {
+.form-group label:before, .radio-inline>input~label:before {
     content: '';
     display: block;
     width: 18px;

@@ -366,7 +366,7 @@
                     <div class="form-group">
                         <label class="inline-radio">Profile
                             <input  type="radio" name="type" value="0" id="radio-profile">
-                            <label for="radio-profile">Profile</label>
+                            <label for="radio-profile"></label>
                         </label>
                     </div>
                 </div>
