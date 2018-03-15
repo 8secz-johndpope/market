@@ -4,6 +4,35 @@
     src: url('fonts/Effra_W_Rg.eot?#iefix') format('embedded-opentype'), url('fonts/Effra_W_Rg.woff') format('woff'), url('fonts/Effra_Md.ttf') format('truetype');
     font-style: normal
 }
+.radio-inline input[type=radio] {
+    border: 0 none;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: 8px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    top: 5px;
+}
+.radio-inline>input~label {
+    position: static;
+}
+form-group label:before, .radio-inline>input~label:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: 1230px 1230px;
+    -webkit-background-size: 1230px 1230px;
+    background-repeat: no-repeat;
+    background-image: url(/css/icon-sprite.svg);
+    background-position: -1110px -780px;
+}
 .tab-content {
     padding: 15px;
     padding-top: 0;

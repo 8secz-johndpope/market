@@ -362,12 +362,12 @@
                 <div class="col-sm-12">
                     <label class="control-label">Apply with:</label>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-12">
                     <div class="form-group">
-                        <div class="radio">
-                            <label for="">Profile</label>
-                            <input  type="radio" name="type" value="0">
-                        </div>
+                        <label class="inline-radio">Profile
+                            <input  type="radio" name="type" value="0" id="radio-profile">
+                            <label for="radio-profile">Profile</label>
+                        </label>
                     </div>
                 </div>
                 <div class="col-sm-4">
