@@ -136,9 +136,10 @@ class CandidatePortalController extends BaseController
         }
         return $query;
     }
-    public function jobApply(Request $request){
+    public function acceptApply(Request $request){
         $user = Auth::user();
-        $advert = Advert::find($request->job_id);
+        $requestApplication = ApplicationRequest::find($request->request)
+        $advert = $requestApplication->advert;
         $profile = null;
         $cv = null;
         if($request->has('profile'))
