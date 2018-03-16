@@ -575,7 +575,7 @@
                                         <tbody>
                                             @foreach($myInvitations as $invitation)
                                             <tr>
-                                                <td><input type="checkbox" ></td>
+                                                <td><input type="checkbox" name="candidates_invited[]"></td>
                                                 <td>{{$invitation->advert->param('title')}}</td>
                                                 <td>{{$invitation->candidate->name}}</td>
                                                 <td>{{$invitation->candidate->phone}}</td>

@@ -76,7 +76,7 @@
                 @endif
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-sm-12">
                 <form method="post" action="/user/reply/all" id="form-replay-all">
@@ -126,6 +126,7 @@
         </button>
       </div>
       <div class="modal-body">
+        @if($user->templates->count() > 0)
         <div class="form-group">
             <label>Select a Template</label>
             <select class="form-control" id="template-reply" name="template-reply">
@@ -134,10 +135,14 @@
                 @endforeach
             </select>
         </div>
+        <div>
+            <p>You do not have reply templates, if you want to create a new one click <a href="/user/templates/add">here</a></p>
+        </div>
+        @endif
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-submit">Save changes</button>
+        <button type="button" class="btn btn-submit" {{ $user->templates->count() == 0 ? 'disabled' : ''}}>Save changes</button>
       </div>
     </div>
   </div>
