@@ -197,11 +197,11 @@ Route::post('/user/templates/save', 'HomeController@save_template');
 Route::post('/user/reply/all', 'HomeController@reply_all');
 Route::get('/user/jobs/application-request/decline/{id}', 'CandidatePortalController@discardRequest');
 Route::get('/user/manage/my/applications', 'HomeController@my_applications');
-Route::get('/recuiter/cv-search', 'MarketController@searchCvPrices');
+Route::get('/recruiter/cv-search', 'MarketController@searchCvPrices');
 Route::get('/user/templates/add', 'HomeController@add_template');
 Route::get('/user/manage/templates', 'HomeController@templates');
 Route::get('/user/delete/template/{id}', 'HomeController@delete_template');
-
+Route::post('/recruiter/candidates/mark-view/all', 'RecruimentPortalController@markViewAll');
 
 Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/manage/sale/{id}', 'HomeController@checkout');

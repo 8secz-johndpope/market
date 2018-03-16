@@ -239,7 +239,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="jobs-selected">
-                                        <a href="#" class="btn btn-disable">Viewed</a>
+                                        <a href="#" class="btn btn-disable" id="viewed">Viewed</a>
                                         <a href="#" class="btn btn-disable">Rejected</a>
                                         <a href="#" class="btn btn-disable">Interview</a>
                                         <a href="#" class="btn btn-disable">Accepted</a>
@@ -270,32 +270,36 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($candidates as $application)
-                                            <tr>
-                                                <td><input type="checkbox" name="candidates[]" value="{{$application->id}}" class="candidates"></td>
-                                                <td>{{$application->advert->param('title')}}</td>
-                                                <td>{{$application->user->name}}</td>
-                                                <td>{{$application->user->phone}}</td>
-                                                <td>{{$application->getStatusEmployer()}}</td>
-                                                <td>{{$application->created_at->format('d M Y')}}</td> 
-                                                <td>
-                                                    @if($application->cv)                      
-                                                    <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">
-                                                        View/Download
-                                                    </a> 
-                                                    @else 
-                                                        <span>No Cv</span> 
-                                                    @endif
-                                                </td>
-                                                <td>
-                                                    <a href="/job/profile/view/{{$application->user_id}}">View Profile
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a>
-                                                </td>
-                                            </tr>
-                                            @endforeach
+                                            <form method="post" id="form-list-candidates">
+                                                <input type="hidden" name="page" value="candidates">
+                                                {{ csrf_field() }}
+                                                @foreach($candidates as $application)
+                                                <tr>
+                                                    <td><input type="checkbox" name="candidates[]" value="{{$application->id}}" class="candidates"></td>
+                                                    <td>{{$application->advert->param('title')}}</td>
+                                                    <td>{{$application->user->name}}</td>
+                                                    <td>{{$application->user->phone}}</td>
+                                                    <td>{{$application->getStatusEmployer()}}</td>
+                                                    <td>{{$application->created_at->format('d M Y')}}</td> 
+                                                    <td>
+                                                        @if($application->cv)                      
+                                                        <a target="_blank" href="{{env('AWS_CV_IMAGE_URL')}}/{{$application->cv->file_name}}">
+                                                            View/Download
+                                                        </a> 
+                                                        @else 
+                                                            <span>No Cv</span> 
+                                                        @endif
+                                                    </td>
+                                                    <td>
+                                                        <a href="/job/profile/view/{{$application->user_id}}">View Profile
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            </form>
                                         </tbody>
                                     </table>
                                 </div>
@@ -596,5 +600,11 @@
     @if(isset($tab))
          $('.nav-tabs a[href="#tab-{{$tab}}"]').tab('show');
     @endif
+    $('#viewed').click(function(e){
+        e.preventDefault();
+        var form = $('#form-list-candidates');
+        form.attr('action', '/recruiter/candidates/mark-view/all');
+        form.submit();
+    });
 </script>
 @endsection

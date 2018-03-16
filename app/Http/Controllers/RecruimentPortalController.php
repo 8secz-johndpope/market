@@ -93,7 +93,7 @@ class RecruimentPortalController extends BaseController
         return $query;
     }
     public function markViewAll(Request $request){
-        $ids = $request->ids;
+        $ids = $request->candidates;
         foreach($ids as $id){
             $application = $this->markViewApplication($id);
             $application->save();
