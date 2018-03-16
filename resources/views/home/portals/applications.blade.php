@@ -40,7 +40,7 @@
                                                 <a class="btn btn-action form-control">Invitations an Application</a>
                                             </div>
                                             <div class="col-sm-3">
-                                                <a class="btn btn-action form-control">Unread Candidates</a>
+                                                <a href="/recruiter/portal?page=candidates&candidate_status=0" class="btn btn-action form-control">Unread Candidates</a>
                                             </div>
                                             <div class="col-sm-3">
                                                 <a class="btn btn-action form-control" href="/user/manage/templates">Manage Reply Templates</a>
