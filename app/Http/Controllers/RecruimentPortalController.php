@@ -124,6 +124,14 @@ class RecruimentPortalController extends BaseController
         }
         return back()->with('status', 'The applications changed the status successfully');
     }
+    public function expireAll(Request $request){
+        $ids = $request->select_jobs;
+        foreach($ids as $id){
+            $job = $this->expireJob($id);
+            $job->save();
+        }
+        return back()->with('status', 'The jobs changed the status successfully');
+    }
     public function getJobsByQuery(array $params = []){
         $user = Auth::user();
         $query = $user->jobs();
@@ -157,6 +165,11 @@ class RecruimentPortalController extends BaseController
         $application = Application::find($id);
         $application->accept();
         return $application;
+    }
+    public function expireJob($id){
+        $job = Advert::find($id);
+        $job->expire();
+        return $job;
     }
 }
 ?>

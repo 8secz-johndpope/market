@@ -159,9 +159,7 @@
                                         <strong>Jobs selected: </strong><span class="num-jobs">0</span>
                                     </div>
                                     <div class="btns-actions">
-                                        <a class="btn btn-disable">Upgrade</a>
-                                        <a class="btn btn-disable">Expire</a>
-                                        <a class="btn btn-disable">Refresh</a>
+                                        <a class="btn btn-disable" id="expire">Expire</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
@@ -186,24 +184,28 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($jobs as $job)
-                                    <tr>
-                                        <td><input type="checkbox" name="select-job[]" class="checkboxs-jobs"></td>
-                                        <td><a href="{{$job->url()}}">{{$job->param('title')}}</a></td>
-                                        <td>{{$job->param('location_name')}}</td>
-                                        <td>{{$job->getStatus()}}</td>
-                                        <td>{{$job->param('views')}}</td>
-                                        <td>
-                                            @if(count($job->applications) > 0)
-                                            <a href="/job/manage/applications/{{$job->id}}">
-                                            {{count($job->applications)}} <span class="fa fa-file-text-o"></span></a>
-                                            @else
-                                                0 <span class="fa fa-file-text-o"></span>
-                                            @endif
-                                        </td>
-                                        <td><a href="#">Expire</td>
-                                    </tr>
-                                    @endforeach
+                                    <form method="post" id="form-list-jobs">
+                                         <input type="hidden" name="page" value="jobs">
+                                        {{ csrf_field() }}
+                                        @foreach($jobs as $job)
+                                        <tr>
+                                            <td><input type="checkbox" name="select_jobs[]" class="checkboxs-jobs" value="{{$job->id}}"></td>
+                                            <td><a href="{{$job->url()}}">{{$job->param('title')}}</a></td>
+                                            <td>{{$job->param('location_name')}}</td>
+                                            <td>{{$job->getStatus()}}</td>
+                                            <td>{{$job->param('views')}}</td>
+                                            <td>
+                                                @if(count($job->applications) > 0)
+                                                <a href="/job/manage/applications/{{$job->id}}">
+                                                {{count($job->applications)}} <span class="fa fa-file-text-o"></span></a>
+                                                @else
+                                                    0 <span class="fa fa-file-text-o"></span>
+                                                @endif
+                                            </td>
+                                            <td><a href="#">Expire</a></td>
+                                        </tr>
+                                        @endforeach
+                                    </form>
                                 </tbody>
                             </table>
                         </div>
@@ -626,6 +628,12 @@
     $('#accept').click(function(e){
         e.preventDefault();
         candidatesCommand('/recruiter/candidates/accept/all');
+    });
+    $('#expire').click(function(e){
+        e.preventDefault();
+        var form = $('#form-list-jobs');
+        form.attr('/recruiter/candidates/accept/all');
+        form.submit();
     });
     function candidatesCommand(actionForm){
         var form = $('#form-list-candidates');

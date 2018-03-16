@@ -205,6 +205,7 @@ Route::post('/recruiter/candidates/mark-view/all', 'RecruimentPortalController@m
 Route::post('/recruiter/candidates/reject/all', 'RecruimentPortalController@rejectAll');
 Route::post('/recruiter/candidates/interview/all', 'RecruimentPortalController@interviewAll');
 Route::post('/recruiter/candidates/accept/all', 'RecruimentPortalController@acceptAll');
+Route::post('/recruiter/jobs/expire/all', 'RecruimentPortalController@expireAll');
 Route::get('/user/manage/order', 'HomeController@order');
 Route::get('/user/manage/sale/{id}', 'HomeController@checkout');
 Route::get('/user/manage/checkout/{id}', 'HomeController@checkout');

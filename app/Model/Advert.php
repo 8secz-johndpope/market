@@ -691,5 +691,8 @@ class Advert extends  BaseModel
     public function getStatus(){
         return self::STATUS[$this->status];
     }
+    public function expire(){
+        $this->status = 3;
+    }
 }
 ?>
