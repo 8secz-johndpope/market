@@ -116,6 +116,14 @@ class RecruimentPortalController extends BaseController
         }
         return back()->with('status', 'The applications changed the status successfully');
     }
+    public function acceptAll(){
+        $ids = $request->candidates;
+        foreach($ids as $id){
+            $application = $this->acceptApplication();
+            $application->save();
+        }
+        return back()->with('status', 'The applications changed the status successfully');
+    }
     public function getJobsByQuery(array $params = []){
         $user = Auth::user();
         $query = $user->jobs();
@@ -143,6 +151,11 @@ class RecruimentPortalController extends BaseController
     public function callInterview($id){
         $application = Application::find($id);
         $application->interview();
+        return $application;
+    }
+    public function acceptApplication($id){
+        $application = Application::find($id);
+        $application->accept();
         return $application;
     }
 }

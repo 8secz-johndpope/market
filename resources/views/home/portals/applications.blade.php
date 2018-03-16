@@ -242,7 +242,7 @@
                                         <a href="#" class="btn btn-disable" id="viewed">Viewed</a>
                                         <a href="#" class="btn btn-disable" id="rejected">Rejected</a>
                                         <a href="#" class="btn btn-disable" id="interview">Interview</a>
-                                        <a href="#" class="btn btn-disable" id="accepted">Accepted</a>
+                                        <a href="#" class="btn btn-disable" id="accept">Accepted</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
@@ -622,6 +622,10 @@
     $('#interview').click(function(e){
         e.preventDefault();
         candidatesCommand('/recruiter/candidates/interview/all');
+    });
+    $('#accept').click(function(e){
+        e.preventDefault();
+        candidatesCommand('/recruiter/candidates/accept/all');
     });
     function candidatesCommand(actionForm){
         var form = $('#form-list-candidates');
