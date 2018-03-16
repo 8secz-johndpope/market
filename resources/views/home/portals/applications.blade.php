@@ -125,14 +125,14 @@
                                     <div class="container-filter clearfix">
                                         <div class="col-md-5">
                                             <label for="keywords">Keywords</label>
-                                            <input type="text" name="jobs_keywords" class="form-control" {{!isset($jobsKeywords)? : 'value="'.$jobsKeywords.'"'}}>
+                                            <input type="text" name="jobs_keywords" class="form-control" {{!isset($jobsKeywords)? : "value=\"".$jobsKeywords."\""}}>
                                         </div>
                                         <div class="col-md-5">
                                             <label for="status">Status</label>
                                             <select class="form-control" name="jobs_status">
                                                 <option value="">Select Status</option>
                                                 @foreach($jobStatus as $status)
-                                                <option value="{{$loop->index}}" checked>{{$status}}</option>
+                                                <option value="{{$loop->index}}" {{!isset($jobsStatus)? : "selected"}}>{{$status}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
