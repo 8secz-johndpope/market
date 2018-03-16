@@ -209,7 +209,7 @@
                         </div>
                         <div class="tab-pane fade in" id="tab-candidates">
                             <div class="row">
-                                <form action="/user/manage/applications" method="get" id="form-filter-candidates">
+                                <form action="" method="get" id="form-filter-candidates">
                                     <input type="hidden" name="page" value="candidates">
                                     <div class="container-filter clearfix">
                                         <div class="col-md-5">
