@@ -70,7 +70,7 @@ class RecruimentPortalController extends BaseController
         $user = Auth::user();
         $query = $user->candidates();
         if(array_key_exists('status', $params)){
-            $query->where('status', $params['status']);
+            $query->where('status_employer', $params['status']);
         }
         $query = $query->get();
         if(array_key_exists('keywords', $params)){
