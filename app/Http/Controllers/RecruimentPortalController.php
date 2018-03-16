@@ -111,7 +111,7 @@ class RecruimentPortalController extends BaseController
     public function interviewAll(Request $request){
         $ids = $request->candidates;
         foreach($ids as $id){
-            $application = $this->callInterview();
+            $application = $this->callInterview($id);
             $application->save();
         }
         return back()->with('status', 'The applications changed the status successfully');
@@ -119,7 +119,7 @@ class RecruimentPortalController extends BaseController
     public function acceptAll(Request $request){
         $ids = $request->candidates;
         foreach($ids as $id){
-            $application = $this->acceptApplication();
+            $application = $this->acceptApplication($id);
             $application->save();
         }
         return back()->with('status', 'The applications changed the status successfully');
