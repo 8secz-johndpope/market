@@ -304,8 +304,12 @@
                                                         @endif
                                                     </td>
                                                     <td>
-                                                        <a href="/job/profile/view/{{$application->profile_id}}">View Profile
+                                                        @if(isset($application->profile))
+                                                        <a href="/job/profile/view/{{$application->profile->id}}">View Profile
                                                         </a>
+                                                        @else
+                                                        No Profile
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-primary" href="/user/areply/{{$application->id}}">Reply</a>
