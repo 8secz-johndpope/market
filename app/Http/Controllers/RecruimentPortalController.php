@@ -98,7 +98,7 @@ class RecruimentPortalController extends BaseController
             $application = $this->markViewApplication($id);
             $application->save();
         }
-        return back()->with('status' => 'The applications were marked as viewed successfully');
+        return back()->with('status', 'The applications were marked as viewed successfully');
     }
     public function getJobsByQuery(array $params = []){
         $user = Auth::user();
