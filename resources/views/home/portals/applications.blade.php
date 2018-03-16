@@ -606,7 +606,7 @@
             buttons.removeClass('btn-action');
             buttons.addClass('btn-disable');
         }
-        tabpanel.find('.num-jobs').text(checkbox.length);
+        tabpanel.find('.num-jobs').text(checkboxs.length);
     });
     @if(isset($tab))
          $('.nav-tabs a[href="#tab-{{$tab}}"]').tab('show');
