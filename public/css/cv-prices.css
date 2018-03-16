@@ -26,3 +26,12 @@
 .top-block .ctas {
     padding: 0 0 70px;
 }
+.profilesearch-example-container .profilesearch-desktop {
+    width: 612px;
+    height: 515px;
+    margin: 0 80px;
+    text-align: center;
+    position: relative;
+    background-image: url(/css/profile-search-desktop.png);
+    background-repeat: no-repeat;
+}
