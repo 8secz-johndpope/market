@@ -35,3 +35,11 @@
     background-image: url(/css/profile-search-desktop.png);
     background-repeat: no-repeat;
 }
+.profilesearch-example-container .profilesearch_desktop .profilesearch_web {
+    top: 25px;
+    left: 25px;
+    width: 565px;
+    height: 315px;
+    overflow: hidden;
+    position: absolute;
+}
