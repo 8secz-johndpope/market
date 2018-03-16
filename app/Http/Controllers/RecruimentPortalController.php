@@ -39,7 +39,6 @@ class RecruimentPortalController extends BaseController
             $params['keywords'] = $request->candidate_keywords;
         }
         if(count($params) > 0){
-            return $params;
             $aux = $this->getCandidatesByQuery($params);
         }
         else{
