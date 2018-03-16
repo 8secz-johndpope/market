@@ -134,11 +134,11 @@
                 <option value="{{$template->id}}">{{$template->title}}</option>
                 @endforeach
             </select>
-        </div>
+        </div> 
+        @endif
         <div>
             <p>You do not have reply templates, if you want to create a new one click <a href="/user/templates/add">here</a></p>
         </div>
-        @endif
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
