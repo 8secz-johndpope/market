@@ -252,7 +252,15 @@
                                         <li><a href="#">Last Name</a></li>
                                     </ul>
                                 </div>
+                                @if(isset(session('status')))
+                                <div class="col-xs-12">
+                                    <div class="alert alert-succesfull" role="alert">
+                                        <span>{{session('status')}}</span>
+                                    </div>
+                                </div>
+                                @endif
                             </div>
+
                             <div class="row">
                                 <div class="col-sm-12">
                                     <table class="w100p table table-striped table-hover">

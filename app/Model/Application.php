@@ -41,6 +41,6 @@ class Application extends Model
         $this->status_employee = 2;
     }
     public function markView(){
-        $this->status_employer = 2;
+        $this->status_employer = 1;
     }
 }
