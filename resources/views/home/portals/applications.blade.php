@@ -615,7 +615,7 @@
         e.preventDefault();
         candidatesCommand('/recruiter/candidates/mark-view/all');
     });
-    $('#reject').click(function(e){
+    $('#rejected').click(function(e){
         e.preventDefault();
         candidatesCommand('/recruiter/candidates/reject/all');
     });
