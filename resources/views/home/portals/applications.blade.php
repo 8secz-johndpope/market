@@ -206,7 +206,7 @@
                         <div class="tab-pane fade in" id="tab-candidates">
                             <div class="row">
                                 <form action="/user/manage/applications" method="get" id="form-filter-candidates">
-                                    <input type="hidden" name="tab" value="tab-candidates">
+                                    <input type="hidden" name="page" value="candidates">
                                     <div class="container-filter clearfix">
                                         <div class="col-md-5">
                                             <label for="keywords">Keywords</label>
@@ -580,7 +580,7 @@
         tabpanel.find('.num-jobs').text(checkbox.length);
     });
     @if(isset($tab))
-         $('.nav-tabs a[href="#{{$tab}}"]').tab('show');
+         $('.nav-tabs a[href="#tab-{{$tab}}"]').tab('show');
     @endif
 </script>
 @endsection
