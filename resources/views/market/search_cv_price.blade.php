@@ -22,7 +22,9 @@
 	<section class="top-block">
 		<div class="bg-image">
 			<h1>Profile & CV Search</h1>
-			<p>Headhunt the candidates that you need</p>
+			<div class="ctas text-center">
+				<p>Headhunt the candidates that you need</p>
+			</div>
 		</div>
 	</section>
 	<section class="cvsearch-features">
