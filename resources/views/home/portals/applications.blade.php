@@ -214,7 +214,7 @@
                                     <div class="container-filter clearfix">
                                         <div class="col-md-5">
                                             <label for="keywords">Keywords</label>
-                                            <input type="text" name="candidate_keywords" class="form-control" value="{{!isset($cadidatesKeywords)? : $cadidatesKeywords}}">
+                                            <input type="text" name="candidate_keywords" class="form-control" value="{{!isset($candidatesKeywords)? : $candidatesKeywords}}">
                                         </div>
                                         <div class="col-md-5">
                                             <label for="status">Application Status</label>
