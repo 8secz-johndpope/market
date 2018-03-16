@@ -43,8 +43,7 @@ class RecruimentPortalController extends BaseController
             }
             if(count($params) > 0){
                 $aux = $this->getCandidatesByQuery($params);
-            }
-            
+            } 
         }
         elseif($request->page === 'jobs'){
            if($request->has('jobs_status')){
@@ -54,10 +53,9 @@ class RecruimentPortalController extends BaseController
                 $params['keywords'] = $request->jobs_keywords;
             }
             if(count($params) > 0){
-                $aux = $this->getJobsByQuery($params);
+                $jobs = $this->getJobsByQuery($params);
             }
         }
-
         $candidates = collect();
         foreach ($aux as $application) {
             $candidate = Application::find($application->id);
