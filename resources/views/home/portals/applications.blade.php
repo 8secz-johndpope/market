@@ -304,7 +304,7 @@
                                                         @endif
                                                     </td>
                                                     <td>
-                                                        <a href="/job/profile/view/{{$application->user_id}}">View Profile
+                                                        <a href="/job/profile/view/{{$application->profile_id}}">View Profile
                                                         </a>
                                                     </td>
                                                     <td>
