@@ -27,7 +27,7 @@
                         <li class="active"><a data-toggle="tab" href="#tab-overview">Overview</a></li>
                         <li><a data-toggle="tab" href="#tab-jobs">Jobs</a></li>
                         <li><a data-toggle="tab" href="#tab-candidates">Candidates</a></li>
-                        <li><a data-toggle="tab" href="#tab-invitations">Invitations To Apply</a></li>
+                        <li><a data-toggle="tab" href="#tab-invitations">Invitations an Apply</a></li>
                         <li><a data-toggle="tab" href="#tab-share">Share Credit</a></li>
                     </ul>
                     <div class="tab-content">
@@ -37,7 +37,7 @@
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <a class="btn btn-action form-control">Invitations an Application</a>
+                                                <a href="/recruiter/portal?page=invitations" class="btn btn-action form-control">Invitations an Application</a>
                                             </div>
                                             <div class="col-sm-3">
                                                 <a href="/recruiter/portal?page=candidates&candidate_status=0" class="btn btn-action form-control">Unread Candidates</a>
