@@ -37,18 +37,36 @@ class Application extends Model
         return $this->belongsTo('App\Model\Profile');
     }
     public function withdraw(){
-        $this->status_employer = 3;
-        $this->status_employee = 2;
+        if(!$this->isReject()){
+            $this->status_employer = 3;
+            $this->status_employee = 2;
+        }
     }
     public function markView(){
         $this->status_employer = 1;
     }
     public function reject(){
-        $this->status_employee = 1;
-        $this->status_employer = 2;
+        if(!$this->isWithdrawn()){
+            $this->status_employee = 1;
+            $this->status_employer = 2;
+        }
     }
     public function interview(){
-        $this->status_employee = 3;
-        $this->status_employer = 4;
+        if(!$this->isReject() && !$this->isWithdrawn()){
+            $this->status_employee = 3;
+            $this->status_employer = 4;
+        }
+    }
+    public function accept(){
+        if(!$this->isReject() && !$this->isWithdrawn()){
+            $this->status_employee = 4;
+            $this->status_employer = 5;
+        }
+    }
+    public function isReject(){
+        return $this->status_employer == 2;
+    }
+    public function isWithdrawn(){
+        return $this->status_employee == 2;   
     }
 }
