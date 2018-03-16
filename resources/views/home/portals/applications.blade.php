@@ -499,6 +499,11 @@
                         </div>
                         <div class="tab-pane fade in" id="tab-invitations">
                             <div class="row">
+                                <div class="col-sm-12 container-num-jobs">
+                                    <h4>Your invitaions an apply <span class="num-jobs-title">{{$myInvitations->count()}}</span></h4>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="container-filter clearfix">
                                     <div class="col-md-5">
                                         <label for="keywords">Keywords</label>
