@@ -32,18 +32,37 @@ class RecruimentPortalController extends BaseController
         $applicationStatus = Application::STATUS_EMPLOYER;
         $jobStatus = Advert::STATUS;
         $params = array();
-        if($request->has('candidate_status')){
-            $params['status'] = $request->candidate_status;
+        if($request->page === 'candidates'){
+            if($request->has('candidate_status')){
+                $params['status'] = $request->candidate_status;
+            }
+            if($request->has('candidate_keywords')){
+                $params['keywords'] = $request->candidate_keywords;
+            }
+            if(count($params) > 0){
+                $aux = $this->getCandidatesByQuery($params);
+            }
+            else{
+                $aux = $user->candidates;
+            }
+            $jobs = $user->jobs;
         }
-        if($request->has('candidate_keywords')){
-            $params['keywords'] = $request->candidate_keywords;
+        elseif($request->page === 'jobs'){
+           if($request->has('job_status')){
+                $params['status'] = $request->candidate_status;
+            }
+            if($request->has('job_keywords')){
+                $params['keywords'] = $request->candidate_keywords;
+            }
+            if(count($params) > 0){
+                $aux = $this->getJobsByQuery($params);
+            }
+            else{
+                $jobs = $user->jobs;
+            }
+            $aux = $user->candidates; 
         }
-        if(count($params) > 0){
-            $aux = $this->getCandidatesByQuery($params);
-        }
-        else{
-            $aux = $user->candidates;
-        }
+
         $candidates = collect();
         foreach ($aux as $application) {
             $candidate = Application::find($application->id);
@@ -51,7 +70,7 @@ class RecruimentPortalController extends BaseController
         }
         $totalUnreadCandidates = $user->unreadCandidates->count();
         $balance = \Stripe\Balance::retrieve( array("stripe_account" => $user->stripe_account));
-        return view('home.portals.applications',['jobs'=>$user->jobs,'user'=>$user, 'balance' => $balance, 'myInvitations' => $myInvitations, 'invitationStatus' => $invitationStatus, 'applicationStatus' => $applicationStatus, 'jobsNewCandidates' => $jobsNewCandidates, 'candidates' => $candidates, 'totalUnreadCandidates' => $totalUnreadCandidates, 'tab' => $request->page]);
+        return view('home.portals.applications',['jobs'=>$jobs,'user'=>$user, 'balance' => $balance, 'myInvitations' => $myInvitations, 'invitationStatus' => $invitationStatus, 'applicationStatus' => $applicationStatus, 'jobsNewCandidates' => $jobsNewCandidates, 'candidates' => $candidates, 'totalUnreadCandidates' => $totalUnreadCandidates, 'tab' => $request->page]);
     }
     public function jobsWithNewCandidates(){
         $user = Auth::user();
@@ -76,6 +95,20 @@ class RecruimentPortalController extends BaseController
         if(array_key_exists('keywords', $params)){
            $query = $query->filter(function($value, $key) use($params){
                 return stripos($value->advert->param('title'), $params['keywords'],0) !== false;
+           });
+        }
+        return $query;
+    }
+    public function getJobsByQuery(array $params = []){
+        $user = Auth::user();
+        $query = $user->candidates();
+        if(array_key_exists('status', $params)){
+            $query->where('status', $params['status']);
+        }
+        $query = $query->get();
+        if(array_key_exists('keywords', $params)){
+           $query = $query->filter(function($value, $key) use($params){
+                return stripos($value->param('title'), $params['keywords'],0) !== false;
            });
         }
         return $query;
