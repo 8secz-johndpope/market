@@ -44,7 +44,27 @@
 							<h4>Preview candidates</h4>
 							<p>Preview a candidate's profile before viewing their Profile</p>
 						</article>
-						<article class="col-md-4"></article>
+						<article class="col-md-4">
+							<h4>Stay updated</h4>
+							<p>Be the first to know about new candidates with daily email alerts</p>
+						</article>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 profilesearch-example-container">
+					<div class="profilesearch-desktop">
+						<div class="profilesearch-web">
+							<div class="profilesearch-web-wrapper">
+								<img class="screenshot" src="">
+							</div>
+						</div>
+						<div class="profilesearch-zoom">
+							<span>&nbsp;</span>
+						</div>
+						<ul class="profilesearch-page-selector">
+							
+						</ul>
 					</div>
 				</div>
 			</div>
