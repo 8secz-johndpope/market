@@ -632,7 +632,7 @@
     $('#expire').click(function(e){
         e.preventDefault();
         var form = $('#form-list-jobs');
-        form.attr('/recruiter/candidates/accept/all');
+        form.attr('/recruiter/jobs/expire/all');
         form.submit();
     });
     function candidatesCommand(actionForm){
