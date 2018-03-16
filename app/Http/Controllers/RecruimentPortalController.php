@@ -73,6 +73,7 @@ class RecruimentPortalController extends BaseController
             $query->where('status_employer', $params['status']);
         }
         $query = $query->get();
+        return $query;
         if(array_key_exists('keywords', $params)){
            $query = $query->filter(function($value, $key) use($params){
                 return stripos($value->advert->param('title'), $params['keywords'],0) !== false;
