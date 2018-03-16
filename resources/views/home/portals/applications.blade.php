@@ -240,7 +240,7 @@
                                 <div class="col-sm-6">
                                     <div class="jobs-selected">
                                         <a href="#" class="btn btn-disable" id="viewed">Viewed</a>
-                                        <a href="#" class="btn btn-disable">Rejected</a>
+                                        <a href="#" class="btn btn-disable" id="rejected">Rejected</a>
                                         <a href="#" class="btn btn-disable">Interview</a>
                                         <a href="#" class="btn btn-disable">Accepted</a>
                                     </div>
@@ -613,9 +613,17 @@
     @endif
     $('#viewed').click(function(e){
         e.preventDefault();
-        var form = $('#form-list-candidates');
-        form.attr('action', '/recruiter/candidates/mark-view/all');
-        form.submit();
+        candidatesCommand('/recruiter/candidates/mark-view/all');
     });
+    $('#reject').click(function(e){
+        e.preventDefault();
+        candidatesCommand('/recruiter/candidates/reject/all');
+    });
+    
+    function candidatesCommand(actionForm){
+        var form = $('#form-list-candidates');
+        form.attr('action', actionForm);
+        form.submit();
+    }
 </script>
 @endsection
