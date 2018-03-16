@@ -32,10 +32,10 @@ class RecruimentPortalController extends BaseController
         $applicationStatus = Application::STATUS_EMPLOYER;
         $jobStatus = Advert::STATUS;
         $params = array();
-        if($request->has('candidates_status')){
+        if($request->has('candidate_status')){
             $params['status'] = $request->candidates_status;
         }
-        if($request->has('candidates_keywords')){
+        if($request->has('candidate_keywords')){
             $params['keywords'] = $request->keywords;
         }
         if(count($params) > 0){
