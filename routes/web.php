@@ -162,7 +162,7 @@ Route::post('/user/jobs/save/looking-for', 'HomeController@saveLookingFor');
 Route::get('/user/manage/favorites', 'HomeController@favorites');
 Route::get('/user/manage/alerts', 'HomeController@alerts');
 Route::get('/user/create/alert', 'HomeController@createAlert');
-Route::get('/user/manage/applications', 'RecruimentPortalController@applications');
+Route::get('/recruiter/portal', 'RecruimentPortalController@applications');
 Route::get('/user/manage/motors', 'HomeController@motors');
 Route::get('/user/manage/sales', 'HomeController@motors');
 Route::get('/job/manage/applications/{id}', 'RecruimentPortalController@viewApplications');
