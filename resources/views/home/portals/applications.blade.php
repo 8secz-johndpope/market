@@ -116,7 +116,7 @@
                         <div class="tab-pane fade in" id="tab-jobs">
                             <div class="row">
                                 <div class="col-sm-12 container-num-jobs">
-                                    <h4>Your jobs <span class="num-jobs-title">{{count($jobs)}}</span></h4>
+                                    <h4>Your jobs <span class="num-jobs-title">{{$jobs->count()}}</span></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -208,6 +208,11 @@
                             </table>
                         </div>
                         <div class="tab-pane fade in" id="tab-candidates">
+                            <div class="row">
+                                <div class="col-sm-12 container-num-jobs">
+                                    <h4>Your candidates <span class="num-jobs-title">{{$candidates->count()}}</span></h4>
+                                </div>
+                            </div>
                             <div class="row">
                                 <form action="" method="get" id="form-filter-candidates">
                                     <input type="hidden" name="page" value="candidates">
