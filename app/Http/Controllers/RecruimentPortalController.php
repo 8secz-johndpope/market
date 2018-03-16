@@ -36,9 +36,14 @@ class RecruimentPortalController extends BaseController
             $params['status'] = $request->candidates_status;
         }
         if($request->has('candidates_keywords')){
-            
+            $params['keywords'] = $request->keywords;
         }
-        $aux = $user->candidates;
+        if(count($params) > 0){
+            $aux = $this->getCandidatesByQuery($params);
+        }
+        else{
+            $aux = $user->candidates;
+        }
         $candidates = collect();
         foreach ($aux as $application) {
             $candidate = Application::find($application->id);
