@@ -3004,7 +3004,7 @@ class HomeController extends BaseController
             $requestApplication->candidate_id = $request->user_profile;
             $user->applicationRequestsSent()->save($requestApplication);
             return ['message' => 'The application request was sent correctly'];
-        }catch(Exception $e){
+        }catch(\Exception $e){
             return $e;
         }
     }
