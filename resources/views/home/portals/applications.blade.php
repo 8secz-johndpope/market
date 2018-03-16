@@ -120,7 +120,8 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <form action="" method="get" id="">
+                                <form action="" method="get" id="form-filter-jobs">
+                                    <input type="hidden" name="page" value="jobs">
                                     <div class="container-filter clearfix">
                                         <div class="col-md-5">
                                             <label for="keywords">Keywords</label>

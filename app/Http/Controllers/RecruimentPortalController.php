@@ -47,11 +47,11 @@ class RecruimentPortalController extends BaseController
             
         }
         elseif($request->page === 'jobs'){
-           if($request->has('job_status')){
-                $params['status'] = $request->candidate_status;
+           if($request->has('jobs_status')){
+                $params['status'] = $request->jobs_status;
             }
-            if($request->has('job_keywords')){
-                $params['keywords'] = $request->candidate_keywords;
+            if($request->has('jobs_keywords')){
+                $params['keywords'] = $request->jobs_keywords;
             }
             if(count($params) > 0){
                 $aux = $this->getJobsByQuery($params);
@@ -96,7 +96,7 @@ class RecruimentPortalController extends BaseController
     }
     public function getJobsByQuery(array $params = []){
         $user = Auth::user();
-        $query = $user->candidates();
+        $query = $user->jobs();
         if(array_key_exists('status', $params)){
             $query->where('status', $params['status']);
         }
