@@ -37,7 +37,7 @@
 					</header>
 					<div class="row cvsearch-benefits">
 						<article class="col-md-4">
-							<h4>Access to 10.1 million Profiles & CVs</h4>
+							<h4>Access Multiple Profiles & CVs</h4>
 							<p>Target by Skills, job title, salary, location, education and more</p>
 						</article>
 						<article class="col-md-4">
@@ -94,7 +94,14 @@
 					<div class="profilesearch-price-table">
 						<div class="row">
 							<div class="col-md-3">
-								
+								<table>
+									<tbody>
+										<tr>
+											<p>Profile & CV Search</p>
+											<p></p>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 							<div class="col-md-3"></div>
 							<div class="col-md-3"></div>
