@@ -43,7 +43,7 @@ class Application extends Model
     public function markView(){
         $this->status_employer = 1;
     }
-    public function rejected(){
+    public function reject(){
         $this->status_employee = 1;
         $this->status_employer = 2;
     }
