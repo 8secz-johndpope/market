@@ -252,7 +252,7 @@
                                         <li><a href="#">Last Name</a></li>
                                     </ul>
                                 </div>
-                                @if(isset(session('status')))
+                                @if(session('status'))
                                 <div class="col-xs-12">
                                     <div class="alert alert-succesfull" role="alert">
                                         <span>{{session('status')}}</span>
