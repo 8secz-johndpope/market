@@ -120,23 +120,26 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="container-filter clearfix">
-                                    <div class="col-md-5">
-                                        <label for="keywords">Keywords</label>
-                                        <input type="text" name="keywords" class="form-control">
+                                <form action="" method="get" id="">
+                                    <div class="container-filter clearfix">
+                                        <div class="col-md-5">
+                                            <label for="keywords">Keywords</label>
+                                            <input type="text" name="job_keywords" class="form-control">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label for="status">Status</label>
+                                            <select class="form-control" name="job_status">
+                                                <option value="">Select Status</option>
+                                                @foreach($jobStatus as $status)
+                                                <option value="{{$loop->index}}" checked>{{$status}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2 container-btn">
+                                            <button class="btn btn-filter" type="submit">Filter</button>
+                                        </div>    
                                     </div>
-                                    <div class="col-md-5">
-                                        <label for="status">Status</label>
-                                        <select class="form-control" name="status">
-                                            <option value="1" checked>Live</option>
-                                            <option value="0">Draft</option>
-                                            <option value="2">Inactive</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-2 container-btn">
-                                        <button class="btn btn-filter">Filter</button>
-                                    </div>    
-                                </div>
+                                </form>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
