@@ -47,4 +47,8 @@ class Application extends Model
         $this->status_employee = 1;
         $this->status_employer = 2;
     }
+    public function interview(){
+        $this->status_employee = 3;
+        $this->status_employer = 4;
+    }
 }

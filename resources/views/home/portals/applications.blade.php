@@ -241,8 +241,8 @@
                                     <div class="jobs-selected">
                                         <a href="#" class="btn btn-disable" id="viewed">Viewed</a>
                                         <a href="#" class="btn btn-disable" id="rejected">Rejected</a>
-                                        <a href="#" class="btn btn-disable">Interview</a>
-                                        <a href="#" class="btn btn-disable">Accepted</a>
+                                        <a href="#" class="btn btn-disable" id="interview">Interview</a>
+                                        <a href="#" class="btn btn-disable" id="accepted">Accepted</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 text-right">
@@ -619,7 +619,10 @@
         e.preventDefault();
         candidatesCommand('/recruiter/candidates/reject/all');
     });
-    
+    $('#interview').click(function(e){
+        e.preventDefault();
+        candidatesCommand('/recruiter/candidates/interview/all');
+    });
     function candidatesCommand(actionForm){
         var form = $('#form-list-candidates');
         form.attr('action', actionForm);
