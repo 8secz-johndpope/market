@@ -205,24 +205,26 @@
                         </div>
                         <div class="tab-pane fade in" id="tab-candidates">
                             <div class="row">
-                                <div class="container-filter clearfix">
-                                    <div class="col-md-5">
-                                        <label for="keywords">Keywords</label>
-                                        <input type="text" name="keywords" class="form-control">
+                                <form action="/user/manage/applications" method="post" id="form-filter-candidates">
+                                    <div class="container-filter clearfix">
+                                        <div class="col-md-5">
+                                            <label for="keywords">Keywords</label>
+                                            <input type="text" name="candidate_keywords" class="form-control">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label for="status">Application Status</label>
+                                            <select class="form-control" name="candidate_status">
+                                                <option value="">Select Status</option>
+                                                @foreach($applicationStatus as $status)
+                                                 <option value="{{$loop->index}}">{{$status}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2 container-btn">
+                                            <button type="submit" class="btn btn-filter">Filter</button>
+                                        </div>    
                                     </div>
-                                    <div class="col-md-5">
-                                        <label for="status">Application Status</label>
-                                        <select class="form-control" name="status">
-                                            <option value="">Select Status</option>
-                                            @foreach($applicationStatus as $status)
-                                             <option value="{{$loop->index}}">{{$status}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="col-md-2 container-btn">
-                                        <button class="btn btn-filter">Filter</button>
-                                    </div>    
-                                </div>
+                                </form>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
