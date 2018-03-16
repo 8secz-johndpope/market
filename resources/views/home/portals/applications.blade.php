@@ -206,7 +206,6 @@
                         <div class="tab-pane fade in" id="tab-candidates">
                             <div class="row">
                                 <form action="/user/manage/applications" method="get" id="form-filter-candidates">
-                                    {{ csrf_field() }}
                                     <input type="hidden" name="tab" value="tab-candidates">
                                     <div class="container-filter clearfix">
                                         <div class="col-md-5">
