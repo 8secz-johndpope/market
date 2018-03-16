@@ -108,7 +108,7 @@ class RecruimentPortalController extends BaseController
         }
         return back()->with('status', 'The applications were rejected successfully');
     }
-    public function interviewAll(){
+    public function interviewAll(Request $request){
         $ids = $request->candidates;
         foreach($ids as $id){
             $application = $this->callInterview();
@@ -116,7 +116,7 @@ class RecruimentPortalController extends BaseController
         }
         return back()->with('status', 'The applications changed the status successfully');
     }
-    public function acceptAll(){
+    public function acceptAll(Request $request){
         $ids = $request->candidates;
         foreach($ids as $id){
             $application = $this->acceptApplication();
