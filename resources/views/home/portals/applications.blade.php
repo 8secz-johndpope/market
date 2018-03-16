@@ -132,7 +132,7 @@
                                             <select class="form-control" name="jobs_status">
                                                 <option value="">Select Status</option>
                                                 @foreach($jobStatus as $status)
-                                                <option value="{{$loop->index}}" {{$jobsStatus == $loop->index ? "selected" : ''}}>{{$status}}</option>
+                                                <option value="{{$loop->index}}" {{$jobsStatus === $loop->index ? "selected" : ''}}>{{$status}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -214,14 +214,14 @@
                                     <div class="container-filter clearfix">
                                         <div class="col-md-5">
                                             <label for="keywords">Keywords</label>
-                                            <input type="text" name="candidate_keywords" class="form-control" value="{{!isset($candidatesKeywords)? : $candidatesKeywords}}">
+                                            <input type="text" name="candidate_keywords" class="form-control" value="{{isset($candidatesKeywords)? $candidatesKeywords : ''}}">
                                         </div>
                                         <div class="col-md-5">
                                             <label for="status">Application Status</label>
                                             <select class="form-control" name="candidate_status">
                                                 <option value="">Select Status</option>
                                                 @foreach($applicationStatus as $status)
-                                                 <option value="{{$loop->index}}" {{$loop->index != $candidatesStatus? : 'selected'}}>{{$status}}</option>
+                                                 <option value="{{$loop->index}}" {{$loop->index !== $candidatesStatus? : 'selected'}}>{{$status}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
