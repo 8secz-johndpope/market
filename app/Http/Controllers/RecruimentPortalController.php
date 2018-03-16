@@ -32,7 +32,7 @@ class RecruimentPortalController extends BaseController
         $applicationStatus = Application::STATUS_EMPLOYER;
         $jobStatus = Advert::STATUS;
         $params = array();
-        $aux = n;
+        $aux = array();
         if($request->page === 'candidates'){
             if($request->has('candidate_status')){
                 $params['status'] = $request->candidate_status;
@@ -48,7 +48,7 @@ class RecruimentPortalController extends BaseController
             }
             $jobs = $user->jobs;
         }
-        else($request->page === 'jobs'){
+        elseif($request->page === 'jobs'){
            if($request->has('job_status')){
                 $params['status'] = $request->candidate_status;
             }
