@@ -688,4 +688,8 @@ class Advert extends  BaseModel
         }
         return $application;
     }
+    public function getStatus(){
+        return self::STATUS[$this->status];
+    }
 }
+?>

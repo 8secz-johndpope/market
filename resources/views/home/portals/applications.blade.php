@@ -191,7 +191,7 @@
                                         <td><input type="checkbox" name="select-job[]" class="checkboxs-jobs"></td>
                                         <td><a href="{{$job->url()}}">{{$job->param('title')}}</a></td>
                                         <td>{{$job->param('location_name')}}</td>
-                                        <td>{{$job->status == 1 ? 'Live': 'Inactive' }}</td>
+                                        <td>{{$job->getStatus()}}</td>
                                         <td>{{$job->param('views')}}</td>
                                         <td>
                                             @if(count($job->applications) > 0)
@@ -214,14 +214,14 @@
                                     <div class="container-filter clearfix">
                                         <div class="col-md-5">
                                             <label for="keywords">Keywords</label>
-                                            <input type="text" name="candidate_keywords" class="form-control">
+                                            <input type="text" name="candidate_keywords" class="form-control" value="{{!isset($cadidatesKeywords)? : $cadidatesKeywords}}">
                                         </div>
                                         <div class="col-md-5">
                                             <label for="status">Application Status</label>
                                             <select class="form-control" name="candidate_status">
                                                 <option value="">Select Status</option>
                                                 @foreach($applicationStatus as $status)
-                                                 <option value="{{$loop->index}}">{{$status}}</option>
+                                                 <option value="{{$loop->index}}" {{$loop->index != $candidatesStatus? : 'selected'}}>{{$status}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
