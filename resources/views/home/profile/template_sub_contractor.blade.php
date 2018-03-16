@@ -570,37 +570,39 @@
                                         @if(Auth::guest())
                                             You need to be <a href="/login">Login</a> | <a href="/register">SignUp</a> for make to request.
                                         @else
-                                        <form action="/user/request-application" id="make-request" method="post">
-                                            {{ csrf_field() }}
-                                            <input type="hidden" name="user_profile" value="{{$profile->user->id}}">
-                                            <div class="form-group">
-                                                @if($jobs->count() > 0)
-                                                <label for="offer-job">Job</label>
-                                                <select id="offer-job" name="offer_job" class="form-control">
-                                                    <option>Select job to offer</option>
-                                                    @foreach($jobs as $job)
-                                                    <option value="{{$job->id}}">{{$job->param('title')}}</option>
-                                                    @endforeach
-                                                </select>
-                                                <div class="validation">
-                                                    <span>Select a job</span>
+                                            @if(isset($jobs))
+                                            <form action="/user/request-application" id="make-request" method="post">
+                                                {{ csrf_field() }}
+                                                <input type="hidden" name="user_profile" value="{{$profile->user->id}}">
+                                                <div class="form-group">
+                                                    @if($jobs->count() > 0)
+                                                    <label for="offer-job">Job</label>
+                                                    <select id="offer-job" name="offer_job" class="form-control">
+                                                        <option>Select job to offer</option>
+                                                        @foreach($jobs as $job)
+                                                        <option value="{{$job->id}}">{{$job->param('title')}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                    <div class="validation">
+                                                        <span>Select a job</span>
+                                                    </div>
+                                                    @endif
                                                 </div>
-                                                @endif
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="offer-message">Message</label>
-                                                <textarea id="offer-message" name="offer_message" class="form-control" rows="4"></textarea>
-                                                <div class="validation">
-                                                    <span>Write a message</span>
+                                                <div class="form-group">
+                                                    <label for="offer-message">Message</label>
+                                                    <textarea id="offer-message" name="offer_message" class="form-control" rows="4"></textarea>
+                                                    <div class="validation">
+                                                        <span>Write a message</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="actions">
-                                                    <button type="submit" class="btn btn-submit">Send</button>
-                                                    <button type="reset" class="btn btn-link">Cancel</button>
+                                                <div class="form-group">
+                                                    <div class="actions">
+                                                        <button type="submit" class="btn btn-submit">Send</button>
+                                                        <button type="reset" class="btn btn-link">Cancel</button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </form>
+                                            </form>
+                                            @endif
                                         @endif
                                     </div>
                                   </div>
