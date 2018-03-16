@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="jobs-selected">
-                    <a href="/user/manage/applications">< Back to jobs</a>
+                    <a href="/recruiter/portal">< Back to jobs</a>
                 </div>
             </div>
             <div class="col-sm-6 text-right">
