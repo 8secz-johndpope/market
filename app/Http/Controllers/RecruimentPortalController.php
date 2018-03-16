@@ -92,6 +92,14 @@ class RecruimentPortalController extends BaseController
         }
         return $query;
     }
+    public function markViewAll(Request $request){
+        $ids = $request->ids;
+        foreach($ids as $id){
+            $application = $this->markViewApplication($id);
+            $application->save();
+        }
+        return back()->with('status' => 'The applications were marked as viewed successfully');
+    }
     public function getJobsByQuery(array $params = []){
         $user = Auth::user();
         $query = $user->jobs();
@@ -105,6 +113,11 @@ class RecruimentPortalController extends BaseController
            });
         }
         return $query;
+    }
+    public function markViewApplication($id){
+        $application = Application::find($id);
+        $application->markView();
+        return $application;
     }
 }
 ?>

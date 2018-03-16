@@ -38,6 +38,9 @@ class Application extends Model
     }
     public function withdraw(){
         $this->status_employer = 3;
+        $this->status_employee = 2;
+    }
+    public function markView(){
         $this->status_employer = 2;
     }
 }
