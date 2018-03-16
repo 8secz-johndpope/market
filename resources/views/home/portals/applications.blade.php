@@ -221,7 +221,7 @@
                                             <select class="form-control" name="candidate_status">
                                                 <option value="">Select Status</option>
                                                 @foreach($applicationStatus as $status)
-                                                 <option value="{{$loop->index}}" {{$loop->index !== $candidatesStatus? : 'selected'}}>{{$status}}</option>
+                                                 <option value="{{$loop->index}}" {{isset($candidatesStatus) && $loop->index == $candidatesStatus? 'selected' : ''}}>{{$status}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
