@@ -579,7 +579,9 @@
             buttons.addClass('btn-disable');
         }
         tabpanel.find('.num-jobs').text(checkbox.length);
-
-    })
+    });
+    @if(isset($tab))
+         $('.nav-tabs a[href="#{{$tab}}"]').tab('show');
+    @endif
 </script>
 @endsection
