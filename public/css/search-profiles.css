@@ -1,0 +1,13 @@
+.candidate{
+	background: #fff;
+}
+
+.candidate-picture{
+	width: 150px;
+}
+
+.candidate-picture figure{
+	width: 100%;
+	height: 150px;
+	border-radius: 50%;
+}
