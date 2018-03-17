@@ -30,7 +30,7 @@
 	<section class="cvsearch-features">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 block-grey">
 					<header class="heading-container">
 						<h3>Profile & CV Search features</h3>
 						<hr>
@@ -87,7 +87,7 @@
 	<section class="cvsearch-prices">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 block-grey">
 					<header class="heading-container">
 						<h3>Profile & CV Search prices</h3>
 					</header>
