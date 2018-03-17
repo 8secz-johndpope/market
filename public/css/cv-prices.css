@@ -142,4 +142,7 @@
     -webkit-border-radius: 50%;
     background-repeat: no-repeat;
 }
-
+.profilesearch-example-container .profilesearch-desktop .next {
+    right: -90px;
+    background-position: 19px 13px;
+}
