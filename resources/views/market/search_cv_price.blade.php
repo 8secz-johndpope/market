@@ -61,11 +61,11 @@
 									<span>&nbsp;</span>
 								</div>
 								<ul class="profilesearch-page-selector">
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
+									<li class="is-active">•</li>
+									<li>•</li>
+									<li>•</li>
+									<li>•</li>
+									<li>•</li>
 								</ul>
 								<div class="profilesearch-description">
 									<header>

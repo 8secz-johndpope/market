@@ -86,6 +86,9 @@
     display: inline-block;
     color: #d6d6d6;
 }
+.profilesearch-example-container .profilesearch-desktop .profilesearch-page-selector .is-active{
+	color: #777;
+}
 .profilesearch-example-container .profilesearch-desktop .profilesearch-web {
     top: 25px;
     left: 25px;
@@ -105,7 +108,10 @@
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border: 5px solid #29a3c1;
-    
     background-position-x: -42px;
     background-position-y: -294px;
+}
+.profile-example-container {
+    height: 515px;
+    margin: 30px 0;
 }
