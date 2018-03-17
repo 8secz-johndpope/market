@@ -49,36 +49,36 @@
 							<p>Be the first to know about new candidates with daily email alerts</p>
 						</article>
 					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 profilesearch-example-container">
-					<div class="profilesearch-desktop">
-						<div class="profilesearch-web">
-							<div class="profilesearch-web-wrapper">
-								<img class="screenshot" src="">
+					<div class="row">
+						<div class="col-md-12 profilesearch-example-container">
+							<div class="profilesearch-desktop">
+								<div class="profilesearch-web">
+									<div class="profilesearch-web-wrapper">
+										<img class="screenshot" src="">
+									</div>
+								</div>
+								<div class="profilesearch-zoom">
+									<span>&nbsp;</span>
+								</div>
+								<ul class="profilesearch-page-selector">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+								<div class="profilesearch-description">
+									<header>
+										<p class="lense-header">View CVs</p>
+									</header>
+									<p class="lense-description">
+										Save CVs as Word or PDF documents & view candidate profiles online. You can access up to 100 new candidate CVs per day.
+									</p>
+								</div>
+								<span class="prev">previous</span>
+								<span class="next">Next</span>
 							</div>
 						</div>
-						<div class="profilesearch-zoom">
-							<span>&nbsp;</span>
-						</div>
-						<ul class="profilesearch-page-selector">
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-						<div class="profilesearch-description">
-							<header>
-								<p class="lense-header">View CVs</p>
-							</header>
-							<p class="lense-description">
-								Save CVs as Word or PDF documents & view candidate profiles online. You can access up to 100 new candidate CVs per day.
-							</p>
-						</div>
-						<span class="prev">previous</span>
-						<span class="next">Next</span>
 					</div>
 				</div>
 			</div>
