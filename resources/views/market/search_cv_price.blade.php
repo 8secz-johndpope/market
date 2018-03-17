@@ -97,15 +97,17 @@
 								<table>
 									<tbody>
 										<tr>
-											<p class="profilesearch-type">
-												Profile & CV Search
-												<br>
-												1 day 
-											</p>
-											<p class="profilesearch-cost">
-												£35
-												<span>+ VAT</span> 
-											</p>
+											<td>
+												<p class="profilesearch-type">
+													Profile & CV Search
+													<br>
+													1 day 
+												</p>
+												<p class="profilesearch-cost">
+													£35
+													<span>+ VAT</span> 
+												</p>
+											</td>
 										</tr>
 									</tbody>
 									<tfoot>
@@ -121,15 +123,17 @@
 								<table>
 									<tbody>
 										<tr>
-											<p class="profilesearch-type">
-												Profile & CV Search
-												<br>
-												1 week 
-											</p>
-											<p class="profilesearch-cost">
-												£150
-												<span>+ VAT</span> 
-											</p>
+											<td>
+												<p class="profilesearch-type">
+													Profile & CV Search
+													<br>
+													1 week 
+												</p>
+												<p class="profilesearch-cost">
+													£150
+													<span>+ VAT</span> 
+												</p>
+											</td>
 										</tr>
 									</tbody>
 									<tfoot>
@@ -145,15 +149,17 @@
 								<table>
 									<tbody>
 										<tr>
-											<p class="profilesearch-type">
-												Profile & CV Search
-												<br>
-												1 month 
-											</p>
-											<p class="profilesearch-cost">
-												£500
-												<span>+ VAT</span> 
-											</p>
+											<td>
+												<p class="profilesearch-type">
+													Profile & CV Search
+													<br>
+													1 month 
+												</p>
+												<p class="profilesearch-cost">
+													£500
+													<span>+ VAT</span> 
+												</p>
+											</td>
 										</tr>
 									</tbody>
 									<tfoot>
@@ -169,17 +175,19 @@
 								<table>
 									<tbody>
 										<tr>
-											<p class="profilesearch-type">
-												Profile & CV Search
-												<br>
+											<td>
+												<p class="profilesearch-type">
+													Profile & CV Search
+													<br>
 
-												<br>
-												12 month 
-											</p>
-											<p class="profilesearch-cost">
-												Credit Contract 
-												<span>90 days credit</span> 
-											</p>
+													<br>
+													12 month 
+												</p>
+												<p class="profilesearch-cost">
+													Credit Contract 
+													<span>90 days credit</span> 
+												</p>
+											</td>
 										</tr>
 									</tbody>
 									<tfoot>
