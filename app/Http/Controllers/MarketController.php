@@ -35,6 +35,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\AccountCreated;
 use App\Model\EmailCode;
 use App\Model\SocialcareServiceOffered;
+use App\Model\SocialcareTaskHelp;
 
 class MarketController extends BaseController
 {
