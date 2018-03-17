@@ -152,7 +152,7 @@
     background-image: url(/recruiter/resources/cms/responsive/cv-search/images/cv-search-left.png);
     background-position: 16px 12px;
 }
-.profilesearch-prices-table {
+.profilesearch-prices {
     width: 100%;
     margin-bottom: 55px;
     border: 1px solid #d6d6d6;
@@ -160,11 +160,11 @@
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
 }
-.profilesearch-prices-table .col-md-3 {
+.profilesearch-prices .col-md-3 {
     padding: 0;
     border-right: 1px solid #d6d6d6;
 }
-.profilesearch-prices-table tbody .cvsearch_type {
+.profilesearch-prices tbody .cvsearch_type {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
