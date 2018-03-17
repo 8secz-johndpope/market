@@ -21,9 +21,15 @@
 <div class="body background-body loaded search-cvs-page">
 	<section class="top-block">
 		<div class="bg-image">
-			<h1>Profile & CV Search</h1>
-			<div class="ctas text-center">
-				<p>Headhunt the candidates that you need</p>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1>Profile & CV Search</h1>
+						<div class="ctas text-center">
+							<p>Headhunt the candidates that you need</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
