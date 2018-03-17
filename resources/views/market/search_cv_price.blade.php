@@ -18,7 +18,7 @@
 
 @section('content')
  
-<div class="body loaded search-cvs-page">
+<div class="body background-body loaded search-cvs-page">
 	<section class="top-block">
 		<div class="bg-image">
 			<h1>Profile & CV Search</h1>
