@@ -75,3 +75,11 @@
     position: absolute;
     transform: translate(-50%,-50%);
 }
+.cvsearch-example-container .cvsearch-desktop .cvsearch_web {
+    top: 25px;
+    left: 25px;
+    width: 565px;
+    height: 315px;
+    overflow: hidden;
+    position: absolute;
+}
