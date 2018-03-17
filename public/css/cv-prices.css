@@ -109,7 +109,7 @@
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    border: 5px solid #29a3c1;
+    border: 5px solid #366ffb;
     background-position-x: -42px;
     background-position-y: -294px;
 }
@@ -127,7 +127,7 @@
 .profilesearch-example-container .profilesearch-description header>p {
     font-size: 24px;
     font-weight: 700;
-    color: #29a3c1;
+    color: #366ffb;
     margin-bottom: 20px;
 }
 .profilesearch-example-container .profilesearch-desktop .next, .profilesearch-example-container .profilesearch-desktop .prev {
@@ -190,7 +190,7 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
-    color: #29a3c1;
+    color: #366ffb;
 }
 .profilesearch-price-table tbody td .profilesearch-cost {
     font-size: 24px;
