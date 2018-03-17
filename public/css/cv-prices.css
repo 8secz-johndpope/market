@@ -230,6 +230,9 @@
 	    -webkit-border-radius: 4px;
 	    border: 1px solid #d6d6d6!important;
 	}
+	.profilesearch-example-container{
+		display: none;
+	}
 }
 @media only screen and (max-width: 1159px){
 	.profilesearch-price-table tbody td {
