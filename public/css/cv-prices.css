@@ -74,6 +74,17 @@
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
+    padding: 0;
+    list-style: none;
+}
+.profilesearch-example-container .profilesearch-desktop .profilesearch-page-selector {
+	float: left;
+    margin: 0 5px;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
+    color: #d6d6d6;
 }
 .profilesearch-example-container .profilesearch-desktop .profilesearch-web {
     top: 25px;
