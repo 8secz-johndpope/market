@@ -190,3 +190,10 @@
     line-height: 28px;
     color: #29a3c1;
 }
+.profilesearch-price-table tbody td .profilesearch-cost {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 30px;
+    display: inline-block;
+}
