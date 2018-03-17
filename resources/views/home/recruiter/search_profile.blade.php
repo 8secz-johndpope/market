@@ -53,9 +53,32 @@
                                 @if(isset($profile->user->address))
                                 <p class="candidate-location">{{$profile->user->address->city}}</p>
                                 @endif
+                                @if(isset($profile->looking_for))
+                                    @if(isset($profile->looking_for->job_title))
+                                    <strong>{{$profile->looking_for->job_title}}</strong>
+                                    @endif
+                                    @if(isset($profile->looking_for->min_per_annum) && isset($profile->looking_for->min_per_hour))
+                                    <p>{{$profile->looking_for->min_per_annum}} per annum or {{$profile->looking_for->min_per_hour}} per hour</p>
+                                    @elseif(isset($profile->looking_for->min_per_annum))
+                                    <p>{{$profile->looking_for->min_per_annum}} per annum</p>
+                                    @elseif(isset($profile->looking_for->min_per_hour))
+                                    <p>{{$profile->looking_for->min_per_hour}} per hour</p>
+                                    @endif
+                                @endif
                             </div>
                         </div>
                         <div class="candidate-actions">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    Save
+                                </div>
+                                <div class="col-xs-3">
+                                    Download CV
+                                </div>
+                                <div class="col-xs-3">
+                                    Request Application
+                                </div>
+                            </div>
                         </div>
                     </div>
                     @endforeach
