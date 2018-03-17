@@ -25,7 +25,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<h1>Profile & CV Search</h1>
-						<div class="ctas text-center">
+						<div class="ctas">
 							<p>Headhunt the candidates that you need</p>
 						</div>
 					</div>
