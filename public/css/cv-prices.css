@@ -43,3 +43,10 @@
     overflow: hidden;
     position: absolute;
 }
+.heading-container h3 {
+    color:#ff9d2c;
+    font-size: 30px;
+    font-weight: 600;
+    display: inline;
+    font-family: Effra-Medium,sans-serif;
+}
