@@ -172,7 +172,7 @@ class RecruimentPortalController extends BaseController
         return $job;
     }
     public function searchCV(Request $request){
-        $profiles = Profile::where('status', 1);
+        $profiles = Profile::where('status', 1)->get();
         $user = Auth::user();
         return view('home.recruiter.search_profile', ['profiles' => $profiles, 'user' => $user]);
     }
