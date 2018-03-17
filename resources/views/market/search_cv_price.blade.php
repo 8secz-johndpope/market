@@ -119,7 +119,7 @@
 									<tfoot>
 										<tr>
 											<td>
-												<a class="btn btn-primary">Buy now</a>
+												<a href="/recruiter/profile-cv/search" class="btn btn-primary">Buy now</a>
 											</td>
 										</tr>
 									</tfoot>
@@ -145,7 +145,7 @@
 									<tfoot>
 										<tr>
 											<td>
-												<a class="btn btn-primary">Buy now</a>
+												<a href="/recruiter/profile-cv/search" class="btn btn-primary">Buy now</a>
 											</td>
 										</tr>
 									</tfoot>
@@ -171,7 +171,7 @@
 									<tfoot>
 										<tr>
 											<td>
-												<a class="btn btn-primary">Buy now</a>
+												<a href="/recruiter/profile-cv/search" class="btn btn-primary">Buy now</a>
 											</td>
 										</tr>
 									</tfoot>
@@ -197,7 +197,7 @@
 									<tfoot>
 										<tr>
 											<td>
-												<a class="btn btn-primary">Buy now</a>
+												<a href="/recruiter/profile-cv/search" class="btn btn-primary">Buy now</a>
 											</td>
 										</tr>
 									</tfoot>

@@ -171,5 +171,9 @@ class RecruimentPortalController extends BaseController
         $job->expire();
         return $job;
     }
+    public function searchCV(Request $request){
+        $profiles = Profile::where('status', 2);
+        return view('home.recruiter.search_profile', ['profiles' => $profiles]);
+    }
 }
 ?>
