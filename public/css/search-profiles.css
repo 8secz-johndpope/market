@@ -1,6 +1,7 @@
 .candidate{
 	background: #fff;
 	margin-bottom: 15px;
+	padding: 15px;
 }
 
 .candidate-picture{
@@ -22,4 +23,5 @@
 .candidate-details-wrapper{
 	width: calc(100% - 155px);
 	display: inline-block;
+	padding-left: 15px;
 }
