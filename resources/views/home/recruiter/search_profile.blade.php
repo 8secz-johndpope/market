@@ -43,7 +43,7 @@
                     @foreach($profiles as $profile)
                     <div class="candidate">
                         <div class="candidate-wrapper">
-                            <div class="candiate-picture">
+                            <div class="candidate-picture">
                                 <figure>
                                     <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
                                 </figure>
