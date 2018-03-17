@@ -217,4 +217,11 @@
 	.profilesearch-price-table tbody td .profilesearch-type {
     	font-size: 20px;
 	}
+	.profilesearch-example-container .profilesearch-description {
+	    width: 212px;
+    	right: -255px;
+	}
+	.profilesearch-price-table tbody td .profilesearch-cost {
+    	font-size: 20px;
+    }
 }
