@@ -49,7 +49,7 @@
                                 </figure>
                             </div>
                             <div class="candidate-details-wrapper">
-                                <h3 class="candidate-name">{{$profile->user->name}}</h3>
+                                <h3 class="candidate-name"><a href="/job/profile/{{$profile->id}}">{{$profile->user->name}}</a></h3>
                                 @if(isset($profile->user->address))
                                 <p class="candidate-location">{{$profile->user->address->city}}</p>
                                 @endif
