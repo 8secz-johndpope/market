@@ -213,6 +213,8 @@
 @media (max-width: 1159){
 	.profilesearch-price-table tbody td {
 		vertical-align: middle;
-		font-size: 20px;
+	}
+	.profilesearch-price-table tbody td .profilesearch-type {
+    	font-size: 20px;
 	}
 }
