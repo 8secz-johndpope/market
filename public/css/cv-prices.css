@@ -174,3 +174,19 @@
     line-height: 28px;
     color: #29a3c1;
 }
+.profilesearch-price-table tbody td {
+    width: 310px;
+    height: 168px;
+    padding: 20px 20px;
+    vertical-align: top;
+    border-right: 1px solid #d6d6d6;
+}
+.profilesearch-price-table tbody td:last-of-type {
+    border-right: 0;
+}
+.profilesearch-price-table tbody td .profilesearch-type {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #29a3c1;
+}
