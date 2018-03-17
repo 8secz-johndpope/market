@@ -63,8 +63,15 @@
 .cvsearch-features, .cvsearch-prices {
     margin-top: 50px;
 }
-.cvsearch_features .cvsearch-benefits {
+.cvsearch-features .cvsearch-benefits {
     text-align: center;
     margin-top: -20px;
     margin-bottom: 20px;
+}
+.cvsearch-example-container .cvsearch-desktop .cvsearch-page-selector {
+    bottom: -45px;
+    width: 111px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
 }
