@@ -5,6 +5,7 @@
 
 .candidate-picture{
 	width: 150px;
+	display: inline-block;
 }
 
 .candidate-picture figure{
@@ -14,4 +15,5 @@
 }
 .candidate-details-wrapper{
 	width: calc(100% - 150px);
+	display: inline-block;
 }
