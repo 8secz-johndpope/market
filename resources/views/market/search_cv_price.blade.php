@@ -90,7 +90,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="cvsearch-prices text center">
+	<section class="cvsearch-prices text-center">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 block-grey">
