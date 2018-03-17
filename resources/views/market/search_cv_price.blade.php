@@ -97,15 +97,100 @@
 								<table>
 									<tbody>
 										<tr>
-											<p>Profile & CV Search</p>
-											<p></p>
+											<p class="profilesearch-type">
+												Profile & CV Search
+												<br>
+												1 day 
+											</p>
+											<p class="profilesearch-cost">
+												£35
+												<span>+ VAT</span> 
+											</p>
 										</tr>
 									</tbody>
+									<tfoot>
+										<tr>
+											<td>
+												<a class="btn btn-primary">Buy now</a>
+											</td>
+										</tr>
+									</tfoot>
 								</table>
 							</div>
-							<div class="col-md-3"></div>
-							<div class="col-md-3"></div>
-							<div class="col-md-3"></div>
+							<div class="col-md-3">
+								<table>
+									<tbody>
+										<tr>
+											<p class="profilesearch-type">
+												Profile & CV Search
+												<br>
+												1 week 
+											</p>
+											<p class="profilesearch-cost">
+												£150
+												<span>+ VAT</span> 
+											</p>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>
+												<a class="btn btn-primary">Buy now</a>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							<div class="col-md-3">
+								<table>
+									<tbody>
+										<tr>
+											<p class="profilesearch-type">
+												Profile & CV Search
+												<br>
+												1 month 
+											</p>
+											<p class="profilesearch-cost">
+												£500
+												<span>+ VAT</span> 
+											</p>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>
+												<a class="btn btn-primary">Buy now</a>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							<div class="col-md-3">
+								<table>
+									<tbody>
+										<tr>
+											<p class="profilesearch-type">
+												Profile & CV Search
+												<br>
+
+												<br>
+												12 month 
+											</p>
+											<p class="profilesearch-cost">
+												Credit Contract 
+												<span>90 days credit</span> 
+											</p>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>
+												<a class="btn btn-primary">Buy now</a>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
