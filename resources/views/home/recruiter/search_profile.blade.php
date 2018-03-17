@@ -14,7 +14,7 @@
     $dateMs = $date->getTimestamp();
 @endphp
 @section('styles')
-<link href="{{ asset("/css/applications.css?q=$dateMs") }}" rel="stylesheet" type="text/css">
+<link href="{{ asset("/css/search-profiles.css?q=$dateMs") }}" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
 <div class="body background-body recruiter-search-profile">
