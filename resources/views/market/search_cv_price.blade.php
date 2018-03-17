@@ -19,7 +19,7 @@
 @section('content')
  
 <div class="body background-body loaded search-cvs-page">
-	<section class="top-block">
+	<section class="top-block text-center">
 		<div class="bg-image">
 			<div class="container">
 				<div class="row">
@@ -37,7 +37,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 block-grey">
-					<header class="heading-container">
+					<header class="heading-container text-center">
 						<h3>Profile & CV Search features</h3>
 						<hr>
 					</header>
@@ -90,7 +90,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="cvsearch-prices">
+	<section class="cvsearch-prices text center">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 block-grey">
