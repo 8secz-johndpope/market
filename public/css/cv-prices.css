@@ -214,6 +214,9 @@
     height: auto;
 }
 @media only screen and (max-width: 769px){
+	.profilesearch-price-table{
+		border: 0;
+	}
 	.profilesearch-price-table tbody td {
 		height: auto;
 		width: 100%;
