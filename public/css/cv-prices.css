@@ -75,11 +75,26 @@
     position: absolute;
     transform: translate(-50%,-50%);
 }
-.profilesearch-example-container .profilesearch-desktop .cvsearch_web {
+.profilesearch-example-container .profilesearch-desktop .profilesearch-web {
     top: 25px;
     left: 25px;
     width: 565px;
     height: 315px;
     overflow: hidden;
     position: absolute;
+}
+.profilesearch-example-container .profilesearch-desktop .profilesearch-zoom {
+    top: 132px;
+    left: -16px;
+    width: 195px;
+    height: 195px;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 5px solid #29a3c1;
+    
+    background-position-x: -42px;
+    background-position-y: -294px;
 }
