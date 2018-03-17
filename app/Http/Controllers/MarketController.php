@@ -34,6 +34,7 @@ use App\Model\ProfileLanguage;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AccountCreated;
 use App\Model\EmailCode;
+use App\Model\SocialcareServiceOffered;
 
 class MarketController extends BaseController
 {
@@ -2462,6 +2463,6 @@ class MarketController extends BaseController
         return view('home.verification.verified', $params);
     }
     public function recruiterRegister(Request $request){
-        
+
     }
 }
