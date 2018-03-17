@@ -179,8 +179,6 @@
 												<p class="profilesearch-type">
 													Profile & CV Search
 													<br>
-
-													<br>
 													12 month 
 												</p>
 												<p class="profilesearch-cost">
