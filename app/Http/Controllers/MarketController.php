@@ -2461,4 +2461,7 @@ class MarketController extends BaseController
         }
         return view('home.verification.verified', $params);
     }
+    public function recruiterRegister(Request $request){
+        
+    }
 }

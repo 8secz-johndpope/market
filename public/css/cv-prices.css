@@ -210,3 +210,9 @@
     font-weight: 700;
     height: auto;
 }
+@media (max-width: 1159){
+	.profilesearch-price-table tbody td {
+		vertical-align: middle;
+		font-size: 20px;
+	}
+}

@@ -198,6 +198,7 @@ Route::post('/user/reply/all', 'HomeController@reply_all');
 Route::get('/user/jobs/application-request/decline/{id}', 'CandidatePortalController@discardRequest');
 Route::get('/user/manage/my/applications', 'HomeController@my_applications');
 Route::get('/recruiter/cv-search', 'MarketController@searchCvPrices');
+Route::get('/recruiter/account/register', 'MarketController@recruiterRegister');
 Route::get('/user/templates/add', 'HomeController@add_template');
 Route::get('/user/manage/templates', 'HomeController@templates');
 Route::get('/user/delete/template/{id}', 'HomeController@delete_template');
