@@ -6,13 +6,13 @@
 }
 
 .candidate-picture{
-	width: 150px;
+	width: 120px;
 	display: inline-block;
 }
 
 .candidate-picture figure{
 	width: 100%;
-	height: 150px;
+	height: 120px;
 	border-radius: 50%;
 	overflow: hidden;
 	position: relative;
@@ -22,7 +22,7 @@
 	height: 100%;
 }
 .candidate-details-wrapper{
-	width: calc(100% - 155px);
+	width: calc(100% - 125px);
 	display: inline-block;
 	padding-left: 15px;
 }
