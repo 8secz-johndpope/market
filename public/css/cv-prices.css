@@ -210,6 +210,12 @@
     font-weight: 700;
     height: auto;
 }
+@media only screen and (max-width: 769px){
+	.profilesearch-price-table tbody td {
+		height: auto;
+		width: 100%;
+	}
+}
 @media only screen and (max-width: 1159px){
 	.profilesearch-price-table tbody td {
 		vertical-align: middle;
