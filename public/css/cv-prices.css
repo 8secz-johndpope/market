@@ -50,3 +50,7 @@
     display: inline;
     font-family: Effra-Medium,sans-serif;
 }
+.heading-container {
+    position: relative;
+    padding: 40px 0 30px 0;
+}
