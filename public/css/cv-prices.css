@@ -146,3 +146,9 @@
     right: -90px;
     background-position: 19px 13px;
 }
+.profilesearch-example-container .profilesearch-desktop .prev {
+    left: -90px;
+    display: none;
+    background-image: url(/recruiter/resources/cms/responsive/cv-search/images/cv-search-left.png);
+    background-position: 16px 12px;
+}
