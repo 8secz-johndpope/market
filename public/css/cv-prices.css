@@ -54,3 +54,9 @@
     position: relative;
     padding: 40px 0 30px 0;
 }
+.block-grey{
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #d6d6d6;
+}
