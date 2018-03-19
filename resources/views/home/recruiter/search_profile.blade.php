@@ -217,7 +217,7 @@
         }
     });
     $('.modal-footer .btn-submit').click(function(){
-        if($('.modal-body select').val() == ''){
+        if(!$('.modal-body select').val()){
             $('.modal .validation span').text('Select job');
             $('.modal .validation').show();
         }
