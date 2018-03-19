@@ -189,7 +189,7 @@ class RecruimentPortalController extends BaseController
     }
     public function applicationRequestAll(Request $request){
         $user = Auth::user();
-        foreach ($profiles as $idProfile) {
+        foreach ($request->candidate_id as $idProfile) {
             $requestApplication = $this->jobApplicationRequest($idProfile, $request->offer_job, $request->offer_message);
             $user->applicationInvitations()->save($requestApplication);
         }
