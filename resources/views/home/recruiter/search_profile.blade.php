@@ -74,7 +74,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <form action="/recruiter/candidate/application-request/all" method="post">
+                <form action="/recruiter/send/application-request/candidates" method="post">
                     {{ csrf_field() }}
                     <div class="candidates-container">
                         @foreach($profiles as $profile)
@@ -161,12 +161,17 @@
         <form action="/recruiter/candidate/application-request/all" method="post">
             {{ csrf_field() }}
             <input type="hidden" name="profile">
+            @if($myJobs->count() > 0)
             <div class="form-group">
                 <label>Select Job</label>
                 <select class="form-control" name="request_job">
                     <option>Select</option>
+                    @foreach($myJobs as $job)
+                    <option value="{{$job->id}}">{{$job->param('title')}}</option>
+                    @endif
                 </select>
             </div>
+            @endif
             <div class="form-group">
                 <label>Write Message</label>
                 <textarea class="form-control" rows="4"></textarea>

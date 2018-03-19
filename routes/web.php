@@ -84,7 +84,8 @@ Route::get('/wallet/request', 'BankController@request');
 
 
 Route::post('/user/save/profile', 'HomeController@save_pro');
-Route::post('/user/request-application', 'HomeController@applicationRequest');
+Route::post('/recruiter/send/application-request/candidate/', 'RecruimentPortalController@applicationRequest');
+Route::post('/recruiter/send/application-request/candidates', 'RecruimentPortalController@applicationRequestAll');
 Route::post('/user/groups/add', 'MessageController@add_group');
 Route::post('/user/send/broadcast', 'MessageController@send_broadcast');
 

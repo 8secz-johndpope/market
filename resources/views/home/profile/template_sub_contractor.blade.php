@@ -571,7 +571,7 @@
                                             You need to be <a href="/login">Login</a> | <a href="/register">SignUp</a> for make to request.
                                         @else
                                             @if(isset($jobs))
-                                            <form action="/user/request-application" id="make-request" method="post">
+                                            <form action="/recruiter/send/application-request/candidate/" id="make-request" method="post">
                                                 {{ csrf_field() }}
                                                 <input type="hidden" name="user_profile" value="{{$profile->user->id}}">
                                                 <div class="form-group">
