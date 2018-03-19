@@ -38,6 +38,15 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-xs-12">
+                <div class="bulk-candidates-container">
+                    <input type="checkbox" name="" id="select-all">
+                    <label for="select-all">
+                        Select all for 
+                        <span class="bulk-apply-tm">BulkApplicationRequest<sup>TM</sup></span>
+                    </label>
+                </div>
+            </div>
             <div class="col-sm-12">
                 <div class="candidates-container">
                     @foreach($profiles as $profile)
