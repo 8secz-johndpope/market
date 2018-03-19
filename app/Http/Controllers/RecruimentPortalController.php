@@ -220,6 +220,7 @@ class RecruimentPortalController extends BaseController
         }
         if($request->has('location')){
             $location = Location::where('slug', $request->location);
+            var_dump($location);die;
             $profiles->join('looking_for_location', 'looking_fors.id', '=', 'looking_for_location.looking_for_id')
                      ->where('looking_for_location.location_id', $location->id);
         }
