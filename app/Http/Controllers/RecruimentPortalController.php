@@ -182,7 +182,7 @@ class RecruimentPortalController extends BaseController
         $profiles = $this->getProfileByQuery($request, $location);
         $user = Auth::user();
         $myJobs = $user->jobs;
-        return view('home.recruiter.search_profile', ['profiles' => $profiles, 'user' => $user, 'myJobs' => $myJobs, 'location' => $location, 'jobTitle' => $jobTitle]);
+        return view('home.recruiter.search_profile', ['profiles' => $profiles, 'user' => $user, 'myJobs' => $myJobs, 'location' => $location, 'jobTitle' => $request->job_title]);
     }
     public function applicationRequest(Request $request){
         try{
