@@ -97,6 +97,7 @@
 .profile-type {
     padding-bottom: 15px;
     padding-top: 15px;
+    cursor: pointer;
 }
 .profile-type:not(:last-of-type){
 	border-right: 1px solid #ddd;

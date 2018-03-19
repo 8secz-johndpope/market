@@ -2995,19 +2995,7 @@ class HomeController extends BaseController
         return view('home.profile.onedrive_sigin');
     }
     
-    public function applicationRequest(Request $request){
-        try{
-            $user = Auth::user();
-            $requestApplication = new applicationRequest();
-            $requestApplication->message = $request->offer_message;
-            $requestApplication->advert_id = $request->offer_job;
-            $requestApplication->candidate_id = $request->user_profile;
-            $user->applicationRequestsSent()->save($requestApplication);
-            return ['message' => 'The application request was sent correctly'];
-        }catch(\Exception $e){
-            return $e;
-        }
-    }
+    
     public function verifyAccount(Request $request){
         $user = Auth::user();
         return view('home.verification.account', ['user' => $user]);
