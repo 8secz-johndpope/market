@@ -44,8 +44,8 @@
                     <div class="candidate">
                         <div class="candidate-wrapper">
                             <div class="checkbox">
-                                <input type="checkbox" name="candidates_id[]" id="candidate-{{$profile->user->id}}" value="{{$profile->user->id}}">
-                                <label for="candidate-{{$profile->user->id}}">
+                                <input type="checkbox" name="candidate_id[]" id="candidate-{{$profile->id}}" value="{{$profile->id}}">
+                                <label for="candidate-{{$profile->id}}">
                                     Select
                                 </label>
                             </div>
