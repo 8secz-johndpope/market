@@ -46,3 +46,13 @@
 	top: 0;
 	left: auto;
 }
+.candidate .candidate-actions {
+    margin-top: 15px;
+}
+.candidate .box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
