@@ -175,10 +175,14 @@ class RecruimentPortalController extends BaseController
         return $job;
     }
     public function searchCV(Request $request){
-        $profiles = $this->getProfileByQuery($request);
+        $location = null;
+        if($request->has('location')){
+            $location = Location::where('slug', $request->location)->first();
+        }
+        $profiles = $this->getProfileByQuery($request, $location);
         $user = Auth::user();
         $myJobs = $user->jobs;
-        return view('home.recruiter.search_profile', ['profiles' => $profiles, 'user' => $user, 'myJobs' => $myJobs]);
+        return view('home.recruiter.search_profile', ['profiles' => $profiles, 'user' => $user, 'myJobs' => $myJobs, 'location' => $location, 'jobTitle' => $jobTitle]);
     }
     public function applicationRequest(Request $request){
         try{
@@ -207,7 +211,7 @@ class RecruimentPortalController extends BaseController
         $job = Advert::find($idJob);
         return $profile->makeApplicationRequest($job, $message);
     }
-    public function getProfileByQuery(Request $request){
+    public function getProfileByQuery(Request $request, $location){
         $profiles = DB::table('profiles')
                             ->where('profiles.status', 1);
         if($request->has('type'))
@@ -218,8 +222,7 @@ class RecruimentPortalController extends BaseController
         if($request->has('job_title')){
             $profiles->where('looking_fors.job_title', 'like', '%'.$request->job_title.'%');
         }
-        if($request->has('location')){
-            $location = Location::where('slug', $request->location)->first();
+        if($location != null){
             $profiles->join('looking_for_location', 'looking_fors.id', '=', 'looking_for_location.looking_for_id')
                      ->where('looking_for_location.location_id', $location->id);
         }

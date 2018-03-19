@@ -23,14 +23,14 @@
                 <div class="col-sm-5">
                     <form id="form-search-cv">
                         <div class="form-group">
-                            <input type="text" name="job_title" value="" id="job-title" placeholder="Job title" class="form-control">
-                            <input type="hidden" name="location" id="location-slug" value="" placeholder="Location" class="form-control">
+                            <input type="text" name="job_title" value="{{isset($jobTitle) ? $jobTitle : ''}}" id="job-title" placeholder="Job title" class="form-control">
+                            <input type="hidden" name="location" id="location-slug" value="{{$location != null ? $location->slug : ''}}" placeholder="Location" class="form-control">
                         </div>
                     </form>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <input type="text" name="location-name" id="location" value="" placeholder="Location" class="form-control">
+                        <input type="text" name="location-name" id="location" value="{{$location != null ? $location->title : ''}}" placeholder="Location" class="form-control">
                         
                     </div>
                 </div>
