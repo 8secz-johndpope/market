@@ -205,6 +205,8 @@
     $('#modalApplicationRequest').on('show.bs.modal', function(event){
         var button = $(event.relatedTarget);
         var request = button.data('whatever');
+        console.log($('.candidates-checkbox:checked').length);
+        console.log(request);
         if(request == 'all' && $('.candidates-checkbox:checked').length < 1){
             $('.modal-footer btn-submit').prop('disabled', true);
             $('.modal validation span').text('Select candidates');
