@@ -2419,7 +2419,7 @@ nav.navbar.navbar-inverse {
 .mb-10 {
     margin-bottom: 10px;
 }
-.bulk-apply-container label, .info .checkbox label {
+.bulk-apply-container label, .info .checkbox label, .candidate .checkbox label {
     display: block;
     padding-left: 0;
     font-size: 10px;
@@ -2453,7 +2453,7 @@ nav.navbar.navbar-inverse {
     width: 1px;
 }
 
-.bulk-apply-container label:before, .info .checkbox label:before {
+.bulk-apply-container label:before, .info .checkbox label:before, .candidate .checkbox label:before {
     content: '';
     display: block;
     content: '';
