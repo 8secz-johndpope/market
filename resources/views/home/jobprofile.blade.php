@@ -242,7 +242,7 @@
                             @if($profile->looking_for->job_title != null)
                             <div class="desired-job-title">
                                 <h3 class="title">Desired job title</h3>
-                                <p class="data">Engineer</p>
+                                <p class="data">{{$profile->looking_for->job_title}}</p>
                             </div>
                             @endif
                             <div class="salary">
@@ -267,7 +267,7 @@
                             <div class="location">
                                 <h3 class="title">Location</h3>
                                 @foreach($profile->looking_for->locations as $location)
-                                <p class="data">London, South East England</p>
+                                <p class="data">$location->title, $location->parent->title</p>
                                 @endforeach
                             </div>
                         </div>
