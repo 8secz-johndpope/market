@@ -208,8 +208,8 @@
     $('.modal-footer .btn-submit').click(function(){
         
         if($('#profile').val() == 'all'){
-            $('#offer-job').val($('modal-body select').val());
-            $('#offer-message').val($('modal-body textarea').val());
+            $('#offer-job').val($('.modal-body select').val());
+            $('#offer-message').val($('.modal-body textarea').val());
             $('#form-candidates-request').submit();
         }
         else{
