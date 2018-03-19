@@ -84,11 +84,11 @@
                         </div>
                         <div class="candidate-actions text-center">
                             <div class="row">
-                                <div class="col-xs-3">
+                                <div class="col-xs-4">
                                     <span class="heart-empty favroite-icon"></span>
                                     Save
                                 </div>
-                                <div class="col-xs-3">
+                                <div class="col-xs-4">
                                     <div class="dropdown">
                                         <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"">Download CV<span class="caret"></span></button>
                                         <ul class="dropdown-menu">
@@ -100,7 +100,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-xs-3">
+                                <div class="col-xs-4">
                                     Request Application
                                 </div>
                             </div>
