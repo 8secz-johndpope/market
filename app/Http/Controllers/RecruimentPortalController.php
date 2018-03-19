@@ -175,7 +175,6 @@ class RecruimentPortalController extends BaseController
     }
     public function searchCV(Request $request){
         $profiles = $this->getProfileByQuery($request);
-        return $profiles;
         $user = Auth::user();
         $myJobs = $user->jobs;
         return view('home.recruiter.search_profile', ['profiles' => $profiles, 'user' => $user, 'myJobs' => $myJobs]);
