@@ -180,15 +180,26 @@ class RecruimentPortalController extends BaseController
     public function applicationRequest(Request $request){
         try{
             $user = Auth::user();
-            $requestApplication = new ApplicationRequest();
-            $requestApplication->message = $request->offer_message;
-            $requestApplication->advert_id = $request->offer_job;
-            $requestApplication->candidate_id = $request->user_profile;
+            $requestApplication = $this->jobApplicationRequest($request->user_profile, $request->offer_job, $request->offer_message);
             $user->applicationRequestsSent()->save($requestApplication);
             return ['message' => 'The application request was sent correctly'];
         }catch(\Exception $e){
             return $e;
         }
+    }
+    public function applicationRequestAll(Request $request){
+        $user = Auth::user();
+        foreach ($profiles as $idProfile) {
+            $requestApplication = $this->jobApplicationRequest($idProfile, $request->offer_job, $request->offer_message);
+            $user->applicationRequestsSent()->save($requestApplication);
+        }
+        return back()->with('status', 'The application request was sent correctly');
+
+    }
+    public function jobApplicationRequest($idProfile, $idJob, $message){
+        $profile = Profile::find($idProfile);
+        $job = Advert::find($idJob);
+        return $profile->makeApplicationRequest($job, $message);
     }
 }
 ?>

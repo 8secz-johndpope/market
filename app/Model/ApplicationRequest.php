@@ -9,6 +9,11 @@ class ApplicationRequest extends Model
 {
 	const STATUS = array('New', 'Viewed', 'Accepted' ,'Rejected');
 
+	public function __construct()
+    {
+        parent::__construct();
+        $this->status = 0;
+    }
 	public function advert(){
 		return $this->belongsTo('App\Model\Advert');
 	}

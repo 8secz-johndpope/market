@@ -158,7 +158,7 @@
         <h4 class="modal-title">Send Application Request</h4>
       </div>
       <div class="modal-body">
-        <form action="/recruiter/candidate/application-request/all" method="post">
+        <form action="/recruiter/send/application-request/candidate" method="post">
             {{ csrf_field() }}
             <input type="hidden" name="profile">
             @if($myJobs->count() > 0)

@@ -82,4 +82,11 @@ class Profile extends Model
 	public function isOwen($user){
 		return ($user != null) && $this->user->id === $user->id; 
 	}
+	public function makeApplicationRequest($advert, $message){
+		$applicationRequest = new ApplicationRequest();
+		$applicationRequest->advert_id = $advert->id;
+		$applicationRequest->message = $message;
+		$applicationRequest->candidate_id = $this->user->id;
+		return $applicationRequest;
+	}
 }
