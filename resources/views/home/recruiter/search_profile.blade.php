@@ -27,7 +27,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="form-group">
-                    <input type="text" name="location" value="" placeholder="Location">
+                    <input type="text" name="location" value="" placeholder="Location" class="form-control">
                 </div>
             </div>
             <div class="col-sm-3">
