@@ -24,7 +24,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<h1>Profile & CV Search</h1>
+						<h1>Profile CV Search</h1>
 						<div class="ctas">
 							<p>Headhunt the candidates that you need</p>
 						</div>
@@ -43,7 +43,7 @@
 					</header>
 					<div class="row cvsearch-benefits">
 						<article class="col-md-4">
-							<h4>Access Multiple Profiles & CVs</h4>
+							<h4>Access Multiple Profiles CVs</h4>
 							<p>Target by Skills, job title, salary, location, education and more</p>
 						</article>
 						<article class="col-md-4">
@@ -75,10 +75,10 @@
 								</ul>
 								<div class="profilesearch-description">
 									<header>
-										<p class="lense-header">View CVs</p>
+										<p class="lense-header">View Profile CVs</p>
 									</header>
 									<p class="lense-description">
-										Save CVs as Word or PDF documents & view candidate profiles online. You can access up to 100 new candidate CVs per day.
+										Save CVs as Word or PDF documents & view candidate profiles online. You can access up to 100 new candidate Profiles CVs per day.
 									</p>
 								</div>
 								<span class="prev">previous</span>
