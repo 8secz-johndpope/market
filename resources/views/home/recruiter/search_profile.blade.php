@@ -87,7 +87,7 @@
                                 <div class="col-xs-4">
                                     <div class="box">
                                         <span class="heart-empty favroite-icon"></span>
-                                        Save
+                                        <span>Save</span>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
