@@ -85,6 +85,7 @@
                         <div class="candidate-actions text-center">
                             <div class="row">
                                 <div class="col-xs-3">
+                                    <span class="heart-empty favroite-icon"></span>
                                     Save
                                 </div>
                                 <div class="col-xs-3">
