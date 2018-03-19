@@ -25,11 +25,16 @@
                     <input type="text" name="job_title" value="" id="job-title" placeholder="Job title" class="form-control">
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <div class="form-group">
                     <select class="form-control">
                         <option>Select Sector</option>
                     </select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <button class="btn btn-submit">Search</button>
                 </div>
             </div>
         </div>
@@ -52,7 +57,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-sm-8">
                 <div class="bulk-candidates-container">
                     <input type="checkbox" name="" id="select-all">
                     <label for="select-all">
@@ -61,6 +66,11 @@
                     </label>
                 </div>
             </div>
+            <div class="col-sm-4">
+                <button class="btn btn-submit">Bulk Application Request</button>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12">
                 <div class="candidates-container">
                     @foreach($profiles as $profile)
