@@ -43,6 +43,12 @@
                     @foreach($profiles as $profile)
                     <div class="candidate">
                         <div class="candidate-wrapper">
+                            <div class="checkbox">
+                                <input type="checkbox" name="candidates_id[]" id="candidate-{{$profile->user->id}}" value="{{$profile->user->id}}">
+                                <label for="candidate-{{$profile->user->id}}">
+                                    Select
+                                </label>
+                            </div>
                             <div class="candidate-picture">
                                 <figure>
                                     <img src="{{env('AWS_WEB_IMAGE_URL')}}/{{$profile->user->image}}">
