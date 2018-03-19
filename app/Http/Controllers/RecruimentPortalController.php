@@ -7,6 +7,7 @@ use App\Model\Application;
 use App\Model\Advert;
 use App\Model\ApplicationRequest;
 use App\Model\Profile;
+use App\Model\LookingFor;
 class RecruimentPortalController extends BaseController
 {
    
@@ -172,7 +173,7 @@ class RecruimentPortalController extends BaseController
         return $job;
     }
     public function searchCV(Request $request){
-        $profiles = Profile::where('status', 1)->get();
+        $profiles = $this->getProfileByQuery($request);
         $user = Auth::user();
         $myJobs = $user->jobs;
         return view('home.recruiter.search_profile', ['profiles' => $profiles, 'user' => $user, 'myJobs' => $myJobs]);
@@ -203,6 +204,16 @@ class RecruimentPortalController extends BaseController
         $profile = Profile::find($idProfile);
         $job = Advert::find($idJob);
         return $profile->makeApplicationRequest($job, $message);
+    }
+    public function getProfileByQuery(Request $request){
+        $lookingFors = LookingFor::all();
+        if($request->has('job_title'))
+            $lookingFor->where('LIKE', 'job_title', '%'.$request->job_title.'%');
+        $profiles = collect();
+        foreach ($lookingFors->get() as $looking) {
+            $profiles->put($looking->profile->id, $looking->profile);
+        }
+        return $profiles;
     }
 }
 ?>
