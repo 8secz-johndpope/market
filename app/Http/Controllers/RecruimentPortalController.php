@@ -206,14 +206,13 @@ class RecruimentPortalController extends BaseController
         return $profile->makeApplicationRequest($job, $message);
     }
     public function getProfileByQuery(Request $request){
-        $lookingFors = LookingFor::all();
-        if($request->has('job_title'))
-            $lookingFor->where('LIKE', 'job_title', '%'.$request->job_title.'%');
-        $profiles = collect();
-        foreach ($lookingFors as $looking) {
-            $profiles->put($looking->profile->id, $looking->profile);
+        $profiles = DB::table('profiles')
+                            ->join('looking_fors', 'profile.id', '=', 'looking_fors.profile_id');
+        if($request->has('job_title')){
+            $profiles->where('looking_fors.job_title', 'like', $request->job_title);
         }
-        return $profiles;
+        return $profiles->get();
+                           
     }
 }
 ?>
