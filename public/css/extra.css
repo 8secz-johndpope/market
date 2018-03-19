@@ -2426,7 +2426,7 @@ nav.navbar.navbar-inverse {
     position: relative;
     padding-top: 37px;
 }
-.info .checkbox {
+.info .checkbox, .candidate .checkbox {
     position: absolute;
     left: -46px;
     width: 40px;
@@ -2436,7 +2436,7 @@ nav.navbar.navbar-inverse {
     top: 0;
     margin: 0;
 }
-.bulk-apply-container input[type=checkbox], .info .checkbox input[type=checkbox] {
+.bulk-apply-container input[type=checkbox], .info .checkbox input[type=checkbox], .candidate .checkbox input[type=checkbox] {
     position: relative;
     display: block;
     margin-left: auto;
