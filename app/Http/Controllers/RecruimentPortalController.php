@@ -221,7 +221,7 @@ class RecruimentPortalController extends BaseController
         $idsProfiles = $profiles->select('profiles.id')->get();
         $colProfiles = collect();
         foreach ($idsProfiles as $id) {
-            $colProfiles->put($id, Profile::find($id));
+            $colProfiles->put($id, Profile::find((int)$id));
         }
         return $colProfiles;
                            
