@@ -58,8 +58,13 @@
 }
 .candidate  .favroite-icon {
 	display: inline-block;
+	vertical-align: middle;
 }
 .candidate .favroite-icon:before {
     height: 20px;
     width: 20px;
+}
+.candidate  .favroite-icon + span{
+	display: inline-block;
+	vertical-align: middle;
 }
