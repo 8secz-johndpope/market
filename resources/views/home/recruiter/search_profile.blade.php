@@ -66,7 +66,7 @@
                     </label>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 text-right">
                 <button class="btn btn-submit">Bulk Application Request</button>
             </div>
         </div>
