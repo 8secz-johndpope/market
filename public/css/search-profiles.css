@@ -1,3 +1,6 @@
+.body{
+	min-height: 90vh;
+}
 .candidate{
 	background: #fff;
 	margin-bottom: 15px;
