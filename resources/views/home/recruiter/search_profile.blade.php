@@ -133,7 +133,7 @@
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="box">
-                                            <button class="btn btn-link" data-toggle="modal">Request Application</button>
+                                            <button class="btn btn-link" data-toggle="modal" data-target="#modalApplicationRequest">Request Application</button>
                                         </div>
                                     </div>
                                 </div>
@@ -145,6 +145,25 @@
             </div>
         </div>
     </div>
+</div>
+<div id="modalApplicationRequest" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Send Application Request</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>
 <script>
     $('#select-all').change(function(){
