@@ -9,6 +9,7 @@ use App\Model\Advert;
 use App\Model\ApplicationRequest;
 use App\Model\Profile;
 use App\Model\LookingFor;
+use App\Model\Location;
 class RecruimentPortalController extends BaseController
 {
    
