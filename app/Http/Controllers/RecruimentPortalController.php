@@ -182,7 +182,7 @@ class RecruimentPortalController extends BaseController
             $user = Auth::user();
             $requestApplication = $this->jobApplicationRequest($request->user_profile, $request->offer_job, $request->offer_message);
             $user->applicationInvitations()->save($requestApplication);
-            return ['message' => 'The application request was sent correctly'];
+            return back()->with('status', 'The application request was sent correctly');
         }catch(\Exception $e){
             return $e;
         }
@@ -191,6 +191,9 @@ class RecruimentPortalController extends BaseController
         $user = Auth::user();
         foreach ($request->candidate_id as $idProfile) {
             $requestApplication = $this->jobApplicationRequest($idProfile, $request->offer_job, $request->offer_message);
+            if($requestApplication == null){
+                back()->with('error', 'Error, the job or profile selected are not valid');
+            }
             $user->applicationInvitations()->save($requestApplication);
         }
         return back()->with('status', 'The application request was sent correctly');
