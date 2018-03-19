@@ -133,7 +133,7 @@
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="box">
-                                            <button class="btn btn-link" data-toggle="modal" data-target="#modalApplicationRequest">Request Application</button>
+                                            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalApplicationRequest">Request Application</button>
                                         </div>
                                     </div>
                                 </div>
