@@ -53,6 +53,7 @@
     font-family: Effra-Regular,sans-serif;
     text-rendering: optimizeLegibility;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 .heading-container {
     position: relative;
