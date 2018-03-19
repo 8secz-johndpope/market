@@ -50,7 +50,9 @@
     font-size: 30px;
     font-weight: 600;
     display: inline;
-    font-family: Effra-Medium,sans-serif;
+    font-family: Effra-Regular,sans-serif;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
 }
 .heading-container {
     position: relative;
@@ -191,14 +193,15 @@
 }
 .profilesearch-price-table tbody td .profilesearch-type {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 28px;
     color: #366ffb;
    	text-rendering: optimizeLegibility;
+   	font-family: inherit;
 }
 .profilesearch-price-table tbody td .profilesearch-cost {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 10px;
     line-height: 30px;
     display: inline-block;
