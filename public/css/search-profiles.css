@@ -36,4 +36,4 @@
 .candidate-details-wrapper .candidate-location{
 	text-transform: capitalize;
 	color: #ccc;
-}
+	margin-bottom: 0;

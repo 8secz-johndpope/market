@@ -73,7 +73,16 @@
                                     Save
                                 </div>
                                 <div class="col-xs-3">
-                                    Download CV
+                                    <div class="dropdown">
+                                        <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"">Download CV<span class="caret"></span></button>
+                                        <ul class="dropdown-menu">
+                                            @foreach($profile->user->cvs as $cv)
+                                            <li>
+                                                <a href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->filename}}">{{$cv->title}}</a>
+                                            </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="col-xs-3">
                                     Request Application
