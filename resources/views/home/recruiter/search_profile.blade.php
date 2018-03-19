@@ -217,8 +217,7 @@
         }
     });
     $('.modal-footer .btn-submit').click(function(){
-        console.log($('.modal-body select').val());
-        /*if(!$('.modal-body select').val()){
+        if($('.modal-body select').val() == ''){
             $('.modal .validation span').text('Select job');
             $('.modal .validation').show();
         }
@@ -231,7 +230,7 @@
             else{
                 $('#form-candidate-request').submit();
             }
-        }*/
+        }
     });    
 </script>
 @endsection
