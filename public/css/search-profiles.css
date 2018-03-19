@@ -8,6 +8,7 @@
 .candidate-picture{
 	width: 120px;
 	display: inline-block;
+	vertical-align: middle;
 }
 
 .candidate-picture figure{
@@ -25,4 +26,5 @@
 	width: calc(100% - 125px);
 	display: inline-block;
 	padding-left: 15px;
+	vertical-align: middle;
 }
