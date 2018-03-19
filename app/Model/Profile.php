@@ -83,6 +83,9 @@ class Profile extends Model
 		return ($user != null) && $this->user->id === $user->id; 
 	}
 	public function makeApplicationRequest($advert, $message){
+		if($advert == null){
+			return null;
+		}
 		$applicationRequest = new ApplicationRequest();
 		$applicationRequest->advert_id = $advert->id;
 		$applicationRequest->message = $message;

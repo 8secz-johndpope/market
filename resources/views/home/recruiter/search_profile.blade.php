@@ -28,7 +28,8 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <input type="text" name="location" id="location" value="" placeholder="Location" class="form-control">
+                        <input type="text" name="location-name" id="location" value="" placeholder="Location" class="form-control">
+                        <input type="hidden" name="location" id="location-id" value="" placeholder="Location" class="form-control">
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -214,7 +215,7 @@
         serviceUrl: '/api/lsuggest',
         onSelect: function (suggestion) {
             $(this).val(suggestion.value);
-            $(this).attr('data-ref', suggestion.data);
+            $('#location-id').val(suggestion.data);
             //   window.location.href = "{{env('APP_URL')}}/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
