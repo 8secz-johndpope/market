@@ -59,6 +59,13 @@
             </div>
         </div>
         <div class="row bulk-candidates-container">
+            <div class="col-xs-12">
+            @if(session('status'))
+                <div class="alert alert-success">
+                    <span>{{session('status')}}</span>
+                </div>
+            @endif
+            </div>
             <div class="col-sm-8">
                 <div class="">
                     <input type="checkbox" name="" id="select-all">
@@ -74,8 +81,10 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <form action="/recruiter/send/application-request/candidates" method="post">
+                <form action="/recruiter/send/application-request/candidates" method="post" id="form-candidates-request">
                     {{ csrf_field() }}
+                    <input type="hidden" name="offer_job" id="offer-job">
+                    <input type="hidden" name="offer_message" id="offer-message">
                     <div class="candidates-container">
                         @foreach($profiles as $profile)
                         <div class="candidate">
@@ -197,8 +206,11 @@
         modal.find('#profile').val(request);
     });
     $('.modal-footer .btn-submit').click(function(){
+        
         if($('#profile').val() == 'all'){
-
+            $('#offer_job').val($('modal-body select').val());
+            $('#offer_message').val($('modal-body textarea').val());
+            $('#form-candidates-request').submit();
         }
         else{
             $('#form-candidate-request').submit();
