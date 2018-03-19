@@ -56,9 +56,9 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row bulk-candidates-container">
             <div class="col-sm-8">
-                <div class="bulk-candidates-container">
+                <div class="">
                     <input type="checkbox" name="" id="select-all">
                     <label for="select-all">
                         Select all for 
