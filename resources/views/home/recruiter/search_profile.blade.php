@@ -145,7 +145,7 @@
                                                 <ul class="dropdown-menu">
                                                     @foreach($profile->user->cvs as $cv)
                                                     <li>
-                                                        <a href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->filename}}" target="_blank" class="download-cv">{{$cv->title}}</a>
+                                                        <a href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->file_name}}" target="_blank" class="download-cv">{{$cv->title}}</a>
                                                     </li>
                                                     @endforeach
                                                 </ul>
