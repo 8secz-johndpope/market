@@ -219,10 +219,9 @@ class RecruimentPortalController extends BaseController
                      ->where('looking_for_location.location_id', $request->location);
         }
         $idsProfiles = $profiles->select('profiles.id')->get();
-        var_dump($idsProfiles);die;
         $colProfiles = collect();
-        foreach ($idsProfiles as $id) {
-            $colProfiles->put($id, Profile::find((int)$id));
+        foreach ($idsProfiles as $profile) {
+            $colProfiles->put($profile->id, Profile::find((int)$profile->id));
         }
         return $colProfiles;
                            
