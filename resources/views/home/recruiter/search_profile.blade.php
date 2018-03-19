@@ -43,16 +43,16 @@
                 </header>
             </div>
         </div>
-        <div class="row text-center profile-types">
+        <div class="row text-center profile-types-container">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 profile-type">
                         General Sector
                     </div>
-                     <div class="col-sm-4">
+                     <div class="col-sm-4 profile-type">
                         Social & Childcare Sector
                     </div>
-                     <div class="col-sm-4">
+                     <div class="col-sm-4 profile-type">
                         Sub Contractor Sector
                     </div>
                 </div>
