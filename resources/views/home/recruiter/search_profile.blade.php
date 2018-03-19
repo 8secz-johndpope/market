@@ -158,16 +158,20 @@
         <h4 class="modal-title">Send Application Request</h4>
       </div>
       <div class="modal-body">
-        <div class="form-group">
-            <label>Select Job</label>
-            <select class="form-control" name="request_job">
-                <option>Select</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Write Message</label>
-            <textarea class="form-control" rows="4"></textarea>
-        </div>
+        <form action="/recruiter/candidate/application-request/all" method="post">
+            {{ csrf_field() }}
+            <input type="hidden" name="profile">
+            <div class="form-group">
+                <label>Select Job</label>
+                <select class="form-control" name="request_job">
+                    <option>Select</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Write Message</label>
+                <textarea class="form-control" rows="4"></textarea>
+            </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -179,6 +183,12 @@
 <script>
     $('#select-all').change(function(){
         $('.candidates-checkbox').prop('checked', this.checked);
+    });
+    $('#modalApplicationRequest').on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget);
+        var request = button.data('whatever');
+        var modal = $(this);
+        modal.find('#profile').val(request);
     });    
 </script>
 @endsection
