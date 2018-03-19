@@ -93,12 +93,12 @@
                                 </div>
                                 <div class="col-xs-4">
                                     <div class="box">
-                                        <div class="dropdown download-cv">
+                                        <div class="dropdown download-cvs">
                                             <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"">Download CV<span class="caret"></span></button>
                                             <ul class="dropdown-menu">
                                                 @foreach($profile->user->cvs as $cv)
                                                 <li>
-                                                    <a href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->filename}}">{{$cv->title}}</a>
+                                                    <a href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->filename}}" target="_blank" class="download-cv">{{$cv->title}}</a>
                                                 </li>
                                                 @endforeach
                                             </ul>
