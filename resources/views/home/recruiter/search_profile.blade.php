@@ -65,6 +65,11 @@
                     <span>{{session('status')}}</span>
                 </div>
             @endif
+             @if(session('error'))
+                <div class="alert alert-danger">
+                    <span>{{session('error')}}</span>
+                </div>
+            @endif
             </div>
             <div class="col-sm-8">
                 <div class="">
