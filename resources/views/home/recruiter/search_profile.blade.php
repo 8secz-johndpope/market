@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <input type="text" name="location" value="" placeholder="Location" class="form-control">
+                        <input type="text" name="location" id="location" value="" placeholder="Location" class="form-control">
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -206,6 +206,16 @@
   </div>
 </div>
 <script>
+    $("#location").autocomplete({
+        paramName :'q',
+        serviceUrl: '/api/lsuggest',
+        onSelect: function (suggestion) {
+            $(this).val(suggestion.value);
+            $(this).attr('data-ref', suggestion.data);
+            //   window.location.href = "{{env('APP_URL')}}/"+suggestion.slug+"?q="+suggestion.value
+            // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+        }
+    });
     $('#select-all').change(function(){
         $('.candidates-checkbox').prop('checked', this.checked);
     });
