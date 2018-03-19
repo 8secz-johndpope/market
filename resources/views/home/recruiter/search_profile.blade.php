@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="col-sm-4 text-right">
-                <button class="btn btn-submit">Bulk Application Request</button>
+                <button type="button" class="btn btn-submit" data-toggle="modal" data-target="#modalApplicationRequest" data-whatever="all">Bulk Application Request</button>
             </div>
         </div>
         <div class="row">
@@ -133,7 +133,7 @@
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="box">
-                                            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalApplicationRequest">Request Application</button>
+                                            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalApplicationRequest" data-whatever="{{$profile->id}}">Request Application</button>
                                         </div>
                                     </div>
                                 </div>
@@ -156,7 +156,16 @@
         <h4 class="modal-title">Send Application Request</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <div class="form-group">
+            <label>Select Job</label>
+            <select class="form-control" name="request_job">
+                <option>Select</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Write Message</label>
+            <textarea class="textarea-control" rows="4"></textarea>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
