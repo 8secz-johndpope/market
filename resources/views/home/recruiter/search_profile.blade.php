@@ -85,23 +85,29 @@
                         <div class="candidate-actions text-center">
                             <div class="row">
                                 <div class="col-xs-4">
-                                    <span class="heart-empty favroite-icon"></span>
-                                    Save
-                                </div>
-                                <div class="col-xs-4">
-                                    <div class="dropdown">
-                                        <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"">Download CV<span class="caret"></span></button>
-                                        <ul class="dropdown-menu">
-                                            @foreach($profile->user->cvs as $cv)
-                                            <li>
-                                                <a href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->filename}}">{{$cv->title}}</a>
-                                            </li>
-                                            @endforeach
-                                        </ul>
+                                    <div class="box">
+                                        <span class="heart-empty favroite-icon"></span>
+                                        Save
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
-                                    Request Application
+                                    <div class="box">
+                                        <div class="dropdown">
+                                            <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"">Download CV<span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                @foreach($profile->user->cvs as $cv)
+                                                <li>
+                                                    <a href="{{env('AWS_CV_IMAGE_URL')}}/{{$cv->filename}}">{{$cv->title}}</a>
+                                                </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="box">
+                                        <button class="btn btn-link" data-toggle="modal">Request Application</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
