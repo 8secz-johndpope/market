@@ -52,7 +52,7 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-sm-4 profile-type">
-                        <a href="?type=general">General Sector
+                        <a href="?type=general">General Sector</a>
                     </div>
                      <div class="col-sm-4 profile-type">
                         Social & Childcare Sector
