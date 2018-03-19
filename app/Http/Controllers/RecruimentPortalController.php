@@ -208,14 +208,16 @@ class RecruimentPortalController extends BaseController
     }
     public function getProfileByQuery(Request $request){
         $profiles = DB::table('profiles')
-                            //
                             ->where('profiles.status', 1);
+        if($request->has('type'))
+            $profiles->where('profiles.type', $request->type);
         if($request->has('job_title')){
             $profiles->join('looking_fors', 'profiles.id', '=', 'looking_fors.profile_id')
                     ->where('looking_fors.job_title', 'like', '%'.$request->job_title.'%');
         }
         if($request->has('location')){
-            $profiles->join('looking_for_location', 'looking_fors.id', '=', 'looking_for_location.looking_for_id')
+            $profiles->join('looking_fors', 'profiles.id', '=', 'looking_fors.profile_id')
+                     ->join('looking_for_location', 'looking_fors.id', '=', 'looking_for_location.looking_for_id')
                      ->where('looking_for_location.location_id', $request->location);
         }
         $idsProfiles = $profiles->select('profiles.id')->get();
