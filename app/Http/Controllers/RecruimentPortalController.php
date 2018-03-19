@@ -181,7 +181,7 @@ class RecruimentPortalController extends BaseController
         try{
             $user = Auth::user();
             $requestApplication = $this->jobApplicationRequest($request->user_profile, $request->offer_job, $request->offer_message);
-            $user->applicationRequestsSent()->save($requestApplication);
+            $user->applicationInvitations()->save($requestApplication);
             return ['message' => 'The application request was sent correctly'];
         }catch(\Exception $e){
             return $e;
