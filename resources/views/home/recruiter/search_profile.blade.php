@@ -20,21 +20,23 @@
 <div class="body background-body recruiter-search-profile">
     <div class="container">
         <div class="row search-input-container">
-            <div class="col-sm-5">
-                <div class="form-group">
-                    <input type="text" name="job_title" value="" id="job-title" placeholder="Job title" class="form-control">
+            <form id="form-search-cv">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <input type="text" name="job_title" value="" id="job-title" placeholder="Job title" class="form-control">
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="form-group">
-                    <input type="text" name="location" value="" placeholder="Location" class="form-control">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <input type="text" name="location" value="" placeholder="Location" class="form-control">
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="form-group">
-                    <button class="btn btn-submit">Search</button>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-submit">Search</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="row">
             <div class="col-md-12">
