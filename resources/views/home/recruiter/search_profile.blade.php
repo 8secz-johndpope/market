@@ -36,11 +36,15 @@
                 </div>
             </div>
         </div>
-        <div class="row text-center profile-types">
+        <div class="row">
             <div class="col-md-12">
-                <header>
+                 <header>
                     <h3>I am looking for candidates in:</h3>
                 </header>
+            </div>
+        </div>
+        <div class="row text-center profile-types">
+            <div class="col-md-12">
                 <div class="row">
                     <div class="col-sm-4">
                         General Sector
