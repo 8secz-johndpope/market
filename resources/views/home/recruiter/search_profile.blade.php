@@ -55,10 +55,10 @@
                         <a href="?type=general">General Sector</a>
                     </div>
                      <div class="col-sm-4 profile-type">
-                        Social & Childcare Sector
+                        <a href="?type=social-childcare">Social & Childcare Sector</a>
                     </div>
                      <div class="col-sm-4 profile-type">
-                        Sub Contractor Sector
+                        <a href="?type=sub-contractor">Sub Contractor Sector</a>
                     </div>
                 </div>
             </div>
