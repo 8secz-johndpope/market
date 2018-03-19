@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
-                        <button type="submit" class="btn btn-submit">Search</button>
+                        <button type="button" class="btn btn-submit">Search</button>
                     </div>
                 </div>
             </form>
@@ -254,6 +254,9 @@
                 $('#form-candidate-request').submit();
             }
         }
-    });    
+    });
+    $('.search-input-container .btn-submit').click(function(){
+        $('#form-search-cv').submit();
+    });   
 </script>
 @endsection

@@ -218,8 +218,9 @@ class RecruimentPortalController extends BaseController
             $profiles->where('looking_fors.job_title', 'like', '%'.$request->job_title.'%');
         }
         if($request->has('location')){
+            $location = Location::where('slug', $request->location);
             $profiles->join('looking_for_location', 'looking_fors.id', '=', 'looking_for_location.looking_for_id')
-                     ->where('looking_for_location.location_id', $request->location);
+                     ->where('looking_for_location.location_id', $location->id);
         }
         $idsProfiles = $profiles->select('profiles.id')->get();
         $colProfiles = collect();
