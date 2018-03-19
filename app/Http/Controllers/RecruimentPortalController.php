@@ -214,7 +214,7 @@ class RecruimentPortalController extends BaseController
         if($request->has('job_title') || $request->has('location')){
             $profiles->join('looking_fors', 'profiles.id', '=', 'looking_fors.profile_id')
         }
-        if($request->has('job_title'))
+        if($request->has('job_title')){
             $profiles->where('looking_fors.job_title', 'like', '%'.$request->job_title.'%');
         }
         if($request->has('location')){
