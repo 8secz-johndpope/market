@@ -171,6 +171,9 @@
             {{ csrf_field() }}
             <input type="hidden" name="user_profile"  id="profile">
             @if($myJobs->count() > 0)
+            <div class="validation alert alert-danger" style="display: none">
+                <span></span>                
+            </div>
             <div class="form-group">
                 <label>Select Job</label>
                 <select class="form-control" name="offer_job">
@@ -202,11 +205,17 @@
     $('#modalApplicationRequest').on('show.bs.modal', function(event){
         var button = $(event.relatedTarget);
         var request = button.data('whatever');
-        var modal = $(this);
-        modal.find('#profile').val(request);
+        if(request == 'all' && $('.candidates-checkbox:checked').length == 0){
+            $('.modal-footer btn-submit').prop('disabled', true);
+            $('.modal validation span').text('Select candidates');
+            $('.modal validation').show();
+        }else{
+            $('.modal validation').hide();
+            var modal = $(this);
+            modal.find('#profile').val(request);
+        }
     });
     $('.modal-footer .btn-submit').click(function(){
-        
         if($('#profile').val() == 'all'){
             $('#offer-job').val($('.modal-body select').val());
             $('#offer-message').val($('.modal-body textarea').val());
