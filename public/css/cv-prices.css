@@ -191,9 +191,10 @@
 }
 .profilesearch-price-table tbody td .profilesearch-type {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 28px;
     color: #366ffb;
+   	text-rendering: optimizeLegibility;
 }
 .profilesearch-price-table tbody td .profilesearch-cost {
     font-size: 24px;
