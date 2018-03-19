@@ -19,6 +19,20 @@
 @section('content')
 <div class="body background-body recruiter-search-profile">
     <div class="container">
+        <div class="row search-input-container">
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <input type="text" name="job_title" value="" id="job-title" placeholder="Job title" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Select Sector</option>
+                    </select>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <header>
