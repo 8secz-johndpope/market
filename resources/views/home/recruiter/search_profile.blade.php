@@ -27,9 +27,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="form-group">
-                    <select class="form-control">
-                        <option>Select Sector</option>
-                    </select>
+                    <input type="text" name="location" value="" placeholder="Location">
                 </div>
             </div>
             <div class="col-sm-3">
@@ -38,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row text-center profile-types">
             <div class="col-md-12">
                 <header>
                     <h3>I am looking for candidates in:</h3>
@@ -99,11 +97,11 @@
                                         <strong>{{$profile->looking_for->job_title}}</strong>
                                         @endif
                                         @if(isset($profile->looking_for->min_per_annum) && isset($profile->looking_for->min_per_hour))
-                                        <p>{{$profile->looking_for->min_per_annum}} per annum or {{$profile->looking_for->min_per_hour}} per hour</p>
+                                        <p>£{{$profile->looking_for->min_per_annum}} per annum or £{{$profile->looking_for->min_per_hour}} per hour</p>
                                         @elseif(isset($profile->looking_for->min_per_annum))
-                                        <p>{{$profile->looking_for->min_per_annum}} per annum</p>
+                                        <p>£{{$profile->looking_for->min_per_annum}} per annum</p>
                                         @elseif(isset($profile->looking_for->min_per_hour))
-                                        <p>{{$profile->looking_for->min_per_hour}} per hour</p>
+                                        <p>£{{$profile->looking_for->min_per_hour}} per hour</p>
                                         @endif
                                     @endif
                                 </div>
@@ -164,7 +162,7 @@
         </div>
         <div class="form-group">
             <label>Write Message</label>
-            <textarea class="textarea-control" rows="4"></textarea>
+            <textarea class="form-control" rows="4"></textarea>
         </div>
       </div>
       <div class="modal-footer">
