@@ -210,7 +210,7 @@ class RecruimentPortalController extends BaseController
         if($request->has('job_title'))
             $lookingFor->where('LIKE', 'job_title', '%'.$request->job_title.'%');
         $profiles = collect();
-        foreach ($lookingFors->get() as $looking) {
+        foreach ($lookingFors as $looking) {
             $profiles->put($looking->profile->id, $looking->profile);
         }
         return $profiles;
