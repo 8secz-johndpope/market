@@ -53,7 +53,7 @@
                     <div class="candidate">
                         <div class="candidate-wrapper">
                             <div class="checkbox">
-                                <input type="checkbox" name="candidate_id[]" id="candidate-{{$profile->id}}" value="{{$profile->id}}">
+                                <input type="checkbox" name="candidate_id[]" id="candidate-{{$profile->id}}" value="{{$profile->id}}" class="candidates-checkbox">
                                 <label for="candidate-{{$profile->id}}">
                                     Select
                                 </label>
@@ -112,6 +112,8 @@
     </div>
 </div>
 <script>
-    
+    $('#select-all').change(function(){
+        $('.candidates-checkbox').prop('checked', this.checked);
+    });    
 </script>
 @endsection
