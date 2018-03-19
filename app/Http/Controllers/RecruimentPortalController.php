@@ -191,7 +191,7 @@ class RecruimentPortalController extends BaseController
         $user = Auth::user();
         foreach ($profiles as $idProfile) {
             $requestApplication = $this->jobApplicationRequest($idProfile, $request->offer_job, $request->offer_message);
-            $user->applicationRequestsSent()->save($requestApplication);
+            $user->applicationInvitations()->save($requestApplication);
         }
         return back()->with('status', 'The application request was sent correctly');
 
