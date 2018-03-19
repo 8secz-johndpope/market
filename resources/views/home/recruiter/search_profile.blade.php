@@ -217,13 +217,19 @@
         }
     });
     $('.modal-footer .btn-submit').click(function(){
-        if($('#profile').val() == 'all'){
-            $('#offer-job').val($('.modal-body select').val());
-            $('#offer-message').val($('.modal-body textarea').val());
-            $('#form-candidates-request').submit();
+        if($('.modal-body select').val() == ''){
+            $('.modal .validation span').text('Select job');
+            $('.modal .validation').show();
         }
         else{
-            $('#form-candidate-request').submit();
+            if($('#profile').val() == 'all'){
+                $('#offer-job').val($('.modal-body select').val());
+                $('#offer-message').val($('.modal-body textarea').val());
+                $('#form-candidates-request').submit();
+            }
+            else{
+                $('#form-candidate-request').submit();
+            }
         }
     });    
 </script>
