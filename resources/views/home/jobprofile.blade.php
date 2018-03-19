@@ -267,7 +267,7 @@
                             <div class="location">
                                 <h3 class="title">Location</h3>
                                 @foreach($profile->looking_for->locations as $location)
-                                <p class="data">$location->title, $location->parent->title</p>
+                                <p class="data">{{$location->title}}, {{$location->parent->title}}</p>
                                 @endforeach
                             </div>
                         </div>
