@@ -217,8 +217,7 @@
         serviceUrl: '/api/lsuggest',
         onSelect: function (suggestion) {
             $(this).val(suggestion.value);
-            console.log(suggestion);
-            $('#location-slug').val(suggestion.data);
+            $('#location-slug').val(suggestion.slug);
             //   window.location.href = "{{env('APP_URL')}}/"+suggestion.slug+"?q="+suggestion.value
             // alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         }
