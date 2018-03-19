@@ -67,7 +67,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="candidate-actions">
+                        <div class="candidate-actions text-center">
                             <div class="row">
                                 <div class="col-xs-3">
                                     Save
