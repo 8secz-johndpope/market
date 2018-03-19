@@ -177,7 +177,7 @@
             <div class="form-group">
                 <label>Select Job</label>
                 <select class="form-control" name="offer_job">
-                    <option>Select</option>
+                    <option value="">Select</option>
                     @foreach($myJobs as $job)
                     <option value="{{$job->id}}">{{$job->param('title')}}</option>
                     @endforeach
