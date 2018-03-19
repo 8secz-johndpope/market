@@ -168,7 +168,7 @@
                     <option>Select</option>
                     @foreach($myJobs as $job)
                     <option value="{{$job->id}}">{{$job->param('title')}}</option>
-                    @endif
+                    @endforeach
                 </select>
             </div>
             @endif
