@@ -158,7 +158,7 @@
         <h4 class="modal-title">Send Application Request</h4>
       </div>
       <div class="modal-body">
-        <form action="/recruiter/send/application-request/candidate" method="post">
+        <form action="/recruiter/send/application-request/candidate" method="post" id="form-candidate-request">
             {{ csrf_field() }}
             <input type="hidden" name="user_profile"  id="profile">
             @if($myJobs->count() > 0)
@@ -195,6 +195,14 @@
         var request = button.data('whatever');
         var modal = $(this);
         modal.find('#profile').val(request);
+    });
+    $('.modal-footer .btn-submit').click(function(){
+        if($('#profile').val() == 'all'){
+
+        }
+        else{
+            $('#form-candidate-request').submit();
+        }
     });    
 </script>
 @endsection
