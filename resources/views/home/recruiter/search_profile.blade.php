@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="col-xs-4">
                                     <div class="box">
-                                        <div class="dropdown">
+                                        <div class="dropdown download-cv">
                                             <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"">Download CV<span class="caret"></span></button>
                                             <ul class="dropdown-menu">
                                                 @foreach($profile->user->cvs as $cv)
