@@ -2502,7 +2502,7 @@ nav.navbar.navbar-inverse {
     margin-left: -72px;
     border-color: transparent transparent #313c53;
 }
-.bulk-apply-container input[type=checkbox]~label {
+.bulk-apply-container input[type=checkbox]~label, .bulk-candidates-container input[type=checkbox]~label{
     position: relative;
     display: inline-block;
     padding-top: 0;
