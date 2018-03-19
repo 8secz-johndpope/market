@@ -160,11 +160,11 @@
       <div class="modal-body">
         <form action="/recruiter/send/application-request/candidate" method="post">
             {{ csrf_field() }}
-            <input type="hidden" name="profile">
+            <input type="hidden" name="user_profile"  id="profile">
             @if($myJobs->count() > 0)
             <div class="form-group">
                 <label>Select Job</label>
-                <select class="form-control" name="request_job">
+                <select class="form-control" name="offer_job">
                     <option>Select</option>
                     @foreach($myJobs as $job)
                     <option value="{{$job->id}}">{{$job->param('title')}}</option>
