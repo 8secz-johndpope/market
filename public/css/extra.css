@@ -2453,7 +2453,7 @@ nav.navbar.navbar-inverse {
     width: 1px;
 }
 
-.bulk-apply-container label:before, .info .checkbox label:before, .candidate .checkbox label:before {
+.bulk-apply-container label:before, .info .checkbox label:before, .candidate .checkbox label:before, .bulk-candidates-container label:before {
     content: '';
     display: block;
     content: '';
