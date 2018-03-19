@@ -28,3 +28,12 @@
 	padding-left: 15px;
 	vertical-align: middle;
 }
+.candidate-details-wrapper .candidate-name {
+	font-size: 20px;
+	margin-top: 0;
+	font-family: Effra-Medium, sans-serif;
+}
+.candidate-details-wrapper .candidate-location{
+	text-transform: capitalize;
+	color: #ccc;
+}
