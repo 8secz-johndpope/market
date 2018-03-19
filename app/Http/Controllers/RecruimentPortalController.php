@@ -219,7 +219,12 @@ class RecruimentPortalController extends BaseController
             $profiles->join('looking_for_location', 'looking_fors.id', '=', 'looking_for_location.looking_for_id')
                      ->where('looking_for_location.location_id', $request->location);
         }
-        return $profiles->select('profiles.id')->get();
+        $idsProfiles = $profiles->select('profiles.id')->get();
+        $profiles = collect();
+        foreach ($idsProfiles as $id) {
+            $profiles->put($id, Profile::find($id));
+        }
+        return $profiles;
                            
     }
 }
